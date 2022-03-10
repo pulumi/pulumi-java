@@ -84,17 +84,17 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     	      this.times = defaults.times;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setIntervalUnit(@Nullable String intervalUnit) {
+        public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
 
-        public Builder setTimes(@Nullable String times) {
+        public Builder times(@Nullable String times) {
             this.times = times;
             return this;
         }

@@ -144,62 +144,62 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDdls(@Nullable Input<List<String>> ddls) {
+        public Builder ddls(@Nullable Input<List<String>> ddls) {
             this.ddls = ddls;
             return this;
         }
 
-        public Builder setDdls(@Nullable List<String> ddls) {
+        public Builder ddls(@Nullable List<String> ddls) {
             this.ddls = Input.ofNullable(ddls);
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<DatabaseEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable DatabaseEncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable DatabaseEncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setInstance(Input<String> instance) {
+        public Builder instance(Input<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Input.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

@@ -88,32 +88,32 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
     	      this.originId = defaults.originId;
         }
 
-        public Builder setFailoverCriteria(Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria) {
+        public Builder failoverCriteria(Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
-        public Builder setFailoverCriteria(DistributionOriginGroupFailoverCriteriaGetArgs failoverCriteria) {
+        public Builder failoverCriteria(DistributionOriginGroupFailoverCriteriaGetArgs failoverCriteria) {
             this.failoverCriteria = Input.of(Objects.requireNonNull(failoverCriteria));
             return this;
         }
 
-        public Builder setMembers(Input<List<DistributionOriginGroupMemberGetArgs>> members) {
+        public Builder members(Input<List<DistributionOriginGroupMemberGetArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<DistributionOriginGroupMemberGetArgs> members) {
+        public Builder members(List<DistributionOriginGroupMemberGetArgs> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setOriginId(Input<String> originId) {
+        public Builder originId(Input<String> originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Input.of(Objects.requireNonNull(originId));
             return this;
         }

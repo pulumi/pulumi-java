@@ -67,12 +67,12 @@ public final class GroupInsightsConfiguration {
     	      this.notificationsEnabled = defaults.notificationsEnabled;
         }
 
-        public Builder setInsightsEnabled(@Nullable Boolean insightsEnabled) {
+        public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
             this.insightsEnabled = insightsEnabled;
             return this;
         }
 
-        public Builder setNotificationsEnabled(@Nullable Boolean notificationsEnabled) {
+        public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }

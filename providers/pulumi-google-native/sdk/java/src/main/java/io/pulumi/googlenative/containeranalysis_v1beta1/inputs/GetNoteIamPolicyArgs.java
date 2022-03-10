@@ -62,12 +62,12 @@ public final class GetNoteIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setNoteId(String noteId) {
+        public Builder noteId(String noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

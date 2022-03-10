@@ -152,72 +152,72 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetContainerHostResourceId = defaults.targetContainerHostResourceId;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetContainerHostCredentialsBase64(Input<String> targetContainerHostCredentialsBase64) {
+        public Builder targetContainerHostCredentialsBase64(Input<String> targetContainerHostCredentialsBase64) {
             this.targetContainerHostCredentialsBase64 = Objects.requireNonNull(targetContainerHostCredentialsBase64);
             return this;
         }
 
-        public Builder setTargetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
+        public Builder targetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
             this.targetContainerHostCredentialsBase64 = Input.of(Objects.requireNonNull(targetContainerHostCredentialsBase64));
             return this;
         }
 
-        public Builder setTargetContainerHostResourceId(Input<String> targetContainerHostResourceId) {
+        public Builder targetContainerHostResourceId(Input<String> targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
         }
 
-        public Builder setTargetContainerHostResourceId(String targetContainerHostResourceId) {
+        public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Input.of(Objects.requireNonNull(targetContainerHostResourceId));
             return this;
         }

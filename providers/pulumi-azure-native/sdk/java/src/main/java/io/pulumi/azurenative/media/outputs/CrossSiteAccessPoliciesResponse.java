@@ -67,12 +67,12 @@ public final class CrossSiteAccessPoliciesResponse {
     	      this.crossDomainPolicy = defaults.crossDomainPolicy;
         }
 
-        public Builder setClientAccessPolicy(@Nullable String clientAccessPolicy) {
+        public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
             this.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
 
-        public Builder setCrossDomainPolicy(@Nullable String crossDomainPolicy) {
+        public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }

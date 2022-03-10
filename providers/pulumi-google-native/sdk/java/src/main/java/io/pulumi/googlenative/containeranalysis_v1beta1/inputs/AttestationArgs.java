@@ -71,22 +71,22 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
         }
 
-        public Builder setGenericSignedAttestation(@Nullable Input<GenericSignedAttestationArgs> genericSignedAttestation) {
+        public Builder genericSignedAttestation(@Nullable Input<GenericSignedAttestationArgs> genericSignedAttestation) {
             this.genericSignedAttestation = genericSignedAttestation;
             return this;
         }
 
-        public Builder setGenericSignedAttestation(@Nullable GenericSignedAttestationArgs genericSignedAttestation) {
+        public Builder genericSignedAttestation(@Nullable GenericSignedAttestationArgs genericSignedAttestation) {
             this.genericSignedAttestation = Input.ofNullable(genericSignedAttestation);
             return this;
         }
 
-        public Builder setPgpSignedAttestation(@Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(@Nullable Input<PgpSignedAttestationArgs> pgpSignedAttestation) {
             this.pgpSignedAttestation = pgpSignedAttestation;
             return this;
         }
 
-        public Builder setPgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
             this.pgpSignedAttestation = Input.ofNullable(pgpSignedAttestation);
             return this;
         }

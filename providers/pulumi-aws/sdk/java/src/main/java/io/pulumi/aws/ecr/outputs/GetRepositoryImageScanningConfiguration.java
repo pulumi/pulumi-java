@@ -48,7 +48,7 @@ public final class GetRepositoryImageScanningConfiguration {
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder setScanOnPush(Boolean scanOnPush) {
+        public Builder scanOnPush(Boolean scanOnPush) {
             this.scanOnPush = Objects.requireNonNull(scanOnPush);
             return this;
         }

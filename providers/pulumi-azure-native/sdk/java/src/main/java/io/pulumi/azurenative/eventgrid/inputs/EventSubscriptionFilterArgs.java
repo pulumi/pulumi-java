@@ -141,52 +141,52 @@ public final class EventSubscriptionFilterArgs extends io.pulumi.resources.Resou
     	      this.subjectEndsWith = defaults.subjectEndsWith;
         }
 
-        public Builder setAdvancedFilters(@Nullable Input<List<Object>> advancedFilters) {
+        public Builder advancedFilters(@Nullable Input<List<Object>> advancedFilters) {
             this.advancedFilters = advancedFilters;
             return this;
         }
 
-        public Builder setAdvancedFilters(@Nullable List<Object> advancedFilters) {
+        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = Input.ofNullable(advancedFilters);
             return this;
         }
 
-        public Builder setIncludedEventTypes(@Nullable Input<List<String>> includedEventTypes) {
+        public Builder includedEventTypes(@Nullable Input<List<String>> includedEventTypes) {
             this.includedEventTypes = includedEventTypes;
             return this;
         }
 
-        public Builder setIncludedEventTypes(@Nullable List<String> includedEventTypes) {
+        public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
             this.includedEventTypes = Input.ofNullable(includedEventTypes);
             return this;
         }
 
-        public Builder setIsSubjectCaseSensitive(@Nullable Input<Boolean> isSubjectCaseSensitive) {
+        public Builder isSubjectCaseSensitive(@Nullable Input<Boolean> isSubjectCaseSensitive) {
             this.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
 
-        public Builder setIsSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
+        public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
             this.isSubjectCaseSensitive = Input.ofNullable(isSubjectCaseSensitive);
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable Input<String> subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable Input<String> subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable String subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = Input.ofNullable(subjectBeginsWith);
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable Input<String> subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable Input<String> subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable String subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = Input.ofNullable(subjectEndsWith);
             return this;
         }

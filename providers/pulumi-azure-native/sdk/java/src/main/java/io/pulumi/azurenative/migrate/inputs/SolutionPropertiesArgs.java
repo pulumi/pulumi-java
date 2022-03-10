@@ -139,62 +139,62 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.tool = defaults.tool;
         }
 
-        public Builder setCleanupState(@Nullable Input<String> cleanupState) {
+        public Builder cleanupState(@Nullable Input<String> cleanupState) {
             this.cleanupState = cleanupState;
             return this;
         }
 
-        public Builder setCleanupState(@Nullable String cleanupState) {
+        public Builder cleanupState(@Nullable String cleanupState) {
             this.cleanupState = Input.ofNullable(cleanupState);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<SolutionDetailsArgs> details) {
+        public Builder details(@Nullable Input<SolutionDetailsArgs> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable SolutionDetailsArgs details) {
+        public Builder details(@Nullable SolutionDetailsArgs details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setGoal(@Nullable Input<String> goal) {
+        public Builder goal(@Nullable Input<String> goal) {
             this.goal = goal;
             return this;
         }
 
-        public Builder setGoal(@Nullable String goal) {
+        public Builder goal(@Nullable String goal) {
             this.goal = Input.ofNullable(goal);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Input<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTool(@Nullable Input<String> tool) {
+        public Builder tool(@Nullable Input<String> tool) {
             this.tool = tool;
             return this;
         }
 
-        public Builder setTool(@Nullable String tool) {
+        public Builder tool(@Nullable String tool) {
             this.tool = Input.ofNullable(tool);
             return this;
         }

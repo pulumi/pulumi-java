@@ -132,57 +132,57 @@ public final class GetServerCertificateResult {
     	      this.uploadDate = defaults.uploadDate;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificateBody(String certificateBody) {
+        public Builder certificateBody(String certificateBody) {
             this.certificateBody = Objects.requireNonNull(certificateBody);
             return this;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLatest(@Nullable Boolean latest) {
+        public Builder latest(@Nullable Boolean latest) {
             this.latest = latest;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }
 
-        public Builder setUploadDate(String uploadDate) {
+        public Builder uploadDate(String uploadDate) {
             this.uploadDate = Objects.requireNonNull(uploadDate);
             return this;
         }

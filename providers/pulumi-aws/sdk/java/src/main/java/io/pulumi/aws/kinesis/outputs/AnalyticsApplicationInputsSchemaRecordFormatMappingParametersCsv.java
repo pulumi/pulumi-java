@@ -65,12 +65,12 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     	      this.recordRowDelimiter = defaults.recordRowDelimiter;
         }
 
-        public Builder setRecordColumnDelimiter(String recordColumnDelimiter) {
+        public Builder recordColumnDelimiter(String recordColumnDelimiter) {
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
 
-        public Builder setRecordRowDelimiter(String recordRowDelimiter) {
+        public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
         }

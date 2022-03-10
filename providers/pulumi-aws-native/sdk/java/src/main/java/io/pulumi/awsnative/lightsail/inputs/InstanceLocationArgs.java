@@ -74,22 +74,22 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setRegionName(@Nullable Input<String> regionName) {
+        public Builder regionName(@Nullable Input<String> regionName) {
             this.regionName = regionName;
             return this;
         }
 
-        public Builder setRegionName(@Nullable String regionName) {
+        public Builder regionName(@Nullable String regionName) {
             this.regionName = Input.ofNullable(regionName);
             return this;
         }

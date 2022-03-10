@@ -90,32 +90,32 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
     	      this.source = defaults.source;
         }
 
-        public Builder setAttacher(Input<String> attacher) {
+        public Builder attacher(Input<String> attacher) {
             this.attacher = Objects.requireNonNull(attacher);
             return this;
         }
 
-        public Builder setAttacher(String attacher) {
+        public Builder attacher(String attacher) {
             this.attacher = Input.of(Objects.requireNonNull(attacher));
             return this;
         }
 
-        public Builder setNodeName(Input<String> nodeName) {
+        public Builder nodeName(Input<String> nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Input.of(Objects.requireNonNull(nodeName));
             return this;
         }
 
-        public Builder setSource(Input<VolumeAttachmentSourceArgs> source) {
+        public Builder source(Input<VolumeAttachmentSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(VolumeAttachmentSourceArgs source) {
+        public Builder source(VolumeAttachmentSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

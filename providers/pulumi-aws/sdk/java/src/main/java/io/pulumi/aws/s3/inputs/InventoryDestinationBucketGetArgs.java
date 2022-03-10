@@ -119,52 +119,52 @@ public final class InventoryDestinationBucketGetArgs extends io.pulumi.resources
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setBucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Input<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<InventoryDestinationBucketEncryptionGetArgs> encryption) {
+        public Builder encryption(@Nullable Input<InventoryDestinationBucketEncryptionGetArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable InventoryDestinationBucketEncryptionGetArgs encryption) {
+        public Builder encryption(@Nullable InventoryDestinationBucketEncryptionGetArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

@@ -153,72 +153,72 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Input<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Input.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Boolean permanentRestore) {
+        public Builder permanentRestore(@Nullable Boolean permanentRestore) {
             this.permanentRestore = Input.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder setStorageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Input<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
-        public Builder setStorageTier(@Nullable String storageTier) {
+        public Builder storageTier(@Nullable String storageTier) {
             this.storageTier = Input.ofNullable(storageTier);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
             this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
             return this;
         }
 
-        public Builder setVolumeId(Input<String> volumeId) {
+        public Builder volumeId(Input<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
-        public Builder setVolumeId(String volumeId) {
+        public Builder volumeId(String volumeId) {
             this.volumeId = Input.of(Objects.requireNonNull(volumeId));
             return this;
         }

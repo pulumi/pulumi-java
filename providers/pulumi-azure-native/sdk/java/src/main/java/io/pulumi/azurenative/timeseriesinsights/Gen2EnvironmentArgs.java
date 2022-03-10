@@ -189,92 +189,92 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.warmStoreConfiguration = defaults.warmStoreConfiguration;
         }
 
-        public Builder setEnvironmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Input<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Input.ofNullable(environmentName);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setStorageConfiguration(Input<Gen2StorageConfigurationInputArgs> storageConfiguration) {
+        public Builder storageConfiguration(Input<Gen2StorageConfigurationInputArgs> storageConfiguration) {
             this.storageConfiguration = Objects.requireNonNull(storageConfiguration);
             return this;
         }
 
-        public Builder setStorageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
+        public Builder storageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
             this.storageConfiguration = Input.of(Objects.requireNonNull(storageConfiguration));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeSeriesIdProperties(Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
+        public Builder timeSeriesIdProperties(Input<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
             this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties);
             return this;
         }
 
-        public Builder setTimeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
+        public Builder timeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
             this.timeSeriesIdProperties = Input.of(Objects.requireNonNull(timeSeriesIdProperties));
             return this;
         }
 
-        public Builder setWarmStoreConfiguration(@Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
+        public Builder warmStoreConfiguration(@Nullable Input<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
             this.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
 
-        public Builder setWarmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
+        public Builder warmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
             this.warmStoreConfiguration = Input.ofNullable(warmStoreConfiguration);
             return this;
         }

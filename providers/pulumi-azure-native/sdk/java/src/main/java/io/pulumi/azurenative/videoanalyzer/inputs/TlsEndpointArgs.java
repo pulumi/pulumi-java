@@ -143,62 +143,62 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setCredentials(Input<UsernamePasswordCredentialsArgs> credentials) {
+        public Builder credentials(Input<UsernamePasswordCredentialsArgs> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setCredentials(UsernamePasswordCredentialsArgs credentials) {
+        public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
             this.credentials = Input.of(Objects.requireNonNull(credentials));
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable Input<PemCertificateListArgs> trustedCertificates) {
+        public Builder trustedCertificates(@Nullable Input<PemCertificateListArgs> trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable PemCertificateListArgs trustedCertificates) {
+        public Builder trustedCertificates(@Nullable PemCertificateListArgs trustedCertificates) {
             this.trustedCertificates = Input.ofNullable(trustedCertificates);
             return this;
         }
 
-        public Builder setTunnel(@Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel) {
+        public Builder tunnel(@Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel) {
             this.tunnel = tunnel;
             return this;
         }
 
-        public Builder setTunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
+        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
             this.tunnel = Input.ofNullable(tunnel);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable Input<TlsValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Input<TlsValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable TlsValidationOptionsArgs validationOptions) {
+        public Builder validationOptions(@Nullable TlsValidationOptionsArgs validationOptions) {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }

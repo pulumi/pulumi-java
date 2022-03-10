@@ -107,42 +107,42 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
     	      this.publicPort = defaults.publicPort;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Input.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder setPublicPort(@Nullable Input<Integer> publicPort) {
+        public Builder publicPort(@Nullable Input<Integer> publicPort) {
             this.publicPort = publicPort;
             return this;
         }
 
-        public Builder setPublicPort(@Nullable Integer publicPort) {
+        public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = Input.ofNullable(publicPort);
             return this;
         }

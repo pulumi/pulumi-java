@@ -87,42 +87,42 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setEbs(@Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs) {
+        public Builder ebs(@Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setEbs(@Nullable SpotFleetEbsBlockDeviceArgs ebs) {
+        public Builder ebs(@Nullable SpotFleetEbsBlockDeviceArgs ebs) {
             this.ebs = Input.ofNullable(ebs);
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Input<String> noDevice) {
+        public Builder noDevice(@Nullable Input<String> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable String noDevice) {
+        public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = Input.ofNullable(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Input<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }

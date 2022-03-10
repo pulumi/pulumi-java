@@ -182,82 +182,82 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     	      this.removeInstanceStateOnDestroy = defaults.removeInstanceStateOnDestroy;
         }
 
-        public Builder setMinimalAction(@Nullable Input<String> minimalAction) {
+        public Builder minimalAction(@Nullable Input<String> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
 
-        public Builder setMinimalAction(@Nullable String minimalAction) {
+        public Builder minimalAction(@Nullable String minimalAction) {
             this.minimalAction = Input.ofNullable(minimalAction);
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable Input<String> mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable Input<String> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Input.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPreservedState(@Nullable Input<RegionPerInstanceConfigPreservedStateArgs> preservedState) {
+        public Builder preservedState(@Nullable Input<RegionPerInstanceConfigPreservedStateArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
 
-        public Builder setPreservedState(@Nullable RegionPerInstanceConfigPreservedStateArgs preservedState) {
+        public Builder preservedState(@Nullable RegionPerInstanceConfigPreservedStateArgs preservedState) {
             this.preservedState = Input.ofNullable(preservedState);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRegionInstanceGroupManager(Input<String> regionInstanceGroupManager) {
+        public Builder regionInstanceGroupManager(Input<String> regionInstanceGroupManager) {
             this.regionInstanceGroupManager = Objects.requireNonNull(regionInstanceGroupManager);
             return this;
         }
 
-        public Builder setRegionInstanceGroupManager(String regionInstanceGroupManager) {
+        public Builder regionInstanceGroupManager(String regionInstanceGroupManager) {
             this.regionInstanceGroupManager = Input.of(Objects.requireNonNull(regionInstanceGroupManager));
             return this;
         }
 
-        public Builder setRemoveInstanceStateOnDestroy(@Nullable Input<Boolean> removeInstanceStateOnDestroy) {
+        public Builder removeInstanceStateOnDestroy(@Nullable Input<Boolean> removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
 
-        public Builder setRemoveInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
+        public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = Input.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }

@@ -118,27 +118,27 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     	      this.validUntil = defaults.validUntil;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setSpotInstanceType(@Nullable String spotInstanceType) {
+        public Builder spotInstanceType(@Nullable String spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
 
-        public Builder setValidUntil(@Nullable String validUntil) {
+        public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = validUntil;
             return this;
         }

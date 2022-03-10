@@ -87,17 +87,17 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setResponseModels(@Nullable Object responseModels) {
+        public Builder responseModels(@Nullable Object responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Object responseParameters) {
+        public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

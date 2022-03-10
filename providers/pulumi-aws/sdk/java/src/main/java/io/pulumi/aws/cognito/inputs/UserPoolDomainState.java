@@ -150,72 +150,72 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setCloudfrontDistributionArn(@Nullable Input<String> cloudfrontDistributionArn) {
+        public Builder cloudfrontDistributionArn(@Nullable Input<String> cloudfrontDistributionArn) {
             this.cloudfrontDistributionArn = cloudfrontDistributionArn;
             return this;
         }
 
-        public Builder setCloudfrontDistributionArn(@Nullable String cloudfrontDistributionArn) {
+        public Builder cloudfrontDistributionArn(@Nullable String cloudfrontDistributionArn) {
             this.cloudfrontDistributionArn = Input.ofNullable(cloudfrontDistributionArn);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Input<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

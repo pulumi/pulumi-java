@@ -74,12 +74,12 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable Object name) {
+        public Builder name(@Nullable Object name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

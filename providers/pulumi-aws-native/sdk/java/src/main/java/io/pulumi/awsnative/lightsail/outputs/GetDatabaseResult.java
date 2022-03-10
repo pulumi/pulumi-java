@@ -142,37 +142,37 @@ public final class GetDatabaseResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBackupRetention(@Nullable Boolean backupRetention) {
+        public Builder backupRetention(@Nullable Boolean backupRetention) {
             this.backupRetention = backupRetention;
             return this;
         }
 
-        public Builder setCaCertificateIdentifier(@Nullable String caCertificateIdentifier) {
+        public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
             this.caCertificateIdentifier = caCertificateIdentifier;
             return this;
         }
 
-        public Builder setDatabaseArn(@Nullable String databaseArn) {
+        public Builder databaseArn(@Nullable String databaseArn) {
             this.databaseArn = databaseArn;
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable String preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatabaseTag> tags) {
+        public Builder tags(@Nullable List<DatabaseTag> tags) {
             this.tags = tags;
             return this;
         }

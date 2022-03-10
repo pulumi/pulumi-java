@@ -83,17 +83,17 @@ public final class ForwardProxyResponse {
     	      this.customProtoHeaderName = defaults.customProtoHeaderName;
         }
 
-        public Builder setConvention(@Nullable String convention) {
+        public Builder convention(@Nullable String convention) {
             this.convention = convention;
             return this;
         }
 
-        public Builder setCustomHostHeaderName(@Nullable String customHostHeaderName) {
+        public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
             this.customHostHeaderName = customHostHeaderName;
             return this;
         }
 
-        public Builder setCustomProtoHeaderName(@Nullable String customProtoHeaderName) {
+        public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }

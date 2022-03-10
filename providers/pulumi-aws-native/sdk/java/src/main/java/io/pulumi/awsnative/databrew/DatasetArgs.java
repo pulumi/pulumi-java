@@ -136,62 +136,62 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFormat(@Nullable Input<DatasetFormat> format) {
+        public Builder format(@Nullable Input<DatasetFormat> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable DatasetFormat format) {
+        public Builder format(@Nullable DatasetFormat format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable Input<DatasetFormatOptionsArgs> formatOptions) {
+        public Builder formatOptions(@Nullable Input<DatasetFormatOptionsArgs> formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable DatasetFormatOptionsArgs formatOptions) {
+        public Builder formatOptions(@Nullable DatasetFormatOptionsArgs formatOptions) {
             this.formatOptions = Input.ofNullable(formatOptions);
             return this;
         }
 
-        public Builder setInput(Input<DatasetInputArgs> input) {
+        public Builder input(Input<DatasetInputArgs> input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setInput(DatasetInputArgs input) {
+        public Builder input(DatasetInputArgs input) {
             this.input = Input.of(Objects.requireNonNull(input));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPathOptions(@Nullable Input<DatasetPathOptionsArgs> pathOptions) {
+        public Builder pathOptions(@Nullable Input<DatasetPathOptionsArgs> pathOptions) {
             this.pathOptions = pathOptions;
             return this;
         }
 
-        public Builder setPathOptions(@Nullable DatasetPathOptionsArgs pathOptions) {
+        public Builder pathOptions(@Nullable DatasetPathOptionsArgs pathOptions) {
             this.pathOptions = Input.ofNullable(pathOptions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatasetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatasetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetTagArgs> tags) {
+        public Builder tags(@Nullable List<DatasetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

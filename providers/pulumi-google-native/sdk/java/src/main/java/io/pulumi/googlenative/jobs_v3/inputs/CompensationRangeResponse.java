@@ -72,12 +72,12 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
     	      this.minCompensation = defaults.minCompensation;
         }
 
-        public Builder setMaxCompensation(MoneyResponse maxCompensation) {
+        public Builder maxCompensation(MoneyResponse maxCompensation) {
             this.maxCompensation = Objects.requireNonNull(maxCompensation);
             return this;
         }
 
-        public Builder setMinCompensation(MoneyResponse minCompensation) {
+        public Builder minCompensation(MoneyResponse minCompensation) {
             this.minCompensation = Objects.requireNonNull(minCompensation);
             return this;
         }

@@ -101,42 +101,42 @@ public final class TopicRuleCloudwatchAlarmGetArgs extends io.pulumi.resources.R
     	      this.stateValue = defaults.stateValue;
         }
 
-        public Builder setAlarmName(Input<String> alarmName) {
+        public Builder alarmName(Input<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Input.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStateReason(Input<String> stateReason) {
+        public Builder stateReason(Input<String> stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
-        public Builder setStateReason(String stateReason) {
+        public Builder stateReason(String stateReason) {
             this.stateReason = Input.of(Objects.requireNonNull(stateReason));
             return this;
         }
 
-        public Builder setStateValue(Input<String> stateValue) {
+        public Builder stateValue(Input<String> stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }
 
-        public Builder setStateValue(String stateValue) {
+        public Builder stateValue(String stateValue) {
             this.stateValue = Input.of(Objects.requireNonNull(stateValue));
             return this;
         }

@@ -186,47 +186,47 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDestIpRange(String destIpRange) {
+        public Builder destIpRange(String destIpRange) {
             this.destIpRange = Objects.requireNonNull(destIpRange);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInstanceTags(List<String> instanceTags) {
+        public Builder instanceTags(List<String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteType(String routeType) {
+        public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

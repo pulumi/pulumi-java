@@ -98,22 +98,22 @@ public final class PackageInformationResponse {
     	      this.trackingNumber = defaults.trackingNumber;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setDriveCount(Double driveCount) {
+        public Builder driveCount(Double driveCount) {
             this.driveCount = Objects.requireNonNull(driveCount);
             return this;
         }
 
-        public Builder setShipDate(String shipDate) {
+        public Builder shipDate(String shipDate) {
             this.shipDate = Objects.requireNonNull(shipDate);
             return this;
         }
 
-        public Builder setTrackingNumber(String trackingNumber) {
+        public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }

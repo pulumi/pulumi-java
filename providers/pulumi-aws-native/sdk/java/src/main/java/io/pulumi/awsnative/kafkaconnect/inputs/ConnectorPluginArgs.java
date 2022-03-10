@@ -52,12 +52,12 @@ public final class ConnectorPluginArgs extends io.pulumi.resources.ResourceArgs 
     	      this.customPlugin = defaults.customPlugin;
         }
 
-        public Builder setCustomPlugin(Input<ConnectorCustomPluginArgs> customPlugin) {
+        public Builder customPlugin(Input<ConnectorCustomPluginArgs> customPlugin) {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
         }
 
-        public Builder setCustomPlugin(ConnectorCustomPluginArgs customPlugin) {
+        public Builder customPlugin(ConnectorCustomPluginArgs customPlugin) {
             this.customPlugin = Input.of(Objects.requireNonNull(customPlugin));
             return this;
         }

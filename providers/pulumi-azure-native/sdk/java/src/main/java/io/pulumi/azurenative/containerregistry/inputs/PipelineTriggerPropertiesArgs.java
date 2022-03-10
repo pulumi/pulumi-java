@@ -53,12 +53,12 @@ public final class PipelineTriggerPropertiesArgs extends io.pulumi.resources.Res
     	      this.sourceTrigger = defaults.sourceTrigger;
         }
 
-        public Builder setSourceTrigger(@Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger) {
+        public Builder sourceTrigger(@Nullable Input<PipelineSourceTriggerPropertiesArgs> sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }
 
-        public Builder setSourceTrigger(@Nullable PipelineSourceTriggerPropertiesArgs sourceTrigger) {
+        public Builder sourceTrigger(@Nullable PipelineSourceTriggerPropertiesArgs sourceTrigger) {
             this.sourceTrigger = Input.ofNullable(sourceTrigger);
             return this;
         }

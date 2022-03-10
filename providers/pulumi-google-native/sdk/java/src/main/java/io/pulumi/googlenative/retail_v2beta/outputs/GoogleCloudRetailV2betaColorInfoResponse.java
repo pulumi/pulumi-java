@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2betaColorInfoResponse {
     	      this.colors = defaults.colors;
         }
 
-        public Builder setColorFamilies(List<String> colorFamilies) {
+        public Builder colorFamilies(List<String> colorFamilies) {
             this.colorFamilies = Objects.requireNonNull(colorFamilies);
             return this;
         }
 
-        public Builder setColors(List<String> colors) {
+        public Builder colors(List<String> colors) {
             this.colors = Objects.requireNonNull(colors);
             return this;
         }

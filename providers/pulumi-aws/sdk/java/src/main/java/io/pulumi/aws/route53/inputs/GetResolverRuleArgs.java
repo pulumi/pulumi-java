@@ -135,32 +135,32 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverRuleId(@Nullable String resolverRuleId) {
+        public Builder resolverRuleId(@Nullable String resolverRuleId) {
             this.resolverRuleId = resolverRuleId;
             return this;
         }
 
-        public Builder setRuleType(@Nullable String ruleType) {
+        public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

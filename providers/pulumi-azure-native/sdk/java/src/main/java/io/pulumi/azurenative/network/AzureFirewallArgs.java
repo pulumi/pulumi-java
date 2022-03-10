@@ -321,172 +321,172 @@ public final class AzureFirewallArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalProperties(@Nullable Input<Map<String,String>> additionalProperties) {
+        public Builder additionalProperties(@Nullable Input<Map<String,String>> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setAdditionalProperties(@Nullable Map<String,String> additionalProperties) {
+        public Builder additionalProperties(@Nullable Map<String,String> additionalProperties) {
             this.additionalProperties = Input.ofNullable(additionalProperties);
             return this;
         }
 
-        public Builder setApplicationRuleCollections(@Nullable Input<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections) {
+        public Builder applicationRuleCollections(@Nullable Input<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections) {
             this.applicationRuleCollections = applicationRuleCollections;
             return this;
         }
 
-        public Builder setApplicationRuleCollections(@Nullable List<AzureFirewallApplicationRuleCollectionArgs> applicationRuleCollections) {
+        public Builder applicationRuleCollections(@Nullable List<AzureFirewallApplicationRuleCollectionArgs> applicationRuleCollections) {
             this.applicationRuleCollections = Input.ofNullable(applicationRuleCollections);
             return this;
         }
 
-        public Builder setAzureFirewallName(@Nullable Input<String> azureFirewallName) {
+        public Builder azureFirewallName(@Nullable Input<String> azureFirewallName) {
             this.azureFirewallName = azureFirewallName;
             return this;
         }
 
-        public Builder setAzureFirewallName(@Nullable String azureFirewallName) {
+        public Builder azureFirewallName(@Nullable String azureFirewallName) {
             this.azureFirewallName = Input.ofNullable(azureFirewallName);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
             this.firewallPolicy = Input.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder setHubIPAddresses(@Nullable Input<HubIPAddressesArgs> hubIPAddresses) {
+        public Builder hubIPAddresses(@Nullable Input<HubIPAddressesArgs> hubIPAddresses) {
             this.hubIPAddresses = hubIPAddresses;
             return this;
         }
 
-        public Builder setHubIPAddresses(@Nullable HubIPAddressesArgs hubIPAddresses) {
+        public Builder hubIPAddresses(@Nullable HubIPAddressesArgs hubIPAddresses) {
             this.hubIPAddresses = Input.ofNullable(hubIPAddresses);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<AzureFirewallIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<AzureFirewallIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<AzureFirewallIPConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<AzureFirewallIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagementIpConfiguration(@Nullable Input<AzureFirewallIPConfigurationArgs> managementIpConfiguration) {
+        public Builder managementIpConfiguration(@Nullable Input<AzureFirewallIPConfigurationArgs> managementIpConfiguration) {
             this.managementIpConfiguration = managementIpConfiguration;
             return this;
         }
 
-        public Builder setManagementIpConfiguration(@Nullable AzureFirewallIPConfigurationArgs managementIpConfiguration) {
+        public Builder managementIpConfiguration(@Nullable AzureFirewallIPConfigurationArgs managementIpConfiguration) {
             this.managementIpConfiguration = Input.ofNullable(managementIpConfiguration);
             return this;
         }
 
-        public Builder setNatRuleCollections(@Nullable Input<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections) {
+        public Builder natRuleCollections(@Nullable Input<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections) {
             this.natRuleCollections = natRuleCollections;
             return this;
         }
 
-        public Builder setNatRuleCollections(@Nullable List<AzureFirewallNatRuleCollectionArgs> natRuleCollections) {
+        public Builder natRuleCollections(@Nullable List<AzureFirewallNatRuleCollectionArgs> natRuleCollections) {
             this.natRuleCollections = Input.ofNullable(natRuleCollections);
             return this;
         }
 
-        public Builder setNetworkRuleCollections(@Nullable Input<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections) {
+        public Builder networkRuleCollections(@Nullable Input<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections) {
             this.networkRuleCollections = networkRuleCollections;
             return this;
         }
 
-        public Builder setNetworkRuleCollections(@Nullable List<AzureFirewallNetworkRuleCollectionArgs> networkRuleCollections) {
+        public Builder networkRuleCollections(@Nullable List<AzureFirewallNetworkRuleCollectionArgs> networkRuleCollections) {
             this.networkRuleCollections = Input.ofNullable(networkRuleCollections);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<AzureFirewallSkuArgs> sku) {
+        public Builder sku(@Nullable Input<AzureFirewallSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable AzureFirewallSkuArgs sku) {
+        public Builder sku(@Nullable AzureFirewallSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
+        public Builder threatIntelMode(@Nullable Input<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
+        public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
             this.threatIntelMode = Input.ofNullable(threatIntelMode);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
+        public Builder virtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceArgs virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Input.ofNullable(virtualHub);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

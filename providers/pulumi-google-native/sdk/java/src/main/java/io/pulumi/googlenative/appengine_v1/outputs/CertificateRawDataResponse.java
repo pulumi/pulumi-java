@@ -65,12 +65,12 @@ public final class CertificateRawDataResponse {
     	      this.publicCertificate = defaults.publicCertificate;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setPublicCertificate(String publicCertificate) {
+        public Builder publicCertificate(String publicCertificate) {
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }

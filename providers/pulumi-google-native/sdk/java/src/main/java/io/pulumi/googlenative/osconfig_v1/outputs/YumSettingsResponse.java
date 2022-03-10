@@ -99,22 +99,22 @@ public final class YumSettingsResponse {
     	      this.security = defaults.security;
         }
 
-        public Builder setExcludes(List<String> excludes) {
+        public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
 
-        public Builder setExclusivePackages(List<String> exclusivePackages) {
+        public Builder exclusivePackages(List<String> exclusivePackages) {
             this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
             return this;
         }
 
-        public Builder setMinimal(Boolean minimal) {
+        public Builder minimal(Boolean minimal) {
             this.minimal = Objects.requireNonNull(minimal);
             return this;
         }
 
-        public Builder setSecurity(Boolean security) {
+        public Builder security(Boolean security) {
             this.security = Objects.requireNonNull(security);
             return this;
         }

@@ -76,12 +76,12 @@ public final class DeploymentTarget {
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(DeploymentTargetConfig config) {
+        public Builder config(DeploymentTargetConfig config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setImports(@Nullable List<DeploymentTargetImport> imports) {
+        public Builder imports(@Nullable List<DeploymentTargetImport> imports) {
             this.imports = imports;
             return this;
         }

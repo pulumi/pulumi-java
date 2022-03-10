@@ -65,12 +65,12 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
     	      this.maintenanceWindow = defaults.maintenanceWindow;
         }
 
-        public Builder setConcurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup) {
+        public Builder concurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup) {
             this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup);
             return this;
         }
 
-        public Builder setMaintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }

@@ -75,22 +75,22 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder setDistributionCut(@Nullable Input<DistributionCutArgs> distributionCut) {
+        public Builder distributionCut(@Nullable Input<DistributionCutArgs> distributionCut) {
             this.distributionCut = distributionCut;
             return this;
         }
 
-        public Builder setDistributionCut(@Nullable DistributionCutArgs distributionCut) {
+        public Builder distributionCut(@Nullable DistributionCutArgs distributionCut) {
             this.distributionCut = Input.ofNullable(distributionCut);
             return this;
         }
 
-        public Builder setGoodTotalRatio(@Nullable Input<TimeSeriesRatioArgs> goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable Input<TimeSeriesRatioArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
-        public Builder setGoodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
             this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
             return this;
         }

@@ -57,7 +57,7 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
     	      this.emailAddress = defaults.emailAddress;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }

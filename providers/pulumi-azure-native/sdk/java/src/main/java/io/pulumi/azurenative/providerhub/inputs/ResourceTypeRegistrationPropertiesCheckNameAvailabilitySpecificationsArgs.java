@@ -64,22 +64,22 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     	      this.resourceTypesWithCustomValidation = defaults.resourceTypesWithCustomValidation;
         }
 
-        public Builder setEnableDefaultValidation(@Nullable Input<Boolean> enableDefaultValidation) {
+        public Builder enableDefaultValidation(@Nullable Input<Boolean> enableDefaultValidation) {
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
 
-        public Builder setEnableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
+        public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
             this.enableDefaultValidation = Input.ofNullable(enableDefaultValidation);
             return this;
         }
 
-        public Builder setResourceTypesWithCustomValidation(@Nullable Input<List<String>> resourceTypesWithCustomValidation) {
+        public Builder resourceTypesWithCustomValidation(@Nullable Input<List<String>> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }
 
-        public Builder setResourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
+        public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = Input.ofNullable(resourceTypesWithCustomValidation);
             return this;
         }

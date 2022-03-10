@@ -173,82 +173,82 @@ public final class AzureTableOutputDataSourceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Input<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Input<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setColumnsToRemove(@Nullable Input<List<String>> columnsToRemove) {
+        public Builder columnsToRemove(@Nullable Input<List<String>> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
 
-        public Builder setColumnsToRemove(@Nullable List<String> columnsToRemove) {
+        public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             this.columnsToRemove = Input.ofNullable(columnsToRemove);
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Input<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Input.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder setRowKey(@Nullable Input<String> rowKey) {
+        public Builder rowKey(@Nullable Input<String> rowKey) {
             this.rowKey = rowKey;
             return this;
         }
 
-        public Builder setRowKey(@Nullable String rowKey) {
+        public Builder rowKey(@Nullable String rowKey) {
             this.rowKey = Input.ofNullable(rowKey);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

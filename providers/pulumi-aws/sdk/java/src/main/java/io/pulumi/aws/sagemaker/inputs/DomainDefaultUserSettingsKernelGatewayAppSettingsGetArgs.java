@@ -89,32 +89,32 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder setCustomImages(@Nullable Input<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages) {
+        public Builder customImages(@Nullable Input<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages) {
             this.customImages = customImages;
             return this;
         }
 
-        public Builder setCustomImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
+        public Builder customImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
             this.customImages = Input.ofNullable(customImages);
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Input<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = Input.ofNullable(lifecycleConfigArns);
             return this;
         }

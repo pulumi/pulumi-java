@@ -87,32 +87,32 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder setTopicArn(Input<String> topicArn) {
+        public Builder topicArn(Input<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }

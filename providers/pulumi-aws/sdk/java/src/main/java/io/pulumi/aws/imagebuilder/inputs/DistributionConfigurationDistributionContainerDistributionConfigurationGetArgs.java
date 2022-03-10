@@ -88,32 +88,32 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder setContainerTags(@Nullable Input<List<String>> containerTags) {
+        public Builder containerTags(@Nullable Input<List<String>> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
-        public Builder setContainerTags(@Nullable List<String> containerTags) {
+        public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = Input.ofNullable(containerTags);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTargetRepository(Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
+        public Builder targetRepository(Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs> targetRepository) {
             this.targetRepository = Objects.requireNonNull(targetRepository);
             return this;
         }
 
-        public Builder setTargetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs targetRepository) {
+        public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryGetArgs targetRepository) {
             this.targetRepository = Input.of(Objects.requireNonNull(targetRepository));
             return this;
         }

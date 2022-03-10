@@ -55,7 +55,7 @@ public final class ContainerInfoResponse extends io.pulumi.resources.InvokeArgs 
     	      this.image = defaults.image;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }

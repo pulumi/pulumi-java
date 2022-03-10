@@ -81,12 +81,12 @@ public final class RegionNetworkEndpointGroupCloudFunction {
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setFunction(@Nullable String function) {
+        public Builder function(@Nullable String function) {
             this.function = function;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = urlMask;
             return this;
         }

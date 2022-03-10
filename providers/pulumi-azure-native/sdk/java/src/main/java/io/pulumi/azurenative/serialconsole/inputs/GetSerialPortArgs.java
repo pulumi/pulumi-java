@@ -116,27 +116,27 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serialPort = defaults.serialPort;
         }
 
-        public Builder setParentResource(String parentResource) {
+        public Builder parentResource(String parentResource) {
             this.parentResource = Objects.requireNonNull(parentResource);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceProviderNamespace(String resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
-        public Builder setSerialPort(String serialPort) {
+        public Builder serialPort(String serialPort) {
             this.serialPort = Objects.requireNonNull(serialPort);
             return this;
         }

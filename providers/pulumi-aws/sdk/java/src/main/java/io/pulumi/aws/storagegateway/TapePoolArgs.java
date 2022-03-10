@@ -120,52 +120,52 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPoolName(Input<String> poolName) {
+        public Builder poolName(Input<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setPoolName(String poolName) {
+        public Builder poolName(String poolName) {
             this.poolName = Input.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder setRetentionLockTimeInDays(@Nullable Input<Integer> retentionLockTimeInDays) {
+        public Builder retentionLockTimeInDays(@Nullable Input<Integer> retentionLockTimeInDays) {
             this.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
 
-        public Builder setRetentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
+        public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
             this.retentionLockTimeInDays = Input.ofNullable(retentionLockTimeInDays);
             return this;
         }
 
-        public Builder setRetentionLockType(@Nullable Input<String> retentionLockType) {
+        public Builder retentionLockType(@Nullable Input<String> retentionLockType) {
             this.retentionLockType = retentionLockType;
             return this;
         }
 
-        public Builder setRetentionLockType(@Nullable String retentionLockType) {
+        public Builder retentionLockType(@Nullable String retentionLockType) {
             this.retentionLockType = Input.ofNullable(retentionLockType);
             return this;
         }
 
-        public Builder setStorageClass(Input<String> storageClass) {
+        public Builder storageClass(Input<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Input.of(Objects.requireNonNull(storageClass));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

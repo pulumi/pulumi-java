@@ -84,17 +84,17 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustment {
     	      this.scalingAdjustment = defaults.scalingAdjustment;
         }
 
-        public Builder setMetricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
+        public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
             this.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
 
-        public Builder setMetricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
+        public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
             this.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
 
-        public Builder setScalingAdjustment(Integer scalingAdjustment) {
+        public Builder scalingAdjustment(Integer scalingAdjustment) {
             this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
             return this;
         }

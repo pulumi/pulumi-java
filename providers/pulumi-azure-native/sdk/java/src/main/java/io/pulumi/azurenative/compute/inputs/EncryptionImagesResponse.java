@@ -76,12 +76,12 @@ public final class EncryptionImagesResponse extends io.pulumi.resources.InvokeAr
     	      this.osDiskImage = defaults.osDiskImage;
         }
 
-        public Builder setDataDiskImages(@Nullable List<DataDiskImageEncryptionResponse> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionResponse> dataDiskImages) {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
 
-        public Builder setOsDiskImage(@Nullable OSDiskImageEncryptionResponse osDiskImage) {
+        public Builder osDiskImage(@Nullable OSDiskImageEncryptionResponse osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }

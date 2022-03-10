@@ -129,52 +129,52 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     	      this.streams = defaults.streams;
         }
 
-        public Builder setExtensionName(Input<String> extensionName) {
+        public Builder extensionName(Input<String> extensionName) {
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
 
-        public Builder setExtensionName(String extensionName) {
+        public Builder extensionName(String extensionName) {
             this.extensionName = Input.of(Objects.requireNonNull(extensionName));
             return this;
         }
 
-        public Builder setExtensionSettings(@Nullable Input<Object> extensionSettings) {
+        public Builder extensionSettings(@Nullable Input<Object> extensionSettings) {
             this.extensionSettings = extensionSettings;
             return this;
         }
 
-        public Builder setExtensionSettings(@Nullable Object extensionSettings) {
+        public Builder extensionSettings(@Nullable Object extensionSettings) {
             this.extensionSettings = Input.ofNullable(extensionSettings);
             return this;
         }
 
-        public Builder setInputDataSources(@Nullable Input<List<String>> inputDataSources) {
+        public Builder inputDataSources(@Nullable Input<List<String>> inputDataSources) {
             this.inputDataSources = inputDataSources;
             return this;
         }
 
-        public Builder setInputDataSources(@Nullable List<String> inputDataSources) {
+        public Builder inputDataSources(@Nullable List<String> inputDataSources) {
             this.inputDataSources = Input.ofNullable(inputDataSources);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStreams(@Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
+        public Builder streams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
             this.streams = Input.ofNullable(streams);
             return this;
         }

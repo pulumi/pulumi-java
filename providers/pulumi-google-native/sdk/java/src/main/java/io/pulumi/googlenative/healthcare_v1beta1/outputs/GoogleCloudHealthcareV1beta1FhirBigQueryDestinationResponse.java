@@ -99,22 +99,22 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setDatasetUri(String datasetUri) {
+        public Builder datasetUri(String datasetUri) {
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
 
-        public Builder setForce(Boolean force) {
+        public Builder force(Boolean force) {
             this.force = Objects.requireNonNull(force);
             return this;
         }
 
-        public Builder setSchemaConfig(SchemaConfigResponse schemaConfig) {
+        public Builder schemaConfig(SchemaConfigResponse schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
 
-        public Builder setWriteDisposition(String writeDisposition) {
+        public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
     	      this.value = defaults.value;
         }
 
-        public Builder setParameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Input<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
-        public Builder setParameter(@Nullable String parameter) {
+        public Builder parameter(@Nullable String parameter) {
             this.parameter = Input.ofNullable(parameter);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

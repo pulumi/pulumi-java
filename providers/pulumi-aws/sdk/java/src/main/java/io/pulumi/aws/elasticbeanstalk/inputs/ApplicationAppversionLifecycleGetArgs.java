@@ -104,42 +104,42 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
     	      this.serviceRole = defaults.serviceRole;
         }
 
-        public Builder setDeleteSourceFromS3(@Nullable Input<Boolean> deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(@Nullable Input<Boolean> deleteSourceFromS3) {
             this.deleteSourceFromS3 = deleteSourceFromS3;
             return this;
         }
 
-        public Builder setDeleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(@Nullable Boolean deleteSourceFromS3) {
             this.deleteSourceFromS3 = Input.ofNullable(deleteSourceFromS3);
             return this;
         }
 
-        public Builder setMaxAgeInDays(@Nullable Input<Integer> maxAgeInDays) {
+        public Builder maxAgeInDays(@Nullable Input<Integer> maxAgeInDays) {
             this.maxAgeInDays = maxAgeInDays;
             return this;
         }
 
-        public Builder setMaxAgeInDays(@Nullable Integer maxAgeInDays) {
+        public Builder maxAgeInDays(@Nullable Integer maxAgeInDays) {
             this.maxAgeInDays = Input.ofNullable(maxAgeInDays);
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Input<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Input.ofNullable(maxCount);
             return this;
         }
 
-        public Builder setServiceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Input<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
             return this;
         }

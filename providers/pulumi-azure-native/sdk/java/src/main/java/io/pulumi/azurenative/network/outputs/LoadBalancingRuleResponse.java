@@ -294,82 +294,82 @@ public final class LoadBalancingRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
+        public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setDisableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
+        public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
             this.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Boolean enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Boolean enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendPort(Integer frontendPort) {
+        public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setLoadDistribution(@Nullable String loadDistribution) {
+        public Builder loadDistribution(@Nullable String loadDistribution) {
             this.loadDistribution = loadDistribution;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProbe(@Nullable SubResourceResponse probe) {
+        public Builder probe(@Nullable SubResourceResponse probe) {
             this.probe = probe;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

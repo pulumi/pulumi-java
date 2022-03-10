@@ -42,7 +42,7 @@ public final class GetSubnetRouteTableAssociationResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

@@ -42,7 +42,7 @@ public final class EntryBigqueryTableSpecViewSpec {
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder setViewQuery(@Nullable String viewQuery) {
+        public Builder viewQuery(@Nullable String viewQuery) {
             this.viewQuery = viewQuery;
             return this;
         }

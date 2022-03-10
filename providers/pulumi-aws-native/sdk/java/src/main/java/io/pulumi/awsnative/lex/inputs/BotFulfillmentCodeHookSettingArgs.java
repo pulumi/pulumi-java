@@ -80,32 +80,32 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
     	      this.postFulfillmentStatusSpecification = defaults.postFulfillmentStatusSpecification;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setFulfillmentUpdatesSpecification(@Nullable Input<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification) {
+        public Builder fulfillmentUpdatesSpecification(@Nullable Input<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
             return this;
         }
 
-        public Builder setFulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecificationArgs fulfillmentUpdatesSpecification) {
+        public Builder fulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecificationArgs fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = Input.ofNullable(fulfillmentUpdatesSpecification);
             return this;
         }
 
-        public Builder setPostFulfillmentStatusSpecification(@Nullable Input<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification) {
+        public Builder postFulfillmentStatusSpecification(@Nullable Input<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
             return this;
         }
 
-        public Builder setPostFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecificationArgs postFulfillmentStatusSpecification) {
+        public Builder postFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecificationArgs postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = Input.ofNullable(postFulfillmentStatusSpecification);
             return this;
         }

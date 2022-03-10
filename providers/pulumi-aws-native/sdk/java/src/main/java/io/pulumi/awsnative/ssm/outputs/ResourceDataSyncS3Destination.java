@@ -75,27 +75,27 @@ public final class ResourceDataSyncS3Destination {
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketRegion(String bucketRegion) {
+        public Builder bucketRegion(String bucketRegion) {
             this.bucketRegion = Objects.requireNonNull(bucketRegion);
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable String kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
 
-        public Builder setSyncFormat(String syncFormat) {
+        public Builder syncFormat(String syncFormat) {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }

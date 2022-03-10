@@ -76,22 +76,22 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
     	      this.quasiIds = defaults.quasiIds;
         }
 
-        public Builder setEntityId(@Nullable Input<GooglePrivacyDlpV2EntityIdArgs> entityId) {
+        public Builder entityId(@Nullable Input<GooglePrivacyDlpV2EntityIdArgs> entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setEntityId(@Nullable GooglePrivacyDlpV2EntityIdArgs entityId) {
+        public Builder entityId(@Nullable GooglePrivacyDlpV2EntityIdArgs entityId) {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
 
-        public Builder setQuasiIds(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
+        public Builder quasiIds(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
             this.quasiIds = quasiIds;
             return this;
         }
 
-        public Builder setQuasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
+        public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
             this.quasiIds = Input.ofNullable(quasiIds);
             return this;
         }

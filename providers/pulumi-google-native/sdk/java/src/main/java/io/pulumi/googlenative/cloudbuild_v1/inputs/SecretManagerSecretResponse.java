@@ -72,12 +72,12 @@ public final class SecretManagerSecretResponse extends io.pulumi.resources.Invok
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setVersionName(String versionName) {
+        public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }

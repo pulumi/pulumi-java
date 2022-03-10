@@ -65,12 +65,12 @@ public final class GetDomainAdvancedSecurityOption {
     	      this.internalUserDatabaseEnabled = defaults.internalUserDatabaseEnabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setInternalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = Objects.requireNonNull(internalUserDatabaseEnabled);
             return this;
         }

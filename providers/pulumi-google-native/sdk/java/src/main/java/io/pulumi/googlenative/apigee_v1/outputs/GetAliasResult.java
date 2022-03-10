@@ -82,17 +82,17 @@ public final class GetAliasResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setCertsInfo(GoogleCloudApigeeV1CertificateResponse certsInfo) {
+        public Builder certsInfo(GoogleCloudApigeeV1CertificateResponse certsInfo) {
             this.certsInfo = Objects.requireNonNull(certsInfo);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

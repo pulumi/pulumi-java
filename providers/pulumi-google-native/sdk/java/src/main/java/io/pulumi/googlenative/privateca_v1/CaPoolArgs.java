@@ -154,82 +154,82 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCaPoolId(Input<String> caPoolId) {
+        public Builder caPoolId(Input<String> caPoolId) {
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
 
-        public Builder setCaPoolId(String caPoolId) {
+        public Builder caPoolId(String caPoolId) {
             this.caPoolId = Input.of(Objects.requireNonNull(caPoolId));
             return this;
         }
 
-        public Builder setIssuancePolicy(@Nullable Input<IssuancePolicyArgs> issuancePolicy) {
+        public Builder issuancePolicy(@Nullable Input<IssuancePolicyArgs> issuancePolicy) {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
 
-        public Builder setIssuancePolicy(@Nullable IssuancePolicyArgs issuancePolicy) {
+        public Builder issuancePolicy(@Nullable IssuancePolicyArgs issuancePolicy) {
             this.issuancePolicy = Input.ofNullable(issuancePolicy);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPublishingOptions(@Nullable Input<PublishingOptionsArgs> publishingOptions) {
+        public Builder publishingOptions(@Nullable Input<PublishingOptionsArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
 
-        public Builder setPublishingOptions(@Nullable PublishingOptionsArgs publishingOptions) {
+        public Builder publishingOptions(@Nullable PublishingOptionsArgs publishingOptions) {
             this.publishingOptions = Input.ofNullable(publishingOptions);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setTier(Input<CaPoolTier> tier) {
+        public Builder tier(Input<CaPoolTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(CaPoolTier tier) {
+        public Builder tier(CaPoolTier tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

@@ -126,52 +126,52 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAzureFile(@Nullable Input<AzureFileVolumeArgs> azureFile) {
+        public Builder azureFile(@Nullable Input<AzureFileVolumeArgs> azureFile) {
             this.azureFile = azureFile;
             return this;
         }
 
-        public Builder setAzureFile(@Nullable AzureFileVolumeArgs azureFile) {
+        public Builder azureFile(@Nullable AzureFileVolumeArgs azureFile) {
             this.azureFile = Input.ofNullable(azureFile);
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable Input<Object> emptyDir) {
+        public Builder emptyDir(@Nullable Input<Object> emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable Object emptyDir) {
+        public Builder emptyDir(@Nullable Object emptyDir) {
             this.emptyDir = Input.ofNullable(emptyDir);
             return this;
         }
 
-        public Builder setGitRepo(@Nullable Input<GitRepoVolumeArgs> gitRepo) {
+        public Builder gitRepo(@Nullable Input<GitRepoVolumeArgs> gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
 
-        public Builder setGitRepo(@Nullable GitRepoVolumeArgs gitRepo) {
+        public Builder gitRepo(@Nullable GitRepoVolumeArgs gitRepo) {
             this.gitRepo = Input.ofNullable(gitRepo);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<Map<String,String>> secret) {
+        public Builder secret(@Nullable Input<Map<String,String>> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable Map<String,String> secret) {
+        public Builder secret(@Nullable Map<String,String> secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }

@@ -169,82 +169,82 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setGalleryImageName(Input<String> galleryImageName) {
+        public Builder galleryImageName(Input<String> galleryImageName) {
             this.galleryImageName = Objects.requireNonNull(galleryImageName);
             return this;
         }
 
-        public Builder setGalleryImageName(String galleryImageName) {
+        public Builder galleryImageName(String galleryImageName) {
             this.galleryImageName = Input.of(Objects.requireNonNull(galleryImageName));
             return this;
         }
 
-        public Builder setGalleryImageVersionName(@Nullable Input<String> galleryImageVersionName) {
+        public Builder galleryImageVersionName(@Nullable Input<String> galleryImageVersionName) {
             this.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
 
-        public Builder setGalleryImageVersionName(@Nullable String galleryImageVersionName) {
+        public Builder galleryImageVersionName(@Nullable String galleryImageVersionName) {
             this.galleryImageVersionName = Input.ofNullable(galleryImageVersionName);
             return this;
         }
 
-        public Builder setGalleryName(Input<String> galleryName) {
+        public Builder galleryName(Input<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
-        public Builder setGalleryName(String galleryName) {
+        public Builder galleryName(String galleryName) {
             this.galleryName = Input.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPublishingProfile(@Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
+        public Builder publishingProfile(@Nullable Input<GalleryImageVersionPublishingProfileArgs> publishingProfile) {
             this.publishingProfile = publishingProfile;
             return this;
         }
 
-        public Builder setPublishingProfile(@Nullable GalleryImageVersionPublishingProfileArgs publishingProfile) {
+        public Builder publishingProfile(@Nullable GalleryImageVersionPublishingProfileArgs publishingProfile) {
             this.publishingProfile = Input.ofNullable(publishingProfile);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageProfile(Input<GalleryImageVersionStorageProfileArgs> storageProfile) {
+        public Builder storageProfile(Input<GalleryImageVersionStorageProfileArgs> storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
 
-        public Builder setStorageProfile(GalleryImageVersionStorageProfileArgs storageProfile) {
+        public Builder storageProfile(GalleryImageVersionStorageProfileArgs storageProfile) {
             this.storageProfile = Input.of(Objects.requireNonNull(storageProfile));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

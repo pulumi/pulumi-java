@@ -66,12 +66,12 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

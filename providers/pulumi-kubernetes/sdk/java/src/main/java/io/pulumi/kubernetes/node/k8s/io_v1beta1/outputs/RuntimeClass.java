@@ -134,32 +134,32 @@ public final class RuntimeClass {
     	      this.scheduling = defaults.scheduling;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setHandler(String handler) {
+        public Builder handler(String handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setOverhead(@Nullable Overhead overhead) {
+        public Builder overhead(@Nullable Overhead overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setScheduling(@Nullable Scheduling scheduling) {
+        public Builder scheduling(@Nullable Scheduling scheduling) {
             this.scheduling = scheduling;
             return this;
         }

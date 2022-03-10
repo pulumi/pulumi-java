@@ -157,72 +157,72 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
     	      this.update = defaults.update;
         }
 
-        public Builder setContainerSpecGcsPath(@Nullable Input<String> containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(@Nullable Input<String> containerSpecGcsPath) {
             this.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
 
-        public Builder setContainerSpecGcsPath(@Nullable String containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
             this.containerSpecGcsPath = Input.ofNullable(containerSpecGcsPath);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs environment) {
+        public Builder environment(@Nullable GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setJobName(Input<String> jobName) {
+        public Builder jobName(Input<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Input.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder setLaunchOptions(@Nullable Input<Map<String,String>> launchOptions) {
+        public Builder launchOptions(@Nullable Input<Map<String,String>> launchOptions) {
             this.launchOptions = launchOptions;
             return this;
         }
 
-        public Builder setLaunchOptions(@Nullable Map<String,String> launchOptions) {
+        public Builder launchOptions(@Nullable Map<String,String> launchOptions) {
             this.launchOptions = Input.ofNullable(launchOptions);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setTransformNameMappings(@Nullable Input<Map<String,String>> transformNameMappings) {
+        public Builder transformNameMappings(@Nullable Input<Map<String,String>> transformNameMappings) {
             this.transformNameMappings = transformNameMappings;
             return this;
         }
 
-        public Builder setTransformNameMappings(@Nullable Map<String,String> transformNameMappings) {
+        public Builder transformNameMappings(@Nullable Map<String,String> transformNameMappings) {
             this.transformNameMappings = Input.ofNullable(transformNameMappings);
             return this;
         }
 
-        public Builder setUpdate(@Nullable Input<Boolean> update) {
+        public Builder update(@Nullable Input<Boolean> update) {
             this.update = update;
             return this;
         }
 
-        public Builder setUpdate(@Nullable Boolean update) {
+        public Builder update(@Nullable Boolean update) {
             this.update = Input.ofNullable(update);
             return this;
         }

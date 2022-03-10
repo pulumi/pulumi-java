@@ -95,32 +95,32 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
     	      this.retentionInMb = defaults.retentionInMb;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder setRetentionInMb(@Nullable Input<Integer> retentionInMb) {
+        public Builder retentionInMb(@Nullable Input<Integer> retentionInMb) {
             this.retentionInMb = retentionInMb;
             return this;
         }
 
-        public Builder setRetentionInMb(@Nullable Integer retentionInMb) {
+        public Builder retentionInMb(@Nullable Integer retentionInMb) {
             this.retentionInMb = Input.ofNullable(retentionInMb);
             return this;
         }

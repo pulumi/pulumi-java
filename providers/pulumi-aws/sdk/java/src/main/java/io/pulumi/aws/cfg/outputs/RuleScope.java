@@ -100,22 +100,22 @@ public final class RuleScope {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setComplianceResourceId(@Nullable String complianceResourceId) {
+        public Builder complianceResourceId(@Nullable String complianceResourceId) {
             this.complianceResourceId = complianceResourceId;
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
-        public Builder setTagKey(@Nullable String tagKey) {
+        public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagValue(@Nullable String tagValue) {
+        public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = tagValue;
             return this;
         }

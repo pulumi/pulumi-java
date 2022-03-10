@@ -51,7 +51,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
     	      this.inputName = defaults.inputName;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }

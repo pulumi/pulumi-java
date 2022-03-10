@@ -92,32 +92,32 @@ public final class PersistenceConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.rdbSnapshotStartTime = defaults.rdbSnapshotStartTime;
         }
 
-        public Builder setPersistenceMode(@Nullable Input<PersistenceConfigPersistenceMode> persistenceMode) {
+        public Builder persistenceMode(@Nullable Input<PersistenceConfigPersistenceMode> persistenceMode) {
             this.persistenceMode = persistenceMode;
             return this;
         }
 
-        public Builder setPersistenceMode(@Nullable PersistenceConfigPersistenceMode persistenceMode) {
+        public Builder persistenceMode(@Nullable PersistenceConfigPersistenceMode persistenceMode) {
             this.persistenceMode = Input.ofNullable(persistenceMode);
             return this;
         }
 
-        public Builder setRdbSnapshotPeriod(@Nullable Input<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
+        public Builder rdbSnapshotPeriod(@Nullable Input<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
 
-        public Builder setRdbSnapshotPeriod(@Nullable PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
+        public Builder rdbSnapshotPeriod(@Nullable PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = Input.ofNullable(rdbSnapshotPeriod);
             return this;
         }
 
-        public Builder setRdbSnapshotStartTime(@Nullable Input<String> rdbSnapshotStartTime) {
+        public Builder rdbSnapshotStartTime(@Nullable Input<String> rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;
         }
 
-        public Builder setRdbSnapshotStartTime(@Nullable String rdbSnapshotStartTime) {
+        public Builder rdbSnapshotStartTime(@Nullable String rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = Input.ofNullable(rdbSnapshotStartTime);
             return this;
         }

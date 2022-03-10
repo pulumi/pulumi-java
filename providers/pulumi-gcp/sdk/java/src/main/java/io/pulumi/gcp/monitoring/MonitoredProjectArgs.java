@@ -70,22 +70,22 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder setMetricsScope(Input<String> metricsScope) {
+        public Builder metricsScope(Input<String> metricsScope) {
             this.metricsScope = Objects.requireNonNull(metricsScope);
             return this;
         }
 
-        public Builder setMetricsScope(String metricsScope) {
+        public Builder metricsScope(String metricsScope) {
             this.metricsScope = Input.of(Objects.requireNonNull(metricsScope));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

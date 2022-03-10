@@ -60,17 +60,17 @@ public final class GetServiceTemplateSpecVolumeSecret {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<GetServiceTemplateSpecVolumeSecretItem> items) {
+        public Builder items(List<GetServiceTemplateSpecVolumeSecretItem> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

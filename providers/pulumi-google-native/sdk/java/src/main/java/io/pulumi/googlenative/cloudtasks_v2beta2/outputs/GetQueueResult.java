@@ -198,52 +198,52 @@ public final class GetQueueResult {
     	      this.tombstoneTtl = defaults.tombstoneTtl;
         }
 
-        public Builder setAppEngineHttpTarget(AppEngineHttpTargetResponse appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(AppEngineHttpTargetResponse appEngineHttpTarget) {
             this.appEngineHttpTarget = Objects.requireNonNull(appEngineHttpTarget);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPullTarget(PullTargetResponse pullTarget) {
+        public Builder pullTarget(PullTargetResponse pullTarget) {
             this.pullTarget = Objects.requireNonNull(pullTarget);
             return this;
         }
 
-        public Builder setPurgeTime(String purgeTime) {
+        public Builder purgeTime(String purgeTime) {
             this.purgeTime = Objects.requireNonNull(purgeTime);
             return this;
         }
 
-        public Builder setRateLimits(RateLimitsResponse rateLimits) {
+        public Builder rateLimits(RateLimitsResponse rateLimits) {
             this.rateLimits = Objects.requireNonNull(rateLimits);
             return this;
         }
 
-        public Builder setRetryConfig(RetryConfigResponse retryConfig) {
+        public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStats(QueueStatsResponse stats) {
+        public Builder stats(QueueStatsResponse stats) {
             this.stats = Objects.requireNonNull(stats);
             return this;
         }
 
-        public Builder setTaskTtl(String taskTtl) {
+        public Builder taskTtl(String taskTtl) {
             this.taskTtl = Objects.requireNonNull(taskTtl);
             return this;
         }
 
-        public Builder setTombstoneTtl(String tombstoneTtl) {
+        public Builder tombstoneTtl(String tombstoneTtl) {
             this.tombstoneTtl = Objects.requireNonNull(tombstoneTtl);
             return this;
         }

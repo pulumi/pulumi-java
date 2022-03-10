@@ -131,62 +131,62 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setConnectIps(@Nullable Input<List<String>> connectIps) {
+        public Builder connectIps(@Nullable Input<List<String>> connectIps) {
             this.connectIps = connectIps;
             return this;
         }
 
-        public Builder setConnectIps(@Nullable List<String> connectIps) {
+        public Builder connectIps(@Nullable List<String> connectIps) {
             this.connectIps = Input.ofNullable(connectIps);
             return this;
         }
 
-        public Builder setCustomerDnsIps(Input<List<String>> customerDnsIps) {
+        public Builder customerDnsIps(Input<List<String>> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
 
-        public Builder setCustomerDnsIps(List<String> customerDnsIps) {
+        public Builder customerDnsIps(List<String> customerDnsIps) {
             this.customerDnsIps = Input.of(Objects.requireNonNull(customerDnsIps));
             return this;
         }
 
-        public Builder setCustomerUsername(Input<String> customerUsername) {
+        public Builder customerUsername(Input<String> customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
 
-        public Builder setCustomerUsername(String customerUsername) {
+        public Builder customerUsername(String customerUsername) {
             this.customerUsername = Input.of(Objects.requireNonNull(customerUsername));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

@@ -115,27 +115,27 @@ public final class AppEngineHttpRequestResponse {
     	      this.relativeUrl = defaults.relativeUrl;
         }
 
-        public Builder setAppEngineRouting(AppEngineRoutingResponse appEngineRouting) {
+        public Builder appEngineRouting(AppEngineRoutingResponse appEngineRouting) {
             this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setRelativeUrl(String relativeUrl) {
+        public Builder relativeUrl(String relativeUrl) {
             this.relativeUrl = Objects.requireNonNull(relativeUrl);
             return this;
         }

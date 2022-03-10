@@ -72,12 +72,12 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
     	      this.script = defaults.script;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

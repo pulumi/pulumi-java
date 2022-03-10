@@ -330,92 +330,92 @@ public final class GetNetworkVirtualApplianceResult {
     	      this.virtualHub = defaults.virtualHub;
         }
 
-        public Builder setAddressPrefix(String addressPrefix) {
+        public Builder addressPrefix(String addressPrefix) {
             this.addressPrefix = Objects.requireNonNull(addressPrefix);
             return this;
         }
 
-        public Builder setBootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
+        public Builder bootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
 
-        public Builder setCloudInitConfiguration(@Nullable String cloudInitConfiguration) {
+        public Builder cloudInitConfiguration(@Nullable String cloudInitConfiguration) {
             this.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
 
-        public Builder setCloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
+        public Builder cloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInboundSecurityRules(List<SubResourceResponse> inboundSecurityRules) {
+        public Builder inboundSecurityRules(List<SubResourceResponse> inboundSecurityRules) {
             this.inboundSecurityRules = Objects.requireNonNull(inboundSecurityRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNvaSku(@Nullable VirtualApplianceSkuPropertiesResponse nvaSku) {
+        public Builder nvaSku(@Nullable VirtualApplianceSkuPropertiesResponse nvaSku) {
             this.nvaSku = nvaSku;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
+        public Builder virtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
             this.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
 
-        public Builder setVirtualApplianceNics(List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics) {
+        public Builder virtualApplianceNics(List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics) {
             this.virtualApplianceNics = Objects.requireNonNull(virtualApplianceNics);
             return this;
         }
 
-        public Builder setVirtualApplianceSites(List<SubResourceResponse> virtualApplianceSites) {
+        public Builder virtualApplianceSites(List<SubResourceResponse> virtualApplianceSites) {
             this.virtualApplianceSites = Objects.requireNonNull(virtualApplianceSites);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceResponse virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }

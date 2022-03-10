@@ -74,12 +74,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay) {
+        public Builder fixedDelay(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay) {
             this.fixedDelay = fixedDelay;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
         }

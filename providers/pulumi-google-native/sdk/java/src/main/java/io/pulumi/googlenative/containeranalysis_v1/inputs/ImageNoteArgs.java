@@ -74,22 +74,22 @@ public final class ImageNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUrl = defaults.resourceUrl;
         }
 
-        public Builder setFingerprint(Input<FingerprintArgs> fingerprint) {
+        public Builder fingerprint(Input<FingerprintArgs> fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setFingerprint(FingerprintArgs fingerprint) {
+        public Builder fingerprint(FingerprintArgs fingerprint) {
             this.fingerprint = Input.of(Objects.requireNonNull(fingerprint));
             return this;
         }
 
-        public Builder setResourceUrl(Input<String> resourceUrl) {
+        public Builder resourceUrl(Input<String> resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
 
-        public Builder setResourceUrl(String resourceUrl) {
+        public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Input.of(Objects.requireNonNull(resourceUrl));
             return this;
         }

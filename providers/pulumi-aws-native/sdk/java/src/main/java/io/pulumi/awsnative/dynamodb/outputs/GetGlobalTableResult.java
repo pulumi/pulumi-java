@@ -131,57 +131,57 @@ public final class GetGlobalTableResult {
     	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAttributeDefinitions(@Nullable List<GlobalTableAttributeDefinition> attributeDefinitions) {
+        public Builder attributeDefinitions(@Nullable List<GlobalTableAttributeDefinition> attributeDefinitions) {
             this.attributeDefinitions = attributeDefinitions;
             return this;
         }
 
-        public Builder setBillingMode(@Nullable String billingMode) {
+        public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndex> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setReplicas(@Nullable List<GlobalTableReplicaSpecification> replicas) {
+        public Builder replicas(@Nullable List<GlobalTableReplicaSpecification> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable GlobalTableSSESpecification sSESpecification) {
+        public Builder sSESpecification(@Nullable GlobalTableSSESpecification sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
-        public Builder setStreamSpecification(@Nullable GlobalTableStreamSpecification streamSpecification) {
+        public Builder streamSpecification(@Nullable GlobalTableStreamSpecification streamSpecification) {
             this.streamSpecification = streamSpecification;
             return this;
         }
 
-        public Builder setTableId(@Nullable String tableId) {
+        public Builder tableId(@Nullable String tableId) {
             this.tableId = tableId;
             return this;
         }
 
-        public Builder setTimeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification) {
+        public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecification timeToLiveSpecification) {
             this.timeToLiveSpecification = timeToLiveSpecification;
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }

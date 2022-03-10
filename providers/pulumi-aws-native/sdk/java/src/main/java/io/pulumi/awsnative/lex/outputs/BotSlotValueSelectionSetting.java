@@ -52,12 +52,12 @@ public final class BotSlotValueSelectionSetting {
     	      this.resolutionStrategy = defaults.resolutionStrategy;
         }
 
-        public Builder setRegexFilter(@Nullable BotSlotValueRegexFilter regexFilter) {
+        public Builder regexFilter(@Nullable BotSlotValueRegexFilter regexFilter) {
             this.regexFilter = regexFilter;
             return this;
         }
 
-        public Builder setResolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
+        public Builder resolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
         }

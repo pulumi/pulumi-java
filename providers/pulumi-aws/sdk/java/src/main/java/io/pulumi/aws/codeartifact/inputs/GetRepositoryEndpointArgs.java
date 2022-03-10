@@ -102,22 +102,22 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
     	      this.repository = defaults.repository;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }

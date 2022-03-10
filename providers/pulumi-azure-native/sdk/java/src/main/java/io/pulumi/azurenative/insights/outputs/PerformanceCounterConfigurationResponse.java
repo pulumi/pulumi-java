@@ -59,17 +59,17 @@ public final class PerformanceCounterConfigurationResponse {
     	      this.samplingPeriod = defaults.samplingPeriod;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSamplingPeriod(String samplingPeriod) {
+        public Builder samplingPeriod(String samplingPeriod) {
             this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
             return this;
         }

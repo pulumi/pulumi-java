@@ -103,42 +103,42 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificati
     	      this.timeoutDurationMinutes = defaults.timeoutDurationMinutes;
         }
 
-        public Builder setAllocationStrategy(Input<String> allocationStrategy) {
+        public Builder allocationStrategy(Input<String> allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }
 
-        public Builder setAllocationStrategy(String allocationStrategy) {
+        public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Input.of(Objects.requireNonNull(allocationStrategy));
             return this;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = Input.ofNullable(blockDurationMinutes);
             return this;
         }
 
-        public Builder setTimeoutAction(Input<String> timeoutAction) {
+        public Builder timeoutAction(Input<String> timeoutAction) {
             this.timeoutAction = Objects.requireNonNull(timeoutAction);
             return this;
         }
 
-        public Builder setTimeoutAction(String timeoutAction) {
+        public Builder timeoutAction(String timeoutAction) {
             this.timeoutAction = Input.of(Objects.requireNonNull(timeoutAction));
             return this;
         }
 
-        public Builder setTimeoutDurationMinutes(Input<Integer> timeoutDurationMinutes) {
+        public Builder timeoutDurationMinutes(Input<Integer> timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
             return this;
         }
 
-        public Builder setTimeoutDurationMinutes(Integer timeoutDurationMinutes) {
+        public Builder timeoutDurationMinutes(Integer timeoutDurationMinutes) {
             this.timeoutDurationMinutes = Input.of(Objects.requireNonNull(timeoutDurationMinutes));
             return this;
         }

@@ -99,22 +99,22 @@ public final class KeyVaultPropertiesResponse {
     	      this.userIdentity = defaults.userIdentity;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setUserIdentity(@Nullable String userIdentity) {
+        public Builder userIdentity(@Nullable String userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }

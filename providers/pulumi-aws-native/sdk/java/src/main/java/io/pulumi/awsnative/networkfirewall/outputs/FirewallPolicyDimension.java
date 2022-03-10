@@ -40,7 +40,7 @@ public final class FirewallPolicyDimension {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

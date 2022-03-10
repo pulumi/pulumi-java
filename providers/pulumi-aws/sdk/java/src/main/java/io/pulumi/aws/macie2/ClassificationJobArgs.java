@@ -216,112 +216,112 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustomDataIdentifierIds(@Nullable Input<List<String>> customDataIdentifierIds) {
+        public Builder customDataIdentifierIds(@Nullable Input<List<String>> customDataIdentifierIds) {
             this.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
 
-        public Builder setCustomDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
+        public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
             this.customDataIdentifierIds = Input.ofNullable(customDataIdentifierIds);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInitialRun(@Nullable Input<Boolean> initialRun) {
+        public Builder initialRun(@Nullable Input<Boolean> initialRun) {
             this.initialRun = initialRun;
             return this;
         }
 
-        public Builder setInitialRun(@Nullable Boolean initialRun) {
+        public Builder initialRun(@Nullable Boolean initialRun) {
             this.initialRun = Input.ofNullable(initialRun);
             return this;
         }
 
-        public Builder setJobStatus(@Nullable Input<String> jobStatus) {
+        public Builder jobStatus(@Nullable Input<String> jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
 
-        public Builder setJobStatus(@Nullable String jobStatus) {
+        public Builder jobStatus(@Nullable String jobStatus) {
             this.jobStatus = Input.ofNullable(jobStatus);
             return this;
         }
 
-        public Builder setJobType(Input<String> jobType) {
+        public Builder jobType(Input<String> jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
 
-        public Builder setJobType(String jobType) {
+        public Builder jobType(String jobType) {
             this.jobType = Input.of(Objects.requireNonNull(jobType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setS3JobDefinition(Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
+        public Builder s3JobDefinition(Input<ClassificationJobS3JobDefinitionArgs> s3JobDefinition) {
             this.s3JobDefinition = Objects.requireNonNull(s3JobDefinition);
             return this;
         }
 
-        public Builder setS3JobDefinition(ClassificationJobS3JobDefinitionArgs s3JobDefinition) {
+        public Builder s3JobDefinition(ClassificationJobS3JobDefinitionArgs s3JobDefinition) {
             this.s3JobDefinition = Input.of(Objects.requireNonNull(s3JobDefinition));
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Input<Integer> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Input<Integer> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Integer samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
             this.samplingPercentage = Input.ofNullable(samplingPercentage);
             return this;
         }
 
-        public Builder setScheduleFrequency(@Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable Input<ClassificationJobScheduleFrequencyArgs> scheduleFrequency) {
             this.scheduleFrequency = scheduleFrequency;
             return this;
         }
 
-        public Builder setScheduleFrequency(@Nullable ClassificationJobScheduleFrequencyArgs scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyArgs scheduleFrequency) {
             this.scheduleFrequency = Input.ofNullable(scheduleFrequency);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

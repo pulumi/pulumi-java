@@ -109,42 +109,42 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Input<Integer> minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Input<Integer> minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = Input.ofNullable(minReadySeconds);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Input<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<Map<String,String>> selector) {
+        public Builder selector(@Nullable Input<Map<String,String>> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable Map<String,String> selector) {
+        public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<PodTemplateSpecArgs> template) {
+        public Builder template(@Nullable Input<PodTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable PodTemplateSpecArgs template) {
+        public Builder template(@Nullable PodTemplateSpecArgs template) {
             this.template = Input.ofNullable(template);
             return this;
         }

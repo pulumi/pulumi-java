@@ -74,17 +74,17 @@ public final class GetSchemaIamPolicyArgs extends io.pulumi.resources.InvokeArgs
     	      this.schemaId = defaults.schemaId;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSchemaId(String schemaId) {
+        public Builder schemaId(String schemaId) {
             this.schemaId = Objects.requireNonNull(schemaId);
             return this;
         }

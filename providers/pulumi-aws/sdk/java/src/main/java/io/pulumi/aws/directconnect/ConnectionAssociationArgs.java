@@ -69,22 +69,22 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     	      this.lagId = defaults.lagId;
         }
 
-        public Builder setConnectionId(Input<String> connectionId) {
+        public Builder connectionId(Input<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Input.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder setLagId(Input<String> lagId) {
+        public Builder lagId(Input<String> lagId) {
             this.lagId = Objects.requireNonNull(lagId);
             return this;
         }
 
-        public Builder setLagId(String lagId) {
+        public Builder lagId(String lagId) {
             this.lagId = Input.of(Objects.requireNonNull(lagId));
             return this;
         }

@@ -209,102 +209,102 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
             this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatPools(@Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools) {
+        public Builder loadBalancerInboundNatPools(@Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools) {
             this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatPools(@Nullable List<SubResourceArgs> loadBalancerInboundNatPools) {
+        public Builder loadBalancerInboundNatPools(@Nullable List<SubResourceArgs> loadBalancerInboundNatPools) {
             this.loadBalancerInboundNatPools = Input.ofNullable(loadBalancerInboundNatPools);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
             this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<ApiEntityReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Input<ApiEntityReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ApiEntityReferenceArgs subnet) {
+        public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

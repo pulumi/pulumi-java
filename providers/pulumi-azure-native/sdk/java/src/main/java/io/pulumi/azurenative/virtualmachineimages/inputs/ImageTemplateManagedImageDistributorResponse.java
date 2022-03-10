@@ -124,27 +124,27 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactTags(@Nullable Map<String,String> artifactTags) {
+        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRunOutputName(String runOutputName) {
+        public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

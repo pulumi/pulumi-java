@@ -78,17 +78,17 @@ public final class GetRulesetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RulesetRule> rules) {
+        public Builder rules(@Nullable List<RulesetRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RulesetTag> tags) {
+        public Builder tags(@Nullable List<RulesetTag> tags) {
             this.tags = tags;
             return this;
         }

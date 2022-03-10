@@ -88,17 +88,17 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

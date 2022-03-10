@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
     	      this.languageCode = defaults.languageCode;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }

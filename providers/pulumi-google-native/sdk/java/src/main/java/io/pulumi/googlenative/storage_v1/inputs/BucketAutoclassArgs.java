@@ -75,22 +75,22 @@ public final class BucketAutoclassArgs extends io.pulumi.resources.ResourceArgs 
     	      this.toggleTime = defaults.toggleTime;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setToggleTime(@Nullable Input<String> toggleTime) {
+        public Builder toggleTime(@Nullable Input<String> toggleTime) {
             this.toggleTime = toggleTime;
             return this;
         }
 
-        public Builder setToggleTime(@Nullable String toggleTime) {
+        public Builder toggleTime(@Nullable String toggleTime) {
             this.toggleTime = Input.ofNullable(toggleTime);
             return this;
         }

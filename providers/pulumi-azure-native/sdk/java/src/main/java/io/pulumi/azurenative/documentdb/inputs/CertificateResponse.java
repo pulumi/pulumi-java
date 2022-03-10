@@ -53,7 +53,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pem = defaults.pem;
         }
 
-        public Builder setPem(@Nullable String pem) {
+        public Builder pem(@Nullable String pem) {
             this.pem = pem;
             return this;
         }

@@ -189,92 +189,92 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throughputMode = defaults.throughputMode;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable Input<String> availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable Input<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable String availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Input.ofNullable(availabilityZoneName);
             return this;
         }
 
-        public Builder setCreationToken(@Nullable Input<String> creationToken) {
+        public Builder creationToken(@Nullable Input<String> creationToken) {
             this.creationToken = creationToken;
             return this;
         }
 
-        public Builder setCreationToken(@Nullable String creationToken) {
+        public Builder creationToken(@Nullable String creationToken) {
             this.creationToken = Input.ofNullable(creationToken);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable Input<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable Input<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable FileSystemLifecyclePolicyArgs lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable FileSystemLifecyclePolicyArgs lifecyclePolicy) {
             this.lifecyclePolicy = Input.ofNullable(lifecyclePolicy);
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable Input<String> performanceMode) {
+        public Builder performanceMode(@Nullable Input<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable String performanceMode) {
+        public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Input.ofNullable(performanceMode);
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Input.ofNullable(provisionedThroughputInMibps);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable Input<String> throughputMode) {
+        public Builder throughputMode(@Nullable Input<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable String throughputMode) {
+        public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Input.ofNullable(throughputMode);
             return this;
         }

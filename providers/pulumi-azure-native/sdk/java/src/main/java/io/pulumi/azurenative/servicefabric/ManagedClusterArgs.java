@@ -302,162 +302,162 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddonFeatures(@Nullable Input<List<String>> addonFeatures) {
+        public Builder addonFeatures(@Nullable Input<List<String>> addonFeatures) {
             this.addonFeatures = addonFeatures;
             return this;
         }
 
-        public Builder setAddonFeatures(@Nullable List<String> addonFeatures) {
+        public Builder addonFeatures(@Nullable List<String> addonFeatures) {
             this.addonFeatures = Input.ofNullable(addonFeatures);
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Input<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Input.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder setAdminUserName(Input<String> adminUserName) {
+        public Builder adminUserName(Input<String> adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Input.of(Objects.requireNonNull(adminUserName));
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder setClientConnectionPort(@Nullable Input<Integer> clientConnectionPort) {
+        public Builder clientConnectionPort(@Nullable Input<Integer> clientConnectionPort) {
             this.clientConnectionPort = clientConnectionPort;
             return this;
         }
 
-        public Builder setClientConnectionPort(@Nullable Integer clientConnectionPort) {
+        public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
             this.clientConnectionPort = Input.ofNullable(clientConnectionPort);
             return this;
         }
 
-        public Builder setClients(@Nullable Input<List<ClientCertificateArgs>> clients) {
+        public Builder clients(@Nullable Input<List<ClientCertificateArgs>> clients) {
             this.clients = clients;
             return this;
         }
 
-        public Builder setClients(@Nullable List<ClientCertificateArgs> clients) {
+        public Builder clients(@Nullable List<ClientCertificateArgs> clients) {
             this.clients = Input.ofNullable(clients);
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable String clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = Input.ofNullable(clusterCodeVersion);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setDnsName(Input<String> dnsName) {
+        public Builder dnsName(Input<String> dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Input.of(Objects.requireNonNull(dnsName));
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
+        public Builder fabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
+        public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
             this.fabricSettings = Input.ofNullable(fabricSettings);
             return this;
         }
 
-        public Builder setHttpGatewayConnectionPort(@Nullable Input<Integer> httpGatewayConnectionPort) {
+        public Builder httpGatewayConnectionPort(@Nullable Input<Integer> httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = httpGatewayConnectionPort;
             return this;
         }
 
-        public Builder setHttpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
+        public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = Input.ofNullable(httpGatewayConnectionPort);
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
             this.loadBalancingRules = Input.ofNullable(loadBalancingRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

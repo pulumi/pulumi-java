@@ -108,22 +108,22 @@ public final class MetricCounterResponse extends io.pulumi.resources.InvokeArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setAdditionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
+        public Builder additionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
             this.additionalDimensions = additionalDimensions;
             return this;
         }
 
-        public Builder setDimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
+        public Builder dimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
             this.dimensionFilter = dimensionFilter;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

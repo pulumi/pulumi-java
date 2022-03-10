@@ -85,17 +85,17 @@ public final class AdvancedScheduleResponse {
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

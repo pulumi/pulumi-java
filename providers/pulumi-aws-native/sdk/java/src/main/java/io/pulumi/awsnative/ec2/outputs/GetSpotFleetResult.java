@@ -52,12 +52,12 @@ public final class GetSpotFleetResult {
     	      this.spotFleetRequestConfigData = defaults.spotFleetRequestConfigData;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSpotFleetRequestConfigData(@Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
+        public Builder spotFleetRequestConfigData(@Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
             this.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
         }

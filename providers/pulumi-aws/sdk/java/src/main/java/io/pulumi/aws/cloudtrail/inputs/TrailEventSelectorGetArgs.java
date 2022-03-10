@@ -105,42 +105,42 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     	      this.readWriteType = defaults.readWriteType;
         }
 
-        public Builder setDataResources(@Nullable Input<List<TrailEventSelectorDataResourceGetArgs>> dataResources) {
+        public Builder dataResources(@Nullable Input<List<TrailEventSelectorDataResourceGetArgs>> dataResources) {
             this.dataResources = dataResources;
             return this;
         }
 
-        public Builder setDataResources(@Nullable List<TrailEventSelectorDataResourceGetArgs> dataResources) {
+        public Builder dataResources(@Nullable List<TrailEventSelectorDataResourceGetArgs> dataResources) {
             this.dataResources = Input.ofNullable(dataResources);
             return this;
         }
 
-        public Builder setExcludeManagementEventSources(@Nullable Input<List<String>> excludeManagementEventSources) {
+        public Builder excludeManagementEventSources(@Nullable Input<List<String>> excludeManagementEventSources) {
             this.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
 
-        public Builder setExcludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
+        public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
             this.excludeManagementEventSources = Input.ofNullable(excludeManagementEventSources);
             return this;
         }
 
-        public Builder setIncludeManagementEvents(@Nullable Input<Boolean> includeManagementEvents) {
+        public Builder includeManagementEvents(@Nullable Input<Boolean> includeManagementEvents) {
             this.includeManagementEvents = includeManagementEvents;
             return this;
         }
 
-        public Builder setIncludeManagementEvents(@Nullable Boolean includeManagementEvents) {
+        public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
             this.includeManagementEvents = Input.ofNullable(includeManagementEvents);
             return this;
         }
 
-        public Builder setReadWriteType(@Nullable Input<String> readWriteType) {
+        public Builder readWriteType(@Nullable Input<String> readWriteType) {
             this.readWriteType = readWriteType;
             return this;
         }
 
-        public Builder setReadWriteType(@Nullable String readWriteType) {
+        public Builder readWriteType(@Nullable String readWriteType) {
             this.readWriteType = Input.ofNullable(readWriteType);
             return this;
         }

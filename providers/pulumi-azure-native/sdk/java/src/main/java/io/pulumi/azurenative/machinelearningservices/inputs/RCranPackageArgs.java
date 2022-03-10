@@ -70,22 +70,22 @@ public final class RCranPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Input<String> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }

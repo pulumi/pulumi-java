@@ -136,37 +136,37 @@ public final class GetResponsePlanResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActions(@Nullable List<ResponsePlanAction> actions) {
+        public Builder actions(@Nullable List<ResponsePlanAction> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setChatChannel(@Nullable ResponsePlanChatChannel chatChannel) {
+        public Builder chatChannel(@Nullable ResponsePlanChatChannel chatChannel) {
             this.chatChannel = chatChannel;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEngagements(@Nullable List<String> engagements) {
+        public Builder engagements(@Nullable List<String> engagements) {
             this.engagements = engagements;
             return this;
         }
 
-        public Builder setIncidentTemplate(@Nullable ResponsePlanIncidentTemplate incidentTemplate) {
+        public Builder incidentTemplate(@Nullable ResponsePlanIncidentTemplate incidentTemplate) {
             this.incidentTemplate = incidentTemplate;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResponsePlanTag> tags) {
+        public Builder tags(@Nullable List<ResponsePlanTag> tags) {
             this.tags = tags;
             return this;
         }

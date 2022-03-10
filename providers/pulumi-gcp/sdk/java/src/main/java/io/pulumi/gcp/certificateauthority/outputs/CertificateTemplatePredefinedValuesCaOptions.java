@@ -68,12 +68,12 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
     	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
         }
 
-        public Builder setIsCa(@Nullable Boolean isCa) {
+        public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = isCa;
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }

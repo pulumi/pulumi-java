@@ -85,17 +85,17 @@ public final class InstanceGroupManagerVersionResponse extends io.pulumi.resourc
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTargetSize(FixedOrPercentResponse targetSize) {
+        public Builder targetSize(FixedOrPercentResponse targetSize) {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }

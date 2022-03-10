@@ -68,12 +68,12 @@ public final class RetryPolicyResponse {
     	      this.intervalInSeconds = defaults.intervalInSeconds;
         }
 
-        public Builder setCount(@Nullable Object count) {
+        public Builder count(@Nullable Object count) {
             this.count = count;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }

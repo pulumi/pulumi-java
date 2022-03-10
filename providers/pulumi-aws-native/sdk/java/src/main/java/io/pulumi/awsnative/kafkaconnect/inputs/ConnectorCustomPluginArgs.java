@@ -74,22 +74,22 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
     	      this.revision = defaults.revision;
         }
 
-        public Builder setCustomPluginArn(Input<String> customPluginArn) {
+        public Builder customPluginArn(Input<String> customPluginArn) {
             this.customPluginArn = Objects.requireNonNull(customPluginArn);
             return this;
         }
 
-        public Builder setCustomPluginArn(String customPluginArn) {
+        public Builder customPluginArn(String customPluginArn) {
             this.customPluginArn = Input.of(Objects.requireNonNull(customPluginArn));
             return this;
         }
 
-        public Builder setRevision(Input<Integer> revision) {
+        public Builder revision(Input<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Input.of(Objects.requireNonNull(revision));
             return this;
         }

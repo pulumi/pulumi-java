@@ -92,17 +92,17 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
     	      this.vnetConfig = defaults.vnetConfig;
         }
 
-        public Builder setOsDiskSizeGB(@Nullable Integer osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
+        public Builder vnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
             this.vnetConfig = vnetConfig;
             return this;
         }

@@ -154,72 +154,72 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLicenseCount(@Nullable Input<Integer> licenseCount) {
+        public Builder licenseCount(@Nullable Input<Integer> licenseCount) {
             this.licenseCount = licenseCount;
             return this;
         }
 
-        public Builder setLicenseCount(@Nullable Integer licenseCount) {
+        public Builder licenseCount(@Nullable Integer licenseCount) {
             this.licenseCount = Input.ofNullable(licenseCount);
             return this;
         }
 
-        public Builder setLicenseCountHardLimit(@Nullable Input<Boolean> licenseCountHardLimit) {
+        public Builder licenseCountHardLimit(@Nullable Input<Boolean> licenseCountHardLimit) {
             this.licenseCountHardLimit = licenseCountHardLimit;
             return this;
         }
 
-        public Builder setLicenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
+        public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
             this.licenseCountHardLimit = Input.ofNullable(licenseCountHardLimit);
             return this;
         }
 
-        public Builder setLicenseCountingType(Input<String> licenseCountingType) {
+        public Builder licenseCountingType(Input<String> licenseCountingType) {
             this.licenseCountingType = Objects.requireNonNull(licenseCountingType);
             return this;
         }
 
-        public Builder setLicenseCountingType(String licenseCountingType) {
+        public Builder licenseCountingType(String licenseCountingType) {
             this.licenseCountingType = Input.of(Objects.requireNonNull(licenseCountingType));
             return this;
         }
 
-        public Builder setLicenseRules(@Nullable Input<List<String>> licenseRules) {
+        public Builder licenseRules(@Nullable Input<List<String>> licenseRules) {
             this.licenseRules = licenseRules;
             return this;
         }
 
-        public Builder setLicenseRules(@Nullable List<String> licenseRules) {
+        public Builder licenseRules(@Nullable List<String> licenseRules) {
             this.licenseRules = Input.ofNullable(licenseRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

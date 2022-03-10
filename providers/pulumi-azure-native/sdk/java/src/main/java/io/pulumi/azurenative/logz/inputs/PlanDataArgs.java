@@ -102,42 +102,42 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageType = defaults.usageType;
         }
 
-        public Builder setBillingCycle(@Nullable Input<String> billingCycle) {
+        public Builder billingCycle(@Nullable Input<String> billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
 
-        public Builder setBillingCycle(@Nullable String billingCycle) {
+        public Builder billingCycle(@Nullable String billingCycle) {
             this.billingCycle = Input.ofNullable(billingCycle);
             return this;
         }
 
-        public Builder setEffectiveDate(@Nullable Input<String> effectiveDate) {
+        public Builder effectiveDate(@Nullable Input<String> effectiveDate) {
             this.effectiveDate = effectiveDate;
             return this;
         }
 
-        public Builder setEffectiveDate(@Nullable String effectiveDate) {
+        public Builder effectiveDate(@Nullable String effectiveDate) {
             this.effectiveDate = Input.ofNullable(effectiveDate);
             return this;
         }
 
-        public Builder setPlanDetails(@Nullable Input<String> planDetails) {
+        public Builder planDetails(@Nullable Input<String> planDetails) {
             this.planDetails = planDetails;
             return this;
         }
 
-        public Builder setPlanDetails(@Nullable String planDetails) {
+        public Builder planDetails(@Nullable String planDetails) {
             this.planDetails = Input.ofNullable(planDetails);
             return this;
         }
 
-        public Builder setUsageType(@Nullable Input<String> usageType) {
+        public Builder usageType(@Nullable Input<String> usageType) {
             this.usageType = usageType;
             return this;
         }
 
-        public Builder setUsageType(@Nullable String usageType) {
+        public Builder usageType(@Nullable String usageType) {
             this.usageType = Input.ofNullable(usageType);
             return this;
         }

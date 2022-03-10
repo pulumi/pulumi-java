@@ -66,12 +66,12 @@ public final class SnapshotDefinitionResponse {
     	      this.snapshotTime = defaults.snapshotTime;
         }
 
-        public Builder setBaseTableReference(TableReferenceResponse baseTableReference) {
+        public Builder baseTableReference(TableReferenceResponse baseTableReference) {
             this.baseTableReference = Objects.requireNonNull(baseTableReference);
             return this;
         }
 
-        public Builder setSnapshotTime(String snapshotTime) {
+        public Builder snapshotTime(String snapshotTime) {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetSecurityContactArgs extends io.pulumi.resources.InvokeArgs
     	      this.securityContactName = defaults.securityContactName;
         }
 
-        public Builder setSecurityContactName(String securityContactName) {
+        public Builder securityContactName(String securityContactName) {
             this.securityContactName = Objects.requireNonNull(securityContactName);
             return this;
         }

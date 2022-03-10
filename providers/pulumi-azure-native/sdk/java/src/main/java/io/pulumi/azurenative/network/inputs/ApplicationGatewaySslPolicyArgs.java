@@ -128,52 +128,52 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder setCipherSuites(@Nullable Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites) {
+        public Builder cipherSuites(@Nullable Input<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites) {
             this.cipherSuites = cipherSuites;
             return this;
         }
 
-        public Builder setCipherSuites(@Nullable List<Either<String,ApplicationGatewaySslCipherSuite>> cipherSuites) {
+        public Builder cipherSuites(@Nullable List<Either<String,ApplicationGatewaySslCipherSuite>> cipherSuites) {
             this.cipherSuites = Input.ofNullable(cipherSuites);
             return this;
         }
 
-        public Builder setDisabledSslProtocols(@Nullable Input<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols) {
+        public Builder disabledSslProtocols(@Nullable Input<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols) {
             this.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
 
-        public Builder setDisabledSslProtocols(@Nullable List<Either<String,ApplicationGatewaySslProtocol>> disabledSslProtocols) {
+        public Builder disabledSslProtocols(@Nullable List<Either<String,ApplicationGatewaySslProtocol>> disabledSslProtocols) {
             this.disabledSslProtocols = Input.ofNullable(disabledSslProtocols);
             return this;
         }
 
-        public Builder setMinProtocolVersion(@Nullable Input<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion) {
+        public Builder minProtocolVersion(@Nullable Input<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion) {
             this.minProtocolVersion = minProtocolVersion;
             return this;
         }
 
-        public Builder setMinProtocolVersion(@Nullable Either<String,ApplicationGatewaySslProtocol> minProtocolVersion) {
+        public Builder minProtocolVersion(@Nullable Either<String,ApplicationGatewaySslProtocol> minProtocolVersion) {
             this.minProtocolVersion = Input.ofNullable(minProtocolVersion);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<Either<String,ApplicationGatewaySslPolicyName>> policyName) {
+        public Builder policyName(@Nullable Input<Either<String,ApplicationGatewaySslPolicyName>> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Either<String,ApplicationGatewaySslPolicyName> policyName) {
+        public Builder policyName(@Nullable Either<String,ApplicationGatewaySslPolicyName> policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Input<Either<String,ApplicationGatewaySslPolicyType>> policyType) {
+        public Builder policyType(@Nullable Input<Either<String,ApplicationGatewaySslPolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Either<String,ApplicationGatewaySslPolicyType> policyType) {
+        public Builder policyType(@Nullable Either<String,ApplicationGatewaySslPolicyType> policyType) {
             this.policyType = Input.ofNullable(policyType);
             return this;
         }

@@ -75,22 +75,22 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.schema = defaults.schema;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setSchema(Input<String> schema) {
+        public Builder schema(Input<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }

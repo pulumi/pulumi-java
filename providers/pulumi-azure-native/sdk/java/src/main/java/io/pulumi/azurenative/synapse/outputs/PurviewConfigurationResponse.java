@@ -50,7 +50,7 @@ public final class PurviewConfigurationResponse {
     	      this.purviewResourceId = defaults.purviewResourceId;
         }
 
-        public Builder setPurviewResourceId(@Nullable String purviewResourceId) {
+        public Builder purviewResourceId(@Nullable String purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
         }

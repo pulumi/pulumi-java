@@ -107,42 +107,42 @@ public final class LogStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.path = defaults.path;
         }
 
-        public Builder setEnableReliableLogging(@Nullable Input<Object> enableReliableLogging) {
+        public Builder enableReliableLogging(@Nullable Input<Object> enableReliableLogging) {
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
-        public Builder setEnableReliableLogging(@Nullable Object enableReliableLogging) {
+        public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             this.enableReliableLogging = Input.ofNullable(enableReliableLogging);
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<Object> logLevel) {
+        public Builder logLevel(@Nullable Input<Object> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Object logLevel) {
+        public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Input<Object> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = Input.ofNullable(path);
             return this;
         }

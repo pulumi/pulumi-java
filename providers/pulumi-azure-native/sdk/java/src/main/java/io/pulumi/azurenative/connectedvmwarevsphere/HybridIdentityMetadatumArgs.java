@@ -118,52 +118,52 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setMetadataName(@Nullable Input<String> metadataName) {
+        public Builder metadataName(@Nullable Input<String> metadataName) {
             this.metadataName = metadataName;
             return this;
         }
 
-        public Builder setMetadataName(@Nullable String metadataName) {
+        public Builder metadataName(@Nullable String metadataName) {
             this.metadataName = Input.ofNullable(metadataName);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualMachineName(Input<String> virtualMachineName) {
+        public Builder virtualMachineName(Input<String> virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
 
-        public Builder setVirtualMachineName(String virtualMachineName) {
+        public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Input.of(Objects.requireNonNull(virtualMachineName));
             return this;
         }
 
-        public Builder setVmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Input<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = Input.ofNullable(vmId);
             return this;
         }

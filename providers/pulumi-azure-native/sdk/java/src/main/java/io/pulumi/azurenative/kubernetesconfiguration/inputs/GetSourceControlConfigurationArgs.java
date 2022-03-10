@@ -116,27 +116,27 @@ public final class GetSourceControlConfigurationArgs extends io.pulumi.resources
     	      this.sourceControlConfigurationName = defaults.sourceControlConfigurationName;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterResourceName(String clusterResourceName) {
+        public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
 
-        public Builder setClusterRp(String clusterRp) {
+        public Builder clusterRp(String clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSourceControlConfigurationName(String sourceControlConfigurationName) {
+        public Builder sourceControlConfigurationName(String sourceControlConfigurationName) {
             this.sourceControlConfigurationName = Objects.requireNonNull(sourceControlConfigurationName);
             return this;
         }

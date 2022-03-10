@@ -57,12 +57,12 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     	      this.routingMode = defaults.routingMode;
         }
 
-        public Builder setRoutingMode(@Nullable Input<NetworkRoutingConfigRoutingMode> routingMode) {
+        public Builder routingMode(@Nullable Input<NetworkRoutingConfigRoutingMode> routingMode) {
             this.routingMode = routingMode;
             return this;
         }
 
-        public Builder setRoutingMode(@Nullable NetworkRoutingConfigRoutingMode routingMode) {
+        public Builder routingMode(@Nullable NetworkRoutingConfigRoutingMode routingMode) {
             this.routingMode = Input.ofNullable(routingMode);
             return this;
         }

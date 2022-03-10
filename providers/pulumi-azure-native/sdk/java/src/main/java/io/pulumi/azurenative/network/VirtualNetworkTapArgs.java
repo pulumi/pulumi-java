@@ -170,82 +170,82 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
     	      this.tapName = defaults.tapName;
         }
 
-        public Builder setDestinationLoadBalancerFrontEndIPConfiguration(@Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
+        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration) {
             this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
 
-        public Builder setDestinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
+        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationArgs destinationLoadBalancerFrontEndIPConfiguration) {
             this.destinationLoadBalancerFrontEndIPConfiguration = Input.ofNullable(destinationLoadBalancerFrontEndIPConfiguration);
             return this;
         }
 
-        public Builder setDestinationNetworkInterfaceIPConfiguration(@Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
+        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
 
-        public Builder setDestinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
+        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationArgs destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = Input.ofNullable(destinationNetworkInterfaceIPConfiguration);
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTapName(@Nullable Input<String> tapName) {
+        public Builder tapName(@Nullable Input<String> tapName) {
             this.tapName = tapName;
             return this;
         }
 
-        public Builder setTapName(@Nullable String tapName) {
+        public Builder tapName(@Nullable String tapName) {
             this.tapName = Input.ofNullable(tapName);
             return this;
         }

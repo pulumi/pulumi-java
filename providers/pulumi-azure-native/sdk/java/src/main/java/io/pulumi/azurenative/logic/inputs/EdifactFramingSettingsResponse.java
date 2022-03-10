@@ -219,57 +219,57 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
     	      this.serviceCodeListDirectoryVersion = defaults.serviceCodeListDirectoryVersion;
         }
 
-        public Builder setCharacterEncoding(@Nullable String characterEncoding) {
+        public Builder characterEncoding(@Nullable String characterEncoding) {
             this.characterEncoding = characterEncoding;
             return this;
         }
 
-        public Builder setCharacterSet(String characterSet) {
+        public Builder characterSet(String characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDecimalPointIndicator(String decimalPointIndicator) {
+        public Builder decimalPointIndicator(String decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
-        public Builder setProtocolVersion(Integer protocolVersion) {
+        public Builder protocolVersion(Integer protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
-        public Builder setReleaseIndicator(Integer releaseIndicator) {
+        public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
-        public Builder setRepetitionSeparator(Integer repetitionSeparator) {
+        public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setServiceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
+        public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }

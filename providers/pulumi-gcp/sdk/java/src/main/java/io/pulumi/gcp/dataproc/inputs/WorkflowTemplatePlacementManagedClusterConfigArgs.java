@@ -292,152 +292,152 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setAutoscalingConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig) {
+        public Builder autoscalingConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig) {
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
-        public Builder setAutoscalingConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs autoscalingConfig) {
+        public Builder autoscalingConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs autoscalingConfig) {
             this.autoscalingConfig = Input.ofNullable(autoscalingConfig);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setEndpointConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig) {
+        public Builder endpointConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
 
-        public Builder setEndpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs endpointConfig) {
+        public Builder endpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs endpointConfig) {
             this.endpointConfig = Input.ofNullable(endpointConfig);
             return this;
         }
 
-        public Builder setGceClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig) {
+        public Builder gceClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
-        public Builder setGceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs gceClusterConfig) {
+        public Builder gceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs gceClusterConfig) {
             this.gceClusterConfig = Input.ofNullable(gceClusterConfig);
             return this;
         }
 
-        public Builder setGkeClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig) {
+        public Builder gkeClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig) {
             this.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
 
-        public Builder setGkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs gkeClusterConfig) {
+        public Builder gkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs gkeClusterConfig) {
             this.gkeClusterConfig = Input.ofNullable(gkeClusterConfig);
             return this;
         }
 
-        public Builder setInitializationActions(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions) {
+        public Builder initializationActions(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
 
-        public Builder setInitializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs> initializationActions) {
+        public Builder initializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs> initializationActions) {
             this.initializationActions = Input.ofNullable(initializationActions);
             return this;
         }
 
-        public Builder setLifecycleConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig) {
+        public Builder lifecycleConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
-        public Builder setLifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs lifecycleConfig) {
+        public Builder lifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs lifecycleConfig) {
             this.lifecycleConfig = Input.ofNullable(lifecycleConfig);
             return this;
         }
 
-        public Builder setMasterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig) {
+        public Builder masterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
 
-        public Builder setMasterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs masterConfig) {
+        public Builder masterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs masterConfig) {
             this.masterConfig = Input.ofNullable(masterConfig);
             return this;
         }
 
-        public Builder setMetastoreConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig) {
+        public Builder metastoreConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
 
-        public Builder setMetastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs metastoreConfig) {
+        public Builder metastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs metastoreConfig) {
             this.metastoreConfig = Input.ofNullable(metastoreConfig);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Input.ofNullable(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setSecurityConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig) {
+        public Builder securityConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
-        public Builder setSecurityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs securityConfig) {
+        public Builder securityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs securityConfig) {
             this.securityConfig = Input.ofNullable(securityConfig);
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs softwareConfig) {
+        public Builder softwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs softwareConfig) {
             this.softwareConfig = Input.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder setStagingBucket(@Nullable Input<String> stagingBucket) {
+        public Builder stagingBucket(@Nullable Input<String> stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
 
-        public Builder setStagingBucket(@Nullable String stagingBucket) {
+        public Builder stagingBucket(@Nullable String stagingBucket) {
             this.stagingBucket = Input.ofNullable(stagingBucket);
             return this;
         }
 
-        public Builder setTempBucket(@Nullable Input<String> tempBucket) {
+        public Builder tempBucket(@Nullable Input<String> tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
 
-        public Builder setTempBucket(@Nullable String tempBucket) {
+        public Builder tempBucket(@Nullable String tempBucket) {
             this.tempBucket = Input.ofNullable(tempBucket);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs workerConfig) {
+        public Builder workerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }

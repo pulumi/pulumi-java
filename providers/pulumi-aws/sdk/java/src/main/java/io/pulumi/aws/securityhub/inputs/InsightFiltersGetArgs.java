@@ -1534,882 +1534,882 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
     	      this.workflowStatuses = defaults.workflowStatuses;
         }
 
-        public Builder setAwsAccountIds(@Nullable Input<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds) {
+        public Builder awsAccountIds(@Nullable Input<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds) {
             this.awsAccountIds = awsAccountIds;
             return this;
         }
 
-        public Builder setAwsAccountIds(@Nullable List<InsightFiltersAwsAccountIdGetArgs> awsAccountIds) {
+        public Builder awsAccountIds(@Nullable List<InsightFiltersAwsAccountIdGetArgs> awsAccountIds) {
             this.awsAccountIds = Input.ofNullable(awsAccountIds);
             return this;
         }
 
-        public Builder setCompanyNames(@Nullable Input<List<InsightFiltersCompanyNameGetArgs>> companyNames) {
+        public Builder companyNames(@Nullable Input<List<InsightFiltersCompanyNameGetArgs>> companyNames) {
             this.companyNames = companyNames;
             return this;
         }
 
-        public Builder setCompanyNames(@Nullable List<InsightFiltersCompanyNameGetArgs> companyNames) {
+        public Builder companyNames(@Nullable List<InsightFiltersCompanyNameGetArgs> companyNames) {
             this.companyNames = Input.ofNullable(companyNames);
             return this;
         }
 
-        public Builder setComplianceStatuses(@Nullable Input<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses) {
+        public Builder complianceStatuses(@Nullable Input<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses) {
             this.complianceStatuses = complianceStatuses;
             return this;
         }
 
-        public Builder setComplianceStatuses(@Nullable List<InsightFiltersComplianceStatusGetArgs> complianceStatuses) {
+        public Builder complianceStatuses(@Nullable List<InsightFiltersComplianceStatusGetArgs> complianceStatuses) {
             this.complianceStatuses = Input.ofNullable(complianceStatuses);
             return this;
         }
 
-        public Builder setConfidences(@Nullable Input<List<InsightFiltersConfidenceGetArgs>> confidences) {
+        public Builder confidences(@Nullable Input<List<InsightFiltersConfidenceGetArgs>> confidences) {
             this.confidences = confidences;
             return this;
         }
 
-        public Builder setConfidences(@Nullable List<InsightFiltersConfidenceGetArgs> confidences) {
+        public Builder confidences(@Nullable List<InsightFiltersConfidenceGetArgs> confidences) {
             this.confidences = Input.ofNullable(confidences);
             return this;
         }
 
-        public Builder setCreatedAts(@Nullable Input<List<InsightFiltersCreatedAtGetArgs>> createdAts) {
+        public Builder createdAts(@Nullable Input<List<InsightFiltersCreatedAtGetArgs>> createdAts) {
             this.createdAts = createdAts;
             return this;
         }
 
-        public Builder setCreatedAts(@Nullable List<InsightFiltersCreatedAtGetArgs> createdAts) {
+        public Builder createdAts(@Nullable List<InsightFiltersCreatedAtGetArgs> createdAts) {
             this.createdAts = Input.ofNullable(createdAts);
             return this;
         }
 
-        public Builder setCriticalities(@Nullable Input<List<InsightFiltersCriticalityGetArgs>> criticalities) {
+        public Builder criticalities(@Nullable Input<List<InsightFiltersCriticalityGetArgs>> criticalities) {
             this.criticalities = criticalities;
             return this;
         }
 
-        public Builder setCriticalities(@Nullable List<InsightFiltersCriticalityGetArgs> criticalities) {
+        public Builder criticalities(@Nullable List<InsightFiltersCriticalityGetArgs> criticalities) {
             this.criticalities = Input.ofNullable(criticalities);
             return this;
         }
 
-        public Builder setDescriptions(@Nullable Input<List<InsightFiltersDescriptionGetArgs>> descriptions) {
+        public Builder descriptions(@Nullable Input<List<InsightFiltersDescriptionGetArgs>> descriptions) {
             this.descriptions = descriptions;
             return this;
         }
 
-        public Builder setDescriptions(@Nullable List<InsightFiltersDescriptionGetArgs> descriptions) {
+        public Builder descriptions(@Nullable List<InsightFiltersDescriptionGetArgs> descriptions) {
             this.descriptions = Input.ofNullable(descriptions);
             return this;
         }
 
-        public Builder setFindingProviderFieldsConfidences(@Nullable Input<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences) {
+        public Builder findingProviderFieldsConfidences(@Nullable Input<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences) {
             this.findingProviderFieldsConfidences = findingProviderFieldsConfidences;
             return this;
         }
 
-        public Builder setFindingProviderFieldsConfidences(@Nullable List<InsightFiltersFindingProviderFieldsConfidenceGetArgs> findingProviderFieldsConfidences) {
+        public Builder findingProviderFieldsConfidences(@Nullable List<InsightFiltersFindingProviderFieldsConfidenceGetArgs> findingProviderFieldsConfidences) {
             this.findingProviderFieldsConfidences = Input.ofNullable(findingProviderFieldsConfidences);
             return this;
         }
 
-        public Builder setFindingProviderFieldsCriticalities(@Nullable Input<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities) {
+        public Builder findingProviderFieldsCriticalities(@Nullable Input<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities) {
             this.findingProviderFieldsCriticalities = findingProviderFieldsCriticalities;
             return this;
         }
 
-        public Builder setFindingProviderFieldsCriticalities(@Nullable List<InsightFiltersFindingProviderFieldsCriticalityGetArgs> findingProviderFieldsCriticalities) {
+        public Builder findingProviderFieldsCriticalities(@Nullable List<InsightFiltersFindingProviderFieldsCriticalityGetArgs> findingProviderFieldsCriticalities) {
             this.findingProviderFieldsCriticalities = Input.ofNullable(findingProviderFieldsCriticalities);
             return this;
         }
 
-        public Builder setFindingProviderFieldsRelatedFindingsIds(@Nullable Input<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds) {
+        public Builder findingProviderFieldsRelatedFindingsIds(@Nullable Input<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds) {
             this.findingProviderFieldsRelatedFindingsIds = findingProviderFieldsRelatedFindingsIds;
             return this;
         }
 
-        public Builder setFindingProviderFieldsRelatedFindingsIds(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs> findingProviderFieldsRelatedFindingsIds) {
+        public Builder findingProviderFieldsRelatedFindingsIds(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs> findingProviderFieldsRelatedFindingsIds) {
             this.findingProviderFieldsRelatedFindingsIds = Input.ofNullable(findingProviderFieldsRelatedFindingsIds);
             return this;
         }
 
-        public Builder setFindingProviderFieldsRelatedFindingsProductArns(@Nullable Input<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns) {
+        public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable Input<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns) {
             this.findingProviderFieldsRelatedFindingsProductArns = findingProviderFieldsRelatedFindingsProductArns;
             return this;
         }
 
-        public Builder setFindingProviderFieldsRelatedFindingsProductArns(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs> findingProviderFieldsRelatedFindingsProductArns) {
+        public Builder findingProviderFieldsRelatedFindingsProductArns(@Nullable List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs> findingProviderFieldsRelatedFindingsProductArns) {
             this.findingProviderFieldsRelatedFindingsProductArns = Input.ofNullable(findingProviderFieldsRelatedFindingsProductArns);
             return this;
         }
 
-        public Builder setFindingProviderFieldsSeverityLabels(@Nullable Input<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels) {
+        public Builder findingProviderFieldsSeverityLabels(@Nullable Input<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels) {
             this.findingProviderFieldsSeverityLabels = findingProviderFieldsSeverityLabels;
             return this;
         }
 
-        public Builder setFindingProviderFieldsSeverityLabels(@Nullable List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs> findingProviderFieldsSeverityLabels) {
+        public Builder findingProviderFieldsSeverityLabels(@Nullable List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs> findingProviderFieldsSeverityLabels) {
             this.findingProviderFieldsSeverityLabels = Input.ofNullable(findingProviderFieldsSeverityLabels);
             return this;
         }
 
-        public Builder setFindingProviderFieldsSeverityOriginals(@Nullable Input<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals) {
+        public Builder findingProviderFieldsSeverityOriginals(@Nullable Input<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals) {
             this.findingProviderFieldsSeverityOriginals = findingProviderFieldsSeverityOriginals;
             return this;
         }
 
-        public Builder setFindingProviderFieldsSeverityOriginals(@Nullable List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs> findingProviderFieldsSeverityOriginals) {
+        public Builder findingProviderFieldsSeverityOriginals(@Nullable List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs> findingProviderFieldsSeverityOriginals) {
             this.findingProviderFieldsSeverityOriginals = Input.ofNullable(findingProviderFieldsSeverityOriginals);
             return this;
         }
 
-        public Builder setFindingProviderFieldsTypes(@Nullable Input<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes) {
+        public Builder findingProviderFieldsTypes(@Nullable Input<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes) {
             this.findingProviderFieldsTypes = findingProviderFieldsTypes;
             return this;
         }
 
-        public Builder setFindingProviderFieldsTypes(@Nullable List<InsightFiltersFindingProviderFieldsTypeGetArgs> findingProviderFieldsTypes) {
+        public Builder findingProviderFieldsTypes(@Nullable List<InsightFiltersFindingProviderFieldsTypeGetArgs> findingProviderFieldsTypes) {
             this.findingProviderFieldsTypes = Input.ofNullable(findingProviderFieldsTypes);
             return this;
         }
 
-        public Builder setFirstObservedAts(@Nullable Input<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts) {
+        public Builder firstObservedAts(@Nullable Input<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts) {
             this.firstObservedAts = firstObservedAts;
             return this;
         }
 
-        public Builder setFirstObservedAts(@Nullable List<InsightFiltersFirstObservedAtGetArgs> firstObservedAts) {
+        public Builder firstObservedAts(@Nullable List<InsightFiltersFirstObservedAtGetArgs> firstObservedAts) {
             this.firstObservedAts = Input.ofNullable(firstObservedAts);
             return this;
         }
 
-        public Builder setGeneratorIds(@Nullable Input<List<InsightFiltersGeneratorIdGetArgs>> generatorIds) {
+        public Builder generatorIds(@Nullable Input<List<InsightFiltersGeneratorIdGetArgs>> generatorIds) {
             this.generatorIds = generatorIds;
             return this;
         }
 
-        public Builder setGeneratorIds(@Nullable List<InsightFiltersGeneratorIdGetArgs> generatorIds) {
+        public Builder generatorIds(@Nullable List<InsightFiltersGeneratorIdGetArgs> generatorIds) {
             this.generatorIds = Input.ofNullable(generatorIds);
             return this;
         }
 
-        public Builder setIds(@Nullable Input<List<InsightFiltersIdGetArgs>> ids) {
+        public Builder ids(@Nullable Input<List<InsightFiltersIdGetArgs>> ids) {
             this.ids = ids;
             return this;
         }
 
-        public Builder setIds(@Nullable List<InsightFiltersIdGetArgs> ids) {
+        public Builder ids(@Nullable List<InsightFiltersIdGetArgs> ids) {
             this.ids = Input.ofNullable(ids);
             return this;
         }
 
-        public Builder setKeywords(@Nullable Input<List<InsightFiltersKeywordGetArgs>> keywords) {
+        public Builder keywords(@Nullable Input<List<InsightFiltersKeywordGetArgs>> keywords) {
             this.keywords = keywords;
             return this;
         }
 
-        public Builder setKeywords(@Nullable List<InsightFiltersKeywordGetArgs> keywords) {
+        public Builder keywords(@Nullable List<InsightFiltersKeywordGetArgs> keywords) {
             this.keywords = Input.ofNullable(keywords);
             return this;
         }
 
-        public Builder setLastObservedAts(@Nullable Input<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts) {
+        public Builder lastObservedAts(@Nullable Input<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts) {
             this.lastObservedAts = lastObservedAts;
             return this;
         }
 
-        public Builder setLastObservedAts(@Nullable List<InsightFiltersLastObservedAtGetArgs> lastObservedAts) {
+        public Builder lastObservedAts(@Nullable List<InsightFiltersLastObservedAtGetArgs> lastObservedAts) {
             this.lastObservedAts = Input.ofNullable(lastObservedAts);
             return this;
         }
 
-        public Builder setMalwareNames(@Nullable Input<List<InsightFiltersMalwareNameGetArgs>> malwareNames) {
+        public Builder malwareNames(@Nullable Input<List<InsightFiltersMalwareNameGetArgs>> malwareNames) {
             this.malwareNames = malwareNames;
             return this;
         }
 
-        public Builder setMalwareNames(@Nullable List<InsightFiltersMalwareNameGetArgs> malwareNames) {
+        public Builder malwareNames(@Nullable List<InsightFiltersMalwareNameGetArgs> malwareNames) {
             this.malwareNames = Input.ofNullable(malwareNames);
             return this;
         }
 
-        public Builder setMalwarePaths(@Nullable Input<List<InsightFiltersMalwarePathGetArgs>> malwarePaths) {
+        public Builder malwarePaths(@Nullable Input<List<InsightFiltersMalwarePathGetArgs>> malwarePaths) {
             this.malwarePaths = malwarePaths;
             return this;
         }
 
-        public Builder setMalwarePaths(@Nullable List<InsightFiltersMalwarePathGetArgs> malwarePaths) {
+        public Builder malwarePaths(@Nullable List<InsightFiltersMalwarePathGetArgs> malwarePaths) {
             this.malwarePaths = Input.ofNullable(malwarePaths);
             return this;
         }
 
-        public Builder setMalwareStates(@Nullable Input<List<InsightFiltersMalwareStateGetArgs>> malwareStates) {
+        public Builder malwareStates(@Nullable Input<List<InsightFiltersMalwareStateGetArgs>> malwareStates) {
             this.malwareStates = malwareStates;
             return this;
         }
 
-        public Builder setMalwareStates(@Nullable List<InsightFiltersMalwareStateGetArgs> malwareStates) {
+        public Builder malwareStates(@Nullable List<InsightFiltersMalwareStateGetArgs> malwareStates) {
             this.malwareStates = Input.ofNullable(malwareStates);
             return this;
         }
 
-        public Builder setMalwareTypes(@Nullable Input<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes) {
+        public Builder malwareTypes(@Nullable Input<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes) {
             this.malwareTypes = malwareTypes;
             return this;
         }
 
-        public Builder setMalwareTypes(@Nullable List<InsightFiltersMalwareTypeGetArgs> malwareTypes) {
+        public Builder malwareTypes(@Nullable List<InsightFiltersMalwareTypeGetArgs> malwareTypes) {
             this.malwareTypes = Input.ofNullable(malwareTypes);
             return this;
         }
 
-        public Builder setNetworkDestinationDomains(@Nullable Input<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains) {
+        public Builder networkDestinationDomains(@Nullable Input<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains) {
             this.networkDestinationDomains = networkDestinationDomains;
             return this;
         }
 
-        public Builder setNetworkDestinationDomains(@Nullable List<InsightFiltersNetworkDestinationDomainGetArgs> networkDestinationDomains) {
+        public Builder networkDestinationDomains(@Nullable List<InsightFiltersNetworkDestinationDomainGetArgs> networkDestinationDomains) {
             this.networkDestinationDomains = Input.ofNullable(networkDestinationDomains);
             return this;
         }
 
-        public Builder setNetworkDestinationIpv4s(@Nullable Input<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s) {
+        public Builder networkDestinationIpv4s(@Nullable Input<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s) {
             this.networkDestinationIpv4s = networkDestinationIpv4s;
             return this;
         }
 
-        public Builder setNetworkDestinationIpv4s(@Nullable List<InsightFiltersNetworkDestinationIpv4GetArgs> networkDestinationIpv4s) {
+        public Builder networkDestinationIpv4s(@Nullable List<InsightFiltersNetworkDestinationIpv4GetArgs> networkDestinationIpv4s) {
             this.networkDestinationIpv4s = Input.ofNullable(networkDestinationIpv4s);
             return this;
         }
 
-        public Builder setNetworkDestinationIpv6s(@Nullable Input<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s) {
+        public Builder networkDestinationIpv6s(@Nullable Input<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s) {
             this.networkDestinationIpv6s = networkDestinationIpv6s;
             return this;
         }
 
-        public Builder setNetworkDestinationIpv6s(@Nullable List<InsightFiltersNetworkDestinationIpv6GetArgs> networkDestinationIpv6s) {
+        public Builder networkDestinationIpv6s(@Nullable List<InsightFiltersNetworkDestinationIpv6GetArgs> networkDestinationIpv6s) {
             this.networkDestinationIpv6s = Input.ofNullable(networkDestinationIpv6s);
             return this;
         }
 
-        public Builder setNetworkDestinationPorts(@Nullable Input<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts) {
+        public Builder networkDestinationPorts(@Nullable Input<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts) {
             this.networkDestinationPorts = networkDestinationPorts;
             return this;
         }
 
-        public Builder setNetworkDestinationPorts(@Nullable List<InsightFiltersNetworkDestinationPortGetArgs> networkDestinationPorts) {
+        public Builder networkDestinationPorts(@Nullable List<InsightFiltersNetworkDestinationPortGetArgs> networkDestinationPorts) {
             this.networkDestinationPorts = Input.ofNullable(networkDestinationPorts);
             return this;
         }
 
-        public Builder setNetworkDirections(@Nullable Input<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections) {
+        public Builder networkDirections(@Nullable Input<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections) {
             this.networkDirections = networkDirections;
             return this;
         }
 
-        public Builder setNetworkDirections(@Nullable List<InsightFiltersNetworkDirectionGetArgs> networkDirections) {
+        public Builder networkDirections(@Nullable List<InsightFiltersNetworkDirectionGetArgs> networkDirections) {
             this.networkDirections = Input.ofNullable(networkDirections);
             return this;
         }
 
-        public Builder setNetworkProtocols(@Nullable Input<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols) {
+        public Builder networkProtocols(@Nullable Input<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols) {
             this.networkProtocols = networkProtocols;
             return this;
         }
 
-        public Builder setNetworkProtocols(@Nullable List<InsightFiltersNetworkProtocolGetArgs> networkProtocols) {
+        public Builder networkProtocols(@Nullable List<InsightFiltersNetworkProtocolGetArgs> networkProtocols) {
             this.networkProtocols = Input.ofNullable(networkProtocols);
             return this;
         }
 
-        public Builder setNetworkSourceDomains(@Nullable Input<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains) {
+        public Builder networkSourceDomains(@Nullable Input<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains) {
             this.networkSourceDomains = networkSourceDomains;
             return this;
         }
 
-        public Builder setNetworkSourceDomains(@Nullable List<InsightFiltersNetworkSourceDomainGetArgs> networkSourceDomains) {
+        public Builder networkSourceDomains(@Nullable List<InsightFiltersNetworkSourceDomainGetArgs> networkSourceDomains) {
             this.networkSourceDomains = Input.ofNullable(networkSourceDomains);
             return this;
         }
 
-        public Builder setNetworkSourceIpv4s(@Nullable Input<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s) {
+        public Builder networkSourceIpv4s(@Nullable Input<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s) {
             this.networkSourceIpv4s = networkSourceIpv4s;
             return this;
         }
 
-        public Builder setNetworkSourceIpv4s(@Nullable List<InsightFiltersNetworkSourceIpv4GetArgs> networkSourceIpv4s) {
+        public Builder networkSourceIpv4s(@Nullable List<InsightFiltersNetworkSourceIpv4GetArgs> networkSourceIpv4s) {
             this.networkSourceIpv4s = Input.ofNullable(networkSourceIpv4s);
             return this;
         }
 
-        public Builder setNetworkSourceIpv6s(@Nullable Input<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s) {
+        public Builder networkSourceIpv6s(@Nullable Input<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s) {
             this.networkSourceIpv6s = networkSourceIpv6s;
             return this;
         }
 
-        public Builder setNetworkSourceIpv6s(@Nullable List<InsightFiltersNetworkSourceIpv6GetArgs> networkSourceIpv6s) {
+        public Builder networkSourceIpv6s(@Nullable List<InsightFiltersNetworkSourceIpv6GetArgs> networkSourceIpv6s) {
             this.networkSourceIpv6s = Input.ofNullable(networkSourceIpv6s);
             return this;
         }
 
-        public Builder setNetworkSourceMacs(@Nullable Input<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs) {
+        public Builder networkSourceMacs(@Nullable Input<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs) {
             this.networkSourceMacs = networkSourceMacs;
             return this;
         }
 
-        public Builder setNetworkSourceMacs(@Nullable List<InsightFiltersNetworkSourceMacGetArgs> networkSourceMacs) {
+        public Builder networkSourceMacs(@Nullable List<InsightFiltersNetworkSourceMacGetArgs> networkSourceMacs) {
             this.networkSourceMacs = Input.ofNullable(networkSourceMacs);
             return this;
         }
 
-        public Builder setNetworkSourcePorts(@Nullable Input<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts) {
+        public Builder networkSourcePorts(@Nullable Input<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts) {
             this.networkSourcePorts = networkSourcePorts;
             return this;
         }
 
-        public Builder setNetworkSourcePorts(@Nullable List<InsightFiltersNetworkSourcePortGetArgs> networkSourcePorts) {
+        public Builder networkSourcePorts(@Nullable List<InsightFiltersNetworkSourcePortGetArgs> networkSourcePorts) {
             this.networkSourcePorts = Input.ofNullable(networkSourcePorts);
             return this;
         }
 
-        public Builder setNoteTexts(@Nullable Input<List<InsightFiltersNoteTextGetArgs>> noteTexts) {
+        public Builder noteTexts(@Nullable Input<List<InsightFiltersNoteTextGetArgs>> noteTexts) {
             this.noteTexts = noteTexts;
             return this;
         }
 
-        public Builder setNoteTexts(@Nullable List<InsightFiltersNoteTextGetArgs> noteTexts) {
+        public Builder noteTexts(@Nullable List<InsightFiltersNoteTextGetArgs> noteTexts) {
             this.noteTexts = Input.ofNullable(noteTexts);
             return this;
         }
 
-        public Builder setNoteUpdatedAts(@Nullable Input<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts) {
+        public Builder noteUpdatedAts(@Nullable Input<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts) {
             this.noteUpdatedAts = noteUpdatedAts;
             return this;
         }
 
-        public Builder setNoteUpdatedAts(@Nullable List<InsightFiltersNoteUpdatedAtGetArgs> noteUpdatedAts) {
+        public Builder noteUpdatedAts(@Nullable List<InsightFiltersNoteUpdatedAtGetArgs> noteUpdatedAts) {
             this.noteUpdatedAts = Input.ofNullable(noteUpdatedAts);
             return this;
         }
 
-        public Builder setNoteUpdatedBies(@Nullable Input<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies) {
+        public Builder noteUpdatedBies(@Nullable Input<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies) {
             this.noteUpdatedBies = noteUpdatedBies;
             return this;
         }
 
-        public Builder setNoteUpdatedBies(@Nullable List<InsightFiltersNoteUpdatedByGetArgs> noteUpdatedBies) {
+        public Builder noteUpdatedBies(@Nullable List<InsightFiltersNoteUpdatedByGetArgs> noteUpdatedBies) {
             this.noteUpdatedBies = Input.ofNullable(noteUpdatedBies);
             return this;
         }
 
-        public Builder setProcessLaunchedAts(@Nullable Input<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts) {
+        public Builder processLaunchedAts(@Nullable Input<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts) {
             this.processLaunchedAts = processLaunchedAts;
             return this;
         }
 
-        public Builder setProcessLaunchedAts(@Nullable List<InsightFiltersProcessLaunchedAtGetArgs> processLaunchedAts) {
+        public Builder processLaunchedAts(@Nullable List<InsightFiltersProcessLaunchedAtGetArgs> processLaunchedAts) {
             this.processLaunchedAts = Input.ofNullable(processLaunchedAts);
             return this;
         }
 
-        public Builder setProcessNames(@Nullable Input<List<InsightFiltersProcessNameGetArgs>> processNames) {
+        public Builder processNames(@Nullable Input<List<InsightFiltersProcessNameGetArgs>> processNames) {
             this.processNames = processNames;
             return this;
         }
 
-        public Builder setProcessNames(@Nullable List<InsightFiltersProcessNameGetArgs> processNames) {
+        public Builder processNames(@Nullable List<InsightFiltersProcessNameGetArgs> processNames) {
             this.processNames = Input.ofNullable(processNames);
             return this;
         }
 
-        public Builder setProcessParentPids(@Nullable Input<List<InsightFiltersProcessParentPidGetArgs>> processParentPids) {
+        public Builder processParentPids(@Nullable Input<List<InsightFiltersProcessParentPidGetArgs>> processParentPids) {
             this.processParentPids = processParentPids;
             return this;
         }
 
-        public Builder setProcessParentPids(@Nullable List<InsightFiltersProcessParentPidGetArgs> processParentPids) {
+        public Builder processParentPids(@Nullable List<InsightFiltersProcessParentPidGetArgs> processParentPids) {
             this.processParentPids = Input.ofNullable(processParentPids);
             return this;
         }
 
-        public Builder setProcessPaths(@Nullable Input<List<InsightFiltersProcessPathGetArgs>> processPaths) {
+        public Builder processPaths(@Nullable Input<List<InsightFiltersProcessPathGetArgs>> processPaths) {
             this.processPaths = processPaths;
             return this;
         }
 
-        public Builder setProcessPaths(@Nullable List<InsightFiltersProcessPathGetArgs> processPaths) {
+        public Builder processPaths(@Nullable List<InsightFiltersProcessPathGetArgs> processPaths) {
             this.processPaths = Input.ofNullable(processPaths);
             return this;
         }
 
-        public Builder setProcessPids(@Nullable Input<List<InsightFiltersProcessPidGetArgs>> processPids) {
+        public Builder processPids(@Nullable Input<List<InsightFiltersProcessPidGetArgs>> processPids) {
             this.processPids = processPids;
             return this;
         }
 
-        public Builder setProcessPids(@Nullable List<InsightFiltersProcessPidGetArgs> processPids) {
+        public Builder processPids(@Nullable List<InsightFiltersProcessPidGetArgs> processPids) {
             this.processPids = Input.ofNullable(processPids);
             return this;
         }
 
-        public Builder setProcessTerminatedAts(@Nullable Input<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts) {
+        public Builder processTerminatedAts(@Nullable Input<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts) {
             this.processTerminatedAts = processTerminatedAts;
             return this;
         }
 
-        public Builder setProcessTerminatedAts(@Nullable List<InsightFiltersProcessTerminatedAtGetArgs> processTerminatedAts) {
+        public Builder processTerminatedAts(@Nullable List<InsightFiltersProcessTerminatedAtGetArgs> processTerminatedAts) {
             this.processTerminatedAts = Input.ofNullable(processTerminatedAts);
             return this;
         }
 
-        public Builder setProductArns(@Nullable Input<List<InsightFiltersProductArnGetArgs>> productArns) {
+        public Builder productArns(@Nullable Input<List<InsightFiltersProductArnGetArgs>> productArns) {
             this.productArns = productArns;
             return this;
         }
 
-        public Builder setProductArns(@Nullable List<InsightFiltersProductArnGetArgs> productArns) {
+        public Builder productArns(@Nullable List<InsightFiltersProductArnGetArgs> productArns) {
             this.productArns = Input.ofNullable(productArns);
             return this;
         }
 
-        public Builder setProductFields(@Nullable Input<List<InsightFiltersProductFieldGetArgs>> productFields) {
+        public Builder productFields(@Nullable Input<List<InsightFiltersProductFieldGetArgs>> productFields) {
             this.productFields = productFields;
             return this;
         }
 
-        public Builder setProductFields(@Nullable List<InsightFiltersProductFieldGetArgs> productFields) {
+        public Builder productFields(@Nullable List<InsightFiltersProductFieldGetArgs> productFields) {
             this.productFields = Input.ofNullable(productFields);
             return this;
         }
 
-        public Builder setProductNames(@Nullable Input<List<InsightFiltersProductNameGetArgs>> productNames) {
+        public Builder productNames(@Nullable Input<List<InsightFiltersProductNameGetArgs>> productNames) {
             this.productNames = productNames;
             return this;
         }
 
-        public Builder setProductNames(@Nullable List<InsightFiltersProductNameGetArgs> productNames) {
+        public Builder productNames(@Nullable List<InsightFiltersProductNameGetArgs> productNames) {
             this.productNames = Input.ofNullable(productNames);
             return this;
         }
 
-        public Builder setRecommendationTexts(@Nullable Input<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts) {
+        public Builder recommendationTexts(@Nullable Input<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts) {
             this.recommendationTexts = recommendationTexts;
             return this;
         }
 
-        public Builder setRecommendationTexts(@Nullable List<InsightFiltersRecommendationTextGetArgs> recommendationTexts) {
+        public Builder recommendationTexts(@Nullable List<InsightFiltersRecommendationTextGetArgs> recommendationTexts) {
             this.recommendationTexts = Input.ofNullable(recommendationTexts);
             return this;
         }
 
-        public Builder setRecordStates(@Nullable Input<List<InsightFiltersRecordStateGetArgs>> recordStates) {
+        public Builder recordStates(@Nullable Input<List<InsightFiltersRecordStateGetArgs>> recordStates) {
             this.recordStates = recordStates;
             return this;
         }
 
-        public Builder setRecordStates(@Nullable List<InsightFiltersRecordStateGetArgs> recordStates) {
+        public Builder recordStates(@Nullable List<InsightFiltersRecordStateGetArgs> recordStates) {
             this.recordStates = Input.ofNullable(recordStates);
             return this;
         }
 
-        public Builder setRelatedFindingsIds(@Nullable Input<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds) {
+        public Builder relatedFindingsIds(@Nullable Input<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds) {
             this.relatedFindingsIds = relatedFindingsIds;
             return this;
         }
 
-        public Builder setRelatedFindingsIds(@Nullable List<InsightFiltersRelatedFindingsIdGetArgs> relatedFindingsIds) {
+        public Builder relatedFindingsIds(@Nullable List<InsightFiltersRelatedFindingsIdGetArgs> relatedFindingsIds) {
             this.relatedFindingsIds = Input.ofNullable(relatedFindingsIds);
             return this;
         }
 
-        public Builder setRelatedFindingsProductArns(@Nullable Input<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns) {
+        public Builder relatedFindingsProductArns(@Nullable Input<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns) {
             this.relatedFindingsProductArns = relatedFindingsProductArns;
             return this;
         }
 
-        public Builder setRelatedFindingsProductArns(@Nullable List<InsightFiltersRelatedFindingsProductArnGetArgs> relatedFindingsProductArns) {
+        public Builder relatedFindingsProductArns(@Nullable List<InsightFiltersRelatedFindingsProductArnGetArgs> relatedFindingsProductArns) {
             this.relatedFindingsProductArns = Input.ofNullable(relatedFindingsProductArns);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIamInstanceProfileArns(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns) {
+        public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns) {
             this.resourceAwsEc2InstanceIamInstanceProfileArns = resourceAwsEc2InstanceIamInstanceProfileArns;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIamInstanceProfileArns(@Nullable List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs> resourceAwsEc2InstanceIamInstanceProfileArns) {
+        public Builder resourceAwsEc2InstanceIamInstanceProfileArns(@Nullable List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs> resourceAwsEc2InstanceIamInstanceProfileArns) {
             this.resourceAwsEc2InstanceIamInstanceProfileArns = Input.ofNullable(resourceAwsEc2InstanceIamInstanceProfileArns);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceImageIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds) {
+        public Builder resourceAwsEc2InstanceImageIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds) {
             this.resourceAwsEc2InstanceImageIds = resourceAwsEc2InstanceImageIds;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceImageIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs> resourceAwsEc2InstanceImageIds) {
+        public Builder resourceAwsEc2InstanceImageIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs> resourceAwsEc2InstanceImageIds) {
             this.resourceAwsEc2InstanceImageIds = Input.ofNullable(resourceAwsEc2InstanceImageIds);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIpv4Addresses(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses) {
+        public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses) {
             this.resourceAwsEc2InstanceIpv4Addresses = resourceAwsEc2InstanceIpv4Addresses;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIpv4Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs> resourceAwsEc2InstanceIpv4Addresses) {
+        public Builder resourceAwsEc2InstanceIpv4Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs> resourceAwsEc2InstanceIpv4Addresses) {
             this.resourceAwsEc2InstanceIpv4Addresses = Input.ofNullable(resourceAwsEc2InstanceIpv4Addresses);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIpv6Addresses(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses) {
+        public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses) {
             this.resourceAwsEc2InstanceIpv6Addresses = resourceAwsEc2InstanceIpv6Addresses;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceIpv6Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs> resourceAwsEc2InstanceIpv6Addresses) {
+        public Builder resourceAwsEc2InstanceIpv6Addresses(@Nullable List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs> resourceAwsEc2InstanceIpv6Addresses) {
             this.resourceAwsEc2InstanceIpv6Addresses = Input.ofNullable(resourceAwsEc2InstanceIpv6Addresses);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceKeyNames(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames) {
+        public Builder resourceAwsEc2InstanceKeyNames(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames) {
             this.resourceAwsEc2InstanceKeyNames = resourceAwsEc2InstanceKeyNames;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceKeyNames(@Nullable List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs> resourceAwsEc2InstanceKeyNames) {
+        public Builder resourceAwsEc2InstanceKeyNames(@Nullable List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs> resourceAwsEc2InstanceKeyNames) {
             this.resourceAwsEc2InstanceKeyNames = Input.ofNullable(resourceAwsEc2InstanceKeyNames);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceLaunchedAts(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts) {
+        public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts) {
             this.resourceAwsEc2InstanceLaunchedAts = resourceAwsEc2InstanceLaunchedAts;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceLaunchedAts(@Nullable List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs> resourceAwsEc2InstanceLaunchedAts) {
+        public Builder resourceAwsEc2InstanceLaunchedAts(@Nullable List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs> resourceAwsEc2InstanceLaunchedAts) {
             this.resourceAwsEc2InstanceLaunchedAts = Input.ofNullable(resourceAwsEc2InstanceLaunchedAts);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceSubnetIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds) {
+        public Builder resourceAwsEc2InstanceSubnetIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds) {
             this.resourceAwsEc2InstanceSubnetIds = resourceAwsEc2InstanceSubnetIds;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceSubnetIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs> resourceAwsEc2InstanceSubnetIds) {
+        public Builder resourceAwsEc2InstanceSubnetIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs> resourceAwsEc2InstanceSubnetIds) {
             this.resourceAwsEc2InstanceSubnetIds = Input.ofNullable(resourceAwsEc2InstanceSubnetIds);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceTypes(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes) {
+        public Builder resourceAwsEc2InstanceTypes(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes) {
             this.resourceAwsEc2InstanceTypes = resourceAwsEc2InstanceTypes;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceTypes(@Nullable List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs> resourceAwsEc2InstanceTypes) {
+        public Builder resourceAwsEc2InstanceTypes(@Nullable List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs> resourceAwsEc2InstanceTypes) {
             this.resourceAwsEc2InstanceTypes = Input.ofNullable(resourceAwsEc2InstanceTypes);
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceVpcIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds) {
+        public Builder resourceAwsEc2InstanceVpcIds(@Nullable Input<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds) {
             this.resourceAwsEc2InstanceVpcIds = resourceAwsEc2InstanceVpcIds;
             return this;
         }
 
-        public Builder setResourceAwsEc2InstanceVpcIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs> resourceAwsEc2InstanceVpcIds) {
+        public Builder resourceAwsEc2InstanceVpcIds(@Nullable List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs> resourceAwsEc2InstanceVpcIds) {
             this.resourceAwsEc2InstanceVpcIds = Input.ofNullable(resourceAwsEc2InstanceVpcIds);
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyCreatedAts(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts) {
+        public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts) {
             this.resourceAwsIamAccessKeyCreatedAts = resourceAwsIamAccessKeyCreatedAts;
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyCreatedAts(@Nullable List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs> resourceAwsIamAccessKeyCreatedAts) {
+        public Builder resourceAwsIamAccessKeyCreatedAts(@Nullable List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs> resourceAwsIamAccessKeyCreatedAts) {
             this.resourceAwsIamAccessKeyCreatedAts = Input.ofNullable(resourceAwsIamAccessKeyCreatedAts);
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyStatuses(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses) {
+        public Builder resourceAwsIamAccessKeyStatuses(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses) {
             this.resourceAwsIamAccessKeyStatuses = resourceAwsIamAccessKeyStatuses;
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyStatuses(@Nullable List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs> resourceAwsIamAccessKeyStatuses) {
+        public Builder resourceAwsIamAccessKeyStatuses(@Nullable List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs> resourceAwsIamAccessKeyStatuses) {
             this.resourceAwsIamAccessKeyStatuses = Input.ofNullable(resourceAwsIamAccessKeyStatuses);
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyUserNames(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames) {
+        public Builder resourceAwsIamAccessKeyUserNames(@Nullable Input<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames) {
             this.resourceAwsIamAccessKeyUserNames = resourceAwsIamAccessKeyUserNames;
             return this;
         }
 
-        public Builder setResourceAwsIamAccessKeyUserNames(@Nullable List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs> resourceAwsIamAccessKeyUserNames) {
+        public Builder resourceAwsIamAccessKeyUserNames(@Nullable List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs> resourceAwsIamAccessKeyUserNames) {
             this.resourceAwsIamAccessKeyUserNames = Input.ofNullable(resourceAwsIamAccessKeyUserNames);
             return this;
         }
 
-        public Builder setResourceAwsS3BucketOwnerIds(@Nullable Input<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds) {
+        public Builder resourceAwsS3BucketOwnerIds(@Nullable Input<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds) {
             this.resourceAwsS3BucketOwnerIds = resourceAwsS3BucketOwnerIds;
             return this;
         }
 
-        public Builder setResourceAwsS3BucketOwnerIds(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs> resourceAwsS3BucketOwnerIds) {
+        public Builder resourceAwsS3BucketOwnerIds(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs> resourceAwsS3BucketOwnerIds) {
             this.resourceAwsS3BucketOwnerIds = Input.ofNullable(resourceAwsS3BucketOwnerIds);
             return this;
         }
 
-        public Builder setResourceAwsS3BucketOwnerNames(@Nullable Input<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames) {
+        public Builder resourceAwsS3BucketOwnerNames(@Nullable Input<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames) {
             this.resourceAwsS3BucketOwnerNames = resourceAwsS3BucketOwnerNames;
             return this;
         }
 
-        public Builder setResourceAwsS3BucketOwnerNames(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs> resourceAwsS3BucketOwnerNames) {
+        public Builder resourceAwsS3BucketOwnerNames(@Nullable List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs> resourceAwsS3BucketOwnerNames) {
             this.resourceAwsS3BucketOwnerNames = Input.ofNullable(resourceAwsS3BucketOwnerNames);
             return this;
         }
 
-        public Builder setResourceContainerImageIds(@Nullable Input<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds) {
+        public Builder resourceContainerImageIds(@Nullable Input<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds) {
             this.resourceContainerImageIds = resourceContainerImageIds;
             return this;
         }
 
-        public Builder setResourceContainerImageIds(@Nullable List<InsightFiltersResourceContainerImageIdGetArgs> resourceContainerImageIds) {
+        public Builder resourceContainerImageIds(@Nullable List<InsightFiltersResourceContainerImageIdGetArgs> resourceContainerImageIds) {
             this.resourceContainerImageIds = Input.ofNullable(resourceContainerImageIds);
             return this;
         }
 
-        public Builder setResourceContainerImageNames(@Nullable Input<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames) {
+        public Builder resourceContainerImageNames(@Nullable Input<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames) {
             this.resourceContainerImageNames = resourceContainerImageNames;
             return this;
         }
 
-        public Builder setResourceContainerImageNames(@Nullable List<InsightFiltersResourceContainerImageNameGetArgs> resourceContainerImageNames) {
+        public Builder resourceContainerImageNames(@Nullable List<InsightFiltersResourceContainerImageNameGetArgs> resourceContainerImageNames) {
             this.resourceContainerImageNames = Input.ofNullable(resourceContainerImageNames);
             return this;
         }
 
-        public Builder setResourceContainerLaunchedAts(@Nullable Input<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts) {
+        public Builder resourceContainerLaunchedAts(@Nullable Input<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts) {
             this.resourceContainerLaunchedAts = resourceContainerLaunchedAts;
             return this;
         }
 
-        public Builder setResourceContainerLaunchedAts(@Nullable List<InsightFiltersResourceContainerLaunchedAtGetArgs> resourceContainerLaunchedAts) {
+        public Builder resourceContainerLaunchedAts(@Nullable List<InsightFiltersResourceContainerLaunchedAtGetArgs> resourceContainerLaunchedAts) {
             this.resourceContainerLaunchedAts = Input.ofNullable(resourceContainerLaunchedAts);
             return this;
         }
 
-        public Builder setResourceContainerNames(@Nullable Input<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames) {
+        public Builder resourceContainerNames(@Nullable Input<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames) {
             this.resourceContainerNames = resourceContainerNames;
             return this;
         }
 
-        public Builder setResourceContainerNames(@Nullable List<InsightFiltersResourceContainerNameGetArgs> resourceContainerNames) {
+        public Builder resourceContainerNames(@Nullable List<InsightFiltersResourceContainerNameGetArgs> resourceContainerNames) {
             this.resourceContainerNames = Input.ofNullable(resourceContainerNames);
             return this;
         }
 
-        public Builder setResourceDetailsOthers(@Nullable Input<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers) {
+        public Builder resourceDetailsOthers(@Nullable Input<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers) {
             this.resourceDetailsOthers = resourceDetailsOthers;
             return this;
         }
 
-        public Builder setResourceDetailsOthers(@Nullable List<InsightFiltersResourceDetailsOtherGetArgs> resourceDetailsOthers) {
+        public Builder resourceDetailsOthers(@Nullable List<InsightFiltersResourceDetailsOtherGetArgs> resourceDetailsOthers) {
             this.resourceDetailsOthers = Input.ofNullable(resourceDetailsOthers);
             return this;
         }
 
-        public Builder setResourceIds(@Nullable Input<List<InsightFiltersResourceIdGetArgs>> resourceIds) {
+        public Builder resourceIds(@Nullable Input<List<InsightFiltersResourceIdGetArgs>> resourceIds) {
             this.resourceIds = resourceIds;
             return this;
         }
 
-        public Builder setResourceIds(@Nullable List<InsightFiltersResourceIdGetArgs> resourceIds) {
+        public Builder resourceIds(@Nullable List<InsightFiltersResourceIdGetArgs> resourceIds) {
             this.resourceIds = Input.ofNullable(resourceIds);
             return this;
         }
 
-        public Builder setResourcePartitions(@Nullable Input<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions) {
+        public Builder resourcePartitions(@Nullable Input<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions) {
             this.resourcePartitions = resourcePartitions;
             return this;
         }
 
-        public Builder setResourcePartitions(@Nullable List<InsightFiltersResourcePartitionGetArgs> resourcePartitions) {
+        public Builder resourcePartitions(@Nullable List<InsightFiltersResourcePartitionGetArgs> resourcePartitions) {
             this.resourcePartitions = Input.ofNullable(resourcePartitions);
             return this;
         }
 
-        public Builder setResourceRegions(@Nullable Input<List<InsightFiltersResourceRegionGetArgs>> resourceRegions) {
+        public Builder resourceRegions(@Nullable Input<List<InsightFiltersResourceRegionGetArgs>> resourceRegions) {
             this.resourceRegions = resourceRegions;
             return this;
         }
 
-        public Builder setResourceRegions(@Nullable List<InsightFiltersResourceRegionGetArgs> resourceRegions) {
+        public Builder resourceRegions(@Nullable List<InsightFiltersResourceRegionGetArgs> resourceRegions) {
             this.resourceRegions = Input.ofNullable(resourceRegions);
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Input<List<InsightFiltersResourceTagGetArgs>> resourceTags) {
+        public Builder resourceTags(@Nullable Input<List<InsightFiltersResourceTagGetArgs>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable List<InsightFiltersResourceTagGetArgs> resourceTags) {
+        public Builder resourceTags(@Nullable List<InsightFiltersResourceTagGetArgs> resourceTags) {
             this.resourceTags = Input.ofNullable(resourceTags);
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable Input<List<InsightFiltersResourceTypeGetArgs>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Input<List<InsightFiltersResourceTypeGetArgs>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<InsightFiltersResourceTypeGetArgs> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<InsightFiltersResourceTypeGetArgs> resourceTypes) {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder setSeverityLabels(@Nullable Input<List<InsightFiltersSeverityLabelGetArgs>> severityLabels) {
+        public Builder severityLabels(@Nullable Input<List<InsightFiltersSeverityLabelGetArgs>> severityLabels) {
             this.severityLabels = severityLabels;
             return this;
         }
 
-        public Builder setSeverityLabels(@Nullable List<InsightFiltersSeverityLabelGetArgs> severityLabels) {
+        public Builder severityLabels(@Nullable List<InsightFiltersSeverityLabelGetArgs> severityLabels) {
             this.severityLabels = Input.ofNullable(severityLabels);
             return this;
         }
 
-        public Builder setSourceUrls(@Nullable Input<List<InsightFiltersSourceUrlGetArgs>> sourceUrls) {
+        public Builder sourceUrls(@Nullable Input<List<InsightFiltersSourceUrlGetArgs>> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
 
-        public Builder setSourceUrls(@Nullable List<InsightFiltersSourceUrlGetArgs> sourceUrls) {
+        public Builder sourceUrls(@Nullable List<InsightFiltersSourceUrlGetArgs> sourceUrls) {
             this.sourceUrls = Input.ofNullable(sourceUrls);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorCategories(@Nullable Input<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories) {
+        public Builder threatIntelIndicatorCategories(@Nullable Input<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories) {
             this.threatIntelIndicatorCategories = threatIntelIndicatorCategories;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorCategories(@Nullable List<InsightFiltersThreatIntelIndicatorCategoryGetArgs> threatIntelIndicatorCategories) {
+        public Builder threatIntelIndicatorCategories(@Nullable List<InsightFiltersThreatIntelIndicatorCategoryGetArgs> threatIntelIndicatorCategories) {
             this.threatIntelIndicatorCategories = Input.ofNullable(threatIntelIndicatorCategories);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorLastObservedAts(@Nullable Input<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts) {
+        public Builder threatIntelIndicatorLastObservedAts(@Nullable Input<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts) {
             this.threatIntelIndicatorLastObservedAts = threatIntelIndicatorLastObservedAts;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorLastObservedAts(@Nullable List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs> threatIntelIndicatorLastObservedAts) {
+        public Builder threatIntelIndicatorLastObservedAts(@Nullable List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs> threatIntelIndicatorLastObservedAts) {
             this.threatIntelIndicatorLastObservedAts = Input.ofNullable(threatIntelIndicatorLastObservedAts);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorSourceUrls(@Nullable Input<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls) {
+        public Builder threatIntelIndicatorSourceUrls(@Nullable Input<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls) {
             this.threatIntelIndicatorSourceUrls = threatIntelIndicatorSourceUrls;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorSourceUrls(@Nullable List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs> threatIntelIndicatorSourceUrls) {
+        public Builder threatIntelIndicatorSourceUrls(@Nullable List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs> threatIntelIndicatorSourceUrls) {
             this.threatIntelIndicatorSourceUrls = Input.ofNullable(threatIntelIndicatorSourceUrls);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorSources(@Nullable Input<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources) {
+        public Builder threatIntelIndicatorSources(@Nullable Input<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources) {
             this.threatIntelIndicatorSources = threatIntelIndicatorSources;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorSources(@Nullable List<InsightFiltersThreatIntelIndicatorSourceGetArgs> threatIntelIndicatorSources) {
+        public Builder threatIntelIndicatorSources(@Nullable List<InsightFiltersThreatIntelIndicatorSourceGetArgs> threatIntelIndicatorSources) {
             this.threatIntelIndicatorSources = Input.ofNullable(threatIntelIndicatorSources);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorTypes(@Nullable Input<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes) {
+        public Builder threatIntelIndicatorTypes(@Nullable Input<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes) {
             this.threatIntelIndicatorTypes = threatIntelIndicatorTypes;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorTypes(@Nullable List<InsightFiltersThreatIntelIndicatorTypeGetArgs> threatIntelIndicatorTypes) {
+        public Builder threatIntelIndicatorTypes(@Nullable List<InsightFiltersThreatIntelIndicatorTypeGetArgs> threatIntelIndicatorTypes) {
             this.threatIntelIndicatorTypes = Input.ofNullable(threatIntelIndicatorTypes);
             return this;
         }
 
-        public Builder setThreatIntelIndicatorValues(@Nullable Input<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues) {
+        public Builder threatIntelIndicatorValues(@Nullable Input<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues) {
             this.threatIntelIndicatorValues = threatIntelIndicatorValues;
             return this;
         }
 
-        public Builder setThreatIntelIndicatorValues(@Nullable List<InsightFiltersThreatIntelIndicatorValueGetArgs> threatIntelIndicatorValues) {
+        public Builder threatIntelIndicatorValues(@Nullable List<InsightFiltersThreatIntelIndicatorValueGetArgs> threatIntelIndicatorValues) {
             this.threatIntelIndicatorValues = Input.ofNullable(threatIntelIndicatorValues);
             return this;
         }
 
-        public Builder setTitles(@Nullable Input<List<InsightFiltersTitleGetArgs>> titles) {
+        public Builder titles(@Nullable Input<List<InsightFiltersTitleGetArgs>> titles) {
             this.titles = titles;
             return this;
         }
 
-        public Builder setTitles(@Nullable List<InsightFiltersTitleGetArgs> titles) {
+        public Builder titles(@Nullable List<InsightFiltersTitleGetArgs> titles) {
             this.titles = Input.ofNullable(titles);
             return this;
         }
 
-        public Builder setTypes(@Nullable Input<List<InsightFiltersTypeGetArgs>> types) {
+        public Builder types(@Nullable Input<List<InsightFiltersTypeGetArgs>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<InsightFiltersTypeGetArgs> types) {
+        public Builder types(@Nullable List<InsightFiltersTypeGetArgs> types) {
             this.types = Input.ofNullable(types);
             return this;
         }
 
-        public Builder setUpdatedAts(@Nullable Input<List<InsightFiltersUpdatedAtGetArgs>> updatedAts) {
+        public Builder updatedAts(@Nullable Input<List<InsightFiltersUpdatedAtGetArgs>> updatedAts) {
             this.updatedAts = updatedAts;
             return this;
         }
 
-        public Builder setUpdatedAts(@Nullable List<InsightFiltersUpdatedAtGetArgs> updatedAts) {
+        public Builder updatedAts(@Nullable List<InsightFiltersUpdatedAtGetArgs> updatedAts) {
             this.updatedAts = Input.ofNullable(updatedAts);
             return this;
         }
 
-        public Builder setUserDefinedValues(@Nullable Input<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues) {
+        public Builder userDefinedValues(@Nullable Input<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues) {
             this.userDefinedValues = userDefinedValues;
             return this;
         }
 
-        public Builder setUserDefinedValues(@Nullable List<InsightFiltersUserDefinedValueGetArgs> userDefinedValues) {
+        public Builder userDefinedValues(@Nullable List<InsightFiltersUserDefinedValueGetArgs> userDefinedValues) {
             this.userDefinedValues = Input.ofNullable(userDefinedValues);
             return this;
         }
 
-        public Builder setVerificationStates(@Nullable Input<List<InsightFiltersVerificationStateGetArgs>> verificationStates) {
+        public Builder verificationStates(@Nullable Input<List<InsightFiltersVerificationStateGetArgs>> verificationStates) {
             this.verificationStates = verificationStates;
             return this;
         }
 
-        public Builder setVerificationStates(@Nullable List<InsightFiltersVerificationStateGetArgs> verificationStates) {
+        public Builder verificationStates(@Nullable List<InsightFiltersVerificationStateGetArgs> verificationStates) {
             this.verificationStates = Input.ofNullable(verificationStates);
             return this;
         }
 
-        public Builder setWorkflowStatuses(@Nullable Input<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses) {
+        public Builder workflowStatuses(@Nullable Input<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses) {
             this.workflowStatuses = workflowStatuses;
             return this;
         }
 
-        public Builder setWorkflowStatuses(@Nullable List<InsightFiltersWorkflowStatusGetArgs> workflowStatuses) {
+        public Builder workflowStatuses(@Nullable List<InsightFiltersWorkflowStatusGetArgs> workflowStatuses) {
             this.workflowStatuses = Input.ofNullable(workflowStatuses);
             return this;
         }

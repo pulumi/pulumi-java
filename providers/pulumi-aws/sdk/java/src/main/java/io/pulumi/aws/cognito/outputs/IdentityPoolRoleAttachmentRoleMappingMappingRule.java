@@ -97,22 +97,22 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
     	      this.value = defaults.value;
         }
 
-        public Builder setClaim(String claim) {
+        public Builder claim(String claim) {
             this.claim = Objects.requireNonNull(claim);
             return this;
         }
 
-        public Builder setMatchType(String matchType) {
+        public Builder matchType(String matchType) {
             this.matchType = Objects.requireNonNull(matchType);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

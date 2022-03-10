@@ -163,42 +163,42 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEntityTypeDisplayName(String entityTypeDisplayName) {
+        public Builder entityTypeDisplayName(String entityTypeDisplayName) {
             this.entityTypeDisplayName = Objects.requireNonNull(entityTypeDisplayName);
             return this;
         }
 
-        public Builder setIsList(Boolean isList) {
+        public Builder isList(Boolean isList) {
             this.isList = Objects.requireNonNull(isList);
             return this;
         }
 
-        public Builder setMandatory(Boolean mandatory) {
+        public Builder mandatory(Boolean mandatory) {
             this.mandatory = Objects.requireNonNull(mandatory);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrompts(List<String> prompts) {
+        public Builder prompts(List<String> prompts) {
             this.prompts = Objects.requireNonNull(prompts);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

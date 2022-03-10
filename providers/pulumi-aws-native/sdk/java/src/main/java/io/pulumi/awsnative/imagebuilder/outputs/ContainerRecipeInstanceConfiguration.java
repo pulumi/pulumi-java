@@ -69,12 +69,12 @@ public final class ContainerRecipeInstanceConfiguration {
     	      this.image = defaults.image;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }

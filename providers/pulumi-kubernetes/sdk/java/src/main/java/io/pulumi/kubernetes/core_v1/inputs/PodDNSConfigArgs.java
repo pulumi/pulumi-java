@@ -92,32 +92,32 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.searches = defaults.searches;
         }
 
-        public Builder setNameservers(@Nullable Input<List<String>> nameservers) {
+        public Builder nameservers(@Nullable Input<List<String>> nameservers) {
             this.nameservers = nameservers;
             return this;
         }
 
-        public Builder setNameservers(@Nullable List<String> nameservers) {
+        public Builder nameservers(@Nullable List<String> nameservers) {
             this.nameservers = Input.ofNullable(nameservers);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<PodDNSConfigOptionArgs>> options) {
+        public Builder options(@Nullable Input<List<PodDNSConfigOptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<PodDNSConfigOptionArgs> options) {
+        public Builder options(@Nullable List<PodDNSConfigOptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSearches(@Nullable Input<List<String>> searches) {
+        public Builder searches(@Nullable Input<List<String>> searches) {
             this.searches = searches;
             return this;
         }
 
-        public Builder setSearches(@Nullable List<String> searches) {
+        public Builder searches(@Nullable List<String> searches) {
             this.searches = Input.ofNullable(searches);
             return this;
         }

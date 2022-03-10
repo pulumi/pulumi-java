@@ -50,7 +50,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     	      this.functionAlias = defaults.functionAlias;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }

@@ -104,42 +104,42 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
     	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Input<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable String directoryName) {
+        public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Input.ofNullable(directoryName);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedNames(@Nullable Input<List<String>> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(@Nullable Input<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedNames(@Nullable List<String> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(@Nullable List<String> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Input.ofNullable(organizationalUnitDistinguishedNames);
             return this;
         }
 
-        public Builder setServiceAccountCredentials(@Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(@Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = serviceAccountCredentials;
             return this;
         }
 
-        public Builder setServiceAccountCredentials(@Nullable DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(@Nullable DirectoryConfigServiceAccountCredentialsGetArgs serviceAccountCredentials) {
             this.serviceAccountCredentials = Input.ofNullable(serviceAccountCredentials);
             return this;
         }

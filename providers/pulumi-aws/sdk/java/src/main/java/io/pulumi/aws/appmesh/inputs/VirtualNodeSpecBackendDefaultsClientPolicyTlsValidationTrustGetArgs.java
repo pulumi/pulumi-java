@@ -88,32 +88,32 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
+        public Builder acm(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
+        public Builder acm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
             this.acm = Input.ofNullable(acm);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
+        public Builder file(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

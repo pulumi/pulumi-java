@@ -70,22 +70,22 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupArn = defaults.resourceGroupArn;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupArn(@Nullable Input<String> resourceGroupArn) {
+        public Builder resourceGroupArn(@Nullable Input<String> resourceGroupArn) {
             this.resourceGroupArn = resourceGroupArn;
             return this;
         }
 
-        public Builder setResourceGroupArn(@Nullable String resourceGroupArn) {
+        public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
             this.resourceGroupArn = Input.ofNullable(resourceGroupArn);
             return this;
         }

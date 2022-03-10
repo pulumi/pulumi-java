@@ -115,52 +115,52 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<ConsentStoreIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<ConsentStoreIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable ConsentStoreIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable ConsentStoreIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setConsentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Input<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
-        public Builder setConsentStoreId(String consentStoreId) {
+        public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder setDataset(Input<String> dataset) {
+        public Builder dataset(Input<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Input.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

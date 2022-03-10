@@ -214,62 +214,62 @@ public final class SamplingRuleUpdate {
     	      this.uRLPath = defaults.uRLPath;
         }
 
-        public Builder setAttributes(@Nullable Object attributes) {
+        public Builder attributes(@Nullable Object attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setFixedRate(@Nullable Double fixedRate) {
+        public Builder fixedRate(@Nullable Double fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
 
-        public Builder setHTTPMethod(@Nullable String hTTPMethod) {
+        public Builder hTTPMethod(@Nullable String hTTPMethod) {
             this.hTTPMethod = hTTPMethod;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setReservoirSize(@Nullable Integer reservoirSize) {
+        public Builder reservoirSize(@Nullable Integer reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
 
-        public Builder setResourceARN(@Nullable String resourceARN) {
+        public Builder resourceARN(@Nullable String resourceARN) {
             this.resourceARN = resourceARN;
             return this;
         }
 
-        public Builder setRuleARN(@Nullable String ruleARN) {
+        public Builder ruleARN(@Nullable String ruleARN) {
             this.ruleARN = ruleARN;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceType(@Nullable String serviceType) {
+        public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
-        public Builder setURLPath(@Nullable String uRLPath) {
+        public Builder uRLPath(@Nullable String uRLPath) {
             this.uRLPath = uRLPath;
             return this;
         }

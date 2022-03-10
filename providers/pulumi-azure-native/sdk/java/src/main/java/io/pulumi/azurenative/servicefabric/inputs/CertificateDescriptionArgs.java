@@ -90,32 +90,32 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder setThumbprint(Input<String> thumbprint) {
+        public Builder thumbprint(Input<String> thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Input.of(Objects.requireNonNull(thumbprint));
             return this;
         }
 
-        public Builder setThumbprintSecondary(@Nullable Input<String> thumbprintSecondary) {
+        public Builder thumbprintSecondary(@Nullable Input<String> thumbprintSecondary) {
             this.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
 
-        public Builder setThumbprintSecondary(@Nullable String thumbprintSecondary) {
+        public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
             this.thumbprintSecondary = Input.ofNullable(thumbprintSecondary);
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable Input<String> x509StoreName) {
+        public Builder x509StoreName(@Nullable Input<String> x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable String x509StoreName) {
+        public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = Input.ofNullable(x509StoreName);
             return this;
         }

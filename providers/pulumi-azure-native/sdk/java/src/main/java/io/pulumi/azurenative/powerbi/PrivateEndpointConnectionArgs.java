@@ -138,62 +138,62 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAzureResourceName(Input<String> azureResourceName) {
+        public Builder azureResourceName(Input<String> azureResourceName) {
             this.azureResourceName = Objects.requireNonNull(azureResourceName);
             return this;
         }
 
-        public Builder setAzureResourceName(String azureResourceName) {
+        public Builder azureResourceName(String azureResourceName) {
             this.azureResourceName = Input.of(Objects.requireNonNull(azureResourceName));
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Input<PrivateEndpointArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
             this.privateEndpoint = Input.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable String privateEndpointName) {
+        public Builder privateEndpointName(@Nullable String privateEndpointName) {
             this.privateEndpointName = Input.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ResourceProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ResourceProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

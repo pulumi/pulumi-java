@@ -102,42 +102,42 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
     	      this.resourceRecordValue = defaults.resourceRecordValue;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setResourceRecordName(@Nullable Input<String> resourceRecordName) {
+        public Builder resourceRecordName(@Nullable Input<String> resourceRecordName) {
             this.resourceRecordName = resourceRecordName;
             return this;
         }
 
-        public Builder setResourceRecordName(@Nullable String resourceRecordName) {
+        public Builder resourceRecordName(@Nullable String resourceRecordName) {
             this.resourceRecordName = Input.ofNullable(resourceRecordName);
             return this;
         }
 
-        public Builder setResourceRecordType(@Nullable Input<String> resourceRecordType) {
+        public Builder resourceRecordType(@Nullable Input<String> resourceRecordType) {
             this.resourceRecordType = resourceRecordType;
             return this;
         }
 
-        public Builder setResourceRecordType(@Nullable String resourceRecordType) {
+        public Builder resourceRecordType(@Nullable String resourceRecordType) {
             this.resourceRecordType = Input.ofNullable(resourceRecordType);
             return this;
         }
 
-        public Builder setResourceRecordValue(@Nullable Input<String> resourceRecordValue) {
+        public Builder resourceRecordValue(@Nullable Input<String> resourceRecordValue) {
             this.resourceRecordValue = resourceRecordValue;
             return this;
         }
 
-        public Builder setResourceRecordValue(@Nullable String resourceRecordValue) {
+        public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
             this.resourceRecordValue = Input.ofNullable(resourceRecordValue);
             return this;
         }

@@ -103,42 +103,42 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder setLogGroupNames(@Nullable Input<List<String>> logGroupNames) {
+        public Builder logGroupNames(@Nullable Input<List<String>> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
-        public Builder setLogGroupNames(@Nullable List<String> logGroupNames) {
+        public Builder logGroupNames(@Nullable List<String> logGroupNames) {
             this.logGroupNames = Input.ofNullable(logGroupNames);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryDefinitionId(@Nullable Input<String> queryDefinitionId) {
+        public Builder queryDefinitionId(@Nullable Input<String> queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
 
-        public Builder setQueryDefinitionId(@Nullable String queryDefinitionId) {
+        public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
             this.queryDefinitionId = Input.ofNullable(queryDefinitionId);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Input<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }

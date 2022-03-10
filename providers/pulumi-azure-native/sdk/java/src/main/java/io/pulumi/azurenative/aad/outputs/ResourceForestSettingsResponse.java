@@ -69,12 +69,12 @@ public final class ResourceForestSettingsResponse {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setResourceForest(@Nullable String resourceForest) {
+        public Builder resourceForest(@Nullable String resourceForest) {
             this.resourceForest = resourceForest;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<ForestTrustResponse> settings) {
+        public Builder settings(@Nullable List<ForestTrustResponse> settings) {
             this.settings = settings;
             return this;
         }

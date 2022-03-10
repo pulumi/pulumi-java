@@ -59,17 +59,17 @@ public final class DomainMasterUserOptions {
     	      this.masterUserPassword = defaults.masterUserPassword;
         }
 
-        public Builder setMasterUserARN(@Nullable String masterUserARN) {
+        public Builder masterUserARN(@Nullable String masterUserARN) {
             this.masterUserARN = masterUserARN;
             return this;
         }
 
-        public Builder setMasterUserName(@Nullable String masterUserName) {
+        public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
-        public Builder setMasterUserPassword(@Nullable String masterUserPassword) {
+        public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }

@@ -88,42 +88,42 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs extends io.p
     	      this.updateVersion = defaults.updateVersion;
         }
 
-        public Builder setCurrentVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
+        public Builder currentVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
+        public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
             this.currentVersion = Input.ofNullable(currentVersion);
             return this;
         }
 
-        public Builder setSigKeyCrc(@Nullable Input<Integer> sigKeyCrc) {
+        public Builder sigKeyCrc(@Nullable Input<Integer> sigKeyCrc) {
             this.sigKeyCrc = sigKeyCrc;
             return this;
         }
 
-        public Builder setSigKeyCrc(@Nullable Integer sigKeyCrc) {
+        public Builder sigKeyCrc(@Nullable Integer sigKeyCrc) {
             this.sigKeyCrc = Input.ofNullable(sigKeyCrc);
             return this;
         }
 
-        public Builder setUpdateSignature(@Nullable Input<String> updateSignature) {
+        public Builder updateSignature(@Nullable Input<String> updateSignature) {
             this.updateSignature = updateSignature;
             return this;
         }
 
-        public Builder setUpdateSignature(@Nullable String updateSignature) {
+        public Builder updateSignature(@Nullable String updateSignature) {
             this.updateSignature = Input.ofNullable(updateSignature);
             return this;
         }
 
-        public Builder setUpdateVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
+        public Builder updateVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
             this.updateVersion = updateVersion;
             return this;
         }
 
-        public Builder setUpdateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
+        public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
             this.updateVersion = Input.ofNullable(updateVersion);
             return this;
         }

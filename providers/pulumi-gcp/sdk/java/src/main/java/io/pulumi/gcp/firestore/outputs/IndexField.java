@@ -91,17 +91,17 @@ public final class IndexField {
     	      this.order = defaults.order;
         }
 
-        public Builder setArrayConfig(@Nullable String arrayConfig) {
+        public Builder arrayConfig(@Nullable String arrayConfig) {
             this.arrayConfig = arrayConfig;
             return this;
         }
 
-        public Builder setFieldPath(@Nullable String fieldPath) {
+        public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }

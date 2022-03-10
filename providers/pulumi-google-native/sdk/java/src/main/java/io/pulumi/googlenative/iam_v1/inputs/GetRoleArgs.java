@@ -62,12 +62,12 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.roleId = defaults.roleId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }

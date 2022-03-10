@@ -69,12 +69,12 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettings {
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }

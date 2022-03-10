@@ -94,27 +94,27 @@ public final class GetSafetyRuleResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setAssertionRule(@Nullable SafetyRuleAssertionRule assertionRule) {
+        public Builder assertionRule(@Nullable SafetyRuleAssertionRule assertionRule) {
             this.assertionRule = assertionRule;
             return this;
         }
 
-        public Builder setGatingRule(@Nullable SafetyRuleGatingRule gatingRule) {
+        public Builder gatingRule(@Nullable SafetyRuleGatingRule gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSafetyRuleArn(@Nullable String safetyRuleArn) {
+        public Builder safetyRuleArn(@Nullable String safetyRuleArn) {
             this.safetyRuleArn = safetyRuleArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable SafetyRuleStatus status) {
+        public Builder status(@Nullable SafetyRuleStatus status) {
             this.status = status;
             return this;
         }

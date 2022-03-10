@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     	      this.cardWidth = defaults.cardWidth;
         }
 
-        public Builder setCardContents(Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents) {
+        public Builder cardContents(Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents) {
             this.cardContents = Objects.requireNonNull(cardContents);
             return this;
         }
 
-        public Builder setCardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContents) {
+        public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContents) {
             this.cardContents = Input.of(Objects.requireNonNull(cardContents));
             return this;
         }
 
-        public Builder setCardWidth(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
+        public Builder cardWidth(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth) {
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }
 
-        public Builder setCardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth cardWidth) {
+        public Builder cardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth cardWidth) {
             this.cardWidth = Input.of(Objects.requireNonNull(cardWidth));
             return this;
         }

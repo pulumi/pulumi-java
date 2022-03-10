@@ -74,22 +74,22 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
     	      this.version = defaults.version;
         }
 
-        public Builder setName(Input<SimulationApplicationRenderingEngineName> name) {
+        public Builder name(Input<SimulationApplicationRenderingEngineName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(SimulationApplicationRenderingEngineName name) {
+        public Builder name(SimulationApplicationRenderingEngineName name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

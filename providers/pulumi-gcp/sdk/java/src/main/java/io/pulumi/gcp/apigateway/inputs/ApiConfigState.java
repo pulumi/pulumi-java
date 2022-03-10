@@ -207,102 +207,102 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceConfigId = defaults.serviceConfigId;
         }
 
-        public Builder setApi(@Nullable Input<String> api) {
+        public Builder api(@Nullable Input<String> api) {
             this.api = api;
             return this;
         }
 
-        public Builder setApi(@Nullable String api) {
+        public Builder api(@Nullable String api) {
             this.api = Input.ofNullable(api);
             return this;
         }
 
-        public Builder setApiConfigId(@Nullable Input<String> apiConfigId) {
+        public Builder apiConfigId(@Nullable Input<String> apiConfigId) {
             this.apiConfigId = apiConfigId;
             return this;
         }
 
-        public Builder setApiConfigId(@Nullable String apiConfigId) {
+        public Builder apiConfigId(@Nullable String apiConfigId) {
             this.apiConfigId = Input.ofNullable(apiConfigId);
             return this;
         }
 
-        public Builder setApiConfigIdPrefix(@Nullable Input<String> apiConfigIdPrefix) {
+        public Builder apiConfigIdPrefix(@Nullable Input<String> apiConfigIdPrefix) {
             this.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
 
-        public Builder setApiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
+        public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
             this.apiConfigIdPrefix = Input.ofNullable(apiConfigIdPrefix);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<ApiConfigGatewayConfigGetArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<ApiConfigGatewayConfigGetArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable ApiConfigGatewayConfigGetArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigGetArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOpenapiDocuments(@Nullable Input<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable Input<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments) {
             this.openapiDocuments = openapiDocuments;
             return this;
         }
 
-        public Builder setOpenapiDocuments(@Nullable List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
+        public Builder openapiDocuments(@Nullable List<ApiConfigOpenapiDocumentGetArgs> openapiDocuments) {
             this.openapiDocuments = Input.ofNullable(openapiDocuments);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceConfigId(@Nullable Input<String> serviceConfigId) {
+        public Builder serviceConfigId(@Nullable Input<String> serviceConfigId) {
             this.serviceConfigId = serviceConfigId;
             return this;
         }
 
-        public Builder setServiceConfigId(@Nullable String serviceConfigId) {
+        public Builder serviceConfigId(@Nullable String serviceConfigId) {
             this.serviceConfigId = Input.ofNullable(serviceConfigId);
             return this;
         }

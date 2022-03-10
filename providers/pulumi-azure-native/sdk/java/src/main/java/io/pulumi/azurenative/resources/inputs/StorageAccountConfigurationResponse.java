@@ -74,12 +74,12 @@ public final class StorageAccountConfigurationResponse extends io.pulumi.resourc
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder setStorageAccountKey(@Nullable String storageAccountKey) {
+        public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }

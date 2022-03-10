@@ -177,82 +177,82 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(Input<Either<String,ActionType>> action) {
+        public Builder action(Input<Either<String,ActionType>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(Either<String,ActionType> action) {
+        public Builder action(Either<String,ActionType> action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,CustomRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,CustomRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setMatchConditions(Input<List<FrontDoorMatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(Input<List<FrontDoorMatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setMatchConditions(List<FrontDoorMatchConditionArgs> matchConditions) {
+        public Builder matchConditions(List<FrontDoorMatchConditionArgs> matchConditions) {
             this.matchConditions = Input.of(Objects.requireNonNull(matchConditions));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRateLimitDurationInMinutes(@Nullable Input<Integer> rateLimitDurationInMinutes) {
+        public Builder rateLimitDurationInMinutes(@Nullable Input<Integer> rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
-        public Builder setRateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
+        public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = Input.ofNullable(rateLimitDurationInMinutes);
             return this;
         }
 
-        public Builder setRateLimitThreshold(@Nullable Input<Integer> rateLimitThreshold) {
+        public Builder rateLimitThreshold(@Nullable Input<Integer> rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
-        public Builder setRateLimitThreshold(@Nullable Integer rateLimitThreshold) {
+        public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
             this.rateLimitThreshold = Input.ofNullable(rateLimitThreshold);
             return this;
         }
 
-        public Builder setRuleType(Input<Either<String,RuleType>> ruleType) {
+        public Builder ruleType(Input<Either<String,RuleType>> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(Either<String,RuleType> ruleType) {
+        public Builder ruleType(Either<String,RuleType> ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }

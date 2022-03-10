@@ -48,12 +48,12 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyGroupConfig = defaults.keyGroupConfig;
         }
 
-        public Builder setKeyGroupConfig(Input<KeyGroupConfigArgs> keyGroupConfig) {
+        public Builder keyGroupConfig(Input<KeyGroupConfigArgs> keyGroupConfig) {
             this.keyGroupConfig = Objects.requireNonNull(keyGroupConfig);
             return this;
         }
 
-        public Builder setKeyGroupConfig(KeyGroupConfigArgs keyGroupConfig) {
+        public Builder keyGroupConfig(KeyGroupConfigArgs keyGroupConfig) {
             this.keyGroupConfig = Input.of(Objects.requireNonNull(keyGroupConfig));
             return this;
         }

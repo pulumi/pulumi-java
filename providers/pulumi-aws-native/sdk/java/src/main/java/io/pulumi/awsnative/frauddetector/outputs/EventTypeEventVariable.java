@@ -161,57 +161,57 @@ public final class EventTypeEventVariable {
     	      this.variableType = defaults.variableType;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSource(@Nullable EventTypeEventVariableDataSource dataSource) {
+        public Builder dataSource(@Nullable EventTypeEventVariableDataSource dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataType(@Nullable EventTypeEventVariableDataType dataType) {
+        public Builder dataType(@Nullable EventTypeEventVariableDataType dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInline(@Nullable Boolean inline) {
+        public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventTypeTag> tags) {
+        public Builder tags(@Nullable List<EventTypeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVariableType(@Nullable EventTypeEventVariableVariableType variableType) {
+        public Builder variableType(@Nullable EventTypeEventVariableVariableType variableType) {
             this.variableType = variableType;
             return this;
         }

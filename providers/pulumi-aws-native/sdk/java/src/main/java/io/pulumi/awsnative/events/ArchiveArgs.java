@@ -88,42 +88,42 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Input<Object> eventPattern) {
+        public Builder eventPattern(@Nullable Input<Object> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Object eventPattern) {
+        public Builder eventPattern(@Nullable Object eventPattern) {
             this.eventPattern = Input.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder setSourceArn(Input<String> sourceArn) {
+        public Builder sourceArn(Input<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
 
-        public Builder setSourceArn(String sourceArn) {
+        public Builder sourceArn(String sourceArn) {
             this.sourceArn = Input.of(Objects.requireNonNull(sourceArn));
             return this;
         }

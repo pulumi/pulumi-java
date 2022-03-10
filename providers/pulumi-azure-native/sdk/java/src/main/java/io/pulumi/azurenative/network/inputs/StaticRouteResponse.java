@@ -91,17 +91,17 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.nextHopIpAddress = defaults.nextHopIpAddress;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }

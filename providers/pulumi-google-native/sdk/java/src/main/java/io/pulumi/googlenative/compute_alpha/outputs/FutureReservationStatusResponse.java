@@ -98,22 +98,22 @@ public final class FutureReservationStatusResponse {
     	      this.procurementStatus = defaults.procurementStatus;
         }
 
-        public Builder setAutoCreatedReservations(List<String> autoCreatedReservations) {
+        public Builder autoCreatedReservations(List<String> autoCreatedReservations) {
             this.autoCreatedReservations = Objects.requireNonNull(autoCreatedReservations);
             return this;
         }
 
-        public Builder setFulfilledCount(String fulfilledCount) {
+        public Builder fulfilledCount(String fulfilledCount) {
             this.fulfilledCount = Objects.requireNonNull(fulfilledCount);
             return this;
         }
 
-        public Builder setLockTime(String lockTime) {
+        public Builder lockTime(String lockTime) {
             this.lockTime = Objects.requireNonNull(lockTime);
             return this;
         }
 
-        public Builder setProcurementStatus(String procurementStatus) {
+        public Builder procurementStatus(String procurementStatus) {
             this.procurementStatus = Objects.requireNonNull(procurementStatus);
             return this;
         }

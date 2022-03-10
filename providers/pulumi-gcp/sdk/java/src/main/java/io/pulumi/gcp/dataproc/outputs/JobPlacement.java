@@ -51,12 +51,12 @@ public final class JobPlacement {
     	      this.clusterUuid = defaults.clusterUuid;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterUuid(@Nullable String clusterUuid) {
+        public Builder clusterUuid(@Nullable String clusterUuid) {
             this.clusterUuid = clusterUuid;
             return this;
         }

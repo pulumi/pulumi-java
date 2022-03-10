@@ -68,12 +68,12 @@ public final class WebAclDefaultAction {
     	      this.block = defaults.block;
         }
 
-        public Builder setAllow(@Nullable WebAclDefaultActionAllow allow) {
+        public Builder allow(@Nullable WebAclDefaultActionAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebAclDefaultActionBlock block) {
+        public Builder block(@Nullable WebAclDefaultActionBlock block) {
             this.block = block;
             return this;
         }

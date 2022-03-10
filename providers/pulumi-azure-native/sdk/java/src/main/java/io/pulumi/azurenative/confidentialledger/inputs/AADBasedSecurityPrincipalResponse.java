@@ -90,17 +90,17 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setLedgerRoleName(@Nullable String ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

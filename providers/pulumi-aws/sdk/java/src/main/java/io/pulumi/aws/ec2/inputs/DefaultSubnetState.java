@@ -317,202 +317,202 @@ public final class DefaultSubnetState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssignIpv6AddressOnCreation(@Nullable Input<Boolean> assignIpv6AddressOnCreation) {
+        public Builder assignIpv6AddressOnCreation(@Nullable Input<Boolean> assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
             return this;
         }
 
-        public Builder setAssignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
+        public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = Input.ofNullable(assignIpv6AddressOnCreation);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder setEnableDns64(@Nullable Input<Boolean> enableDns64) {
+        public Builder enableDns64(@Nullable Input<Boolean> enableDns64) {
             this.enableDns64 = enableDns64;
             return this;
         }
 
-        public Builder setEnableDns64(@Nullable Boolean enableDns64) {
+        public Builder enableDns64(@Nullable Boolean enableDns64) {
             this.enableDns64 = Input.ofNullable(enableDns64);
             return this;
         }
 
-        public Builder setEnableResourceNameDnsARecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch) {
+        public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
             return this;
         }
 
-        public Builder setEnableResourceNameDnsARecordOnLaunch(@Nullable Boolean enableResourceNameDnsARecordOnLaunch) {
+        public Builder enableResourceNameDnsARecordOnLaunch(@Nullable Boolean enableResourceNameDnsARecordOnLaunch) {
             this.enableResourceNameDnsARecordOnLaunch = Input.ofNullable(enableResourceNameDnsARecordOnLaunch);
             return this;
         }
 
-        public Builder setEnableResourceNameDnsAaaaRecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch) {
+        public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = enableResourceNameDnsAaaaRecordOnLaunch;
             return this;
         }
 
-        public Builder setEnableResourceNameDnsAaaaRecordOnLaunch(@Nullable Boolean enableResourceNameDnsAaaaRecordOnLaunch) {
+        public Builder enableResourceNameDnsAaaaRecordOnLaunch(@Nullable Boolean enableResourceNameDnsAaaaRecordOnLaunch) {
             this.enableResourceNameDnsAaaaRecordOnLaunch = Input.ofNullable(enableResourceNameDnsAaaaRecordOnLaunch);
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder setIpv6CidrBlockAssociationId(@Nullable Input<String> ipv6CidrBlockAssociationId) {
+        public Builder ipv6CidrBlockAssociationId(@Nullable Input<String> ipv6CidrBlockAssociationId) {
             this.ipv6CidrBlockAssociationId = ipv6CidrBlockAssociationId;
             return this;
         }
 
-        public Builder setIpv6CidrBlockAssociationId(@Nullable String ipv6CidrBlockAssociationId) {
+        public Builder ipv6CidrBlockAssociationId(@Nullable String ipv6CidrBlockAssociationId) {
             this.ipv6CidrBlockAssociationId = Input.ofNullable(ipv6CidrBlockAssociationId);
             return this;
         }
 
-        public Builder setIpv6Native(@Nullable Input<Boolean> ipv6Native) {
+        public Builder ipv6Native(@Nullable Input<Boolean> ipv6Native) {
             this.ipv6Native = ipv6Native;
             return this;
         }
 
-        public Builder setIpv6Native(@Nullable Boolean ipv6Native) {
+        public Builder ipv6Native(@Nullable Boolean ipv6Native) {
             this.ipv6Native = Input.ofNullable(ipv6Native);
             return this;
         }
 
-        public Builder setMapCustomerOwnedIpOnLaunch(@Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch) {
+        public Builder mapCustomerOwnedIpOnLaunch(@Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
             return this;
         }
 
-        public Builder setMapCustomerOwnedIpOnLaunch(@Nullable Boolean mapCustomerOwnedIpOnLaunch) {
+        public Builder mapCustomerOwnedIpOnLaunch(@Nullable Boolean mapCustomerOwnedIpOnLaunch) {
             this.mapCustomerOwnedIpOnLaunch = Input.ofNullable(mapCustomerOwnedIpOnLaunch);
             return this;
         }
 
-        public Builder setMapPublicIpOnLaunch(@Nullable Input<Boolean> mapPublicIpOnLaunch) {
+        public Builder mapPublicIpOnLaunch(@Nullable Input<Boolean> mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
-        public Builder setMapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
+        public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = Input.ofNullable(mapPublicIpOnLaunch);
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Input<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Input.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPrivateDnsHostnameTypeOnLaunch(@Nullable Input<String> privateDnsHostnameTypeOnLaunch) {
+        public Builder privateDnsHostnameTypeOnLaunch(@Nullable Input<String> privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
             return this;
         }
 
-        public Builder setPrivateDnsHostnameTypeOnLaunch(@Nullable String privateDnsHostnameTypeOnLaunch) {
+        public Builder privateDnsHostnameTypeOnLaunch(@Nullable String privateDnsHostnameTypeOnLaunch) {
             this.privateDnsHostnameTypeOnLaunch = Input.ofNullable(privateDnsHostnameTypeOnLaunch);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

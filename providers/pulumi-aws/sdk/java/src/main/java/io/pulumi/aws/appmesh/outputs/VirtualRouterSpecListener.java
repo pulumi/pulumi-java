@@ -48,7 +48,7 @@ public final class VirtualRouterSpecListener {
     	      this.portMapping = defaults.portMapping;
         }
 
-        public Builder setPortMapping(VirtualRouterSpecListenerPortMapping portMapping) {
+        public Builder portMapping(VirtualRouterSpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }

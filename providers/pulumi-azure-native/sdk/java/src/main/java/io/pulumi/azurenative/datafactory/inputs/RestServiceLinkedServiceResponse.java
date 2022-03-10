@@ -340,92 +340,92 @@ public final class RestServiceLinkedServiceResponse extends io.pulumi.resources.
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAadResourceId(@Nullable Object aadResourceId) {
+        public Builder aadResourceId(@Nullable Object aadResourceId) {
             this.aadResourceId = aadResourceId;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthHeaders(@Nullable Object authHeaders) {
+        public Builder authHeaders(@Nullable Object authHeaders) {
             this.authHeaders = authHeaders;
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Object azureCloudType) {
+        public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
+        public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
             this.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setTenant(@Nullable Object tenant) {
+        public Builder tenant(@Nullable Object tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUserName(@Nullable Object userName) {
+        public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
         }

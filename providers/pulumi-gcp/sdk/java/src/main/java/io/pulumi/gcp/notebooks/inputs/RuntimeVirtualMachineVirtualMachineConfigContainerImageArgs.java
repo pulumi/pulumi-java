@@ -71,22 +71,22 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs e
     	      this.tag = defaults.tag;
         }
 
-        public Builder setRepository(Input<String> repository) {
+        public Builder repository(Input<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

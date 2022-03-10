@@ -195,102 +195,102 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppEngineHttpQueue(@Nullable Input<AppEngineHttpQueueArgs> appEngineHttpQueue) {
+        public Builder appEngineHttpQueue(@Nullable Input<AppEngineHttpQueueArgs> appEngineHttpQueue) {
             this.appEngineHttpQueue = appEngineHttpQueue;
             return this;
         }
 
-        public Builder setAppEngineHttpQueue(@Nullable AppEngineHttpQueueArgs appEngineHttpQueue) {
+        public Builder appEngineHttpQueue(@Nullable AppEngineHttpQueueArgs appEngineHttpQueue) {
             this.appEngineHttpQueue = Input.ofNullable(appEngineHttpQueue);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRateLimits(@Nullable Input<RateLimitsArgs> rateLimits) {
+        public Builder rateLimits(@Nullable Input<RateLimitsArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
 
-        public Builder setRateLimits(@Nullable RateLimitsArgs rateLimits) {
+        public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
             this.rateLimits = Input.ofNullable(rateLimits);
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable Input<RetryConfigArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Input<RetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable RetryConfigArgs retryConfig) {
+        public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
             this.retryConfig = Input.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder setStackdriverLoggingConfig(@Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(@Nullable Input<StackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
 
-        public Builder setStackdriverLoggingConfig(@Nullable StackdriverLoggingConfigArgs stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(@Nullable StackdriverLoggingConfigArgs stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = Input.ofNullable(stackdriverLoggingConfig);
             return this;
         }
 
-        public Builder setTaskTtl(@Nullable Input<String> taskTtl) {
+        public Builder taskTtl(@Nullable Input<String> taskTtl) {
             this.taskTtl = taskTtl;
             return this;
         }
 
-        public Builder setTaskTtl(@Nullable String taskTtl) {
+        public Builder taskTtl(@Nullable String taskTtl) {
             this.taskTtl = Input.ofNullable(taskTtl);
             return this;
         }
 
-        public Builder setTombstoneTtl(@Nullable Input<String> tombstoneTtl) {
+        public Builder tombstoneTtl(@Nullable Input<String> tombstoneTtl) {
             this.tombstoneTtl = tombstoneTtl;
             return this;
         }
 
-        public Builder setTombstoneTtl(@Nullable String tombstoneTtl) {
+        public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
             this.tombstoneTtl = Input.ofNullable(tombstoneTtl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<QueueType> type) {
+        public Builder type(@Nullable Input<QueueType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable QueueType type) {
+        public Builder type(@Nullable QueueType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

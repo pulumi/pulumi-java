@@ -212,112 +212,112 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessType(@Nullable Input<String> accessType) {
+        public Builder accessType(@Nullable Input<String> accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setAccessType(@Nullable String accessType) {
+        public Builder accessType(@Nullable String accessType) {
             this.accessType = Input.ofNullable(accessType);
             return this;
         }
 
-        public Builder setAppFamily(@Nullable Input<String> appFamily) {
+        public Builder appFamily(@Nullable Input<String> appFamily) {
             this.appFamily = appFamily;
             return this;
         }
 
-        public Builder setAppFamily(@Nullable String appFamily) {
+        public Builder appFamily(@Nullable String appFamily) {
             this.appFamily = Input.ofNullable(appFamily);
             return this;
         }
 
-        public Builder setApps(@Nullable Input<List<String>> apps) {
+        public Builder apps(@Nullable Input<List<String>> apps) {
             this.apps = apps;
             return this;
         }
 
-        public Builder setApps(@Nullable List<String> apps) {
+        public Builder apps(@Nullable List<String> apps) {
             this.apps = Input.ofNullable(apps);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setCompanies(@Nullable Input<List<String>> companies) {
+        public Builder companies(@Nullable Input<List<String>> companies) {
             this.companies = companies;
             return this;
         }
 
-        public Builder setCompanies(@Nullable List<String> companies) {
+        public Builder companies(@Nullable List<String> companies) {
             this.companies = Input.ofNullable(companies);
             return this;
         }
 
-        public Builder setDeveloperId(@Nullable Input<String> developerId) {
+        public Builder developerId(@Nullable Input<String> developerId) {
             this.developerId = developerId;
             return this;
         }
 
-        public Builder setDeveloperId(@Nullable String developerId) {
+        public Builder developerId(@Nullable String developerId) {
             this.developerId = Input.ofNullable(developerId);
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setFirstName(Input<String> firstName) {
+        public Builder firstName(Input<String> firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = Input.of(Objects.requireNonNull(firstName));
             return this;
         }
 
-        public Builder setLastName(Input<String> lastName) {
+        public Builder lastName(Input<String> lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
 
-        public Builder setLastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = Input.of(Objects.requireNonNull(lastName));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

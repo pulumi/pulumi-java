@@ -102,42 +102,42 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder setCustomerGatewayArn(Input<String> customerGatewayArn) {
+        public Builder customerGatewayArn(Input<String> customerGatewayArn) {
             this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
             return this;
         }
 
-        public Builder setCustomerGatewayArn(String customerGatewayArn) {
+        public Builder customerGatewayArn(String customerGatewayArn) {
             this.customerGatewayArn = Input.of(Objects.requireNonNull(customerGatewayArn));
             return this;
         }
 
-        public Builder setDeviceId(Input<String> deviceId) {
+        public Builder deviceId(Input<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Input.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder setGlobalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Input<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder setLinkId(@Nullable Input<String> linkId) {
+        public Builder linkId(@Nullable Input<String> linkId) {
             this.linkId = linkId;
             return this;
         }
 
-        public Builder setLinkId(@Nullable String linkId) {
+        public Builder linkId(@Nullable String linkId) {
             this.linkId = Input.ofNullable(linkId);
             return this;
         }

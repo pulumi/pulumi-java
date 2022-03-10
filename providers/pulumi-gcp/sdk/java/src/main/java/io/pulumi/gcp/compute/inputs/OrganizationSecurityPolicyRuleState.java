@@ -213,102 +213,102 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDirection(@Nullable Input<String> direction) {
+        public Builder direction(@Nullable Input<String> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Boolean enableLogging) {
+        public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setMatch(@Nullable Input<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
+        public Builder match(@Nullable Input<OrganizationSecurityPolicyRuleMatchGetArgs> match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMatch(@Nullable OrganizationSecurityPolicyRuleMatchGetArgs match) {
+        public Builder match(@Nullable OrganizationSecurityPolicyRuleMatchGetArgs match) {
             this.match = Input.ofNullable(match);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Input<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTargetResources(@Nullable Input<List<String>> targetResources) {
+        public Builder targetResources(@Nullable Input<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
-        public Builder setTargetResources(@Nullable List<String> targetResources) {
+        public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Input.ofNullable(targetResources);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }

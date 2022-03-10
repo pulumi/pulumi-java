@@ -370,202 +370,202 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
     	      this.triggerConfigurations = defaults.triggerConfigurations;
         }
 
-        public Builder setAlarmConfiguration(@Nullable Input<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration) {
+        public Builder alarmConfiguration(@Nullable Input<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration) {
             this.alarmConfiguration = alarmConfiguration;
             return this;
         }
 
-        public Builder setAlarmConfiguration(@Nullable DeploymentGroupAlarmConfigurationGetArgs alarmConfiguration) {
+        public Builder alarmConfiguration(@Nullable DeploymentGroupAlarmConfigurationGetArgs alarmConfiguration) {
             this.alarmConfiguration = Input.ofNullable(alarmConfiguration);
             return this;
         }
 
-        public Builder setAppName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Input<String> appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = Input.ofNullable(appName);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoRollbackConfiguration(@Nullable Input<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable Input<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration) {
             this.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
 
-        public Builder setAutoRollbackConfiguration(@Nullable DeploymentGroupAutoRollbackConfigurationGetArgs autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable DeploymentGroupAutoRollbackConfigurationGetArgs autoRollbackConfiguration) {
             this.autoRollbackConfiguration = Input.ofNullable(autoRollbackConfiguration);
             return this;
         }
 
-        public Builder setAutoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
-        public Builder setAutoscalingGroups(@Nullable List<String> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable List<String> autoscalingGroups) {
             this.autoscalingGroups = Input.ofNullable(autoscalingGroups);
             return this;
         }
 
-        public Builder setBlueGreenDeploymentConfig(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig) {
+        public Builder blueGreenDeploymentConfig(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig) {
             this.blueGreenDeploymentConfig = blueGreenDeploymentConfig;
             return this;
         }
 
-        public Builder setBlueGreenDeploymentConfig(@Nullable DeploymentGroupBlueGreenDeploymentConfigGetArgs blueGreenDeploymentConfig) {
+        public Builder blueGreenDeploymentConfig(@Nullable DeploymentGroupBlueGreenDeploymentConfigGetArgs blueGreenDeploymentConfig) {
             this.blueGreenDeploymentConfig = Input.ofNullable(blueGreenDeploymentConfig);
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable Input<String> computePlatform) {
+        public Builder computePlatform(@Nullable Input<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable String computePlatform) {
+        public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Input.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder setDeploymentConfigName(@Nullable Input<String> deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable Input<String> deploymentConfigName) {
             this.deploymentConfigName = deploymentConfigName;
             return this;
         }
 
-        public Builder setDeploymentConfigName(@Nullable String deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
             this.deploymentConfigName = Input.ofNullable(deploymentConfigName);
             return this;
         }
 
-        public Builder setDeploymentGroupId(@Nullable Input<String> deploymentGroupId) {
+        public Builder deploymentGroupId(@Nullable Input<String> deploymentGroupId) {
             this.deploymentGroupId = deploymentGroupId;
             return this;
         }
 
-        public Builder setDeploymentGroupId(@Nullable String deploymentGroupId) {
+        public Builder deploymentGroupId(@Nullable String deploymentGroupId) {
             this.deploymentGroupId = Input.ofNullable(deploymentGroupId);
             return this;
         }
 
-        public Builder setDeploymentGroupName(@Nullable Input<String> deploymentGroupName) {
+        public Builder deploymentGroupName(@Nullable Input<String> deploymentGroupName) {
             this.deploymentGroupName = deploymentGroupName;
             return this;
         }
 
-        public Builder setDeploymentGroupName(@Nullable String deploymentGroupName) {
+        public Builder deploymentGroupName(@Nullable String deploymentGroupName) {
             this.deploymentGroupName = Input.ofNullable(deploymentGroupName);
             return this;
         }
 
-        public Builder setDeploymentStyle(@Nullable Input<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle) {
+        public Builder deploymentStyle(@Nullable Input<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle) {
             this.deploymentStyle = deploymentStyle;
             return this;
         }
 
-        public Builder setDeploymentStyle(@Nullable DeploymentGroupDeploymentStyleGetArgs deploymentStyle) {
+        public Builder deploymentStyle(@Nullable DeploymentGroupDeploymentStyleGetArgs deploymentStyle) {
             this.deploymentStyle = Input.ofNullable(deploymentStyle);
             return this;
         }
 
-        public Builder setEc2TagFilters(@Nullable Input<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable Input<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters) {
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }
 
-        public Builder setEc2TagFilters(@Nullable List<DeploymentGroupEc2TagFilterGetArgs> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagFilterGetArgs> ec2TagFilters) {
             this.ec2TagFilters = Input.ofNullable(ec2TagFilters);
             return this;
         }
 
-        public Builder setEc2TagSets(@Nullable Input<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets) {
+        public Builder ec2TagSets(@Nullable Input<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets) {
             this.ec2TagSets = ec2TagSets;
             return this;
         }
 
-        public Builder setEc2TagSets(@Nullable List<DeploymentGroupEc2TagSetGetArgs> ec2TagSets) {
+        public Builder ec2TagSets(@Nullable List<DeploymentGroupEc2TagSetGetArgs> ec2TagSets) {
             this.ec2TagSets = Input.ofNullable(ec2TagSets);
             return this;
         }
 
-        public Builder setEcsService(@Nullable Input<DeploymentGroupEcsServiceGetArgs> ecsService) {
+        public Builder ecsService(@Nullable Input<DeploymentGroupEcsServiceGetArgs> ecsService) {
             this.ecsService = ecsService;
             return this;
         }
 
-        public Builder setEcsService(@Nullable DeploymentGroupEcsServiceGetArgs ecsService) {
+        public Builder ecsService(@Nullable DeploymentGroupEcsServiceGetArgs ecsService) {
             this.ecsService = Input.ofNullable(ecsService);
             return this;
         }
 
-        public Builder setLoadBalancerInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo) {
+        public Builder loadBalancerInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo) {
             this.loadBalancerInfo = loadBalancerInfo;
             return this;
         }
 
-        public Builder setLoadBalancerInfo(@Nullable DeploymentGroupLoadBalancerInfoGetArgs loadBalancerInfo) {
+        public Builder loadBalancerInfo(@Nullable DeploymentGroupLoadBalancerInfoGetArgs loadBalancerInfo) {
             this.loadBalancerInfo = Input.ofNullable(loadBalancerInfo);
             return this;
         }
 
-        public Builder setOnPremisesInstanceTagFilters(@Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(@Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters) {
             this.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
             return this;
         }
 
-        public Builder setOnPremisesInstanceTagFilters(@Nullable List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs> onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(@Nullable List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs> onPremisesInstanceTagFilters) {
             this.onPremisesInstanceTagFilters = Input.ofNullable(onPremisesInstanceTagFilters);
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable Input<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Input.ofNullable(serviceRoleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTriggerConfigurations(@Nullable Input<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations) {
+        public Builder triggerConfigurations(@Nullable Input<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations) {
             this.triggerConfigurations = triggerConfigurations;
             return this;
         }
 
-        public Builder setTriggerConfigurations(@Nullable List<DeploymentGroupTriggerConfigurationGetArgs> triggerConfigurations) {
+        public Builder triggerConfigurations(@Nullable List<DeploymentGroupTriggerConfigurationGetArgs> triggerConfigurations) {
             this.triggerConfigurations = Input.ofNullable(triggerConfigurations);
             return this;
         }

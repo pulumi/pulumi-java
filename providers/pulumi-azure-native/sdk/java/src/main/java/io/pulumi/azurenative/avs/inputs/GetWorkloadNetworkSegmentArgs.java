@@ -84,17 +84,17 @@ public final class GetWorkloadNetworkSegmentArgs extends io.pulumi.resources.Inv
     	      this.segmentId = defaults.segmentId;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSegmentId(String segmentId) {
+        public Builder segmentId(String segmentId) {
             this.segmentId = Objects.requireNonNull(segmentId);
             return this;
         }

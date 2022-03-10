@@ -64,22 +64,22 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setItems(@Nullable Input<List<DistributionOriginGroupArgs>> items) {
+        public Builder items(@Nullable Input<List<DistributionOriginGroupArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DistributionOriginGroupArgs> items) {
+        public Builder items(@Nullable List<DistributionOriginGroupArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }
 
-        public Builder setQuantity(Input<Integer> quantity) {
+        public Builder quantity(Input<Integer> quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
 
-        public Builder setQuantity(Integer quantity) {
+        public Builder quantity(Integer quantity) {
             this.quantity = Input.of(Objects.requireNonNull(quantity));
             return this;
         }

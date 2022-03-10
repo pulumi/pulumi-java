@@ -67,12 +67,12 @@ public final class LoggingPropertiesResponse {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setAuditLogStatus(@Nullable String auditLogStatus) {
+        public Builder auditLogStatus(@Nullable String auditLogStatus) {
             this.auditLogStatus = auditLogStatus;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }

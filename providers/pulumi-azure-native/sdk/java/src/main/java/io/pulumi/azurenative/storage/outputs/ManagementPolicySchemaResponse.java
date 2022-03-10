@@ -49,7 +49,7 @@ public final class ManagementPolicySchemaResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ManagementPolicyRuleResponse> rules) {
+        public Builder rules(List<ManagementPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

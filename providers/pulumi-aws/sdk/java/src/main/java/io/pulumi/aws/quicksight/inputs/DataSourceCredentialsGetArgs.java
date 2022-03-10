@@ -72,22 +72,22 @@ public final class DataSourceCredentialsGetArgs extends io.pulumi.resources.Reso
     	      this.credentialPair = defaults.credentialPair;
         }
 
-        public Builder setCopySourceArn(@Nullable Input<String> copySourceArn) {
+        public Builder copySourceArn(@Nullable Input<String> copySourceArn) {
             this.copySourceArn = copySourceArn;
             return this;
         }
 
-        public Builder setCopySourceArn(@Nullable String copySourceArn) {
+        public Builder copySourceArn(@Nullable String copySourceArn) {
             this.copySourceArn = Input.ofNullable(copySourceArn);
             return this;
         }
 
-        public Builder setCredentialPair(@Nullable Input<DataSourceCredentialsCredentialPairGetArgs> credentialPair) {
+        public Builder credentialPair(@Nullable Input<DataSourceCredentialsCredentialPairGetArgs> credentialPair) {
             this.credentialPair = credentialPair;
             return this;
         }
 
-        public Builder setCredentialPair(@Nullable DataSourceCredentialsCredentialPairGetArgs credentialPair) {
+        public Builder credentialPair(@Nullable DataSourceCredentialsCredentialPairGetArgs credentialPair) {
             this.credentialPair = Input.ofNullable(credentialPair);
             return this;
         }

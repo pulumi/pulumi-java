@@ -87,32 +87,32 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setComponentDependencies(@Nullable Object componentDependencies) {
+        public Builder componentDependencies(@Nullable Object componentDependencies) {
             this.componentDependencies = componentDependencies;
             return this;
         }
 
-        public Builder setComponentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters) {
+        public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters) {
             this.componentLambdaParameters = componentLambdaParameters;
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentPlatforms(@Nullable List<ComponentVersionComponentPlatform> componentPlatforms) {
+        public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatform> componentPlatforms) {
             this.componentPlatforms = componentPlatforms;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable String componentVersion) {
+        public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setLambdaArn(@Nullable String lambdaArn) {
+        public Builder lambdaArn(@Nullable String lambdaArn) {
             this.lambdaArn = lambdaArn;
             return this;
         }

@@ -40,7 +40,7 @@ public final class ListStorageAccountKeysResult {
     	      this.userStorageKey = defaults.userStorageKey;
         }
 
-        public Builder setUserStorageKey(String userStorageKey) {
+        public Builder userStorageKey(String userStorageKey) {
             this.userStorageKey = Objects.requireNonNull(userStorageKey);
             return this;
         }

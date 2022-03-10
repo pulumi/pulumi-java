@@ -174,82 +174,82 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unitNumber = defaults.unitNumber;
         }
 
-        public Builder setControllerKey(@Nullable Input<Integer> controllerKey) {
+        public Builder controllerKey(@Nullable Input<Integer> controllerKey) {
             this.controllerKey = controllerKey;
             return this;
         }
 
-        public Builder setControllerKey(@Nullable Integer controllerKey) {
+        public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = Input.ofNullable(controllerKey);
             return this;
         }
 
-        public Builder setDeviceKey(@Nullable Input<Integer> deviceKey) {
+        public Builder deviceKey(@Nullable Input<Integer> deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
-        public Builder setDeviceKey(@Nullable Integer deviceKey) {
+        public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = Input.ofNullable(deviceKey);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setDiskMode(@Nullable Input<Either<String,DiskMode>> diskMode) {
+        public Builder diskMode(@Nullable Input<Either<String,DiskMode>> diskMode) {
             this.diskMode = diskMode;
             return this;
         }
 
-        public Builder setDiskMode(@Nullable Either<String,DiskMode> diskMode) {
+        public Builder diskMode(@Nullable Either<String,DiskMode> diskMode) {
             this.diskMode = Input.ofNullable(diskMode);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<Either<String,DiskType>> diskType) {
+        public Builder diskType(@Nullable Input<Either<String,DiskType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable Either<String,DiskType> diskType) {
+        public Builder diskType(@Nullable Either<String,DiskType> diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUnitNumber(@Nullable Input<Integer> unitNumber) {
+        public Builder unitNumber(@Nullable Input<Integer> unitNumber) {
             this.unitNumber = unitNumber;
             return this;
         }
 
-        public Builder setUnitNumber(@Nullable Integer unitNumber) {
+        public Builder unitNumber(@Nullable Integer unitNumber) {
             this.unitNumber = Input.ofNullable(unitNumber);
             return this;
         }

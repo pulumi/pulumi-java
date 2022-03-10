@@ -91,17 +91,17 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     	      this.version = defaults.version;
         }
 
-        public Builder setMetrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics) {
+        public Builder metrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setSessionCount(Integer sessionCount) {
+        public Builder sessionCount(Integer sessionCount) {
             this.sessionCount = Objects.requireNonNull(sessionCount);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

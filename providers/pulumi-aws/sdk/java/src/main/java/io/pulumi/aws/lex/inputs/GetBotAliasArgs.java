@@ -68,12 +68,12 @@ public final class GetBotAliasArgs extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setBotName(String botName) {
+        public Builder botName(String botName) {
             this.botName = Objects.requireNonNull(botName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

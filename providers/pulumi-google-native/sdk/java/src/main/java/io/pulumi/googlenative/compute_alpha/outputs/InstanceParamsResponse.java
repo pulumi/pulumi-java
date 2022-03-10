@@ -49,7 +49,7 @@ public final class InstanceParamsResponse {
     	      this.resourceManagerTags = defaults.resourceManagerTags;
         }
 
-        public Builder setResourceManagerTags(Map<String,String> resourceManagerTags) {
+        public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }

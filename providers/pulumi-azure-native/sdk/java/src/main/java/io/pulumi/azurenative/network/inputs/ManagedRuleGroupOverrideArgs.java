@@ -76,22 +76,22 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRuleGroupName(Input<String> ruleGroupName) {
+        public Builder ruleGroupName(Input<String> ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Input.of(Objects.requireNonNull(ruleGroupName));
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<ManagedRuleOverrideArgs>> rules) {
+        public Builder rules(@Nullable Input<List<ManagedRuleOverrideArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<ManagedRuleOverrideArgs> rules) {
+        public Builder rules(@Nullable List<ManagedRuleOverrideArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

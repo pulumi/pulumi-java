@@ -74,12 +74,12 @@ public final class EventSubscriptionIdentityResponse extends io.pulumi.resources
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

@@ -153,72 +153,72 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountStatus = defaults.storageAccountStatus;
         }
 
-        public Builder setDataPolicy(Input<Either<String,DataPolicy>> dataPolicy) {
+        public Builder dataPolicy(Input<Either<String,DataPolicy>> dataPolicy) {
             this.dataPolicy = Objects.requireNonNull(dataPolicy);
             return this;
         }
 
-        public Builder setDataPolicy(Either<String,DataPolicy> dataPolicy) {
+        public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
             this.dataPolicy = Input.of(Objects.requireNonNull(dataPolicy));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(@Nullable Input<String> storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(@Nullable Input<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(@Nullable String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
             this.storageAccountCredentialId = Input.ofNullable(storageAccountCredentialId);
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
 
-        public Builder setStorageAccountStatus(@Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus) {
+        public Builder storageAccountStatus(@Nullable Input<Either<String,StorageAccountStatus>> storageAccountStatus) {
             this.storageAccountStatus = storageAccountStatus;
             return this;
         }
 
-        public Builder setStorageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
+        public Builder storageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
             this.storageAccountStatus = Input.ofNullable(storageAccountStatus);
             return this;
         }

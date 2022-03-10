@@ -186,87 +186,87 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Input<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable String executionArn) {
+        public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Input.ofNullable(executionArn);
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable Input<String> invokeUrl) {
+        public Builder invokeUrl(@Nullable Input<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable String invokeUrl) {
+        public Builder invokeUrl(@Nullable String invokeUrl) {
             this.invokeUrl = Input.ofNullable(invokeUrl);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder setStageDescription(@Nullable Input<String> stageDescription) {
+        public Builder stageDescription(@Nullable Input<String> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
 
-        public Builder setStageDescription(@Nullable String stageDescription) {
+        public Builder stageDescription(@Nullable String stageDescription) {
             this.stageDescription = Input.ofNullable(stageDescription);
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable Map<String,String> triggers) {
+        public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Input<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Map<String,String> variables) {
+        public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

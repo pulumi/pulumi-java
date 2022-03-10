@@ -76,32 +76,32 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setResourceTypeFilters(@Nullable Input<List<String>> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable Input<List<String>> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
 
-        public Builder setResourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = Input.ofNullable(resourceTypeFilters);
             return this;
         }
 
-        public Builder setStackIdentifier(@Nullable Input<String> stackIdentifier) {
+        public Builder stackIdentifier(@Nullable Input<String> stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
 
-        public Builder setStackIdentifier(@Nullable String stackIdentifier) {
+        public Builder stackIdentifier(@Nullable String stackIdentifier) {
             this.stackIdentifier = Input.ofNullable(stackIdentifier);
             return this;
         }
 
-        public Builder setTagFilters(@Nullable Input<List<GroupTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Input<List<GroupTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<GroupTagFilterArgs> tagFilters) {
+        public Builder tagFilters(@Nullable List<GroupTagFilterArgs> tagFilters) {
             this.tagFilters = Input.ofNullable(tagFilters);
             return this;
         }

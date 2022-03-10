@@ -74,12 +74,12 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
     	      this.enableRestriction = defaults.enableRestriction;
         }
 
-        public Builder setAllowedServices(List<String> allowedServices) {
+        public Builder allowedServices(List<String> allowedServices) {
             this.allowedServices = Objects.requireNonNull(allowedServices);
             return this;
         }
 
-        public Builder setEnableRestriction(Boolean enableRestriction) {
+        public Builder enableRestriction(Boolean enableRestriction) {
             this.enableRestriction = Objects.requireNonNull(enableRestriction);
             return this;
         }

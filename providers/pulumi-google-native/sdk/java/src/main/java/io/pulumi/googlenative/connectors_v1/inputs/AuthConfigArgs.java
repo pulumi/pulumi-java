@@ -127,52 +127,52 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userPassword = defaults.userPassword;
         }
 
-        public Builder setAdditionalVariables(@Nullable Input<List<ConfigVariableArgs>> additionalVariables) {
+        public Builder additionalVariables(@Nullable Input<List<ConfigVariableArgs>> additionalVariables) {
             this.additionalVariables = additionalVariables;
             return this;
         }
 
-        public Builder setAdditionalVariables(@Nullable List<ConfigVariableArgs> additionalVariables) {
+        public Builder additionalVariables(@Nullable List<ConfigVariableArgs> additionalVariables) {
             this.additionalVariables = Input.ofNullable(additionalVariables);
             return this;
         }
 
-        public Builder setAuthType(@Nullable Input<AuthConfigAuthType> authType) {
+        public Builder authType(@Nullable Input<AuthConfigAuthType> authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setAuthType(@Nullable AuthConfigAuthType authType) {
+        public Builder authType(@Nullable AuthConfigAuthType authType) {
             this.authType = Input.ofNullable(authType);
             return this;
         }
 
-        public Builder setOauth2ClientCredentials(@Nullable Input<Oauth2ClientCredentialsArgs> oauth2ClientCredentials) {
+        public Builder oauth2ClientCredentials(@Nullable Input<Oauth2ClientCredentialsArgs> oauth2ClientCredentials) {
             this.oauth2ClientCredentials = oauth2ClientCredentials;
             return this;
         }
 
-        public Builder setOauth2ClientCredentials(@Nullable Oauth2ClientCredentialsArgs oauth2ClientCredentials) {
+        public Builder oauth2ClientCredentials(@Nullable Oauth2ClientCredentialsArgs oauth2ClientCredentials) {
             this.oauth2ClientCredentials = Input.ofNullable(oauth2ClientCredentials);
             return this;
         }
 
-        public Builder setOauth2JwtBearer(@Nullable Input<Oauth2JwtBearerArgs> oauth2JwtBearer) {
+        public Builder oauth2JwtBearer(@Nullable Input<Oauth2JwtBearerArgs> oauth2JwtBearer) {
             this.oauth2JwtBearer = oauth2JwtBearer;
             return this;
         }
 
-        public Builder setOauth2JwtBearer(@Nullable Oauth2JwtBearerArgs oauth2JwtBearer) {
+        public Builder oauth2JwtBearer(@Nullable Oauth2JwtBearerArgs oauth2JwtBearer) {
             this.oauth2JwtBearer = Input.ofNullable(oauth2JwtBearer);
             return this;
         }
 
-        public Builder setUserPassword(@Nullable Input<UserPasswordArgs> userPassword) {
+        public Builder userPassword(@Nullable Input<UserPasswordArgs> userPassword) {
             this.userPassword = userPassword;
             return this;
         }
 
-        public Builder setUserPassword(@Nullable UserPasswordArgs userPassword) {
+        public Builder userPassword(@Nullable UserPasswordArgs userPassword) {
             this.userPassword = Input.ofNullable(userPassword);
             return this;
         }

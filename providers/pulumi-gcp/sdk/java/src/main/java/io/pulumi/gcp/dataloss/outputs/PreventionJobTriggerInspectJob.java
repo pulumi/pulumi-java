@@ -88,17 +88,17 @@ public final class PreventionJobTriggerInspectJob {
     	      this.storageConfig = defaults.storageConfig;
         }
 
-        public Builder setActions(List<PreventionJobTriggerInspectJobAction> actions) {
+        public Builder actions(List<PreventionJobTriggerInspectJobAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setInspectTemplateName(String inspectTemplateName) {
+        public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
 
-        public Builder setStorageConfig(PreventionJobTriggerInspectJobStorageConfig storageConfig) {
+        public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfig storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }

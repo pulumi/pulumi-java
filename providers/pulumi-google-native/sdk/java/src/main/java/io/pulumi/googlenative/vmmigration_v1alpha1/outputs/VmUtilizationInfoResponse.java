@@ -83,17 +83,17 @@ public final class VmUtilizationInfoResponse {
     	      this.vmwareVmDetails = defaults.vmwareVmDetails;
         }
 
-        public Builder setUtilization(VmUtilizationMetricsResponse utilization) {
+        public Builder utilization(VmUtilizationMetricsResponse utilization) {
             this.utilization = Objects.requireNonNull(utilization);
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setVmwareVmDetails(VmwareVmDetailsResponse vmwareVmDetails) {
+        public Builder vmwareVmDetails(VmwareVmDetailsResponse vmwareVmDetails) {
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
         }

@@ -82,22 +82,22 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs e
     	      this.resource = defaults.resource;
         }
 
-        public Builder setAccessLevel(@Nullable Input<String> accessLevel) {
+        public Builder accessLevel(@Nullable Input<String> accessLevel) {
             this.accessLevel = accessLevel;
             return this;
         }
 
-        public Builder setAccessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable String accessLevel) {
             this.accessLevel = Input.ofNullable(accessLevel);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Input<String> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }

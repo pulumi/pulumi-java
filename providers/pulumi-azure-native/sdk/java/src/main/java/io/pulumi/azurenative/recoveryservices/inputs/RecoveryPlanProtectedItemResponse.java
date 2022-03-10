@@ -74,12 +74,12 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
     	      this.virtualMachineId = defaults.virtualMachineId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setVirtualMachineId(@Nullable String virtualMachineId) {
+        public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }

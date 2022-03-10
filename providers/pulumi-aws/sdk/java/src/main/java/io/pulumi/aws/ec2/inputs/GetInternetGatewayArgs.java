@@ -90,17 +90,17 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetInternetGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setInternetGatewayId(@Nullable String internetGatewayId) {
+        public Builder internetGatewayId(@Nullable String internetGatewayId) {
             this.internetGatewayId = internetGatewayId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

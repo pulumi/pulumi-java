@@ -73,22 +73,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.masks = defaults.masks;
         }
 
-        public Builder setFlags(Input<List<String>> flags) {
+        public Builder flags(Input<List<String>> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
 
-        public Builder setFlags(List<String> flags) {
+        public Builder flags(List<String> flags) {
             this.flags = Input.of(Objects.requireNonNull(flags));
             return this;
         }
 
-        public Builder setMasks(@Nullable Input<List<String>> masks) {
+        public Builder masks(@Nullable Input<List<String>> masks) {
             this.masks = masks;
             return this;
         }
 
-        public Builder setMasks(@Nullable List<String> masks) {
+        public Builder masks(@Nullable List<String> masks) {
             this.masks = Input.ofNullable(masks);
             return this;
         }

@@ -200,102 +200,102 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
     	      this.stage = defaults.stage;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable Input<String> basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable Input<String> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable String basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
             this.basicAuthCredentials = Input.ofNullable(basicAuthCredentials);
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Input<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Input.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Input.ofNullable(enableAutoBuild);
             return this;
         }
 
-        public Builder setEnableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
-        public Builder setEnableBasicAuth(@Nullable Boolean enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = Input.ofNullable(enableBasicAuth);
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Input.ofNullable(enablePerformanceMode);
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Input.ofNullable(enablePullRequestPreview);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setFramework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Input<String> framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = Input.ofNullable(framework);
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Input.ofNullable(pullRequestEnvironmentName);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }

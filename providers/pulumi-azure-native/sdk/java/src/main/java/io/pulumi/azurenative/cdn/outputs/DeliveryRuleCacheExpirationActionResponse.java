@@ -68,12 +68,12 @@ public final class DeliveryRuleCacheExpirationActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(CacheExpirationActionParametersResponse parameters) {
+        public Builder parameters(CacheExpirationActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

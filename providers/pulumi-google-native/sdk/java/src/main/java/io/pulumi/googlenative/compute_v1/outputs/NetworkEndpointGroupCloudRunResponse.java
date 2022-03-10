@@ -81,17 +81,17 @@ public final class NetworkEndpointGroupCloudRunResponse {
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setUrlMask(String urlMask) {
+        public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }

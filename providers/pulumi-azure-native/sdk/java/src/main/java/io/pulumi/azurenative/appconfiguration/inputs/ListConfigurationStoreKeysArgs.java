@@ -86,17 +86,17 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setConfigStoreName(String configStoreName) {
+        public Builder configStoreName(String configStoreName) {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

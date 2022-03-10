@@ -99,22 +99,22 @@ public final class VirtualMachineSshCredentialsResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPrivateKeyData(@Nullable String privateKeyData) {
+        public Builder privateKeyData(@Nullable String privateKeyData) {
             this.privateKeyData = privateKeyData;
             return this;
         }
 
-        public Builder setPublicKeyData(@Nullable String publicKeyData) {
+        public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

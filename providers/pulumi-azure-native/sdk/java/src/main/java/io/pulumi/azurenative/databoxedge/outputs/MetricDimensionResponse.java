@@ -65,12 +65,12 @@ public final class MetricDimensionResponse {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setSourceName(String sourceName) {
+        public Builder sourceName(String sourceName) {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }

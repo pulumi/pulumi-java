@@ -296,82 +296,82 @@ public final class RecoveryServicesProviderPropertiesResponse {
     	      this.serverVersion = defaults.serverVersion;
         }
 
-        public Builder setAllowedScenarios(@Nullable List<String> allowedScenarios) {
+        public Builder allowedScenarios(@Nullable List<String> allowedScenarios) {
             this.allowedScenarios = allowedScenarios;
             return this;
         }
 
-        public Builder setAuthenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
+        public Builder authenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
             this.authenticationIdentityDetails = authenticationIdentityDetails;
             return this;
         }
 
-        public Builder setConnectionStatus(@Nullable String connectionStatus) {
+        public Builder connectionStatus(@Nullable String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
         }
 
-        public Builder setDraIdentifier(@Nullable String draIdentifier) {
+        public Builder draIdentifier(@Nullable String draIdentifier) {
             this.draIdentifier = draIdentifier;
             return this;
         }
 
-        public Builder setFabricFriendlyName(@Nullable String fabricFriendlyName) {
+        public Builder fabricFriendlyName(@Nullable String fabricFriendlyName) {
             this.fabricFriendlyName = fabricFriendlyName;
             return this;
         }
 
-        public Builder setFabricType(@Nullable String fabricType) {
+        public Builder fabricType(@Nullable String fabricType) {
             this.fabricType = fabricType;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
+        public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
-        public Builder setLastHeartBeat(@Nullable String lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Integer protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Integer protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setProviderVersion(@Nullable String providerVersion) {
+        public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
 
-        public Builder setProviderVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
+        public Builder providerVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
             this.providerVersionDetails = providerVersionDetails;
             return this;
         }
 
-        public Builder setProviderVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
+        public Builder providerVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
             this.providerVersionExpiryDate = providerVersionExpiryDate;
             return this;
         }
 
-        public Builder setProviderVersionState(@Nullable String providerVersionState) {
+        public Builder providerVersionState(@Nullable String providerVersionState) {
             this.providerVersionState = providerVersionState;
             return this;
         }
 
-        public Builder setResourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
+        public Builder resourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
             this.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
             return this;
         }
 
-        public Builder setServerVersion(@Nullable String serverVersion) {
+        public Builder serverVersion(@Nullable String serverVersion) {
             this.serverVersion = serverVersion;
             return this;
         }

@@ -102,42 +102,42 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCloudLinkName(@Nullable Input<String> cloudLinkName) {
+        public Builder cloudLinkName(@Nullable Input<String> cloudLinkName) {
             this.cloudLinkName = cloudLinkName;
             return this;
         }
 
-        public Builder setCloudLinkName(@Nullable String cloudLinkName) {
+        public Builder cloudLinkName(@Nullable String cloudLinkName) {
             this.cloudLinkName = Input.ofNullable(cloudLinkName);
             return this;
         }
 
-        public Builder setLinkedCloud(@Nullable Input<String> linkedCloud) {
+        public Builder linkedCloud(@Nullable Input<String> linkedCloud) {
             this.linkedCloud = linkedCloud;
             return this;
         }
 
-        public Builder setLinkedCloud(@Nullable String linkedCloud) {
+        public Builder linkedCloud(@Nullable String linkedCloud) {
             this.linkedCloud = Input.ofNullable(linkedCloud);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

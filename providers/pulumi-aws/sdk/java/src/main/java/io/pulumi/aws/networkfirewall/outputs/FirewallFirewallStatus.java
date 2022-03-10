@@ -50,7 +50,7 @@ public final class FirewallFirewallStatus {
     	      this.syncStates = defaults.syncStates;
         }
 
-        public Builder setSyncStates(@Nullable List<FirewallFirewallStatusSyncState> syncStates) {
+        public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncState> syncStates) {
             this.syncStates = syncStates;
             return this;
         }

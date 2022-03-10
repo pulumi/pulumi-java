@@ -99,52 +99,52 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setPublishMode(@Nullable Input<String> publishMode) {
+        public Builder publishMode(@Nullable Input<String> publishMode) {
             this.publishMode = publishMode;
             return this;
         }
 
-        public Builder setPublishMode(@Nullable String publishMode) {
+        public Builder publishMode(@Nullable String publishMode) {
             this.publishMode = Input.ofNullable(publishMode);
             return this;
         }
 
-        public Builder setPublishedPort(@Nullable Input<Integer> publishedPort) {
+        public Builder publishedPort(@Nullable Input<Integer> publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
 
-        public Builder setPublishedPort(@Nullable Integer publishedPort) {
+        public Builder publishedPort(@Nullable Integer publishedPort) {
             this.publishedPort = Input.ofNullable(publishedPort);
             return this;
         }
 
-        public Builder setTargetPort(Input<Integer> targetPort) {
+        public Builder targetPort(Input<Integer> targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
         }
 
-        public Builder setTargetPort(Integer targetPort) {
+        public Builder targetPort(Integer targetPort) {
             this.targetPort = Input.of(Objects.requireNonNull(targetPort));
             return this;
         }

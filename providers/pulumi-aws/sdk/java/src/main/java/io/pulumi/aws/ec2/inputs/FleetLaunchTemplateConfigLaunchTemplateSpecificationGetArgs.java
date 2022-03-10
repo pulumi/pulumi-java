@@ -86,32 +86,32 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
     	      this.version = defaults.version;
         }
 
-        public Builder setLaunchTemplateId(@Nullable Input<String> launchTemplateId) {
+        public Builder launchTemplateId(@Nullable Input<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
-        public Builder setLaunchTemplateId(@Nullable String launchTemplateId) {
+        public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = Input.ofNullable(launchTemplateId);
             return this;
         }
 
-        public Builder setLaunchTemplateName(@Nullable Input<String> launchTemplateName) {
+        public Builder launchTemplateName(@Nullable Input<String> launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
 
-        public Builder setLaunchTemplateName(@Nullable String launchTemplateName) {
+        public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = Input.ofNullable(launchTemplateName);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

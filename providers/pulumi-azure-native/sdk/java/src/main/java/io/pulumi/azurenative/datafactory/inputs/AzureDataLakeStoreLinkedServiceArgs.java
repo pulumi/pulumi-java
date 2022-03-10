@@ -292,152 +292,152 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(@Nullable Input<Object> accountName) {
+        public Builder accountName(@Nullable Input<Object> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable Object accountName) {
+        public Builder accountName(@Nullable Object accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Input<Object> azureCloudType) {
+        public Builder azureCloudType(@Nullable Input<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Object azureCloudType) {
+        public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = Input.ofNullable(azureCloudType);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setDataLakeStoreUri(Input<Object> dataLakeStoreUri) {
+        public Builder dataLakeStoreUri(Input<Object> dataLakeStoreUri) {
             this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri);
             return this;
         }
 
-        public Builder setDataLakeStoreUri(Object dataLakeStoreUri) {
+        public Builder dataLakeStoreUri(Object dataLakeStoreUri) {
             this.dataLakeStoreUri = Input.of(Objects.requireNonNull(dataLakeStoreUri));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Input<Object> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Input<Object> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Object resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Object resourceGroupName) {
             this.resourceGroupName = Input.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<Object> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<Object> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Object subscriptionId) {
+        public Builder subscriptionId(@Nullable Object subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<Object> tenant) {
+        public Builder tenant(@Nullable Input<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable Object tenant) {
+        public Builder tenant(@Nullable Object tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

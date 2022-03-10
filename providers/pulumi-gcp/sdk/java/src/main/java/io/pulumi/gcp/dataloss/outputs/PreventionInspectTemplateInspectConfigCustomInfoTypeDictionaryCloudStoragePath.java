@@ -48,7 +48,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     	      this.path = defaults.path;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

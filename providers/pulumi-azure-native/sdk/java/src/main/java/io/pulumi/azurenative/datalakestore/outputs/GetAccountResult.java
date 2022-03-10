@@ -424,122 +424,122 @@ public final class GetAccountResult {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setCurrentTier(String currentTier) {
+        public Builder currentTier(String currentTier) {
             this.currentTier = Objects.requireNonNull(currentTier);
             return this;
         }
 
-        public Builder setDefaultGroup(String defaultGroup) {
+        public Builder defaultGroup(String defaultGroup) {
             this.defaultGroup = Objects.requireNonNull(defaultGroup);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setEncryptionProvisioningState(String encryptionProvisioningState) {
+        public Builder encryptionProvisioningState(String encryptionProvisioningState) {
             this.encryptionProvisioningState = Objects.requireNonNull(encryptionProvisioningState);
             return this;
         }
 
-        public Builder setEncryptionState(String encryptionState) {
+        public Builder encryptionState(String encryptionState) {
             this.encryptionState = Objects.requireNonNull(encryptionState);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setFirewallAllowAzureIps(String firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(String firewallAllowAzureIps) {
             this.firewallAllowAzureIps = Objects.requireNonNull(firewallAllowAzureIps);
             return this;
         }
 
-        public Builder setFirewallRules(List<FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = Objects.requireNonNull(firewallRules);
             return this;
         }
 
-        public Builder setFirewallState(String firewallState) {
+        public Builder firewallState(String firewallState) {
             this.firewallState = Objects.requireNonNull(firewallState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(EncryptionIdentityResponse identity) {
+        public Builder identity(EncryptionIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewTier(String newTier) {
+        public Builder newTier(String newTier) {
             this.newTier = Objects.requireNonNull(newTier);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTrustedIdProviderState(String trustedIdProviderState) {
+        public Builder trustedIdProviderState(String trustedIdProviderState) {
             this.trustedIdProviderState = Objects.requireNonNull(trustedIdProviderState);
             return this;
         }
 
-        public Builder setTrustedIdProviders(List<TrustedIdProviderResponse> trustedIdProviders) {
+        public Builder trustedIdProviders(List<TrustedIdProviderResponse> trustedIdProviders) {
             this.trustedIdProviders = Objects.requireNonNull(trustedIdProviders);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }

@@ -102,37 +102,37 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setBasePath(@Nullable Input<String> basePath) {
+        public Builder basePath(@Nullable Input<String> basePath) {
             this.basePath = basePath;
             return this;
         }
 
-        public Builder setBasePath(@Nullable String basePath) {
+        public Builder basePath(@Nullable String basePath) {
             this.basePath = Input.ofNullable(basePath);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }

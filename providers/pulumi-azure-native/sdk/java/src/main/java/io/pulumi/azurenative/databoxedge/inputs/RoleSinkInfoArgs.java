@@ -56,12 +56,12 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleId = defaults.roleId;
         }
 
-        public Builder setRoleId(Input<String> roleId) {
+        public Builder roleId(Input<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Input.of(Objects.requireNonNull(roleId));
             return this;
         }

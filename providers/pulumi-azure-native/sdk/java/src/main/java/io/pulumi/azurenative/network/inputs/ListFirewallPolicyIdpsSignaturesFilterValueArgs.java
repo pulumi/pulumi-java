@@ -86,17 +86,17 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFilterName(@Nullable String filterName) {
+        public Builder filterName(@Nullable String filterName) {
             this.filterName = filterName;
             return this;
         }
 
-        public Builder setFirewallPolicyName(String firewallPolicyName) {
+        public Builder firewallPolicyName(String firewallPolicyName) {
             this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

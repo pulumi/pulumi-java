@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
     	      this.logicalOperator = defaults.logicalOperator;
         }
 
-        public Builder setConditions(@Nullable Input<GooglePrivacyDlpV2ConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Input<GooglePrivacyDlpV2ConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable GooglePrivacyDlpV2ConditionsArgs conditions) {
+        public Builder conditions(@Nullable GooglePrivacyDlpV2ConditionsArgs conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setLogicalOperator(@Nullable Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator) {
+        public Builder logicalOperator(@Nullable Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
 
-        public Builder setLogicalOperator(@Nullable GooglePrivacyDlpV2ExpressionsLogicalOperator logicalOperator) {
+        public Builder logicalOperator(@Nullable GooglePrivacyDlpV2ExpressionsLogicalOperator logicalOperator) {
             this.logicalOperator = Input.ofNullable(logicalOperator);
             return this;
         }

@@ -56,7 +56,7 @@ public final class DeploymentNoteResponse extends io.pulumi.resources.InvokeArgs
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setResourceUri(List<String> resourceUri) {
+        public Builder resourceUri(List<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

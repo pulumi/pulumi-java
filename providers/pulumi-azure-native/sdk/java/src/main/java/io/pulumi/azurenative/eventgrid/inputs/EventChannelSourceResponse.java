@@ -58,7 +58,7 @@ public final class EventChannelSourceResponse extends io.pulumi.resources.Invoke
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }

@@ -74,22 +74,22 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder setProjectMaps(@Nullable Input<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps) {
+        public Builder projectMaps(@Nullable Input<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps) {
             this.projectMaps = projectMaps;
             return this;
         }
 
-        public Builder setProjectMaps(@Nullable List<ReservationShareSettingsProjectMapGetArgs> projectMaps) {
+        public Builder projectMaps(@Nullable List<ReservationShareSettingsProjectMapGetArgs> projectMaps) {
             this.projectMaps = Input.ofNullable(projectMaps);
             return this;
         }
 
-        public Builder setShareType(@Nullable Input<String> shareType) {
+        public Builder shareType(@Nullable Input<String> shareType) {
             this.shareType = shareType;
             return this;
         }
 
-        public Builder setShareType(@Nullable String shareType) {
+        public Builder shareType(@Nullable String shareType) {
             this.shareType = Input.ofNullable(shareType);
             return this;
         }

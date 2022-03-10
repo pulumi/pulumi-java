@@ -75,12 +75,12 @@ public final class SchemaVersion extends io.pulumi.resources.InvokeArgs {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setIsLatest(@Nullable Boolean isLatest) {
+        public Builder isLatest(@Nullable Boolean isLatest) {
             this.isLatest = isLatest;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Integer versionNumber) {
+        public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

@@ -88,17 +88,17 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

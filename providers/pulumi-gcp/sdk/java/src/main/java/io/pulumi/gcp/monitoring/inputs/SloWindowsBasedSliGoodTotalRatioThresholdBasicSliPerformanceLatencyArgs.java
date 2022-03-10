@@ -54,12 +54,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setThreshold(Input<String> threshold) {
+        public Builder threshold(Input<String> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(String threshold) {
+        public Builder threshold(String threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }

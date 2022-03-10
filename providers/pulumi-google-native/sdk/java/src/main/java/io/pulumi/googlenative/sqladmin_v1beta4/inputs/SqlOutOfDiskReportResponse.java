@@ -73,12 +73,12 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
     	      this.sqlOutOfDiskState = defaults.sqlOutOfDiskState;
         }
 
-        public Builder setSqlMinRecommendedIncreaseSizeGb(Integer sqlMinRecommendedIncreaseSizeGb) {
+        public Builder sqlMinRecommendedIncreaseSizeGb(Integer sqlMinRecommendedIncreaseSizeGb) {
             this.sqlMinRecommendedIncreaseSizeGb = Objects.requireNonNull(sqlMinRecommendedIncreaseSizeGb);
             return this;
         }
 
-        public Builder setSqlOutOfDiskState(String sqlOutOfDiskState) {
+        public Builder sqlOutOfDiskState(String sqlOutOfDiskState) {
             this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState);
             return this;
         }

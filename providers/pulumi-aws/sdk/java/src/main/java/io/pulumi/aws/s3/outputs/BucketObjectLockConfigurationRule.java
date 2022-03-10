@@ -48,7 +48,7 @@ public final class BucketObjectLockConfigurationRule {
     	      this.defaultRetention = defaults.defaultRetention;
         }
 
-        public Builder setDefaultRetention(BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
+        public Builder defaultRetention(BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
             this.defaultRetention = Objects.requireNonNull(defaultRetention);
             return this;
         }

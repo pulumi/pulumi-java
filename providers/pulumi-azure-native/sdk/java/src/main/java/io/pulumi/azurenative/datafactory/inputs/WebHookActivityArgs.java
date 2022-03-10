@@ -242,122 +242,122 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setAuthentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<WebActivityAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable WebActivityAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable WebActivityAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<Object> body) {
+        public Builder body(@Nullable Input<Object> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Object> headers) {
+        public Builder headers(@Nullable Input<Object> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Object headers) {
+        public Builder headers(@Nullable Object headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setMethod(Input<Either<String,WebHookActivityMethod>> method) {
+        public Builder method(Input<Either<String,WebHookActivityMethod>> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setMethod(Either<String,WebHookActivityMethod> method) {
+        public Builder method(Either<String,WebHookActivityMethod> method) {
             this.method = Input.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReportStatusOnCallBack(@Nullable Input<Object> reportStatusOnCallBack) {
+        public Builder reportStatusOnCallBack(@Nullable Input<Object> reportStatusOnCallBack) {
             this.reportStatusOnCallBack = reportStatusOnCallBack;
             return this;
         }
 
-        public Builder setReportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
+        public Builder reportStatusOnCallBack(@Nullable Object reportStatusOnCallBack) {
             this.reportStatusOnCallBack = Input.ofNullable(reportStatusOnCallBack);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUrl(Input<Object> url) {
+        public Builder url(Input<Object> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

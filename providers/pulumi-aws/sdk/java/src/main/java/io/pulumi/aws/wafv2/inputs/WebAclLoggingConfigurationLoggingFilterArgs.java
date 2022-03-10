@@ -71,22 +71,22 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(Input<String> defaultBehavior) {
+        public Builder defaultBehavior(Input<String> defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setDefaultBehavior(String defaultBehavior) {
+        public Builder defaultBehavior(String defaultBehavior) {
             this.defaultBehavior = Input.of(Objects.requireNonNull(defaultBehavior));
             return this;
         }
 
-        public Builder setFilters(Input<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> filters) {
+        public Builder filters(Input<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(List<WebAclLoggingConfigurationLoggingFilterFilterArgs> filters) {
+        public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilterArgs> filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }

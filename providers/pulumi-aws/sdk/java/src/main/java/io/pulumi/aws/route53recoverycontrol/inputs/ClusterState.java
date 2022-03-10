@@ -104,42 +104,42 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterEndpoints(@Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
 
-        public Builder setClusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
             this.clusterEndpoints = Input.ofNullable(clusterEndpoints);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -79,22 +79,22 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate) {
+        public Builder rollingUpdate(@Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateDaemonSetArgs rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateDaemonSetArgs rollingUpdate) {
             this.rollingUpdate = Input.ofNullable(rollingUpdate);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

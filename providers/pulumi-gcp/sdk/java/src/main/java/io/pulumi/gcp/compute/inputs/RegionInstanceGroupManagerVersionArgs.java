@@ -87,32 +87,32 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(Input<String> instanceTemplate) {
+        public Builder instanceTemplate(Input<String> instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Input.of(Objects.requireNonNull(instanceTemplate));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize) {
+        public Builder targetSize(@Nullable Input<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable RegionInstanceGroupManagerVersionTargetSizeArgs targetSize) {
+        public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSizeArgs targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }

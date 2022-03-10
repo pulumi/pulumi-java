@@ -68,12 +68,12 @@ public final class PacketMirroringNetworkInfoResponse extends io.pulumi.resource
     	      this.url = defaults.url;
         }
 
-        public Builder setCanonicalUrl(String canonicalUrl) {
+        public Builder canonicalUrl(String canonicalUrl) {
             this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

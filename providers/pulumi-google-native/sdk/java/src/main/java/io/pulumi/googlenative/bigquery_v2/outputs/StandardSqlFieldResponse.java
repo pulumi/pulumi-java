@@ -66,12 +66,12 @@ public final class StandardSqlFieldResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(StandardSqlDataTypeResponse type) {
+        public Builder type(StandardSqlDataTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

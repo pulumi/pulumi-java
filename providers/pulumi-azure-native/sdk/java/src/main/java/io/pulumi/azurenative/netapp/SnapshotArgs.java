@@ -134,62 +134,62 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPoolName(Input<String> poolName) {
+        public Builder poolName(Input<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setPoolName(String poolName) {
+        public Builder poolName(String poolName) {
             this.poolName = Input.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Input<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable String snapshotName) {
+        public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Input.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder setVolumeName(Input<String> volumeName) {
+        public Builder volumeName(Input<String> volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
 
-        public Builder setVolumeName(String volumeName) {
+        public Builder volumeName(String volumeName) {
             this.volumeName = Input.of(Objects.requireNonNull(volumeName));
             return this;
         }

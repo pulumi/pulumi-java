@@ -53,12 +53,12 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text) {
+        public Builder text(@Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs text) {
+        public Builder text(@Nullable CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

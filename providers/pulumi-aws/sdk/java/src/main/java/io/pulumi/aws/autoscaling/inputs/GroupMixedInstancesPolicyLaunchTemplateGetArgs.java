@@ -72,22 +72,22 @@ public final class GroupMixedInstancesPolicyLaunchTemplateGetArgs extends io.pul
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setLaunchTemplateSpecification(Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
 
-        public Builder setLaunchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Input.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
 
-        public Builder setOverrides(@Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs>> overrides) {
+        public Builder overrides(@Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs> overrides) {
+        public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs> overrides) {
             this.overrides = Input.ofNullable(overrides);
             return this;
         }

@@ -83,17 +83,17 @@ public final class AutoScalingPolicyResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setMechanism(AddRemoveReplicaScalingMechanismResponse mechanism) {
+        public Builder mechanism(AddRemoveReplicaScalingMechanismResponse mechanism) {
             this.mechanism = Objects.requireNonNull(mechanism);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTrigger(AverageLoadScalingTriggerResponse trigger) {
+        public Builder trigger(AverageLoadScalingTriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

@@ -47,7 +47,7 @@ public final class DistributionOriginGroupMember extends io.pulumi.resources.Inv
     	      this.originId = defaults.originId;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }

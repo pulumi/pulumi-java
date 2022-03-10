@@ -50,7 +50,7 @@ public final class DicomStoreStreamConfig {
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder setBigqueryDestination(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
+        public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }

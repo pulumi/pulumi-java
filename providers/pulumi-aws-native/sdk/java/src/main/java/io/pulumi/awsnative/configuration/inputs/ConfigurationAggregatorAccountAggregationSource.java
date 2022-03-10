@@ -76,17 +76,17 @@ public final class ConfigurationAggregatorAccountAggregationSource extends io.pu
     	      this.awsRegions = defaults.awsRegions;
         }
 
-        public Builder setAccountIds(List<String> accountIds) {
+        public Builder accountIds(List<String> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
-        public Builder setAllAwsRegions(@Nullable Boolean allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
-        public Builder setAwsRegions(@Nullable List<String> awsRegions) {
+        public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }

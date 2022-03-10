@@ -90,17 +90,17 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse extends io.pulumi.resou
     	      this.proximity = defaults.proximity;
         }
 
-        public Builder setHotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
+        public Builder hotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
 
-        public Builder setProximity(GooglePrivacyDlpV2ProximityResponse proximity) {
+        public Builder proximity(GooglePrivacyDlpV2ProximityResponse proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }

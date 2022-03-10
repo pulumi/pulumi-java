@@ -157,37 +157,37 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
-        public Builder setDbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
 
-        public Builder setIncludePublic(@Nullable Boolean includePublic) {
+        public Builder includePublic(@Nullable Boolean includePublic) {
             this.includePublic = includePublic;
             return this;
         }
 
-        public Builder setIncludeShared(@Nullable Boolean includeShared) {
+        public Builder includeShared(@Nullable Boolean includeShared) {
             this.includeShared = includeShared;
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setSnapshotType(@Nullable String snapshotType) {
+        public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

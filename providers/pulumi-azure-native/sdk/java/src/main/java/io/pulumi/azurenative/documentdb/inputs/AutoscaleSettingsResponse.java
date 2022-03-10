@@ -53,7 +53,7 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
     	      this.maxThroughput = defaults.maxThroughput;
         }
 
-        public Builder setMaxThroughput(@Nullable Integer maxThroughput) {
+        public Builder maxThroughput(@Nullable Integer maxThroughput) {
             this.maxThroughput = maxThroughput;
             return this;
         }

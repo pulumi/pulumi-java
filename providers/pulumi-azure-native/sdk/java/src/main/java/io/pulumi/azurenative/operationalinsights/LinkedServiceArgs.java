@@ -153,72 +153,72 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeAccessResourceId = defaults.writeAccessResourceId;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<String> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<String> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable String linkedServiceName) {
+        public Builder linkedServiceName(@Nullable String linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,LinkedServiceEntityStatus>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,LinkedServiceEntityStatus>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,LinkedServiceEntityStatus> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,LinkedServiceEntityStatus> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
 
-        public Builder setWriteAccessResourceId(@Nullable Input<String> writeAccessResourceId) {
+        public Builder writeAccessResourceId(@Nullable Input<String> writeAccessResourceId) {
             this.writeAccessResourceId = writeAccessResourceId;
             return this;
         }
 
-        public Builder setWriteAccessResourceId(@Nullable String writeAccessResourceId) {
+        public Builder writeAccessResourceId(@Nullable String writeAccessResourceId) {
             this.writeAccessResourceId = Input.ofNullable(writeAccessResourceId);
             return this;
         }

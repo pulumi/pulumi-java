@@ -74,12 +74,12 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
     	      this.order = defaults.order;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }

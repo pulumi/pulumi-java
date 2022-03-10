@@ -69,22 +69,22 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
     	      this.snsCallerArn = defaults.snsCallerArn;
         }
 
-        public Builder setExternalId(Input<String> externalId) {
+        public Builder externalId(Input<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Input.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder setSnsCallerArn(Input<String> snsCallerArn) {
+        public Builder snsCallerArn(Input<String> snsCallerArn) {
             this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
             return this;
         }
 
-        public Builder setSnsCallerArn(String snsCallerArn) {
+        public Builder snsCallerArn(String snsCallerArn) {
             this.snsCallerArn = Input.of(Objects.requireNonNull(snsCallerArn));
             return this;
         }

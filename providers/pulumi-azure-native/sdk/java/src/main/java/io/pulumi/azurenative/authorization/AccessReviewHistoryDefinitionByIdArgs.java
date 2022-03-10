@@ -205,102 +205,102 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder setDecisions(@Nullable Input<List<Either<String,AccessReviewResult>>> decisions) {
+        public Builder decisions(@Nullable Input<List<Either<String,AccessReviewResult>>> decisions) {
             this.decisions = decisions;
             return this;
         }
 
-        public Builder setDecisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
+        public Builder decisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
             this.decisions = Input.ofNullable(decisions);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setHistoryDefinitionId(@Nullable Input<String> historyDefinitionId) {
+        public Builder historyDefinitionId(@Nullable Input<String> historyDefinitionId) {
             this.historyDefinitionId = historyDefinitionId;
             return this;
         }
 
-        public Builder setHistoryDefinitionId(@Nullable String historyDefinitionId) {
+        public Builder historyDefinitionId(@Nullable String historyDefinitionId) {
             this.historyDefinitionId = Input.ofNullable(historyDefinitionId);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances) {
+        public Builder instances(@Nullable Input<List<AccessReviewHistoryInstanceArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
+        public Builder instances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Input<Integer> numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Integer numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = Input.ofNullable(numberOfOccurrences);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<AccessReviewScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Input<List<AccessReviewScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<AccessReviewScopeArgs> scopes) {
+        public Builder scopes(@Nullable List<AccessReviewScopeArgs> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setStartDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Input<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = Input.ofNullable(startDate);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
+        public Builder type(@Nullable Input<Either<String,AccessReviewRecurrenceRangeType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
+        public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

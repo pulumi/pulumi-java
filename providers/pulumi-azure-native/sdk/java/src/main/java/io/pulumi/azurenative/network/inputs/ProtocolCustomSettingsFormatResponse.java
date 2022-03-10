@@ -106,22 +106,22 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
     	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceRateOverride(@Nullable String sourceRateOverride) {
+        public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
             this.sourceRateOverride = sourceRateOverride;
             return this;
         }
 
-        public Builder setTriggerRateOverride(@Nullable String triggerRateOverride) {
+        public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
             this.triggerRateOverride = triggerRateOverride;
             return this;
         }
 
-        public Builder setTriggerSensitivityOverride(@Nullable String triggerSensitivityOverride) {
+        public Builder triggerSensitivityOverride(@Nullable String triggerSensitivityOverride) {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }

@@ -161,82 +161,82 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFileSystemArn(@Nullable Input<String> fileSystemArn) {
+        public Builder fileSystemArn(@Nullable Input<String> fileSystemArn) {
             this.fileSystemArn = fileSystemArn;
             return this;
         }
 
-        public Builder setFileSystemArn(@Nullable String fileSystemArn) {
+        public Builder fileSystemArn(@Nullable String fileSystemArn) {
             this.fileSystemArn = Input.ofNullable(fileSystemArn);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPosixUser(@Nullable Input<AccessPointPosixUserGetArgs> posixUser) {
+        public Builder posixUser(@Nullable Input<AccessPointPosixUserGetArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
 
-        public Builder setPosixUser(@Nullable AccessPointPosixUserGetArgs posixUser) {
+        public Builder posixUser(@Nullable AccessPointPosixUserGetArgs posixUser) {
             this.posixUser = Input.ofNullable(posixUser);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable Input<AccessPointRootDirectoryGetArgs> rootDirectory) {
+        public Builder rootDirectory(@Nullable Input<AccessPointRootDirectoryGetArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable AccessPointRootDirectoryGetArgs rootDirectory) {
+        public Builder rootDirectory(@Nullable AccessPointRootDirectoryGetArgs rootDirectory) {
             this.rootDirectory = Input.ofNullable(rootDirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

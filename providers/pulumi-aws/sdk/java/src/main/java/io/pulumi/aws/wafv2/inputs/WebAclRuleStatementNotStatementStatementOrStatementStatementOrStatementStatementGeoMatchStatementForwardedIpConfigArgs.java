@@ -69,22 +69,22 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(Input<String> fallbackBehavior) {
+        public Builder fallbackBehavior(Input<String> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setFallbackBehavior(String fallbackBehavior) {
+        public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }

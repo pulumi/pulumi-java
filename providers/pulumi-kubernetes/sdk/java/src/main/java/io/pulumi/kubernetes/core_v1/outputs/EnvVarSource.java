@@ -102,22 +102,22 @@ public final class EnvVarSource {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setConfigMapKeyRef(@Nullable ConfigMapKeySelector configMapKeyRef) {
+        public Builder configMapKeyRef(@Nullable ConfigMapKeySelector configMapKeyRef) {
             this.configMapKeyRef = configMapKeyRef;
             return this;
         }
 
-        public Builder setFieldRef(@Nullable ObjectFieldSelector fieldRef) {
+        public Builder fieldRef(@Nullable ObjectFieldSelector fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable ResourceFieldSelector resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable ResourceFieldSelector resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
 
-        public Builder setSecretKeyRef(@Nullable SecretKeySelector secretKeyRef) {
+        public Builder secretKeyRef(@Nullable SecretKeySelector secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }

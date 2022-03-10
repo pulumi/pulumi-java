@@ -90,32 +90,32 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder setBucketSize(Input<Double> bucketSize) {
+        public Builder bucketSize(Input<Double> bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketSize(Double bucketSize) {
+        public Builder bucketSize(Double bucketSize) {
             this.bucketSize = Input.of(Objects.requireNonNull(bucketSize));
             return this;
         }
 
-        public Builder setLowerBound(Input<GooglePrivacyDlpV2ValueArgs> lowerBound) {
+        public Builder lowerBound(Input<GooglePrivacyDlpV2ValueArgs> lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
 
-        public Builder setLowerBound(GooglePrivacyDlpV2ValueArgs lowerBound) {
+        public Builder lowerBound(GooglePrivacyDlpV2ValueArgs lowerBound) {
             this.lowerBound = Input.of(Objects.requireNonNull(lowerBound));
             return this;
         }
 
-        public Builder setUpperBound(Input<GooglePrivacyDlpV2ValueArgs> upperBound) {
+        public Builder upperBound(Input<GooglePrivacyDlpV2ValueArgs> upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
 
-        public Builder setUpperBound(GooglePrivacyDlpV2ValueArgs upperBound) {
+        public Builder upperBound(GooglePrivacyDlpV2ValueArgs upperBound) {
             this.upperBound = Input.of(Objects.requireNonNull(upperBound));
             return this;
         }

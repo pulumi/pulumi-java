@@ -98,22 +98,22 @@ public final class GetAttestorResult {
     	      this.userOwnedDrydockNote = defaults.userOwnedDrydockNote;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUserOwnedDrydockNote(UserOwnedDrydockNoteResponse userOwnedDrydockNote) {
+        public Builder userOwnedDrydockNote(UserOwnedDrydockNoteResponse userOwnedDrydockNote) {
             this.userOwnedDrydockNote = Objects.requireNonNull(userOwnedDrydockNote);
             return this;
         }

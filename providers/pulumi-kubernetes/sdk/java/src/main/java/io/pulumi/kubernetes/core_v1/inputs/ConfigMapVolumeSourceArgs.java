@@ -112,42 +112,42 @@ public final class ConfigMapVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.optional = defaults.optional;
         }
 
-        public Builder setDefaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Input.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder setItems(@Nullable Input<List<KeyToPathArgs>> items) {
+        public Builder items(@Nullable Input<List<KeyToPathArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPathArgs> items) {
+        public Builder items(@Nullable List<KeyToPathArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Input<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = Input.ofNullable(optional);
             return this;
         }

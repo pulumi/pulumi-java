@@ -50,7 +50,7 @@ public final class KubernetesClusterPropertiesResponse {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

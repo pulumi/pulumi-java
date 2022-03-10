@@ -49,12 +49,12 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
     	      this.reuseOnScaleIn = defaults.reuseOnScaleIn;
         }
 
-        public Builder setReuseOnScaleIn(@Nullable Input<Boolean> reuseOnScaleIn) {
+        public Builder reuseOnScaleIn(@Nullable Input<Boolean> reuseOnScaleIn) {
             this.reuseOnScaleIn = reuseOnScaleIn;
             return this;
         }
 
-        public Builder setReuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
+        public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
             this.reuseOnScaleIn = Input.ofNullable(reuseOnScaleIn);
             return this;
         }

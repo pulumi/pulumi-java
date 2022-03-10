@@ -68,12 +68,12 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPostgresInstanceName(String postgresInstanceName) {
+        public Builder postgresInstanceName(String postgresInstanceName) {
             this.postgresInstanceName = Objects.requireNonNull(postgresInstanceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

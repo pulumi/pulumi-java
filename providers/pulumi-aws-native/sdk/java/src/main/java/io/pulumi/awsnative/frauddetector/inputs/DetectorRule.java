@@ -190,57 +190,57 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setLanguage(@Nullable DetectorRuleLanguage language) {
+        public Builder language(@Nullable DetectorRuleLanguage language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setOutcomes(@Nullable List<DetectorOutcome> outcomes) {
+        public Builder outcomes(@Nullable List<DetectorOutcome> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable String ruleVersion) {
+        public Builder ruleVersion(@Nullable String ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTag> tags) {
+        public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }

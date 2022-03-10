@@ -82,32 +82,32 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     	      this.status = defaults.status;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setSpecification(@Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification) {
+        public Builder specification(@Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
 
-        public Builder setSpecification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
+        public Builder specification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
             this.specification = Input.ofNullable(specification);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<DefaultRolloutPropertiesStatusArgs> status) {
+        public Builder status(@Nullable Input<DefaultRolloutPropertiesStatusArgs> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable DefaultRolloutPropertiesStatusArgs status) {
+        public Builder status(@Nullable DefaultRolloutPropertiesStatusArgs status) {
             this.status = Input.ofNullable(status);
             return this;
         }

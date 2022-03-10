@@ -67,22 +67,22 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
     	      this.valuesMap = defaults.valuesMap;
         }
 
-        public Builder setExpression(Input<String> expression) {
+        public Builder expression(Input<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder setValuesMap(Input<List<DatasetFilterValueArgs>> valuesMap) {
+        public Builder valuesMap(Input<List<DatasetFilterValueArgs>> valuesMap) {
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }
 
-        public Builder setValuesMap(List<DatasetFilterValueArgs> valuesMap) {
+        public Builder valuesMap(List<DatasetFilterValueArgs> valuesMap) {
             this.valuesMap = Input.of(Objects.requireNonNull(valuesMap));
             return this;
         }

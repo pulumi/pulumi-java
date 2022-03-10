@@ -123,52 +123,52 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setInitializeParams(@Nullable Input<LocalDiskInitializeParamsArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Input<LocalDiskInitializeParamsArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
+        public Builder initializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
             this.initializeParams = Input.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Input<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

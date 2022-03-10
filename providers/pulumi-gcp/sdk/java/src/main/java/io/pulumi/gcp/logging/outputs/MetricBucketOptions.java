@@ -95,17 +95,17 @@ public final class MetricBucketOptions {
     	      this.linearBuckets = defaults.linearBuckets;
         }
 
-        public Builder setExplicitBuckets(@Nullable MetricBucketOptionsExplicitBuckets explicitBuckets) {
+        public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBuckets explicitBuckets) {
             this.explicitBuckets = explicitBuckets;
             return this;
         }
 
-        public Builder setExponentialBuckets(@Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets) {
+        public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
 
-        public Builder setLinearBuckets(@Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
+        public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
         }

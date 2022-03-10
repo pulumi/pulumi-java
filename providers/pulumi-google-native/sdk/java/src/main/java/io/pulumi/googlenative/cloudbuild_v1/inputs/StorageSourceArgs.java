@@ -90,32 +90,32 @@ public final class StorageSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Input<String> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable String generation) {
+        public Builder generation(@Nullable String generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<String> object) {
+        public Builder object(@Nullable Input<String> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = Input.ofNullable(object);
             return this;
         }

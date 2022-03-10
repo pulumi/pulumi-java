@@ -497,142 +497,142 @@ public final class JobStatistics2Response {
     	      this.undeclaredQueryParameters = defaults.undeclaredQueryParameters;
         }
 
-        public Builder setBiEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
+        public Builder biEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
             this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics);
             return this;
         }
 
-        public Builder setBillingTier(Integer billingTier) {
+        public Builder billingTier(Integer billingTier) {
             this.billingTier = Objects.requireNonNull(billingTier);
             return this;
         }
 
-        public Builder setCacheHit(Boolean cacheHit) {
+        public Builder cacheHit(Boolean cacheHit) {
             this.cacheHit = Objects.requireNonNull(cacheHit);
             return this;
         }
 
-        public Builder setDdlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
+        public Builder ddlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
             this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount);
             return this;
         }
 
-        public Builder setDdlDestinationTable(TableReferenceResponse ddlDestinationTable) {
+        public Builder ddlDestinationTable(TableReferenceResponse ddlDestinationTable) {
             this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable);
             return this;
         }
 
-        public Builder setDdlOperationPerformed(String ddlOperationPerformed) {
+        public Builder ddlOperationPerformed(String ddlOperationPerformed) {
             this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed);
             return this;
         }
 
-        public Builder setDdlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
+        public Builder ddlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
             this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset);
             return this;
         }
 
-        public Builder setDdlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
+        public Builder ddlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
             this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine);
             return this;
         }
 
-        public Builder setDdlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
+        public Builder ddlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
             this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy);
             return this;
         }
 
-        public Builder setDdlTargetTable(TableReferenceResponse ddlTargetTable) {
+        public Builder ddlTargetTable(TableReferenceResponse ddlTargetTable) {
             this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable);
             return this;
         }
 
-        public Builder setDmlStats(DmlStatisticsResponse dmlStats) {
+        public Builder dmlStats(DmlStatisticsResponse dmlStats) {
             this.dmlStats = Objects.requireNonNull(dmlStats);
             return this;
         }
 
-        public Builder setEstimatedBytesProcessed(String estimatedBytesProcessed) {
+        public Builder estimatedBytesProcessed(String estimatedBytesProcessed) {
             this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed);
             return this;
         }
 
-        public Builder setMlStatistics(MlStatisticsResponse mlStatistics) {
+        public Builder mlStatistics(MlStatisticsResponse mlStatistics) {
             this.mlStatistics = Objects.requireNonNull(mlStatistics);
             return this;
         }
 
-        public Builder setModelTraining(BigQueryModelTrainingResponse modelTraining) {
+        public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
             this.modelTraining = Objects.requireNonNull(modelTraining);
             return this;
         }
 
-        public Builder setNumDmlAffectedRows(String numDmlAffectedRows) {
+        public Builder numDmlAffectedRows(String numDmlAffectedRows) {
             this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows);
             return this;
         }
 
-        public Builder setQueryPlan(List<ExplainQueryStageResponse> queryPlan) {
+        public Builder queryPlan(List<ExplainQueryStageResponse> queryPlan) {
             this.queryPlan = Objects.requireNonNull(queryPlan);
             return this;
         }
 
-        public Builder setReferencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
+        public Builder referencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
             this.referencedRoutines = Objects.requireNonNull(referencedRoutines);
             return this;
         }
 
-        public Builder setReferencedTables(List<TableReferenceResponse> referencedTables) {
+        public Builder referencedTables(List<TableReferenceResponse> referencedTables) {
             this.referencedTables = Objects.requireNonNull(referencedTables);
             return this;
         }
 
-        public Builder setReservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
+        public Builder reservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
             this.reservationUsage = Objects.requireNonNull(reservationUsage);
             return this;
         }
 
-        public Builder setSchema(TableSchemaResponse schema) {
+        public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setStatementType(String statementType) {
+        public Builder statementType(String statementType) {
             this.statementType = Objects.requireNonNull(statementType);
             return this;
         }
 
-        public Builder setTimeline(List<QueryTimelineSampleResponse> timeline) {
+        public Builder timeline(List<QueryTimelineSampleResponse> timeline) {
             this.timeline = Objects.requireNonNull(timeline);
             return this;
         }
 
-        public Builder setTotalBytesBilled(String totalBytesBilled) {
+        public Builder totalBytesBilled(String totalBytesBilled) {
             this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled);
             return this;
         }
 
-        public Builder setTotalBytesProcessed(String totalBytesProcessed) {
+        public Builder totalBytesProcessed(String totalBytesProcessed) {
             this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
             return this;
         }
 
-        public Builder setTotalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
+        public Builder totalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
             this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy);
             return this;
         }
 
-        public Builder setTotalPartitionsProcessed(String totalPartitionsProcessed) {
+        public Builder totalPartitionsProcessed(String totalPartitionsProcessed) {
             this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed);
             return this;
         }
 
-        public Builder setTotalSlotMs(String totalSlotMs) {
+        public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
 
-        public Builder setUndeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
+        public Builder undeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
             this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
             return this;
         }

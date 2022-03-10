@@ -76,22 +76,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     	      this.policy = defaults.policy;
         }
 
-        public Builder setAllowedValues(@Nullable Input<List<String>> allowedValues) {
+        public Builder allowedValues(@Nullable Input<List<String>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setAllowedValues(@Nullable List<String> allowedValues) {
+        public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = Input.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
+        public Builder policy(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
+        public Builder policy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

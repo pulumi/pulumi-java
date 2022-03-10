@@ -51,12 +51,12 @@ public final class ServiceCatalogProvisionedProductDetailsProperties {
     	      this.provisionedProductStatusMessage = defaults.provisionedProductStatusMessage;
         }
 
-        public Builder setProvisionedProductId(@Nullable String provisionedProductId) {
+        public Builder provisionedProductId(@Nullable String provisionedProductId) {
             this.provisionedProductId = provisionedProductId;
             return this;
         }
 
-        public Builder setProvisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
+        public Builder provisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
         }

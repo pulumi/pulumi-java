@@ -75,22 +75,22 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
     	      this.period = defaults.period;
         }
 
-        public Builder setPerPartitionBytes(Input<String> perPartitionBytes) {
+        public Builder perPartitionBytes(Input<String> perPartitionBytes) {
             this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
             return this;
         }
 
-        public Builder setPerPartitionBytes(String perPartitionBytes) {
+        public Builder perPartitionBytes(String perPartitionBytes) {
             this.perPartitionBytes = Input.of(Objects.requireNonNull(perPartitionBytes));
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }

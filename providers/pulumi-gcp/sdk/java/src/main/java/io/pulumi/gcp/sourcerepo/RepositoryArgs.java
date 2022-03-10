@@ -92,32 +92,32 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pubsubConfigs = defaults.pubsubConfigs;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPubsubConfigs(@Nullable Input<List<RepositoryPubsubConfigArgs>> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable Input<List<RepositoryPubsubConfigArgs>> pubsubConfigs) {
             this.pubsubConfigs = pubsubConfigs;
             return this;
         }
 
-        public Builder setPubsubConfigs(@Nullable List<RepositoryPubsubConfigArgs> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable List<RepositoryPubsubConfigArgs> pubsubConfigs) {
             this.pubsubConfigs = Input.ofNullable(pubsubConfigs);
             return this;
         }

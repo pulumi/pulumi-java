@@ -65,12 +65,12 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
     	      this.notebookServerEndpoint = defaults.notebookServerEndpoint;
         }
 
-        public Builder setAuthToken(String authToken) {
+        public Builder authToken(String authToken) {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
 
-        public Builder setNotebookServerEndpoint(String notebookServerEndpoint) {
+        public Builder notebookServerEndpoint(String notebookServerEndpoint) {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
         }

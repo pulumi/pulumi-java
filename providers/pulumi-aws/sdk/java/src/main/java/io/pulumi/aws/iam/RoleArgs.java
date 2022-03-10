@@ -219,107 +219,107 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssumeRolePolicy(Input<String> assumeRolePolicy) {
+        public Builder assumeRolePolicy(Input<String> assumeRolePolicy) {
             this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setForceDetachPolicies(@Nullable Input<Boolean> forceDetachPolicies) {
+        public Builder forceDetachPolicies(@Nullable Input<Boolean> forceDetachPolicies) {
             this.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
 
-        public Builder setForceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
+        public Builder forceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
             this.forceDetachPolicies = Input.ofNullable(forceDetachPolicies);
             return this;
         }
 
-        public Builder setInlinePolicies(@Nullable Input<List<RoleInlinePolicyArgs>> inlinePolicies) {
+        public Builder inlinePolicies(@Nullable Input<List<RoleInlinePolicyArgs>> inlinePolicies) {
             this.inlinePolicies = inlinePolicies;
             return this;
         }
 
-        public Builder setInlinePolicies(@Nullable List<RoleInlinePolicyArgs> inlinePolicies) {
+        public Builder inlinePolicies(@Nullable List<RoleInlinePolicyArgs> inlinePolicies) {
             this.inlinePolicies = Input.ofNullable(inlinePolicies);
             return this;
         }
 
-        public Builder setManagedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable Input<List<String>> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
-        public Builder setManagedPolicyArns(@Nullable List<String> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = Input.ofNullable(managedPolicyArns);
             return this;
         }
 
-        public Builder setMaxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Input<Integer> maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
-        public Builder setMaxSessionDuration(@Nullable Integer maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = Input.ofNullable(maxSessionDuration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPermissionsBoundary(@Nullable Input<String> permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable Input<String> permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
-        public Builder setPermissionsBoundary(@Nullable String permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = Input.ofNullable(permissionsBoundary);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

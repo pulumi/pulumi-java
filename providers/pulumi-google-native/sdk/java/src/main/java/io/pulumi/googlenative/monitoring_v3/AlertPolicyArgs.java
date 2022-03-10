@@ -251,132 +251,132 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder setAlertStrategy(@Nullable Input<AlertStrategyArgs> alertStrategy) {
+        public Builder alertStrategy(@Nullable Input<AlertStrategyArgs> alertStrategy) {
             this.alertStrategy = alertStrategy;
             return this;
         }
 
-        public Builder setAlertStrategy(@Nullable AlertStrategyArgs alertStrategy) {
+        public Builder alertStrategy(@Nullable AlertStrategyArgs alertStrategy) {
             this.alertStrategy = Input.ofNullable(alertStrategy);
             return this;
         }
 
-        public Builder setCombiner(@Nullable Input<AlertPolicyCombiner> combiner) {
+        public Builder combiner(@Nullable Input<AlertPolicyCombiner> combiner) {
             this.combiner = combiner;
             return this;
         }
 
-        public Builder setCombiner(@Nullable AlertPolicyCombiner combiner) {
+        public Builder combiner(@Nullable AlertPolicyCombiner combiner) {
             this.combiner = Input.ofNullable(combiner);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<ConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setCreationRecord(@Nullable Input<MutationRecordArgs> creationRecord) {
+        public Builder creationRecord(@Nullable Input<MutationRecordArgs> creationRecord) {
             this.creationRecord = creationRecord;
             return this;
         }
 
-        public Builder setCreationRecord(@Nullable MutationRecordArgs creationRecord) {
+        public Builder creationRecord(@Nullable MutationRecordArgs creationRecord) {
             this.creationRecord = Input.ofNullable(creationRecord);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDocumentation(@Nullable Input<DocumentationArgs> documentation) {
+        public Builder documentation(@Nullable Input<DocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable DocumentationArgs documentation) {
+        public Builder documentation(@Nullable DocumentationArgs documentation) {
             this.documentation = Input.ofNullable(documentation);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setMutationRecord(@Nullable Input<MutationRecordArgs> mutationRecord) {
+        public Builder mutationRecord(@Nullable Input<MutationRecordArgs> mutationRecord) {
             this.mutationRecord = mutationRecord;
             return this;
         }
 
-        public Builder setMutationRecord(@Nullable MutationRecordArgs mutationRecord) {
+        public Builder mutationRecord(@Nullable MutationRecordArgs mutationRecord) {
             this.mutationRecord = Input.ofNullable(mutationRecord);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable Input<List<String>> notificationChannels) {
+        public Builder notificationChannels(@Nullable Input<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable List<String> notificationChannels) {
+        public Builder notificationChannels(@Nullable List<String> notificationChannels) {
             this.notificationChannels = Input.ofNullable(notificationChannels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setValidity(@Nullable Input<StatusArgs> validity) {
+        public Builder validity(@Nullable Input<StatusArgs> validity) {
             this.validity = validity;
             return this;
         }
 
-        public Builder setValidity(@Nullable StatusArgs validity) {
+        public Builder validity(@Nullable StatusArgs validity) {
             this.validity = Input.ofNullable(validity);
             return this;
         }

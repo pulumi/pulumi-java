@@ -114,27 +114,27 @@ public final class RecommendedActionImpactRecordResponse {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAbsoluteValue(Double absoluteValue) {
+        public Builder absoluteValue(Double absoluteValue) {
             this.absoluteValue = Objects.requireNonNull(absoluteValue);
             return this;
         }
 
-        public Builder setChangeValueAbsolute(Double changeValueAbsolute) {
+        public Builder changeValueAbsolute(Double changeValueAbsolute) {
             this.changeValueAbsolute = Objects.requireNonNull(changeValueAbsolute);
             return this;
         }
 
-        public Builder setChangeValueRelative(Double changeValueRelative) {
+        public Builder changeValueRelative(Double changeValueRelative) {
             this.changeValueRelative = Objects.requireNonNull(changeValueRelative);
             return this;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }

@@ -71,22 +71,22 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setAliasName(@Nullable Input<String> aliasName) {
+        public Builder aliasName(@Nullable Input<String> aliasName) {
             this.aliasName = aliasName;
             return this;
         }
 
-        public Builder setAliasName(@Nullable String aliasName) {
+        public Builder aliasName(@Nullable String aliasName) {
             this.aliasName = Input.ofNullable(aliasName);
             return this;
         }
 
-        public Builder setProperties(Input<PutAliasRequestPropertiesArgs> properties) {
+        public Builder properties(Input<PutAliasRequestPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(PutAliasRequestPropertiesArgs properties) {
+        public Builder properties(PutAliasRequestPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }

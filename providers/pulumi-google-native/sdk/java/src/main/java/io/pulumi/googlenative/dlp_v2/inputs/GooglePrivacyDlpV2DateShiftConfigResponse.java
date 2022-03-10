@@ -106,22 +106,22 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse extends io.pulumi.r
     	      this.upperBoundDays = defaults.upperBoundDays;
         }
 
-        public Builder setContext(GooglePrivacyDlpV2FieldIdResponse context) {
+        public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setLowerBoundDays(Integer lowerBoundDays) {
+        public Builder lowerBoundDays(Integer lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
 
-        public Builder setUpperBoundDays(Integer upperBoundDays) {
+        public Builder upperBoundDays(Integer upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }

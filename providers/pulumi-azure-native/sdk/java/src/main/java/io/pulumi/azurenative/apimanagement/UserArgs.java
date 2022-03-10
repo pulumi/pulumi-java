@@ -253,132 +253,132 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAppType(@Nullable Input<Either<String,AppType>> appType) {
+        public Builder appType(@Nullable Input<Either<String,AppType>> appType) {
             this.appType = appType;
             return this;
         }
 
-        public Builder setAppType(@Nullable Either<String,AppType> appType) {
+        public Builder appType(@Nullable Either<String,AppType> appType) {
             this.appType = Input.ofNullable(appType);
             return this;
         }
 
-        public Builder setConfirmation(@Nullable Input<Either<String,Confirmation>> confirmation) {
+        public Builder confirmation(@Nullable Input<Either<String,Confirmation>> confirmation) {
             this.confirmation = confirmation;
             return this;
         }
 
-        public Builder setConfirmation(@Nullable Either<String,Confirmation> confirmation) {
+        public Builder confirmation(@Nullable Either<String,Confirmation> confirmation) {
             this.confirmation = Input.ofNullable(confirmation);
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setFirstName(Input<String> firstName) {
+        public Builder firstName(Input<String> firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = Input.of(Objects.requireNonNull(firstName));
             return this;
         }
 
-        public Builder setIdentities(@Nullable Input<List<UserIdentityContractArgs>> identities) {
+        public Builder identities(@Nullable Input<List<UserIdentityContractArgs>> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentities(@Nullable List<UserIdentityContractArgs> identities) {
+        public Builder identities(@Nullable List<UserIdentityContractArgs> identities) {
             this.identities = Input.ofNullable(identities);
             return this;
         }
 
-        public Builder setLastName(Input<String> lastName) {
+        public Builder lastName(Input<String> lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
 
-        public Builder setLastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = Input.of(Objects.requireNonNull(lastName));
             return this;
         }
 
-        public Builder setNote(@Nullable Input<String> note) {
+        public Builder note(@Nullable Input<String> note) {
             this.note = note;
             return this;
         }
 
-        public Builder setNote(@Nullable String note) {
+        public Builder note(@Nullable String note) {
             this.note = Input.ofNullable(note);
             return this;
         }
 
-        public Builder setNotify(@Nullable Input<Boolean> notify) {
+        public Builder notify(@Nullable Input<Boolean> notify) {
             this.notify = notify;
             return this;
         }
 
-        public Builder setNotify(@Nullable Boolean notify) {
+        public Builder notify(@Nullable Boolean notify) {
             this.notify = Input.ofNullable(notify);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,UserState>> state) {
+        public Builder state(@Nullable Input<Either<String,UserState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,UserState> state) {
+        public Builder state(@Nullable Either<String,UserState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setUserId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Input<String> userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = Input.ofNullable(userId);
             return this;
         }

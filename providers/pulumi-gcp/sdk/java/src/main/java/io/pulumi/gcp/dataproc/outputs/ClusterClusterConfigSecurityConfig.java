@@ -48,7 +48,7 @@ public final class ClusterClusterConfigSecurityConfig {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+        public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }

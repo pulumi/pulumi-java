@@ -74,12 +74,12 @@ public final class GoogleCloudRetailV2betaConditionResponse extends io.pulumi.re
     	      this.queryTerms = defaults.queryTerms;
         }
 
-        public Builder setActiveTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
+        public Builder activeTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
             this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
             return this;
         }
 
-        public Builder setQueryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
+        public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }

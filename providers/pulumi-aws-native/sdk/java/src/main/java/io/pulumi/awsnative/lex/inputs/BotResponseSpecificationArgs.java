@@ -72,22 +72,22 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder setAllowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Input.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder setMessageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        public Builder messageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }

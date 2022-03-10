@@ -50,7 +50,7 @@ public final class BodyDiagnosticSettingsResponse {
     	      this.bytes = defaults.bytes;
         }
 
-        public Builder setBytes(@Nullable Integer bytes) {
+        public Builder bytes(@Nullable Integer bytes) {
             this.bytes = bytes;
             return this;
         }

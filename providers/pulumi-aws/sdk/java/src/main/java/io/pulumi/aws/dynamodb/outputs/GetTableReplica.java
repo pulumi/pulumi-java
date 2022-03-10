@@ -49,12 +49,12 @@ public final class GetTableReplica {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
 
-        public Builder setRegionName(String regionName) {
+        public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }

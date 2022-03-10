@@ -76,22 +76,22 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setHealthStateName(Input<Either<String,HealthStateName>> healthStateName) {
+        public Builder healthStateName(Input<Either<String,HealthStateName>> healthStateName) {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
 
-        public Builder setHealthStateName(Either<String,HealthStateName> healthStateName) {
+        public Builder healthStateName(Either<String,HealthStateName> healthStateName) {
             this.healthStateName = Input.of(Objects.requireNonNull(healthStateName));
             return this;
         }
 
-        public Builder setSeverity(Input<Double> severity) {
+        public Builder severity(Input<Double> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Double severity) {
+        public Builder severity(Double severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }

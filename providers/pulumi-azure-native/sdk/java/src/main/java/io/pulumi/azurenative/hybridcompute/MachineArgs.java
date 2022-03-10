@@ -165,82 +165,82 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setClientPublicKey(@Nullable Input<String> clientPublicKey) {
+        public Builder clientPublicKey(@Nullable Input<String> clientPublicKey) {
             this.clientPublicKey = clientPublicKey;
             return this;
         }
 
-        public Builder setClientPublicKey(@Nullable String clientPublicKey) {
+        public Builder clientPublicKey(@Nullable String clientPublicKey) {
             this.clientPublicKey = Input.ofNullable(clientPublicKey);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<MachineIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<MachineIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable MachineIdentityArgs identity) {
+        public Builder identity(@Nullable MachineIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocationData(@Nullable Input<LocationDataArgs> locationData) {
+        public Builder locationData(@Nullable Input<LocationDataArgs> locationData) {
             this.locationData = locationData;
             return this;
         }
 
-        public Builder setLocationData(@Nullable LocationDataArgs locationData) {
+        public Builder locationData(@Nullable LocationDataArgs locationData) {
             this.locationData = Input.ofNullable(locationData);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Input<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = Input.ofNullable(vmId);
             return this;
         }

@@ -91,17 +91,17 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
     	      this.lineRegistrations = defaults.lineRegistrations;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setIsValidated(Boolean isValidated) {
+        public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
 
-        public Builder setLineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
+        public Builder lineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }

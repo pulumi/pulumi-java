@@ -125,52 +125,52 @@ public final class TransformationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataset(@Nullable Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(@Nullable Input<DatasetReferenceArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable DatasetReferenceArgs dataset) {
+        public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFlowlet(@Nullable Input<DataFlowReferenceArgs> flowlet) {
+        public Builder flowlet(@Nullable Input<DataFlowReferenceArgs> flowlet) {
             this.flowlet = flowlet;
             return this;
         }
 
-        public Builder setFlowlet(@Nullable DataFlowReferenceArgs flowlet) {
+        public Builder flowlet(@Nullable DataFlowReferenceArgs flowlet) {
             this.flowlet = Input.ofNullable(flowlet);
             return this;
         }
 
-        public Builder setLinkedService(@Nullable Input<LinkedServiceReferenceArgs> linkedService) {
+        public Builder linkedService(@Nullable Input<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
-        public Builder setLinkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
+        public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
             this.linkedService = Input.ofNullable(linkedService);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

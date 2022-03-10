@@ -126,52 +126,52 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     	      this.onPremCluster = defaults.onPremCluster;
         }
 
-        public Builder setEdgeCluster(@Nullable Input<EdgeClusterArgs> edgeCluster) {
+        public Builder edgeCluster(@Nullable Input<EdgeClusterArgs> edgeCluster) {
             this.edgeCluster = edgeCluster;
             return this;
         }
 
-        public Builder setEdgeCluster(@Nullable EdgeClusterArgs edgeCluster) {
+        public Builder edgeCluster(@Nullable EdgeClusterArgs edgeCluster) {
             this.edgeCluster = Input.ofNullable(edgeCluster);
             return this;
         }
 
-        public Builder setGkeCluster(@Nullable Input<GkeClusterArgs> gkeCluster) {
+        public Builder gkeCluster(@Nullable Input<GkeClusterArgs> gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
 
-        public Builder setGkeCluster(@Nullable GkeClusterArgs gkeCluster) {
+        public Builder gkeCluster(@Nullable GkeClusterArgs gkeCluster) {
             this.gkeCluster = Input.ofNullable(gkeCluster);
             return this;
         }
 
-        public Builder setKubernetesResource(@Nullable Input<KubernetesResourceArgs> kubernetesResource) {
+        public Builder kubernetesResource(@Nullable Input<KubernetesResourceArgs> kubernetesResource) {
             this.kubernetesResource = kubernetesResource;
             return this;
         }
 
-        public Builder setKubernetesResource(@Nullable KubernetesResourceArgs kubernetesResource) {
+        public Builder kubernetesResource(@Nullable KubernetesResourceArgs kubernetesResource) {
             this.kubernetesResource = Input.ofNullable(kubernetesResource);
             return this;
         }
 
-        public Builder setMultiCloudCluster(@Nullable Input<MultiCloudClusterArgs> multiCloudCluster) {
+        public Builder multiCloudCluster(@Nullable Input<MultiCloudClusterArgs> multiCloudCluster) {
             this.multiCloudCluster = multiCloudCluster;
             return this;
         }
 
-        public Builder setMultiCloudCluster(@Nullable MultiCloudClusterArgs multiCloudCluster) {
+        public Builder multiCloudCluster(@Nullable MultiCloudClusterArgs multiCloudCluster) {
             this.multiCloudCluster = Input.ofNullable(multiCloudCluster);
             return this;
         }
 
-        public Builder setOnPremCluster(@Nullable Input<OnPremClusterArgs> onPremCluster) {
+        public Builder onPremCluster(@Nullable Input<OnPremClusterArgs> onPremCluster) {
             this.onPremCluster = onPremCluster;
             return this;
         }
 
-        public Builder setOnPremCluster(@Nullable OnPremClusterArgs onPremCluster) {
+        public Builder onPremCluster(@Nullable OnPremClusterArgs onPremCluster) {
             this.onPremCluster = Input.ofNullable(onPremCluster);
             return this;
         }

@@ -88,32 +88,32 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     	      this.values = defaults.values;
         }
 
-        public Builder setConsumeReservationType(Input<String> consumeReservationType) {
+        public Builder consumeReservationType(Input<String> consumeReservationType) {
             this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
             return this;
         }
 
-        public Builder setConsumeReservationType(String consumeReservationType) {
+        public Builder consumeReservationType(String consumeReservationType) {
             this.consumeReservationType = Input.of(Objects.requireNonNull(consumeReservationType));
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

@@ -186,42 +186,42 @@ public final class PatchDeploymentPatchConfig {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable PatchDeploymentPatchConfigApt apt) {
+        public Builder apt(@Nullable PatchDeploymentPatchConfigApt apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setGoo(@Nullable PatchDeploymentPatchConfigGoo goo) {
+        public Builder goo(@Nullable PatchDeploymentPatchConfigGoo goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setPostStep(@Nullable PatchDeploymentPatchConfigPostStep postStep) {
+        public Builder postStep(@Nullable PatchDeploymentPatchConfigPostStep postStep) {
             this.postStep = postStep;
             return this;
         }
 
-        public Builder setPreStep(@Nullable PatchDeploymentPatchConfigPreStep preStep) {
+        public Builder preStep(@Nullable PatchDeploymentPatchConfigPreStep preStep) {
             this.preStep = preStep;
             return this;
         }
 
-        public Builder setRebootConfig(@Nullable String rebootConfig) {
+        public Builder rebootConfig(@Nullable String rebootConfig) {
             this.rebootConfig = rebootConfig;
             return this;
         }
 
-        public Builder setWindowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate) {
+        public Builder windowsUpdate(@Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
 
-        public Builder setYum(@Nullable PatchDeploymentPatchConfigYum yum) {
+        public Builder yum(@Nullable PatchDeploymentPatchConfigYum yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setZypper(@Nullable PatchDeploymentPatchConfigZypper zypper) {
+        public Builder zypper(@Nullable PatchDeploymentPatchConfigZypper zypper) {
             this.zypper = zypper;
             return this;
         }

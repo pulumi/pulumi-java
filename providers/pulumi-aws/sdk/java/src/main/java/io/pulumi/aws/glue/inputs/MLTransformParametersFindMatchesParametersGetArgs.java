@@ -104,42 +104,42 @@ public final class MLTransformParametersFindMatchesParametersGetArgs extends io.
     	      this.primaryKeyColumnName = defaults.primaryKeyColumnName;
         }
 
-        public Builder setAccuracyCostTradeOff(@Nullable Input<Double> accuracyCostTradeOff) {
+        public Builder accuracyCostTradeOff(@Nullable Input<Double> accuracyCostTradeOff) {
             this.accuracyCostTradeOff = accuracyCostTradeOff;
             return this;
         }
 
-        public Builder setAccuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
+        public Builder accuracyCostTradeOff(@Nullable Double accuracyCostTradeOff) {
             this.accuracyCostTradeOff = Input.ofNullable(accuracyCostTradeOff);
             return this;
         }
 
-        public Builder setEnforceProvidedLabels(@Nullable Input<Boolean> enforceProvidedLabels) {
+        public Builder enforceProvidedLabels(@Nullable Input<Boolean> enforceProvidedLabels) {
             this.enforceProvidedLabels = enforceProvidedLabels;
             return this;
         }
 
-        public Builder setEnforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
+        public Builder enforceProvidedLabels(@Nullable Boolean enforceProvidedLabels) {
             this.enforceProvidedLabels = Input.ofNullable(enforceProvidedLabels);
             return this;
         }
 
-        public Builder setPrecisionRecallTradeOff(@Nullable Input<Double> precisionRecallTradeOff) {
+        public Builder precisionRecallTradeOff(@Nullable Input<Double> precisionRecallTradeOff) {
             this.precisionRecallTradeOff = precisionRecallTradeOff;
             return this;
         }
 
-        public Builder setPrecisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
+        public Builder precisionRecallTradeOff(@Nullable Double precisionRecallTradeOff) {
             this.precisionRecallTradeOff = Input.ofNullable(precisionRecallTradeOff);
             return this;
         }
 
-        public Builder setPrimaryKeyColumnName(@Nullable Input<String> primaryKeyColumnName) {
+        public Builder primaryKeyColumnName(@Nullable Input<String> primaryKeyColumnName) {
             this.primaryKeyColumnName = primaryKeyColumnName;
             return this;
         }
 
-        public Builder setPrimaryKeyColumnName(@Nullable String primaryKeyColumnName) {
+        public Builder primaryKeyColumnName(@Nullable String primaryKeyColumnName) {
             this.primaryKeyColumnName = Input.ofNullable(primaryKeyColumnName);
             return this;
         }

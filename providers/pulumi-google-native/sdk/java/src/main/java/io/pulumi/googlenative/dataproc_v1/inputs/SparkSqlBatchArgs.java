@@ -92,32 +92,32 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryVariables = defaults.queryVariables;
         }
 
-        public Builder setJarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Input.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder setQueryFileUri(Input<String> queryFileUri) {
+        public Builder queryFileUri(Input<String> queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
 
-        public Builder setQueryFileUri(String queryFileUri) {
+        public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Input.of(Objects.requireNonNull(queryFileUri));
             return this;
         }
 
-        public Builder setQueryVariables(@Nullable Input<Map<String,String>> queryVariables) {
+        public Builder queryVariables(@Nullable Input<Map<String,String>> queryVariables) {
             this.queryVariables = queryVariables;
             return this;
         }
 
-        public Builder setQueryVariables(@Nullable Map<String,String> queryVariables) {
+        public Builder queryVariables(@Nullable Map<String,String> queryVariables) {
             this.queryVariables = Input.ofNullable(queryVariables);
             return this;
         }

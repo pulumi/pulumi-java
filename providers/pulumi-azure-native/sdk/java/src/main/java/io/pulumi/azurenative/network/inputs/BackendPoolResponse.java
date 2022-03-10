@@ -157,37 +157,37 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackends(@Nullable List<BackendResponse> backends) {
+        public Builder backends(@Nullable List<BackendResponse> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

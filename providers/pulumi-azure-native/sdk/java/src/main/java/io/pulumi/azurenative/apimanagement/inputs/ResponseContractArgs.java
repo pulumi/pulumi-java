@@ -110,42 +110,42 @@ public final class ResponseContractArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<ParameterContractArgs>> headers) {
+        public Builder headers(@Nullable Input<List<ParameterContractArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<ParameterContractArgs> headers) {
+        public Builder headers(@Nullable List<ParameterContractArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setRepresentations(@Nullable Input<List<RepresentationContractArgs>> representations) {
+        public Builder representations(@Nullable Input<List<RepresentationContractArgs>> representations) {
             this.representations = representations;
             return this;
         }
 
-        public Builder setRepresentations(@Nullable List<RepresentationContractArgs> representations) {
+        public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
             this.representations = Input.ofNullable(representations);
             return this;
         }
 
-        public Builder setStatusCode(Input<Integer> statusCode) {
+        public Builder statusCode(Input<Integer> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusCode(Integer statusCode) {
+        public Builder statusCode(Integer statusCode) {
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }

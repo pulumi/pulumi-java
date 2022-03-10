@@ -93,32 +93,32 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder setDiskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Input<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = Input.ofNullable(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = Input.ofNullable(diskSizeGiB);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<Either<String,StorageType>> diskType) {
+        public Builder diskType(@Nullable Input<Either<String,StorageType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable Either<String,StorageType> diskType) {
+        public Builder diskType(@Nullable Either<String,StorageType> diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }

@@ -56,7 +56,7 @@ public final class ApplicationNotificationPolicyResponse extends io.pulumi.resou
     	      this.notificationEndpoints = defaults.notificationEndpoints;
         }
 
-        public Builder setNotificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+        public Builder notificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }

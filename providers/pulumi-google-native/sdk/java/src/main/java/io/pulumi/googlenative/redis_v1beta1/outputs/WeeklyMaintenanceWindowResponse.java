@@ -82,17 +82,17 @@ public final class WeeklyMaintenanceWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(TimeOfDayResponse startTime) {
+        public Builder startTime(TimeOfDayResponse startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

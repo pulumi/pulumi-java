@@ -48,7 +48,7 @@ public final class StreamingConfigResponse {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

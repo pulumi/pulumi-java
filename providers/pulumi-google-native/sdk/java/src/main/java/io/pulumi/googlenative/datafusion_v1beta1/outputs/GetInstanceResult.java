@@ -472,137 +472,137 @@ public final class GetInstanceResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAccelerators(List<AcceleratorResponse> accelerators) {
+        public Builder accelerators(List<AcceleratorResponse> accelerators) {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
 
-        public Builder setApiEndpoint(String apiEndpoint) {
+        public Builder apiEndpoint(String apiEndpoint) {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
 
-        public Builder setAvailableVersion(List<VersionResponse> availableVersion) {
+        public Builder availableVersion(List<VersionResponse> availableVersion) {
             this.availableVersion = Objects.requireNonNull(availableVersion);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCryptoKeyConfig(CryptoKeyConfigResponse cryptoKeyConfig) {
+        public Builder cryptoKeyConfig(CryptoKeyConfigResponse cryptoKeyConfig) {
             this.cryptoKeyConfig = Objects.requireNonNull(cryptoKeyConfig);
             return this;
         }
 
-        public Builder setDataprocServiceAccount(String dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(String dataprocServiceAccount) {
             this.dataprocServiceAccount = Objects.requireNonNull(dataprocServiceAccount);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisabledReason(List<String> disabledReason) {
+        public Builder disabledReason(List<String> disabledReason) {
             this.disabledReason = Objects.requireNonNull(disabledReason);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableRbac(Boolean enableRbac) {
+        public Builder enableRbac(Boolean enableRbac) {
             this.enableRbac = Objects.requireNonNull(enableRbac);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setEnableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Objects.requireNonNull(enableStackdriverMonitoring);
             return this;
         }
 
-        public Builder setGcsBucket(String gcsBucket) {
+        public Builder gcsBucket(String gcsBucket) {
             this.gcsBucket = Objects.requireNonNull(gcsBucket);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkConfig(NetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setOptions(Map<String,String> options) {
+        public Builder options(Map<String,String> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setP4ServiceAccount(String p4ServiceAccount) {
+        public Builder p4ServiceAccount(String p4ServiceAccount) {
             this.p4ServiceAccount = Objects.requireNonNull(p4ServiceAccount);
             return this;
         }
 
-        public Builder setPrivateInstance(Boolean privateInstance) {
+        public Builder privateInstance(Boolean privateInstance) {
             this.privateInstance = Objects.requireNonNull(privateInstance);
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateMessage(String stateMessage) {
+        public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
 
-        public Builder setTenantProjectId(String tenantProjectId) {
+        public Builder tenantProjectId(String tenantProjectId) {
             this.tenantProjectId = Objects.requireNonNull(tenantProjectId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

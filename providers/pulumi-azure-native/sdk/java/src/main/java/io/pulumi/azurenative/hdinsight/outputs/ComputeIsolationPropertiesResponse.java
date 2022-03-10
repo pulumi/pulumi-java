@@ -68,12 +68,12 @@ public final class ComputeIsolationPropertiesResponse {
     	      this.hostSku = defaults.hostSku;
         }
 
-        public Builder setEnableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
+        public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
             this.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
-        public Builder setHostSku(@Nullable String hostSku) {
+        public Builder hostSku(@Nullable String hostSku) {
             this.hostSku = hostSku;
             return this;
         }

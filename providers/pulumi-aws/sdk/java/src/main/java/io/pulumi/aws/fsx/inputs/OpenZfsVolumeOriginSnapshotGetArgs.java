@@ -61,22 +61,22 @@ public final class OpenZfsVolumeOriginSnapshotGetArgs extends io.pulumi.resource
     	      this.snapshotArn = defaults.snapshotArn;
         }
 
-        public Builder setCopyStrategy(Input<String> copyStrategy) {
+        public Builder copyStrategy(Input<String> copyStrategy) {
             this.copyStrategy = Objects.requireNonNull(copyStrategy);
             return this;
         }
 
-        public Builder setCopyStrategy(String copyStrategy) {
+        public Builder copyStrategy(String copyStrategy) {
             this.copyStrategy = Input.of(Objects.requireNonNull(copyStrategy));
             return this;
         }
 
-        public Builder setSnapshotArn(Input<String> snapshotArn) {
+        public Builder snapshotArn(Input<String> snapshotArn) {
             this.snapshotArn = Objects.requireNonNull(snapshotArn);
             return this;
         }
 
-        public Builder setSnapshotArn(String snapshotArn) {
+        public Builder snapshotArn(String snapshotArn) {
             this.snapshotArn = Input.of(Objects.requireNonNull(snapshotArn));
             return this;
         }

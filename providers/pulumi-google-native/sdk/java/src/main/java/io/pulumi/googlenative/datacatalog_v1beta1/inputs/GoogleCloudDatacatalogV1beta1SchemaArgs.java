@@ -57,12 +57,12 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends io.pulumi.res
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(Input<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns) {
+        public Builder columns(Input<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
-        public Builder setColumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> columns) {
+        public Builder columns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> columns) {
             this.columns = Input.of(Objects.requireNonNull(columns));
             return this;
         }

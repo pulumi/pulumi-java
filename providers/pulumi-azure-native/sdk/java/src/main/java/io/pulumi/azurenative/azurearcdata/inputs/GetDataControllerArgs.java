@@ -64,12 +64,12 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDataControllerName(String dataControllerName) {
+        public Builder dataControllerName(String dataControllerName) {
             this.dataControllerName = Objects.requireNonNull(dataControllerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

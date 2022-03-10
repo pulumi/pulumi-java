@@ -196,102 +196,102 @@ public final class AssemblyPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setAssemblyCulture(@Nullable Input<String> assemblyCulture) {
+        public Builder assemblyCulture(@Nullable Input<String> assemblyCulture) {
             this.assemblyCulture = assemblyCulture;
             return this;
         }
 
-        public Builder setAssemblyCulture(@Nullable String assemblyCulture) {
+        public Builder assemblyCulture(@Nullable String assemblyCulture) {
             this.assemblyCulture = Input.ofNullable(assemblyCulture);
             return this;
         }
 
-        public Builder setAssemblyName(Input<String> assemblyName) {
+        public Builder assemblyName(Input<String> assemblyName) {
             this.assemblyName = Objects.requireNonNull(assemblyName);
             return this;
         }
 
-        public Builder setAssemblyName(String assemblyName) {
+        public Builder assemblyName(String assemblyName) {
             this.assemblyName = Input.of(Objects.requireNonNull(assemblyName));
             return this;
         }
 
-        public Builder setAssemblyPublicKeyToken(@Nullable Input<String> assemblyPublicKeyToken) {
+        public Builder assemblyPublicKeyToken(@Nullable Input<String> assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
 
-        public Builder setAssemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
+        public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = Input.ofNullable(assemblyPublicKeyToken);
             return this;
         }
 
-        public Builder setAssemblyVersion(@Nullable Input<String> assemblyVersion) {
+        public Builder assemblyVersion(@Nullable Input<String> assemblyVersion) {
             this.assemblyVersion = assemblyVersion;
             return this;
         }
 
-        public Builder setAssemblyVersion(@Nullable String assemblyVersion) {
+        public Builder assemblyVersion(@Nullable String assemblyVersion) {
             this.assemblyVersion = Input.ofNullable(assemblyVersion);
             return this;
         }
 
-        public Builder setChangedTime(@Nullable Input<String> changedTime) {
+        public Builder changedTime(@Nullable Input<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = Input.ofNullable(changedTime);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<Object> content) {
+        public Builder content(@Nullable Input<Object> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable Object content) {
+        public Builder content(@Nullable Object content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentLink(@Nullable Input<ContentLinkArgs> contentLink) {
+        public Builder contentLink(@Nullable Input<ContentLinkArgs> contentLink) {
             this.contentLink = contentLink;
             return this;
         }
 
-        public Builder setContentLink(@Nullable ContentLinkArgs contentLink) {
+        public Builder contentLink(@Nullable ContentLinkArgs contentLink) {
             this.contentLink = Input.ofNullable(contentLink);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

@@ -58,12 +58,12 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oracleSchemas = defaults.oracleSchemas;
         }
 
-        public Builder setOracleSchemas(@Nullable Input<List<OracleSchemaArgs>> oracleSchemas) {
+        public Builder oracleSchemas(@Nullable Input<List<OracleSchemaArgs>> oracleSchemas) {
             this.oracleSchemas = oracleSchemas;
             return this;
         }
 
-        public Builder setOracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
+        public Builder oracleSchemas(@Nullable List<OracleSchemaArgs> oracleSchemas) {
             this.oracleSchemas = Input.ofNullable(oracleSchemas);
             return this;
         }

@@ -73,12 +73,12 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends io.pulumi.r
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setKeyValue(String keyValue) {
+        public Builder keyValue(String keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

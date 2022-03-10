@@ -76,22 +76,22 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setStrategy(Input<String> strategy) {
+        public Builder strategy(Input<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Input.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder setWebhook(@Nullable Input<WebhookConversionArgs> webhook) {
+        public Builder webhook(@Nullable Input<WebhookConversionArgs> webhook) {
             this.webhook = webhook;
             return this;
         }
 
-        public Builder setWebhook(@Nullable WebhookConversionArgs webhook) {
+        public Builder webhook(@Nullable WebhookConversionArgs webhook) {
             this.webhook = Input.ofNullable(webhook);
             return this;
         }

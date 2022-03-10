@@ -90,17 +90,17 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.dataAccess = defaults.dataAccess;
         }
 
-        public Builder setCloudAudit(CloudAuditOptionsResponse cloudAudit) {
+        public Builder cloudAudit(CloudAuditOptionsResponse cloudAudit) {
             this.cloudAudit = Objects.requireNonNull(cloudAudit);
             return this;
         }
 
-        public Builder setCounter(CounterOptionsResponse counter) {
+        public Builder counter(CounterOptionsResponse counter) {
             this.counter = Objects.requireNonNull(counter);
             return this;
         }
 
-        public Builder setDataAccess(DataAccessOptionsResponse dataAccess) {
+        public Builder dataAccess(DataAccessOptionsResponse dataAccess) {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
         }

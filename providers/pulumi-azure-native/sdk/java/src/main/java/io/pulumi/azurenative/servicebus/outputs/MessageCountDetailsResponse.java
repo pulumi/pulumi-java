@@ -113,27 +113,27 @@ public final class MessageCountDetailsResponse {
     	      this.transferMessageCount = defaults.transferMessageCount;
         }
 
-        public Builder setActiveMessageCount(Double activeMessageCount) {
+        public Builder activeMessageCount(Double activeMessageCount) {
             this.activeMessageCount = Objects.requireNonNull(activeMessageCount);
             return this;
         }
 
-        public Builder setDeadLetterMessageCount(Double deadLetterMessageCount) {
+        public Builder deadLetterMessageCount(Double deadLetterMessageCount) {
             this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount);
             return this;
         }
 
-        public Builder setScheduledMessageCount(Double scheduledMessageCount) {
+        public Builder scheduledMessageCount(Double scheduledMessageCount) {
             this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount);
             return this;
         }
 
-        public Builder setTransferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
+        public Builder transferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
             this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount);
             return this;
         }
 
-        public Builder setTransferMessageCount(Double transferMessageCount) {
+        public Builder transferMessageCount(Double transferMessageCount) {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
         }

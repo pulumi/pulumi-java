@@ -153,37 +153,37 @@ public final class ApplicationApplicationConfiguration {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setApplicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration) {
+        public Builder applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration) {
             this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration);
             return this;
         }
 
-        public Builder setApplicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration) {
+        public Builder applicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration) {
             this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
             return this;
         }
 
-        public Builder setEnvironmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties) {
+        public Builder environmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties) {
             this.environmentProperties = environmentProperties;
             return this;
         }
 
-        public Builder setFlinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration) {
+        public Builder flinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration) {
             this.flinkApplicationConfiguration = flinkApplicationConfiguration;
             return this;
         }
 
-        public Builder setRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration) {
+        public Builder runConfiguration(@Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration) {
             this.runConfiguration = runConfiguration;
             return this;
         }
 
-        public Builder setSqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration) {
+        public Builder sqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration) {
             this.sqlApplicationConfiguration = sqlApplicationConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }

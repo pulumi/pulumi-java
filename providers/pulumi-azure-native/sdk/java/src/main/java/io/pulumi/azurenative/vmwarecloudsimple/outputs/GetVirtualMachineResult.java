@@ -476,137 +476,137 @@ public final class GetVirtualMachineResult {
     	      this.vmwaretools = defaults.vmwaretools;
         }
 
-        public Builder setAmountOfRam(Integer amountOfRam) {
+        public Builder amountOfRam(Integer amountOfRam) {
             this.amountOfRam = Objects.requireNonNull(amountOfRam);
             return this;
         }
 
-        public Builder setControllers(List<VirtualDiskControllerResponse> controllers) {
+        public Builder controllers(List<VirtualDiskControllerResponse> controllers) {
             this.controllers = Objects.requireNonNull(controllers);
             return this;
         }
 
-        public Builder setCustomization(@Nullable GuestOSCustomizationResponse customization) {
+        public Builder customization(@Nullable GuestOSCustomizationResponse customization) {
             this.customization = customization;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<VirtualDiskResponse> disks) {
+        public Builder disks(@Nullable List<VirtualDiskResponse> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDnsname(String dnsname) {
+        public Builder dnsname(String dnsname) {
             this.dnsname = Objects.requireNonNull(dnsname);
             return this;
         }
 
-        public Builder setExposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
+        public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
             this.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setGuestOS(String guestOS) {
+        public Builder guestOS(String guestOS) {
             this.guestOS = Objects.requireNonNull(guestOS);
             return this;
         }
 
-        public Builder setGuestOSType(String guestOSType) {
+        public Builder guestOSType(String guestOSType) {
             this.guestOSType = Objects.requireNonNull(guestOSType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNics(@Nullable List<VirtualNicResponse> nics) {
+        public Builder nics(@Nullable List<VirtualNicResponse> nics) {
             this.nics = nics;
             return this;
         }
 
-        public Builder setNumberOfCores(Integer numberOfCores) {
+        public Builder numberOfCores(Integer numberOfCores) {
             this.numberOfCores = Objects.requireNonNull(numberOfCores);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPrivateCloudId(String privateCloudId) {
+        public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIP(String publicIP) {
+        public Builder publicIP(String publicIP) {
             this.publicIP = Objects.requireNonNull(publicIP);
             return this;
         }
 
-        public Builder setResourcePool(@Nullable ResourcePoolResponse resourcePool) {
+        public Builder resourcePool(@Nullable ResourcePoolResponse resourcePool) {
             this.resourcePool = resourcePool;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }
 
-        public Builder setVSphereNetworks(@Nullable List<String> vSphereNetworks) {
+        public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
             this.vSphereNetworks = vSphereNetworks;
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setVmwaretools(String vmwaretools) {
+        public Builder vmwaretools(String vmwaretools) {
             this.vmwaretools = Objects.requireNonNull(vmwaretools);
             return this;
         }

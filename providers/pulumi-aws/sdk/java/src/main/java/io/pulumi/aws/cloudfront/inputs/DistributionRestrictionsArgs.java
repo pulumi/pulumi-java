@@ -48,12 +48,12 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.geoRestriction = defaults.geoRestriction;
         }
 
-        public Builder setGeoRestriction(Input<DistributionRestrictionsGeoRestrictionArgs> geoRestriction) {
+        public Builder geoRestriction(Input<DistributionRestrictionsGeoRestrictionArgs> geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
         }
 
-        public Builder setGeoRestriction(DistributionRestrictionsGeoRestrictionArgs geoRestriction) {
+        public Builder geoRestriction(DistributionRestrictionsGeoRestrictionArgs geoRestriction) {
             this.geoRestriction = Input.of(Objects.requireNonNull(geoRestriction));
             return this;
         }

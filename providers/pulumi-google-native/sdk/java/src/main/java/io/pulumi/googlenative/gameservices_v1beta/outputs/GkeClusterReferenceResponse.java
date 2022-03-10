@@ -48,7 +48,7 @@ public final class GkeClusterReferenceResponse {
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }

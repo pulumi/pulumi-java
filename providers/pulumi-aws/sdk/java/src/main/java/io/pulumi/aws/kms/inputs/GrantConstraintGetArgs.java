@@ -71,22 +71,22 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
     	      this.encryptionContextSubset = defaults.encryptionContextSubset;
         }
 
-        public Builder setEncryptionContextEquals(@Nullable Input<Map<String,String>> encryptionContextEquals) {
+        public Builder encryptionContextEquals(@Nullable Input<Map<String,String>> encryptionContextEquals) {
             this.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
 
-        public Builder setEncryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
+        public Builder encryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
             this.encryptionContextEquals = Input.ofNullable(encryptionContextEquals);
             return this;
         }
 
-        public Builder setEncryptionContextSubset(@Nullable Input<Map<String,String>> encryptionContextSubset) {
+        public Builder encryptionContextSubset(@Nullable Input<Map<String,String>> encryptionContextSubset) {
             this.encryptionContextSubset = encryptionContextSubset;
             return this;
         }
 
-        public Builder setEncryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
+        public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
             this.encryptionContextSubset = Input.ofNullable(encryptionContextSubset);
             return this;
         }

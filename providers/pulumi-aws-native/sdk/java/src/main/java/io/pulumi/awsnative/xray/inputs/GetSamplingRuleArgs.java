@@ -47,7 +47,7 @@ public final class GetSamplingRuleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.ruleARN = defaults.ruleARN;
         }
 
-        public Builder setRuleARN(String ruleARN) {
+        public Builder ruleARN(String ruleARN) {
             this.ruleARN = Objects.requireNonNull(ruleARN);
             return this;
         }

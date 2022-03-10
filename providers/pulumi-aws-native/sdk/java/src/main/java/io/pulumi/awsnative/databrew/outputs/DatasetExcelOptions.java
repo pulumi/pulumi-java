@@ -62,17 +62,17 @@ public final class DatasetExcelOptions {
     	      this.sheetNames = defaults.sheetNames;
         }
 
-        public Builder setHeaderRow(@Nullable Boolean headerRow) {
+        public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = headerRow;
             return this;
         }
 
-        public Builder setSheetIndexes(@Nullable List<Integer> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
 
-        public Builder setSheetNames(@Nullable List<String> sheetNames) {
+        public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }

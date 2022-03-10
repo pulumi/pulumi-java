@@ -165,42 +165,42 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
     	      this.weightReportMode = defaults.weightReportMode;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setPortSpecification(String portSpecification) {
+        public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
 
-        public Builder setProxyHeader(String proxyHeader) {
+        public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
 
-        public Builder setRequestPath(String requestPath) {
+        public Builder requestPath(String requestPath) {
             this.requestPath = Objects.requireNonNull(requestPath);
             return this;
         }
 
-        public Builder setResponse(String response) {
+        public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }
 
-        public Builder setWeightReportMode(String weightReportMode) {
+        public Builder weightReportMode(String weightReportMode) {
             this.weightReportMode = Objects.requireNonNull(weightReportMode);
             return this;
         }

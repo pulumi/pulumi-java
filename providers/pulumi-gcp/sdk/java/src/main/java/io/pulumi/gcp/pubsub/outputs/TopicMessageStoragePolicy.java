@@ -59,7 +59,7 @@ public final class TopicMessageStoragePolicy {
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder setAllowedPersistenceRegions(List<String> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }

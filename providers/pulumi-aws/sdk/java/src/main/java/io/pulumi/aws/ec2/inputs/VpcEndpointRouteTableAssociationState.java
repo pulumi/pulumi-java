@@ -70,22 +70,22 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder setRouteTableId(@Nullable Input<String> routeTableId) {
+        public Builder routeTableId(@Nullable Input<String> routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = Input.ofNullable(routeTableId);
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }

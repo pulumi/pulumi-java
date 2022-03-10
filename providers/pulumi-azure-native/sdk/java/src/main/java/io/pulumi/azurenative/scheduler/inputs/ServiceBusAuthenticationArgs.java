@@ -87,32 +87,32 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setSasKey(@Nullable Input<String> sasKey) {
+        public Builder sasKey(@Nullable Input<String> sasKey) {
             this.sasKey = sasKey;
             return this;
         }
 
-        public Builder setSasKey(@Nullable String sasKey) {
+        public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = Input.ofNullable(sasKey);
             return this;
         }
 
-        public Builder setSasKeyName(@Nullable Input<String> sasKeyName) {
+        public Builder sasKeyName(@Nullable Input<String> sasKeyName) {
             this.sasKeyName = sasKeyName;
             return this;
         }
 
-        public Builder setSasKeyName(@Nullable String sasKeyName) {
+        public Builder sasKeyName(@Nullable String sasKeyName) {
             this.sasKeyName = Input.ofNullable(sasKeyName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ServiceBusAuthenticationType> type) {
+        public Builder type(@Nullable Input<ServiceBusAuthenticationType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ServiceBusAuthenticationType type) {
+        public Builder type(@Nullable ServiceBusAuthenticationType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

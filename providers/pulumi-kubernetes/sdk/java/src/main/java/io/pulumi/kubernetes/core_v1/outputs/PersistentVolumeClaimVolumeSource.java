@@ -68,12 +68,12 @@ public final class PersistentVolumeClaimVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setClaimName(String claimName) {
+        public Builder claimName(String claimName) {
             this.claimName = Objects.requireNonNull(claimName);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

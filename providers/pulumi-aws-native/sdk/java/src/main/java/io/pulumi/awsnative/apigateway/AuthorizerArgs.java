@@ -200,102 +200,102 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthType(@Nullable Input<String> authType) {
+        public Builder authType(@Nullable Input<String> authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = Input.ofNullable(authType);
             return this;
         }
 
-        public Builder setAuthorizerCredentials(@Nullable Input<String> authorizerCredentials) {
+        public Builder authorizerCredentials(@Nullable Input<String> authorizerCredentials) {
             this.authorizerCredentials = authorizerCredentials;
             return this;
         }
 
-        public Builder setAuthorizerCredentials(@Nullable String authorizerCredentials) {
+        public Builder authorizerCredentials(@Nullable String authorizerCredentials) {
             this.authorizerCredentials = Input.ofNullable(authorizerCredentials);
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = Input.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
 
-        public Builder setAuthorizerUri(@Nullable Input<String> authorizerUri) {
+        public Builder authorizerUri(@Nullable Input<String> authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
 
-        public Builder setAuthorizerUri(@Nullable String authorizerUri) {
+        public Builder authorizerUri(@Nullable String authorizerUri) {
             this.authorizerUri = Input.ofNullable(authorizerUri);
             return this;
         }
 
-        public Builder setIdentitySource(@Nullable Input<String> identitySource) {
+        public Builder identitySource(@Nullable Input<String> identitySource) {
             this.identitySource = identitySource;
             return this;
         }
 
-        public Builder setIdentitySource(@Nullable String identitySource) {
+        public Builder identitySource(@Nullable String identitySource) {
             this.identitySource = Input.ofNullable(identitySource);
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable Input<String> identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable Input<String> identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable String identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = Input.ofNullable(identityValidationExpression);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProviderARNs(@Nullable Input<List<String>> providerARNs) {
+        public Builder providerARNs(@Nullable Input<List<String>> providerARNs) {
             this.providerARNs = providerARNs;
             return this;
         }
 
-        public Builder setProviderARNs(@Nullable List<String> providerARNs) {
+        public Builder providerARNs(@Nullable List<String> providerARNs) {
             this.providerARNs = Input.ofNullable(providerARNs);
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

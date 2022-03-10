@@ -65,12 +65,12 @@ public final class SchemaConfigResponse {
     	      this.schemaType = defaults.schemaType;
         }
 
-        public Builder setRecursiveStructureDepth(String recursiveStructureDepth) {
+        public Builder recursiveStructureDepth(String recursiveStructureDepth) {
             this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
             return this;
         }
 
-        public Builder setSchemaType(String schemaType) {
+        public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }

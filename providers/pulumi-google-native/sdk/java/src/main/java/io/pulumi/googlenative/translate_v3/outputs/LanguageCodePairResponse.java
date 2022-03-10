@@ -65,12 +65,12 @@ public final class LanguageCodePairResponse {
     	      this.targetLanguageCode = defaults.targetLanguageCode;
         }
 
-        public Builder setSourceLanguageCode(String sourceLanguageCode) {
+        public Builder sourceLanguageCode(String sourceLanguageCode) {
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
 
-        public Builder setTargetLanguageCode(String targetLanguageCode) {
+        public Builder targetLanguageCode(String targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }

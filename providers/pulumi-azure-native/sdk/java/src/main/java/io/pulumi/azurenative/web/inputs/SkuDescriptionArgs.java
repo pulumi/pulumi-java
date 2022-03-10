@@ -174,82 +174,82 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<CapabilityArgs>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<CapabilityArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<CapabilityArgs> capabilities) {
+        public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setFamily(@Nullable Input<String> family) {
+        public Builder family(@Nullable Input<String> family) {
             this.family = family;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = Input.ofNullable(family);
             return this;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setSkuCapacity(@Nullable Input<SkuCapacityArgs> skuCapacity) {
+        public Builder skuCapacity(@Nullable Input<SkuCapacityArgs> skuCapacity) {
             this.skuCapacity = skuCapacity;
             return this;
         }
 
-        public Builder setSkuCapacity(@Nullable SkuCapacityArgs skuCapacity) {
+        public Builder skuCapacity(@Nullable SkuCapacityArgs skuCapacity) {
             this.skuCapacity = Input.ofNullable(skuCapacity);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

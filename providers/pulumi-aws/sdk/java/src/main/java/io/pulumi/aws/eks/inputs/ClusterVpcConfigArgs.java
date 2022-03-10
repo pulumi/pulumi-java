@@ -152,72 +152,72 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setClusterSecurityGroupId(@Nullable Input<String> clusterSecurityGroupId) {
+        public Builder clusterSecurityGroupId(@Nullable Input<String> clusterSecurityGroupId) {
             this.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
 
-        public Builder setClusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
+        public Builder clusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
             this.clusterSecurityGroupId = Input.ofNullable(clusterSecurityGroupId);
             return this;
         }
 
-        public Builder setEndpointPrivateAccess(@Nullable Input<Boolean> endpointPrivateAccess) {
+        public Builder endpointPrivateAccess(@Nullable Input<Boolean> endpointPrivateAccess) {
             this.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
 
-        public Builder setEndpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
+        public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = Input.ofNullable(endpointPrivateAccess);
             return this;
         }
 
-        public Builder setEndpointPublicAccess(@Nullable Input<Boolean> endpointPublicAccess) {
+        public Builder endpointPublicAccess(@Nullable Input<Boolean> endpointPublicAccess) {
             this.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
 
-        public Builder setEndpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
+        public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
             this.endpointPublicAccess = Input.ofNullable(endpointPublicAccess);
             return this;
         }
 
-        public Builder setPublicAccessCidrs(@Nullable Input<List<String>> publicAccessCidrs) {
+        public Builder publicAccessCidrs(@Nullable Input<List<String>> publicAccessCidrs) {
             this.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
 
-        public Builder setPublicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
+        public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
             this.publicAccessCidrs = Input.ofNullable(publicAccessCidrs);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

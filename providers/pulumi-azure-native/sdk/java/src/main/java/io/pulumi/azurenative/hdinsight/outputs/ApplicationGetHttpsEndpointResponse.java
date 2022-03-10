@@ -150,37 +150,37 @@ public final class ApplicationGetHttpsEndpointResponse {
     	      this.subDomainSuffix = defaults.subDomainSuffix;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDisableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
+        public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
             this.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicPort(Integer publicPort) {
+        public Builder publicPort(Integer publicPort) {
             this.publicPort = Objects.requireNonNull(publicPort);
             return this;
         }
 
-        public Builder setSubDomainSuffix(@Nullable String subDomainSuffix) {
+        public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }

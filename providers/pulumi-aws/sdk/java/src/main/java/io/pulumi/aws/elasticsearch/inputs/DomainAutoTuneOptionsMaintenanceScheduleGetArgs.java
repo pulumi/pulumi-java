@@ -86,32 +86,32 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends io.pu
     	      this.startAt = defaults.startAt;
         }
 
-        public Builder setCronExpressionForRecurrence(Input<String> cronExpressionForRecurrence) {
+        public Builder cronExpressionForRecurrence(Input<String> cronExpressionForRecurrence) {
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
 
-        public Builder setCronExpressionForRecurrence(String cronExpressionForRecurrence) {
+        public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             this.cronExpressionForRecurrence = Input.of(Objects.requireNonNull(cronExpressionForRecurrence));
             return this;
         }
 
-        public Builder setDuration(Input<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration) {
+        public Builder duration(Input<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs duration) {
+        public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder setStartAt(Input<String> startAt) {
+        public Builder startAt(Input<String> startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
         }
 
-        public Builder setStartAt(String startAt) {
+        public Builder startAt(String startAt) {
             this.startAt = Input.of(Objects.requireNonNull(startAt));
             return this;
         }

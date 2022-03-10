@@ -163,72 +163,72 @@ public final class JobInputAssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder setAssetName(Input<String> assetName) {
+        public Builder assetName(Input<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Input.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder setEnd(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
+        public Builder end(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setEnd(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
+        public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
             this.end = Input.ofNullable(end);
             return this;
         }
 
-        public Builder setFiles(@Nullable Input<List<String>> files) {
+        public Builder files(@Nullable Input<List<String>> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<String> files) {
+        public Builder files(@Nullable List<String> files) {
             this.files = Input.ofNullable(files);
             return this;
         }
 
-        public Builder setInputDefinitions(@Nullable Input<List<Object>> inputDefinitions) {
+        public Builder inputDefinitions(@Nullable Input<List<Object>> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
 
-        public Builder setInputDefinitions(@Nullable List<Object> inputDefinitions) {
+        public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = Input.ofNullable(inputDefinitions);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setStart(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
+        public Builder start(@Nullable Input<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
             this.start = start;
             return this;
         }
 
-        public Builder setStart(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
+        public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
             this.start = Input.ofNullable(start);
             return this;
         }

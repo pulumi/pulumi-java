@@ -65,12 +65,12 @@ public final class BotIntent {
     	      this.intentVersion = defaults.intentVersion;
         }
 
-        public Builder setIntentName(String intentName) {
+        public Builder intentName(String intentName) {
             this.intentName = Objects.requireNonNull(intentName);
             return this;
         }
 
-        public Builder setIntentVersion(String intentVersion) {
+        public Builder intentVersion(String intentVersion) {
             this.intentVersion = Objects.requireNonNull(intentVersion);
             return this;
         }

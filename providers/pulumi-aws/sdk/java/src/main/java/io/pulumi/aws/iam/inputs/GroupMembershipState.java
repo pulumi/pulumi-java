@@ -87,32 +87,32 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     	      this.users = defaults.users;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUsers(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Input<List<String>> users) {
             this.users = users;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<String> users) {
+        public Builder users(@Nullable List<String> users) {
             this.users = Input.ofNullable(users);
             return this;
         }

@@ -245,82 +245,82 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations) {
+        public Builder aggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
-        public Builder setAggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationGetArgs> aggregations) {
+        public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationGetArgs> aggregations) {
             this.aggregations = Input.ofNullable(aggregations);
             return this;
         }
 
-        public Builder setComparison(Input<String> comparison) {
+        public Builder comparison(Input<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Input.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder setDenominatorAggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations) {
+        public Builder denominatorAggregations(@Nullable Input<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations) {
             this.denominatorAggregations = denominatorAggregations;
             return this;
         }
 
-        public Builder setDenominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs> denominatorAggregations) {
+        public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs> denominatorAggregations) {
             this.denominatorAggregations = Input.ofNullable(denominatorAggregations);
             return this;
         }
 
-        public Builder setDenominatorFilter(@Nullable Input<String> denominatorFilter) {
+        public Builder denominatorFilter(@Nullable Input<String> denominatorFilter) {
             this.denominatorFilter = denominatorFilter;
             return this;
         }
 
-        public Builder setDenominatorFilter(@Nullable String denominatorFilter) {
+        public Builder denominatorFilter(@Nullable String denominatorFilter) {
             this.denominatorFilter = Input.ofNullable(denominatorFilter);
             return this;
         }
 
-        public Builder setDuration(Input<String> duration) {
+        public Builder duration(Input<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setThresholdValue(@Nullable Input<Double> thresholdValue) {
+        public Builder thresholdValue(@Nullable Input<Double> thresholdValue) {
             this.thresholdValue = thresholdValue;
             return this;
         }
 
-        public Builder setThresholdValue(@Nullable Double thresholdValue) {
+        public Builder thresholdValue(@Nullable Double thresholdValue) {
             this.thresholdValue = Input.ofNullable(thresholdValue);
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger) {
+        public Builder trigger(@Nullable Input<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionThresholdTriggerGetArgs trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTriggerGetArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

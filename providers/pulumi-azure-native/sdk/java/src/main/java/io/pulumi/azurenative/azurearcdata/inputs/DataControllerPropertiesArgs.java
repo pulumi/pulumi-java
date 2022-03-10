@@ -160,72 +160,72 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     	      this.uploadWatermark = defaults.uploadWatermark;
         }
 
-        public Builder setBasicLoginInformation(@Nullable Input<BasicLoginInformationArgs> basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable Input<BasicLoginInformationArgs> basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
             this.basicLoginInformation = Input.ofNullable(basicLoginInformation);
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Input<Object> k8sRaw) {
+        public Builder k8sRaw(@Nullable Input<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = Input.ofNullable(k8sRaw);
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable Input<String> lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable Input<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = Input.ofNullable(lastUploadedDate);
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceConfig(@Nullable Input<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig) {
+        public Builder logAnalyticsWorkspaceConfig(@Nullable Input<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
+        public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = Input.ofNullable(logAnalyticsWorkspaceConfig);
             return this;
         }
 
-        public Builder setOnPremiseProperty(@Nullable Input<OnPremisePropertyArgs> onPremiseProperty) {
+        public Builder onPremiseProperty(@Nullable Input<OnPremisePropertyArgs> onPremiseProperty) {
             this.onPremiseProperty = onPremiseProperty;
             return this;
         }
 
-        public Builder setOnPremiseProperty(@Nullable OnPremisePropertyArgs onPremiseProperty) {
+        public Builder onPremiseProperty(@Nullable OnPremisePropertyArgs onPremiseProperty) {
             this.onPremiseProperty = Input.ofNullable(onPremiseProperty);
             return this;
         }
 
-        public Builder setUploadServicePrincipal(@Nullable Input<UploadServicePrincipalArgs> uploadServicePrincipal) {
+        public Builder uploadServicePrincipal(@Nullable Input<UploadServicePrincipalArgs> uploadServicePrincipal) {
             this.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
 
-        public Builder setUploadServicePrincipal(@Nullable UploadServicePrincipalArgs uploadServicePrincipal) {
+        public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalArgs uploadServicePrincipal) {
             this.uploadServicePrincipal = Input.ofNullable(uploadServicePrincipal);
             return this;
         }
 
-        public Builder setUploadWatermark(@Nullable Input<UploadWatermarkArgs> uploadWatermark) {
+        public Builder uploadWatermark(@Nullable Input<UploadWatermarkArgs> uploadWatermark) {
             this.uploadWatermark = uploadWatermark;
             return this;
         }
 
-        public Builder setUploadWatermark(@Nullable UploadWatermarkArgs uploadWatermark) {
+        public Builder uploadWatermark(@Nullable UploadWatermarkArgs uploadWatermark) {
             this.uploadWatermark = Input.ofNullable(uploadWatermark);
             return this;
         }

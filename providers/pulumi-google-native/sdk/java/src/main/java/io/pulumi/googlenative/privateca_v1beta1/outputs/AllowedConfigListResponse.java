@@ -49,7 +49,7 @@ public final class AllowedConfigListResponse {
     	      this.allowedConfigValues = defaults.allowedConfigValues;
         }
 
-        public Builder setAllowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
+        public Builder allowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }

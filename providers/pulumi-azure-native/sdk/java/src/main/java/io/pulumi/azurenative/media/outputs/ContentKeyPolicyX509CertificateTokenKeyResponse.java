@@ -67,12 +67,12 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     	      this.rawBody = defaults.rawBody;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setRawBody(String rawBody) {
+        public Builder rawBody(String rawBody) {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }

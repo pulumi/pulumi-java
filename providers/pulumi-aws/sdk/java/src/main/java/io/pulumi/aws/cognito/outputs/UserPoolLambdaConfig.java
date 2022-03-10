@@ -245,67 +245,67 @@ public final class UserPoolLambdaConfig {
     	      this.verifyAuthChallengeResponse = defaults.verifyAuthChallengeResponse;
         }
 
-        public Builder setCreateAuthChallenge(@Nullable String createAuthChallenge) {
+        public Builder createAuthChallenge(@Nullable String createAuthChallenge) {
             this.createAuthChallenge = createAuthChallenge;
             return this;
         }
 
-        public Builder setCustomEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender) {
+        public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender) {
             this.customEmailSender = customEmailSender;
             return this;
         }
 
-        public Builder setCustomMessage(@Nullable String customMessage) {
+        public Builder customMessage(@Nullable String customMessage) {
             this.customMessage = customMessage;
             return this;
         }
 
-        public Builder setCustomSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender) {
+        public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender) {
             this.customSmsSender = customSmsSender;
             return this;
         }
 
-        public Builder setDefineAuthChallenge(@Nullable String defineAuthChallenge) {
+        public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
             this.defineAuthChallenge = defineAuthChallenge;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setPostAuthentication(@Nullable String postAuthentication) {
+        public Builder postAuthentication(@Nullable String postAuthentication) {
             this.postAuthentication = postAuthentication;
             return this;
         }
 
-        public Builder setPostConfirmation(@Nullable String postConfirmation) {
+        public Builder postConfirmation(@Nullable String postConfirmation) {
             this.postConfirmation = postConfirmation;
             return this;
         }
 
-        public Builder setPreAuthentication(@Nullable String preAuthentication) {
+        public Builder preAuthentication(@Nullable String preAuthentication) {
             this.preAuthentication = preAuthentication;
             return this;
         }
 
-        public Builder setPreSignUp(@Nullable String preSignUp) {
+        public Builder preSignUp(@Nullable String preSignUp) {
             this.preSignUp = preSignUp;
             return this;
         }
 
-        public Builder setPreTokenGeneration(@Nullable String preTokenGeneration) {
+        public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
             this.preTokenGeneration = preTokenGeneration;
             return this;
         }
 
-        public Builder setUserMigration(@Nullable String userMigration) {
+        public Builder userMigration(@Nullable String userMigration) {
             this.userMigration = userMigration;
             return this;
         }
 
-        public Builder setVerifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
+        public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
             return this;
         }

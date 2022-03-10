@@ -195,52 +195,52 @@ public final class X12ValidationSettingsResponse {
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setCheckDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
+        public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
+        public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
+        public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
             return this;
         }
 
-        public Builder setInterchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
+        public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(String trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setValidateCharacterSet(Boolean validateCharacterSet) {
+        public Builder validateCharacterSet(Boolean validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
 
-        public Builder setValidateEDITypes(Boolean validateEDITypes) {
+        public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
-        public Builder setValidateXSDTypes(Boolean validateXSDTypes) {
+        public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }

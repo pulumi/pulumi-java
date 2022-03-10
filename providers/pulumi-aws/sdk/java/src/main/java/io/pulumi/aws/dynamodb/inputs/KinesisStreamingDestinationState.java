@@ -71,22 +71,22 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setStreamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Input<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Input.ofNullable(streamArn);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

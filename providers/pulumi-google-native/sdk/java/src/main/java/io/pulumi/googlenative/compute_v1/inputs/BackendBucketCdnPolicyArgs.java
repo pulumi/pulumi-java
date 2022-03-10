@@ -225,112 +225,112 @@ public final class BackendBucketCdnPolicyArgs extends io.pulumi.resources.Resour
     	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
         }
 
-        public Builder setBypassCacheOnRequestHeaders(@Nullable Input<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders) {
+        public Builder bypassCacheOnRequestHeaders(@Nullable Input<List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders) {
             this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
             return this;
         }
 
-        public Builder setBypassCacheOnRequestHeaders(@Nullable List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs> bypassCacheOnRequestHeaders) {
+        public Builder bypassCacheOnRequestHeaders(@Nullable List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs> bypassCacheOnRequestHeaders) {
             this.bypassCacheOnRequestHeaders = Input.ofNullable(bypassCacheOnRequestHeaders);
             return this;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable Input<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable Input<BackendBucketCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable BackendBucketCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable BackendBucketCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
             this.cacheKeyPolicy = Input.ofNullable(cacheKeyPolicy);
             return this;
         }
 
-        public Builder setCacheMode(@Nullable Input<BackendBucketCdnPolicyCacheMode> cacheMode) {
+        public Builder cacheMode(@Nullable Input<BackendBucketCdnPolicyCacheMode> cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
 
-        public Builder setCacheMode(@Nullable BackendBucketCdnPolicyCacheMode cacheMode) {
+        public Builder cacheMode(@Nullable BackendBucketCdnPolicyCacheMode cacheMode) {
             this.cacheMode = Input.ofNullable(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Input<Integer> clientTtl) {
+        public Builder clientTtl(@Nullable Input<Integer> clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Integer clientTtl) {
+        public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = Input.ofNullable(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Input<Integer> maxTtl) {
+        public Builder maxTtl(@Nullable Input<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Integer maxTtl) {
+        public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = Input.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Input<Boolean> negativeCaching) {
+        public Builder negativeCaching(@Nullable Input<Boolean> negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Boolean negativeCaching) {
+        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = Input.ofNullable(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(@Nullable Input<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(@Nullable Input<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy) {
             this.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicy) {
             this.negativeCachingPolicy = Input.ofNullable(negativeCachingPolicy);
             return this;
         }
 
-        public Builder setRequestCoalescing(@Nullable Input<Boolean> requestCoalescing) {
+        public Builder requestCoalescing(@Nullable Input<Boolean> requestCoalescing) {
             this.requestCoalescing = requestCoalescing;
             return this;
         }
 
-        public Builder setRequestCoalescing(@Nullable Boolean requestCoalescing) {
+        public Builder requestCoalescing(@Nullable Boolean requestCoalescing) {
             this.requestCoalescing = Input.ofNullable(requestCoalescing);
             return this;
         }
 
-        public Builder setServeWhileStale(@Nullable Input<Integer> serveWhileStale) {
+        public Builder serveWhileStale(@Nullable Input<Integer> serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
 
-        public Builder setServeWhileStale(@Nullable Integer serveWhileStale) {
+        public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = Input.ofNullable(serveWhileStale);
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(@Nullable Input<String> signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(@Nullable Input<String> signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(@Nullable String signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(@Nullable String signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Input.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
         }

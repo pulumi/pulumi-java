@@ -76,22 +76,22 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metricRules = defaults.metricRules;
         }
 
-        public Builder setLimits(@Nullable Input<List<QuotaLimitArgs>> limits) {
+        public Builder limits(@Nullable Input<List<QuotaLimitArgs>> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable List<QuotaLimitArgs> limits) {
+        public Builder limits(@Nullable List<QuotaLimitArgs> limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setMetricRules(@Nullable Input<List<MetricRuleArgs>> metricRules) {
+        public Builder metricRules(@Nullable Input<List<MetricRuleArgs>> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
 
-        public Builder setMetricRules(@Nullable List<MetricRuleArgs> metricRules) {
+        public Builder metricRules(@Nullable List<MetricRuleArgs> metricRules) {
             this.metricRules = Input.ofNullable(metricRules);
             return this;
         }

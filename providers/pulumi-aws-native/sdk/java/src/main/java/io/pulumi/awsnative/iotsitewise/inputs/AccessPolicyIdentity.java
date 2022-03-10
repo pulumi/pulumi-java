@@ -80,17 +80,17 @@ public final class AccessPolicyIdentity extends io.pulumi.resources.InvokeArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setIamRole(@Nullable AccessPolicyIamRole iamRole) {
+        public Builder iamRole(@Nullable AccessPolicyIamRole iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setIamUser(@Nullable AccessPolicyIamUser iamUser) {
+        public Builder iamUser(@Nullable AccessPolicyIamUser iamUser) {
             this.iamUser = iamUser;
             return this;
         }
 
-        public Builder setUser(@Nullable AccessPolicyUser user) {
+        public Builder user(@Nullable AccessPolicyUser user) {
             this.user = user;
             return this;
         }

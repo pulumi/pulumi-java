@@ -82,17 +82,17 @@ public final class NodeManagementResponse {
     	      this.upgradeOptions = defaults.upgradeOptions;
         }
 
-        public Builder setAutoRepair(Boolean autoRepair) {
+        public Builder autoRepair(Boolean autoRepair) {
             this.autoRepair = Objects.requireNonNull(autoRepair);
             return this;
         }
 
-        public Builder setAutoUpgrade(Boolean autoUpgrade) {
+        public Builder autoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
 
-        public Builder setUpgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
+        public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }

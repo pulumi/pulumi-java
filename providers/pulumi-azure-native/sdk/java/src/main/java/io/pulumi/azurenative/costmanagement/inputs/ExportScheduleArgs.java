@@ -94,32 +94,32 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setRecurrence(@Nullable Input<Either<String,RecurrenceType>> recurrence) {
+        public Builder recurrence(@Nullable Input<Either<String,RecurrenceType>> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Either<String,RecurrenceType> recurrence) {
+        public Builder recurrence(@Nullable Either<String,RecurrenceType> recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
 
-        public Builder setRecurrencePeriod(@Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod) {
+        public Builder recurrencePeriod(@Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
-        public Builder setRecurrencePeriod(@Nullable ExportRecurrencePeriodArgs recurrencePeriod) {
+        public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodArgs recurrencePeriod) {
             this.recurrencePeriod = Input.ofNullable(recurrencePeriod);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,StatusType>> status) {
+        public Builder status(@Nullable Input<Either<String,StatusType>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,StatusType> status) {
+        public Builder status(@Nullable Either<String,StatusType> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

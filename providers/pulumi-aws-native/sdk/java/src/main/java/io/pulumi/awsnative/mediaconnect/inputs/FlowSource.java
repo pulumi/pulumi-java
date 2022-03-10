@@ -285,77 +285,77 @@ public final class FlowSource extends io.pulumi.resources.InvokeArgs {
     	      this.whitelistCidr = defaults.whitelistCidr;
         }
 
-        public Builder setDecryption(@Nullable FlowEncryption decryption) {
+        public Builder decryption(@Nullable FlowEncryption decryption) {
             this.decryption = decryption;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntitlementArn(@Nullable String entitlementArn) {
+        public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
 
-        public Builder setIngestIp(@Nullable String ingestIp) {
+        public Builder ingestIp(@Nullable String ingestIp) {
             this.ingestIp = ingestIp;
             return this;
         }
 
-        public Builder setIngestPort(@Nullable Integer ingestPort) {
+        public Builder ingestPort(@Nullable Integer ingestPort) {
             this.ingestPort = ingestPort;
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Integer maxBitrate) {
+        public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
 
-        public Builder setMaxLatency(@Nullable Integer maxLatency) {
+        public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
 
-        public Builder setMinLatency(@Nullable Integer minLatency) {
+        public Builder minLatency(@Nullable Integer minLatency) {
             this.minLatency = minLatency;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable FlowSourceProtocol protocol) {
+        public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
-        public Builder setSourceIngestPort(@Nullable String sourceIngestPort) {
+        public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
             this.sourceIngestPort = sourceIngestPort;
             return this;
         }
 
-        public Builder setStreamId(@Nullable String streamId) {
+        public Builder streamId(@Nullable String streamId) {
             this.streamId = streamId;
             return this;
         }
 
-        public Builder setVpcInterfaceName(@Nullable String vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
-        public Builder setWhitelistCidr(@Nullable String whitelistCidr) {
+        public Builder whitelistCidr(@Nullable String whitelistCidr) {
             this.whitelistCidr = whitelistCidr;
             return this;
         }

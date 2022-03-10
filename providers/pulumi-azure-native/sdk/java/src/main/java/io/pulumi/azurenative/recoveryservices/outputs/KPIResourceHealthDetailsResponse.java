@@ -69,12 +69,12 @@ public final class KPIResourceHealthDetailsResponse {
     	      this.resourceHealthStatus = defaults.resourceHealthStatus;
         }
 
-        public Builder setResourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
+        public Builder resourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
             this.resourceHealthDetails = resourceHealthDetails;
             return this;
         }
 
-        public Builder setResourceHealthStatus(@Nullable String resourceHealthStatus) {
+        public Builder resourceHealthStatus(@Nullable String resourceHealthStatus) {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }

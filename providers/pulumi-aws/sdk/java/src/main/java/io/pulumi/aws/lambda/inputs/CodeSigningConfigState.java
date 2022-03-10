@@ -136,62 +136,62 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     	      this.policies = defaults.policies;
         }
 
-        public Builder setAllowedPublishers(@Nullable Input<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers) {
+        public Builder allowedPublishers(@Nullable Input<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers) {
             this.allowedPublishers = allowedPublishers;
             return this;
         }
 
-        public Builder setAllowedPublishers(@Nullable CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
+        public Builder allowedPublishers(@Nullable CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
             this.allowedPublishers = Input.ofNullable(allowedPublishers);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConfigId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Input<String> configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = Input.ofNullable(configId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLastModified(@Nullable Input<String> lastModified) {
+        public Builder lastModified(@Nullable Input<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Input.ofNullable(lastModified);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<CodeSigningConfigPoliciesGetArgs> policies) {
+        public Builder policies(@Nullable Input<CodeSigningConfigPoliciesGetArgs> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable CodeSigningConfigPoliciesGetArgs policies) {
+        public Builder policies(@Nullable CodeSigningConfigPoliciesGetArgs policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }

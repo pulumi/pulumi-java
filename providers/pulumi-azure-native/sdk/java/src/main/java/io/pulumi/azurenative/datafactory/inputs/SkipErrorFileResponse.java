@@ -74,12 +74,12 @@ public final class SkipErrorFileResponse extends io.pulumi.resources.InvokeArgs 
     	      this.fileMissing = defaults.fileMissing;
         }
 
-        public Builder setDataInconsistency(@Nullable Object dataInconsistency) {
+        public Builder dataInconsistency(@Nullable Object dataInconsistency) {
             this.dataInconsistency = dataInconsistency;
             return this;
         }
 
-        public Builder setFileMissing(@Nullable Object fileMissing) {
+        public Builder fileMissing(@Nullable Object fileMissing) {
             this.fileMissing = fileMissing;
             return this;
         }

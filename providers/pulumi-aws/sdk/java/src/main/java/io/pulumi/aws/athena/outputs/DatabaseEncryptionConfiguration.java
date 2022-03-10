@@ -67,12 +67,12 @@ public final class DatabaseEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionOption(String encryptionOption) {
+        public Builder encryptionOption(String encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }

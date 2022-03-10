@@ -55,7 +55,7 @@ public final class KpiParticipantProfilesMetadataResponse extends io.pulumi.reso
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setTypeName(String typeName) {
+        public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }

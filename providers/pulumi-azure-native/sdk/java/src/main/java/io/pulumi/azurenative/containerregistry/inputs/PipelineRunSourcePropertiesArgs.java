@@ -72,22 +72,22 @@ public final class PipelineRunSourcePropertiesArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,PipelineRunSourceType>> type) {
+        public Builder type(@Nullable Input<Either<String,PipelineRunSourceType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,PipelineRunSourceType> type) {
+        public Builder type(@Nullable Either<String,PipelineRunSourceType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

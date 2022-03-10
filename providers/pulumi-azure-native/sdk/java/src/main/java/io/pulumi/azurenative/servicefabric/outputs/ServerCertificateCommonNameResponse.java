@@ -65,12 +65,12 @@ public final class ServerCertificateCommonNameResponse {
     	      this.certificateIssuerThumbprint = defaults.certificateIssuerThumbprint;
         }
 
-        public Builder setCertificateCommonName(String certificateCommonName) {
+        public Builder certificateCommonName(String certificateCommonName) {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
 
-        public Builder setCertificateIssuerThumbprint(String certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }

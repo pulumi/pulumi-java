@@ -280,152 +280,152 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     	      this.truststorePassword = defaults.truststorePassword;
         }
 
-        public Builder setCrossRealmTrustAdminServer(@Nullable Input<String> crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(@Nullable Input<String> crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
 
-        public Builder setCrossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = Input.ofNullable(crossRealmTrustAdminServer);
             return this;
         }
 
-        public Builder setCrossRealmTrustKdc(@Nullable Input<String> crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(@Nullable Input<String> crossRealmTrustKdc) {
             this.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
 
-        public Builder setCrossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = Input.ofNullable(crossRealmTrustKdc);
             return this;
         }
 
-        public Builder setCrossRealmTrustRealm(@Nullable Input<String> crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(@Nullable Input<String> crossRealmTrustRealm) {
             this.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
 
-        public Builder setCrossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = Input.ofNullable(crossRealmTrustRealm);
             return this;
         }
 
-        public Builder setCrossRealmTrustSharedPassword(@Nullable Input<String> crossRealmTrustSharedPassword) {
+        public Builder crossRealmTrustSharedPassword(@Nullable Input<String> crossRealmTrustSharedPassword) {
             this.crossRealmTrustSharedPassword = crossRealmTrustSharedPassword;
             return this;
         }
 
-        public Builder setCrossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
+        public Builder crossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
             this.crossRealmTrustSharedPassword = Input.ofNullable(crossRealmTrustSharedPassword);
             return this;
         }
 
-        public Builder setEnableKerberos(@Nullable Input<Boolean> enableKerberos) {
+        public Builder enableKerberos(@Nullable Input<Boolean> enableKerberos) {
             this.enableKerberos = enableKerberos;
             return this;
         }
 
-        public Builder setEnableKerberos(@Nullable Boolean enableKerberos) {
+        public Builder enableKerberos(@Nullable Boolean enableKerberos) {
             this.enableKerberos = Input.ofNullable(enableKerberos);
             return this;
         }
 
-        public Builder setKdcDbKey(@Nullable Input<String> kdcDbKey) {
+        public Builder kdcDbKey(@Nullable Input<String> kdcDbKey) {
             this.kdcDbKey = kdcDbKey;
             return this;
         }
 
-        public Builder setKdcDbKey(@Nullable String kdcDbKey) {
+        public Builder kdcDbKey(@Nullable String kdcDbKey) {
             this.kdcDbKey = Input.ofNullable(kdcDbKey);
             return this;
         }
 
-        public Builder setKeyPassword(@Nullable Input<String> keyPassword) {
+        public Builder keyPassword(@Nullable Input<String> keyPassword) {
             this.keyPassword = keyPassword;
             return this;
         }
 
-        public Builder setKeyPassword(@Nullable String keyPassword) {
+        public Builder keyPassword(@Nullable String keyPassword) {
             this.keyPassword = Input.ofNullable(keyPassword);
             return this;
         }
 
-        public Builder setKeystore(@Nullable Input<String> keystore) {
+        public Builder keystore(@Nullable Input<String> keystore) {
             this.keystore = keystore;
             return this;
         }
 
-        public Builder setKeystore(@Nullable String keystore) {
+        public Builder keystore(@Nullable String keystore) {
             this.keystore = Input.ofNullable(keystore);
             return this;
         }
 
-        public Builder setKeystorePassword(@Nullable Input<String> keystorePassword) {
+        public Builder keystorePassword(@Nullable Input<String> keystorePassword) {
             this.keystorePassword = keystorePassword;
             return this;
         }
 
-        public Builder setKeystorePassword(@Nullable String keystorePassword) {
+        public Builder keystorePassword(@Nullable String keystorePassword) {
             this.keystorePassword = Input.ofNullable(keystorePassword);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setRealm(@Nullable Input<String> realm) {
+        public Builder realm(@Nullable Input<String> realm) {
             this.realm = realm;
             return this;
         }
 
-        public Builder setRealm(@Nullable String realm) {
+        public Builder realm(@Nullable String realm) {
             this.realm = Input.ofNullable(realm);
             return this;
         }
 
-        public Builder setRootPrincipalPassword(@Nullable Input<String> rootPrincipalPassword) {
+        public Builder rootPrincipalPassword(@Nullable Input<String> rootPrincipalPassword) {
             this.rootPrincipalPassword = rootPrincipalPassword;
             return this;
         }
 
-        public Builder setRootPrincipalPassword(@Nullable String rootPrincipalPassword) {
+        public Builder rootPrincipalPassword(@Nullable String rootPrincipalPassword) {
             this.rootPrincipalPassword = Input.ofNullable(rootPrincipalPassword);
             return this;
         }
 
-        public Builder setTgtLifetimeHours(@Nullable Input<Integer> tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(@Nullable Input<Integer> tgtLifetimeHours) {
             this.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
 
-        public Builder setTgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = Input.ofNullable(tgtLifetimeHours);
             return this;
         }
 
-        public Builder setTruststore(@Nullable Input<String> truststore) {
+        public Builder truststore(@Nullable Input<String> truststore) {
             this.truststore = truststore;
             return this;
         }
 
-        public Builder setTruststore(@Nullable String truststore) {
+        public Builder truststore(@Nullable String truststore) {
             this.truststore = Input.ofNullable(truststore);
             return this;
         }
 
-        public Builder setTruststorePassword(@Nullable Input<String> truststorePassword) {
+        public Builder truststorePassword(@Nullable Input<String> truststorePassword) {
             this.truststorePassword = truststorePassword;
             return this;
         }
 
-        public Builder setTruststorePassword(@Nullable String truststorePassword) {
+        public Builder truststorePassword(@Nullable String truststorePassword) {
             this.truststorePassword = Input.ofNullable(truststorePassword);
             return this;
         }

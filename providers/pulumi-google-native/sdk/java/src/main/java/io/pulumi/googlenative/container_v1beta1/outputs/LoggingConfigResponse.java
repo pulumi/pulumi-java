@@ -48,7 +48,7 @@ public final class LoggingConfigResponse {
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder setComponentConfig(LoggingComponentConfigResponse componentConfig) {
+        public Builder componentConfig(LoggingComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }

@@ -55,7 +55,7 @@ public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setVm(VM vm) {
+        public Builder vm(VM vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }

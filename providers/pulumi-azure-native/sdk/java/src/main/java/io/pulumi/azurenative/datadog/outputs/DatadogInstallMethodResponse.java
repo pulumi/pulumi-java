@@ -83,17 +83,17 @@ public final class DatadogInstallMethodResponse {
     	      this.toolVersion = defaults.toolVersion;
         }
 
-        public Builder setInstallerVersion(@Nullable String installerVersion) {
+        public Builder installerVersion(@Nullable String installerVersion) {
             this.installerVersion = installerVersion;
             return this;
         }
 
-        public Builder setTool(@Nullable String tool) {
+        public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
         }
 
-        public Builder setToolVersion(@Nullable String toolVersion) {
+        public Builder toolVersion(@Nullable String toolVersion) {
             this.toolVersion = toolVersion;
             return this;
         }

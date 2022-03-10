@@ -48,7 +48,7 @@ public final class BotVoiceSettings {
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder setVoiceId(String voiceId) {
+        public Builder voiceId(String voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }

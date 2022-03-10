@@ -49,7 +49,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder setCertificateAuthorityArns(List<String> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }

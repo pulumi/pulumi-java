@@ -86,17 +86,17 @@ public final class TokenRequestSpec {
     	      this.expirationSeconds = defaults.expirationSeconds;
         }
 
-        public Builder setAudiences(List<String> audiences) {
+        public Builder audiences(List<String> audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
-        public Builder setBoundObjectRef(@Nullable BoundObjectReference boundObjectRef) {
+        public Builder boundObjectRef(@Nullable BoundObjectReference boundObjectRef) {
             this.boundObjectRef = boundObjectRef;
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }

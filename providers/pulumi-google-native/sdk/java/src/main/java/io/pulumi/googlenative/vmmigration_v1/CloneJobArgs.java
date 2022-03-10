@@ -126,72 +126,72 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setCloneJobId(Input<String> cloneJobId) {
+        public Builder cloneJobId(Input<String> cloneJobId) {
             this.cloneJobId = Objects.requireNonNull(cloneJobId);
             return this;
         }
 
-        public Builder setCloneJobId(String cloneJobId) {
+        public Builder cloneJobId(String cloneJobId) {
             this.cloneJobId = Input.of(Objects.requireNonNull(cloneJobId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMigratingVmId(Input<String> migratingVmId) {
+        public Builder migratingVmId(Input<String> migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
 
-        public Builder setMigratingVmId(String migratingVmId) {
+        public Builder migratingVmId(String migratingVmId) {
             this.migratingVmId = Input.of(Objects.requireNonNull(migratingVmId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSourceId(Input<String> sourceId) {
+        public Builder sourceId(Input<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Input.of(Objects.requireNonNull(sourceId));
             return this;
         }

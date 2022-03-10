@@ -92,32 +92,32 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     	      this.options = defaults.options;
         }
 
-        public Builder setCollection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Input<String> collection) {
             this.collection = collection;
             return this;
         }
 
-        public Builder setCollection(@Nullable String collection) {
+        public Builder collection(@Nullable String collection) {
             this.collection = Input.ofNullable(collection);
             return this;
         }
 
-        public Builder setMethodMap(@Nullable Input<MethodMapArgs> methodMap) {
+        public Builder methodMap(@Nullable Input<MethodMapArgs> methodMap) {
             this.methodMap = methodMap;
             return this;
         }
 
-        public Builder setMethodMap(@Nullable MethodMapArgs methodMap) {
+        public Builder methodMap(@Nullable MethodMapArgs methodMap) {
             this.methodMap = Input.ofNullable(methodMap);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Input<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsArgs options) {
+        public Builder options(@Nullable OptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }

@@ -93,32 +93,32 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
     	      this.version = defaults.version;
         }
 
-        public Builder setMetrics(@Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs> metrics) {
+        public Builder metrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setSessionCount(@Nullable Input<Integer> sessionCount) {
+        public Builder sessionCount(@Nullable Input<Integer> sessionCount) {
             this.sessionCount = sessionCount;
             return this;
         }
 
-        public Builder setSessionCount(@Nullable Integer sessionCount) {
+        public Builder sessionCount(@Nullable Integer sessionCount) {
             this.sessionCount = Input.ofNullable(sessionCount);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

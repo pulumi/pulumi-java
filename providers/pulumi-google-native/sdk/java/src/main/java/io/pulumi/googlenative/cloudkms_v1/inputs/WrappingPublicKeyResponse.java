@@ -55,7 +55,7 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
     	      this.pem = defaults.pem;
         }
 
-        public Builder setPem(String pem) {
+        public Builder pem(String pem) {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }

@@ -104,42 +104,42 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startOn = defaults.startOn;
         }
 
-        public Builder setCache(@Nullable Input<List<SettingsPropertiesCacheArgs>> cache) {
+        public Builder cache(@Nullable Input<List<SettingsPropertiesCacheArgs>> cache) {
             this.cache = cache;
             return this;
         }
 
-        public Builder setCache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
+        public Builder cache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
             this.cache = Input.ofNullable(cache);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSettingName(@Nullable Input<String> settingName) {
+        public Builder settingName(@Nullable Input<String> settingName) {
             this.settingName = settingName;
             return this;
         }
 
-        public Builder setSettingName(@Nullable String settingName) {
+        public Builder settingName(@Nullable String settingName) {
             this.settingName = Input.ofNullable(settingName);
             return this;
         }
 
-        public Builder setStartOn(@Nullable Input<String> startOn) {
+        public Builder startOn(@Nullable Input<String> startOn) {
             this.startOn = startOn;
             return this;
         }
 
-        public Builder setStartOn(@Nullable String startOn) {
+        public Builder startOn(@Nullable String startOn) {
             this.startOn = Input.ofNullable(startOn);
             return this;
         }

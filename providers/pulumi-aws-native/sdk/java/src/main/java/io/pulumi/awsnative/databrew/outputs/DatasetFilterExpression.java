@@ -59,12 +59,12 @@ public final class DatasetFilterExpression {
     	      this.valuesMap = defaults.valuesMap;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setValuesMap(List<DatasetFilterValue> valuesMap) {
+        public Builder valuesMap(List<DatasetFilterValue> valuesMap) {
             this.valuesMap = Objects.requireNonNull(valuesMap);
             return this;
         }

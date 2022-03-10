@@ -86,32 +86,32 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
     	      this.rmplName = defaults.rmplName;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRmplName(@Nullable Input<String> rmplName) {
+        public Builder rmplName(@Nullable Input<String> rmplName) {
             this.rmplName = rmplName;
             return this;
         }
 
-        public Builder setRmplName(@Nullable String rmplName) {
+        public Builder rmplName(@Nullable String rmplName) {
             this.rmplName = Input.ofNullable(rmplName);
             return this;
         }

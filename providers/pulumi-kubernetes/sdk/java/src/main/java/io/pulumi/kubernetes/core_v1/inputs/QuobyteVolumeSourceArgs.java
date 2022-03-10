@@ -139,62 +139,62 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
     	      this.volume = defaults.volume;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setRegistry(Input<String> registry) {
+        public Builder registry(Input<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
-        public Builder setRegistry(String registry) {
+        public Builder registry(String registry) {
             this.registry = Input.of(Objects.requireNonNull(registry));
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Input<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }
 
-        public Builder setVolume(Input<String> volume) {
+        public Builder volume(Input<String> volume) {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }
 
-        public Builder setVolume(String volume) {
+        public Builder volume(String volume) {
             this.volume = Input.of(Objects.requireNonNull(volume));
             return this;
         }

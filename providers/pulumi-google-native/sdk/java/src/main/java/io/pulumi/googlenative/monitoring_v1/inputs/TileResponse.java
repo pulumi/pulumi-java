@@ -121,27 +121,27 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     	      this.yPos = defaults.yPos;
         }
 
-        public Builder setHeight(Integer height) {
+        public Builder height(Integer height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setWidget(WidgetResponse widget) {
+        public Builder widget(WidgetResponse widget) {
             this.widget = Objects.requireNonNull(widget);
             return this;
         }
 
-        public Builder setWidth(Integer width) {
+        public Builder width(Integer width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }
 
-        public Builder setXPos(Integer xPos) {
+        public Builder xPos(Integer xPos) {
             this.xPos = Objects.requireNonNull(xPos);
             return this;
         }
 
-        public Builder setYPos(Integer yPos) {
+        public Builder yPos(Integer yPos) {
             this.yPos = Objects.requireNonNull(yPos);
             return this;
         }

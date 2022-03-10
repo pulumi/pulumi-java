@@ -221,62 +221,62 @@ public final class GetFutureReservationResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setShareSettings(ShareSettingsResponse shareSettings) {
+        public Builder shareSettings(ShareSettingsResponse shareSettings) {
             this.shareSettings = Objects.requireNonNull(shareSettings);
             return this;
         }
 
-        public Builder setSpecificSkuProperties(FutureReservationSpecificSKUPropertiesResponse specificSkuProperties) {
+        public Builder specificSkuProperties(FutureReservationSpecificSKUPropertiesResponse specificSkuProperties) {
             this.specificSkuProperties = Objects.requireNonNull(specificSkuProperties);
             return this;
         }
 
-        public Builder setStatus(FutureReservationStatusResponse status) {
+        public Builder status(FutureReservationStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTimeWindow(FutureReservationTimeWindowResponse timeWindow) {
+        public Builder timeWindow(FutureReservationTimeWindowResponse timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

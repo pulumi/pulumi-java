@@ -86,17 +86,17 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
     	      this.startAt = defaults.startAt;
         }
 
-        public Builder setCronExpressionForRecurrence(String cronExpressionForRecurrence) {
+        public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
 
-        public Builder setDurations(List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations) {
+        public Builder durations(List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations) {
             this.durations = Objects.requireNonNull(durations);
             return this;
         }
 
-        public Builder setStartAt(String startAt) {
+        public Builder startAt(String startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
         }

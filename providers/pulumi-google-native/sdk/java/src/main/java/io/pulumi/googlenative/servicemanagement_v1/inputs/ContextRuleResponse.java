@@ -121,27 +121,27 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAllowedRequestExtensions(List<String> allowedRequestExtensions) {
+        public Builder allowedRequestExtensions(List<String> allowedRequestExtensions) {
             this.allowedRequestExtensions = Objects.requireNonNull(allowedRequestExtensions);
             return this;
         }
 
-        public Builder setAllowedResponseExtensions(List<String> allowedResponseExtensions) {
+        public Builder allowedResponseExtensions(List<String> allowedResponseExtensions) {
             this.allowedResponseExtensions = Objects.requireNonNull(allowedResponseExtensions);
             return this;
         }
 
-        public Builder setProvided(List<String> provided) {
+        public Builder provided(List<String> provided) {
             this.provided = Objects.requireNonNull(provided);
             return this;
         }
 
-        public Builder setRequested(List<String> requested) {
+        public Builder requested(List<String> requested) {
             this.requested = Objects.requireNonNull(requested);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

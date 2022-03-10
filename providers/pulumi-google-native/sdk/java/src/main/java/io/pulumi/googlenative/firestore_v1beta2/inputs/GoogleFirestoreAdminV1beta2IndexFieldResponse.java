@@ -88,17 +88,17 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
     	      this.order = defaults.order;
         }
 
-        public Builder setArrayConfig(String arrayConfig) {
+        public Builder arrayConfig(String arrayConfig) {
             this.arrayConfig = Objects.requireNonNull(arrayConfig);
             return this;
         }
 
-        public Builder setFieldPath(String fieldPath) {
+        public Builder fieldPath(String fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
 
-        public Builder setOrder(String order) {
+        public Builder order(String order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }

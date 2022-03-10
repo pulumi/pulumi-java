@@ -48,7 +48,7 @@ public final class ConditionContextResponse {
     	      this.accessTime = defaults.accessTime;
         }
 
-        public Builder setAccessTime(String accessTime) {
+        public Builder accessTime(String accessTime) {
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
         }

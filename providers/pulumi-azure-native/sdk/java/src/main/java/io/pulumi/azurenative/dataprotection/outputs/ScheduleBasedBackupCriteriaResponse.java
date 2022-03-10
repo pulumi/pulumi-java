@@ -152,37 +152,37 @@ public final class ScheduleBasedBackupCriteriaResponse {
     	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
         }
 
-        public Builder setAbsoluteCriteria(@Nullable List<String> absoluteCriteria) {
+        public Builder absoluteCriteria(@Nullable List<String> absoluteCriteria) {
             this.absoluteCriteria = absoluteCriteria;
             return this;
         }
 
-        public Builder setDaysOfMonth(@Nullable List<DayResponse> daysOfMonth) {
+        public Builder daysOfMonth(@Nullable List<DayResponse> daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
-        public Builder setMonthsOfYear(@Nullable List<String> monthsOfYear) {
+        public Builder monthsOfYear(@Nullable List<String> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setScheduleTimes(@Nullable List<String> scheduleTimes) {
+        public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
             this.scheduleTimes = scheduleTimes;
             return this;
         }
 
-        public Builder setWeeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }

@@ -97,22 +97,22 @@ public final class TransferJobScheduleStartTimeOfDay {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setHours(Integer hours) {
+        public Builder hours(Integer hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
-        public Builder setNanos(Integer nanos) {
+        public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

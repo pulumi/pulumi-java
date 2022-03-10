@@ -164,42 +164,42 @@ public final class GetDisasterRecoveryConfigResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlternateName(@Nullable String alternateName) {
+        public Builder alternateName(@Nullable String alternateName) {
             this.alternateName = alternateName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerNamespace(@Nullable String partnerNamespace) {
+        public Builder partnerNamespace(@Nullable String partnerNamespace) {
             this.partnerNamespace = partnerNamespace;
             return this;
         }
 
-        public Builder setPendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
+        public Builder pendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
             this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -70,22 +70,22 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
     	      this.description = defaults.description;
         }
 
-        public Builder setCidr(Input<String> cidr) {
+        public Builder cidr(Input<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Input.of(Objects.requireNonNull(cidr));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

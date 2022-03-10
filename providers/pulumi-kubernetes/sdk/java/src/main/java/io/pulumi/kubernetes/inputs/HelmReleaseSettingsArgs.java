@@ -123,52 +123,52 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.repositoryConfigPath = defaults.repositoryConfigPath;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = Input.ofNullable(driver);
             return this;
         }
 
-        public Builder setPluginsPath(@Nullable Input<String> pluginsPath) {
+        public Builder pluginsPath(@Nullable Input<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
 
-        public Builder setPluginsPath(@Nullable String pluginsPath) {
+        public Builder pluginsPath(@Nullable String pluginsPath) {
             this.pluginsPath = Input.ofNullable(pluginsPath);
             return this;
         }
 
-        public Builder setRegistryConfigPath(@Nullable Input<String> registryConfigPath) {
+        public Builder registryConfigPath(@Nullable Input<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
 
-        public Builder setRegistryConfigPath(@Nullable String registryConfigPath) {
+        public Builder registryConfigPath(@Nullable String registryConfigPath) {
             this.registryConfigPath = Input.ofNullable(registryConfigPath);
             return this;
         }
 
-        public Builder setRepositoryCache(@Nullable Input<String> repositoryCache) {
+        public Builder repositoryCache(@Nullable Input<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
 
-        public Builder setRepositoryCache(@Nullable String repositoryCache) {
+        public Builder repositoryCache(@Nullable String repositoryCache) {
             this.repositoryCache = Input.ofNullable(repositoryCache);
             return this;
         }
 
-        public Builder setRepositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
+        public Builder repositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
 
-        public Builder setRepositoryConfigPath(@Nullable String repositoryConfigPath) {
+        public Builder repositoryConfigPath(@Nullable String repositoryConfigPath) {
             this.repositoryConfigPath = Input.ofNullable(repositoryConfigPath);
             return this;
         }

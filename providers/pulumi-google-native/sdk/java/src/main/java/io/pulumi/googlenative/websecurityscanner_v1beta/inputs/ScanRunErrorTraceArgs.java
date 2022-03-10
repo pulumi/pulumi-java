@@ -92,32 +92,32 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     	      this.scanConfigError = defaults.scanConfigError;
         }
 
-        public Builder setCode(@Nullable Input<ScanRunErrorTraceCode> code) {
+        public Builder code(@Nullable Input<ScanRunErrorTraceCode> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable ScanRunErrorTraceCode code) {
+        public Builder code(@Nullable ScanRunErrorTraceCode code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setMostCommonHttpErrorCode(@Nullable Input<Integer> mostCommonHttpErrorCode) {
+        public Builder mostCommonHttpErrorCode(@Nullable Input<Integer> mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
 
-        public Builder setMostCommonHttpErrorCode(@Nullable Integer mostCommonHttpErrorCode) {
+        public Builder mostCommonHttpErrorCode(@Nullable Integer mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = Input.ofNullable(mostCommonHttpErrorCode);
             return this;
         }
 
-        public Builder setScanConfigError(@Nullable Input<ScanConfigErrorArgs> scanConfigError) {
+        public Builder scanConfigError(@Nullable Input<ScanConfigErrorArgs> scanConfigError) {
             this.scanConfigError = scanConfigError;
             return this;
         }
 
-        public Builder setScanConfigError(@Nullable ScanConfigErrorArgs scanConfigError) {
+        public Builder scanConfigError(@Nullable ScanConfigErrorArgs scanConfigError) {
             this.scanConfigError = Input.ofNullable(scanConfigError);
             return this;
         }

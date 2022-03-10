@@ -50,7 +50,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicy {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setTls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTls tls) {
+        public Builder tls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTls tls) {
             this.tls = tls;
             return this;
         }

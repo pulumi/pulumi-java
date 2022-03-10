@@ -408,112 +408,112 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
     	      this.tier = defaults.tier;
         }
 
-        public Builder setClusterDefinition(ClusterDefinitionResponse clusterDefinition) {
+        public Builder clusterDefinition(ClusterDefinitionResponse clusterDefinition) {
             this.clusterDefinition = Objects.requireNonNull(clusterDefinition);
             return this;
         }
 
-        public Builder setClusterHdpVersion(@Nullable String clusterHdpVersion) {
+        public Builder clusterHdpVersion(@Nullable String clusterHdpVersion) {
             this.clusterHdpVersion = clusterHdpVersion;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterState(@Nullable String clusterState) {
+        public Builder clusterState(@Nullable String clusterState) {
             this.clusterState = clusterState;
             return this;
         }
 
-        public Builder setClusterVersion(@Nullable String clusterVersion) {
+        public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
 
-        public Builder setComputeIsolationProperties(@Nullable ComputeIsolationPropertiesResponse computeIsolationProperties) {
+        public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesResponse computeIsolationProperties) {
             this.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable ComputeProfileResponse computeProfile) {
+        public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
 
-        public Builder setConnectivityEndpoints(@Nullable List<ConnectivityEndpointResponse> connectivityEndpoints) {
+        public Builder connectivityEndpoints(@Nullable List<ConnectivityEndpointResponse> connectivityEndpoints) {
             this.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setDiskEncryptionProperties(@Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties) {
+        public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties) {
             this.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
 
-        public Builder setEncryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties) {
+        public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties) {
             this.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ErrorsResponse> errors) {
+        public Builder errors(@Nullable List<ErrorsResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setExcludedServicesConfig(@Nullable ExcludedServicesConfigResponse excludedServicesConfig) {
+        public Builder excludedServicesConfig(@Nullable ExcludedServicesConfigResponse excludedServicesConfig) {
             this.excludedServicesConfig = excludedServicesConfig;
             return this;
         }
 
-        public Builder setKafkaRestProperties(@Nullable KafkaRestPropertiesResponse kafkaRestProperties) {
+        public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesResponse kafkaRestProperties) {
             this.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
 
-        public Builder setMinSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
+        public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
             this.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
 
-        public Builder setNetworkProperties(@Nullable NetworkPropertiesResponse networkProperties) {
+        public Builder networkProperties(@Nullable NetworkPropertiesResponse networkProperties) {
             this.networkProperties = networkProperties;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setQuotaInfo(@Nullable QuotaInfoResponse quotaInfo) {
+        public Builder quotaInfo(@Nullable QuotaInfoResponse quotaInfo) {
             this.quotaInfo = quotaInfo;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileResponse securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

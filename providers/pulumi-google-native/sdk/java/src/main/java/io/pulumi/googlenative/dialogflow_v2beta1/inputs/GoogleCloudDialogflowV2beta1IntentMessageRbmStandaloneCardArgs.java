@@ -92,32 +92,32 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     	      this.thumbnailImageAlignment = defaults.thumbnailImageAlignment;
         }
 
-        public Builder setCardContent(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent) {
+        public Builder cardContent(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs> cardContent) {
             this.cardContent = Objects.requireNonNull(cardContent);
             return this;
         }
 
-        public Builder setCardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs cardContent) {
+        public Builder cardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs cardContent) {
             this.cardContent = Input.of(Objects.requireNonNull(cardContent));
             return this;
         }
 
-        public Builder setCardOrientation(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation) {
+        public Builder cardOrientation(Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation> cardOrientation) {
             this.cardOrientation = Objects.requireNonNull(cardOrientation);
             return this;
         }
 
-        public Builder setCardOrientation(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation cardOrientation) {
+        public Builder cardOrientation(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation cardOrientation) {
             this.cardOrientation = Input.of(Objects.requireNonNull(cardOrientation));
             return this;
         }
 
-        public Builder setThumbnailImageAlignment(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment) {
+        public Builder thumbnailImageAlignment(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment) {
             this.thumbnailImageAlignment = thumbnailImageAlignment;
             return this;
         }
 
-        public Builder setThumbnailImageAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment thumbnailImageAlignment) {
+        public Builder thumbnailImageAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment thumbnailImageAlignment) {
             this.thumbnailImageAlignment = Input.ofNullable(thumbnailImageAlignment);
             return this;
         }

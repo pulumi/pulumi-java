@@ -103,42 +103,42 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setBindingSelector(@Nullable Input<String> bindingSelector) {
+        public Builder bindingSelector(@Nullable Input<String> bindingSelector) {
             this.bindingSelector = bindingSelector;
             return this;
         }
 
-        public Builder setBindingSelector(@Nullable String bindingSelector) {
+        public Builder bindingSelector(@Nullable String bindingSelector) {
             this.bindingSelector = Input.ofNullable(bindingSelector);
             return this;
         }
 
-        public Builder setIdentity(Input<UserAssignedIdentityArgs> identity) {
+        public Builder identity(Input<UserAssignedIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(UserAssignedIdentityArgs identity) {
+        public Builder identity(UserAssignedIdentityArgs identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }

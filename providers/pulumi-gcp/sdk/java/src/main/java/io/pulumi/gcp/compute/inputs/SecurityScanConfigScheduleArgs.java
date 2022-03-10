@@ -73,22 +73,22 @@ public final class SecurityScanConfigScheduleArgs extends io.pulumi.resources.Re
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setIntervalDurationDays(Input<Integer> intervalDurationDays) {
+        public Builder intervalDurationDays(Input<Integer> intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
-        public Builder setIntervalDurationDays(Integer intervalDurationDays) {
+        public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Input.of(Objects.requireNonNull(intervalDurationDays));
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable Input<String> scheduleTime) {
+        public Builder scheduleTime(@Nullable Input<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable String scheduleTime) {
+        public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = Input.ofNullable(scheduleTime);
             return this;
         }

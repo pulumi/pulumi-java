@@ -83,17 +83,17 @@ public final class ApplicationClientDetailsResponse {
     	      this.puid = defaults.puid;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setOid(@Nullable String oid) {
+        public Builder oid(@Nullable String oid) {
             this.oid = oid;
             return this;
         }
 
-        public Builder setPuid(@Nullable String puid) {
+        public Builder puid(@Nullable String puid) {
             this.puid = puid;
             return this;
         }

@@ -75,12 +75,12 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAutoUser(@Nullable AutoUserSpecificationResponse autoUser) {
+        public Builder autoUser(@Nullable AutoUserSpecificationResponse autoUser) {
             this.autoUser = autoUser;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

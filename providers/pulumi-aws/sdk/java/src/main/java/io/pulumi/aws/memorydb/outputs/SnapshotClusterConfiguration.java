@@ -244,67 +244,67 @@ public final class SnapshotClusterConfiguration {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable String maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNumShards(@Nullable Integer numShards) {
+        public Builder numShards(@Nullable Integer numShards) {
             this.numShards = numShards;
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable String parameterGroupName) {
+        public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setSnapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
-        public Builder setSnapshotWindow(@Nullable String snapshotWindow) {
+        public Builder snapshotWindow(@Nullable String snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable String subnetGroupName) {
+        public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

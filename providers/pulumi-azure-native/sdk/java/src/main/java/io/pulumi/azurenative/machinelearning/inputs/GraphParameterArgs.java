@@ -94,32 +94,32 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLinks(Input<List<GraphParameterLinkArgs>> links) {
+        public Builder links(Input<List<GraphParameterLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setLinks(List<GraphParameterLinkArgs> links) {
+        public Builder links(List<GraphParameterLinkArgs> links) {
             this.links = Input.of(Objects.requireNonNull(links));
             return this;
         }
 
-        public Builder setType(Input<Either<String,ParameterType>> type) {
+        public Builder type(Input<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ParameterType> type) {
+        public Builder type(Either<String,ParameterType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

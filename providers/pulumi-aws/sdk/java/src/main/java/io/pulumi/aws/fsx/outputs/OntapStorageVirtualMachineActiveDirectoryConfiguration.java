@@ -60,12 +60,12 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     	      this.selfManagedActiveDirectoryConfiguration = defaults.selfManagedActiveDirectoryConfiguration;
         }
 
-        public Builder setNetbiosName(@Nullable String netbiosName) {
+        public Builder netbiosName(@Nullable String netbiosName) {
             this.netbiosName = netbiosName;
             return this;
         }
 
-        public Builder setSelfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
+        public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
         }

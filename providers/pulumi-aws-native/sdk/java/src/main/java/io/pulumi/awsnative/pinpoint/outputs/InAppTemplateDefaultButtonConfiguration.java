@@ -85,32 +85,32 @@ public final class InAppTemplateDefaultButtonConfiguration {
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBorderRadius(@Nullable Integer borderRadius) {
+        public Builder borderRadius(@Nullable Integer borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
 
-        public Builder setButtonAction(@Nullable InAppTemplateButtonAction buttonAction) {
+        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

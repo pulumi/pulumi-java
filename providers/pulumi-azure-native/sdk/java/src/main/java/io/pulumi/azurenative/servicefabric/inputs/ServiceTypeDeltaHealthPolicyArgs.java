@@ -59,12 +59,12 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
     	      this.maxPercentDeltaUnhealthyServices = defaults.maxPercentDeltaUnhealthyServices;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyServices(@Nullable Input<Integer> maxPercentDeltaUnhealthyServices) {
+        public Builder maxPercentDeltaUnhealthyServices(@Nullable Input<Integer> maxPercentDeltaUnhealthyServices) {
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
+        public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
             this.maxPercentDeltaUnhealthyServices = Input.ofNullable(maxPercentDeltaUnhealthyServices);
             return this;
         }

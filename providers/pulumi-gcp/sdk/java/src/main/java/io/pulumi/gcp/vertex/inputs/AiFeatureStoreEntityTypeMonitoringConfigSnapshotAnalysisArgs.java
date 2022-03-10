@@ -72,22 +72,22 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     	      this.monitoringInterval = defaults.monitoringInterval;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setMonitoringInterval(@Nullable Input<String> monitoringInterval) {
+        public Builder monitoringInterval(@Nullable Input<String> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
 
-        public Builder setMonitoringInterval(@Nullable String monitoringInterval) {
+        public Builder monitoringInterval(@Nullable String monitoringInterval) {
             this.monitoringInterval = Input.ofNullable(monitoringInterval);
             return this;
         }

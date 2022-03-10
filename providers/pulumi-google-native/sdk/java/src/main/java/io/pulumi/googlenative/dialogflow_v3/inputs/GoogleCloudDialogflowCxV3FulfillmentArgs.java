@@ -143,62 +143,62 @@ public final class GoogleCloudDialogflowCxV3FulfillmentArgs extends io.pulumi.re
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setConditionalCases(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> conditionalCases) {
+        public Builder conditionalCases(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs>> conditionalCases) {
             this.conditionalCases = conditionalCases;
             return this;
         }
 
-        public Builder setConditionalCases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> conditionalCases) {
+        public Builder conditionalCases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> conditionalCases) {
             this.conditionalCases = Input.ofNullable(conditionalCases);
             return this;
         }
 
-        public Builder setMessages(@Nullable Input<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> messages) {
+        public Builder messages(@Nullable Input<List<GoogleCloudDialogflowCxV3ResponseMessageArgs>> messages) {
             this.messages = messages;
             return this;
         }
 
-        public Builder setMessages(@Nullable List<GoogleCloudDialogflowCxV3ResponseMessageArgs> messages) {
+        public Builder messages(@Nullable List<GoogleCloudDialogflowCxV3ResponseMessageArgs> messages) {
             this.messages = Input.ofNullable(messages);
             return this;
         }
 
-        public Builder setReturnPartialResponses(@Nullable Input<Boolean> returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Input<Boolean> returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
 
-        public Builder setReturnPartialResponses(@Nullable Boolean returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = Input.ofNullable(returnPartialResponses);
             return this;
         }
 
-        public Builder setSetParameterActions(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> setParameterActions) {
+        public Builder setParameterActions(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs>> setParameterActions) {
             this.setParameterActions = setParameterActions;
             return this;
         }
 
-        public Builder setSetParameterActions(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs> setParameterActions) {
+        public Builder setParameterActions(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs> setParameterActions) {
             this.setParameterActions = Input.ofNullable(setParameterActions);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }
 
-        public Builder setWebhook(@Nullable Input<String> webhook) {
+        public Builder webhook(@Nullable Input<String> webhook) {
             this.webhook = webhook;
             return this;
         }
 
-        public Builder setWebhook(@Nullable String webhook) {
+        public Builder webhook(@Nullable String webhook) {
             this.webhook = Input.ofNullable(webhook);
             return this;
         }

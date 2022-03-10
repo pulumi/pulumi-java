@@ -76,12 +76,12 @@ public final class BudgetThresholdRule {
     	      this.thresholdPercent = defaults.thresholdPercent;
         }
 
-        public Builder setSpendBasis(@Nullable String spendBasis) {
+        public Builder spendBasis(@Nullable String spendBasis) {
             this.spendBasis = spendBasis;
             return this;
         }
 
-        public Builder setThresholdPercent(Double thresholdPercent) {
+        public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }

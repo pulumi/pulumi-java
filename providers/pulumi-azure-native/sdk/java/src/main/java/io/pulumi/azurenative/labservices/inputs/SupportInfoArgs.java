@@ -106,42 +106,42 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setInstructions(@Nullable Input<String> instructions) {
+        public Builder instructions(@Nullable Input<String> instructions) {
             this.instructions = instructions;
             return this;
         }
 
-        public Builder setInstructions(@Nullable String instructions) {
+        public Builder instructions(@Nullable String instructions) {
             this.instructions = Input.ofNullable(instructions);
             return this;
         }
 
-        public Builder setPhone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Input<String> phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = Input.ofNullable(phone);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

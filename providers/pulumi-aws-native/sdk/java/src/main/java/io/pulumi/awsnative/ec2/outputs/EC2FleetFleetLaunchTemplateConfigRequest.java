@@ -53,12 +53,12 @@ public final class EC2FleetFleetLaunchTemplateConfigRequest {
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setLaunchTemplateSpecification(@Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
+        public Builder overrides(@Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
             this.overrides = overrides;
             return this;
         }

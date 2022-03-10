@@ -75,22 +75,22 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCode(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Input<Integer> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

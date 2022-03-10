@@ -235,122 +235,122 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApiServerEndpoint(@Nullable Input<String> apiServerEndpoint) {
+        public Builder apiServerEndpoint(@Nullable Input<String> apiServerEndpoint) {
             this.apiServerEndpoint = apiServerEndpoint;
             return this;
         }
 
-        public Builder setApiServerEndpoint(@Nullable String apiServerEndpoint) {
+        public Builder apiServerEndpoint(@Nullable String apiServerEndpoint) {
             this.apiServerEndpoint = Input.ofNullable(apiServerEndpoint);
             return this;
         }
 
-        public Builder setClusterRootCA(@Nullable Input<String> clusterRootCA) {
+        public Builder clusterRootCA(@Nullable Input<String> clusterRootCA) {
             this.clusterRootCA = clusterRootCA;
             return this;
         }
 
-        public Builder setClusterRootCA(@Nullable String clusterRootCA) {
+        public Builder clusterRootCA(@Nullable String clusterRootCA) {
             this.clusterRootCA = Input.ofNullable(clusterRootCA);
             return this;
         }
 
-        public Builder setControllerDetails(Input<ControllerDetailsArgs> controllerDetails) {
+        public Builder controllerDetails(Input<ControllerDetailsArgs> controllerDetails) {
             this.controllerDetails = Objects.requireNonNull(controllerDetails);
             return this;
         }
 
-        public Builder setControllerDetails(ControllerDetailsArgs controllerDetails) {
+        public Builder controllerDetails(ControllerDetailsArgs controllerDetails) {
             this.controllerDetails = Input.of(Objects.requireNonNull(controllerDetails));
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<OrchestratorIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<OrchestratorIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable OrchestratorIdentityArgs identity) {
+        public Builder identity(@Nullable OrchestratorIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,OrchestratorKind>> kind) {
+        public Builder kind(Input<Either<String,OrchestratorKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,OrchestratorKind> kind) {
+        public Builder kind(Either<String,OrchestratorKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOrchestratorAppId(@Nullable Input<String> orchestratorAppId) {
+        public Builder orchestratorAppId(@Nullable Input<String> orchestratorAppId) {
             this.orchestratorAppId = orchestratorAppId;
             return this;
         }
 
-        public Builder setOrchestratorAppId(@Nullable String orchestratorAppId) {
+        public Builder orchestratorAppId(@Nullable String orchestratorAppId) {
             this.orchestratorAppId = Input.ofNullable(orchestratorAppId);
             return this;
         }
 
-        public Builder setOrchestratorTenantId(@Nullable Input<String> orchestratorTenantId) {
+        public Builder orchestratorTenantId(@Nullable Input<String> orchestratorTenantId) {
             this.orchestratorTenantId = orchestratorTenantId;
             return this;
         }
 
-        public Builder setOrchestratorTenantId(@Nullable String orchestratorTenantId) {
+        public Builder orchestratorTenantId(@Nullable String orchestratorTenantId) {
             this.orchestratorTenantId = Input.ofNullable(orchestratorTenantId);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

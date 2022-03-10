@@ -98,27 +98,27 @@ public final class RegistryAuth extends io.pulumi.resources.InvokeArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConfigFile(@Nullable String configFile) {
+        public Builder configFile(@Nullable String configFile) {
             this.configFile = configFile;
             return this;
         }
 
-        public Builder setConfigFileContent(@Nullable String configFileContent) {
+        public Builder configFileContent(@Nullable String configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

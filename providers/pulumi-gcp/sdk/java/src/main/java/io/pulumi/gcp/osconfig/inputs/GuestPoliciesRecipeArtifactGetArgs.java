@@ -110,42 +110,42 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Input.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(@Nullable Input<GuestPoliciesRecipeArtifactGcsGetArgs> gcs) {
+        public Builder gcs(@Nullable Input<GuestPoliciesRecipeArtifactGcsGetArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setGcs(@Nullable GuestPoliciesRecipeArtifactGcsGetArgs gcs) {
+        public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcsGetArgs gcs) {
             this.gcs = Input.ofNullable(gcs);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setRemote(@Nullable Input<GuestPoliciesRecipeArtifactRemoteGetArgs> remote) {
+        public Builder remote(@Nullable Input<GuestPoliciesRecipeArtifactRemoteGetArgs> remote) {
             this.remote = remote;
             return this;
         }
 
-        public Builder setRemote(@Nullable GuestPoliciesRecipeArtifactRemoteGetArgs remote) {
+        public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemoteGetArgs remote) {
             this.remote = Input.ofNullable(remote);
             return this;
         }

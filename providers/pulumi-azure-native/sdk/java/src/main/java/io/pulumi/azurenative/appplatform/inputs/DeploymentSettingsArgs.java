@@ -142,62 +142,62 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setCpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Input<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setJvmOptions(@Nullable Input<String> jvmOptions) {
+        public Builder jvmOptions(@Nullable Input<String> jvmOptions) {
             this.jvmOptions = jvmOptions;
             return this;
         }
 
-        public Builder setJvmOptions(@Nullable String jvmOptions) {
+        public Builder jvmOptions(@Nullable String jvmOptions) {
             this.jvmOptions = Input.ofNullable(jvmOptions);
             return this;
         }
 
-        public Builder setMemoryInGB(@Nullable Input<Integer> memoryInGB) {
+        public Builder memoryInGB(@Nullable Input<Integer> memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
-        public Builder setMemoryInGB(@Nullable Integer memoryInGB) {
+        public Builder memoryInGB(@Nullable Integer memoryInGB) {
             this.memoryInGB = Input.ofNullable(memoryInGB);
             return this;
         }
 
-        public Builder setNetCoreMainEntryPath(@Nullable Input<String> netCoreMainEntryPath) {
+        public Builder netCoreMainEntryPath(@Nullable Input<String> netCoreMainEntryPath) {
             this.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
 
-        public Builder setNetCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
+        public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
             this.netCoreMainEntryPath = Input.ofNullable(netCoreMainEntryPath);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<Either<String,RuntimeVersion>> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<Either<String,RuntimeVersion>> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Either<String,RuntimeVersion> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Either<String,RuntimeVersion> runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }

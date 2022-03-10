@@ -75,22 +75,22 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.predefinedSource = defaults.predefinedSource;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPredefinedSource(@Nullable Input<SourcePredefinedSource> predefinedSource) {
+        public Builder predefinedSource(@Nullable Input<SourcePredefinedSource> predefinedSource) {
             this.predefinedSource = predefinedSource;
             return this;
         }
 
-        public Builder setPredefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
+        public Builder predefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
             this.predefinedSource = Input.ofNullable(predefinedSource);
             return this;
         }

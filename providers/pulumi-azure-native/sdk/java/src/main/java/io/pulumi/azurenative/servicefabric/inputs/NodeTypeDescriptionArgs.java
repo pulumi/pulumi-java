@@ -226,112 +226,112 @@ public final class NodeTypeDescriptionArgs extends io.pulumi.resources.ResourceA
     	      this.vmInstanceCount = defaults.vmInstanceCount;
         }
 
-        public Builder setApplicationPorts(@Nullable Input<EndpointRangeDescriptionArgs> applicationPorts) {
+        public Builder applicationPorts(@Nullable Input<EndpointRangeDescriptionArgs> applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
-        public Builder setApplicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
+        public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
             this.applicationPorts = Input.ofNullable(applicationPorts);
             return this;
         }
 
-        public Builder setCapacities(@Nullable Input<Map<String,String>> capacities) {
+        public Builder capacities(@Nullable Input<Map<String,String>> capacities) {
             this.capacities = capacities;
             return this;
         }
 
-        public Builder setCapacities(@Nullable Map<String,String> capacities) {
+        public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = Input.ofNullable(capacities);
             return this;
         }
 
-        public Builder setClientConnectionEndpointPort(Input<Integer> clientConnectionEndpointPort) {
+        public Builder clientConnectionEndpointPort(Input<Integer> clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
             return this;
         }
 
-        public Builder setClientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
+        public Builder clientConnectionEndpointPort(Integer clientConnectionEndpointPort) {
             this.clientConnectionEndpointPort = Input.of(Objects.requireNonNull(clientConnectionEndpointPort));
             return this;
         }
 
-        public Builder setDurabilityLevel(@Nullable Input<String> durabilityLevel) {
+        public Builder durabilityLevel(@Nullable Input<String> durabilityLevel) {
             this.durabilityLevel = durabilityLevel;
             return this;
         }
 
-        public Builder setDurabilityLevel(@Nullable String durabilityLevel) {
+        public Builder durabilityLevel(@Nullable String durabilityLevel) {
             this.durabilityLevel = Input.ofNullable(durabilityLevel);
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
             this.ephemeralPorts = Input.ofNullable(ephemeralPorts);
             return this;
         }
 
-        public Builder setHttpGatewayEndpointPort(Input<Integer> httpGatewayEndpointPort) {
+        public Builder httpGatewayEndpointPort(Input<Integer> httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
             return this;
         }
 
-        public Builder setHttpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
+        public Builder httpGatewayEndpointPort(Integer httpGatewayEndpointPort) {
             this.httpGatewayEndpointPort = Input.of(Objects.requireNonNull(httpGatewayEndpointPort));
             return this;
         }
 
-        public Builder setIsPrimary(Input<Boolean> isPrimary) {
+        public Builder isPrimary(Input<Boolean> isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
-        public Builder setIsPrimary(Boolean isPrimary) {
+        public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Input.of(Objects.requireNonNull(isPrimary));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Input<Map<String,String>> placementProperties) {
+        public Builder placementProperties(@Nullable Input<Map<String,String>> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Map<String,String> placementProperties) {
+        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = Input.ofNullable(placementProperties);
             return this;
         }
 
-        public Builder setReverseProxyEndpointPort(@Nullable Input<Integer> reverseProxyEndpointPort) {
+        public Builder reverseProxyEndpointPort(@Nullable Input<Integer> reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = reverseProxyEndpointPort;
             return this;
         }
 
-        public Builder setReverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
+        public Builder reverseProxyEndpointPort(@Nullable Integer reverseProxyEndpointPort) {
             this.reverseProxyEndpointPort = Input.ofNullable(reverseProxyEndpointPort);
             return this;
         }
 
-        public Builder setVmInstanceCount(Input<Integer> vmInstanceCount) {
+        public Builder vmInstanceCount(Input<Integer> vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
 
-        public Builder setVmInstanceCount(Integer vmInstanceCount) {
+        public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Input.of(Objects.requireNonNull(vmInstanceCount));
             return this;
         }

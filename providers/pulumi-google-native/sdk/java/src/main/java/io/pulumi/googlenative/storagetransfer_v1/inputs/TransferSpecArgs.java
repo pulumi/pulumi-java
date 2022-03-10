@@ -258,132 +258,132 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferOptions = defaults.transferOptions;
         }
 
-        public Builder setAwsS3DataSource(@Nullable Input<AwsS3DataArgs> awsS3DataSource) {
+        public Builder awsS3DataSource(@Nullable Input<AwsS3DataArgs> awsS3DataSource) {
             this.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
-        public Builder setAwsS3DataSource(@Nullable AwsS3DataArgs awsS3DataSource) {
+        public Builder awsS3DataSource(@Nullable AwsS3DataArgs awsS3DataSource) {
             this.awsS3DataSource = Input.ofNullable(awsS3DataSource);
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(@Nullable Input<AzureBlobStorageDataArgs> azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(@Nullable Input<AzureBlobStorageDataArgs> azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(@Nullable AzureBlobStorageDataArgs azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(@Nullable AzureBlobStorageDataArgs azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = Input.ofNullable(azureBlobStorageDataSource);
             return this;
         }
 
-        public Builder setGcsDataSink(@Nullable Input<GcsDataArgs> gcsDataSink) {
+        public Builder gcsDataSink(@Nullable Input<GcsDataArgs> gcsDataSink) {
             this.gcsDataSink = gcsDataSink;
             return this;
         }
 
-        public Builder setGcsDataSink(@Nullable GcsDataArgs gcsDataSink) {
+        public Builder gcsDataSink(@Nullable GcsDataArgs gcsDataSink) {
             this.gcsDataSink = Input.ofNullable(gcsDataSink);
             return this;
         }
 
-        public Builder setGcsDataSource(@Nullable Input<GcsDataArgs> gcsDataSource) {
+        public Builder gcsDataSource(@Nullable Input<GcsDataArgs> gcsDataSource) {
             this.gcsDataSource = gcsDataSource;
             return this;
         }
 
-        public Builder setGcsDataSource(@Nullable GcsDataArgs gcsDataSource) {
+        public Builder gcsDataSource(@Nullable GcsDataArgs gcsDataSource) {
             this.gcsDataSource = Input.ofNullable(gcsDataSource);
             return this;
         }
 
-        public Builder setGcsIntermediateDataLocation(@Nullable Input<GcsDataArgs> gcsIntermediateDataLocation) {
+        public Builder gcsIntermediateDataLocation(@Nullable Input<GcsDataArgs> gcsIntermediateDataLocation) {
             this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
             return this;
         }
 
-        public Builder setGcsIntermediateDataLocation(@Nullable GcsDataArgs gcsIntermediateDataLocation) {
+        public Builder gcsIntermediateDataLocation(@Nullable GcsDataArgs gcsIntermediateDataLocation) {
             this.gcsIntermediateDataLocation = Input.ofNullable(gcsIntermediateDataLocation);
             return this;
         }
 
-        public Builder setHttpDataSource(@Nullable Input<HttpDataArgs> httpDataSource) {
+        public Builder httpDataSource(@Nullable Input<HttpDataArgs> httpDataSource) {
             this.httpDataSource = httpDataSource;
             return this;
         }
 
-        public Builder setHttpDataSource(@Nullable HttpDataArgs httpDataSource) {
+        public Builder httpDataSource(@Nullable HttpDataArgs httpDataSource) {
             this.httpDataSource = Input.ofNullable(httpDataSource);
             return this;
         }
 
-        public Builder setObjectConditions(@Nullable Input<ObjectConditionsArgs> objectConditions) {
+        public Builder objectConditions(@Nullable Input<ObjectConditionsArgs> objectConditions) {
             this.objectConditions = objectConditions;
             return this;
         }
 
-        public Builder setObjectConditions(@Nullable ObjectConditionsArgs objectConditions) {
+        public Builder objectConditions(@Nullable ObjectConditionsArgs objectConditions) {
             this.objectConditions = Input.ofNullable(objectConditions);
             return this;
         }
 
-        public Builder setPosixDataSink(@Nullable Input<PosixFilesystemArgs> posixDataSink) {
+        public Builder posixDataSink(@Nullable Input<PosixFilesystemArgs> posixDataSink) {
             this.posixDataSink = posixDataSink;
             return this;
         }
 
-        public Builder setPosixDataSink(@Nullable PosixFilesystemArgs posixDataSink) {
+        public Builder posixDataSink(@Nullable PosixFilesystemArgs posixDataSink) {
             this.posixDataSink = Input.ofNullable(posixDataSink);
             return this;
         }
 
-        public Builder setPosixDataSource(@Nullable Input<PosixFilesystemArgs> posixDataSource) {
+        public Builder posixDataSource(@Nullable Input<PosixFilesystemArgs> posixDataSource) {
             this.posixDataSource = posixDataSource;
             return this;
         }
 
-        public Builder setPosixDataSource(@Nullable PosixFilesystemArgs posixDataSource) {
+        public Builder posixDataSource(@Nullable PosixFilesystemArgs posixDataSource) {
             this.posixDataSource = Input.ofNullable(posixDataSource);
             return this;
         }
 
-        public Builder setSinkAgentPoolName(@Nullable Input<String> sinkAgentPoolName) {
+        public Builder sinkAgentPoolName(@Nullable Input<String> sinkAgentPoolName) {
             this.sinkAgentPoolName = sinkAgentPoolName;
             return this;
         }
 
-        public Builder setSinkAgentPoolName(@Nullable String sinkAgentPoolName) {
+        public Builder sinkAgentPoolName(@Nullable String sinkAgentPoolName) {
             this.sinkAgentPoolName = Input.ofNullable(sinkAgentPoolName);
             return this;
         }
 
-        public Builder setSourceAgentPoolName(@Nullable Input<String> sourceAgentPoolName) {
+        public Builder sourceAgentPoolName(@Nullable Input<String> sourceAgentPoolName) {
             this.sourceAgentPoolName = sourceAgentPoolName;
             return this;
         }
 
-        public Builder setSourceAgentPoolName(@Nullable String sourceAgentPoolName) {
+        public Builder sourceAgentPoolName(@Nullable String sourceAgentPoolName) {
             this.sourceAgentPoolName = Input.ofNullable(sourceAgentPoolName);
             return this;
         }
 
-        public Builder setTransferManifest(@Nullable Input<TransferManifestArgs> transferManifest) {
+        public Builder transferManifest(@Nullable Input<TransferManifestArgs> transferManifest) {
             this.transferManifest = transferManifest;
             return this;
         }
 
-        public Builder setTransferManifest(@Nullable TransferManifestArgs transferManifest) {
+        public Builder transferManifest(@Nullable TransferManifestArgs transferManifest) {
             this.transferManifest = Input.ofNullable(transferManifest);
             return this;
         }
 
-        public Builder setTransferOptions(@Nullable Input<TransferOptionsArgs> transferOptions) {
+        public Builder transferOptions(@Nullable Input<TransferOptionsArgs> transferOptions) {
             this.transferOptions = transferOptions;
             return this;
         }
 
-        public Builder setTransferOptions(@Nullable TransferOptionsArgs transferOptions) {
+        public Builder transferOptions(@Nullable TransferOptionsArgs transferOptions) {
             this.transferOptions = Input.ofNullable(transferOptions);
             return this;
         }

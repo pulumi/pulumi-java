@@ -74,22 +74,22 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentityIds(Input<List<String>> identityIds) {
+        public Builder identityIds(Input<List<String>> identityIds) {
             this.identityIds = Objects.requireNonNull(identityIds);
             return this;
         }
 
-        public Builder setIdentityIds(List<String> identityIds) {
+        public Builder identityIds(List<String> identityIds) {
             this.identityIds = Input.of(Objects.requireNonNull(identityIds));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

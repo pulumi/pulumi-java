@@ -197,52 +197,52 @@ public final class GetBackupScheduleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackupType(String backupType) {
+        public Builder backupType(String backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastSuccessfulRun(String lastSuccessfulRun) {
+        public Builder lastSuccessfulRun(String lastSuccessfulRun) {
             this.lastSuccessfulRun = Objects.requireNonNull(lastSuccessfulRun);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRetentionCount(Double retentionCount) {
+        public Builder retentionCount(Double retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
 
-        public Builder setScheduleRecurrence(ScheduleRecurrenceResponse scheduleRecurrence) {
+        public Builder scheduleRecurrence(ScheduleRecurrenceResponse scheduleRecurrence) {
             this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
             return this;
         }
 
-        public Builder setScheduleStatus(String scheduleStatus) {
+        public Builder scheduleStatus(String scheduleStatus) {
             this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

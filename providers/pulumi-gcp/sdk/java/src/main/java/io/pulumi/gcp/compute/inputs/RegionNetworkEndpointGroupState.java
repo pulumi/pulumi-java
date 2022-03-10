@@ -201,92 +201,92 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setAppEngine(@Nullable Input<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine) {
+        public Builder appEngine(@Nullable Input<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
 
-        public Builder setAppEngine(@Nullable RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
+        public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
             this.appEngine = Input.ofNullable(appEngine);
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
+        public Builder cloudFunction(@Nullable Input<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
+        public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
             this.cloudFunction = Input.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(@Nullable Input<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Input<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
 
-        public Builder setCloudRun(@Nullable RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
+        public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
             this.cloudRun = Input.ofNullable(cloudRun);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable Input<String> networkEndpointType) {
+        public Builder networkEndpointType(@Nullable Input<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable String networkEndpointType) {
+        public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Input.ofNullable(networkEndpointType);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

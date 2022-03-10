@@ -54,7 +54,7 @@ public final class ServiceNetworkSettingsNetworkSettings {
     	      this.ingressTrafficAllowed = defaults.ingressTrafficAllowed;
         }
 
-        public Builder setIngressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
+        public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }

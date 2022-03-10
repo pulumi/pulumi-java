@@ -51,7 +51,7 @@ public final class GetAttestationAtSubscriptionArgs extends io.pulumi.resources.
     	      this.attestationName = defaults.attestationName;
         }
 
-        public Builder setAttestationName(String attestationName) {
+        public Builder attestationName(String attestationName) {
             this.attestationName = Objects.requireNonNull(attestationName);
             return this;
         }

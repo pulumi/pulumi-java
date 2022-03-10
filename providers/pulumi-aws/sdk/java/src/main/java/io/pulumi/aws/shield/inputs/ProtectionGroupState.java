@@ -168,82 +168,82 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAggregation(@Nullable Input<String> aggregation) {
+        public Builder aggregation(@Nullable Input<String> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setAggregation(@Nullable String aggregation) {
+        public Builder aggregation(@Nullable String aggregation) {
             this.aggregation = Input.ofNullable(aggregation);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }
 
-        public Builder setProtectionGroupArn(@Nullable Input<String> protectionGroupArn) {
+        public Builder protectionGroupArn(@Nullable Input<String> protectionGroupArn) {
             this.protectionGroupArn = protectionGroupArn;
             return this;
         }
 
-        public Builder setProtectionGroupArn(@Nullable String protectionGroupArn) {
+        public Builder protectionGroupArn(@Nullable String protectionGroupArn) {
             this.protectionGroupArn = Input.ofNullable(protectionGroupArn);
             return this;
         }
 
-        public Builder setProtectionGroupId(@Nullable Input<String> protectionGroupId) {
+        public Builder protectionGroupId(@Nullable Input<String> protectionGroupId) {
             this.protectionGroupId = protectionGroupId;
             return this;
         }
 
-        public Builder setProtectionGroupId(@Nullable String protectionGroupId) {
+        public Builder protectionGroupId(@Nullable String protectionGroupId) {
             this.protectionGroupId = Input.ofNullable(protectionGroupId);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

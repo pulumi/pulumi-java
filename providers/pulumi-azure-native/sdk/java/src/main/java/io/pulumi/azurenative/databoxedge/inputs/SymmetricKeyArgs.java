@@ -57,12 +57,12 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.connectionString = defaults.connectionString;
         }
 
-        public Builder setConnectionString(@Nullable Input<AsymmetricEncryptedSecretArgs> connectionString) {
+        public Builder connectionString(@Nullable Input<AsymmetricEncryptedSecretArgs> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
+        public Builder connectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }

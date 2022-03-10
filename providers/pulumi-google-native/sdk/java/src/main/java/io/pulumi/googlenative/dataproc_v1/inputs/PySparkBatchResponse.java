@@ -137,32 +137,32 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pythonFileUris = defaults.pythonFileUris;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setMainPythonFileUri(String mainPythonFileUri) {
+        public Builder mainPythonFileUri(String mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
 
-        public Builder setPythonFileUris(List<String> pythonFileUris) {
+        public Builder pythonFileUris(List<String> pythonFileUris) {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }

@@ -100,42 +100,42 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable Input<OriginEndpointMssEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<OriginEndpointMssEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointMssEncryptionArgs encryption) {
+        public Builder encryption(@Nullable OriginEndpointMssEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Input<Integer> manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Input<Integer> manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = Input.ofNullable(manifestWindowSeconds);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }

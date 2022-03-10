@@ -61,22 +61,22 @@ public final class ApplicationTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setTagKey(Input<String> tagKey) {
+        public Builder tagKey(Input<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
-        public Builder setTagKey(String tagKey) {
+        public Builder tagKey(String tagKey) {
             this.tagKey = Input.of(Objects.requireNonNull(tagKey));
             return this;
         }
 
-        public Builder setTagValue(Input<String> tagValue) {
+        public Builder tagValue(Input<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }

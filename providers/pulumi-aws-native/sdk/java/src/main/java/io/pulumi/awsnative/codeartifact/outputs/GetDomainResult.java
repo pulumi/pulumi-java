@@ -118,27 +118,27 @@ public final class GetDomainResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTag> tags) {
+        public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }

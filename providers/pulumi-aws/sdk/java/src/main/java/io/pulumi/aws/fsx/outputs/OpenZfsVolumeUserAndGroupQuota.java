@@ -74,17 +74,17 @@ public final class OpenZfsVolumeUserAndGroupQuota {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

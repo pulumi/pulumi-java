@@ -74,12 +74,12 @@ public final class XssMatchSetXssMatchTuple {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(XssMatchSetXssMatchTupleFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(XssMatchSetXssMatchTupleFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

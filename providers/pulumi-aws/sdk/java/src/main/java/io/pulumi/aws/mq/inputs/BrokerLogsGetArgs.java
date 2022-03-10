@@ -70,22 +70,22 @@ public final class BrokerLogsGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.general = defaults.general;
         }
 
-        public Builder setAudit(@Nullable Input<Boolean> audit) {
+        public Builder audit(@Nullable Input<Boolean> audit) {
             this.audit = audit;
             return this;
         }
 
-        public Builder setAudit(@Nullable Boolean audit) {
+        public Builder audit(@Nullable Boolean audit) {
             this.audit = Input.ofNullable(audit);
             return this;
         }
 
-        public Builder setGeneral(@Nullable Input<Boolean> general) {
+        public Builder general(@Nullable Input<Boolean> general) {
             this.general = general;
             return this;
         }
 
-        public Builder setGeneral(@Nullable Boolean general) {
+        public Builder general(@Nullable Boolean general) {
             this.general = Input.ofNullable(general);
             return this;
         }

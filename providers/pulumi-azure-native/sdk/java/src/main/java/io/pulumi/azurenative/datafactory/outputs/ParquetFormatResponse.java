@@ -86,17 +86,17 @@ public final class ParquetFormatResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

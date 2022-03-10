@@ -121,52 +121,52 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIncomingTrafficPolicy(@Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy) {
+        public Builder incomingTrafficPolicy(@Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy) {
             this.incomingTrafficPolicy = incomingTrafficPolicy;
             return this;
         }
 
-        public Builder setIncomingTrafficPolicy(@Nullable Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
+        public Builder incomingTrafficPolicy(@Nullable Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
             this.incomingTrafficPolicy = Input.ofNullable(incomingTrafficPolicy);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageSyncServiceName(@Nullable Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(@Nullable Input<String> storageSyncServiceName) {
             this.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
-        public Builder setStorageSyncServiceName(@Nullable String storageSyncServiceName) {
+        public Builder storageSyncServiceName(@Nullable String storageSyncServiceName) {
             this.storageSyncServiceName = Input.ofNullable(storageSyncServiceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

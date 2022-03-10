@@ -85,17 +85,17 @@ public final class LogSettingsResponse {
     	      this.logLocationSettings = defaults.logLocationSettings;
         }
 
-        public Builder setCopyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
+        public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
             this.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
 
-        public Builder setEnableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
+        public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             this.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
 
-        public Builder setLogLocationSettings(LogLocationSettingsResponse logLocationSettings) {
+        public Builder logLocationSettings(LogLocationSettingsResponse logLocationSettings) {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }

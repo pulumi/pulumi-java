@@ -68,12 +68,12 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCustomEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
+        public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
             this.customEntityStoreAssignmentName = Objects.requireNonNull(customEntityStoreAssignmentName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

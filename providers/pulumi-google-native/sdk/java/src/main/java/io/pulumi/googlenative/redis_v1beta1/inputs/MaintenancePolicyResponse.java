@@ -106,22 +106,22 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
     	      this.weeklyMaintenanceWindow = defaults.weeklyMaintenanceWindow;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
+        public Builder weeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }

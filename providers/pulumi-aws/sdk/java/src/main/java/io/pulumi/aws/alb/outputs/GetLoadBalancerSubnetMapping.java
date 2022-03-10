@@ -73,27 +73,27 @@ public final class GetLoadBalancerSubnetMapping {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAllocationId(String allocationId) {
+        public Builder allocationId(String allocationId) {
             this.allocationId = Objects.requireNonNull(allocationId);
             return this;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
-        public Builder setOutpostId(String outpostId) {
+        public Builder outpostId(String outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
-        public Builder setPrivateIpv4Address(String privateIpv4Address) {
+        public Builder privateIpv4Address(String privateIpv4Address) {
             this.privateIpv4Address = Objects.requireNonNull(privateIpv4Address);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

@@ -95,27 +95,27 @@ public final class DatasetParameter {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreateColumn(@Nullable Boolean createColumn) {
+        public Builder createColumn(@Nullable Boolean createColumn) {
             this.createColumn = createColumn;
             return this;
         }
 
-        public Builder setDatetimeOptions(@Nullable DatasetDatetimeOptions datetimeOptions) {
+        public Builder datetimeOptions(@Nullable DatasetDatetimeOptions datetimeOptions) {
             this.datetimeOptions = datetimeOptions;
             return this;
         }
 
-        public Builder setFilter(@Nullable DatasetFilterExpression filter) {
+        public Builder filter(@Nullable DatasetFilterExpression filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(DatasetParameterType type) {
+        public Builder type(DatasetParameterType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

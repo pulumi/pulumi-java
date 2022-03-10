@@ -72,17 +72,17 @@ public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeA
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setAttachmentId(String attachmentId) {
+        public Builder attachmentId(String attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

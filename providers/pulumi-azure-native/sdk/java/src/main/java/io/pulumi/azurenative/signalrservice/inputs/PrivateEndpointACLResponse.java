@@ -91,17 +91,17 @@ public final class PrivateEndpointACLResponse extends io.pulumi.resources.Invoke
     	      this.name = defaults.name;
         }
 
-        public Builder setAllow(@Nullable List<String> allow) {
+        public Builder allow(@Nullable List<String> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setDeny(@Nullable List<String> deny) {
+        public Builder deny(@Nullable List<String> deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

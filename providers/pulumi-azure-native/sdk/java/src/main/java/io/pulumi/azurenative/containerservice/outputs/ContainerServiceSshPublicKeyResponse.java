@@ -48,7 +48,7 @@ public final class ContainerServiceSshPublicKeyResponse {
     	      this.keyData = defaults.keyData;
         }
 
-        public Builder setKeyData(String keyData) {
+        public Builder keyData(String keyData) {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }

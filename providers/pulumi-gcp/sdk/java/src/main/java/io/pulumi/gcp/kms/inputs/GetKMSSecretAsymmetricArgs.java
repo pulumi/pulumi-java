@@ -88,17 +88,17 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
     	      this.cryptoKeyVersion = defaults.cryptoKeyVersion;
         }
 
-        public Builder setCiphertext(String ciphertext) {
+        public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
 
-        public Builder setCrc32(@Nullable String crc32) {
+        public Builder crc32(@Nullable String crc32) {
             this.crc32 = crc32;
             return this;
         }
 
-        public Builder setCryptoKeyVersion(String cryptoKeyVersion) {
+        public Builder cryptoKeyVersion(String cryptoKeyVersion) {
             this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
             return this;
         }

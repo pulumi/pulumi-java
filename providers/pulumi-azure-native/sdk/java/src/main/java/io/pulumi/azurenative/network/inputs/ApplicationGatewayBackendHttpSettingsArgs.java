@@ -290,152 +290,152 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends io.pulumi.r
     	      this.trustedRootCertificates = defaults.trustedRootCertificates;
         }
 
-        public Builder setAffinityCookieName(@Nullable Input<String> affinityCookieName) {
+        public Builder affinityCookieName(@Nullable Input<String> affinityCookieName) {
             this.affinityCookieName = affinityCookieName;
             return this;
         }
 
-        public Builder setAffinityCookieName(@Nullable String affinityCookieName) {
+        public Builder affinityCookieName(@Nullable String affinityCookieName) {
             this.affinityCookieName = Input.ofNullable(affinityCookieName);
             return this;
         }
 
-        public Builder setAuthenticationCertificates(@Nullable Input<List<SubResourceArgs>> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable Input<List<SubResourceArgs>> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
-        public Builder setAuthenticationCertificates(@Nullable List<SubResourceArgs> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable List<SubResourceArgs> authenticationCertificates) {
             this.authenticationCertificates = Input.ofNullable(authenticationCertificates);
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable Input<ApplicationGatewayConnectionDrainingArgs> connectionDraining) {
+        public Builder connectionDraining(@Nullable Input<ApplicationGatewayConnectionDrainingArgs> connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable ApplicationGatewayConnectionDrainingArgs connectionDraining) {
+        public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingArgs connectionDraining) {
             this.connectionDraining = Input.ofNullable(connectionDraining);
             return this;
         }
 
-        public Builder setCookieBasedAffinity(@Nullable Input<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity) {
+        public Builder cookieBasedAffinity(@Nullable Input<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity) {
             this.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
 
-        public Builder setCookieBasedAffinity(@Nullable Either<String,ApplicationGatewayCookieBasedAffinity> cookieBasedAffinity) {
+        public Builder cookieBasedAffinity(@Nullable Either<String,ApplicationGatewayCookieBasedAffinity> cookieBasedAffinity) {
             this.cookieBasedAffinity = Input.ofNullable(cookieBasedAffinity);
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPickHostNameFromBackendAddress(@Nullable Input<Boolean> pickHostNameFromBackendAddress) {
+        public Builder pickHostNameFromBackendAddress(@Nullable Input<Boolean> pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
+        public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = Input.ofNullable(pickHostNameFromBackendAddress);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProbe(@Nullable Input<SubResourceArgs> probe) {
+        public Builder probe(@Nullable Input<SubResourceArgs> probe) {
             this.probe = probe;
             return this;
         }
 
-        public Builder setProbe(@Nullable SubResourceArgs probe) {
+        public Builder probe(@Nullable SubResourceArgs probe) {
             this.probe = Input.ofNullable(probe);
             return this;
         }
 
-        public Builder setProbeEnabled(@Nullable Input<Boolean> probeEnabled) {
+        public Builder probeEnabled(@Nullable Input<Boolean> probeEnabled) {
             this.probeEnabled = probeEnabled;
             return this;
         }
 
-        public Builder setProbeEnabled(@Nullable Boolean probeEnabled) {
+        public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             this.probeEnabled = Input.ofNullable(probeEnabled);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Input<Integer> requestTimeout) {
+        public Builder requestTimeout(@Nullable Input<Integer> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Integer requestTimeout) {
+        public Builder requestTimeout(@Nullable Integer requestTimeout) {
             this.requestTimeout = Input.ofNullable(requestTimeout);
             return this;
         }
 
-        public Builder setTrustedRootCertificates(@Nullable Input<List<SubResourceArgs>> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable Input<List<SubResourceArgs>> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
-        public Builder setTrustedRootCertificates(@Nullable List<SubResourceArgs> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable List<SubResourceArgs> trustedRootCertificates) {
             this.trustedRootCertificates = Input.ofNullable(trustedRootCertificates);
             return this;
         }

@@ -49,7 +49,7 @@ public final class EndpointVerificationSpecificAttributesResponse {
     	      this.certificateAttributes = defaults.certificateAttributes;
         }
 
-        public Builder setCertificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
+        public Builder certificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }

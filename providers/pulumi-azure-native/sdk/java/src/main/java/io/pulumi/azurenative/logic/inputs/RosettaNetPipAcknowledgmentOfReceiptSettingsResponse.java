@@ -73,12 +73,12 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
     	      this.timeToAcknowledgeInSeconds = defaults.timeToAcknowledgeInSeconds;
         }
 
-        public Builder setIsNonRepudiationRequired(Boolean isNonRepudiationRequired) {
+        public Builder isNonRepudiationRequired(Boolean isNonRepudiationRequired) {
             this.isNonRepudiationRequired = Objects.requireNonNull(isNonRepudiationRequired);
             return this;
         }
 
-        public Builder setTimeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
+        public Builder timeToAcknowledgeInSeconds(Integer timeToAcknowledgeInSeconds) {
             this.timeToAcknowledgeInSeconds = Objects.requireNonNull(timeToAcknowledgeInSeconds);
             return this;
         }

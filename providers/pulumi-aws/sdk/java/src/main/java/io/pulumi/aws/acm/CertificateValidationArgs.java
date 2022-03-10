@@ -71,22 +71,22 @@ public final class CertificateValidationArgs extends io.pulumi.resources.Resourc
     	      this.validationRecordFqdns = defaults.validationRecordFqdns;
         }
 
-        public Builder setCertificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Input<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder setValidationRecordFqdns(@Nullable Input<List<String>> validationRecordFqdns) {
+        public Builder validationRecordFqdns(@Nullable Input<List<String>> validationRecordFqdns) {
             this.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
 
-        public Builder setValidationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
+        public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
             this.validationRecordFqdns = Input.ofNullable(validationRecordFqdns);
             return this;
         }

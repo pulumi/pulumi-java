@@ -55,7 +55,7 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.number = defaults.number;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }

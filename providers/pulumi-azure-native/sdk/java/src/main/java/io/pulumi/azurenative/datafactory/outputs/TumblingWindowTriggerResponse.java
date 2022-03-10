@@ -253,67 +253,67 @@ public final class TumblingWindowTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDelay(@Nullable Object delay) {
+        public Builder delay(@Nullable Object delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<Object> dependsOn) {
+        public Builder dependsOn(@Nullable List<Object> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setMaxConcurrency(Integer maxConcurrency) {
+        public Builder maxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
 
-        public Builder setPipeline(TriggerPipelineReferenceResponse pipeline) {
+        public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

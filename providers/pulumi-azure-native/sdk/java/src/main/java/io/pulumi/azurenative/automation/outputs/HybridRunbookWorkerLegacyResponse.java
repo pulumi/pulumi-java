@@ -99,22 +99,22 @@ public final class HybridRunbookWorkerLegacyResponse {
     	      this.registrationTime = defaults.registrationTime;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setLastSeenDateTime(@Nullable String lastSeenDateTime) {
+        public Builder lastSeenDateTime(@Nullable String lastSeenDateTime) {
             this.lastSeenDateTime = lastSeenDateTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRegistrationTime(@Nullable String registrationTime) {
+        public Builder registrationTime(@Nullable String registrationTime) {
             this.registrationTime = registrationTime;
             return this;
         }

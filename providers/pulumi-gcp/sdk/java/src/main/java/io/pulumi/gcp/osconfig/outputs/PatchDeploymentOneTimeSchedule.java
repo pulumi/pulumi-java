@@ -50,7 +50,7 @@ public final class PatchDeploymentOneTimeSchedule {
     	      this.executeTime = defaults.executeTime;
         }
 
-        public Builder setExecuteTime(String executeTime) {
+        public Builder executeTime(String executeTime) {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }

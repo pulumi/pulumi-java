@@ -65,12 +65,12 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile 
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }

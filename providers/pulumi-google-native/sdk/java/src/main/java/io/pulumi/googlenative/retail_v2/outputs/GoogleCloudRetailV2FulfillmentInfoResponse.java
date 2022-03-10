@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2FulfillmentInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPlaceIds(List<String> placeIds) {
+        public Builder placeIds(List<String> placeIds) {
             this.placeIds = Objects.requireNonNull(placeIds);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

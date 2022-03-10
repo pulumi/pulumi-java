@@ -361,202 +361,202 @@ public final class StoredIscsiVolumeState extends io.pulumi.resources.ResourceAr
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setChapEnabled(@Nullable Input<Boolean> chapEnabled) {
+        public Builder chapEnabled(@Nullable Input<Boolean> chapEnabled) {
             this.chapEnabled = chapEnabled;
             return this;
         }
 
-        public Builder setChapEnabled(@Nullable Boolean chapEnabled) {
+        public Builder chapEnabled(@Nullable Boolean chapEnabled) {
             this.chapEnabled = Input.ofNullable(chapEnabled);
             return this;
         }
 
-        public Builder setDiskId(@Nullable Input<String> diskId) {
+        public Builder diskId(@Nullable Input<String> diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = Input.ofNullable(diskId);
             return this;
         }
 
-        public Builder setGatewayArn(@Nullable Input<String> gatewayArn) {
+        public Builder gatewayArn(@Nullable Input<String> gatewayArn) {
             this.gatewayArn = gatewayArn;
             return this;
         }
 
-        public Builder setGatewayArn(@Nullable String gatewayArn) {
+        public Builder gatewayArn(@Nullable String gatewayArn) {
             this.gatewayArn = Input.ofNullable(gatewayArn);
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Boolean kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setLunNumber(@Nullable Input<Integer> lunNumber) {
+        public Builder lunNumber(@Nullable Input<Integer> lunNumber) {
             this.lunNumber = lunNumber;
             return this;
         }
 
-        public Builder setLunNumber(@Nullable Integer lunNumber) {
+        public Builder lunNumber(@Nullable Integer lunNumber) {
             this.lunNumber = Input.ofNullable(lunNumber);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfacePort(@Nullable Input<Integer> networkInterfacePort) {
+        public Builder networkInterfacePort(@Nullable Input<Integer> networkInterfacePort) {
             this.networkInterfacePort = networkInterfacePort;
             return this;
         }
 
-        public Builder setNetworkInterfacePort(@Nullable Integer networkInterfacePort) {
+        public Builder networkInterfacePort(@Nullable Integer networkInterfacePort) {
             this.networkInterfacePort = Input.ofNullable(networkInterfacePort);
             return this;
         }
 
-        public Builder setPreserveExistingData(@Nullable Input<Boolean> preserveExistingData) {
+        public Builder preserveExistingData(@Nullable Input<Boolean> preserveExistingData) {
             this.preserveExistingData = preserveExistingData;
             return this;
         }
 
-        public Builder setPreserveExistingData(@Nullable Boolean preserveExistingData) {
+        public Builder preserveExistingData(@Nullable Boolean preserveExistingData) {
             this.preserveExistingData = Input.ofNullable(preserveExistingData);
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Input<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }
 
-        public Builder setTargetName(@Nullable Input<String> targetName) {
+        public Builder targetName(@Nullable Input<String> targetName) {
             this.targetName = targetName;
             return this;
         }
 
-        public Builder setTargetName(@Nullable String targetName) {
+        public Builder targetName(@Nullable String targetName) {
             this.targetName = Input.ofNullable(targetName);
             return this;
         }
 
-        public Builder setVolumeAttachmentStatus(@Nullable Input<String> volumeAttachmentStatus) {
+        public Builder volumeAttachmentStatus(@Nullable Input<String> volumeAttachmentStatus) {
             this.volumeAttachmentStatus = volumeAttachmentStatus;
             return this;
         }
 
-        public Builder setVolumeAttachmentStatus(@Nullable String volumeAttachmentStatus) {
+        public Builder volumeAttachmentStatus(@Nullable String volumeAttachmentStatus) {
             this.volumeAttachmentStatus = Input.ofNullable(volumeAttachmentStatus);
             return this;
         }
 
-        public Builder setVolumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Input<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
-        public Builder setVolumeId(@Nullable String volumeId) {
+        public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Input.ofNullable(volumeId);
             return this;
         }
 
-        public Builder setVolumeSizeInBytes(@Nullable Input<Integer> volumeSizeInBytes) {
+        public Builder volumeSizeInBytes(@Nullable Input<Integer> volumeSizeInBytes) {
             this.volumeSizeInBytes = volumeSizeInBytes;
             return this;
         }
 
-        public Builder setVolumeSizeInBytes(@Nullable Integer volumeSizeInBytes) {
+        public Builder volumeSizeInBytes(@Nullable Integer volumeSizeInBytes) {
             this.volumeSizeInBytes = Input.ofNullable(volumeSizeInBytes);
             return this;
         }
 
-        public Builder setVolumeStatus(@Nullable Input<String> volumeStatus) {
+        public Builder volumeStatus(@Nullable Input<String> volumeStatus) {
             this.volumeStatus = volumeStatus;
             return this;
         }
 
-        public Builder setVolumeStatus(@Nullable String volumeStatus) {
+        public Builder volumeStatus(@Nullable String volumeStatus) {
             this.volumeStatus = Input.ofNullable(volumeStatus);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

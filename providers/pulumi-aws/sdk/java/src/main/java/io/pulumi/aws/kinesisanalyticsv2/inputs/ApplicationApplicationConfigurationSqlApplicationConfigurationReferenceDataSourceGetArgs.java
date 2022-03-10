@@ -100,42 +100,42 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setReferenceId(@Nullable Input<String> referenceId) {
+        public Builder referenceId(@Nullable Input<String> referenceId) {
             this.referenceId = referenceId;
             return this;
         }
 
-        public Builder setReferenceId(@Nullable String referenceId) {
+        public Builder referenceId(@Nullable String referenceId) {
             this.referenceId = Input.ofNullable(referenceId);
             return this;
         }
 
-        public Builder setReferenceSchema(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {
+        public Builder referenceSchema(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
 
-        public Builder setReferenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs referenceSchema) {
+        public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs referenceSchema) {
             this.referenceSchema = Input.of(Objects.requireNonNull(referenceSchema));
             return this;
         }
 
-        public Builder setS3ReferenceDataSource(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource) {
+        public Builder s3ReferenceDataSource(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
 
-        public Builder setS3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs s3ReferenceDataSource) {
+        public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Input.of(Objects.requireNonNull(s3ReferenceDataSource));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

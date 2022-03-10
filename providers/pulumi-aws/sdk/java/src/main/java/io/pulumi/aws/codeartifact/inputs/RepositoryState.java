@@ -202,102 +202,102 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder setAdministratorAccount(@Nullable Input<String> administratorAccount) {
+        public Builder administratorAccount(@Nullable Input<String> administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
-        public Builder setAdministratorAccount(@Nullable String administratorAccount) {
+        public Builder administratorAccount(@Nullable String administratorAccount) {
             this.administratorAccount = Input.ofNullable(administratorAccount);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Input<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Input.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections) {
+        public Builder externalConnections(@Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable RepositoryExternalConnectionsGetArgs externalConnections) {
+        public Builder externalConnections(@Nullable RepositoryExternalConnectionsGetArgs externalConnections) {
             this.externalConnections = Input.ofNullable(externalConnections);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Input<String> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUpstreams(@Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams) {
+        public Builder upstreams(@Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
 
-        public Builder setUpstreams(@Nullable List<RepositoryUpstreamGetArgs> upstreams) {
+        public Builder upstreams(@Nullable List<RepositoryUpstreamGetArgs> upstreams) {
             this.upstreams = Input.ofNullable(upstreams);
             return this;
         }

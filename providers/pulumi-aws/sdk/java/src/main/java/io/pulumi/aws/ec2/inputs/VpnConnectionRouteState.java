@@ -70,22 +70,22 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
     	      this.vpnConnectionId = defaults.vpnConnectionId;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setVpnConnectionId(@Nullable Input<String> vpnConnectionId) {
+        public Builder vpnConnectionId(@Nullable Input<String> vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
             return this;
         }
 
-        public Builder setVpnConnectionId(@Nullable String vpnConnectionId) {
+        public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
             this.vpnConnectionId = Input.ofNullable(vpnConnectionId);
             return this;
         }

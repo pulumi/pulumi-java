@@ -216,112 +216,112 @@ public final class TrafficMirrorSessionState extends io.pulumi.resources.Resourc
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPacketLength(@Nullable Input<Integer> packetLength) {
+        public Builder packetLength(@Nullable Input<Integer> packetLength) {
             this.packetLength = packetLength;
             return this;
         }
 
-        public Builder setPacketLength(@Nullable Integer packetLength) {
+        public Builder packetLength(@Nullable Integer packetLength) {
             this.packetLength = Input.ofNullable(packetLength);
             return this;
         }
 
-        public Builder setSessionNumber(@Nullable Input<Integer> sessionNumber) {
+        public Builder sessionNumber(@Nullable Input<Integer> sessionNumber) {
             this.sessionNumber = sessionNumber;
             return this;
         }
 
-        public Builder setSessionNumber(@Nullable Integer sessionNumber) {
+        public Builder sessionNumber(@Nullable Integer sessionNumber) {
             this.sessionNumber = Input.ofNullable(sessionNumber);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(@Nullable Input<String> trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(@Nullable Input<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = trafficMirrorFilterId;
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Input.ofNullable(trafficMirrorFilterId);
             return this;
         }
 
-        public Builder setTrafficMirrorTargetId(@Nullable Input<String> trafficMirrorTargetId) {
+        public Builder trafficMirrorTargetId(@Nullable Input<String> trafficMirrorTargetId) {
             this.trafficMirrorTargetId = trafficMirrorTargetId;
             return this;
         }
 
-        public Builder setTrafficMirrorTargetId(@Nullable String trafficMirrorTargetId) {
+        public Builder trafficMirrorTargetId(@Nullable String trafficMirrorTargetId) {
             this.trafficMirrorTargetId = Input.ofNullable(trafficMirrorTargetId);
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Input<Integer> virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Input<Integer> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Integer virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Integer virtualNetworkId) {
             this.virtualNetworkId = Input.ofNullable(virtualNetworkId);
             return this;
         }

@@ -76,17 +76,17 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
     	      this.sampleSeriesLabel = defaults.sampleSeriesLabel;
         }
 
-        public Builder setPerfMetricType(String perfMetricType) {
+        public Builder perfMetricType(String perfMetricType) {
             this.perfMetricType = Objects.requireNonNull(perfMetricType);
             return this;
         }
 
-        public Builder setPerfUnit(String perfUnit) {
+        public Builder perfUnit(String perfUnit) {
             this.perfUnit = Objects.requireNonNull(perfUnit);
             return this;
         }
 
-        public Builder setSampleSeriesLabel(String sampleSeriesLabel) {
+        public Builder sampleSeriesLabel(String sampleSeriesLabel) {
             this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
             return this;
         }

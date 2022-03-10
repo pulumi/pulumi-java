@@ -89,22 +89,22 @@ public final class GetDetectorResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setFindingPublishingFrequency(String findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(String findingPublishingFrequency) {
             this.findingPublishingFrequency = Objects.requireNonNull(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServiceRoleArn(String serviceRoleArn) {
+        public Builder serviceRoleArn(String serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

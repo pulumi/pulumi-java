@@ -85,17 +85,17 @@ public final class ConfigurationAggregatorAccountAggregationSource {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setAccountIds(List<String> accountIds) {
+        public Builder accountIds(List<String> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }

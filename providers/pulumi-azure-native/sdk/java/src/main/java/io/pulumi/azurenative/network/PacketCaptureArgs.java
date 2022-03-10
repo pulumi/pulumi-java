@@ -187,92 +187,92 @@ public final class PacketCaptureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.totalBytesPerSession = defaults.totalBytesPerSession;
         }
 
-        public Builder setBytesToCapturePerPacket(@Nullable Input<Double> bytesToCapturePerPacket) {
+        public Builder bytesToCapturePerPacket(@Nullable Input<Double> bytesToCapturePerPacket) {
             this.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
 
-        public Builder setBytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
+        public Builder bytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
             this.bytesToCapturePerPacket = Input.ofNullable(bytesToCapturePerPacket);
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<List<PacketCaptureFilterArgs>> filters) {
+        public Builder filters(@Nullable Input<List<PacketCaptureFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<PacketCaptureFilterArgs> filters) {
+        public Builder filters(@Nullable List<PacketCaptureFilterArgs> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setNetworkWatcherName(Input<String> networkWatcherName) {
+        public Builder networkWatcherName(Input<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
 
-        public Builder setNetworkWatcherName(String networkWatcherName) {
+        public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Input.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
 
-        public Builder setPacketCaptureName(@Nullable Input<String> packetCaptureName) {
+        public Builder packetCaptureName(@Nullable Input<String> packetCaptureName) {
             this.packetCaptureName = packetCaptureName;
             return this;
         }
 
-        public Builder setPacketCaptureName(@Nullable String packetCaptureName) {
+        public Builder packetCaptureName(@Nullable String packetCaptureName) {
             this.packetCaptureName = Input.ofNullable(packetCaptureName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageLocation(Input<PacketCaptureStorageLocationArgs> storageLocation) {
+        public Builder storageLocation(Input<PacketCaptureStorageLocationArgs> storageLocation) {
             this.storageLocation = Objects.requireNonNull(storageLocation);
             return this;
         }
 
-        public Builder setStorageLocation(PacketCaptureStorageLocationArgs storageLocation) {
+        public Builder storageLocation(PacketCaptureStorageLocationArgs storageLocation) {
             this.storageLocation = Input.of(Objects.requireNonNull(storageLocation));
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder setTimeLimitInSeconds(@Nullable Input<Integer> timeLimitInSeconds) {
+        public Builder timeLimitInSeconds(@Nullable Input<Integer> timeLimitInSeconds) {
             this.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
 
-        public Builder setTimeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
+        public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
             this.timeLimitInSeconds = Input.ofNullable(timeLimitInSeconds);
             return this;
         }
 
-        public Builder setTotalBytesPerSession(@Nullable Input<Double> totalBytesPerSession) {
+        public Builder totalBytesPerSession(@Nullable Input<Double> totalBytesPerSession) {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
 
-        public Builder setTotalBytesPerSession(@Nullable Double totalBytesPerSession) {
+        public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
             this.totalBytesPerSession = Input.ofNullable(totalBytesPerSession);
             return this;
         }

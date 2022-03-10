@@ -203,102 +203,102 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder setActions(Input<List<TriggerActionArgs>> actions) {
+        public Builder actions(Input<List<TriggerActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<TriggerActionArgs> actions) {
+        public Builder actions(List<TriggerActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPredicate(@Nullable Input<TriggerPredicateArgs> predicate) {
+        public Builder predicate(@Nullable Input<TriggerPredicateArgs> predicate) {
             this.predicate = predicate;
             return this;
         }
 
-        public Builder setPredicate(@Nullable TriggerPredicateArgs predicate) {
+        public Builder predicate(@Nullable TriggerPredicateArgs predicate) {
             this.predicate = Input.ofNullable(predicate);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Input<Boolean> startOnCreation) {
+        public Builder startOnCreation(@Nullable Input<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Boolean startOnCreation) {
+        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = Input.ofNullable(startOnCreation);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable Input<String> workflowName) {
+        public Builder workflowName(@Nullable Input<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable String workflowName) {
+        public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Input.ofNullable(workflowName);
             return this;
         }

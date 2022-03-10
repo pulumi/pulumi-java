@@ -75,22 +75,22 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder setPublicKeyPem(@Nullable Input<String> publicKeyPem) {
+        public Builder publicKeyPem(@Nullable Input<String> publicKeyPem) {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
 
-        public Builder setPublicKeyPem(@Nullable String publicKeyPem) {
+        public Builder publicKeyPem(@Nullable String publicKeyPem) {
             this.publicKeyPem = Input.ofNullable(publicKeyPem);
             return this;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable Input<String> signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable Input<String> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable String signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
             this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
             return this;
         }

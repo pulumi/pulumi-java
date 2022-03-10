@@ -70,22 +70,22 @@ public final class InsightFiltersProcessLaunchedAtDateRangeGetArgs extends io.pu
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(Input<String> unit) {
+        public Builder unit(Input<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Input.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder setValue(Input<Integer> value) {
+        public Builder value(Input<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

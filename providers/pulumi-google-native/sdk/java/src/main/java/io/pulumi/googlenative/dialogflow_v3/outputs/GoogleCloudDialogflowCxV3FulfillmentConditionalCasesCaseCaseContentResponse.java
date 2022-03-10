@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
     	      this.message = defaults.message;
         }
 
-        public Builder setAdditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases) {
+        public Builder additionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases) {
             this.additionalCases = Objects.requireNonNull(additionalCases);
             return this;
         }
 
-        public Builder setMessage(GoogleCloudDialogflowCxV3ResponseMessageResponse message) {
+        public Builder message(GoogleCloudDialogflowCxV3ResponseMessageResponse message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

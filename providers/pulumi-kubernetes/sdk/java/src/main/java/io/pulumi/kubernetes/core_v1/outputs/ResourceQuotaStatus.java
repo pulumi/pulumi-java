@@ -67,12 +67,12 @@ public final class ResourceQuotaStatus {
     	      this.used = defaults.used;
         }
 
-        public Builder setHard(@Nullable Map<String,String> hard) {
+        public Builder hard(@Nullable Map<String,String> hard) {
             this.hard = hard;
             return this;
         }
 
-        public Builder setUsed(@Nullable Map<String,String> used) {
+        public Builder used(@Nullable Map<String,String> used) {
             this.used = used;
             return this;
         }

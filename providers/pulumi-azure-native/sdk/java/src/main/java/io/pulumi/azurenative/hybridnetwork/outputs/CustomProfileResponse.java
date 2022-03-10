@@ -50,7 +50,7 @@ public final class CustomProfileResponse {
     	      this.metadataConfigurationPath = defaults.metadataConfigurationPath;
         }
 
-        public Builder setMetadataConfigurationPath(@Nullable String metadataConfigurationPath) {
+        public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }

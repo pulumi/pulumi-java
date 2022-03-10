@@ -99,42 +99,42 @@ public final class SkusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setProperties(@Nullable Input<SkuResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<SkuResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable SkuResourcePropertiesArgs properties) {
+        public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

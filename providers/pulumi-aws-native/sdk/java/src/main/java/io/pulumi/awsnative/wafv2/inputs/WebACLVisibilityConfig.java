@@ -77,17 +77,17 @@ public final class WebACLVisibilityConfig extends io.pulumi.resources.InvokeArgs
     	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
         }
 
-        public Builder setCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
+        public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }

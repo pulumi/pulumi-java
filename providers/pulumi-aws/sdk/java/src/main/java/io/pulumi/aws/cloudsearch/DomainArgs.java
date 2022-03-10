@@ -123,52 +123,52 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scalingParameters = defaults.scalingParameters;
         }
 
-        public Builder setEndpointOptions(@Nullable Input<DomainEndpointOptionsArgs> endpointOptions) {
+        public Builder endpointOptions(@Nullable Input<DomainEndpointOptionsArgs> endpointOptions) {
             this.endpointOptions = endpointOptions;
             return this;
         }
 
-        public Builder setEndpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
+        public Builder endpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
             this.endpointOptions = Input.ofNullable(endpointOptions);
             return this;
         }
 
-        public Builder setIndexFields(@Nullable Input<List<DomainIndexFieldArgs>> indexFields) {
+        public Builder indexFields(@Nullable Input<List<DomainIndexFieldArgs>> indexFields) {
             this.indexFields = indexFields;
             return this;
         }
 
-        public Builder setIndexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
+        public Builder indexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
             this.indexFields = Input.ofNullable(indexFields);
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Input<Boolean> multiAz) {
+        public Builder multiAz(@Nullable Input<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Boolean multiAz) {
+        public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Input.ofNullable(multiAz);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScalingParameters(@Nullable Input<DomainScalingParametersArgs> scalingParameters) {
+        public Builder scalingParameters(@Nullable Input<DomainScalingParametersArgs> scalingParameters) {
             this.scalingParameters = scalingParameters;
             return this;
         }
 
-        public Builder setScalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
+        public Builder scalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
             this.scalingParameters = Input.ofNullable(scalingParameters);
             return this;
         }

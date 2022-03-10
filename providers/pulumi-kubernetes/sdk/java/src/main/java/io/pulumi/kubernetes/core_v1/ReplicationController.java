@@ -140,8 +140,8 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
     private static ReplicationControllerArgs makeArgs(@Nullable ReplicationControllerArgs args) {
         var builder = args == null ? ReplicationControllerArgs.builder() : ReplicationControllerArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ReplicationController")
+            .apiVersion("v1")
+            .kind("ReplicationController")
             .build();
     }
 

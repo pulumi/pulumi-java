@@ -103,22 +103,22 @@ public final class OsPolicyAssignmentInstanceFilter {
     	      this.inventories = defaults.inventories;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = all;
             return this;
         }
 
-        public Builder setExclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels) {
+        public Builder exclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels) {
             this.exclusionLabels = exclusionLabels;
             return this;
         }
 
-        public Builder setInclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels) {
+        public Builder inclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels) {
             this.inclusionLabels = inclusionLabels;
             return this;
         }
 
-        public Builder setInventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
+        public Builder inventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
             this.inventories = inventories;
             return this;
         }

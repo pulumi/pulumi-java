@@ -238,122 +238,122 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setContainerProperties(@Nullable Input<String> containerProperties) {
+        public Builder containerProperties(@Nullable Input<String> containerProperties) {
             this.containerProperties = containerProperties;
             return this;
         }
 
-        public Builder setContainerProperties(@Nullable String containerProperties) {
+        public Builder containerProperties(@Nullable String containerProperties) {
             this.containerProperties = Input.ofNullable(containerProperties);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPlatformCapabilities(@Nullable Input<List<String>> platformCapabilities) {
+        public Builder platformCapabilities(@Nullable Input<List<String>> platformCapabilities) {
             this.platformCapabilities = platformCapabilities;
             return this;
         }
 
-        public Builder setPlatformCapabilities(@Nullable List<String> platformCapabilities) {
+        public Builder platformCapabilities(@Nullable List<String> platformCapabilities) {
             this.platformCapabilities = Input.ofNullable(platformCapabilities);
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable Input<Boolean> propagateTags) {
+        public Builder propagateTags(@Nullable Input<Boolean> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable Boolean propagateTags) {
+        public Builder propagateTags(@Nullable Boolean propagateTags) {
             this.propagateTags = Input.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder setRetryStrategy(@Nullable Input<JobDefinitionRetryStrategyGetArgs> retryStrategy) {
+        public Builder retryStrategy(@Nullable Input<JobDefinitionRetryStrategyGetArgs> retryStrategy) {
             this.retryStrategy = retryStrategy;
             return this;
         }
 
-        public Builder setRetryStrategy(@Nullable JobDefinitionRetryStrategyGetArgs retryStrategy) {
+        public Builder retryStrategy(@Nullable JobDefinitionRetryStrategyGetArgs retryStrategy) {
             this.retryStrategy = Input.ofNullable(retryStrategy);
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Input<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<JobDefinitionTimeoutGetArgs> timeout) {
+        public Builder timeout(@Nullable Input<JobDefinitionTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable JobDefinitionTimeoutGetArgs timeout) {
+        public Builder timeout(@Nullable JobDefinitionTimeoutGetArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

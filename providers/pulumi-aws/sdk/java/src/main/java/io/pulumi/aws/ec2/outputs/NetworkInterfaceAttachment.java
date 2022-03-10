@@ -76,17 +76,17 @@ public final class NetworkInterfaceAttachment {
     	      this.instance = defaults.instance;
         }
 
-        public Builder setAttachmentId(@Nullable String attachmentId) {
+        public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }

@@ -71,12 +71,12 @@ public final class DetectorModelIotEvents extends io.pulumi.resources.InvokeArgs
     	      this.payload = defaults.payload;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }

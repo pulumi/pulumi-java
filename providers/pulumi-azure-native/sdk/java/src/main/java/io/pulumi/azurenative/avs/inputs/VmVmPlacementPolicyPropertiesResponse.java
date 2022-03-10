@@ -140,32 +140,32 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
     	      this.vmMembers = defaults.vmMembers;
         }
 
-        public Builder setAffinityType(String affinityType) {
+        public Builder affinityType(String affinityType) {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmMembers(List<String> vmMembers) {
+        public Builder vmMembers(List<String> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }

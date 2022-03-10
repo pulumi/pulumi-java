@@ -100,52 +100,52 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setCACertificatePem(@Nullable Input<String> cACertificatePem) {
+        public Builder cACertificatePem(@Nullable Input<String> cACertificatePem) {
             this.cACertificatePem = cACertificatePem;
             return this;
         }
 
-        public Builder setCACertificatePem(@Nullable String cACertificatePem) {
+        public Builder cACertificatePem(@Nullable String cACertificatePem) {
             this.cACertificatePem = Input.ofNullable(cACertificatePem);
             return this;
         }
 
-        public Builder setCertificateMode(@Nullable Input<CertificateMode> certificateMode) {
+        public Builder certificateMode(@Nullable Input<CertificateMode> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
-        public Builder setCertificateMode(@Nullable CertificateMode certificateMode) {
+        public Builder certificateMode(@Nullable CertificateMode certificateMode) {
             this.certificateMode = Input.ofNullable(certificateMode);
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Input<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable String certificatePem) {
+        public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Input.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable String certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder setStatus(Input<CertificateStatus> status) {
+        public Builder status(Input<CertificateStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(CertificateStatus status) {
+        public Builder status(CertificateStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

@@ -56,7 +56,7 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(List<DiagnosticConditionResponse> conditions) {
+        public Builder conditions(List<DiagnosticConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

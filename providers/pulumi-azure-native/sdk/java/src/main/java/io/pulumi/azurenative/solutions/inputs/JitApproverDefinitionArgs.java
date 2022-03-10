@@ -92,32 +92,32 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,JitApproverType>> type) {
+        public Builder type(@Nullable Input<Either<String,JitApproverType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,JitApproverType> type) {
+        public Builder type(@Nullable Either<String,JitApproverType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

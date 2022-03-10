@@ -234,122 +234,122 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setAllowTracing(@Nullable Input<Boolean> allowTracing) {
+        public Builder allowTracing(@Nullable Input<Boolean> allowTracing) {
             this.allowTracing = allowTracing;
             return this;
         }
 
-        public Builder setAllowTracing(@Nullable Boolean allowTracing) {
+        public Builder allowTracing(@Nullable Boolean allowTracing) {
             this.allowTracing = Input.ofNullable(allowTracing);
             return this;
         }
 
-        public Builder setAppType(@Nullable Input<String> appType) {
+        public Builder appType(@Nullable Input<String> appType) {
             this.appType = appType;
             return this;
         }
 
-        public Builder setAppType(@Nullable String appType) {
+        public Builder appType(@Nullable String appType) {
             this.appType = Input.ofNullable(appType);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setNotify(@Nullable Input<Boolean> notify) {
+        public Builder notify(@Nullable Input<Boolean> notify) {
             this.notify = notify;
             return this;
         }
 
-        public Builder setNotify(@Nullable Boolean notify) {
+        public Builder notify(@Nullable Boolean notify) {
             this.notify = Input.ofNullable(notify);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Input<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Input.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable Input<String> secondaryKey) {
+        public Builder secondaryKey(@Nullable Input<String> secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = Input.ofNullable(secondaryKey);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Input<String> sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = Input.ofNullable(sid);
             return this;
         }
 
-        public Builder setState(@Nullable Input<SubscriptionState> state) {
+        public Builder state(@Nullable Input<SubscriptionState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable SubscriptionState state) {
+        public Builder state(@Nullable SubscriptionState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

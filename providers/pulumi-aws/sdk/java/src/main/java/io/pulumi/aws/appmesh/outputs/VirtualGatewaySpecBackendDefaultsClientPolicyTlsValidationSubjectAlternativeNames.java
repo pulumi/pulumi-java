@@ -48,7 +48,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
+        public Builder match(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

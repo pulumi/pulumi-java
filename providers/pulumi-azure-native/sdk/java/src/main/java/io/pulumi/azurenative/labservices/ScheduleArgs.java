@@ -167,82 +167,82 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZoneId = defaults.timeZoneId;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setRecurrencePattern(@Nullable Input<RecurrencePatternArgs> recurrencePattern) {
+        public Builder recurrencePattern(@Nullable Input<RecurrencePatternArgs> recurrencePattern) {
             this.recurrencePattern = recurrencePattern;
             return this;
         }
 
-        public Builder setRecurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
+        public Builder recurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
             this.recurrencePattern = Input.ofNullable(recurrencePattern);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScheduleName(@Nullable Input<String> scheduleName) {
+        public Builder scheduleName(@Nullable Input<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
 
-        public Builder setScheduleName(@Nullable String scheduleName) {
+        public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = Input.ofNullable(scheduleName);
             return this;
         }
 
-        public Builder setStartAt(@Nullable Input<String> startAt) {
+        public Builder startAt(@Nullable Input<String> startAt) {
             this.startAt = startAt;
             return this;
         }
 
-        public Builder setStartAt(@Nullable String startAt) {
+        public Builder startAt(@Nullable String startAt) {
             this.startAt = Input.ofNullable(startAt);
             return this;
         }
 
-        public Builder setStopAt(Input<String> stopAt) {
+        public Builder stopAt(Input<String> stopAt) {
             this.stopAt = Objects.requireNonNull(stopAt);
             return this;
         }
 
-        public Builder setStopAt(String stopAt) {
+        public Builder stopAt(String stopAt) {
             this.stopAt = Input.of(Objects.requireNonNull(stopAt));
             return this;
         }
 
-        public Builder setTimeZoneId(Input<String> timeZoneId) {
+        public Builder timeZoneId(Input<String> timeZoneId) {
             this.timeZoneId = Objects.requireNonNull(timeZoneId);
             return this;
         }
 
-        public Builder setTimeZoneId(String timeZoneId) {
+        public Builder timeZoneId(String timeZoneId) {
             this.timeZoneId = Input.of(Objects.requireNonNull(timeZoneId));
             return this;
         }

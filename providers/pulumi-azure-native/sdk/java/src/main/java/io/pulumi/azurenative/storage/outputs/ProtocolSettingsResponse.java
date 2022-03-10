@@ -50,7 +50,7 @@ public final class ProtocolSettingsResponse {
     	      this.smb = defaults.smb;
         }
 
-        public Builder setSmb(@Nullable SmbSettingResponse smb) {
+        public Builder smb(@Nullable SmbSettingResponse smb) {
             this.smb = smb;
             return this;
         }

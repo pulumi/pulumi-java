@@ -92,32 +92,32 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder setComputerAttributes(@Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes) {
+        public Builder computerAttributes(@Nullable Input<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes) {
             this.computerAttributes = computerAttributes;
             return this;
         }
 
-        public Builder setComputerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttributeArgs> computerAttributes) {
+        public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttributeArgs> computerAttributes) {
             this.computerAttributes = Input.ofNullable(computerAttributes);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }

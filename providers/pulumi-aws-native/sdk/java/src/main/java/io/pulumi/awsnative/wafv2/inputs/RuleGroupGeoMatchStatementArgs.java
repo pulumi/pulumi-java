@@ -64,22 +64,22 @@ public final class RuleGroupGeoMatchStatementArgs extends io.pulumi.resources.Re
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder setCountryCodes(@Nullable Input<List<String>> countryCodes) {
+        public Builder countryCodes(@Nullable Input<List<String>> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
-        public Builder setCountryCodes(@Nullable List<String> countryCodes) {
+        public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = Input.ofNullable(countryCodes);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
             return this;
         }

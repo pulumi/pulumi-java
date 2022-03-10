@@ -90,32 +90,32 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
     	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
         }
 
-        public Builder setClusterBootstrapAccountPassword(@Nullable Input<String> clusterBootstrapAccountPassword) {
+        public Builder clusterBootstrapAccountPassword(@Nullable Input<String> clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
 
-        public Builder setClusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
+        public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = Input.ofNullable(clusterBootstrapAccountPassword);
             return this;
         }
 
-        public Builder setClusterOperatorAccountPassword(@Nullable Input<String> clusterOperatorAccountPassword) {
+        public Builder clusterOperatorAccountPassword(@Nullable Input<String> clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
 
-        public Builder setClusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
+        public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = Input.ofNullable(clusterOperatorAccountPassword);
             return this;
         }
 
-        public Builder setSqlServiceAccountPassword(@Nullable Input<String> sqlServiceAccountPassword) {
+        public Builder sqlServiceAccountPassword(@Nullable Input<String> sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
 
-        public Builder setSqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
+        public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = Input.ofNullable(sqlServiceAccountPassword);
             return this;
         }

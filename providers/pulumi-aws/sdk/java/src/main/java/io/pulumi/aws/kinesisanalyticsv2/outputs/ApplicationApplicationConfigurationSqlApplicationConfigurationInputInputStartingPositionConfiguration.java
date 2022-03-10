@@ -50,7 +50,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.inputStartingPosition = defaults.inputStartingPosition;
         }
 
-        public Builder setInputStartingPosition(@Nullable String inputStartingPosition) {
+        public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
             this.inputStartingPosition = inputStartingPosition;
             return this;
         }

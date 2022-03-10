@@ -143,32 +143,32 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder setCloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis) {
+        public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis) {
             this.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKinesisToS3(@Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3) {
+        public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3) {
             this.kinesisToS3 = kinesisToS3;
             return this;
         }
 
-        public Builder setKubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader) {
+        public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader) {
             this.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
 
-        public Builder setKubernetesService(@Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService) {
+        public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService) {
             this.kubernetesService = kubernetesService;
             return this;
         }
 
-        public Builder setOfferingType(String offeringType) {
+        public Builder offeringType(String offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }

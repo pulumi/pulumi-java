@@ -66,12 +66,12 @@ public final class GoogleCloudApigeeV1OperationResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setMethods(List<String> methods) {
+        public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

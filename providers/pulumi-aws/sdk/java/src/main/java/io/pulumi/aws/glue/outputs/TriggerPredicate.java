@@ -69,12 +69,12 @@ public final class TriggerPredicate {
     	      this.logical = defaults.logical;
         }
 
-        public Builder setConditions(List<TriggerPredicateCondition> conditions) {
+        public Builder conditions(List<TriggerPredicateCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLogical(@Nullable String logical) {
+        public Builder logical(@Nullable String logical) {
             this.logical = logical;
             return this;
         }

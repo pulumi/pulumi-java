@@ -66,12 +66,12 @@ public final class StreamEncryption {
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder setEncryptionType(StreamEncryptionEncryptionType encryptionType) {
+        public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }

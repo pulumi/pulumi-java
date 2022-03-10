@@ -273,142 +273,142 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBackendAddressPools(@Nullable Input<List<BackendAddressPoolArgs>> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable Input<List<BackendAddressPoolArgs>> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
-        public Builder setBackendAddressPools(@Nullable List<BackendAddressPoolArgs> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable List<BackendAddressPoolArgs> backendAddressPools) {
             this.backendAddressPools = Input.ofNullable(backendAddressPools);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(@Nullable Input<List<FrontendIPConfigurationArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable Input<List<FrontendIPConfigurationArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(@Nullable List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable List<FrontendIPConfigurationArgs> frontendIPConfigurations) {
             this.frontendIPConfigurations = Input.ofNullable(frontendIPConfigurations);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInboundNatPools(@Nullable Input<List<InboundNatPoolArgs>> inboundNatPools) {
+        public Builder inboundNatPools(@Nullable Input<List<InboundNatPoolArgs>> inboundNatPools) {
             this.inboundNatPools = inboundNatPools;
             return this;
         }
 
-        public Builder setInboundNatPools(@Nullable List<InboundNatPoolArgs> inboundNatPools) {
+        public Builder inboundNatPools(@Nullable List<InboundNatPoolArgs> inboundNatPools) {
             this.inboundNatPools = Input.ofNullable(inboundNatPools);
             return this;
         }
 
-        public Builder setInboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
 
-        public Builder setInboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
             this.inboundNatRules = Input.ofNullable(inboundNatRules);
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable String loadBalancerName) {
+        public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Input.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable Input<List<LoadBalancingRuleArgs>> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
             this.loadBalancingRules = Input.ofNullable(loadBalancingRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOutboundRules(@Nullable Input<List<OutboundRuleArgs>> outboundRules) {
+        public Builder outboundRules(@Nullable Input<List<OutboundRuleArgs>> outboundRules) {
             this.outboundRules = outboundRules;
             return this;
         }
 
-        public Builder setOutboundRules(@Nullable List<OutboundRuleArgs> outboundRules) {
+        public Builder outboundRules(@Nullable List<OutboundRuleArgs> outboundRules) {
             this.outboundRules = Input.ofNullable(outboundRules);
             return this;
         }
 
-        public Builder setProbes(@Nullable Input<List<ProbeArgs>> probes) {
+        public Builder probes(@Nullable Input<List<ProbeArgs>> probes) {
             this.probes = probes;
             return this;
         }
 
-        public Builder setProbes(@Nullable List<ProbeArgs> probes) {
+        public Builder probes(@Nullable List<ProbeArgs> probes) {
             this.probes = Input.ofNullable(probes);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<LoadBalancerSkuArgs> sku) {
+        public Builder sku(@Nullable Input<LoadBalancerSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable LoadBalancerSkuArgs sku) {
+        public Builder sku(@Nullable LoadBalancerSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

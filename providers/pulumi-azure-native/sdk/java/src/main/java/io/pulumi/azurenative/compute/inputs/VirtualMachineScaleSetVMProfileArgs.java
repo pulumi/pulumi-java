@@ -245,122 +245,122 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     	      this.userData = defaults.userData;
         }
 
-        public Builder setBillingProfile(@Nullable Input<BillingProfileArgs> billingProfile) {
+        public Builder billingProfile(@Nullable Input<BillingProfileArgs> billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
 
-        public Builder setBillingProfile(@Nullable BillingProfileArgs billingProfile) {
+        public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
             this.billingProfile = Input.ofNullable(billingProfile);
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
             this.diagnosticsProfile = Input.ofNullable(diagnosticsProfile);
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
             this.evictionPolicy = Input.ofNullable(evictionPolicy);
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
+        public Builder extensionProfile(@Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
+        public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
             this.extensionProfile = Input.ofNullable(extensionProfile);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Input<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
+        public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority) {
+        public Builder priority(@Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
+        public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
             this.scheduledEventsProfile = Input.ofNullable(scheduledEventsProfile);
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileArgs securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Input.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }

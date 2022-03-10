@@ -50,7 +50,7 @@ public final class TransitGatewayConnectOptions {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

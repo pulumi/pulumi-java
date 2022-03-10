@@ -74,12 +74,12 @@ public final class BackendTlsPropertiesResponse extends io.pulumi.resources.Invo
     	      this.validateCertificateName = defaults.validateCertificateName;
         }
 
-        public Builder setValidateCertificateChain(@Nullable Boolean validateCertificateChain) {
+        public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
             this.validateCertificateChain = validateCertificateChain;
             return this;
         }
 
-        public Builder setValidateCertificateName(@Nullable Boolean validateCertificateName) {
+        public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
             this.validateCertificateName = validateCertificateName;
             return this;
         }

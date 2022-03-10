@@ -72,17 +72,17 @@ public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setNatAddressId(String natAddressId) {
+        public Builder natAddressId(String natAddressId) {
             this.natAddressId = Objects.requireNonNull(natAddressId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

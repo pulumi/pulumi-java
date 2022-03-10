@@ -81,17 +81,17 @@ public final class TemplateSpecVersionInfoResponse {
     	      this.timeModified = defaults.timeModified;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
 
-        public Builder setTimeModified(String timeModified) {
+        public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }

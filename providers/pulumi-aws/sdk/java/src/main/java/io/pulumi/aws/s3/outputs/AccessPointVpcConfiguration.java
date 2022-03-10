@@ -48,7 +48,7 @@ public final class AccessPointVpcConfiguration {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

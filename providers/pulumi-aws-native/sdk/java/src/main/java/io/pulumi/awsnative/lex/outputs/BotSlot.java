@@ -86,32 +86,32 @@ public final class BotSlot {
     	      this.valueElicitationSetting = defaults.valueElicitationSetting;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMultipleValuesSetting(@Nullable BotMultipleValuesSetting multipleValuesSetting) {
+        public Builder multipleValuesSetting(@Nullable BotMultipleValuesSetting multipleValuesSetting) {
             this.multipleValuesSetting = multipleValuesSetting;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObfuscationSetting(@Nullable BotObfuscationSetting obfuscationSetting) {
+        public Builder obfuscationSetting(@Nullable BotObfuscationSetting obfuscationSetting) {
             this.obfuscationSetting = obfuscationSetting;
             return this;
         }
 
-        public Builder setSlotTypeName(String slotTypeName) {
+        public Builder slotTypeName(String slotTypeName) {
             this.slotTypeName = Objects.requireNonNull(slotTypeName);
             return this;
         }
 
-        public Builder setValueElicitationSetting(BotSlotValueElicitationSetting valueElicitationSetting) {
+        public Builder valueElicitationSetting(BotSlotValueElicitationSetting valueElicitationSetting) {
             this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
             return this;
         }

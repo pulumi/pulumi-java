@@ -110,42 +110,42 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     	      this.roles = defaults.roles;
         }
 
-        public Builder setGroup(Input<String> group) {
+        public Builder group(Input<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Input.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder setMemberKey(@Nullable Input<GroupMembershipMemberKeyArgs> memberKey) {
+        public Builder memberKey(@Nullable Input<GroupMembershipMemberKeyArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
 
-        public Builder setMemberKey(@Nullable GroupMembershipMemberKeyArgs memberKey) {
+        public Builder memberKey(@Nullable GroupMembershipMemberKeyArgs memberKey) {
             this.memberKey = Input.ofNullable(memberKey);
             return this;
         }
 
-        public Builder setPreferredMemberKey(@Nullable Input<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable Input<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
             this.preferredMemberKey = preferredMemberKey;
             return this;
         }
 
-        public Builder setPreferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
             this.preferredMemberKey = Input.ofNullable(preferredMemberKey);
             return this;
         }
 
-        public Builder setRoles(Input<List<GroupMembershipRoleArgs>> roles) {
+        public Builder roles(Input<List<GroupMembershipRoleArgs>> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setRoles(List<GroupMembershipRoleArgs> roles) {
+        public Builder roles(List<GroupMembershipRoleArgs> roles) {
             this.roles = Input.of(Objects.requireNonNull(roles));
             return this;
         }

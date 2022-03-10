@@ -232,122 +232,122 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useMsi = defaults.useMsi;
         }
 
-        public Builder setAuxiliaryTenantIds(@Nullable Input<List<String>> auxiliaryTenantIds) {
+        public Builder auxiliaryTenantIds(@Nullable Input<List<String>> auxiliaryTenantIds) {
             this.auxiliaryTenantIds = auxiliaryTenantIds;
             return this;
         }
 
-        public Builder setAuxiliaryTenantIds(@Nullable List<String> auxiliaryTenantIds) {
+        public Builder auxiliaryTenantIds(@Nullable List<String> auxiliaryTenantIds) {
             this.auxiliaryTenantIds = Input.ofNullable(auxiliaryTenantIds);
             return this;
         }
 
-        public Builder setClientCertificatePassword(@Nullable Input<String> clientCertificatePassword) {
+        public Builder clientCertificatePassword(@Nullable Input<String> clientCertificatePassword) {
             this.clientCertificatePassword = Input.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
 
-        public Builder setClientCertificatePassword(@Nullable String clientCertificatePassword) {
+        public Builder clientCertificatePassword(@Nullable String clientCertificatePassword) {
             this.clientCertificatePassword = Input.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
 
-        public Builder setClientCertificatePath(@Nullable Input<String> clientCertificatePath) {
+        public Builder clientCertificatePath(@Nullable Input<String> clientCertificatePath) {
             this.clientCertificatePath = clientCertificatePath;
             return this;
         }
 
-        public Builder setClientCertificatePath(@Nullable String clientCertificatePath) {
+        public Builder clientCertificatePath(@Nullable String clientCertificatePath) {
             this.clientCertificatePath = Input.ofNullable(clientCertificatePath);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = Input.ofNullable(clientId).asSecret();
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId).asSecret();
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret).asSecret();
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret).asSecret();
             return this;
         }
 
-        public Builder setDisablePulumiPartnerId(@Nullable Input<Boolean> disablePulumiPartnerId) {
+        public Builder disablePulumiPartnerId(@Nullable Input<Boolean> disablePulumiPartnerId) {
             this.disablePulumiPartnerId = disablePulumiPartnerId;
             return this;
         }
 
-        public Builder setDisablePulumiPartnerId(@Nullable Boolean disablePulumiPartnerId) {
+        public Builder disablePulumiPartnerId(@Nullable Boolean disablePulumiPartnerId) {
             this.disablePulumiPartnerId = Input.ofNullable(disablePulumiPartnerId);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setMsiEndpoint(@Nullable Input<String> msiEndpoint) {
+        public Builder msiEndpoint(@Nullable Input<String> msiEndpoint) {
             this.msiEndpoint = msiEndpoint;
             return this;
         }
 
-        public Builder setMsiEndpoint(@Nullable String msiEndpoint) {
+        public Builder msiEndpoint(@Nullable String msiEndpoint) {
             this.msiEndpoint = Input.ofNullable(msiEndpoint);
             return this;
         }
 
-        public Builder setPartnerId(@Nullable Input<String> partnerId) {
+        public Builder partnerId(@Nullable Input<String> partnerId) {
             this.partnerId = partnerId;
             return this;
         }
 
-        public Builder setPartnerId(@Nullable String partnerId) {
+        public Builder partnerId(@Nullable String partnerId) {
             this.partnerId = Input.ofNullable(partnerId);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setUseMsi(@Nullable Input<Boolean> useMsi) {
+        public Builder useMsi(@Nullable Input<Boolean> useMsi) {
             this.useMsi = useMsi;
             return this;
         }
 
-        public Builder setUseMsi(@Nullable Boolean useMsi) {
+        public Builder useMsi(@Nullable Boolean useMsi) {
             this.useMsi = Input.ofNullable(useMsi);
             return this;
         }

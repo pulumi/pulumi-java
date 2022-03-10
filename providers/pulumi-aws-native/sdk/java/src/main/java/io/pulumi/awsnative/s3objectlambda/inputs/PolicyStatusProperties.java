@@ -53,7 +53,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder setIsPublic(@Nullable Boolean isPublic) {
+        public Builder isPublic(@Nullable Boolean isPublic) {
             this.isPublic = isPublic;
             return this;
         }

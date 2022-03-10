@@ -341,172 +341,172 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setChecksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Input<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
-        public Builder setChecksum(@Nullable String checksum) {
+        public Builder checksum(@Nullable String checksum) {
             this.checksum = Input.ofNullable(checksum);
             return this;
         }
 
-        public Builder setConclusionStatement(@Nullable Input<IntentConclusionStatementGetArgs> conclusionStatement) {
+        public Builder conclusionStatement(@Nullable Input<IntentConclusionStatementGetArgs> conclusionStatement) {
             this.conclusionStatement = conclusionStatement;
             return this;
         }
 
-        public Builder setConclusionStatement(@Nullable IntentConclusionStatementGetArgs conclusionStatement) {
+        public Builder conclusionStatement(@Nullable IntentConclusionStatementGetArgs conclusionStatement) {
             this.conclusionStatement = Input.ofNullable(conclusionStatement);
             return this;
         }
 
-        public Builder setConfirmationPrompt(@Nullable Input<IntentConfirmationPromptGetArgs> confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable Input<IntentConfirmationPromptGetArgs> confirmationPrompt) {
             this.confirmationPrompt = confirmationPrompt;
             return this;
         }
 
-        public Builder setConfirmationPrompt(@Nullable IntentConfirmationPromptGetArgs confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable IntentConfirmationPromptGetArgs confirmationPrompt) {
             this.confirmationPrompt = Input.ofNullable(confirmationPrompt);
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Boolean createVersion) {
+        public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Input.ofNullable(createVersion);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable Input<IntentDialogCodeHookGetArgs> dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable Input<IntentDialogCodeHookGetArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable IntentDialogCodeHookGetArgs dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable IntentDialogCodeHookGetArgs dialogCodeHook) {
             this.dialogCodeHook = Input.ofNullable(dialogCodeHook);
             return this;
         }
 
-        public Builder setFollowUpPrompt(@Nullable Input<IntentFollowUpPromptGetArgs> followUpPrompt) {
+        public Builder followUpPrompt(@Nullable Input<IntentFollowUpPromptGetArgs> followUpPrompt) {
             this.followUpPrompt = followUpPrompt;
             return this;
         }
 
-        public Builder setFollowUpPrompt(@Nullable IntentFollowUpPromptGetArgs followUpPrompt) {
+        public Builder followUpPrompt(@Nullable IntentFollowUpPromptGetArgs followUpPrompt) {
             this.followUpPrompt = Input.ofNullable(followUpPrompt);
             return this;
         }
 
-        public Builder setFulfillmentActivity(@Nullable Input<IntentFulfillmentActivityGetArgs> fulfillmentActivity) {
+        public Builder fulfillmentActivity(@Nullable Input<IntentFulfillmentActivityGetArgs> fulfillmentActivity) {
             this.fulfillmentActivity = fulfillmentActivity;
             return this;
         }
 
-        public Builder setFulfillmentActivity(@Nullable IntentFulfillmentActivityGetArgs fulfillmentActivity) {
+        public Builder fulfillmentActivity(@Nullable IntentFulfillmentActivityGetArgs fulfillmentActivity) {
             this.fulfillmentActivity = Input.ofNullable(fulfillmentActivity);
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable String lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable Input<String> parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable Input<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable String parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = Input.ofNullable(parentIntentSignature);
             return this;
         }
 
-        public Builder setRejectionStatement(@Nullable Input<IntentRejectionStatementGetArgs> rejectionStatement) {
+        public Builder rejectionStatement(@Nullable Input<IntentRejectionStatementGetArgs> rejectionStatement) {
             this.rejectionStatement = rejectionStatement;
             return this;
         }
 
-        public Builder setRejectionStatement(@Nullable IntentRejectionStatementGetArgs rejectionStatement) {
+        public Builder rejectionStatement(@Nullable IntentRejectionStatementGetArgs rejectionStatement) {
             this.rejectionStatement = Input.ofNullable(rejectionStatement);
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<String> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = Input.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder setSlots(@Nullable Input<List<IntentSlotGetArgs>> slots) {
+        public Builder slots(@Nullable Input<List<IntentSlotGetArgs>> slots) {
             this.slots = slots;
             return this;
         }
 
-        public Builder setSlots(@Nullable List<IntentSlotGetArgs> slots) {
+        public Builder slots(@Nullable List<IntentSlotGetArgs> slots) {
             this.slots = Input.ofNullable(slots);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -67,12 +67,12 @@ public final class DatasetCsvOptions extends io.pulumi.resources.InvokeArgs {
     	      this.headerRow = defaults.headerRow;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setHeaderRow(@Nullable Boolean headerRow) {
+        public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = headerRow;
             return this;
         }

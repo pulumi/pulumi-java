@@ -102,42 +102,42 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     	      this.scopeName = defaults.scopeName;
         }
 
-        public Builder setLinkedResourceId(@Nullable Input<String> linkedResourceId) {
+        public Builder linkedResourceId(@Nullable Input<String> linkedResourceId) {
             this.linkedResourceId = linkedResourceId;
             return this;
         }
 
-        public Builder setLinkedResourceId(@Nullable String linkedResourceId) {
+        public Builder linkedResourceId(@Nullable String linkedResourceId) {
             this.linkedResourceId = Input.ofNullable(linkedResourceId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScopeName(Input<String> scopeName) {
+        public Builder scopeName(Input<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
-        public Builder setScopeName(String scopeName) {
+        public Builder scopeName(String scopeName) {
             this.scopeName = Input.of(Objects.requireNonNull(scopeName));
             return this;
         }

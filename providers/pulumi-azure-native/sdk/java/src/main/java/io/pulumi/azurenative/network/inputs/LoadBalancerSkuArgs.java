@@ -77,22 +77,22 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable Input<Either<String,LoadBalancerSkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,LoadBalancerSkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,LoadBalancerSkuName> name) {
+        public Builder name(@Nullable Either<String,LoadBalancerSkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,LoadBalancerSkuTier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,LoadBalancerSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,LoadBalancerSkuTier> tier) {
+        public Builder tier(@Nullable Either<String,LoadBalancerSkuTier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

@@ -120,27 +120,27 @@ public final class VirtualNodeSpec {
     	      this.serviceDiscovery = defaults.serviceDiscovery;
         }
 
-        public Builder setBackendDefaults(@Nullable VirtualNodeSpecBackendDefaults backendDefaults) {
+        public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaults backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
-        public Builder setBackends(@Nullable List<VirtualNodeSpecBackend> backends) {
+        public Builder backends(@Nullable List<VirtualNodeSpecBackend> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setListener(@Nullable VirtualNodeSpecListener listener) {
+        public Builder listener(@Nullable VirtualNodeSpecListener listener) {
             this.listener = listener;
             return this;
         }
 
-        public Builder setLogging(@Nullable VirtualNodeSpecLogging logging) {
+        public Builder logging(@Nullable VirtualNodeSpecLogging logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setServiceDiscovery(@Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
+        public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
         }

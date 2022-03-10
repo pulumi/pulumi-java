@@ -61,17 +61,17 @@ public final class ComponentVersionLambdaDeviceMount {
     	      this.permission = defaults.permission;
         }
 
-        public Builder setAddGroupOwner(@Nullable Boolean addGroupOwner) {
+        public Builder addGroupOwner(@Nullable Boolean addGroupOwner) {
             this.addGroupOwner = addGroupOwner;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPermission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
+        public Builder permission(@Nullable ComponentVersionLambdaFilesystemPermission permission) {
             this.permission = permission;
             return this;
         }

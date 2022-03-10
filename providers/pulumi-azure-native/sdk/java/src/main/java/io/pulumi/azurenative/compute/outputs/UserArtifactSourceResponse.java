@@ -67,12 +67,12 @@ public final class UserArtifactSourceResponse {
     	      this.mediaLink = defaults.mediaLink;
         }
 
-        public Builder setDefaultConfigurationLink(@Nullable String defaultConfigurationLink) {
+        public Builder defaultConfigurationLink(@Nullable String defaultConfigurationLink) {
             this.defaultConfigurationLink = defaultConfigurationLink;
             return this;
         }
 
-        public Builder setMediaLink(String mediaLink) {
+        public Builder mediaLink(String mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }

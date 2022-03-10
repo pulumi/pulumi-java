@@ -120,17 +120,17 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
     	      this.retryConditions = defaults.retryConditions;
         }
 
-        public Builder setNumRetries(@Nullable Integer numRetries) {
+        public Builder numRetries(@Nullable Integer numRetries) {
             this.numRetries = numRetries;
             return this;
         }
 
-        public Builder setPerTryTimeout(@Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
+        public Builder perTryTimeout(@Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable List<String> retryConditions) {
+        public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }

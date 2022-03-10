@@ -90,17 +90,17 @@ public final class RegistryCredentialsResponse extends io.pulumi.resources.Invok
     	      this.username = defaults.username;
         }
 
-        public Builder setPasswordSecretRef(@Nullable String passwordSecretRef) {
+        public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
             this.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
-        public Builder setServer(@Nullable String server) {
+        public Builder server(@Nullable String server) {
             this.server = server;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

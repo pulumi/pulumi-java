@@ -91,32 +91,32 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setPrincipalMetadata(@Nullable Input<Map<String,String>> principalMetadata) {
+        public Builder principalMetadata(@Nullable Input<Map<String,String>> principalMetadata) {
             this.principalMetadata = principalMetadata;
             return this;
         }
 
-        public Builder setPrincipalMetadata(@Nullable Map<String,String> principalMetadata) {
+        public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
             this.principalMetadata = Input.ofNullable(principalMetadata);
             return this;
         }
 
-        public Builder setPrincipalType(Input<String> principalType) {
+        public Builder principalType(Input<String> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Input.of(Objects.requireNonNull(principalType));
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetInstanceNode extends io.pulumi.resources.InvokeArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -88,17 +88,17 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPorts(List<JitNetworkAccessPortRuleResponse> ports) {
+        public Builder ports(List<JitNetworkAccessPortRuleResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }

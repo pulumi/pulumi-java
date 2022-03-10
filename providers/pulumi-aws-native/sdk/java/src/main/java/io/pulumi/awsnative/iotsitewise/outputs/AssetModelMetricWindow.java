@@ -42,7 +42,7 @@ public final class AssetModelMetricWindow {
     	      this.tumbling = defaults.tumbling;
         }
 
-        public Builder setTumbling(@Nullable AssetModelTumblingWindow tumbling) {
+        public Builder tumbling(@Nullable AssetModelTumblingWindow tumbling) {
             this.tumbling = tumbling;
             return this;
         }

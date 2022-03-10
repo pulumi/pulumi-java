@@ -112,22 +112,22 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }

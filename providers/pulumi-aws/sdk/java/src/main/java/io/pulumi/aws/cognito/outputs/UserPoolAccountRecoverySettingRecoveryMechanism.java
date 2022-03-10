@@ -66,12 +66,12 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

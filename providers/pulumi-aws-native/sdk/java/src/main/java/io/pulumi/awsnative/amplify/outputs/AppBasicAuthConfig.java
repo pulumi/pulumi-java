@@ -60,17 +60,17 @@ public final class AppBasicAuthConfig {
     	      this.username = defaults.username;
         }
 
-        public Builder setEnableBasicAuth(@Nullable Boolean enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

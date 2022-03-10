@@ -99,22 +99,22 @@ public final class RectangleResponse {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(@Nullable String height) {
+        public Builder height(@Nullable String height) {
             this.height = height;
             return this;
         }
 
-        public Builder setLeft(@Nullable String left) {
+        public Builder left(@Nullable String left) {
             this.left = left;
             return this;
         }
 
-        public Builder setTop(@Nullable String top) {
+        public Builder top(@Nullable String top) {
             this.top = top;
             return this;
         }
 
-        public Builder setWidth(@Nullable String width) {
+        public Builder width(@Nullable String width) {
             this.width = width;
             return this;
         }

@@ -48,7 +48,7 @@ public final class MonitoringScheduleScheduleConfig {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

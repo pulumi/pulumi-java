@@ -52,12 +52,12 @@ public final class ConnectorCapacity {
     	      this.provisionedCapacity = defaults.provisionedCapacity;
         }
 
-        public Builder setAutoScaling(@Nullable ConnectorAutoScaling autoScaling) {
+        public Builder autoScaling(@Nullable ConnectorAutoScaling autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
 
-        public Builder setProvisionedCapacity(@Nullable ConnectorProvisionedCapacity provisionedCapacity) {
+        public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacity provisionedCapacity) {
             this.provisionedCapacity = provisionedCapacity;
             return this;
         }

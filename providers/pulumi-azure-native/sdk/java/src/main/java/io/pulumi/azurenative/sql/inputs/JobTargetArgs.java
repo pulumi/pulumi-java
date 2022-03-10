@@ -157,72 +157,72 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setElasticPoolName(@Nullable Input<String> elasticPoolName) {
+        public Builder elasticPoolName(@Nullable Input<String> elasticPoolName) {
             this.elasticPoolName = elasticPoolName;
             return this;
         }
 
-        public Builder setElasticPoolName(@Nullable String elasticPoolName) {
+        public Builder elasticPoolName(@Nullable String elasticPoolName) {
             this.elasticPoolName = Input.ofNullable(elasticPoolName);
             return this;
         }
 
-        public Builder setMembershipType(@Nullable Input<JobTargetGroupMembershipType> membershipType) {
+        public Builder membershipType(@Nullable Input<JobTargetGroupMembershipType> membershipType) {
             this.membershipType = membershipType;
             return this;
         }
 
-        public Builder setMembershipType(@Nullable JobTargetGroupMembershipType membershipType) {
+        public Builder membershipType(@Nullable JobTargetGroupMembershipType membershipType) {
             this.membershipType = Input.ofNullable(membershipType);
             return this;
         }
 
-        public Builder setRefreshCredential(@Nullable Input<String> refreshCredential) {
+        public Builder refreshCredential(@Nullable Input<String> refreshCredential) {
             this.refreshCredential = refreshCredential;
             return this;
         }
 
-        public Builder setRefreshCredential(@Nullable String refreshCredential) {
+        public Builder refreshCredential(@Nullable String refreshCredential) {
             this.refreshCredential = Input.ofNullable(refreshCredential);
             return this;
         }
 
-        public Builder setServerName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Input<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = Input.ofNullable(serverName);
             return this;
         }
 
-        public Builder setShardMapName(@Nullable Input<String> shardMapName) {
+        public Builder shardMapName(@Nullable Input<String> shardMapName) {
             this.shardMapName = shardMapName;
             return this;
         }
 
-        public Builder setShardMapName(@Nullable String shardMapName) {
+        public Builder shardMapName(@Nullable String shardMapName) {
             this.shardMapName = Input.ofNullable(shardMapName);
             return this;
         }
 
-        public Builder setType(Input<Either<String,JobTargetType>> type) {
+        public Builder type(Input<Either<String,JobTargetType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,JobTargetType> type) {
+        public Builder type(Either<String,JobTargetType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

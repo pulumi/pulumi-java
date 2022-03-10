@@ -42,7 +42,7 @@ public final class JobReference {
     	      this.jobId = defaults.jobId;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }

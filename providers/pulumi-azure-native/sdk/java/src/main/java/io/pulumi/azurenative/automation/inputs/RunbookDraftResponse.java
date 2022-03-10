@@ -139,32 +139,32 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDraftContentLink(@Nullable ContentLinkResponse draftContentLink) {
+        public Builder draftContentLink(@Nullable ContentLinkResponse draftContentLink) {
             this.draftContentLink = draftContentLink;
             return this;
         }
 
-        public Builder setInEdit(@Nullable Boolean inEdit) {
+        public Builder inEdit(@Nullable Boolean inEdit) {
             this.inEdit = inEdit;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setOutputTypes(@Nullable List<String> outputTypes) {
+        public Builder outputTypes(@Nullable List<String> outputTypes) {
             this.outputTypes = outputTypes;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,RunbookParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,RunbookParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }

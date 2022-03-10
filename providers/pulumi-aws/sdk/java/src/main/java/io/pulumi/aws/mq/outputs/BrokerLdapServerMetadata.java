@@ -213,57 +213,57 @@ public final class BrokerLdapServerMetadata {
     	      this.userSearchSubtree = defaults.userSearchSubtree;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setRoleBase(@Nullable String roleBase) {
+        public Builder roleBase(@Nullable String roleBase) {
             this.roleBase = roleBase;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleSearchMatching(@Nullable String roleSearchMatching) {
+        public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
             this.roleSearchMatching = roleSearchMatching;
             return this;
         }
 
-        public Builder setRoleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
+        public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
             this.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
 
-        public Builder setServiceAccountPassword(@Nullable String serviceAccountPassword) {
+        public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
             this.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
 
-        public Builder setServiceAccountUsername(@Nullable String serviceAccountUsername) {
+        public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
             this.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
 
-        public Builder setUserBase(@Nullable String userBase) {
+        public Builder userBase(@Nullable String userBase) {
             this.userBase = userBase;
             return this;
         }
 
-        public Builder setUserRoleName(@Nullable String userRoleName) {
+        public Builder userRoleName(@Nullable String userRoleName) {
             this.userRoleName = userRoleName;
             return this;
         }
 
-        public Builder setUserSearchMatching(@Nullable String userSearchMatching) {
+        public Builder userSearchMatching(@Nullable String userSearchMatching) {
             this.userSearchMatching = userSearchMatching;
             return this;
         }
 
-        public Builder setUserSearchSubtree(@Nullable Boolean userSearchSubtree) {
+        public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
             this.userSearchSubtree = userSearchSubtree;
             return this;
         }

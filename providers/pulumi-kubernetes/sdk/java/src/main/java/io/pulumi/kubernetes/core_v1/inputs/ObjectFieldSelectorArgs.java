@@ -74,22 +74,22 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     	      this.fieldPath = defaults.fieldPath;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setFieldPath(Input<String> fieldPath) {
+        public Builder fieldPath(Input<String> fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
 
-        public Builder setFieldPath(String fieldPath) {
+        public Builder fieldPath(String fieldPath) {
             this.fieldPath = Input.of(Objects.requireNonNull(fieldPath));
             return this;
         }

@@ -68,12 +68,12 @@ public final class CanaryVisualReference {
     	      this.baseScreenshots = defaults.baseScreenshots;
         }
 
-        public Builder setBaseCanaryRunId(String baseCanaryRunId) {
+        public Builder baseCanaryRunId(String baseCanaryRunId) {
             this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
             return this;
         }
 
-        public Builder setBaseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
+        public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
             this.baseScreenshots = baseScreenshots;
             return this;
         }

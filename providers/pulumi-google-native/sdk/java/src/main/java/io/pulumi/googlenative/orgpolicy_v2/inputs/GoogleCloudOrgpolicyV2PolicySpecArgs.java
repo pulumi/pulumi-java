@@ -109,42 +109,42 @@ public final class GoogleCloudOrgpolicyV2PolicySpecArgs extends io.pulumi.resour
     	      this.rules = defaults.rules;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Input.ofNullable(inheritFromParent);
             return this;
         }
 
-        public Builder setReset(@Nullable Input<Boolean> reset) {
+        public Builder reset(@Nullable Input<Boolean> reset) {
             this.reset = reset;
             return this;
         }
 
-        public Builder setReset(@Nullable Boolean reset) {
+        public Builder reset(@Nullable Boolean reset) {
             this.reset = Input.ofNullable(reset);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

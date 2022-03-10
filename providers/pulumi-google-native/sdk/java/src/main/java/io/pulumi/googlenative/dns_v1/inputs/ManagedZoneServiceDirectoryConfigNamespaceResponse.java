@@ -80,17 +80,17 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder setDeletionTime(String deletionTime) {
+        public Builder deletionTime(String deletionTime) {
             this.deletionTime = Objects.requireNonNull(deletionTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNamespaceUrl(String namespaceUrl) {
+        public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }

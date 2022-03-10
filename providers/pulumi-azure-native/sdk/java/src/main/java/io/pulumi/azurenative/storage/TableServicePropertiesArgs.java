@@ -103,42 +103,42 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     	      this.tableServiceName = defaults.tableServiceName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCors(@Nullable Input<CorsRulesArgs> cors) {
+        public Builder cors(@Nullable Input<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsRulesArgs cors) {
+        public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTableServiceName(@Nullable Input<String> tableServiceName) {
+        public Builder tableServiceName(@Nullable Input<String> tableServiceName) {
             this.tableServiceName = tableServiceName;
             return this;
         }
 
-        public Builder setTableServiceName(@Nullable String tableServiceName) {
+        public Builder tableServiceName(@Nullable String tableServiceName) {
             this.tableServiceName = Input.ofNullable(tableServiceName);
             return this;
         }

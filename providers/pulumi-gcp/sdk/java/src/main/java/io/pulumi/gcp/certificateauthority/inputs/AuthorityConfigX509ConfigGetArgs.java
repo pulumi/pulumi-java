@@ -128,52 +128,52 @@ public final class AuthorityConfigX509ConfigGetArgs extends io.pulumi.resources.
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable Input<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Input<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs> additionalExtensions) {
             this.additionalExtensions = Input.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder setCaOptions(Input<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions) {
+        public Builder caOptions(Input<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
-        public Builder setCaOptions(AuthorityConfigX509ConfigCaOptionsGetArgs caOptions) {
+        public Builder caOptions(AuthorityConfigX509ConfigCaOptionsGetArgs caOptions) {
             this.caOptions = Input.of(Objects.requireNonNull(caOptions));
             return this;
         }
 
-        public Builder setKeyUsage(Input<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage) {
+        public Builder keyUsage(Input<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setKeyUsage(AuthorityConfigX509ConfigKeyUsageGetArgs keyUsage) {
+        public Builder keyUsage(AuthorityConfigX509ConfigKeyUsageGetArgs keyUsage) {
             this.keyUsage = Input.of(Objects.requireNonNull(keyUsage));
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable Input<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds) {
+        public Builder policyIds(@Nullable Input<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<AuthorityConfigX509ConfigPolicyIdGetArgs> policyIds) {
+        public Builder policyIds(@Nullable List<AuthorityConfigX509ConfigPolicyIdGetArgs> policyIds) {
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }

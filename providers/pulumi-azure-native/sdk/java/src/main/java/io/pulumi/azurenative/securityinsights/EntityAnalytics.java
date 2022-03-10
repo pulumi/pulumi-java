@@ -168,7 +168,7 @@ public class EntityAnalytics extends io.pulumi.resources.CustomResource {
     private static EntityAnalyticsArgs makeArgs(EntityAnalyticsArgs args) {
         var builder = args == null ? EntityAnalyticsArgs.builder() : EntityAnalyticsArgs.builder(args);
         return builder
-            .setKind("EntityAnalytics")
+            .kind("EntityAnalytics")
             .build();
     }
 

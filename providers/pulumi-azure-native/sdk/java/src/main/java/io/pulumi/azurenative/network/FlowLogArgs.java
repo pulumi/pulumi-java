@@ -235,122 +235,122 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceId = defaults.targetResourceId;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFlowAnalyticsConfiguration(@Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
+        public Builder flowAnalyticsConfiguration(@Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
 
-        public Builder setFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesArgs flowAnalyticsConfiguration) {
+        public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesArgs flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = Input.ofNullable(flowAnalyticsConfiguration);
             return this;
         }
 
-        public Builder setFlowLogName(@Nullable Input<String> flowLogName) {
+        public Builder flowLogName(@Nullable Input<String> flowLogName) {
             this.flowLogName = flowLogName;
             return this;
         }
 
-        public Builder setFlowLogName(@Nullable String flowLogName) {
+        public Builder flowLogName(@Nullable String flowLogName) {
             this.flowLogName = Input.ofNullable(flowLogName);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<FlowLogFormatParametersArgs> format) {
+        public Builder format(@Nullable Input<FlowLogFormatParametersArgs> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable FlowLogFormatParametersArgs format) {
+        public Builder format(@Nullable FlowLogFormatParametersArgs format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkWatcherName(Input<String> networkWatcherName) {
+        public Builder networkWatcherName(Input<String> networkWatcherName) {
             this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
             return this;
         }
 
-        public Builder setNetworkWatcherName(String networkWatcherName) {
+        public Builder networkWatcherName(String networkWatcherName) {
             this.networkWatcherName = Input.of(Objects.requireNonNull(networkWatcherName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<RetentionPolicyParametersArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<RetentionPolicyParametersArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyParametersArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyParametersArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setStorageId(Input<String> storageId) {
+        public Builder storageId(Input<String> storageId) {
             this.storageId = Objects.requireNonNull(storageId);
             return this;
         }
 
-        public Builder setStorageId(String storageId) {
+        public Builder storageId(String storageId) {
             this.storageId = Input.of(Objects.requireNonNull(storageId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetResourceId(Input<String> targetResourceId) {
+        public Builder targetResourceId(Input<String> targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
 
-        public Builder setTargetResourceId(String targetResourceId) {
+        public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Input.of(Objects.requireNonNull(targetResourceId));
             return this;
         }

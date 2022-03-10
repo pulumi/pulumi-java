@@ -52,12 +52,12 @@ public final class OriginRequestPolicyHeadersConfig {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(@Nullable String headerBehavior) {
+        public Builder headerBehavior(@Nullable String headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
-        public Builder setHeaders(@Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
+        public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
             this.headers = headers;
             return this;
         }

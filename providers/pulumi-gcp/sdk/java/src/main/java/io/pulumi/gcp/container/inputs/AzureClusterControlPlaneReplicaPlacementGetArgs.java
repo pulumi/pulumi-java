@@ -69,22 +69,22 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAzureAvailabilityZone(Input<String> azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(Input<String> azureAvailabilityZone) {
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
 
-        public Builder setAzureAvailabilityZone(String azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             this.azureAvailabilityZone = Input.of(Objects.requireNonNull(azureAvailabilityZone));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

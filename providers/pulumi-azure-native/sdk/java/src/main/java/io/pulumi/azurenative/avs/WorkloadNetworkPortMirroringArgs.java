@@ -169,82 +169,82 @@ public final class WorkloadNetworkPortMirroringArgs extends io.pulumi.resources.
     	      this.source = defaults.source;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setDirection(@Nullable Input<Either<String,PortMirroringDirectionEnum>> direction) {
+        public Builder direction(@Nullable Input<Either<String,PortMirroringDirectionEnum>> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable Either<String,PortMirroringDirectionEnum> direction) {
+        public Builder direction(@Nullable Either<String,PortMirroringDirectionEnum> direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setPortMirroringId(@Nullable Input<String> portMirroringId) {
+        public Builder portMirroringId(@Nullable Input<String> portMirroringId) {
             this.portMirroringId = portMirroringId;
             return this;
         }
 
-        public Builder setPortMirroringId(@Nullable String portMirroringId) {
+        public Builder portMirroringId(@Nullable String portMirroringId) {
             this.portMirroringId = Input.ofNullable(portMirroringId);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }

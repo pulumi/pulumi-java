@@ -100,42 +100,42 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     	      this.permissionPolicy = defaults.permissionPolicy;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setFormatVersion(@Nullable Input<DataSetRowLevelPermissionFormatVersion> formatVersion) {
+        public Builder formatVersion(@Nullable Input<DataSetRowLevelPermissionFormatVersion> formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
 
-        public Builder setFormatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
+        public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
             this.formatVersion = Input.ofNullable(formatVersion);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setPermissionPolicy(Input<DataSetRowLevelPermissionPolicy> permissionPolicy) {
+        public Builder permissionPolicy(Input<DataSetRowLevelPermissionPolicy> permissionPolicy) {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }
 
-        public Builder setPermissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
+        public Builder permissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
             this.permissionPolicy = Input.of(Objects.requireNonNull(permissionPolicy));
             return this;
         }

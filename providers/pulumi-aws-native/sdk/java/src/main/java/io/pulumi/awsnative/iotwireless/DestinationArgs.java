@@ -137,62 +137,62 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpression(Input<String> expression) {
+        public Builder expression(Input<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder setExpressionType(Input<DestinationExpressionType> expressionType) {
+        public Builder expressionType(Input<DestinationExpressionType> expressionType) {
             this.expressionType = Objects.requireNonNull(expressionType);
             return this;
         }
 
-        public Builder setExpressionType(DestinationExpressionType expressionType) {
+        public Builder expressionType(DestinationExpressionType expressionType) {
             this.expressionType = Input.of(Objects.requireNonNull(expressionType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DestinationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DestinationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DestinationTagArgs> tags) {
+        public Builder tags(@Nullable List<DestinationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

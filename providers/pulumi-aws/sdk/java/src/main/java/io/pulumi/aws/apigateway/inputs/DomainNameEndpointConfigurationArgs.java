@@ -52,12 +52,12 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(Input<String> types) {
+        public Builder types(Input<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setTypes(String types) {
+        public Builder types(String types) {
             this.types = Input.of(Objects.requireNonNull(types));
             return this;
         }

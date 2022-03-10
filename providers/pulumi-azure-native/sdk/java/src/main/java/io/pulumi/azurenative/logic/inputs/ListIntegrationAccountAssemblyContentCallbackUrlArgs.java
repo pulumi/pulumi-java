@@ -84,17 +84,17 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlArgs extends 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAssemblyArtifactName(String assemblyArtifactName) {
+        public Builder assemblyArtifactName(String assemblyArtifactName) {
             this.assemblyArtifactName = Objects.requireNonNull(assemblyArtifactName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

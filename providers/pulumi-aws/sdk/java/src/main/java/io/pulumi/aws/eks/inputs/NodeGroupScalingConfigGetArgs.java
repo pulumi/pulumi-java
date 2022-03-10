@@ -85,32 +85,32 @@ public final class NodeGroupScalingConfigGetArgs extends io.pulumi.resources.Res
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setDesiredSize(Input<Integer> desiredSize) {
+        public Builder desiredSize(Input<Integer> desiredSize) {
             this.desiredSize = Objects.requireNonNull(desiredSize);
             return this;
         }
 
-        public Builder setDesiredSize(Integer desiredSize) {
+        public Builder desiredSize(Integer desiredSize) {
             this.desiredSize = Input.of(Objects.requireNonNull(desiredSize));
             return this;
         }
 
-        public Builder setMaxSize(Input<Integer> maxSize) {
+        public Builder maxSize(Input<Integer> maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Input.of(Objects.requireNonNull(maxSize));
             return this;
         }
 
-        public Builder setMinSize(Input<Integer> minSize) {
+        public Builder minSize(Input<Integer> minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Input.of(Objects.requireNonNull(minSize));
             return this;
         }

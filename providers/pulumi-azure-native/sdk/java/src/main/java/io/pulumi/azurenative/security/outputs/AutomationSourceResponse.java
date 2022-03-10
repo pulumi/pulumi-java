@@ -69,12 +69,12 @@ public final class AutomationSourceResponse {
     	      this.ruleSets = defaults.ruleSets;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setRuleSets(@Nullable List<AutomationRuleSetResponse> ruleSets) {
+        public Builder ruleSets(@Nullable List<AutomationRuleSetResponse> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }

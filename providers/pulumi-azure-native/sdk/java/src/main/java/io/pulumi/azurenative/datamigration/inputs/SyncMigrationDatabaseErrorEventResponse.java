@@ -88,17 +88,17 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
     	      this.timestampString = defaults.timestampString;
         }
 
-        public Builder setEventText(String eventText) {
+        public Builder eventText(String eventText) {
             this.eventText = Objects.requireNonNull(eventText);
             return this;
         }
 
-        public Builder setEventTypeString(String eventTypeString) {
+        public Builder eventTypeString(String eventTypeString) {
             this.eventTypeString = Objects.requireNonNull(eventTypeString);
             return this;
         }
 
-        public Builder setTimestampString(String timestampString) {
+        public Builder timestampString(String timestampString) {
             this.timestampString = Objects.requireNonNull(timestampString);
             return this;
         }

@@ -69,12 +69,12 @@ public final class TagSettingsPropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilterOperator(@Nullable String filterOperator) {
+        public Builder filterOperator(@Nullable String filterOperator) {
             this.filterOperator = filterOperator;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,List<String>> tags) {
+        public Builder tags(@Nullable Map<String,List<String>> tags) {
             this.tags = tags;
             return this;
         }

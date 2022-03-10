@@ -91,32 +91,32 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setKeyVault(@Nullable Input<ResourceReferenceArgs> keyVault) {
+        public Builder keyVault(@Nullable Input<ResourceReferenceArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable ResourceReferenceArgs keyVault) {
+        public Builder keyVault(@Nullable ResourceReferenceArgs keyVault) {
             this.keyVault = Input.ofNullable(keyVault);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Input<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Input.ofNullable(keyVersion);
             return this;
         }

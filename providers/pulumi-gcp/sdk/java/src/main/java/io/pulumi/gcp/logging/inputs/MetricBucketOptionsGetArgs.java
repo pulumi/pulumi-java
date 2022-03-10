@@ -93,32 +93,32 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
     	      this.linearBuckets = defaults.linearBuckets;
         }
 
-        public Builder setExplicitBuckets(@Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets) {
+        public Builder explicitBuckets(@Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets) {
             this.explicitBuckets = explicitBuckets;
             return this;
         }
 
-        public Builder setExplicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsGetArgs explicitBuckets) {
+        public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsGetArgs explicitBuckets) {
             this.explicitBuckets = Input.ofNullable(explicitBuckets);
             return this;
         }
 
-        public Builder setExponentialBuckets(@Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets) {
+        public Builder exponentialBuckets(@Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
 
-        public Builder setExponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsGetArgs exponentialBuckets) {
+        public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsGetArgs exponentialBuckets) {
             this.exponentialBuckets = Input.ofNullable(exponentialBuckets);
             return this;
         }
 
-        public Builder setLinearBuckets(@Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
+        public Builder linearBuckets(@Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
         }
 
-        public Builder setLinearBuckets(@Nullable MetricBucketOptionsLinearBucketsGetArgs linearBuckets) {
+        public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBucketsGetArgs linearBuckets) {
             this.linearBuckets = Input.ofNullable(linearBuckets);
             return this;
         }

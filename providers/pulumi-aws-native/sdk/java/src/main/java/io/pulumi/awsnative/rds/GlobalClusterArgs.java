@@ -138,62 +138,62 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageEncrypted = defaults.storageEncrypted;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setEngine(@Nullable Input<GlobalClusterEngine> engine) {
+        public Builder engine(@Nullable Input<GlobalClusterEngine> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable GlobalClusterEngine engine) {
+        public Builder engine(@Nullable GlobalClusterEngine engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setGlobalClusterIdentifier(@Nullable Input<String> globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(@Nullable Input<String> globalClusterIdentifier) {
             this.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
 
-        public Builder setGlobalClusterIdentifier(@Nullable String globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
             this.globalClusterIdentifier = Input.ofNullable(globalClusterIdentifier);
             return this;
         }
 
-        public Builder setSourceDBClusterIdentifier(@Nullable Input<String> sourceDBClusterIdentifier) {
+        public Builder sourceDBClusterIdentifier(@Nullable Input<String> sourceDBClusterIdentifier) {
             this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
             return this;
         }
 
-        public Builder setSourceDBClusterIdentifier(@Nullable String sourceDBClusterIdentifier) {
+        public Builder sourceDBClusterIdentifier(@Nullable String sourceDBClusterIdentifier) {
             this.sourceDBClusterIdentifier = Input.ofNullable(sourceDBClusterIdentifier);
             return this;
         }
 
-        public Builder setStorageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
-        public Builder setStorageEncrypted(@Nullable Boolean storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
             this.storageEncrypted = Input.ofNullable(storageEncrypted);
             return this;
         }

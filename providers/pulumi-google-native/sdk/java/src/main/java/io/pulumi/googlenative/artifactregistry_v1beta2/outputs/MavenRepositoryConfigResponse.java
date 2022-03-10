@@ -66,12 +66,12 @@ public final class MavenRepositoryConfigResponse {
     	      this.versionPolicy = defaults.versionPolicy;
         }
 
-        public Builder setAllowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
+        public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
             this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites);
             return this;
         }
 
-        public Builder setVersionPolicy(String versionPolicy) {
+        public Builder versionPolicy(String versionPolicy) {
             this.versionPolicy = Objects.requireNonNull(versionPolicy);
             return this;
         }

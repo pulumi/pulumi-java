@@ -51,7 +51,7 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sessionId = defaults.sessionId;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }

@@ -57,12 +57,12 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     	      this.datasetId = defaults.datasetId;
         }
 
-        public Builder setDatasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Input<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }

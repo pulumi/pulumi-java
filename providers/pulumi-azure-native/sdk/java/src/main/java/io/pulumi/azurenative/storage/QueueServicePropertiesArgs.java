@@ -103,42 +103,42 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCors(@Nullable Input<CorsRulesArgs> cors) {
+        public Builder cors(@Nullable Input<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsRulesArgs cors) {
+        public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setQueueServiceName(@Nullable Input<String> queueServiceName) {
+        public Builder queueServiceName(@Nullable Input<String> queueServiceName) {
             this.queueServiceName = queueServiceName;
             return this;
         }
 
-        public Builder setQueueServiceName(@Nullable String queueServiceName) {
+        public Builder queueServiceName(@Nullable String queueServiceName) {
             this.queueServiceName = Input.ofNullable(queueServiceName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

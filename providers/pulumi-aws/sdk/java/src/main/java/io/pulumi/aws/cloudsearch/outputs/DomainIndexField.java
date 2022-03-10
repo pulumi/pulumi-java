@@ -180,47 +180,47 @@ public final class DomainIndexField {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnalysisScheme(@Nullable String analysisScheme) {
+        public Builder analysisScheme(@Nullable String analysisScheme) {
             this.analysisScheme = analysisScheme;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setFacet(@Nullable Boolean facet) {
+        public Builder facet(@Nullable Boolean facet) {
             this.facet = facet;
             return this;
         }
 
-        public Builder setHighlight(@Nullable Boolean highlight) {
+        public Builder highlight(@Nullable Boolean highlight) {
             this.highlight = highlight;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder set$return(@Nullable Boolean $return) {
+        public Builder $return(@Nullable Boolean $return) {
             this.$return = $return;
             return this;
         }
 
-        public Builder setSearch(@Nullable Boolean search) {
+        public Builder search(@Nullable Boolean search) {
             this.search = search;
             return this;
         }
 
-        public Builder setSort(@Nullable Boolean sort) {
+        public Builder sort(@Nullable Boolean sort) {
             this.sort = sort;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

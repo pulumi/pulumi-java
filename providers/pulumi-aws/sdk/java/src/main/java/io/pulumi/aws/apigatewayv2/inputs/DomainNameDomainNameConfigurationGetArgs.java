@@ -119,52 +119,52 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
     	      this.targetDomainName = defaults.targetDomainName;
         }
 
-        public Builder setCertificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Input<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Input.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder setSecurityPolicy(Input<String> securityPolicy) {
+        public Builder securityPolicy(Input<String> securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Input.of(Objects.requireNonNull(securityPolicy));
             return this;
         }
 
-        public Builder setTargetDomainName(@Nullable Input<String> targetDomainName) {
+        public Builder targetDomainName(@Nullable Input<String> targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }
 
-        public Builder setTargetDomainName(@Nullable String targetDomainName) {
+        public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = Input.ofNullable(targetDomainName);
             return this;
         }

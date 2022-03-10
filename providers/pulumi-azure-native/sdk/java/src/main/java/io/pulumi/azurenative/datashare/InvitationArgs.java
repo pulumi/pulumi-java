@@ -168,82 +168,82 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetObjectId = defaults.targetObjectId;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setInvitationName(@Nullable Input<String> invitationName) {
+        public Builder invitationName(@Nullable Input<String> invitationName) {
             this.invitationName = invitationName;
             return this;
         }
 
-        public Builder setInvitationName(@Nullable String invitationName) {
+        public Builder invitationName(@Nullable String invitationName) {
             this.invitationName = Input.ofNullable(invitationName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareName(Input<String> shareName) {
+        public Builder shareName(Input<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder setTargetActiveDirectoryId(@Nullable Input<String> targetActiveDirectoryId) {
+        public Builder targetActiveDirectoryId(@Nullable Input<String> targetActiveDirectoryId) {
             this.targetActiveDirectoryId = targetActiveDirectoryId;
             return this;
         }
 
-        public Builder setTargetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
+        public Builder targetActiveDirectoryId(@Nullable String targetActiveDirectoryId) {
             this.targetActiveDirectoryId = Input.ofNullable(targetActiveDirectoryId);
             return this;
         }
 
-        public Builder setTargetEmail(@Nullable Input<String> targetEmail) {
+        public Builder targetEmail(@Nullable Input<String> targetEmail) {
             this.targetEmail = targetEmail;
             return this;
         }
 
-        public Builder setTargetEmail(@Nullable String targetEmail) {
+        public Builder targetEmail(@Nullable String targetEmail) {
             this.targetEmail = Input.ofNullable(targetEmail);
             return this;
         }
 
-        public Builder setTargetObjectId(@Nullable Input<String> targetObjectId) {
+        public Builder targetObjectId(@Nullable Input<String> targetObjectId) {
             this.targetObjectId = targetObjectId;
             return this;
         }
 
-        public Builder setTargetObjectId(@Nullable String targetObjectId) {
+        public Builder targetObjectId(@Nullable String targetObjectId) {
             this.targetObjectId = Input.ofNullable(targetObjectId);
             return this;
         }

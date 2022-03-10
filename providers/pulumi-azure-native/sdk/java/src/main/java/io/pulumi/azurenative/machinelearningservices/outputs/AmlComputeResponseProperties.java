@@ -300,82 +300,82 @@ public final class AmlComputeResponseProperties {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setAllocationState(String allocationState) {
+        public Builder allocationState(String allocationState) {
             this.allocationState = Objects.requireNonNull(allocationState);
             return this;
         }
 
-        public Builder setAllocationStateTransitionTime(String allocationStateTransitionTime) {
+        public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
             return this;
         }
 
-        public Builder setCurrentNodeCount(Integer currentNodeCount) {
+        public Builder currentNodeCount(Integer currentNodeCount) {
             this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
             return this;
         }
 
-        public Builder setEnableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
+        public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
 
-        public Builder setErrors(List<MachineLearningServiceErrorResponse> errors) {
+        public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setIsolatedNetwork(@Nullable Boolean isolatedNetwork) {
+        public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
 
-        public Builder setNodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
+        public Builder nodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
             this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setRemoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
+        public Builder remoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
+        public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ResourceIdResponse subnet) {
+        public Builder subnet(@Nullable ResourceIdResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setTargetNodeCount(Integer targetNodeCount) {
+        public Builder targetNodeCount(Integer targetNodeCount) {
             this.targetNodeCount = Objects.requireNonNull(targetNodeCount);
             return this;
         }
 
-        public Builder setUserAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
+        public Builder userAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
 
-        public Builder setVirtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
+        public Builder virtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
 
-        public Builder setVmPriority(@Nullable String vmPriority) {
+        public Builder vmPriority(@Nullable String vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

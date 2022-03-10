@@ -93,32 +93,32 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setJwts(@Nullable Input<List<JwtArgs>> jwts) {
+        public Builder jwts(@Nullable Input<List<JwtArgs>> jwts) {
             this.jwts = jwts;
             return this;
         }
 
-        public Builder setJwts(@Nullable List<JwtArgs> jwts) {
+        public Builder jwts(@Nullable List<JwtArgs> jwts) {
             this.jwts = Input.ofNullable(jwts);
             return this;
         }
 
-        public Builder setSerializedPayload(Input<String> serializedPayload) {
+        public Builder serializedPayload(Input<String> serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Input.of(Objects.requireNonNull(serializedPayload));
             return this;
         }
 
-        public Builder setSignatures(@Nullable Input<List<SignatureArgs>> signatures) {
+        public Builder signatures(@Nullable Input<List<SignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
 
-        public Builder setSignatures(@Nullable List<SignatureArgs> signatures) {
+        public Builder signatures(@Nullable List<SignatureArgs> signatures) {
             this.signatures = Input.ofNullable(signatures);
             return this;
         }

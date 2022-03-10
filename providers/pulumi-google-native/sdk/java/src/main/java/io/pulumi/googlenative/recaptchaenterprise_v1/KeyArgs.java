@@ -200,102 +200,102 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webSettings = defaults.webSettings;
         }
 
-        public Builder setAndroidSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings) {
+        public Builder androidSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings) {
             this.androidSettings = androidSettings;
             return this;
         }
 
-        public Builder setAndroidSettings(@Nullable GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
+        public Builder androidSettings(@Nullable GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs androidSettings) {
             this.androidSettings = Input.ofNullable(androidSettings);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIosSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
+        public Builder iosSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
 
-        public Builder setIosSettings(@Nullable GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
+        public Builder iosSettings(@Nullable GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs iosSettings) {
             this.iosSettings = Input.ofNullable(iosSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
+        public Builder testingOptions(@Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
+        public Builder testingOptions(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs testingOptions) {
             this.testingOptions = Input.ofNullable(testingOptions);
             return this;
         }
 
-        public Builder setWafSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
+        public Builder wafSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings) {
             this.wafSettings = wafSettings;
             return this;
         }
 
-        public Builder setWafSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
+        public Builder wafSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WafSettingsArgs wafSettings) {
             this.wafSettings = Input.ofNullable(wafSettings);
             return this;
         }
 
-        public Builder setWebSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
+        public Builder webSettings(@Nullable Input<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
 
-        public Builder setWebSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
+        public Builder webSettings(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs webSettings) {
             this.webSettings = Input.ofNullable(webSettings);
             return this;
         }

@@ -72,12 +72,12 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.r
     	      this.minInstanceCount = defaults.minInstanceCount;
         }
 
-        public Builder setMaxInstanceCount(Integer maxInstanceCount) {
+        public Builder maxInstanceCount(Integer maxInstanceCount) {
             this.maxInstanceCount = Objects.requireNonNull(maxInstanceCount);
             return this;
         }
 
-        public Builder setMinInstanceCount(Integer minInstanceCount) {
+        public Builder minInstanceCount(Integer minInstanceCount) {
             this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
             return this;
         }

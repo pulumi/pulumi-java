@@ -71,12 +71,12 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
     	      this.top = defaults.top;
         }
 
-        public Builder setRemediationName(String remediationName) {
+        public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
 
-        public Builder setTop(@Nullable Integer top) {
+        public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
         }

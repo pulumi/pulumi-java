@@ -82,17 +82,17 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setConfigMap(ConfigMapVolumeSourceResponse configMap) {
+        public Builder configMap(ConfigMapVolumeSourceResponse configMap) {
             this.configMap = Objects.requireNonNull(configMap);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(SecretVolumeSourceResponse secret) {
+        public Builder secret(SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

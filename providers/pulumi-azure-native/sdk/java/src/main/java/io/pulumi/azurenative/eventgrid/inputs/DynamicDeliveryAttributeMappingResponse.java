@@ -91,17 +91,17 @@ public final class DynamicDeliveryAttributeMappingResponse extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceField(@Nullable String sourceField) {
+        public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

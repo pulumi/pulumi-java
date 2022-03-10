@@ -158,72 +158,72 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servingStatus = defaults.servingStatus;
         }
 
-        public Builder setAuthDomain(@Nullable Input<String> authDomain) {
+        public Builder authDomain(@Nullable Input<String> authDomain) {
             this.authDomain = authDomain;
             return this;
         }
 
-        public Builder setAuthDomain(@Nullable String authDomain) {
+        public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Input.ofNullable(authDomain);
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable Input<String> databaseType) {
+        public Builder databaseType(@Nullable Input<String> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable String databaseType) {
+        public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable Input<ApplicationFeatureSettingsArgs> featureSettings) {
+        public Builder featureSettings(@Nullable Input<ApplicationFeatureSettingsArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable ApplicationFeatureSettingsArgs featureSettings) {
+        public Builder featureSettings(@Nullable ApplicationFeatureSettingsArgs featureSettings) {
             this.featureSettings = Input.ofNullable(featureSettings);
             return this;
         }
 
-        public Builder setIap(@Nullable Input<ApplicationIapArgs> iap) {
+        public Builder iap(@Nullable Input<ApplicationIapArgs> iap) {
             this.iap = iap;
             return this;
         }
 
-        public Builder setIap(@Nullable ApplicationIapArgs iap) {
+        public Builder iap(@Nullable ApplicationIapArgs iap) {
             this.iap = Input.ofNullable(iap);
             return this;
         }
 
-        public Builder setLocationId(Input<String> locationId) {
+        public Builder locationId(Input<String> locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
 
-        public Builder setLocationId(String locationId) {
+        public Builder locationId(String locationId) {
             this.locationId = Input.of(Objects.requireNonNull(locationId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServingStatus(@Nullable Input<String> servingStatus) {
+        public Builder servingStatus(@Nullable Input<String> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
-        public Builder setServingStatus(@Nullable String servingStatus) {
+        public Builder servingStatus(@Nullable String servingStatus) {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }

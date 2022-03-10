@@ -68,12 +68,12 @@ public final class GetDataCollectionRuleArgs extends io.pulumi.resources.InvokeA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDataCollectionRuleName(String dataCollectionRuleName) {
+        public Builder dataCollectionRuleName(String dataCollectionRuleName) {
             this.dataCollectionRuleName = Objects.requireNonNull(dataCollectionRuleName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

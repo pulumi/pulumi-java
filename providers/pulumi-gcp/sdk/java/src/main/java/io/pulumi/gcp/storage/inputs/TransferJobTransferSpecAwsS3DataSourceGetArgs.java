@@ -87,32 +87,32 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(@Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey) {
+        public Builder awsAccessKey(@Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey) {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
 
-        public Builder setAwsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs awsAccessKey) {
+        public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs awsAccessKey) {
             this.awsAccessKey = Input.ofNullable(awsAccessKey);
             return this;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse {
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder setRedirectUri(String redirectUri) {
+        public Builder redirectUri(String redirectUri) {
             this.redirectUri = Objects.requireNonNull(redirectUri);
             return this;
         }

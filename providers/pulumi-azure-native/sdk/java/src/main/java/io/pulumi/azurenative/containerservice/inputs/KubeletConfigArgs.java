@@ -221,112 +221,112 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topologyManagerPolicy = defaults.topologyManagerPolicy;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable Input<List<String>> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable Input<List<String>> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = Input.ofNullable(allowedUnsafeSysctls);
             return this;
         }
 
-        public Builder setContainerLogMaxFiles(@Nullable Input<Integer> containerLogMaxFiles) {
+        public Builder containerLogMaxFiles(@Nullable Input<Integer> containerLogMaxFiles) {
             this.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
 
-        public Builder setContainerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
+        public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
             this.containerLogMaxFiles = Input.ofNullable(containerLogMaxFiles);
             return this;
         }
 
-        public Builder setContainerLogMaxSizeMB(@Nullable Input<Integer> containerLogMaxSizeMB) {
+        public Builder containerLogMaxSizeMB(@Nullable Input<Integer> containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
 
-        public Builder setContainerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
+        public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = Input.ofNullable(containerLogMaxSizeMB);
             return this;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Input<Boolean> cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Input<Boolean> cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Input.ofNullable(cpuCfsQuota);
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable Input<String> cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable Input<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Input.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
 
-        public Builder setCpuManagerPolicy(@Nullable Input<String> cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(@Nullable Input<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
-        public Builder setCpuManagerPolicy(@Nullable String cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
             this.cpuManagerPolicy = Input.ofNullable(cpuManagerPolicy);
             return this;
         }
 
-        public Builder setFailSwapOn(@Nullable Input<Boolean> failSwapOn) {
+        public Builder failSwapOn(@Nullable Input<Boolean> failSwapOn) {
             this.failSwapOn = failSwapOn;
             return this;
         }
 
-        public Builder setFailSwapOn(@Nullable Boolean failSwapOn) {
+        public Builder failSwapOn(@Nullable Boolean failSwapOn) {
             this.failSwapOn = Input.ofNullable(failSwapOn);
             return this;
         }
 
-        public Builder setImageGcHighThreshold(@Nullable Input<Integer> imageGcHighThreshold) {
+        public Builder imageGcHighThreshold(@Nullable Input<Integer> imageGcHighThreshold) {
             this.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
 
-        public Builder setImageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
+        public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
             this.imageGcHighThreshold = Input.ofNullable(imageGcHighThreshold);
             return this;
         }
 
-        public Builder setImageGcLowThreshold(@Nullable Input<Integer> imageGcLowThreshold) {
+        public Builder imageGcLowThreshold(@Nullable Input<Integer> imageGcLowThreshold) {
             this.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
 
-        public Builder setImageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
+        public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
             this.imageGcLowThreshold = Input.ofNullable(imageGcLowThreshold);
             return this;
         }
 
-        public Builder setPodMaxPids(@Nullable Input<Integer> podMaxPids) {
+        public Builder podMaxPids(@Nullable Input<Integer> podMaxPids) {
             this.podMaxPids = podMaxPids;
             return this;
         }
 
-        public Builder setPodMaxPids(@Nullable Integer podMaxPids) {
+        public Builder podMaxPids(@Nullable Integer podMaxPids) {
             this.podMaxPids = Input.ofNullable(podMaxPids);
             return this;
         }
 
-        public Builder setTopologyManagerPolicy(@Nullable Input<String> topologyManagerPolicy) {
+        public Builder topologyManagerPolicy(@Nullable Input<String> topologyManagerPolicy) {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }
 
-        public Builder setTopologyManagerPolicy(@Nullable String topologyManagerPolicy) {
+        public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
             this.topologyManagerPolicy = Input.ofNullable(topologyManagerPolicy);
             return this;
         }

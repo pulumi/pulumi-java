@@ -103,42 +103,42 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCanDefer(@Nullable Input<Boolean> canDefer) {
+        public Builder canDefer(@Nullable Input<Boolean> canDefer) {
             this.canDefer = canDefer;
             return this;
         }
 
-        public Builder setCanDefer(@Nullable Boolean canDefer) {
+        public Builder canDefer(@Nullable Boolean canDefer) {
             this.canDefer = Input.ofNullable(canDefer);
             return this;
         }
 
-        public Builder setCanReschedule(@Nullable Input<Boolean> canReschedule) {
+        public Builder canReschedule(@Nullable Input<Boolean> canReschedule) {
             this.canReschedule = canReschedule;
             return this;
         }
 
-        public Builder setCanReschedule(@Nullable Boolean canReschedule) {
+        public Builder canReschedule(@Nullable Boolean canReschedule) {
             this.canReschedule = Input.ofNullable(canReschedule);
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(@Nullable Input<String> scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(@Nullable Input<String> scheduleDeadlineTime) {
             this.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Input.ofNullable(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

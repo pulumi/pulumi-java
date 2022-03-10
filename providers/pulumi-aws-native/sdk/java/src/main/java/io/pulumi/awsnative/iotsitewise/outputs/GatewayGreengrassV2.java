@@ -48,7 +48,7 @@ public final class GatewayGreengrassV2 {
     	      this.coreDeviceThingName = defaults.coreDeviceThingName;
         }
 
-        public Builder setCoreDeviceThingName(String coreDeviceThingName) {
+        public Builder coreDeviceThingName(String coreDeviceThingName) {
             this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
             return this;
         }

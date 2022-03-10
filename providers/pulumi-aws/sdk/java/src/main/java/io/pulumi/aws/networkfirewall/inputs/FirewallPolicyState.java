@@ -152,72 +152,72 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.updateToken = defaults.updateToken;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable Input<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Input<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable FirewallPolicyFirewallPolicyGetArgs firewallPolicy) {
+        public Builder firewallPolicy(@Nullable FirewallPolicyFirewallPolicyGetArgs firewallPolicy) {
             this.firewallPolicy = Input.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUpdateToken(@Nullable Input<String> updateToken) {
+        public Builder updateToken(@Nullable Input<String> updateToken) {
             this.updateToken = updateToken;
             return this;
         }
 
-        public Builder setUpdateToken(@Nullable String updateToken) {
+        public Builder updateToken(@Nullable String updateToken) {
             this.updateToken = Input.ofNullable(updateToken);
             return this;
         }

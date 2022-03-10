@@ -196,52 +196,52 @@ public final class SlackChannelPropertiesResponse {
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsValidated(Boolean isValidated) {
+        public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
 
-        public Builder setLandingPageUrl(@Nullable String landingPageUrl) {
+        public Builder landingPageUrl(@Nullable String landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
 
-        public Builder setLastSubmissionId(String lastSubmissionId) {
+        public Builder lastSubmissionId(String lastSubmissionId) {
             this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId);
             return this;
         }
 
-        public Builder setRedirectAction(String redirectAction) {
+        public Builder redirectAction(String redirectAction) {
             this.redirectAction = Objects.requireNonNull(redirectAction);
             return this;
         }
 
-        public Builder setRegisterBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
+        public Builder registerBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
             this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow);
             return this;
         }
 
-        public Builder setSigningSecret(@Nullable String signingSecret) {
+        public Builder signingSecret(@Nullable String signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
 
-        public Builder setVerificationToken(@Nullable String verificationToken) {
+        public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }

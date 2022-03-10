@@ -70,22 +70,22 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
     	      this.deleteAfter = defaults.deleteAfter;
         }
 
-        public Builder setColdStorageAfter(@Nullable Input<Integer> coldStorageAfter) {
+        public Builder coldStorageAfter(@Nullable Input<Integer> coldStorageAfter) {
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
 
-        public Builder setColdStorageAfter(@Nullable Integer coldStorageAfter) {
+        public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
             this.coldStorageAfter = Input.ofNullable(coldStorageAfter);
             return this;
         }
 
-        public Builder setDeleteAfter(@Nullable Input<Integer> deleteAfter) {
+        public Builder deleteAfter(@Nullable Input<Integer> deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
         }
 
-        public Builder setDeleteAfter(@Nullable Integer deleteAfter) {
+        public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = Input.ofNullable(deleteAfter);
             return this;
         }

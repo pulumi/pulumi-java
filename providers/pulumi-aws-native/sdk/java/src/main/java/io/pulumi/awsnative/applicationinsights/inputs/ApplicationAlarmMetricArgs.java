@@ -56,12 +56,12 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
     	      this.alarmMetricName = defaults.alarmMetricName;
         }
 
-        public Builder setAlarmMetricName(Input<String> alarmMetricName) {
+        public Builder alarmMetricName(Input<String> alarmMetricName) {
             this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
             return this;
         }
 
-        public Builder setAlarmMetricName(String alarmMetricName) {
+        public Builder alarmMetricName(String alarmMetricName) {
             this.alarmMetricName = Input.of(Objects.requireNonNull(alarmMetricName));
             return this;
         }

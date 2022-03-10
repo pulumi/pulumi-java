@@ -121,27 +121,27 @@ public final class AS2EnvelopeSettingsResponse extends io.pulumi.resources.Invok
     	      this.transmitFileNameInMimeHeader = defaults.transmitFileNameInMimeHeader;
         }
 
-        public Builder setAutogenerateFileName(Boolean autogenerateFileName) {
+        public Builder autogenerateFileName(Boolean autogenerateFileName) {
             this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
             return this;
         }
 
-        public Builder setFileNameTemplate(String fileNameTemplate) {
+        public Builder fileNameTemplate(String fileNameTemplate) {
             this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
             return this;
         }
 
-        public Builder setMessageContentType(String messageContentType) {
+        public Builder messageContentType(String messageContentType) {
             this.messageContentType = Objects.requireNonNull(messageContentType);
             return this;
         }
 
-        public Builder setSuspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
+        public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
             this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
             return this;
         }
 
-        public Builder setTransmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
+        public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
             this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
             return this;
         }

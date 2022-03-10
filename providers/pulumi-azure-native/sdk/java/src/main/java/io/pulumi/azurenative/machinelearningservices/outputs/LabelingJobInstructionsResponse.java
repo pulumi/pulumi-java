@@ -50,7 +50,7 @@ public final class LabelingJobInstructionsResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

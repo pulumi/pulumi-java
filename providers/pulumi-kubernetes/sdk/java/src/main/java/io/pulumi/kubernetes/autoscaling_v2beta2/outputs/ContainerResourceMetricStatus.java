@@ -82,17 +82,17 @@ public final class ContainerResourceMetricStatus {
     	      this.name = defaults.name;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setCurrent(MetricValueStatus current) {
+        public Builder current(MetricValueStatus current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

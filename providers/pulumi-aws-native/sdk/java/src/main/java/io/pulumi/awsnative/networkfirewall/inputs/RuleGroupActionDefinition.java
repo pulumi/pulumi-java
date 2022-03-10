@@ -49,7 +49,7 @@ public final class RuleGroupActionDefinition extends io.pulumi.resources.InvokeA
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
+        public Builder publishMetricAction(@Nullable RuleGroupPublishMetricAction publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }

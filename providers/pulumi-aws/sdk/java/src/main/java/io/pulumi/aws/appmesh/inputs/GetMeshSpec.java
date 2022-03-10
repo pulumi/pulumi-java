@@ -52,7 +52,7 @@ public final class GetMeshSpec extends io.pulumi.resources.InvokeArgs {
     	      this.egressFilters = defaults.egressFilters;
         }
 
-        public Builder setEgressFilters(List<GetMeshSpecEgressFilter> egressFilters) {
+        public Builder egressFilters(List<GetMeshSpecEgressFilter> egressFilters) {
             this.egressFilters = Objects.requireNonNull(egressFilters);
             return this;
         }

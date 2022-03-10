@@ -141,62 +141,62 @@ public final class IntegrationRuntimeComputePropertiesArgs extends io.pulumi.res
     	      this.vNetProperties = defaults.vNetProperties;
         }
 
-        public Builder setDataFlowProperties(@Nullable Input<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties) {
+        public Builder dataFlowProperties(@Nullable Input<IntegrationRuntimeDataFlowPropertiesArgs> dataFlowProperties) {
             this.dataFlowProperties = dataFlowProperties;
             return this;
         }
 
-        public Builder setDataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesArgs dataFlowProperties) {
+        public Builder dataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesArgs dataFlowProperties) {
             this.dataFlowProperties = Input.ofNullable(dataFlowProperties);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxParallelExecutionsPerNode(@Nullable Input<Integer> maxParallelExecutionsPerNode) {
+        public Builder maxParallelExecutionsPerNode(@Nullable Input<Integer> maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
 
-        public Builder setMaxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
+        public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = Input.ofNullable(maxParallelExecutionsPerNode);
             return this;
         }
 
-        public Builder setNodeSize(@Nullable Input<String> nodeSize) {
+        public Builder nodeSize(@Nullable Input<String> nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
 
-        public Builder setNodeSize(@Nullable String nodeSize) {
+        public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = Input.ofNullable(nodeSize);
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Input.ofNullable(numberOfNodes);
             return this;
         }
 
-        public Builder setVNetProperties(@Nullable Input<IntegrationRuntimeVNetPropertiesArgs> vNetProperties) {
+        public Builder vNetProperties(@Nullable Input<IntegrationRuntimeVNetPropertiesArgs> vNetProperties) {
             this.vNetProperties = vNetProperties;
             return this;
         }
 
-        public Builder setVNetProperties(@Nullable IntegrationRuntimeVNetPropertiesArgs vNetProperties) {
+        public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesArgs vNetProperties) {
             this.vNetProperties = Input.ofNullable(vNetProperties);
             return this;
         }

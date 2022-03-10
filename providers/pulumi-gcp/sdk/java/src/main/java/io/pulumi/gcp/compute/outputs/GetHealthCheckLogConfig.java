@@ -40,7 +40,7 @@ public final class GetHealthCheckLogConfig {
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }

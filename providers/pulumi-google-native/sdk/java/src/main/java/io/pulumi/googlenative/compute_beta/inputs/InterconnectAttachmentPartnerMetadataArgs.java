@@ -90,32 +90,32 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
     	      this.portalUrl = defaults.portalUrl;
         }
 
-        public Builder setInterconnectName(@Nullable Input<String> interconnectName) {
+        public Builder interconnectName(@Nullable Input<String> interconnectName) {
             this.interconnectName = interconnectName;
             return this;
         }
 
-        public Builder setInterconnectName(@Nullable String interconnectName) {
+        public Builder interconnectName(@Nullable String interconnectName) {
             this.interconnectName = Input.ofNullable(interconnectName);
             return this;
         }
 
-        public Builder setPartnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Input<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Input.ofNullable(partnerName);
             return this;
         }
 
-        public Builder setPortalUrl(@Nullable Input<String> portalUrl) {
+        public Builder portalUrl(@Nullable Input<String> portalUrl) {
             this.portalUrl = portalUrl;
             return this;
         }
 
-        public Builder setPortalUrl(@Nullable String portalUrl) {
+        public Builder portalUrl(@Nullable String portalUrl) {
             this.portalUrl = Input.ofNullable(portalUrl);
             return this;
         }

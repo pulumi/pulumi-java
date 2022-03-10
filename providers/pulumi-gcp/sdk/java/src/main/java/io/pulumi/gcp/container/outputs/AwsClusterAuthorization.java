@@ -49,7 +49,7 @@ public final class AwsClusterAuthorization {
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder setAdminUsers(List<AwsClusterAuthorizationAdminUser> adminUsers) {
+        public Builder adminUsers(List<AwsClusterAuthorizationAdminUser> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }

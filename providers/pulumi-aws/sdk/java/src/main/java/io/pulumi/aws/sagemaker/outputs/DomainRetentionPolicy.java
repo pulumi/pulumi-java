@@ -50,7 +50,7 @@ public final class DomainRetentionPolicy {
     	      this.homeEfsFileSystem = defaults.homeEfsFileSystem;
         }
 
-        public Builder setHomeEfsFileSystem(@Nullable String homeEfsFileSystem) {
+        public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
             this.homeEfsFileSystem = homeEfsFileSystem;
             return this;
         }

@@ -108,42 +108,42 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     	      this.topologyKey = defaults.topologyKey;
         }
 
-        public Builder setLabelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
+        public Builder labelSelector(@Nullable Input<LabelSelectorArgs> labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
-        public Builder setLabelSelector(@Nullable LabelSelectorArgs labelSelector) {
+        public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
             this.labelSelector = Input.ofNullable(labelSelector);
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Input.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder setNamespaces(@Nullable Input<List<String>> namespaces) {
+        public Builder namespaces(@Nullable Input<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
-        public Builder setNamespaces(@Nullable List<String> namespaces) {
+        public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = Input.ofNullable(namespaces);
             return this;
         }
 
-        public Builder setTopologyKey(Input<String> topologyKey) {
+        public Builder topologyKey(Input<String> topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
-        public Builder setTopologyKey(String topologyKey) {
+        public Builder topologyKey(String topologyKey) {
             this.topologyKey = Input.of(Objects.requireNonNull(topologyKey));
             return this;
         }

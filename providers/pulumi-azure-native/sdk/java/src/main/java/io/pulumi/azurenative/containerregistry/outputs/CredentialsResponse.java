@@ -74,12 +74,12 @@ public final class CredentialsResponse {
     	      this.sourceRegistry = defaults.sourceRegistry;
         }
 
-        public Builder setCustomRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
+        public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
             this.customRegistries = customRegistries;
             return this;
         }
 
-        public Builder setSourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
+        public Builder sourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
             this.sourceRegistry = sourceRegistry;
             return this;
         }

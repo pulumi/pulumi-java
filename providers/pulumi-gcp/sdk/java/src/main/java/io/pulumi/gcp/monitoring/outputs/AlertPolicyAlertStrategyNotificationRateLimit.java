@@ -50,7 +50,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }

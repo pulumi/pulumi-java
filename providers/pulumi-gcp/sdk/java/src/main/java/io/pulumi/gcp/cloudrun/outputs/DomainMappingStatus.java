@@ -71,22 +71,22 @@ public final class DomainMappingStatus {
     	      this.resourceRecords = defaults.resourceRecords;
         }
 
-        public Builder setConditions(@Nullable List<DomainMappingStatusCondition> conditions) {
+        public Builder conditions(@Nullable List<DomainMappingStatusCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setMappedRouteName(@Nullable String mappedRouteName) {
+        public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setResourceRecords(@Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
+        public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }

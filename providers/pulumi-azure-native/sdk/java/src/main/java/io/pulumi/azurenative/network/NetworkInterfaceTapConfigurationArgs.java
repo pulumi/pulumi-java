@@ -135,62 +135,62 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     	      this.virtualNetworkTap = defaults.virtualNetworkTap;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkInterfaceName(Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(Input<String> networkInterfaceName) {
             this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
             return this;
         }
 
-        public Builder setNetworkInterfaceName(String networkInterfaceName) {
+        public Builder networkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = Input.of(Objects.requireNonNull(networkInterfaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTapConfigurationName(@Nullable Input<String> tapConfigurationName) {
+        public Builder tapConfigurationName(@Nullable Input<String> tapConfigurationName) {
             this.tapConfigurationName = tapConfigurationName;
             return this;
         }
 
-        public Builder setTapConfigurationName(@Nullable String tapConfigurationName) {
+        public Builder tapConfigurationName(@Nullable String tapConfigurationName) {
             this.tapConfigurationName = Input.ofNullable(tapConfigurationName);
             return this;
         }
 
-        public Builder setVirtualNetworkTap(@Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap) {
+        public Builder virtualNetworkTap(@Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap) {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
 
-        public Builder setVirtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
+        public Builder virtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
             this.virtualNetworkTap = Input.ofNullable(virtualNetworkTap);
             return this;
         }

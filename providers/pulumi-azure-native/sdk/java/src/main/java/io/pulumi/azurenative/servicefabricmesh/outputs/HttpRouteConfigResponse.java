@@ -83,17 +83,17 @@ public final class HttpRouteConfigResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDestination(GatewayDestinationResponse destination) {
+        public Builder destination(GatewayDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setMatch(HttpRouteMatchRuleResponse match) {
+        public Builder match(HttpRouteMatchRuleResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

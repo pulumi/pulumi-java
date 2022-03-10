@@ -126,52 +126,52 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.repository = defaults.repository;
         }
 
-        public Builder setExec(@Nullable Input<OSPolicyResourceExecResourceArgs> exec) {
+        public Builder exec(@Nullable Input<OSPolicyResourceExecResourceArgs> exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setExec(@Nullable OSPolicyResourceExecResourceArgs exec) {
+        public Builder exec(@Nullable OSPolicyResourceExecResourceArgs exec) {
             this.exec = Input.ofNullable(exec);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<OSPolicyResourceFileResourceArgs> file) {
+        public Builder file(@Nullable Input<OSPolicyResourceFileResourceArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable OSPolicyResourceFileResourceArgs file) {
+        public Builder file(@Nullable OSPolicyResourceFileResourceArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPkg(@Nullable Input<OSPolicyResourcePackageResourceArgs> pkg) {
+        public Builder pkg(@Nullable Input<OSPolicyResourcePackageResourceArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
 
-        public Builder setPkg(@Nullable OSPolicyResourcePackageResourceArgs pkg) {
+        public Builder pkg(@Nullable OSPolicyResourcePackageResourceArgs pkg) {
             this.pkg = Input.ofNullable(pkg);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository) {
+        public Builder repository(@Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable OSPolicyResourceRepositoryResourceArgs repository) {
+        public Builder repository(@Nullable OSPolicyResourceRepositoryResourceArgs repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }

@@ -126,52 +126,52 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.warning = defaults.warning;
         }
 
-        public Builder setCategory(@Nullable Input<TestIssueCategory> category) {
+        public Builder category(@Nullable Input<TestIssueCategory> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable TestIssueCategory category) {
+        public Builder category(@Nullable TestIssueCategory category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable Input<String> errorMessage) {
+        public Builder errorMessage(@Nullable Input<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = Input.ofNullable(errorMessage);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<TestIssueSeverity> severity) {
+        public Builder severity(@Nullable Input<TestIssueSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable TestIssueSeverity severity) {
+        public Builder severity(@Nullable TestIssueSeverity severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setType(@Nullable Input<TestIssueType> type) {
+        public Builder type(@Nullable Input<TestIssueType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable TestIssueType type) {
+        public Builder type(@Nullable TestIssueType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWarning(@Nullable Input<AnyArgs> warning) {
+        public Builder warning(@Nullable Input<AnyArgs> warning) {
             this.warning = warning;
             return this;
         }
 
-        public Builder setWarning(@Nullable AnyArgs warning) {
+        public Builder warning(@Nullable AnyArgs warning) {
             this.warning = Input.ofNullable(warning);
             return this;
         }

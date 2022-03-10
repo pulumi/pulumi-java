@@ -118,27 +118,27 @@ public final class GetIntegrationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setLastUpdatedAt(@Nullable String lastUpdatedAt) {
+        public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable String objectTypeName) {
+        public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
-        public Builder setObjectTypeNames(@Nullable List<IntegrationObjectTypeMapping> objectTypeNames) {
+        public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMapping> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IntegrationTag> tags) {
+        public Builder tags(@Nullable List<IntegrationTag> tags) {
             this.tags = tags;
             return this;
         }

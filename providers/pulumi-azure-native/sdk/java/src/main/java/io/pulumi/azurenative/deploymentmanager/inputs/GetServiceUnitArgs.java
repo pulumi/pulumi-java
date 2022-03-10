@@ -100,22 +100,22 @@ public final class GetServiceUnitArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceUnitName = defaults.serviceUnitName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceTopologyName(String serviceTopologyName) {
+        public Builder serviceTopologyName(String serviceTopologyName) {
             this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
             return this;
         }
 
-        public Builder setServiceUnitName(String serviceUnitName) {
+        public Builder serviceUnitName(String serviceUnitName) {
             this.serviceUnitName = Objects.requireNonNull(serviceUnitName);
             return this;
         }

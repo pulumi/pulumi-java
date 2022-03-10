@@ -148,32 +148,32 @@ public final class AccessLevelBasicConditionDevicePolicy {
     	      this.requireScreenLock = defaults.requireScreenLock;
         }
 
-        public Builder setAllowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
-        public Builder setOsConstraints(@Nullable List<AccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints) {
+        public Builder osConstraints(@Nullable List<AccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
 
-        public Builder setRequireAdminApproval(@Nullable Boolean requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
-        public Builder setRequireCorpOwned(@Nullable Boolean requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
-        public Builder setRequireScreenLock(@Nullable Boolean requireScreenLock) {
+        public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
             this.requireScreenLock = requireScreenLock;
             return this;
         }

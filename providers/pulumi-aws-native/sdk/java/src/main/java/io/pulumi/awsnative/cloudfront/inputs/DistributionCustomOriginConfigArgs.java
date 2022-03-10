@@ -112,62 +112,62 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
     	      this.originSSLProtocols = defaults.originSSLProtocols;
         }
 
-        public Builder setHTTPPort(@Nullable Input<Integer> hTTPPort) {
+        public Builder hTTPPort(@Nullable Input<Integer> hTTPPort) {
             this.hTTPPort = hTTPPort;
             return this;
         }
 
-        public Builder setHTTPPort(@Nullable Integer hTTPPort) {
+        public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = Input.ofNullable(hTTPPort);
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Input<Integer> hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Input<Integer> hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Integer hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = Input.ofNullable(hTTPSPort);
             return this;
         }
 
-        public Builder setOriginKeepaliveTimeout(@Nullable Input<Integer> originKeepaliveTimeout) {
+        public Builder originKeepaliveTimeout(@Nullable Input<Integer> originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
 
-        public Builder setOriginKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
+        public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
             this.originKeepaliveTimeout = Input.ofNullable(originKeepaliveTimeout);
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(Input<String> originProtocolPolicy) {
+        public Builder originProtocolPolicy(Input<String> originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(String originProtocolPolicy) {
+        public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Input.of(Objects.requireNonNull(originProtocolPolicy));
             return this;
         }
 
-        public Builder setOriginReadTimeout(@Nullable Input<Integer> originReadTimeout) {
+        public Builder originReadTimeout(@Nullable Input<Integer> originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
 
-        public Builder setOriginReadTimeout(@Nullable Integer originReadTimeout) {
+        public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
             this.originReadTimeout = Input.ofNullable(originReadTimeout);
             return this;
         }
 
-        public Builder setOriginSSLProtocols(@Nullable Input<List<String>> originSSLProtocols) {
+        public Builder originSSLProtocols(@Nullable Input<List<String>> originSSLProtocols) {
             this.originSSLProtocols = originSSLProtocols;
             return this;
         }
 
-        public Builder setOriginSSLProtocols(@Nullable List<String> originSSLProtocols) {
+        public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
             this.originSSLProtocols = Input.ofNullable(originSSLProtocols);
             return this;
         }

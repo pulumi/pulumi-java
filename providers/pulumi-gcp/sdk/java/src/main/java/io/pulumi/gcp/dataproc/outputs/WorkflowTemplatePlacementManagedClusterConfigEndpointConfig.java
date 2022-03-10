@@ -71,12 +71,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
     	      this.httpPorts = defaults.httpPorts;
         }
 
-        public Builder setEnableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
-        public Builder setHttpPorts(@Nullable Map<String,String> httpPorts) {
+        public Builder httpPorts(@Nullable Map<String,String> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
         }

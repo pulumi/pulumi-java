@@ -247,67 +247,67 @@ public final class GetvNetPeeringResult {
     	      this.useRemoteGateways = defaults.useRemoteGateways;
         }
 
-        public Builder setAllowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
+        public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
 
-        public Builder setAllowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
+        public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
 
-        public Builder setAllowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
+        public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
 
-        public Builder setDatabricksAddressSpace(@Nullable AddressSpaceResponse databricksAddressSpace) {
+        public Builder databricksAddressSpace(@Nullable AddressSpaceResponse databricksAddressSpace) {
             this.databricksAddressSpace = databricksAddressSpace;
             return this;
         }
 
-        public Builder setDatabricksVirtualNetwork(@Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork) {
+        public Builder databricksVirtualNetwork(@Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork) {
             this.databricksVirtualNetwork = databricksVirtualNetwork;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringState(String peeringState) {
+        public Builder peeringState(String peeringState) {
             this.peeringState = Objects.requireNonNull(peeringState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRemoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
+        public Builder remoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
 
-        public Builder setRemoteVirtualNetwork(VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork) {
             this.remoteVirtualNetwork = Objects.requireNonNull(remoteVirtualNetwork);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseRemoteGateways(@Nullable Boolean useRemoteGateways) {
+        public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }

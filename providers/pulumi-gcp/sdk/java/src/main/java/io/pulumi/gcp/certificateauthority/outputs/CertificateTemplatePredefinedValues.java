@@ -120,27 +120,27 @@ public final class CertificateTemplatePredefinedValues {
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setCaOptions(@Nullable CertificateTemplatePredefinedValuesCaOptions caOptions) {
+        public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptions caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage) {
+        public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
+        public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }

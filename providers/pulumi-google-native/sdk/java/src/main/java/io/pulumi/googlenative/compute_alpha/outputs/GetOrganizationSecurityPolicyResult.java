@@ -339,107 +339,107 @@ public final class GetOrganizationSecurityPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder setAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
+        public Builder advancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
             this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
             return this;
         }
 
-        public Builder setAssociations(List<SecurityPolicyAssociationResponse> associations) {
+        public Builder associations(List<SecurityPolicyAssociationResponse> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
 
-        public Builder setCloudArmorConfig(SecurityPolicyCloudArmorConfigResponse cloudArmorConfig) {
+        public Builder cloudArmorConfig(SecurityPolicyCloudArmorConfigResponse cloudArmorConfig) {
             this.cloudArmorConfig = Objects.requireNonNull(cloudArmorConfig);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDdosProtectionConfig(SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig) {
+        public Builder ddosProtectionConfig(SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig) {
             this.ddosProtectionConfig = Objects.requireNonNull(ddosProtectionConfig);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
+        public Builder recaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRuleTupleCount(Integer ruleTupleCount) {
+        public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
 
-        public Builder setRules(List<SecurityPolicyRuleResponse> rules) {
+        public Builder rules(List<SecurityPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

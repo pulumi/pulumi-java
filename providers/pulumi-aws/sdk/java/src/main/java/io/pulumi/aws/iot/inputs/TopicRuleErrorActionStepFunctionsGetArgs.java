@@ -86,32 +86,32 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
     	      this.stateMachineName = defaults.stateMachineName;
         }
 
-        public Builder setExecutionNamePrefix(@Nullable Input<String> executionNamePrefix) {
+        public Builder executionNamePrefix(@Nullable Input<String> executionNamePrefix) {
             this.executionNamePrefix = executionNamePrefix;
             return this;
         }
 
-        public Builder setExecutionNamePrefix(@Nullable String executionNamePrefix) {
+        public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
             this.executionNamePrefix = Input.ofNullable(executionNamePrefix);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStateMachineName(Input<String> stateMachineName) {
+        public Builder stateMachineName(Input<String> stateMachineName) {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
         }
 
-        public Builder setStateMachineName(String stateMachineName) {
+        public Builder stateMachineName(String stateMachineName) {
             this.stateMachineName = Input.of(Objects.requireNonNull(stateMachineName));
             return this;
         }

@@ -90,17 +90,17 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
     	      this.state = defaults.state;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setServicemesh(ServiceMeshFeatureStateResponse servicemesh) {
+        public Builder servicemesh(ServiceMeshFeatureStateResponse servicemesh) {
             this.servicemesh = Objects.requireNonNull(servicemesh);
             return this;
         }
 
-        public Builder setState(FeatureStateResponse state) {
+        public Builder state(FeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

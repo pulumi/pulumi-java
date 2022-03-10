@@ -136,62 +136,62 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terms = defaults.terms;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareKind(@Nullable Input<Either<String,ShareKind>> shareKind) {
+        public Builder shareKind(@Nullable Input<Either<String,ShareKind>> shareKind) {
             this.shareKind = shareKind;
             return this;
         }
 
-        public Builder setShareKind(@Nullable Either<String,ShareKind> shareKind) {
+        public Builder shareKind(@Nullable Either<String,ShareKind> shareKind) {
             this.shareKind = Input.ofNullable(shareKind);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setTerms(@Nullable Input<String> terms) {
+        public Builder terms(@Nullable Input<String> terms) {
             this.terms = terms;
             return this;
         }
 
-        public Builder setTerms(@Nullable String terms) {
+        public Builder terms(@Nullable String terms) {
             this.terms = Input.ofNullable(terms);
             return this;
         }

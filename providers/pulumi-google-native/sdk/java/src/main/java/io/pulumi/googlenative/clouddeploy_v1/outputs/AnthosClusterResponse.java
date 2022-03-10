@@ -48,7 +48,7 @@ public final class AnthosClusterResponse {
     	      this.membership = defaults.membership;
         }
 
-        public Builder setMembership(String membership) {
+        public Builder membership(String membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }

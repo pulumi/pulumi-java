@@ -68,12 +68,12 @@ public final class DataPoolLocationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEncryption(@Nullable DataPoolEncryptionResponse encryption) {
+        public Builder encryption(@Nullable DataPoolEncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

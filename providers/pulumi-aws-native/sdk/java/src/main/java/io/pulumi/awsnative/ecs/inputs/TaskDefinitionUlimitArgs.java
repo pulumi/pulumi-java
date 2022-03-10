@@ -74,32 +74,32 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     	      this.softLimit = defaults.softLimit;
         }
 
-        public Builder setHardLimit(Input<Integer> hardLimit) {
+        public Builder hardLimit(Input<Integer> hardLimit) {
             this.hardLimit = Objects.requireNonNull(hardLimit);
             return this;
         }
 
-        public Builder setHardLimit(Integer hardLimit) {
+        public Builder hardLimit(Integer hardLimit) {
             this.hardLimit = Input.of(Objects.requireNonNull(hardLimit));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSoftLimit(Input<Integer> softLimit) {
+        public Builder softLimit(Input<Integer> softLimit) {
             this.softLimit = Objects.requireNonNull(softLimit);
             return this;
         }
 
-        public Builder setSoftLimit(Integer softLimit) {
+        public Builder softLimit(Integer softLimit) {
             this.softLimit = Input.of(Objects.requireNonNull(softLimit));
             return this;
         }

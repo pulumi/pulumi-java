@@ -136,62 +136,62 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
     	      this.vmGroupId = defaults.vmGroupId;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setVmGroupId(@Nullable Input<String> vmGroupId) {
+        public Builder vmGroupId(@Nullable Input<String> vmGroupId) {
             this.vmGroupId = vmGroupId;
             return this;
         }
 
-        public Builder setVmGroupId(@Nullable String vmGroupId) {
+        public Builder vmGroupId(@Nullable String vmGroupId) {
             this.vmGroupId = Input.ofNullable(vmGroupId);
             return this;
         }

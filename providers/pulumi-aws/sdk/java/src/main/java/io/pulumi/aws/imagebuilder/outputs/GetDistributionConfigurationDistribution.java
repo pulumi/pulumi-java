@@ -83,17 +83,17 @@ public final class GetDistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
+        public Builder amiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
             this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations);
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

@@ -102,22 +102,22 @@ public final class RequestContractResponse {
     	      this.representations = defaults.representations;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<ParameterContractResponse> headers) {
+        public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable List<ParameterContractResponse> queryParameters) {
+        public Builder queryParameters(@Nullable List<ParameterContractResponse> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
-        public Builder setRepresentations(@Nullable List<RepresentationContractResponse> representations) {
+        public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             this.representations = representations;
             return this;
         }

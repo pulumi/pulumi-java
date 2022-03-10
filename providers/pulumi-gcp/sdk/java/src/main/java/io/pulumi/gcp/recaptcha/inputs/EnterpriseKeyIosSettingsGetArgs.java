@@ -72,22 +72,22 @@ public final class EnterpriseKeyIosSettingsGetArgs extends io.pulumi.resources.R
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder setAllowAllBundleIds(@Nullable Input<Boolean> allowAllBundleIds) {
+        public Builder allowAllBundleIds(@Nullable Input<Boolean> allowAllBundleIds) {
             this.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
 
-        public Builder setAllowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
+        public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
             this.allowAllBundleIds = Input.ofNullable(allowAllBundleIds);
             return this;
         }
 
-        public Builder setAllowedBundleIds(@Nullable Input<List<String>> allowedBundleIds) {
+        public Builder allowedBundleIds(@Nullable Input<List<String>> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
-        public Builder setAllowedBundleIds(@Nullable List<String> allowedBundleIds) {
+        public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
             this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
             return this;
         }

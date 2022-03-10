@@ -48,7 +48,7 @@ public final class UptimeCheckConfigTcpCheck {
     	      this.port = defaults.port;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

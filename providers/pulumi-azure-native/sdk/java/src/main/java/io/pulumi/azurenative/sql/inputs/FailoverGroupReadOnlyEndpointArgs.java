@@ -59,12 +59,12 @@ public final class FailoverGroupReadOnlyEndpointArgs extends io.pulumi.resources
     	      this.failoverPolicy = defaults.failoverPolicy;
         }
 
-        public Builder setFailoverPolicy(@Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
+        public Builder failoverPolicy(@Nullable Input<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }
 
-        public Builder setFailoverPolicy(@Nullable Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
+        public Builder failoverPolicy(@Nullable Either<String,ReadOnlyEndpointFailoverPolicy> failoverPolicy) {
             this.failoverPolicy = Input.ofNullable(failoverPolicy);
             return this;
         }

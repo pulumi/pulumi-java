@@ -122,27 +122,27 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.lastKeyRotationTimestamp = defaults.lastKeyRotationTimestamp;
         }
 
-        public Builder setCurrentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
+        public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
             this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setLastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
+        public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }

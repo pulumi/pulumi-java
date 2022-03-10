@@ -89,17 +89,17 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(HoursOfOperationConfigDay day) {
+        public Builder day(HoursOfOperationConfigDay day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setEndTime(HoursOfOperationTimeSlice endTime) {
+        public Builder endTime(HoursOfOperationTimeSlice endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(HoursOfOperationTimeSlice startTime) {
+        public Builder startTime(HoursOfOperationTimeSlice startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

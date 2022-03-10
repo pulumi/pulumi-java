@@ -63,22 +63,22 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder setNumberOfDays(@Nullable Input<Integer> numberOfDays) {
+        public Builder numberOfDays(@Nullable Input<Integer> numberOfDays) {
             this.numberOfDays = numberOfDays;
             return this;
         }
 
-        public Builder setNumberOfDays(@Nullable Integer numberOfDays) {
+        public Builder numberOfDays(@Nullable Integer numberOfDays) {
             this.numberOfDays = Input.ofNullable(numberOfDays);
             return this;
         }
 
-        public Builder setUnlimited(@Nullable Input<Boolean> unlimited) {
+        public Builder unlimited(@Nullable Input<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
 
-        public Builder setUnlimited(@Nullable Boolean unlimited) {
+        public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = Input.ofNullable(unlimited);
             return this;
         }

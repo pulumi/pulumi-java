@@ -67,12 +67,12 @@ public final class LaunchProfileStreamingSessionStorageRoot {
     	      this.windows = defaults.windows;
         }
 
-        public Builder setLinux(@Nullable String linux) {
+        public Builder linux(@Nullable String linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setWindows(@Nullable String windows) {
+        public Builder windows(@Nullable String windows) {
             this.windows = windows;
             return this;
         }

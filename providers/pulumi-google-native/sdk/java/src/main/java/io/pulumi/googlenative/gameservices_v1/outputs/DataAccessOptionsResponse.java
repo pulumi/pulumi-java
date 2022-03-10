@@ -40,7 +40,7 @@ public final class DataAccessOptionsResponse {
     	      this.logMode = defaults.logMode;
         }
 
-        public Builder setLogMode(String logMode) {
+        public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }

@@ -164,92 +164,92 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setCertificateAuthorityId(Input<String> certificateAuthorityId) {
+        public Builder certificateAuthorityId(Input<String> certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
 
-        public Builder setCertificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Input.of(Objects.requireNonNull(certificateAuthorityId));
             return this;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<CertificateConfigArgs> config) {
+        public Builder config(@Nullable Input<CertificateConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable CertificateConfigArgs config) {
+        public Builder config(@Nullable CertificateConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifetime(Input<String> lifetime) {
+        public Builder lifetime(Input<String> lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Input.of(Objects.requireNonNull(lifetime));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPemCsr(@Nullable Input<String> pemCsr) {
+        public Builder pemCsr(@Nullable Input<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
 
-        public Builder setPemCsr(@Nullable String pemCsr) {
+        public Builder pemCsr(@Nullable String pemCsr) {
             this.pemCsr = Input.ofNullable(pemCsr);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

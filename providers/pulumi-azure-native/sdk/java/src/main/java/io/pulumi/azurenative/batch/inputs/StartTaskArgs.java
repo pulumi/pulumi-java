@@ -153,72 +153,72 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForSuccess = defaults.waitForSuccess;
         }
 
-        public Builder setCommandLine(@Nullable Input<String> commandLine) {
+        public Builder commandLine(@Nullable Input<String> commandLine) {
             this.commandLine = commandLine;
             return this;
         }
 
-        public Builder setCommandLine(@Nullable String commandLine) {
+        public Builder commandLine(@Nullable String commandLine) {
             this.commandLine = Input.ofNullable(commandLine);
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable Input<TaskContainerSettingsArgs> containerSettings) {
+        public Builder containerSettings(@Nullable Input<TaskContainerSettingsArgs> containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable TaskContainerSettingsArgs containerSettings) {
+        public Builder containerSettings(@Nullable TaskContainerSettingsArgs containerSettings) {
             this.containerSettings = Input.ofNullable(containerSettings);
             return this;
         }
 
-        public Builder setEnvironmentSettings(@Nullable Input<List<EnvironmentSettingArgs>> environmentSettings) {
+        public Builder environmentSettings(@Nullable Input<List<EnvironmentSettingArgs>> environmentSettings) {
             this.environmentSettings = environmentSettings;
             return this;
         }
 
-        public Builder setEnvironmentSettings(@Nullable List<EnvironmentSettingArgs> environmentSettings) {
+        public Builder environmentSettings(@Nullable List<EnvironmentSettingArgs> environmentSettings) {
             this.environmentSettings = Input.ofNullable(environmentSettings);
             return this;
         }
 
-        public Builder setMaxTaskRetryCount(@Nullable Input<Integer> maxTaskRetryCount) {
+        public Builder maxTaskRetryCount(@Nullable Input<Integer> maxTaskRetryCount) {
             this.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
 
-        public Builder setMaxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
+        public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
             this.maxTaskRetryCount = Input.ofNullable(maxTaskRetryCount);
             return this;
         }
 
-        public Builder setResourceFiles(@Nullable Input<List<ResourceFileArgs>> resourceFiles) {
+        public Builder resourceFiles(@Nullable Input<List<ResourceFileArgs>> resourceFiles) {
             this.resourceFiles = resourceFiles;
             return this;
         }
 
-        public Builder setResourceFiles(@Nullable List<ResourceFileArgs> resourceFiles) {
+        public Builder resourceFiles(@Nullable List<ResourceFileArgs> resourceFiles) {
             this.resourceFiles = Input.ofNullable(resourceFiles);
             return this;
         }
 
-        public Builder setUserIdentity(@Nullable Input<UserIdentityArgs> userIdentity) {
+        public Builder userIdentity(@Nullable Input<UserIdentityArgs> userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
 
-        public Builder setUserIdentity(@Nullable UserIdentityArgs userIdentity) {
+        public Builder userIdentity(@Nullable UserIdentityArgs userIdentity) {
             this.userIdentity = Input.ofNullable(userIdentity);
             return this;
         }
 
-        public Builder setWaitForSuccess(@Nullable Input<Boolean> waitForSuccess) {
+        public Builder waitForSuccess(@Nullable Input<Boolean> waitForSuccess) {
             this.waitForSuccess = waitForSuccess;
             return this;
         }
 
-        public Builder setWaitForSuccess(@Nullable Boolean waitForSuccess) {
+        public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
             this.waitForSuccess = Input.ofNullable(waitForSuccess);
             return this;
         }

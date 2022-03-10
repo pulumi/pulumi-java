@@ -97,22 +97,22 @@ public final class PersistenceConfigResponse {
     	      this.rdbSnapshotStartTime = defaults.rdbSnapshotStartTime;
         }
 
-        public Builder setPersistenceMode(String persistenceMode) {
+        public Builder persistenceMode(String persistenceMode) {
             this.persistenceMode = Objects.requireNonNull(persistenceMode);
             return this;
         }
 
-        public Builder setRdbNextSnapshotTime(String rdbNextSnapshotTime) {
+        public Builder rdbNextSnapshotTime(String rdbNextSnapshotTime) {
             this.rdbNextSnapshotTime = Objects.requireNonNull(rdbNextSnapshotTime);
             return this;
         }
 
-        public Builder setRdbSnapshotPeriod(String rdbSnapshotPeriod) {
+        public Builder rdbSnapshotPeriod(String rdbSnapshotPeriod) {
             this.rdbSnapshotPeriod = Objects.requireNonNull(rdbSnapshotPeriod);
             return this;
         }
 
-        public Builder setRdbSnapshotStartTime(String rdbSnapshotStartTime) {
+        public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
             this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
             return this;
         }

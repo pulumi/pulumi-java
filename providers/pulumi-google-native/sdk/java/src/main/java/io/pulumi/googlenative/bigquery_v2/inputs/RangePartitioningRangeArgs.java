@@ -90,32 +90,32 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(@Nullable Input<String> end) {
+        public Builder end(@Nullable Input<String> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = Input.ofNullable(end);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Input<String> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setStart(@Nullable Input<String> start) {
+        public Builder start(@Nullable Input<String> start) {
             this.start = start;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = Input.ofNullable(start);
             return this;
         }

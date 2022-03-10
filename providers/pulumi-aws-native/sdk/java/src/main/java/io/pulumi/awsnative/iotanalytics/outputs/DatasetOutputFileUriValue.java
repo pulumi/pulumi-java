@@ -40,7 +40,7 @@ public final class DatasetOutputFileUriValue {
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }

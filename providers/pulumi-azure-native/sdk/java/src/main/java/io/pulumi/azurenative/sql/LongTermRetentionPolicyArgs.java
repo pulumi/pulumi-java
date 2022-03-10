@@ -167,82 +167,82 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     	      this.yearlyRetention = defaults.yearlyRetention;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setMonthlyRetention(@Nullable Input<String> monthlyRetention) {
+        public Builder monthlyRetention(@Nullable Input<String> monthlyRetention) {
             this.monthlyRetention = monthlyRetention;
             return this;
         }
 
-        public Builder setMonthlyRetention(@Nullable String monthlyRetention) {
+        public Builder monthlyRetention(@Nullable String monthlyRetention) {
             this.monthlyRetention = Input.ofNullable(monthlyRetention);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setWeekOfYear(@Nullable Input<Integer> weekOfYear) {
+        public Builder weekOfYear(@Nullable Input<Integer> weekOfYear) {
             this.weekOfYear = weekOfYear;
             return this;
         }
 
-        public Builder setWeekOfYear(@Nullable Integer weekOfYear) {
+        public Builder weekOfYear(@Nullable Integer weekOfYear) {
             this.weekOfYear = Input.ofNullable(weekOfYear);
             return this;
         }
 
-        public Builder setWeeklyRetention(@Nullable Input<String> weeklyRetention) {
+        public Builder weeklyRetention(@Nullable Input<String> weeklyRetention) {
             this.weeklyRetention = weeklyRetention;
             return this;
         }
 
-        public Builder setWeeklyRetention(@Nullable String weeklyRetention) {
+        public Builder weeklyRetention(@Nullable String weeklyRetention) {
             this.weeklyRetention = Input.ofNullable(weeklyRetention);
             return this;
         }
 
-        public Builder setYearlyRetention(@Nullable Input<String> yearlyRetention) {
+        public Builder yearlyRetention(@Nullable Input<String> yearlyRetention) {
             this.yearlyRetention = yearlyRetention;
             return this;
         }
 
-        public Builder setYearlyRetention(@Nullable String yearlyRetention) {
+        public Builder yearlyRetention(@Nullable String yearlyRetention) {
             this.yearlyRetention = Input.ofNullable(yearlyRetention);
             return this;
         }

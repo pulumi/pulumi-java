@@ -74,22 +74,22 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }

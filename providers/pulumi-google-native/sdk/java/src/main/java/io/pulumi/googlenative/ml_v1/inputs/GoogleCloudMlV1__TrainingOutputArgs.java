@@ -159,72 +159,72 @@ public final class GoogleCloudMlV1__TrainingOutputArgs extends io.pulumi.resourc
     	      this.trials = defaults.trials;
         }
 
-        public Builder setBuiltInAlgorithmOutput(@Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(@Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
 
-        public Builder setBuiltInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Input.ofNullable(builtInAlgorithmOutput);
             return this;
         }
 
-        public Builder setCompletedTrialCount(@Nullable Input<String> completedTrialCount) {
+        public Builder completedTrialCount(@Nullable Input<String> completedTrialCount) {
             this.completedTrialCount = completedTrialCount;
             return this;
         }
 
-        public Builder setCompletedTrialCount(@Nullable String completedTrialCount) {
+        public Builder completedTrialCount(@Nullable String completedTrialCount) {
             this.completedTrialCount = Input.ofNullable(completedTrialCount);
             return this;
         }
 
-        public Builder setConsumedMLUnits(@Nullable Input<Double> consumedMLUnits) {
+        public Builder consumedMLUnits(@Nullable Input<Double> consumedMLUnits) {
             this.consumedMLUnits = consumedMLUnits;
             return this;
         }
 
-        public Builder setConsumedMLUnits(@Nullable Double consumedMLUnits) {
+        public Builder consumedMLUnits(@Nullable Double consumedMLUnits) {
             this.consumedMLUnits = Input.ofNullable(consumedMLUnits);
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(@Nullable Input<String> hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(@Nullable Input<String> hyperparameterMetricTag) {
             this.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(@Nullable String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Input.ofNullable(hyperparameterMetricTag);
             return this;
         }
 
-        public Builder setIsBuiltInAlgorithmJob(@Nullable Input<Boolean> isBuiltInAlgorithmJob) {
+        public Builder isBuiltInAlgorithmJob(@Nullable Input<Boolean> isBuiltInAlgorithmJob) {
             this.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
             return this;
         }
 
-        public Builder setIsBuiltInAlgorithmJob(@Nullable Boolean isBuiltInAlgorithmJob) {
+        public Builder isBuiltInAlgorithmJob(@Nullable Boolean isBuiltInAlgorithmJob) {
             this.isBuiltInAlgorithmJob = Input.ofNullable(isBuiltInAlgorithmJob);
             return this;
         }
 
-        public Builder setIsHyperparameterTuningJob(@Nullable Input<Boolean> isHyperparameterTuningJob) {
+        public Builder isHyperparameterTuningJob(@Nullable Input<Boolean> isHyperparameterTuningJob) {
             this.isHyperparameterTuningJob = isHyperparameterTuningJob;
             return this;
         }
 
-        public Builder setIsHyperparameterTuningJob(@Nullable Boolean isHyperparameterTuningJob) {
+        public Builder isHyperparameterTuningJob(@Nullable Boolean isHyperparameterTuningJob) {
             this.isHyperparameterTuningJob = Input.ofNullable(isHyperparameterTuningJob);
             return this;
         }
 
-        public Builder setTrials(@Nullable Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials) {
+        public Builder trials(@Nullable Input<List<GoogleCloudMlV1__HyperparameterOutputArgs>> trials) {
             this.trials = trials;
             return this;
         }
 
-        public Builder setTrials(@Nullable List<GoogleCloudMlV1__HyperparameterOutputArgs> trials) {
+        public Builder trials(@Nullable List<GoogleCloudMlV1__HyperparameterOutputArgs> trials) {
             this.trials = Input.ofNullable(trials);
             return this;
         }

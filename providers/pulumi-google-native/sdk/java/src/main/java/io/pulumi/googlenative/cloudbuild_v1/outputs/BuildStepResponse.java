@@ -244,67 +244,67 @@ public final class BuildStepResponse {
     	      this.waitFor = defaults.waitFor;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setDir(String dir) {
+        public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
 
-        public Builder setEntrypoint(String entrypoint) {
+        public Builder entrypoint(String entrypoint) {
             this.entrypoint = Objects.requireNonNull(entrypoint);
             return this;
         }
 
-        public Builder setEnv(List<String> env) {
+        public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPullTiming(TimeSpanResponse pullTiming) {
+        public Builder pullTiming(TimeSpanResponse pullTiming) {
             this.pullTiming = Objects.requireNonNull(pullTiming);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setSecretEnv(List<String> secretEnv) {
+        public Builder secretEnv(List<String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTiming(TimeSpanResponse timing) {
+        public Builder timing(TimeSpanResponse timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
 
-        public Builder setVolumes(List<VolumeResponse> volumes) {
+        public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
 
-        public Builder setWaitFor(List<String> waitFor) {
+        public Builder waitFor(List<String> waitFor) {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }

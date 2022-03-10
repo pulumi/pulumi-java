@@ -75,17 +75,17 @@ public final class GetFoldersResult {
     	      this.parentId = defaults.parentId;
         }
 
-        public Builder setFolders(List<GetFoldersFolder> folders) {
+        public Builder folders(List<GetFoldersFolder> folders) {
             this.folders = Objects.requireNonNull(folders);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }

@@ -53,12 +53,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder setGcePdKmsKeyName(@Nullable Input<String> gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(@Nullable Input<String> gcePdKmsKeyName) {
             this.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
 
-        public Builder setGcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
             this.gcePdKmsKeyName = Input.ofNullable(gcePdKmsKeyName);
             return this;
         }

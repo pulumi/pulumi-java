@@ -52,12 +52,12 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends io.
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder setDefaultResourceSpec(Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
             return this;
         }
 
-        public Builder setDefaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
+        public Builder defaultResourceSpec(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Input.of(Objects.requireNonNull(defaultResourceSpec));
             return this;
         }

@@ -84,17 +84,17 @@ public final class KpiGroupByMetadataResponse {
     	      this.fieldType = defaults.fieldType;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setFieldName(@Nullable String fieldName) {
+        public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
-        public Builder setFieldType(@Nullable String fieldType) {
+        public Builder fieldType(@Nullable String fieldType) {
             this.fieldType = fieldType;
             return this;
         }

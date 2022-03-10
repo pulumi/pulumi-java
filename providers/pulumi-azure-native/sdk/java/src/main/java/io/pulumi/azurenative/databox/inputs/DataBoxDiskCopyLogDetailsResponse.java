@@ -105,22 +105,22 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
     	      this.verboseLogLink = defaults.verboseLogLink;
         }
 
-        public Builder setCopyLogDetailsType(String copyLogDetailsType) {
+        public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
 
-        public Builder setDiskSerialNumber(String diskSerialNumber) {
+        public Builder diskSerialNumber(String diskSerialNumber) {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }
 
-        public Builder setErrorLogLink(String errorLogLink) {
+        public Builder errorLogLink(String errorLogLink) {
             this.errorLogLink = Objects.requireNonNull(errorLogLink);
             return this;
         }
 
-        public Builder setVerboseLogLink(String verboseLogLink) {
+        public Builder verboseLogLink(String verboseLogLink) {
             this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
             return this;
         }

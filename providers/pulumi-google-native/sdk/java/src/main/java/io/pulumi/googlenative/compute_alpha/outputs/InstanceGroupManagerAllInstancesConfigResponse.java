@@ -48,7 +48,7 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(InstancePropertiesPatchResponse properties) {
+        public Builder properties(InstancePropertiesPatchResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

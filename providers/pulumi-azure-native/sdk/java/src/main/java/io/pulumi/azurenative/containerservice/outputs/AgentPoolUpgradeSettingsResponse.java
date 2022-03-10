@@ -50,7 +50,7 @@ public final class AgentPoolUpgradeSettingsResponse {
     	      this.maxSurge = defaults.maxSurge;
         }
 
-        public Builder setMaxSurge(@Nullable String maxSurge) {
+        public Builder maxSurge(@Nullable String maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
     	      this.assessmentMetadataName = defaults.assessmentMetadataName;
         }
 
-        public Builder setAssessmentMetadataName(String assessmentMetadataName) {
+        public Builder assessmentMetadataName(String assessmentMetadataName) {
             this.assessmentMetadataName = Objects.requireNonNull(assessmentMetadataName);
             return this;
         }

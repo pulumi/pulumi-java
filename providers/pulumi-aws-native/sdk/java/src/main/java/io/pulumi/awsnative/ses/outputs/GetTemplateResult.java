@@ -52,12 +52,12 @@ public final class GetTemplateResult {
     	      this.template = defaults.template;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTemplate(@Nullable Template template) {
+        public Builder template(@Nullable Template template) {
             this.template = template;
             return this;
         }

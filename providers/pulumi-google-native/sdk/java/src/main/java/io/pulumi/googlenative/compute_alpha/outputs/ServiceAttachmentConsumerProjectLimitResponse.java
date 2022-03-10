@@ -66,12 +66,12 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
     	      this.projectIdOrNum = defaults.projectIdOrNum;
         }
 
-        public Builder setConnectionLimit(Integer connectionLimit) {
+        public Builder connectionLimit(Integer connectionLimit) {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
 
-        public Builder setProjectIdOrNum(String projectIdOrNum) {
+        public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }

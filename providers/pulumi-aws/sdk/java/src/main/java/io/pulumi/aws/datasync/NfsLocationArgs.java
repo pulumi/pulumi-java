@@ -121,52 +121,52 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setMountOptions(@Nullable Input<NfsLocationMountOptionsArgs> mountOptions) {
+        public Builder mountOptions(@Nullable Input<NfsLocationMountOptionsArgs> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable NfsLocationMountOptionsArgs mountOptions) {
+        public Builder mountOptions(@Nullable NfsLocationMountOptionsArgs mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setOnPremConfig(Input<NfsLocationOnPremConfigArgs> onPremConfig) {
+        public Builder onPremConfig(Input<NfsLocationOnPremConfigArgs> onPremConfig) {
             this.onPremConfig = Objects.requireNonNull(onPremConfig);
             return this;
         }
 
-        public Builder setOnPremConfig(NfsLocationOnPremConfigArgs onPremConfig) {
+        public Builder onPremConfig(NfsLocationOnPremConfigArgs onPremConfig) {
             this.onPremConfig = Input.of(Objects.requireNonNull(onPremConfig));
             return this;
         }
 
-        public Builder setServerHostname(Input<String> serverHostname) {
+        public Builder serverHostname(Input<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
 
-        public Builder setServerHostname(String serverHostname) {
+        public Builder serverHostname(String serverHostname) {
             this.serverHostname = Input.of(Objects.requireNonNull(serverHostname));
             return this;
         }
 
-        public Builder setSubdirectory(Input<String> subdirectory) {
+        public Builder subdirectory(Input<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
 
-        public Builder setSubdirectory(String subdirectory) {
+        public Builder subdirectory(String subdirectory) {
             this.subdirectory = Input.of(Objects.requireNonNull(subdirectory));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

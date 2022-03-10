@@ -75,22 +75,22 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     	      this.paramName = defaults.paramName;
         }
 
-        public Builder setParamIndicator(Input<Either<String,ParamIndicator>> paramIndicator) {
+        public Builder paramIndicator(Input<Either<String,ParamIndicator>> paramIndicator) {
             this.paramIndicator = Objects.requireNonNull(paramIndicator);
             return this;
         }
 
-        public Builder setParamIndicator(Either<String,ParamIndicator> paramIndicator) {
+        public Builder paramIndicator(Either<String,ParamIndicator> paramIndicator) {
             this.paramIndicator = Input.of(Objects.requireNonNull(paramIndicator));
             return this;
         }
 
-        public Builder setParamName(Input<String> paramName) {
+        public Builder paramName(Input<String> paramName) {
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }
 
-        public Builder setParamName(String paramName) {
+        public Builder paramName(String paramName) {
             this.paramName = Input.of(Objects.requireNonNull(paramName));
             return this;
         }

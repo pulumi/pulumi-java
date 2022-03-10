@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
+        public Builder type(@Nullable Input<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GoogleCloudDialogflowV2beta1SuggestionFeatureType type) {
+        public Builder type(@Nullable GoogleCloudDialogflowV2beta1SuggestionFeatureType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

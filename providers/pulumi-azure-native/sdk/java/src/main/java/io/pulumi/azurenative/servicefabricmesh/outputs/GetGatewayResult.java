@@ -264,72 +264,72 @@ public final class GetGatewayResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationNetwork(NetworkRefResponse destinationNetwork) {
+        public Builder destinationNetwork(NetworkRefResponse destinationNetwork) {
             this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
             return this;
         }
 
-        public Builder setHttp(@Nullable List<HttpConfigResponse> http) {
+        public Builder http(@Nullable List<HttpConfigResponse> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceNetwork(NetworkRefResponse sourceNetwork) {
+        public Builder sourceNetwork(NetworkRefResponse sourceNetwork) {
             this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTcp(@Nullable List<TcpConfigResponse> tcp) {
+        public Builder tcp(@Nullable List<TcpConfigResponse> tcp) {
             this.tcp = tcp;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

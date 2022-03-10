@@ -94,32 +94,32 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromArgs extends io
     	      this.sources = defaults.sources;
         }
 
-        public Builder setIdentities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Input<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = Input.ofNullable(identities);
             return this;
         }
 
-        public Builder setIdentityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Input<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = Input.ofNullable(identityType);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<ServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<ServicePerimeterStatusIngressPolicyIngressFromSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSourceArgs> sources) {
+        public Builder sources(@Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }

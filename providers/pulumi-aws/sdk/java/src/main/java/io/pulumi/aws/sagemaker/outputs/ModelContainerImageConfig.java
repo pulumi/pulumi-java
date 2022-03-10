@@ -48,7 +48,7 @@ public final class ModelContainerImageConfig {
     	      this.repositoryAccessMode = defaults.repositoryAccessMode;
         }
 
-        public Builder setRepositoryAccessMode(String repositoryAccessMode) {
+        public Builder repositoryAccessMode(String repositoryAccessMode) {
             this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode);
             return this;
         }

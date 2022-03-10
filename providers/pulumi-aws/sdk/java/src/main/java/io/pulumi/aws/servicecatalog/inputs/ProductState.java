@@ -297,162 +297,162 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributor(@Nullable Input<String> distributor) {
+        public Builder distributor(@Nullable Input<String> distributor) {
             this.distributor = distributor;
             return this;
         }
 
-        public Builder setDistributor(@Nullable String distributor) {
+        public Builder distributor(@Nullable String distributor) {
             this.distributor = Input.ofNullable(distributor);
             return this;
         }
 
-        public Builder setHasDefaultPath(@Nullable Input<Boolean> hasDefaultPath) {
+        public Builder hasDefaultPath(@Nullable Input<Boolean> hasDefaultPath) {
             this.hasDefaultPath = hasDefaultPath;
             return this;
         }
 
-        public Builder setHasDefaultPath(@Nullable Boolean hasDefaultPath) {
+        public Builder hasDefaultPath(@Nullable Boolean hasDefaultPath) {
             this.hasDefaultPath = Input.ofNullable(hasDefaultPath);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setProvisioningArtifactParameters(@Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(@Nullable Input<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
             this.provisioningArtifactParameters = provisioningArtifactParameters;
             return this;
         }
 
-        public Builder setProvisioningArtifactParameters(@Nullable ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(@Nullable ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
             this.provisioningArtifactParameters = Input.ofNullable(provisioningArtifactParameters);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSupportDescription(@Nullable Input<String> supportDescription) {
+        public Builder supportDescription(@Nullable Input<String> supportDescription) {
             this.supportDescription = supportDescription;
             return this;
         }
 
-        public Builder setSupportDescription(@Nullable String supportDescription) {
+        public Builder supportDescription(@Nullable String supportDescription) {
             this.supportDescription = Input.ofNullable(supportDescription);
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable Input<String> supportEmail) {
+        public Builder supportEmail(@Nullable Input<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable String supportEmail) {
+        public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Input.ofNullable(supportEmail);
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable Input<String> supportUrl) {
+        public Builder supportUrl(@Nullable Input<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable String supportUrl) {
+        public Builder supportUrl(@Nullable String supportUrl) {
             this.supportUrl = Input.ofNullable(supportUrl);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

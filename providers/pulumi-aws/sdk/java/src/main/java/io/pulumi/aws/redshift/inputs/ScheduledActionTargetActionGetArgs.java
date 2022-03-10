@@ -88,32 +88,32 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder setPauseCluster(@Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster) {
+        public Builder pauseCluster(@Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
-        public Builder setPauseCluster(@Nullable ScheduledActionTargetActionPauseClusterGetArgs pauseCluster) {
+        public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseClusterGetArgs pauseCluster) {
             this.pauseCluster = Input.ofNullable(pauseCluster);
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster) {
+        public Builder resizeCluster(@Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable ScheduledActionTargetActionResizeClusterGetArgs resizeCluster) {
+        public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeClusterGetArgs resizeCluster) {
             this.resizeCluster = Input.ofNullable(resizeCluster);
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
+        public Builder resumeCluster(@Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable ScheduledActionTargetActionResumeClusterGetArgs resumeCluster) {
+        public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeClusterGetArgs resumeCluster) {
             this.resumeCluster = Input.ofNullable(resumeCluster);
             return this;
         }

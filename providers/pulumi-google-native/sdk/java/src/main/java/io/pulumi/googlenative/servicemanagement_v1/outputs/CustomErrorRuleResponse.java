@@ -66,12 +66,12 @@ public final class CustomErrorRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setIsErrorType(Boolean isErrorType) {
+        public Builder isErrorType(Boolean isErrorType) {
             this.isErrorType = Objects.requireNonNull(isErrorType);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

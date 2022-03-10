@@ -88,32 +88,32 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppImageConfigName(Input<String> appImageConfigName) {
+        public Builder appImageConfigName(Input<String> appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
 
-        public Builder setAppImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Input.of(Objects.requireNonNull(appImageConfigName));
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = Input.ofNullable(kernelGatewayImageConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

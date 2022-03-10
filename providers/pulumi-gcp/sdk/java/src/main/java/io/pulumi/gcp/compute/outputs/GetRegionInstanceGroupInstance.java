@@ -83,17 +83,17 @@ public final class GetRegionInstanceGroupInstance {
     	      this.status = defaults.status;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setNamedPorts(List<GetRegionInstanceGroupInstanceNamedPort> namedPorts) {
+        public Builder namedPorts(List<GetRegionInstanceGroupInstanceNamedPort> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -182,47 +182,47 @@ public final class GetMediaGraphResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSinks(List<MediaGraphAssetSinkResponse> sinks) {
+        public Builder sinks(List<MediaGraphAssetSinkResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
-        public Builder setSources(List<MediaGraphRtspSourceResponse> sources) {
+        public Builder sources(List<MediaGraphRtspSourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

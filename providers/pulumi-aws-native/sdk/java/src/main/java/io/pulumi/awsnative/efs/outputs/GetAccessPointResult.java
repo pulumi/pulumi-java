@@ -61,17 +61,17 @@ public final class GetAccessPointResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setAccessPointTags(@Nullable List<AccessPointTag> accessPointTags) {
+        public Builder accessPointTags(@Nullable List<AccessPointTag> accessPointTags) {
             this.accessPointTags = accessPointTags;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

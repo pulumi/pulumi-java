@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2FileSetArgs extends io.pulumi.resources.Res
     	      this.url = defaults.url;
         }
 
-        public Builder setRegexFileSet(@Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
+        public Builder regexFileSet(@Nullable Input<GooglePrivacyDlpV2CloudStorageRegexFileSetArgs> regexFileSet) {
             this.regexFileSet = regexFileSet;
             return this;
         }
 
-        public Builder setRegexFileSet(@Nullable GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
+        public Builder regexFileSet(@Nullable GooglePrivacyDlpV2CloudStorageRegexFileSetArgs regexFileSet) {
             this.regexFileSet = Input.ofNullable(regexFileSet);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

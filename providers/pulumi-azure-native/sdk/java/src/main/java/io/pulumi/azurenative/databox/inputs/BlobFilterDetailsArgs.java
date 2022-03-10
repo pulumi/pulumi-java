@@ -91,32 +91,32 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.containerList = defaults.containerList;
         }
 
-        public Builder setBlobPathList(@Nullable Input<List<String>> blobPathList) {
+        public Builder blobPathList(@Nullable Input<List<String>> blobPathList) {
             this.blobPathList = blobPathList;
             return this;
         }
 
-        public Builder setBlobPathList(@Nullable List<String> blobPathList) {
+        public Builder blobPathList(@Nullable List<String> blobPathList) {
             this.blobPathList = Input.ofNullable(blobPathList);
             return this;
         }
 
-        public Builder setBlobPrefixList(@Nullable Input<List<String>> blobPrefixList) {
+        public Builder blobPrefixList(@Nullable Input<List<String>> blobPrefixList) {
             this.blobPrefixList = blobPrefixList;
             return this;
         }
 
-        public Builder setBlobPrefixList(@Nullable List<String> blobPrefixList) {
+        public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
             this.blobPrefixList = Input.ofNullable(blobPrefixList);
             return this;
         }
 
-        public Builder setContainerList(@Nullable Input<List<String>> containerList) {
+        public Builder containerList(@Nullable Input<List<String>> containerList) {
             this.containerList = containerList;
             return this;
         }
 
-        public Builder setContainerList(@Nullable List<String> containerList) {
+        public Builder containerList(@Nullable List<String> containerList) {
             this.containerList = Input.ofNullable(containerList);
             return this;
         }

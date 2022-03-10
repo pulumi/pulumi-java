@@ -118,52 +118,52 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder setAssumeRole(@Nullable Input<String> assumeRole) {
+        public Builder assumeRole(@Nullable Input<String> assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
 
-        public Builder setAssumeRole(@Nullable String assumeRole) {
+        public Builder assumeRole(@Nullable String assumeRole) {
             this.assumeRole = Input.ofNullable(assumeRole);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Input<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

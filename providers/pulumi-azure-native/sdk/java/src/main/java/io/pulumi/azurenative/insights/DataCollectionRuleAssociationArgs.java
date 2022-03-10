@@ -102,42 +102,42 @@ public final class DataCollectionRuleAssociationArgs extends io.pulumi.resources
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setAssociationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Input<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = Input.ofNullable(associationName);
             return this;
         }
 
-        public Builder setDataCollectionRuleId(@Nullable Input<String> dataCollectionRuleId) {
+        public Builder dataCollectionRuleId(@Nullable Input<String> dataCollectionRuleId) {
             this.dataCollectionRuleId = dataCollectionRuleId;
             return this;
         }
 
-        public Builder setDataCollectionRuleId(@Nullable String dataCollectionRuleId) {
+        public Builder dataCollectionRuleId(@Nullable String dataCollectionRuleId) {
             this.dataCollectionRuleId = Input.ofNullable(dataCollectionRuleId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }

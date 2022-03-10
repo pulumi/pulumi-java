@@ -105,42 +105,42 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.frameworkTags = defaults.frameworkTags;
         }
 
-        public Builder setFrameworkControls(Input<List<FrameworkControlArgs>> frameworkControls) {
+        public Builder frameworkControls(Input<List<FrameworkControlArgs>> frameworkControls) {
             this.frameworkControls = Objects.requireNonNull(frameworkControls);
             return this;
         }
 
-        public Builder setFrameworkControls(List<FrameworkControlArgs> frameworkControls) {
+        public Builder frameworkControls(List<FrameworkControlArgs> frameworkControls) {
             this.frameworkControls = Input.of(Objects.requireNonNull(frameworkControls));
             return this;
         }
 
-        public Builder setFrameworkDescription(@Nullable Input<String> frameworkDescription) {
+        public Builder frameworkDescription(@Nullable Input<String> frameworkDescription) {
             this.frameworkDescription = frameworkDescription;
             return this;
         }
 
-        public Builder setFrameworkDescription(@Nullable String frameworkDescription) {
+        public Builder frameworkDescription(@Nullable String frameworkDescription) {
             this.frameworkDescription = Input.ofNullable(frameworkDescription);
             return this;
         }
 
-        public Builder setFrameworkName(@Nullable Input<String> frameworkName) {
+        public Builder frameworkName(@Nullable Input<String> frameworkName) {
             this.frameworkName = frameworkName;
             return this;
         }
 
-        public Builder setFrameworkName(@Nullable String frameworkName) {
+        public Builder frameworkName(@Nullable String frameworkName) {
             this.frameworkName = Input.ofNullable(frameworkName);
             return this;
         }
 
-        public Builder setFrameworkTags(@Nullable Input<List<FrameworkTagArgs>> frameworkTags) {
+        public Builder frameworkTags(@Nullable Input<List<FrameworkTagArgs>> frameworkTags) {
             this.frameworkTags = frameworkTags;
             return this;
         }
 
-        public Builder setFrameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
+        public Builder frameworkTags(@Nullable List<FrameworkTagArgs> frameworkTags) {
             this.frameworkTags = Input.ofNullable(frameworkTags);
             return this;
         }

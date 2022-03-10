@@ -67,12 +67,12 @@ public final class PrincipalsResponse {
     	      this.upn = defaults.upn;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setUpn(@Nullable String upn) {
+        public Builder upn(@Nullable String upn) {
             this.upn = upn;
             return this;
         }

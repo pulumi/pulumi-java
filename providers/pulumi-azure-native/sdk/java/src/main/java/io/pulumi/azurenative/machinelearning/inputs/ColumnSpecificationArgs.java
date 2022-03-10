@@ -128,52 +128,52 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     	      this.xMsIsordered = defaults.xMsIsordered;
         }
 
-        public Builder set$enum(@Nullable Input<List<Object>> $enum) {
+        public Builder $enum(@Nullable Input<List<Object>> $enum) {
             this.$enum = $enum;
             return this;
         }
 
-        public Builder set$enum(@Nullable List<Object> $enum) {
+        public Builder $enum(@Nullable List<Object> $enum) {
             this.$enum = Input.ofNullable($enum);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<Either<String,ColumnFormat>> format) {
+        public Builder format(@Nullable Input<Either<String,ColumnFormat>> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable Either<String,ColumnFormat> format) {
+        public Builder format(@Nullable Either<String,ColumnFormat> format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setType(Input<Either<String,ColumnType>> type) {
+        public Builder type(Input<Either<String,ColumnType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ColumnType> type) {
+        public Builder type(Either<String,ColumnType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setXMsIsnullable(@Nullable Input<Boolean> xMsIsnullable) {
+        public Builder xMsIsnullable(@Nullable Input<Boolean> xMsIsnullable) {
             this.xMsIsnullable = xMsIsnullable;
             return this;
         }
 
-        public Builder setXMsIsnullable(@Nullable Boolean xMsIsnullable) {
+        public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
             this.xMsIsnullable = Input.ofNullable(xMsIsnullable);
             return this;
         }
 
-        public Builder setXMsIsordered(@Nullable Input<Boolean> xMsIsordered) {
+        public Builder xMsIsordered(@Nullable Input<Boolean> xMsIsordered) {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
 
-        public Builder setXMsIsordered(@Nullable Boolean xMsIsordered) {
+        public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
             this.xMsIsordered = Input.ofNullable(xMsIsordered);
             return this;
         }

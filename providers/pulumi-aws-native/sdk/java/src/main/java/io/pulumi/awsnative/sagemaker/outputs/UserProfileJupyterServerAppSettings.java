@@ -42,7 +42,7 @@ public final class UserProfileJupyterServerAppSettings {
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable UserProfileResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }

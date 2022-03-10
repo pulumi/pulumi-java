@@ -89,32 +89,32 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setApplicationName(Input<String> applicationName) {
+        public Builder applicationName(Input<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Input.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

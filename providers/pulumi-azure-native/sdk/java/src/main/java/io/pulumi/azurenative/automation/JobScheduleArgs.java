@@ -153,72 +153,72 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setJobScheduleId(@Nullable Input<String> jobScheduleId) {
+        public Builder jobScheduleId(@Nullable Input<String> jobScheduleId) {
             this.jobScheduleId = jobScheduleId;
             return this;
         }
 
-        public Builder setJobScheduleId(@Nullable String jobScheduleId) {
+        public Builder jobScheduleId(@Nullable String jobScheduleId) {
             this.jobScheduleId = Input.ofNullable(jobScheduleId);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunOn(@Nullable Input<String> runOn) {
+        public Builder runOn(@Nullable Input<String> runOn) {
             this.runOn = runOn;
             return this;
         }
 
-        public Builder setRunOn(@Nullable String runOn) {
+        public Builder runOn(@Nullable String runOn) {
             this.runOn = Input.ofNullable(runOn);
             return this;
         }
 
-        public Builder setRunbook(Input<RunbookAssociationPropertyArgs> runbook) {
+        public Builder runbook(Input<RunbookAssociationPropertyArgs> runbook) {
             this.runbook = Objects.requireNonNull(runbook);
             return this;
         }
 
-        public Builder setRunbook(RunbookAssociationPropertyArgs runbook) {
+        public Builder runbook(RunbookAssociationPropertyArgs runbook) {
             this.runbook = Input.of(Objects.requireNonNull(runbook));
             return this;
         }
 
-        public Builder setSchedule(Input<ScheduleAssociationPropertyArgs> schedule) {
+        public Builder schedule(Input<ScheduleAssociationPropertyArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(ScheduleAssociationPropertyArgs schedule) {
+        public Builder schedule(ScheduleAssociationPropertyArgs schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }

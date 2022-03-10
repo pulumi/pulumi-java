@@ -60,12 +60,12 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
     	      this.reportId = defaults.reportId;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setReportId(String reportId) {
+        public Builder reportId(String reportId) {
             this.reportId = Objects.requireNonNull(reportId);
             return this;
         }

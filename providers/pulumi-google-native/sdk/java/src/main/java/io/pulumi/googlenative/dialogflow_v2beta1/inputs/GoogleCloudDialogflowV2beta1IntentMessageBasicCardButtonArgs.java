@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
     	      this.title = defaults.title;
         }
 
-        public Builder setOpenUriAction(Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
+        public Builder openUriAction(Input<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
-        public Builder setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs openUriAction) {
+        public Builder openUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs openUriAction) {
             this.openUriAction = Input.of(Objects.requireNonNull(openUriAction));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

@@ -98,27 +98,27 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setCutoverJobId(String cutoverJobId) {
+        public Builder cutoverJobId(String cutoverJobId) {
             this.cutoverJobId = Objects.requireNonNull(cutoverJobId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMigratingVmId(String migratingVmId) {
+        public Builder migratingVmId(String migratingVmId) {
             this.migratingVmId = Objects.requireNonNull(migratingVmId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }

@@ -125,52 +125,52 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
     	      this.targetAccount = defaults.targetAccount;
         }
 
-        public Builder setDocumentName(Input<String> documentName) {
+        public Builder documentName(Input<String> documentName) {
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
 
-        public Builder setDocumentName(String documentName) {
+        public Builder documentName(String documentName) {
             this.documentName = Input.of(Objects.requireNonNull(documentName));
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Input<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Input.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ResponsePlanSsmParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ResponsePlanSsmParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<ResponsePlanSsmParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTargetAccount(@Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
+        public Builder targetAccount(@Nullable Input<ResponsePlanSsmAutomationTargetAccount> targetAccount) {
             this.targetAccount = targetAccount;
             return this;
         }
 
-        public Builder setTargetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
+        public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             this.targetAccount = Input.ofNullable(targetAccount);
             return this;
         }

@@ -55,7 +55,7 @@ public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeA
     	      this.policyUri = defaults.policyUri;
         }
 
-        public Builder setPolicyUri(String policyUri) {
+        public Builder policyUri(String policyUri) {
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }

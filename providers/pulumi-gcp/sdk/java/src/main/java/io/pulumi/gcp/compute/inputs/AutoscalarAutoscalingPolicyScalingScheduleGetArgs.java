@@ -152,72 +152,72 @@ public final class AutoscalarAutoscalingPolicyScalingScheduleGetArgs extends io.
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setDurationSec(Input<Integer> durationSec) {
+        public Builder durationSec(Input<Integer> durationSec) {
             this.durationSec = Objects.requireNonNull(durationSec);
             return this;
         }
 
-        public Builder setDurationSec(Integer durationSec) {
+        public Builder durationSec(Integer durationSec) {
             this.durationSec = Input.of(Objects.requireNonNull(durationSec));
             return this;
         }
 
-        public Builder setMinRequiredReplicas(Input<Integer> minRequiredReplicas) {
+        public Builder minRequiredReplicas(Input<Integer> minRequiredReplicas) {
             this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
             return this;
         }
 
-        public Builder setMinRequiredReplicas(Integer minRequiredReplicas) {
+        public Builder minRequiredReplicas(Integer minRequiredReplicas) {
             this.minRequiredReplicas = Input.of(Objects.requireNonNull(minRequiredReplicas));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

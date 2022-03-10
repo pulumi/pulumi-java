@@ -91,17 +91,17 @@ public final class AzNsActionGroupResponse extends io.pulumi.resources.InvokeArg
     	      this.emailSubject = defaults.emailSubject;
         }
 
-        public Builder setActionGroup(@Nullable List<String> actionGroup) {
+        public Builder actionGroup(@Nullable List<String> actionGroup) {
             this.actionGroup = actionGroup;
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable String customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }

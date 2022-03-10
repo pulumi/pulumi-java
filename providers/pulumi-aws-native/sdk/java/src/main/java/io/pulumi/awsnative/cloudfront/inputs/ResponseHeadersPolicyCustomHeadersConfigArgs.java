@@ -49,12 +49,12 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
+        public Builder items(Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<ResponseHeadersPolicyCustomHeaderArgs> items) {
+        public Builder items(List<ResponseHeadersPolicyCustomHeaderArgs> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }

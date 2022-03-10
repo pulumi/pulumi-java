@@ -53,12 +53,12 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitGetArgs extends 
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }

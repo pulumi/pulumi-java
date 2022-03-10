@@ -105,22 +105,22 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevision(String revision) {
+        public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -206,102 +206,102 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
     	      this.validateSsl = defaults.validateSsl;
         }
 
-        public Builder setAuthInfo(@Nullable Input<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo) {
+        public Builder authInfo(@Nullable Input<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
-        public Builder setAuthInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfoGetArgs authInfo) {
+        public Builder authInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfoGetArgs authInfo) {
             this.authInfo = Input.ofNullable(authInfo);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Input<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setMaskHeaders(@Nullable Input<Boolean> maskHeaders) {
+        public Builder maskHeaders(@Nullable Input<Boolean> maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
 
-        public Builder setMaskHeaders(@Nullable Boolean maskHeaders) {
+        public Builder maskHeaders(@Nullable Boolean maskHeaders) {
             this.maskHeaders = Input.ofNullable(maskHeaders);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Input<String> requestMethod) {
+        public Builder requestMethod(@Nullable Input<String> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable String requestMethod) {
+        public Builder requestMethod(@Nullable String requestMethod) {
             this.requestMethod = Input.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder setUseSsl(@Nullable Input<Boolean> useSsl) {
+        public Builder useSsl(@Nullable Input<Boolean> useSsl) {
             this.useSsl = useSsl;
             return this;
         }
 
-        public Builder setUseSsl(@Nullable Boolean useSsl) {
+        public Builder useSsl(@Nullable Boolean useSsl) {
             this.useSsl = Input.ofNullable(useSsl);
             return this;
         }
 
-        public Builder setValidateSsl(@Nullable Input<Boolean> validateSsl) {
+        public Builder validateSsl(@Nullable Input<Boolean> validateSsl) {
             this.validateSsl = validateSsl;
             return this;
         }
 
-        public Builder setValidateSsl(@Nullable Boolean validateSsl) {
+        public Builder validateSsl(@Nullable Boolean validateSsl) {
             this.validateSsl = Input.ofNullable(validateSsl);
             return this;
         }

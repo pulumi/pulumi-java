@@ -106,42 +106,42 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
     	      this.smbs = defaults.smbs;
         }
 
-        public Builder setIscses(@Nullable Input<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> iscses) {
+        public Builder iscses(@Nullable Input<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> iscses) {
             this.iscses = iscses;
             return this;
         }
 
-        public Builder setIscses(@Nullable List<OntapStorageVirtualMachineEndpointIscseGetArgs> iscses) {
+        public Builder iscses(@Nullable List<OntapStorageVirtualMachineEndpointIscseGetArgs> iscses) {
             this.iscses = Input.ofNullable(iscses);
             return this;
         }
 
-        public Builder setManagements(@Nullable Input<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements) {
+        public Builder managements(@Nullable Input<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements) {
             this.managements = managements;
             return this;
         }
 
-        public Builder setManagements(@Nullable List<OntapStorageVirtualMachineEndpointManagementGetArgs> managements) {
+        public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagementGetArgs> managements) {
             this.managements = Input.ofNullable(managements);
             return this;
         }
 
-        public Builder setNfs(@Nullable Input<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs) {
+        public Builder nfs(@Nullable Input<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs) {
             this.nfs = nfs;
             return this;
         }
 
-        public Builder setNfs(@Nullable List<OntapStorageVirtualMachineEndpointNfGetArgs> nfs) {
+        public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNfGetArgs> nfs) {
             this.nfs = Input.ofNullable(nfs);
             return this;
         }
 
-        public Builder setSmbs(@Nullable Input<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs) {
+        public Builder smbs(@Nullable Input<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs) {
             this.smbs = smbs;
             return this;
         }
 
-        public Builder setSmbs(@Nullable List<OntapStorageVirtualMachineEndpointSmbGetArgs> smbs) {
+        public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmbGetArgs> smbs) {
             this.smbs = Input.ofNullable(smbs);
             return this;
         }

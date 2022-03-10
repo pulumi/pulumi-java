@@ -75,12 +75,12 @@ public final class VirtualHubRouteResponse extends io.pulumi.resources.InvokeArg
     	      this.nextHopIpAddress = defaults.nextHopIpAddress;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }

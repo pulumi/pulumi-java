@@ -65,12 +65,12 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
     	      this.labelValue = defaults.labelValue;
         }
 
-        public Builder setLabelName(String labelName) {
+        public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
-        public Builder setLabelValue(String labelValue) {
+        public Builder labelValue(String labelValue) {
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }

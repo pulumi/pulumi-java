@@ -482,142 +482,142 @@ public final class GetVolumeResult {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setBackupId(@Nullable String backupId) {
+        public Builder backupId(@Nullable String backupId) {
             this.backupId = backupId;
             return this;
         }
 
-        public Builder setBaremetalTenantId(String baremetalTenantId) {
+        public Builder baremetalTenantId(String baremetalTenantId) {
             this.baremetalTenantId = Objects.requireNonNull(baremetalTenantId);
             return this;
         }
 
-        public Builder setCreationToken(String creationToken) {
+        public Builder creationToken(String creationToken) {
             this.creationToken = Objects.requireNonNull(creationToken);
             return this;
         }
 
-        public Builder setDataProtection(@Nullable VolumePropertiesResponseDataProtection dataProtection) {
+        public Builder dataProtection(@Nullable VolumePropertiesResponseDataProtection dataProtection) {
             this.dataProtection = dataProtection;
             return this;
         }
 
-        public Builder setEncryptionKeySource(@Nullable String encryptionKeySource) {
+        public Builder encryptionKeySource(@Nullable String encryptionKeySource) {
             this.encryptionKeySource = encryptionKeySource;
             return this;
         }
 
-        public Builder setExportPolicy(@Nullable VolumePropertiesResponseExportPolicy exportPolicy) {
+        public Builder exportPolicy(@Nullable VolumePropertiesResponseExportPolicy exportPolicy) {
             this.exportPolicy = exportPolicy;
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsRestoring(@Nullable Boolean isRestoring) {
+        public Builder isRestoring(@Nullable Boolean isRestoring) {
             this.isRestoring = isRestoring;
             return this;
         }
 
-        public Builder setKerberosEnabled(@Nullable Boolean kerberosEnabled) {
+        public Builder kerberosEnabled(@Nullable Boolean kerberosEnabled) {
             this.kerberosEnabled = kerberosEnabled;
             return this;
         }
 
-        public Builder setLdapEnabled(@Nullable Boolean ldapEnabled) {
+        public Builder ldapEnabled(@Nullable Boolean ldapEnabled) {
             this.ldapEnabled = ldapEnabled;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMountTargets(List<MountTargetPropertiesResponse> mountTargets) {
+        public Builder mountTargets(List<MountTargetPropertiesResponse> mountTargets) {
             this.mountTargets = Objects.requireNonNull(mountTargets);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocolTypes(@Nullable List<String> protocolTypes) {
+        public Builder protocolTypes(@Nullable List<String> protocolTypes) {
             this.protocolTypes = protocolTypes;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable String securityStyle) {
+        public Builder securityStyle(@Nullable String securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
 
-        public Builder setServiceLevel(@Nullable String serviceLevel) {
+        public Builder serviceLevel(@Nullable String serviceLevel) {
             this.serviceLevel = serviceLevel;
             return this;
         }
 
-        public Builder setSmbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
+        public Builder smbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
             this.smbContinuouslyAvailable = smbContinuouslyAvailable;
             return this;
         }
 
-        public Builder setSmbEncryption(@Nullable Boolean smbEncryption) {
+        public Builder smbEncryption(@Nullable Boolean smbEncryption) {
             this.smbEncryption = smbEncryption;
             return this;
         }
 
-        public Builder setSnapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
+        public Builder snapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
             this.snapshotDirectoryVisible = snapshotDirectoryVisible;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThroughputMibps(@Nullable Double throughputMibps) {
+        public Builder throughputMibps(@Nullable Double throughputMibps) {
             this.throughputMibps = throughputMibps;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsageThreshold(Double usageThreshold) {
+        public Builder usageThreshold(Double usageThreshold) {
             this.usageThreshold = Objects.requireNonNull(usageThreshold);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

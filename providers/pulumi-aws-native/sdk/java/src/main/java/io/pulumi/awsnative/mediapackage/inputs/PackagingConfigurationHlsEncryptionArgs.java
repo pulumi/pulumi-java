@@ -88,32 +88,32 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
+        public Builder encryptionMethod(@Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = Input.ofNullable(encryptionMethod);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

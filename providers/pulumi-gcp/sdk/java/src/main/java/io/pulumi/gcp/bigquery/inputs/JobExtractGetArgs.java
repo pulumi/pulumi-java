@@ -176,82 +176,82 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setDestinationFormat(@Nullable Input<String> destinationFormat) {
+        public Builder destinationFormat(@Nullable Input<String> destinationFormat) {
             this.destinationFormat = destinationFormat;
             return this;
         }
 
-        public Builder setDestinationFormat(@Nullable String destinationFormat) {
+        public Builder destinationFormat(@Nullable String destinationFormat) {
             this.destinationFormat = Input.ofNullable(destinationFormat);
             return this;
         }
 
-        public Builder setDestinationUris(Input<List<String>> destinationUris) {
+        public Builder destinationUris(Input<List<String>> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
 
-        public Builder setDestinationUris(List<String> destinationUris) {
+        public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Input.of(Objects.requireNonNull(destinationUris));
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder setPrintHeader(@Nullable Input<Boolean> printHeader) {
+        public Builder printHeader(@Nullable Input<Boolean> printHeader) {
             this.printHeader = printHeader;
             return this;
         }
 
-        public Builder setPrintHeader(@Nullable Boolean printHeader) {
+        public Builder printHeader(@Nullable Boolean printHeader) {
             this.printHeader = Input.ofNullable(printHeader);
             return this;
         }
 
-        public Builder setSourceModel(@Nullable Input<JobExtractSourceModelGetArgs> sourceModel) {
+        public Builder sourceModel(@Nullable Input<JobExtractSourceModelGetArgs> sourceModel) {
             this.sourceModel = sourceModel;
             return this;
         }
 
-        public Builder setSourceModel(@Nullable JobExtractSourceModelGetArgs sourceModel) {
+        public Builder sourceModel(@Nullable JobExtractSourceModelGetArgs sourceModel) {
             this.sourceModel = Input.ofNullable(sourceModel);
             return this;
         }
 
-        public Builder setSourceTable(@Nullable Input<JobExtractSourceTableGetArgs> sourceTable) {
+        public Builder sourceTable(@Nullable Input<JobExtractSourceTableGetArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
 
-        public Builder setSourceTable(@Nullable JobExtractSourceTableGetArgs sourceTable) {
+        public Builder sourceTable(@Nullable JobExtractSourceTableGetArgs sourceTable) {
             this.sourceTable = Input.ofNullable(sourceTable);
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(@Nullable Input<Boolean> useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(@Nullable Input<Boolean> useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Input.ofNullable(useAvroLogicalTypes);
             return this;
         }

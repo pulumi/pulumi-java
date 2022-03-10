@@ -84,17 +84,17 @@ public final class PartitionStorageDescriptorSerDeInfo {
     	      this.serializationLibrary = defaults.serializationLibrary;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSerializationLibrary(@Nullable String serializationLibrary) {
+        public Builder serializationLibrary(@Nullable String serializationLibrary) {
             this.serializationLibrary = serializationLibrary;
             return this;
         }

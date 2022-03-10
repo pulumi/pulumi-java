@@ -76,22 +76,22 @@ public final class NodeAffinityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requiredDuringSchedulingIgnoredDuringExecution = defaults.requiredDuringSchedulingIgnoredDuringExecution;
         }
 
-        public Builder setPreferredDuringSchedulingIgnoredDuringExecution(@Nullable Input<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable Input<List<PreferredSchedulingTermArgs>> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
-        public Builder setPreferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTermArgs> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = Input.ofNullable(preferredDuringSchedulingIgnoredDuringExecution);
             return this;
         }
 
-        public Builder setRequiredDuringSchedulingIgnoredDuringExecution(@Nullable Input<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable Input<NodeSelectorArgs> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
-        public Builder setRequiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelectorArgs requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelectorArgs requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = Input.ofNullable(requiredDuringSchedulingIgnoredDuringExecution);
             return this;
         }

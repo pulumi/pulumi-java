@@ -212,112 +212,112 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiProducts(@Nullable Input<List<String>> apiProducts) {
+        public Builder apiProducts(@Nullable Input<List<String>> apiProducts) {
             this.apiProducts = apiProducts;
             return this;
         }
 
-        public Builder setApiProducts(@Nullable List<String> apiProducts) {
+        public Builder apiProducts(@Nullable List<String> apiProducts) {
             this.apiProducts = Input.ofNullable(apiProducts);
             return this;
         }
 
-        public Builder setAppFamily(@Nullable Input<String> appFamily) {
+        public Builder appFamily(@Nullable Input<String> appFamily) {
             this.appFamily = appFamily;
             return this;
         }
 
-        public Builder setAppFamily(@Nullable String appFamily) {
+        public Builder appFamily(@Nullable String appFamily) {
             this.appFamily = Input.ofNullable(appFamily);
             return this;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setCallbackUrl(@Nullable Input<String> callbackUrl) {
+        public Builder callbackUrl(@Nullable Input<String> callbackUrl) {
             this.callbackUrl = callbackUrl;
             return this;
         }
 
-        public Builder setCallbackUrl(@Nullable String callbackUrl) {
+        public Builder callbackUrl(@Nullable String callbackUrl) {
             this.callbackUrl = Input.ofNullable(callbackUrl);
             return this;
         }
 
-        public Builder setDeveloperId(Input<String> developerId) {
+        public Builder developerId(Input<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
-        public Builder setDeveloperId(String developerId) {
+        public Builder developerId(String developerId) {
             this.developerId = Input.of(Objects.requireNonNull(developerId));
             return this;
         }
 
-        public Builder setKeyExpiresIn(@Nullable Input<String> keyExpiresIn) {
+        public Builder keyExpiresIn(@Nullable Input<String> keyExpiresIn) {
             this.keyExpiresIn = keyExpiresIn;
             return this;
         }
 
-        public Builder setKeyExpiresIn(@Nullable String keyExpiresIn) {
+        public Builder keyExpiresIn(@Nullable String keyExpiresIn) {
             this.keyExpiresIn = Input.ofNullable(keyExpiresIn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Input<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

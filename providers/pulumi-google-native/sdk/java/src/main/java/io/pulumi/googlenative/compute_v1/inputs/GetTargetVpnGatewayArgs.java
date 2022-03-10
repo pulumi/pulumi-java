@@ -74,17 +74,17 @@ public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArg
     	      this.targetVpnGateway = defaults.targetVpnGateway;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setTargetVpnGateway(String targetVpnGateway) {
+        public Builder targetVpnGateway(String targetVpnGateway) {
             this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
             return this;
         }

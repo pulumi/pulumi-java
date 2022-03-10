@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCaseContent(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
+        public Builder caseContent(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
             this.caseContent = Objects.requireNonNull(caseContent);
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

@@ -104,22 +104,22 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.idleStartTime = defaults.idleStartTime;
         }
 
-        public Builder setAutoDeleteTime(String autoDeleteTime) {
+        public Builder autoDeleteTime(String autoDeleteTime) {
             this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime);
             return this;
         }
 
-        public Builder setAutoDeleteTtl(String autoDeleteTtl) {
+        public Builder autoDeleteTtl(String autoDeleteTtl) {
             this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl);
             return this;
         }
 
-        public Builder setIdleDeleteTtl(String idleDeleteTtl) {
+        public Builder idleDeleteTtl(String idleDeleteTtl) {
             this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl);
             return this;
         }
 
-        public Builder setIdleStartTime(String idleStartTime) {
+        public Builder idleStartTime(String idleStartTime) {
             this.idleStartTime = Objects.requireNonNull(idleStartTime);
             return this;
         }

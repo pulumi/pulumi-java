@@ -155,72 +155,72 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     	      this.validations = defaults.validations;
         }
 
-        public Builder setActions(@Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
+        public Builder actions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable Input<String> resourceProviderName) {
+        public Builder resourceProviderName(@Nullable Input<String> resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable String resourceProviderName) {
+        public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = Input.ofNullable(resourceProviderName);
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidations(@Nullable Input<List<CustomRPValidationsArgs>> validations) {
+        public Builder validations(@Nullable Input<List<CustomRPValidationsArgs>> validations) {
             this.validations = validations;
             return this;
         }
 
-        public Builder setValidations(@Nullable List<CustomRPValidationsArgs> validations) {
+        public Builder validations(@Nullable List<CustomRPValidationsArgs> validations) {
             this.validations = Input.ofNullable(validations);
             return this;
         }

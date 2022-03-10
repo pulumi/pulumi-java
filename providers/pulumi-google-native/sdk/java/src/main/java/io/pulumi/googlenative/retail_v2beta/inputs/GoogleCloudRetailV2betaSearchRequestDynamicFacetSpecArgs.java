@@ -57,12 +57,12 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs exte
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
+        public Builder mode(@Nullable Input<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode mode) {
+        public Builder mode(@Nullable GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

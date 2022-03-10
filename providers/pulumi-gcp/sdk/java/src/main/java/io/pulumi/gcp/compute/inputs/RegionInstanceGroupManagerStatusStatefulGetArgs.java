@@ -72,22 +72,22 @@ public final class RegionInstanceGroupManagerStatusStatefulGetArgs extends io.pu
     	      this.perInstanceConfigs = defaults.perInstanceConfigs;
         }
 
-        public Builder setHasStatefulConfig(@Nullable Input<Boolean> hasStatefulConfig) {
+        public Builder hasStatefulConfig(@Nullable Input<Boolean> hasStatefulConfig) {
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
-        public Builder setHasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
+        public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
             this.hasStatefulConfig = Input.ofNullable(hasStatefulConfig);
             return this;
         }
 
-        public Builder setPerInstanceConfigs(@Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs) {
+        public Builder perInstanceConfigs(@Nullable Input<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
 
-        public Builder setPerInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs> perInstanceConfigs) {
+        public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs> perInstanceConfigs) {
             this.perInstanceConfigs = Input.ofNullable(perInstanceConfigs);
             return this;
         }

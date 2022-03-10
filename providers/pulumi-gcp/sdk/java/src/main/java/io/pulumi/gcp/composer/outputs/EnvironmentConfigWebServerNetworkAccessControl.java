@@ -42,7 +42,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControl {
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+        public Builder allowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }

@@ -175,82 +175,82 @@ public final class ApiConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setApi(Input<String> api) {
+        public Builder api(Input<String> api) {
             this.api = Objects.requireNonNull(api);
             return this;
         }
 
-        public Builder setApi(String api) {
+        public Builder api(String api) {
             this.api = Input.of(Objects.requireNonNull(api));
             return this;
         }
 
-        public Builder setApiConfigId(@Nullable Input<String> apiConfigId) {
+        public Builder apiConfigId(@Nullable Input<String> apiConfigId) {
             this.apiConfigId = apiConfigId;
             return this;
         }
 
-        public Builder setApiConfigId(@Nullable String apiConfigId) {
+        public Builder apiConfigId(@Nullable String apiConfigId) {
             this.apiConfigId = Input.ofNullable(apiConfigId);
             return this;
         }
 
-        public Builder setApiConfigIdPrefix(@Nullable Input<String> apiConfigIdPrefix) {
+        public Builder apiConfigIdPrefix(@Nullable Input<String> apiConfigIdPrefix) {
             this.apiConfigIdPrefix = apiConfigIdPrefix;
             return this;
         }
 
-        public Builder setApiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
+        public Builder apiConfigIdPrefix(@Nullable String apiConfigIdPrefix) {
             this.apiConfigIdPrefix = Input.ofNullable(apiConfigIdPrefix);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<ApiConfigGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable ApiConfigGatewayConfigArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable ApiConfigGatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setOpenapiDocuments(Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
+        public Builder openapiDocuments(Input<List<ApiConfigOpenapiDocumentArgs>> openapiDocuments) {
             this.openapiDocuments = Objects.requireNonNull(openapiDocuments);
             return this;
         }
 
-        public Builder setOpenapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
+        public Builder openapiDocuments(List<ApiConfigOpenapiDocumentArgs> openapiDocuments) {
             this.openapiDocuments = Input.of(Objects.requireNonNull(openapiDocuments));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

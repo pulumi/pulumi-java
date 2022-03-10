@@ -52,12 +52,12 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterGetArgs extends io.
     	      this.enabledInBroker = defaults.enabledInBroker;
         }
 
-        public Builder setEnabledInBroker(Input<Boolean> enabledInBroker) {
+        public Builder enabledInBroker(Input<Boolean> enabledInBroker) {
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
         }
 
-        public Builder setEnabledInBroker(Boolean enabledInBroker) {
+        public Builder enabledInBroker(Boolean enabledInBroker) {
             this.enabledInBroker = Input.of(Objects.requireNonNull(enabledInBroker));
             return this;
         }

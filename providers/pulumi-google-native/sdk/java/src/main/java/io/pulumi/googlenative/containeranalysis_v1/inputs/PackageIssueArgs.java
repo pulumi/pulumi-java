@@ -155,72 +155,72 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageType = defaults.packageType;
         }
 
-        public Builder setAffectedCpeUri(Input<String> affectedCpeUri) {
+        public Builder affectedCpeUri(Input<String> affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
-        public Builder setAffectedCpeUri(String affectedCpeUri) {
+        public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Input.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
 
-        public Builder setAffectedPackage(Input<String> affectedPackage) {
+        public Builder affectedPackage(Input<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
-        public Builder setAffectedPackage(String affectedPackage) {
+        public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Input.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
 
-        public Builder setAffectedVersion(Input<VersionArgs> affectedVersion) {
+        public Builder affectedVersion(Input<VersionArgs> affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
 
-        public Builder setAffectedVersion(VersionArgs affectedVersion) {
+        public Builder affectedVersion(VersionArgs affectedVersion) {
             this.affectedVersion = Input.of(Objects.requireNonNull(affectedVersion));
             return this;
         }
 
-        public Builder setFixedCpeUri(@Nullable Input<String> fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable Input<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
-        public Builder setFixedCpeUri(@Nullable String fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
             this.fixedCpeUri = Input.ofNullable(fixedCpeUri);
             return this;
         }
 
-        public Builder setFixedPackage(@Nullable Input<String> fixedPackage) {
+        public Builder fixedPackage(@Nullable Input<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
 
-        public Builder setFixedPackage(@Nullable String fixedPackage) {
+        public Builder fixedPackage(@Nullable String fixedPackage) {
             this.fixedPackage = Input.ofNullable(fixedPackage);
             return this;
         }
 
-        public Builder setFixedVersion(Input<VersionArgs> fixedVersion) {
+        public Builder fixedVersion(Input<VersionArgs> fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
 
-        public Builder setFixedVersion(VersionArgs fixedVersion) {
+        public Builder fixedVersion(VersionArgs fixedVersion) {
             this.fixedVersion = Input.of(Objects.requireNonNull(fixedVersion));
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Input<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }

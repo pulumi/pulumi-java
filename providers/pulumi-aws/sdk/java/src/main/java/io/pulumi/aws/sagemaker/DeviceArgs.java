@@ -70,22 +70,22 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deviceFleetName = defaults.deviceFleetName;
         }
 
-        public Builder setDevice(Input<DeviceDeviceArgs> device) {
+        public Builder device(Input<DeviceDeviceArgs> device) {
             this.device = Objects.requireNonNull(device);
             return this;
         }
 
-        public Builder setDevice(DeviceDeviceArgs device) {
+        public Builder device(DeviceDeviceArgs device) {
             this.device = Input.of(Objects.requireNonNull(device));
             return this;
         }
 
-        public Builder setDeviceFleetName(Input<String> deviceFleetName) {
+        public Builder deviceFleetName(Input<String> deviceFleetName) {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
 
-        public Builder setDeviceFleetName(String deviceFleetName) {
+        public Builder deviceFleetName(String deviceFleetName) {
             this.deviceFleetName = Input.of(Objects.requireNonNull(deviceFleetName));
             return this;
         }

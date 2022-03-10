@@ -50,7 +50,7 @@ public final class ContainerGroupDiagnosticsResponse {
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder setLogAnalytics(@Nullable LogAnalyticsResponse logAnalytics) {
+        public Builder logAnalytics(@Nullable LogAnalyticsResponse logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }

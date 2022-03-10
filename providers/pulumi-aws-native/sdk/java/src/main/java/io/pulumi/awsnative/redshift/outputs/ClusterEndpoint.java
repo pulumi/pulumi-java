@@ -51,12 +51,12 @@ public final class ClusterEndpoint {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }

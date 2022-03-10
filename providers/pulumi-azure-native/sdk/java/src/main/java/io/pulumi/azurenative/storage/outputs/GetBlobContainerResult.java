@@ -360,102 +360,102 @@ public final class GetBlobContainerResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDefaultEncryptionScope(@Nullable String defaultEncryptionScope) {
+        public Builder defaultEncryptionScope(@Nullable String defaultEncryptionScope) {
             this.defaultEncryptionScope = defaultEncryptionScope;
             return this;
         }
 
-        public Builder setDeleted(Boolean deleted) {
+        public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDeletedTime(String deletedTime) {
+        public Builder deletedTime(String deletedTime) {
             this.deletedTime = Objects.requireNonNull(deletedTime);
             return this;
         }
 
-        public Builder setDenyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
+        public Builder denyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHasImmutabilityPolicy(Boolean hasImmutabilityPolicy) {
+        public Builder hasImmutabilityPolicy(Boolean hasImmutabilityPolicy) {
             this.hasImmutabilityPolicy = Objects.requireNonNull(hasImmutabilityPolicy);
             return this;
         }
 
-        public Builder setHasLegalHold(Boolean hasLegalHold) {
+        public Builder hasLegalHold(Boolean hasLegalHold) {
             this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImmutabilityPolicy(ImmutabilityPolicyPropertiesResponse immutabilityPolicy) {
+        public Builder immutabilityPolicy(ImmutabilityPolicyPropertiesResponse immutabilityPolicy) {
             this.immutabilityPolicy = Objects.requireNonNull(immutabilityPolicy);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLeaseDuration(String leaseDuration) {
+        public Builder leaseDuration(String leaseDuration) {
             this.leaseDuration = Objects.requireNonNull(leaseDuration);
             return this;
         }
 
-        public Builder setLeaseState(String leaseState) {
+        public Builder leaseState(String leaseState) {
             this.leaseState = Objects.requireNonNull(leaseState);
             return this;
         }
 
-        public Builder setLeaseStatus(String leaseStatus) {
+        public Builder leaseStatus(String leaseStatus) {
             this.leaseStatus = Objects.requireNonNull(leaseStatus);
             return this;
         }
 
-        public Builder setLegalHold(LegalHoldPropertiesResponse legalHold) {
+        public Builder legalHold(LegalHoldPropertiesResponse legalHold) {
             this.legalHold = Objects.requireNonNull(legalHold);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicAccess(@Nullable String publicAccess) {
+        public Builder publicAccess(@Nullable String publicAccess) {
             this.publicAccess = publicAccess;
             return this;
         }
 
-        public Builder setRemainingRetentionDays(Integer remainingRetentionDays) {
+        public Builder remainingRetentionDays(Integer remainingRetentionDays) {
             this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

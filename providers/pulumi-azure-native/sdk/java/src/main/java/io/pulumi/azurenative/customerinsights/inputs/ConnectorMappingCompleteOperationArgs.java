@@ -75,22 +75,22 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
     	      this.destinationFolder = defaults.destinationFolder;
         }
 
-        public Builder setCompletionOperationType(@Nullable Input<CompletionOperationTypes> completionOperationType) {
+        public Builder completionOperationType(@Nullable Input<CompletionOperationTypes> completionOperationType) {
             this.completionOperationType = completionOperationType;
             return this;
         }
 
-        public Builder setCompletionOperationType(@Nullable CompletionOperationTypes completionOperationType) {
+        public Builder completionOperationType(@Nullable CompletionOperationTypes completionOperationType) {
             this.completionOperationType = Input.ofNullable(completionOperationType);
             return this;
         }
 
-        public Builder setDestinationFolder(@Nullable Input<String> destinationFolder) {
+        public Builder destinationFolder(@Nullable Input<String> destinationFolder) {
             this.destinationFolder = destinationFolder;
             return this;
         }
 
-        public Builder setDestinationFolder(@Nullable String destinationFolder) {
+        public Builder destinationFolder(@Nullable String destinationFolder) {
             this.destinationFolder = Input.ofNullable(destinationFolder);
             return this;
         }

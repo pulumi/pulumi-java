@@ -86,17 +86,17 @@ public final class GetClusterResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setClusterArn(@Nullable String clusterArn) {
+        public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
-        public Builder setClusterEndpoints(@Nullable List<ClusterEndpoint> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable List<ClusterEndpoint> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
 
-        public Builder setStatus(@Nullable ClusterStatus status) {
+        public Builder status(@Nullable ClusterStatus status) {
             this.status = status;
             return this;
         }

@@ -193,47 +193,47 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowResponseFolder folder) {
+        public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScriptLines(@Nullable List<String> scriptLines) {
+        public Builder scriptLines(@Nullable List<String> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
 
-        public Builder setSinks(@Nullable List<DataFlowSinkResponse> sinks) {
+        public Builder sinks(@Nullable List<DataFlowSinkResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setSources(@Nullable List<DataFlowSourceResponse> sources) {
+        public Builder sources(@Nullable List<DataFlowSourceResponse> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTransformations(@Nullable List<TransformationResponse> transformations) {
+        public Builder transformations(@Nullable List<TransformationResponse> transformations) {
             this.transformations = transformations;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

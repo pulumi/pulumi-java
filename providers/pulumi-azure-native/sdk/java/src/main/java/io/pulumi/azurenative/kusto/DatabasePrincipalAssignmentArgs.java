@@ -169,82 +169,82 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setPrincipalAssignmentName(@Nullable Input<String> principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable Input<String> principalAssignmentName) {
             this.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
-        public Builder setPrincipalAssignmentName(@Nullable String principalAssignmentName) {
+        public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
             this.principalAssignmentName = Input.ofNullable(principalAssignmentName);
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setPrincipalType(Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(Input<Either<String,PrincipalType>> principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setPrincipalType(Either<String,PrincipalType> principalType) {
+        public Builder principalType(Either<String,PrincipalType> principalType) {
             this.principalType = Input.of(Objects.requireNonNull(principalType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRole(Input<Either<String,DatabasePrincipalRole>> role) {
+        public Builder role(Input<Either<String,DatabasePrincipalRole>> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(Either<String,DatabasePrincipalRole> role) {
+        public Builder role(Either<String,DatabasePrincipalRole> role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

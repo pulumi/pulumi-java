@@ -96,42 +96,42 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReplication(Input<ReplicationArgs> replication) {
+        public Builder replication(Input<ReplicationArgs> replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
 
-        public Builder setReplication(ReplicationArgs replication) {
+        public Builder replication(ReplicationArgs replication) {
             this.replication = Input.of(Objects.requireNonNull(replication));
             return this;
         }
 
-        public Builder setSecretId(Input<String> secretId) {
+        public Builder secretId(Input<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }

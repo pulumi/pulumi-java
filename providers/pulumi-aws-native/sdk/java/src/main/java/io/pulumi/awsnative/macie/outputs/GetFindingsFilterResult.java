@@ -168,42 +168,42 @@ public final class GetFindingsFilterResult {
     	      this.position = defaults.position;
         }
 
-        public Builder setAction(@Nullable FindingsFilterFindingFilterAction action) {
+        public Builder action(@Nullable FindingsFilterFindingFilterAction action) {
             this.action = action;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFindingCriteria(@Nullable FindingsFilterFindingCriteria findingCriteria) {
+        public Builder findingCriteria(@Nullable FindingsFilterFindingCriteria findingCriteria) {
             this.findingCriteria = findingCriteria;
             return this;
         }
 
-        public Builder setFindingsFilterListItems(@Nullable List<FindingsFilterListItem> findingsFilterListItems) {
+        public Builder findingsFilterListItems(@Nullable List<FindingsFilterListItem> findingsFilterListItems) {
             this.findingsFilterListItems = findingsFilterListItems;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPosition(@Nullable Integer position) {
+        public Builder position(@Nullable Integer position) {
             this.position = position;
             return this;
         }

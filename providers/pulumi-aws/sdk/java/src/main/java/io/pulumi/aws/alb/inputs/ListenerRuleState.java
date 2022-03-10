@@ -155,72 +155,72 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setActions(@Nullable Input<List<ListenerRuleActionGetArgs>> actions) {
+        public Builder actions(@Nullable Input<List<ListenerRuleActionGetArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<ListenerRuleActionGetArgs> actions) {
+        public Builder actions(@Nullable List<ListenerRuleActionGetArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<ListenerRuleConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<ListenerRuleConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ListenerRuleConditionGetArgs> conditions) {
+        public Builder conditions(@Nullable List<ListenerRuleConditionGetArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setListenerArn(@Nullable Input<String> listenerArn) {
+        public Builder listenerArn(@Nullable Input<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
-        public Builder setListenerArn(@Nullable String listenerArn) {
+        public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = Input.ofNullable(listenerArn);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

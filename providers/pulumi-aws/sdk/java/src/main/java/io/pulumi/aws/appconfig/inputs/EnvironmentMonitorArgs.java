@@ -70,22 +70,22 @@ public final class EnvironmentMonitorArgs extends io.pulumi.resources.ResourceAr
     	      this.alarmRoleArn = defaults.alarmRoleArn;
         }
 
-        public Builder setAlarmArn(Input<String> alarmArn) {
+        public Builder alarmArn(Input<String> alarmArn) {
             this.alarmArn = Objects.requireNonNull(alarmArn);
             return this;
         }
 
-        public Builder setAlarmArn(String alarmArn) {
+        public Builder alarmArn(String alarmArn) {
             this.alarmArn = Input.of(Objects.requireNonNull(alarmArn));
             return this;
         }
 
-        public Builder setAlarmRoleArn(@Nullable Input<String> alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable Input<String> alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }
 
-        public Builder setAlarmRoleArn(@Nullable String alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             this.alarmRoleArn = Input.ofNullable(alarmRoleArn);
             return this;
         }

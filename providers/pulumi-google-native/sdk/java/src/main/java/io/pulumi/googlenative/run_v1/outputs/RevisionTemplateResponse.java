@@ -66,12 +66,12 @@ public final class RevisionTemplateResponse {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(ObjectMetaResponse metadata) {
+        public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSpec(RevisionSpecResponse spec) {
+        public Builder spec(RevisionSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

@@ -55,7 +55,7 @@ public final class ManagementAssociationPropertiesResponse extends io.pulumi.res
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }

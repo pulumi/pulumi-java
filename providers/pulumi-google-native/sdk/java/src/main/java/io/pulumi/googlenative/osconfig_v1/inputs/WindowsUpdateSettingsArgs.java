@@ -92,32 +92,32 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     	      this.exclusivePatches = defaults.exclusivePatches;
         }
 
-        public Builder setClassifications(@Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications) {
+        public Builder classifications(@Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications) {
             this.classifications = classifications;
             return this;
         }
 
-        public Builder setClassifications(@Nullable List<WindowsUpdateSettingsClassificationsItem> classifications) {
+        public Builder classifications(@Nullable List<WindowsUpdateSettingsClassificationsItem> classifications) {
             this.classifications = Input.ofNullable(classifications);
             return this;
         }
 
-        public Builder setExcludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Input<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Input.ofNullable(excludes);
             return this;
         }
 
-        public Builder setExclusivePatches(@Nullable Input<List<String>> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable Input<List<String>> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
 
-        public Builder setExclusivePatches(@Nullable List<String> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = Input.ofNullable(exclusivePatches);
             return this;
         }

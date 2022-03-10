@@ -139,62 +139,62 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
     	      this.xssProtection = defaults.xssProtection;
         }
 
-        public Builder setContentSecurityPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy) {
             this.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
-        public Builder setContentSecurityPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs contentSecurityPolicy) {
             this.contentSecurityPolicy = Input.ofNullable(contentSecurityPolicy);
             return this;
         }
 
-        public Builder setContentTypeOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
+        public Builder contentTypeOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions) {
             this.contentTypeOptions = contentTypeOptions;
             return this;
         }
 
-        public Builder setContentTypeOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs contentTypeOptions) {
+        public Builder contentTypeOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs contentTypeOptions) {
             this.contentTypeOptions = Input.ofNullable(contentTypeOptions);
             return this;
         }
 
-        public Builder setFrameOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
+        public Builder frameOptions(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions) {
             this.frameOptions = frameOptions;
             return this;
         }
 
-        public Builder setFrameOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs frameOptions) {
+        public Builder frameOptions(@Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs frameOptions) {
             this.frameOptions = Input.ofNullable(frameOptions);
             return this;
         }
 
-        public Builder setReferrerPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
+        public Builder referrerPolicy(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy) {
             this.referrerPolicy = referrerPolicy;
             return this;
         }
 
-        public Builder setReferrerPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs referrerPolicy) {
+        public Builder referrerPolicy(@Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs referrerPolicy) {
             this.referrerPolicy = Input.ofNullable(referrerPolicy);
             return this;
         }
 
-        public Builder setStrictTransportSecurity(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
+        public Builder strictTransportSecurity(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity) {
             this.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
 
-        public Builder setStrictTransportSecurity(@Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs strictTransportSecurity) {
+        public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs strictTransportSecurity) {
             this.strictTransportSecurity = Input.ofNullable(strictTransportSecurity);
             return this;
         }
 
-        public Builder setXssProtection(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
+        public Builder xssProtection(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection) {
             this.xssProtection = xssProtection;
             return this;
         }
 
-        public Builder setXssProtection(@Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs xssProtection) {
+        public Builder xssProtection(@Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs xssProtection) {
             this.xssProtection = Input.ofNullable(xssProtection);
             return this;
         }

@@ -74,22 +74,22 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder setAlgorithm(Input<KeyVersionSpecAlgorithm> algorithm) {
+        public Builder algorithm(Input<KeyVersionSpecAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAlgorithm(KeyVersionSpecAlgorithm algorithm) {
+        public Builder algorithm(KeyVersionSpecAlgorithm algorithm) {
             this.algorithm = Input.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(Input<String> cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(Input<String> cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(String cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Input.of(Objects.requireNonNull(cloudKmsKeyVersion));
             return this;
         }

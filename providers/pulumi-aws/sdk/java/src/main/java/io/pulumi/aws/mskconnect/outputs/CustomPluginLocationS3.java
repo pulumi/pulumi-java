@@ -83,17 +83,17 @@ public final class CustomPluginLocationS3 {
     	      this.objectVersion = defaults.objectVersion;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFileKey(String fileKey) {
+        public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
-        public Builder setObjectVersion(@Nullable String objectVersion) {
+        public Builder objectVersion(@Nullable String objectVersion) {
             this.objectVersion = objectVersion;
             return this;
         }

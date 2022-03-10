@@ -66,12 +66,12 @@ public final class EgressFromResponse {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentities(List<String> identities) {
+        public Builder identities(List<String> identities) {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }

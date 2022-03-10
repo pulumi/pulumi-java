@@ -53,12 +53,12 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     	      this.multiLine = defaults.multiLine;
         }
 
-        public Builder setMultiLine(@Nullable Input<Boolean> multiLine) {
+        public Builder multiLine(@Nullable Input<Boolean> multiLine) {
             this.multiLine = multiLine;
             return this;
         }
 
-        public Builder setMultiLine(@Nullable Boolean multiLine) {
+        public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = Input.ofNullable(multiLine);
             return this;
         }

@@ -92,22 +92,22 @@ public final class RuleGroupSizeConstraintStatement extends io.pulumi.resources.
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setComparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

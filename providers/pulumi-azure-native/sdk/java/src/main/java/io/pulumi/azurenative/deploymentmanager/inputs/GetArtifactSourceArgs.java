@@ -68,12 +68,12 @@ public final class GetArtifactSourceArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setArtifactSourceName(String artifactSourceName) {
+        public Builder artifactSourceName(String artifactSourceName) {
             this.artifactSourceName = Objects.requireNonNull(artifactSourceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

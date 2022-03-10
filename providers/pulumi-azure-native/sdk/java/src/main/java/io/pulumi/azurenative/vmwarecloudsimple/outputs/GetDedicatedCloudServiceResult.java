@@ -180,47 +180,47 @@ public final class GetDedicatedCloudServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setGatewaySubnet(String gatewaySubnet) {
+        public Builder gatewaySubnet(String gatewaySubnet) {
             this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsAccountOnboarded(String isAccountOnboarded) {
+        public Builder isAccountOnboarded(String isAccountOnboarded) {
             this.isAccountOnboarded = Objects.requireNonNull(isAccountOnboarded);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodes(Integer nodes) {
+        public Builder nodes(Integer nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setServiceURL(String serviceURL) {
+        public Builder serviceURL(String serviceURL) {
             this.serviceURL = Objects.requireNonNull(serviceURL);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

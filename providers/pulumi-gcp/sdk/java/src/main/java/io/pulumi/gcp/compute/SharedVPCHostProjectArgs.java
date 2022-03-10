@@ -52,12 +52,12 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
     	      this.project = defaults.project;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }

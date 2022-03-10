@@ -524,152 +524,152 @@ public final class AssessmentPropertiesResponse extends io.pulumi.resources.Invo
     	      this.vmUptime = defaults.vmUptime;
         }
 
-        public Builder setAzureDiskType(String azureDiskType) {
+        public Builder azureDiskType(String azureDiskType) {
             this.azureDiskType = Objects.requireNonNull(azureDiskType);
             return this;
         }
 
-        public Builder setAzureHybridUseBenefit(String azureHybridUseBenefit) {
+        public Builder azureHybridUseBenefit(String azureHybridUseBenefit) {
             this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
             return this;
         }
 
-        public Builder setAzureLocation(String azureLocation) {
+        public Builder azureLocation(String azureLocation) {
             this.azureLocation = Objects.requireNonNull(azureLocation);
             return this;
         }
 
-        public Builder setAzureOfferCode(String azureOfferCode) {
+        public Builder azureOfferCode(String azureOfferCode) {
             this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
             return this;
         }
 
-        public Builder setAzurePricingTier(String azurePricingTier) {
+        public Builder azurePricingTier(String azurePricingTier) {
             this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
             return this;
         }
 
-        public Builder setAzureStorageRedundancy(String azureStorageRedundancy) {
+        public Builder azureStorageRedundancy(String azureStorageRedundancy) {
             this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
             return this;
         }
 
-        public Builder setAzureVmFamilies(List<String> azureVmFamilies) {
+        public Builder azureVmFamilies(List<String> azureVmFamilies) {
             this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
             return this;
         }
 
-        public Builder setConfidenceRatingInPercentage(Double confidenceRatingInPercentage) {
+        public Builder confidenceRatingInPercentage(Double confidenceRatingInPercentage) {
             this.confidenceRatingInPercentage = Objects.requireNonNull(confidenceRatingInPercentage);
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setCurrency(String currency) {
+        public Builder currency(String currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
 
-        public Builder setDiscountPercentage(Double discountPercentage) {
+        public Builder discountPercentage(Double discountPercentage) {
             this.discountPercentage = Objects.requireNonNull(discountPercentage);
             return this;
         }
 
-        public Builder setEaSubscriptionId(String eaSubscriptionId) {
+        public Builder eaSubscriptionId(String eaSubscriptionId) {
             this.eaSubscriptionId = Objects.requireNonNull(eaSubscriptionId);
             return this;
         }
 
-        public Builder setMonthlyBandwidthCost(Double monthlyBandwidthCost) {
+        public Builder monthlyBandwidthCost(Double monthlyBandwidthCost) {
             this.monthlyBandwidthCost = Objects.requireNonNull(monthlyBandwidthCost);
             return this;
         }
 
-        public Builder setMonthlyComputeCost(Double monthlyComputeCost) {
+        public Builder monthlyComputeCost(Double monthlyComputeCost) {
             this.monthlyComputeCost = Objects.requireNonNull(monthlyComputeCost);
             return this;
         }
 
-        public Builder setMonthlyPremiumStorageCost(Double monthlyPremiumStorageCost) {
+        public Builder monthlyPremiumStorageCost(Double monthlyPremiumStorageCost) {
             this.monthlyPremiumStorageCost = Objects.requireNonNull(monthlyPremiumStorageCost);
             return this;
         }
 
-        public Builder setMonthlyStandardSSDStorageCost(Double monthlyStandardSSDStorageCost) {
+        public Builder monthlyStandardSSDStorageCost(Double monthlyStandardSSDStorageCost) {
             this.monthlyStandardSSDStorageCost = Objects.requireNonNull(monthlyStandardSSDStorageCost);
             return this;
         }
 
-        public Builder setMonthlyStorageCost(Double monthlyStorageCost) {
+        public Builder monthlyStorageCost(Double monthlyStorageCost) {
             this.monthlyStorageCost = Objects.requireNonNull(monthlyStorageCost);
             return this;
         }
 
-        public Builder setNumberOfMachines(Integer numberOfMachines) {
+        public Builder numberOfMachines(Integer numberOfMachines) {
             this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
             return this;
         }
 
-        public Builder setPercentile(String percentile) {
+        public Builder percentile(String percentile) {
             this.percentile = Objects.requireNonNull(percentile);
             return this;
         }
 
-        public Builder setPerfDataEndTime(String perfDataEndTime) {
+        public Builder perfDataEndTime(String perfDataEndTime) {
             this.perfDataEndTime = Objects.requireNonNull(perfDataEndTime);
             return this;
         }
 
-        public Builder setPerfDataStartTime(String perfDataStartTime) {
+        public Builder perfDataStartTime(String perfDataStartTime) {
             this.perfDataStartTime = Objects.requireNonNull(perfDataStartTime);
             return this;
         }
 
-        public Builder setPricesTimestamp(String pricesTimestamp) {
+        public Builder pricesTimestamp(String pricesTimestamp) {
             this.pricesTimestamp = Objects.requireNonNull(pricesTimestamp);
             return this;
         }
 
-        public Builder setReservedInstance(String reservedInstance) {
+        public Builder reservedInstance(String reservedInstance) {
             this.reservedInstance = Objects.requireNonNull(reservedInstance);
             return this;
         }
 
-        public Builder setScalingFactor(Double scalingFactor) {
+        public Builder scalingFactor(Double scalingFactor) {
             this.scalingFactor = Objects.requireNonNull(scalingFactor);
             return this;
         }
 
-        public Builder setSizingCriterion(String sizingCriterion) {
+        public Builder sizingCriterion(String sizingCriterion) {
             this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTimeRange(String timeRange) {
+        public Builder timeRange(String timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }
 
-        public Builder setVmUptime(VmUptimeResponse vmUptime) {
+        public Builder vmUptime(VmUptimeResponse vmUptime) {
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }

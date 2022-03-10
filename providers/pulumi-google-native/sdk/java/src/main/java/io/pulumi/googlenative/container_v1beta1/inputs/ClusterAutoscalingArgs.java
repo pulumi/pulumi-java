@@ -127,52 +127,52 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder setAutoprovisioningLocations(@Nullable Input<List<String>> autoprovisioningLocations) {
+        public Builder autoprovisioningLocations(@Nullable Input<List<String>> autoprovisioningLocations) {
             this.autoprovisioningLocations = autoprovisioningLocations;
             return this;
         }
 
-        public Builder setAutoprovisioningLocations(@Nullable List<String> autoprovisioningLocations) {
+        public Builder autoprovisioningLocations(@Nullable List<String> autoprovisioningLocations) {
             this.autoprovisioningLocations = Input.ofNullable(autoprovisioningLocations);
             return this;
         }
 
-        public Builder setAutoprovisioningNodePoolDefaults(@Nullable Input<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults) {
+        public Builder autoprovisioningNodePoolDefaults(@Nullable Input<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults) {
             this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
             return this;
         }
 
-        public Builder setAutoprovisioningNodePoolDefaults(@Nullable AutoprovisioningNodePoolDefaultsArgs autoprovisioningNodePoolDefaults) {
+        public Builder autoprovisioningNodePoolDefaults(@Nullable AutoprovisioningNodePoolDefaultsArgs autoprovisioningNodePoolDefaults) {
             this.autoprovisioningNodePoolDefaults = Input.ofNullable(autoprovisioningNodePoolDefaults);
             return this;
         }
 
-        public Builder setAutoscalingProfile(@Nullable Input<ClusterAutoscalingAutoscalingProfile> autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable Input<ClusterAutoscalingAutoscalingProfile> autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
-        public Builder setAutoscalingProfile(@Nullable ClusterAutoscalingAutoscalingProfile autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable ClusterAutoscalingAutoscalingProfile autoscalingProfile) {
             this.autoscalingProfile = Input.ofNullable(autoscalingProfile);
             return this;
         }
 
-        public Builder setEnableNodeAutoprovisioning(@Nullable Input<Boolean> enableNodeAutoprovisioning) {
+        public Builder enableNodeAutoprovisioning(@Nullable Input<Boolean> enableNodeAutoprovisioning) {
             this.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
             return this;
         }
 
-        public Builder setEnableNodeAutoprovisioning(@Nullable Boolean enableNodeAutoprovisioning) {
+        public Builder enableNodeAutoprovisioning(@Nullable Boolean enableNodeAutoprovisioning) {
             this.enableNodeAutoprovisioning = Input.ofNullable(enableNodeAutoprovisioning);
             return this;
         }
 
-        public Builder setResourceLimits(@Nullable Input<List<ResourceLimitArgs>> resourceLimits) {
+        public Builder resourceLimits(@Nullable Input<List<ResourceLimitArgs>> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
 
-        public Builder setResourceLimits(@Nullable List<ResourceLimitArgs> resourceLimits) {
+        public Builder resourceLimits(@Nullable List<ResourceLimitArgs> resourceLimits) {
             this.resourceLimits = Input.ofNullable(resourceLimits);
             return this;
         }

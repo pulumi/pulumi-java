@@ -132,62 +132,62 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.repositoryUri = defaults.repositoryUri;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCatalogData(@Nullable Input<RepositoryCatalogDataGetArgs> catalogData) {
+        public Builder catalogData(@Nullable Input<RepositoryCatalogDataGetArgs> catalogData) {
             this.catalogData = catalogData;
             return this;
         }
 
-        public Builder setCatalogData(@Nullable RepositoryCatalogDataGetArgs catalogData) {
+        public Builder catalogData(@Nullable RepositoryCatalogDataGetArgs catalogData) {
             this.catalogData = Input.ofNullable(catalogData);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setRegistryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Input<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = Input.ofNullable(registryId);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryUri(@Nullable Input<String> repositoryUri) {
+        public Builder repositoryUri(@Nullable Input<String> repositoryUri) {
             this.repositoryUri = repositoryUri;
             return this;
         }
 
-        public Builder setRepositoryUri(@Nullable String repositoryUri) {
+        public Builder repositoryUri(@Nullable String repositoryUri) {
             this.repositoryUri = Input.ofNullable(repositoryUri);
             return this;
         }

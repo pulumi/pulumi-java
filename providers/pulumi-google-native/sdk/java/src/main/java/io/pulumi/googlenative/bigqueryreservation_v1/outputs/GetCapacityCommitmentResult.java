@@ -162,42 +162,42 @@ public final class GetCapacityCommitmentResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCommitmentEndTime(String commitmentEndTime) {
+        public Builder commitmentEndTime(String commitmentEndTime) {
             this.commitmentEndTime = Objects.requireNonNull(commitmentEndTime);
             return this;
         }
 
-        public Builder setCommitmentStartTime(String commitmentStartTime) {
+        public Builder commitmentStartTime(String commitmentStartTime) {
             this.commitmentStartTime = Objects.requireNonNull(commitmentStartTime);
             return this;
         }
 
-        public Builder setFailureStatus(StatusResponse failureStatus) {
+        public Builder failureStatus(StatusResponse failureStatus) {
             this.failureStatus = Objects.requireNonNull(failureStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(String plan) {
+        public Builder plan(String plan) {
             this.plan = Objects.requireNonNull(plan);
             return this;
         }
 
-        public Builder setRenewalPlan(String renewalPlan) {
+        public Builder renewalPlan(String renewalPlan) {
             this.renewalPlan = Objects.requireNonNull(renewalPlan);
             return this;
         }
 
-        public Builder setSlotCount(String slotCount) {
+        public Builder slotCount(String slotCount) {
             this.slotCount = Objects.requireNonNull(slotCount);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

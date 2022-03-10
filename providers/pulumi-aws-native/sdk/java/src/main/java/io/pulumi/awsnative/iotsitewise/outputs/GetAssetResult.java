@@ -135,37 +135,37 @@ public final class GetAssetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetArn(@Nullable String assetArn) {
+        public Builder assetArn(@Nullable String assetArn) {
             this.assetArn = assetArn;
             return this;
         }
 
-        public Builder setAssetHierarchies(@Nullable List<AssetHierarchy> assetHierarchies) {
+        public Builder assetHierarchies(@Nullable List<AssetHierarchy> assetHierarchies) {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setAssetModelId(@Nullable String assetModelId) {
+        public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
 
-        public Builder setAssetName(@Nullable String assetName) {
+        public Builder assetName(@Nullable String assetName) {
             this.assetName = assetName;
             return this;
         }
 
-        public Builder setAssetProperties(@Nullable List<AssetProperty> assetProperties) {
+        public Builder assetProperties(@Nullable List<AssetProperty> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetTag> tags) {
+        public Builder tags(@Nullable List<AssetTag> tags) {
             this.tags = tags;
             return this;
         }

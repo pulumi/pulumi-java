@@ -297,162 +297,162 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = Input.ofNullable(autoDeleteOnIdle);
             return this;
         }
 
-        public Builder setDeadLetteringOnFilterEvaluationExceptions(@Nullable Input<Boolean> deadLetteringOnFilterEvaluationExceptions) {
+        public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Input<Boolean> deadLetteringOnFilterEvaluationExceptions) {
             this.deadLetteringOnFilterEvaluationExceptions = deadLetteringOnFilterEvaluationExceptions;
             return this;
         }
 
-        public Builder setDeadLetteringOnFilterEvaluationExceptions(@Nullable Boolean deadLetteringOnFilterEvaluationExceptions) {
+        public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Boolean deadLetteringOnFilterEvaluationExceptions) {
             this.deadLetteringOnFilterEvaluationExceptions = Input.ofNullable(deadLetteringOnFilterEvaluationExceptions);
             return this;
         }
 
-        public Builder setDeadLetteringOnMessageExpiration(@Nullable Input<Boolean> deadLetteringOnMessageExpiration) {
+        public Builder deadLetteringOnMessageExpiration(@Nullable Input<Boolean> deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
 
-        public Builder setDeadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
+        public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = Input.ofNullable(deadLetteringOnMessageExpiration);
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = Input.ofNullable(defaultMessageTimeToLive);
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = Input.ofNullable(duplicateDetectionHistoryTimeWindow);
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = Input.ofNullable(enableBatchedOperations);
             return this;
         }
 
-        public Builder setForwardDeadLetteredMessagesTo(@Nullable Input<String> forwardDeadLetteredMessagesTo) {
+        public Builder forwardDeadLetteredMessagesTo(@Nullable Input<String> forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
 
-        public Builder setForwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
+        public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = Input.ofNullable(forwardDeadLetteredMessagesTo);
             return this;
         }
 
-        public Builder setForwardTo(@Nullable Input<String> forwardTo) {
+        public Builder forwardTo(@Nullable Input<String> forwardTo) {
             this.forwardTo = forwardTo;
             return this;
         }
 
-        public Builder setForwardTo(@Nullable String forwardTo) {
+        public Builder forwardTo(@Nullable String forwardTo) {
             this.forwardTo = Input.ofNullable(forwardTo);
             return this;
         }
 
-        public Builder setLockDuration(@Nullable Input<String> lockDuration) {
+        public Builder lockDuration(@Nullable Input<String> lockDuration) {
             this.lockDuration = lockDuration;
             return this;
         }
 
-        public Builder setLockDuration(@Nullable String lockDuration) {
+        public Builder lockDuration(@Nullable String lockDuration) {
             this.lockDuration = Input.ofNullable(lockDuration);
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Input.ofNullable(maxDeliveryCount);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setRequiresSession(@Nullable Input<Boolean> requiresSession) {
+        public Builder requiresSession(@Nullable Input<Boolean> requiresSession) {
             this.requiresSession = requiresSession;
             return this;
         }
 
-        public Builder setRequiresSession(@Nullable Boolean requiresSession) {
+        public Builder requiresSession(@Nullable Boolean requiresSession) {
             this.requiresSession = Input.ofNullable(requiresSession);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<EntityStatus> status) {
+        public Builder status(@Nullable Input<EntityStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable EntityStatus status) {
+        public Builder status(@Nullable EntityStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable Input<String> subscriptionName) {
+        public Builder subscriptionName(@Nullable Input<String> subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable String subscriptionName) {
+        public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = Input.ofNullable(subscriptionName);
             return this;
         }
 
-        public Builder setTopicName(Input<String> topicName) {
+        public Builder topicName(Input<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }

@@ -60,17 +60,17 @@ public final class GetOriginRequestPolicyResult {
     	      this.originRequestPolicyConfig = defaults.originRequestPolicyConfig;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setOriginRequestPolicyConfig(@Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
+        public Builder originRequestPolicyConfig(@Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
             this.originRequestPolicyConfig = originRequestPolicyConfig;
             return this;
         }

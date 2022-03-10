@@ -115,42 +115,42 @@ public final class CertificateCertificateDescription {
     	      this.subjectKeyIds = defaults.subjectKeyIds;
         }
 
-        public Builder setAiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
 
-        public Builder setAuthorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds) {
+        public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds) {
             this.authorityKeyIds = authorityKeyIds;
             return this;
         }
 
-        public Builder setCertFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints) {
+        public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints) {
             this.certFingerprints = certFingerprints;
             return this;
         }
 
-        public Builder setConfigValues(@Nullable List<CertificateCertificateDescriptionConfigValue> configValues) {
+        public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValue> configValues) {
             this.configValues = configValues;
             return this;
         }
 
-        public Builder setCrlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
+        public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
             this.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys) {
+        public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setSubjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions) {
+        public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions) {
             this.subjectDescriptions = subjectDescriptions;
             return this;
         }
 
-        public Builder setSubjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
+        public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }

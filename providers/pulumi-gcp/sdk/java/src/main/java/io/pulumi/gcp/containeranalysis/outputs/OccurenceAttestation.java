@@ -79,12 +79,12 @@ public final class OccurenceAttestation {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(List<OccurenceAttestationSignature> signatures) {
+        public Builder signatures(List<OccurenceAttestationSignature> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

@@ -86,17 +86,17 @@ public final class AutoHealActionsResponse {
     	      this.minProcessExecutionTime = defaults.minProcessExecutionTime;
         }
 
-        public Builder setActionType(@Nullable String actionType) {
+        public Builder actionType(@Nullable String actionType) {
             this.actionType = actionType;
             return this;
         }
 
-        public Builder setCustomAction(@Nullable AutoHealCustomActionResponse customAction) {
+        public Builder customAction(@Nullable AutoHealCustomActionResponse customAction) {
             this.customAction = customAction;
             return this;
         }
 
-        public Builder setMinProcessExecutionTime(@Nullable String minProcessExecutionTime) {
+        public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }

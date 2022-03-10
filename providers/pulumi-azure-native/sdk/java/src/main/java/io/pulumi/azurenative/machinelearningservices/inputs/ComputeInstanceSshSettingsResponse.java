@@ -107,22 +107,22 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
     	      this.sshPublicAccess = defaults.sshPublicAccess;
         }
 
-        public Builder setAdminPublicKey(@Nullable String adminPublicKey) {
+        public Builder adminPublicKey(@Nullable String adminPublicKey) {
             this.adminPublicKey = adminPublicKey;
             return this;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setSshPort(Integer sshPort) {
+        public Builder sshPort(Integer sshPort) {
             this.sshPort = Objects.requireNonNull(sshPort);
             return this;
         }
 
-        public Builder setSshPublicAccess(@Nullable String sshPublicAccess) {
+        public Builder sshPublicAccess(@Nullable String sshPublicAccess) {
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }

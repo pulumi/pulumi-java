@@ -168,42 +168,42 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBaseThemeId(@Nullable String baseThemeId) {
+        public Builder baseThemeId(@Nullable String baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ThemeConfiguration configuration) {
+        public Builder configuration(@Nullable ThemeConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ThemeError> errors) {
+        public Builder errors(@Nullable List<ThemeError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setStatus(@Nullable ThemeResourceStatus status) {
+        public Builder status(@Nullable ThemeResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Double versionNumber) {
+        public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

@@ -91,32 +91,32 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     	      this.isValidated = defaults.isValidated;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Boolean isValidated) {
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = Input.ofNullable(isValidated);
             return this;
         }

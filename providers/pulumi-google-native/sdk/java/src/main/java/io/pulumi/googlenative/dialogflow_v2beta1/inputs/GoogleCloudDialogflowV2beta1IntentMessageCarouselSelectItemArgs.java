@@ -108,42 +108,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
+        public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setInfo(Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
+        public Builder info(Input<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
-        public Builder setInfo(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs info) {
+        public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs info) {
             this.info = Input.of(Objects.requireNonNull(info));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

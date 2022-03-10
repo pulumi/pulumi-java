@@ -169,82 +169,82 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
     	      this.stackSetName = defaults.stackSetName;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setDeploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
+        public Builder deploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
 
-        public Builder setDeploymentTargets(@Nullable StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
+        public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
             this.deploymentTargets = Input.ofNullable(deploymentTargets);
             return this;
         }
 
-        public Builder setOrganizationalUnitId(@Nullable Input<String> organizationalUnitId) {
+        public Builder organizationalUnitId(@Nullable Input<String> organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
             return this;
         }
 
-        public Builder setOrganizationalUnitId(@Nullable String organizationalUnitId) {
+        public Builder organizationalUnitId(@Nullable String organizationalUnitId) {
             this.organizationalUnitId = Input.ofNullable(organizationalUnitId);
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable Map<String,String> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
             this.parameterOverrides = Input.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRetainStack(@Nullable Input<Boolean> retainStack) {
+        public Builder retainStack(@Nullable Input<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
 
-        public Builder setRetainStack(@Nullable Boolean retainStack) {
+        public Builder retainStack(@Nullable Boolean retainStack) {
             this.retainStack = Input.ofNullable(retainStack);
             return this;
         }
 
-        public Builder setStackId(@Nullable Input<String> stackId) {
+        public Builder stackId(@Nullable Input<String> stackId) {
             this.stackId = stackId;
             return this;
         }
 
-        public Builder setStackId(@Nullable String stackId) {
+        public Builder stackId(@Nullable String stackId) {
             this.stackId = Input.ofNullable(stackId);
             return this;
         }
 
-        public Builder setStackSetName(@Nullable Input<String> stackSetName) {
+        public Builder stackSetName(@Nullable Input<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
 
-        public Builder setStackSetName(@Nullable String stackSetName) {
+        public Builder stackSetName(@Nullable String stackSetName) {
             this.stackSetName = Input.ofNullable(stackSetName);
             return this;
         }

@@ -210,37 +210,37 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy) {
+        public Builder corsPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy) {
+        public Builder retryPolicy(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionTimeout timeout) {
+        public Builder timeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
+        public Builder urlRewrite(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }

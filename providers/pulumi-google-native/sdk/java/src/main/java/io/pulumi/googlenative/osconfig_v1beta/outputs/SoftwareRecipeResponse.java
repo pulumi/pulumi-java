@@ -132,32 +132,32 @@ public final class SoftwareRecipeResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifacts(List<SoftwareRecipeArtifactResponse> artifacts) {
+        public Builder artifacts(List<SoftwareRecipeArtifactResponse> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setInstallSteps(List<SoftwareRecipeStepResponse> installSteps) {
+        public Builder installSteps(List<SoftwareRecipeStepResponse> installSteps) {
             this.installSteps = Objects.requireNonNull(installSteps);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateSteps(List<SoftwareRecipeStepResponse> updateSteps) {
+        public Builder updateSteps(List<SoftwareRecipeStepResponse> updateSteps) {
             this.updateSteps = Objects.requireNonNull(updateSteps);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

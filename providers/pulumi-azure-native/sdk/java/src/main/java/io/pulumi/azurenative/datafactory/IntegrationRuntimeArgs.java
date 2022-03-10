@@ -105,42 +105,42 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFactoryName(Input<String> factoryName) {
+        public Builder factoryName(Input<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
-        public Builder setFactoryName(String factoryName) {
+        public Builder factoryName(String factoryName) {
             this.factoryName = Input.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder setIntegrationRuntimeName(@Nullable Input<String> integrationRuntimeName) {
+        public Builder integrationRuntimeName(@Nullable Input<String> integrationRuntimeName) {
             this.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
-        public Builder setIntegrationRuntimeName(@Nullable String integrationRuntimeName) {
+        public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
             this.integrationRuntimeName = Input.ofNullable(integrationRuntimeName);
             return this;
         }
 
-        public Builder setProperties(Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
+        public Builder properties(Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
+        public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

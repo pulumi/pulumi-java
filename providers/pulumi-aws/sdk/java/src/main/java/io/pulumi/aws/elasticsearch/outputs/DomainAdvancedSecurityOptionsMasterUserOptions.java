@@ -83,17 +83,17 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
     	      this.masterUserPassword = defaults.masterUserPassword;
         }
 
-        public Builder setMasterUserArn(@Nullable String masterUserArn) {
+        public Builder masterUserArn(@Nullable String masterUserArn) {
             this.masterUserArn = masterUserArn;
             return this;
         }
 
-        public Builder setMasterUserName(@Nullable String masterUserName) {
+        public Builder masterUserName(@Nullable String masterUserName) {
             this.masterUserName = masterUserName;
             return this;
         }
 
-        public Builder setMasterUserPassword(@Nullable String masterUserPassword) {
+        public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }

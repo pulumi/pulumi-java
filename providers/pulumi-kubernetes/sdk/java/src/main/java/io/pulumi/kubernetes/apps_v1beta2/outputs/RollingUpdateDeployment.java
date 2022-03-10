@@ -69,12 +69,12 @@ public final class RollingUpdateDeployment {
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxSurge(@Nullable Either<Integer,String> maxSurge) {
+        public Builder maxSurge(@Nullable Either<Integer,String> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }

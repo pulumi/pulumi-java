@@ -368,202 +368,202 @@ public final class AzureClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.workloadIdentityConfigs = defaults.workloadIdentityConfigs;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthorization(@Nullable Input<AzureClusterAuthorizationGetArgs> authorization) {
+        public Builder authorization(@Nullable Input<AzureClusterAuthorizationGetArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable AzureClusterAuthorizationGetArgs authorization) {
+        public Builder authorization(@Nullable AzureClusterAuthorizationGetArgs authorization) {
             this.authorization = Input.ofNullable(authorization);
             return this;
         }
 
-        public Builder setAzureRegion(@Nullable Input<String> azureRegion) {
+        public Builder azureRegion(@Nullable Input<String> azureRegion) {
             this.azureRegion = azureRegion;
             return this;
         }
 
-        public Builder setAzureRegion(@Nullable String azureRegion) {
+        public Builder azureRegion(@Nullable String azureRegion) {
             this.azureRegion = Input.ofNullable(azureRegion);
             return this;
         }
 
-        public Builder setClient(@Nullable Input<String> client) {
+        public Builder client(@Nullable Input<String> client) {
             this.client = client;
             return this;
         }
 
-        public Builder setClient(@Nullable String client) {
+        public Builder client(@Nullable String client) {
             this.client = Input.ofNullable(client);
             return this;
         }
 
-        public Builder setControlPlane(@Nullable Input<AzureClusterControlPlaneGetArgs> controlPlane) {
+        public Builder controlPlane(@Nullable Input<AzureClusterControlPlaneGetArgs> controlPlane) {
             this.controlPlane = controlPlane;
             return this;
         }
 
-        public Builder setControlPlane(@Nullable AzureClusterControlPlaneGetArgs controlPlane) {
+        public Builder controlPlane(@Nullable AzureClusterControlPlaneGetArgs controlPlane) {
             this.controlPlane = Input.ofNullable(controlPlane);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setFleet(@Nullable Input<AzureClusterFleetGetArgs> fleet) {
+        public Builder fleet(@Nullable Input<AzureClusterFleetGetArgs> fleet) {
             this.fleet = fleet;
             return this;
         }
 
-        public Builder setFleet(@Nullable AzureClusterFleetGetArgs fleet) {
+        public Builder fleet(@Nullable AzureClusterFleetGetArgs fleet) {
             this.fleet = Input.ofNullable(fleet);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworking(@Nullable Input<AzureClusterNetworkingGetArgs> networking) {
+        public Builder networking(@Nullable Input<AzureClusterNetworkingGetArgs> networking) {
             this.networking = networking;
             return this;
         }
 
-        public Builder setNetworking(@Nullable AzureClusterNetworkingGetArgs networking) {
+        public Builder networking(@Nullable AzureClusterNetworkingGetArgs networking) {
             this.networking = Input.ofNullable(networking);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReconciling(@Nullable Input<Boolean> reconciling) {
+        public Builder reconciling(@Nullable Input<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
 
-        public Builder setReconciling(@Nullable Boolean reconciling) {
+        public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Input.ofNullable(reconciling);
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable Input<String> resourceGroupId) {
+        public Builder resourceGroupId(@Nullable Input<String> resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable String resourceGroupId) {
+        public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = Input.ofNullable(resourceGroupId);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setWorkloadIdentityConfigs(@Nullable Input<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(@Nullable Input<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
 
-        public Builder setWorkloadIdentityConfigs(@Nullable List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
+        public Builder workloadIdentityConfigs(@Nullable List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
             this.workloadIdentityConfigs = Input.ofNullable(workloadIdentityConfigs);
             return this;
         }

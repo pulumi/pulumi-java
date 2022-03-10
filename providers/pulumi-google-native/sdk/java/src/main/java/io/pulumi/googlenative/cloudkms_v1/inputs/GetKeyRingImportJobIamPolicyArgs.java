@@ -98,27 +98,27 @@ public final class GetKeyRingImportJobIamPolicyArgs extends io.pulumi.resources.
     	      this.project = defaults.project;
         }
 
-        public Builder setImportJobId(String importJobId) {
+        public Builder importJobId(String importJobId) {
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
 
-        public Builder setKeyRingId(String keyRingId) {
+        public Builder keyRingId(String keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -67,12 +67,12 @@ public final class IPBlock {
     	      this.except = defaults.except;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setExcept(@Nullable List<String> except) {
+        public Builder except(@Nullable List<String> except) {
             this.except = except;
             return this;
         }

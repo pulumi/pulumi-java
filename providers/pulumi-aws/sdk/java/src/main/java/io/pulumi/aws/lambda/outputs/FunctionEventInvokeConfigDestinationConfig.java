@@ -68,12 +68,12 @@ public final class FunctionEventInvokeConfigDestinationConfig {
     	      this.onSuccess = defaults.onSuccess;
         }
 
-        public Builder setOnFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure) {
+        public Builder onFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
-        public Builder setOnSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
+        public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
             this.onSuccess = onSuccess;
             return this;
         }

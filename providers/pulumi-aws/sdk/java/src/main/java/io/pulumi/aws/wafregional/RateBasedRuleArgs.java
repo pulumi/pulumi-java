@@ -138,62 +138,62 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPredicates(@Nullable Input<List<RateBasedRulePredicateArgs>> predicates) {
+        public Builder predicates(@Nullable Input<List<RateBasedRulePredicateArgs>> predicates) {
             this.predicates = predicates;
             return this;
         }
 
-        public Builder setPredicates(@Nullable List<RateBasedRulePredicateArgs> predicates) {
+        public Builder predicates(@Nullable List<RateBasedRulePredicateArgs> predicates) {
             this.predicates = Input.ofNullable(predicates);
             return this;
         }
 
-        public Builder setRateKey(Input<String> rateKey) {
+        public Builder rateKey(Input<String> rateKey) {
             this.rateKey = Objects.requireNonNull(rateKey);
             return this;
         }
 
-        public Builder setRateKey(String rateKey) {
+        public Builder rateKey(String rateKey) {
             this.rateKey = Input.of(Objects.requireNonNull(rateKey));
             return this;
         }
 
-        public Builder setRateLimit(Input<Integer> rateLimit) {
+        public Builder rateLimit(Input<Integer> rateLimit) {
             this.rateLimit = Objects.requireNonNull(rateLimit);
             return this;
         }
 
-        public Builder setRateLimit(Integer rateLimit) {
+        public Builder rateLimit(Integer rateLimit) {
             this.rateLimit = Input.of(Objects.requireNonNull(rateLimit));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

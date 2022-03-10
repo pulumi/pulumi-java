@@ -71,22 +71,22 @@ public final class ImagePipelineImageTestsConfigurationGetArgs extends io.pulumi
     	      this.timeoutMinutes = defaults.timeoutMinutes;
         }
 
-        public Builder setImageTestsEnabled(@Nullable Input<Boolean> imageTestsEnabled) {
+        public Builder imageTestsEnabled(@Nullable Input<Boolean> imageTestsEnabled) {
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
-        public Builder setImageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
+        public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
             this.imageTestsEnabled = Input.ofNullable(imageTestsEnabled);
             return this;
         }
 
-        public Builder setTimeoutMinutes(@Nullable Input<Integer> timeoutMinutes) {
+        public Builder timeoutMinutes(@Nullable Input<Integer> timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
 
-        public Builder setTimeoutMinutes(@Nullable Integer timeoutMinutes) {
+        public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             this.timeoutMinutes = Input.ofNullable(timeoutMinutes);
             return this;
         }

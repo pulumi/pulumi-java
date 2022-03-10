@@ -75,12 +75,12 @@ public final class TaskFilterRule extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setFilterType(@Nullable TaskFilterRuleFilterType filterType) {
+        public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
             this.filterType = filterType;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

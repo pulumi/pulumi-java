@@ -86,32 +86,32 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificate(Input<String> certificate) {
+        public Builder certificate(Input<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setChain(@Nullable Input<String> chain) {
+        public Builder chain(@Nullable Input<String> chain) {
             this.chain = chain;
             return this;
         }
 
-        public Builder setChain(@Nullable String chain) {
+        public Builder chain(@Nullable String chain) {
             this.chain = Input.ofNullable(chain);
             return this;
         }
 
-        public Builder setPrivateKey(Input<String> privateKey) {
+        public Builder privateKey(Input<String> privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Input.of(Objects.requireNonNull(privateKey));
             return this;
         }

@@ -48,7 +48,7 @@ public final class NodeInputResponse {
     	      this.nodeName = defaults.nodeName;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }

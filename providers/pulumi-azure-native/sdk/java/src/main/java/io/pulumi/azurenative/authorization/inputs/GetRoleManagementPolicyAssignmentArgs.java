@@ -68,12 +68,12 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
     	      this.scope = defaults.scope;
         }
 
-        public Builder setRoleManagementPolicyAssignmentName(String roleManagementPolicyAssignmentName) {
+        public Builder roleManagementPolicyAssignmentName(String roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = Objects.requireNonNull(roleManagementPolicyAssignmentName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

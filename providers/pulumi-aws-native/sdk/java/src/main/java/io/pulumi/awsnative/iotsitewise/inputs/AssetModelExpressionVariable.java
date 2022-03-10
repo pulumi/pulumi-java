@@ -69,12 +69,12 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(AssetModelVariableValue value) {
+        public Builder value(AssetModelVariableValue value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

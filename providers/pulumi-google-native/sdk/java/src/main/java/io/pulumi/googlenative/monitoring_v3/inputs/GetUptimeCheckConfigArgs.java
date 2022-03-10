@@ -62,12 +62,12 @@ public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeAr
     	      this.uptimeCheckConfigId = defaults.uptimeCheckConfigId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setUptimeCheckConfigId(String uptimeCheckConfigId) {
+        public Builder uptimeCheckConfigId(String uptimeCheckConfigId) {
             this.uptimeCheckConfigId = Objects.requireNonNull(uptimeCheckConfigId);
             return this;
         }

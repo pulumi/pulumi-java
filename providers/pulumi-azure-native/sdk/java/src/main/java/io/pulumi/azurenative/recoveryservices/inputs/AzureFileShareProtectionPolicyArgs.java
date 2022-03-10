@@ -148,62 +148,62 @@ public final class AzureFileShareProtectionPolicyArgs extends io.pulumi.resource
     	      this.workLoadType = defaults.workLoadType;
         }
 
-        public Builder setBackupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Input<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Input<Object> schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Input<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Object schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = Input.ofNullable(schedulePolicy);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable Input<Either<String,WorkloadType>> workLoadType) {
+        public Builder workLoadType(@Nullable Input<Either<String,WorkloadType>> workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
+        public Builder workLoadType(@Nullable Either<String,WorkloadType> workLoadType) {
             this.workLoadType = Input.ofNullable(workLoadType);
             return this;
         }

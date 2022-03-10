@@ -100,22 +100,22 @@ public final class AddRemoveReplicaScalingMechanismResponse {
     	      this.scaleIncrement = defaults.scaleIncrement;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMaxCount(Integer maxCount) {
+        public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
-        public Builder setMinCount(Integer minCount) {
+        public Builder minCount(Integer minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
 
-        public Builder setScaleIncrement(Integer scaleIncrement) {
+        public Builder scaleIncrement(Integer scaleIncrement) {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }

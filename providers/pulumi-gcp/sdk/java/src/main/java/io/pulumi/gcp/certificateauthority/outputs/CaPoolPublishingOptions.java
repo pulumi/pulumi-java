@@ -75,12 +75,12 @@ public final class CaPoolPublishingOptions {
     	      this.publishCrl = defaults.publishCrl;
         }
 
-        public Builder setPublishCaCert(Boolean publishCaCert) {
+        public Builder publishCaCert(Boolean publishCaCert) {
             this.publishCaCert = Objects.requireNonNull(publishCaCert);
             return this;
         }
 
-        public Builder setPublishCrl(Boolean publishCrl) {
+        public Builder publishCrl(Boolean publishCrl) {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }

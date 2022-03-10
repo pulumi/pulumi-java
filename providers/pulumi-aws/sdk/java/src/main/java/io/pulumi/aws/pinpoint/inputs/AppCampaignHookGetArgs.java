@@ -86,32 +86,32 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
     	      this.webUrl = defaults.webUrl;
         }
 
-        public Builder setLambdaFunctionName(@Nullable Input<String> lambdaFunctionName) {
+        public Builder lambdaFunctionName(@Nullable Input<String> lambdaFunctionName) {
             this.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
 
-        public Builder setLambdaFunctionName(@Nullable String lambdaFunctionName) {
+        public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
             this.lambdaFunctionName = Input.ofNullable(lambdaFunctionName);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setWebUrl(@Nullable Input<String> webUrl) {
+        public Builder webUrl(@Nullable Input<String> webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
-        public Builder setWebUrl(@Nullable String webUrl) {
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = Input.ofNullable(webUrl);
             return this;
         }

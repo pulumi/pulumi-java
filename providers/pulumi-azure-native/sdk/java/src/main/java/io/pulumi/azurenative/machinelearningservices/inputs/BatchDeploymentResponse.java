@@ -268,67 +268,67 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
     	      this.retrySettings = defaults.retrySettings;
         }
 
-        public Builder setCodeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
+        public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setCompute(@Nullable ComputeConfigurationResponse compute) {
+        public Builder compute(@Nullable ComputeConfigurationResponse compute) {
             this.compute = compute;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setErrorThreshold(@Nullable Integer errorThreshold) {
+        public Builder errorThreshold(@Nullable Integer errorThreshold) {
             this.errorThreshold = errorThreshold;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setMiniBatchSize(@Nullable Double miniBatchSize) {
+        public Builder miniBatchSize(@Nullable Double miniBatchSize) {
             this.miniBatchSize = miniBatchSize;
             return this;
         }
 
-        public Builder setModel(@Nullable Object model) {
+        public Builder model(@Nullable Object model) {
             this.model = model;
             return this;
         }
 
-        public Builder setOutputConfiguration(@Nullable BatchOutputConfigurationResponse outputConfiguration) {
+        public Builder outputConfiguration(@Nullable BatchOutputConfigurationResponse outputConfiguration) {
             this.outputConfiguration = outputConfiguration;
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable List<String> partitionKeys) {
+        public Builder partitionKeys(@Nullable List<String> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setRetrySettings(@Nullable BatchRetrySettingsResponse retrySettings) {
+        public Builder retrySettings(@Nullable BatchRetrySettingsResponse retrySettings) {
             this.retrySettings = retrySettings;
             return this;
         }

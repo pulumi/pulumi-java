@@ -84,17 +84,17 @@ public final class GetServerAzureADOnlyAuthenticationArgs extends io.pulumi.reso
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setAuthenticationName(String authenticationName) {
+        public Builder authenticationName(String authenticationName) {
             this.authenticationName = Objects.requireNonNull(authenticationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

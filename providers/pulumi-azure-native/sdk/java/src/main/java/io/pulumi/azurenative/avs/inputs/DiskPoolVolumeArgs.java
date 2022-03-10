@@ -75,22 +75,22 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lunName = defaults.lunName;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<String>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<String> endpoints) {
+        public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setLunName(@Nullable Input<String> lunName) {
+        public Builder lunName(@Nullable Input<String> lunName) {
             this.lunName = lunName;
             return this;
         }
 
-        public Builder setLunName(@Nullable String lunName) {
+        public Builder lunName(@Nullable String lunName) {
             this.lunName = Input.ofNullable(lunName);
             return this;
         }

@@ -89,32 +89,32 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
     	      this.serviceKey = defaults.serviceKey;
         }
 
-        public Builder setAuthToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Input<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
-        public Builder setAuthToken(@Nullable String authToken) {
+        public Builder authToken(@Nullable String authToken) {
             this.authToken = Input.ofNullable(authToken);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServiceKey(@Nullable Input<String> serviceKey) {
+        public Builder serviceKey(@Nullable Input<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
 
-        public Builder setServiceKey(@Nullable String serviceKey) {
+        public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = Input.ofNullable(serviceKey);
             return this;
         }

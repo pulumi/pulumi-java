@@ -102,42 +102,42 @@ public final class GetDomainResult {
     	      this.subDomainSettings = defaults.subDomainSettings;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAutoSubDomainCreationPatterns(@Nullable List<String> autoSubDomainCreationPatterns) {
+        public Builder autoSubDomainCreationPatterns(@Nullable List<String> autoSubDomainCreationPatterns) {
             this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
             return this;
         }
 
-        public Builder setAutoSubDomainIAMRole(@Nullable String autoSubDomainIAMRole) {
+        public Builder autoSubDomainIAMRole(@Nullable String autoSubDomainIAMRole) {
             this.autoSubDomainIAMRole = autoSubDomainIAMRole;
             return this;
         }
 
-        public Builder setCertificateRecord(@Nullable String certificateRecord) {
+        public Builder certificateRecord(@Nullable String certificateRecord) {
             this.certificateRecord = certificateRecord;
             return this;
         }
 
-        public Builder setDomainStatus(@Nullable String domainStatus) {
+        public Builder domainStatus(@Nullable String domainStatus) {
             this.domainStatus = domainStatus;
             return this;
         }
 
-        public Builder setEnableAutoSubDomain(@Nullable Boolean enableAutoSubDomain) {
+        public Builder enableAutoSubDomain(@Nullable Boolean enableAutoSubDomain) {
             this.enableAutoSubDomain = enableAutoSubDomain;
             return this;
         }
 
-        public Builder setStatusReason(@Nullable String statusReason) {
+        public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = statusReason;
             return this;
         }
 
-        public Builder setSubDomainSettings(@Nullable List<DomainSubDomainSetting> subDomainSettings) {
+        public Builder subDomainSettings(@Nullable List<DomainSubDomainSetting> subDomainSettings) {
             this.subDomainSettings = subDomainSettings;
             return this;
         }

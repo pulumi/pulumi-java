@@ -281,152 +281,152 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setFixedRate(@Nullable Input<Double> fixedRate) {
+        public Builder fixedRate(@Nullable Input<Double> fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
 
-        public Builder setFixedRate(@Nullable Double fixedRate) {
+        public Builder fixedRate(@Nullable Double fixedRate) {
             this.fixedRate = Input.ofNullable(fixedRate);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Input<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setReservoirSize(@Nullable Input<Integer> reservoirSize) {
+        public Builder reservoirSize(@Nullable Input<Integer> reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
 
-        public Builder setReservoirSize(@Nullable Integer reservoirSize) {
+        public Builder reservoirSize(@Nullable Integer reservoirSize) {
             this.reservoirSize = Input.ofNullable(reservoirSize);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setServiceType(@Nullable Input<String> serviceType) {
+        public Builder serviceType(@Nullable Input<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
-        public Builder setServiceType(@Nullable String serviceType) {
+        public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = Input.ofNullable(serviceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUrlPath(@Nullable Input<String> urlPath) {
+        public Builder urlPath(@Nullable Input<String> urlPath) {
             this.urlPath = urlPath;
             return this;
         }
 
-        public Builder setUrlPath(@Nullable String urlPath) {
+        public Builder urlPath(@Nullable String urlPath) {
             this.urlPath = Input.ofNullable(urlPath);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

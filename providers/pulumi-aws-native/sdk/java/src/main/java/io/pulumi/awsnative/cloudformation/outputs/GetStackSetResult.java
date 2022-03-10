@@ -218,57 +218,57 @@ public final class GetStackSetResult {
     	      this.templateBody = defaults.templateBody;
         }
 
-        public Builder setAdministrationRoleARN(@Nullable String administrationRoleARN) {
+        public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
             this.administrationRoleARN = administrationRoleARN;
             return this;
         }
 
-        public Builder setAutoDeployment(@Nullable StackSetAutoDeployment autoDeployment) {
+        public Builder autoDeployment(@Nullable StackSetAutoDeployment autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<StackSetCapability> capabilities) {
+        public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExecutionRoleName(@Nullable String executionRoleName) {
+        public Builder executionRoleName(@Nullable String executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
 
-        public Builder setManagedExecution(@Nullable ManagedExecutionProperties managedExecution) {
+        public Builder managedExecution(@Nullable ManagedExecutionProperties managedExecution) {
             this.managedExecution = managedExecution;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<StackSetParameter> parameters) {
+        public Builder parameters(@Nullable List<StackSetParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setStackInstancesGroup(@Nullable List<StackSetStackInstances> stackInstancesGroup) {
+        public Builder stackInstancesGroup(@Nullable List<StackSetStackInstances> stackInstancesGroup) {
             this.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
 
-        public Builder setStackSetId(@Nullable String stackSetId) {
+        public Builder stackSetId(@Nullable String stackSetId) {
             this.stackSetId = stackSetId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StackSetTag> tags) {
+        public Builder tags(@Nullable List<StackSetTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = templateBody;
             return this;
         }

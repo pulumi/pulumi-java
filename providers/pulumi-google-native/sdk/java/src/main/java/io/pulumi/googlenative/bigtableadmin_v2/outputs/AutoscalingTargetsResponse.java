@@ -48,7 +48,7 @@ public final class AutoscalingTargetsResponse {
     	      this.cpuUtilizationPercent = defaults.cpuUtilizationPercent;
         }
 
-        public Builder setCpuUtilizationPercent(Integer cpuUtilizationPercent) {
+        public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
             this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
             return this;
         }

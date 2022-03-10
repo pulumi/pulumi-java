@@ -131,32 +131,32 @@ public final class GetIndexResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAncestor(String ancestor) {
+        public Builder ancestor(String ancestor) {
             this.ancestor = Objects.requireNonNull(ancestor);
             return this;
         }
 
-        public Builder setIndexId(String indexId) {
+        public Builder indexId(String indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProperties(List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties) {
+        public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

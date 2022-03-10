@@ -49,7 +49,7 @@ public final class WebServerNetworkAccessControlResponse {
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
+        public Builder allowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }

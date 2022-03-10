@@ -218,112 +218,112 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setApplicationName(Input<String> applicationName) {
+        public Builder applicationName(Input<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Input.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder setBlobPath(Input<String> blobPath) {
+        public Builder blobPath(Input<String> blobPath) {
             this.blobPath = Objects.requireNonNull(blobPath);
             return this;
         }
 
-        public Builder setBlobPath(String blobPath) {
+        public Builder blobPath(String blobPath) {
             this.blobPath = Input.of(Objects.requireNonNull(blobPath));
             return this;
         }
 
-        public Builder setFlightingRing(Input<String> flightingRing) {
+        public Builder flightingRing(Input<String> flightingRing) {
             this.flightingRing = Objects.requireNonNull(flightingRing);
             return this;
         }
 
-        public Builder setFlightingRing(String flightingRing) {
+        public Builder flightingRing(String flightingRing) {
             this.flightingRing = Input.of(Objects.requireNonNull(flightingRing));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetOSList(Input<List<TargetOSInfoArgs>> targetOSList) {
+        public Builder targetOSList(Input<List<TargetOSInfoArgs>> targetOSList) {
             this.targetOSList = Objects.requireNonNull(targetOSList);
             return this;
         }
 
-        public Builder setTargetOSList(List<TargetOSInfoArgs> targetOSList) {
+        public Builder targetOSList(List<TargetOSInfoArgs> targetOSList) {
             this.targetOSList = Input.of(Objects.requireNonNull(targetOSList));
             return this;
         }
 
-        public Builder setTestBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
-        public Builder setTestBaseAccountName(String testBaseAccountName) {
+        public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }
 
-        public Builder setTests(Input<List<TestArgs>> tests) {
+        public Builder tests(Input<List<TestArgs>> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
-        public Builder setTests(List<TestArgs> tests) {
+        public Builder tests(List<TestArgs> tests) {
             this.tests = Input.of(Objects.requireNonNull(tests));
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

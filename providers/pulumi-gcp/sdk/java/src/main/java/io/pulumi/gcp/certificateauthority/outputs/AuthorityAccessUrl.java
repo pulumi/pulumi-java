@@ -52,12 +52,12 @@ public final class AuthorityAccessUrl {
     	      this.crlAccessUrls = defaults.crlAccessUrls;
         }
 
-        public Builder setCaCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
+        public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
             this.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
 
-        public Builder setCrlAccessUrls(@Nullable List<String> crlAccessUrls) {
+        public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }

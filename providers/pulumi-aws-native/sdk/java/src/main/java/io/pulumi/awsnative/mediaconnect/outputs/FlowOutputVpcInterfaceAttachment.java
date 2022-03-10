@@ -50,7 +50,7 @@ public final class FlowOutputVpcInterfaceAttachment {
     	      this.vpcInterfaceName = defaults.vpcInterfaceName;
         }
 
-        public Builder setVpcInterfaceName(@Nullable String vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }

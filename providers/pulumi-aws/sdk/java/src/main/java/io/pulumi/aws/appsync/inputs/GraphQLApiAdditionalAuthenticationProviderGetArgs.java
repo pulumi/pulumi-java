@@ -105,42 +105,42 @@ public final class GraphQLApiAdditionalAuthenticationProviderGetArgs extends io.
     	      this.userPoolConfig = defaults.userPoolConfig;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setLambdaAuthorizerConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
 
-        public Builder setLambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = Input.ofNullable(lambdaAuthorizerConfig);
             return this;
         }
 
-        public Builder setOpenidConnectConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs> openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
 
-        public Builder setOpenidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigGetArgs openidConnectConfig) {
             this.openidConnectConfig = Input.ofNullable(openidConnectConfig);
             return this;
         }
 
-        public Builder setUserPoolConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
+        public Builder userPoolConfig(@Nullable Input<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs> userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
         }
 
-        public Builder setUserPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
+        public Builder userPoolConfig(@Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetArgs userPoolConfig) {
             this.userPoolConfig = Input.ofNullable(userPoolConfig);
             return this;
         }

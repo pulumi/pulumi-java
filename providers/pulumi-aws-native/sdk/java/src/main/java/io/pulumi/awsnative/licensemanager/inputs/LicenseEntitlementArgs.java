@@ -112,62 +112,62 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     	      this.value = defaults.value;
         }
 
-        public Builder setAllowCheckIn(@Nullable Input<Boolean> allowCheckIn) {
+        public Builder allowCheckIn(@Nullable Input<Boolean> allowCheckIn) {
             this.allowCheckIn = allowCheckIn;
             return this;
         }
 
-        public Builder setAllowCheckIn(@Nullable Boolean allowCheckIn) {
+        public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
             this.allowCheckIn = Input.ofNullable(allowCheckIn);
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Input<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = Input.ofNullable(maxCount);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOverage(@Nullable Input<Boolean> overage) {
+        public Builder overage(@Nullable Input<Boolean> overage) {
             this.overage = overage;
             return this;
         }
 
-        public Builder setOverage(@Nullable Boolean overage) {
+        public Builder overage(@Nullable Boolean overage) {
             this.overage = Input.ofNullable(overage);
             return this;
         }
 
-        public Builder setUnit(Input<String> unit) {
+        public Builder unit(Input<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Input.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

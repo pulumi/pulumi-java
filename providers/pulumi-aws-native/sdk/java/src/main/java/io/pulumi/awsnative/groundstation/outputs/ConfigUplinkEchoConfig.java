@@ -52,12 +52,12 @@ public final class ConfigUplinkEchoConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAntennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
+        public Builder antennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
             this.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

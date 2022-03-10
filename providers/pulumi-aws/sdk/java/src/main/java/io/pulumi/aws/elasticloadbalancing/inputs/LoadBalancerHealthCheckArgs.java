@@ -121,52 +121,52 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(Input<Integer> healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Input.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
 
-        public Builder setInterval(Input<Integer> interval) {
+        public Builder interval(Input<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder setTimeout(Input<Integer> timeout) {
+        public Builder timeout(Input<Integer> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTimeout(Integer timeout) {
+        public Builder timeout(Integer timeout) {
             this.timeout = Input.of(Objects.requireNonNull(timeout));
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
         }

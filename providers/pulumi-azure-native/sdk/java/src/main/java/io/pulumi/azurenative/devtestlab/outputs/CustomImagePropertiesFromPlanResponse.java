@@ -83,17 +83,17 @@ public final class CustomImagePropertiesFromPlanResponse {
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }

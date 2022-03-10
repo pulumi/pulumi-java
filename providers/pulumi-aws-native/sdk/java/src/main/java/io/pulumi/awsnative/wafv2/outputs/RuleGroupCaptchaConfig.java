@@ -42,7 +42,7 @@ public final class RuleGroupCaptchaConfig {
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }

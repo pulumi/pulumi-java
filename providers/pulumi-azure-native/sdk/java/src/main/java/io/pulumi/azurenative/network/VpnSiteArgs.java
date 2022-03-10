@@ -271,142 +271,142 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnSiteName = defaults.vpnSiteName;
         }
 
-        public Builder setAddressSpace(@Nullable Input<AddressSpaceArgs> addressSpace) {
+        public Builder addressSpace(@Nullable Input<AddressSpaceArgs> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setAddressSpace(@Nullable AddressSpaceArgs addressSpace) {
+        public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
             this.addressSpace = Input.ofNullable(addressSpace);
             return this;
         }
 
-        public Builder setBgpProperties(@Nullable Input<BgpSettingsArgs> bgpProperties) {
+        public Builder bgpProperties(@Nullable Input<BgpSettingsArgs> bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
 
-        public Builder setBgpProperties(@Nullable BgpSettingsArgs bgpProperties) {
+        public Builder bgpProperties(@Nullable BgpSettingsArgs bgpProperties) {
             this.bgpProperties = Input.ofNullable(bgpProperties);
             return this;
         }
 
-        public Builder setDeviceProperties(@Nullable Input<DevicePropertiesArgs> deviceProperties) {
+        public Builder deviceProperties(@Nullable Input<DevicePropertiesArgs> deviceProperties) {
             this.deviceProperties = deviceProperties;
             return this;
         }
 
-        public Builder setDeviceProperties(@Nullable DevicePropertiesArgs deviceProperties) {
+        public Builder deviceProperties(@Nullable DevicePropertiesArgs deviceProperties) {
             this.deviceProperties = Input.ofNullable(deviceProperties);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setIsSecuritySite(@Nullable Input<Boolean> isSecuritySite) {
+        public Builder isSecuritySite(@Nullable Input<Boolean> isSecuritySite) {
             this.isSecuritySite = isSecuritySite;
             return this;
         }
 
-        public Builder setIsSecuritySite(@Nullable Boolean isSecuritySite) {
+        public Builder isSecuritySite(@Nullable Boolean isSecuritySite) {
             this.isSecuritySite = Input.ofNullable(isSecuritySite);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setO365Policy(@Nullable Input<O365PolicyPropertiesArgs> o365Policy) {
+        public Builder o365Policy(@Nullable Input<O365PolicyPropertiesArgs> o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
 
-        public Builder setO365Policy(@Nullable O365PolicyPropertiesArgs o365Policy) {
+        public Builder o365Policy(@Nullable O365PolicyPropertiesArgs o365Policy) {
             this.o365Policy = Input.ofNullable(o365Policy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSiteKey(@Nullable Input<String> siteKey) {
+        public Builder siteKey(@Nullable Input<String> siteKey) {
             this.siteKey = siteKey;
             return this;
         }
 
-        public Builder setSiteKey(@Nullable String siteKey) {
+        public Builder siteKey(@Nullable String siteKey) {
             this.siteKey = Input.ofNullable(siteKey);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable Input<SubResourceArgs> virtualWan) {
+        public Builder virtualWan(@Nullable Input<SubResourceArgs> virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable SubResourceArgs virtualWan) {
+        public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
             this.virtualWan = Input.ofNullable(virtualWan);
             return this;
         }
 
-        public Builder setVpnSiteLinks(@Nullable Input<List<VpnSiteLinkArgs>> vpnSiteLinks) {
+        public Builder vpnSiteLinks(@Nullable Input<List<VpnSiteLinkArgs>> vpnSiteLinks) {
             this.vpnSiteLinks = vpnSiteLinks;
             return this;
         }
 
-        public Builder setVpnSiteLinks(@Nullable List<VpnSiteLinkArgs> vpnSiteLinks) {
+        public Builder vpnSiteLinks(@Nullable List<VpnSiteLinkArgs> vpnSiteLinks) {
             this.vpnSiteLinks = Input.ofNullable(vpnSiteLinks);
             return this;
         }
 
-        public Builder setVpnSiteName(@Nullable Input<String> vpnSiteName) {
+        public Builder vpnSiteName(@Nullable Input<String> vpnSiteName) {
             this.vpnSiteName = vpnSiteName;
             return this;
         }
 
-        public Builder setVpnSiteName(@Nullable String vpnSiteName) {
+        public Builder vpnSiteName(@Nullable String vpnSiteName) {
             this.vpnSiteName = Input.ofNullable(vpnSiteName);
             return this;
         }

@@ -171,82 +171,82 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Map<String,String> customAttributes) {
+        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Input.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder setEventTypes(@Nullable Input<List<String>> eventTypes) {
+        public Builder eventTypes(@Nullable Input<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
-        public Builder setEventTypes(@Nullable List<String> eventTypes) {
+        public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Input.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder setNotificationId(@Nullable Input<String> notificationId) {
+        public Builder notificationId(@Nullable Input<String> notificationId) {
             this.notificationId = notificationId;
             return this;
         }
 
-        public Builder setNotificationId(@Nullable String notificationId) {
+        public Builder notificationId(@Nullable String notificationId) {
             this.notificationId = Input.ofNullable(notificationId);
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable Input<String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Input<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable String objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Input.ofNullable(objectNamePrefix);
             return this;
         }
 
-        public Builder setPayloadFormat(@Nullable Input<String> payloadFormat) {
+        public Builder payloadFormat(@Nullable Input<String> payloadFormat) {
             this.payloadFormat = payloadFormat;
             return this;
         }
 
-        public Builder setPayloadFormat(@Nullable String payloadFormat) {
+        public Builder payloadFormat(@Nullable String payloadFormat) {
             this.payloadFormat = Input.ofNullable(payloadFormat);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

@@ -49,12 +49,12 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder setTotalEgressBandwidthTier(@Nullable Input<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(@Nullable Input<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = totalEgressBandwidthTier;
             return this;
         }
 
-        public Builder setTotalEgressBandwidthTier(@Nullable NetworkPerformanceConfigTotalEgressBandwidthTier totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(@Nullable NetworkPerformanceConfigTotalEgressBandwidthTier totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Input.ofNullable(totalEgressBandwidthTier);
             return this;
         }

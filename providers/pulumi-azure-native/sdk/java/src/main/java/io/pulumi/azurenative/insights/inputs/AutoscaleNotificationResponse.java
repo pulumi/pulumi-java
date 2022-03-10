@@ -93,17 +93,17 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder setEmail(@Nullable EmailNotificationResponse email) {
+        public Builder email(@Nullable EmailNotificationResponse email) {
             this.email = email;
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setWebhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
+        public Builder webhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
             this.webhooks = webhooks;
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetResponsePolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.responsePolicy = defaults.responsePolicy;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setResponsePolicy(String responsePolicy) {
+        public Builder responsePolicy(String responsePolicy) {
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }

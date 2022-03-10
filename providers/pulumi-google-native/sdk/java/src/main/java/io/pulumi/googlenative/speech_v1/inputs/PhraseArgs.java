@@ -75,22 +75,22 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setBoost(@Nullable Input<Double> boost) {
+        public Builder boost(@Nullable Input<Double> boost) {
             this.boost = boost;
             return this;
         }
 
-        public Builder setBoost(@Nullable Double boost) {
+        public Builder boost(@Nullable Double boost) {
             this.boost = Input.ofNullable(boost);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

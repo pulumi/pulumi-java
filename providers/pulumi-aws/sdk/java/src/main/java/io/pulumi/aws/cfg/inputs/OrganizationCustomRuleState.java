@@ -231,122 +231,122 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
     	      this.triggerTypes = defaults.triggerTypes;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExcludedAccounts(@Nullable Input<List<String>> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable Input<List<String>> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
 
-        public Builder setExcludedAccounts(@Nullable List<String> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = Input.ofNullable(excludedAccounts);
             return this;
         }
 
-        public Builder setInputParameters(@Nullable Input<String> inputParameters) {
+        public Builder inputParameters(@Nullable Input<String> inputParameters) {
             this.inputParameters = inputParameters;
             return this;
         }
 
-        public Builder setInputParameters(@Nullable String inputParameters) {
+        public Builder inputParameters(@Nullable String inputParameters) {
             this.inputParameters = Input.ofNullable(inputParameters);
             return this;
         }
 
-        public Builder setLambdaFunctionArn(@Nullable Input<String> lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable Input<String> lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }
 
-        public Builder setLambdaFunctionArn(@Nullable String lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
             this.lambdaFunctionArn = Input.ofNullable(lambdaFunctionArn);
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceIdScope(@Nullable Input<String> resourceIdScope) {
+        public Builder resourceIdScope(@Nullable Input<String> resourceIdScope) {
             this.resourceIdScope = resourceIdScope;
             return this;
         }
 
-        public Builder setResourceIdScope(@Nullable String resourceIdScope) {
+        public Builder resourceIdScope(@Nullable String resourceIdScope) {
             this.resourceIdScope = Input.ofNullable(resourceIdScope);
             return this;
         }
 
-        public Builder setResourceTypesScopes(@Nullable Input<List<String>> resourceTypesScopes) {
+        public Builder resourceTypesScopes(@Nullable Input<List<String>> resourceTypesScopes) {
             this.resourceTypesScopes = resourceTypesScopes;
             return this;
         }
 
-        public Builder setResourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
+        public Builder resourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
             this.resourceTypesScopes = Input.ofNullable(resourceTypesScopes);
             return this;
         }
 
-        public Builder setTagKeyScope(@Nullable Input<String> tagKeyScope) {
+        public Builder tagKeyScope(@Nullable Input<String> tagKeyScope) {
             this.tagKeyScope = tagKeyScope;
             return this;
         }
 
-        public Builder setTagKeyScope(@Nullable String tagKeyScope) {
+        public Builder tagKeyScope(@Nullable String tagKeyScope) {
             this.tagKeyScope = Input.ofNullable(tagKeyScope);
             return this;
         }
 
-        public Builder setTagValueScope(@Nullable Input<String> tagValueScope) {
+        public Builder tagValueScope(@Nullable Input<String> tagValueScope) {
             this.tagValueScope = tagValueScope;
             return this;
         }
 
-        public Builder setTagValueScope(@Nullable String tagValueScope) {
+        public Builder tagValueScope(@Nullable String tagValueScope) {
             this.tagValueScope = Input.ofNullable(tagValueScope);
             return this;
         }
 
-        public Builder setTriggerTypes(@Nullable Input<List<String>> triggerTypes) {
+        public Builder triggerTypes(@Nullable Input<List<String>> triggerTypes) {
             this.triggerTypes = triggerTypes;
             return this;
         }
 
-        public Builder setTriggerTypes(@Nullable List<String> triggerTypes) {
+        public Builder triggerTypes(@Nullable List<String> triggerTypes) {
             this.triggerTypes = Input.ofNullable(triggerTypes);
             return this;
         }

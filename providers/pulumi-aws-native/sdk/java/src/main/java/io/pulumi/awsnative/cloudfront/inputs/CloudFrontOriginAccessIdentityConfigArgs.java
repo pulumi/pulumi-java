@@ -48,12 +48,12 @@ public final class CloudFrontOriginAccessIdentityConfigArgs extends io.pulumi.re
     	      this.comment = defaults.comment;
         }
 
-        public Builder setComment(Input<String> comment) {
+        public Builder comment(Input<String> comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Input.of(Objects.requireNonNull(comment));
             return this;
         }

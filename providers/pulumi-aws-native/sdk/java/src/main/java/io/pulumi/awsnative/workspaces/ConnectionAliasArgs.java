@@ -64,22 +64,22 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConnectionString(Input<String> connectionString) {
+        public Builder connectionString(Input<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Input.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ConnectionAliasTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ConnectionAliasTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConnectionAliasTagArgs> tags) {
+        public Builder tags(@Nullable List<ConnectionAliasTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

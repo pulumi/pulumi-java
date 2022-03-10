@@ -125,52 +125,52 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<List<FulfillmentFeatureArgs>> features) {
+        public Builder features(@Nullable Input<List<FulfillmentFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<FulfillmentFeatureArgs> features) {
+        public Builder features(@Nullable List<FulfillmentFeatureArgs> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setGenericWebService(@Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Input<FulfillmentGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
 
-        public Builder setGenericWebService(@Nullable FulfillmentGenericWebServiceArgs genericWebService) {
+        public Builder genericWebService(@Nullable FulfillmentGenericWebServiceArgs genericWebService) {
             this.genericWebService = Input.ofNullable(genericWebService);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

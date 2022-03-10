@@ -264,87 +264,87 @@ public final class DataSourceParameters extends io.pulumi.resources.InvokeArgs {
     	      this.teradataParameters = defaults.teradataParameters;
         }
 
-        public Builder setAmazonElasticsearchParameters(@Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters) {
+        public Builder amazonElasticsearchParameters(@Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters) {
             this.amazonElasticsearchParameters = amazonElasticsearchParameters;
             return this;
         }
 
-        public Builder setAmazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters) {
+        public Builder amazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters) {
             this.amazonOpenSearchParameters = amazonOpenSearchParameters;
             return this;
         }
 
-        public Builder setAthenaParameters(@Nullable DataSourceAthenaParameters athenaParameters) {
+        public Builder athenaParameters(@Nullable DataSourceAthenaParameters athenaParameters) {
             this.athenaParameters = athenaParameters;
             return this;
         }
 
-        public Builder setAuroraParameters(@Nullable DataSourceAuroraParameters auroraParameters) {
+        public Builder auroraParameters(@Nullable DataSourceAuroraParameters auroraParameters) {
             this.auroraParameters = auroraParameters;
             return this;
         }
 
-        public Builder setAuroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters) {
+        public Builder auroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters) {
             this.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
             return this;
         }
 
-        public Builder setMariaDbParameters(@Nullable DataSourceMariaDbParameters mariaDbParameters) {
+        public Builder mariaDbParameters(@Nullable DataSourceMariaDbParameters mariaDbParameters) {
             this.mariaDbParameters = mariaDbParameters;
             return this;
         }
 
-        public Builder setMySqlParameters(@Nullable DataSourceMySqlParameters mySqlParameters) {
+        public Builder mySqlParameters(@Nullable DataSourceMySqlParameters mySqlParameters) {
             this.mySqlParameters = mySqlParameters;
             return this;
         }
 
-        public Builder setOracleParameters(@Nullable DataSourceOracleParameters oracleParameters) {
+        public Builder oracleParameters(@Nullable DataSourceOracleParameters oracleParameters) {
             this.oracleParameters = oracleParameters;
             return this;
         }
 
-        public Builder setPostgreSqlParameters(@Nullable DataSourcePostgreSqlParameters postgreSqlParameters) {
+        public Builder postgreSqlParameters(@Nullable DataSourcePostgreSqlParameters postgreSqlParameters) {
             this.postgreSqlParameters = postgreSqlParameters;
             return this;
         }
 
-        public Builder setPrestoParameters(@Nullable DataSourcePrestoParameters prestoParameters) {
+        public Builder prestoParameters(@Nullable DataSourcePrestoParameters prestoParameters) {
             this.prestoParameters = prestoParameters;
             return this;
         }
 
-        public Builder setRdsParameters(@Nullable DataSourceRdsParameters rdsParameters) {
+        public Builder rdsParameters(@Nullable DataSourceRdsParameters rdsParameters) {
             this.rdsParameters = rdsParameters;
             return this;
         }
 
-        public Builder setRedshiftParameters(@Nullable DataSourceRedshiftParameters redshiftParameters) {
+        public Builder redshiftParameters(@Nullable DataSourceRedshiftParameters redshiftParameters) {
             this.redshiftParameters = redshiftParameters;
             return this;
         }
 
-        public Builder setS3Parameters(@Nullable DataSourceS3Parameters s3Parameters) {
+        public Builder s3Parameters(@Nullable DataSourceS3Parameters s3Parameters) {
             this.s3Parameters = s3Parameters;
             return this;
         }
 
-        public Builder setSnowflakeParameters(@Nullable DataSourceSnowflakeParameters snowflakeParameters) {
+        public Builder snowflakeParameters(@Nullable DataSourceSnowflakeParameters snowflakeParameters) {
             this.snowflakeParameters = snowflakeParameters;
             return this;
         }
 
-        public Builder setSparkParameters(@Nullable DataSourceSparkParameters sparkParameters) {
+        public Builder sparkParameters(@Nullable DataSourceSparkParameters sparkParameters) {
             this.sparkParameters = sparkParameters;
             return this;
         }
 
-        public Builder setSqlServerParameters(@Nullable DataSourceSqlServerParameters sqlServerParameters) {
+        public Builder sqlServerParameters(@Nullable DataSourceSqlServerParameters sqlServerParameters) {
             this.sqlServerParameters = sqlServerParameters;
             return this;
         }
 
-        public Builder setTeradataParameters(@Nullable DataSourceTeradataParameters teradataParameters) {
+        public Builder teradataParameters(@Nullable DataSourceTeradataParameters teradataParameters) {
             this.teradataParameters = teradataParameters;
             return this;
         }

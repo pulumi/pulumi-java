@@ -125,52 +125,52 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setBackends(@Nullable Input<List<BackendArgs>> backends) {
+        public Builder backends(@Nullable Input<List<BackendArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setBackends(@Nullable List<BackendArgs> backends) {
+        public Builder backends(@Nullable List<BackendArgs> backends) {
             this.backends = Input.ofNullable(backends);
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable Input<SubResourceArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Input<SubResourceArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
             this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable Input<SubResourceArgs> loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable Input<SubResourceArgs> loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
             this.loadBalancingSettings = Input.ofNullable(loadBalancingSettings);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

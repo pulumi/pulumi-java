@@ -87,32 +87,32 @@ public final class StackStorageConnectorArgs extends io.pulumi.resources.Resourc
     	      this.resourceIdentifier = defaults.resourceIdentifier;
         }
 
-        public Builder setConnectorType(Input<String> connectorType) {
+        public Builder connectorType(Input<String> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(String connectorType) {
+        public Builder connectorType(String connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setDomains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Input<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = Input.ofNullable(domains);
             return this;
         }
 
-        public Builder setResourceIdentifier(@Nullable Input<String> resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable Input<String> resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
         }
 
-        public Builder setResourceIdentifier(@Nullable String resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
             this.resourceIdentifier = Input.ofNullable(resourceIdentifier);
             return this;
         }

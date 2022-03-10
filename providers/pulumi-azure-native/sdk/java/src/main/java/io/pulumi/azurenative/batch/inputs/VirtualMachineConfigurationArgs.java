@@ -189,92 +189,92 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setContainerConfiguration(@Nullable Input<ContainerConfigurationArgs> containerConfiguration) {
+        public Builder containerConfiguration(@Nullable Input<ContainerConfigurationArgs> containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setContainerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
+        public Builder containerConfiguration(@Nullable ContainerConfigurationArgs containerConfiguration) {
             this.containerConfiguration = Input.ofNullable(containerConfiguration);
             return this;
         }
 
-        public Builder setDataDisks(@Nullable Input<List<DataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Input<List<DataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<DataDiskArgs> dataDisks) {
+        public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
             this.dataDisks = Input.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder setExtensions(@Nullable Input<List<VMExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Input<List<VMExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<VMExtensionArgs> extensions) {
+        public Builder extensions(@Nullable List<VMExtensionArgs> extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setImageReference(Input<ImageReferenceArgs> imageReference) {
+        public Builder imageReference(Input<ImageReferenceArgs> imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
 
-        public Builder setImageReference(ImageReferenceArgs imageReference) {
+        public Builder imageReference(ImageReferenceArgs imageReference) {
             this.imageReference = Input.of(Objects.requireNonNull(imageReference));
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Input<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setNodeAgentSkuId(Input<String> nodeAgentSkuId) {
+        public Builder nodeAgentSkuId(Input<String> nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
 
-        public Builder setNodeAgentSkuId(String nodeAgentSkuId) {
+        public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             this.nodeAgentSkuId = Input.of(Objects.requireNonNull(nodeAgentSkuId));
             return this;
         }
 
-        public Builder setNodePlacementConfiguration(@Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
+        public Builder nodePlacementConfiguration(@Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
 
-        public Builder setNodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
+        public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationArgs nodePlacementConfiguration) {
             this.nodePlacementConfiguration = Input.ofNullable(nodePlacementConfiguration);
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }

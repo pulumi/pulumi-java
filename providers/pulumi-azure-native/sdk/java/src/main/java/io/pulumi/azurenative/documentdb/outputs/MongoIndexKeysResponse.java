@@ -50,7 +50,7 @@ public final class MongoIndexKeysResponse {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(@Nullable List<String> keys) {
+        public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetFlowVpcInterfaceResult {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setNetworkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
+        public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

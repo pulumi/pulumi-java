@@ -75,22 +75,22 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder setAccessType(@Nullable Input<RuntimeAccessConfigAccessType> accessType) {
+        public Builder accessType(@Nullable Input<RuntimeAccessConfigAccessType> accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setAccessType(@Nullable RuntimeAccessConfigAccessType accessType) {
+        public Builder accessType(@Nullable RuntimeAccessConfigAccessType accessType) {
             this.accessType = Input.ofNullable(accessType);
             return this;
         }
 
-        public Builder setRuntimeOwner(@Nullable Input<String> runtimeOwner) {
+        public Builder runtimeOwner(@Nullable Input<String> runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
 
-        public Builder setRuntimeOwner(@Nullable String runtimeOwner) {
+        public Builder runtimeOwner(@Nullable String runtimeOwner) {
             this.runtimeOwner = Input.ofNullable(runtimeOwner);
             return this;
         }

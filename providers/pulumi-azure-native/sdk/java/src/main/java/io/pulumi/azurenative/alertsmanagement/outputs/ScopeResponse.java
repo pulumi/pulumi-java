@@ -68,12 +68,12 @@ public final class ScopeResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setScopeType(@Nullable String scopeType) {
+        public Builder scopeType(@Nullable String scopeType) {
             this.scopeType = scopeType;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

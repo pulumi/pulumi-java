@@ -126,8 +126,8 @@ public class RuntimeClassList extends io.pulumi.resources.CustomResource {
     private static RuntimeClassListArgs makeArgs(RuntimeClassListArgs args) {
         var builder = args == null ? RuntimeClassListArgs.builder() : RuntimeClassListArgs.builder(args);
         return builder
-            .setApiVersion("node.k8s.io/v1beta1")
-            .setKind("RuntimeClassList")
+            .apiVersion("node.k8s.io/v1beta1")
+            .kind("RuntimeClassList")
             .build();
     }
 

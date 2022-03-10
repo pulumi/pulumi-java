@@ -50,7 +50,7 @@ public final class TransitGatewayPeeringAttachmentOptions {
     	      this.dynamicRouting = defaults.dynamicRouting;
         }
 
-        public Builder setDynamicRouting(@Nullable String dynamicRouting) {
+        public Builder dynamicRouting(@Nullable String dynamicRouting) {
             this.dynamicRouting = dynamicRouting;
             return this;
         }

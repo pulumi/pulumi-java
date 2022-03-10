@@ -115,27 +115,27 @@ public final class InstanceS3Import {
     	      this.sourceEngineVersion = defaults.sourceEngineVersion;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setIngestionRole(String ingestionRole) {
+        public Builder ingestionRole(String ingestionRole) {
             this.ingestionRole = Objects.requireNonNull(ingestionRole);
             return this;
         }
 
-        public Builder setSourceEngine(String sourceEngine) {
+        public Builder sourceEngine(String sourceEngine) {
             this.sourceEngine = Objects.requireNonNull(sourceEngine);
             return this;
         }
 
-        public Builder setSourceEngineVersion(String sourceEngineVersion) {
+        public Builder sourceEngineVersion(String sourceEngineVersion) {
             this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
             return this;
         }

@@ -67,12 +67,12 @@ public final class BotAliasTextLogSetting extends io.pulumi.resources.InvokeArgs
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDestination(@Nullable BotAliasTextLogDestination destination) {
+        public Builder destination(@Nullable BotAliasTextLogDestination destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

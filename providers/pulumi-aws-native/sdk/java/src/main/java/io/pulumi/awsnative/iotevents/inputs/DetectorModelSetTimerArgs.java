@@ -91,32 +91,32 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder setDurationExpression(@Nullable Input<String> durationExpression) {
+        public Builder durationExpression(@Nullable Input<String> durationExpression) {
             this.durationExpression = durationExpression;
             return this;
         }
 
-        public Builder setDurationExpression(@Nullable String durationExpression) {
+        public Builder durationExpression(@Nullable String durationExpression) {
             this.durationExpression = Input.ofNullable(durationExpression);
             return this;
         }
 
-        public Builder setSeconds(@Nullable Input<Integer> seconds) {
+        public Builder seconds(@Nullable Input<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
 
-        public Builder setSeconds(@Nullable Integer seconds) {
+        public Builder seconds(@Nullable Integer seconds) {
             this.seconds = Input.ofNullable(seconds);
             return this;
         }
 
-        public Builder setTimerName(Input<String> timerName) {
+        public Builder timerName(Input<String> timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
 
-        public Builder setTimerName(String timerName) {
+        public Builder timerName(String timerName) {
             this.timerName = Input.of(Objects.requireNonNull(timerName));
             return this;
         }

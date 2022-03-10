@@ -75,17 +75,17 @@ public final class ResizeErrorResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(@Nullable List<ResizeErrorResponse> details) {
+        public Builder details(@Nullable List<ResizeErrorResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

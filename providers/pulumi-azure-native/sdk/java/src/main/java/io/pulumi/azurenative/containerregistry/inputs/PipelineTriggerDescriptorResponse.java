@@ -53,7 +53,7 @@ public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources
     	      this.sourceTrigger = defaults.sourceTrigger;
         }
 
-        public Builder setSourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
+        public Builder sourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }

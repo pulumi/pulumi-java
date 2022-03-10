@@ -236,67 +236,67 @@ public final class GetSensitivityLabelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInformationType(@Nullable String informationType) {
+        public Builder informationType(@Nullable String informationType) {
             this.informationType = informationType;
             return this;
         }
 
-        public Builder setInformationTypeId(@Nullable String informationTypeId) {
+        public Builder informationTypeId(@Nullable String informationTypeId) {
             this.informationTypeId = informationTypeId;
             return this;
         }
 
-        public Builder setIsDisabled(Boolean isDisabled) {
+        public Builder isDisabled(Boolean isDisabled) {
             this.isDisabled = Objects.requireNonNull(isDisabled);
             return this;
         }
 
-        public Builder setLabelId(@Nullable String labelId) {
+        public Builder labelId(@Nullable String labelId) {
             this.labelId = labelId;
             return this;
         }
 
-        public Builder setLabelName(@Nullable String labelName) {
+        public Builder labelName(@Nullable String labelName) {
             this.labelName = labelName;
             return this;
         }
 
-        public Builder setManagedBy(String managedBy) {
+        public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRank(@Nullable String rank) {
+        public Builder rank(@Nullable String rank) {
             this.rank = rank;
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

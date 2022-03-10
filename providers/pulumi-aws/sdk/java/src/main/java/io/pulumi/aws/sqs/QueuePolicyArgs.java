@@ -69,17 +69,17 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queueUrl = defaults.queueUrl;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setQueueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Input<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
             return this;
         }

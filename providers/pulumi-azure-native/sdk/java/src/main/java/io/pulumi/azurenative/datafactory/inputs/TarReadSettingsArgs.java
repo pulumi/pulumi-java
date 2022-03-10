@@ -76,22 +76,22 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setPreserveCompressionFileNameAsFolder(@Nullable Input<Object> preserveCompressionFileNameAsFolder) {
+        public Builder preserveCompressionFileNameAsFolder(@Nullable Input<Object> preserveCompressionFileNameAsFolder) {
             this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
 
-        public Builder setPreserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
+        public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
             this.preserveCompressionFileNameAsFolder = Input.ofNullable(preserveCompressionFileNameAsFolder);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

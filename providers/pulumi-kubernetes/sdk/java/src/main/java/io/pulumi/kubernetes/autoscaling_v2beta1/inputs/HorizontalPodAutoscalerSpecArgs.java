@@ -109,42 +109,42 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     	      this.scaleTargetRef = defaults.scaleTargetRef;
         }
 
-        public Builder setMaxReplicas(Input<Integer> maxReplicas) {
+        public Builder maxReplicas(Input<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Input.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<MetricSpecArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<MetricSpecArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<MetricSpecArgs> metrics) {
+        public Builder metrics(@Nullable List<MetricSpecArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Input.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder setScaleTargetRef(Input<CrossVersionObjectReferenceArgs> scaleTargetRef) {
+        public Builder scaleTargetRef(Input<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
 
-        public Builder setScaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
+        public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
             this.scaleTargetRef = Input.of(Objects.requireNonNull(scaleTargetRef));
             return this;
         }

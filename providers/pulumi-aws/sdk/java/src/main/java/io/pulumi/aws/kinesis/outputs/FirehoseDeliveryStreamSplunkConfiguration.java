@@ -166,42 +166,42 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setHecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
+        public Builder hecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
             this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
             return this;
         }
 
-        public Builder setHecEndpoint(String hecEndpoint) {
+        public Builder hecEndpoint(String hecEndpoint) {
             this.hecEndpoint = Objects.requireNonNull(hecEndpoint);
             return this;
         }
 
-        public Builder setHecEndpointType(@Nullable String hecEndpointType) {
+        public Builder hecEndpointType(@Nullable String hecEndpointType) {
             this.hecEndpointType = hecEndpointType;
             return this;
         }
 
-        public Builder setHecToken(String hecToken) {
+        public Builder hecToken(String hecToken) {
             this.hecToken = Objects.requireNonNull(hecToken);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Integer retryDuration) {
+        public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }

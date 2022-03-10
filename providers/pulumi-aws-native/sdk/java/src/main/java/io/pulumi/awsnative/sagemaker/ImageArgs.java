@@ -104,52 +104,52 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setImageDescription(@Nullable Input<String> imageDescription) {
+        public Builder imageDescription(@Nullable Input<String> imageDescription) {
             this.imageDescription = imageDescription;
             return this;
         }
 
-        public Builder setImageDescription(@Nullable String imageDescription) {
+        public Builder imageDescription(@Nullable String imageDescription) {
             this.imageDescription = Input.ofNullable(imageDescription);
             return this;
         }
 
-        public Builder setImageDisplayName(@Nullable Input<String> imageDisplayName) {
+        public Builder imageDisplayName(@Nullable Input<String> imageDisplayName) {
             this.imageDisplayName = imageDisplayName;
             return this;
         }
 
-        public Builder setImageDisplayName(@Nullable String imageDisplayName) {
+        public Builder imageDisplayName(@Nullable String imageDisplayName) {
             this.imageDisplayName = Input.ofNullable(imageDisplayName);
             return this;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setImageRoleArn(Input<String> imageRoleArn) {
+        public Builder imageRoleArn(Input<String> imageRoleArn) {
             this.imageRoleArn = Objects.requireNonNull(imageRoleArn);
             return this;
         }
 
-        public Builder setImageRoleArn(String imageRoleArn) {
+        public Builder imageRoleArn(String imageRoleArn) {
             this.imageRoleArn = Input.of(Objects.requireNonNull(imageRoleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ImageTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ImageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ImageTagArgs> tags) {
+        public Builder tags(@Nullable List<ImageTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

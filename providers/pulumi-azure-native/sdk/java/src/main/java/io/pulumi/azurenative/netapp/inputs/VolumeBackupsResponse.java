@@ -92,17 +92,17 @@ public final class VolumeBackupsResponse extends io.pulumi.resources.InvokeArgs 
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setBackupsCount(@Nullable Integer backupsCount) {
+        public Builder backupsCount(@Nullable Integer backupsCount) {
             this.backupsCount = backupsCount;
             return this;
         }
 
-        public Builder setPolicyEnabled(@Nullable Boolean policyEnabled) {
+        public Builder policyEnabled(@Nullable Boolean policyEnabled) {
             this.policyEnabled = policyEnabled;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }

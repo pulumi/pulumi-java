@@ -74,22 +74,22 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secondary = defaults.secondary;
         }
 
-        public Builder setPrimary(@Nullable Input<String> primary) {
+        public Builder primary(@Nullable Input<String> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable String primary) {
+        public Builder primary(@Nullable String primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }
 
-        public Builder setSecondary(@Nullable Input<String> secondary) {
+        public Builder secondary(@Nullable Input<String> secondary) {
             this.secondary = secondary;
             return this;
         }
 
-        public Builder setSecondary(@Nullable String secondary) {
+        public Builder secondary(@Nullable String secondary) {
             this.secondary = Input.ofNullable(secondary);
             return this;
         }

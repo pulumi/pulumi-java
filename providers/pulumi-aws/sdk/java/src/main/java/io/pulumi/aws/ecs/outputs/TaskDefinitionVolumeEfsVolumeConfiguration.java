@@ -117,27 +117,27 @@ public final class TaskDefinitionVolumeEfsVolumeConfiguration {
     	      this.transitEncryptionPort = defaults.transitEncryptionPort;
         }
 
-        public Builder setAuthorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable String rootDirectory) {
+        public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setTransitEncryption(@Nullable String transitEncryption) {
+        public Builder transitEncryption(@Nullable String transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
 
-        public Builder setTransitEncryptionPort(@Nullable Integer transitEncryptionPort) {
+        public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }

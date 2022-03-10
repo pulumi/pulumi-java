@@ -52,12 +52,12 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }

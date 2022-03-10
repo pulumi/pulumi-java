@@ -77,12 +77,12 @@ public final class InstanceNetworkInterfaceAliasIpRange {
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setSubnetworkRangeName(@Nullable String subnetworkRangeName) {
+        public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }

@@ -170,82 +170,82 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setCreateDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Input<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Input.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationExpirationTime(@Nullable Input<Object> destinationExpirationTime) {
+        public Builder destinationExpirationTime(@Nullable Input<Object> destinationExpirationTime) {
             this.destinationExpirationTime = destinationExpirationTime;
             return this;
         }
 
-        public Builder setDestinationExpirationTime(@Nullable Object destinationExpirationTime) {
+        public Builder destinationExpirationTime(@Nullable Object destinationExpirationTime) {
             this.destinationExpirationTime = Input.ofNullable(destinationExpirationTime);
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable Input<TableReferenceArgs> destinationTable) {
+        public Builder destinationTable(@Nullable Input<TableReferenceArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable TableReferenceArgs destinationTable) {
+        public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
             this.destinationTable = Input.ofNullable(destinationTable);
             return this;
         }
 
-        public Builder setOperationType(@Nullable Input<String> operationType) {
+        public Builder operationType(@Nullable Input<String> operationType) {
             this.operationType = operationType;
             return this;
         }
 
-        public Builder setOperationType(@Nullable String operationType) {
+        public Builder operationType(@Nullable String operationType) {
             this.operationType = Input.ofNullable(operationType);
             return this;
         }
 
-        public Builder setSourceTable(@Nullable Input<TableReferenceArgs> sourceTable) {
+        public Builder sourceTable(@Nullable Input<TableReferenceArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
 
-        public Builder setSourceTable(@Nullable TableReferenceArgs sourceTable) {
+        public Builder sourceTable(@Nullable TableReferenceArgs sourceTable) {
             this.sourceTable = Input.ofNullable(sourceTable);
             return this;
         }
 
-        public Builder setSourceTables(@Nullable Input<List<TableReferenceArgs>> sourceTables) {
+        public Builder sourceTables(@Nullable Input<List<TableReferenceArgs>> sourceTables) {
             this.sourceTables = sourceTables;
             return this;
         }
 
-        public Builder setSourceTables(@Nullable List<TableReferenceArgs> sourceTables) {
+        public Builder sourceTables(@Nullable List<TableReferenceArgs> sourceTables) {
             this.sourceTables = Input.ofNullable(sourceTables);
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

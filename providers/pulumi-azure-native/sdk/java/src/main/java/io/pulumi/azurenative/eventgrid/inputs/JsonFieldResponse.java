@@ -57,7 +57,7 @@ public final class JsonFieldResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder setSourceField(@Nullable String sourceField) {
+        public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
         }

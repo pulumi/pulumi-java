@@ -68,12 +68,12 @@ public final class HttpLogsConfigResponse {
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder setAzureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemHttpLogsConfigResponse fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemHttpLogsConfigResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }

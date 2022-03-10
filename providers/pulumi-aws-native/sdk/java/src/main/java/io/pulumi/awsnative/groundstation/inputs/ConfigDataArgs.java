@@ -128,72 +128,72 @@ public final class ConfigDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uplinkEchoConfig = defaults.uplinkEchoConfig;
         }
 
-        public Builder setAntennaDownlinkConfig(@Nullable Input<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig) {
+        public Builder antennaDownlinkConfig(@Nullable Input<ConfigAntennaDownlinkConfigArgs> antennaDownlinkConfig) {
             this.antennaDownlinkConfig = antennaDownlinkConfig;
             return this;
         }
 
-        public Builder setAntennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfigArgs antennaDownlinkConfig) {
+        public Builder antennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfigArgs antennaDownlinkConfig) {
             this.antennaDownlinkConfig = Input.ofNullable(antennaDownlinkConfig);
             return this;
         }
 
-        public Builder setAntennaDownlinkDemodDecodeConfig(@Nullable Input<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig) {
+        public Builder antennaDownlinkDemodDecodeConfig(@Nullable Input<ConfigAntennaDownlinkDemodDecodeConfigArgs> antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
             return this;
         }
 
-        public Builder setAntennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfigArgs antennaDownlinkDemodDecodeConfig) {
+        public Builder antennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfigArgs antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = Input.ofNullable(antennaDownlinkDemodDecodeConfig);
             return this;
         }
 
-        public Builder setAntennaUplinkConfig(@Nullable Input<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig) {
+        public Builder antennaUplinkConfig(@Nullable Input<ConfigAntennaUplinkConfigArgs> antennaUplinkConfig) {
             this.antennaUplinkConfig = antennaUplinkConfig;
             return this;
         }
 
-        public Builder setAntennaUplinkConfig(@Nullable ConfigAntennaUplinkConfigArgs antennaUplinkConfig) {
+        public Builder antennaUplinkConfig(@Nullable ConfigAntennaUplinkConfigArgs antennaUplinkConfig) {
             this.antennaUplinkConfig = Input.ofNullable(antennaUplinkConfig);
             return this;
         }
 
-        public Builder setDataflowEndpointConfig(@Nullable Input<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig) {
+        public Builder dataflowEndpointConfig(@Nullable Input<ConfigDataflowEndpointConfigArgs> dataflowEndpointConfig) {
             this.dataflowEndpointConfig = dataflowEndpointConfig;
             return this;
         }
 
-        public Builder setDataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfigArgs dataflowEndpointConfig) {
+        public Builder dataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfigArgs dataflowEndpointConfig) {
             this.dataflowEndpointConfig = Input.ofNullable(dataflowEndpointConfig);
             return this;
         }
 
-        public Builder setS3RecordingConfig(@Nullable Input<ConfigS3RecordingConfigArgs> s3RecordingConfig) {
+        public Builder s3RecordingConfig(@Nullable Input<ConfigS3RecordingConfigArgs> s3RecordingConfig) {
             this.s3RecordingConfig = s3RecordingConfig;
             return this;
         }
 
-        public Builder setS3RecordingConfig(@Nullable ConfigS3RecordingConfigArgs s3RecordingConfig) {
+        public Builder s3RecordingConfig(@Nullable ConfigS3RecordingConfigArgs s3RecordingConfig) {
             this.s3RecordingConfig = Input.ofNullable(s3RecordingConfig);
             return this;
         }
 
-        public Builder setTrackingConfig(@Nullable Input<ConfigTrackingConfigArgs> trackingConfig) {
+        public Builder trackingConfig(@Nullable Input<ConfigTrackingConfigArgs> trackingConfig) {
             this.trackingConfig = trackingConfig;
             return this;
         }
 
-        public Builder setTrackingConfig(@Nullable ConfigTrackingConfigArgs trackingConfig) {
+        public Builder trackingConfig(@Nullable ConfigTrackingConfigArgs trackingConfig) {
             this.trackingConfig = Input.ofNullable(trackingConfig);
             return this;
         }
 
-        public Builder setUplinkEchoConfig(@Nullable Input<ConfigUplinkEchoConfigArgs> uplinkEchoConfig) {
+        public Builder uplinkEchoConfig(@Nullable Input<ConfigUplinkEchoConfigArgs> uplinkEchoConfig) {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
         }
 
-        public Builder setUplinkEchoConfig(@Nullable ConfigUplinkEchoConfigArgs uplinkEchoConfig) {
+        public Builder uplinkEchoConfig(@Nullable ConfigUplinkEchoConfigArgs uplinkEchoConfig) {
             this.uplinkEchoConfig = Input.ofNullable(uplinkEchoConfig);
             return this;
         }

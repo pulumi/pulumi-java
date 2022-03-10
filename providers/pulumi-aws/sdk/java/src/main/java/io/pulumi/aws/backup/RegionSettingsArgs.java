@@ -72,22 +72,22 @@ public final class RegionSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceTypeOptInPreference = defaults.resourceTypeOptInPreference;
         }
 
-        public Builder setResourceTypeManagementPreference(@Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference) {
+        public Builder resourceTypeManagementPreference(@Nullable Input<Map<String,Boolean>> resourceTypeManagementPreference) {
             this.resourceTypeManagementPreference = resourceTypeManagementPreference;
             return this;
         }
 
-        public Builder setResourceTypeManagementPreference(@Nullable Map<String,Boolean> resourceTypeManagementPreference) {
+        public Builder resourceTypeManagementPreference(@Nullable Map<String,Boolean> resourceTypeManagementPreference) {
             this.resourceTypeManagementPreference = Input.ofNullable(resourceTypeManagementPreference);
             return this;
         }
 
-        public Builder setResourceTypeOptInPreference(Input<Map<String,Boolean>> resourceTypeOptInPreference) {
+        public Builder resourceTypeOptInPreference(Input<Map<String,Boolean>> resourceTypeOptInPreference) {
             this.resourceTypeOptInPreference = Objects.requireNonNull(resourceTypeOptInPreference);
             return this;
         }
 
-        public Builder setResourceTypeOptInPreference(Map<String,Boolean> resourceTypeOptInPreference) {
+        public Builder resourceTypeOptInPreference(Map<String,Boolean> resourceTypeOptInPreference) {
             this.resourceTypeOptInPreference = Input.of(Objects.requireNonNull(resourceTypeOptInPreference));
             return this;
         }

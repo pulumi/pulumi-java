@@ -110,42 +110,42 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     	      this.labels = defaults.labels;
         }
 
-        public Builder setCloudRepo(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo) {
+        public Builder cloudRepo(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo) {
             this.cloudRepo = cloudRepo;
             return this;
         }
 
-        public Builder setCloudRepo(@Nullable GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs cloudRepo) {
+        public Builder cloudRepo(@Nullable GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs cloudRepo) {
             this.cloudRepo = Input.ofNullable(cloudRepo);
             return this;
         }
 
-        public Builder setGerrit(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
+        public Builder gerrit(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
 
-        public Builder setGerrit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs gerrit) {
+        public Builder gerrit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs gerrit) {
             this.gerrit = Input.ofNullable(gerrit);
             return this;
         }
 
-        public Builder setGit(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
+        public Builder git(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
 
-        public Builder setGit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs git) {
+        public Builder git(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs git) {
             this.git = Input.ofNullable(git);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }

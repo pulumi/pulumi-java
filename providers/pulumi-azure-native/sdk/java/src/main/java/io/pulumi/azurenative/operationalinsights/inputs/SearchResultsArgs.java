@@ -123,52 +123,52 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startSearchTime = defaults.startSearchTime;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndSearchTime(@Nullable Input<String> endSearchTime) {
+        public Builder endSearchTime(@Nullable Input<String> endSearchTime) {
             this.endSearchTime = endSearchTime;
             return this;
         }
 
-        public Builder setEndSearchTime(@Nullable String endSearchTime) {
+        public Builder endSearchTime(@Nullable String endSearchTime) {
             this.endSearchTime = Input.ofNullable(endSearchTime);
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Input<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable Integer limit) {
+        public Builder limit(@Nullable Integer limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setStartSearchTime(@Nullable Input<String> startSearchTime) {
+        public Builder startSearchTime(@Nullable Input<String> startSearchTime) {
             this.startSearchTime = startSearchTime;
             return this;
         }
 
-        public Builder setStartSearchTime(@Nullable String startSearchTime) {
+        public Builder startSearchTime(@Nullable String startSearchTime) {
             this.startSearchTime = Input.ofNullable(startSearchTime);
             return this;
         }

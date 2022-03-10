@@ -140,47 +140,47 @@ public final class GetExportResult {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setAccepts(@Nullable String accepts) {
+        public Builder accepts(@Nullable String accepts) {
             this.accepts = accepts;
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setContentDisposition(String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setExportType(String exportType) {
+        public Builder exportType(String exportType) {
             this.exportType = Objects.requireNonNull(exportType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

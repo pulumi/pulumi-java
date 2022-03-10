@@ -75,22 +75,22 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.sendForBulkImport = defaults.sendForBulkImport;
         }
 
-        public Builder setPubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }
 
-        public Builder setSendForBulkImport(@Nullable Input<Boolean> sendForBulkImport) {
+        public Builder sendForBulkImport(@Nullable Input<Boolean> sendForBulkImport) {
             this.sendForBulkImport = sendForBulkImport;
             return this;
         }
 
-        public Builder setSendForBulkImport(@Nullable Boolean sendForBulkImport) {
+        public Builder sendForBulkImport(@Nullable Boolean sendForBulkImport) {
             this.sendForBulkImport = Input.ofNullable(sendForBulkImport);
             return this;
         }

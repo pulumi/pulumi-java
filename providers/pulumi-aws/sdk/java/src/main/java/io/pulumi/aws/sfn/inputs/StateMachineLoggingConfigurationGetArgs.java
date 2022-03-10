@@ -87,32 +87,32 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
     	      this.logDestination = defaults.logDestination;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Input<Boolean> includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Input<Boolean> includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Boolean includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = Input.ofNullable(includeExecutionData);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<String> level) {
+        public Builder level(@Nullable Input<String> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setLogDestination(@Nullable Input<String> logDestination) {
+        public Builder logDestination(@Nullable Input<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
 
-        public Builder setLogDestination(@Nullable String logDestination) {
+        public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Input.ofNullable(logDestination);
             return this;
         }

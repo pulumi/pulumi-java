@@ -48,7 +48,7 @@ public final class GetGlobalUserEnvironmentResult {
     	      this.environment = defaults.environment;
         }
 
-        public Builder setEnvironment(EnvironmentDetailsResponse environment) {
+        public Builder environment(EnvironmentDetailsResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }

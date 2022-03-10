@@ -86,32 +86,32 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setPgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Input<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
-        public Builder setPgpKey(@Nullable String pgpKey) {
+        public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Input.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

@@ -90,32 +90,32 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
     	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
         }
 
-        public Builder setMaxPercentUnhealthyPartitionsPerService(@Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService) {
+        public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService) {
             this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
+        public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
             this.maxPercentUnhealthyPartitionsPerService = Input.ofNullable(maxPercentUnhealthyPartitionsPerService);
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyReplicasPerPartition(@Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition) {
+        public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition) {
             this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
+        public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
             this.maxPercentUnhealthyReplicasPerPartition = Input.ofNullable(maxPercentUnhealthyReplicasPerPartition);
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyServices(@Nullable Input<Integer> maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Input<Integer> maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = Input.ofNullable(maxPercentUnhealthyServices);
             return this;
         }

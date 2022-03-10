@@ -91,32 +91,32 @@ public final class ClusterMaintenancePolicyArgs extends io.pulumi.resources.Reso
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable Input<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable Input<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindowArgs dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindowArgs dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable Input<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable Input<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusionArgs> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusionArgs> maintenanceExclusions) {
             this.maintenanceExclusions = Input.ofNullable(maintenanceExclusions);
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable Input<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow) {
+        public Builder recurringWindow(@Nullable Input<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindowArgs recurringWindow) {
+        public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindowArgs recurringWindow) {
             this.recurringWindow = Input.ofNullable(recurringWindow);
             return this;
         }

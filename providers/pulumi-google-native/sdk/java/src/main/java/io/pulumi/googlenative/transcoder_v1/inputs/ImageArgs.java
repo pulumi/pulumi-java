@@ -92,32 +92,32 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAlpha(@Nullable Input<Double> alpha) {
+        public Builder alpha(@Nullable Input<Double> alpha) {
             this.alpha = alpha;
             return this;
         }
 
-        public Builder setAlpha(@Nullable Double alpha) {
+        public Builder alpha(@Nullable Double alpha) {
             this.alpha = Input.ofNullable(alpha);
             return this;
         }
 
-        public Builder setResolution(@Nullable Input<NormalizedCoordinateArgs> resolution) {
+        public Builder resolution(@Nullable Input<NormalizedCoordinateArgs> resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setResolution(@Nullable NormalizedCoordinateArgs resolution) {
+        public Builder resolution(@Nullable NormalizedCoordinateArgs resolution) {
             this.resolution = Input.ofNullable(resolution);
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

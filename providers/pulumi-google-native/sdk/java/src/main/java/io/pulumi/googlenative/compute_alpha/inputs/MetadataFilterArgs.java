@@ -76,22 +76,22 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(@Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels) {
+        public Builder filterLabels(@Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels) {
             this.filterLabels = filterLabels;
             return this;
         }
 
-        public Builder setFilterLabels(@Nullable List<MetadataFilterLabelMatchArgs> filterLabels) {
+        public Builder filterLabels(@Nullable List<MetadataFilterLabelMatchArgs> filterLabels) {
             this.filterLabels = Input.ofNullable(filterLabels);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(@Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
+        public Builder filterMatchCriteria(@Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
             this.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
 
-        public Builder setFilterMatchCriteria(@Nullable MetadataFilterFilterMatchCriteria filterMatchCriteria) {
+        public Builder filterMatchCriteria(@Nullable MetadataFilterFilterMatchCriteria filterMatchCriteria) {
             this.filterMatchCriteria = Input.ofNullable(filterMatchCriteria);
             return this;
         }

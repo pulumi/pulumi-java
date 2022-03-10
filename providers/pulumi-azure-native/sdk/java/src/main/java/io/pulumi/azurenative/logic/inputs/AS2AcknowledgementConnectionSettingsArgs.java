@@ -105,42 +105,42 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends io.pulumi.re
     	      this.unfoldHttpHeaders = defaults.unfoldHttpHeaders;
         }
 
-        public Builder setIgnoreCertificateNameMismatch(Input<Boolean> ignoreCertificateNameMismatch) {
+        public Builder ignoreCertificateNameMismatch(Input<Boolean> ignoreCertificateNameMismatch) {
             this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
             return this;
         }
 
-        public Builder setIgnoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
+        public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
             this.ignoreCertificateNameMismatch = Input.of(Objects.requireNonNull(ignoreCertificateNameMismatch));
             return this;
         }
 
-        public Builder setKeepHttpConnectionAlive(Input<Boolean> keepHttpConnectionAlive) {
+        public Builder keepHttpConnectionAlive(Input<Boolean> keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
             return this;
         }
 
-        public Builder setKeepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
+        public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
             this.keepHttpConnectionAlive = Input.of(Objects.requireNonNull(keepHttpConnectionAlive));
             return this;
         }
 
-        public Builder setSupportHttpStatusCodeContinue(Input<Boolean> supportHttpStatusCodeContinue) {
+        public Builder supportHttpStatusCodeContinue(Input<Boolean> supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
             return this;
         }
 
-        public Builder setSupportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
+        public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
             this.supportHttpStatusCodeContinue = Input.of(Objects.requireNonNull(supportHttpStatusCodeContinue));
             return this;
         }
 
-        public Builder setUnfoldHttpHeaders(Input<Boolean> unfoldHttpHeaders) {
+        public Builder unfoldHttpHeaders(Input<Boolean> unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
             return this;
         }
 
-        public Builder setUnfoldHttpHeaders(Boolean unfoldHttpHeaders) {
+        public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
             this.unfoldHttpHeaders = Input.of(Objects.requireNonNull(unfoldHttpHeaders));
             return this;
         }

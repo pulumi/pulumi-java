@@ -237,122 +237,122 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setBatchSize(@Nullable Input<String> batchSize) {
+        public Builder batchSize(@Nullable Input<String> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable String batchSize) {
+        public Builder batchSize(@Nullable String batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setDataFormat(Input<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat) {
+        public Builder dataFormat(Input<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setDataFormat(GoogleCloudMlV1__PredictionInputDataFormat dataFormat) {
+        public Builder dataFormat(GoogleCloudMlV1__PredictionInputDataFormat dataFormat) {
             this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder setInputPaths(Input<List<String>> inputPaths) {
+        public Builder inputPaths(Input<List<String>> inputPaths) {
             this.inputPaths = Objects.requireNonNull(inputPaths);
             return this;
         }
 
-        public Builder setInputPaths(List<String> inputPaths) {
+        public Builder inputPaths(List<String> inputPaths) {
             this.inputPaths = Input.of(Objects.requireNonNull(inputPaths));
             return this;
         }
 
-        public Builder setMaxWorkerCount(@Nullable Input<String> maxWorkerCount) {
+        public Builder maxWorkerCount(@Nullable Input<String> maxWorkerCount) {
             this.maxWorkerCount = maxWorkerCount;
             return this;
         }
 
-        public Builder setMaxWorkerCount(@Nullable String maxWorkerCount) {
+        public Builder maxWorkerCount(@Nullable String maxWorkerCount) {
             this.maxWorkerCount = Input.ofNullable(maxWorkerCount);
             return this;
         }
 
-        public Builder setModelName(@Nullable Input<String> modelName) {
+        public Builder modelName(@Nullable Input<String> modelName) {
             this.modelName = modelName;
             return this;
         }
 
-        public Builder setModelName(@Nullable String modelName) {
+        public Builder modelName(@Nullable String modelName) {
             this.modelName = Input.ofNullable(modelName);
             return this;
         }
 
-        public Builder setOutputDataFormat(@Nullable Input<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat) {
+        public Builder outputDataFormat(@Nullable Input<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat) {
             this.outputDataFormat = outputDataFormat;
             return this;
         }
 
-        public Builder setOutputDataFormat(@Nullable GoogleCloudMlV1__PredictionInputOutputDataFormat outputDataFormat) {
+        public Builder outputDataFormat(@Nullable GoogleCloudMlV1__PredictionInputOutputDataFormat outputDataFormat) {
             this.outputDataFormat = Input.ofNullable(outputDataFormat);
             return this;
         }
 
-        public Builder setOutputPath(Input<String> outputPath) {
+        public Builder outputPath(Input<String> outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
 
-        public Builder setOutputPath(String outputPath) {
+        public Builder outputPath(String outputPath) {
             this.outputPath = Input.of(Objects.requireNonNull(outputPath));
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder setSignatureName(@Nullable Input<String> signatureName) {
+        public Builder signatureName(@Nullable Input<String> signatureName) {
             this.signatureName = signatureName;
             return this;
         }
 
-        public Builder setSignatureName(@Nullable String signatureName) {
+        public Builder signatureName(@Nullable String signatureName) {
             this.signatureName = Input.ofNullable(signatureName);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }
 
-        public Builder setVersionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Input<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
-        public Builder setVersionName(@Nullable String versionName) {
+        public Builder versionName(@Nullable String versionName) {
             this.versionName = Input.ofNullable(versionName);
             return this;
         }

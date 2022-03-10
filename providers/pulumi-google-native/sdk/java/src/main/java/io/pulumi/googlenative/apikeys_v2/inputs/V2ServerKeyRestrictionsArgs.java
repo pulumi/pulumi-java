@@ -58,12 +58,12 @@ public final class V2ServerKeyRestrictionsArgs extends io.pulumi.resources.Resou
     	      this.allowedIps = defaults.allowedIps;
         }
 
-        public Builder setAllowedIps(@Nullable Input<List<String>> allowedIps) {
+        public Builder allowedIps(@Nullable Input<List<String>> allowedIps) {
             this.allowedIps = allowedIps;
             return this;
         }
 
-        public Builder setAllowedIps(@Nullable List<String> allowedIps) {
+        public Builder allowedIps(@Nullable List<String> allowedIps) {
             this.allowedIps = Input.ofNullable(allowedIps);
             return this;
         }

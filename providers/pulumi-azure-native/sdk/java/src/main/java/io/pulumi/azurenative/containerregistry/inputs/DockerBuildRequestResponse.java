@@ -291,77 +291,77 @@ public final class DockerBuildRequestResponse extends io.pulumi.resources.Invoke
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentResponse> arguments) {
+        public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsResponse credentials) {
+        public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setDockerFilePath(String dockerFilePath) {
+        public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
 
-        public Builder setImageNames(@Nullable List<String> imageNames) {
+        public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Boolean isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setPlatform(PlatformPropertiesResponse platform) {
+        public Builder platform(PlatformPropertiesResponse platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable String sourceLocation) {
+        public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

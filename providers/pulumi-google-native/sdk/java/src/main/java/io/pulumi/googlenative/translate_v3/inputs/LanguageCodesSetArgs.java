@@ -58,12 +58,12 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
     	      this.languageCodes = defaults.languageCodes;
         }
 
-        public Builder setLanguageCodes(@Nullable Input<List<String>> languageCodes) {
+        public Builder languageCodes(@Nullable Input<List<String>> languageCodes) {
             this.languageCodes = languageCodes;
             return this;
         }
 
-        public Builder setLanguageCodes(@Nullable List<String> languageCodes) {
+        public Builder languageCodes(@Nullable List<String> languageCodes) {
             this.languageCodes = Input.ofNullable(languageCodes);
             return this;
         }

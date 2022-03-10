@@ -74,22 +74,22 @@ public final class SqlDWUpsertSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.keys = defaults.keys;
         }
 
-        public Builder setInterimSchemaName(@Nullable Input<Object> interimSchemaName) {
+        public Builder interimSchemaName(@Nullable Input<Object> interimSchemaName) {
             this.interimSchemaName = interimSchemaName;
             return this;
         }
 
-        public Builder setInterimSchemaName(@Nullable Object interimSchemaName) {
+        public Builder interimSchemaName(@Nullable Object interimSchemaName) {
             this.interimSchemaName = Input.ofNullable(interimSchemaName);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<Object> keys) {
+        public Builder keys(@Nullable Input<Object> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable Object keys) {
+        public Builder keys(@Nullable Object keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }

@@ -176,57 +176,57 @@ public final class DeliveryStreamRedshiftDestinationConfiguration extends io.pul
     	      this.username = defaults.username;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setClusterJDBCURL(String clusterJDBCURL) {
+        public Builder clusterJDBCURL(String clusterJDBCURL) {
             this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
             return this;
         }
 
-        public Builder setCopyCommand(DeliveryStreamCopyCommand copyCommand) {
+        public Builder copyCommand(DeliveryStreamCopyCommand copyCommand) {
             this.copyCommand = Objects.requireNonNull(copyCommand);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamRedshiftRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

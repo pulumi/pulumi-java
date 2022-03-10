@@ -104,22 +104,22 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAddRemove(@Nullable Either<String,AddRemove> addRemove) {
+        public Builder addRemove(@Nullable Either<String,AddRemove> addRemove) {
             this.addRemove = addRemove;
             return this;
         }
 
-        public Builder setLabAccountResourceId(@Nullable String labAccountResourceId) {
+        public Builder labAccountResourceId(@Nullable String labAccountResourceId) {
             this.labAccountResourceId = labAccountResourceId;
             return this;
         }
 
-        public Builder setLabResourceId(@Nullable String labResourceId) {
+        public Builder labResourceId(@Nullable String labResourceId) {
             this.labResourceId = labResourceId;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

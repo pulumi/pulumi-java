@@ -313,87 +313,87 @@ public final class GetIotSecuritySolutionResult {
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setAdditionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces) {
+        public Builder additionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces) {
             this.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
 
-        public Builder setAutoDiscoveredResources(List<String> autoDiscoveredResources) {
+        public Builder autoDiscoveredResources(List<String> autoDiscoveredResources) {
             this.autoDiscoveredResources = Objects.requireNonNull(autoDiscoveredResources);
             return this;
         }
 
-        public Builder setDisabledDataSources(@Nullable List<String> disabledDataSources) {
+        public Builder disabledDataSources(@Nullable List<String> disabledDataSources) {
             this.disabledDataSources = disabledDataSources;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExport(@Nullable List<String> export) {
+        public Builder export(@Nullable List<String> export) {
             this.export = export;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIotHubs(List<String> iotHubs) {
+        public Builder iotHubs(List<String> iotHubs) {
             this.iotHubs = Objects.requireNonNull(iotHubs);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration) {
+        public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration) {
             this.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnmaskedIpLoggingStatus(@Nullable String unmaskedIpLoggingStatus) {
+        public Builder unmaskedIpLoggingStatus(@Nullable String unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
 
-        public Builder setUserDefinedResources(@Nullable UserDefinedResourcesPropertiesResponse userDefinedResources) {
+        public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesResponse userDefinedResources) {
             this.userDefinedResources = userDefinedResources;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
         }

@@ -109,42 +109,42 @@ public final class FacebookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setGraphApiVersion(@Nullable Input<String> graphApiVersion) {
+        public Builder graphApiVersion(@Nullable Input<String> graphApiVersion) {
             this.graphApiVersion = graphApiVersion;
             return this;
         }
 
-        public Builder setGraphApiVersion(@Nullable String graphApiVersion) {
+        public Builder graphApiVersion(@Nullable String graphApiVersion) {
             this.graphApiVersion = Input.ofNullable(graphApiVersion);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<LoginScopesArgs> login) {
+        public Builder login(@Nullable Input<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesArgs login) {
+        public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<AppRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<AppRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AppRegistrationArgs registration) {
+        public Builder registration(@Nullable AppRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }

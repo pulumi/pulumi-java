@@ -75,22 +75,22 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
     	      this.matchFields = defaults.matchFields;
         }
 
-        public Builder setMatchExpressions(@Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions) {
+        public Builder matchExpressions(@Nullable Input<List<NodeSelectorRequirementArgs>> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchExpressions(@Nullable List<NodeSelectorRequirementArgs> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<NodeSelectorRequirementArgs> matchExpressions) {
             this.matchExpressions = Input.ofNullable(matchExpressions);
             return this;
         }
 
-        public Builder setMatchFields(@Nullable Input<List<NodeSelectorRequirementArgs>> matchFields) {
+        public Builder matchFields(@Nullable Input<List<NodeSelectorRequirementArgs>> matchFields) {
             this.matchFields = matchFields;
             return this;
         }
 
-        public Builder setMatchFields(@Nullable List<NodeSelectorRequirementArgs> matchFields) {
+        public Builder matchFields(@Nullable List<NodeSelectorRequirementArgs> matchFields) {
             this.matchFields = Input.ofNullable(matchFields);
             return this;
         }

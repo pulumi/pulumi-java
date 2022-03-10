@@ -91,32 +91,32 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInstances(@Nullable Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances) {
+        public Builder instances(@Nullable Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<PacketMirroringMirroredResourcesInstanceGetArgs> instances) {
+        public Builder instances(@Nullable List<PacketMirroringMirroredResourcesInstanceGetArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setSubnetworks(@Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks) {
+        public Builder subnetworks(@Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
 
-        public Builder setSubnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetworkGetArgs> subnetworks) {
+        public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetworkGetArgs> subnetworks) {
             this.subnetworks = Input.ofNullable(subnetworks);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

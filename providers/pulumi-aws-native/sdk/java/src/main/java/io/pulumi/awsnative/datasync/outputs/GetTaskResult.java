@@ -201,67 +201,67 @@ public final class GetTaskResult {
     	      this.taskArn = defaults.taskArn;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setDestinationNetworkInterfaceArns(@Nullable List<String> destinationNetworkInterfaceArns) {
+        public Builder destinationNetworkInterfaceArns(@Nullable List<String> destinationNetworkInterfaceArns) {
             this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorDetail(@Nullable String errorDetail) {
+        public Builder errorDetail(@Nullable String errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<TaskFilterRule> excludes) {
+        public Builder excludes(@Nullable List<TaskFilterRule> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setIncludes(@Nullable List<TaskFilterRule> includes) {
+        public Builder includes(@Nullable List<TaskFilterRule> includes) {
             this.includes = includes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptions(@Nullable TaskOptions options) {
+        public Builder options(@Nullable TaskOptions options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TaskSchedule schedule) {
+        public Builder schedule(@Nullable TaskSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSourceNetworkInterfaceArns(@Nullable List<String> sourceNetworkInterfaceArns) {
+        public Builder sourceNetworkInterfaceArns(@Nullable List<String> sourceNetworkInterfaceArns) {
             this.sourceNetworkInterfaceArns = sourceNetworkInterfaceArns;
             return this;
         }
 
-        public Builder setStatus(@Nullable TaskStatus status) {
+        public Builder status(@Nullable TaskStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TaskTag> tags) {
+        public Builder tags(@Nullable List<TaskTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskArn(@Nullable String taskArn) {
+        public Builder taskArn(@Nullable String taskArn) {
             this.taskArn = taskArn;
             return this;
         }

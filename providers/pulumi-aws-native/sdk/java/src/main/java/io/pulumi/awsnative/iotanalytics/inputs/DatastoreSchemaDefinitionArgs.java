@@ -50,12 +50,12 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable Input<List<DatastoreColumnArgs>> columns) {
+        public Builder columns(@Nullable Input<List<DatastoreColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<DatastoreColumnArgs> columns) {
+        public Builder columns(@Nullable List<DatastoreColumnArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }

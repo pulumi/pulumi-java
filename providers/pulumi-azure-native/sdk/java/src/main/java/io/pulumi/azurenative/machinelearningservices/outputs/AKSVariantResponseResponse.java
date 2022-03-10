@@ -201,52 +201,52 @@ public final class AKSVariantResponseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setError(ServiceResponseBaseResponseError error) {
+        public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrafficPercentile(@Nullable Double trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

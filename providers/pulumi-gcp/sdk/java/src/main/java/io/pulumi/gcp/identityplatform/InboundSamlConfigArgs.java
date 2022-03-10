@@ -143,62 +143,62 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.spConfig = defaults.spConfig;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdpConfig(Input<InboundSamlConfigIdpConfigArgs> idpConfig) {
+        public Builder idpConfig(Input<InboundSamlConfigIdpConfigArgs> idpConfig) {
             this.idpConfig = Objects.requireNonNull(idpConfig);
             return this;
         }
 
-        public Builder setIdpConfig(InboundSamlConfigIdpConfigArgs idpConfig) {
+        public Builder idpConfig(InboundSamlConfigIdpConfigArgs idpConfig) {
             this.idpConfig = Input.of(Objects.requireNonNull(idpConfig));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpConfig(Input<InboundSamlConfigSpConfigArgs> spConfig) {
+        public Builder spConfig(Input<InboundSamlConfigSpConfigArgs> spConfig) {
             this.spConfig = Objects.requireNonNull(spConfig);
             return this;
         }
 
-        public Builder setSpConfig(InboundSamlConfigSpConfigArgs spConfig) {
+        public Builder spConfig(InboundSamlConfigSpConfigArgs spConfig) {
             this.spConfig = Input.of(Objects.requireNonNull(spConfig));
             return this;
         }

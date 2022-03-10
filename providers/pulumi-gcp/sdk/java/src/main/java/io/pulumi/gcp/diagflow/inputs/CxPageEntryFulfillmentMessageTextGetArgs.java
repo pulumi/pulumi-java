@@ -73,22 +73,22 @@ public final class CxPageEntryFulfillmentMessageTextGetArgs extends io.pulumi.re
     	      this.texts = defaults.texts;
         }
 
-        public Builder setAllowPlaybackInterruption(@Nullable Input<Boolean> allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(@Nullable Input<Boolean> allowPlaybackInterruption) {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
-        public Builder setAllowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Input.ofNullable(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setTexts(@Nullable Input<List<String>> texts) {
+        public Builder texts(@Nullable Input<List<String>> texts) {
             this.texts = texts;
             return this;
         }
 
-        public Builder setTexts(@Nullable List<String> texts) {
+        public Builder texts(@Nullable List<String> texts) {
             this.texts = Input.ofNullable(texts);
             return this;
         }

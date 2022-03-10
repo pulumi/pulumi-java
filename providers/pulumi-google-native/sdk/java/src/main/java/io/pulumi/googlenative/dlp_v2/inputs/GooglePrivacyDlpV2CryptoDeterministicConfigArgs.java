@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setContext(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
+        public Builder context(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
+        public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+        public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
             this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
             return this;
         }

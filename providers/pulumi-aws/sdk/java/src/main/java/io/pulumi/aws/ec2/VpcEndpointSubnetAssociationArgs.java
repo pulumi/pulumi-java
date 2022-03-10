@@ -69,22 +69,22 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setVpcEndpointId(Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(Input<String> vpcEndpointId) {
             this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
             return this;
         }
 
-        public Builder setVpcEndpointId(String vpcEndpointId) {
+        public Builder vpcEndpointId(String vpcEndpointId) {
             this.vpcEndpointId = Input.of(Objects.requireNonNull(vpcEndpointId));
             return this;
         }

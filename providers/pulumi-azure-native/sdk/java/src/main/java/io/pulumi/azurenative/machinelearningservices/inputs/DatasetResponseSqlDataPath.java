@@ -105,22 +105,22 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
     	      this.sqlTableName = defaults.sqlTableName;
         }
 
-        public Builder setQueryTimeout(Double queryTimeout) {
+        public Builder queryTimeout(Double queryTimeout) {
             this.queryTimeout = Objects.requireNonNull(queryTimeout);
             return this;
         }
 
-        public Builder setSqlQuery(String sqlQuery) {
+        public Builder sqlQuery(String sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
 
-        public Builder setSqlStoredProcedureName(String sqlStoredProcedureName) {
+        public Builder sqlStoredProcedureName(String sqlStoredProcedureName) {
             this.sqlStoredProcedureName = Objects.requireNonNull(sqlStoredProcedureName);
             return this;
         }
 
-        public Builder setSqlTableName(String sqlTableName) {
+        public Builder sqlTableName(String sqlTableName) {
             this.sqlTableName = Objects.requireNonNull(sqlTableName);
             return this;
         }

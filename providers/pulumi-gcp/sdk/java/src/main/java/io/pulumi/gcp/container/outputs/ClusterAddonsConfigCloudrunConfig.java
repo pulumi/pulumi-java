@@ -72,12 +72,12 @@ public final class ClusterAddonsConfigCloudrunConfig {
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable String loadBalancerType) {
+        public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }

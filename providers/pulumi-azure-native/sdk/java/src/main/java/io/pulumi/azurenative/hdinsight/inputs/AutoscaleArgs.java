@@ -75,22 +75,22 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recurrence = defaults.recurrence;
         }
 
-        public Builder setCapacity(@Nullable Input<AutoscaleCapacityArgs> capacity) {
+        public Builder capacity(@Nullable Input<AutoscaleCapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable AutoscaleCapacityArgs capacity) {
+        public Builder capacity(@Nullable AutoscaleCapacityArgs capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Input<AutoscaleRecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Input<AutoscaleRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable AutoscaleRecurrenceArgs recurrence) {
+        public Builder recurrence(@Nullable AutoscaleRecurrenceArgs recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }

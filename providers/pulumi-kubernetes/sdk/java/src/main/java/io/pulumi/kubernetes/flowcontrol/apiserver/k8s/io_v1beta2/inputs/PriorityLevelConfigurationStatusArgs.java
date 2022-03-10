@@ -58,12 +58,12 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<PriorityLevelConfigurationConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<PriorityLevelConfigurationConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<PriorityLevelConfigurationConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }

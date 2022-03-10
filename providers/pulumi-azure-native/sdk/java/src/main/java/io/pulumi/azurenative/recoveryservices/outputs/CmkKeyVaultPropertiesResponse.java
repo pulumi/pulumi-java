@@ -50,7 +50,7 @@ public final class CmkKeyVaultPropertiesResponse {
     	      this.keyUri = defaults.keyUri;
         }
 
-        public Builder setKeyUri(@Nullable String keyUri) {
+        public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = keyUri;
             return this;
         }

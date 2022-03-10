@@ -137,72 +137,72 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable Input<RuleGroupRuleActionArgs> action) {
+        public Builder action(@Nullable Input<RuleGroupRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable RuleGroupRuleActionArgs action) {
+        public Builder action(@Nullable RuleGroupRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable Input<RuleGroupCaptchaConfigArgs> captchaConfig) {
+        public Builder captchaConfig(@Nullable Input<RuleGroupCaptchaConfigArgs> captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable RuleGroupCaptchaConfigArgs captchaConfig) {
+        public Builder captchaConfig(@Nullable RuleGroupCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Input.ofNullable(captchaConfig);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable Input<List<RuleGroupLabelArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Input<List<RuleGroupLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<RuleGroupLabelArgs> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<RuleGroupLabelArgs> ruleLabels) {
             this.ruleLabels = Input.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder setStatement(Input<RuleGroupStatementArgs> statement) {
+        public Builder statement(Input<RuleGroupStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setStatement(RuleGroupStatementArgs statement) {
+        public Builder statement(RuleGroupStatementArgs statement) {
             this.statement = Input.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<RuleGroupVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<RuleGroupVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

@@ -167,42 +167,42 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<SubResourceResponse> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable String privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceResponse subnet) {
+        public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }

@@ -57,7 +57,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends io.pulumi
     	      this.logs = defaults.logs;
         }
 
-        public Builder setLogs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
+        public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
             this.logs = logs;
             return this;
         }

@@ -86,32 +86,32 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     	      this.mailFromDomain = defaults.mailFromDomain;
         }
 
-        public Builder setBehaviorOnMxFailure(@Nullable Input<String> behaviorOnMxFailure) {
+        public Builder behaviorOnMxFailure(@Nullable Input<String> behaviorOnMxFailure) {
             this.behaviorOnMxFailure = behaviorOnMxFailure;
             return this;
         }
 
-        public Builder setBehaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
+        public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
             this.behaviorOnMxFailure = Input.ofNullable(behaviorOnMxFailure);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setMailFromDomain(@Nullable Input<String> mailFromDomain) {
+        public Builder mailFromDomain(@Nullable Input<String> mailFromDomain) {
             this.mailFromDomain = mailFromDomain;
             return this;
         }
 
-        public Builder setMailFromDomain(@Nullable String mailFromDomain) {
+        public Builder mailFromDomain(@Nullable String mailFromDomain) {
             this.mailFromDomain = Input.ofNullable(mailFromDomain);
             return this;
         }

@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends io.
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder setParts(Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts) {
+        public Builder parts(Input<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setParts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs> parts) {
+        public Builder parts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs> parts) {
             this.parts = Input.of(Objects.requireNonNull(parts));
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Input<Integer> repeatCount) {
+        public Builder repeatCount(@Nullable Input<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Integer repeatCount) {
+        public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = Input.ofNullable(repeatCount);
             return this;
         }

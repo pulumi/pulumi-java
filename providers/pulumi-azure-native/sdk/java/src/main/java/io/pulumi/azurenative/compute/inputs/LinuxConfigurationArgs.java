@@ -108,42 +108,42 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setDisablePasswordAuthentication(@Nullable Input<Boolean> disablePasswordAuthentication) {
+        public Builder disablePasswordAuthentication(@Nullable Input<Boolean> disablePasswordAuthentication) {
             this.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
 
-        public Builder setDisablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
+        public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
             this.disablePasswordAuthentication = Input.ofNullable(disablePasswordAuthentication);
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable Input<LinuxPatchSettingsArgs> patchSettings) {
+        public Builder patchSettings(@Nullable Input<LinuxPatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
+        public Builder patchSettings(@Nullable LinuxPatchSettingsArgs patchSettings) {
             this.patchSettings = Input.ofNullable(patchSettings);
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Boolean provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = Input.ofNullable(provisionVMAgent);
             return this;
         }
 
-        public Builder setSsh(@Nullable Input<SshConfigurationArgs> ssh) {
+        public Builder ssh(@Nullable Input<SshConfigurationArgs> ssh) {
             this.ssh = ssh;
             return this;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationArgs ssh) {
+        public Builder ssh(@Nullable SshConfigurationArgs ssh) {
             this.ssh = Input.ofNullable(ssh);
             return this;
         }

@@ -121,27 +121,27 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.nextHopType = defaults.nextHopType;
         }
 
-        public Builder setDestinationType(String destinationType) {
+        public Builder destinationType(String destinationType) {
             this.destinationType = Objects.requireNonNull(destinationType);
             return this;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }

@@ -135,62 +135,62 @@ public final class ClientCertAuthenticationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateExpirationDate(@Nullable Input<String> certificateExpirationDate) {
+        public Builder certificateExpirationDate(@Nullable Input<String> certificateExpirationDate) {
             this.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
 
-        public Builder setCertificateExpirationDate(@Nullable String certificateExpirationDate) {
+        public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
             this.certificateExpirationDate = Input.ofNullable(certificateExpirationDate);
             return this;
         }
 
-        public Builder setCertificateSubjectName(@Nullable Input<String> certificateSubjectName) {
+        public Builder certificateSubjectName(@Nullable Input<String> certificateSubjectName) {
             this.certificateSubjectName = certificateSubjectName;
             return this;
         }
 
-        public Builder setCertificateSubjectName(@Nullable String certificateSubjectName) {
+        public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
             this.certificateSubjectName = Input.ofNullable(certificateSubjectName);
             return this;
         }
 
-        public Builder setCertificateThumbprint(@Nullable Input<String> certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable Input<String> certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
-        public Builder setCertificateThumbprint(@Nullable String certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = Input.ofNullable(certificateThumbprint);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPfx(@Nullable Input<String> pfx) {
+        public Builder pfx(@Nullable Input<String> pfx) {
             this.pfx = pfx;
             return this;
         }
 
-        public Builder setPfx(@Nullable String pfx) {
+        public Builder pfx(@Nullable String pfx) {
             this.pfx = Input.ofNullable(pfx);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

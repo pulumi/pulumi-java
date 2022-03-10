@@ -76,22 +76,22 @@ public final class ServicePerimeterStatusEgressPolicyEgressFromGetArgs extends i
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentities(@Nullable Input<List<String>> identities) {
+        public Builder identities(@Nullable Input<List<String>> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = Input.ofNullable(identities);
             return this;
         }
 
-        public Builder setIdentityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Input<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = Input.ofNullable(identityType);
             return this;
         }

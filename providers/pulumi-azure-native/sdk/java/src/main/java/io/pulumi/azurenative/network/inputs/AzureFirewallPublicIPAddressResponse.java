@@ -57,7 +57,7 @@ public final class AzureFirewallPublicIPAddressResponse extends io.pulumi.resour
     	      this.address = defaults.address;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }

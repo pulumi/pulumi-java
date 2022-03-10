@@ -123,27 +123,27 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     	      this.scoreThreshold = defaults.scoreThreshold;
         }
 
-        public Builder setNegatives(@Nullable Double negatives) {
+        public Builder negatives(@Nullable Double negatives) {
             this.negatives = negatives;
             return this;
         }
 
-        public Builder setNegativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
+        public Builder negativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
             this.negativesAboveThreshold = negativesAboveThreshold;
             return this;
         }
 
-        public Builder setPositives(@Nullable Double positives) {
+        public Builder positives(@Nullable Double positives) {
             this.positives = positives;
             return this;
         }
 
-        public Builder setPositivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
+        public Builder positivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
             this.positivesAboveThreshold = positivesAboveThreshold;
             return this;
         }
 
-        public Builder setScoreThreshold(@Nullable Integer scoreThreshold) {
+        public Builder scoreThreshold(@Nullable Integer scoreThreshold) {
             this.scoreThreshold = scoreThreshold;
             return this;
         }

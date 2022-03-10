@@ -76,22 +76,22 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setArmTemplateId(@Nullable Input<String> armTemplateId) {
+        public Builder armTemplateId(@Nullable Input<String> armTemplateId) {
             this.armTemplateId = armTemplateId;
             return this;
         }
 
-        public Builder setArmTemplateId(@Nullable String armTemplateId) {
+        public Builder armTemplateId(@Nullable String armTemplateId) {
             this.armTemplateId = Input.ofNullable(armTemplateId);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ArmTemplateParameterPropertiesArgs> parameters) {
+        public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

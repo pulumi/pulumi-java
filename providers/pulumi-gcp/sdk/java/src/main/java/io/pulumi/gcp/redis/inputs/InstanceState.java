@@ -573,302 +573,302 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.transitEncryptionMode = defaults.transitEncryptionMode;
         }
 
-        public Builder setAlternativeLocationId(@Nullable Input<String> alternativeLocationId) {
+        public Builder alternativeLocationId(@Nullable Input<String> alternativeLocationId) {
             this.alternativeLocationId = alternativeLocationId;
             return this;
         }
 
-        public Builder setAlternativeLocationId(@Nullable String alternativeLocationId) {
+        public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
             this.alternativeLocationId = Input.ofNullable(alternativeLocationId);
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Input<Boolean> authEnabled) {
+        public Builder authEnabled(@Nullable Input<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Boolean authEnabled) {
+        public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Input.ofNullable(authEnabled);
             return this;
         }
 
-        public Builder setAuthString(@Nullable Input<String> authString) {
+        public Builder authString(@Nullable Input<String> authString) {
             this.authString = authString;
             return this;
         }
 
-        public Builder setAuthString(@Nullable String authString) {
+        public Builder authString(@Nullable String authString) {
             this.authString = Input.ofNullable(authString);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable String authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder setConnectMode(@Nullable Input<String> connectMode) {
+        public Builder connectMode(@Nullable Input<String> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
-        public Builder setConnectMode(@Nullable String connectMode) {
+        public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = Input.ofNullable(connectMode);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setCurrentLocationId(@Nullable Input<String> currentLocationId) {
+        public Builder currentLocationId(@Nullable Input<String> currentLocationId) {
             this.currentLocationId = currentLocationId;
             return this;
         }
 
-        public Builder setCurrentLocationId(@Nullable String currentLocationId) {
+        public Builder currentLocationId(@Nullable String currentLocationId) {
             this.currentLocationId = Input.ofNullable(currentLocationId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocationId(@Nullable Input<String> locationId) {
+        public Builder locationId(@Nullable Input<String> locationId) {
             this.locationId = locationId;
             return this;
         }
 
-        public Builder setLocationId(@Nullable String locationId) {
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = Input.ofNullable(locationId);
             return this;
         }
 
-        public Builder setMaintenancePolicy(@Nullable Input<InstanceMaintenancePolicyGetArgs> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Input<InstanceMaintenancePolicyGetArgs> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
-        public Builder setMaintenancePolicy(@Nullable InstanceMaintenancePolicyGetArgs maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable InstanceMaintenancePolicyGetArgs maintenancePolicy) {
             this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder setMaintenanceSchedule(@Nullable Input<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule) {
+        public Builder maintenanceSchedule(@Nullable Input<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule) {
             this.maintenanceSchedule = maintenanceSchedule;
             return this;
         }
 
-        public Builder setMaintenanceSchedule(@Nullable InstanceMaintenanceScheduleGetArgs maintenanceSchedule) {
+        public Builder maintenanceSchedule(@Nullable InstanceMaintenanceScheduleGetArgs maintenanceSchedule) {
             this.maintenanceSchedule = Input.ofNullable(maintenanceSchedule);
             return this;
         }
 
-        public Builder setMemorySizeGb(@Nullable Input<Integer> memorySizeGb) {
+        public Builder memorySizeGb(@Nullable Input<Integer> memorySizeGb) {
             this.memorySizeGb = memorySizeGb;
             return this;
         }
 
-        public Builder setMemorySizeGb(@Nullable Integer memorySizeGb) {
+        public Builder memorySizeGb(@Nullable Integer memorySizeGb) {
             this.memorySizeGb = Input.ofNullable(memorySizeGb);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodes(@Nullable Input<List<InstanceNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Input<List<InstanceNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNodes(@Nullable List<InstanceNodeGetArgs> nodes) {
+        public Builder nodes(@Nullable List<InstanceNodeGetArgs> nodes) {
             this.nodes = Input.ofNullable(nodes);
             return this;
         }
 
-        public Builder setPersistenceIamIdentity(@Nullable Input<String> persistenceIamIdentity) {
+        public Builder persistenceIamIdentity(@Nullable Input<String> persistenceIamIdentity) {
             this.persistenceIamIdentity = persistenceIamIdentity;
             return this;
         }
 
-        public Builder setPersistenceIamIdentity(@Nullable String persistenceIamIdentity) {
+        public Builder persistenceIamIdentity(@Nullable String persistenceIamIdentity) {
             this.persistenceIamIdentity = Input.ofNullable(persistenceIamIdentity);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReadEndpoint(@Nullable Input<String> readEndpoint) {
+        public Builder readEndpoint(@Nullable Input<String> readEndpoint) {
             this.readEndpoint = readEndpoint;
             return this;
         }
 
-        public Builder setReadEndpoint(@Nullable String readEndpoint) {
+        public Builder readEndpoint(@Nullable String readEndpoint) {
             this.readEndpoint = Input.ofNullable(readEndpoint);
             return this;
         }
 
-        public Builder setReadEndpointPort(@Nullable Input<Integer> readEndpointPort) {
+        public Builder readEndpointPort(@Nullable Input<Integer> readEndpointPort) {
             this.readEndpointPort = readEndpointPort;
             return this;
         }
 
-        public Builder setReadEndpointPort(@Nullable Integer readEndpointPort) {
+        public Builder readEndpointPort(@Nullable Integer readEndpointPort) {
             this.readEndpointPort = Input.ofNullable(readEndpointPort);
             return this;
         }
 
-        public Builder setReadReplicasMode(@Nullable Input<String> readReplicasMode) {
+        public Builder readReplicasMode(@Nullable Input<String> readReplicasMode) {
             this.readReplicasMode = readReplicasMode;
             return this;
         }
 
-        public Builder setReadReplicasMode(@Nullable String readReplicasMode) {
+        public Builder readReplicasMode(@Nullable String readReplicasMode) {
             this.readReplicasMode = Input.ofNullable(readReplicasMode);
             return this;
         }
 
-        public Builder setRedisConfigs(@Nullable Input<Map<String,String>> redisConfigs) {
+        public Builder redisConfigs(@Nullable Input<Map<String,String>> redisConfigs) {
             this.redisConfigs = redisConfigs;
             return this;
         }
 
-        public Builder setRedisConfigs(@Nullable Map<String,String> redisConfigs) {
+        public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
             this.redisConfigs = Input.ofNullable(redisConfigs);
             return this;
         }
 
-        public Builder setRedisVersion(@Nullable Input<String> redisVersion) {
+        public Builder redisVersion(@Nullable Input<String> redisVersion) {
             this.redisVersion = redisVersion;
             return this;
         }
 
-        public Builder setRedisVersion(@Nullable String redisVersion) {
+        public Builder redisVersion(@Nullable String redisVersion) {
             this.redisVersion = Input.ofNullable(redisVersion);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Input.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable String reservedIpRange) {
+        public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }
 
-        public Builder setServerCaCerts(@Nullable Input<List<InstanceServerCaCertGetArgs>> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable Input<List<InstanceServerCaCertGetArgs>> serverCaCerts) {
             this.serverCaCerts = serverCaCerts;
             return this;
         }
 
-        public Builder setServerCaCerts(@Nullable List<InstanceServerCaCertGetArgs> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable List<InstanceServerCaCertGetArgs> serverCaCerts) {
             this.serverCaCerts = Input.ofNullable(serverCaCerts);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setTransitEncryptionMode(@Nullable Input<String> transitEncryptionMode) {
+        public Builder transitEncryptionMode(@Nullable Input<String> transitEncryptionMode) {
             this.transitEncryptionMode = transitEncryptionMode;
             return this;
         }
 
-        public Builder setTransitEncryptionMode(@Nullable String transitEncryptionMode) {
+        public Builder transitEncryptionMode(@Nullable String transitEncryptionMode) {
             this.transitEncryptionMode = Input.ofNullable(transitEncryptionMode);
             return this;
         }

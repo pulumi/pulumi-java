@@ -277,77 +277,77 @@ public final class GetCanaryResult {
     	      this.visualReference = defaults.visualReference;
         }
 
-        public Builder setArtifactConfig(@Nullable CanaryArtifactConfig artifactConfig) {
+        public Builder artifactConfig(@Nullable CanaryArtifactConfig artifactConfig) {
             this.artifactConfig = artifactConfig;
             return this;
         }
 
-        public Builder setArtifactS3Location(@Nullable String artifactS3Location) {
+        public Builder artifactS3Location(@Nullable String artifactS3Location) {
             this.artifactS3Location = artifactS3Location;
             return this;
         }
 
-        public Builder setCode(@Nullable CanaryCode code) {
+        public Builder code(@Nullable CanaryCode code) {
             this.code = code;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setFailureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRunConfig(@Nullable CanaryRunConfig runConfig) {
+        public Builder runConfig(@Nullable CanaryRunConfig runConfig) {
             this.runConfig = runConfig;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setSchedule(@Nullable CanarySchedule schedule) {
+        public Builder schedule(@Nullable CanarySchedule schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStartCanaryAfterCreation(@Nullable Boolean startCanaryAfterCreation) {
+        public Builder startCanaryAfterCreation(@Nullable Boolean startCanaryAfterCreation) {
             this.startCanaryAfterCreation = startCanaryAfterCreation;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSuccessRetentionPeriod(@Nullable Integer successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CanaryTag> tags) {
+        public Builder tags(@Nullable List<CanaryTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVPCConfig(@Nullable CanaryVPCConfig vPCConfig) {
+        public Builder vPCConfig(@Nullable CanaryVPCConfig vPCConfig) {
             this.vPCConfig = vPCConfig;
             return this;
         }
 
-        public Builder setVisualReference(@Nullable CanaryVisualReference visualReference) {
+        public Builder visualReference(@Nullable CanaryVisualReference visualReference) {
             this.visualReference = visualReference;
             return this;
         }

@@ -107,22 +107,22 @@ public final class ScriptActionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRoles(Object roles) {
+        public Builder roles(Object roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

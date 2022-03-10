@@ -220,112 +220,112 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllowedRegions(@Nullable Input<List<String>> allowedRegions) {
+        public Builder allowedRegions(@Nullable Input<List<String>> allowedRegions) {
             this.allowedRegions = allowedRegions;
             return this;
         }
 
-        public Builder setAllowedRegions(@Nullable List<String> allowedRegions) {
+        public Builder allowedRegions(@Nullable List<String> allowedRegions) {
             this.allowedRegions = Input.ofNullable(allowedRegions);
             return this;
         }
 
-        public Builder setDefaultAutoShutdownProfile(@Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
+        public Builder defaultAutoShutdownProfile(@Nullable Input<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
 
-        public Builder setDefaultAutoShutdownProfile(@Nullable AutoShutdownProfileArgs defaultAutoShutdownProfile) {
+        public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileArgs defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = Input.ofNullable(defaultAutoShutdownProfile);
             return this;
         }
 
-        public Builder setDefaultConnectionProfile(@Nullable Input<ConnectionProfileArgs> defaultConnectionProfile) {
+        public Builder defaultConnectionProfile(@Nullable Input<ConnectionProfileArgs> defaultConnectionProfile) {
             this.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
 
-        public Builder setDefaultConnectionProfile(@Nullable ConnectionProfileArgs defaultConnectionProfile) {
+        public Builder defaultConnectionProfile(@Nullable ConnectionProfileArgs defaultConnectionProfile) {
             this.defaultConnectionProfile = Input.ofNullable(defaultConnectionProfile);
             return this;
         }
 
-        public Builder setDefaultNetworkProfile(@Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
+        public Builder defaultNetworkProfile(@Nullable Input<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
             this.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
 
-        public Builder setDefaultNetworkProfile(@Nullable LabPlanNetworkProfileArgs defaultNetworkProfile) {
+        public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileArgs defaultNetworkProfile) {
             this.defaultNetworkProfile = Input.ofNullable(defaultNetworkProfile);
             return this;
         }
 
-        public Builder setLabPlanName(@Nullable Input<String> labPlanName) {
+        public Builder labPlanName(@Nullable Input<String> labPlanName) {
             this.labPlanName = labPlanName;
             return this;
         }
 
-        public Builder setLabPlanName(@Nullable String labPlanName) {
+        public Builder labPlanName(@Nullable String labPlanName) {
             this.labPlanName = Input.ofNullable(labPlanName);
             return this;
         }
 
-        public Builder setLinkedLmsInstance(@Nullable Input<String> linkedLmsInstance) {
+        public Builder linkedLmsInstance(@Nullable Input<String> linkedLmsInstance) {
             this.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
 
-        public Builder setLinkedLmsInstance(@Nullable String linkedLmsInstance) {
+        public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
             this.linkedLmsInstance = Input.ofNullable(linkedLmsInstance);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSharedGalleryId(@Nullable Input<String> sharedGalleryId) {
+        public Builder sharedGalleryId(@Nullable Input<String> sharedGalleryId) {
             this.sharedGalleryId = sharedGalleryId;
             return this;
         }
 
-        public Builder setSharedGalleryId(@Nullable String sharedGalleryId) {
+        public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
             this.sharedGalleryId = Input.ofNullable(sharedGalleryId);
             return this;
         }
 
-        public Builder setSupportInfo(@Nullable Input<SupportInfoArgs> supportInfo) {
+        public Builder supportInfo(@Nullable Input<SupportInfoArgs> supportInfo) {
             this.supportInfo = supportInfo;
             return this;
         }
 
-        public Builder setSupportInfo(@Nullable SupportInfoArgs supportInfo) {
+        public Builder supportInfo(@Nullable SupportInfoArgs supportInfo) {
             this.supportInfo = Input.ofNullable(supportInfo);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

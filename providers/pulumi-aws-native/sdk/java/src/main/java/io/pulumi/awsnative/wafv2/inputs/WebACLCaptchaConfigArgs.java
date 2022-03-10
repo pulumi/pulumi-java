@@ -49,12 +49,12 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable WebACLImmunityTimePropertyArgs immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable WebACLImmunityTimePropertyArgs immunityTimeProperty) {
             this.immunityTimeProperty = Input.ofNullable(immunityTimeProperty);
             return this;
         }

@@ -126,8 +126,8 @@ public class PodSecurityPolicyList extends io.pulumi.resources.CustomResource {
     private static PodSecurityPolicyListArgs makeArgs(PodSecurityPolicyListArgs args) {
         var builder = args == null ? PodSecurityPolicyListArgs.builder() : PodSecurityPolicyListArgs.builder(args);
         return builder
-            .setApiVersion("policy/v1beta1")
-            .setKind("PodSecurityPolicyList")
+            .apiVersion("policy/v1beta1")
+            .kind("PodSecurityPolicyList")
             .build();
     }
 

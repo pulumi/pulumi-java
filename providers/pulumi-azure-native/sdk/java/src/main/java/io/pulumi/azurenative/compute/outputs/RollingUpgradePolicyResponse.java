@@ -133,32 +133,32 @@ public final class RollingUpgradePolicyResponse {
     	      this.prioritizeUnhealthyInstances = defaults.prioritizeUnhealthyInstances;
         }
 
-        public Builder setEnableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
+        public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
             this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
 
-        public Builder setMaxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
+        public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
             this.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
 
-        public Builder setMaxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
+        public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
             this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
 
-        public Builder setMaxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
+        public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
             this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
 
-        public Builder setPauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
+        public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
             this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
 
-        public Builder setPrioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
+        public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
             this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
         }

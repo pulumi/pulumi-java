@@ -138,62 +138,62 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProfileName = defaults.userProfileName;
         }
 
-        public Builder setAppName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Input<String> appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = Input.ofNullable(appName);
             return this;
         }
 
-        public Builder setAppType(Input<AppType> appType) {
+        public Builder appType(Input<AppType> appType) {
             this.appType = Objects.requireNonNull(appType);
             return this;
         }
 
-        public Builder setAppType(AppType appType) {
+        public Builder appType(AppType appType) {
             this.appType = Input.of(Objects.requireNonNull(appType));
             return this;
         }
 
-        public Builder setDomainId(Input<String> domainId) {
+        public Builder domainId(Input<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
-        public Builder setDomainId(String domainId) {
+        public Builder domainId(String domainId) {
             this.domainId = Input.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable Input<AppResourceSpecArgs> resourceSpec) {
+        public Builder resourceSpec(@Nullable Input<AppResourceSpecArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable AppResourceSpecArgs resourceSpec) {
+        public Builder resourceSpec(@Nullable AppResourceSpecArgs resourceSpec) {
             this.resourceSpec = Input.ofNullable(resourceSpec);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AppTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AppTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppTagArgs> tags) {
+        public Builder tags(@Nullable List<AppTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserProfileName(Input<String> userProfileName) {
+        public Builder userProfileName(Input<String> userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
 
-        public Builder setUserProfileName(String userProfileName) {
+        public Builder userProfileName(String userProfileName) {
             this.userProfileName = Input.of(Objects.requireNonNull(userProfileName));
             return this;
         }

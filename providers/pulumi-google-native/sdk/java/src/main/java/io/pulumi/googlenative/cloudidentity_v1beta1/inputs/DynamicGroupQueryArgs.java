@@ -71,22 +71,22 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<DynamicGroupQueryResourceType> resourceType) {
+        public Builder resourceType(@Nullable Input<DynamicGroupQueryResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable DynamicGroupQueryResourceType resourceType) {
+        public Builder resourceType(@Nullable DynamicGroupQueryResourceType resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

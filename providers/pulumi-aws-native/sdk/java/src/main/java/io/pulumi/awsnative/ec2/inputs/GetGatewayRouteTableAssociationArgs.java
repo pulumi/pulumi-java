@@ -51,7 +51,7 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
     	      this.gatewayId = defaults.gatewayId;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }

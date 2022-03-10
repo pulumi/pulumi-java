@@ -82,17 +82,17 @@ public final class RuleGroupRuleVisibilityConfig {
     	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
         }
 
-        public Builder setCloudwatchMetricsEnabled(Boolean cloudwatchMetricsEnabled) {
+        public Builder cloudwatchMetricsEnabled(Boolean cloudwatchMetricsEnabled) {
             this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
+        public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }

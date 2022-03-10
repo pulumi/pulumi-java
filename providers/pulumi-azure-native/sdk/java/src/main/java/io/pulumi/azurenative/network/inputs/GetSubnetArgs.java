@@ -102,22 +102,22 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.virtualNetworkName = defaults.virtualNetworkName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSubnetName(String subnetName) {
+        public Builder subnetName(String subnetName) {
             this.subnetName = Objects.requireNonNull(subnetName);
             return this;
         }
 
-        public Builder setVirtualNetworkName(String virtualNetworkName) {
+        public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }

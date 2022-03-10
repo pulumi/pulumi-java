@@ -192,57 +192,57 @@ public final class GetSSLPolicyResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomFeatures(List<String> customFeatures) {
+        public Builder customFeatures(List<String> customFeatures) {
             this.customFeatures = Objects.requireNonNull(customFeatures);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnabledFeatures(List<String> enabledFeatures) {
+        public Builder enabledFeatures(List<String> enabledFeatures) {
             this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMinTlsVersion(String minTlsVersion) {
+        public Builder minTlsVersion(String minTlsVersion) {
             this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProfile(String profile) {
+        public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

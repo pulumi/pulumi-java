@@ -47,7 +47,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

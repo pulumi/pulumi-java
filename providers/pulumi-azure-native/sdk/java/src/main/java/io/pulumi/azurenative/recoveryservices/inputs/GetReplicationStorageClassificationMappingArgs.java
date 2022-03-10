@@ -116,27 +116,27 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
     	      this.storageClassificationName = defaults.storageClassificationName;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setStorageClassificationMappingName(String storageClassificationMappingName) {
+        public Builder storageClassificationMappingName(String storageClassificationMappingName) {
             this.storageClassificationMappingName = Objects.requireNonNull(storageClassificationMappingName);
             return this;
         }
 
-        public Builder setStorageClassificationName(String storageClassificationName) {
+        public Builder storageClassificationName(String storageClassificationName) {
             this.storageClassificationName = Objects.requireNonNull(storageClassificationName);
             return this;
         }

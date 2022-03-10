@@ -159,82 +159,82 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputFormat = defaults.outputFormat;
         }
 
-        public Builder setCsvDelimiter(@Nullable Input<String> csvDelimiter) {
+        public Builder csvDelimiter(@Nullable Input<String> csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
 
-        public Builder setCsvDelimiter(@Nullable String csvDelimiter) {
+        public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = Input.ofNullable(csvDelimiter);
             return this;
         }
 
-        public Builder setDatastoreName(Input<String> datastoreName) {
+        public Builder datastoreName(Input<String> datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Input.of(Objects.requireNonNull(datastoreName));
             return this;
         }
 
-        public Builder setDateRange(Input<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
+        public Builder dateRange(Input<GoogleCloudApigeeV1DateRangeArgs> dateRange) {
             this.dateRange = Objects.requireNonNull(dateRange);
             return this;
         }
 
-        public Builder setDateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
+        public Builder dateRange(GoogleCloudApigeeV1DateRangeArgs dateRange) {
             this.dateRange = Input.of(Objects.requireNonNull(dateRange));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }

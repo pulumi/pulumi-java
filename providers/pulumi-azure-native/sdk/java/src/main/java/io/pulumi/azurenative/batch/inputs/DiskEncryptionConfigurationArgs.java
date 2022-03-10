@@ -58,12 +58,12 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     	      this.targets = defaults.targets;
         }
 
-        public Builder setTargets(@Nullable Input<List<DiskEncryptionTarget>> targets) {
+        public Builder targets(@Nullable Input<List<DiskEncryptionTarget>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<DiskEncryptionTarget> targets) {
+        public Builder targets(@Nullable List<DiskEncryptionTarget> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }

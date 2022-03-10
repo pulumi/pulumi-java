@@ -67,22 +67,22 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfigArgs exten
     	      this.constraintsResource = defaults.constraintsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable Input<String> baseliningJobName) {
+        public Builder baseliningJobName(@Nullable Input<String> baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = Input.ofNullable(baseliningJobName);
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable Input<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
+        public Builder constraintsResource(@Nullable Input<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
+        public Builder constraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Input.ofNullable(constraintsResource);
             return this;
         }

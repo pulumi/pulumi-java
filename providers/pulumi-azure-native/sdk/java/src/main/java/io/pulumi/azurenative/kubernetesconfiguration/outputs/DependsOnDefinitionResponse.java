@@ -50,7 +50,7 @@ public final class DependsOnDefinitionResponse {
     	      this.kustomizationName = defaults.kustomizationName;
         }
 
-        public Builder setKustomizationName(@Nullable String kustomizationName) {
+        public Builder kustomizationName(@Nullable String kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
         }

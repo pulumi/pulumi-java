@@ -62,12 +62,12 @@ public final class FilterDateFilter extends io.pulumi.resources.InvokeArgs {
     	      this.startInclusive = defaults.startInclusive;
         }
 
-        public Builder setEndInclusive(@Nullable Integer endInclusive) {
+        public Builder endInclusive(@Nullable Integer endInclusive) {
             this.endInclusive = endInclusive;
             return this;
         }
 
-        public Builder setStartInclusive(@Nullable Integer startInclusive) {
+        public Builder startInclusive(@Nullable Integer startInclusive) {
             this.startInclusive = startInclusive;
             return this;
         }

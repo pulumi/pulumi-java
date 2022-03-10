@@ -87,32 +87,32 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rolloutName = defaults.rolloutName;
         }
 
-        public Builder setProperties(@Nullable Input<DefaultRolloutPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<DefaultRolloutPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable DefaultRolloutPropertiesArgs properties) {
+        public Builder properties(@Nullable DefaultRolloutPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder setRolloutName(@Nullable Input<String> rolloutName) {
+        public Builder rolloutName(@Nullable Input<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
 
-        public Builder setRolloutName(@Nullable String rolloutName) {
+        public Builder rolloutName(@Nullable String rolloutName) {
             this.rolloutName = Input.ofNullable(rolloutName);
             return this;
         }

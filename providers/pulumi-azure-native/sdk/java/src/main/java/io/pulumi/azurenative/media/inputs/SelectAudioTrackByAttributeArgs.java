@@ -127,52 +127,52 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAttribute(Input<Either<String,TrackAttribute>> attribute) {
+        public Builder attribute(Input<Either<String,TrackAttribute>> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setAttribute(Either<String,TrackAttribute> attribute) {
+        public Builder attribute(Either<String,TrackAttribute> attribute) {
             this.attribute = Input.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder setChannelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
+        public Builder channelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
-        public Builder setChannelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
+        public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
             this.channelMapping = Input.ofNullable(channelMapping);
             return this;
         }
 
-        public Builder setFilter(Input<Either<String,AttributeFilter>> filter) {
+        public Builder filter(Input<Either<String,AttributeFilter>> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(Either<String,AttributeFilter> filter) {
+        public Builder filter(Either<String,AttributeFilter> filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setFilterValue(@Nullable Input<String> filterValue) {
+        public Builder filterValue(@Nullable Input<String> filterValue) {
             this.filterValue = filterValue;
             return this;
         }
 
-        public Builder setFilterValue(@Nullable String filterValue) {
+        public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = Input.ofNullable(filterValue);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

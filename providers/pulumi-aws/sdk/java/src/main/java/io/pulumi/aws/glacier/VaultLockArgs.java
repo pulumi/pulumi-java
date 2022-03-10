@@ -103,42 +103,42 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setCompleteLock(Input<Boolean> completeLock) {
+        public Builder completeLock(Input<Boolean> completeLock) {
             this.completeLock = Objects.requireNonNull(completeLock);
             return this;
         }
 
-        public Builder setCompleteLock(Boolean completeLock) {
+        public Builder completeLock(Boolean completeLock) {
             this.completeLock = Input.of(Objects.requireNonNull(completeLock));
             return this;
         }
 
-        public Builder setIgnoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
             this.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
 
-        public Builder setIgnoreDeletionError(@Nullable Boolean ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
             this.ignoreDeletionError = Input.ofNullable(ignoreDeletionError);
             return this;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setVaultName(Input<String> vaultName) {
+        public Builder vaultName(Input<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }

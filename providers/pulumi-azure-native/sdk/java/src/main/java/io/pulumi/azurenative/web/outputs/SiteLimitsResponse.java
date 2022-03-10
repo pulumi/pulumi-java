@@ -83,17 +83,17 @@ public final class SiteLimitsResponse {
     	      this.maxPercentageCpu = defaults.maxPercentageCpu;
         }
 
-        public Builder setMaxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
+        public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
             this.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
 
-        public Builder setMaxMemoryInMb(@Nullable Double maxMemoryInMb) {
+        public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             this.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
 
-        public Builder setMaxPercentageCpu(@Nullable Double maxPercentageCpu) {
+        public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }

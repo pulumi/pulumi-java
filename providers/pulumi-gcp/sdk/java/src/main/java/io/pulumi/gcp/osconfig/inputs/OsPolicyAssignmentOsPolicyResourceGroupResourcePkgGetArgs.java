@@ -173,82 +173,82 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt) {
+        public Builder apt(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs apt) {
+        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setDeb(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb) {
+        public Builder deb(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb) {
             this.deb = deb;
             return this;
         }
 
-        public Builder setDeb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs deb) {
+        public Builder deb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs deb) {
             this.deb = Input.ofNullable(deb);
             return this;
         }
 
-        public Builder setDesiredState(Input<String> desiredState) {
+        public Builder desiredState(Input<String> desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Input.of(Objects.requireNonNull(desiredState));
             return this;
         }
 
-        public Builder setGooget(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet) {
+        public Builder googet(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet) {
             this.googet = googet;
             return this;
         }
 
-        public Builder setGooget(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs googet) {
+        public Builder googet(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs googet) {
             this.googet = Input.ofNullable(googet);
             return this;
         }
 
-        public Builder setMsi(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi) {
+        public Builder msi(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi) {
             this.msi = msi;
             return this;
         }
 
-        public Builder setMsi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs msi) {
+        public Builder msi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs msi) {
             this.msi = Input.ofNullable(msi);
             return this;
         }
 
-        public Builder setRpm(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm) {
+        public Builder rpm(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm) {
             this.rpm = rpm;
             return this;
         }
 
-        public Builder setRpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs rpm) {
+        public Builder rpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs rpm) {
             this.rpm = Input.ofNullable(rpm);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum) {
+        public Builder yum(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs yum) {
+        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper) {
+        public Builder zypper(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs zypper) {
+        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

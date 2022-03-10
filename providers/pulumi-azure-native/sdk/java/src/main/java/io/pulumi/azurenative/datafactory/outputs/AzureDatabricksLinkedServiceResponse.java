@@ -430,122 +430,122 @@ public final class AzureDatabricksLinkedServiceResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setAccessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
+        public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDomain(Object domain) {
+        public Builder domain(Object domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setExistingClusterId(@Nullable Object existingClusterId) {
+        public Builder existingClusterId(@Nullable Object existingClusterId) {
             this.existingClusterId = existingClusterId;
             return this;
         }
 
-        public Builder setInstancePoolId(@Nullable Object instancePoolId) {
+        public Builder instancePoolId(@Nullable Object instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
 
-        public Builder setNewClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
+        public Builder newClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
             this.newClusterCustomTags = newClusterCustomTags;
             return this;
         }
 
-        public Builder setNewClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
+        public Builder newClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
             this.newClusterDriverNodeType = newClusterDriverNodeType;
             return this;
         }
 
-        public Builder setNewClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
+        public Builder newClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
             this.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
             return this;
         }
 
-        public Builder setNewClusterInitScripts(@Nullable Object newClusterInitScripts) {
+        public Builder newClusterInitScripts(@Nullable Object newClusterInitScripts) {
             this.newClusterInitScripts = newClusterInitScripts;
             return this;
         }
 
-        public Builder setNewClusterLogDestination(@Nullable Object newClusterLogDestination) {
+        public Builder newClusterLogDestination(@Nullable Object newClusterLogDestination) {
             this.newClusterLogDestination = newClusterLogDestination;
             return this;
         }
 
-        public Builder setNewClusterNodeType(@Nullable Object newClusterNodeType) {
+        public Builder newClusterNodeType(@Nullable Object newClusterNodeType) {
             this.newClusterNodeType = newClusterNodeType;
             return this;
         }
 
-        public Builder setNewClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
+        public Builder newClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
             this.newClusterNumOfWorker = newClusterNumOfWorker;
             return this;
         }
 
-        public Builder setNewClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
+        public Builder newClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
             this.newClusterSparkConf = newClusterSparkConf;
             return this;
         }
 
-        public Builder setNewClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
+        public Builder newClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
             this.newClusterSparkEnvVars = newClusterSparkEnvVars;
             return this;
         }
 
-        public Builder setNewClusterVersion(@Nullable Object newClusterVersion) {
+        public Builder newClusterVersion(@Nullable Object newClusterVersion) {
             this.newClusterVersion = newClusterVersion;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Object policyId) {
+        public Builder policyId(@Nullable Object policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Object workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

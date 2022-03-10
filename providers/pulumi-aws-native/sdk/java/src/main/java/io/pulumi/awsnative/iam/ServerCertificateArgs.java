@@ -112,62 +112,62 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateBody(@Nullable Input<String> certificateBody) {
+        public Builder certificateBody(@Nullable Input<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
 
-        public Builder setCertificateBody(@Nullable String certificateBody) {
+        public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Input.ofNullable(certificateBody);
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setServerCertificateName(@Nullable Input<String> serverCertificateName) {
+        public Builder serverCertificateName(@Nullable Input<String> serverCertificateName) {
             this.serverCertificateName = serverCertificateName;
             return this;
         }
 
-        public Builder setServerCertificateName(@Nullable String serverCertificateName) {
+        public Builder serverCertificateName(@Nullable String serverCertificateName) {
             this.serverCertificateName = Input.ofNullable(serverCertificateName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ServerCertificateTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ServerCertificateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServerCertificateTagArgs> tags) {
+        public Builder tags(@Nullable List<ServerCertificateTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

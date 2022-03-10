@@ -90,17 +90,17 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientApplication(@Nullable String clientApplication) {
+        public Builder clientApplication(@Nullable String clientApplication) {
             this.clientApplication = clientApplication;
             return this;
         }
 
-        public Builder setClusterApplication(@Nullable String clusterApplication) {
+        public Builder clusterApplication(@Nullable String clusterApplication) {
             this.clusterApplication = clusterApplication;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

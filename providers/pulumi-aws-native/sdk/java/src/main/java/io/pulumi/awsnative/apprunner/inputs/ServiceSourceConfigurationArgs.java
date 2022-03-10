@@ -97,42 +97,42 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
     	      this.imageRepository = defaults.imageRepository;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<ServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<ServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceAuthenticationConfigurationArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Input<Boolean> autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Input<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = Input.ofNullable(autoDeploymentsEnabled);
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable Input<ServiceCodeRepositoryArgs> codeRepository) {
+        public Builder codeRepository(@Nullable Input<ServiceCodeRepositoryArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable ServiceCodeRepositoryArgs codeRepository) {
+        public Builder codeRepository(@Nullable ServiceCodeRepositoryArgs codeRepository) {
             this.codeRepository = Input.ofNullable(codeRepository);
             return this;
         }
 
-        public Builder setImageRepository(@Nullable Input<ServiceImageRepositoryArgs> imageRepository) {
+        public Builder imageRepository(@Nullable Input<ServiceImageRepositoryArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ServiceImageRepositoryArgs imageRepository) {
+        public Builder imageRepository(@Nullable ServiceImageRepositoryArgs imageRepository) {
             this.imageRepository = Input.ofNullable(imageRepository);
             return this;
         }

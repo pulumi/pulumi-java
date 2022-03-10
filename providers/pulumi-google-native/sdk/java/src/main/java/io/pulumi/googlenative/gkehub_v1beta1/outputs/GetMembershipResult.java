@@ -245,67 +245,67 @@ public final class GetMembershipResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAuthority(AuthorityResponse authority) {
+        public Builder authority(AuthorityResponse authority) {
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpoint(MembershipEndpointResponse endpoint) {
+        public Builder endpoint(MembershipEndpointResponse endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setInfrastructureType(String infrastructureType) {
+        public Builder infrastructureType(String infrastructureType) {
             this.infrastructureType = Objects.requireNonNull(infrastructureType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastConnectionTime(String lastConnectionTime) {
+        public Builder lastConnectionTime(String lastConnectionTime) {
             this.lastConnectionTime = Objects.requireNonNull(lastConnectionTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(MembershipStateResponse state) {
+        public Builder state(MembershipStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -68,12 +68,12 @@ public final class WorkbookManagedIdentityResponse {
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }

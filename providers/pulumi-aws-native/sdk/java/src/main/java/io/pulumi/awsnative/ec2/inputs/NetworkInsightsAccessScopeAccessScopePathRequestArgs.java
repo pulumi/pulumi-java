@@ -76,32 +76,32 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
     	      this.throughResources = defaults.throughResources;
         }
 
-        public Builder setDestination(@Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> destination) {
+        public Builder destination(@Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs destination) {
+        public Builder destination(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> source) {
+        public Builder source(@Nullable Input<NetworkInsightsAccessScopePathStatementRequestArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs source) {
+        public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequestArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setThroughResources(@Nullable Input<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
+        public Builder throughResources(@Nullable Input<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources) {
             this.throughResources = throughResources;
             return this;
         }
 
-        public Builder setThroughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
+        public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs> throughResources) {
             this.throughResources = Input.ofNullable(throughResources);
             return this;
         }

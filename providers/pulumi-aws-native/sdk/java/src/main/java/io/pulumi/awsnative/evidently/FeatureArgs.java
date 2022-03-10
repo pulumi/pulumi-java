@@ -143,82 +143,82 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variations = defaults.variations;
         }
 
-        public Builder setDefaultVariation(@Nullable Input<String> defaultVariation) {
+        public Builder defaultVariation(@Nullable Input<String> defaultVariation) {
             this.defaultVariation = defaultVariation;
             return this;
         }
 
-        public Builder setDefaultVariation(@Nullable String defaultVariation) {
+        public Builder defaultVariation(@Nullable String defaultVariation) {
             this.defaultVariation = Input.ofNullable(defaultVariation);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEntityOverrides(@Nullable Input<List<FeatureEntityOverrideArgs>> entityOverrides) {
+        public Builder entityOverrides(@Nullable Input<List<FeatureEntityOverrideArgs>> entityOverrides) {
             this.entityOverrides = entityOverrides;
             return this;
         }
 
-        public Builder setEntityOverrides(@Nullable List<FeatureEntityOverrideArgs> entityOverrides) {
+        public Builder entityOverrides(@Nullable List<FeatureEntityOverrideArgs> entityOverrides) {
             this.entityOverrides = Input.ofNullable(entityOverrides);
             return this;
         }
 
-        public Builder setEvaluationStrategy(@Nullable Input<FeatureEvaluationStrategy> evaluationStrategy) {
+        public Builder evaluationStrategy(@Nullable Input<FeatureEvaluationStrategy> evaluationStrategy) {
             this.evaluationStrategy = evaluationStrategy;
             return this;
         }
 
-        public Builder setEvaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
+        public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
             this.evaluationStrategy = Input.ofNullable(evaluationStrategy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FeatureTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FeatureTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FeatureTagArgs> tags) {
+        public Builder tags(@Nullable List<FeatureTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVariations(Input<List<FeatureVariationObjectArgs>> variations) {
+        public Builder variations(Input<List<FeatureVariationObjectArgs>> variations) {
             this.variations = Objects.requireNonNull(variations);
             return this;
         }
 
-        public Builder setVariations(List<FeatureVariationObjectArgs> variations) {
+        public Builder variations(List<FeatureVariationObjectArgs> variations) {
             this.variations = Input.of(Objects.requireNonNull(variations));
             return this;
         }

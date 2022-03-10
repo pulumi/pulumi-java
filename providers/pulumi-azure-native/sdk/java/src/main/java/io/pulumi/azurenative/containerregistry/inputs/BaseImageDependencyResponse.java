@@ -122,27 +122,27 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

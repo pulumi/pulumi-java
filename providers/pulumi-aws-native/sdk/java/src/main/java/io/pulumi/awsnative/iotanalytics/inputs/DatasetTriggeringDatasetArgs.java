@@ -48,12 +48,12 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
     	      this.datasetName = defaults.datasetName;
         }
 
-        public Builder setDatasetName(Input<String> datasetName) {
+        public Builder datasetName(Input<String> datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Input.of(Objects.requireNonNull(datasetName));
             return this;
         }

@@ -49,12 +49,12 @@ public final class ResponseHeadersPolicyAccessControlAllowOriginsArgs extends io
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(Input<List<String>> items) {
+        public Builder items(Input<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }

@@ -74,22 +74,22 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xcodeVersion = defaults.xcodeVersion;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setXcodeVersion(@Nullable Input<String> xcodeVersion) {
+        public Builder xcodeVersion(@Nullable Input<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
 
-        public Builder setXcodeVersion(@Nullable String xcodeVersion) {
+        public Builder xcodeVersion(@Nullable String xcodeVersion) {
             this.xcodeVersion = Input.ofNullable(xcodeVersion);
             return this;
         }

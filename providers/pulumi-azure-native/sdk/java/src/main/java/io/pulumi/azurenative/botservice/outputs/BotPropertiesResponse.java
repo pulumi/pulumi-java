@@ -566,167 +566,167 @@ public final class BotPropertiesResponse {
     	      this.storageResourceId = defaults.storageResourceId;
         }
 
-        public Builder setAllSettings(@Nullable Map<String,String> allSettings) {
+        public Builder allSettings(@Nullable Map<String,String> allSettings) {
             this.allSettings = allSettings;
             return this;
         }
 
-        public Builder setAppPasswordHint(@Nullable String appPasswordHint) {
+        public Builder appPasswordHint(@Nullable String appPasswordHint) {
             this.appPasswordHint = appPasswordHint;
             return this;
         }
 
-        public Builder setCmekEncryptionStatus(String cmekEncryptionStatus) {
+        public Builder cmekEncryptionStatus(String cmekEncryptionStatus) {
             this.cmekEncryptionStatus = Objects.requireNonNull(cmekEncryptionStatus);
             return this;
         }
 
-        public Builder setCmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
+        public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
             this.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
 
-        public Builder setConfiguredChannels(List<String> configuredChannels) {
+        public Builder configuredChannels(List<String> configuredChannels) {
             this.configuredChannels = Objects.requireNonNull(configuredChannels);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeveloperAppInsightKey(@Nullable String developerAppInsightKey) {
+        public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
             this.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
 
-        public Builder setDeveloperAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
+        public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
             this.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
 
-        public Builder setDeveloperAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
+        public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
             this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnabledChannels(List<String> enabledChannels) {
+        public Builder enabledChannels(List<String> enabledChannels) {
             this.enabledChannels = Objects.requireNonNull(enabledChannels);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpointVersion(String endpointVersion) {
+        public Builder endpointVersion(String endpointVersion) {
             this.endpointVersion = Objects.requireNonNull(endpointVersion);
             return this;
         }
 
-        public Builder setIconUrl(@Nullable String iconUrl) {
+        public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
 
-        public Builder setIsCmekEnabled(@Nullable Boolean isCmekEnabled) {
+        public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
             this.isCmekEnabled = isCmekEnabled;
             return this;
         }
 
-        public Builder setIsDeveloperAppInsightsApiKeySet(Boolean isDeveloperAppInsightsApiKeySet) {
+        public Builder isDeveloperAppInsightsApiKeySet(Boolean isDeveloperAppInsightsApiKeySet) {
             this.isDeveloperAppInsightsApiKeySet = Objects.requireNonNull(isDeveloperAppInsightsApiKeySet);
             return this;
         }
 
-        public Builder setIsStreamingSupported(@Nullable Boolean isStreamingSupported) {
+        public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
             this.isStreamingSupported = isStreamingSupported;
             return this;
         }
 
-        public Builder setLuisAppIds(@Nullable List<String> luisAppIds) {
+        public Builder luisAppIds(@Nullable List<String> luisAppIds) {
             this.luisAppIds = luisAppIds;
             return this;
         }
 
-        public Builder setLuisKey(@Nullable String luisKey) {
+        public Builder luisKey(@Nullable String luisKey) {
             this.luisKey = luisKey;
             return this;
         }
 
-        public Builder setManifestUrl(@Nullable String manifestUrl) {
+        public Builder manifestUrl(@Nullable String manifestUrl) {
             this.manifestUrl = manifestUrl;
             return this;
         }
 
-        public Builder setMigrationToken(String migrationToken) {
+        public Builder migrationToken(String migrationToken) {
             this.migrationToken = Objects.requireNonNull(migrationToken);
             return this;
         }
 
-        public Builder setMsaAppId(String msaAppId) {
+        public Builder msaAppId(String msaAppId) {
             this.msaAppId = Objects.requireNonNull(msaAppId);
             return this;
         }
 
-        public Builder setMsaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
+        public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
             this.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
 
-        public Builder setMsaAppTenantId(@Nullable String msaAppTenantId) {
+        public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
             this.msaAppTenantId = msaAppTenantId;
             return this;
         }
 
-        public Builder setMsaAppType(@Nullable String msaAppType) {
+        public Builder msaAppType(@Nullable String msaAppType) {
             this.msaAppType = msaAppType;
             return this;
         }
 
-        public Builder setOpenWithHint(@Nullable String openWithHint) {
+        public Builder openWithHint(@Nullable String openWithHint) {
             this.openWithHint = openWithHint;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublishingCredentials(@Nullable String publishingCredentials) {
+        public Builder publishingCredentials(@Nullable String publishingCredentials) {
             this.publishingCredentials = publishingCredentials;
             return this;
         }
 
-        public Builder setSchemaTransformationVersion(@Nullable String schemaTransformationVersion) {
+        public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
             this.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
 
-        public Builder setStorageResourceId(@Nullable String storageResourceId) {
+        public Builder storageResourceId(@Nullable String storageResourceId) {
             this.storageResourceId = storageResourceId;
             return this;
         }

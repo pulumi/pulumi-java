@@ -74,32 +74,32 @@ public final class TopicRuleSnsActionArgs extends io.pulumi.resources.ResourceAr
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setMessageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Input<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable String messageFormat) {
+        public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = Input.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTargetArn(Input<String> targetArn) {
+        public Builder targetArn(Input<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Input.of(Objects.requireNonNull(targetArn));
             return this;
         }

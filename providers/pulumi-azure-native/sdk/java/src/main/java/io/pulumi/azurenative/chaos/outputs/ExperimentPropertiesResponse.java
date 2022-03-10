@@ -86,17 +86,17 @@ public final class ExperimentPropertiesResponse {
     	      this.steps = defaults.steps;
         }
 
-        public Builder setSelectors(List<SelectorResponse> selectors) {
+        public Builder selectors(List<SelectorResponse> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Boolean startOnCreation) {
+        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
-        public Builder setSteps(List<StepResponse> steps) {
+        public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }

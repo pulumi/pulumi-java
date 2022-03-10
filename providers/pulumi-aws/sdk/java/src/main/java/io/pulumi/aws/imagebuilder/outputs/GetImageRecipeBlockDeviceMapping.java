@@ -99,22 +99,22 @@ public final class GetImageRecipeBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setEbs(List<GetImageRecipeBlockDeviceMappingEb> ebs) {
+        public Builder ebs(List<GetImageRecipeBlockDeviceMappingEb> ebs) {
             this.ebs = Objects.requireNonNull(ebs);
             return this;
         }
 
-        public Builder setNoDevice(String noDevice) {
+        public Builder noDevice(String noDevice) {
             this.noDevice = Objects.requireNonNull(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(String virtualName) {
+        public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }

@@ -67,12 +67,12 @@ public final class PackageNoteResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDistribution(List<DistributionResponse> distribution) {
+        public Builder distribution(List<DistributionResponse> distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

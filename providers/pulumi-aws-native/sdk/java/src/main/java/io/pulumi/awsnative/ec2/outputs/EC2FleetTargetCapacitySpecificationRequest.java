@@ -77,27 +77,27 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder setDefaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
+        public Builder defaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
             this.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
 
-        public Builder setOnDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
+        public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
 
-        public Builder setSpotTargetCapacity(@Nullable Integer spotTargetCapacity) {
+        public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
 
-        public Builder setTargetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
+        public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
             this.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
 
-        public Builder setTotalTargetCapacity(Integer totalTargetCapacity) {
+        public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }

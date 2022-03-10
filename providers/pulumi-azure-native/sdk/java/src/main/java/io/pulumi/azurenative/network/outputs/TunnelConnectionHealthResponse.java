@@ -114,27 +114,27 @@ public final class TunnelConnectionHealthResponse {
     	      this.tunnel = defaults.tunnel;
         }
 
-        public Builder setConnectionStatus(String connectionStatus) {
+        public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
 
-        public Builder setEgressBytesTransferred(Double egressBytesTransferred) {
+        public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
 
-        public Builder setIngressBytesTransferred(Double ingressBytesTransferred) {
+        public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
 
-        public Builder setLastConnectionEstablishedUtcTime(String lastConnectionEstablishedUtcTime) {
+        public Builder lastConnectionEstablishedUtcTime(String lastConnectionEstablishedUtcTime) {
             this.lastConnectionEstablishedUtcTime = Objects.requireNonNull(lastConnectionEstablishedUtcTime);
             return this;
         }
 
-        public Builder setTunnel(String tunnel) {
+        public Builder tunnel(String tunnel) {
             this.tunnel = Objects.requireNonNull(tunnel);
             return this;
         }

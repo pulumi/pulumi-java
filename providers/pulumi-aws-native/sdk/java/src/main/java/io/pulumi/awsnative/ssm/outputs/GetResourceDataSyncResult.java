@@ -42,7 +42,7 @@ public final class GetResourceDataSyncResult {
     	      this.syncSource = defaults.syncSource;
         }
 
-        public Builder setSyncSource(@Nullable ResourceDataSyncSyncSource syncSource) {
+        public Builder syncSource(@Nullable ResourceDataSyncSyncSource syncSource) {
             this.syncSource = syncSource;
             return this;
         }

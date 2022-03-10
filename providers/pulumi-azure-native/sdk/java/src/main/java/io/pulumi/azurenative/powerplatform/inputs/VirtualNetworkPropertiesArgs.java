@@ -75,22 +75,22 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetPropertiesArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetPropertiesArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetPropertiesArgs subnet) {
+        public Builder subnet(@Nullable SubnetPropertiesArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

@@ -69,12 +69,12 @@ public final class ModeValueInfoResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setInterfaceString(@Nullable String interfaceString) {
+        public Builder interfaceString(@Nullable String interfaceString) {
             this.interfaceString = interfaceString;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }

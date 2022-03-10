@@ -65,12 +65,12 @@ public final class GetFluidRelayServerKeysResult {
     	      this.key2 = defaults.key2;
         }
 
-        public Builder setKey1(String key1) {
+        public Builder key1(String key1) {
             this.key1 = Objects.requireNonNull(key1);
             return this;
         }
 
-        public Builder setKey2(String key2) {
+        public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }

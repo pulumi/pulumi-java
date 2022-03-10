@@ -72,12 +72,12 @@ public final class BucketOwnerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.entityId = defaults.entityId;
         }
 
-        public Builder setEntity(String entity) {
+        public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }

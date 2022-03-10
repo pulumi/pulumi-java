@@ -142,62 +142,62 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAdministratorType(@Nullable Input<Either<String,AdministratorType>> administratorType) {
+        public Builder administratorType(@Nullable Input<Either<String,AdministratorType>> administratorType) {
             this.administratorType = administratorType;
             return this;
         }
 
-        public Builder setAdministratorType(@Nullable Either<String,AdministratorType> administratorType) {
+        public Builder administratorType(@Nullable Either<String,AdministratorType> administratorType) {
             this.administratorType = Input.ofNullable(administratorType);
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(@Nullable Input<Boolean> azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(@Nullable Input<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Input.ofNullable(azureADOnlyAuthentication);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<String> login) {
+        public Builder login(@Nullable Input<String> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(@Nullable Input<Either<String,PrincipalType>> principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Either<String,PrincipalType> principalType) {
+        public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
             this.principalType = Input.ofNullable(principalType);
             return this;
         }
 
-        public Builder setSid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Input<String> sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = Input.ofNullable(sid);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

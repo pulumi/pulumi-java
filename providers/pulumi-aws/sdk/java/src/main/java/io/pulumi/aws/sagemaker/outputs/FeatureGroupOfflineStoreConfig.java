@@ -85,17 +85,17 @@ public final class FeatureGroupOfflineStoreConfig {
     	      this.s3StorageConfig = defaults.s3StorageConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
 
-        public Builder setS3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
+        public Builder s3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }

@@ -88,17 +88,17 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setManagementResourceId(String managementResourceId) {
+        public Builder managementResourceId(String managementResourceId) {
             this.managementResourceId = Objects.requireNonNull(managementResourceId);
             return this;
         }
 
-        public Builder setManagementResourceTenantId(String managementResourceTenantId) {
+        public Builder managementResourceTenantId(String managementResourceTenantId) {
             this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }

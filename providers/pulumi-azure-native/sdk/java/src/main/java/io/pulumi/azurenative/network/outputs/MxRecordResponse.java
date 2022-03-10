@@ -68,12 +68,12 @@ public final class MxRecordResponse {
     	      this.preference = defaults.preference;
         }
 
-        public Builder setExchange(@Nullable String exchange) {
+        public Builder exchange(@Nullable String exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setPreference(@Nullable Integer preference) {
+        public Builder preference(@Nullable Integer preference) {
             this.preference = preference;
             return this;
         }

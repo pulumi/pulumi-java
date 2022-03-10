@@ -52,12 +52,12 @@ public final class TokenCredentialsPropertiesResponse {
     	      this.passwords = defaults.passwords;
         }
 
-        public Builder setCertificates(@Nullable List<TokenCertificateResponse> certificates) {
+        public Builder certificates(@Nullable List<TokenCertificateResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<TokenPasswordResponse> passwords) {
+        public Builder passwords(@Nullable List<TokenPasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }

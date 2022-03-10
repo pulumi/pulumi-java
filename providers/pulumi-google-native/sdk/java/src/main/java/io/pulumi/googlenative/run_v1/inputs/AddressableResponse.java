@@ -51,7 +51,7 @@ public final class AddressableResponse extends io.pulumi.resources.InvokeArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

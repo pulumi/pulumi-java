@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
+        public Builder cloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
             this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath);
             return this;
         }
 
-        public Builder setWordList(GooglePrivacyDlpV2WordListResponse wordList) {
+        public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }

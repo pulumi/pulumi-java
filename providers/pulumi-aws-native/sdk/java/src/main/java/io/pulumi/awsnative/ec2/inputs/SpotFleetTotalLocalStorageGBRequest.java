@@ -62,12 +62,12 @@ public final class SpotFleetTotalLocalStorageGBRequest extends io.pulumi.resourc
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(@Nullable Double max) {
+        public Builder max(@Nullable Double max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMin(@Nullable Double min) {
+        public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
         }

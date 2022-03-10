@@ -102,42 +102,42 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setDestinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Input<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Input.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder setDestinationType(@Nullable Input<String> destinationType) {
+        public Builder destinationType(@Nullable Input<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Input.ofNullable(destinationType);
             return this;
         }
 
-        public Builder setDetectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Input<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Input.ofNullable(detectorId);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

@@ -103,42 +103,42 @@ public final class DeliveryStreamS3DestinationConfiguration {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setBucketARN(String bucketARN) {
+        public Builder bucketARN(String bucketARN) {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }

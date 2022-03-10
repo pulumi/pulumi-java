@@ -153,72 +153,72 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
     	      this.virtualHub = defaults.virtualHub;
         }
 
-        public Builder setAutoScaleConfiguration(@Nullable Input<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration) {
+        public Builder autoScaleConfiguration(@Nullable Input<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration) {
             this.autoScaleConfiguration = autoScaleConfiguration;
             return this;
         }
 
-        public Builder setAutoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs autoScaleConfiguration) {
+        public Builder autoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs autoScaleConfiguration) {
             this.autoScaleConfiguration = Input.ofNullable(autoScaleConfiguration);
             return this;
         }
 
-        public Builder setExpressRouteGatewayName(@Nullable Input<String> expressRouteGatewayName) {
+        public Builder expressRouteGatewayName(@Nullable Input<String> expressRouteGatewayName) {
             this.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
 
-        public Builder setExpressRouteGatewayName(@Nullable String expressRouteGatewayName) {
+        public Builder expressRouteGatewayName(@Nullable String expressRouteGatewayName) {
             this.expressRouteGatewayName = Input.ofNullable(expressRouteGatewayName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualHub(Input<VirtualHubIdArgs> virtualHub) {
+        public Builder virtualHub(Input<VirtualHubIdArgs> virtualHub) {
             this.virtualHub = Objects.requireNonNull(virtualHub);
             return this;
         }
 
-        public Builder setVirtualHub(VirtualHubIdArgs virtualHub) {
+        public Builder virtualHub(VirtualHubIdArgs virtualHub) {
             this.virtualHub = Input.of(Objects.requireNonNull(virtualHub));
             return this;
         }

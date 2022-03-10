@@ -436,232 +436,232 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<List<EnvVarArgs>> env) {
+        public Builder env(@Nullable Input<List<EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<EnvVarArgs> env) {
+        public Builder env(@Nullable List<EnvVarArgs> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
+        public Builder envFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
+        public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
             this.envFrom = Input.ofNullable(envFrom);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setImagePullPolicy(@Nullable Input<String> imagePullPolicy) {
+        public Builder imagePullPolicy(@Nullable Input<String> imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
 
-        public Builder setImagePullPolicy(@Nullable String imagePullPolicy) {
+        public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
             this.imagePullPolicy = Input.ofNullable(imagePullPolicy);
             return this;
         }
 
-        public Builder setLifecycle(@Nullable Input<LifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Input<LifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable LifecycleArgs lifecycle) {
+        public Builder lifecycle(@Nullable LifecycleArgs lifecycle) {
             this.lifecycle = Input.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable Input<ProbeArgs> livenessProbe) {
+        public Builder livenessProbe(@Nullable Input<ProbeArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ProbeArgs livenessProbe) {
+        public Builder livenessProbe(@Nullable ProbeArgs livenessProbe) {
             this.livenessProbe = Input.ofNullable(livenessProbe);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPortArgs> ports) {
+        public Builder ports(@Nullable List<ContainerPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable Input<ProbeArgs> readinessProbe) {
+        public Builder readinessProbe(@Nullable Input<ProbeArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable ProbeArgs readinessProbe) {
+        public Builder readinessProbe(@Nullable ProbeArgs readinessProbe) {
             this.readinessProbe = Input.ofNullable(readinessProbe);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Input<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ResourceRequirementsArgs resources) {
+        public Builder resources(@Nullable ResourceRequirementsArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable Input<SecurityContextArgs> securityContext) {
+        public Builder securityContext(@Nullable Input<SecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable SecurityContextArgs securityContext) {
+        public Builder securityContext(@Nullable SecurityContextArgs securityContext) {
             this.securityContext = Input.ofNullable(securityContext);
             return this;
         }
 
-        public Builder setStartupProbe(@Nullable Input<ProbeArgs> startupProbe) {
+        public Builder startupProbe(@Nullable Input<ProbeArgs> startupProbe) {
             this.startupProbe = startupProbe;
             return this;
         }
 
-        public Builder setStartupProbe(@Nullable ProbeArgs startupProbe) {
+        public Builder startupProbe(@Nullable ProbeArgs startupProbe) {
             this.startupProbe = Input.ofNullable(startupProbe);
             return this;
         }
 
-        public Builder setStdin(@Nullable Input<Boolean> stdin) {
+        public Builder stdin(@Nullable Input<Boolean> stdin) {
             this.stdin = stdin;
             return this;
         }
 
-        public Builder setStdin(@Nullable Boolean stdin) {
+        public Builder stdin(@Nullable Boolean stdin) {
             this.stdin = Input.ofNullable(stdin);
             return this;
         }
 
-        public Builder setStdinOnce(@Nullable Input<Boolean> stdinOnce) {
+        public Builder stdinOnce(@Nullable Input<Boolean> stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
 
-        public Builder setStdinOnce(@Nullable Boolean stdinOnce) {
+        public Builder stdinOnce(@Nullable Boolean stdinOnce) {
             this.stdinOnce = Input.ofNullable(stdinOnce);
             return this;
         }
 
-        public Builder setTargetContainerName(@Nullable Input<String> targetContainerName) {
+        public Builder targetContainerName(@Nullable Input<String> targetContainerName) {
             this.targetContainerName = targetContainerName;
             return this;
         }
 
-        public Builder setTargetContainerName(@Nullable String targetContainerName) {
+        public Builder targetContainerName(@Nullable String targetContainerName) {
             this.targetContainerName = Input.ofNullable(targetContainerName);
             return this;
         }
 
-        public Builder setTerminationMessagePath(@Nullable Input<String> terminationMessagePath) {
+        public Builder terminationMessagePath(@Nullable Input<String> terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
 
-        public Builder setTerminationMessagePath(@Nullable String terminationMessagePath) {
+        public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
             this.terminationMessagePath = Input.ofNullable(terminationMessagePath);
             return this;
         }
 
-        public Builder setTerminationMessagePolicy(@Nullable Input<String> terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(@Nullable Input<String> terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
 
-        public Builder setTerminationMessagePolicy(@Nullable String terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
             this.terminationMessagePolicy = Input.ofNullable(terminationMessagePolicy);
             return this;
         }
 
-        public Builder setTty(@Nullable Input<Boolean> tty) {
+        public Builder tty(@Nullable Input<Boolean> tty) {
             this.tty = tty;
             return this;
         }
 
-        public Builder setTty(@Nullable Boolean tty) {
+        public Builder tty(@Nullable Boolean tty) {
             this.tty = Input.ofNullable(tty);
             return this;
         }
 
-        public Builder setVolumeDevices(@Nullable Input<List<VolumeDeviceArgs>> volumeDevices) {
+        public Builder volumeDevices(@Nullable Input<List<VolumeDeviceArgs>> volumeDevices) {
             this.volumeDevices = volumeDevices;
             return this;
         }
 
-        public Builder setVolumeDevices(@Nullable List<VolumeDeviceArgs> volumeDevices) {
+        public Builder volumeDevices(@Nullable List<VolumeDeviceArgs> volumeDevices) {
             this.volumeDevices = Input.ofNullable(volumeDevices);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable Input<String> workingDir) {
+        public Builder workingDir(@Nullable Input<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable String workingDir) {
+        public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = Input.ofNullable(workingDir);
             return this;
         }

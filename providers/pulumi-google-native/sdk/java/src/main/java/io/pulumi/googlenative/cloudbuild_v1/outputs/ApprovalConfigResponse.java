@@ -48,7 +48,7 @@ public final class ApprovalConfigResponse {
     	      this.approvalRequired = defaults.approvalRequired;
         }
 
-        public Builder setApprovalRequired(Boolean approvalRequired) {
+        public Builder approvalRequired(Boolean approvalRequired) {
             this.approvalRequired = Objects.requireNonNull(approvalRequired);
             return this;
         }

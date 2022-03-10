@@ -89,17 +89,17 @@ public final class EdifactOneWayAgreementResponse extends io.pulumi.resources.In
     	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
         }
 
-        public Builder setProtocolSettings(EdifactProtocolSettingsResponse protocolSettings) {
+        public Builder protocolSettings(EdifactProtocolSettingsResponse protocolSettings) {
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
 
-        public Builder setReceiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
+        public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
 
-        public Builder setSenderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
+        public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }

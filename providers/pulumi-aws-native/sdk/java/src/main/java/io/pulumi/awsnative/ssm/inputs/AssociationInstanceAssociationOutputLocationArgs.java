@@ -49,12 +49,12 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     	      this.s3Location = defaults.s3Location;
         }
 
-        public Builder setS3Location(@Nullable Input<AssociationS3OutputLocationArgs> s3Location) {
+        public Builder s3Location(@Nullable Input<AssociationS3OutputLocationArgs> s3Location) {
             this.s3Location = s3Location;
             return this;
         }
 
-        public Builder setS3Location(@Nullable AssociationS3OutputLocationArgs s3Location) {
+        public Builder s3Location(@Nullable AssociationS3OutputLocationArgs s3Location) {
             this.s3Location = Input.ofNullable(s3Location);
             return this;
         }

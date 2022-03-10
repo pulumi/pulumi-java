@@ -139,32 +139,32 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setCompliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
+        public Builder compliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
             this.compliance = compliance;
             return this;
         }
 
-        public Builder setConfigurationProfile(@Nullable String configurationProfile) {
+        public Builder configurationProfile(@Nullable String configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
 
-        public Builder setConfigurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
+        public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

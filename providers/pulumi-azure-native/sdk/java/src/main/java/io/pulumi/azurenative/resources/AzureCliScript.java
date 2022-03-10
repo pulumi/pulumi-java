@@ -398,7 +398,7 @@ public class AzureCliScript extends io.pulumi.resources.CustomResource {
     private static AzureCliScriptArgs makeArgs(AzureCliScriptArgs args) {
         var builder = args == null ? AzureCliScriptArgs.builder() : AzureCliScriptArgs.builder(args);
         return builder
-            .setKind("AzureCLI")
+            .kind("AzureCLI")
             .build();
     }
 

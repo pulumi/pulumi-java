@@ -49,7 +49,7 @@ public final class CloudAuditLoggingFeatureSpecResponse {
     	      this.allowlistedServiceAccounts = defaults.allowlistedServiceAccounts;
         }
 
-        public Builder setAllowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
+        public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
             this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
             return this;
         }

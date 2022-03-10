@@ -101,27 +101,27 @@ public final class GetProjectResult {
     	      this.serviceCatalogProvisionedProductDetails = defaults.serviceCatalogProvisionedProductDetails;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setProjectArn(@Nullable String projectArn) {
+        public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectStatus(@Nullable ProjectStatus projectStatus) {
+        public Builder projectStatus(@Nullable ProjectStatus projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
 
-        public Builder setServiceCatalogProvisionedProductDetails(@Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
+        public Builder serviceCatalogProvisionedProductDetails(@Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
             this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
             return this;
         }

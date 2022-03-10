@@ -91,32 +91,32 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<DurationArgs> ttl) {
+        public Builder ttl(@Nullable Input<DurationArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable DurationArgs ttl) {
+        public Builder ttl(@Nullable DurationArgs ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

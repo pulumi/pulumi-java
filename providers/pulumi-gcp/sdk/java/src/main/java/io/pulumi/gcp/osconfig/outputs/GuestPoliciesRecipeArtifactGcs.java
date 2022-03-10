@@ -90,17 +90,17 @@ public final class GuestPoliciesRecipeArtifactGcs {
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }

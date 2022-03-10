@@ -100,52 +100,52 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder setDefaultTargetCapacityType(@Nullable Input<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType) {
+        public Builder defaultTargetCapacityType(@Nullable Input<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType) {
             this.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
 
-        public Builder setDefaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
+        public Builder defaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
             this.defaultTargetCapacityType = Input.ofNullable(defaultTargetCapacityType);
             return this;
         }
 
-        public Builder setOnDemandTargetCapacity(@Nullable Input<Integer> onDemandTargetCapacity) {
+        public Builder onDemandTargetCapacity(@Nullable Input<Integer> onDemandTargetCapacity) {
             this.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
 
-        public Builder setOnDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
+        public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
             this.onDemandTargetCapacity = Input.ofNullable(onDemandTargetCapacity);
             return this;
         }
 
-        public Builder setSpotTargetCapacity(@Nullable Input<Integer> spotTargetCapacity) {
+        public Builder spotTargetCapacity(@Nullable Input<Integer> spotTargetCapacity) {
             this.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
 
-        public Builder setSpotTargetCapacity(@Nullable Integer spotTargetCapacity) {
+        public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
             this.spotTargetCapacity = Input.ofNullable(spotTargetCapacity);
             return this;
         }
 
-        public Builder setTargetCapacityUnitType(@Nullable Input<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType) {
+        public Builder targetCapacityUnitType(@Nullable Input<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType) {
             this.targetCapacityUnitType = targetCapacityUnitType;
             return this;
         }
 
-        public Builder setTargetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
+        public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
             this.targetCapacityUnitType = Input.ofNullable(targetCapacityUnitType);
             return this;
         }
 
-        public Builder setTotalTargetCapacity(Input<Integer> totalTargetCapacity) {
+        public Builder totalTargetCapacity(Input<Integer> totalTargetCapacity) {
             this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
             return this;
         }
 
-        public Builder setTotalTargetCapacity(Integer totalTargetCapacity) {
+        public Builder totalTargetCapacity(Integer totalTargetCapacity) {
             this.totalTargetCapacity = Input.of(Objects.requireNonNull(totalTargetCapacity));
             return this;
         }

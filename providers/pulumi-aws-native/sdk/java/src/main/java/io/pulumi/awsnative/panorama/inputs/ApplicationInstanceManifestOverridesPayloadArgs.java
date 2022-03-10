@@ -49,12 +49,12 @@ public final class ApplicationInstanceManifestOverridesPayloadArgs extends io.pu
     	      this.payloadData = defaults.payloadData;
         }
 
-        public Builder setPayloadData(@Nullable Input<String> payloadData) {
+        public Builder payloadData(@Nullable Input<String> payloadData) {
             this.payloadData = payloadData;
             return this;
         }
 
-        public Builder setPayloadData(@Nullable String payloadData) {
+        public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = Input.ofNullable(payloadData);
             return this;
         }

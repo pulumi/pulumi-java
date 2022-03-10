@@ -105,42 +105,42 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setIntegrationRuntimeName(@Nullable Input<String> integrationRuntimeName) {
+        public Builder integrationRuntimeName(@Nullable Input<String> integrationRuntimeName) {
             this.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
-        public Builder setIntegrationRuntimeName(@Nullable String integrationRuntimeName) {
+        public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
             this.integrationRuntimeName = Input.ofNullable(integrationRuntimeName);
             return this;
         }
 
-        public Builder setProperties(Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
+        public Builder properties(Input<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
+        public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

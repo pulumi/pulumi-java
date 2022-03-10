@@ -92,32 +92,32 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
     	      this.values = defaults.values;
         }
 
-        public Builder setDimensionName(Input<String> dimensionName) {
+        public Builder dimensionName(Input<String> dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Input.of(Objects.requireNonNull(dimensionName));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,ScaleRuleMetricDimensionOperationType>> operator) {
+        public Builder operator(Input<Either<String,ScaleRuleMetricDimensionOperationType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,ScaleRuleMetricDimensionOperationType> operator) {
+        public Builder operator(Either<String,ScaleRuleMetricDimensionOperationType> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setValues(Input<List<String>> values) {
+        public Builder values(Input<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

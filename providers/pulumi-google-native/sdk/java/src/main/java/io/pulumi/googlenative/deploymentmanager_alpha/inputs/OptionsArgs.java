@@ -110,42 +110,42 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setAsyncOptions(@Nullable Input<List<AsyncOptionsArgs>> asyncOptions) {
+        public Builder asyncOptions(@Nullable Input<List<AsyncOptionsArgs>> asyncOptions) {
             this.asyncOptions = asyncOptions;
             return this;
         }
 
-        public Builder setAsyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
+        public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
             this.asyncOptions = Input.ofNullable(asyncOptions);
             return this;
         }
 
-        public Builder setInputMappings(@Nullable Input<List<InputMappingArgs>> inputMappings) {
+        public Builder inputMappings(@Nullable Input<List<InputMappingArgs>> inputMappings) {
             this.inputMappings = inputMappings;
             return this;
         }
 
-        public Builder setInputMappings(@Nullable List<InputMappingArgs> inputMappings) {
+        public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
             this.inputMappings = Input.ofNullable(inputMappings);
             return this;
         }
 
-        public Builder setNameProperty(@Nullable Input<String> nameProperty) {
+        public Builder nameProperty(@Nullable Input<String> nameProperty) {
             this.nameProperty = nameProperty;
             return this;
         }
 
-        public Builder setNameProperty(@Nullable String nameProperty) {
+        public Builder nameProperty(@Nullable String nameProperty) {
             this.nameProperty = Input.ofNullable(nameProperty);
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable Input<ValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Input<ValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable ValidationOptionsArgs validationOptions) {
+        public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }

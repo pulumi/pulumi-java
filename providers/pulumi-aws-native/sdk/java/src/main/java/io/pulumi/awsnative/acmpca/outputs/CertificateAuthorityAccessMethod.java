@@ -51,12 +51,12 @@ public final class CertificateAuthorityAccessMethod {
     	      this.customObjectIdentifier = defaults.customObjectIdentifier;
         }
 
-        public Builder setAccessMethodType(@Nullable String accessMethodType) {
+        public Builder accessMethodType(@Nullable String accessMethodType) {
             this.accessMethodType = accessMethodType;
             return this;
         }
 
-        public Builder setCustomObjectIdentifier(@Nullable String customObjectIdentifier) {
+        public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }

@@ -229,62 +229,62 @@ public final class GetStorageAccountCredentialResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccountKey(@Nullable AsymmetricEncryptedSecretResponse accountKey) {
+        public Builder accountKey(@Nullable AsymmetricEncryptedSecretResponse accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountType(String accountType) {
+        public Builder accountType(String accountType) {
             this.accountType = Objects.requireNonNull(accountType);
             return this;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setBlobDomainName(@Nullable String blobDomainName) {
+        public Builder blobDomainName(@Nullable String blobDomainName) {
             this.blobDomainName = blobDomainName;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSslStatus(String sslStatus) {
+        public Builder sslStatus(String sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

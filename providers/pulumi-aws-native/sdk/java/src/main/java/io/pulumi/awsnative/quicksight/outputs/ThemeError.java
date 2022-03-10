@@ -60,12 +60,12 @@ public final class ThemeError {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(@Nullable ThemeErrorType type) {
+        public Builder type(@Nullable ThemeErrorType type) {
             this.type = type;
             return this;
         }

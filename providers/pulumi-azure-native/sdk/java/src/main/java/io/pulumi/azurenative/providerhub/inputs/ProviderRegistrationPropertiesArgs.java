@@ -232,152 +232,152 @@ public final class ProviderRegistrationPropertiesArgs extends io.pulumi.resource
     	      this.templateDeploymentOptions = defaults.templateDeploymentOptions;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<ResourceProviderCapabilitiesArgs>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<ResourceProviderCapabilitiesArgs> capabilities) {
+        public Builder capabilities(@Nullable List<ResourceProviderCapabilitiesArgs> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule) {
+        public Builder featuresRule(@Nullable Input<ResourceProviderManifestPropertiesFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceProviderManifestPropertiesFeaturesRuleArgs featuresRule) {
+        public Builder featuresRule(@Nullable ResourceProviderManifestPropertiesFeaturesRuleArgs featuresRule) {
             this.featuresRule = Input.ofNullable(featuresRule);
             return this;
         }
 
-        public Builder setManagement(@Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management) {
+        public Builder management(@Nullable Input<ResourceProviderManifestPropertiesManagementArgs> management) {
             this.management = management;
             return this;
         }
 
-        public Builder setManagement(@Nullable ResourceProviderManifestPropertiesManagementArgs management) {
+        public Builder management(@Nullable ResourceProviderManifestPropertiesManagementArgs management) {
             this.management = Input.ofNullable(management);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setProviderAuthentication(@Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication) {
+        public Builder providerAuthentication(@Nullable Input<ResourceProviderManifestPropertiesProviderAuthenticationArgs> providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
-        public Builder setProviderAuthentication(@Nullable ResourceProviderManifestPropertiesProviderAuthenticationArgs providerAuthentication) {
+        public Builder providerAuthentication(@Nullable ResourceProviderManifestPropertiesProviderAuthenticationArgs providerAuthentication) {
             this.providerAuthentication = Input.ofNullable(providerAuthentication);
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable Input<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
             this.providerAuthorizations = Input.ofNullable(providerAuthorizations);
             return this;
         }
 
-        public Builder setProviderHubMetadata(@Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata) {
+        public Builder providerHubMetadata(@Nullable Input<ProviderRegistrationPropertiesProviderHubMetadataArgs> providerHubMetadata) {
             this.providerHubMetadata = providerHubMetadata;
             return this;
         }
 
-        public Builder setProviderHubMetadata(@Nullable ProviderRegistrationPropertiesProviderHubMetadataArgs providerHubMetadata) {
+        public Builder providerHubMetadata(@Nullable ProviderRegistrationPropertiesProviderHubMetadataArgs providerHubMetadata) {
             this.providerHubMetadata = Input.ofNullable(providerHubMetadata);
             return this;
         }
 
-        public Builder setProviderType(@Nullable Input<Either<String,ResourceProviderType>> providerType) {
+        public Builder providerType(@Nullable Input<Either<String,ResourceProviderType>> providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setProviderType(@Nullable Either<String,ResourceProviderType> providerType) {
+        public Builder providerType(@Nullable Either<String,ResourceProviderType> providerType) {
             this.providerType = Input.ofNullable(providerType);
             return this;
         }
 
-        public Builder setProviderVersion(@Nullable Input<String> providerVersion) {
+        public Builder providerVersion(@Nullable Input<String> providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
 
-        public Builder setProviderVersion(@Nullable String providerVersion) {
+        public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = Input.ofNullable(providerVersion);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable Input<ResourceProviderManifestPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable ResourceProviderManifestPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable ResourceProviderManifestPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
             this.requestHeaderOptions = Input.ofNullable(requestHeaderOptions);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Input.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable Input<ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = Input.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable Input<ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
             this.templateDeploymentOptions = Input.ofNullable(templateDeploymentOptions);
             return this;
         }

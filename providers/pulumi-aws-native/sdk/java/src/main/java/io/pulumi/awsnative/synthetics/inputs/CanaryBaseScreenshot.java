@@ -71,12 +71,12 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
     	      this.screenshotName = defaults.screenshotName;
         }
 
-        public Builder setIgnoreCoordinates(@Nullable List<String> ignoreCoordinates) {
+        public Builder ignoreCoordinates(@Nullable List<String> ignoreCoordinates) {
             this.ignoreCoordinates = ignoreCoordinates;
             return this;
         }
 
-        public Builder setScreenshotName(String screenshotName) {
+        public Builder screenshotName(String screenshotName) {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }

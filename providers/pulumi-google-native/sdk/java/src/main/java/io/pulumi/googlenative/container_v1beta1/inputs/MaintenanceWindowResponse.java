@@ -91,17 +91,17 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(DailyMaintenanceWindowResponse dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(DailyMaintenanceWindowResponse dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
         }
 
-        public Builder setMaintenanceExclusions(Map<String,String> maintenanceExclusions) {
+        public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
             this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
             return this;
         }
 
-        public Builder setRecurringWindow(RecurringTimeWindowResponse recurringWindow) {
+        public Builder recurringWindow(RecurringTimeWindowResponse recurringWindow) {
             this.recurringWindow = Objects.requireNonNull(recurringWindow);
             return this;
         }

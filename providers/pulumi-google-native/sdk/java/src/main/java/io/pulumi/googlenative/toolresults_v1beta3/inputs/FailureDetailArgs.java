@@ -154,72 +154,72 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unableToCrawl = defaults.unableToCrawl;
         }
 
-        public Builder setCrashed(@Nullable Input<Boolean> crashed) {
+        public Builder crashed(@Nullable Input<Boolean> crashed) {
             this.crashed = crashed;
             return this;
         }
 
-        public Builder setCrashed(@Nullable Boolean crashed) {
+        public Builder crashed(@Nullable Boolean crashed) {
             this.crashed = Input.ofNullable(crashed);
             return this;
         }
 
-        public Builder setDeviceOutOfMemory(@Nullable Input<Boolean> deviceOutOfMemory) {
+        public Builder deviceOutOfMemory(@Nullable Input<Boolean> deviceOutOfMemory) {
             this.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
 
-        public Builder setDeviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
+        public Builder deviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
             this.deviceOutOfMemory = Input.ofNullable(deviceOutOfMemory);
             return this;
         }
 
-        public Builder setFailedRoboscript(@Nullable Input<Boolean> failedRoboscript) {
+        public Builder failedRoboscript(@Nullable Input<Boolean> failedRoboscript) {
             this.failedRoboscript = failedRoboscript;
             return this;
         }
 
-        public Builder setFailedRoboscript(@Nullable Boolean failedRoboscript) {
+        public Builder failedRoboscript(@Nullable Boolean failedRoboscript) {
             this.failedRoboscript = Input.ofNullable(failedRoboscript);
             return this;
         }
 
-        public Builder setNotInstalled(@Nullable Input<Boolean> notInstalled) {
+        public Builder notInstalled(@Nullable Input<Boolean> notInstalled) {
             this.notInstalled = notInstalled;
             return this;
         }
 
-        public Builder setNotInstalled(@Nullable Boolean notInstalled) {
+        public Builder notInstalled(@Nullable Boolean notInstalled) {
             this.notInstalled = Input.ofNullable(notInstalled);
             return this;
         }
 
-        public Builder setOtherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
-        public Builder setOtherNativeCrash(@Nullable Boolean otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
             this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
             return this;
         }
 
-        public Builder setTimedOut(@Nullable Input<Boolean> timedOut) {
+        public Builder timedOut(@Nullable Input<Boolean> timedOut) {
             this.timedOut = timedOut;
             return this;
         }
 
-        public Builder setTimedOut(@Nullable Boolean timedOut) {
+        public Builder timedOut(@Nullable Boolean timedOut) {
             this.timedOut = Input.ofNullable(timedOut);
             return this;
         }
 
-        public Builder setUnableToCrawl(@Nullable Input<Boolean> unableToCrawl) {
+        public Builder unableToCrawl(@Nullable Input<Boolean> unableToCrawl) {
             this.unableToCrawl = unableToCrawl;
             return this;
         }
 
-        public Builder setUnableToCrawl(@Nullable Boolean unableToCrawl) {
+        public Builder unableToCrawl(@Nullable Boolean unableToCrawl) {
             this.unableToCrawl = Input.ofNullable(unableToCrawl);
             return this;
         }

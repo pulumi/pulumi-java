@@ -111,42 +111,42 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.ledgerType = defaults.ledgerType;
         }
 
-        public Builder setAadBasedSecurityPrincipals(@Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
+        public Builder aadBasedSecurityPrincipals(@Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
             this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
 
-        public Builder setAadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
+        public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
             this.aadBasedSecurityPrincipals = Input.ofNullable(aadBasedSecurityPrincipals);
             return this;
         }
 
-        public Builder setCertBasedSecurityPrincipals(@Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
+        public Builder certBasedSecurityPrincipals(@Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
 
-        public Builder setCertBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
+        public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = Input.ofNullable(certBasedSecurityPrincipals);
             return this;
         }
 
-        public Builder setLedgerStorageAccount(@Nullable Input<String> ledgerStorageAccount) {
+        public Builder ledgerStorageAccount(@Nullable Input<String> ledgerStorageAccount) {
             this.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
 
-        public Builder setLedgerStorageAccount(@Nullable String ledgerStorageAccount) {
+        public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
             this.ledgerStorageAccount = Input.ofNullable(ledgerStorageAccount);
             return this;
         }
 
-        public Builder setLedgerType(@Nullable Input<Either<String,LedgerType>> ledgerType) {
+        public Builder ledgerType(@Nullable Input<Either<String,LedgerType>> ledgerType) {
             this.ledgerType = ledgerType;
             return this;
         }
 
-        public Builder setLedgerType(@Nullable Either<String,LedgerType> ledgerType) {
+        public Builder ledgerType(@Nullable Either<String,LedgerType> ledgerType) {
             this.ledgerType = Input.ofNullable(ledgerType);
             return this;
         }

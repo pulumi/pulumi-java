@@ -70,22 +70,22 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
     	      this.targetUrl = defaults.targetUrl;
         }
 
-        public Builder setContext(@Nullable Input<String> context) {
+        public Builder context(@Nullable Input<String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable Input<String> targetUrl) {
+        public Builder targetUrl(@Nullable Input<String> targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable String targetUrl) {
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = Input.ofNullable(targetUrl);
             return this;
         }

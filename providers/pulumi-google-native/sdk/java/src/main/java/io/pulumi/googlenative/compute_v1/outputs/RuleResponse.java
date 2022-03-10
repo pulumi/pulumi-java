@@ -148,37 +148,37 @@ public final class RuleResponse {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIns(List<String> ins) {
+        public Builder ins(List<String> ins) {
             this.ins = Objects.requireNonNull(ins);
             return this;
         }
 
-        public Builder setLogConfigs(List<LogConfigResponse> logConfigs) {
+        public Builder logConfigs(List<LogConfigResponse> logConfigs) {
             this.logConfigs = Objects.requireNonNull(logConfigs);
             return this;
         }
 
-        public Builder setNotIns(List<String> notIns) {
+        public Builder notIns(List<String> notIns) {
             this.notIns = Objects.requireNonNull(notIns);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

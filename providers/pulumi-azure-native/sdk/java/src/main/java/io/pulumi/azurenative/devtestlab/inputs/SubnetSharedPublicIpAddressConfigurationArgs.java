@@ -58,12 +58,12 @@ public final class SubnetSharedPublicIpAddressConfigurationArgs extends io.pulum
     	      this.allowedPorts = defaults.allowedPorts;
         }
 
-        public Builder setAllowedPorts(@Nullable Input<List<PortArgs>> allowedPorts) {
+        public Builder allowedPorts(@Nullable Input<List<PortArgs>> allowedPorts) {
             this.allowedPorts = allowedPorts;
             return this;
         }
 
-        public Builder setAllowedPorts(@Nullable List<PortArgs> allowedPorts) {
+        public Builder allowedPorts(@Nullable List<PortArgs> allowedPorts) {
             this.allowedPorts = Input.ofNullable(allowedPorts);
             return this;
         }

@@ -50,12 +50,12 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
+        public Builder items(@Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs> items) {
+        public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

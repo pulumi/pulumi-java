@@ -124,27 +124,27 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     	      this.state = defaults.state;
         }
 
-        public Builder setAllAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
             this.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
 
-        public Builder setExcludeNames(@Nullable List<String> excludeNames) {
+        public Builder excludeNames(@Nullable List<String> excludeNames) {
             this.excludeNames = excludeNames;
             return this;
         }
 
-        public Builder setExcludeZoneIds(@Nullable List<String> excludeZoneIds) {
+        public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
             this.excludeZoneIds = excludeZoneIds;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAvailabilityZonesFilter> filters) {
+        public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -114,27 +114,27 @@ public final class GetSiteResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setDefaultUrl(String defaultUrl) {
+        public Builder defaultUrl(String defaultUrl) {
             this.defaultUrl = Objects.requireNonNull(defaultUrl);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

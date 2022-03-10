@@ -216,57 +216,57 @@ public final class GetLocalUserResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHasSharedKey(@Nullable Boolean hasSharedKey) {
+        public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
 
-        public Builder setHasSshKey(@Nullable Boolean hasSshKey) {
+        public Builder hasSshKey(@Nullable Boolean hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
 
-        public Builder setHasSshPassword(@Nullable Boolean hasSshPassword) {
+        public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPermissionScopes(@Nullable List<PermissionScopeResponse> permissionScopes) {
+        public Builder permissionScopes(@Nullable List<PermissionScopeResponse> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
 
-        public Builder setSid(String sid) {
+        public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
 
-        public Builder setSshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

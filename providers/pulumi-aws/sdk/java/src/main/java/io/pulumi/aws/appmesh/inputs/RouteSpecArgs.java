@@ -123,52 +123,52 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tcpRoute = defaults.tcpRoute;
         }
 
-        public Builder setGrpcRoute(@Nullable Input<RouteSpecGrpcRouteArgs> grpcRoute) {
+        public Builder grpcRoute(@Nullable Input<RouteSpecGrpcRouteArgs> grpcRoute) {
             this.grpcRoute = grpcRoute;
             return this;
         }
 
-        public Builder setGrpcRoute(@Nullable RouteSpecGrpcRouteArgs grpcRoute) {
+        public Builder grpcRoute(@Nullable RouteSpecGrpcRouteArgs grpcRoute) {
             this.grpcRoute = Input.ofNullable(grpcRoute);
             return this;
         }
 
-        public Builder setHttp2Route(@Nullable Input<RouteSpecHttp2RouteArgs> http2Route) {
+        public Builder http2Route(@Nullable Input<RouteSpecHttp2RouteArgs> http2Route) {
             this.http2Route = http2Route;
             return this;
         }
 
-        public Builder setHttp2Route(@Nullable RouteSpecHttp2RouteArgs http2Route) {
+        public Builder http2Route(@Nullable RouteSpecHttp2RouteArgs http2Route) {
             this.http2Route = Input.ofNullable(http2Route);
             return this;
         }
 
-        public Builder setHttpRoute(@Nullable Input<RouteSpecHttpRouteArgs> httpRoute) {
+        public Builder httpRoute(@Nullable Input<RouteSpecHttpRouteArgs> httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
 
-        public Builder setHttpRoute(@Nullable RouteSpecHttpRouteArgs httpRoute) {
+        public Builder httpRoute(@Nullable RouteSpecHttpRouteArgs httpRoute) {
             this.httpRoute = Input.ofNullable(httpRoute);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTcpRoute(@Nullable Input<RouteSpecTcpRouteArgs> tcpRoute) {
+        public Builder tcpRoute(@Nullable Input<RouteSpecTcpRouteArgs> tcpRoute) {
             this.tcpRoute = tcpRoute;
             return this;
         }
 
-        public Builder setTcpRoute(@Nullable RouteSpecTcpRouteArgs tcpRoute) {
+        public Builder tcpRoute(@Nullable RouteSpecTcpRouteArgs tcpRoute) {
             this.tcpRoute = Input.ofNullable(tcpRoute);
             return this;
         }

@@ -81,17 +81,17 @@ public final class InterconnectCircuitInfoResponse {
     	      this.googleDemarcId = defaults.googleDemarcId;
         }
 
-        public Builder setCustomerDemarcId(String customerDemarcId) {
+        public Builder customerDemarcId(String customerDemarcId) {
             this.customerDemarcId = Objects.requireNonNull(customerDemarcId);
             return this;
         }
 
-        public Builder setGoogleCircuitId(String googleCircuitId) {
+        public Builder googleCircuitId(String googleCircuitId) {
             this.googleCircuitId = Objects.requireNonNull(googleCircuitId);
             return this;
         }
 
-        public Builder setGoogleDemarcId(String googleDemarcId) {
+        public Builder googleDemarcId(String googleDemarcId) {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }

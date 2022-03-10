@@ -144,62 +144,62 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
     	      this.publicIp = defaults.publicIp;
         }
 
-        public Builder setAllocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Input<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
-        public Builder setAllocationId(@Nullable String allocationId) {
+        public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Input.ofNullable(allocationId);
             return this;
         }
 
-        public Builder setAllowReassociation(@Nullable Input<Boolean> allowReassociation) {
+        public Builder allowReassociation(@Nullable Input<Boolean> allowReassociation) {
             this.allowReassociation = allowReassociation;
             return this;
         }
 
-        public Builder setAllowReassociation(@Nullable Boolean allowReassociation) {
+        public Builder allowReassociation(@Nullable Boolean allowReassociation) {
             this.allowReassociation = Input.ofNullable(allowReassociation);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIp(@Nullable Input<String> publicIp) {
+        public Builder publicIp(@Nullable Input<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
-        public Builder setPublicIp(@Nullable String publicIp) {
+        public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Input.ofNullable(publicIp);
             return this;
         }

@@ -185,47 +185,47 @@ public final class VirtualMachineConfigurationResponse {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setContainerConfiguration(@Nullable ContainerConfigurationResponse containerConfiguration) {
+        public Builder containerConfiguration(@Nullable ContainerConfigurationResponse containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<DataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<VMExtensionResponse> extensions) {
+        public Builder extensions(@Nullable List<VMExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setImageReference(ImageReferenceResponse imageReference) {
+        public Builder imageReference(ImageReferenceResponse imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setNodeAgentSkuId(String nodeAgentSkuId) {
+        public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
 
-        public Builder setNodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
+        public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }

@@ -67,12 +67,12 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setCloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
+        public Builder cloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
             this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

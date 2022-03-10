@@ -143,62 +143,62 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
     	      this.textMetadata = defaults.textMetadata;
         }
 
-        public Builder setAnnotationType(@Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType) {
+        public Builder annotationType(@Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
-        public Builder setAnnotationType(@Nullable GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
+        public Builder annotationType(@Nullable GoogleCloudDatalabelingV1beta1InputConfigAnnotationType annotationType) {
             this.annotationType = Input.ofNullable(annotationType);
             return this;
         }
 
-        public Builder setBigquerySource(@Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
+        public Builder bigquerySource(@Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource) {
             this.bigquerySource = bigquerySource;
             return this;
         }
 
-        public Builder setBigquerySource(@Nullable GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
+        public Builder bigquerySource(@Nullable GoogleCloudDatalabelingV1beta1BigQuerySourceArgs bigquerySource) {
             this.bigquerySource = Input.ofNullable(bigquerySource);
             return this;
         }
 
-        public Builder setClassificationMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
+        public Builder classificationMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata) {
             this.classificationMetadata = classificationMetadata;
             return this;
         }
 
-        public Builder setClassificationMetadata(@Nullable GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
+        public Builder classificationMetadata(@Nullable GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs classificationMetadata) {
             this.classificationMetadata = Input.ofNullable(classificationMetadata);
             return this;
         }
 
-        public Builder setDataType(Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
+        public Builder dataType(Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setDataType(GoogleCloudDatalabelingV1beta1InputConfigDataType dataType) {
+        public Builder dataType(GoogleCloudDatalabelingV1beta1InputConfigDataType dataType) {
             this.dataType = Input.of(Objects.requireNonNull(dataType));
             return this;
         }
 
-        public Builder setGcsSource(@Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
+        public Builder gcsSource(@Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource) {
             this.gcsSource = gcsSource;
             return this;
         }
 
-        public Builder setGcsSource(@Nullable GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
+        public Builder gcsSource(@Nullable GoogleCloudDatalabelingV1beta1GcsSourceArgs gcsSource) {
             this.gcsSource = Input.ofNullable(gcsSource);
             return this;
         }
 
-        public Builder setTextMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
+        public Builder textMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata) {
             this.textMetadata = textMetadata;
             return this;
         }
 
-        public Builder setTextMetadata(@Nullable GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
+        public Builder textMetadata(@Nullable GoogleCloudDatalabelingV1beta1TextMetadataArgs textMetadata) {
             this.textMetadata = Input.ofNullable(textMetadata);
             return this;
         }

@@ -111,52 +111,52 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setDomainRedirect(@Nullable Input<DomainRedirectArgs> domainRedirect) {
+        public Builder domainRedirect(@Nullable Input<DomainRedirectArgs> domainRedirect) {
             this.domainRedirect = domainRedirect;
             return this;
         }
 
-        public Builder setDomainRedirect(@Nullable DomainRedirectArgs domainRedirect) {
+        public Builder domainRedirect(@Nullable DomainRedirectArgs domainRedirect) {
             this.domainRedirect = Input.ofNullable(domainRedirect);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSite(Input<String> site) {
+        public Builder site(Input<String> site) {
             this.site = Objects.requireNonNull(site);
             return this;
         }
 
-        public Builder setSite(String site) {
+        public Builder site(String site) {
             this.site = Input.of(Objects.requireNonNull(site));
             return this;
         }
 
-        public Builder setSiteId(Input<String> siteId) {
+        public Builder siteId(Input<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }

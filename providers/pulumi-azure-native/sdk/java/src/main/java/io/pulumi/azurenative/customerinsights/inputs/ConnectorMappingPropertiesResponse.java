@@ -177,42 +177,42 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     	      this.structure = defaults.structure;
         }
 
-        public Builder setAvailability(ConnectorMappingAvailabilityResponse availability) {
+        public Builder availability(ConnectorMappingAvailabilityResponse availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setCompleteOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
+        public Builder completeOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
             this.completeOperation = Objects.requireNonNull(completeOperation);
             return this;
         }
 
-        public Builder setErrorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
+        public Builder errorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
             this.errorManagement = Objects.requireNonNull(errorManagement);
             return this;
         }
 
-        public Builder setFileFilter(@Nullable String fileFilter) {
+        public Builder fileFilter(@Nullable String fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFormat(ConnectorMappingFormatResponse format) {
+        public Builder format(ConnectorMappingFormatResponse format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setHasHeader(@Nullable Boolean hasHeader) {
+        public Builder hasHeader(@Nullable Boolean hasHeader) {
             this.hasHeader = hasHeader;
             return this;
         }
 
-        public Builder setStructure(List<ConnectorMappingStructureResponse> structure) {
+        public Builder structure(List<ConnectorMappingStructureResponse> structure) {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }

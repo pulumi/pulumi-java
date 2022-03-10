@@ -67,12 +67,12 @@ public final class ScheduledActionScalableTargetAction {
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }

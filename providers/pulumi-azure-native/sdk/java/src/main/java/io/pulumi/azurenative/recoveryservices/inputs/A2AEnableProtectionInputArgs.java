@@ -287,152 +287,152 @@ public final class A2AEnableProtectionInputArgs extends io.pulumi.resources.Reso
     	      this.vmManagedDisks = defaults.vmManagedDisks;
         }
 
-        public Builder setDiskEncryptionInfo(@Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo) {
+        public Builder diskEncryptionInfo(@Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo) {
             this.diskEncryptionInfo = diskEncryptionInfo;
             return this;
         }
 
-        public Builder setDiskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
+        public Builder diskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
             this.diskEncryptionInfo = Input.ofNullable(diskEncryptionInfo);
             return this;
         }
 
-        public Builder setFabricObjectId(@Nullable Input<String> fabricObjectId) {
+        public Builder fabricObjectId(@Nullable Input<String> fabricObjectId) {
             this.fabricObjectId = fabricObjectId;
             return this;
         }
 
-        public Builder setFabricObjectId(@Nullable String fabricObjectId) {
+        public Builder fabricObjectId(@Nullable String fabricObjectId) {
             this.fabricObjectId = Input.ofNullable(fabricObjectId);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable Input<String> multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable String multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = Input.ofNullable(multiVmGroupName);
             return this;
         }
 
-        public Builder setRecoveryAvailabilitySetId(@Nullable Input<String> recoveryAvailabilitySetId) {
+        public Builder recoveryAvailabilitySetId(@Nullable Input<String> recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
-        public Builder setRecoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
+        public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = Input.ofNullable(recoveryAvailabilitySetId);
             return this;
         }
 
-        public Builder setRecoveryAvailabilityZone(@Nullable Input<String> recoveryAvailabilityZone) {
+        public Builder recoveryAvailabilityZone(@Nullable Input<String> recoveryAvailabilityZone) {
             this.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
 
-        public Builder setRecoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
+        public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
             this.recoveryAvailabilityZone = Input.ofNullable(recoveryAvailabilityZone);
             return this;
         }
 
-        public Builder setRecoveryAzureNetworkId(@Nullable Input<String> recoveryAzureNetworkId) {
+        public Builder recoveryAzureNetworkId(@Nullable Input<String> recoveryAzureNetworkId) {
             this.recoveryAzureNetworkId = recoveryAzureNetworkId;
             return this;
         }
 
-        public Builder setRecoveryAzureNetworkId(@Nullable String recoveryAzureNetworkId) {
+        public Builder recoveryAzureNetworkId(@Nullable String recoveryAzureNetworkId) {
             this.recoveryAzureNetworkId = Input.ofNullable(recoveryAzureNetworkId);
             return this;
         }
 
-        public Builder setRecoveryBootDiagStorageAccountId(@Nullable Input<String> recoveryBootDiagStorageAccountId) {
+        public Builder recoveryBootDiagStorageAccountId(@Nullable Input<String> recoveryBootDiagStorageAccountId) {
             this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
+        public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
             this.recoveryBootDiagStorageAccountId = Input.ofNullable(recoveryBootDiagStorageAccountId);
             return this;
         }
 
-        public Builder setRecoveryCloudServiceId(@Nullable Input<String> recoveryCloudServiceId) {
+        public Builder recoveryCloudServiceId(@Nullable Input<String> recoveryCloudServiceId) {
             this.recoveryCloudServiceId = recoveryCloudServiceId;
             return this;
         }
 
-        public Builder setRecoveryCloudServiceId(@Nullable String recoveryCloudServiceId) {
+        public Builder recoveryCloudServiceId(@Nullable String recoveryCloudServiceId) {
             this.recoveryCloudServiceId = Input.ofNullable(recoveryCloudServiceId);
             return this;
         }
 
-        public Builder setRecoveryContainerId(@Nullable Input<String> recoveryContainerId) {
+        public Builder recoveryContainerId(@Nullable Input<String> recoveryContainerId) {
             this.recoveryContainerId = recoveryContainerId;
             return this;
         }
 
-        public Builder setRecoveryContainerId(@Nullable String recoveryContainerId) {
+        public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
             this.recoveryContainerId = Input.ofNullable(recoveryContainerId);
             return this;
         }
 
-        public Builder setRecoveryProximityPlacementGroupId(@Nullable Input<String> recoveryProximityPlacementGroupId) {
+        public Builder recoveryProximityPlacementGroupId(@Nullable Input<String> recoveryProximityPlacementGroupId) {
             this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setRecoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
+        public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
             this.recoveryProximityPlacementGroupId = Input.ofNullable(recoveryProximityPlacementGroupId);
             return this;
         }
 
-        public Builder setRecoveryResourceGroupId(@Nullable Input<String> recoveryResourceGroupId) {
+        public Builder recoveryResourceGroupId(@Nullable Input<String> recoveryResourceGroupId) {
             this.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
 
-        public Builder setRecoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
+        public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
             this.recoveryResourceGroupId = Input.ofNullable(recoveryResourceGroupId);
             return this;
         }
 
-        public Builder setRecoverySubnetName(@Nullable Input<String> recoverySubnetName) {
+        public Builder recoverySubnetName(@Nullable Input<String> recoverySubnetName) {
             this.recoverySubnetName = recoverySubnetName;
             return this;
         }
 
-        public Builder setRecoverySubnetName(@Nullable String recoverySubnetName) {
+        public Builder recoverySubnetName(@Nullable String recoverySubnetName) {
             this.recoverySubnetName = Input.ofNullable(recoverySubnetName);
             return this;
         }
 
-        public Builder setVmDisks(@Nullable Input<List<A2AVmDiskInputDetailsArgs>> vmDisks) {
+        public Builder vmDisks(@Nullable Input<List<A2AVmDiskInputDetailsArgs>> vmDisks) {
             this.vmDisks = vmDisks;
             return this;
         }
 
-        public Builder setVmDisks(@Nullable List<A2AVmDiskInputDetailsArgs> vmDisks) {
+        public Builder vmDisks(@Nullable List<A2AVmDiskInputDetailsArgs> vmDisks) {
             this.vmDisks = Input.ofNullable(vmDisks);
             return this;
         }
 
-        public Builder setVmManagedDisks(@Nullable Input<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
+        public Builder vmManagedDisks(@Nullable Input<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
             this.vmManagedDisks = vmManagedDisks;
             return this;
         }
 
-        public Builder setVmManagedDisks(@Nullable List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
+        public Builder vmManagedDisks(@Nullable List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
             this.vmManagedDisks = Input.ofNullable(vmManagedDisks);
             return this;
         }

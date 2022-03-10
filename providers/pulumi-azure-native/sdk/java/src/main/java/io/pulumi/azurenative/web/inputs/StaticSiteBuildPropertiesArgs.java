@@ -171,82 +171,82 @@ public final class StaticSiteBuildPropertiesArgs extends io.pulumi.resources.Res
     	      this.skipGithubActionWorkflowGeneration = defaults.skipGithubActionWorkflowGeneration;
         }
 
-        public Builder setApiBuildCommand(@Nullable Input<String> apiBuildCommand) {
+        public Builder apiBuildCommand(@Nullable Input<String> apiBuildCommand) {
             this.apiBuildCommand = apiBuildCommand;
             return this;
         }
 
-        public Builder setApiBuildCommand(@Nullable String apiBuildCommand) {
+        public Builder apiBuildCommand(@Nullable String apiBuildCommand) {
             this.apiBuildCommand = Input.ofNullable(apiBuildCommand);
             return this;
         }
 
-        public Builder setApiLocation(@Nullable Input<String> apiLocation) {
+        public Builder apiLocation(@Nullable Input<String> apiLocation) {
             this.apiLocation = apiLocation;
             return this;
         }
 
-        public Builder setApiLocation(@Nullable String apiLocation) {
+        public Builder apiLocation(@Nullable String apiLocation) {
             this.apiLocation = Input.ofNullable(apiLocation);
             return this;
         }
 
-        public Builder setAppArtifactLocation(@Nullable Input<String> appArtifactLocation) {
+        public Builder appArtifactLocation(@Nullable Input<String> appArtifactLocation) {
             this.appArtifactLocation = appArtifactLocation;
             return this;
         }
 
-        public Builder setAppArtifactLocation(@Nullable String appArtifactLocation) {
+        public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
             this.appArtifactLocation = Input.ofNullable(appArtifactLocation);
             return this;
         }
 
-        public Builder setAppBuildCommand(@Nullable Input<String> appBuildCommand) {
+        public Builder appBuildCommand(@Nullable Input<String> appBuildCommand) {
             this.appBuildCommand = appBuildCommand;
             return this;
         }
 
-        public Builder setAppBuildCommand(@Nullable String appBuildCommand) {
+        public Builder appBuildCommand(@Nullable String appBuildCommand) {
             this.appBuildCommand = Input.ofNullable(appBuildCommand);
             return this;
         }
 
-        public Builder setAppLocation(@Nullable Input<String> appLocation) {
+        public Builder appLocation(@Nullable Input<String> appLocation) {
             this.appLocation = appLocation;
             return this;
         }
 
-        public Builder setAppLocation(@Nullable String appLocation) {
+        public Builder appLocation(@Nullable String appLocation) {
             this.appLocation = Input.ofNullable(appLocation);
             return this;
         }
 
-        public Builder setGithubActionSecretNameOverride(@Nullable Input<String> githubActionSecretNameOverride) {
+        public Builder githubActionSecretNameOverride(@Nullable Input<String> githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
 
-        public Builder setGithubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
+        public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = Input.ofNullable(githubActionSecretNameOverride);
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable Input<String> outputLocation) {
+        public Builder outputLocation(@Nullable Input<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Input.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder setSkipGithubActionWorkflowGeneration(@Nullable Input<Boolean> skipGithubActionWorkflowGeneration) {
+        public Builder skipGithubActionWorkflowGeneration(@Nullable Input<Boolean> skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }
 
-        public Builder setSkipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
+        public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = Input.ofNullable(skipGithubActionWorkflowGeneration);
             return this;
         }

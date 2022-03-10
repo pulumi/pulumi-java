@@ -57,12 +57,12 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder setCloudRunService(@Nullable Input<CloudRunServiceArgs> cloudRunService) {
+        public Builder cloudRunService(@Nullable Input<CloudRunServiceArgs> cloudRunService) {
             this.cloudRunService = cloudRunService;
             return this;
         }
 
-        public Builder setCloudRunService(@Nullable CloudRunServiceArgs cloudRunService) {
+        public Builder cloudRunService(@Nullable CloudRunServiceArgs cloudRunService) {
             this.cloudRunService = Input.ofNullable(cloudRunService);
             return this;
         }

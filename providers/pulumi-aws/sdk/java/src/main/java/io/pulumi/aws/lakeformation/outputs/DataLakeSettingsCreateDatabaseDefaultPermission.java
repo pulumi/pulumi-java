@@ -68,12 +68,12 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermission {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = principal;
             return this;
         }

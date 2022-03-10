@@ -140,72 +140,72 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.textToSpeechSettings = defaults.textToSpeechSettings;
         }
 
-        public Builder setAgentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Input<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Input.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setFulfillment(@Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment) {
+        public Builder fulfillment(@Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentArgs> fulfillment) {
             this.fulfillment = fulfillment;
             return this;
         }
 
-        public Builder setFulfillment(@Nullable GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
+        public Builder fulfillment(@Nullable GoogleCloudDialogflowV2beta1FulfillmentArgs fulfillment) {
             this.fulfillment = Input.ofNullable(fulfillment);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTextToSpeechSettings(@Nullable Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
+        public Builder textToSpeechSettings(@Nullable Input<GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs> textToSpeechSettings) {
             this.textToSpeechSettings = textToSpeechSettings;
             return this;
         }
 
-        public Builder setTextToSpeechSettings(@Nullable GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
+        public Builder textToSpeechSettings(@Nullable GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs textToSpeechSettings) {
             this.textToSpeechSettings = Input.ofNullable(textToSpeechSettings);
             return this;
         }

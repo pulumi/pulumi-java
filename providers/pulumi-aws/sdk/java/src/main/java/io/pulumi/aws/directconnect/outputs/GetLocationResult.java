@@ -106,27 +106,27 @@ public final class GetLocationResult {
     	      this.locationName = defaults.locationName;
         }
 
-        public Builder setAvailablePortSpeeds(List<String> availablePortSpeeds) {
+        public Builder availablePortSpeeds(List<String> availablePortSpeeds) {
             this.availablePortSpeeds = Objects.requireNonNull(availablePortSpeeds);
             return this;
         }
 
-        public Builder setAvailableProviders(List<String> availableProviders) {
+        public Builder availableProviders(List<String> availableProviders) {
             this.availableProviders = Objects.requireNonNull(availableProviders);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocationCode(String locationCode) {
+        public Builder locationCode(String locationCode) {
             this.locationCode = Objects.requireNonNull(locationCode);
             return this;
         }
 
-        public Builder setLocationName(String locationName) {
+        public Builder locationName(String locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }

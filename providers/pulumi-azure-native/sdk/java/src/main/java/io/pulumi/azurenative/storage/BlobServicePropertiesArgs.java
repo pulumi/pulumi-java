@@ -236,122 +236,122 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.restorePolicy = defaults.restorePolicy;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAutomaticSnapshotPolicyEnabled(@Nullable Input<Boolean> automaticSnapshotPolicyEnabled) {
+        public Builder automaticSnapshotPolicyEnabled(@Nullable Input<Boolean> automaticSnapshotPolicyEnabled) {
             this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
 
-        public Builder setAutomaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
+        public Builder automaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
             this.automaticSnapshotPolicyEnabled = Input.ofNullable(automaticSnapshotPolicyEnabled);
             return this;
         }
 
-        public Builder setBlobServicesName(@Nullable Input<String> blobServicesName) {
+        public Builder blobServicesName(@Nullable Input<String> blobServicesName) {
             this.blobServicesName = blobServicesName;
             return this;
         }
 
-        public Builder setBlobServicesName(@Nullable String blobServicesName) {
+        public Builder blobServicesName(@Nullable String blobServicesName) {
             this.blobServicesName = Input.ofNullable(blobServicesName);
             return this;
         }
 
-        public Builder setChangeFeed(@Nullable Input<ChangeFeedArgs> changeFeed) {
+        public Builder changeFeed(@Nullable Input<ChangeFeedArgs> changeFeed) {
             this.changeFeed = changeFeed;
             return this;
         }
 
-        public Builder setChangeFeed(@Nullable ChangeFeedArgs changeFeed) {
+        public Builder changeFeed(@Nullable ChangeFeedArgs changeFeed) {
             this.changeFeed = Input.ofNullable(changeFeed);
             return this;
         }
 
-        public Builder setContainerDeleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
+        public Builder containerDeleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
 
-        public Builder setContainerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
+        public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = Input.ofNullable(containerDeleteRetentionPolicy);
             return this;
         }
 
-        public Builder setCors(@Nullable Input<CorsRulesArgs> cors) {
+        public Builder cors(@Nullable Input<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsRulesArgs cors) {
+        public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setDefaultServiceVersion(@Nullable Input<String> defaultServiceVersion) {
+        public Builder defaultServiceVersion(@Nullable Input<String> defaultServiceVersion) {
             this.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
 
-        public Builder setDefaultServiceVersion(@Nullable String defaultServiceVersion) {
+        public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
             this.defaultServiceVersion = Input.ofNullable(defaultServiceVersion);
             return this;
         }
 
-        public Builder setDeleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
+        public Builder deleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
             this.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
 
-        public Builder setDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs deleteRetentionPolicy) {
+        public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs deleteRetentionPolicy) {
             this.deleteRetentionPolicy = Input.ofNullable(deleteRetentionPolicy);
             return this;
         }
 
-        public Builder setIsVersioningEnabled(@Nullable Input<Boolean> isVersioningEnabled) {
+        public Builder isVersioningEnabled(@Nullable Input<Boolean> isVersioningEnabled) {
             this.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
 
-        public Builder setIsVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
+        public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
             this.isVersioningEnabled = Input.ofNullable(isVersioningEnabled);
             return this;
         }
 
-        public Builder setLastAccessTimeTrackingPolicy(@Nullable Input<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
+        public Builder lastAccessTimeTrackingPolicy(@Nullable Input<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
 
-        public Builder setLastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
+        public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = Input.ofNullable(lastAccessTimeTrackingPolicy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<RestorePolicyPropertiesArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<RestorePolicyPropertiesArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable RestorePolicyPropertiesArgs restorePolicy) {
+        public Builder restorePolicy(@Nullable RestorePolicyPropertiesArgs restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }

@@ -284,152 +284,152 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.reso
     	      this.vmScaleSetName = defaults.vmScaleSetName;
         }
 
-        public Builder setAsyncExecution(@Nullable Input<Boolean> asyncExecution) {
+        public Builder asyncExecution(@Nullable Input<Boolean> asyncExecution) {
             this.asyncExecution = asyncExecution;
             return this;
         }
 
-        public Builder setAsyncExecution(@Nullable Boolean asyncExecution) {
+        public Builder asyncExecution(@Nullable Boolean asyncExecution) {
             this.asyncExecution = Input.ofNullable(asyncExecution);
             return this;
         }
 
-        public Builder setErrorBlobUri(@Nullable Input<String> errorBlobUri) {
+        public Builder errorBlobUri(@Nullable Input<String> errorBlobUri) {
             this.errorBlobUri = errorBlobUri;
             return this;
         }
 
-        public Builder setErrorBlobUri(@Nullable String errorBlobUri) {
+        public Builder errorBlobUri(@Nullable String errorBlobUri) {
             this.errorBlobUri = Input.ofNullable(errorBlobUri);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOutputBlobUri(@Nullable Input<String> outputBlobUri) {
+        public Builder outputBlobUri(@Nullable Input<String> outputBlobUri) {
             this.outputBlobUri = outputBlobUri;
             return this;
         }
 
-        public Builder setOutputBlobUri(@Nullable String outputBlobUri) {
+        public Builder outputBlobUri(@Nullable String outputBlobUri) {
             this.outputBlobUri = Input.ofNullable(outputBlobUri);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<RunCommandInputParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<RunCommandInputParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProtectedParameters(@Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters) {
+        public Builder protectedParameters(@Nullable Input<List<RunCommandInputParameterArgs>> protectedParameters) {
             this.protectedParameters = protectedParameters;
             return this;
         }
 
-        public Builder setProtectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
+        public Builder protectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
             this.protectedParameters = Input.ofNullable(protectedParameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunAsPassword(@Nullable Input<String> runAsPassword) {
+        public Builder runAsPassword(@Nullable Input<String> runAsPassword) {
             this.runAsPassword = runAsPassword;
             return this;
         }
 
-        public Builder setRunAsPassword(@Nullable String runAsPassword) {
+        public Builder runAsPassword(@Nullable String runAsPassword) {
             this.runAsPassword = Input.ofNullable(runAsPassword);
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Input<String> runAsUser) {
+        public Builder runAsUser(@Nullable Input<String> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable String runAsUser) {
+        public Builder runAsUser(@Nullable String runAsUser) {
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder setRunCommandName(@Nullable Input<String> runCommandName) {
+        public Builder runCommandName(@Nullable Input<String> runCommandName) {
             this.runCommandName = runCommandName;
             return this;
         }
 
-        public Builder setRunCommandName(@Nullable String runCommandName) {
+        public Builder runCommandName(@Nullable String runCommandName) {
             this.runCommandName = Input.ofNullable(runCommandName);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source) {
+        public Builder source(@Nullable Input<VirtualMachineRunCommandScriptSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
+        public Builder source(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setVmScaleSetName(Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(Input<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
 
-        public Builder setVmScaleSetName(String vmScaleSetName) {
+        public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }

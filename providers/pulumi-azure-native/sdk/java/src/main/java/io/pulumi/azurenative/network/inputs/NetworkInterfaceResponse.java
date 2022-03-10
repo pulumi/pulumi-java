@@ -437,122 +437,122 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setDnsSettings(@Nullable NetworkInterfaceDnsSettingsResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDscpConfiguration(SubResourceResponse dscpConfiguration) {
+        public Builder dscpConfiguration(SubResourceResponse dscpConfiguration) {
             this.dscpConfiguration = Objects.requireNonNull(dscpConfiguration);
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Boolean enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setHostedWorkloads(List<String> hostedWorkloads) {
+        public Builder hostedWorkloads(List<String> hostedWorkloads) {
             this.hostedWorkloads = Objects.requireNonNull(hostedWorkloads);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMacAddress(String macAddress) {
+        public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
 
-        public Builder setMigrationPhase(@Nullable String migrationPhase) {
+        public Builder migrationPhase(@Nullable String migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setPrimary(Boolean primary) {
+        public Builder primary(Boolean primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setPrivateEndpoint(PrivateEndpointResponse privateEndpoint) {
+        public Builder privateEndpoint(PrivateEndpointResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateLinkService(@Nullable PrivateLinkServiceResponse privateLinkService) {
+        public Builder privateLinkService(@Nullable PrivateLinkServiceResponse privateLinkService) {
             this.privateLinkService = privateLinkService;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> tapConfigurations) {
+        public Builder tapConfigurations(List<NetworkInterfaceTapConfigurationResponse> tapConfigurations) {
             this.tapConfigurations = Objects.requireNonNull(tapConfigurations);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachine(SubResourceResponse virtualMachine) {
+        public Builder virtualMachine(SubResourceResponse virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }

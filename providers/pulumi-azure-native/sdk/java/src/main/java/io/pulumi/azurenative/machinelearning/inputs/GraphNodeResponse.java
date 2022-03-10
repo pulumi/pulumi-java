@@ -108,22 +108,22 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setInputId(@Nullable String inputId) {
+        public Builder inputId(@Nullable String inputId) {
             this.inputId = inputId;
             return this;
         }
 
-        public Builder setOutputId(@Nullable String outputId) {
+        public Builder outputId(@Nullable String outputId) {
             this.outputId = outputId;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }

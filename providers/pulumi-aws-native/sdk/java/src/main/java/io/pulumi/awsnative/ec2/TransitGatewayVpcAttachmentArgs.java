@@ -129,72 +129,72 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAddSubnetIds(@Nullable Input<List<String>> addSubnetIds) {
+        public Builder addSubnetIds(@Nullable Input<List<String>> addSubnetIds) {
             this.addSubnetIds = addSubnetIds;
             return this;
         }
 
-        public Builder setAddSubnetIds(@Nullable List<String> addSubnetIds) {
+        public Builder addSubnetIds(@Nullable List<String> addSubnetIds) {
             this.addSubnetIds = Input.ofNullable(addSubnetIds);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<OptionsPropertiesArgs> options) {
+        public Builder options(@Nullable Input<OptionsPropertiesArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsPropertiesArgs options) {
+        public Builder options(@Nullable OptionsPropertiesArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setRemoveSubnetIds(@Nullable Input<List<String>> removeSubnetIds) {
+        public Builder removeSubnetIds(@Nullable Input<List<String>> removeSubnetIds) {
             this.removeSubnetIds = removeSubnetIds;
             return this;
         }
 
-        public Builder setRemoveSubnetIds(@Nullable List<String> removeSubnetIds) {
+        public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
             this.removeSubnetIds = Input.ofNullable(removeSubnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TransitGatewayVpcAttachmentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TransitGatewayVpcAttachmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayVpcAttachmentTagArgs> tags) {
+        public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable Input<String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Input<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Input.ofNullable(transitGatewayId);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

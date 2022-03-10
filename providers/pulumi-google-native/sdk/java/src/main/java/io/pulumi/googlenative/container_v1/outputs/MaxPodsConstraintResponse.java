@@ -48,7 +48,7 @@ public final class MaxPodsConstraintResponse {
     	      this.maxPodsPerNode = defaults.maxPodsPerNode;
         }
 
-        public Builder setMaxPodsPerNode(String maxPodsPerNode) {
+        public Builder maxPodsPerNode(String maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }

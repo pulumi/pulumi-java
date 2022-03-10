@@ -69,12 +69,12 @@ public final class DistributionTrustedKeyGroup {
     	      this.items = defaults.items;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DistributionTrustedKeyGroupItem> items) {
+        public Builder items(@Nullable List<DistributionTrustedKeyGroupItem> items) {
             this.items = items;
             return this;
         }

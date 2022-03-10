@@ -50,7 +50,7 @@ public final class CxAgentSpeechToTextSettings {
     	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
         }
 
-        public Builder setEnableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
+        public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }

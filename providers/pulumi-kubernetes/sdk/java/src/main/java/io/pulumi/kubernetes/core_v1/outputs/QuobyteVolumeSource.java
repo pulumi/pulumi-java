@@ -132,32 +132,32 @@ public final class QuobyteVolumeSource {
     	      this.volume = defaults.volume;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setRegistry(String registry) {
+        public Builder registry(String registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }
 
-        public Builder setVolume(String volume) {
+        public Builder volume(String volume) {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }

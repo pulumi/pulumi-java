@@ -154,37 +154,37 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userTenantId = defaults.userTenantId;
         }
 
-        public Builder setUserAltSecId(@Nullable String userAltSecId) {
+        public Builder userAltSecId(@Nullable String userAltSecId) {
             this.userAltSecId = userAltSecId;
             return this;
         }
 
-        public Builder setUserIdp(@Nullable String userIdp) {
+        public Builder userIdp(@Nullable String userIdp) {
             this.userIdp = userIdp;
             return this;
         }
 
-        public Builder setUserIss(@Nullable String userIss) {
+        public Builder userIss(@Nullable String userIss) {
             this.userIss = userIss;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserObjectId(@Nullable String userObjectId) {
+        public Builder userObjectId(@Nullable String userObjectId) {
             this.userObjectId = userObjectId;
             return this;
         }
 
-        public Builder setUserPuId(@Nullable String userPuId) {
+        public Builder userPuId(@Nullable String userPuId) {
             this.userPuId = userPuId;
             return this;
         }
 
-        public Builder setUserTenantId(@Nullable String userTenantId) {
+        public Builder userTenantId(@Nullable String userTenantId) {
             this.userTenantId = userTenantId;
             return this;
         }

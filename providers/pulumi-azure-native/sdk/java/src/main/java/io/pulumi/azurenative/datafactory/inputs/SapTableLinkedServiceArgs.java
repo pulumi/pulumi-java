@@ -387,212 +387,212 @@ public final class SapTableLinkedServiceArgs extends io.pulumi.resources.Resourc
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<Object> clientId) {
+        public Builder clientId(@Nullable Input<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<Object> language) {
+        public Builder language(@Nullable Input<Object> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable Object language) {
+        public Builder language(@Nullable Object language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setLogonGroup(@Nullable Input<Object> logonGroup) {
+        public Builder logonGroup(@Nullable Input<Object> logonGroup) {
             this.logonGroup = logonGroup;
             return this;
         }
 
-        public Builder setLogonGroup(@Nullable Object logonGroup) {
+        public Builder logonGroup(@Nullable Object logonGroup) {
             this.logonGroup = Input.ofNullable(logonGroup);
             return this;
         }
 
-        public Builder setMessageServer(@Nullable Input<Object> messageServer) {
+        public Builder messageServer(@Nullable Input<Object> messageServer) {
             this.messageServer = messageServer;
             return this;
         }
 
-        public Builder setMessageServer(@Nullable Object messageServer) {
+        public Builder messageServer(@Nullable Object messageServer) {
             this.messageServer = Input.ofNullable(messageServer);
             return this;
         }
 
-        public Builder setMessageServerService(@Nullable Input<Object> messageServerService) {
+        public Builder messageServerService(@Nullable Input<Object> messageServerService) {
             this.messageServerService = messageServerService;
             return this;
         }
 
-        public Builder setMessageServerService(@Nullable Object messageServerService) {
+        public Builder messageServerService(@Nullable Object messageServerService) {
             this.messageServerService = Input.ofNullable(messageServerService);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServer(@Nullable Input<Object> server) {
+        public Builder server(@Nullable Input<Object> server) {
             this.server = server;
             return this;
         }
 
-        public Builder setServer(@Nullable Object server) {
+        public Builder server(@Nullable Object server) {
             this.server = Input.ofNullable(server);
             return this;
         }
 
-        public Builder setSncLibraryPath(@Nullable Input<Object> sncLibraryPath) {
+        public Builder sncLibraryPath(@Nullable Input<Object> sncLibraryPath) {
             this.sncLibraryPath = sncLibraryPath;
             return this;
         }
 
-        public Builder setSncLibraryPath(@Nullable Object sncLibraryPath) {
+        public Builder sncLibraryPath(@Nullable Object sncLibraryPath) {
             this.sncLibraryPath = Input.ofNullable(sncLibraryPath);
             return this;
         }
 
-        public Builder setSncMode(@Nullable Input<Object> sncMode) {
+        public Builder sncMode(@Nullable Input<Object> sncMode) {
             this.sncMode = sncMode;
             return this;
         }
 
-        public Builder setSncMode(@Nullable Object sncMode) {
+        public Builder sncMode(@Nullable Object sncMode) {
             this.sncMode = Input.ofNullable(sncMode);
             return this;
         }
 
-        public Builder setSncMyName(@Nullable Input<Object> sncMyName) {
+        public Builder sncMyName(@Nullable Input<Object> sncMyName) {
             this.sncMyName = sncMyName;
             return this;
         }
 
-        public Builder setSncMyName(@Nullable Object sncMyName) {
+        public Builder sncMyName(@Nullable Object sncMyName) {
             this.sncMyName = Input.ofNullable(sncMyName);
             return this;
         }
 
-        public Builder setSncPartnerName(@Nullable Input<Object> sncPartnerName) {
+        public Builder sncPartnerName(@Nullable Input<Object> sncPartnerName) {
             this.sncPartnerName = sncPartnerName;
             return this;
         }
 
-        public Builder setSncPartnerName(@Nullable Object sncPartnerName) {
+        public Builder sncPartnerName(@Nullable Object sncPartnerName) {
             this.sncPartnerName = Input.ofNullable(sncPartnerName);
             return this;
         }
 
-        public Builder setSncQop(@Nullable Input<Object> sncQop) {
+        public Builder sncQop(@Nullable Input<Object> sncQop) {
             this.sncQop = sncQop;
             return this;
         }
 
-        public Builder setSncQop(@Nullable Object sncQop) {
+        public Builder sncQop(@Nullable Object sncQop) {
             this.sncQop = Input.ofNullable(sncQop);
             return this;
         }
 
-        public Builder setSystemId(@Nullable Input<Object> systemId) {
+        public Builder systemId(@Nullable Input<Object> systemId) {
             this.systemId = systemId;
             return this;
         }
 
-        public Builder setSystemId(@Nullable Object systemId) {
+        public Builder systemId(@Nullable Object systemId) {
             this.systemId = Input.ofNullable(systemId);
             return this;
         }
 
-        public Builder setSystemNumber(@Nullable Input<Object> systemNumber) {
+        public Builder systemNumber(@Nullable Input<Object> systemNumber) {
             this.systemNumber = systemNumber;
             return this;
         }
 
-        public Builder setSystemNumber(@Nullable Object systemNumber) {
+        public Builder systemNumber(@Nullable Object systemNumber) {
             this.systemNumber = Input.ofNullable(systemNumber);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<Object> userName) {
+        public Builder userName(@Nullable Input<Object> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable Object userName) {
+        public Builder userName(@Nullable Object userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

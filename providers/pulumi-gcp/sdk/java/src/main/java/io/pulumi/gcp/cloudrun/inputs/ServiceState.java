@@ -190,82 +190,82 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.traffics = defaults.traffics;
         }
 
-        public Builder setAutogenerateRevisionName(@Nullable Input<Boolean> autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(@Nullable Input<Boolean> autogenerateRevisionName) {
             this.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
 
-        public Builder setAutogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
             this.autogenerateRevisionName = Input.ofNullable(autogenerateRevisionName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ServiceMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Input<ServiceMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ServiceMetadataGetArgs metadata) {
+        public Builder metadata(@Nullable ServiceMetadataGetArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<ServiceStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<ServiceStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ServiceStatusGetArgs> statuses) {
+        public Builder statuses(@Nullable List<ServiceStatusGetArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<ServiceTemplateGetArgs> template) {
+        public Builder template(@Nullable Input<ServiceTemplateGetArgs> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable ServiceTemplateGetArgs template) {
+        public Builder template(@Nullable ServiceTemplateGetArgs template) {
             this.template = Input.ofNullable(template);
             return this;
         }
 
-        public Builder setTraffics(@Nullable Input<List<ServiceTrafficGetArgs>> traffics) {
+        public Builder traffics(@Nullable Input<List<ServiceTrafficGetArgs>> traffics) {
             this.traffics = traffics;
             return this;
         }
 
-        public Builder setTraffics(@Nullable List<ServiceTrafficGetArgs> traffics) {
+        public Builder traffics(@Nullable List<ServiceTrafficGetArgs> traffics) {
             this.traffics = Input.ofNullable(traffics);
             return this;
         }

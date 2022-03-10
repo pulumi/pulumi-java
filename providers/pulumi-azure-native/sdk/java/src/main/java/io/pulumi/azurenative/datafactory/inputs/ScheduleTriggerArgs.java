@@ -127,52 +127,52 @@ public final class ScheduleTriggerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Input.ofNullable(pipelines);
             return this;
         }
 
-        public Builder setRecurrence(Input<ScheduleTriggerRecurrenceArgs> recurrence) {
+        public Builder recurrence(Input<ScheduleTriggerRecurrenceArgs> recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setRecurrence(ScheduleTriggerRecurrenceArgs recurrence) {
+        public Builder recurrence(ScheduleTriggerRecurrenceArgs recurrence) {
             this.recurrence = Input.of(Objects.requireNonNull(recurrence));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

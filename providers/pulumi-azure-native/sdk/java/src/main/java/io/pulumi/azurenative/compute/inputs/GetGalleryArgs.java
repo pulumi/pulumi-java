@@ -86,17 +86,17 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
     	      this.select = defaults.select;
         }
 
-        public Builder setGalleryName(String galleryName) {
+        public Builder galleryName(String galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSelect(@Nullable String select) {
+        public Builder select(@Nullable String select) {
             this.select = select;
             return this;
         }

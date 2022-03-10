@@ -72,17 +72,17 @@ public final class GetReferenceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.referenceId = defaults.referenceId;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setReferenceId(String referenceId) {
+        public Builder referenceId(String referenceId) {
             this.referenceId = Objects.requireNonNull(referenceId);
             return this;
         }

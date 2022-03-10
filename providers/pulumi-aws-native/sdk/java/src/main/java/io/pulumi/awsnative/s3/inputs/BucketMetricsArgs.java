@@ -63,22 +63,22 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setEventThreshold(@Nullable Input<BucketReplicationTimeValueArgs> eventThreshold) {
+        public Builder eventThreshold(@Nullable Input<BucketReplicationTimeValueArgs> eventThreshold) {
             this.eventThreshold = eventThreshold;
             return this;
         }
 
-        public Builder setEventThreshold(@Nullable BucketReplicationTimeValueArgs eventThreshold) {
+        public Builder eventThreshold(@Nullable BucketReplicationTimeValueArgs eventThreshold) {
             this.eventThreshold = Input.ofNullable(eventThreshold);
             return this;
         }
 
-        public Builder setStatus(Input<BucketMetricsStatus> status) {
+        public Builder status(Input<BucketMetricsStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(BucketMetricsStatus status) {
+        public Builder status(BucketMetricsStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

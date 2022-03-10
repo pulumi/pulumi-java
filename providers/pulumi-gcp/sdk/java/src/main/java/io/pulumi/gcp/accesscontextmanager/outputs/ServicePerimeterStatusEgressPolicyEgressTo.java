@@ -80,12 +80,12 @@ public final class ServicePerimeterStatusEgressPolicyEgressTo {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setOperations(@Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperation> operations) {
+        public Builder operations(@Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperation> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }

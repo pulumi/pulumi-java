@@ -67,12 +67,12 @@ public final class ApiDeploymentParameterMetadataSetResponse {
     	      this.redisCacheConnectionString = defaults.redisCacheConnectionString;
         }
 
-        public Builder setPackageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
+        public Builder packageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
             this.packageContentLink = packageContentLink;
             return this;
         }
 
-        public Builder setRedisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
+        public Builder redisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
         }

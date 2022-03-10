@@ -72,12 +72,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     	      this.text = defaults.text;
         }
 
-        public Builder setPostbackData(String postbackData) {
+        public Builder postbackData(String postbackData) {
             this.postbackData = Objects.requireNonNull(postbackData);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

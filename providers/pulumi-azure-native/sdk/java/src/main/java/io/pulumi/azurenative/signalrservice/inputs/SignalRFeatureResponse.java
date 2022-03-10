@@ -93,17 +93,17 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setFlag(String flag) {
+        public Builder flag(String flag) {
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -83,17 +83,17 @@ public final class EnterprisePolicyIdentityResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSystemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
+        public Builder systemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
             this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

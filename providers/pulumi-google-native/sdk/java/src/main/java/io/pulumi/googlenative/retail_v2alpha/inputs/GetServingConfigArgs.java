@@ -86,22 +86,22 @@ public final class GetServingConfigArgs extends io.pulumi.resources.InvokeArgs {
     	      this.servingConfigId = defaults.servingConfigId;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setServingConfigId(String servingConfigId) {
+        public Builder servingConfigId(String servingConfigId) {
             this.servingConfigId = Objects.requireNonNull(servingConfigId);
             return this;
         }

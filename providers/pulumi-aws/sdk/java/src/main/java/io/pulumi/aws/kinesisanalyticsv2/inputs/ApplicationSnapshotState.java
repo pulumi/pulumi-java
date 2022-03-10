@@ -103,42 +103,42 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setApplicationVersionId(@Nullable Input<Integer> applicationVersionId) {
+        public Builder applicationVersionId(@Nullable Input<Integer> applicationVersionId) {
             this.applicationVersionId = applicationVersionId;
             return this;
         }
 
-        public Builder setApplicationVersionId(@Nullable Integer applicationVersionId) {
+        public Builder applicationVersionId(@Nullable Integer applicationVersionId) {
             this.applicationVersionId = Input.ofNullable(applicationVersionId);
             return this;
         }
 
-        public Builder setSnapshotCreationTimestamp(@Nullable Input<String> snapshotCreationTimestamp) {
+        public Builder snapshotCreationTimestamp(@Nullable Input<String> snapshotCreationTimestamp) {
             this.snapshotCreationTimestamp = snapshotCreationTimestamp;
             return this;
         }
 
-        public Builder setSnapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
+        public Builder snapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
             this.snapshotCreationTimestamp = Input.ofNullable(snapshotCreationTimestamp);
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Input<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable String snapshotName) {
+        public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Input.ofNullable(snapshotName);
             return this;
         }

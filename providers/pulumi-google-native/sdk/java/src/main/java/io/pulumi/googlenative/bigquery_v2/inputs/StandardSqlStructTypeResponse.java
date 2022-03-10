@@ -48,7 +48,7 @@ public final class StandardSqlStructTypeResponse extends io.pulumi.resources.Inv
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(List<StandardSqlFieldResponse> fields) {
+        public Builder fields(List<StandardSqlFieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }

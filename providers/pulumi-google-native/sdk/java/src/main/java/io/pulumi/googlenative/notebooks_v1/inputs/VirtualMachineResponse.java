@@ -89,17 +89,17 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
     	      this.virtualMachineConfig = defaults.virtualMachineConfig;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setVirtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
+        public Builder virtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
         }

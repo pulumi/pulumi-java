@@ -78,32 +78,32 @@ public final class UserIdentityInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.lastName = defaults.lastName;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setFirstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Input<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = Input.ofNullable(firstName);
             return this;
         }
 
-        public Builder setLastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Input<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = Input.ofNullable(lastName);
             return this;
         }

@@ -66,12 +66,12 @@ public final class MetadataIntegrationResponse {
     	      this.dataplexConfig = defaults.dataplexConfig;
         }
 
-        public Builder setDataCatalogConfig(DataCatalogConfigResponse dataCatalogConfig) {
+        public Builder dataCatalogConfig(DataCatalogConfigResponse dataCatalogConfig) {
             this.dataCatalogConfig = Objects.requireNonNull(dataCatalogConfig);
             return this;
         }
 
-        public Builder setDataplexConfig(DataplexConfigResponse dataplexConfig) {
+        public Builder dataplexConfig(DataplexConfigResponse dataplexConfig) {
             this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
             return this;
         }

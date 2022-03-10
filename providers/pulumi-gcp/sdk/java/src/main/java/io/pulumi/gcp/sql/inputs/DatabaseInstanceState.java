@@ -390,202 +390,202 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
     	      this.settings = defaults.settings;
         }
 
-        public Builder setClone(@Nullable Input<DatabaseInstanceCloneGetArgs> clone) {
+        public Builder clone(@Nullable Input<DatabaseInstanceCloneGetArgs> clone) {
             this.clone = clone;
             return this;
         }
 
-        public Builder setClone(@Nullable DatabaseInstanceCloneGetArgs clone) {
+        public Builder clone(@Nullable DatabaseInstanceCloneGetArgs clone) {
             this.clone = Input.ofNullable(clone);
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable Input<String> databaseVersion) {
+        public Builder databaseVersion(@Nullable Input<String> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable String databaseVersion) {
+        public Builder databaseVersion(@Nullable String databaseVersion) {
             this.databaseVersion = Input.ofNullable(databaseVersion);
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = Input.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder setEncryptionKeyName(@Nullable Input<String> encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable Input<String> encryptionKeyName) {
             this.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
-        public Builder setEncryptionKeyName(@Nullable String encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
             this.encryptionKeyName = Input.ofNullable(encryptionKeyName);
             return this;
         }
 
-        public Builder setFirstIpAddress(@Nullable Input<String> firstIpAddress) {
+        public Builder firstIpAddress(@Nullable Input<String> firstIpAddress) {
             this.firstIpAddress = firstIpAddress;
             return this;
         }
 
-        public Builder setFirstIpAddress(@Nullable String firstIpAddress) {
+        public Builder firstIpAddress(@Nullable String firstIpAddress) {
             this.firstIpAddress = Input.ofNullable(firstIpAddress);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<DatabaseInstanceIpAddressGetArgs> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable String masterInstanceName) {
+        public Builder masterInstanceName(@Nullable String masterInstanceName) {
             this.masterInstanceName = Input.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Input.ofNullable(publicIpAddress);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationGetArgs replicaConfiguration) {
             this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder setRestoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext) {
             this.restoreBackupContext = restoreBackupContext;
             return this;
         }
 
-        public Builder setRestoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextGetArgs restoreBackupContext) {
             this.restoreBackupContext = Input.ofNullable(restoreBackupContext);
             return this;
         }
 
-        public Builder setRootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Input<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
-        public Builder setRootPassword(@Nullable String rootPassword) {
+        public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Input.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setServerCaCerts(@Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable Input<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts) {
             this.serverCaCerts = serverCaCerts;
             return this;
         }
 
-        public Builder setServerCaCerts(@Nullable List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
+        public Builder serverCaCerts(@Nullable List<DatabaseInstanceServerCaCertGetArgs> serverCaCerts) {
             this.serverCaCerts = Input.ofNullable(serverCaCerts);
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Input.ofNullable(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<DatabaseInstanceSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Input<DatabaseInstanceSettingsGetArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable DatabaseInstanceSettingsGetArgs settings) {
+        public Builder settings(@Nullable DatabaseInstanceSettingsGetArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

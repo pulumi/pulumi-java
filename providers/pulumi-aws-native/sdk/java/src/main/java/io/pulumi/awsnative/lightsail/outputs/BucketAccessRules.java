@@ -68,12 +68,12 @@ public final class BucketAccessRules {
     	      this.getObject = defaults.getObject;
         }
 
-        public Builder setAllowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
+        public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
             this.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
 
-        public Builder setGetObject(@Nullable String getObject) {
+        public Builder getObject(@Nullable String getObject) {
             this.getObject = getObject;
             return this;
         }

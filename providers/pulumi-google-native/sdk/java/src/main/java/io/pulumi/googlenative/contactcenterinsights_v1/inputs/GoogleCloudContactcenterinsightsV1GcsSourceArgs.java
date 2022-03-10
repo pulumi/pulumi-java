@@ -74,22 +74,22 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
     	      this.transcriptUri = defaults.transcriptUri;
         }
 
-        public Builder setAudioUri(@Nullable Input<String> audioUri) {
+        public Builder audioUri(@Nullable Input<String> audioUri) {
             this.audioUri = audioUri;
             return this;
         }
 
-        public Builder setAudioUri(@Nullable String audioUri) {
+        public Builder audioUri(@Nullable String audioUri) {
             this.audioUri = Input.ofNullable(audioUri);
             return this;
         }
 
-        public Builder setTranscriptUri(@Nullable Input<String> transcriptUri) {
+        public Builder transcriptUri(@Nullable Input<String> transcriptUri) {
             this.transcriptUri = transcriptUri;
             return this;
         }
 
-        public Builder setTranscriptUri(@Nullable String transcriptUri) {
+        public Builder transcriptUri(@Nullable String transcriptUri) {
             this.transcriptUri = Input.ofNullable(transcriptUri);
             return this;
         }

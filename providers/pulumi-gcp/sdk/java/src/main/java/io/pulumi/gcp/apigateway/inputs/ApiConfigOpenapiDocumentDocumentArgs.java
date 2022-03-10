@@ -69,22 +69,22 @@ public final class ApiConfigOpenapiDocumentDocumentArgs extends io.pulumi.resour
     	      this.path = defaults.path;
         }
 
-        public Builder setContents(Input<String> contents) {
+        public Builder contents(Input<String> contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
-        public Builder setContents(String contents) {
+        public Builder contents(String contents) {
             this.contents = Input.of(Objects.requireNonNull(contents));
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

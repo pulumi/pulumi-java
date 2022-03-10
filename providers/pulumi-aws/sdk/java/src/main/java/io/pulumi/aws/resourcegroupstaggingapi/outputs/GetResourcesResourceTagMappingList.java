@@ -84,17 +84,17 @@ public final class GetResourcesResourceTagMappingList {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComplianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
+        public Builder complianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
             this.complianceDetails = Objects.requireNonNull(complianceDetails);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

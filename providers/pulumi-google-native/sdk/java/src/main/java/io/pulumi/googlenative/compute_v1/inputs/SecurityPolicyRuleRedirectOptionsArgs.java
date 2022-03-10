@@ -71,22 +71,22 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setType(@Nullable Input<SecurityPolicyRuleRedirectOptionsType> type) {
+        public Builder type(@Nullable Input<SecurityPolicyRuleRedirectOptionsType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SecurityPolicyRuleRedirectOptionsType type) {
+        public Builder type(@Nullable SecurityPolicyRuleRedirectOptionsType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

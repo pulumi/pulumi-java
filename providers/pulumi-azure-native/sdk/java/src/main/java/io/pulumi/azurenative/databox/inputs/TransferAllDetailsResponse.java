@@ -91,17 +91,17 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
     	      this.transferAllFiles = defaults.transferAllFiles;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setTransferAllBlobs(@Nullable Boolean transferAllBlobs) {
+        public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
             this.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
-        public Builder setTransferAllFiles(@Nullable Boolean transferAllFiles) {
+        public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
             this.transferAllFiles = transferAllFiles;
             return this;
         }

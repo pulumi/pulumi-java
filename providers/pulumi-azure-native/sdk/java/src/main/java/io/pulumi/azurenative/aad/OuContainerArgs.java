@@ -134,62 +134,62 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spn = defaults.spn;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setDomainServiceName(Input<String> domainServiceName) {
+        public Builder domainServiceName(Input<String> domainServiceName) {
             this.domainServiceName = Objects.requireNonNull(domainServiceName);
             return this;
         }
 
-        public Builder setDomainServiceName(String domainServiceName) {
+        public Builder domainServiceName(String domainServiceName) {
             this.domainServiceName = Input.of(Objects.requireNonNull(domainServiceName));
             return this;
         }
 
-        public Builder setOuContainerName(@Nullable Input<String> ouContainerName) {
+        public Builder ouContainerName(@Nullable Input<String> ouContainerName) {
             this.ouContainerName = ouContainerName;
             return this;
         }
 
-        public Builder setOuContainerName(@Nullable String ouContainerName) {
+        public Builder ouContainerName(@Nullable String ouContainerName) {
             this.ouContainerName = Input.ofNullable(ouContainerName);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSpn(@Nullable Input<String> spn) {
+        public Builder spn(@Nullable Input<String> spn) {
             this.spn = spn;
             return this;
         }
 
-        public Builder setSpn(@Nullable String spn) {
+        public Builder spn(@Nullable String spn) {
             this.spn = Input.ofNullable(spn);
             return this;
         }

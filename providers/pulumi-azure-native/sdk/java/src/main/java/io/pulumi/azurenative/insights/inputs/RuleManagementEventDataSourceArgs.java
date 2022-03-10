@@ -268,142 +268,142 @@ public final class RuleManagementEventDataSourceArgs extends io.pulumi.resources
     	      this.subStatus = defaults.subStatus;
         }
 
-        public Builder setClaims(@Nullable Input<RuleManagementEventClaimsDataSourceArgs> claims) {
+        public Builder claims(@Nullable Input<RuleManagementEventClaimsDataSourceArgs> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setClaims(@Nullable RuleManagementEventClaimsDataSourceArgs claims) {
+        public Builder claims(@Nullable RuleManagementEventClaimsDataSourceArgs claims) {
             this.claims = Input.ofNullable(claims);
             return this;
         }
 
-        public Builder setEventName(@Nullable Input<String> eventName) {
+        public Builder eventName(@Nullable Input<String> eventName) {
             this.eventName = eventName;
             return this;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = Input.ofNullable(eventName);
             return this;
         }
 
-        public Builder setEventSource(@Nullable Input<String> eventSource) {
+        public Builder eventSource(@Nullable Input<String> eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = Input.ofNullable(eventSource);
             return this;
         }
 
-        public Builder setLegacyResourceId(@Nullable Input<String> legacyResourceId) {
+        public Builder legacyResourceId(@Nullable Input<String> legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
-        public Builder setLegacyResourceId(@Nullable String legacyResourceId) {
+        public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = Input.ofNullable(legacyResourceId);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<String> level) {
+        public Builder level(@Nullable Input<String> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Input.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOperationName(@Nullable Input<String> operationName) {
+        public Builder operationName(@Nullable Input<String> operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = Input.ofNullable(operationName);
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Input<String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Input<String> resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = Input.ofNullable(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable Input<String> resourceLocation) {
+        public Builder resourceLocation(@Nullable Input<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = Input.ofNullable(resourceLocation);
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable Input<String> resourceProviderName) {
+        public Builder resourceProviderName(@Nullable Input<String> resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable String resourceProviderName) {
+        public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = Input.ofNullable(resourceProviderName);
             return this;
         }
 
-        public Builder setResourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Input<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubStatus(@Nullable Input<String> subStatus) {
+        public Builder subStatus(@Nullable Input<String> subStatus) {
             this.subStatus = subStatus;
             return this;
         }
 
-        public Builder setSubStatus(@Nullable String subStatus) {
+        public Builder subStatus(@Nullable String subStatus) {
             this.subStatus = Input.ofNullable(subStatus);
             return this;
         }

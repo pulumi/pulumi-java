@@ -76,22 +76,22 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder setCustomImages(@Nullable Input<List<DomainCustomImageArgs>> customImages) {
+        public Builder customImages(@Nullable Input<List<DomainCustomImageArgs>> customImages) {
             this.customImages = customImages;
             return this;
         }
 
-        public Builder setCustomImages(@Nullable List<DomainCustomImageArgs> customImages) {
+        public Builder customImages(@Nullable List<DomainCustomImageArgs> customImages) {
             this.customImages = Input.ofNullable(customImages);
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Input<DomainResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }

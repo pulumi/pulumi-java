@@ -107,22 +107,22 @@ public final class MetricAbsenceResponse extends io.pulumi.resources.InvokeArgs 
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(List<AggregationResponse> aggregations) {
+        public Builder aggregations(List<AggregationResponse> aggregations) {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setTrigger(TriggerResponse trigger) {
+        public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

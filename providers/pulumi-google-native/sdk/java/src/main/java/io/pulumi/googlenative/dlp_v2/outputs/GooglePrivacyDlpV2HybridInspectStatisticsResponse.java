@@ -81,17 +81,17 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
     	      this.processedCount = defaults.processedCount;
         }
 
-        public Builder setAbortedCount(String abortedCount) {
+        public Builder abortedCount(String abortedCount) {
             this.abortedCount = Objects.requireNonNull(abortedCount);
             return this;
         }
 
-        public Builder setPendingCount(String pendingCount) {
+        public Builder pendingCount(String pendingCount) {
             this.pendingCount = Objects.requireNonNull(pendingCount);
             return this;
         }
 
-        public Builder setProcessedCount(String processedCount) {
+        public Builder processedCount(String processedCount) {
             this.processedCount = Objects.requireNonNull(processedCount);
             return this;
         }

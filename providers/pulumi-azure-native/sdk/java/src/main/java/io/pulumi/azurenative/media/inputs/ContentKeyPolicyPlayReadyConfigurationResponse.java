@@ -93,17 +93,17 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends io.pul
     	      this.responseCustomData = defaults.responseCustomData;
         }
 
-        public Builder setLicenses(List<ContentKeyPolicyPlayReadyLicenseResponse> licenses) {
+        public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseResponse> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResponseCustomData(@Nullable String responseCustomData) {
+        public Builder responseCustomData(@Nullable String responseCustomData) {
             this.responseCustomData = responseCustomData;
             return this;
         }

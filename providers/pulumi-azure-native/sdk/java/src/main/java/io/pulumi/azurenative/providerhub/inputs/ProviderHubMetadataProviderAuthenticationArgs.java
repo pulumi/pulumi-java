@@ -49,12 +49,12 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(Input<List<String>> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
 
-        public Builder setAllowedAudiences(List<String> allowedAudiences) {
+        public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Input.of(Objects.requireNonNull(allowedAudiences));
             return this;
         }

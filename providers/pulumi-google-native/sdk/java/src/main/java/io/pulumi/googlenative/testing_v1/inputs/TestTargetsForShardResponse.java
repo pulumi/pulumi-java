@@ -56,7 +56,7 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }

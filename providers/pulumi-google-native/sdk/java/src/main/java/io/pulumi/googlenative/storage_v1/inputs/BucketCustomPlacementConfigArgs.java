@@ -58,12 +58,12 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
     	      this.dataLocations = defaults.dataLocations;
         }
 
-        public Builder setDataLocations(@Nullable Input<List<String>> dataLocations) {
+        public Builder dataLocations(@Nullable Input<List<String>> dataLocations) {
             this.dataLocations = dataLocations;
             return this;
         }
 
-        public Builder setDataLocations(@Nullable List<String> dataLocations) {
+        public Builder dataLocations(@Nullable List<String> dataLocations) {
             this.dataLocations = Input.ofNullable(dataLocations);
             return this;
         }

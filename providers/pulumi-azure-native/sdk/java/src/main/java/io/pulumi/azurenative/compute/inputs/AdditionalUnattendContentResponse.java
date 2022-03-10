@@ -106,22 +106,22 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
     	      this.settingName = defaults.settingName;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setPassName(@Nullable String passName) {
+        public Builder passName(@Nullable String passName) {
             this.passName = passName;
             return this;
         }
 
-        public Builder setSettingName(@Nullable String settingName) {
+        public Builder settingName(@Nullable String settingName) {
             this.settingName = settingName;
             return this;
         }

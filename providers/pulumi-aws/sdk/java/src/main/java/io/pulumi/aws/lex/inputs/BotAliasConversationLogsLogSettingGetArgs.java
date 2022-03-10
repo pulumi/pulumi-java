@@ -118,52 +118,52 @@ public final class BotAliasConversationLogsLogSettingGetArgs extends io.pulumi.r
     	      this.resourcePrefix = defaults.resourcePrefix;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setLogType(Input<String> logType) {
+        public Builder logType(Input<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder setResourcePrefix(@Nullable Input<String> resourcePrefix) {
+        public Builder resourcePrefix(@Nullable Input<String> resourcePrefix) {
             this.resourcePrefix = resourcePrefix;
             return this;
         }
 
-        public Builder setResourcePrefix(@Nullable String resourcePrefix) {
+        public Builder resourcePrefix(@Nullable String resourcePrefix) {
             this.resourcePrefix = Input.ofNullable(resourcePrefix);
             return this;
         }

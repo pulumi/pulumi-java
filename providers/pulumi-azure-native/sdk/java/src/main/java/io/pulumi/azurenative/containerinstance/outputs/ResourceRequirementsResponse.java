@@ -68,12 +68,12 @@ public final class ResourceRequirementsResponse {
     	      this.requests = defaults.requests;
         }
 
-        public Builder setLimits(@Nullable ResourceLimitsResponse limits) {
+        public Builder limits(@Nullable ResourceLimitsResponse limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setRequests(ResourceRequestsResponse requests) {
+        public Builder requests(ResourceRequestsResponse requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }

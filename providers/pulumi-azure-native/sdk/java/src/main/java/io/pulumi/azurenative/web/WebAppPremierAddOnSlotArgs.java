@@ -231,122 +231,122 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMarketplaceOffer(@Nullable Input<String> marketplaceOffer) {
+        public Builder marketplaceOffer(@Nullable Input<String> marketplaceOffer) {
             this.marketplaceOffer = marketplaceOffer;
             return this;
         }
 
-        public Builder setMarketplaceOffer(@Nullable String marketplaceOffer) {
+        public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
             this.marketplaceOffer = Input.ofNullable(marketplaceOffer);
             return this;
         }
 
-        public Builder setMarketplacePublisher(@Nullable Input<String> marketplacePublisher) {
+        public Builder marketplacePublisher(@Nullable Input<String> marketplacePublisher) {
             this.marketplacePublisher = marketplacePublisher;
             return this;
         }
 
-        public Builder setMarketplacePublisher(@Nullable String marketplacePublisher) {
+        public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
             this.marketplacePublisher = Input.ofNullable(marketplacePublisher);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPremierAddOnName(@Nullable Input<String> premierAddOnName) {
+        public Builder premierAddOnName(@Nullable Input<String> premierAddOnName) {
             this.premierAddOnName = premierAddOnName;
             return this;
         }
 
-        public Builder setPremierAddOnName(@Nullable String premierAddOnName) {
+        public Builder premierAddOnName(@Nullable String premierAddOnName) {
             this.premierAddOnName = Input.ofNullable(premierAddOnName);
             return this;
         }
 
-        public Builder setProduct(@Nullable Input<String> product) {
+        public Builder product(@Nullable Input<String> product) {
             this.product = product;
             return this;
         }
 
-        public Builder setProduct(@Nullable String product) {
+        public Builder product(@Nullable String product) {
             this.product = Input.ofNullable(product);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Input<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }

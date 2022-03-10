@@ -86,32 +86,32 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable Input<String> vpcRegion) {
+        public Builder vpcRegion(@Nullable Input<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable String vpcRegion) {
+        public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = Input.ofNullable(vpcRegion);
             return this;
         }
 
-        public Builder setZoneId(Input<String> zoneId) {
+        public Builder zoneId(Input<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Input.of(Objects.requireNonNull(zoneId));
             return this;
         }

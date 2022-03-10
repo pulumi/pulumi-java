@@ -84,17 +84,17 @@ public final class DetectorModelAssetPropertyValue extends io.pulumi.resources.I
     	      this.value = defaults.value;
         }
 
-        public Builder setQuality(@Nullable String quality) {
+        public Builder quality(@Nullable String quality) {
             this.quality = quality;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
+        public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
-        public Builder setValue(DetectorModelAssetPropertyVariant value) {
+        public Builder value(DetectorModelAssetPropertyVariant value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

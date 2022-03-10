@@ -48,7 +48,7 @@ public final class AppEngineResponse {
     	      this.moduleId = defaults.moduleId;
         }
 
-        public Builder setModuleId(String moduleId) {
+        public Builder moduleId(String moduleId) {
             this.moduleId = Objects.requireNonNull(moduleId);
             return this;
         }

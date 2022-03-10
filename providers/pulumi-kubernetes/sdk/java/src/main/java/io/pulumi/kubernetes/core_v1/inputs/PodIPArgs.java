@@ -58,12 +58,12 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }

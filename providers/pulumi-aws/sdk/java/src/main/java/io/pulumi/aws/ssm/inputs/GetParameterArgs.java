@@ -71,12 +71,12 @@ public final class GetParameterArgs extends io.pulumi.resources.InvokeArgs {
     	      this.withDecryption = defaults.withDecryption;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setWithDecryption(@Nullable Boolean withDecryption) {
+        public Builder withDecryption(@Nullable Boolean withDecryption) {
             this.withDecryption = withDecryption;
             return this;
         }

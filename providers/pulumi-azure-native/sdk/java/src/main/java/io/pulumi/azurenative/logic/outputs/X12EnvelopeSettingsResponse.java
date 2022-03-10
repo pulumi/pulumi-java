@@ -421,122 +421,122 @@ public final class X12EnvelopeSettingsResponse {
     	      this.useControlStandardsIdAsRepetitionCharacter = defaults.useControlStandardsIdAsRepetitionCharacter;
         }
 
-        public Builder setControlStandardsId(Integer controlStandardsId) {
+        public Builder controlStandardsId(Integer controlStandardsId) {
             this.controlStandardsId = Objects.requireNonNull(controlStandardsId);
             return this;
         }
 
-        public Builder setControlVersionNumber(String controlVersionNumber) {
+        public Builder controlVersionNumber(String controlVersionNumber) {
             this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber);
             return this;
         }
 
-        public Builder setEnableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
+        public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
 
-        public Builder setFunctionalGroupId(@Nullable String functionalGroupId) {
+        public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
-        public Builder setGroupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
+        public Builder groupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
 
-        public Builder setGroupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
+        public Builder groupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
 
-        public Builder setGroupHeaderAgencyCode(String groupHeaderAgencyCode) {
+        public Builder groupHeaderAgencyCode(String groupHeaderAgencyCode) {
             this.groupHeaderAgencyCode = Objects.requireNonNull(groupHeaderAgencyCode);
             return this;
         }
 
-        public Builder setGroupHeaderDateFormat(String groupHeaderDateFormat) {
+        public Builder groupHeaderDateFormat(String groupHeaderDateFormat) {
             this.groupHeaderDateFormat = Objects.requireNonNull(groupHeaderDateFormat);
             return this;
         }
 
-        public Builder setGroupHeaderTimeFormat(String groupHeaderTimeFormat) {
+        public Builder groupHeaderTimeFormat(String groupHeaderTimeFormat) {
             this.groupHeaderTimeFormat = Objects.requireNonNull(groupHeaderTimeFormat);
             return this;
         }
 
-        public Builder setGroupHeaderVersion(String groupHeaderVersion) {
+        public Builder groupHeaderVersion(String groupHeaderVersion) {
             this.groupHeaderVersion = Objects.requireNonNull(groupHeaderVersion);
             return this;
         }
 
-        public Builder setInterchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
+        public Builder interchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
 
-        public Builder setInterchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
+        public Builder interchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
 
-        public Builder setOverwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
+        public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
 
-        public Builder setReceiverApplicationId(String receiverApplicationId) {
+        public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
 
-        public Builder setRolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
+        public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
 
-        public Builder setRolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
+        public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
 
-        public Builder setRolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
+        public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
 
-        public Builder setSenderApplicationId(String senderApplicationId) {
+        public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
 
-        public Builder setTransactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
+        public Builder transactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
 
-        public Builder setTransactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
+        public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
-        public Builder setTransactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
+        public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
-        public Builder setTransactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
+        public Builder transactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
 
-        public Builder setUsageIndicator(String usageIndicator) {
+        public Builder usageIndicator(String usageIndicator) {
             this.usageIndicator = Objects.requireNonNull(usageIndicator);
             return this;
         }
 
-        public Builder setUseControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
+        public Builder useControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
             this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
             return this;
         }

@@ -251,132 +251,132 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAdministratorLogin(@Nullable Input<String> administratorLogin) {
+        public Builder administratorLogin(@Nullable Input<String> administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = Input.ofNullable(administratorLogin);
             return this;
         }
 
-        public Builder setAdministratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
 
-        public Builder setAdministratorLoginPassword(@Nullable String administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
             this.administratorLoginPassword = Input.ofNullable(administratorLoginPassword);
             return this;
         }
 
-        public Builder setAdministrators(@Nullable Input<ServerExternalAdministratorArgs> administrators) {
+        public Builder administrators(@Nullable Input<ServerExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
 
-        public Builder setAdministrators(@Nullable ServerExternalAdministratorArgs administrators) {
+        public Builder administrators(@Nullable ServerExternalAdministratorArgs administrators) {
             this.administrators = Input.ofNullable(administrators);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = Input.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,ServerPublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,ServerPublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Input<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = Input.ofNullable(serverName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

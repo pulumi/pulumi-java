@@ -89,22 +89,22 @@ public final class IndexDocumentMetadataConfiguration extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelevance(@Nullable IndexRelevance relevance) {
+        public Builder relevance(@Nullable IndexRelevance relevance) {
             this.relevance = relevance;
             return this;
         }
 
-        public Builder setSearch(@Nullable IndexSearch search) {
+        public Builder search(@Nullable IndexSearch search) {
             this.search = search;
             return this;
         }
 
-        public Builder setType(IndexDocumentAttributeValueType type) {
+        public Builder type(IndexDocumentAttributeValueType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

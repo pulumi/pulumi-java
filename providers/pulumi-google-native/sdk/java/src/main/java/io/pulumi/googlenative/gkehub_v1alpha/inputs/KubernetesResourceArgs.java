@@ -75,22 +75,22 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceOptions = defaults.resourceOptions;
         }
 
-        public Builder setMembershipCrManifest(@Nullable Input<String> membershipCrManifest) {
+        public Builder membershipCrManifest(@Nullable Input<String> membershipCrManifest) {
             this.membershipCrManifest = membershipCrManifest;
             return this;
         }
 
-        public Builder setMembershipCrManifest(@Nullable String membershipCrManifest) {
+        public Builder membershipCrManifest(@Nullable String membershipCrManifest) {
             this.membershipCrManifest = Input.ofNullable(membershipCrManifest);
             return this;
         }
 
-        public Builder setResourceOptions(@Nullable Input<ResourceOptionsArgs> resourceOptions) {
+        public Builder resourceOptions(@Nullable Input<ResourceOptionsArgs> resourceOptions) {
             this.resourceOptions = resourceOptions;
             return this;
         }
 
-        public Builder setResourceOptions(@Nullable ResourceOptionsArgs resourceOptions) {
+        public Builder resourceOptions(@Nullable ResourceOptionsArgs resourceOptions) {
             this.resourceOptions = Input.ofNullable(resourceOptions);
             return this;
         }

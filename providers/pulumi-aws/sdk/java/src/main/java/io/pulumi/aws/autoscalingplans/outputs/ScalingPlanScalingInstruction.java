@@ -273,72 +273,72 @@ public final class ScalingPlanScalingInstruction {
     	      this.targetTrackingConfigurations = defaults.targetTrackingConfigurations;
         }
 
-        public Builder setCustomizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification) {
+        public Builder customizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification) {
             this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setDisableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
+        public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
             this.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
 
-        public Builder setMaxCapacity(Integer maxCapacity) {
+        public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
-        public Builder setPredefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
+        public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
+        public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
+        public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
 
-        public Builder setPredictiveScalingMode(@Nullable String predictiveScalingMode) {
+        public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
             this.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
+        public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
 
-        public Builder setScheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
+        public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
             this.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setTargetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
+        public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
             return this;
         }

@@ -76,22 +76,22 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setMysqlColumns(@Nullable Input<List<MysqlColumnArgs>> mysqlColumns) {
+        public Builder mysqlColumns(@Nullable Input<List<MysqlColumnArgs>> mysqlColumns) {
             this.mysqlColumns = mysqlColumns;
             return this;
         }
 
-        public Builder setMysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
+        public Builder mysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
             this.mysqlColumns = Input.ofNullable(mysqlColumns);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

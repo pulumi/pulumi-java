@@ -165,82 +165,82 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setAgentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Input<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
-        public Builder setAgentArns(List<String> agentArns) {
+        public Builder agentArns(List<String> agentArns) {
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setMountOptions(@Nullable Input<LocationSMBMountOptionsArgs> mountOptions) {
+        public Builder mountOptions(@Nullable Input<LocationSMBMountOptionsArgs> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable LocationSMBMountOptionsArgs mountOptions) {
+        public Builder mountOptions(@Nullable LocationSMBMountOptionsArgs mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setServerHostname(Input<String> serverHostname) {
+        public Builder serverHostname(Input<String> serverHostname) {
             this.serverHostname = Objects.requireNonNull(serverHostname);
             return this;
         }
 
-        public Builder setServerHostname(String serverHostname) {
+        public Builder serverHostname(String serverHostname) {
             this.serverHostname = Input.of(Objects.requireNonNull(serverHostname));
             return this;
         }
 
-        public Builder setSubdirectory(Input<String> subdirectory) {
+        public Builder subdirectory(Input<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
 
-        public Builder setSubdirectory(String subdirectory) {
+        public Builder subdirectory(String subdirectory) {
             this.subdirectory = Input.of(Objects.requireNonNull(subdirectory));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LocationSMBTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LocationSMBTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationSMBTagArgs> tags) {
+        public Builder tags(@Nullable List<LocationSMBTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

@@ -221,102 +221,102 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setHashKeyField(Input<String> hashKeyField) {
+        public Builder hashKeyField(Input<String> hashKeyField) {
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
 
-        public Builder setHashKeyField(String hashKeyField) {
+        public Builder hashKeyField(String hashKeyField) {
             this.hashKeyField = Input.of(Objects.requireNonNull(hashKeyField));
             return this;
         }
 
-        public Builder setHashKeyType(@Nullable Input<String> hashKeyType) {
+        public Builder hashKeyType(@Nullable Input<String> hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
 
-        public Builder setHashKeyType(@Nullable String hashKeyType) {
+        public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = Input.ofNullable(hashKeyType);
             return this;
         }
 
-        public Builder setHashKeyValue(Input<String> hashKeyValue) {
+        public Builder hashKeyValue(Input<String> hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
 
-        public Builder setHashKeyValue(String hashKeyValue) {
+        public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Input.of(Objects.requireNonNull(hashKeyValue));
             return this;
         }
 
-        public Builder setOperation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Input<String> operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = Input.ofNullable(operation);
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayloadArgs payload) {
+        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setPayloadField(@Nullable Input<String> payloadField) {
+        public Builder payloadField(@Nullable Input<String> payloadField) {
             this.payloadField = payloadField;
             return this;
         }
 
-        public Builder setPayloadField(@Nullable String payloadField) {
+        public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = Input.ofNullable(payloadField);
             return this;
         }
 
-        public Builder setRangeKeyField(@Nullable Input<String> rangeKeyField) {
+        public Builder rangeKeyField(@Nullable Input<String> rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
 
-        public Builder setRangeKeyField(@Nullable String rangeKeyField) {
+        public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = Input.ofNullable(rangeKeyField);
             return this;
         }
 
-        public Builder setRangeKeyType(@Nullable Input<String> rangeKeyType) {
+        public Builder rangeKeyType(@Nullable Input<String> rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
 
-        public Builder setRangeKeyType(@Nullable String rangeKeyType) {
+        public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = Input.ofNullable(rangeKeyType);
             return this;
         }
 
-        public Builder setRangeKeyValue(@Nullable Input<String> rangeKeyValue) {
+        public Builder rangeKeyValue(@Nullable Input<String> rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
 
-        public Builder setRangeKeyValue(@Nullable String rangeKeyValue) {
+        public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = Input.ofNullable(rangeKeyValue);
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

@@ -121,32 +121,32 @@ public final class GetTableResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBillingMode(@Nullable TableBillingMode billingMode) {
+        public Builder billingMode(@Nullable TableBillingMode billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
-        public Builder setDefaultTimeToLive(@Nullable Integer defaultTimeToLive) {
+        public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
             this.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
 
-        public Builder setEncryptionSpecification(@Nullable TableEncryptionSpecification encryptionSpecification) {
+        public Builder encryptionSpecification(@Nullable TableEncryptionSpecification encryptionSpecification) {
             this.encryptionSpecification = encryptionSpecification;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setRegularColumns(@Nullable List<TableColumn> regularColumns) {
+        public Builder regularColumns(@Nullable List<TableColumn> regularColumns) {
             this.regularColumns = regularColumns;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TableTag> tags) {
+        public Builder tags(@Nullable List<TableTag> tags) {
             this.tags = tags;
             return this;
         }

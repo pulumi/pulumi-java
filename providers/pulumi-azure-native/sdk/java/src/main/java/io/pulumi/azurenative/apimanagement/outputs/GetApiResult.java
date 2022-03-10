@@ -376,107 +376,107 @@ public final class GetApiResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiRevision(@Nullable String apiRevision) {
+        public Builder apiRevision(@Nullable String apiRevision) {
             this.apiRevision = apiRevision;
             return this;
         }
 
-        public Builder setApiRevisionDescription(@Nullable String apiRevisionDescription) {
+        public Builder apiRevisionDescription(@Nullable String apiRevisionDescription) {
             this.apiRevisionDescription = apiRevisionDescription;
             return this;
         }
 
-        public Builder setApiType(@Nullable String apiType) {
+        public Builder apiType(@Nullable String apiType) {
             this.apiType = apiType;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersionDescription(@Nullable String apiVersionDescription) {
+        public Builder apiVersionDescription(@Nullable String apiVersionDescription) {
             this.apiVersionDescription = apiVersionDescription;
             return this;
         }
 
-        public Builder setApiVersionSet(@Nullable ApiVersionSetContractDetailsResponse apiVersionSet) {
+        public Builder apiVersionSet(@Nullable ApiVersionSetContractDetailsResponse apiVersionSet) {
             this.apiVersionSet = apiVersionSet;
             return this;
         }
 
-        public Builder setApiVersionSetId(@Nullable String apiVersionSetId) {
+        public Builder apiVersionSetId(@Nullable String apiVersionSetId) {
             this.apiVersionSetId = apiVersionSetId;
             return this;
         }
 
-        public Builder setAuthenticationSettings(@Nullable AuthenticationSettingsContractResponse authenticationSettings) {
+        public Builder authenticationSettings(@Nullable AuthenticationSettingsContractResponse authenticationSettings) {
             this.authenticationSettings = authenticationSettings;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsCurrent(@Nullable Boolean isCurrent) {
+        public Builder isCurrent(@Nullable Boolean isCurrent) {
             this.isCurrent = isCurrent;
             return this;
         }
 
-        public Builder setIsOnline(Boolean isOnline) {
+        public Builder isOnline(Boolean isOnline) {
             this.isOnline = Objects.requireNonNull(isOnline);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<String> protocols) {
+        public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable String serviceUrl) {
+        public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
-        public Builder setSourceApiId(@Nullable String sourceApiId) {
+        public Builder sourceApiId(@Nullable String sourceApiId) {
             this.sourceApiId = sourceApiId;
             return this;
         }
 
-        public Builder setSubscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames) {
+        public Builder subscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractResponse subscriptionKeyParameterNames) {
             this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
             return this;
         }
 
-        public Builder setSubscriptionRequired(@Nullable Boolean subscriptionRequired) {
+        public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

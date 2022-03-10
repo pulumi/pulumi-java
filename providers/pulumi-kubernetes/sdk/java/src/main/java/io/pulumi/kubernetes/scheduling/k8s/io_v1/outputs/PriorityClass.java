@@ -150,37 +150,37 @@ public final class PriorityClass {
     	      this.value = defaults.value;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGlobalDefault(@Nullable Boolean globalDefault) {
+        public Builder globalDefault(@Nullable Boolean globalDefault) {
             this.globalDefault = globalDefault;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable String preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

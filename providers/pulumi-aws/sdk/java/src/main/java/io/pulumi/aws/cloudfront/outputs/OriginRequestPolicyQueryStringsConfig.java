@@ -52,12 +52,12 @@ public final class OriginRequestPolicyQueryStringsConfig {
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
+        public Builder queryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }

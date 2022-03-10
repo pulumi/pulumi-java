@@ -124,72 +124,72 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     	      this.sourcePrefixLists = defaults.sourcePrefixLists;
         }
 
-        public Builder setDestinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable Input<List<String>> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = Input.ofNullable(destinationAddresses);
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable Input<List<String>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Input<List<String>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = Input.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder setDestinationPrefixLists(@Nullable Input<List<String>> destinationPrefixLists) {
+        public Builder destinationPrefixLists(@Nullable Input<List<String>> destinationPrefixLists) {
             this.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
 
-        public Builder setDestinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
+        public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
             this.destinationPrefixLists = Input.ofNullable(destinationPrefixLists);
             return this;
         }
 
-        public Builder setProtocols(@Nullable Input<List<NetworkInsightsAccessScopeProtocol>> protocols) {
+        public Builder protocols(@Nullable Input<List<NetworkInsightsAccessScopeProtocol>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
+        public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
             this.protocols = Input.ofNullable(protocols);
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable Input<List<String>> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = Input.ofNullable(sourceAddresses);
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable Input<List<String>> sourcePorts) {
+        public Builder sourcePorts(@Nullable Input<List<String>> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<String> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = Input.ofNullable(sourcePorts);
             return this;
         }
 
-        public Builder setSourcePrefixLists(@Nullable Input<List<String>> sourcePrefixLists) {
+        public Builder sourcePrefixLists(@Nullable Input<List<String>> sourcePrefixLists) {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
 
-        public Builder setSourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
+        public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
             this.sourcePrefixLists = Input.ofNullable(sourcePrefixLists);
             return this;
         }

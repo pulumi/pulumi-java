@@ -76,27 +76,27 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
     	      this.useIpAliases = defaults.useIpAliases;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Boolean useIpAliases) {
+        public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }

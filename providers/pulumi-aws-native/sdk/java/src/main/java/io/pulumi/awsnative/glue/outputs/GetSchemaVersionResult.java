@@ -50,7 +50,7 @@ public final class GetSchemaVersionResult {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }

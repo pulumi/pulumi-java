@@ -101,42 +101,42 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setMultistepNumber(@Nullable Input<Integer> multistepNumber) {
+        public Builder multistepNumber(@Nullable Input<Integer> multistepNumber) {
             this.multistepNumber = multistepNumber;
             return this;
         }
 
-        public Builder setMultistepNumber(@Nullable Integer multistepNumber) {
+        public Builder multistepNumber(@Nullable Integer multistepNumber) {
             this.multistepNumber = Input.ofNullable(multistepNumber);
             return this;
         }
 
-        public Builder setOutcomeSummary(@Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary) {
+        public Builder outcomeSummary(@Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary) {
             this.outcomeSummary = outcomeSummary;
             return this;
         }
 
-        public Builder setOutcomeSummary(@Nullable IndividualOutcomeOutcomeSummary outcomeSummary) {
+        public Builder outcomeSummary(@Nullable IndividualOutcomeOutcomeSummary outcomeSummary) {
             this.outcomeSummary = Input.ofNullable(outcomeSummary);
             return this;
         }
 
-        public Builder setRunDuration(@Nullable Input<DurationArgs> runDuration) {
+        public Builder runDuration(@Nullable Input<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
 
-        public Builder setRunDuration(@Nullable DurationArgs runDuration) {
+        public Builder runDuration(@Nullable DurationArgs runDuration) {
             this.runDuration = Input.ofNullable(runDuration);
             return this;
         }
 
-        public Builder setStepId(@Nullable Input<String> stepId) {
+        public Builder stepId(@Nullable Input<String> stepId) {
             this.stepId = stepId;
             return this;
         }
 
-        public Builder setStepId(@Nullable String stepId) {
+        public Builder stepId(@Nullable String stepId) {
             this.stepId = Input.ofNullable(stepId);
             return this;
         }

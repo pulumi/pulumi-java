@@ -91,17 +91,17 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setStatus(@Nullable InstanceViewStatusResponse status) {
+        public Builder status(@Nullable InstanceViewStatusResponse status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

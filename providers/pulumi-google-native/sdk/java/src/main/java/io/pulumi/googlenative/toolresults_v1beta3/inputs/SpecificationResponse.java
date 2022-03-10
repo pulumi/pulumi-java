@@ -73,12 +73,12 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
     	      this.iosTest = defaults.iosTest;
         }
 
-        public Builder setAndroidTest(AndroidTestResponse androidTest) {
+        public Builder androidTest(AndroidTestResponse androidTest) {
             this.androidTest = Objects.requireNonNull(androidTest);
             return this;
         }
 
-        public Builder setIosTest(IosTestResponse iosTest) {
+        public Builder iosTest(IosTestResponse iosTest) {
             this.iosTest = Objects.requireNonNull(iosTest);
             return this;
         }

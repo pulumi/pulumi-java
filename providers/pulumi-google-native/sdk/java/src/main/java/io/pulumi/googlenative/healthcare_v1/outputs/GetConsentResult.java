@@ -196,52 +196,52 @@ public final class GetConsentResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setConsentArtifact(String consentArtifact) {
+        public Builder consentArtifact(String consentArtifact) {
             this.consentArtifact = Objects.requireNonNull(consentArtifact);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicies(List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies) {
+        public Builder policies(List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }
 
-        public Builder setRevisionCreateTime(String revisionCreateTime) {
+        public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

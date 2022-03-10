@@ -165,52 +165,52 @@ public final class DataSourceConfluenceConfiguration extends io.pulumi.resources
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setAttachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration) {
+        public Builder attachmentConfiguration(@Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration) {
             this.attachmentConfiguration = attachmentConfiguration;
             return this;
         }
 
-        public Builder setBlogConfiguration(@Nullable DataSourceConfluenceBlogConfiguration blogConfiguration) {
+        public Builder blogConfiguration(@Nullable DataSourceConfluenceBlogConfiguration blogConfiguration) {
             this.blogConfiguration = blogConfiguration;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setPageConfiguration(@Nullable DataSourceConfluencePageConfiguration pageConfiguration) {
+        public Builder pageConfiguration(@Nullable DataSourceConfluencePageConfiguration pageConfiguration) {
             this.pageConfiguration = pageConfiguration;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setServerUrl(String serverUrl) {
+        public Builder serverUrl(String serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
 
-        public Builder setSpaceConfiguration(@Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration) {
+        public Builder spaceConfiguration(@Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration) {
             this.spaceConfiguration = spaceConfiguration;
             return this;
         }
 
-        public Builder setVersion(DataSourceConfluenceVersion version) {
+        public Builder version(DataSourceConfluenceVersion version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }

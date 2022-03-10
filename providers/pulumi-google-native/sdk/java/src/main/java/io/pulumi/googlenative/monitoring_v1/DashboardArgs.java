@@ -195,102 +195,102 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setColumnLayout(@Nullable Input<ColumnLayoutArgs> columnLayout) {
+        public Builder columnLayout(@Nullable Input<ColumnLayoutArgs> columnLayout) {
             this.columnLayout = columnLayout;
             return this;
         }
 
-        public Builder setColumnLayout(@Nullable ColumnLayoutArgs columnLayout) {
+        public Builder columnLayout(@Nullable ColumnLayoutArgs columnLayout) {
             this.columnLayout = Input.ofNullable(columnLayout);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setGridLayout(@Nullable Input<GridLayoutArgs> gridLayout) {
+        public Builder gridLayout(@Nullable Input<GridLayoutArgs> gridLayout) {
             this.gridLayout = gridLayout;
             return this;
         }
 
-        public Builder setGridLayout(@Nullable GridLayoutArgs gridLayout) {
+        public Builder gridLayout(@Nullable GridLayoutArgs gridLayout) {
             this.gridLayout = Input.ofNullable(gridLayout);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMosaicLayout(@Nullable Input<MosaicLayoutArgs> mosaicLayout) {
+        public Builder mosaicLayout(@Nullable Input<MosaicLayoutArgs> mosaicLayout) {
             this.mosaicLayout = mosaicLayout;
             return this;
         }
 
-        public Builder setMosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
+        public Builder mosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
             this.mosaicLayout = Input.ofNullable(mosaicLayout);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRowLayout(@Nullable Input<RowLayoutArgs> rowLayout) {
+        public Builder rowLayout(@Nullable Input<RowLayoutArgs> rowLayout) {
             this.rowLayout = rowLayout;
             return this;
         }
 
-        public Builder setRowLayout(@Nullable RowLayoutArgs rowLayout) {
+        public Builder rowLayout(@Nullable RowLayoutArgs rowLayout) {
             this.rowLayout = Input.ofNullable(rowLayout);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

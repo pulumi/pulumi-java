@@ -265,142 +265,142 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
             this.copyTagsToSnapshots = Input.ofNullable(copyTagsToSnapshots);
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable Input<String> dataCompressionType) {
+        public Builder dataCompressionType(@Nullable Input<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable String dataCompressionType) {
+        public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = Input.ofNullable(dataCompressionType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNfsExports(@Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
+        public Builder nfsExports(@Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
 
-        public Builder setNfsExports(@Nullable OpenZfsVolumeNfsExportsGetArgs nfsExports) {
+        public Builder nfsExports(@Nullable OpenZfsVolumeNfsExportsGetArgs nfsExports) {
             this.nfsExports = Input.ofNullable(nfsExports);
             return this;
         }
 
-        public Builder setOriginSnapshot(@Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
+        public Builder originSnapshot(@Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
             this.originSnapshot = originSnapshot;
             return this;
         }
 
-        public Builder setOriginSnapshot(@Nullable OpenZfsVolumeOriginSnapshotGetArgs originSnapshot) {
+        public Builder originSnapshot(@Nullable OpenZfsVolumeOriginSnapshotGetArgs originSnapshot) {
             this.originSnapshot = Input.ofNullable(originSnapshot);
             return this;
         }
 
-        public Builder setParentVolumeId(@Nullable Input<String> parentVolumeId) {
+        public Builder parentVolumeId(@Nullable Input<String> parentVolumeId) {
             this.parentVolumeId = parentVolumeId;
             return this;
         }
 
-        public Builder setParentVolumeId(@Nullable String parentVolumeId) {
+        public Builder parentVolumeId(@Nullable String parentVolumeId) {
             this.parentVolumeId = Input.ofNullable(parentVolumeId);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(@Nullable Input<Integer> storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(@Nullable Input<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = storageCapacityQuotaGib;
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Input.ofNullable(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder setStorageCapacityReservationGib(@Nullable Input<Integer> storageCapacityReservationGib) {
+        public Builder storageCapacityReservationGib(@Nullable Input<Integer> storageCapacityReservationGib) {
             this.storageCapacityReservationGib = storageCapacityReservationGib;
             return this;
         }
 
-        public Builder setStorageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
+        public Builder storageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
             this.storageCapacityReservationGib = Input.ofNullable(storageCapacityReservationGib);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
             this.userAndGroupQuotas = Input.ofNullable(userAndGroupQuotas);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

@@ -62,22 +62,22 @@ public final class DatastorePartitionArgs extends io.pulumi.resources.ResourceAr
     	      this.timestampPartition = defaults.timestampPartition;
         }
 
-        public Builder setPartition(@Nullable Input<DatastorePartitionArgs> partition) {
+        public Builder partition(@Nullable Input<DatastorePartitionArgs> partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPartition(@Nullable DatastorePartitionArgs partition) {
+        public Builder partition(@Nullable DatastorePartitionArgs partition) {
             this.partition = Input.ofNullable(partition);
             return this;
         }
 
-        public Builder setTimestampPartition(@Nullable Input<DatastoreTimestampPartitionArgs> timestampPartition) {
+        public Builder timestampPartition(@Nullable Input<DatastoreTimestampPartitionArgs> timestampPartition) {
             this.timestampPartition = timestampPartition;
             return this;
         }
 
-        public Builder setTimestampPartition(@Nullable DatastoreTimestampPartitionArgs timestampPartition) {
+        public Builder timestampPartition(@Nullable DatastoreTimestampPartitionArgs timestampPartition) {
             this.timestampPartition = Input.ofNullable(timestampPartition);
             return this;
         }

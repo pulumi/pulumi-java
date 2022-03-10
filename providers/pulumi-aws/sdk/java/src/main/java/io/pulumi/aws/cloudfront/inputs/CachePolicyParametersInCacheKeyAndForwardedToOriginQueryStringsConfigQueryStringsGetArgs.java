@@ -54,12 +54,12 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Input<List<String>> items) {
+        public Builder items(@Nullable Input<List<String>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<String> items) {
+        public Builder items(@Nullable List<String> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

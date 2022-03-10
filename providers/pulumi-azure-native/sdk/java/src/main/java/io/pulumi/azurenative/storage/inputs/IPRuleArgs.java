@@ -75,22 +75,22 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iPAddressOrRange = defaults.iPAddressOrRange;
         }
 
-        public Builder setAction(@Nullable Input<Action> action) {
+        public Builder action(@Nullable Input<Action> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Action action) {
+        public Builder action(@Nullable Action action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setIPAddressOrRange(Input<String> iPAddressOrRange) {
+        public Builder iPAddressOrRange(Input<String> iPAddressOrRange) {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
         }
 
-        public Builder setIPAddressOrRange(String iPAddressOrRange) {
+        public Builder iPAddressOrRange(String iPAddressOrRange) {
             this.iPAddressOrRange = Input.of(Objects.requireNonNull(iPAddressOrRange));
             return this;
         }

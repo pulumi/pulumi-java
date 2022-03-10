@@ -42,7 +42,7 @@ public final class AiMetadataStoreState {
     	      this.diskUtilizationBytes = defaults.diskUtilizationBytes;
         }
 
-        public Builder setDiskUtilizationBytes(@Nullable String diskUtilizationBytes) {
+        public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
             this.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }

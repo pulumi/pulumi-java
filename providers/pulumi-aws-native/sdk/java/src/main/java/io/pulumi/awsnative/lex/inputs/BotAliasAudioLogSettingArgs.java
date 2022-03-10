@@ -66,22 +66,22 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDestination(Input<BotAliasAudioLogDestinationArgs> destination) {
+        public Builder destination(Input<BotAliasAudioLogDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(BotAliasAudioLogDestinationArgs destination) {
+        public Builder destination(BotAliasAudioLogDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }

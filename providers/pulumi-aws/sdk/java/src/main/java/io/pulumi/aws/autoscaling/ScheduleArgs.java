@@ -187,92 +187,92 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAutoscalingGroupName(Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(Input<String> autoscalingGroupName) {
             this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
             return this;
         }
 
-        public Builder setAutoscalingGroupName(String autoscalingGroupName) {
+        public Builder autoscalingGroupName(String autoscalingGroupName) {
             this.autoscalingGroupName = Input.of(Objects.requireNonNull(autoscalingGroupName));
             return this;
         }
 
-        public Builder setDesiredCapacity(@Nullable Input<Integer> desiredCapacity) {
+        public Builder desiredCapacity(@Nullable Input<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
 
-        public Builder setDesiredCapacity(@Nullable Integer desiredCapacity) {
+        public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Input.ofNullable(desiredCapacity);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Input<Integer> maxSize) {
+        public Builder maxSize(@Nullable Input<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Integer maxSize) {
+        public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Input.ofNullable(maxSize);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Input<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Input<String> recurrence) {
+        public Builder recurrence(@Nullable Input<String> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable String recurrence) {
+        public Builder recurrence(@Nullable String recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
 
-        public Builder setScheduledActionName(Input<String> scheduledActionName) {
+        public Builder scheduledActionName(Input<String> scheduledActionName) {
             this.scheduledActionName = Objects.requireNonNull(scheduledActionName);
             return this;
         }
 
-        public Builder setScheduledActionName(String scheduledActionName) {
+        public Builder scheduledActionName(String scheduledActionName) {
             this.scheduledActionName = Input.of(Objects.requireNonNull(scheduledActionName));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

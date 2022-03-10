@@ -229,57 +229,57 @@ public final class EdifactProtocolSettingsResponse extends io.pulumi.resources.I
     	      this.validationSettings = defaults.validationSettings;
         }
 
-        public Builder setAcknowledgementSettings(EdifactAcknowledgementSettingsResponse acknowledgementSettings) {
+        public Builder acknowledgementSettings(EdifactAcknowledgementSettingsResponse acknowledgementSettings) {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
 
-        public Builder setEdifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides) {
+        public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
 
-        public Builder setEnvelopeOverrides(@Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
-        public Builder setEnvelopeSettings(EdifactEnvelopeSettingsResponse envelopeSettings) {
+        public Builder envelopeSettings(EdifactEnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
-        public Builder setFramingSettings(EdifactFramingSettingsResponse framingSettings) {
+        public Builder framingSettings(EdifactFramingSettingsResponse framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
 
-        public Builder setMessageFilter(EdifactMessageFilterResponse messageFilter) {
+        public Builder messageFilter(EdifactMessageFilterResponse messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
 
-        public Builder setMessageFilterList(@Nullable List<EdifactMessageIdentifierResponse> messageFilterList) {
+        public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierResponse> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
 
-        public Builder setProcessingSettings(EdifactProcessingSettingsResponse processingSettings) {
+        public Builder processingSettings(EdifactProcessingSettingsResponse processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
 
-        public Builder setSchemaReferences(List<EdifactSchemaReferenceResponse> schemaReferences) {
+        public Builder schemaReferences(List<EdifactSchemaReferenceResponse> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
 
-        public Builder setValidationOverrides(@Nullable List<EdifactValidationOverrideResponse> validationOverrides) {
+        public Builder validationOverrides(@Nullable List<EdifactValidationOverrideResponse> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
 
-        public Builder setValidationSettings(EdifactValidationSettingsResponse validationSettings) {
+        public Builder validationSettings(EdifactValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }

@@ -140,62 +140,62 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
     	      this.schema = defaults.schema;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable Input<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable Input<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseArgs kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseArgs kinesisFirehose) {
             this.kinesisFirehose = Input.ofNullable(kinesisFirehose);
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable Input<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream) {
+        public Builder kinesisStream(@Nullable Input<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamArgs kinesisStream) {
+        public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamArgs kinesisStream) {
             this.kinesisStream = Input.ofNullable(kinesisStream);
             return this;
         }
 
-        public Builder setLambda(@Nullable Input<AnalyticsApplicationOutputLambdaArgs> lambda) {
+        public Builder lambda(@Nullable Input<AnalyticsApplicationOutputLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setLambda(@Nullable AnalyticsApplicationOutputLambdaArgs lambda) {
+        public Builder lambda(@Nullable AnalyticsApplicationOutputLambdaArgs lambda) {
             this.lambda = Input.ofNullable(lambda);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchema(Input<AnalyticsApplicationOutputSchemaArgs> schema) {
+        public Builder schema(Input<AnalyticsApplicationOutputSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationOutputSchemaArgs schema) {
+        public Builder schema(AnalyticsApplicationOutputSchemaArgs schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }

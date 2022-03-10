@@ -50,7 +50,7 @@ public final class WebAclRuleActionBlock {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
+        public Builder customResponse(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

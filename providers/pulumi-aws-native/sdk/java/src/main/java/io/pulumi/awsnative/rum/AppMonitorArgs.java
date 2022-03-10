@@ -114,52 +114,52 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppMonitorConfiguration(@Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration) {
+        public Builder appMonitorConfiguration(@Nullable Input<AppMonitorConfigurationArgs> appMonitorConfiguration) {
             this.appMonitorConfiguration = appMonitorConfiguration;
             return this;
         }
 
-        public Builder setAppMonitorConfiguration(@Nullable AppMonitorConfigurationArgs appMonitorConfiguration) {
+        public Builder appMonitorConfiguration(@Nullable AppMonitorConfigurationArgs appMonitorConfiguration) {
             this.appMonitorConfiguration = Input.ofNullable(appMonitorConfiguration);
             return this;
         }
 
-        public Builder setCwLogEnabled(@Nullable Input<Boolean> cwLogEnabled) {
+        public Builder cwLogEnabled(@Nullable Input<Boolean> cwLogEnabled) {
             this.cwLogEnabled = cwLogEnabled;
             return this;
         }
 
-        public Builder setCwLogEnabled(@Nullable Boolean cwLogEnabled) {
+        public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
             this.cwLogEnabled = Input.ofNullable(cwLogEnabled);
             return this;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AppMonitorTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AppMonitorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppMonitorTagArgs> tags) {
+        public Builder tags(@Nullable List<AppMonitorTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

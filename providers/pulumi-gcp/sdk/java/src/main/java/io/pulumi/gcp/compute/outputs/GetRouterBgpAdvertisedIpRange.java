@@ -49,12 +49,12 @@ public final class GetRouterBgpAdvertisedIpRange {
     	      this.range = defaults.range;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setRange(String range) {
+        public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

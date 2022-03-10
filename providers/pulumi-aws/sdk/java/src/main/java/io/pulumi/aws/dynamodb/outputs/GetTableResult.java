@@ -220,107 +220,107 @@ public final class GetTableResult {
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAttributes(List<GetTableAttribute> attributes) {
+        public Builder attributes(List<GetTableAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setBillingMode(String billingMode) {
+        public Builder billingMode(String billingMode) {
             this.billingMode = Objects.requireNonNull(billingMode);
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Objects.requireNonNull(globalSecondaryIndexes);
             return this;
         }
 
-        public Builder setHashKey(String hashKey) {
+        public Builder hashKey(String hashKey) {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocalSecondaryIndexes(List<GetTableLocalSecondaryIndex> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(List<GetTableLocalSecondaryIndex> localSecondaryIndexes) {
             this.localSecondaryIndexes = Objects.requireNonNull(localSecondaryIndexes);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPointInTimeRecovery(GetTablePointInTimeRecovery pointInTimeRecovery) {
+        public Builder pointInTimeRecovery(GetTablePointInTimeRecovery pointInTimeRecovery) {
             this.pointInTimeRecovery = Objects.requireNonNull(pointInTimeRecovery);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
 
-        public Builder setReadCapacity(Integer readCapacity) {
+        public Builder readCapacity(Integer readCapacity) {
             this.readCapacity = Objects.requireNonNull(readCapacity);
             return this;
         }
 
-        public Builder setReplicas(List<GetTableReplica> replicas) {
+        public Builder replicas(List<GetTableReplica> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
-        public Builder setServerSideEncryption(GetTableServerSideEncryption serverSideEncryption) {
+        public Builder serverSideEncryption(GetTableServerSideEncryption serverSideEncryption) {
             this.serverSideEncryption = Objects.requireNonNull(serverSideEncryption);
             return this;
         }
 
-        public Builder setStreamArn(String streamArn) {
+        public Builder streamArn(String streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
 
-        public Builder setStreamEnabled(Boolean streamEnabled) {
+        public Builder streamEnabled(Boolean streamEnabled) {
             this.streamEnabled = Objects.requireNonNull(streamEnabled);
             return this;
         }
 
-        public Builder setStreamLabel(String streamLabel) {
+        public Builder streamLabel(String streamLabel) {
             this.streamLabel = Objects.requireNonNull(streamLabel);
             return this;
         }
 
-        public Builder setStreamViewType(String streamViewType) {
+        public Builder streamViewType(String streamViewType) {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }
 
-        public Builder setTableClass(String tableClass) {
+        public Builder tableClass(String tableClass) {
             this.tableClass = Objects.requireNonNull(tableClass);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTtl(GetTableTtl ttl) {
+        public Builder ttl(GetTableTtl ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setWriteCapacity(Integer writeCapacity) {
+        public Builder writeCapacity(Integer writeCapacity) {
             this.writeCapacity = Objects.requireNonNull(writeCapacity);
             return this;
         }

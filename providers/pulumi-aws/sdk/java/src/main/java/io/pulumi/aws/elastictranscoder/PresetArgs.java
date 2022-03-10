@@ -201,102 +201,102 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoWatermarks = defaults.videoWatermarks;
         }
 
-        public Builder setAudio(@Nullable Input<PresetAudioArgs> audio) {
+        public Builder audio(@Nullable Input<PresetAudioArgs> audio) {
             this.audio = audio;
             return this;
         }
 
-        public Builder setAudio(@Nullable PresetAudioArgs audio) {
+        public Builder audio(@Nullable PresetAudioArgs audio) {
             this.audio = Input.ofNullable(audio);
             return this;
         }
 
-        public Builder setAudioCodecOptions(@Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions) {
+        public Builder audioCodecOptions(@Nullable Input<PresetAudioCodecOptionsArgs> audioCodecOptions) {
             this.audioCodecOptions = audioCodecOptions;
             return this;
         }
 
-        public Builder setAudioCodecOptions(@Nullable PresetAudioCodecOptionsArgs audioCodecOptions) {
+        public Builder audioCodecOptions(@Nullable PresetAudioCodecOptionsArgs audioCodecOptions) {
             this.audioCodecOptions = Input.ofNullable(audioCodecOptions);
             return this;
         }
 
-        public Builder setContainer(Input<String> container) {
+        public Builder container(Input<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Input.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setThumbnails(@Nullable Input<PresetThumbnailsArgs> thumbnails) {
+        public Builder thumbnails(@Nullable Input<PresetThumbnailsArgs> thumbnails) {
             this.thumbnails = thumbnails;
             return this;
         }
 
-        public Builder setThumbnails(@Nullable PresetThumbnailsArgs thumbnails) {
+        public Builder thumbnails(@Nullable PresetThumbnailsArgs thumbnails) {
             this.thumbnails = Input.ofNullable(thumbnails);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVideo(@Nullable Input<PresetVideoArgs> video) {
+        public Builder video(@Nullable Input<PresetVideoArgs> video) {
             this.video = video;
             return this;
         }
 
-        public Builder setVideo(@Nullable PresetVideoArgs video) {
+        public Builder video(@Nullable PresetVideoArgs video) {
             this.video = Input.ofNullable(video);
             return this;
         }
 
-        public Builder setVideoCodecOptions(@Nullable Input<Map<String,String>> videoCodecOptions) {
+        public Builder videoCodecOptions(@Nullable Input<Map<String,String>> videoCodecOptions) {
             this.videoCodecOptions = videoCodecOptions;
             return this;
         }
 
-        public Builder setVideoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
+        public Builder videoCodecOptions(@Nullable Map<String,String> videoCodecOptions) {
             this.videoCodecOptions = Input.ofNullable(videoCodecOptions);
             return this;
         }
 
-        public Builder setVideoWatermarks(@Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks) {
+        public Builder videoWatermarks(@Nullable Input<List<PresetVideoWatermarkArgs>> videoWatermarks) {
             this.videoWatermarks = videoWatermarks;
             return this;
         }
 
-        public Builder setVideoWatermarks(@Nullable List<PresetVideoWatermarkArgs> videoWatermarks) {
+        public Builder videoWatermarks(@Nullable List<PresetVideoWatermarkArgs> videoWatermarks) {
             this.videoWatermarks = Input.ofNullable(videoWatermarks);
             return this;
         }

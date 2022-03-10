@@ -52,12 +52,12 @@ public final class DomainConfigurationAuthorizerConfig {
     	      this.defaultAuthorizerName = defaults.defaultAuthorizerName;
         }
 
-        public Builder setAllowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
+        public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
             this.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
 
-        public Builder setDefaultAuthorizerName(@Nullable String defaultAuthorizerName) {
+        public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }

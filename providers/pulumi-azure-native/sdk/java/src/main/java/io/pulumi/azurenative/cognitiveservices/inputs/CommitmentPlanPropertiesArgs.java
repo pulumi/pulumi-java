@@ -126,52 +126,52 @@ public final class CommitmentPlanPropertiesArgs extends io.pulumi.resources.Reso
     	      this.planType = defaults.planType;
         }
 
-        public Builder setAutoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Input.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder setCurrent(@Nullable Input<CommitmentPeriodArgs> current) {
+        public Builder current(@Nullable Input<CommitmentPeriodArgs> current) {
             this.current = current;
             return this;
         }
 
-        public Builder setCurrent(@Nullable CommitmentPeriodArgs current) {
+        public Builder current(@Nullable CommitmentPeriodArgs current) {
             this.current = Input.ofNullable(current);
             return this;
         }
 
-        public Builder setHostingModel(@Nullable Input<Either<String,HostingModel>> hostingModel) {
+        public Builder hostingModel(@Nullable Input<Either<String,HostingModel>> hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
 
-        public Builder setHostingModel(@Nullable Either<String,HostingModel> hostingModel) {
+        public Builder hostingModel(@Nullable Either<String,HostingModel> hostingModel) {
             this.hostingModel = Input.ofNullable(hostingModel);
             return this;
         }
 
-        public Builder setNext(@Nullable Input<CommitmentPeriodArgs> next) {
+        public Builder next(@Nullable Input<CommitmentPeriodArgs> next) {
             this.next = next;
             return this;
         }
 
-        public Builder setNext(@Nullable CommitmentPeriodArgs next) {
+        public Builder next(@Nullable CommitmentPeriodArgs next) {
             this.next = Input.ofNullable(next);
             return this;
         }
 
-        public Builder setPlanType(@Nullable Input<String> planType) {
+        public Builder planType(@Nullable Input<String> planType) {
             this.planType = planType;
             return this;
         }
 
-        public Builder setPlanType(@Nullable String planType) {
+        public Builder planType(@Nullable String planType) {
             this.planType = Input.ofNullable(planType);
             return this;
         }

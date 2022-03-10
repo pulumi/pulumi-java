@@ -105,42 +105,42 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setEbs(@Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs) {
+        public Builder ebs(@Nullable Input<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setEbs(@Nullable LaunchTemplateBlockDeviceMappingEbsGetArgs ebs) {
+        public Builder ebs(@Nullable LaunchTemplateBlockDeviceMappingEbsGetArgs ebs) {
             this.ebs = Input.ofNullable(ebs);
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Input<String> noDevice) {
+        public Builder noDevice(@Nullable Input<String> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable String noDevice) {
+        public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = Input.ofNullable(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Input<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }

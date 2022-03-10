@@ -50,7 +50,7 @@ public final class UniqueKeyPolicyResponse {
     	      this.uniqueKeys = defaults.uniqueKeys;
         }
 
-        public Builder setUniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
             this.uniqueKeys = uniqueKeys;
             return this;
         }

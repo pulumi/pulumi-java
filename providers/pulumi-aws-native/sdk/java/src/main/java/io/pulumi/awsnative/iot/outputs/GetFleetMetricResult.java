@@ -240,67 +240,67 @@ public final class GetFleetMetricResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAggregationField(@Nullable String aggregationField) {
+        public Builder aggregationField(@Nullable String aggregationField) {
             this.aggregationField = aggregationField;
             return this;
         }
 
-        public Builder setAggregationType(@Nullable FleetMetricAggregationType aggregationType) {
+        public Builder aggregationType(@Nullable FleetMetricAggregationType aggregationType) {
             this.aggregationType = aggregationType;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Double creationDate) {
+        public Builder creationDate(@Nullable Double creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIndexName(@Nullable String indexName) {
+        public Builder indexName(@Nullable String indexName) {
             this.indexName = indexName;
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable Double lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Double lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setMetricArn(@Nullable String metricArn) {
+        public Builder metricArn(@Nullable String metricArn) {
             this.metricArn = metricArn;
             return this;
         }
 
-        public Builder setPeriod(@Nullable Integer period) {
+        public Builder period(@Nullable Integer period) {
             this.period = period;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryVersion(@Nullable String queryVersion) {
+        public Builder queryVersion(@Nullable String queryVersion) {
             this.queryVersion = queryVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FleetMetricTag> tags) {
+        public Builder tags(@Nullable List<FleetMetricTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
         }

@@ -217,57 +217,57 @@ public final class GetSnapshotPolicyResult {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable DailyScheduleResponse dailySchedule) {
+        public Builder dailySchedule(@Nullable DailyScheduleResponse dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable HourlyScheduleResponse hourlySchedule) {
+        public Builder hourlySchedule(@Nullable HourlyScheduleResponse hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable MonthlyScheduleResponse monthlySchedule) {
+        public Builder monthlySchedule(@Nullable MonthlyScheduleResponse monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable WeeklyScheduleResponse weeklySchedule) {
+        public Builder weeklySchedule(@Nullable WeeklyScheduleResponse weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }

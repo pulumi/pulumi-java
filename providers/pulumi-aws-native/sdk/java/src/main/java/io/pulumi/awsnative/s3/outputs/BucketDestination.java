@@ -100,22 +100,22 @@ public final class BucketDestination {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketAccountId(@Nullable String bucketAccountId) {
+        public Builder bucketAccountId(@Nullable String bucketAccountId) {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFormat(BucketDestinationFormat format) {
+        public Builder format(BucketDestinationFormat format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

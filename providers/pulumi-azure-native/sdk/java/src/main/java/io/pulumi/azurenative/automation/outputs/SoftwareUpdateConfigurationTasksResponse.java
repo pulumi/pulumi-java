@@ -67,12 +67,12 @@ public final class SoftwareUpdateConfigurationTasksResponse {
     	      this.preTask = defaults.preTask;
         }
 
-        public Builder setPostTask(@Nullable TaskPropertiesResponse postTask) {
+        public Builder postTask(@Nullable TaskPropertiesResponse postTask) {
             this.postTask = postTask;
             return this;
         }
 
-        public Builder setPreTask(@Nullable TaskPropertiesResponse preTask) {
+        public Builder preTask(@Nullable TaskPropertiesResponse preTask) {
             this.preTask = preTask;
             return this;
         }

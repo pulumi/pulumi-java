@@ -108,27 +108,27 @@ public final class GetResponsePolicyResult {
     	      this.responsePolicyName = defaults.responsePolicyName;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGkeClusters(List<ResponsePolicyGKEClusterResponse> gkeClusters) {
+        public Builder gkeClusters(List<ResponsePolicyGKEClusterResponse> gkeClusters) {
             this.gkeClusters = Objects.requireNonNull(gkeClusters);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworks(List<ResponsePolicyNetworkResponse> networks) {
+        public Builder networks(List<ResponsePolicyNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
 
-        public Builder setResponsePolicyName(String responsePolicyName) {
+        public Builder responsePolicyName(String responsePolicyName) {
             this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
             return this;
         }

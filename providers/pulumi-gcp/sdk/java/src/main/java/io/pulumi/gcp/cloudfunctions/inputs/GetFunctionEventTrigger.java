@@ -88,17 +88,17 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
     	      this.resource = defaults.resource;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setFailurePolicies(List<GetFunctionEventTriggerFailurePolicy> failurePolicies) {
+        public Builder failurePolicies(List<GetFunctionEventTriggerFailurePolicy> failurePolicies) {
             this.failurePolicies = Objects.requireNonNull(failurePolicies);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

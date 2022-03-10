@@ -571,172 +571,172 @@ public final class GetAmiResult {
     	      this.virtualizationType = defaults.virtualizationType;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(List<GetAmiBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(List<GetAmiBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnaSupport(Boolean enaSupport) {
+        public Builder enaSupport(Boolean enaSupport) {
             this.enaSupport = Objects.requireNonNull(enaSupport);
             return this;
         }
 
-        public Builder setExecutableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable List<String> executableUsers) {
             this.executableUsers = executableUsers;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAmiFilter> filters) {
+        public Builder filters(@Nullable List<GetAmiFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setHypervisor(String hypervisor) {
+        public Builder hypervisor(String hypervisor) {
             this.hypervisor = Objects.requireNonNull(hypervisor);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setImageLocation(String imageLocation) {
+        public Builder imageLocation(String imageLocation) {
             this.imageLocation = Objects.requireNonNull(imageLocation);
             return this;
         }
 
-        public Builder setImageOwnerAlias(String imageOwnerAlias) {
+        public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.imageOwnerAlias = Objects.requireNonNull(imageOwnerAlias);
             return this;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setKernelId(String kernelId) {
+        public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setOwners(List<String> owners) {
+        public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setPlatformDetails(String platformDetails) {
+        public Builder platformDetails(String platformDetails) {
             this.platformDetails = Objects.requireNonNull(platformDetails);
             return this;
         }
 
-        public Builder setProductCodes(List<GetAmiProductCode> productCodes) {
+        public Builder productCodes(List<GetAmiProductCode> productCodes) {
             this.productCodes = Objects.requireNonNull(productCodes);
             return this;
         }
 
-        public Builder set$public(Boolean $public) {
+        public Builder $public(Boolean $public) {
             this.$public = Objects.requireNonNull($public);
             return this;
         }
 
-        public Builder setRamdiskId(String ramdiskId) {
+        public Builder ramdiskId(String ramdiskId) {
             this.ramdiskId = Objects.requireNonNull(ramdiskId);
             return this;
         }
 
-        public Builder setRootDeviceName(String rootDeviceName) {
+        public Builder rootDeviceName(String rootDeviceName) {
             this.rootDeviceName = Objects.requireNonNull(rootDeviceName);
             return this;
         }
 
-        public Builder setRootDeviceType(String rootDeviceType) {
+        public Builder rootDeviceType(String rootDeviceType) {
             this.rootDeviceType = Objects.requireNonNull(rootDeviceType);
             return this;
         }
 
-        public Builder setRootSnapshotId(String rootSnapshotId) {
+        public Builder rootSnapshotId(String rootSnapshotId) {
             this.rootSnapshotId = Objects.requireNonNull(rootSnapshotId);
             return this;
         }
 
-        public Builder setSriovNetSupport(String sriovNetSupport) {
+        public Builder sriovNetSupport(String sriovNetSupport) {
             this.sriovNetSupport = Objects.requireNonNull(sriovNetSupport);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateReason(Map<String,String> stateReason) {
+        public Builder stateReason(Map<String,String> stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUsageOperation(String usageOperation) {
+        public Builder usageOperation(String usageOperation) {
             this.usageOperation = Objects.requireNonNull(usageOperation);
             return this;
         }
 
-        public Builder setVirtualizationType(String virtualizationType) {
+        public Builder virtualizationType(String virtualizationType) {
             this.virtualizationType = Objects.requireNonNull(virtualizationType);
             return this;
         }

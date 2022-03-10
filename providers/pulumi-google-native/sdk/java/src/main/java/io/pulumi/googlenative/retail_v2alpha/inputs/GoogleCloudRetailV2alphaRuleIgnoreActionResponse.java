@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse extends io.p
     	      this.ignoreTerms = defaults.ignoreTerms;
         }
 
-        public Builder setIgnoreTerms(List<String> ignoreTerms) {
+        public Builder ignoreTerms(List<String> ignoreTerms) {
             this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
             return this;
         }

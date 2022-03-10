@@ -79,32 +79,32 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
     	      this.s3Encryption = defaults.s3Encryption;
         }
 
-        public Builder setCloudwatchEncryption(Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption) {
+        public Builder cloudwatchEncryption(Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption) {
             this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
             return this;
         }
 
-        public Builder setCloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs cloudwatchEncryption) {
+        public Builder cloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs cloudwatchEncryption) {
             this.cloudwatchEncryption = Input.of(Objects.requireNonNull(cloudwatchEncryption));
             return this;
         }
 
-        public Builder setJobBookmarksEncryption(Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption) {
+        public Builder jobBookmarksEncryption(Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
             return this;
         }
 
-        public Builder setJobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs jobBookmarksEncryption) {
+        public Builder jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Input.of(Objects.requireNonNull(jobBookmarksEncryption));
             return this;
         }
 
-        public Builder setS3Encryption(Input<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption) {
+        public Builder s3Encryption(Input<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption) {
             this.s3Encryption = Objects.requireNonNull(s3Encryption);
             return this;
         }
 
-        public Builder setS3Encryption(SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs s3Encryption) {
+        public Builder s3Encryption(SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs s3Encryption) {
             this.s3Encryption = Input.of(Objects.requireNonNull(s3Encryption));
             return this;
         }

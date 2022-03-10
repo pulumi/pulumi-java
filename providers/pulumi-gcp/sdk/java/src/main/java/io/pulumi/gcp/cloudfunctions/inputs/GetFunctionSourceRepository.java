@@ -64,12 +64,12 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
     	      this.url = defaults.url;
         }
 
-        public Builder setDeployedUrl(String deployedUrl) {
+        public Builder deployedUrl(String deployedUrl) {
             this.deployedUrl = Objects.requireNonNull(deployedUrl);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

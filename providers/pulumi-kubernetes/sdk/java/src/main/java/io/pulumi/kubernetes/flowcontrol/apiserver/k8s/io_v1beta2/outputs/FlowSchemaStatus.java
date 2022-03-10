@@ -50,7 +50,7 @@ public final class FlowSchemaStatus {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable List<FlowSchemaCondition> conditions) {
+        public Builder conditions(@Nullable List<FlowSchemaCondition> conditions) {
             this.conditions = conditions;
             return this;
         }

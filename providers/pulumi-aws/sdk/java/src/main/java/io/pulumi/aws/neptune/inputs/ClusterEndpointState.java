@@ -180,92 +180,92 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterEndpointIdentifier(@Nullable Input<String> clusterEndpointIdentifier) {
+        public Builder clusterEndpointIdentifier(@Nullable Input<String> clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = clusterEndpointIdentifier;
             return this;
         }
 
-        public Builder setClusterEndpointIdentifier(@Nullable String clusterEndpointIdentifier) {
+        public Builder clusterEndpointIdentifier(@Nullable String clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Input.ofNullable(clusterEndpointIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable String clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEndpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Input<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Input.ofNullable(endpointType);
             return this;
         }
 
-        public Builder setExcludedMembers(@Nullable Input<List<String>> excludedMembers) {
+        public Builder excludedMembers(@Nullable Input<List<String>> excludedMembers) {
             this.excludedMembers = excludedMembers;
             return this;
         }
 
-        public Builder setExcludedMembers(@Nullable List<String> excludedMembers) {
+        public Builder excludedMembers(@Nullable List<String> excludedMembers) {
             this.excludedMembers = Input.ofNullable(excludedMembers);
             return this;
         }
 
-        public Builder setStaticMembers(@Nullable Input<List<String>> staticMembers) {
+        public Builder staticMembers(@Nullable Input<List<String>> staticMembers) {
             this.staticMembers = staticMembers;
             return this;
         }
 
-        public Builder setStaticMembers(@Nullable List<String> staticMembers) {
+        public Builder staticMembers(@Nullable List<String> staticMembers) {
             this.staticMembers = Input.ofNullable(staticMembers);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

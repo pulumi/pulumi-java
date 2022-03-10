@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
     	      this.field = defaults.field;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }

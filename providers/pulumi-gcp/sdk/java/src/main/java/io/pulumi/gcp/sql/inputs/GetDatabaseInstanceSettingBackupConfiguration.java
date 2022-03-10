@@ -124,37 +124,37 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends io.pulu
     	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
         }
 
-        public Builder setBackupRetentionSettings(List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings) {
+        public Builder backupRetentionSettings(List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings) {
             this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
             return this;
         }
 
-        public Builder setBinaryLogEnabled(Boolean binaryLogEnabled) {
+        public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTransactionLogRetentionDays(Integer transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
         }

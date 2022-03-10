@@ -266,72 +266,72 @@ public final class GetRolloutResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactSourceId(@Nullable String artifactSourceId) {
+        public Builder artifactSourceId(@Nullable String artifactSourceId) {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
 
-        public Builder setBuildVersion(String buildVersion) {
+        public Builder buildVersion(String buildVersion) {
             this.buildVersion = Objects.requireNonNull(buildVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationInfo(RolloutOperationInfoResponse operationInfo) {
+        public Builder operationInfo(RolloutOperationInfoResponse operationInfo) {
             this.operationInfo = Objects.requireNonNull(operationInfo);
             return this;
         }
 
-        public Builder setServices(List<ServiceResponse> services) {
+        public Builder services(List<ServiceResponse> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStepGroups(List<StepGroupResponse> stepGroups) {
+        public Builder stepGroups(List<StepGroupResponse> stepGroups) {
             this.stepGroups = Objects.requireNonNull(stepGroups);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetServiceTopologyId(String targetServiceTopologyId) {
+        public Builder targetServiceTopologyId(String targetServiceTopologyId) {
             this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
             return this;
         }
 
-        public Builder setTotalRetryAttempts(Integer totalRetryAttempts) {
+        public Builder totalRetryAttempts(Integer totalRetryAttempts) {
             this.totalRetryAttempts = Objects.requireNonNull(totalRetryAttempts);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

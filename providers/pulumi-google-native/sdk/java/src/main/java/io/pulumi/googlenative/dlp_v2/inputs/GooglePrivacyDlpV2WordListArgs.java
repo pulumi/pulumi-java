@@ -58,12 +58,12 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
     	      this.words = defaults.words;
         }
 
-        public Builder setWords(@Nullable Input<List<String>> words) {
+        public Builder words(@Nullable Input<List<String>> words) {
             this.words = words;
             return this;
         }
 
-        public Builder setWords(@Nullable List<String> words) {
+        public Builder words(@Nullable List<String> words) {
             this.words = Input.ofNullable(words);
             return this;
         }

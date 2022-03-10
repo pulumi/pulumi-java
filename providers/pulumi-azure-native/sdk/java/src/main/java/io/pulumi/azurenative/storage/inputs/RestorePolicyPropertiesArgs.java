@@ -75,22 +75,22 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDays(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Input<Integer> days) {
             this.days = days;
             return this;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = Input.ofNullable(days);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }

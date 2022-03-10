@@ -56,12 +56,12 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setTargetNameServers(Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
+        public Builder targetNameServers(Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
 
-        public Builder setTargetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs> targetNameServers) {
+        public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs> targetNameServers) {
             this.targetNameServers = Input.of(Objects.requireNonNull(targetNameServers));
             return this;
         }

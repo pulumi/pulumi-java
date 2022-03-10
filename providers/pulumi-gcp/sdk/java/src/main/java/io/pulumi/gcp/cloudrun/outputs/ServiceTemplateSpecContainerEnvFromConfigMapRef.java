@@ -70,12 +70,12 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference) {
+        public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

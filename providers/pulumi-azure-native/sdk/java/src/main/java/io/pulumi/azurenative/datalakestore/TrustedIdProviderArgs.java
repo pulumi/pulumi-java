@@ -102,42 +102,42 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     	      this.trustedIdProviderName = defaults.trustedIdProviderName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setIdProvider(Input<String> idProvider) {
+        public Builder idProvider(Input<String> idProvider) {
             this.idProvider = Objects.requireNonNull(idProvider);
             return this;
         }
 
-        public Builder setIdProvider(String idProvider) {
+        public Builder idProvider(String idProvider) {
             this.idProvider = Input.of(Objects.requireNonNull(idProvider));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTrustedIdProviderName(@Nullable Input<String> trustedIdProviderName) {
+        public Builder trustedIdProviderName(@Nullable Input<String> trustedIdProviderName) {
             this.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
 
-        public Builder setTrustedIdProviderName(@Nullable String trustedIdProviderName) {
+        public Builder trustedIdProviderName(@Nullable String trustedIdProviderName) {
             this.trustedIdProviderName = Input.ofNullable(trustedIdProviderName);
             return this;
         }

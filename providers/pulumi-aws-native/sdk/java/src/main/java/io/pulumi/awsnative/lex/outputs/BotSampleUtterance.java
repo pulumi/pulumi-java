@@ -40,7 +40,7 @@ public final class BotSampleUtterance {
     	      this.utterance = defaults.utterance;
         }
 
-        public Builder setUtterance(String utterance) {
+        public Builder utterance(String utterance) {
             this.utterance = Objects.requireNonNull(utterance);
             return this;
         }

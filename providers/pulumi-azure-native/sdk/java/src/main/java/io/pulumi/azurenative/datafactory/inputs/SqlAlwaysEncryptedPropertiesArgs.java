@@ -112,42 +112,42 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     	      this.servicePrincipalKey = defaults.servicePrincipalKey;
         }
 
-        public Builder setAlwaysEncryptedAkvAuthType(Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType) {
+        public Builder alwaysEncryptedAkvAuthType(Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType) {
             this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
             return this;
         }
 
-        public Builder setAlwaysEncryptedAkvAuthType(Either<String,SqlAlwaysEncryptedAkvAuthType> alwaysEncryptedAkvAuthType) {
+        public Builder alwaysEncryptedAkvAuthType(Either<String,SqlAlwaysEncryptedAkvAuthType> alwaysEncryptedAkvAuthType) {
             this.alwaysEncryptedAkvAuthType = Input.of(Objects.requireNonNull(alwaysEncryptedAkvAuthType));
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
             return this;
         }

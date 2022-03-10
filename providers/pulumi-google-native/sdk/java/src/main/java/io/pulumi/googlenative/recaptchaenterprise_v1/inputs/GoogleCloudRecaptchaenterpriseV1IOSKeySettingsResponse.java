@@ -74,12 +74,12 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder setAllowAllBundleIds(Boolean allowAllBundleIds) {
+        public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
             this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds);
             return this;
         }
 
-        public Builder setAllowedBundleIds(List<String> allowedBundleIds) {
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }

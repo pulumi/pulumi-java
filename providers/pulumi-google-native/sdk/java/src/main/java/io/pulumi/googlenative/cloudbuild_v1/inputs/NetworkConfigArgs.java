@@ -75,22 +75,22 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder setEgressOption(@Nullable Input<NetworkConfigEgressOption> egressOption) {
+        public Builder egressOption(@Nullable Input<NetworkConfigEgressOption> egressOption) {
             this.egressOption = egressOption;
             return this;
         }
 
-        public Builder setEgressOption(@Nullable NetworkConfigEgressOption egressOption) {
+        public Builder egressOption(@Nullable NetworkConfigEgressOption egressOption) {
             this.egressOption = Input.ofNullable(egressOption);
             return this;
         }
 
-        public Builder setPeeredNetwork(Input<String> peeredNetwork) {
+        public Builder peeredNetwork(Input<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }

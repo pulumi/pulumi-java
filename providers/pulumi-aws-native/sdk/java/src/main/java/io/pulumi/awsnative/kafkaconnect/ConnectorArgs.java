@@ -215,122 +215,122 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerConfiguration = defaults.workerConfiguration;
         }
 
-        public Builder setCapacity(Input<ConnectorCapacityArgs> capacity) {
+        public Builder capacity(Input<ConnectorCapacityArgs> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCapacity(ConnectorCapacityArgs capacity) {
+        public Builder capacity(ConnectorCapacityArgs capacity) {
             this.capacity = Input.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder setConnectorConfiguration(Input<Object> connectorConfiguration) {
+        public Builder connectorConfiguration(Input<Object> connectorConfiguration) {
             this.connectorConfiguration = Objects.requireNonNull(connectorConfiguration);
             return this;
         }
 
-        public Builder setConnectorConfiguration(Object connectorConfiguration) {
+        public Builder connectorConfiguration(Object connectorConfiguration) {
             this.connectorConfiguration = Input.of(Objects.requireNonNull(connectorConfiguration));
             return this;
         }
 
-        public Builder setConnectorDescription(@Nullable Input<String> connectorDescription) {
+        public Builder connectorDescription(@Nullable Input<String> connectorDescription) {
             this.connectorDescription = connectorDescription;
             return this;
         }
 
-        public Builder setConnectorDescription(@Nullable String connectorDescription) {
+        public Builder connectorDescription(@Nullable String connectorDescription) {
             this.connectorDescription = Input.ofNullable(connectorDescription);
             return this;
         }
 
-        public Builder setConnectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Input<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
-        public Builder setConnectorName(@Nullable String connectorName) {
+        public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Input.ofNullable(connectorName);
             return this;
         }
 
-        public Builder setKafkaCluster(Input<ConnectorKafkaClusterArgs> kafkaCluster) {
+        public Builder kafkaCluster(Input<ConnectorKafkaClusterArgs> kafkaCluster) {
             this.kafkaCluster = Objects.requireNonNull(kafkaCluster);
             return this;
         }
 
-        public Builder setKafkaCluster(ConnectorKafkaClusterArgs kafkaCluster) {
+        public Builder kafkaCluster(ConnectorKafkaClusterArgs kafkaCluster) {
             this.kafkaCluster = Input.of(Objects.requireNonNull(kafkaCluster));
             return this;
         }
 
-        public Builder setKafkaClusterClientAuthentication(Input<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication) {
+        public Builder kafkaClusterClientAuthentication(Input<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication) {
             this.kafkaClusterClientAuthentication = Objects.requireNonNull(kafkaClusterClientAuthentication);
             return this;
         }
 
-        public Builder setKafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthenticationArgs kafkaClusterClientAuthentication) {
+        public Builder kafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthenticationArgs kafkaClusterClientAuthentication) {
             this.kafkaClusterClientAuthentication = Input.of(Objects.requireNonNull(kafkaClusterClientAuthentication));
             return this;
         }
 
-        public Builder setKafkaClusterEncryptionInTransit(Input<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit) {
+        public Builder kafkaClusterEncryptionInTransit(Input<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit) {
             this.kafkaClusterEncryptionInTransit = Objects.requireNonNull(kafkaClusterEncryptionInTransit);
             return this;
         }
 
-        public Builder setKafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransitArgs kafkaClusterEncryptionInTransit) {
+        public Builder kafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransitArgs kafkaClusterEncryptionInTransit) {
             this.kafkaClusterEncryptionInTransit = Input.of(Objects.requireNonNull(kafkaClusterEncryptionInTransit));
             return this;
         }
 
-        public Builder setKafkaConnectVersion(Input<String> kafkaConnectVersion) {
+        public Builder kafkaConnectVersion(Input<String> kafkaConnectVersion) {
             this.kafkaConnectVersion = Objects.requireNonNull(kafkaConnectVersion);
             return this;
         }
 
-        public Builder setKafkaConnectVersion(String kafkaConnectVersion) {
+        public Builder kafkaConnectVersion(String kafkaConnectVersion) {
             this.kafkaConnectVersion = Input.of(Objects.requireNonNull(kafkaConnectVersion));
             return this;
         }
 
-        public Builder setLogDelivery(@Nullable Input<ConnectorLogDeliveryArgs> logDelivery) {
+        public Builder logDelivery(@Nullable Input<ConnectorLogDeliveryArgs> logDelivery) {
             this.logDelivery = logDelivery;
             return this;
         }
 
-        public Builder setLogDelivery(@Nullable ConnectorLogDeliveryArgs logDelivery) {
+        public Builder logDelivery(@Nullable ConnectorLogDeliveryArgs logDelivery) {
             this.logDelivery = Input.ofNullable(logDelivery);
             return this;
         }
 
-        public Builder setPlugins(Input<List<ConnectorPluginArgs>> plugins) {
+        public Builder plugins(Input<List<ConnectorPluginArgs>> plugins) {
             this.plugins = Objects.requireNonNull(plugins);
             return this;
         }
 
-        public Builder setPlugins(List<ConnectorPluginArgs> plugins) {
+        public Builder plugins(List<ConnectorPluginArgs> plugins) {
             this.plugins = Input.of(Objects.requireNonNull(plugins));
             return this;
         }
 
-        public Builder setServiceExecutionRoleArn(Input<String> serviceExecutionRoleArn) {
+        public Builder serviceExecutionRoleArn(Input<String> serviceExecutionRoleArn) {
             this.serviceExecutionRoleArn = Objects.requireNonNull(serviceExecutionRoleArn);
             return this;
         }
 
-        public Builder setServiceExecutionRoleArn(String serviceExecutionRoleArn) {
+        public Builder serviceExecutionRoleArn(String serviceExecutionRoleArn) {
             this.serviceExecutionRoleArn = Input.of(Objects.requireNonNull(serviceExecutionRoleArn));
             return this;
         }
 
-        public Builder setWorkerConfiguration(@Nullable Input<ConnectorWorkerConfigurationArgs> workerConfiguration) {
+        public Builder workerConfiguration(@Nullable Input<ConnectorWorkerConfigurationArgs> workerConfiguration) {
             this.workerConfiguration = workerConfiguration;
             return this;
         }
 
-        public Builder setWorkerConfiguration(@Nullable ConnectorWorkerConfigurationArgs workerConfiguration) {
+        public Builder workerConfiguration(@Nullable ConnectorWorkerConfigurationArgs workerConfiguration) {
             this.workerConfiguration = Input.ofNullable(workerConfiguration);
             return this;
         }

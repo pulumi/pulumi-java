@@ -288,152 +288,152 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     	      this.uid = defaults.uid;
         }
 
-        public Builder setBaseline(@Nullable Input<Boolean> baseline) {
+        public Builder baseline(@Nullable Input<Boolean> baseline) {
             this.baseline = baseline;
             return this;
         }
 
-        public Builder setBaseline(@Nullable Boolean baseline) {
+        public Builder baseline(@Nullable Boolean baseline) {
             this.baseline = Input.ofNullable(baseline);
             return this;
         }
 
-        public Builder setDeleted(@Nullable Input<Boolean> deleted) {
+        public Builder deleted(@Nullable Input<Boolean> deleted) {
             this.deleted = deleted;
             return this;
         }
 
-        public Builder setDeleted(@Nullable Boolean deleted) {
+        public Builder deleted(@Nullable Boolean deleted) {
             this.deleted = Input.ofNullable(deleted);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setInstanceFilter(@Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
+        public Builder instanceFilter(@Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
             this.instanceFilter = instanceFilter;
             return this;
         }
 
-        public Builder setInstanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
+        public Builder instanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
             this.instanceFilter = Input.ofNullable(instanceFilter);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsPolicies(@Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
+        public Builder osPolicies(@Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
             this.osPolicies = osPolicies;
             return this;
         }
 
-        public Builder setOsPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
+        public Builder osPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
             this.osPolicies = Input.ofNullable(osPolicies);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReconciling(@Nullable Input<Boolean> reconciling) {
+        public Builder reconciling(@Nullable Input<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
 
-        public Builder setReconciling(@Nullable Boolean reconciling) {
+        public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Input.ofNullable(reconciling);
             return this;
         }
 
-        public Builder setRevisionCreateTime(@Nullable Input<String> revisionCreateTime) {
+        public Builder revisionCreateTime(@Nullable Input<String> revisionCreateTime) {
             this.revisionCreateTime = revisionCreateTime;
             return this;
         }
 
-        public Builder setRevisionCreateTime(@Nullable String revisionCreateTime) {
+        public Builder revisionCreateTime(@Nullable String revisionCreateTime) {
             this.revisionCreateTime = Input.ofNullable(revisionCreateTime);
             return this;
         }
 
-        public Builder setRevisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Input<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
 
-        public Builder setRollout(@Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout) {
+        public Builder rollout(@Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
 
-        public Builder setRollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
+        public Builder rollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
             this.rollout = Input.ofNullable(rollout);
             return this;
         }
 
-        public Builder setRolloutState(@Nullable Input<String> rolloutState) {
+        public Builder rolloutState(@Nullable Input<String> rolloutState) {
             this.rolloutState = rolloutState;
             return this;
         }
 
-        public Builder setRolloutState(@Nullable String rolloutState) {
+        public Builder rolloutState(@Nullable String rolloutState) {
             this.rolloutState = Input.ofNullable(rolloutState);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

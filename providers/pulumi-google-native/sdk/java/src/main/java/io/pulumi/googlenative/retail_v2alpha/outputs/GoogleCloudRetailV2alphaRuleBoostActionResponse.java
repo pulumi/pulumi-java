@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse {
     	      this.productsFilter = defaults.productsFilter;
         }
 
-        public Builder setBoost(Double boost) {
+        public Builder boost(Double boost) {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
 
-        public Builder setProductsFilter(String productsFilter) {
+        public Builder productsFilter(String productsFilter) {
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
         }

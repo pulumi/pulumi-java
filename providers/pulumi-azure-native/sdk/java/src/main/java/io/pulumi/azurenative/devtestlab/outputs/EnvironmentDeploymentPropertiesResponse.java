@@ -69,12 +69,12 @@ public final class EnvironmentDeploymentPropertiesResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setArmTemplateId(@Nullable String armTemplateId) {
+        public Builder armTemplateId(@Nullable String armTemplateId) {
             this.armTemplateId = armTemplateId;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
+        public Builder parameters(@Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetApiKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.aPIKeyId = defaults.aPIKeyId;
         }
 
-        public Builder setAPIKeyId(String aPIKeyId) {
+        public Builder aPIKeyId(String aPIKeyId) {
             this.aPIKeyId = Objects.requireNonNull(aPIKeyId);
             return this;
         }

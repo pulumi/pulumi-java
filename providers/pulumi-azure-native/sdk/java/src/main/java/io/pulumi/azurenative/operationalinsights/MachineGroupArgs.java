@@ -172,82 +172,82 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setGroupType(@Nullable Input<Either<String,MachineGroupType>> groupType) {
+        public Builder groupType(@Nullable Input<Either<String,MachineGroupType>> groupType) {
             this.groupType = groupType;
             return this;
         }
 
-        public Builder setGroupType(@Nullable Either<String,MachineGroupType> groupType) {
+        public Builder groupType(@Nullable Either<String,MachineGroupType> groupType) {
             this.groupType = Input.ofNullable(groupType);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setMachineGroupName(@Nullable Input<String> machineGroupName) {
+        public Builder machineGroupName(@Nullable Input<String> machineGroupName) {
             this.machineGroupName = machineGroupName;
             return this;
         }
 
-        public Builder setMachineGroupName(@Nullable String machineGroupName) {
+        public Builder machineGroupName(@Nullable String machineGroupName) {
             this.machineGroupName = Input.ofNullable(machineGroupName);
             return this;
         }
 
-        public Builder setMachines(@Nullable Input<List<MachineReferenceWithHintsArgs>> machines) {
+        public Builder machines(@Nullable Input<List<MachineReferenceWithHintsArgs>> machines) {
             this.machines = machines;
             return this;
         }
 
-        public Builder setMachines(@Nullable List<MachineReferenceWithHintsArgs> machines) {
+        public Builder machines(@Nullable List<MachineReferenceWithHintsArgs> machines) {
             this.machines = Input.ofNullable(machines);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

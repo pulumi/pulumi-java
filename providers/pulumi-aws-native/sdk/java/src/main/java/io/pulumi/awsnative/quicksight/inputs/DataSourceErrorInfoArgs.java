@@ -71,22 +71,22 @@ public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setType(@Nullable Input<DataSourceErrorInfoType> type) {
+        public Builder type(@Nullable Input<DataSourceErrorInfoType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable DataSourceErrorInfoType type) {
+        public Builder type(@Nullable DataSourceErrorInfoType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

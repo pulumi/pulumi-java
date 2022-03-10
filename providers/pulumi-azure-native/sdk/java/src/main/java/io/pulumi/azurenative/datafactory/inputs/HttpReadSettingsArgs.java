@@ -189,92 +189,92 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Input<Object> additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Input<Object> additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Object additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = Input.ofNullable(additionalHeaders);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Input<Boolean> enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Input<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = Input.ofNullable(enablePartitionDiscovery);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Input<Object> partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Input<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Object partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = Input.ofNullable(partitionRootPath);
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Input<Object> requestBody) {
+        public Builder requestBody(@Nullable Input<Object> requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Object requestBody) {
+        public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = Input.ofNullable(requestBody);
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Input<Object> requestMethod) {
+        public Builder requestMethod(@Nullable Input<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Object requestMethod) {
+        public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = Input.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Input<Object> requestTimeout) {
+        public Builder requestTimeout(@Nullable Input<Object> requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Object requestTimeout) {
+        public Builder requestTimeout(@Nullable Object requestTimeout) {
             this.requestTimeout = Input.ofNullable(requestTimeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

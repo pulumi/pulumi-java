@@ -184,47 +184,47 @@ public final class GetChannelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorized(@Nullable Boolean authorized) {
+        public Builder authorized(@Nullable Boolean authorized) {
             this.authorized = authorized;
             return this;
         }
 
-        public Builder setIngestEndpoint(@Nullable String ingestEndpoint) {
+        public Builder ingestEndpoint(@Nullable String ingestEndpoint) {
             this.ingestEndpoint = ingestEndpoint;
             return this;
         }
 
-        public Builder setLatencyMode(@Nullable ChannelLatencyMode latencyMode) {
+        public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
             this.latencyMode = latencyMode;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPlaybackUrl(@Nullable String playbackUrl) {
+        public Builder playbackUrl(@Nullable String playbackUrl) {
             this.playbackUrl = playbackUrl;
             return this;
         }
 
-        public Builder setRecordingConfigurationArn(@Nullable String recordingConfigurationArn) {
+        public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
             this.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ChannelTag> tags) {
+        public Builder tags(@Nullable List<ChannelTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable ChannelType type) {
+        public Builder type(@Nullable ChannelType type) {
             this.type = type;
             return this;
         }

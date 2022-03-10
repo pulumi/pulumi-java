@@ -126,52 +126,52 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder setConditions(@Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setMappedRouteName(@Nullable Input<String> mappedRouteName) {
+        public Builder mappedRouteName(@Nullable Input<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
 
-        public Builder setMappedRouteName(@Nullable String mappedRouteName) {
+        public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = Input.ofNullable(mappedRouteName);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setResourceRecords(@Nullable Input<List<ResourceRecordArgs>> resourceRecords) {
+        public Builder resourceRecords(@Nullable Input<List<ResourceRecordArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
 
-        public Builder setResourceRecords(@Nullable List<ResourceRecordArgs> resourceRecords) {
+        public Builder resourceRecords(@Nullable List<ResourceRecordArgs> resourceRecords) {
             this.resourceRecords = Input.ofNullable(resourceRecords);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

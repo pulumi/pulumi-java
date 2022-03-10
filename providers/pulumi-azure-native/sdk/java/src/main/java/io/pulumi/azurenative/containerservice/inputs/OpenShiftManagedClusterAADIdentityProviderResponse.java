@@ -123,27 +123,27 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends io
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setCustomerAdminGroupId(@Nullable String customerAdminGroupId) {
+        public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

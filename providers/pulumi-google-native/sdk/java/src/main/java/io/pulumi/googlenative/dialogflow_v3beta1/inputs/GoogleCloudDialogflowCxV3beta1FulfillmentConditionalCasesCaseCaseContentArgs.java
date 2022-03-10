@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     	      this.message = defaults.message;
         }
 
-        public Builder setAdditionalCases(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases) {
+        public Builder additionalCases(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases) {
             this.additionalCases = additionalCases;
             return this;
         }
 
-        public Builder setAdditionalCases(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs additionalCases) {
+        public Builder additionalCases(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs additionalCases) {
             this.additionalCases = Input.ofNullable(additionalCases);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message) {
+        public Builder message(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageArgs message) {
+        public Builder message(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageArgs message) {
             this.message = Input.ofNullable(message);
             return this;
         }

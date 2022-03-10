@@ -52,12 +52,12 @@ public final class MitigationActionUpdateDeviceCertificateParamsArgs extends io.
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(Input<MitigationActionUpdateDeviceCertificateParamsAction> action) {
+        public Builder action(Input<MitigationActionUpdateDeviceCertificateParamsAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(MitigationActionUpdateDeviceCertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }

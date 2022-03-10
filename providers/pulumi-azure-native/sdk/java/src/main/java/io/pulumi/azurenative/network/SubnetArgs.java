@@ -337,182 +337,182 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkName = defaults.virtualNetworkName;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setAddressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = Input.ofNullable(addressPrefixes);
             return this;
         }
 
-        public Builder setApplicationGatewayIpConfigurations(@Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
+        public Builder applicationGatewayIpConfigurations(@Nullable Input<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
 
-        public Builder setApplicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
+        public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
             this.applicationGatewayIpConfigurations = Input.ofNullable(applicationGatewayIpConfigurations);
             return this;
         }
 
-        public Builder setDelegations(@Nullable Input<List<DelegationArgs>> delegations) {
+        public Builder delegations(@Nullable Input<List<DelegationArgs>> delegations) {
             this.delegations = delegations;
             return this;
         }
 
-        public Builder setDelegations(@Nullable List<DelegationArgs> delegations) {
+        public Builder delegations(@Nullable List<DelegationArgs> delegations) {
             this.delegations = Input.ofNullable(delegations);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
+        public Builder ipAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
+        public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
             this.ipAllocations = Input.ofNullable(ipAllocations);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatGateway(@Nullable Input<SubResourceArgs> natGateway) {
+        public Builder natGateway(@Nullable Input<SubResourceArgs> natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
-        public Builder setNatGateway(@Nullable SubResourceArgs natGateway) {
+        public Builder natGateway(@Nullable SubResourceArgs natGateway) {
             this.natGateway = Input.ofNullable(natGateway);
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
             this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
             return this;
         }
 
-        public Builder setPrivateEndpointNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
+        public Builder privateEndpointNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
 
-        public Builder setPrivateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
+        public Builder privateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
             this.privateEndpointNetworkPolicies = Input.ofNullable(privateEndpointNetworkPolicies);
             return this;
         }
 
-        public Builder setPrivateLinkServiceNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
+        public Builder privateLinkServiceNetworkPolicies(@Nullable Input<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
 
-        public Builder setPrivateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
+        public Builder privateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
             this.privateLinkServiceNetworkPolicies = Input.ofNullable(privateLinkServiceNetworkPolicies);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRouteTable(@Nullable Input<RouteTableArgs> routeTable) {
+        public Builder routeTable(@Nullable Input<RouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
-        public Builder setRouteTable(@Nullable RouteTableArgs routeTable) {
+        public Builder routeTable(@Nullable RouteTableArgs routeTable) {
             this.routeTable = Input.ofNullable(routeTable);
             return this;
         }
 
-        public Builder setServiceEndpointPolicies(@Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
+        public Builder serviceEndpointPolicies(@Nullable Input<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
 
-        public Builder setServiceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
+        public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
             this.serviceEndpointPolicies = Input.ofNullable(serviceEndpointPolicies);
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Input<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
             this.serviceEndpoints = Input.ofNullable(serviceEndpoints);
             return this;
         }
 
-        public Builder setSubnetName(@Nullable Input<String> subnetName) {
+        public Builder subnetName(@Nullable Input<String> subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
-        public Builder setSubnetName(@Nullable String subnetName) {
+        public Builder subnetName(@Nullable String subnetName) {
             this.subnetName = Input.ofNullable(subnetName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVirtualNetworkName(Input<String> virtualNetworkName) {
+        public Builder virtualNetworkName(Input<String> virtualNetworkName) {
             this.virtualNetworkName = Objects.requireNonNull(virtualNetworkName);
             return this;
         }
 
-        public Builder setVirtualNetworkName(String virtualNetworkName) {
+        public Builder virtualNetworkName(String virtualNetworkName) {
             this.virtualNetworkName = Input.of(Objects.requireNonNull(virtualNetworkName));
             return this;
         }

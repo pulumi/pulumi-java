@@ -93,17 +93,17 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IpRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IpRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

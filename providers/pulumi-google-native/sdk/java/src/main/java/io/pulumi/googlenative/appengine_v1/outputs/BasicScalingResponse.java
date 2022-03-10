@@ -66,12 +66,12 @@ public final class BasicScalingResponse {
     	      this.maxInstances = defaults.maxInstances;
         }
 
-        public Builder setIdleTimeout(String idleTimeout) {
+        public Builder idleTimeout(String idleTimeout) {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }

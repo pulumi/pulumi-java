@@ -76,22 +76,22 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.table = defaults.table;
         }
 
-        public Builder setOracleColumns(@Nullable Input<List<OracleColumnArgs>> oracleColumns) {
+        public Builder oracleColumns(@Nullable Input<List<OracleColumnArgs>> oracleColumns) {
             this.oracleColumns = oracleColumns;
             return this;
         }
 
-        public Builder setOracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
+        public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
             this.oracleColumns = Input.ofNullable(oracleColumns);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }

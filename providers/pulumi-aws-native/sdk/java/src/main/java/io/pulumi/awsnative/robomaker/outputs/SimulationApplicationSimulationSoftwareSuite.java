@@ -68,12 +68,12 @@ public final class SimulationApplicationSimulationSoftwareSuite {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(SimulationApplicationSimulationSoftwareSuiteName name) {
+        public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
+        public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             this.version = version;
             return this;
         }

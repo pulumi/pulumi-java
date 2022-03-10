@@ -57,7 +57,7 @@ public final class ContainerRegistryPropertiesResponse extends io.pulumi.resourc
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

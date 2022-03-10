@@ -234,122 +234,122 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
     	      this.subscribers = defaults.subscribers;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setActionId(@Nullable Input<String> actionId) {
+        public Builder actionId(@Nullable Input<String> actionId) {
             this.actionId = actionId;
             return this;
         }
 
-        public Builder setActionId(@Nullable String actionId) {
+        public Builder actionId(@Nullable String actionId) {
             this.actionId = Input.ofNullable(actionId);
             return this;
         }
 
-        public Builder setActionThreshold(@Nullable Input<BudgetActionActionThresholdGetArgs> actionThreshold) {
+        public Builder actionThreshold(@Nullable Input<BudgetActionActionThresholdGetArgs> actionThreshold) {
             this.actionThreshold = actionThreshold;
             return this;
         }
 
-        public Builder setActionThreshold(@Nullable BudgetActionActionThresholdGetArgs actionThreshold) {
+        public Builder actionThreshold(@Nullable BudgetActionActionThresholdGetArgs actionThreshold) {
             this.actionThreshold = Input.ofNullable(actionThreshold);
             return this;
         }
 
-        public Builder setActionType(@Nullable Input<String> actionType) {
+        public Builder actionType(@Nullable Input<String> actionType) {
             this.actionType = actionType;
             return this;
         }
 
-        public Builder setActionType(@Nullable String actionType) {
+        public Builder actionType(@Nullable String actionType) {
             this.actionType = Input.ofNullable(actionType);
             return this;
         }
 
-        public Builder setApprovalModel(@Nullable Input<String> approvalModel) {
+        public Builder approvalModel(@Nullable Input<String> approvalModel) {
             this.approvalModel = approvalModel;
             return this;
         }
 
-        public Builder setApprovalModel(@Nullable String approvalModel) {
+        public Builder approvalModel(@Nullable String approvalModel) {
             this.approvalModel = Input.ofNullable(approvalModel);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBudgetName(@Nullable Input<String> budgetName) {
+        public Builder budgetName(@Nullable Input<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
 
-        public Builder setBudgetName(@Nullable String budgetName) {
+        public Builder budgetName(@Nullable String budgetName) {
             this.budgetName = Input.ofNullable(budgetName);
             return this;
         }
 
-        public Builder setDefinition(@Nullable Input<BudgetActionDefinitionGetArgs> definition) {
+        public Builder definition(@Nullable Input<BudgetActionDefinitionGetArgs> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable BudgetActionDefinitionGetArgs definition) {
+        public Builder definition(@Nullable BudgetActionDefinitionGetArgs definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setNotificationType(@Nullable Input<String> notificationType) {
+        public Builder notificationType(@Nullable Input<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
 
-        public Builder setNotificationType(@Nullable String notificationType) {
+        public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Input.ofNullable(notificationType);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubscribers(@Nullable Input<List<BudgetActionSubscriberGetArgs>> subscribers) {
+        public Builder subscribers(@Nullable Input<List<BudgetActionSubscriberGetArgs>> subscribers) {
             this.subscribers = subscribers;
             return this;
         }
 
-        public Builder setSubscribers(@Nullable List<BudgetActionSubscriberGetArgs> subscribers) {
+        public Builder subscribers(@Nullable List<BudgetActionSubscriberGetArgs> subscribers) {
             this.subscribers = Input.ofNullable(subscribers);
             return this;
         }

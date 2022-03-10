@@ -75,22 +75,22 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable Input<HttpFaultAbortArgs> abort) {
+        public Builder abort(@Nullable Input<HttpFaultAbortArgs> abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setAbort(@Nullable HttpFaultAbortArgs abort) {
+        public Builder abort(@Nullable HttpFaultAbortArgs abort) {
             this.abort = Input.ofNullable(abort);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<HttpFaultDelayArgs> delay) {
+        public Builder delay(@Nullable Input<HttpFaultDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable HttpFaultDelayArgs delay) {
+        public Builder delay(@Nullable HttpFaultDelayArgs delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }

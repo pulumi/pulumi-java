@@ -74,12 +74,12 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
     	      this.port = defaults.port;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setPort(String port) {
+        public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

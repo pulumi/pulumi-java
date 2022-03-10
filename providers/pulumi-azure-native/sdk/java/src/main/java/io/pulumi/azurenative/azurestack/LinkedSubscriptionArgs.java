@@ -120,52 +120,52 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setLinkedSubscriptionId(Input<String> linkedSubscriptionId) {
+        public Builder linkedSubscriptionId(Input<String> linkedSubscriptionId) {
             this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId);
             return this;
         }
 
-        public Builder setLinkedSubscriptionId(String linkedSubscriptionId) {
+        public Builder linkedSubscriptionId(String linkedSubscriptionId) {
             this.linkedSubscriptionId = Input.of(Objects.requireNonNull(linkedSubscriptionId));
             return this;
         }
 
-        public Builder setLinkedSubscriptionName(@Nullable Input<String> linkedSubscriptionName) {
+        public Builder linkedSubscriptionName(@Nullable Input<String> linkedSubscriptionName) {
             this.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
 
-        public Builder setLinkedSubscriptionName(@Nullable String linkedSubscriptionName) {
+        public Builder linkedSubscriptionName(@Nullable String linkedSubscriptionName) {
             this.linkedSubscriptionName = Input.ofNullable(linkedSubscriptionName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<Either<String,Location>> location) {
+        public Builder location(@Nullable Input<Either<String,Location>> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable Either<String,Location> location) {
+        public Builder location(@Nullable Either<String,Location> location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRegistrationResourceId(Input<String> registrationResourceId) {
+        public Builder registrationResourceId(Input<String> registrationResourceId) {
             this.registrationResourceId = Objects.requireNonNull(registrationResourceId);
             return this;
         }
 
-        public Builder setRegistrationResourceId(String registrationResourceId) {
+        public Builder registrationResourceId(String registrationResourceId) {
             this.registrationResourceId = Input.of(Objects.requireNonNull(registrationResourceId));
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }

@@ -187,82 +187,82 @@ public final class TargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Input<Boolean> proxyBind) {
+        public Builder proxyBind(@Nullable Input<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Boolean proxyBind) {
+        public Builder proxyBind(@Nullable Boolean proxyBind) {
             this.proxyBind = Input.ofNullable(proxyBind);
             return this;
         }
 
-        public Builder setQuicOverride(@Nullable Input<String> quicOverride) {
+        public Builder quicOverride(@Nullable Input<String> quicOverride) {
             this.quicOverride = quicOverride;
             return this;
         }
 
-        public Builder setQuicOverride(@Nullable String quicOverride) {
+        public Builder quicOverride(@Nullable String quicOverride) {
             this.quicOverride = Input.ofNullable(quicOverride);
             return this;
         }
 
-        public Builder setSslCertificates(Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(Input<List<String>> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
 
-        public Builder setSslCertificates(List<String> sslCertificates) {
+        public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Input.of(Objects.requireNonNull(sslCertificates));
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder setUrlMap(Input<String> urlMap) {
+        public Builder urlMap(Input<String> urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
 
-        public Builder setUrlMap(String urlMap) {
+        public Builder urlMap(String urlMap) {
             this.urlMap = Input.of(Objects.requireNonNull(urlMap));
             return this;
         }

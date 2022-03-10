@@ -74,22 +74,22 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setPolicy(Input<PolicyArgs> policy) {
+        public Builder policy(Input<PolicyArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(PolicyArgs policy) {
+        public Builder policy(PolicyArgs policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setWebhook(Input<WebhookArgs> webhook) {
+        public Builder webhook(Input<WebhookArgs> webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
 
-        public Builder setWebhook(WebhookArgs webhook) {
+        public Builder webhook(WebhookArgs webhook) {
             this.webhook = Input.of(Objects.requireNonNull(webhook));
             return this;
         }

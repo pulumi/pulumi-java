@@ -77,27 +77,27 @@ public final class GetNetworkInsightsAccessScopeResult {
     	      this.updatedDate = defaults.updatedDate;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeArn(@Nullable String networkInsightsAccessScopeArn) {
+        public Builder networkInsightsAccessScopeArn(@Nullable String networkInsightsAccessScopeArn) {
             this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeId(@Nullable String networkInsightsAccessScopeId) {
+        public Builder networkInsightsAccessScopeId(@Nullable String networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAccessScopeTag> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAccessScopeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUpdatedDate(@Nullable String updatedDate) {
+        public Builder updatedDate(@Nullable String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
         }

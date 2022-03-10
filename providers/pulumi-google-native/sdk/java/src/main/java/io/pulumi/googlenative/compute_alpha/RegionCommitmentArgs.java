@@ -258,142 +258,142 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoRenew(@Nullable Input<Boolean> autoRenew) {
+        public Builder autoRenew(@Nullable Input<Boolean> autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = Input.ofNullable(autoRenew);
             return this;
         }
 
-        public Builder setCategory(@Nullable Input<RegionCommitmentCategory> category) {
+        public Builder category(@Nullable Input<RegionCommitmentCategory> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable RegionCommitmentCategory category) {
+        public Builder category(@Nullable RegionCommitmentCategory category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLicenseResource(@Nullable Input<LicenseResourceCommitmentArgs> licenseResource) {
+        public Builder licenseResource(@Nullable Input<LicenseResourceCommitmentArgs> licenseResource) {
             this.licenseResource = licenseResource;
             return this;
         }
 
-        public Builder setLicenseResource(@Nullable LicenseResourceCommitmentArgs licenseResource) {
+        public Builder licenseResource(@Nullable LicenseResourceCommitmentArgs licenseResource) {
             this.licenseResource = Input.ofNullable(licenseResource);
             return this;
         }
 
-        public Builder setMergeSourceCommitments(@Nullable Input<List<String>> mergeSourceCommitments) {
+        public Builder mergeSourceCommitments(@Nullable Input<List<String>> mergeSourceCommitments) {
             this.mergeSourceCommitments = mergeSourceCommitments;
             return this;
         }
 
-        public Builder setMergeSourceCommitments(@Nullable List<String> mergeSourceCommitments) {
+        public Builder mergeSourceCommitments(@Nullable List<String> mergeSourceCommitments) {
             this.mergeSourceCommitments = Input.ofNullable(mergeSourceCommitments);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<RegionCommitmentPlan> plan) {
+        public Builder plan(@Nullable Input<RegionCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable RegionCommitmentPlan plan) {
+        public Builder plan(@Nullable RegionCommitmentPlan plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setReservations(@Nullable Input<List<ReservationArgs>> reservations) {
+        public Builder reservations(@Nullable Input<List<ReservationArgs>> reservations) {
             this.reservations = reservations;
             return this;
         }
 
-        public Builder setReservations(@Nullable List<ReservationArgs> reservations) {
+        public Builder reservations(@Nullable List<ReservationArgs> reservations) {
             this.reservations = Input.ofNullable(reservations);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<ResourceCommitmentArgs>> resources) {
+        public Builder resources(@Nullable Input<List<ResourceCommitmentArgs>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<ResourceCommitmentArgs> resources) {
+        public Builder resources(@Nullable List<ResourceCommitmentArgs> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setSplitSourceCommitment(@Nullable Input<String> splitSourceCommitment) {
+        public Builder splitSourceCommitment(@Nullable Input<String> splitSourceCommitment) {
             this.splitSourceCommitment = splitSourceCommitment;
             return this;
         }
 
-        public Builder setSplitSourceCommitment(@Nullable String splitSourceCommitment) {
+        public Builder splitSourceCommitment(@Nullable String splitSourceCommitment) {
             this.splitSourceCommitment = Input.ofNullable(splitSourceCommitment);
             return this;
         }
 
-        public Builder setType(@Nullable Input<RegionCommitmentType> type) {
+        public Builder type(@Nullable Input<RegionCommitmentType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RegionCommitmentType type) {
+        public Builder type(@Nullable RegionCommitmentType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

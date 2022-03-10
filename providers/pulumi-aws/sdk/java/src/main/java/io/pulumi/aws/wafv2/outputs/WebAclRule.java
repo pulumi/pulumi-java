@@ -154,37 +154,37 @@ public final class WebAclRule {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable WebAclRuleAction action) {
+        public Builder action(@Nullable WebAclRuleAction action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebAclRuleOverrideAction overrideAction) {
+        public Builder overrideAction(@Nullable WebAclRuleOverrideAction overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<WebAclRuleRuleLabel> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<WebAclRuleRuleLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setStatement(WebAclRuleStatement statement) {
+        public Builder statement(WebAclRuleStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setVisibilityConfig(WebAclRuleVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(WebAclRuleVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }

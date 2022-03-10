@@ -201,52 +201,52 @@ public final class BlobEventsTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setBlobPathBeginsWith(@Nullable String blobPathBeginsWith) {
+        public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
             this.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
 
-        public Builder setBlobPathEndsWith(@Nullable String blobPathEndsWith) {
+        public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
             this.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setIgnoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
+        public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

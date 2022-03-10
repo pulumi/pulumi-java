@@ -191,92 +191,92 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
     	      this.writerIdentity = defaults.writerIdentity;
         }
 
-        public Builder setBigqueryOptions(@Nullable Input<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Input<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
-        public Builder setBigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsGetArgs bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsGetArgs bigqueryOptions) {
             this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Input<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Input.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setExclusions(@Nullable Input<List<BillingAccountSinkExclusionGetArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<BillingAccountSinkExclusionGetArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<BillingAccountSinkExclusionGetArgs> exclusions) {
+        public Builder exclusions(@Nullable List<BillingAccountSinkExclusionGetArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setWriterIdentity(@Nullable Input<String> writerIdentity) {
+        public Builder writerIdentity(@Nullable Input<String> writerIdentity) {
             this.writerIdentity = writerIdentity;
             return this;
         }
 
-        public Builder setWriterIdentity(@Nullable String writerIdentity) {
+        public Builder writerIdentity(@Nullable String writerIdentity) {
             this.writerIdentity = Input.ofNullable(writerIdentity);
             return this;
         }

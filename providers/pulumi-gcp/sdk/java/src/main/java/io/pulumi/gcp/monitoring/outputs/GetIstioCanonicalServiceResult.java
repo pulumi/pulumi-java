@@ -117,47 +117,47 @@ public final class GetIstioCanonicalServiceResult {
     	      this.telemetries = defaults.telemetries;
         }
 
-        public Builder setCanonicalService(String canonicalService) {
+        public Builder canonicalService(String canonicalService) {
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
 
-        public Builder setCanonicalServiceNamespace(String canonicalServiceNamespace) {
+        public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMeshUid(String meshUid) {
+        public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setTelemetries(List<GetIstioCanonicalServiceTelemetry> telemetries) {
+        public Builder telemetries(List<GetIstioCanonicalServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }

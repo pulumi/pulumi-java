@@ -52,12 +52,12 @@ public final class GetClusterCapacityProviderAssociationsResult {
     	      this.defaultCapacityProviderStrategy = defaults.defaultCapacityProviderStrategy;
         }
 
-        public Builder setCapacityProviders(@Nullable List<String> capacityProviders) {
+        public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = capacityProviders;
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(@Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
             return this;
         }

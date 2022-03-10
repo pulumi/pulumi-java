@@ -143,32 +143,32 @@ public final class ManagedClusterLoadBalancerProfileResponse extends io.pulumi.r
     	      this.outboundIPs = defaults.outboundIPs;
         }
 
-        public Builder setAllocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
+        public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
-        public Builder setEffectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
+        public Builder effectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
             this.effectiveOutboundIPs = effectiveOutboundIPs;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setManagedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
+        public Builder managedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
             this.managedOutboundIPs = managedOutboundIPs;
             return this;
         }
 
-        public Builder setOutboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
+        public Builder outboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
             this.outboundIPPrefixes = outboundIPPrefixes;
             return this;
         }
 
-        public Builder setOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
+        public Builder outboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = outboundIPs;
             return this;
         }

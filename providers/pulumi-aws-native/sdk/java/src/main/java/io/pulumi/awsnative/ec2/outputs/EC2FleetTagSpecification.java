@@ -53,12 +53,12 @@ public final class EC2FleetTagSpecification {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
+        public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EC2FleetTag> tags) {
+        public Builder tags(@Nullable List<EC2FleetTag> tags) {
             this.tags = tags;
             return this;
         }

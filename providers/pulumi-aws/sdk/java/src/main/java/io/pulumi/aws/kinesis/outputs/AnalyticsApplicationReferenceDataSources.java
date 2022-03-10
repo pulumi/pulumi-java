@@ -101,22 +101,22 @@ public final class AnalyticsApplicationReferenceDataSources {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setS3(AnalyticsApplicationReferenceDataSourcesS3 s3) {
+        public Builder s3(AnalyticsApplicationReferenceDataSourcesS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationReferenceDataSourcesSchema schema) {
+        public Builder schema(AnalyticsApplicationReferenceDataSourcesSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

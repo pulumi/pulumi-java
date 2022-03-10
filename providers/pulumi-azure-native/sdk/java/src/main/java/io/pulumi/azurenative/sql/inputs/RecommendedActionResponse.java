@@ -498,142 +498,142 @@ public final class RecommendedActionResponse extends io.pulumi.resources.InvokeA
     	      this.validSince = defaults.validSince;
         }
 
-        public Builder setDetails(Map<String,Object> details) {
+        public Builder details(Map<String,Object> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setErrorDetails(RecommendedActionErrorInfoResponse errorDetails) {
+        public Builder errorDetails(RecommendedActionErrorInfoResponse errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
 
-        public Builder setEstimatedImpact(List<RecommendedActionImpactRecordResponse> estimatedImpact) {
+        public Builder estimatedImpact(List<RecommendedActionImpactRecordResponse> estimatedImpact) {
             this.estimatedImpact = Objects.requireNonNull(estimatedImpact);
             return this;
         }
 
-        public Builder setExecuteActionDuration(String executeActionDuration) {
+        public Builder executeActionDuration(String executeActionDuration) {
             this.executeActionDuration = Objects.requireNonNull(executeActionDuration);
             return this;
         }
 
-        public Builder setExecuteActionInitiatedBy(String executeActionInitiatedBy) {
+        public Builder executeActionInitiatedBy(String executeActionInitiatedBy) {
             this.executeActionInitiatedBy = Objects.requireNonNull(executeActionInitiatedBy);
             return this;
         }
 
-        public Builder setExecuteActionInitiatedTime(String executeActionInitiatedTime) {
+        public Builder executeActionInitiatedTime(String executeActionInitiatedTime) {
             this.executeActionInitiatedTime = Objects.requireNonNull(executeActionInitiatedTime);
             return this;
         }
 
-        public Builder setExecuteActionStartTime(String executeActionStartTime) {
+        public Builder executeActionStartTime(String executeActionStartTime) {
             this.executeActionStartTime = Objects.requireNonNull(executeActionStartTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImplementationDetails(RecommendedActionImplementationInfoResponse implementationDetails) {
+        public Builder implementationDetails(RecommendedActionImplementationInfoResponse implementationDetails) {
             this.implementationDetails = Objects.requireNonNull(implementationDetails);
             return this;
         }
 
-        public Builder setIsArchivedAction(Boolean isArchivedAction) {
+        public Builder isArchivedAction(Boolean isArchivedAction) {
             this.isArchivedAction = Objects.requireNonNull(isArchivedAction);
             return this;
         }
 
-        public Builder setIsExecutableAction(Boolean isExecutableAction) {
+        public Builder isExecutableAction(Boolean isExecutableAction) {
             this.isExecutableAction = Objects.requireNonNull(isExecutableAction);
             return this;
         }
 
-        public Builder setIsRevertableAction(Boolean isRevertableAction) {
+        public Builder isRevertableAction(Boolean isRevertableAction) {
             this.isRevertableAction = Objects.requireNonNull(isRevertableAction);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastRefresh(String lastRefresh) {
+        public Builder lastRefresh(String lastRefresh) {
             this.lastRefresh = Objects.requireNonNull(lastRefresh);
             return this;
         }
 
-        public Builder setLinkedObjects(List<String> linkedObjects) {
+        public Builder linkedObjects(List<String> linkedObjects) {
             this.linkedObjects = Objects.requireNonNull(linkedObjects);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObservedImpact(List<RecommendedActionImpactRecordResponse> observedImpact) {
+        public Builder observedImpact(List<RecommendedActionImpactRecordResponse> observedImpact) {
             this.observedImpact = Objects.requireNonNull(observedImpact);
             return this;
         }
 
-        public Builder setRecommendationReason(String recommendationReason) {
+        public Builder recommendationReason(String recommendationReason) {
             this.recommendationReason = Objects.requireNonNull(recommendationReason);
             return this;
         }
 
-        public Builder setRevertActionDuration(String revertActionDuration) {
+        public Builder revertActionDuration(String revertActionDuration) {
             this.revertActionDuration = Objects.requireNonNull(revertActionDuration);
             return this;
         }
 
-        public Builder setRevertActionInitiatedBy(String revertActionInitiatedBy) {
+        public Builder revertActionInitiatedBy(String revertActionInitiatedBy) {
             this.revertActionInitiatedBy = Objects.requireNonNull(revertActionInitiatedBy);
             return this;
         }
 
-        public Builder setRevertActionInitiatedTime(String revertActionInitiatedTime) {
+        public Builder revertActionInitiatedTime(String revertActionInitiatedTime) {
             this.revertActionInitiatedTime = Objects.requireNonNull(revertActionInitiatedTime);
             return this;
         }
 
-        public Builder setRevertActionStartTime(String revertActionStartTime) {
+        public Builder revertActionStartTime(String revertActionStartTime) {
             this.revertActionStartTime = Objects.requireNonNull(revertActionStartTime);
             return this;
         }
 
-        public Builder setScore(Integer score) {
+        public Builder score(Integer score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }
 
-        public Builder setState(RecommendedActionStateInfoResponse state) {
+        public Builder state(RecommendedActionStateInfoResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTimeSeries(List<RecommendedActionMetricInfoResponse> timeSeries) {
+        public Builder timeSeries(List<RecommendedActionMetricInfoResponse> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidSince(String validSince) {
+        public Builder validSince(String validSince) {
             this.validSince = Objects.requireNonNull(validSince);
             return this;
         }

@@ -64,22 +64,22 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,IdentityManagementTypes>> type) {
+        public Builder type(@Nullable Input<Either<String,IdentityManagementTypes>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,IdentityManagementTypes> type) {
+        public Builder type(@Nullable Either<String,IdentityManagementTypes> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

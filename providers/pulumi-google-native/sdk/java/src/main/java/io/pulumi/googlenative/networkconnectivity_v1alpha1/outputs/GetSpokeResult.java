@@ -212,57 +212,57 @@ public final class GetSpokeResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHub(String hub) {
+        public Builder hub(String hub) {
             this.hub = Objects.requireNonNull(hub);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachments(List<String> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(List<String> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Objects.requireNonNull(linkedInterconnectAttachments);
             return this;
         }
 
-        public Builder setLinkedRouterApplianceInstances(List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Objects.requireNonNull(linkedRouterApplianceInstances);
             return this;
         }
 
-        public Builder setLinkedVpnTunnels(List<String> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(List<String> linkedVpnTunnels) {
             this.linkedVpnTunnels = Objects.requireNonNull(linkedVpnTunnels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -90,32 +90,32 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setReservedPeeringRanges(Input<List<String>> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(Input<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = Objects.requireNonNull(reservedPeeringRanges);
             return this;
         }
 
-        public Builder setReservedPeeringRanges(List<String> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(List<String> reservedPeeringRanges) {
             this.reservedPeeringRanges = Input.of(Objects.requireNonNull(reservedPeeringRanges));
             return this;
         }
 
-        public Builder setService(Input<String> service) {
+        public Builder service(Input<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }

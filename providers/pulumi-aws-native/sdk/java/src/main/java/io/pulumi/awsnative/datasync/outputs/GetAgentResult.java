@@ -102,22 +102,22 @@ public final class GetAgentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentArn(@Nullable String agentArn) {
+        public Builder agentArn(@Nullable String agentArn) {
             this.agentArn = agentArn;
             return this;
         }
 
-        public Builder setAgentName(@Nullable String agentName) {
+        public Builder agentName(@Nullable String agentName) {
             this.agentName = agentName;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable AgentEndpointType endpointType) {
+        public Builder endpointType(@Nullable AgentEndpointType endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AgentTag> tags) {
+        public Builder tags(@Nullable List<AgentTag> tags) {
             this.tags = tags;
             return this;
         }

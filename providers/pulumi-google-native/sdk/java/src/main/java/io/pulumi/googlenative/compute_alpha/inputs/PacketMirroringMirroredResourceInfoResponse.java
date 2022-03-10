@@ -87,17 +87,17 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInstances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
+        public Builder instances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setSubnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
+        public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

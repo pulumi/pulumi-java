@@ -89,32 +89,32 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setExpiry(Input<String> expiry) {
+        public Builder expiry(Input<String> expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Input.of(Objects.requireNonNull(expiry));
             return this;
         }
 
-        public Builder setSubject(Input<String> subject) {
+        public Builder subject(Input<String> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder setThumbprint(Input<String> thumbprint) {
+        public Builder thumbprint(Input<String> thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Input.of(Objects.requireNonNull(thumbprint));
             return this;
         }

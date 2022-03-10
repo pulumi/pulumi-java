@@ -84,17 +84,17 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setIdToken(String idToken) {
+        public Builder idToken(String idToken) {
             this.idToken = Objects.requireNonNull(idToken);
             return this;
         }
 
-        public Builder setRefreshToken(String refreshToken) {
+        public Builder refreshToken(String refreshToken) {
             this.refreshToken = Objects.requireNonNull(refreshToken);
             return this;
         }

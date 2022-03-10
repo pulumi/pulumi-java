@@ -154,37 +154,37 @@ public final class WsfcDomainProfileResponse extends io.pulumi.resources.InvokeA
     	      this.storageAccountUrl = defaults.storageAccountUrl;
         }
 
-        public Builder setClusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
+        public Builder clusterBootstrapAccount(@Nullable String clusterBootstrapAccount) {
             this.clusterBootstrapAccount = clusterBootstrapAccount;
             return this;
         }
 
-        public Builder setClusterOperatorAccount(@Nullable String clusterOperatorAccount) {
+        public Builder clusterOperatorAccount(@Nullable String clusterOperatorAccount) {
             this.clusterOperatorAccount = clusterOperatorAccount;
             return this;
         }
 
-        public Builder setDomainFqdn(@Nullable String domainFqdn) {
+        public Builder domainFqdn(@Nullable String domainFqdn) {
             this.domainFqdn = domainFqdn;
             return this;
         }
 
-        public Builder setFileShareWitnessPath(@Nullable String fileShareWitnessPath) {
+        public Builder fileShareWitnessPath(@Nullable String fileShareWitnessPath) {
             this.fileShareWitnessPath = fileShareWitnessPath;
             return this;
         }
 
-        public Builder setOuPath(@Nullable String ouPath) {
+        public Builder ouPath(@Nullable String ouPath) {
             this.ouPath = ouPath;
             return this;
         }
 
-        public Builder setSqlServiceAccount(@Nullable String sqlServiceAccount) {
+        public Builder sqlServiceAccount(@Nullable String sqlServiceAccount) {
             this.sqlServiceAccount = sqlServiceAccount;
             return this;
         }
 
-        public Builder setStorageAccountUrl(@Nullable String storageAccountUrl) {
+        public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }

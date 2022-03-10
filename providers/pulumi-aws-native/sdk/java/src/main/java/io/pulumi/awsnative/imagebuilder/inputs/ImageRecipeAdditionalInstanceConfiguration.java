@@ -75,12 +75,12 @@ public final class ImageRecipeAdditionalInstanceConfiguration extends io.pulumi.
     	      this.userDataOverride = defaults.userDataOverride;
         }
 
-        public Builder setSystemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
+        public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
             this.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
-        public Builder setUserDataOverride(@Nullable String userDataOverride) {
+        public Builder userDataOverride(@Nullable String userDataOverride) {
             this.userDataOverride = userDataOverride;
             return this;
         }

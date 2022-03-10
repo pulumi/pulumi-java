@@ -89,17 +89,17 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
     	      this.skipToken = defaults.skipToken;
         }
 
-        public Builder setConfigurationFilters(List<ConfigurationFilters> configurationFilters) {
+        public Builder configurationFilters(List<ConfigurationFilters> configurationFilters) {
             this.configurationFilters = Objects.requireNonNull(configurationFilters);
             return this;
         }
 
-        public Builder setCustomerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
             this.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }

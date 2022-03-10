@@ -82,17 +82,17 @@ public final class GoogleCloudRetailV2betaImageResponse {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(Integer height) {
+        public Builder height(Integer height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setWidth(Integer width) {
+        public Builder width(Integer width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }

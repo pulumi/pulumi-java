@@ -282,77 +282,77 @@ public final class GetGen1EnvironmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDataAccessFqdn(String dataAccessFqdn) {
+        public Builder dataAccessFqdn(String dataAccessFqdn) {
             this.dataAccessFqdn = Objects.requireNonNull(dataAccessFqdn);
             return this;
         }
 
-        public Builder setDataAccessId(String dataAccessId) {
+        public Builder dataAccessId(String dataAccessId) {
             this.dataAccessId = Objects.requireNonNull(dataAccessId);
             return this;
         }
 
-        public Builder setDataRetentionTime(String dataRetentionTime) {
+        public Builder dataRetentionTime(String dataRetentionTime) {
             this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartitionKeyProperties(@Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties) {
+        public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyResponse> partitionKeyProperties) {
             this.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setStatus(EnvironmentStatusResponse status) {
+        public Builder status(EnvironmentStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageLimitExceededBehavior(@Nullable String storageLimitExceededBehavior) {
+        public Builder storageLimitExceededBehavior(@Nullable String storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

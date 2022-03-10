@@ -76,17 +76,17 @@ public final class RulesetThreshold extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable RulesetThresholdType type) {
+        public Builder type(@Nullable RulesetThresholdType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUnit(@Nullable RulesetThresholdUnit unit) {
+        public Builder unit(@Nullable RulesetThresholdUnit unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

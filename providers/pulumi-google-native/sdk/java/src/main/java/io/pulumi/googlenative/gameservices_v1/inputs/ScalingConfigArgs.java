@@ -109,42 +109,42 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder setFleetAutoscalerSpec(Input<String> fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(Input<String> fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
-        public Builder setFleetAutoscalerSpec(String fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Input.of(Objects.requireNonNull(fleetAutoscalerSpec));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<ScheduleArgs> schedules) {
+        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Input.ofNullable(schedules);
             return this;
         }
 
-        public Builder setSelectors(@Nullable Input<List<LabelSelectorArgs>> selectors) {
+        public Builder selectors(@Nullable Input<List<LabelSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
-        public Builder setSelectors(@Nullable List<LabelSelectorArgs> selectors) {
+        public Builder selectors(@Nullable List<LabelSelectorArgs> selectors) {
             this.selectors = Input.ofNullable(selectors);
             return this;
         }

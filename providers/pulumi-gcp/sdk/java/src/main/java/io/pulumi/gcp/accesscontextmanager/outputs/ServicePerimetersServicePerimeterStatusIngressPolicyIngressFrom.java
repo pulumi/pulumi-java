@@ -97,17 +97,17 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
     	      this.sources = defaults.sources;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setSources(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource> sources) {
+        public Builder sources(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSource> sources) {
             this.sources = sources;
             return this;
         }

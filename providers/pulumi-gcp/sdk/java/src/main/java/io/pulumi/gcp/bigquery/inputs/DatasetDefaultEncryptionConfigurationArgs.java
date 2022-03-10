@@ -54,12 +54,12 @@ public final class DatasetDefaultEncryptionConfigurationArgs extends io.pulumi.r
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Input<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }

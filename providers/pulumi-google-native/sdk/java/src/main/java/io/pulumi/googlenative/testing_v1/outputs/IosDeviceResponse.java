@@ -97,22 +97,22 @@ public final class IosDeviceResponse {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder setIosModelId(String iosModelId) {
+        public Builder iosModelId(String iosModelId) {
             this.iosModelId = Objects.requireNonNull(iosModelId);
             return this;
         }
 
-        public Builder setIosVersionId(String iosVersionId) {
+        public Builder iosVersionId(String iosVersionId) {
             this.iosVersionId = Objects.requireNonNull(iosVersionId);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setOrientation(String orientation) {
+        public Builder orientation(String orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }

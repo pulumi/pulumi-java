@@ -56,12 +56,12 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<ManagerType> type) {
+        public Builder type(Input<ManagerType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ManagerType type) {
+        public Builder type(ManagerType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

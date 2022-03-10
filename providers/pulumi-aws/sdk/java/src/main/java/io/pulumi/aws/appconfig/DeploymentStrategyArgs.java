@@ -169,82 +169,82 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeploymentDurationInMinutes(Input<Integer> deploymentDurationInMinutes) {
+        public Builder deploymentDurationInMinutes(Input<Integer> deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Objects.requireNonNull(deploymentDurationInMinutes);
             return this;
         }
 
-        public Builder setDeploymentDurationInMinutes(Integer deploymentDurationInMinutes) {
+        public Builder deploymentDurationInMinutes(Integer deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Input.of(Objects.requireNonNull(deploymentDurationInMinutes));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFinalBakeTimeInMinutes(@Nullable Input<Integer> finalBakeTimeInMinutes) {
+        public Builder finalBakeTimeInMinutes(@Nullable Input<Integer> finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
 
-        public Builder setFinalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
+        public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = Input.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
 
-        public Builder setGrowthFactor(Input<Double> growthFactor) {
+        public Builder growthFactor(Input<Double> growthFactor) {
             this.growthFactor = Objects.requireNonNull(growthFactor);
             return this;
         }
 
-        public Builder setGrowthFactor(Double growthFactor) {
+        public Builder growthFactor(Double growthFactor) {
             this.growthFactor = Input.of(Objects.requireNonNull(growthFactor));
             return this;
         }
 
-        public Builder setGrowthType(@Nullable Input<String> growthType) {
+        public Builder growthType(@Nullable Input<String> growthType) {
             this.growthType = growthType;
             return this;
         }
 
-        public Builder setGrowthType(@Nullable String growthType) {
+        public Builder growthType(@Nullable String growthType) {
             this.growthType = Input.ofNullable(growthType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setReplicateTo(Input<String> replicateTo) {
+        public Builder replicateTo(Input<String> replicateTo) {
             this.replicateTo = Objects.requireNonNull(replicateTo);
             return this;
         }
 
-        public Builder setReplicateTo(String replicateTo) {
+        public Builder replicateTo(String replicateTo) {
             this.replicateTo = Input.of(Objects.requireNonNull(replicateTo));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

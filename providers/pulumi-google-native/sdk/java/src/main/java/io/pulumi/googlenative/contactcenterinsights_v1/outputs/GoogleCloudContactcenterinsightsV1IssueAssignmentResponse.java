@@ -82,17 +82,17 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
     	      this.score = defaults.score;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIssue(String issue) {
+        public Builder issue(String issue) {
             this.issue = Objects.requireNonNull(issue);
             return this;
         }
 
-        public Builder setScore(Double score) {
+        public Builder score(Double score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }

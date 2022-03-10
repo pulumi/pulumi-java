@@ -124,52 +124,52 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setRetry(@Nullable Input<Object> retry) {
+        public Builder retry(@Nullable Input<Object> retry) {
             this.retry = retry;
             return this;
         }
 
-        public Builder setRetry(@Nullable Object retry) {
+        public Builder retry(@Nullable Object retry) {
             this.retry = Input.ofNullable(retry);
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Input<Integer> retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Input<Integer> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
             this.retryIntervalInSeconds = Input.ofNullable(retryIntervalInSeconds);
             return this;
         }
 
-        public Builder setSecureInput(@Nullable Input<Boolean> secureInput) {
+        public Builder secureInput(@Nullable Input<Boolean> secureInput) {
             this.secureInput = secureInput;
             return this;
         }
 
-        public Builder setSecureInput(@Nullable Boolean secureInput) {
+        public Builder secureInput(@Nullable Boolean secureInput) {
             this.secureInput = Input.ofNullable(secureInput);
             return this;
         }
 
-        public Builder setSecureOutput(@Nullable Input<Boolean> secureOutput) {
+        public Builder secureOutput(@Nullable Input<Boolean> secureOutput) {
             this.secureOutput = secureOutput;
             return this;
         }
 
-        public Builder setSecureOutput(@Nullable Boolean secureOutput) {
+        public Builder secureOutput(@Nullable Boolean secureOutput) {
             this.secureOutput = Input.ofNullable(secureOutput);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Object> timeout) {
+        public Builder timeout(@Nullable Input<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

@@ -145,62 +145,62 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setDataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
+        public Builder dataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOperator(Input<ConditionOperator> operator) {
+        public Builder operator(Input<ConditionOperator> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(ConditionOperator operator) {
+        public Builder operator(ConditionOperator operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setTimeAggregation(@Nullable Input<TimeAggregationOperator> timeAggregation) {
+        public Builder timeAggregation(@Nullable Input<TimeAggregationOperator> timeAggregation) {
             this.timeAggregation = timeAggregation;
             return this;
         }
 
-        public Builder setTimeAggregation(@Nullable TimeAggregationOperator timeAggregation) {
+        public Builder timeAggregation(@Nullable TimeAggregationOperator timeAggregation) {
             this.timeAggregation = Input.ofNullable(timeAggregation);
             return this;
         }
 
-        public Builder setWindowSize(@Nullable Input<String> windowSize) {
+        public Builder windowSize(@Nullable Input<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = Input.ofNullable(windowSize);
             return this;
         }

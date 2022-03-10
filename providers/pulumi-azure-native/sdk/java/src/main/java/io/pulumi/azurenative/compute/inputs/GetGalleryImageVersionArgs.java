@@ -118,27 +118,27 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setGalleryImageName(String galleryImageName) {
+        public Builder galleryImageName(String galleryImageName) {
             this.galleryImageName = Objects.requireNonNull(galleryImageName);
             return this;
         }
 
-        public Builder setGalleryImageVersionName(String galleryImageVersionName) {
+        public Builder galleryImageVersionName(String galleryImageVersionName) {
             this.galleryImageVersionName = Objects.requireNonNull(galleryImageVersionName);
             return this;
         }
 
-        public Builder setGalleryName(String galleryName) {
+        public Builder galleryName(String galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -85,17 +85,17 @@ public final class TrafficWeightResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

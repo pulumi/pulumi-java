@@ -90,17 +90,17 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
     	      this.queryVariables = defaults.queryVariables;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setQueryFileUri(String queryFileUri) {
+        public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
 
-        public Builder setQueryVariables(Map<String,String> queryVariables) {
+        public Builder queryVariables(Map<String,String> queryVariables) {
             this.queryVariables = Objects.requireNonNull(queryVariables);
             return this;
         }

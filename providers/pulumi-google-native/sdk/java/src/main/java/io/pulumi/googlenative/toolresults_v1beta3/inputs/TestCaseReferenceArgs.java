@@ -90,32 +90,32 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.testSuiteName = defaults.testSuiteName;
         }
 
-        public Builder setClassName(@Nullable Input<String> className) {
+        public Builder className(@Nullable Input<String> className) {
             this.className = className;
             return this;
         }
 
-        public Builder setClassName(@Nullable String className) {
+        public Builder className(@Nullable String className) {
             this.className = Input.ofNullable(className);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTestSuiteName(@Nullable Input<String> testSuiteName) {
+        public Builder testSuiteName(@Nullable Input<String> testSuiteName) {
             this.testSuiteName = testSuiteName;
             return this;
         }
 
-        public Builder setTestSuiteName(@Nullable String testSuiteName) {
+        public Builder testSuiteName(@Nullable String testSuiteName) {
             this.testSuiteName = Input.ofNullable(testSuiteName);
             return this;
         }

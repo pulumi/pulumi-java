@@ -61,17 +61,17 @@ public final class BotIntentConfirmationSetting {
     	      this.promptSpecification = defaults.promptSpecification;
         }
 
-        public Builder setDeclinationResponse(BotResponseSpecification declinationResponse) {
+        public Builder declinationResponse(BotResponseSpecification declinationResponse) {
             this.declinationResponse = Objects.requireNonNull(declinationResponse);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setPromptSpecification(BotPromptSpecification promptSpecification) {
+        public Builder promptSpecification(BotPromptSpecification promptSpecification) {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
         }

@@ -125,52 +125,52 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
     	      this.vpnClientAddressPool = defaults.vpnClientAddressPool;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Input.ofNullable(enableInternetSecurity);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
+        public Builder routingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Input.ofNullable(routingConfiguration);
             return this;
         }
 
-        public Builder setVpnClientAddressPool(@Nullable Input<AddressSpaceArgs> vpnClientAddressPool) {
+        public Builder vpnClientAddressPool(@Nullable Input<AddressSpaceArgs> vpnClientAddressPool) {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }
 
-        public Builder setVpnClientAddressPool(@Nullable AddressSpaceArgs vpnClientAddressPool) {
+        public Builder vpnClientAddressPool(@Nullable AddressSpaceArgs vpnClientAddressPool) {
             this.vpnClientAddressPool = Input.ofNullable(vpnClientAddressPool);
             return this;
         }

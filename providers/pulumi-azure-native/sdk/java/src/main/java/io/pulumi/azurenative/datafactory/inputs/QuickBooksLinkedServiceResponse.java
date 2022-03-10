@@ -275,72 +275,72 @@ public final class QuickBooksLinkedServiceResponse extends io.pulumi.resources.I
     	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
         }
 
-        public Builder setAccessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
+        public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
+        public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
             this.accessTokenSecret = accessTokenSecret;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setCompanyId(@Nullable Object companyId) {
+        public Builder companyId(@Nullable Object companyId) {
             this.companyId = companyId;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Object connectionProperties) {
+        public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setConsumerKey(@Nullable Object consumerKey) {
+        public Builder consumerKey(@Nullable Object consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
-        public Builder setConsumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
+        public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
             this.consumerSecret = consumerSecret;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Object endpoint) {
+        public Builder endpoint(@Nullable Object endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }

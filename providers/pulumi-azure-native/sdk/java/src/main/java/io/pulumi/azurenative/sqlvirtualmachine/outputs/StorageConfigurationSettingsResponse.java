@@ -116,27 +116,27 @@ public final class StorageConfigurationSettingsResponse {
     	      this.storageWorkloadType = defaults.storageWorkloadType;
         }
 
-        public Builder setDiskConfigurationType(@Nullable String diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
-        public Builder setSqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
+        public Builder sqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
-        public Builder setSqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
+        public Builder sqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
-        public Builder setSqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
+        public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
-        public Builder setStorageWorkloadType(@Nullable String storageWorkloadType) {
+        public Builder storageWorkloadType(@Nullable String storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }

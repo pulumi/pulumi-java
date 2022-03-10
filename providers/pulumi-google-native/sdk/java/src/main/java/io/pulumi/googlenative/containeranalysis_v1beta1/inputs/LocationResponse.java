@@ -89,17 +89,17 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setVersion(VersionResponse version) {
+        public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

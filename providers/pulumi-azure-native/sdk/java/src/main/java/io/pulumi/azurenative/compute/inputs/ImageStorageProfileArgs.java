@@ -93,32 +93,32 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     	      this.zoneResilient = defaults.zoneResilient;
         }
 
-        public Builder setDataDisks(@Nullable Input<List<ImageDataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Input<List<ImageDataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<ImageDataDiskArgs> dataDisks) {
+        public Builder dataDisks(@Nullable List<ImageDataDiskArgs> dataDisks) {
             this.dataDisks = Input.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder setOsDisk(@Nullable Input<ImageOSDiskArgs> osDisk) {
+        public Builder osDisk(@Nullable Input<ImageOSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable ImageOSDiskArgs osDisk) {
+        public Builder osDisk(@Nullable ImageOSDiskArgs osDisk) {
             this.osDisk = Input.ofNullable(osDisk);
             return this;
         }
 
-        public Builder setZoneResilient(@Nullable Input<Boolean> zoneResilient) {
+        public Builder zoneResilient(@Nullable Input<Boolean> zoneResilient) {
             this.zoneResilient = zoneResilient;
             return this;
         }
 
-        public Builder setZoneResilient(@Nullable Boolean zoneResilient) {
+        public Builder zoneResilient(@Nullable Boolean zoneResilient) {
             this.zoneResilient = Input.ofNullable(zoneResilient);
             return this;
         }

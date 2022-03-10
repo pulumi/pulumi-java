@@ -50,7 +50,7 @@ public final class DownwardAPIProjection {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<DownwardAPIVolumeFile> items) {
+        public Builder items(@Nullable List<DownwardAPIVolumeFile> items) {
             this.items = items;
             return this;
         }

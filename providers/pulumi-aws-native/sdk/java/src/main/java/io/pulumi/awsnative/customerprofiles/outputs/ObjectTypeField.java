@@ -84,17 +84,17 @@ public final class ObjectTypeField {
     	      this.target = defaults.target;
         }
 
-        public Builder setContentType(@Nullable ObjectTypeFieldContentType contentType) {
+        public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

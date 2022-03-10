@@ -59,17 +59,17 @@ public final class ClassificationJobUserPausedDetail {
     	      this.jobPausedAt = defaults.jobPausedAt;
         }
 
-        public Builder setJobExpiresAt(@Nullable String jobExpiresAt) {
+        public Builder jobExpiresAt(@Nullable String jobExpiresAt) {
             this.jobExpiresAt = jobExpiresAt;
             return this;
         }
 
-        public Builder setJobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
+        public Builder jobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
             this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
             return this;
         }
 
-        public Builder setJobPausedAt(@Nullable String jobPausedAt) {
+        public Builder jobPausedAt(@Nullable String jobPausedAt) {
             this.jobPausedAt = jobPausedAt;
             return this;
         }

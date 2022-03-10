@@ -47,7 +47,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.functionARN = defaults.functionARN;
         }
 
-        public Builder setFunctionARN(String functionARN) {
+        public Builder functionARN(String functionARN) {
             this.functionARN = Objects.requireNonNull(functionARN);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ThrottlingInformationResponse {
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }

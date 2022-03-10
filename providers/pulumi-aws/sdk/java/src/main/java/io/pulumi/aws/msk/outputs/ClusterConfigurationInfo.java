@@ -66,12 +66,12 @@ public final class ClusterConfigurationInfo {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

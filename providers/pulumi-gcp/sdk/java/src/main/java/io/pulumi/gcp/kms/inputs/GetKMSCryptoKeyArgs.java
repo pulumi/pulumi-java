@@ -69,12 +69,12 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setKeyRing(String keyRing) {
+        public Builder keyRing(String keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

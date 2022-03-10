@@ -53,7 +53,7 @@ public final class BucketOwnershipControlsRule extends io.pulumi.resources.Invok
     	      this.objectOwnership = defaults.objectOwnership;
         }
 
-        public Builder setObjectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
+        public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
             this.objectOwnership = objectOwnership;
             return this;
         }

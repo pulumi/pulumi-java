@@ -76,22 +76,22 @@ public final class BotAbortStatementArgs extends io.pulumi.resources.ResourceArg
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(Input<List<BotAbortStatementMessageArgs>> messages) {
+        public Builder messages(Input<List<BotAbortStatementMessageArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setMessages(List<BotAbortStatementMessageArgs> messages) {
+        public Builder messages(List<BotAbortStatementMessageArgs> messages) {
             this.messages = Input.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder setResponseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Input<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Input.ofNullable(responseCard);
             return this;
         }

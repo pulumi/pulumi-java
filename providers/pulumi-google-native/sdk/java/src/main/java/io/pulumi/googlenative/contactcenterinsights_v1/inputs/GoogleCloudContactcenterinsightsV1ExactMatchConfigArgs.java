@@ -57,12 +57,12 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder setCaseSensitive(@Nullable Input<Boolean> caseSensitive) {
+        public Builder caseSensitive(@Nullable Input<Boolean> caseSensitive) {
             this.caseSensitive = caseSensitive;
             return this;
         }
 
-        public Builder setCaseSensitive(@Nullable Boolean caseSensitive) {
+        public Builder caseSensitive(@Nullable Boolean caseSensitive) {
             this.caseSensitive = Input.ofNullable(caseSensitive);
             return this;
         }

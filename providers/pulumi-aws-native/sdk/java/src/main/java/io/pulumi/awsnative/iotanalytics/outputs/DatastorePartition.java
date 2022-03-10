@@ -51,12 +51,12 @@ public final class DatastorePartition {
     	      this.timestampPartition = defaults.timestampPartition;
         }
 
-        public Builder setPartition(@Nullable DatastorePartition partition) {
+        public Builder partition(@Nullable DatastorePartition partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setTimestampPartition(@Nullable DatastoreTimestampPartition timestampPartition) {
+        public Builder timestampPartition(@Nullable DatastoreTimestampPartition timestampPartition) {
             this.timestampPartition = timestampPartition;
             return this;
         }

@@ -223,112 +223,112 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareMappings = defaults.shareMappings;
         }
 
-        public Builder setComputeResource(@Nullable Input<ComputeResourceArgs> computeResource) {
+        public Builder computeResource(@Nullable Input<ComputeResourceArgs> computeResource) {
             this.computeResource = computeResource;
             return this;
         }
 
-        public Builder setComputeResource(@Nullable ComputeResourceArgs computeResource) {
+        public Builder computeResource(@Nullable ComputeResourceArgs computeResource) {
             this.computeResource = Input.ofNullable(computeResource);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setHostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
+        public Builder hostPlatform(Input<Either<String,PlatformType>> hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
-        public Builder setHostPlatform(Either<String,PlatformType> hostPlatform) {
+        public Builder hostPlatform(Either<String,PlatformType> hostPlatform) {
             this.hostPlatform = Input.of(Objects.requireNonNull(hostPlatform));
             return this;
         }
 
-        public Builder setIoTDeviceDetails(Input<IoTDeviceInfoArgs> ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(Input<IoTDeviceInfoArgs> ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
 
-        public Builder setIoTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(IoTDeviceInfoArgs ioTDeviceDetails) {
             this.ioTDeviceDetails = Input.of(Objects.requireNonNull(ioTDeviceDetails));
             return this;
         }
 
-        public Builder setIoTEdgeAgentInfo(@Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
+        public Builder ioTEdgeAgentInfo(@Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo) {
             this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
             return this;
         }
 
-        public Builder setIoTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
+        public Builder ioTEdgeAgentInfo(@Nullable IoTEdgeAgentInfoArgs ioTEdgeAgentInfo) {
             this.ioTEdgeAgentInfo = Input.ofNullable(ioTEdgeAgentInfo);
             return this;
         }
 
-        public Builder setIoTEdgeDeviceDetails(Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
 
-        public Builder setIoTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(IoTDeviceInfoArgs ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Input.of(Objects.requireNonNull(ioTEdgeDeviceDetails));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setRoleStatus(Either<String,RoleStatus> roleStatus) {
+        public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
             return this;
         }
 
-        public Builder setShareMappings(@Nullable Input<List<MountPointMapArgs>> shareMappings) {
+        public Builder shareMappings(@Nullable Input<List<MountPointMapArgs>> shareMappings) {
             this.shareMappings = shareMappings;
             return this;
         }
 
-        public Builder setShareMappings(@Nullable List<MountPointMapArgs> shareMappings) {
+        public Builder shareMappings(@Nullable List<MountPointMapArgs> shareMappings) {
             this.shareMappings = Input.ofNullable(shareMappings);
             return this;
         }

@@ -72,22 +72,22 @@ public final class RuleGroupJsonMatchPatternArgs extends io.pulumi.resources.Res
     	      this.includedPaths = defaults.includedPaths;
         }
 
-        public Builder setAll(@Nullable Input<Object> all) {
+        public Builder all(@Nullable Input<Object> all) {
             this.all = all;
             return this;
         }
 
-        public Builder setAll(@Nullable Object all) {
+        public Builder all(@Nullable Object all) {
             this.all = Input.ofNullable(all);
             return this;
         }
 
-        public Builder setIncludedPaths(@Nullable Input<List<String>> includedPaths) {
+        public Builder includedPaths(@Nullable Input<List<String>> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
 
-        public Builder setIncludedPaths(@Nullable List<String> includedPaths) {
+        public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = Input.ofNullable(includedPaths);
             return this;
         }

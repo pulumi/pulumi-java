@@ -52,12 +52,12 @@ public final class CxEnvironmentVersionConfigGetArgs extends io.pulumi.resources
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

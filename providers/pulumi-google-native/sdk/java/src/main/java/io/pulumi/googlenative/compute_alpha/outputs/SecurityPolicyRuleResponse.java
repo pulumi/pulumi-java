@@ -296,82 +296,82 @@ public final class SecurityPolicyRuleResponse {
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setHeaderAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
+        public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMatch(SecurityPolicyRuleMatcherResponse match) {
+        public Builder match(SecurityPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setPreview(Boolean preview) {
+        public Builder preview(Boolean preview) {
             this.preview = Objects.requireNonNull(preview);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
+        public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
             return this;
         }
 
-        public Builder setRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
+        public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
         }
 
-        public Builder setRedirectTarget(String redirectTarget) {
+        public Builder redirectTarget(String redirectTarget) {
             this.redirectTarget = Objects.requireNonNull(redirectTarget);
             return this;
         }
 
-        public Builder setRuleNumber(String ruleNumber) {
+        public Builder ruleNumber(String ruleNumber) {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }
 
-        public Builder setRuleTupleCount(Integer ruleTupleCount) {
+        public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
 
-        public Builder setTargetResources(List<String> targetResources) {
+        public Builder targetResources(List<String> targetResources) {
             this.targetResources = Objects.requireNonNull(targetResources);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }

@@ -83,17 +83,17 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

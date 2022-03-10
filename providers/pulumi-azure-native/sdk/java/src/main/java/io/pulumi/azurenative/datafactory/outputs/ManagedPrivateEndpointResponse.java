@@ -134,32 +134,32 @@ public final class ManagedPrivateEndpointResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setConnectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
+        public Builder connectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
             this.connectionState = connectionState;
             return this;
         }
 
-        public Builder setFqdns(@Nullable List<String> fqdns) {
+        public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setIsReserved(Boolean isReserved) {
+        public Builder isReserved(Boolean isReserved) {
             this.isReserved = Objects.requireNonNull(isReserved);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

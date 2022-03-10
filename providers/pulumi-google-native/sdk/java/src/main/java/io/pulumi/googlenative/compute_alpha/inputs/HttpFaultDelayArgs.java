@@ -75,22 +75,22 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(@Nullable Input<DurationArgs> fixedDelay) {
+        public Builder fixedDelay(@Nullable Input<DurationArgs> fixedDelay) {
             this.fixedDelay = fixedDelay;
             return this;
         }
 
-        public Builder setFixedDelay(@Nullable DurationArgs fixedDelay) {
+        public Builder fixedDelay(@Nullable DurationArgs fixedDelay) {
             this.fixedDelay = Input.ofNullable(fixedDelay);
             return this;
         }
 
-        public Builder setPercentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Input<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = Input.ofNullable(percentage);
             return this;
         }

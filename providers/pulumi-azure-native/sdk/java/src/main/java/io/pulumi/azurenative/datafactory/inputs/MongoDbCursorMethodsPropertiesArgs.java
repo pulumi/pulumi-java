@@ -106,42 +106,42 @@ public final class MongoDbCursorMethodsPropertiesArgs extends io.pulumi.resource
     	      this.sort = defaults.sort;
         }
 
-        public Builder setLimit(@Nullable Input<Object> limit) {
+        public Builder limit(@Nullable Input<Object> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable Object limit) {
+        public Builder limit(@Nullable Object limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<Object> project) {
+        public Builder project(@Nullable Input<Object> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable Object project) {
+        public Builder project(@Nullable Object project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSkip(@Nullable Input<Object> skip) {
+        public Builder skip(@Nullable Input<Object> skip) {
             this.skip = skip;
             return this;
         }
 
-        public Builder setSkip(@Nullable Object skip) {
+        public Builder skip(@Nullable Object skip) {
             this.skip = Input.ofNullable(skip);
             return this;
         }
 
-        public Builder setSort(@Nullable Input<Object> sort) {
+        public Builder sort(@Nullable Input<Object> sort) {
             this.sort = sort;
             return this;
         }
 
-        public Builder setSort(@Nullable Object sort) {
+        public Builder sort(@Nullable Object sort) {
             this.sort = Input.ofNullable(sort);
             return this;
         }

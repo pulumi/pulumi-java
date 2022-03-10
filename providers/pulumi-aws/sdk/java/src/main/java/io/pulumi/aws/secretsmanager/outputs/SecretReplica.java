@@ -115,27 +115,27 @@ public final class SecretReplica {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setLastAccessedDate(@Nullable String lastAccessedDate) {
+        public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }

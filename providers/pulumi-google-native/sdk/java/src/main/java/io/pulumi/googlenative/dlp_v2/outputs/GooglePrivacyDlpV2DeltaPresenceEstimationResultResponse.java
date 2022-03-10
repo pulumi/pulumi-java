@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse {
     	      this.deltaPresenceEstimationHistogram = defaults.deltaPresenceEstimationHistogram;
         }
 
-        public Builder setDeltaPresenceEstimationHistogram(List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
+        public Builder deltaPresenceEstimationHistogram(List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
             this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
             return this;
         }

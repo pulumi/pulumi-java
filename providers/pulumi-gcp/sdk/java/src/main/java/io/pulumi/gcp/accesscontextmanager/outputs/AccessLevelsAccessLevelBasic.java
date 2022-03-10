@@ -83,12 +83,12 @@ public final class AccessLevelsAccessLevelBasic {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setCombiningFunction(@Nullable String combiningFunction) {
+        public Builder combiningFunction(@Nullable String combiningFunction) {
             this.combiningFunction = combiningFunction;
             return this;
         }
 
-        public Builder setConditions(List<AccessLevelsAccessLevelBasicCondition> conditions) {
+        public Builder conditions(List<AccessLevelsAccessLevelBasicCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

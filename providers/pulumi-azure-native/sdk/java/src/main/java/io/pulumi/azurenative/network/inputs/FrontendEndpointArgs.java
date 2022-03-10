@@ -142,62 +142,62 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSessionAffinityEnabledState(@Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
+        public Builder sessionAffinityEnabledState(@Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
 
-        public Builder setSessionAffinityEnabledState(@Nullable Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
+        public Builder sessionAffinityEnabledState(@Nullable Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = Input.ofNullable(sessionAffinityEnabledState);
             return this;
         }
 
-        public Builder setSessionAffinityTtlSeconds(@Nullable Input<Integer> sessionAffinityTtlSeconds) {
+        public Builder sessionAffinityTtlSeconds(@Nullable Input<Integer> sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
 
-        public Builder setSessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
+        public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = Input.ofNullable(sessionAffinityTtlSeconds);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }

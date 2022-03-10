@@ -94,42 +94,42 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.uIColorPalette = defaults.uIColorPalette;
         }
 
-        public Builder setDataColorPalette(@Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette) {
+        public Builder dataColorPalette(@Nullable Input<ThemeDataColorPaletteArgs> dataColorPalette) {
             this.dataColorPalette = dataColorPalette;
             return this;
         }
 
-        public Builder setDataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
+        public Builder dataColorPalette(@Nullable ThemeDataColorPaletteArgs dataColorPalette) {
             this.dataColorPalette = Input.ofNullable(dataColorPalette);
             return this;
         }
 
-        public Builder setSheet(@Nullable Input<ThemeSheetStyleArgs> sheet) {
+        public Builder sheet(@Nullable Input<ThemeSheetStyleArgs> sheet) {
             this.sheet = sheet;
             return this;
         }
 
-        public Builder setSheet(@Nullable ThemeSheetStyleArgs sheet) {
+        public Builder sheet(@Nullable ThemeSheetStyleArgs sheet) {
             this.sheet = Input.ofNullable(sheet);
             return this;
         }
 
-        public Builder setTypography(@Nullable Input<ThemeTypographyArgs> typography) {
+        public Builder typography(@Nullable Input<ThemeTypographyArgs> typography) {
             this.typography = typography;
             return this;
         }
 
-        public Builder setTypography(@Nullable ThemeTypographyArgs typography) {
+        public Builder typography(@Nullable ThemeTypographyArgs typography) {
             this.typography = Input.ofNullable(typography);
             return this;
         }
 
-        public Builder setUIColorPalette(@Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette) {
+        public Builder uIColorPalette(@Nullable Input<ThemeUIColorPaletteArgs> uIColorPalette) {
             this.uIColorPalette = uIColorPalette;
             return this;
         }
 
-        public Builder setUIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
+        public Builder uIColorPalette(@Nullable ThemeUIColorPaletteArgs uIColorPalette) {
             this.uIColorPalette = Input.ofNullable(uIColorPalette);
             return this;
         }

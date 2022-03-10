@@ -94,42 +94,42 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setEnvgroupId(Input<String> envgroupId) {
+        public Builder envgroupId(Input<String> envgroupId) {
             this.envgroupId = Objects.requireNonNull(envgroupId);
             return this;
         }
 
-        public Builder setEnvgroupId(String envgroupId) {
+        public Builder envgroupId(String envgroupId) {
             this.envgroupId = Input.of(Objects.requireNonNull(envgroupId));
             return this;
         }
 
-        public Builder setEnvironment(Input<String> environment) {
+        public Builder environment(Input<String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Input.of(Objects.requireNonNull(environment));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }

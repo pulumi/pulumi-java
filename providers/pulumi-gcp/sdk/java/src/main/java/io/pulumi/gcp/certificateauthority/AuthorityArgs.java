@@ -238,112 +238,112 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateAuthorityId(Input<String> certificateAuthorityId) {
+        public Builder certificateAuthorityId(Input<String> certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
 
-        public Builder setCertificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Input.of(Objects.requireNonNull(certificateAuthorityId));
             return this;
         }
 
-        public Builder setConfig(Input<AuthorityConfigArgs> config) {
+        public Builder config(Input<AuthorityConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(AuthorityConfigArgs config) {
+        public Builder config(AuthorityConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setGcsBucket(@Nullable Input<String> gcsBucket) {
+        public Builder gcsBucket(@Nullable Input<String> gcsBucket) {
             this.gcsBucket = gcsBucket;
             return this;
         }
 
-        public Builder setGcsBucket(@Nullable String gcsBucket) {
+        public Builder gcsBucket(@Nullable String gcsBucket) {
             this.gcsBucket = Input.ofNullable(gcsBucket);
             return this;
         }
 
-        public Builder setIgnoreActiveCertificatesOnDeletion(@Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion) {
+        public Builder ignoreActiveCertificatesOnDeletion(@Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion) {
             this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
 
-        public Builder setIgnoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
+        public Builder ignoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
             this.ignoreActiveCertificatesOnDeletion = Input.ofNullable(ignoreActiveCertificatesOnDeletion);
             return this;
         }
 
-        public Builder setKeySpec(Input<AuthorityKeySpecArgs> keySpec) {
+        public Builder keySpec(Input<AuthorityKeySpecArgs> keySpec) {
             this.keySpec = Objects.requireNonNull(keySpec);
             return this;
         }
 
-        public Builder setKeySpec(AuthorityKeySpecArgs keySpec) {
+        public Builder keySpec(AuthorityKeySpecArgs keySpec) {
             this.keySpec = Input.of(Objects.requireNonNull(keySpec));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Input<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Input.ofNullable(lifetime);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setPool(Input<String> pool) {
+        public Builder pool(Input<String> pool) {
             this.pool = Objects.requireNonNull(pool);
             return this;
         }
 
-        public Builder setPool(String pool) {
+        public Builder pool(String pool) {
             this.pool = Input.of(Objects.requireNonNull(pool));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

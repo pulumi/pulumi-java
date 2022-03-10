@@ -85,32 +85,32 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setOutpostId(Input<String> outpostId) {
+        public Builder outpostId(Input<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
-        public Builder setOutpostId(String outpostId) {
+        public Builder outpostId(String outpostId) {
             this.outpostId = Input.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder setSecurityGroupId(Input<String> securityGroupId) {
+        public Builder securityGroupId(Input<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
-        public Builder setSecurityGroupId(String securityGroupId) {
+        public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Input.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

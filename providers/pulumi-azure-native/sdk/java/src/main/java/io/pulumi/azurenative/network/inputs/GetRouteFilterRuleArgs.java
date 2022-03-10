@@ -84,17 +84,17 @@ public final class GetRouteFilterRuleArgs extends io.pulumi.resources.InvokeArgs
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRouteFilterName(String routeFilterName) {
+        public Builder routeFilterName(String routeFilterName) {
             this.routeFilterName = Objects.requireNonNull(routeFilterName);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }

@@ -48,7 +48,7 @@ public final class OrganizationPolicyRestorePolicy {
     	      this.$default = defaults.$default;
         }
 
-        public Builder set$default(Boolean $default) {
+        public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }

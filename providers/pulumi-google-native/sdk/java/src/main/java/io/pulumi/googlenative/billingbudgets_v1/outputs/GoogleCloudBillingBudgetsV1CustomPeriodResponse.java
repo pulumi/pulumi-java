@@ -65,12 +65,12 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse {
     	      this.startDate = defaults.startDate;
         }
 
-        public Builder setEndDate(GoogleTypeDateResponse endDate) {
+        public Builder endDate(GoogleTypeDateResponse endDate) {
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
 
-        public Builder setStartDate(GoogleTypeDateResponse startDate) {
+        public Builder startDate(GoogleTypeDateResponse startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }

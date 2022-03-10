@@ -227,62 +227,62 @@ public final class GetBackupResult {
     	      this.storageBytes = defaults.storageBytes;
         }
 
-        public Builder setCapacityGb(String capacityGb) {
+        public Builder capacityGb(String capacityGb) {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDownloadBytes(String downloadBytes) {
+        public Builder downloadBytes(String downloadBytes) {
             this.downloadBytes = Objects.requireNonNull(downloadBytes);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSourceFileShare(String sourceFileShare) {
+        public Builder sourceFileShare(String sourceFileShare) {
             this.sourceFileShare = Objects.requireNonNull(sourceFileShare);
             return this;
         }
 
-        public Builder setSourceInstance(String sourceInstance) {
+        public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setSourceInstanceTier(String sourceInstanceTier) {
+        public Builder sourceInstanceTier(String sourceInstanceTier) {
             this.sourceInstanceTier = Objects.requireNonNull(sourceInstanceTier);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageBytes(String storageBytes) {
+        public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }

@@ -49,7 +49,7 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
     	      this.propertyGroups = defaults.propertyGroups;
         }
 
-        public Builder setPropertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
+        public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
             this.propertyGroups = Objects.requireNonNull(propertyGroups);
             return this;
         }

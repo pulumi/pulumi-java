@@ -100,22 +100,22 @@ public final class GetGatewayHostnameConfigurationArgs extends io.pulumi.resourc
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setHcId(String hcId) {
+        public Builder hcId(String hcId) {
             this.hcId = Objects.requireNonNull(hcId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

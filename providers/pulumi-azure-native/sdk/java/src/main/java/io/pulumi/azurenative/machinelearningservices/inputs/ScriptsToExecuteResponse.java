@@ -74,12 +74,12 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
     	      this.startupScript = defaults.startupScript;
         }
 
-        public Builder setCreationScript(@Nullable ScriptReferenceResponse creationScript) {
+        public Builder creationScript(@Nullable ScriptReferenceResponse creationScript) {
             this.creationScript = creationScript;
             return this;
         }
 
-        public Builder setStartupScript(@Nullable ScriptReferenceResponse startupScript) {
+        public Builder startupScript(@Nullable ScriptReferenceResponse startupScript) {
             this.startupScript = startupScript;
             return this;
         }

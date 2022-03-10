@@ -382,107 +382,107 @@ public final class MabFileFolderProtectedItemResponse extends io.pulumi.resource
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable String backupSetName) {
+        public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable String createMode) {
+        public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setDeferredDeleteSyncTimeInUTC(@Nullable Double deferredDeleteSyncTimeInUTC) {
+        public Builder deferredDeleteSyncTimeInUTC(@Nullable Double deferredDeleteSyncTimeInUTC) {
             this.deferredDeleteSyncTimeInUTC = deferredDeleteSyncTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable MabFileFolderProtectedItemExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable MabFileFolderProtectedItemExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Boolean isRehydrate) {
+        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastBackupTime(@Nullable String lastBackupTime) {
+        public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable String lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectedItemType(String protectedItemType) {
+        public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable String workloadType) {
+        public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
         }

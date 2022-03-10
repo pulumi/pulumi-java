@@ -149,72 +149,72 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDynamicGroupMetadata(@Nullable Input<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
+        public Builder dynamicGroupMetadata(@Nullable Input<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
             this.dynamicGroupMetadata = dynamicGroupMetadata;
             return this;
         }
 
-        public Builder setDynamicGroupMetadata(@Nullable DynamicGroupMetadataArgs dynamicGroupMetadata) {
+        public Builder dynamicGroupMetadata(@Nullable DynamicGroupMetadataArgs dynamicGroupMetadata) {
             this.dynamicGroupMetadata = Input.ofNullable(dynamicGroupMetadata);
             return this;
         }
 
-        public Builder setGroupKey(Input<EntityKeyArgs> groupKey) {
+        public Builder groupKey(Input<EntityKeyArgs> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
-        public Builder setGroupKey(EntityKeyArgs groupKey) {
+        public Builder groupKey(EntityKeyArgs groupKey) {
             this.groupKey = Input.of(Objects.requireNonNull(groupKey));
             return this;
         }
 
-        public Builder setInitialGroupConfig(@Nullable Input<String> initialGroupConfig) {
+        public Builder initialGroupConfig(@Nullable Input<String> initialGroupConfig) {
             this.initialGroupConfig = initialGroupConfig;
             return this;
         }
 
-        public Builder setInitialGroupConfig(@Nullable String initialGroupConfig) {
+        public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
             this.initialGroupConfig = Input.ofNullable(initialGroupConfig);
             return this;
         }
 
-        public Builder setLabels(Input<Map<String,String>> labels) {
+        public Builder labels(Input<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }

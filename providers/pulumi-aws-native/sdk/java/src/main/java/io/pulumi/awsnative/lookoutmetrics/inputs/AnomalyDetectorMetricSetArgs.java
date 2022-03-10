@@ -176,92 +176,92 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDimensionList(@Nullable Input<List<String>> dimensionList) {
+        public Builder dimensionList(@Nullable Input<List<String>> dimensionList) {
             this.dimensionList = dimensionList;
             return this;
         }
 
-        public Builder setDimensionList(@Nullable List<String> dimensionList) {
+        public Builder dimensionList(@Nullable List<String> dimensionList) {
             this.dimensionList = Input.ofNullable(dimensionList);
             return this;
         }
 
-        public Builder setMetricList(Input<List<AnomalyDetectorMetricArgs>> metricList) {
+        public Builder metricList(Input<List<AnomalyDetectorMetricArgs>> metricList) {
             this.metricList = Objects.requireNonNull(metricList);
             return this;
         }
 
-        public Builder setMetricList(List<AnomalyDetectorMetricArgs> metricList) {
+        public Builder metricList(List<AnomalyDetectorMetricArgs> metricList) {
             this.metricList = Input.of(Objects.requireNonNull(metricList));
             return this;
         }
 
-        public Builder setMetricSetDescription(@Nullable Input<String> metricSetDescription) {
+        public Builder metricSetDescription(@Nullable Input<String> metricSetDescription) {
             this.metricSetDescription = metricSetDescription;
             return this;
         }
 
-        public Builder setMetricSetDescription(@Nullable String metricSetDescription) {
+        public Builder metricSetDescription(@Nullable String metricSetDescription) {
             this.metricSetDescription = Input.ofNullable(metricSetDescription);
             return this;
         }
 
-        public Builder setMetricSetFrequency(@Nullable Input<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
+        public Builder metricSetFrequency(@Nullable Input<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
             this.metricSetFrequency = metricSetFrequency;
             return this;
         }
 
-        public Builder setMetricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
+        public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             this.metricSetFrequency = Input.ofNullable(metricSetFrequency);
             return this;
         }
 
-        public Builder setMetricSetName(Input<String> metricSetName) {
+        public Builder metricSetName(Input<String> metricSetName) {
             this.metricSetName = Objects.requireNonNull(metricSetName);
             return this;
         }
 
-        public Builder setMetricSetName(String metricSetName) {
+        public Builder metricSetName(String metricSetName) {
             this.metricSetName = Input.of(Objects.requireNonNull(metricSetName));
             return this;
         }
 
-        public Builder setMetricSource(Input<AnomalyDetectorMetricSourceArgs> metricSource) {
+        public Builder metricSource(Input<AnomalyDetectorMetricSourceArgs> metricSource) {
             this.metricSource = Objects.requireNonNull(metricSource);
             return this;
         }
 
-        public Builder setMetricSource(AnomalyDetectorMetricSourceArgs metricSource) {
+        public Builder metricSource(AnomalyDetectorMetricSourceArgs metricSource) {
             this.metricSource = Input.of(Objects.requireNonNull(metricSource));
             return this;
         }
 
-        public Builder setOffset(@Nullable Input<Integer> offset) {
+        public Builder offset(@Nullable Input<Integer> offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setOffset(@Nullable Integer offset) {
+        public Builder offset(@Nullable Integer offset) {
             this.offset = Input.ofNullable(offset);
             return this;
         }
 
-        public Builder setTimestampColumn(@Nullable Input<AnomalyDetectorTimestampColumnArgs> timestampColumn) {
+        public Builder timestampColumn(@Nullable Input<AnomalyDetectorTimestampColumnArgs> timestampColumn) {
             this.timestampColumn = timestampColumn;
             return this;
         }
 
-        public Builder setTimestampColumn(@Nullable AnomalyDetectorTimestampColumnArgs timestampColumn) {
+        public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumnArgs timestampColumn) {
             this.timestampColumn = Input.ofNullable(timestampColumn);
             return this;
         }
 
-        public Builder setTimezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Input<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = Input.ofNullable(timezone);
             return this;
         }

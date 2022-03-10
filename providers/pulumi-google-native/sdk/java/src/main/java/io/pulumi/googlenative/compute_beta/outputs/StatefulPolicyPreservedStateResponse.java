@@ -82,17 +82,17 @@ public final class StatefulPolicyPreservedStateResponse {
     	      this.internalIPs = defaults.internalIPs;
         }
 
-        public Builder setDisks(Map<String,String> disks) {
+        public Builder disks(Map<String,String> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setExternalIPs(Map<String,String> externalIPs) {
+        public Builder externalIPs(Map<String,String> externalIPs) {
             this.externalIPs = Objects.requireNonNull(externalIPs);
             return this;
         }
 
-        public Builder setInternalIPs(Map<String,String> internalIPs) {
+        public Builder internalIPs(Map<String,String> internalIPs) {
             this.internalIPs = Objects.requireNonNull(internalIPs);
             return this;
         }

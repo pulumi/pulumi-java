@@ -72,22 +72,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
     	      this.resources = defaults.resources;
         }
 
-        public Builder setInventoryFilters(@Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
+        public Builder inventoryFilters(@Nullable Input<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
             this.inventoryFilters = inventoryFilters;
             return this;
         }
 
-        public Builder setInventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
+        public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
             this.inventoryFilters = Input.ofNullable(inventoryFilters);
             return this;
         }
 
-        public Builder setResources(Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
+        public Builder resources(Input<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
+        public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }

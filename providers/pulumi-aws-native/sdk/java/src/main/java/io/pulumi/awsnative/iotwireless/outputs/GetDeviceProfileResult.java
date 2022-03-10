@@ -118,27 +118,27 @@ public final class GetDeviceProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN) {
+        public Builder loRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceProfileTag> tags) {
+        public Builder tags(@Nullable List<DeviceProfileTag> tags) {
             this.tags = tags;
             return this;
         }

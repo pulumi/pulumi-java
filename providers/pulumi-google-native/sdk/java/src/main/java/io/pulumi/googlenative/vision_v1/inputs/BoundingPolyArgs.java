@@ -76,22 +76,22 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder setNormalizedVertices(@Nullable Input<List<NormalizedVertexArgs>> normalizedVertices) {
+        public Builder normalizedVertices(@Nullable Input<List<NormalizedVertexArgs>> normalizedVertices) {
             this.normalizedVertices = normalizedVertices;
             return this;
         }
 
-        public Builder setNormalizedVertices(@Nullable List<NormalizedVertexArgs> normalizedVertices) {
+        public Builder normalizedVertices(@Nullable List<NormalizedVertexArgs> normalizedVertices) {
             this.normalizedVertices = Input.ofNullable(normalizedVertices);
             return this;
         }
 
-        public Builder setVertices(@Nullable Input<List<VertexArgs>> vertices) {
+        public Builder vertices(@Nullable Input<List<VertexArgs>> vertices) {
             this.vertices = vertices;
             return this;
         }
 
-        public Builder setVertices(@Nullable List<VertexArgs> vertices) {
+        public Builder vertices(@Nullable List<VertexArgs> vertices) {
             this.vertices = Input.ofNullable(vertices);
             return this;
         }

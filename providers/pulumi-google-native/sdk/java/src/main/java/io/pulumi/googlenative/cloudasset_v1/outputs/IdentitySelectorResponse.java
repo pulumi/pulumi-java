@@ -48,7 +48,7 @@ public final class IdentitySelectorResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setIdentity(String identity) {
+        public Builder identity(String identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }

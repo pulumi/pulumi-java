@@ -89,17 +89,17 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sizeGb = defaults.sizeGb;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setSizeGb(Integer sizeGb) {
+        public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }

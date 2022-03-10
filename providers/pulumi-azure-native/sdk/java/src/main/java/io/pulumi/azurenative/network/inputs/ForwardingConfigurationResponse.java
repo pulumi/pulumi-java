@@ -124,27 +124,27 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setBackendPool(@Nullable SubResourceResponse backendPool) {
+        public Builder backendPool(@Nullable SubResourceResponse backendPool) {
             this.backendPool = backendPool;
             return this;
         }
 
-        public Builder setCacheConfiguration(@Nullable CacheConfigurationResponse cacheConfiguration) {
+        public Builder cacheConfiguration(@Nullable CacheConfigurationResponse cacheConfiguration) {
             this.cacheConfiguration = cacheConfiguration;
             return this;
         }
 
-        public Builder setCustomForwardingPath(@Nullable String customForwardingPath) {
+        public Builder customForwardingPath(@Nullable String customForwardingPath) {
             this.customForwardingPath = customForwardingPath;
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable String forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

@@ -62,22 +62,22 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder setComputeType(Input<DatasetResourceConfigurationComputeType> computeType) {
+        public Builder computeType(Input<DatasetResourceConfigurationComputeType> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(DatasetResourceConfigurationComputeType computeType) {
+        public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Input<Integer> volumeSizeInGB) {
+        public Builder volumeSizeInGB(Input<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Integer volumeSizeInGB) {
+        public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Input.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
         }

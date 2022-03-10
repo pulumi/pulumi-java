@@ -92,32 +92,32 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setOidcToken(@Nullable Input<OidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Input<OidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable OidcTokenArgs oidcToken) {
+        public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
             this.oidcToken = Input.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder setPushEndpoint(@Nullable Input<String> pushEndpoint) {
+        public Builder pushEndpoint(@Nullable Input<String> pushEndpoint) {
             this.pushEndpoint = pushEndpoint;
             return this;
         }
 
-        public Builder setPushEndpoint(@Nullable String pushEndpoint) {
+        public Builder pushEndpoint(@Nullable String pushEndpoint) {
             this.pushEndpoint = Input.ofNullable(pushEndpoint);
             return this;
         }

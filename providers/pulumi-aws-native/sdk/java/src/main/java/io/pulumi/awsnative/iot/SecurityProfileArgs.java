@@ -155,72 +155,72 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetArns = defaults.targetArns;
         }
 
-        public Builder setAdditionalMetricsToRetainV2(@Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
+        public Builder additionalMetricsToRetainV2(@Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2) {
             this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
             return this;
         }
 
-        public Builder setAdditionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
+        public Builder additionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
             this.additionalMetricsToRetainV2 = Input.ofNullable(additionalMetricsToRetainV2);
             return this;
         }
 
-        public Builder setAlertTargets(@Nullable Input<Object> alertTargets) {
+        public Builder alertTargets(@Nullable Input<Object> alertTargets) {
             this.alertTargets = alertTargets;
             return this;
         }
 
-        public Builder setAlertTargets(@Nullable Object alertTargets) {
+        public Builder alertTargets(@Nullable Object alertTargets) {
             this.alertTargets = Input.ofNullable(alertTargets);
             return this;
         }
 
-        public Builder setBehaviors(@Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors) {
+        public Builder behaviors(@Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
 
-        public Builder setBehaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
+        public Builder behaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
             this.behaviors = Input.ofNullable(behaviors);
             return this;
         }
 
-        public Builder setSecurityProfileDescription(@Nullable Input<String> securityProfileDescription) {
+        public Builder securityProfileDescription(@Nullable Input<String> securityProfileDescription) {
             this.securityProfileDescription = securityProfileDescription;
             return this;
         }
 
-        public Builder setSecurityProfileDescription(@Nullable String securityProfileDescription) {
+        public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
             this.securityProfileDescription = Input.ofNullable(securityProfileDescription);
             return this;
         }
 
-        public Builder setSecurityProfileName(@Nullable Input<String> securityProfileName) {
+        public Builder securityProfileName(@Nullable Input<String> securityProfileName) {
             this.securityProfileName = securityProfileName;
             return this;
         }
 
-        public Builder setSecurityProfileName(@Nullable String securityProfileName) {
+        public Builder securityProfileName(@Nullable String securityProfileName) {
             this.securityProfileName = Input.ofNullable(securityProfileName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SecurityProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SecurityProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SecurityProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<SecurityProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetArns(@Nullable Input<List<String>> targetArns) {
+        public Builder targetArns(@Nullable Input<List<String>> targetArns) {
             this.targetArns = targetArns;
             return this;
         }
 
-        public Builder setTargetArns(@Nullable List<String> targetArns) {
+        public Builder targetArns(@Nullable List<String> targetArns) {
             this.targetArns = Input.ofNullable(targetArns);
             return this;
         }

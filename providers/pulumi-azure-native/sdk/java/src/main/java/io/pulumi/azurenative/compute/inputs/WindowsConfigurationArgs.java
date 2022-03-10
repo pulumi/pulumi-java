@@ -143,62 +143,62 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     	      this.winRM = defaults.winRM;
         }
 
-        public Builder setAdditionalUnattendContent(@Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent) {
+        public Builder additionalUnattendContent(@Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent) {
             this.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
 
-        public Builder setAdditionalUnattendContent(@Nullable List<AdditionalUnattendContentArgs> additionalUnattendContent) {
+        public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentArgs> additionalUnattendContent) {
             this.additionalUnattendContent = Input.ofNullable(additionalUnattendContent);
             return this;
         }
 
-        public Builder setEnableAutomaticUpdates(@Nullable Input<Boolean> enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Input<Boolean> enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
-        public Builder setEnableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = Input.ofNullable(enableAutomaticUpdates);
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable Input<PatchSettingsArgs> patchSettings) {
+        public Builder patchSettings(@Nullable Input<PatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable PatchSettingsArgs patchSettings) {
+        public Builder patchSettings(@Nullable PatchSettingsArgs patchSettings) {
             this.patchSettings = Input.ofNullable(patchSettings);
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Boolean provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = Input.ofNullable(provisionVMAgent);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
 
-        public Builder setWinRM(@Nullable Input<WinRMConfigurationArgs> winRM) {
+        public Builder winRM(@Nullable Input<WinRMConfigurationArgs> winRM) {
             this.winRM = winRM;
             return this;
         }
 
-        public Builder setWinRM(@Nullable WinRMConfigurationArgs winRM) {
+        public Builder winRM(@Nullable WinRMConfigurationArgs winRM) {
             this.winRM = Input.ofNullable(winRM);
             return this;
         }

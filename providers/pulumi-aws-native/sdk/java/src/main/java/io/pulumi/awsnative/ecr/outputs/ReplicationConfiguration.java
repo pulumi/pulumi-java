@@ -49,7 +49,7 @@ public final class ReplicationConfiguration {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ReplicationConfigurationReplicationRule> rules) {
+        public Builder rules(List<ReplicationConfigurationReplicationRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

@@ -188,92 +188,92 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.taints = defaults.taints;
         }
 
-        public Builder setConfigEncryption(Input<AwsNodePoolConfigConfigEncryptionArgs> configEncryption) {
+        public Builder configEncryption(Input<AwsNodePoolConfigConfigEncryptionArgs> configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
 
-        public Builder setConfigEncryption(AwsNodePoolConfigConfigEncryptionArgs configEncryption) {
+        public Builder configEncryption(AwsNodePoolConfigConfigEncryptionArgs configEncryption) {
             this.configEncryption = Input.of(Objects.requireNonNull(configEncryption));
             return this;
         }
 
-        public Builder setIamInstanceProfile(Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(Input<String> iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
-        public Builder setIamInstanceProfile(String iamInstanceProfile) {
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Input.of(Objects.requireNonNull(iamInstanceProfile));
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setRootVolume(@Nullable Input<AwsNodePoolConfigRootVolumeArgs> rootVolume) {
+        public Builder rootVolume(@Nullable Input<AwsNodePoolConfigRootVolumeArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AwsNodePoolConfigRootVolumeArgs rootVolume) {
+        public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolumeArgs rootVolume) {
             this.rootVolume = Input.ofNullable(rootVolume);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setSshConfig(@Nullable Input<AwsNodePoolConfigSshConfigArgs> sshConfig) {
+        public Builder sshConfig(@Nullable Input<AwsNodePoolConfigSshConfigArgs> sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
 
-        public Builder setSshConfig(@Nullable AwsNodePoolConfigSshConfigArgs sshConfig) {
+        public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfigArgs sshConfig) {
             this.sshConfig = Input.ofNullable(sshConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaints(@Nullable Input<List<AwsNodePoolConfigTaintArgs>> taints) {
+        public Builder taints(@Nullable Input<List<AwsNodePoolConfigTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<AwsNodePoolConfigTaintArgs> taints) {
+        public Builder taints(@Nullable List<AwsNodePoolConfigTaintArgs> taints) {
             this.taints = Input.ofNullable(taints);
             return this;
         }

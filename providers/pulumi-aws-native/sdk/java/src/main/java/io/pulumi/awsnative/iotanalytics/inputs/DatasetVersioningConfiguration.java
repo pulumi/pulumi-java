@@ -63,12 +63,12 @@ public final class DatasetVersioningConfiguration extends io.pulumi.resources.In
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder setMaxVersions(@Nullable Integer maxVersions) {
+        public Builder maxVersions(@Nullable Integer maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
 
-        public Builder setUnlimited(@Nullable Boolean unlimited) {
+        public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = unlimited;
             return this;
         }

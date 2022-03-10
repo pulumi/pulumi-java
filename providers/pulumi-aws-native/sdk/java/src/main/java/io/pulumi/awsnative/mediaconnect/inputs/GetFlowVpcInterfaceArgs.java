@@ -68,12 +68,12 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
     	      this.name = defaults.name;
         }
 
-        public Builder setFlowArn(String flowArn) {
+        public Builder flowArn(String flowArn) {
             this.flowArn = Objects.requireNonNull(flowArn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

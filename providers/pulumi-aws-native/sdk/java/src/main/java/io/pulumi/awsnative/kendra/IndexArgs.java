@@ -186,102 +186,102 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userTokenConfigurations = defaults.userTokenConfigurations;
         }
 
-        public Builder setCapacityUnits(@Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
+        public Builder capacityUnits(@Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
             this.capacityUnits = capacityUnits;
             return this;
         }
 
-        public Builder setCapacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
+        public Builder capacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
             this.capacityUnits = Input.ofNullable(capacityUnits);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentMetadataConfigurations(@Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
+        public Builder documentMetadataConfigurations(@Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
 
-        public Builder setDocumentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
+        public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = Input.ofNullable(documentMetadataConfigurations);
             return this;
         }
 
-        public Builder setEdition(Input<IndexEdition> edition) {
+        public Builder edition(Input<IndexEdition> edition) {
             this.edition = Objects.requireNonNull(edition);
             return this;
         }
 
-        public Builder setEdition(IndexEdition edition) {
+        public Builder edition(IndexEdition edition) {
             this.edition = Input.of(Objects.requireNonNull(edition));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<IndexTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<IndexTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IndexTagArgs> tags) {
+        public Builder tags(@Nullable List<IndexTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserContextPolicy(@Nullable Input<IndexUserContextPolicy> userContextPolicy) {
+        public Builder userContextPolicy(@Nullable Input<IndexUserContextPolicy> userContextPolicy) {
             this.userContextPolicy = userContextPolicy;
             return this;
         }
 
-        public Builder setUserContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
+        public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
             this.userContextPolicy = Input.ofNullable(userContextPolicy);
             return this;
         }
 
-        public Builder setUserTokenConfigurations(@Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
+        public Builder userTokenConfigurations(@Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
 
-        public Builder setUserTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
+        public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
             this.userTokenConfigurations = Input.ofNullable(userTokenConfigurations);
             return this;
         }

@@ -246,67 +246,67 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setDatabaseCount(Integer databaseCount) {
+        public Builder databaseCount(Integer databaseCount) {
             this.databaseCount = Objects.requireNonNull(databaseCount);
             return this;
         }
 
-        public Builder setDatabaseErrorCount(Integer databaseErrorCount) {
+        public Builder databaseErrorCount(Integer databaseErrorCount) {
             this.databaseErrorCount = Objects.requireNonNull(databaseErrorCount);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSourceServerBrandVersion(String sourceServerBrandVersion) {
+        public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
 
-        public Builder setSourceServerName(String sourceServerName) {
+        public Builder sourceServerName(String sourceServerName) {
             this.sourceServerName = Objects.requireNonNull(sourceServerName);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerName(String targetServerName) {
+        public Builder targetServerName(String targetServerName) {
             this.targetServerName = Objects.requireNonNull(targetServerName);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

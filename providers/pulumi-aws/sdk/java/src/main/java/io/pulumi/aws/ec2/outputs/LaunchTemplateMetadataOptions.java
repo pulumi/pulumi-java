@@ -116,27 +116,27 @@ public final class LaunchTemplateMetadataOptions {
     	      this.instanceMetadataTags = defaults.instanceMetadataTags;
         }
 
-        public Builder setHttpEndpoint(@Nullable String httpEndpoint) {
+        public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
 
-        public Builder setHttpProtocolIpv6(@Nullable String httpProtocolIpv6) {
+        public Builder httpProtocolIpv6(@Nullable String httpProtocolIpv6) {
             this.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable String httpTokens) {
+        public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
 
-        public Builder setInstanceMetadataTags(@Nullable String instanceMetadataTags) {
+        public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
         }

@@ -69,22 +69,22 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     	      this.queryArg = defaults.queryArg;
         }
 
-        public Builder setProfileId(Input<String> profileId) {
+        public Builder profileId(Input<String> profileId) {
             this.profileId = Objects.requireNonNull(profileId);
             return this;
         }
 
-        public Builder setProfileId(String profileId) {
+        public Builder profileId(String profileId) {
             this.profileId = Input.of(Objects.requireNonNull(profileId));
             return this;
         }
 
-        public Builder setQueryArg(Input<String> queryArg) {
+        public Builder queryArg(Input<String> queryArg) {
             this.queryArg = Objects.requireNonNull(queryArg);
             return this;
         }
 
-        public Builder setQueryArg(String queryArg) {
+        public Builder queryArg(String queryArg) {
             this.queryArg = Input.of(Objects.requireNonNull(queryArg));
             return this;
         }

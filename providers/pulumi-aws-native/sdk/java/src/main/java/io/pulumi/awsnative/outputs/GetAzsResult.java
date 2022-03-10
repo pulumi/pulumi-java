@@ -41,7 +41,7 @@ public final class GetAzsResult {
     	      this.azs = defaults.azs;
         }
 
-        public Builder setAzs(List<String> azs) {
+        public Builder azs(List<String> azs) {
             this.azs = Objects.requireNonNull(azs);
             return this;
         }

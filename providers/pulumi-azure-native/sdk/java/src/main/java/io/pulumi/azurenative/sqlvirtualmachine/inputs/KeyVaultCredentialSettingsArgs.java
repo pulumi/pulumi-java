@@ -123,52 +123,52 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     	      this.servicePrincipalSecret = defaults.servicePrincipalSecret;
         }
 
-        public Builder setAzureKeyVaultUrl(@Nullable Input<String> azureKeyVaultUrl) {
+        public Builder azureKeyVaultUrl(@Nullable Input<String> azureKeyVaultUrl) {
             this.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
 
-        public Builder setAzureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
+        public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
             this.azureKeyVaultUrl = Input.ofNullable(azureKeyVaultUrl);
             return this;
         }
 
-        public Builder setCredentialName(@Nullable Input<String> credentialName) {
+        public Builder credentialName(@Nullable Input<String> credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
-        public Builder setCredentialName(@Nullable String credentialName) {
+        public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = Input.ofNullable(credentialName);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setServicePrincipalName(@Nullable Input<String> servicePrincipalName) {
+        public Builder servicePrincipalName(@Nullable Input<String> servicePrincipalName) {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }
 
-        public Builder setServicePrincipalName(@Nullable String servicePrincipalName) {
+        public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
             this.servicePrincipalName = Input.ofNullable(servicePrincipalName);
             return this;
         }
 
-        public Builder setServicePrincipalSecret(@Nullable Input<String> servicePrincipalSecret) {
+        public Builder servicePrincipalSecret(@Nullable Input<String> servicePrincipalSecret) {
             this.servicePrincipalSecret = servicePrincipalSecret;
             return this;
         }
 
-        public Builder setServicePrincipalSecret(@Nullable String servicePrincipalSecret) {
+        public Builder servicePrincipalSecret(@Nullable String servicePrincipalSecret) {
             this.servicePrincipalSecret = Input.ofNullable(servicePrincipalSecret);
             return this;
         }

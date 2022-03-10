@@ -57,7 +57,7 @@ public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }

@@ -58,7 +58,7 @@ public final class RemediationFiltersResponse extends io.pulumi.resources.Invoke
     	      this.locations = defaults.locations;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }

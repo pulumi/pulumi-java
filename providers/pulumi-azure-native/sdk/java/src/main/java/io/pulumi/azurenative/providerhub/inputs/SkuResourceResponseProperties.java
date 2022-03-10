@@ -64,12 +64,12 @@ public final class SkuResourceResponseProperties extends io.pulumi.resources.Inv
     	      this.skuSettings = defaults.skuSettings;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSkuSettings(List<SkuSettingResponse> skuSettings) {
+        public Builder skuSettings(List<SkuSettingResponse> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }

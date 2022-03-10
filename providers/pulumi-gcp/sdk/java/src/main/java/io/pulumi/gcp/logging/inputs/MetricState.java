@@ -188,82 +188,82 @@ public final class MetricState extends io.pulumi.resources.ResourceArgs {
     	      this.valueExtractor = defaults.valueExtractor;
         }
 
-        public Builder setBucketOptions(@Nullable Input<MetricBucketOptionsGetArgs> bucketOptions) {
+        public Builder bucketOptions(@Nullable Input<MetricBucketOptionsGetArgs> bucketOptions) {
             this.bucketOptions = bucketOptions;
             return this;
         }
 
-        public Builder setBucketOptions(@Nullable MetricBucketOptionsGetArgs bucketOptions) {
+        public Builder bucketOptions(@Nullable MetricBucketOptionsGetArgs bucketOptions) {
             this.bucketOptions = Input.ofNullable(bucketOptions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setLabelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
+        public Builder labelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
 
-        public Builder setLabelExtractors(@Nullable Map<String,String> labelExtractors) {
+        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Input.ofNullable(labelExtractors);
             return this;
         }
 
-        public Builder setMetricDescriptor(@Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor) {
+        public Builder metricDescriptor(@Nullable Input<MetricMetricDescriptorGetArgs> metricDescriptor) {
             this.metricDescriptor = metricDescriptor;
             return this;
         }
 
-        public Builder setMetricDescriptor(@Nullable MetricMetricDescriptorGetArgs metricDescriptor) {
+        public Builder metricDescriptor(@Nullable MetricMetricDescriptorGetArgs metricDescriptor) {
             this.metricDescriptor = Input.ofNullable(metricDescriptor);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setValueExtractor(@Nullable Input<String> valueExtractor) {
+        public Builder valueExtractor(@Nullable Input<String> valueExtractor) {
             this.valueExtractor = valueExtractor;
             return this;
         }
 
-        public Builder setValueExtractor(@Nullable String valueExtractor) {
+        public Builder valueExtractor(@Nullable String valueExtractor) {
             this.valueExtractor = Input.ofNullable(valueExtractor);
             return this;
         }

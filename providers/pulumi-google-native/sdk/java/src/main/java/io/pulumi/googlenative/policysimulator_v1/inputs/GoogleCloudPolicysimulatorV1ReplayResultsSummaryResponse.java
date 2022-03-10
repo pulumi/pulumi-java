@@ -137,32 +137,32 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
     	      this.unchangedCount = defaults.unchangedCount;
         }
 
-        public Builder setDifferenceCount(Integer differenceCount) {
+        public Builder differenceCount(Integer differenceCount) {
             this.differenceCount = Objects.requireNonNull(differenceCount);
             return this;
         }
 
-        public Builder setErrorCount(Integer errorCount) {
+        public Builder errorCount(Integer errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
 
-        public Builder setLogCount(Integer logCount) {
+        public Builder logCount(Integer logCount) {
             this.logCount = Objects.requireNonNull(logCount);
             return this;
         }
 
-        public Builder setNewestDate(GoogleTypeDateResponse newestDate) {
+        public Builder newestDate(GoogleTypeDateResponse newestDate) {
             this.newestDate = Objects.requireNonNull(newestDate);
             return this;
         }
 
-        public Builder setOldestDate(GoogleTypeDateResponse oldestDate) {
+        public Builder oldestDate(GoogleTypeDateResponse oldestDate) {
             this.oldestDate = Objects.requireNonNull(oldestDate);
             return this;
         }
 
-        public Builder setUnchangedCount(Integer unchangedCount) {
+        public Builder unchangedCount(Integer unchangedCount) {
             this.unchangedCount = Objects.requireNonNull(unchangedCount);
             return this;
         }

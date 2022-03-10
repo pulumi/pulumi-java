@@ -187,92 +187,92 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoTrackingConfiguration(@Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration) {
+        public Builder autoTrackingConfiguration(@Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration) {
             this.autoTrackingConfiguration = autoTrackingConfiguration;
             return this;
         }
 
-        public Builder setAutoTrackingConfiguration(@Nullable AutoTrackingConfiguration autoTrackingConfiguration) {
+        public Builder autoTrackingConfiguration(@Nullable AutoTrackingConfiguration autoTrackingConfiguration) {
             this.autoTrackingConfiguration = Input.ofNullable(autoTrackingConfiguration);
             return this;
         }
 
-        public Builder setContactProfileName(@Nullable Input<String> contactProfileName) {
+        public Builder contactProfileName(@Nullable Input<String> contactProfileName) {
             this.contactProfileName = contactProfileName;
             return this;
         }
 
-        public Builder setContactProfileName(@Nullable String contactProfileName) {
+        public Builder contactProfileName(@Nullable String contactProfileName) {
             this.contactProfileName = Input.ofNullable(contactProfileName);
             return this;
         }
 
-        public Builder setEventHubUri(@Nullable Input<String> eventHubUri) {
+        public Builder eventHubUri(@Nullable Input<String> eventHubUri) {
             this.eventHubUri = eventHubUri;
             return this;
         }
 
-        public Builder setEventHubUri(@Nullable String eventHubUri) {
+        public Builder eventHubUri(@Nullable String eventHubUri) {
             this.eventHubUri = Input.ofNullable(eventHubUri);
             return this;
         }
 
-        public Builder setLinks(Input<List<ContactProfileLinkArgs>> links) {
+        public Builder links(Input<List<ContactProfileLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setLinks(List<ContactProfileLinkArgs> links) {
+        public Builder links(List<ContactProfileLinkArgs> links) {
             this.links = Input.of(Objects.requireNonNull(links));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMinimumElevationDegrees(@Nullable Input<Double> minimumElevationDegrees) {
+        public Builder minimumElevationDegrees(@Nullable Input<Double> minimumElevationDegrees) {
             this.minimumElevationDegrees = minimumElevationDegrees;
             return this;
         }
 
-        public Builder setMinimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
+        public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
             this.minimumElevationDegrees = Input.ofNullable(minimumElevationDegrees);
             return this;
         }
 
-        public Builder setMinimumViableContactDuration(@Nullable Input<String> minimumViableContactDuration) {
+        public Builder minimumViableContactDuration(@Nullable Input<String> minimumViableContactDuration) {
             this.minimumViableContactDuration = minimumViableContactDuration;
             return this;
         }
 
-        public Builder setMinimumViableContactDuration(@Nullable String minimumViableContactDuration) {
+        public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
             this.minimumViableContactDuration = Input.ofNullable(minimumViableContactDuration);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

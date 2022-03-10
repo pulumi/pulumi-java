@@ -68,12 +68,12 @@ public final class WaitStepPropertiesResponse {
     	      this.stepType = defaults.stepType;
         }
 
-        public Builder setAttributes(WaitStepAttributesResponse attributes) {
+        public Builder attributes(WaitStepAttributesResponse attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setStepType(String stepType) {
+        public Builder stepType(String stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }

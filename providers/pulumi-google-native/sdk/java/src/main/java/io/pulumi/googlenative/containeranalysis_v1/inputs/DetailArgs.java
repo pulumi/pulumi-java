@@ -268,142 +268,142 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setAffectedCpeUri(Input<String> affectedCpeUri) {
+        public Builder affectedCpeUri(Input<String> affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
-        public Builder setAffectedCpeUri(String affectedCpeUri) {
+        public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Input.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
 
-        public Builder setAffectedPackage(Input<String> affectedPackage) {
+        public Builder affectedPackage(Input<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
-        public Builder setAffectedPackage(String affectedPackage) {
+        public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Input.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
 
-        public Builder setAffectedVersionEnd(@Nullable Input<VersionArgs> affectedVersionEnd) {
+        public Builder affectedVersionEnd(@Nullable Input<VersionArgs> affectedVersionEnd) {
             this.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
 
-        public Builder setAffectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
+        public Builder affectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
             this.affectedVersionEnd = Input.ofNullable(affectedVersionEnd);
             return this;
         }
 
-        public Builder setAffectedVersionStart(@Nullable Input<VersionArgs> affectedVersionStart) {
+        public Builder affectedVersionStart(@Nullable Input<VersionArgs> affectedVersionStart) {
             this.affectedVersionStart = affectedVersionStart;
             return this;
         }
 
-        public Builder setAffectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
+        public Builder affectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
             this.affectedVersionStart = Input.ofNullable(affectedVersionStart);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFixedCpeUri(@Nullable Input<String> fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable Input<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
-        public Builder setFixedCpeUri(@Nullable String fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
             this.fixedCpeUri = Input.ofNullable(fixedCpeUri);
             return this;
         }
 
-        public Builder setFixedPackage(@Nullable Input<String> fixedPackage) {
+        public Builder fixedPackage(@Nullable Input<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
 
-        public Builder setFixedPackage(@Nullable String fixedPackage) {
+        public Builder fixedPackage(@Nullable String fixedPackage) {
             this.fixedPackage = Input.ofNullable(fixedPackage);
             return this;
         }
 
-        public Builder setFixedVersion(@Nullable Input<VersionArgs> fixedVersion) {
+        public Builder fixedVersion(@Nullable Input<VersionArgs> fixedVersion) {
             this.fixedVersion = fixedVersion;
             return this;
         }
 
-        public Builder setFixedVersion(@Nullable VersionArgs fixedVersion) {
+        public Builder fixedVersion(@Nullable VersionArgs fixedVersion) {
             this.fixedVersion = Input.ofNullable(fixedVersion);
             return this;
         }
 
-        public Builder setIsObsolete(@Nullable Input<Boolean> isObsolete) {
+        public Builder isObsolete(@Nullable Input<Boolean> isObsolete) {
             this.isObsolete = isObsolete;
             return this;
         }
 
-        public Builder setIsObsolete(@Nullable Boolean isObsolete) {
+        public Builder isObsolete(@Nullable Boolean isObsolete) {
             this.isObsolete = Input.ofNullable(isObsolete);
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Input<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
 
-        public Builder setSeverityName(@Nullable Input<String> severityName) {
+        public Builder severityName(@Nullable Input<String> severityName) {
             this.severityName = severityName;
             return this;
         }
 
-        public Builder setSeverityName(@Nullable String severityName) {
+        public Builder severityName(@Nullable String severityName) {
             this.severityName = Input.ofNullable(severityName);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSourceUpdateTime(@Nullable Input<String> sourceUpdateTime) {
+        public Builder sourceUpdateTime(@Nullable Input<String> sourceUpdateTime) {
             this.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
 
-        public Builder setSourceUpdateTime(@Nullable String sourceUpdateTime) {
+        public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
             this.sourceUpdateTime = Input.ofNullable(sourceUpdateTime);
             return this;
         }
 
-        public Builder setVendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Input<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfig {
     	      this.sandboxType = defaults.sandboxType;
         }
 
-        public Builder setSandboxType(String sandboxType) {
+        public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }

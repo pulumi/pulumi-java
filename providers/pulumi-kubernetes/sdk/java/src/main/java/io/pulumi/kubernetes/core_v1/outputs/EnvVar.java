@@ -84,17 +84,17 @@ public final class EnvVar {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValueFrom(@Nullable EnvVarSource valueFrom) {
+        public Builder valueFrom(@Nullable EnvVarSource valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }

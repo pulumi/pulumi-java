@@ -140,42 +140,42 @@ public final class ListenerRuleAction extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig) {
+        public Builder authenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig) {
             this.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
 
-        public Builder setAuthenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
+        public Builder authenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
             this.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
 
-        public Builder setFixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
+        public Builder fixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
             this.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
 
-        public Builder setForwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
+        public Builder forwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
             this.forwardConfig = forwardConfig;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setRedirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
+        public Builder redirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
             this.redirectConfig = redirectConfig;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

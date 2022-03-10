@@ -104,42 +104,42 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends io.pulum
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setS3(Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {
+        public Builder s3(Input<AnalyticsApplicationReferenceDataSourcesS3Args> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
-        public Builder setS3(AnalyticsApplicationReferenceDataSourcesS3Args s3) {
+        public Builder s3(AnalyticsApplicationReferenceDataSourcesS3Args s3) {
             this.s3 = Input.of(Objects.requireNonNull(s3));
             return this;
         }
 
-        public Builder setSchema(Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema) {
+        public Builder schema(Input<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationReferenceDataSourcesSchemaArgs schema) {
+        public Builder schema(AnalyticsApplicationReferenceDataSourcesSchemaArgs schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

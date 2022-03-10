@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
     	      this.newValue = defaults.newValue;
         }
 
-        public Builder setNewValue(GooglePrivacyDlpV2ValueResponse newValue) {
+        public Builder newValue(GooglePrivacyDlpV2ValueResponse newValue) {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }

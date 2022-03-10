@@ -69,12 +69,12 @@ public final class GetNodeGroupRemoteAccess extends io.pulumi.resources.InvokeAr
     	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
         }
 
-        public Builder setEc2SshKey(String ec2SshKey) {
+        public Builder ec2SshKey(String ec2SshKey) {
             this.ec2SshKey = Objects.requireNonNull(ec2SshKey);
             return this;
         }
 
-        public Builder setSourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
+        public Builder sourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = Objects.requireNonNull(sourceSecurityGroupIds);
             return this;
         }

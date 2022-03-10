@@ -186,92 +186,92 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable Input<String> appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable Input<String> appNetworkAccessType) {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable String appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
             this.appNetworkAccessType = Input.ofNullable(appNetworkAccessType);
             return this;
         }
 
-        public Builder setAuthMode(Input<String> authMode) {
+        public Builder authMode(Input<String> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
-        public Builder setAuthMode(String authMode) {
+        public Builder authMode(String authMode) {
             this.authMode = Input.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder setDefaultUserSettings(Input<DomainDefaultUserSettingsArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(Input<DomainDefaultUserSettingsArgs> defaultUserSettings) {
             this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
             return this;
         }
 
-        public Builder setDefaultUserSettings(DomainDefaultUserSettingsArgs defaultUserSettings) {
+        public Builder defaultUserSettings(DomainDefaultUserSettingsArgs defaultUserSettings) {
             this.defaultUserSettings = Input.of(Objects.requireNonNull(defaultUserSettings));
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<DomainRetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<DomainRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable DomainRetentionPolicyArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable DomainRetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

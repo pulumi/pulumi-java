@@ -65,12 +65,12 @@ public final class GetAccountAliasResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccountAlias(String accountAlias) {
+        public Builder accountAlias(String accountAlias) {
             this.accountAlias = Objects.requireNonNull(accountAlias);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

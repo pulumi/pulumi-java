@@ -422,232 +422,232 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
-        public Builder setApplyImmediately(@Nullable Boolean applyImmediately) {
+        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Input.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setCaCertIdentifier(@Nullable Input<String> caCertIdentifier) {
+        public Builder caCertIdentifier(@Nullable Input<String> caCertIdentifier) {
             this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
-        public Builder setCaCertIdentifier(@Nullable String caCertIdentifier) {
+        public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
             this.caCertIdentifier = Input.ofNullable(caCertIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder setCopyTagsToSnapshot(@Nullable Input<Boolean> copyTagsToSnapshot) {
+        public Builder copyTagsToSnapshot(@Nullable Input<Boolean> copyTagsToSnapshot) {
             this.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
 
-        public Builder setCopyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
+        public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
             this.copyTagsToSnapshot = Input.ofNullable(copyTagsToSnapshot);
             return this;
         }
 
-        public Builder setDbParameterGroupName(@Nullable Input<String> dbParameterGroupName) {
+        public Builder dbParameterGroupName(@Nullable Input<String> dbParameterGroupName) {
             this.dbParameterGroupName = dbParameterGroupName;
             return this;
         }
 
-        public Builder setDbParameterGroupName(@Nullable String dbParameterGroupName) {
+        public Builder dbParameterGroupName(@Nullable String dbParameterGroupName) {
             this.dbParameterGroupName = Input.ofNullable(dbParameterGroupName);
             return this;
         }
 
-        public Builder setDbSubnetGroupName(@Nullable Input<String> dbSubnetGroupName) {
+        public Builder dbSubnetGroupName(@Nullable Input<String> dbSubnetGroupName) {
             this.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
 
-        public Builder setDbSubnetGroupName(@Nullable String dbSubnetGroupName) {
+        public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
             this.dbSubnetGroupName = Input.ofNullable(dbSubnetGroupName);
             return this;
         }
 
-        public Builder setEngine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Input<String> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setIdentifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Input<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = Input.ofNullable(identifier);
             return this;
         }
 
-        public Builder setIdentifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
-        public Builder setIdentifierPrefix(@Nullable String identifierPrefix) {
+        public Builder identifierPrefix(@Nullable String identifierPrefix) {
             this.identifierPrefix = Input.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder setInstanceClass(Input<Either<String,InstanceType>> instanceClass) {
+        public Builder instanceClass(Input<Either<String,InstanceType>> instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
 
-        public Builder setInstanceClass(Either<String,InstanceType> instanceClass) {
+        public Builder instanceClass(Either<String,InstanceType> instanceClass) {
             this.instanceClass = Input.of(Objects.requireNonNull(instanceClass));
             return this;
         }
 
-        public Builder setMonitoringInterval(@Nullable Input<Integer> monitoringInterval) {
+        public Builder monitoringInterval(@Nullable Input<Integer> monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }
 
-        public Builder setMonitoringInterval(@Nullable Integer monitoringInterval) {
+        public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
             this.monitoringInterval = Input.ofNullable(monitoringInterval);
             return this;
         }
 
-        public Builder setMonitoringRoleArn(@Nullable Input<String> monitoringRoleArn) {
+        public Builder monitoringRoleArn(@Nullable Input<String> monitoringRoleArn) {
             this.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
 
-        public Builder setMonitoringRoleArn(@Nullable String monitoringRoleArn) {
+        public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
             this.monitoringRoleArn = Input.ofNullable(monitoringRoleArn);
             return this;
         }
 
-        public Builder setPerformanceInsightsEnabled(@Nullable Input<Boolean> performanceInsightsEnabled) {
+        public Builder performanceInsightsEnabled(@Nullable Input<Boolean> performanceInsightsEnabled) {
             this.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
 
-        public Builder setPerformanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
+        public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
             this.performanceInsightsEnabled = Input.ofNullable(performanceInsightsEnabled);
             return this;
         }
 
-        public Builder setPerformanceInsightsKmsKeyId(@Nullable Input<String> performanceInsightsKmsKeyId) {
+        public Builder performanceInsightsKmsKeyId(@Nullable Input<String> performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
 
-        public Builder setPerformanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
+        public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
             this.performanceInsightsKmsKeyId = Input.ofNullable(performanceInsightsKmsKeyId);
             return this;
         }
 
-        public Builder setPerformanceInsightsRetentionPeriod(@Nullable Input<Integer> performanceInsightsRetentionPeriod) {
+        public Builder performanceInsightsRetentionPeriod(@Nullable Input<Integer> performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
 
-        public Builder setPerformanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
+        public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
             this.performanceInsightsRetentionPeriod = Input.ofNullable(performanceInsightsRetentionPeriod);
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable String preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder setPromotionTier(@Nullable Input<Integer> promotionTier) {
+        public Builder promotionTier(@Nullable Input<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
 
-        public Builder setPromotionTier(@Nullable Integer promotionTier) {
+        public Builder promotionTier(@Nullable Integer promotionTier) {
             this.promotionTier = Input.ofNullable(promotionTier);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

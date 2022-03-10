@@ -92,32 +92,32 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     	      this.iosDeviceList = defaults.iosDeviceList;
         }
 
-        public Builder setAndroidDeviceList(@Nullable Input<AndroidDeviceListArgs> androidDeviceList) {
+        public Builder androidDeviceList(@Nullable Input<AndroidDeviceListArgs> androidDeviceList) {
             this.androidDeviceList = androidDeviceList;
             return this;
         }
 
-        public Builder setAndroidDeviceList(@Nullable AndroidDeviceListArgs androidDeviceList) {
+        public Builder androidDeviceList(@Nullable AndroidDeviceListArgs androidDeviceList) {
             this.androidDeviceList = Input.ofNullable(androidDeviceList);
             return this;
         }
 
-        public Builder setAndroidMatrix(@Nullable Input<AndroidMatrixArgs> androidMatrix) {
+        public Builder androidMatrix(@Nullable Input<AndroidMatrixArgs> androidMatrix) {
             this.androidMatrix = androidMatrix;
             return this;
         }
 
-        public Builder setAndroidMatrix(@Nullable AndroidMatrixArgs androidMatrix) {
+        public Builder androidMatrix(@Nullable AndroidMatrixArgs androidMatrix) {
             this.androidMatrix = Input.ofNullable(androidMatrix);
             return this;
         }
 
-        public Builder setIosDeviceList(@Nullable Input<IosDeviceListArgs> iosDeviceList) {
+        public Builder iosDeviceList(@Nullable Input<IosDeviceListArgs> iosDeviceList) {
             this.iosDeviceList = iosDeviceList;
             return this;
         }
 
-        public Builder setIosDeviceList(@Nullable IosDeviceListArgs iosDeviceList) {
+        public Builder iosDeviceList(@Nullable IosDeviceListArgs iosDeviceList) {
             this.iosDeviceList = Input.ofNullable(iosDeviceList);
             return this;
         }

@@ -75,22 +75,22 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setNumber(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Input<Integer> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = Input.ofNullable(number);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

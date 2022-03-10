@@ -51,7 +51,7 @@ public final class GetCarrierGatewayArgs extends io.pulumi.resources.InvokeArgs 
     	      this.carrierGatewayId = defaults.carrierGatewayId;
         }
 
-        public Builder setCarrierGatewayId(String carrierGatewayId) {
+        public Builder carrierGatewayId(String carrierGatewayId) {
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
             return this;
         }

@@ -108,22 +108,22 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse extends io.pulu
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setCondition(GooglePrivacyDlpV2RecordConditionResponse condition) {
+        public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setFields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
+        public Builder fields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setInfoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }

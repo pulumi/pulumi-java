@@ -69,12 +69,12 @@ public final class WorkflowStepTagStepDetailsProperties {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkflowS3Tag> tags) {
+        public Builder tags(@Nullable List<WorkflowS3Tag> tags) {
             this.tags = tags;
             return this;
         }

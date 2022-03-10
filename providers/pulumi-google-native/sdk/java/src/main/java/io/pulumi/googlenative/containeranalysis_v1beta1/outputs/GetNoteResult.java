@@ -383,107 +383,107 @@ public final class GetNoteResult {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestationAuthority(AuthorityResponse attestationAuthority) {
+        public Builder attestationAuthority(AuthorityResponse attestationAuthority) {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
 
-        public Builder setBaseImage(BasisResponse baseImage) {
+        public Builder baseImage(BasisResponse baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
 
-        public Builder setBuild(BuildResponse build) {
+        public Builder build(BuildResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployable(DeployableResponse deployable) {
+        public Builder deployable(DeployableResponse deployable) {
             this.deployable = Objects.requireNonNull(deployable);
             return this;
         }
 
-        public Builder setDiscovery(DiscoveryResponse discovery) {
+        public Builder discovery(DiscoveryResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setIntoto(InTotoResponse intoto) {
+        public Builder intoto(InTotoResponse intoto) {
             this.intoto = Objects.requireNonNull(intoto);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLongDescription(String longDescription) {
+        public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder set$package(PackageResponse $package) {
+        public Builder $package(PackageResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setRelatedNoteNames(List<String> relatedNoteNames) {
+        public Builder relatedNoteNames(List<String> relatedNoteNames) {
             this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
             return this;
         }
 
-        public Builder setRelatedUrl(List<RelatedUrlResponse> relatedUrl) {
+        public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
 
-        public Builder setSbom(DocumentNoteResponse sbom) {
+        public Builder sbom(DocumentNoteResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
 
-        public Builder setShortDescription(String shortDescription) {
+        public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
 
-        public Builder setSpdxFile(FileNoteResponse spdxFile) {
+        public Builder spdxFile(FileNoteResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(PackageInfoNoteResponse spdxPackage) {
+        public Builder spdxPackage(PackageInfoNoteResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(RelationshipNoteResponse spdxRelationship) {
+        public Builder spdxRelationship(RelationshipNoteResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVulnerability(VulnerabilityResponse vulnerability) {
+        public Builder vulnerability(VulnerabilityResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }

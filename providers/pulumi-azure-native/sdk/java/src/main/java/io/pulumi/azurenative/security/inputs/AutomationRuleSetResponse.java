@@ -54,7 +54,7 @@ public final class AutomationRuleSetResponse extends io.pulumi.resources.InvokeA
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
+        public Builder rules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

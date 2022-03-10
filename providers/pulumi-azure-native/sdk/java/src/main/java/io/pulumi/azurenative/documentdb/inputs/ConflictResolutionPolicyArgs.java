@@ -92,32 +92,32 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
     	      this.mode = defaults.mode;
         }
 
-        public Builder setConflictResolutionPath(@Nullable Input<String> conflictResolutionPath) {
+        public Builder conflictResolutionPath(@Nullable Input<String> conflictResolutionPath) {
             this.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
 
-        public Builder setConflictResolutionPath(@Nullable String conflictResolutionPath) {
+        public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
             this.conflictResolutionPath = Input.ofNullable(conflictResolutionPath);
             return this;
         }
 
-        public Builder setConflictResolutionProcedure(@Nullable Input<String> conflictResolutionProcedure) {
+        public Builder conflictResolutionProcedure(@Nullable Input<String> conflictResolutionProcedure) {
             this.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
 
-        public Builder setConflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
+        public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
             this.conflictResolutionProcedure = Input.ofNullable(conflictResolutionProcedure);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,ConflictResolutionMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,ConflictResolutionMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,ConflictResolutionMode> mode) {
+        public Builder mode(@Nullable Either<String,ConflictResolutionMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

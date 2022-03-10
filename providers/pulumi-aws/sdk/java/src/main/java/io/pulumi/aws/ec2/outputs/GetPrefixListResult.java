@@ -101,27 +101,27 @@ public final class GetPrefixListResult {
     	      this.prefixListId = defaults.prefixListId;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetPrefixListFilter> filters) {
+        public Builder filters(@Nullable List<GetPrefixListFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrefixListId(@Nullable String prefixListId) {
+        public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }

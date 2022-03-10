@@ -173,82 +173,82 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     	      this.timeToPerformInSeconds = defaults.timeToPerformInSeconds;
         }
 
-        public Builder setActionType(Input<RosettaNetActionType> actionType) {
+        public Builder actionType(Input<RosettaNetActionType> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setActionType(RosettaNetActionType actionType) {
+        public Builder actionType(RosettaNetActionType actionType) {
             this.actionType = Input.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder setIsAuthorizationRequired(Input<Boolean> isAuthorizationRequired) {
+        public Builder isAuthorizationRequired(Input<Boolean> isAuthorizationRequired) {
             this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
             return this;
         }
 
-        public Builder setIsAuthorizationRequired(Boolean isAuthorizationRequired) {
+        public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
             this.isAuthorizationRequired = Input.of(Objects.requireNonNull(isAuthorizationRequired));
             return this;
         }
 
-        public Builder setIsSecuredTransportRequired(Input<Boolean> isSecuredTransportRequired) {
+        public Builder isSecuredTransportRequired(Input<Boolean> isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
             return this;
         }
 
-        public Builder setIsSecuredTransportRequired(Boolean isSecuredTransportRequired) {
+        public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Input.of(Objects.requireNonNull(isSecuredTransportRequired));
             return this;
         }
 
-        public Builder setNonRepudiationOfOriginAndContent(Input<Boolean> nonRepudiationOfOriginAndContent) {
+        public Builder nonRepudiationOfOriginAndContent(Input<Boolean> nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
             return this;
         }
 
-        public Builder setNonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
+        public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Input.of(Objects.requireNonNull(nonRepudiationOfOriginAndContent));
             return this;
         }
 
-        public Builder setPersistentConfidentialityScope(Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
+        public Builder persistentConfidentialityScope(Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
             return this;
         }
 
-        public Builder setPersistentConfidentialityScope(RosettaNetPipConfidentialityScope persistentConfidentialityScope) {
+        public Builder persistentConfidentialityScope(RosettaNetPipConfidentialityScope persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Input.of(Objects.requireNonNull(persistentConfidentialityScope));
             return this;
         }
 
-        public Builder setResponseType(Input<RosettaNetResponseType> responseType) {
+        public Builder responseType(Input<RosettaNetResponseType> responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
 
-        public Builder setResponseType(RosettaNetResponseType responseType) {
+        public Builder responseType(RosettaNetResponseType responseType) {
             this.responseType = Input.of(Objects.requireNonNull(responseType));
             return this;
         }
 
-        public Builder setRetryCount(Input<Integer> retryCount) {
+        public Builder retryCount(Input<Integer> retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
 
-        public Builder setRetryCount(Integer retryCount) {
+        public Builder retryCount(Integer retryCount) {
             this.retryCount = Input.of(Objects.requireNonNull(retryCount));
             return this;
         }
 
-        public Builder setTimeToPerformInSeconds(Input<Integer> timeToPerformInSeconds) {
+        public Builder timeToPerformInSeconds(Input<Integer> timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }
 
-        public Builder setTimeToPerformInSeconds(Integer timeToPerformInSeconds) {
+        public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Input.of(Objects.requireNonNull(timeToPerformInSeconds));
             return this;
         }

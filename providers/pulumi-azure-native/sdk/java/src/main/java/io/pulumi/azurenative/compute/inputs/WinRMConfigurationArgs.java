@@ -58,12 +58,12 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
     	      this.listeners = defaults.listeners;
         }
 
-        public Builder setListeners(@Nullable Input<List<WinRMListenerArgs>> listeners) {
+        public Builder listeners(@Nullable Input<List<WinRMListenerArgs>> listeners) {
             this.listeners = listeners;
             return this;
         }
 
-        public Builder setListeners(@Nullable List<WinRMListenerArgs> listeners) {
+        public Builder listeners(@Nullable List<WinRMListenerArgs> listeners) {
             this.listeners = Input.ofNullable(listeners);
             return this;
         }

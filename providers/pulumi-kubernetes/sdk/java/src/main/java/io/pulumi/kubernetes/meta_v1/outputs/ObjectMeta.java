@@ -328,82 +328,82 @@ public final class ObjectMeta {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setDeletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
+        public Builder deletionGracePeriodSeconds(@Nullable Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
 
-        public Builder setDeletionTimestamp(@Nullable String deletionTimestamp) {
+        public Builder deletionTimestamp(@Nullable String deletionTimestamp) {
             this.deletionTimestamp = deletionTimestamp;
             return this;
         }
 
-        public Builder setFinalizers(@Nullable List<String> finalizers) {
+        public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = finalizers;
             return this;
         }
 
-        public Builder setGenerateName(@Nullable String generateName) {
+        public Builder generateName(@Nullable String generateName) {
             this.generateName = generateName;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setManagedFields(@Nullable List<ManagedFieldsEntry> managedFields) {
+        public Builder managedFields(@Nullable List<ManagedFieldsEntry> managedFields) {
             this.managedFields = managedFields;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setOwnerReferences(@Nullable List<OwnerReference> ownerReferences) {
+        public Builder ownerReferences(@Nullable List<OwnerReference> ownerReferences) {
             this.ownerReferences = ownerReferences;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }

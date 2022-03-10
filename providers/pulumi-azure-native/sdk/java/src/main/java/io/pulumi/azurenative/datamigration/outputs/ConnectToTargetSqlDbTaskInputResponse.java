@@ -48,7 +48,7 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

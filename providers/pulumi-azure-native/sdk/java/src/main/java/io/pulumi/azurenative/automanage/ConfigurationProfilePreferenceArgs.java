@@ -120,52 +120,52 @@ public final class ConfigurationProfilePreferenceArgs extends io.pulumi.resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConfigurationProfilePreferenceName(@Nullable Input<String> configurationProfilePreferenceName) {
+        public Builder configurationProfilePreferenceName(@Nullable Input<String> configurationProfilePreferenceName) {
             this.configurationProfilePreferenceName = configurationProfilePreferenceName;
             return this;
         }
 
-        public Builder setConfigurationProfilePreferenceName(@Nullable String configurationProfilePreferenceName) {
+        public Builder configurationProfilePreferenceName(@Nullable String configurationProfilePreferenceName) {
             this.configurationProfilePreferenceName = Input.ofNullable(configurationProfilePreferenceName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ConfigurationProfilePreferencePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ConfigurationProfilePreferencePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ConfigurationProfilePreferencePropertiesArgs properties) {
+        public Builder properties(@Nullable ConfigurationProfilePreferencePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

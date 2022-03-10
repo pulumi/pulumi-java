@@ -76,12 +76,12 @@ public final class ContainerServiceDeployment extends io.pulumi.resources.Invoke
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setContainers(@Nullable List<Container> containers) {
+        public Builder containers(@Nullable List<Container> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
+        public Builder publicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }

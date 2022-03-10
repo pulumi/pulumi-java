@@ -111,62 +111,62 @@ public final class TagTemplateIamMemberArgs extends io.pulumi.resources.Resource
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder setCondition(@Nullable Input<TagTemplateIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<TagTemplateIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TagTemplateIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable TagTemplateIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setTagTemplate(Input<String> tagTemplate) {
+        public Builder tagTemplate(Input<String> tagTemplate) {
             this.tagTemplate = Objects.requireNonNull(tagTemplate);
             return this;
         }
 
-        public Builder setTagTemplate(String tagTemplate) {
+        public Builder tagTemplate(String tagTemplate) {
             this.tagTemplate = Input.of(Objects.requireNonNull(tagTemplate));
             return this;
         }

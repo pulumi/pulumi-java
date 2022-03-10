@@ -61,22 +61,22 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
     	      this.storageCapacityUnits = defaults.storageCapacityUnits;
         }
 
-        public Builder setQueryCapacityUnits(Input<Integer> queryCapacityUnits) {
+        public Builder queryCapacityUnits(Input<Integer> queryCapacityUnits) {
             this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
             return this;
         }
 
-        public Builder setQueryCapacityUnits(Integer queryCapacityUnits) {
+        public Builder queryCapacityUnits(Integer queryCapacityUnits) {
             this.queryCapacityUnits = Input.of(Objects.requireNonNull(queryCapacityUnits));
             return this;
         }
 
-        public Builder setStorageCapacityUnits(Input<Integer> storageCapacityUnits) {
+        public Builder storageCapacityUnits(Input<Integer> storageCapacityUnits) {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }
 
-        public Builder setStorageCapacityUnits(Integer storageCapacityUnits) {
+        public Builder storageCapacityUnits(Integer storageCapacityUnits) {
             this.storageCapacityUnits = Input.of(Objects.requireNonNull(storageCapacityUnits));
             return this;
         }

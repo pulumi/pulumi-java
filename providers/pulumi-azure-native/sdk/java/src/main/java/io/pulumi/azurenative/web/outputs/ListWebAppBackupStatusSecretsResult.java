@@ -312,87 +312,87 @@ public final class ListWebAppBackupStatusSecretsResult {
     	      this.websiteSizeInBytes = defaults.websiteSizeInBytes;
         }
 
-        public Builder setBackupId(Integer backupId) {
+        public Builder backupId(Integer backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setBlobName(String blobName) {
+        public Builder blobName(String blobName) {
             this.blobName = Objects.requireNonNull(blobName);
             return this;
         }
 
-        public Builder setCorrelationId(String correlationId) {
+        public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDatabases(List<DatabaseBackupSettingResponse> databases) {
+        public Builder databases(List<DatabaseBackupSettingResponse> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setFinishedTimeStamp(String finishedTimeStamp) {
+        public Builder finishedTimeStamp(String finishedTimeStamp) {
             this.finishedTimeStamp = Objects.requireNonNull(finishedTimeStamp);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastRestoreTimeStamp(String lastRestoreTimeStamp) {
+        public Builder lastRestoreTimeStamp(String lastRestoreTimeStamp) {
             this.lastRestoreTimeStamp = Objects.requireNonNull(lastRestoreTimeStamp);
             return this;
         }
 
-        public Builder setLog(String log) {
+        public Builder log(String log) {
             this.log = Objects.requireNonNull(log);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScheduled(Boolean scheduled) {
+        public Builder scheduled(Boolean scheduled) {
             this.scheduled = Objects.requireNonNull(scheduled);
             return this;
         }
 
-        public Builder setSizeInBytes(Double sizeInBytes) {
+        public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageAccountUrl(String storageAccountUrl) {
+        public Builder storageAccountUrl(String storageAccountUrl) {
             this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWebsiteSizeInBytes(Double websiteSizeInBytes) {
+        public Builder websiteSizeInBytes(Double websiteSizeInBytes) {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
         }

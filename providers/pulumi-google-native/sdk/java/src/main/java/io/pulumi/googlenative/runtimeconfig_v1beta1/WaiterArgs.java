@@ -139,72 +139,72 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setConfigId(Input<String> configId) {
+        public Builder configId(Input<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Input.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder setFailure(@Nullable Input<EndConditionArgs> failure) {
+        public Builder failure(@Nullable Input<EndConditionArgs> failure) {
             this.failure = failure;
             return this;
         }
 
-        public Builder setFailure(@Nullable EndConditionArgs failure) {
+        public Builder failure(@Nullable EndConditionArgs failure) {
             this.failure = Input.ofNullable(failure);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSuccess(@Nullable Input<EndConditionArgs> success) {
+        public Builder success(@Nullable Input<EndConditionArgs> success) {
             this.success = success;
             return this;
         }
 
-        public Builder setSuccess(@Nullable EndConditionArgs success) {
+        public Builder success(@Nullable EndConditionArgs success) {
             this.success = Input.ofNullable(success);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

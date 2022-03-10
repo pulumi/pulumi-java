@@ -56,7 +56,7 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.searchParameters = defaults.searchParameters;
         }
 
-        public Builder setSearchParameters(List<SearchParameterResponse> searchParameters) {
+        public Builder searchParameters(List<SearchParameterResponse> searchParameters) {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }

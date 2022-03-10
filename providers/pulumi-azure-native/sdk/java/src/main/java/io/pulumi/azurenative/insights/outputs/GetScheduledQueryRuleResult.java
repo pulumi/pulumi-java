@@ -330,92 +330,92 @@ public final class GetScheduledQueryRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(Either<AlertingActionResponse,LogToMetricActionResponse> action) {
+        public Builder action(Either<AlertingActionResponse,LogToMetricActionResponse> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAutoMitigate(@Nullable Boolean autoMitigate) {
+        public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
 
-        public Builder setCreatedWithApiVersion(String createdWithApiVersion) {
+        public Builder createdWithApiVersion(String createdWithApiVersion) {
             this.createdWithApiVersion = Objects.requireNonNull(createdWithApiVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEnabled(@Nullable String enabled) {
+        public Builder enabled(@Nullable String enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsLegacyLogAnalyticsRule(Boolean isLegacyLogAnalyticsRule) {
+        public Builder isLegacyLogAnalyticsRule(Boolean isLegacyLogAnalyticsRule) {
             this.isLegacyLogAnalyticsRule = Objects.requireNonNull(isLegacyLogAnalyticsRule);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSchedule(@Nullable ScheduleResponse schedule) {
+        public Builder schedule(@Nullable ScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSource(SourceResponse source) {
+        public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

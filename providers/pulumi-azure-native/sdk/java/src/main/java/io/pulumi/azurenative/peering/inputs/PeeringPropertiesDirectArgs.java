@@ -95,32 +95,32 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
     	      this.peerAsn = defaults.peerAsn;
         }
 
-        public Builder setConnections(@Nullable Input<List<DirectConnectionArgs>> connections) {
+        public Builder connections(@Nullable Input<List<DirectConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<DirectConnectionArgs> connections) {
+        public Builder connections(@Nullable List<DirectConnectionArgs> connections) {
             this.connections = Input.ofNullable(connections);
             return this;
         }
 
-        public Builder setDirectPeeringType(@Nullable Input<Either<String,DirectPeeringType>> directPeeringType) {
+        public Builder directPeeringType(@Nullable Input<Either<String,DirectPeeringType>> directPeeringType) {
             this.directPeeringType = directPeeringType;
             return this;
         }
 
-        public Builder setDirectPeeringType(@Nullable Either<String,DirectPeeringType> directPeeringType) {
+        public Builder directPeeringType(@Nullable Either<String,DirectPeeringType> directPeeringType) {
             this.directPeeringType = Input.ofNullable(directPeeringType);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Input<SubResourceArgs> peerAsn) {
+        public Builder peerAsn(@Nullable Input<SubResourceArgs> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceArgs peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }

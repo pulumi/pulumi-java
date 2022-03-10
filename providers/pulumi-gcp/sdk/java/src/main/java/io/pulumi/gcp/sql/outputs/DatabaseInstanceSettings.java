@@ -265,87 +265,87 @@ public final class DatabaseInstanceSettings {
     	      this.version = defaults.version;
         }
 
-        public Builder setActivationPolicy(@Nullable String activationPolicy) {
+        public Builder activationPolicy(@Nullable String activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable String availabilityType) {
+        public Builder availabilityType(@Nullable String availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration) {
+        public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags) {
+        public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
-        public Builder setDiskAutoresize(@Nullable Boolean diskAutoresize) {
+        public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
             this.diskAutoresize = diskAutoresize;
             return this;
         }
 
-        public Builder setDiskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
+        public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Integer diskSize) {
+        public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = diskSize;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig) {
+        public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration) {
+        public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable DatabaseInstanceSettingsLocationPreference locationPreference) {
+        public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreference locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable String pricingPlan) {
+        public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

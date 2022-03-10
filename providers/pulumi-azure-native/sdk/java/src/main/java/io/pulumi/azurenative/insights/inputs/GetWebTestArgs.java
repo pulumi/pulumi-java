@@ -68,12 +68,12 @@ public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
     	      this.webTestName = defaults.webTestName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWebTestName(String webTestName) {
+        public Builder webTestName(String webTestName) {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }

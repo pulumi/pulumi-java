@@ -53,7 +53,7 @@ public final class ManagedExecutionProperties extends io.pulumi.resources.Invoke
     	      this.active = defaults.active;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
         }

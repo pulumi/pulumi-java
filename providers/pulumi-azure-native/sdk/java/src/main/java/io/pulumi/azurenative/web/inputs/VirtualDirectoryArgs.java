@@ -74,22 +74,22 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualPath = defaults.virtualPath;
         }
 
-        public Builder setPhysicalPath(@Nullable Input<String> physicalPath) {
+        public Builder physicalPath(@Nullable Input<String> physicalPath) {
             this.physicalPath = physicalPath;
             return this;
         }
 
-        public Builder setPhysicalPath(@Nullable String physicalPath) {
+        public Builder physicalPath(@Nullable String physicalPath) {
             this.physicalPath = Input.ofNullable(physicalPath);
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable Input<String> virtualPath) {
+        public Builder virtualPath(@Nullable Input<String> virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable String virtualPath) {
+        public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = Input.ofNullable(virtualPath);
             return this;
         }

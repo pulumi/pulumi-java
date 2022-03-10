@@ -512,122 +512,122 @@ public final class ClusterNodePoolNodeConfig {
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setEphemeralStorageConfig(@Nullable ClusterNodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(@Nullable ClusterNodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
 
-        public Builder setGcfsConfig(@Nullable ClusterNodePoolNodeConfigGcfsConfig gcfsConfig) {
+        public Builder gcfsConfig(@Nullable ClusterNodePoolNodeConfigGcfsConfig gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable ClusterNodePoolNodeConfigKubeletConfig kubeletConfig) {
+        public Builder kubeletConfig(@Nullable ClusterNodePoolNodeConfigKubeletConfig kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLinuxNodeConfig(@Nullable ClusterNodePoolNodeConfigLinuxNodeConfig linuxNodeConfig) {
+        public Builder linuxNodeConfig(@Nullable ClusterNodePoolNodeConfigLinuxNodeConfig linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
 
-        public Builder setLocalSsdCount(@Nullable Integer localSsdCount) {
+        public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNodeGroup(@Nullable String nodeGroup) {
+        public Builder nodeGroup(@Nullable String nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setSandboxConfig(@Nullable ClusterNodePoolNodeConfigSandboxConfig sandboxConfig) {
+        public Builder sandboxConfig(@Nullable ClusterNodePoolNodeConfigSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable ClusterNodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable ClusterNodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setSpot(@Nullable Boolean spot) {
+        public Builder spot(@Nullable Boolean spot) {
             this.spot = spot;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<ClusterNodePoolNodeConfigTaint> taints) {
+        public Builder taints(@Nullable List<ClusterNodePoolNodeConfigTaint> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setWorkloadMetadataConfig(@Nullable ClusterNodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(@Nullable ClusterNodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }

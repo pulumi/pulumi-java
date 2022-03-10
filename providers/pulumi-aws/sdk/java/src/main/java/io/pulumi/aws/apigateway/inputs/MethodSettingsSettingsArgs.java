@@ -201,102 +201,102 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
     	      this.unauthorizedCacheControlHeaderStrategy = defaults.unauthorizedCacheControlHeaderStrategy;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Input.ofNullable(cacheDataEncrypted);
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Input.ofNullable(cacheTtlInSeconds);
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Boolean cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Input.ofNullable(cachingEnabled);
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Boolean metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Input.ofNullable(metricsEnabled);
             return this;
         }
 
-        public Builder setRequireAuthorizationForCacheControl(@Nullable Input<Boolean> requireAuthorizationForCacheControl) {
+        public Builder requireAuthorizationForCacheControl(@Nullable Input<Boolean> requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = requireAuthorizationForCacheControl;
             return this;
         }
 
-        public Builder setRequireAuthorizationForCacheControl(@Nullable Boolean requireAuthorizationForCacheControl) {
+        public Builder requireAuthorizationForCacheControl(@Nullable Boolean requireAuthorizationForCacheControl) {
             this.requireAuthorizationForCacheControl = Input.ofNullable(requireAuthorizationForCacheControl);
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
             return this;
         }
 
-        public Builder setUnauthorizedCacheControlHeaderStrategy(@Nullable Input<String> unauthorizedCacheControlHeaderStrategy) {
+        public Builder unauthorizedCacheControlHeaderStrategy(@Nullable Input<String> unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy;
             return this;
         }
 
-        public Builder setUnauthorizedCacheControlHeaderStrategy(@Nullable String unauthorizedCacheControlHeaderStrategy) {
+        public Builder unauthorizedCacheControlHeaderStrategy(@Nullable String unauthorizedCacheControlHeaderStrategy) {
             this.unauthorizedCacheControlHeaderStrategy = Input.ofNullable(unauthorizedCacheControlHeaderStrategy);
             return this;
         }

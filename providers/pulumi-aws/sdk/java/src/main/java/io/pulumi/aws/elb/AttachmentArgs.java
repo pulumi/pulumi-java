@@ -69,22 +69,22 @@ public final class AttachmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instance = defaults.instance;
         }
 
-        public Builder setElb(Input<String> elb) {
+        public Builder elb(Input<String> elb) {
             this.elb = Objects.requireNonNull(elb);
             return this;
         }
 
-        public Builder setElb(String elb) {
+        public Builder elb(String elb) {
             this.elb = Input.of(Objects.requireNonNull(elb));
             return this;
         }
 
-        public Builder setInstance(Input<String> instance) {
+        public Builder instance(Input<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Input.of(Objects.requireNonNull(instance));
             return this;
         }

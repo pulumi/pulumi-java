@@ -61,12 +61,12 @@ public final class DatasetDeltaTime extends io.pulumi.resources.InvokeArgs {
     	      this.timeExpression = defaults.timeExpression;
         }
 
-        public Builder setOffsetSeconds(Integer offsetSeconds) {
+        public Builder offsetSeconds(Integer offsetSeconds) {
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
 
-        public Builder setTimeExpression(String timeExpression) {
+        public Builder timeExpression(String timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }

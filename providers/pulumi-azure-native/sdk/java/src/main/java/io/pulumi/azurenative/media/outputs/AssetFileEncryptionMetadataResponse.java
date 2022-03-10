@@ -83,17 +83,17 @@ public final class AssetFileEncryptionMetadataResponse {
     	      this.initializationVector = defaults.initializationVector;
         }
 
-        public Builder setAssetFileId(String assetFileId) {
+        public Builder assetFileId(String assetFileId) {
             this.assetFileId = Objects.requireNonNull(assetFileId);
             return this;
         }
 
-        public Builder setAssetFileName(@Nullable String assetFileName) {
+        public Builder assetFileName(@Nullable String assetFileName) {
             this.assetFileName = assetFileName;
             return this;
         }
 
-        public Builder setInitializationVector(@Nullable String initializationVector) {
+        public Builder initializationVector(@Nullable String initializationVector) {
             this.initializationVector = initializationVector;
             return this;
         }

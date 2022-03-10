@@ -42,7 +42,7 @@ public final class ListenerRuleQueryStringConfig {
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable List<ListenerRuleQueryStringKeyValue> values) {
+        public Builder values(@Nullable List<ListenerRuleQueryStringKeyValue> values) {
             this.values = values;
             return this;
         }

@@ -177,82 +177,82 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdType = defaults.thresholdType;
         }
 
-        public Builder setContactEmails(Input<List<String>> contactEmails) {
+        public Builder contactEmails(Input<List<String>> contactEmails) {
             this.contactEmails = Objects.requireNonNull(contactEmails);
             return this;
         }
 
-        public Builder setContactEmails(List<String> contactEmails) {
+        public Builder contactEmails(List<String> contactEmails) {
             this.contactEmails = Input.of(Objects.requireNonNull(contactEmails));
             return this;
         }
 
-        public Builder setContactGroups(@Nullable Input<List<String>> contactGroups) {
+        public Builder contactGroups(@Nullable Input<List<String>> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
 
-        public Builder setContactGroups(@Nullable List<String> contactGroups) {
+        public Builder contactGroups(@Nullable List<String> contactGroups) {
             this.contactGroups = Input.ofNullable(contactGroups);
             return this;
         }
 
-        public Builder setContactRoles(@Nullable Input<List<String>> contactRoles) {
+        public Builder contactRoles(@Nullable Input<List<String>> contactRoles) {
             this.contactRoles = contactRoles;
             return this;
         }
 
-        public Builder setContactRoles(@Nullable List<String> contactRoles) {
+        public Builder contactRoles(@Nullable List<String> contactRoles) {
             this.contactRoles = Input.ofNullable(contactRoles);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setLocale(@Nullable Input<Either<String,CultureCode>> locale) {
+        public Builder locale(@Nullable Input<Either<String,CultureCode>> locale) {
             this.locale = locale;
             return this;
         }
 
-        public Builder setLocale(@Nullable Either<String,CultureCode> locale) {
+        public Builder locale(@Nullable Either<String,CultureCode> locale) {
             this.locale = Input.ofNullable(locale);
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,OperatorType>> operator) {
+        public Builder operator(Input<Either<String,OperatorType>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,OperatorType> operator) {
+        public Builder operator(Either<String,OperatorType> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setThresholdType(@Nullable Input<Either<String,ThresholdType>> thresholdType) {
+        public Builder thresholdType(@Nullable Input<Either<String,ThresholdType>> thresholdType) {
             this.thresholdType = thresholdType;
             return this;
         }
 
-        public Builder setThresholdType(@Nullable Either<String,ThresholdType> thresholdType) {
+        public Builder thresholdType(@Nullable Either<String,ThresholdType> thresholdType) {
             this.thresholdType = Input.ofNullable(thresholdType);
             return this;
         }

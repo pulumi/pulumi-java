@@ -107,42 +107,42 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setIdentity(@Nullable Input<CMKIdentityDefinitionArgs> identity) {
+        public Builder identity(@Nullable Input<CMKIdentityDefinitionArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable CMKIdentityDefinitionArgs identity) {
+        public Builder identity(@Nullable CMKIdentityDefinitionArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyName(Input<String> keyName) {
+        public Builder keyName(Input<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Input.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Input<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = Input.ofNullable(keyVersion);
             return this;
         }
 
-        public Builder setVaultBaseUrl(Input<String> vaultBaseUrl) {
+        public Builder vaultBaseUrl(Input<String> vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Input.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
         }

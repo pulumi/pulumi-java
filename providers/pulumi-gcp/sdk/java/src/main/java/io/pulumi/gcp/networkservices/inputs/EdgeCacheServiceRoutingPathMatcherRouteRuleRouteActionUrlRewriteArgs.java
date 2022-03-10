@@ -96,32 +96,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     	      this.pathTemplateRewrite = defaults.pathTemplateRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable Input<String> hostRewrite) {
+        public Builder hostRewrite(@Nullable Input<String> hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = Input.ofNullable(hostRewrite);
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable Input<String> pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable Input<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = Input.ofNullable(pathPrefixRewrite);
             return this;
         }
 
-        public Builder setPathTemplateRewrite(@Nullable Input<String> pathTemplateRewrite) {
+        public Builder pathTemplateRewrite(@Nullable Input<String> pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }
 
-        public Builder setPathTemplateRewrite(@Nullable String pathTemplateRewrite) {
+        public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
             this.pathTemplateRewrite = Input.ofNullable(pathTemplateRewrite);
             return this;
         }

@@ -92,32 +92,32 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
     	      this.uri = defaults.uri;
         }
 
-        public Builder setName(Input<Either<String,ApplicationDefinitionArtifactName>> name) {
+        public Builder name(Input<Either<String,ApplicationDefinitionArtifactName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,ApplicationDefinitionArtifactName> name) {
+        public Builder name(Either<String,ApplicationDefinitionArtifactName> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<ApplicationArtifactType> type) {
+        public Builder type(Input<ApplicationArtifactType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ApplicationArtifactType type) {
+        public Builder type(ApplicationArtifactType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

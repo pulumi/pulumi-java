@@ -56,12 +56,12 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expr = defaults.expr;
         }
 
-        public Builder setExpr(Input<ExprArgs> expr) {
+        public Builder expr(Input<ExprArgs> expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
-        public Builder setExpr(ExprArgs expr) {
+        public Builder expr(ExprArgs expr) {
             this.expr = Input.of(Objects.requireNonNull(expr));
             return this;
         }

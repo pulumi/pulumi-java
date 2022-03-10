@@ -85,32 +85,32 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(Input<String> transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(Input<String> transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Input.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
         }

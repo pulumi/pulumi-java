@@ -81,17 +81,17 @@ public final class GooglePrivacyDlpV2BucketResponse {
     	      this.replacementValue = defaults.replacementValue;
         }
 
-        public Builder setMax(GooglePrivacyDlpV2ValueResponse max) {
+        public Builder max(GooglePrivacyDlpV2ValueResponse max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMin(GooglePrivacyDlpV2ValueResponse min) {
+        public Builder min(GooglePrivacyDlpV2ValueResponse min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
-        public Builder setReplacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
+        public Builder replacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
         }

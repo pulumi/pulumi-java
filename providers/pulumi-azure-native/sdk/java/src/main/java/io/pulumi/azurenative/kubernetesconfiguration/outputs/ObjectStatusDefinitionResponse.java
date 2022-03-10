@@ -151,37 +151,37 @@ public final class ObjectStatusDefinitionResponse {
     	      this.statusConditions = defaults.statusConditions;
         }
 
-        public Builder setAppliedBy(@Nullable ObjectReferenceDefinitionResponse appliedBy) {
+        public Builder appliedBy(@Nullable ObjectReferenceDefinitionResponse appliedBy) {
             this.appliedBy = appliedBy;
             return this;
         }
 
-        public Builder setComplianceState(@Nullable String complianceState) {
+        public Builder complianceState(@Nullable String complianceState) {
             this.complianceState = complianceState;
             return this;
         }
 
-        public Builder setHelmReleaseProperties(@Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties) {
+        public Builder helmReleaseProperties(@Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties) {
             this.helmReleaseProperties = helmReleaseProperties;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setStatusConditions(@Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
+        public Builder statusConditions(@Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
             this.statusConditions = statusConditions;
             return this;
         }

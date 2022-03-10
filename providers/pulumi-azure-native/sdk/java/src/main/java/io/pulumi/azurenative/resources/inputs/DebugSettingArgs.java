@@ -57,12 +57,12 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.detailLevel = defaults.detailLevel;
         }
 
-        public Builder setDetailLevel(@Nullable Input<String> detailLevel) {
+        public Builder detailLevel(@Nullable Input<String> detailLevel) {
             this.detailLevel = detailLevel;
             return this;
         }
 
-        public Builder setDetailLevel(@Nullable String detailLevel) {
+        public Builder detailLevel(@Nullable String detailLevel) {
             this.detailLevel = Input.ofNullable(detailLevel);
             return this;
         }

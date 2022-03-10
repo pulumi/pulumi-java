@@ -143,62 +143,62 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.useForPeeringService = defaults.useForPeeringService;
         }
 
-        public Builder setBandwidthInMbps(@Nullable Input<Integer> bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Input<Integer> bandwidthInMbps) {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
-        public Builder setBandwidthInMbps(@Nullable Integer bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             this.bandwidthInMbps = Input.ofNullable(bandwidthInMbps);
             return this;
         }
 
-        public Builder setBgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
+        public Builder bgpSession(@Nullable Input<BgpSessionArgs> bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
 
-        public Builder setBgpSession(@Nullable BgpSessionArgs bgpSession) {
+        public Builder bgpSession(@Nullable BgpSessionArgs bgpSession) {
             this.bgpSession = Input.ofNullable(bgpSession);
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable Input<String> connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable Input<String> connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable String connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = Input.ofNullable(connectionIdentifier);
             return this;
         }
 
-        public Builder setPeeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Input<Integer> peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
-        public Builder setPeeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = Input.ofNullable(peeringDBFacilityId);
             return this;
         }
 
-        public Builder setSessionAddressProvider(@Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider) {
+        public Builder sessionAddressProvider(@Nullable Input<Either<String,SessionAddressProvider>> sessionAddressProvider) {
             this.sessionAddressProvider = sessionAddressProvider;
             return this;
         }
 
-        public Builder setSessionAddressProvider(@Nullable Either<String,SessionAddressProvider> sessionAddressProvider) {
+        public Builder sessionAddressProvider(@Nullable Either<String,SessionAddressProvider> sessionAddressProvider) {
             this.sessionAddressProvider = Input.ofNullable(sessionAddressProvider);
             return this;
         }
 
-        public Builder setUseForPeeringService(@Nullable Input<Boolean> useForPeeringService) {
+        public Builder useForPeeringService(@Nullable Input<Boolean> useForPeeringService) {
             this.useForPeeringService = useForPeeringService;
             return this;
         }
 
-        public Builder setUseForPeeringService(@Nullable Boolean useForPeeringService) {
+        public Builder useForPeeringService(@Nullable Boolean useForPeeringService) {
             this.useForPeeringService = Input.ofNullable(useForPeeringService);
             return this;
         }

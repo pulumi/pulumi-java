@@ -53,12 +53,12 @@ public final class GetActivityResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ActivityTagsEntry> tags) {
+        public Builder tags(@Nullable List<ActivityTagsEntry> tags) {
             this.tags = tags;
             return this;
         }

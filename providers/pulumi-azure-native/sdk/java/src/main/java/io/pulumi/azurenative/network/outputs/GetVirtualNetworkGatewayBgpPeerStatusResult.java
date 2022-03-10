@@ -50,7 +50,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<BgpPeerStatusResponse> value) {
+        public Builder value(@Nullable List<BgpPeerStatusResponse> value) {
             this.value = value;
             return this;
         }

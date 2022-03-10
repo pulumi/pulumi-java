@@ -56,12 +56,12 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<ResourceIdentityType> type) {
+        public Builder type(Input<ResourceIdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ResourceIdentityType type) {
+        public Builder type(ResourceIdentityType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetRelationshipLinkArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setRelationshipLinkName(String relationshipLinkName) {
+        public Builder relationshipLinkName(String relationshipLinkName) {
             this.relationshipLinkName = Objects.requireNonNull(relationshipLinkName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

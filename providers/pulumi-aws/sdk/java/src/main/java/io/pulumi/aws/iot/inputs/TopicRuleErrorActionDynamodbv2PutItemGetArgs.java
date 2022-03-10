@@ -52,12 +52,12 @@ public final class TopicRuleErrorActionDynamodbv2PutItemGetArgs extends io.pulum
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

@@ -74,22 +74,22 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
     	      this.userAssignedIdentityResourceId = defaults.userAssignedIdentityResourceId;
         }
 
-        public Builder setLinkedWorkspaceResourceId(@Nullable Input<String> linkedWorkspaceResourceId) {
+        public Builder linkedWorkspaceResourceId(@Nullable Input<String> linkedWorkspaceResourceId) {
             this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
 
-        public Builder setLinkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
+        public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
             this.linkedWorkspaceResourceId = Input.ofNullable(linkedWorkspaceResourceId);
             return this;
         }
 
-        public Builder setUserAssignedIdentityResourceId(@Nullable Input<String> userAssignedIdentityResourceId) {
+        public Builder userAssignedIdentityResourceId(@Nullable Input<String> userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
 
-        public Builder setUserAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
+        public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = Input.ofNullable(userAssignedIdentityResourceId);
             return this;
         }

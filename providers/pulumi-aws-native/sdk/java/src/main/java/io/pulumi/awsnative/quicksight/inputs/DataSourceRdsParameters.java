@@ -72,12 +72,12 @@ public final class DataSourceRdsParameters extends io.pulumi.resources.InvokeArg
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }

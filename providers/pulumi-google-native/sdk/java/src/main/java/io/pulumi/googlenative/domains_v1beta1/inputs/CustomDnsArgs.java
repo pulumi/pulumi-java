@@ -76,22 +76,22 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setDsRecords(@Nullable Input<List<DsRecordArgs>> dsRecords) {
+        public Builder dsRecords(@Nullable Input<List<DsRecordArgs>> dsRecords) {
             this.dsRecords = dsRecords;
             return this;
         }
 
-        public Builder setDsRecords(@Nullable List<DsRecordArgs> dsRecords) {
+        public Builder dsRecords(@Nullable List<DsRecordArgs> dsRecords) {
             this.dsRecords = Input.ofNullable(dsRecords);
             return this;
         }
 
-        public Builder setNameServers(Input<List<String>> nameServers) {
+        public Builder nameServers(Input<List<String>> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Input.of(Objects.requireNonNull(nameServers));
             return this;
         }

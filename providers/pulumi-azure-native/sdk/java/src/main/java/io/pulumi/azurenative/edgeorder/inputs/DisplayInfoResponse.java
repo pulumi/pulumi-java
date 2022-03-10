@@ -72,12 +72,12 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.productFamilyDisplayName = defaults.productFamilyDisplayName;
         }
 
-        public Builder setConfigurationDisplayName(String configurationDisplayName) {
+        public Builder configurationDisplayName(String configurationDisplayName) {
             this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
             return this;
         }
 
-        public Builder setProductFamilyDisplayName(String productFamilyDisplayName) {
+        public Builder productFamilyDisplayName(String productFamilyDisplayName) {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
         }

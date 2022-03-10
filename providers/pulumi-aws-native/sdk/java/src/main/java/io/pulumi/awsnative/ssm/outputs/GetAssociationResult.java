@@ -243,87 +243,87 @@ public final class GetAssociationResult {
     	      this.waitForSuccessTimeoutSeconds = defaults.waitForSuccessTimeoutSeconds;
         }
 
-        public Builder setApplyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
+        public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = associationId;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAutomationTargetParameterName(@Nullable String automationTargetParameterName) {
+        public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
 
-        public Builder setCalendarNames(@Nullable List<String> calendarNames) {
+        public Builder calendarNames(@Nullable List<String> calendarNames) {
             this.calendarNames = calendarNames;
             return this;
         }
 
-        public Builder setComplianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
+        public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable String maxConcurrency) {
+        public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
-        public Builder setMaxErrors(@Nullable String maxErrors) {
+        public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable AssociationInstanceAssociationOutputLocation outputLocation) {
+        public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setSyncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
+        public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<AssociationTarget> targets) {
+        public Builder targets(@Nullable List<AssociationTarget> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setWaitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
+        public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }

@@ -159,72 +159,72 @@ public final class WebActivityAuthenticationArgs extends io.pulumi.resources.Res
     	      this.username = defaults.username;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPfx(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
+        public Builder pfx(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx) {
             this.pfx = pfx;
             return this;
         }
 
-        public Builder setPfx(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
+        public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> pfx) {
             this.pfx = Input.ofNullable(pfx);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<Object> resource) {
+        public Builder resource(@Nullable Input<Object> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable Object resource) {
+        public Builder resource(@Nullable Object resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserTenant(@Nullable Input<Object> userTenant) {
+        public Builder userTenant(@Nullable Input<Object> userTenant) {
             this.userTenant = userTenant;
             return this;
         }
 
-        public Builder setUserTenant(@Nullable Object userTenant) {
+        public Builder userTenant(@Nullable Object userTenant) {
             this.userTenant = Input.ofNullable(userTenant);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Input<Object> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = Input.ofNullable(username);
             return this;
         }

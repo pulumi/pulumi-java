@@ -180,112 +180,112 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
         }
 
-        public Builder setAttributeDefinitions(Input<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions) {
+        public Builder attributeDefinitions(Input<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions) {
             this.attributeDefinitions = Objects.requireNonNull(attributeDefinitions);
             return this;
         }
 
-        public Builder setAttributeDefinitions(List<GlobalTableAttributeDefinitionArgs> attributeDefinitions) {
+        public Builder attributeDefinitions(List<GlobalTableAttributeDefinitionArgs> attributeDefinitions) {
             this.attributeDefinitions = Input.of(Objects.requireNonNull(attributeDefinitions));
             return this;
         }
 
-        public Builder setBillingMode(@Nullable Input<String> billingMode) {
+        public Builder billingMode(@Nullable Input<String> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
-        public Builder setBillingMode(@Nullable String billingMode) {
+        public Builder billingMode(@Nullable String billingMode) {
             this.billingMode = Input.ofNullable(billingMode);
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable Input<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable Input<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableGlobalSecondaryIndexArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Input.ofNullable(globalSecondaryIndexes);
             return this;
         }
 
-        public Builder setKeySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
+        public Builder keySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
-        public Builder setKeySchema(List<GlobalTableKeySchemaArgs> keySchema) {
+        public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
             this.keySchema = Input.of(Objects.requireNonNull(keySchema));
             return this;
         }
 
-        public Builder setLocalSecondaryIndexes(@Nullable Input<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable Input<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes) {
             this.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
 
-        public Builder setLocalSecondaryIndexes(@Nullable List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
+        public Builder localSecondaryIndexes(@Nullable List<GlobalTableLocalSecondaryIndexArgs> localSecondaryIndexes) {
             this.localSecondaryIndexes = Input.ofNullable(localSecondaryIndexes);
             return this;
         }
 
-        public Builder setReplicas(Input<List<GlobalTableReplicaSpecificationArgs>> replicas) {
+        public Builder replicas(Input<List<GlobalTableReplicaSpecificationArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
-        public Builder setReplicas(List<GlobalTableReplicaSpecificationArgs> replicas) {
+        public Builder replicas(List<GlobalTableReplicaSpecificationArgs> replicas) {
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable Input<GlobalTableSSESpecificationArgs> sSESpecification) {
+        public Builder sSESpecification(@Nullable Input<GlobalTableSSESpecificationArgs> sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable GlobalTableSSESpecificationArgs sSESpecification) {
+        public Builder sSESpecification(@Nullable GlobalTableSSESpecificationArgs sSESpecification) {
             this.sSESpecification = Input.ofNullable(sSESpecification);
             return this;
         }
 
-        public Builder setStreamSpecification(@Nullable Input<GlobalTableStreamSpecificationArgs> streamSpecification) {
+        public Builder streamSpecification(@Nullable Input<GlobalTableStreamSpecificationArgs> streamSpecification) {
             this.streamSpecification = streamSpecification;
             return this;
         }
 
-        public Builder setStreamSpecification(@Nullable GlobalTableStreamSpecificationArgs streamSpecification) {
+        public Builder streamSpecification(@Nullable GlobalTableStreamSpecificationArgs streamSpecification) {
             this.streamSpecification = Input.ofNullable(streamSpecification);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
 
-        public Builder setTimeToLiveSpecification(@Nullable Input<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification) {
+        public Builder timeToLiveSpecification(@Nullable Input<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification) {
             this.timeToLiveSpecification = timeToLiveSpecification;
             return this;
         }
 
-        public Builder setTimeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
+        public Builder timeToLiveSpecification(@Nullable GlobalTableTimeToLiveSpecificationArgs timeToLiveSpecification) {
             this.timeToLiveSpecification = Input.ofNullable(timeToLiveSpecification);
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = Input.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }

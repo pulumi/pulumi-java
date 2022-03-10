@@ -76,32 +76,32 @@ public final class SAMLProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSamlMetadataDocument(Input<String> samlMetadataDocument) {
+        public Builder samlMetadataDocument(Input<String> samlMetadataDocument) {
             this.samlMetadataDocument = Objects.requireNonNull(samlMetadataDocument);
             return this;
         }
 
-        public Builder setSamlMetadataDocument(String samlMetadataDocument) {
+        public Builder samlMetadataDocument(String samlMetadataDocument) {
             this.samlMetadataDocument = Input.of(Objects.requireNonNull(samlMetadataDocument));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SAMLProviderTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SAMLProviderTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SAMLProviderTagArgs> tags) {
+        public Builder tags(@Nullable List<SAMLProviderTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

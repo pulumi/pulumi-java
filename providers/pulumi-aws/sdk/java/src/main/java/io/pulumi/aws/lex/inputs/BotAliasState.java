@@ -183,92 +183,92 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBotName(@Nullable Input<String> botName) {
+        public Builder botName(@Nullable Input<String> botName) {
             this.botName = botName;
             return this;
         }
 
-        public Builder setBotName(@Nullable String botName) {
+        public Builder botName(@Nullable String botName) {
             this.botName = Input.ofNullable(botName);
             return this;
         }
 
-        public Builder setBotVersion(@Nullable Input<String> botVersion) {
+        public Builder botVersion(@Nullable Input<String> botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
-        public Builder setBotVersion(@Nullable String botVersion) {
+        public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = Input.ofNullable(botVersion);
             return this;
         }
 
-        public Builder setChecksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Input<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
-        public Builder setChecksum(@Nullable String checksum) {
+        public Builder checksum(@Nullable String checksum) {
             this.checksum = Input.ofNullable(checksum);
             return this;
         }
 
-        public Builder setConversationLogs(@Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs) {
+        public Builder conversationLogs(@Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs) {
             this.conversationLogs = conversationLogs;
             return this;
         }
 
-        public Builder setConversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
+        public Builder conversationLogs(@Nullable BotAliasConversationLogsGetArgs conversationLogs) {
             this.conversationLogs = Input.ofNullable(conversationLogs);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable String lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

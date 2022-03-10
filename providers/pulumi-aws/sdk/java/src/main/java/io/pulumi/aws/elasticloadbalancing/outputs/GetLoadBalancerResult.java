@@ -216,107 +216,107 @@ public final class GetLoadBalancerResult {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setAccessLogs(GetLoadBalancerAccessLogs accessLogs) {
+        public Builder accessLogs(GetLoadBalancerAccessLogs accessLogs) {
             this.accessLogs = Objects.requireNonNull(accessLogs);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setConnectionDraining(Boolean connectionDraining) {
+        public Builder connectionDraining(Boolean connectionDraining) {
             this.connectionDraining = Objects.requireNonNull(connectionDraining);
             return this;
         }
 
-        public Builder setConnectionDrainingTimeout(Integer connectionDrainingTimeout) {
+        public Builder connectionDrainingTimeout(Integer connectionDrainingTimeout) {
             this.connectionDrainingTimeout = Objects.requireNonNull(connectionDrainingTimeout);
             return this;
         }
 
-        public Builder setCrossZoneLoadBalancing(Boolean crossZoneLoadBalancing) {
+        public Builder crossZoneLoadBalancing(Boolean crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = Objects.requireNonNull(crossZoneLoadBalancing);
             return this;
         }
 
-        public Builder setDesyncMitigationMode(String desyncMitigationMode) {
+        public Builder desyncMitigationMode(String desyncMitigationMode) {
             this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setHealthCheck(GetLoadBalancerHealthCheck healthCheck) {
+        public Builder healthCheck(GetLoadBalancerHealthCheck healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdleTimeout(Integer idleTimeout) {
+        public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
 
-        public Builder setInstances(List<String> instances) {
+        public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setInternal(Boolean internal) {
+        public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
 
-        public Builder setListeners(List<GetLoadBalancerListener> listeners) {
+        public Builder listeners(List<GetLoadBalancerListener> listeners) {
             this.listeners = Objects.requireNonNull(listeners);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSourceSecurityGroup(String sourceSecurityGroup) {
+        public Builder sourceSecurityGroup(String sourceSecurityGroup) {
             this.sourceSecurityGroup = Objects.requireNonNull(sourceSecurityGroup);
             return this;
         }
 
-        public Builder setSourceSecurityGroupId(String sourceSecurityGroupId) {
+        public Builder sourceSecurityGroupId(String sourceSecurityGroupId) {
             this.sourceSecurityGroupId = Objects.requireNonNull(sourceSecurityGroupId);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

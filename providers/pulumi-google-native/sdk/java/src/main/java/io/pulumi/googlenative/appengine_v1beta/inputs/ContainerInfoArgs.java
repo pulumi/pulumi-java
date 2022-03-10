@@ -57,12 +57,12 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.image = defaults.image;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }

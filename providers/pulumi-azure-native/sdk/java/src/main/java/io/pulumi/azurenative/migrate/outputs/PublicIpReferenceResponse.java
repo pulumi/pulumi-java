@@ -48,7 +48,7 @@ public final class PublicIpReferenceResponse {
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder setSourceArmResourceId(String sourceArmResourceId) {
+        public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }

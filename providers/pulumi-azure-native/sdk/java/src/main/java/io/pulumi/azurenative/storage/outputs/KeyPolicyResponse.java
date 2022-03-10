@@ -48,7 +48,7 @@ public final class KeyPolicyResponse {
     	      this.keyExpirationPeriodInDays = defaults.keyExpirationPeriodInDays;
         }
 
-        public Builder setKeyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
+        public Builder keyExpirationPeriodInDays(Integer keyExpirationPeriodInDays) {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
         }

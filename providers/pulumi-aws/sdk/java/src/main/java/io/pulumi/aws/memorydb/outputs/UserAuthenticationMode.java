@@ -85,17 +85,17 @@ public final class UserAuthenticationMode {
     	      this.type = defaults.type;
         }
 
-        public Builder setPasswordCount(@Nullable Integer passwordCount) {
+        public Builder passwordCount(@Nullable Integer passwordCount) {
             this.passwordCount = passwordCount;
             return this;
         }
 
-        public Builder setPasswords(List<String> passwords) {
+        public Builder passwords(List<String> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

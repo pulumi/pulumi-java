@@ -133,52 +133,52 @@ public final class GetProjectResult {
     	      this.skipDelete = defaults.skipDelete;
         }
 
-        public Builder setAutoCreateNetwork(Boolean autoCreateNetwork) {
+        public Builder autoCreateNetwork(Boolean autoCreateNetwork) {
             this.autoCreateNetwork = Objects.requireNonNull(autoCreateNetwork);
             return this;
         }
 
-        public Builder setBillingAccount(String billingAccount) {
+        public Builder billingAccount(String billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(String number) {
+        public Builder number(String number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setSkipDelete(Boolean skipDelete) {
+        public Builder skipDelete(Boolean skipDelete) {
             this.skipDelete = Objects.requireNonNull(skipDelete);
             return this;
         }

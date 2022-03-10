@@ -75,22 +75,22 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
-        public Builder setLastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1LastPeriodAmountArgs lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1LastPeriodAmountArgs lastPeriodAmount) {
             this.lastPeriodAmount = Input.ofNullable(lastPeriodAmount);
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
+        public Builder specifiedAmount(@Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
+        public Builder specifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
             this.specifiedAmount = Input.ofNullable(specifiedAmount);
             return this;
         }

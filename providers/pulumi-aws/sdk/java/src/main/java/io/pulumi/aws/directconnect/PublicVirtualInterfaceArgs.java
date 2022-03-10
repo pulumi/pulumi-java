@@ -201,102 +201,102 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setAddressFamily(Input<String> addressFamily) {
+        public Builder addressFamily(Input<String> addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setAddressFamily(String addressFamily) {
+        public Builder addressFamily(String addressFamily) {
             this.addressFamily = Input.of(Objects.requireNonNull(addressFamily));
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable Input<String> amazonAddress) {
+        public Builder amazonAddress(@Nullable Input<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable String amazonAddress) {
+        public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Input.ofNullable(amazonAddress);
             return this;
         }
 
-        public Builder setBgpAsn(Input<Integer> bgpAsn) {
+        public Builder bgpAsn(Input<Integer> bgpAsn) {
             this.bgpAsn = Objects.requireNonNull(bgpAsn);
             return this;
         }
 
-        public Builder setBgpAsn(Integer bgpAsn) {
+        public Builder bgpAsn(Integer bgpAsn) {
             this.bgpAsn = Input.of(Objects.requireNonNull(bgpAsn));
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable Input<String> bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable Input<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable String bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Input.ofNullable(bgpAuthKey);
             return this;
         }
 
-        public Builder setConnectionId(Input<String> connectionId) {
+        public Builder connectionId(Input<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Input.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable Input<String> customerAddress) {
+        public Builder customerAddress(@Nullable Input<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable String customerAddress) {
+        public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Input.ofNullable(customerAddress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRouteFilterPrefixes(Input<List<String>> routeFilterPrefixes) {
+        public Builder routeFilterPrefixes(Input<List<String>> routeFilterPrefixes) {
             this.routeFilterPrefixes = Objects.requireNonNull(routeFilterPrefixes);
             return this;
         }
 
-        public Builder setRouteFilterPrefixes(List<String> routeFilterPrefixes) {
+        public Builder routeFilterPrefixes(List<String> routeFilterPrefixes) {
             this.routeFilterPrefixes = Input.of(Objects.requireNonNull(routeFilterPrefixes));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVlan(Input<Integer> vlan) {
+        public Builder vlan(Input<Integer> vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
 
-        public Builder setVlan(Integer vlan) {
+        public Builder vlan(Integer vlan) {
             this.vlan = Input.of(Objects.requireNonNull(vlan));
             return this;
         }

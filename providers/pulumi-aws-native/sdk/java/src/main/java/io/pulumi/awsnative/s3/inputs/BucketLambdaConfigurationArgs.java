@@ -91,32 +91,32 @@ public final class BucketLambdaConfigurationArgs extends io.pulumi.resources.Res
     	      this.function = defaults.function;
         }
 
-        public Builder setEvent(Input<String> event) {
+        public Builder event(Input<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Input.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilterArgs filter) {
+        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setFunction(Input<String> function) {
+        public Builder function(Input<String> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Input.of(Objects.requireNonNull(function));
             return this;
         }

@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setMessageFormat(String messageFormat) {
+        public Builder messageFormat(String messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

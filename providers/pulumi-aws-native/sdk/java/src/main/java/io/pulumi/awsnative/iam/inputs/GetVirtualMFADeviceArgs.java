@@ -47,7 +47,7 @@ public final class GetVirtualMFADeviceArgs extends io.pulumi.resources.InvokeArg
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }

@@ -99,22 +99,22 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setContainerRunOptions(@Nullable String containerRunOptions) {
+        public Builder containerRunOptions(@Nullable String containerRunOptions) {
             this.containerRunOptions = containerRunOptions;
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setRegistry(@Nullable ContainerRegistryResponse registry) {
+        public Builder registry(@Nullable ContainerRegistryResponse registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }

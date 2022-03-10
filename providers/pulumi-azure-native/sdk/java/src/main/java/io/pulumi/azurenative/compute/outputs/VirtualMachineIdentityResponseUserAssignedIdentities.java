@@ -65,12 +65,12 @@ public final class VirtualMachineIdentityResponseUserAssignedIdentities {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }

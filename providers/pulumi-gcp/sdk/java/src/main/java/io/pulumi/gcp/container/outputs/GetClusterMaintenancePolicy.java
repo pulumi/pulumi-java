@@ -60,17 +60,17 @@ public final class GetClusterMaintenancePolicy {
     	      this.recurringWindows = defaults.recurringWindows;
         }
 
-        public Builder setDailyMaintenanceWindows(List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows) {
+        public Builder dailyMaintenanceWindows(List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows) {
             this.dailyMaintenanceWindows = Objects.requireNonNull(dailyMaintenanceWindows);
             return this;
         }
 
-        public Builder setMaintenanceExclusions(List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
+        public Builder maintenanceExclusions(List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
             this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
             return this;
         }
 
-        public Builder setRecurringWindows(List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
+        public Builder recurringWindows(List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
             this.recurringWindows = Objects.requireNonNull(recurringWindows);
             return this;
         }

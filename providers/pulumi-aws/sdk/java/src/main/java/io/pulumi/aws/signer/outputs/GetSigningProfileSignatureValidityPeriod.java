@@ -50,12 +50,12 @@ public final class GetSigningProfileSignatureValidityPeriod {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

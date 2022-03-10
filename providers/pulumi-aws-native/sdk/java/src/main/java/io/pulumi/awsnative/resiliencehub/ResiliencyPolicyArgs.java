@@ -130,62 +130,62 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tier = defaults.tier;
         }
 
-        public Builder setDataLocationConstraint(@Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
+        public Builder dataLocationConstraint(@Nullable Input<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint) {
             this.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
 
-        public Builder setDataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
+        public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
             this.dataLocationConstraint = Input.ofNullable(dataLocationConstraint);
             return this;
         }
 
-        public Builder setPolicy(Input<ResiliencyPolicyPolicyMapArgs> policy) {
+        public Builder policy(Input<ResiliencyPolicyPolicyMapArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(ResiliencyPolicyPolicyMapArgs policy) {
+        public Builder policy(ResiliencyPolicyPolicyMapArgs policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setPolicyDescription(@Nullable Input<String> policyDescription) {
+        public Builder policyDescription(@Nullable Input<String> policyDescription) {
             this.policyDescription = policyDescription;
             return this;
         }
 
-        public Builder setPolicyDescription(@Nullable String policyDescription) {
+        public Builder policyDescription(@Nullable String policyDescription) {
             this.policyDescription = Input.ofNullable(policyDescription);
             return this;
         }
 
-        public Builder setPolicyName(Input<String> policyName) {
+        public Builder policyName(Input<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
-        public Builder setPolicyName(String policyName) {
+        public Builder policyName(String policyName) {
             this.policyName = Input.of(Objects.requireNonNull(policyName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<ResiliencyPolicyTagMapArgs> tags) {
+        public Builder tags(@Nullable Input<ResiliencyPolicyTagMapArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable ResiliencyPolicyTagMapArgs tags) {
+        public Builder tags(@Nullable ResiliencyPolicyTagMapArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTier(Input<ResiliencyPolicyTier> tier) {
+        public Builder tier(Input<ResiliencyPolicyTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(ResiliencyPolicyTier tier) {
+        public Builder tier(ResiliencyPolicyTier tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

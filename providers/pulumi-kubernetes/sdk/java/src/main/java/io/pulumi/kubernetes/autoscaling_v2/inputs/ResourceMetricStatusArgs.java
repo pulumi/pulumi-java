@@ -74,22 +74,22 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder setCurrent(Input<MetricValueStatusArgs> current) {
+        public Builder current(Input<MetricValueStatusArgs> current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
-        public Builder setCurrent(MetricValueStatusArgs current) {
+        public Builder current(MetricValueStatusArgs current) {
             this.current = Input.of(Objects.requireNonNull(current));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

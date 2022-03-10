@@ -223,7 +223,7 @@ public class BlobDataSet extends io.pulumi.resources.CustomResource {
     private static BlobDataSetArgs makeArgs(BlobDataSetArgs args) {
         var builder = args == null ? BlobDataSetArgs.builder() : BlobDataSetArgs.builder(args);
         return builder
-            .setKind("Blob")
+            .kind("Blob")
             .build();
     }
 

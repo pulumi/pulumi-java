@@ -156,72 +156,72 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setErrorAction(@Nullable Input<JobErrorActionArgs> errorAction) {
+        public Builder errorAction(@Nullable Input<JobErrorActionArgs> errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
-        public Builder setErrorAction(@Nullable JobErrorActionArgs errorAction) {
+        public Builder errorAction(@Nullable JobErrorActionArgs errorAction) {
             this.errorAction = Input.ofNullable(errorAction);
             return this;
         }
 
-        public Builder setQueueMessage(@Nullable Input<StorageQueueMessageArgs> queueMessage) {
+        public Builder queueMessage(@Nullable Input<StorageQueueMessageArgs> queueMessage) {
             this.queueMessage = queueMessage;
             return this;
         }
 
-        public Builder setQueueMessage(@Nullable StorageQueueMessageArgs queueMessage) {
+        public Builder queueMessage(@Nullable StorageQueueMessageArgs queueMessage) {
             this.queueMessage = Input.ofNullable(queueMessage);
             return this;
         }
 
-        public Builder setRequest(@Nullable Input<HttpRequestArgs> request) {
+        public Builder request(@Nullable Input<HttpRequestArgs> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRequest(@Nullable HttpRequestArgs request) {
+        public Builder request(@Nullable HttpRequestArgs request) {
             this.request = Input.ofNullable(request);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setServiceBusQueueMessage(@Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
+        public Builder serviceBusQueueMessage(@Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
 
-        public Builder setServiceBusQueueMessage(@Nullable ServiceBusQueueMessageArgs serviceBusQueueMessage) {
+        public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageArgs serviceBusQueueMessage) {
             this.serviceBusQueueMessage = Input.ofNullable(serviceBusQueueMessage);
             return this;
         }
 
-        public Builder setServiceBusTopicMessage(@Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
+        public Builder serviceBusTopicMessage(@Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
 
-        public Builder setServiceBusTopicMessage(@Nullable ServiceBusTopicMessageArgs serviceBusTopicMessage) {
+        public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageArgs serviceBusTopicMessage) {
             this.serviceBusTopicMessage = Input.ofNullable(serviceBusTopicMessage);
             return this;
         }
 
-        public Builder setType(@Nullable Input<JobActionType> type) {
+        public Builder type(@Nullable Input<JobActionType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable JobActionType type) {
+        public Builder type(@Nullable JobActionType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -87,17 +87,17 @@ public final class CustomResourceConversion {
     	      this.webhookClientConfig = defaults.webhookClientConfig;
         }
 
-        public Builder setConversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
+        public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setWebhookClientConfig(@Nullable WebhookClientConfig webhookClientConfig) {
+        public Builder webhookClientConfig(@Nullable WebhookClientConfig webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }

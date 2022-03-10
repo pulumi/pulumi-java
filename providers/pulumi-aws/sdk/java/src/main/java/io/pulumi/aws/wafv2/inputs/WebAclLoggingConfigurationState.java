@@ -105,42 +105,42 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setLogDestinationConfigs(@Nullable Input<List<String>> logDestinationConfigs) {
+        public Builder logDestinationConfigs(@Nullable Input<List<String>> logDestinationConfigs) {
             this.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
 
-        public Builder setLogDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
+        public Builder logDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
             this.logDestinationConfigs = Input.ofNullable(logDestinationConfigs);
             return this;
         }
 
-        public Builder setLoggingFilter(@Nullable Input<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter) {
+        public Builder loggingFilter(@Nullable Input<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
 
-        public Builder setLoggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
+        public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
             this.loggingFilter = Input.ofNullable(loggingFilter);
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable Input<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
+        public Builder redactedFields(@Nullable Input<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
+        public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
             this.redactedFields = Input.ofNullable(redactedFields);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }

@@ -230,62 +230,62 @@ public final class GetPacketMirroringResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setCollectorIlb(PacketMirroringForwardingRuleInfoResponse collectorIlb) {
+        public Builder collectorIlb(PacketMirroringForwardingRuleInfoResponse collectorIlb) {
             this.collectorIlb = Objects.requireNonNull(collectorIlb);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnable(String enable) {
+        public Builder enable(String enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilter(PacketMirroringFilterResponse filter) {
+        public Builder filter(PacketMirroringFilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMirroredResources(PacketMirroringMirroredResourceInfoResponse mirroredResources) {
+        public Builder mirroredResources(PacketMirroringMirroredResourceInfoResponse mirroredResources) {
             this.mirroredResources = Objects.requireNonNull(mirroredResources);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(PacketMirroringNetworkInfoResponse network) {
+        public Builder network(PacketMirroringNetworkInfoResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

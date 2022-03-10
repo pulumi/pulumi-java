@@ -223,107 +223,107 @@ public final class SpotFleetInstanceRequirementsRequest {
     	      this.vCpuCount = defaults.vCpuCount;
         }
 
-        public Builder setAcceleratorCount(@Nullable SpotFleetAcceleratorCountRequest acceleratorCount) {
+        public Builder acceleratorCount(@Nullable SpotFleetAcceleratorCountRequest acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
-        public Builder setAcceleratorManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
+        public Builder acceleratorManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
             this.acceleratorManufacturers = acceleratorManufacturers;
             return this;
         }
 
-        public Builder setAcceleratorNames(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
+        public Builder acceleratorNames(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
             this.acceleratorNames = acceleratorNames;
             return this;
         }
 
-        public Builder setAcceleratorTotalMemoryMiB(@Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB) {
+        public Builder acceleratorTotalMemoryMiB(@Nullable SpotFleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
             return this;
         }
 
-        public Builder setAcceleratorTypes(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
+        public Builder acceleratorTypes(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
             this.acceleratorTypes = acceleratorTypes;
             return this;
         }
 
-        public Builder setBareMetal(@Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal) {
+        public Builder bareMetal(@Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal) {
             this.bareMetal = bareMetal;
             return this;
         }
 
-        public Builder setBaselineEbsBandwidthMbps(@Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps) {
+        public Builder baselineEbsBandwidthMbps(@Nullable SpotFleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
             return this;
         }
 
-        public Builder setBurstablePerformance(@Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
+        public Builder burstablePerformance(@Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
 
-        public Builder setCpuManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
+        public Builder cpuManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
             this.cpuManufacturers = cpuManufacturers;
             return this;
         }
 
-        public Builder setExcludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
+        public Builder excludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
 
-        public Builder setInstanceGenerations(@Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
+        public Builder instanceGenerations(@Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
             this.instanceGenerations = instanceGenerations;
             return this;
         }
 
-        public Builder setLocalStorage(@Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage) {
+        public Builder localStorage(@Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage) {
             this.localStorage = localStorage;
             return this;
         }
 
-        public Builder setLocalStorageTypes(@Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
+        public Builder localStorageTypes(@Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
             this.localStorageTypes = localStorageTypes;
             return this;
         }
 
-        public Builder setMemoryGiBPerVCpu(@Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu) {
+        public Builder memoryGiBPerVCpu(@Nullable SpotFleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = memoryGiBPerVCpu;
             return this;
         }
 
-        public Builder setMemoryMiB(@Nullable SpotFleetMemoryMiBRequest memoryMiB) {
+        public Builder memoryMiB(@Nullable SpotFleetMemoryMiBRequest memoryMiB) {
             this.memoryMiB = memoryMiB;
             return this;
         }
 
-        public Builder setNetworkInterfaceCount(@Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount) {
+        public Builder networkInterfaceCount(@Nullable SpotFleetNetworkInterfaceCountRequest networkInterfaceCount) {
             this.networkInterfaceCount = networkInterfaceCount;
             return this;
         }
 
-        public Builder setOnDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
+        public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
             return this;
         }
 
-        public Builder setRequireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
+        public Builder requireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
             this.requireHibernateSupport = requireHibernateSupport;
             return this;
         }
 
-        public Builder setSpotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
+        public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
             return this;
         }
 
-        public Builder setTotalLocalStorageGB(@Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB) {
+        public Builder totalLocalStorageGB(@Nullable SpotFleetTotalLocalStorageGBRequest totalLocalStorageGB) {
             this.totalLocalStorageGB = totalLocalStorageGB;
             return this;
         }
 
-        public Builder setVCpuCount(@Nullable SpotFleetVCpuCountRangeRequest vCpuCount) {
+        public Builder vCpuCount(@Nullable SpotFleetVCpuCountRangeRequest vCpuCount) {
             this.vCpuCount = vCpuCount;
             return this;
         }

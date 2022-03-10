@@ -49,7 +49,7 @@ public final class SystemParametersResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<SystemParameterRuleResponse> rules) {
+        public Builder rules(List<SystemParameterRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

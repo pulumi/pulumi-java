@@ -77,22 +77,22 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilterOperator(@Nullable Input<TagOperators> filterOperator) {
+        public Builder filterOperator(@Nullable Input<TagOperators> filterOperator) {
             this.filterOperator = filterOperator;
             return this;
         }
 
-        public Builder setFilterOperator(@Nullable TagOperators filterOperator) {
+        public Builder filterOperator(@Nullable TagOperators filterOperator) {
             this.filterOperator = Input.ofNullable(filterOperator);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,List<String>>> tags) {
+        public Builder tags(@Nullable Input<Map<String,List<String>>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,List<String>> tags) {
+        public Builder tags(@Nullable Map<String,List<String>> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

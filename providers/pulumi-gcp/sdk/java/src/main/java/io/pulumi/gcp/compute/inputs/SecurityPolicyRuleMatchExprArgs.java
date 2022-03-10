@@ -53,12 +53,12 @@ public final class SecurityPolicyRuleMatchExprArgs extends io.pulumi.resources.R
     	      this.expression = defaults.expression;
         }
 
-        public Builder setExpression(Input<String> expression) {
+        public Builder expression(Input<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }

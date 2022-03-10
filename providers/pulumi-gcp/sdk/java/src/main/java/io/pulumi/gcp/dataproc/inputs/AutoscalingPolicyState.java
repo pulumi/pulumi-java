@@ -160,72 +160,72 @@ public final class AutoscalingPolicyState extends io.pulumi.resources.ResourceAr
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setBasicAlgorithm(@Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable Input<AutoscalingPolicyBasicAlgorithmGetArgs> basicAlgorithm) {
             this.basicAlgorithm = basicAlgorithm;
             return this;
         }
 
-        public Builder setBasicAlgorithm(@Nullable AutoscalingPolicyBasicAlgorithmGetArgs basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable AutoscalingPolicyBasicAlgorithmGetArgs basicAlgorithm) {
             this.basicAlgorithm = Input.ofNullable(basicAlgorithm);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Input<AutoscalingPolicySecondaryWorkerConfigGetArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable AutoscalingPolicySecondaryWorkerConfigGetArgs secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable AutoscalingPolicySecondaryWorkerConfigGetArgs secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Input.ofNullable(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<AutoscalingPolicyWorkerConfigGetArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable AutoscalingPolicyWorkerConfigGetArgs workerConfig) {
+        public Builder workerConfig(@Nullable AutoscalingPolicyWorkerConfigGetArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }

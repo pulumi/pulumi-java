@@ -70,12 +70,12 @@ public final class TargetConfigurationResponse extends io.pulumi.resources.Invok
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(ConfigFileResponse config) {
+        public Builder config(ConfigFileResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setImports(List<ImportFileResponse> imports) {
+        public Builder imports(List<ImportFileResponse> imports) {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }

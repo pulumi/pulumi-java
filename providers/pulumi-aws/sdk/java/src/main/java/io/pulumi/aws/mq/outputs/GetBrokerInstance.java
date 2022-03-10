@@ -58,17 +58,17 @@ public final class GetBrokerInstance {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setConsoleUrl(String consoleUrl) {
+        public Builder consoleUrl(String consoleUrl) {
             this.consoleUrl = Objects.requireNonNull(consoleUrl);
             return this;
         }
 
-        public Builder setEndpoints(List<String> endpoints) {
+        public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

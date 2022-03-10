@@ -100,42 +100,42 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
     	      this.script = defaults.script;
         }
 
-        public Builder setLaunchProfileProtocolVersion(@Nullable Input<String> launchProfileProtocolVersion) {
+        public Builder launchProfileProtocolVersion(@Nullable Input<String> launchProfileProtocolVersion) {
             this.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
 
-        public Builder setLaunchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
+        public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
             this.launchProfileProtocolVersion = Input.ofNullable(launchProfileProtocolVersion);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<StudioComponentLaunchProfilePlatform> platform) {
+        public Builder platform(@Nullable Input<StudioComponentLaunchProfilePlatform> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable StudioComponentLaunchProfilePlatform platform) {
+        public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setRunContext(@Nullable Input<StudioComponentInitializationScriptRunContext> runContext) {
+        public Builder runContext(@Nullable Input<StudioComponentInitializationScriptRunContext> runContext) {
             this.runContext = runContext;
             return this;
         }
 
-        public Builder setRunContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
+        public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
             this.runContext = Input.ofNullable(runContext);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }

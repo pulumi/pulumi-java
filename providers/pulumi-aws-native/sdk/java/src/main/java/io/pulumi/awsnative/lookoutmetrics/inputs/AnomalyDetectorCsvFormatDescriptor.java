@@ -113,32 +113,32 @@ public final class AnomalyDetectorCsvFormatDescriptor extends io.pulumi.resource
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable Boolean containsHeader) {
+        public Builder containsHeader(@Nullable Boolean containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setFileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
+        public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }
 
-        public Builder setHeaderList(@Nullable List<String> headerList) {
+        public Builder headerList(@Nullable List<String> headerList) {
             this.headerList = headerList;
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable String quoteSymbol) {
+        public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }

@@ -168,7 +168,7 @@ public class EyesOn extends io.pulumi.resources.CustomResource {
     private static EyesOnArgs makeArgs(EyesOnArgs args) {
         var builder = args == null ? EyesOnArgs.builder() : EyesOnArgs.builder(args);
         return builder
-            .setKind("EyesOn")
+            .kind("EyesOn")
             .build();
     }
 

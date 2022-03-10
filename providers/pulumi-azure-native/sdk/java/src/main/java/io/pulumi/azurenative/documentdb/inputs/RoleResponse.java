@@ -74,12 +74,12 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setDb(@Nullable String db) {
+        public Builder db(@Nullable String db) {
             this.db = db;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

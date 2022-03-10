@@ -140,62 +140,62 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUsageId = defaults.resourceUsageId;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setInstanceUri(@Nullable Input<String> instanceUri) {
+        public Builder instanceUri(@Nullable Input<String> instanceUri) {
             this.instanceUri = instanceUri;
             return this;
         }
 
-        public Builder setInstanceUri(@Nullable String instanceUri) {
+        public Builder instanceUri(@Nullable String instanceUri) {
             this.instanceUri = Input.ofNullable(instanceUri);
             return this;
         }
 
-        public Builder setProviderId(@Nullable Input<String> providerId) {
+        public Builder providerId(@Nullable Input<String> providerId) {
             this.providerId = providerId;
             return this;
         }
 
-        public Builder setProviderId(@Nullable String providerId) {
+        public Builder providerId(@Nullable String providerId) {
             this.providerId = Input.ofNullable(providerId);
             return this;
         }
 
-        public Builder setProviderSku(@Nullable Input<String> providerSku) {
+        public Builder providerSku(@Nullable Input<String> providerSku) {
             this.providerSku = providerSku;
             return this;
         }
 
-        public Builder setProviderSku(@Nullable String providerSku) {
+        public Builder providerSku(@Nullable String providerSku) {
             this.providerSku = Input.ofNullable(providerSku);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,Status>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,Status>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,Status> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,Status> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceUsageId(@Nullable Input<String> resourceUsageId) {
+        public Builder resourceUsageId(@Nullable Input<String> resourceUsageId) {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
 
-        public Builder setResourceUsageId(@Nullable String resourceUsageId) {
+        public Builder resourceUsageId(@Nullable String resourceUsageId) {
             this.resourceUsageId = Input.ofNullable(resourceUsageId);
             return this;
         }

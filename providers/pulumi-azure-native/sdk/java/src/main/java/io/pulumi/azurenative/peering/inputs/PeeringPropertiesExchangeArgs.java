@@ -76,22 +76,22 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
     	      this.peerAsn = defaults.peerAsn;
         }
 
-        public Builder setConnections(@Nullable Input<List<ExchangeConnectionArgs>> connections) {
+        public Builder connections(@Nullable Input<List<ExchangeConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<ExchangeConnectionArgs> connections) {
+        public Builder connections(@Nullable List<ExchangeConnectionArgs> connections) {
             this.connections = Input.ofNullable(connections);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Input<SubResourceArgs> peerAsn) {
+        public Builder peerAsn(@Nullable Input<SubResourceArgs> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceArgs peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }

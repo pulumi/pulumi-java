@@ -57,7 +57,7 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesService ext
     	      this.cloudRoleArn = defaults.cloudRoleArn;
         }
 
-        public Builder setCloudRoleArn(@Nullable String cloudRoleArn) {
+        public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }

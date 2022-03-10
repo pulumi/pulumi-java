@@ -117,27 +117,27 @@ public final class PolicySpecRule {
     	      this.values = defaults.values;
         }
 
-        public Builder setAllowAll(@Nullable String allowAll) {
+        public Builder allowAll(@Nullable String allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
-        public Builder setCondition(@Nullable PolicySpecRuleCondition condition) {
+        public Builder condition(@Nullable PolicySpecRuleCondition condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setDenyAll(@Nullable String denyAll) {
+        public Builder denyAll(@Nullable String denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
-        public Builder setEnforce(@Nullable String enforce) {
+        public Builder enforce(@Nullable String enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setValues(@Nullable PolicySpecRuleValues values) {
+        public Builder values(@Nullable PolicySpecRuleValues values) {
             this.values = values;
             return this;
         }

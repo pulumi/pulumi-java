@@ -88,17 +88,17 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
     	      this.state = defaults.state;
         }
 
-        public Builder setExtension(String extension) {
+        public Builder extension(String extension) {
             this.extension = Objects.requireNonNull(extension);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

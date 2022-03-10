@@ -94,17 +94,17 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Boolean allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
-        public Builder setCelExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
+        public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
             this.celExpression = celExpression;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GameServerGroupTargetTrackingConfiguration extends io.pulumi.
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

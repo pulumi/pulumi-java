@@ -153,82 +153,82 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setAuthority(@Nullable Input<AuthorityArgs> authority) {
+        public Builder authority(@Nullable Input<AuthorityArgs> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable AuthorityArgs authority) {
+        public Builder authority(@Nullable AuthorityArgs authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<MembershipEndpointArgs> endpoint) {
+        public Builder endpoint(@Nullable Input<MembershipEndpointArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable MembershipEndpointArgs endpoint) {
+        public Builder endpoint(@Nullable MembershipEndpointArgs endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMembershipId(Input<String> membershipId) {
+        public Builder membershipId(Input<String> membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }
 
-        public Builder setMembershipId(String membershipId) {
+        public Builder membershipId(String membershipId) {
             this.membershipId = Input.of(Objects.requireNonNull(membershipId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

@@ -207,52 +207,52 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
     	      this.relativeExpirationDate = defaults.relativeExpirationDate;
         }
 
-        public Builder setAllowTestDevices(Boolean allowTestDevices) {
+        public Builder allowTestDevices(Boolean allowTestDevices) {
             this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
             return this;
         }
 
-        public Builder setBeginDate(@Nullable String beginDate) {
+        public Builder beginDate(@Nullable String beginDate) {
             this.beginDate = beginDate;
             return this;
         }
 
-        public Builder setContentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation) {
+        public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation) {
             this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setGracePeriod(@Nullable String gracePeriod) {
+        public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }
 
-        public Builder setLicenseType(String licenseType) {
+        public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setPlayRight(@Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight) {
+        public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight) {
             this.playRight = playRight;
             return this;
         }
 
-        public Builder setRelativeBeginDate(@Nullable String relativeBeginDate) {
+        public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
             this.relativeBeginDate = relativeBeginDate;
             return this;
         }
 
-        public Builder setRelativeExpirationDate(@Nullable String relativeExpirationDate) {
+        public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }

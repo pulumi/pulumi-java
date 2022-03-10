@@ -57,7 +57,7 @@ public final class ParameterValuesValueResponse extends io.pulumi.resources.Invo
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

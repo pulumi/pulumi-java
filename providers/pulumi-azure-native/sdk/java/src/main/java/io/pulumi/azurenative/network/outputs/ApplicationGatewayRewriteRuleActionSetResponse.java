@@ -85,17 +85,17 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
     	      this.urlConfiguration = defaults.urlConfiguration;
         }
 
-        public Builder setRequestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations) {
+        public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
 
-        public Builder setResponseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
+        public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
 
-        public Builder setUrlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
+        public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
         }

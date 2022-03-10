@@ -119,52 +119,52 @@ public final class CommunicationServiceArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCommunicationServiceName(@Nullable Input<String> communicationServiceName) {
+        public Builder communicationServiceName(@Nullable Input<String> communicationServiceName) {
             this.communicationServiceName = communicationServiceName;
             return this;
         }
 
-        public Builder setCommunicationServiceName(@Nullable String communicationServiceName) {
+        public Builder communicationServiceName(@Nullable String communicationServiceName) {
             this.communicationServiceName = Input.ofNullable(communicationServiceName);
             return this;
         }
 
-        public Builder setDataLocation(Input<String> dataLocation) {
+        public Builder dataLocation(Input<String> dataLocation) {
             this.dataLocation = Objects.requireNonNull(dataLocation);
             return this;
         }
 
-        public Builder setDataLocation(String dataLocation) {
+        public Builder dataLocation(String dataLocation) {
             this.dataLocation = Input.of(Objects.requireNonNull(dataLocation));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

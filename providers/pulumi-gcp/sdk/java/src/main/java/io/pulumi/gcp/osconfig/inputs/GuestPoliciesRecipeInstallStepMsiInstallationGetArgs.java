@@ -88,32 +88,32 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     	      this.flags = defaults.flags;
         }
 
-        public Builder setAllowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder setArtifactId(Input<String> artifactId) {
+        public Builder artifactId(Input<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder setFlags(@Nullable Input<List<String>> flags) {
+        public Builder flags(@Nullable Input<List<String>> flags) {
             this.flags = flags;
             return this;
         }
 
-        public Builder setFlags(@Nullable List<String> flags) {
+        public Builder flags(@Nullable List<String> flags) {
             this.flags = Input.ofNullable(flags);
             return this;
         }

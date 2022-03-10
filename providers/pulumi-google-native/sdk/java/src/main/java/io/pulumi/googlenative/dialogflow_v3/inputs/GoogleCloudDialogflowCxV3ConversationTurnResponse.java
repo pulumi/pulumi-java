@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
     	      this.virtualAgentOutput = defaults.virtualAgentOutput;
         }
 
-        public Builder setUserInput(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput) {
+        public Builder userInput(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput) {
             this.userInput = Objects.requireNonNull(userInput);
             return this;
         }
 
-        public Builder setVirtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
+        public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
         }

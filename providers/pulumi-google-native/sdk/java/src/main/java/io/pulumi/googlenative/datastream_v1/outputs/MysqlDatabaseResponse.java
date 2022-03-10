@@ -67,12 +67,12 @@ public final class MysqlDatabaseResponse {
     	      this.mysqlTables = defaults.mysqlTables;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setMysqlTables(List<MysqlTableResponse> mysqlTables) {
+        public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
             this.mysqlTables = Objects.requireNonNull(mysqlTables);
             return this;
         }

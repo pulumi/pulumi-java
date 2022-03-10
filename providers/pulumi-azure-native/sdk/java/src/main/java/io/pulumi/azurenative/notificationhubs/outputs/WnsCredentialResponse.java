@@ -83,17 +83,17 @@ public final class WnsCredentialResponse {
     	      this.windowsLiveEndpoint = defaults.windowsLiveEndpoint;
         }
 
-        public Builder setPackageSid(@Nullable String packageSid) {
+        public Builder packageSid(@Nullable String packageSid) {
             this.packageSid = packageSid;
             return this;
         }
 
-        public Builder setSecretKey(@Nullable String secretKey) {
+        public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = secretKey;
             return this;
         }
 
-        public Builder setWindowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
+        public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
             this.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }

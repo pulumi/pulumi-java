@@ -185,82 +185,82 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setBillingProject(Input<String> billingProject) {
+        public Builder billingProject(Input<String> billingProject) {
             this.billingProject = Objects.requireNonNull(billingProject);
             return this;
         }
 
-        public Builder setBillingProject(String billingProject) {
+        public Builder billingProject(String billingProject) {
             this.billingProject = Input.of(Objects.requireNonNull(billingProject));
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<OrganizationFeedConditionArgs> condition) {
+        public Builder condition(@Nullable Input<OrganizationFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable OrganizationFeedConditionArgs condition) {
+        public Builder condition(@Nullable OrganizationFeedConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(Input<String> feedId) {
+        public Builder feedId(Input<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
-        public Builder setFeedId(String feedId) {
+        public Builder feedId(String feedId) {
             this.feedId = Input.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder setFeedOutputConfig(Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Input<OrganizationFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setFeedOutputConfig(OrganizationFeedFeedOutputConfigArgs feedOutputConfig) {
+        public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }

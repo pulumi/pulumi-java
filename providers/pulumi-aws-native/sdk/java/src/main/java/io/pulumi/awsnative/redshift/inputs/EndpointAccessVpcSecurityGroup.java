@@ -74,12 +74,12 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
     	      this.vpcSecurityGroupId = defaults.vpcSecurityGroupId;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
+        public Builder vpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
         }

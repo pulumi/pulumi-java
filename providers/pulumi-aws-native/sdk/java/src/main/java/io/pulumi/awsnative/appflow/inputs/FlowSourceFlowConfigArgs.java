@@ -109,42 +109,42 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
     	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Input.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder setConnectorType(Input<FlowConnectorType> connectorType) {
+        public Builder connectorType(Input<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(FlowConnectorType connectorType) {
+        public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable FlowIncrementalPullConfigArgs incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfigArgs incrementalPullConfig) {
             this.incrementalPullConfig = Input.ofNullable(incrementalPullConfig);
             return this;
         }
 
-        public Builder setSourceConnectorProperties(Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
 
-        public Builder setSourceConnectorProperties(FlowSourceConnectorPropertiesArgs sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(FlowSourceConnectorPropertiesArgs sourceConnectorProperties) {
             this.sourceConnectorProperties = Input.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
         }

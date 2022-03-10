@@ -59,12 +59,12 @@ public final class AzureFirewallNatRCActionArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<Either<String,AzureFirewallNatRCActionType>> type) {
+        public Builder type(@Nullable Input<Either<String,AzureFirewallNatRCActionType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,AzureFirewallNatRCActionType> type) {
+        public Builder type(@Nullable Either<String,AzureFirewallNatRCActionType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

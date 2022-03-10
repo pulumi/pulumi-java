@@ -67,12 +67,12 @@ public final class CrawlerSchemaChangePolicy {
     	      this.updateBehavior = defaults.updateBehavior;
         }
 
-        public Builder setDeleteBehavior(@Nullable String deleteBehavior) {
+        public Builder deleteBehavior(@Nullable String deleteBehavior) {
             this.deleteBehavior = deleteBehavior;
             return this;
         }
 
-        public Builder setUpdateBehavior(@Nullable String updateBehavior) {
+        public Builder updateBehavior(@Nullable String updateBehavior) {
             this.updateBehavior = updateBehavior;
             return this;
         }

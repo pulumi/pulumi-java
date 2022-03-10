@@ -140,32 +140,32 @@ public final class KeyAttributesResponse extends io.pulumi.resources.InvokeArgs 
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(Double created) {
+        public Builder created(Double created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExpires(@Nullable Double expires) {
+        public Builder expires(@Nullable Double expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Double notBefore) {
+        public Builder notBefore(@Nullable Double notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setRecoveryLevel(String recoveryLevel) {
+        public Builder recoveryLevel(String recoveryLevel) {
             this.recoveryLevel = Objects.requireNonNull(recoveryLevel);
             return this;
         }
 
-        public Builder setUpdated(Double updated) {
+        public Builder updated(Double updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

@@ -169,42 +169,42 @@ public final class ListenerDefaultAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito) {
+        public Builder authenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito) {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
 
-        public Builder setAuthenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc) {
+        public Builder authenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
 
-        public Builder setFixedResponse(@Nullable ListenerDefaultActionFixedResponse fixedResponse) {
+        public Builder fixedResponse(@Nullable ListenerDefaultActionFixedResponse fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
 
-        public Builder setForward(@Nullable ListenerDefaultActionForward forward) {
+        public Builder forward(@Nullable ListenerDefaultActionForward forward) {
             this.forward = forward;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setRedirect(@Nullable ListenerDefaultActionRedirect redirect) {
+        public Builder redirect(@Nullable ListenerDefaultActionRedirect redirect) {
             this.redirect = redirect;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

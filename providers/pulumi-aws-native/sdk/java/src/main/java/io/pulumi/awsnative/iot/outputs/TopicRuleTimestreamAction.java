@@ -87,32 +87,32 @@ public final class TopicRuleTimestreamAction {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDimensions(List<TopicRuleTimestreamDimension> dimensions) {
+        public Builder dimensions(List<TopicRuleTimestreamDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTimestamp(@Nullable TopicRuleTimestreamTimestamp timestamp) {
+        public Builder timestamp(@Nullable TopicRuleTimestreamTimestamp timestamp) {
             this.timestamp = timestamp;
             return this;
         }

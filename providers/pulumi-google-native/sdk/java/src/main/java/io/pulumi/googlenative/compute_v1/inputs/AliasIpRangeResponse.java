@@ -72,12 +72,12 @@ public final class AliasIpRangeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setSubnetworkRangeName(String subnetworkRangeName) {
+        public Builder subnetworkRangeName(String subnetworkRangeName) {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }

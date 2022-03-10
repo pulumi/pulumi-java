@@ -154,72 +154,72 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Input<String> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setSubresource(@Nullable Input<String> subresource) {
+        public Builder subresource(@Nullable Input<String> subresource) {
             this.subresource = subresource;
             return this;
         }
 
-        public Builder setSubresource(@Nullable String subresource) {
+        public Builder subresource(@Nullable String subresource) {
             this.subresource = Input.ofNullable(subresource);
             return this;
         }
 
-        public Builder setVerb(@Nullable Input<String> verb) {
+        public Builder verb(@Nullable Input<String> verb) {
             this.verb = verb;
             return this;
         }
 
-        public Builder setVerb(@Nullable String verb) {
+        public Builder verb(@Nullable String verb) {
             this.verb = Input.ofNullable(verb);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

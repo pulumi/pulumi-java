@@ -85,22 +85,22 @@ public final class GetNetworkInterfaceAttachment extends io.pulumi.resources.Inv
     	      this.instanceOwnerId = defaults.instanceOwnerId;
         }
 
-        public Builder setAttachmentId(String attachmentId) {
+        public Builder attachmentId(String attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceOwnerId(String instanceOwnerId) {
+        public Builder instanceOwnerId(String instanceOwnerId) {
             this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId);
             return this;
         }

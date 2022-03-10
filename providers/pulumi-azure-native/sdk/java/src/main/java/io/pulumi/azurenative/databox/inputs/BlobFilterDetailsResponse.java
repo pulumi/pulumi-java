@@ -91,17 +91,17 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
     	      this.containerList = defaults.containerList;
         }
 
-        public Builder setBlobPathList(@Nullable List<String> blobPathList) {
+        public Builder blobPathList(@Nullable List<String> blobPathList) {
             this.blobPathList = blobPathList;
             return this;
         }
 
-        public Builder setBlobPrefixList(@Nullable List<String> blobPrefixList) {
+        public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
             this.blobPrefixList = blobPrefixList;
             return this;
         }
 
-        public Builder setContainerList(@Nullable List<String> containerList) {
+        public Builder containerList(@Nullable List<String> containerList) {
             this.containerList = containerList;
             return this;
         }

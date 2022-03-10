@@ -102,22 +102,22 @@ public final class GuestPoliciesPackageRepositoryYum {
     	      this.id = defaults.id;
         }
 
-        public Builder setBaseUrl(String baseUrl) {
+        public Builder baseUrl(String baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setGpgKeys(@Nullable List<String> gpgKeys) {
+        public Builder gpgKeys(@Nullable List<String> gpgKeys) {
             this.gpgKeys = gpgKeys;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

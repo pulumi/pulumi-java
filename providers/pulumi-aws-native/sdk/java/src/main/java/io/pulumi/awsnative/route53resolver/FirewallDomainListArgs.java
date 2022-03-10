@@ -100,42 +100,42 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainFileUrl(@Nullable Input<String> domainFileUrl) {
+        public Builder domainFileUrl(@Nullable Input<String> domainFileUrl) {
             this.domainFileUrl = domainFileUrl;
             return this;
         }
 
-        public Builder setDomainFileUrl(@Nullable String domainFileUrl) {
+        public Builder domainFileUrl(@Nullable String domainFileUrl) {
             this.domainFileUrl = Input.ofNullable(domainFileUrl);
             return this;
         }
 
-        public Builder setDomains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Input<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = Input.ofNullable(domains);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FirewallDomainListTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FirewallDomainListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallDomainListTagArgs> tags) {
+        public Builder tags(@Nullable List<FirewallDomainListTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

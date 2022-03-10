@@ -110,42 +110,42 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder setDateTimeParameters(@Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable Input<List<AnalysisDateTimeParameterArgs>> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameterArgs> dateTimeParameters) {
             this.dateTimeParameters = Input.ofNullable(dateTimeParameters);
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters) {
+        public Builder decimalParameters(@Nullable Input<List<AnalysisDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
+        public Builder decimalParameters(@Nullable List<AnalysisDecimalParameterArgs> decimalParameters) {
             this.decimalParameters = Input.ofNullable(decimalParameters);
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters) {
+        public Builder integerParameters(@Nullable Input<List<AnalysisIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
+        public Builder integerParameters(@Nullable List<AnalysisIntegerParameterArgs> integerParameters) {
             this.integerParameters = Input.ofNullable(integerParameters);
             return this;
         }
 
-        public Builder setStringParameters(@Nullable Input<List<AnalysisStringParameterArgs>> stringParameters) {
+        public Builder stringParameters(@Nullable Input<List<AnalysisStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
 
-        public Builder setStringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
+        public Builder stringParameters(@Nullable List<AnalysisStringParameterArgs> stringParameters) {
             this.stringParameters = Input.ofNullable(stringParameters);
             return this;
         }

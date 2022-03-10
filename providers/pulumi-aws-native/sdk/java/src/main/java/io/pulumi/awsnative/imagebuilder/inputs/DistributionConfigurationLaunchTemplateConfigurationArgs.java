@@ -91,32 +91,32 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
     	      this.setDefaultVersion = defaults.setDefaultVersion;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setLaunchTemplateId(@Nullable Input<String> launchTemplateId) {
+        public Builder launchTemplateId(@Nullable Input<String> launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
-        public Builder setLaunchTemplateId(@Nullable String launchTemplateId) {
+        public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = Input.ofNullable(launchTemplateId);
             return this;
         }
 
-        public Builder setSetDefaultVersion(@Nullable Input<Boolean> setDefaultVersion) {
+        public Builder setDefaultVersion(@Nullable Input<Boolean> setDefaultVersion) {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }
 
-        public Builder setSetDefaultVersion(@Nullable Boolean setDefaultVersion) {
+        public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
             this.setDefaultVersion = Input.ofNullable(setDefaultVersion);
             return this;
         }

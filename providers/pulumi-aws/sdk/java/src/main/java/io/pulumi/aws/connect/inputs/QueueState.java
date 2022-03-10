@@ -234,122 +234,122 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHoursOfOperationId(@Nullable Input<String> hoursOfOperationId) {
+        public Builder hoursOfOperationId(@Nullable Input<String> hoursOfOperationId) {
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
 
-        public Builder setHoursOfOperationId(@Nullable String hoursOfOperationId) {
+        public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             this.hoursOfOperationId = Input.ofNullable(hoursOfOperationId);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setMaxContacts(@Nullable Input<Integer> maxContacts) {
+        public Builder maxContacts(@Nullable Input<Integer> maxContacts) {
             this.maxContacts = maxContacts;
             return this;
         }
 
-        public Builder setMaxContacts(@Nullable Integer maxContacts) {
+        public Builder maxContacts(@Nullable Integer maxContacts) {
             this.maxContacts = Input.ofNullable(maxContacts);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutboundCallerConfig(@Nullable Input<QueueOutboundCallerConfigGetArgs> outboundCallerConfig) {
+        public Builder outboundCallerConfig(@Nullable Input<QueueOutboundCallerConfigGetArgs> outboundCallerConfig) {
             this.outboundCallerConfig = outboundCallerConfig;
             return this;
         }
 
-        public Builder setOutboundCallerConfig(@Nullable QueueOutboundCallerConfigGetArgs outboundCallerConfig) {
+        public Builder outboundCallerConfig(@Nullable QueueOutboundCallerConfigGetArgs outboundCallerConfig) {
             this.outboundCallerConfig = Input.ofNullable(outboundCallerConfig);
             return this;
         }
 
-        public Builder setQueueId(@Nullable Input<String> queueId) {
+        public Builder queueId(@Nullable Input<String> queueId) {
             this.queueId = queueId;
             return this;
         }
 
-        public Builder setQueueId(@Nullable String queueId) {
+        public Builder queueId(@Nullable String queueId) {
             this.queueId = Input.ofNullable(queueId);
             return this;
         }
 
-        public Builder setQuickConnectIds(@Nullable Input<List<String>> quickConnectIds) {
+        public Builder quickConnectIds(@Nullable Input<List<String>> quickConnectIds) {
             this.quickConnectIds = quickConnectIds;
             return this;
         }
 
-        public Builder setQuickConnectIds(@Nullable List<String> quickConnectIds) {
+        public Builder quickConnectIds(@Nullable List<String> quickConnectIds) {
             this.quickConnectIds = Input.ofNullable(quickConnectIds);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

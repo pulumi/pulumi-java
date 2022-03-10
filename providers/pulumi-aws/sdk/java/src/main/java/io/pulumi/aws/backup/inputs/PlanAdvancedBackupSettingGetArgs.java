@@ -70,22 +70,22 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setBackupOptions(Input<Map<String,String>> backupOptions) {
+        public Builder backupOptions(Input<Map<String,String>> backupOptions) {
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
 
-        public Builder setBackupOptions(Map<String,String> backupOptions) {
+        public Builder backupOptions(Map<String,String> backupOptions) {
             this.backupOptions = Input.of(Objects.requireNonNull(backupOptions));
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }

@@ -142,62 +142,62 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder setConditions(@Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<HorizontalPodAutoscalerConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<HorizontalPodAutoscalerConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<HorizontalPodAutoscalerConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setCurrentMetrics(@Nullable Input<List<MetricStatusArgs>> currentMetrics) {
+        public Builder currentMetrics(@Nullable Input<List<MetricStatusArgs>> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
 
-        public Builder setCurrentMetrics(@Nullable List<MetricStatusArgs> currentMetrics) {
+        public Builder currentMetrics(@Nullable List<MetricStatusArgs> currentMetrics) {
             this.currentMetrics = Input.ofNullable(currentMetrics);
             return this;
         }
 
-        public Builder setCurrentReplicas(Input<Integer> currentReplicas) {
+        public Builder currentReplicas(Input<Integer> currentReplicas) {
             this.currentReplicas = Objects.requireNonNull(currentReplicas);
             return this;
         }
 
-        public Builder setCurrentReplicas(Integer currentReplicas) {
+        public Builder currentReplicas(Integer currentReplicas) {
             this.currentReplicas = Input.of(Objects.requireNonNull(currentReplicas));
             return this;
         }
 
-        public Builder setDesiredReplicas(Input<Integer> desiredReplicas) {
+        public Builder desiredReplicas(Input<Integer> desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
 
-        public Builder setDesiredReplicas(Integer desiredReplicas) {
+        public Builder desiredReplicas(Integer desiredReplicas) {
             this.desiredReplicas = Input.of(Objects.requireNonNull(desiredReplicas));
             return this;
         }
 
-        public Builder setLastScaleTime(@Nullable Input<String> lastScaleTime) {
+        public Builder lastScaleTime(@Nullable Input<String> lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
 
-        public Builder setLastScaleTime(@Nullable String lastScaleTime) {
+        public Builder lastScaleTime(@Nullable String lastScaleTime) {
             this.lastScaleTime = Input.ofNullable(lastScaleTime);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }

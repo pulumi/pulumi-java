@@ -140,32 +140,32 @@ public final class RulesEngineMatchConditionResponse extends io.pulumi.resources
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setRulesEngineMatchValue(List<String> rulesEngineMatchValue) {
+        public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
             this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue);
             return this;
         }
 
-        public Builder setRulesEngineMatchVariable(String rulesEngineMatchVariable) {
+        public Builder rulesEngineMatchVariable(String rulesEngineMatchVariable) {
             this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable);
             return this;
         }
 
-        public Builder setRulesEngineOperator(String rulesEngineOperator) {
+        public Builder rulesEngineOperator(String rulesEngineOperator) {
             this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator);
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<String> transforms) {
+        public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }

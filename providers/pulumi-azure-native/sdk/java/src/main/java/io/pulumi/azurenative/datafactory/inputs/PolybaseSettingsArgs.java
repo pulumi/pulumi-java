@@ -109,42 +109,42 @@ public final class PolybaseSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.useTypeDefault = defaults.useTypeDefault;
         }
 
-        public Builder setRejectSampleValue(@Nullable Input<Object> rejectSampleValue) {
+        public Builder rejectSampleValue(@Nullable Input<Object> rejectSampleValue) {
             this.rejectSampleValue = rejectSampleValue;
             return this;
         }
 
-        public Builder setRejectSampleValue(@Nullable Object rejectSampleValue) {
+        public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
             this.rejectSampleValue = Input.ofNullable(rejectSampleValue);
             return this;
         }
 
-        public Builder setRejectType(@Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType) {
+        public Builder rejectType(@Nullable Input<Either<String,PolybaseSettingsRejectType>> rejectType) {
             this.rejectType = rejectType;
             return this;
         }
 
-        public Builder setRejectType(@Nullable Either<String,PolybaseSettingsRejectType> rejectType) {
+        public Builder rejectType(@Nullable Either<String,PolybaseSettingsRejectType> rejectType) {
             this.rejectType = Input.ofNullable(rejectType);
             return this;
         }
 
-        public Builder setRejectValue(@Nullable Input<Object> rejectValue) {
+        public Builder rejectValue(@Nullable Input<Object> rejectValue) {
             this.rejectValue = rejectValue;
             return this;
         }
 
-        public Builder setRejectValue(@Nullable Object rejectValue) {
+        public Builder rejectValue(@Nullable Object rejectValue) {
             this.rejectValue = Input.ofNullable(rejectValue);
             return this;
         }
 
-        public Builder setUseTypeDefault(@Nullable Input<Object> useTypeDefault) {
+        public Builder useTypeDefault(@Nullable Input<Object> useTypeDefault) {
             this.useTypeDefault = useTypeDefault;
             return this;
         }
 
-        public Builder setUseTypeDefault(@Nullable Object useTypeDefault) {
+        public Builder useTypeDefault(@Nullable Object useTypeDefault) {
             this.useTypeDefault = Input.ofNullable(useTypeDefault);
             return this;
         }

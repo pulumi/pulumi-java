@@ -49,12 +49,12 @@ public final class OpenZfsVolumeOriginSnapshot {
     	      this.snapshotArn = defaults.snapshotArn;
         }
 
-        public Builder setCopyStrategy(String copyStrategy) {
+        public Builder copyStrategy(String copyStrategy) {
             this.copyStrategy = Objects.requireNonNull(copyStrategy);
             return this;
         }
 
-        public Builder setSnapshotArn(String snapshotArn) {
+        public Builder snapshotArn(String snapshotArn) {
             this.snapshotArn = Objects.requireNonNull(snapshotArn);
             return this;
         }

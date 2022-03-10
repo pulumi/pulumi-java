@@ -275,152 +275,152 @@ public final class TrailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trailName = defaults.trailName;
         }
 
-        public Builder setCloudWatchLogsLogGroupArn(@Nullable Input<String> cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(@Nullable Input<String> cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;
         }
 
-        public Builder setCloudWatchLogsLogGroupArn(@Nullable String cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(@Nullable String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Input.ofNullable(cloudWatchLogsLogGroupArn);
             return this;
         }
 
-        public Builder setCloudWatchLogsRoleArn(@Nullable Input<String> cloudWatchLogsRoleArn) {
+        public Builder cloudWatchLogsRoleArn(@Nullable Input<String> cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
             return this;
         }
 
-        public Builder setCloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
+        public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
             this.cloudWatchLogsRoleArn = Input.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
 
-        public Builder setEnableLogFileValidation(@Nullable Input<Boolean> enableLogFileValidation) {
+        public Builder enableLogFileValidation(@Nullable Input<Boolean> enableLogFileValidation) {
             this.enableLogFileValidation = enableLogFileValidation;
             return this;
         }
 
-        public Builder setEnableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
+        public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
             this.enableLogFileValidation = Input.ofNullable(enableLogFileValidation);
             return this;
         }
 
-        public Builder setEventSelectors(@Nullable Input<List<TrailEventSelectorArgs>> eventSelectors) {
+        public Builder eventSelectors(@Nullable Input<List<TrailEventSelectorArgs>> eventSelectors) {
             this.eventSelectors = eventSelectors;
             return this;
         }
 
-        public Builder setEventSelectors(@Nullable List<TrailEventSelectorArgs> eventSelectors) {
+        public Builder eventSelectors(@Nullable List<TrailEventSelectorArgs> eventSelectors) {
             this.eventSelectors = Input.ofNullable(eventSelectors);
             return this;
         }
 
-        public Builder setIncludeGlobalServiceEvents(@Nullable Input<Boolean> includeGlobalServiceEvents) {
+        public Builder includeGlobalServiceEvents(@Nullable Input<Boolean> includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = includeGlobalServiceEvents;
             return this;
         }
 
-        public Builder setIncludeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
+        public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
             this.includeGlobalServiceEvents = Input.ofNullable(includeGlobalServiceEvents);
             return this;
         }
 
-        public Builder setInsightSelectors(@Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors) {
+        public Builder insightSelectors(@Nullable Input<List<TrailInsightSelectorArgs>> insightSelectors) {
             this.insightSelectors = insightSelectors;
             return this;
         }
 
-        public Builder setInsightSelectors(@Nullable List<TrailInsightSelectorArgs> insightSelectors) {
+        public Builder insightSelectors(@Nullable List<TrailInsightSelectorArgs> insightSelectors) {
             this.insightSelectors = Input.ofNullable(insightSelectors);
             return this;
         }
 
-        public Builder setIsLogging(Input<Boolean> isLogging) {
+        public Builder isLogging(Input<Boolean> isLogging) {
             this.isLogging = Objects.requireNonNull(isLogging);
             return this;
         }
 
-        public Builder setIsLogging(Boolean isLogging) {
+        public Builder isLogging(Boolean isLogging) {
             this.isLogging = Input.of(Objects.requireNonNull(isLogging));
             return this;
         }
 
-        public Builder setIsMultiRegionTrail(@Nullable Input<Boolean> isMultiRegionTrail) {
+        public Builder isMultiRegionTrail(@Nullable Input<Boolean> isMultiRegionTrail) {
             this.isMultiRegionTrail = isMultiRegionTrail;
             return this;
         }
 
-        public Builder setIsMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
+        public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
             this.isMultiRegionTrail = Input.ofNullable(isMultiRegionTrail);
             return this;
         }
 
-        public Builder setIsOrganizationTrail(@Nullable Input<Boolean> isOrganizationTrail) {
+        public Builder isOrganizationTrail(@Nullable Input<Boolean> isOrganizationTrail) {
             this.isOrganizationTrail = isOrganizationTrail;
             return this;
         }
 
-        public Builder setIsOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
+        public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
             this.isOrganizationTrail = Input.ofNullable(isOrganizationTrail);
             return this;
         }
 
-        public Builder setKMSKeyId(@Nullable Input<String> kMSKeyId) {
+        public Builder kMSKeyId(@Nullable Input<String> kMSKeyId) {
             this.kMSKeyId = kMSKeyId;
             return this;
         }
 
-        public Builder setKMSKeyId(@Nullable String kMSKeyId) {
+        public Builder kMSKeyId(@Nullable String kMSKeyId) {
             this.kMSKeyId = Input.ofNullable(kMSKeyId);
             return this;
         }
 
-        public Builder setS3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Input<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
             return this;
         }
 
-        public Builder setSnsTopicName(@Nullable Input<String> snsTopicName) {
+        public Builder snsTopicName(@Nullable Input<String> snsTopicName) {
             this.snsTopicName = snsTopicName;
             return this;
         }
 
-        public Builder setSnsTopicName(@Nullable String snsTopicName) {
+        public Builder snsTopicName(@Nullable String snsTopicName) {
             this.snsTopicName = Input.ofNullable(snsTopicName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TrailTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TrailTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TrailTagArgs> tags) {
+        public Builder tags(@Nullable List<TrailTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrailName(@Nullable Input<String> trailName) {
+        public Builder trailName(@Nullable Input<String> trailName) {
             this.trailName = trailName;
             return this;
         }
 
-        public Builder setTrailName(@Nullable String trailName) {
+        public Builder trailName(@Nullable String trailName) {
             this.trailName = Input.ofNullable(trailName);
             return this;
         }

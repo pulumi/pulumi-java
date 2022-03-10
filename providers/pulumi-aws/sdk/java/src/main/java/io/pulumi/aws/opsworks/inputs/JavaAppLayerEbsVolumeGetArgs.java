@@ -148,72 +148,72 @@ public final class JavaAppLayerEbsVolumeGetArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setMountPoint(Input<String> mountPoint) {
+        public Builder mountPoint(Input<String> mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Input.of(Objects.requireNonNull(mountPoint));
             return this;
         }
 
-        public Builder setNumberOfDisks(Input<Integer> numberOfDisks) {
+        public Builder numberOfDisks(Input<Integer> numberOfDisks) {
             this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
             return this;
         }
 
-        public Builder setNumberOfDisks(Integer numberOfDisks) {
+        public Builder numberOfDisks(Integer numberOfDisks) {
             this.numberOfDisks = Input.of(Objects.requireNonNull(numberOfDisks));
             return this;
         }
 
-        public Builder setRaidLevel(@Nullable Input<String> raidLevel) {
+        public Builder raidLevel(@Nullable Input<String> raidLevel) {
             this.raidLevel = raidLevel;
             return this;
         }
 
-        public Builder setRaidLevel(@Nullable String raidLevel) {
+        public Builder raidLevel(@Nullable String raidLevel) {
             this.raidLevel = Input.ofNullable(raidLevel);
             return this;
         }
 
-        public Builder setSize(Input<Integer> size) {
+        public Builder size(Input<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

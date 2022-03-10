@@ -84,17 +84,17 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAuthenticationName(String authenticationName) {
+        public Builder authenticationName(String authenticationName) {
             this.authenticationName = Objects.requireNonNull(authenticationName);
             return this;
         }
 
-        public Builder setManagedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

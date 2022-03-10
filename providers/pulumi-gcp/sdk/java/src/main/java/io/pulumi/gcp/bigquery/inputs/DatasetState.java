@@ -295,152 +295,152 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setAccesses(@Nullable Input<List<DatasetAccessGetArgs>> accesses) {
+        public Builder accesses(@Nullable Input<List<DatasetAccessGetArgs>> accesses) {
             this.accesses = accesses;
             return this;
         }
 
-        public Builder setAccesses(@Nullable List<DatasetAccessGetArgs> accesses) {
+        public Builder accesses(@Nullable List<DatasetAccessGetArgs> accesses) {
             this.accesses = Input.ofNullable(accesses);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<Integer> creationTime) {
+        public Builder creationTime(@Nullable Input<Integer> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Integer creationTime) {
+        public Builder creationTime(@Nullable Integer creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDatasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Input<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }
 
-        public Builder setDefaultEncryptionConfiguration(@Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable Input<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDefaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Input.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDefaultPartitionExpirationMs(@Nullable Input<Integer> defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable Input<Integer> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
-        public Builder setDefaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Input.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
 
-        public Builder setDefaultTableExpirationMs(@Nullable Input<Integer> defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable Input<Integer> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
-        public Builder setDefaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Input.ofNullable(defaultTableExpirationMs);
             return this;
         }
 
-        public Builder setDeleteContentsOnDestroy(@Nullable Input<Boolean> deleteContentsOnDestroy) {
+        public Builder deleteContentsOnDestroy(@Nullable Input<Boolean> deleteContentsOnDestroy) {
             this.deleteContentsOnDestroy = deleteContentsOnDestroy;
             return this;
         }
 
-        public Builder setDeleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
+        public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
             this.deleteContentsOnDestroy = Input.ofNullable(deleteContentsOnDestroy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Input<Integer> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Input<Integer> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Integer lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
             this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

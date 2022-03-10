@@ -68,17 +68,17 @@ public final class DataSourceResponse {
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder setConfiguration(DataSourceConfigurationResponse configuration) {
+        public Builder configuration(DataSourceConfigurationResponse configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSinks(List<SinkConfigurationResponse> sinks) {
+        public Builder sinks(List<SinkConfigurationResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }

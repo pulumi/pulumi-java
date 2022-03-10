@@ -74,17 +74,17 @@ public final class PackagingConfigurationSpekeKeyProvider {
     	      this.url = defaults.url;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSystemIds(List<String> systemIds) {
+        public Builder systemIds(List<String> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

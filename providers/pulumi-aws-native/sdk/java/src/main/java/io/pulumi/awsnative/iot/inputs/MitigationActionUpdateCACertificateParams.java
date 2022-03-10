@@ -51,7 +51,7 @@ public final class MitigationActionUpdateCACertificateParams extends io.pulumi.r
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(MitigationActionUpdateCACertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

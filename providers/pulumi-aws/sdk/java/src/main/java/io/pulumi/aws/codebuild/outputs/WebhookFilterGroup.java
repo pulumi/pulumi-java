@@ -50,7 +50,7 @@ public final class WebhookFilterGroup {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<WebhookFilterGroupFilter> filters) {
+        public Builder filters(@Nullable List<WebhookFilterGroupFilter> filters) {
             this.filters = filters;
             return this;
         }

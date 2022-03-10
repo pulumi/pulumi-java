@@ -40,7 +40,7 @@ public final class GetLaunchTemplateCreditSpecification {
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder setCpuCredits(String cpuCredits) {
+        public Builder cpuCredits(String cpuCredits) {
             this.cpuCredits = Objects.requireNonNull(cpuCredits);
             return this;
         }

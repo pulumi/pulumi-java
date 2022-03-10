@@ -74,17 +74,17 @@ public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources
     	      this.region = defaults.region;
         }
 
-        public Builder setNotificationEndpoint(String notificationEndpoint) {
+        public Builder notificationEndpoint(String notificationEndpoint) {
             this.notificationEndpoint = Objects.requireNonNull(notificationEndpoint);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

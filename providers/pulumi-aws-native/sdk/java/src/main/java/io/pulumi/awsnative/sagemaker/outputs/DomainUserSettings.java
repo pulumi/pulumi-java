@@ -119,27 +119,27 @@ public final class DomainUserSettings {
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder setExecutionRole(@Nullable String executionRole) {
+        public Builder executionRole(@Nullable String executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable DomainJupyterServerAppSettings jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable DomainJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable DomainSharingSettings sharingSettings) {
+        public Builder sharingSettings(@Nullable DomainSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }

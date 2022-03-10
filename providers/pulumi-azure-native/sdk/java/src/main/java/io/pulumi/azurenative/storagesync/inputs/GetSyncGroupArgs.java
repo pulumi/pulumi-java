@@ -84,17 +84,17 @@ public final class GetSyncGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.syncGroupName = defaults.syncGroupName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setSyncGroupName(String syncGroupName) {
+        public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }

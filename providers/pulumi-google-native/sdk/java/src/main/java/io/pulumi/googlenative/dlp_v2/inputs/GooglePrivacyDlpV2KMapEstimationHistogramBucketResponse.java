@@ -122,27 +122,27 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
     	      this.minAnonymity = defaults.minAnonymity;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setMaxAnonymity(String maxAnonymity) {
+        public Builder maxAnonymity(String maxAnonymity) {
             this.maxAnonymity = Objects.requireNonNull(maxAnonymity);
             return this;
         }
 
-        public Builder setMinAnonymity(String minAnonymity) {
+        public Builder minAnonymity(String minAnonymity) {
             this.minAnonymity = Objects.requireNonNull(minAnonymity);
             return this;
         }

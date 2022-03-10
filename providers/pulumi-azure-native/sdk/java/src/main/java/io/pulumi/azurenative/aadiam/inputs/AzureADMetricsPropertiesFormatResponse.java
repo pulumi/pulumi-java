@@ -51,7 +51,7 @@ public final class AzureADMetricsPropertiesFormatResponse extends io.pulumi.reso
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

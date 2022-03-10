@@ -69,12 +69,12 @@ public final class TriggerTransportPubsub {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSubscription(@Nullable String subscription) {
+        public Builder subscription(@Nullable String subscription) {
             this.subscription = subscription;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
         }

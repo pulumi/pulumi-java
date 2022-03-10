@@ -106,42 +106,42 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     	      this.version = defaults.version;
         }
 
-        public Builder setPlatform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Input<String> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Input<String> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }
 
-        public Builder setUrlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Input<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

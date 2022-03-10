@@ -138,62 +138,62 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tracks = defaults.tracks;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setFilterName(@Nullable Input<String> filterName) {
+        public Builder filterName(@Nullable Input<String> filterName) {
             this.filterName = filterName;
             return this;
         }
 
-        public Builder setFilterName(@Nullable String filterName) {
+        public Builder filterName(@Nullable String filterName) {
             this.filterName = Input.ofNullable(filterName);
             return this;
         }
 
-        public Builder setFirstQuality(@Nullable Input<FirstQualityArgs> firstQuality) {
+        public Builder firstQuality(@Nullable Input<FirstQualityArgs> firstQuality) {
             this.firstQuality = firstQuality;
             return this;
         }
 
-        public Builder setFirstQuality(@Nullable FirstQualityArgs firstQuality) {
+        public Builder firstQuality(@Nullable FirstQualityArgs firstQuality) {
             this.firstQuality = Input.ofNullable(firstQuality);
             return this;
         }
 
-        public Builder setPresentationTimeRange(@Nullable Input<PresentationTimeRangeArgs> presentationTimeRange) {
+        public Builder presentationTimeRange(@Nullable Input<PresentationTimeRangeArgs> presentationTimeRange) {
             this.presentationTimeRange = presentationTimeRange;
             return this;
         }
 
-        public Builder setPresentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
+        public Builder presentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
             this.presentationTimeRange = Input.ofNullable(presentationTimeRange);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTracks(@Nullable Input<List<FilterTrackSelectionArgs>> tracks) {
+        public Builder tracks(@Nullable Input<List<FilterTrackSelectionArgs>> tracks) {
             this.tracks = tracks;
             return this;
         }
 
-        public Builder setTracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
+        public Builder tracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
             this.tracks = Input.ofNullable(tracks);
             return this;
         }

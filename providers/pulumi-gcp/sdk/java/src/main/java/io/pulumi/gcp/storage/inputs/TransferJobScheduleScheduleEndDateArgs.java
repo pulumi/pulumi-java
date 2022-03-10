@@ -85,32 +85,32 @@ public final class TransferJobScheduleScheduleEndDateArgs extends io.pulumi.reso
     	      this.year = defaults.year;
         }
 
-        public Builder setDay(Input<Integer> day) {
+        public Builder day(Input<Integer> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDay(Integer day) {
+        public Builder day(Integer day) {
             this.day = Input.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder setMonth(Input<Integer> month) {
+        public Builder month(Input<Integer> month) {
             this.month = Objects.requireNonNull(month);
             return this;
         }
 
-        public Builder setMonth(Integer month) {
+        public Builder month(Integer month) {
             this.month = Input.of(Objects.requireNonNull(month));
             return this;
         }
 
-        public Builder setYear(Input<Integer> year) {
+        public Builder year(Input<Integer> year) {
             this.year = Objects.requireNonNull(year);
             return this;
         }
 
-        public Builder setYear(Integer year) {
+        public Builder year(Integer year) {
             this.year = Input.of(Objects.requireNonNull(year));
             return this;
         }

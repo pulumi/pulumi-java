@@ -52,12 +52,12 @@ public final class FargateProfileSelector {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setLabels(@Nullable List<FargateProfileLabel> labels) {
+        public Builder labels(@Nullable List<FargateProfileLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

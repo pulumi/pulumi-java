@@ -163,42 +163,42 @@ public final class DirectoryWorkspaceAccessProperties {
     	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
         }
 
-        public Builder setDeviceTypeAndroid(@Nullable String deviceTypeAndroid) {
+        public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
             this.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
 
-        public Builder setDeviceTypeChromeos(@Nullable String deviceTypeChromeos) {
+        public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
             this.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
 
-        public Builder setDeviceTypeIos(@Nullable String deviceTypeIos) {
+        public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
             this.deviceTypeIos = deviceTypeIos;
             return this;
         }
 
-        public Builder setDeviceTypeLinux(@Nullable String deviceTypeLinux) {
+        public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
             this.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
 
-        public Builder setDeviceTypeOsx(@Nullable String deviceTypeOsx) {
+        public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
             this.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
 
-        public Builder setDeviceTypeWeb(@Nullable String deviceTypeWeb) {
+        public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
             this.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
 
-        public Builder setDeviceTypeWindows(@Nullable String deviceTypeWindows) {
+        public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
             this.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
 
-        public Builder setDeviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
+        public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
         }

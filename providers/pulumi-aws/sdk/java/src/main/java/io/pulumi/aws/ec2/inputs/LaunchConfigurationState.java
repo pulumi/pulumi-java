@@ -388,207 +388,207 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     	      this.vpcClassicLinkSecurityGroups = defaults.vpcClassicLinkSecurityGroups;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable Input<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Input<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<LaunchConfigurationEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<LaunchConfigurationEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setEnableMonitoring(@Nullable Input<Boolean> enableMonitoring) {
+        public Builder enableMonitoring(@Nullable Input<Boolean> enableMonitoring) {
             this.enableMonitoring = enableMonitoring;
             return this;
         }
 
-        public Builder setEnableMonitoring(@Nullable Boolean enableMonitoring) {
+        public Builder enableMonitoring(@Nullable Boolean enableMonitoring) {
             this.enableMonitoring = Input.ofNullable(enableMonitoring);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable Input<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Input<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<LaunchConfigurationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<LaunchConfigurationEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setImageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Input<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = Input.ofNullable(imageId);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable Input<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Input<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable LaunchConfigurationMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsGetArgs metadataOptions) {
             this.metadataOptions = Input.ofNullable(metadataOptions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPlacementTenancy(@Nullable Input<String> placementTenancy) {
+        public Builder placementTenancy(@Nullable Input<String> placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
 
-        public Builder setPlacementTenancy(@Nullable String placementTenancy) {
+        public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = Input.ofNullable(placementTenancy);
             return this;
         }
 
-        public Builder setRootBlockDevice(@Nullable Input<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable Input<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice) {
             this.rootBlockDevice = rootBlockDevice;
             return this;
         }
 
-        public Builder setRootBlockDevice(@Nullable LaunchConfigurationRootBlockDeviceGetArgs rootBlockDevice) {
+        public Builder rootBlockDevice(@Nullable LaunchConfigurationRootBlockDeviceGetArgs rootBlockDevice) {
             this.rootBlockDevice = Input.ofNullable(rootBlockDevice);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Input<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Input.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setUserDataBase64(@Nullable Input<String> userDataBase64) {
+        public Builder userDataBase64(@Nullable Input<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
 
-        public Builder setUserDataBase64(@Nullable String userDataBase64) {
+        public Builder userDataBase64(@Nullable String userDataBase64) {
             this.userDataBase64 = Input.ofNullable(userDataBase64);
             return this;
         }
 
-        public Builder setVpcClassicLinkId(@Nullable Input<String> vpcClassicLinkId) {
+        public Builder vpcClassicLinkId(@Nullable Input<String> vpcClassicLinkId) {
             this.vpcClassicLinkId = vpcClassicLinkId;
             return this;
         }
 
-        public Builder setVpcClassicLinkId(@Nullable String vpcClassicLinkId) {
+        public Builder vpcClassicLinkId(@Nullable String vpcClassicLinkId) {
             this.vpcClassicLinkId = Input.ofNullable(vpcClassicLinkId);
             return this;
         }
 
-        public Builder setVpcClassicLinkSecurityGroups(@Nullable Input<List<String>> vpcClassicLinkSecurityGroups) {
+        public Builder vpcClassicLinkSecurityGroups(@Nullable Input<List<String>> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
             return this;
         }
 
-        public Builder setVpcClassicLinkSecurityGroups(@Nullable List<String> vpcClassicLinkSecurityGroups) {
+        public Builder vpcClassicLinkSecurityGroups(@Nullable List<String> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = Input.ofNullable(vpcClassicLinkSecurityGroups);
             return this;
         }

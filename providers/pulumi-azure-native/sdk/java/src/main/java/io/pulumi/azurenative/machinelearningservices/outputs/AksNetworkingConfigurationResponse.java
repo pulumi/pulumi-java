@@ -99,22 +99,22 @@ public final class AksNetworkingConfigurationResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDnsServiceIP(@Nullable String dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable String dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

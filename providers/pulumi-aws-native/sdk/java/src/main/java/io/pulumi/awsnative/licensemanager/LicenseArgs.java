@@ -196,112 +196,112 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder setBeneficiary(@Nullable Input<String> beneficiary) {
+        public Builder beneficiary(@Nullable Input<String> beneficiary) {
             this.beneficiary = beneficiary;
             return this;
         }
 
-        public Builder setBeneficiary(@Nullable String beneficiary) {
+        public Builder beneficiary(@Nullable String beneficiary) {
             this.beneficiary = Input.ofNullable(beneficiary);
             return this;
         }
 
-        public Builder setConsumptionConfiguration(Input<LicenseConsumptionConfigurationArgs> consumptionConfiguration) {
+        public Builder consumptionConfiguration(Input<LicenseConsumptionConfigurationArgs> consumptionConfiguration) {
             this.consumptionConfiguration = Objects.requireNonNull(consumptionConfiguration);
             return this;
         }
 
-        public Builder setConsumptionConfiguration(LicenseConsumptionConfigurationArgs consumptionConfiguration) {
+        public Builder consumptionConfiguration(LicenseConsumptionConfigurationArgs consumptionConfiguration) {
             this.consumptionConfiguration = Input.of(Objects.requireNonNull(consumptionConfiguration));
             return this;
         }
 
-        public Builder setEntitlements(Input<List<LicenseEntitlementArgs>> entitlements) {
+        public Builder entitlements(Input<List<LicenseEntitlementArgs>> entitlements) {
             this.entitlements = Objects.requireNonNull(entitlements);
             return this;
         }
 
-        public Builder setEntitlements(List<LicenseEntitlementArgs> entitlements) {
+        public Builder entitlements(List<LicenseEntitlementArgs> entitlements) {
             this.entitlements = Input.of(Objects.requireNonNull(entitlements));
             return this;
         }
 
-        public Builder setHomeRegion(Input<String> homeRegion) {
+        public Builder homeRegion(Input<String> homeRegion) {
             this.homeRegion = Objects.requireNonNull(homeRegion);
             return this;
         }
 
-        public Builder setHomeRegion(String homeRegion) {
+        public Builder homeRegion(String homeRegion) {
             this.homeRegion = Input.of(Objects.requireNonNull(homeRegion));
             return this;
         }
 
-        public Builder setIssuer(Input<LicenseIssuerDataArgs> issuer) {
+        public Builder issuer(Input<LicenseIssuerDataArgs> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(LicenseIssuerDataArgs issuer) {
+        public Builder issuer(LicenseIssuerDataArgs issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder setLicenseMetadata(@Nullable Input<List<LicenseMetadataArgs>> licenseMetadata) {
+        public Builder licenseMetadata(@Nullable Input<List<LicenseMetadataArgs>> licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
             return this;
         }
 
-        public Builder setLicenseMetadata(@Nullable List<LicenseMetadataArgs> licenseMetadata) {
+        public Builder licenseMetadata(@Nullable List<LicenseMetadataArgs> licenseMetadata) {
             this.licenseMetadata = Input.ofNullable(licenseMetadata);
             return this;
         }
 
-        public Builder setLicenseName(@Nullable Input<String> licenseName) {
+        public Builder licenseName(@Nullable Input<String> licenseName) {
             this.licenseName = licenseName;
             return this;
         }
 
-        public Builder setLicenseName(@Nullable String licenseName) {
+        public Builder licenseName(@Nullable String licenseName) {
             this.licenseName = Input.ofNullable(licenseName);
             return this;
         }
 
-        public Builder setProductName(Input<String> productName) {
+        public Builder productName(Input<String> productName) {
             this.productName = Objects.requireNonNull(productName);
             return this;
         }
 
-        public Builder setProductName(String productName) {
+        public Builder productName(String productName) {
             this.productName = Input.of(Objects.requireNonNull(productName));
             return this;
         }
 
-        public Builder setProductSKU(@Nullable Input<String> productSKU) {
+        public Builder productSKU(@Nullable Input<String> productSKU) {
             this.productSKU = productSKU;
             return this;
         }
 
-        public Builder setProductSKU(@Nullable String productSKU) {
+        public Builder productSKU(@Nullable String productSKU) {
             this.productSKU = Input.ofNullable(productSKU);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setValidity(Input<LicenseValidityDateFormatArgs> validity) {
+        public Builder validity(Input<LicenseValidityDateFormatArgs> validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
 
-        public Builder setValidity(LicenseValidityDateFormatArgs validity) {
+        public Builder validity(LicenseValidityDateFormatArgs validity) {
             this.validity = Input.of(Objects.requireNonNull(validity));
             return this;
         }

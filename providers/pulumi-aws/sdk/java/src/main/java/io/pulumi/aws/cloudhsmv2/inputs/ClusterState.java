@@ -206,102 +206,102 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setClusterCertificates(@Nullable Input<List<ClusterClusterCertificateGetArgs>> clusterCertificates) {
+        public Builder clusterCertificates(@Nullable Input<List<ClusterClusterCertificateGetArgs>> clusterCertificates) {
             this.clusterCertificates = clusterCertificates;
             return this;
         }
 
-        public Builder setClusterCertificates(@Nullable List<ClusterClusterCertificateGetArgs> clusterCertificates) {
+        public Builder clusterCertificates(@Nullable List<ClusterClusterCertificateGetArgs> clusterCertificates) {
             this.clusterCertificates = Input.ofNullable(clusterCertificates);
             return this;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }
 
-        public Builder setClusterState(@Nullable Input<String> clusterState) {
+        public Builder clusterState(@Nullable Input<String> clusterState) {
             this.clusterState = clusterState;
             return this;
         }
 
-        public Builder setClusterState(@Nullable String clusterState) {
+        public Builder clusterState(@Nullable String clusterState) {
             this.clusterState = Input.ofNullable(clusterState);
             return this;
         }
 
-        public Builder setHsmType(@Nullable Input<String> hsmType) {
+        public Builder hsmType(@Nullable Input<String> hsmType) {
             this.hsmType = hsmType;
             return this;
         }
 
-        public Builder setHsmType(@Nullable String hsmType) {
+        public Builder hsmType(@Nullable String hsmType) {
             this.hsmType = Input.ofNullable(hsmType);
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Input.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder setSourceBackupIdentifier(@Nullable Input<String> sourceBackupIdentifier) {
+        public Builder sourceBackupIdentifier(@Nullable Input<String> sourceBackupIdentifier) {
             this.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
 
-        public Builder setSourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
+        public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
             this.sourceBackupIdentifier = Input.ofNullable(sourceBackupIdentifier);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

@@ -126,8 +126,8 @@ public class SecretList extends io.pulumi.resources.CustomResource {
     private static SecretListArgs makeArgs(SecretListArgs args) {
         var builder = args == null ? SecretListArgs.builder() : SecretListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("SecretList")
+            .apiVersion("v1")
+            .kind("SecretList")
             .build();
     }
 

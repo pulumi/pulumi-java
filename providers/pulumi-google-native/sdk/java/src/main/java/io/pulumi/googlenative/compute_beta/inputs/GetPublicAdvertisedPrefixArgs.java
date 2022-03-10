@@ -62,12 +62,12 @@ public final class GetPublicAdvertisedPrefixArgs extends io.pulumi.resources.Inv
     	      this.publicAdvertisedPrefix = defaults.publicAdvertisedPrefix;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setPublicAdvertisedPrefix(String publicAdvertisedPrefix) {
+        public Builder publicAdvertisedPrefix(String publicAdvertisedPrefix) {
             this.publicAdvertisedPrefix = Objects.requireNonNull(publicAdvertisedPrefix);
             return this;
         }

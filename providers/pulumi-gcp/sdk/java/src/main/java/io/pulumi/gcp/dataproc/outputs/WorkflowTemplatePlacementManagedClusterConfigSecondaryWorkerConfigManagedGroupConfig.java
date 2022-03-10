@@ -51,12 +51,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder setInstanceGroupManagerName(@Nullable String instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
             this.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
 
-        public Builder setInstanceTemplateName(@Nullable String instanceTemplateName) {
+        public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }

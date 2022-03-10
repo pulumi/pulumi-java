@@ -49,7 +49,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatement> statements) {
+        public Builder statements(List<WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

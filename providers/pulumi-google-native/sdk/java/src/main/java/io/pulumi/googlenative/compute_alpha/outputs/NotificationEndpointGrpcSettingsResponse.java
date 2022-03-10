@@ -115,27 +115,27 @@ public final class NotificationEndpointGrpcSettingsResponse {
     	      this.retryDurationSec = defaults.retryDurationSec;
         }
 
-        public Builder setAuthority(String authority) {
+        public Builder authority(String authority) {
             this.authority = Objects.requireNonNull(authority);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setPayloadName(String payloadName) {
+        public Builder payloadName(String payloadName) {
             this.payloadName = Objects.requireNonNull(payloadName);
             return this;
         }
 
-        public Builder setResendInterval(DurationResponse resendInterval) {
+        public Builder resendInterval(DurationResponse resendInterval) {
             this.resendInterval = Objects.requireNonNull(resendInterval);
             return this;
         }
 
-        public Builder setRetryDurationSec(Integer retryDurationSec) {
+        public Builder retryDurationSec(Integer retryDurationSec) {
             this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
             return this;
         }

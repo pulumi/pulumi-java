@@ -74,22 +74,22 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
     	      this.none = defaults.none;
         }
 
-        public Builder setCount(@Nullable Input<Object> count) {
+        public Builder count(@Nullable Input<Object> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Object count) {
+        public Builder count(@Nullable Object count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setNone(@Nullable Input<Object> none) {
+        public Builder none(@Nullable Input<Object> none) {
             this.none = none;
             return this;
         }
 
-        public Builder setNone(@Nullable Object none) {
+        public Builder none(@Nullable Object none) {
             this.none = Input.ofNullable(none);
             return this;
         }

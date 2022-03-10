@@ -93,17 +93,17 @@ public final class AlertRuleLeafConditionResponse extends io.pulumi.resources.In
     	      this.field = defaults.field;
         }
 
-        public Builder setContainsAny(@Nullable List<String> containsAny) {
+        public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
 
-        public Builder setEquals(@Nullable String equals) {
+        public Builder equals(@Nullable String equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }

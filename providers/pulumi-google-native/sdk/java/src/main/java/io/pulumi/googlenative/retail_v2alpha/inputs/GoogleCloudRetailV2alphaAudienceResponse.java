@@ -73,12 +73,12 @@ public final class GoogleCloudRetailV2alphaAudienceResponse extends io.pulumi.re
     	      this.genders = defaults.genders;
         }
 
-        public Builder setAgeGroups(List<String> ageGroups) {
+        public Builder ageGroups(List<String> ageGroups) {
             this.ageGroups = Objects.requireNonNull(ageGroups);
             return this;
         }
 
-        public Builder setGenders(List<String> genders) {
+        public Builder genders(List<String> genders) {
             this.genders = Objects.requireNonNull(genders);
             return this;
         }

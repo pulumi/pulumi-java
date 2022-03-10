@@ -92,32 +92,32 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Input<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Input.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Input<Integer> idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Input<Integer> idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Integer idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = Input.ofNullable(idleTimeoutSec);
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
+        public Builder trackingMode(@Nullable Input<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
+        public Builder trackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
             this.trackingMode = Input.ofNullable(trackingMode);
             return this;
         }

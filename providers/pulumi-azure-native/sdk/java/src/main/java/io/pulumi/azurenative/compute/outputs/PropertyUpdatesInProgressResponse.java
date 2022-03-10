@@ -50,7 +50,7 @@ public final class PropertyUpdatesInProgressResponse {
     	      this.targetTier = defaults.targetTier;
         }
 
-        public Builder setTargetTier(@Nullable String targetTier) {
+        public Builder targetTier(@Nullable String targetTier) {
             this.targetTier = targetTier;
             return this;
         }

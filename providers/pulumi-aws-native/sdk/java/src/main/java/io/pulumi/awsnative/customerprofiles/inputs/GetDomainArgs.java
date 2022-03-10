@@ -51,7 +51,7 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }

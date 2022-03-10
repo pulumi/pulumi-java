@@ -74,22 +74,22 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastObservedTime = defaults.lastObservedTime;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder setLastObservedTime(Input<String> lastObservedTime) {
+        public Builder lastObservedTime(Input<String> lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
 
-        public Builder setLastObservedTime(String lastObservedTime) {
+        public Builder lastObservedTime(String lastObservedTime) {
             this.lastObservedTime = Input.of(Objects.requireNonNull(lastObservedTime));
             return this;
         }

@@ -86,32 +86,32 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Input.ofNullable(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder setLocalGatewayVirtualInterfaceGroupId(@Nullable Input<String> localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(@Nullable Input<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
             return this;
         }
 
-        public Builder setLocalGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Input.ofNullable(localGatewayVirtualInterfaceGroupId);
             return this;
         }

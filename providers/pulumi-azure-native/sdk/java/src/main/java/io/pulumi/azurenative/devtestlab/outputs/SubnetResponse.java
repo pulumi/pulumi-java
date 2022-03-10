@@ -83,17 +83,17 @@ public final class SubnetResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAllowPublicIp(@Nullable String allowPublicIp) {
+        public Builder allowPublicIp(@Nullable String allowPublicIp) {
             this.allowPublicIp = allowPublicIp;
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

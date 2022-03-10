@@ -105,22 +105,22 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
     	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
         }
 
-        public Builder setDeleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
+        public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer);
             return this;
         }
 
-        public Builder setDeleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
+        public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink);
             return this;
         }
 
-        public Builder setMetadataOptions(MetadataOptionsResponse metadataOptions) {
+        public Builder metadataOptions(MetadataOptionsResponse metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
 
-        public Builder setOverwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
+        public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
         }

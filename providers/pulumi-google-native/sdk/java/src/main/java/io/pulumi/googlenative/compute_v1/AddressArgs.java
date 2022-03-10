@@ -239,132 +239,132 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setAddressType(@Nullable Input<AddressAddressType> addressType) {
+        public Builder addressType(@Nullable Input<AddressAddressType> addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setAddressType(@Nullable AddressAddressType addressType) {
+        public Builder addressType(@Nullable AddressAddressType addressType) {
             this.addressType = Input.ofNullable(addressType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpVersion(@Nullable Input<AddressIpVersion> ipVersion) {
+        public Builder ipVersion(@Nullable Input<AddressIpVersion> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
-        public Builder setIpVersion(@Nullable AddressIpVersion ipVersion) {
+        public Builder ipVersion(@Nullable AddressIpVersion ipVersion) {
             this.ipVersion = Input.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable Input<AddressNetworkTier> networkTier) {
+        public Builder networkTier(@Nullable Input<AddressNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable AddressNetworkTier networkTier) {
+        public Builder networkTier(@Nullable AddressNetworkTier networkTier) {
             this.networkTier = Input.ofNullable(networkTier);
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Input.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<AddressPurpose> purpose) {
+        public Builder purpose(@Nullable Input<AddressPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable AddressPurpose purpose) {
+        public Builder purpose(@Nullable AddressPurpose purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

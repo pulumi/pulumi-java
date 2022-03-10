@@ -78,32 +78,32 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     	      this.project = defaults.project;
         }
 
-        public Builder setBrandId(Input<String> brandId) {
+        public Builder brandId(Input<String> brandId) {
             this.brandId = Objects.requireNonNull(brandId);
             return this;
         }
 
-        public Builder setBrandId(String brandId) {
+        public Builder brandId(String brandId) {
             this.brandId = Input.of(Objects.requireNonNull(brandId));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

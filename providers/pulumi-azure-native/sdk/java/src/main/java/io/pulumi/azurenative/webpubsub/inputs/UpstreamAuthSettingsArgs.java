@@ -77,22 +77,22 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setManagedIdentity(@Nullable Input<ManagedIdentitySettingsArgs> managedIdentity) {
+        public Builder managedIdentity(@Nullable Input<ManagedIdentitySettingsArgs> managedIdentity) {
             this.managedIdentity = managedIdentity;
             return this;
         }
 
-        public Builder setManagedIdentity(@Nullable ManagedIdentitySettingsArgs managedIdentity) {
+        public Builder managedIdentity(@Nullable ManagedIdentitySettingsArgs managedIdentity) {
             this.managedIdentity = Input.ofNullable(managedIdentity);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,UpstreamAuthType>> type) {
+        public Builder type(@Nullable Input<Either<String,UpstreamAuthType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,UpstreamAuthType> type) {
+        public Builder type(@Nullable Either<String,UpstreamAuthType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

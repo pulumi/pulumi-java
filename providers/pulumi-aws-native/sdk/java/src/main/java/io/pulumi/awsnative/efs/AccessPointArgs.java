@@ -118,52 +118,52 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setAccessPointTags(@Nullable Input<List<AccessPointTagArgs>> accessPointTags) {
+        public Builder accessPointTags(@Nullable Input<List<AccessPointTagArgs>> accessPointTags) {
             this.accessPointTags = accessPointTags;
             return this;
         }
 
-        public Builder setAccessPointTags(@Nullable List<AccessPointTagArgs> accessPointTags) {
+        public Builder accessPointTags(@Nullable List<AccessPointTagArgs> accessPointTags) {
             this.accessPointTags = Input.ofNullable(accessPointTags);
             return this;
         }
 
-        public Builder setClientToken(@Nullable Input<String> clientToken) {
+        public Builder clientToken(@Nullable Input<String> clientToken) {
             this.clientToken = clientToken;
             return this;
         }
 
-        public Builder setClientToken(@Nullable String clientToken) {
+        public Builder clientToken(@Nullable String clientToken) {
             this.clientToken = Input.ofNullable(clientToken);
             return this;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder setPosixUser(@Nullable Input<AccessPointPosixUserArgs> posixUser) {
+        public Builder posixUser(@Nullable Input<AccessPointPosixUserArgs> posixUser) {
             this.posixUser = posixUser;
             return this;
         }
 
-        public Builder setPosixUser(@Nullable AccessPointPosixUserArgs posixUser) {
+        public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
             this.posixUser = Input.ofNullable(posixUser);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable Input<AccessPointRootDirectoryArgs> rootDirectory) {
+        public Builder rootDirectory(@Nullable Input<AccessPointRootDirectoryArgs> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
+        public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
             this.rootDirectory = Input.ofNullable(rootDirectory);
             return this;
         }

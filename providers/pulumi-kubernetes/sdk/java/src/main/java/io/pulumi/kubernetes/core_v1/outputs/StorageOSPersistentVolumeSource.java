@@ -117,27 +117,27 @@ public final class StorageOSPersistentVolumeSource {
     	      this.volumeNamespace = defaults.volumeNamespace;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable ObjectReference secretRef) {
+        public Builder secretRef(@Nullable ObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeNamespace(@Nullable String volumeNamespace) {
+        public Builder volumeNamespace(@Nullable String volumeNamespace) {
             this.volumeNamespace = volumeNamespace;
             return this;
         }

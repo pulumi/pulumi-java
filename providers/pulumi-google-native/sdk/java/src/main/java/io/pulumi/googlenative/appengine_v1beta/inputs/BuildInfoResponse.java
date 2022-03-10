@@ -55,7 +55,7 @@ public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.cloudBuildId = defaults.cloudBuildId;
         }
 
-        public Builder setCloudBuildId(String cloudBuildId) {
+        public Builder cloudBuildId(String cloudBuildId) {
             this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
             return this;
         }

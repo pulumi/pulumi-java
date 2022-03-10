@@ -68,12 +68,12 @@ public final class ConnectorMappingErrorManagementResponse {
     	      this.errorManagementType = defaults.errorManagementType;
         }
 
-        public Builder setErrorLimit(@Nullable Integer errorLimit) {
+        public Builder errorLimit(@Nullable Integer errorLimit) {
             this.errorLimit = errorLimit;
             return this;
         }
 
-        public Builder setErrorManagementType(String errorManagementType) {
+        public Builder errorManagementType(String errorManagementType) {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }

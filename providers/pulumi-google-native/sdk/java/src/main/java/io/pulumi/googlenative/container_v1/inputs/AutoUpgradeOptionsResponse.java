@@ -72,12 +72,12 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
     	      this.description = defaults.description;
         }
 
-        public Builder setAutoUpgradeStartTime(String autoUpgradeStartTime) {
+        public Builder autoUpgradeStartTime(String autoUpgradeStartTime) {
             this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

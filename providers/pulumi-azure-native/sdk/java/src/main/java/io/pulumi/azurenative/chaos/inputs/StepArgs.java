@@ -75,22 +75,22 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setBranches(Input<List<BranchArgs>> branches) {
+        public Builder branches(Input<List<BranchArgs>> branches) {
             this.branches = Objects.requireNonNull(branches);
             return this;
         }
 
-        public Builder setBranches(List<BranchArgs> branches) {
+        public Builder branches(List<BranchArgs> branches) {
             this.branches = Input.of(Objects.requireNonNull(branches));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

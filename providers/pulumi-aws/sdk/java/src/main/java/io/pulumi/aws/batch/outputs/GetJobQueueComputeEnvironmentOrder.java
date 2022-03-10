@@ -50,12 +50,12 @@ public final class GetJobQueueComputeEnvironmentOrder {
     	      this.order = defaults.order;
         }
 
-        public Builder setComputeEnvironment(String computeEnvironment) {
+        public Builder computeEnvironment(String computeEnvironment) {
             this.computeEnvironment = Objects.requireNonNull(computeEnvironment);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }

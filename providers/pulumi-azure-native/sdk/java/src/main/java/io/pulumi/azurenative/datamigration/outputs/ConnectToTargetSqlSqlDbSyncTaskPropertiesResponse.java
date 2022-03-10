@@ -140,32 +140,32 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setCommands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
+        public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable ConnectToTargetSqlSqlDbSyncTaskInputResponse input) {
+        public Builder input(@Nullable ConnectToTargetSqlSqlDbSyncTaskInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(List<ConnectToTargetSqlDbTaskOutputResponse> output) {
+        public Builder output(List<ConnectToTargetSqlDbTaskOutputResponse> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

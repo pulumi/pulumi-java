@@ -154,37 +154,37 @@ public final class StaticFilesHandlerResponse extends io.pulumi.resources.Invoke
     	      this.uploadPathRegex = defaults.uploadPathRegex;
         }
 
-        public Builder setApplicationReadable(Boolean applicationReadable) {
+        public Builder applicationReadable(Boolean applicationReadable) {
             this.applicationReadable = Objects.requireNonNull(applicationReadable);
             return this;
         }
 
-        public Builder setExpiration(String expiration) {
+        public Builder expiration(String expiration) {
             this.expiration = Objects.requireNonNull(expiration);
             return this;
         }
 
-        public Builder setHttpHeaders(Map<String,String> httpHeaders) {
+        public Builder httpHeaders(Map<String,String> httpHeaders) {
             this.httpHeaders = Objects.requireNonNull(httpHeaders);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRequireMatchingFile(Boolean requireMatchingFile) {
+        public Builder requireMatchingFile(Boolean requireMatchingFile) {
             this.requireMatchingFile = Objects.requireNonNull(requireMatchingFile);
             return this;
         }
 
-        public Builder setUploadPathRegex(String uploadPathRegex) {
+        public Builder uploadPathRegex(String uploadPathRegex) {
             this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
             return this;
         }

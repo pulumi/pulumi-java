@@ -116,27 +116,27 @@ public final class GetDomainMappingResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMetadata(ObjectMetaResponse metadata) {
+        public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSpec(DomainMappingSpecResponse spec) {
+        public Builder spec(DomainMappingSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setStatus(DomainMappingStatusResponse status) {
+        public Builder status(DomainMappingStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

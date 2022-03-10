@@ -65,12 +65,12 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder setPredefinedMetricType(String predefinedMetricType) {
+        public Builder predefinedMetricType(String predefinedMetricType) {
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
 
-        public Builder setResourceLabel(String resourceLabel) {
+        public Builder resourceLabel(String resourceLabel) {
             this.resourceLabel = Objects.requireNonNull(resourceLabel);
             return this;
         }

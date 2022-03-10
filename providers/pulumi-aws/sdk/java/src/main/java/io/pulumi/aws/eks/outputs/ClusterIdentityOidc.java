@@ -50,7 +50,7 @@ public final class ClusterIdentityOidc {
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }

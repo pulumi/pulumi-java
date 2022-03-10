@@ -110,42 +110,42 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setGaugeView(@Nullable Input<GaugeViewArgs> gaugeView) {
+        public Builder gaugeView(@Nullable Input<GaugeViewArgs> gaugeView) {
             this.gaugeView = gaugeView;
             return this;
         }
 
-        public Builder setGaugeView(@Nullable GaugeViewArgs gaugeView) {
+        public Builder gaugeView(@Nullable GaugeViewArgs gaugeView) {
             this.gaugeView = Input.ofNullable(gaugeView);
             return this;
         }
 
-        public Builder setSparkChartView(@Nullable Input<SparkChartViewArgs> sparkChartView) {
+        public Builder sparkChartView(@Nullable Input<SparkChartViewArgs> sparkChartView) {
             this.sparkChartView = sparkChartView;
             return this;
         }
 
-        public Builder setSparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
+        public Builder sparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
             this.sparkChartView = Input.ofNullable(sparkChartView);
             return this;
         }
 
-        public Builder setThresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
+        public Builder thresholds(@Nullable Input<List<ThresholdArgs>> thresholds) {
             this.thresholds = thresholds;
             return this;
         }
 
-        public Builder setThresholds(@Nullable List<ThresholdArgs> thresholds) {
+        public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
             this.thresholds = Input.ofNullable(thresholds);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }

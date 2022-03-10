@@ -150,72 +150,72 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessRules(@Nullable Input<BucketAccessRulesArgs> accessRules) {
+        public Builder accessRules(@Nullable Input<BucketAccessRulesArgs> accessRules) {
             this.accessRules = accessRules;
             return this;
         }
 
-        public Builder setAccessRules(@Nullable BucketAccessRulesArgs accessRules) {
+        public Builder accessRules(@Nullable BucketAccessRulesArgs accessRules) {
             this.accessRules = Input.ofNullable(accessRules);
             return this;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setBundleId(Input<String> bundleId) {
+        public Builder bundleId(Input<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Input.of(Objects.requireNonNull(bundleId));
             return this;
         }
 
-        public Builder setObjectVersioning(@Nullable Input<Boolean> objectVersioning) {
+        public Builder objectVersioning(@Nullable Input<Boolean> objectVersioning) {
             this.objectVersioning = objectVersioning;
             return this;
         }
 
-        public Builder setObjectVersioning(@Nullable Boolean objectVersioning) {
+        public Builder objectVersioning(@Nullable Boolean objectVersioning) {
             this.objectVersioning = Input.ofNullable(objectVersioning);
             return this;
         }
 
-        public Builder setReadOnlyAccessAccounts(@Nullable Input<List<String>> readOnlyAccessAccounts) {
+        public Builder readOnlyAccessAccounts(@Nullable Input<List<String>> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
 
-        public Builder setReadOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
+        public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = Input.ofNullable(readOnlyAccessAccounts);
             return this;
         }
 
-        public Builder setResourcesReceivingAccess(@Nullable Input<List<String>> resourcesReceivingAccess) {
+        public Builder resourcesReceivingAccess(@Nullable Input<List<String>> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
 
-        public Builder setResourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
+        public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = Input.ofNullable(resourcesReceivingAccess);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<BucketTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTagArgs> tags) {
+        public Builder tags(@Nullable List<BucketTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

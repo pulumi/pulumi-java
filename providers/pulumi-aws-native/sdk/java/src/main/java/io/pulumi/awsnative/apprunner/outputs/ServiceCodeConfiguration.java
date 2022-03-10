@@ -60,12 +60,12 @@ public final class ServiceCodeConfiguration {
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable ServiceCodeConfigurationValues codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValues codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
-        public Builder setConfigurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
+        public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }

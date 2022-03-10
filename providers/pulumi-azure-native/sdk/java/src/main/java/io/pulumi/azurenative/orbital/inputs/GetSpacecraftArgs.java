@@ -68,12 +68,12 @@ public final class GetSpacecraftArgs extends io.pulumi.resources.InvokeArgs {
     	      this.spacecraftName = defaults.spacecraftName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSpacecraftName(String spacecraftName) {
+        public Builder spacecraftName(String spacecraftName) {
             this.spacecraftName = Objects.requireNonNull(spacecraftName);
             return this;
         }

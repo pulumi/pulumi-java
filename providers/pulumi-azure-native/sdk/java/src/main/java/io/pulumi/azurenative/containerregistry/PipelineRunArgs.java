@@ -119,52 +119,52 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setPipelineRunName(@Nullable Input<String> pipelineRunName) {
+        public Builder pipelineRunName(@Nullable Input<String> pipelineRunName) {
             this.pipelineRunName = pipelineRunName;
             return this;
         }
 
-        public Builder setPipelineRunName(@Nullable String pipelineRunName) {
+        public Builder pipelineRunName(@Nullable String pipelineRunName) {
             this.pipelineRunName = Input.ofNullable(pipelineRunName);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setRequest(@Nullable Input<PipelineRunRequestArgs> request) {
+        public Builder request(@Nullable Input<PipelineRunRequestArgs> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRequest(@Nullable PipelineRunRequestArgs request) {
+        public Builder request(@Nullable PipelineRunRequestArgs request) {
             this.request = Input.ofNullable(request);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -92,32 +92,32 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(Input<Either<String,FilterTrackPropertyCompareOperation>> operation) {
+        public Builder operation(Input<Either<String,FilterTrackPropertyCompareOperation>> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setOperation(Either<String,FilterTrackPropertyCompareOperation> operation) {
+        public Builder operation(Either<String,FilterTrackPropertyCompareOperation> operation) {
             this.operation = Input.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder setProperty(Input<Either<String,FilterTrackPropertyType>> property) {
+        public Builder property(Input<Either<String,FilterTrackPropertyType>> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setProperty(Either<String,FilterTrackPropertyType> property) {
+        public Builder property(Either<String,FilterTrackPropertyType> property) {
             this.property = Input.of(Objects.requireNonNull(property));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

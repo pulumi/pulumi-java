@@ -74,22 +74,22 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
     	      this.wsdlServiceName = defaults.wsdlServiceName;
         }
 
-        public Builder setWsdlEndpointName(@Nullable Input<String> wsdlEndpointName) {
+        public Builder wsdlEndpointName(@Nullable Input<String> wsdlEndpointName) {
             this.wsdlEndpointName = wsdlEndpointName;
             return this;
         }
 
-        public Builder setWsdlEndpointName(@Nullable String wsdlEndpointName) {
+        public Builder wsdlEndpointName(@Nullable String wsdlEndpointName) {
             this.wsdlEndpointName = Input.ofNullable(wsdlEndpointName);
             return this;
         }
 
-        public Builder setWsdlServiceName(@Nullable Input<String> wsdlServiceName) {
+        public Builder wsdlServiceName(@Nullable Input<String> wsdlServiceName) {
             this.wsdlServiceName = wsdlServiceName;
             return this;
         }
 
-        public Builder setWsdlServiceName(@Nullable String wsdlServiceName) {
+        public Builder wsdlServiceName(@Nullable String wsdlServiceName) {
             this.wsdlServiceName = Input.ofNullable(wsdlServiceName);
             return this;
         }

@@ -289,152 +289,152 @@ public final class AzureMLExecutePipelineActivityArgs extends io.pulumi.resource
     	      this.version = defaults.version;
         }
 
-        public Builder setContinueOnStepFailure(@Nullable Input<Object> continueOnStepFailure) {
+        public Builder continueOnStepFailure(@Nullable Input<Object> continueOnStepFailure) {
             this.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
 
-        public Builder setContinueOnStepFailure(@Nullable Object continueOnStepFailure) {
+        public Builder continueOnStepFailure(@Nullable Object continueOnStepFailure) {
             this.continueOnStepFailure = Input.ofNullable(continueOnStepFailure);
             return this;
         }
 
-        public Builder setDataPathAssignments(@Nullable Input<Object> dataPathAssignments) {
+        public Builder dataPathAssignments(@Nullable Input<Object> dataPathAssignments) {
             this.dataPathAssignments = dataPathAssignments;
             return this;
         }
 
-        public Builder setDataPathAssignments(@Nullable Object dataPathAssignments) {
+        public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
             this.dataPathAssignments = Input.ofNullable(dataPathAssignments);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExperimentName(@Nullable Input<Object> experimentName) {
+        public Builder experimentName(@Nullable Input<Object> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable Object experimentName) {
+        public Builder experimentName(@Nullable Object experimentName) {
             this.experimentName = Input.ofNullable(experimentName);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setMlParentRunId(@Nullable Input<Object> mlParentRunId) {
+        public Builder mlParentRunId(@Nullable Input<Object> mlParentRunId) {
             this.mlParentRunId = mlParentRunId;
             return this;
         }
 
-        public Builder setMlParentRunId(@Nullable Object mlParentRunId) {
+        public Builder mlParentRunId(@Nullable Object mlParentRunId) {
             this.mlParentRunId = Input.ofNullable(mlParentRunId);
             return this;
         }
 
-        public Builder setMlPipelineEndpointId(@Nullable Input<Object> mlPipelineEndpointId) {
+        public Builder mlPipelineEndpointId(@Nullable Input<Object> mlPipelineEndpointId) {
             this.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
 
-        public Builder setMlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
+        public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
             this.mlPipelineEndpointId = Input.ofNullable(mlPipelineEndpointId);
             return this;
         }
 
-        public Builder setMlPipelineId(@Nullable Input<Object> mlPipelineId) {
+        public Builder mlPipelineId(@Nullable Input<Object> mlPipelineId) {
             this.mlPipelineId = mlPipelineId;
             return this;
         }
 
-        public Builder setMlPipelineId(@Nullable Object mlPipelineId) {
+        public Builder mlPipelineId(@Nullable Object mlPipelineId) {
             this.mlPipelineId = Input.ofNullable(mlPipelineId);
             return this;
         }
 
-        public Builder setMlPipelineParameters(@Nullable Input<Object> mlPipelineParameters) {
+        public Builder mlPipelineParameters(@Nullable Input<Object> mlPipelineParameters) {
             this.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
 
-        public Builder setMlPipelineParameters(@Nullable Object mlPipelineParameters) {
+        public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
             this.mlPipelineParameters = Input.ofNullable(mlPipelineParameters);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Object> version) {
+        public Builder version(@Nullable Input<Object> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = Input.ofNullable(version);
             return this;
         }

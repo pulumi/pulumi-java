@@ -128,52 +128,52 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     	      this.targetRegions = defaults.targetRegions;
         }
 
-        public Builder setEndOfLifeDate(@Nullable Input<String> endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable Input<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
-        public Builder setEndOfLifeDate(@Nullable String endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Input.ofNullable(endOfLifeDate);
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Boolean excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = Input.ofNullable(excludeFromLatest);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Input.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder setTargetRegions(@Nullable Input<List<TargetRegionArgs>> targetRegions) {
+        public Builder targetRegions(@Nullable Input<List<TargetRegionArgs>> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }
 
-        public Builder setTargetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
+        public Builder targetRegions(@Nullable List<TargetRegionArgs> targetRegions) {
             this.targetRegions = Input.ofNullable(targetRegions);
             return this;
         }

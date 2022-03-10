@@ -169,42 +169,42 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
     	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
         }
 
-        public Builder setCpuAveragePercent(Integer cpuAveragePercent) {
+        public Builder cpuAveragePercent(Integer cpuAveragePercent) {
             this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
             return this;
         }
 
-        public Builder setCpuMaxPercent(Integer cpuMaxPercent) {
+        public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
             return this;
         }
 
-        public Builder setDiskIoRateAverageKbps(String diskIoRateAverageKbps) {
+        public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
             return this;
         }
 
-        public Builder setDiskIoRateMaxKbps(String diskIoRateMaxKbps) {
+        public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
             return this;
         }
 
-        public Builder setMemoryAveragePercent(Integer memoryAveragePercent) {
+        public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
             return this;
         }
 
-        public Builder setMemoryMaxPercent(Integer memoryMaxPercent) {
+        public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
             return this;
         }
 
-        public Builder setNetworkThroughputAverageKbps(String networkThroughputAverageKbps) {
+        public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
             return this;
         }
 
-        public Builder setNetworkThroughputMaxKbps(String networkThroughputMaxKbps) {
+        public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }

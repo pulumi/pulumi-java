@@ -170,82 +170,82 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setMongoRoleDefinitionId(@Nullable Input<String> mongoRoleDefinitionId) {
+        public Builder mongoRoleDefinitionId(@Nullable Input<String> mongoRoleDefinitionId) {
             this.mongoRoleDefinitionId = mongoRoleDefinitionId;
             return this;
         }
 
-        public Builder setMongoRoleDefinitionId(@Nullable String mongoRoleDefinitionId) {
+        public Builder mongoRoleDefinitionId(@Nullable String mongoRoleDefinitionId) {
             this.mongoRoleDefinitionId = Input.ofNullable(mongoRoleDefinitionId);
             return this;
         }
 
-        public Builder setPrivileges(@Nullable Input<List<PrivilegeArgs>> privileges) {
+        public Builder privileges(@Nullable Input<List<PrivilegeArgs>> privileges) {
             this.privileges = privileges;
             return this;
         }
 
-        public Builder setPrivileges(@Nullable List<PrivilegeArgs> privileges) {
+        public Builder privileges(@Nullable List<PrivilegeArgs> privileges) {
             this.privileges = Input.ofNullable(privileges);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<RoleArgs>> roles) {
+        public Builder roles(@Nullable Input<List<RoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleArgs> roles) {
+        public Builder roles(@Nullable List<RoleArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }
 
-        public Builder setType(@Nullable Input<MongoRoleDefinitionType> type) {
+        public Builder type(@Nullable Input<MongoRoleDefinitionType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable MongoRoleDefinitionType type) {
+        public Builder type(@Nullable MongoRoleDefinitionType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

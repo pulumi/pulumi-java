@@ -313,87 +313,87 @@ public final class GetAssignmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalData(@Nullable AssignmentPropertiesResponseAdditionalData additionalData) {
+        public Builder additionalData(@Nullable AssignmentPropertiesResponseAdditionalData additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
-        public Builder setAssignedComponent(@Nullable AssignedComponentItemResponse assignedComponent) {
+        public Builder assignedComponent(@Nullable AssignedComponentItemResponse assignedComponent) {
             this.assignedComponent = assignedComponent;
             return this;
         }
 
-        public Builder setAssignedStandard(@Nullable AssignedStandardItemResponse assignedStandard) {
+        public Builder assignedStandard(@Nullable AssignedStandardItemResponse assignedStandard) {
             this.assignedStandard = assignedStandard;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

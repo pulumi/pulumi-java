@@ -346,97 +346,97 @@ public final class GetGalleryImageResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisallowed(@Nullable DisallowedResponse disallowed) {
+        public Builder disallowed(@Nullable DisallowedResponse disallowed) {
             this.disallowed = disallowed;
             return this;
         }
 
-        public Builder setEndOfLifeDate(@Nullable String endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
-        public Builder setEula(@Nullable String eula) {
+        public Builder eula(@Nullable String eula) {
             this.eula = eula;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<GalleryImageFeatureResponse> features) {
+        public Builder features(@Nullable List<GalleryImageFeatureResponse> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable String hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentifier(GalleryImageIdentifierResponse identifier) {
+        public Builder identifier(GalleryImageIdentifierResponse identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsState(String osState) {
+        public Builder osState(String osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setPrivacyStatementUri(@Nullable String privacyStatementUri) {
+        public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable ImagePurchasePlanResponse purchasePlan) {
+        public Builder purchasePlan(@Nullable ImagePurchasePlanResponse purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
-        public Builder setRecommended(@Nullable RecommendedMachineConfigurationResponse recommended) {
+        public Builder recommended(@Nullable RecommendedMachineConfigurationResponse recommended) {
             this.recommended = recommended;
             return this;
         }
 
-        public Builder setReleaseNoteUri(@Nullable String releaseNoteUri) {
+        public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

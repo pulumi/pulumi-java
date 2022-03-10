@@ -328,162 +328,162 @@ public final class AddressState extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setAddressType(@Nullable Input<String> addressType) {
+        public Builder addressType(@Nullable Input<String> addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setAddressType(@Nullable String addressType) {
+        public Builder addressType(@Nullable String addressType) {
             this.addressType = Input.ofNullable(addressType);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabelFingerprint(@Nullable Input<String> labelFingerprint) {
+        public Builder labelFingerprint(@Nullable Input<String> labelFingerprint) {
             this.labelFingerprint = labelFingerprint;
             return this;
         }
 
-        public Builder setLabelFingerprint(@Nullable String labelFingerprint) {
+        public Builder labelFingerprint(@Nullable String labelFingerprint) {
             this.labelFingerprint = Input.ofNullable(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable Input<String> networkTier) {
+        public Builder networkTier(@Nullable Input<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable String networkTier) {
+        public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = Input.ofNullable(networkTier);
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Input.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Input<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setUsers(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Input<List<String>> users) {
             this.users = users;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<String> users) {
+        public Builder users(@Nullable List<String> users) {
             this.users = Input.ofNullable(users);
             return this;
         }

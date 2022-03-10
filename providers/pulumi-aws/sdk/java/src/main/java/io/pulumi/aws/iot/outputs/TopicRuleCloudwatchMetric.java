@@ -131,32 +131,32 @@ public final class TopicRuleCloudwatchMetric {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(String metricNamespace) {
+        public Builder metricNamespace(String metricNamespace) {
             this.metricNamespace = Objects.requireNonNull(metricNamespace);
             return this;
         }
 
-        public Builder setMetricTimestamp(@Nullable String metricTimestamp) {
+        public Builder metricTimestamp(@Nullable String metricTimestamp) {
             this.metricTimestamp = metricTimestamp;
             return this;
         }
 
-        public Builder setMetricUnit(String metricUnit) {
+        public Builder metricUnit(String metricUnit) {
             this.metricUnit = Objects.requireNonNull(metricUnit);
             return this;
         }
 
-        public Builder setMetricValue(String metricValue) {
+        public Builder metricValue(String metricValue) {
             this.metricValue = Objects.requireNonNull(metricValue);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

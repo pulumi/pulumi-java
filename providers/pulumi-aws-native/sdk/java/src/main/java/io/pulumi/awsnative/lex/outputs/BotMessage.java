@@ -70,22 +70,22 @@ public final class BotMessage {
     	      this.sSMLMessage = defaults.sSMLMessage;
         }
 
-        public Builder setCustomPayload(@Nullable BotCustomPayload customPayload) {
+        public Builder customPayload(@Nullable BotCustomPayload customPayload) {
             this.customPayload = customPayload;
             return this;
         }
 
-        public Builder setImageResponseCard(@Nullable BotImageResponseCard imageResponseCard) {
+        public Builder imageResponseCard(@Nullable BotImageResponseCard imageResponseCard) {
             this.imageResponseCard = imageResponseCard;
             return this;
         }
 
-        public Builder setPlainTextMessage(@Nullable BotPlainTextMessage plainTextMessage) {
+        public Builder plainTextMessage(@Nullable BotPlainTextMessage plainTextMessage) {
             this.plainTextMessage = plainTextMessage;
             return this;
         }
 
-        public Builder setSSMLMessage(@Nullable BotSSMLMessage sSMLMessage) {
+        public Builder sSMLMessage(@Nullable BotSSMLMessage sSMLMessage) {
             this.sSMLMessage = sSMLMessage;
             return this;
         }

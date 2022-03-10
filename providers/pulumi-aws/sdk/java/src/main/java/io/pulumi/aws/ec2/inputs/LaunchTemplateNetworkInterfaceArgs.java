@@ -280,152 +280,152 @@ public final class LaunchTemplateNetworkInterfaceArgs extends io.pulumi.resource
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociateCarrierIpAddress(@Nullable Input<String> associateCarrierIpAddress) {
+        public Builder associateCarrierIpAddress(@Nullable Input<String> associateCarrierIpAddress) {
             this.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
 
-        public Builder setAssociateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
+        public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
             this.associateCarrierIpAddress = Input.ofNullable(associateCarrierIpAddress);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Input<String> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Input<String> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable String associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
             this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Input<String> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Input<String> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable String deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
             this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Input<Integer> deviceIndex) {
+        public Builder deviceIndex(@Nullable Input<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Input.ofNullable(deviceIndex);
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable Input<String> interfaceType) {
+        public Builder interfaceType(@Nullable Input<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable String interfaceType) {
+        public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = Input.ofNullable(interfaceType);
             return this;
         }
 
-        public Builder setIpv4AddressCount(@Nullable Input<Integer> ipv4AddressCount) {
+        public Builder ipv4AddressCount(@Nullable Input<Integer> ipv4AddressCount) {
             this.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
 
-        public Builder setIpv4AddressCount(@Nullable Integer ipv4AddressCount) {
+        public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
             this.ipv4AddressCount = Input.ofNullable(ipv4AddressCount);
             return this;
         }
 
-        public Builder setIpv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
-        public Builder setIpv4Addresses(@Nullable List<String> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
             this.ipv4Addresses = Input.ofNullable(ipv4Addresses);
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder setNetworkCardIndex(@Nullable Input<Integer> networkCardIndex) {
+        public Builder networkCardIndex(@Nullable Input<Integer> networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
             return this;
         }
 
-        public Builder setNetworkCardIndex(@Nullable Integer networkCardIndex) {
+        public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
             this.networkCardIndex = Input.ofNullable(networkCardIndex);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

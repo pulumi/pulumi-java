@@ -65,12 +65,12 @@ public final class SoftwareRecipeArtifactRemoteResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

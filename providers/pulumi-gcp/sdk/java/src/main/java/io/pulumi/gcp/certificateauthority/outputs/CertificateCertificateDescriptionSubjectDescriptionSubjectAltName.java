@@ -108,27 +108,27 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     	      this.uris = defaults.uris;
         }
 
-        public Builder setCustomSans(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans) {
+        public Builder customSans(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans) {
             this.customSans = customSans;
             return this;
         }
 
-        public Builder setDnsNames(@Nullable List<String> dnsNames) {
+        public Builder dnsNames(@Nullable List<String> dnsNames) {
             this.dnsNames = dnsNames;
             return this;
         }
 
-        public Builder setEmailAddresses(@Nullable List<String> emailAddresses) {
+        public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setUris(@Nullable List<String> uris) {
+        public Builder uris(@Nullable List<String> uris) {
             this.uris = uris;
             return this;
         }

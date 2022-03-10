@@ -113,62 +113,62 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder setCharset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Input<String> charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = Input.ofNullable(charset);
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable Input<Boolean> containsHeader) {
+        public Builder containsHeader(@Nullable Input<Boolean> containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable Boolean containsHeader) {
+        public Builder containsHeader(@Nullable Boolean containsHeader) {
             this.containsHeader = Input.ofNullable(containsHeader);
             return this;
         }
 
-        public Builder setDelimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Input<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Input.ofNullable(delimiter);
             return this;
         }
 
-        public Builder setFileCompression(@Nullable Input<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression) {
+        public Builder fileCompression(@Nullable Input<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }
 
-        public Builder setFileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
+        public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = Input.ofNullable(fileCompression);
             return this;
         }
 
-        public Builder setHeaderList(@Nullable Input<List<String>> headerList) {
+        public Builder headerList(@Nullable Input<List<String>> headerList) {
             this.headerList = headerList;
             return this;
         }
 
-        public Builder setHeaderList(@Nullable List<String> headerList) {
+        public Builder headerList(@Nullable List<String> headerList) {
             this.headerList = Input.ofNullable(headerList);
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable Input<String> quoteSymbol) {
+        public Builder quoteSymbol(@Nullable Input<String> quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable String quoteSymbol) {
+        public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = Input.ofNullable(quoteSymbol);
             return this;
         }

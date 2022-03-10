@@ -75,12 +75,12 @@ public final class CorsSettingsResponse {
     	      this.supportCredentials = defaults.supportCredentials;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
-        public Builder setSupportCredentials(@Nullable Boolean supportCredentials) {
+        public Builder supportCredentials(@Nullable Boolean supportCredentials) {
             this.supportCredentials = supportCredentials;
             return this;
         }

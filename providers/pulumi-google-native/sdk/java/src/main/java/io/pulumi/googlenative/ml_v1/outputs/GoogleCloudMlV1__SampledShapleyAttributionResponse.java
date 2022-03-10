@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
     	      this.numPaths = defaults.numPaths;
         }
 
-        public Builder setNumPaths(Integer numPaths) {
+        public Builder numPaths(Integer numPaths) {
             this.numPaths = Objects.requireNonNull(numPaths);
             return this;
         }

@@ -315,172 +315,172 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoCompleteRestore(@Nullable Input<Boolean> autoCompleteRestore) {
+        public Builder autoCompleteRestore(@Nullable Input<Boolean> autoCompleteRestore) {
             this.autoCompleteRestore = autoCompleteRestore;
             return this;
         }
 
-        public Builder setAutoCompleteRestore(@Nullable Boolean autoCompleteRestore) {
+        public Builder autoCompleteRestore(@Nullable Boolean autoCompleteRestore) {
             this.autoCompleteRestore = Input.ofNullable(autoCompleteRestore);
             return this;
         }
 
-        public Builder setCatalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
+        public Builder catalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
-        public Builder setCatalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
+        public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
             this.catalogCollation = Input.ofNullable(catalogCollation);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode) {
+        public Builder createMode(@Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Either<String,ManagedDatabaseCreateMode> createMode) {
+        public Builder createMode(@Nullable Either<String,ManagedDatabaseCreateMode> createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setLastBackupName(@Nullable Input<String> lastBackupName) {
+        public Builder lastBackupName(@Nullable Input<String> lastBackupName) {
             this.lastBackupName = lastBackupName;
             return this;
         }
 
-        public Builder setLastBackupName(@Nullable String lastBackupName) {
+        public Builder lastBackupName(@Nullable String lastBackupName) {
             this.lastBackupName = Input.ofNullable(lastBackupName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLongTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
 
-        public Builder setLongTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = Input.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
 
-        public Builder setManagedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Input<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
-        public Builder setManagedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder setRecoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
-        public Builder setRecoverableDatabaseId(@Nullable String recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = Input.ofNullable(recoverableDatabaseId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
 
-        public Builder setRestorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = Input.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable String restorePointInTime) {
+        public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Input.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder setSourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
-        public Builder setSourceDatabaseId(@Nullable String sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = Input.ofNullable(sourceDatabaseId);
             return this;
         }
 
-        public Builder setStorageContainerSasToken(@Nullable Input<String> storageContainerSasToken) {
+        public Builder storageContainerSasToken(@Nullable Input<String> storageContainerSasToken) {
             this.storageContainerSasToken = storageContainerSasToken;
             return this;
         }
 
-        public Builder setStorageContainerSasToken(@Nullable String storageContainerSasToken) {
+        public Builder storageContainerSasToken(@Nullable String storageContainerSasToken) {
             this.storageContainerSasToken = Input.ofNullable(storageContainerSasToken);
             return this;
         }
 
-        public Builder setStorageContainerUri(@Nullable Input<String> storageContainerUri) {
+        public Builder storageContainerUri(@Nullable Input<String> storageContainerUri) {
             this.storageContainerUri = storageContainerUri;
             return this;
         }
 
-        public Builder setStorageContainerUri(@Nullable String storageContainerUri) {
+        public Builder storageContainerUri(@Nullable String storageContainerUri) {
             this.storageContainerUri = Input.ofNullable(storageContainerUri);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

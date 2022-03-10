@@ -52,7 +52,7 @@ public final class ClusterMasterAuthorizedNetworksConfig {
     	      this.cidrBlocks = defaults.cidrBlocks;
         }
 
-        public Builder setCidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }

@@ -67,12 +67,12 @@ public final class SystemParameterRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setParameters(List<SystemParameterResponse> parameters) {
+        public Builder parameters(List<SystemParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

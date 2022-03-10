@@ -67,12 +67,12 @@ public final class VirtualNetworkProfileResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }

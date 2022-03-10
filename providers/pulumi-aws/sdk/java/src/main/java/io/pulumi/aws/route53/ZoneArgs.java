@@ -138,62 +138,62 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcs = defaults.vpcs;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setDelegationSetId(@Nullable Input<String> delegationSetId) {
+        public Builder delegationSetId(@Nullable Input<String> delegationSetId) {
             this.delegationSetId = delegationSetId;
             return this;
         }
 
-        public Builder setDelegationSetId(@Nullable String delegationSetId) {
+        public Builder delegationSetId(@Nullable String delegationSetId) {
             this.delegationSetId = Input.ofNullable(delegationSetId);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcs(@Nullable Input<List<ZoneVpcArgs>> vpcs) {
+        public Builder vpcs(@Nullable Input<List<ZoneVpcArgs>> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
 
-        public Builder setVpcs(@Nullable List<ZoneVpcArgs> vpcs) {
+        public Builder vpcs(@Nullable List<ZoneVpcArgs> vpcs) {
             this.vpcs = Input.ofNullable(vpcs);
             return this;
         }

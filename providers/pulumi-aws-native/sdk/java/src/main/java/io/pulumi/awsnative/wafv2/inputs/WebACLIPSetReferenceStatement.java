@@ -63,12 +63,12 @@ public final class WebACLIPSetReferenceStatement extends io.pulumi.resources.Inv
     	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setIPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }

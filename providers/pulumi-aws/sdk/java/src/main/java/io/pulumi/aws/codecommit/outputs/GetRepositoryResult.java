@@ -121,32 +121,32 @@ public final class GetRepositoryResult {
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCloneUrlHttp(String cloneUrlHttp) {
+        public Builder cloneUrlHttp(String cloneUrlHttp) {
             this.cloneUrlHttp = Objects.requireNonNull(cloneUrlHttp);
             return this;
         }
 
-        public Builder setCloneUrlSsh(String cloneUrlSsh) {
+        public Builder cloneUrlSsh(String cloneUrlSsh) {
             this.cloneUrlSsh = Objects.requireNonNull(cloneUrlSsh);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRepositoryId(String repositoryId) {
+        public Builder repositoryId(String repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }

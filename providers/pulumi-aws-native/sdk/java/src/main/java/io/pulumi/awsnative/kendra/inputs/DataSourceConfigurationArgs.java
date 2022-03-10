@@ -167,102 +167,102 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     	      this.workDocsConfiguration = defaults.workDocsConfiguration;
         }
 
-        public Builder setConfluenceConfiguration(@Nullable Input<DataSourceConfluenceConfigurationArgs> confluenceConfiguration) {
+        public Builder confluenceConfiguration(@Nullable Input<DataSourceConfluenceConfigurationArgs> confluenceConfiguration) {
             this.confluenceConfiguration = confluenceConfiguration;
             return this;
         }
 
-        public Builder setConfluenceConfiguration(@Nullable DataSourceConfluenceConfigurationArgs confluenceConfiguration) {
+        public Builder confluenceConfiguration(@Nullable DataSourceConfluenceConfigurationArgs confluenceConfiguration) {
             this.confluenceConfiguration = Input.ofNullable(confluenceConfiguration);
             return this;
         }
 
-        public Builder setDatabaseConfiguration(@Nullable Input<DataSourceDatabaseConfigurationArgs> databaseConfiguration) {
+        public Builder databaseConfiguration(@Nullable Input<DataSourceDatabaseConfigurationArgs> databaseConfiguration) {
             this.databaseConfiguration = databaseConfiguration;
             return this;
         }
 
-        public Builder setDatabaseConfiguration(@Nullable DataSourceDatabaseConfigurationArgs databaseConfiguration) {
+        public Builder databaseConfiguration(@Nullable DataSourceDatabaseConfigurationArgs databaseConfiguration) {
             this.databaseConfiguration = Input.ofNullable(databaseConfiguration);
             return this;
         }
 
-        public Builder setGoogleDriveConfiguration(@Nullable Input<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration) {
+        public Builder googleDriveConfiguration(@Nullable Input<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration) {
             this.googleDriveConfiguration = googleDriveConfiguration;
             return this;
         }
 
-        public Builder setGoogleDriveConfiguration(@Nullable DataSourceGoogleDriveConfigurationArgs googleDriveConfiguration) {
+        public Builder googleDriveConfiguration(@Nullable DataSourceGoogleDriveConfigurationArgs googleDriveConfiguration) {
             this.googleDriveConfiguration = Input.ofNullable(googleDriveConfiguration);
             return this;
         }
 
-        public Builder setOneDriveConfiguration(@Nullable Input<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration) {
+        public Builder oneDriveConfiguration(@Nullable Input<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration) {
             this.oneDriveConfiguration = oneDriveConfiguration;
             return this;
         }
 
-        public Builder setOneDriveConfiguration(@Nullable DataSourceOneDriveConfigurationArgs oneDriveConfiguration) {
+        public Builder oneDriveConfiguration(@Nullable DataSourceOneDriveConfigurationArgs oneDriveConfiguration) {
             this.oneDriveConfiguration = Input.ofNullable(oneDriveConfiguration);
             return this;
         }
 
-        public Builder setS3Configuration(@Nullable Input<DataSourceS3DataSourceConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(@Nullable Input<DataSourceS3DataSourceConfigurationArgs> s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
 
-        public Builder setS3Configuration(@Nullable DataSourceS3DataSourceConfigurationArgs s3Configuration) {
+        public Builder s3Configuration(@Nullable DataSourceS3DataSourceConfigurationArgs s3Configuration) {
             this.s3Configuration = Input.ofNullable(s3Configuration);
             return this;
         }
 
-        public Builder setSalesforceConfiguration(@Nullable Input<DataSourceSalesforceConfigurationArgs> salesforceConfiguration) {
+        public Builder salesforceConfiguration(@Nullable Input<DataSourceSalesforceConfigurationArgs> salesforceConfiguration) {
             this.salesforceConfiguration = salesforceConfiguration;
             return this;
         }
 
-        public Builder setSalesforceConfiguration(@Nullable DataSourceSalesforceConfigurationArgs salesforceConfiguration) {
+        public Builder salesforceConfiguration(@Nullable DataSourceSalesforceConfigurationArgs salesforceConfiguration) {
             this.salesforceConfiguration = Input.ofNullable(salesforceConfiguration);
             return this;
         }
 
-        public Builder setServiceNowConfiguration(@Nullable Input<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration) {
+        public Builder serviceNowConfiguration(@Nullable Input<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration) {
             this.serviceNowConfiguration = serviceNowConfiguration;
             return this;
         }
 
-        public Builder setServiceNowConfiguration(@Nullable DataSourceServiceNowConfigurationArgs serviceNowConfiguration) {
+        public Builder serviceNowConfiguration(@Nullable DataSourceServiceNowConfigurationArgs serviceNowConfiguration) {
             this.serviceNowConfiguration = Input.ofNullable(serviceNowConfiguration);
             return this;
         }
 
-        public Builder setSharePointConfiguration(@Nullable Input<DataSourceSharePointConfigurationArgs> sharePointConfiguration) {
+        public Builder sharePointConfiguration(@Nullable Input<DataSourceSharePointConfigurationArgs> sharePointConfiguration) {
             this.sharePointConfiguration = sharePointConfiguration;
             return this;
         }
 
-        public Builder setSharePointConfiguration(@Nullable DataSourceSharePointConfigurationArgs sharePointConfiguration) {
+        public Builder sharePointConfiguration(@Nullable DataSourceSharePointConfigurationArgs sharePointConfiguration) {
             this.sharePointConfiguration = Input.ofNullable(sharePointConfiguration);
             return this;
         }
 
-        public Builder setWebCrawlerConfiguration(@Nullable Input<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration) {
+        public Builder webCrawlerConfiguration(@Nullable Input<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration) {
             this.webCrawlerConfiguration = webCrawlerConfiguration;
             return this;
         }
 
-        public Builder setWebCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfigurationArgs webCrawlerConfiguration) {
+        public Builder webCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfigurationArgs webCrawlerConfiguration) {
             this.webCrawlerConfiguration = Input.ofNullable(webCrawlerConfiguration);
             return this;
         }
 
-        public Builder setWorkDocsConfiguration(@Nullable Input<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration) {
+        public Builder workDocsConfiguration(@Nullable Input<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration) {
             this.workDocsConfiguration = workDocsConfiguration;
             return this;
         }
 
-        public Builder setWorkDocsConfiguration(@Nullable DataSourceWorkDocsConfigurationArgs workDocsConfiguration) {
+        public Builder workDocsConfiguration(@Nullable DataSourceWorkDocsConfigurationArgs workDocsConfiguration) {
             this.workDocsConfiguration = Input.ofNullable(workDocsConfiguration);
             return this;
         }

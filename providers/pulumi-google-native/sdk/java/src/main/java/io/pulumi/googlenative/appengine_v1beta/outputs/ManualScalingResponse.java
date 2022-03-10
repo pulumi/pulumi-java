@@ -48,7 +48,7 @@ public final class ManualScalingResponse {
     	      this.instances = defaults.instances;
         }
 
-        public Builder setInstances(Integer instances) {
+        public Builder instances(Integer instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }

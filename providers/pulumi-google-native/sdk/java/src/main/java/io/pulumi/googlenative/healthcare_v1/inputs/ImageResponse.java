@@ -72,12 +72,12 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rawBytes = defaults.rawBytes;
         }
 
-        public Builder setGcsUri(String gcsUri) {
+        public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
 
-        public Builder setRawBytes(String rawBytes) {
+        public Builder rawBytes(String rawBytes) {
             this.rawBytes = Objects.requireNonNull(rawBytes);
             return this;
         }

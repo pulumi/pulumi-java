@@ -90,32 +90,32 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.gpuPartitionSize = defaults.gpuPartitionSize;
         }
 
-        public Builder setAcceleratorCount(@Nullable Input<String> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Input<String> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
-        public Builder setAcceleratorCount(@Nullable String acceleratorCount) {
+        public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Input.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder setGpuPartitionSize(@Nullable Input<String> gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable Input<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
-        public Builder setGpuPartitionSize(@Nullable String gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = Input.ofNullable(gpuPartitionSize);
             return this;
         }

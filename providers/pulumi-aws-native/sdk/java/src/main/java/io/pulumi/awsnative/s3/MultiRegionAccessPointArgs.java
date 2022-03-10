@@ -89,32 +89,32 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
     	      this.regions = defaults.regions;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Input<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable MultiRegionAccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable MultiRegionAccessPointPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder setRegions(Input<List<MultiRegionAccessPointRegionArgs>> regions) {
+        public Builder regions(Input<List<MultiRegionAccessPointRegionArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
-        public Builder setRegions(List<MultiRegionAccessPointRegionArgs> regions) {
+        public Builder regions(List<MultiRegionAccessPointRegionArgs> regions) {
             this.regions = Input.of(Objects.requireNonNull(regions));
             return this;
         }

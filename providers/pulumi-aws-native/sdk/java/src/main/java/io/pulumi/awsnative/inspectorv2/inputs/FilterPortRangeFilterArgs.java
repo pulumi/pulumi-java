@@ -62,22 +62,22 @@ public final class FilterPortRangeFilterArgs extends io.pulumi.resources.Resourc
     	      this.endInclusive = defaults.endInclusive;
         }
 
-        public Builder setBeginInclusive(@Nullable Input<Integer> beginInclusive) {
+        public Builder beginInclusive(@Nullable Input<Integer> beginInclusive) {
             this.beginInclusive = beginInclusive;
             return this;
         }
 
-        public Builder setBeginInclusive(@Nullable Integer beginInclusive) {
+        public Builder beginInclusive(@Nullable Integer beginInclusive) {
             this.beginInclusive = Input.ofNullable(beginInclusive);
             return this;
         }
 
-        public Builder setEndInclusive(@Nullable Input<Integer> endInclusive) {
+        public Builder endInclusive(@Nullable Input<Integer> endInclusive) {
             this.endInclusive = endInclusive;
             return this;
         }
 
-        public Builder setEndInclusive(@Nullable Integer endInclusive) {
+        public Builder endInclusive(@Nullable Integer endInclusive) {
             this.endInclusive = Input.ofNullable(endInclusive);
             return this;
         }

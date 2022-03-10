@@ -75,22 +75,22 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.fromPlugin = defaults.fromPlugin;
         }
 
-        public Builder setCallCredentialType(@Nullable Input<CallCredentialsCallCredentialType> callCredentialType) {
+        public Builder callCredentialType(@Nullable Input<CallCredentialsCallCredentialType> callCredentialType) {
             this.callCredentialType = callCredentialType;
             return this;
         }
 
-        public Builder setCallCredentialType(@Nullable CallCredentialsCallCredentialType callCredentialType) {
+        public Builder callCredentialType(@Nullable CallCredentialsCallCredentialType callCredentialType) {
             this.callCredentialType = Input.ofNullable(callCredentialType);
             return this;
         }
 
-        public Builder setFromPlugin(@Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin) {
+        public Builder fromPlugin(@Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin) {
             this.fromPlugin = fromPlugin;
             return this;
         }
 
-        public Builder setFromPlugin(@Nullable MetadataCredentialsFromPluginArgs fromPlugin) {
+        public Builder fromPlugin(@Nullable MetadataCredentialsFromPluginArgs fromPlugin) {
             this.fromPlugin = Input.ofNullable(fromPlugin);
             return this;
         }

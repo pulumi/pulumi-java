@@ -294,7 +294,7 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
     private static EventHubEventSourceArgs makeArgs(EventHubEventSourceArgs args) {
         var builder = args == null ? EventHubEventSourceArgs.builder() : EventHubEventSourceArgs.builder(args);
         return builder
-            .setKind("Microsoft.EventHub")
+            .kind("Microsoft.EventHub")
             .build();
     }
 

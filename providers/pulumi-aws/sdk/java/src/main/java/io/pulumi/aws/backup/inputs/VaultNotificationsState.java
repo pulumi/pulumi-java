@@ -103,42 +103,42 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setBackupVaultArn(@Nullable Input<String> backupVaultArn) {
+        public Builder backupVaultArn(@Nullable Input<String> backupVaultArn) {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
 
-        public Builder setBackupVaultArn(@Nullable String backupVaultArn) {
+        public Builder backupVaultArn(@Nullable String backupVaultArn) {
             this.backupVaultArn = Input.ofNullable(backupVaultArn);
             return this;
         }
 
-        public Builder setBackupVaultEvents(@Nullable Input<List<String>> backupVaultEvents) {
+        public Builder backupVaultEvents(@Nullable Input<List<String>> backupVaultEvents) {
             this.backupVaultEvents = backupVaultEvents;
             return this;
         }
 
-        public Builder setBackupVaultEvents(@Nullable List<String> backupVaultEvents) {
+        public Builder backupVaultEvents(@Nullable List<String> backupVaultEvents) {
             this.backupVaultEvents = Input.ofNullable(backupVaultEvents);
             return this;
         }
 
-        public Builder setBackupVaultName(@Nullable Input<String> backupVaultName) {
+        public Builder backupVaultName(@Nullable Input<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
 
-        public Builder setBackupVaultName(@Nullable String backupVaultName) {
+        public Builder backupVaultName(@Nullable String backupVaultName) {
             this.backupVaultName = Input.ofNullable(backupVaultName);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }

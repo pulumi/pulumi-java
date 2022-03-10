@@ -50,7 +50,7 @@ public final class ServiceProviderParameterResponseMetadata {
     	      this.constraints = defaults.constraints;
         }
 
-        public Builder setConstraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
+        public Builder constraints(@Nullable ServiceProviderParameterResponseConstraints constraints) {
             this.constraints = constraints;
             return this;
         }

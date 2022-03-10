@@ -397,112 +397,112 @@ public final class GetDomainServiceResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setDomainConfigurationType(@Nullable String domainConfigurationType) {
+        public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
             this.domainConfigurationType = domainConfigurationType;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainSecuritySettings(@Nullable DomainSecuritySettingsResponse domainSecuritySettings) {
+        public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsResponse domainSecuritySettings) {
             this.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFilteredSync(@Nullable String filteredSync) {
+        public Builder filteredSync(@Nullable String filteredSync) {
             this.filteredSync = filteredSync;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLdapsSettings(@Nullable LdapsSettingsResponse ldapsSettings) {
+        public Builder ldapsSettings(@Nullable LdapsSettingsResponse ldapsSettings) {
             this.ldapsSettings = ldapsSettings;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMigrationProperties(MigrationPropertiesResponse migrationProperties) {
+        public Builder migrationProperties(MigrationPropertiesResponse migrationProperties) {
             this.migrationProperties = Objects.requireNonNull(migrationProperties);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
+        public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReplicaSets(@Nullable List<ReplicaSetResponse> replicaSets) {
+        public Builder replicaSets(@Nullable List<ReplicaSetResponse> replicaSets) {
             this.replicaSets = replicaSets;
             return this;
         }
 
-        public Builder setResourceForestSettings(@Nullable ResourceForestSettingsResponse resourceForestSettings) {
+        public Builder resourceForestSettings(@Nullable ResourceForestSettingsResponse resourceForestSettings) {
             this.resourceForestSettings = resourceForestSettings;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSyncOwner(String syncOwner) {
+        public Builder syncOwner(String syncOwner) {
             this.syncOwner = Objects.requireNonNull(syncOwner);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

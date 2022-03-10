@@ -53,12 +53,12 @@ public final class DashboardSourceEntityArgs extends io.pulumi.resources.Resourc
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceTemplate(@Nullable Input<DashboardSourceTemplateArgs> sourceTemplate) {
+        public Builder sourceTemplate(@Nullable Input<DashboardSourceTemplateArgs> sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
 
-        public Builder setSourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
+        public Builder sourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
             this.sourceTemplate = Input.ofNullable(sourceTemplate);
             return this;
         }

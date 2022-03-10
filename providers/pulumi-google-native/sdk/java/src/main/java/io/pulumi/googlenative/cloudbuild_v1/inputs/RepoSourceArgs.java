@@ -172,82 +172,82 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setBranchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Input<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = Input.ofNullable(branchName);
             return this;
         }
 
-        public Builder setCommitSha(@Nullable Input<String> commitSha) {
+        public Builder commitSha(@Nullable Input<String> commitSha) {
             this.commitSha = commitSha;
             return this;
         }
 
-        public Builder setCommitSha(@Nullable String commitSha) {
+        public Builder commitSha(@Nullable String commitSha) {
             this.commitSha = Input.ofNullable(commitSha);
             return this;
         }
 
-        public Builder setDir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Input<String> dir) {
             this.dir = dir;
             return this;
         }
 
-        public Builder setDir(@Nullable String dir) {
+        public Builder dir(@Nullable String dir) {
             this.dir = Input.ofNullable(dir);
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRepoName(@Nullable Input<String> repoName) {
+        public Builder repoName(@Nullable Input<String> repoName) {
             this.repoName = repoName;
             return this;
         }
 
-        public Builder setRepoName(@Nullable String repoName) {
+        public Builder repoName(@Nullable String repoName) {
             this.repoName = Input.ofNullable(repoName);
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Map<String,String> substitutions) {
+        public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Input.ofNullable(substitutions);
             return this;
         }
 
-        public Builder setTagName(@Nullable Input<String> tagName) {
+        public Builder tagName(@Nullable Input<String> tagName) {
             this.tagName = tagName;
             return this;
         }
 
-        public Builder setTagName(@Nullable String tagName) {
+        public Builder tagName(@Nullable String tagName) {
             this.tagName = Input.ofNullable(tagName);
             return this;
         }

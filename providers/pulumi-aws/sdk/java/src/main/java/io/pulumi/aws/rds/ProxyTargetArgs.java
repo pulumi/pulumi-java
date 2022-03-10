@@ -102,42 +102,42 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setDbProxyName(Input<String> dbProxyName) {
+        public Builder dbProxyName(Input<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
 
-        public Builder setDbProxyName(String dbProxyName) {
+        public Builder dbProxyName(String dbProxyName) {
             this.dbProxyName = Input.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
 
-        public Builder setTargetGroupName(Input<String> targetGroupName) {
+        public Builder targetGroupName(Input<String> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
 
-        public Builder setTargetGroupName(String targetGroupName) {
+        public Builder targetGroupName(String targetGroupName) {
             this.targetGroupName = Input.of(Objects.requireNonNull(targetGroupName));
             return this;
         }

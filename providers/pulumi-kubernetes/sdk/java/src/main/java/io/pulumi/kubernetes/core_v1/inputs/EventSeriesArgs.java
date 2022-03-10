@@ -91,32 +91,32 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setLastObservedTime(@Nullable Input<String> lastObservedTime) {
+        public Builder lastObservedTime(@Nullable Input<String> lastObservedTime) {
             this.lastObservedTime = lastObservedTime;
             return this;
         }
 
-        public Builder setLastObservedTime(@Nullable String lastObservedTime) {
+        public Builder lastObservedTime(@Nullable String lastObservedTime) {
             this.lastObservedTime = Input.ofNullable(lastObservedTime);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

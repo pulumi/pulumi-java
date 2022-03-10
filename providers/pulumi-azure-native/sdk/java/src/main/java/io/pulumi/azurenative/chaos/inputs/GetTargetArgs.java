@@ -116,27 +116,27 @@ public final class GetTargetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.targetName = defaults.targetName;
         }
 
-        public Builder setParentProviderNamespace(String parentProviderNamespace) {
+        public Builder parentProviderNamespace(String parentProviderNamespace) {
             this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
             return this;
         }
 
-        public Builder setParentResourceName(String parentResourceName) {
+        public Builder parentResourceName(String parentResourceName) {
             this.parentResourceName = Objects.requireNonNull(parentResourceName);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTargetName(String targetName) {
+        public Builder targetName(String targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }

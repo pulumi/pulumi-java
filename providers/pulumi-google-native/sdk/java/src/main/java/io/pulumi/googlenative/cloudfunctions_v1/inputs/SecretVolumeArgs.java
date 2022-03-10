@@ -108,42 +108,42 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setMountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Input<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<List<SecretVersionArgs>> versions) {
+        public Builder versions(@Nullable Input<List<SecretVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<SecretVersionArgs> versions) {
+        public Builder versions(@Nullable List<SecretVersionArgs> versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

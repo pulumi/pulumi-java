@@ -56,12 +56,12 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
     	      this.dataRetention = defaults.dataRetention;
         }
 
-        public Builder setDataRetention(Input<String> dataRetention) {
+        public Builder dataRetention(Input<String> dataRetention) {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
 
-        public Builder setDataRetention(String dataRetention) {
+        public Builder dataRetention(String dataRetention) {
             this.dataRetention = Input.of(Objects.requireNonNull(dataRetention));
             return this;
         }

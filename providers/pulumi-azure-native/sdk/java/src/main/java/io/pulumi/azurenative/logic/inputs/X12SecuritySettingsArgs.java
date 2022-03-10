@@ -106,42 +106,42 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     	      this.securityQualifier = defaults.securityQualifier;
         }
 
-        public Builder setAuthorizationQualifier(Input<String> authorizationQualifier) {
+        public Builder authorizationQualifier(Input<String> authorizationQualifier) {
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
 
-        public Builder setAuthorizationQualifier(String authorizationQualifier) {
+        public Builder authorizationQualifier(String authorizationQualifier) {
             this.authorizationQualifier = Input.of(Objects.requireNonNull(authorizationQualifier));
             return this;
         }
 
-        public Builder setAuthorizationValue(@Nullable Input<String> authorizationValue) {
+        public Builder authorizationValue(@Nullable Input<String> authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
 
-        public Builder setAuthorizationValue(@Nullable String authorizationValue) {
+        public Builder authorizationValue(@Nullable String authorizationValue) {
             this.authorizationValue = Input.ofNullable(authorizationValue);
             return this;
         }
 
-        public Builder setPasswordValue(@Nullable Input<String> passwordValue) {
+        public Builder passwordValue(@Nullable Input<String> passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
 
-        public Builder setPasswordValue(@Nullable String passwordValue) {
+        public Builder passwordValue(@Nullable String passwordValue) {
             this.passwordValue = Input.ofNullable(passwordValue);
             return this;
         }
 
-        public Builder setSecurityQualifier(Input<String> securityQualifier) {
+        public Builder securityQualifier(Input<String> securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }
 
-        public Builder setSecurityQualifier(String securityQualifier) {
+        public Builder securityQualifier(String securityQualifier) {
             this.securityQualifier = Input.of(Objects.requireNonNull(securityQualifier));
             return this;
         }

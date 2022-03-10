@@ -74,22 +74,22 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     	      this.forceVerbatimMode = defaults.forceVerbatimMode;
         }
 
-        public Builder setForceDisableSupplementalResults(@Nullable Input<Boolean> forceDisableSupplementalResults) {
+        public Builder forceDisableSupplementalResults(@Nullable Input<Boolean> forceDisableSupplementalResults) {
             this.forceDisableSupplementalResults = forceDisableSupplementalResults;
             return this;
         }
 
-        public Builder setForceDisableSupplementalResults(@Nullable Boolean forceDisableSupplementalResults) {
+        public Builder forceDisableSupplementalResults(@Nullable Boolean forceDisableSupplementalResults) {
             this.forceDisableSupplementalResults = Input.ofNullable(forceDisableSupplementalResults);
             return this;
         }
 
-        public Builder setForceVerbatimMode(@Nullable Input<Boolean> forceVerbatimMode) {
+        public Builder forceVerbatimMode(@Nullable Input<Boolean> forceVerbatimMode) {
             this.forceVerbatimMode = forceVerbatimMode;
             return this;
         }
 
-        public Builder setForceVerbatimMode(@Nullable Boolean forceVerbatimMode) {
+        public Builder forceVerbatimMode(@Nullable Boolean forceVerbatimMode) {
             this.forceVerbatimMode = Input.ofNullable(forceVerbatimMode);
             return this;
         }

@@ -63,12 +63,12 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
     	      this.root = defaults.root;
         }
 
-        public Builder setMode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
+        public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRoot(@Nullable LaunchProfileStreamingSessionStorageRoot root) {
+        public Builder root(@Nullable LaunchProfileStreamingSessionStorageRoot root) {
             this.root = root;
             return this;
         }

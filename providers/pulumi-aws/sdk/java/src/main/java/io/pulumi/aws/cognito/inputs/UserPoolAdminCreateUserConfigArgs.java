@@ -71,22 +71,22 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
     	      this.inviteMessageTemplate = defaults.inviteMessageTemplate;
         }
 
-        public Builder setAllowAdminCreateUserOnly(@Nullable Input<Boolean> allowAdminCreateUserOnly) {
+        public Builder allowAdminCreateUserOnly(@Nullable Input<Boolean> allowAdminCreateUserOnly) {
             this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
             return this;
         }
 
-        public Builder setAllowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
+        public Builder allowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
             this.allowAdminCreateUserOnly = Input.ofNullable(allowAdminCreateUserOnly);
             return this;
         }
 
-        public Builder setInviteMessageTemplate(@Nullable Input<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate) {
+        public Builder inviteMessageTemplate(@Nullable Input<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate) {
             this.inviteMessageTemplate = inviteMessageTemplate;
             return this;
         }
 
-        public Builder setInviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplateArgs inviteMessageTemplate) {
+        public Builder inviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplateArgs inviteMessageTemplate) {
             this.inviteMessageTemplate = Input.ofNullable(inviteMessageTemplate);
             return this;
         }

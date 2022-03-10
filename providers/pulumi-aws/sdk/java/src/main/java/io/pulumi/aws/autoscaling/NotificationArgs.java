@@ -87,32 +87,32 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setGroupNames(Input<List<String>> groupNames) {
+        public Builder groupNames(Input<List<String>> groupNames) {
             this.groupNames = Objects.requireNonNull(groupNames);
             return this;
         }
 
-        public Builder setGroupNames(List<String> groupNames) {
+        public Builder groupNames(List<String> groupNames) {
             this.groupNames = Input.of(Objects.requireNonNull(groupNames));
             return this;
         }
 
-        public Builder setNotifications(Input<List<String>> notifications) {
+        public Builder notifications(Input<List<String>> notifications) {
             this.notifications = Objects.requireNonNull(notifications);
             return this;
         }
 
-        public Builder setNotifications(List<String> notifications) {
+        public Builder notifications(List<String> notifications) {
             this.notifications = Input.of(Objects.requireNonNull(notifications));
             return this;
         }
 
-        public Builder setTopicArn(Input<String> topicArn) {
+        public Builder topicArn(Input<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }

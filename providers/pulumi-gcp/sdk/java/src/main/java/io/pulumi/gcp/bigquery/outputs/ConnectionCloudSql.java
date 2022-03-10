@@ -102,22 +102,22 @@ public final class ConnectionCloudSql {
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(ConnectionCloudSqlCredential credential) {
+        public Builder credential(ConnectionCloudSqlCredential credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

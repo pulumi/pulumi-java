@@ -125,52 +125,52 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
     	      this.query = defaults.query;
         }
 
-        public Builder setAuthorization(@Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization) {
+        public Builder authorization(@Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
+        public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
             this.authorization = Input.ofNullable(authorization);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<List<String>> certificate) {
+        public Builder certificate(@Nullable Input<List<String>> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable List<String> certificate) {
+        public Builder certificate(@Nullable List<String> certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificateIds(@Nullable Input<List<String>> certificateIds) {
+        public Builder certificateIds(@Nullable Input<List<String>> certificateIds) {
             this.certificateIds = certificateIds;
             return this;
         }
 
-        public Builder setCertificateIds(@Nullable List<String> certificateIds) {
+        public Builder certificateIds(@Nullable List<String> certificateIds) {
             this.certificateIds = Input.ofNullable(certificateIds);
             return this;
         }
 
-        public Builder setHeader(@Nullable Input<Map<String,List<String>>> header) {
+        public Builder header(@Nullable Input<Map<String,List<String>>> header) {
             this.header = header;
             return this;
         }
 
-        public Builder setHeader(@Nullable Map<String,List<String>> header) {
+        public Builder header(@Nullable Map<String,List<String>> header) {
             this.header = Input.ofNullable(header);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<Map<String,List<String>>> query) {
+        public Builder query(@Nullable Input<Map<String,List<String>>> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable Map<String,List<String>> query) {
+        public Builder query(@Nullable Map<String,List<String>> query) {
             this.query = Input.ofNullable(query);
             return this;
         }

@@ -50,7 +50,7 @@ public final class GetResolverRuleAssociationResult {
     	      this.resolverRuleAssociationId = defaults.resolverRuleAssociationId;
         }
 
-        public Builder setResolverRuleAssociationId(@Nullable String resolverRuleAssociationId) {
+        public Builder resolverRuleAssociationId(@Nullable String resolverRuleAssociationId) {
             this.resolverRuleAssociationId = resolverRuleAssociationId;
             return this;
         }

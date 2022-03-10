@@ -55,7 +55,7 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder setScriptPath(String scriptPath) {
+        public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }

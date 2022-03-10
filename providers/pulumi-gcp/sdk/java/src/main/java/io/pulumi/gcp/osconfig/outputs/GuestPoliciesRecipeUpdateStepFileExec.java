@@ -101,22 +101,22 @@ public final class GuestPoliciesRecipeUpdateStepFileExec {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }

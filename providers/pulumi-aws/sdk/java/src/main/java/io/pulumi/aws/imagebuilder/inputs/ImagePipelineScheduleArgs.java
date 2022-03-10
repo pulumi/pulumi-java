@@ -70,22 +70,22 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setPipelineExecutionStartCondition(@Nullable Input<String> pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(@Nullable Input<String> pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
-        public Builder setPipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = Input.ofNullable(pipelineExecutionStartCondition);
             return this;
         }
 
-        public Builder setScheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Input<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }

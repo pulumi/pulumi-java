@@ -155,37 +155,37 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
     	      this.sourceResourceId = defaults.sourceResourceId;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setItemId(@Nullable String itemId) {
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectionIntentItemType(String protectionIntentItemType) {
+        public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }

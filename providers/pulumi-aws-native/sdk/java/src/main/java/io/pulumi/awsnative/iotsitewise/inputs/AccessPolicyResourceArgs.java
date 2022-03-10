@@ -67,22 +67,22 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     	      this.project = defaults.project;
         }
 
-        public Builder setPortal(@Nullable Input<AccessPolicyPortalArgs> portal) {
+        public Builder portal(@Nullable Input<AccessPolicyPortalArgs> portal) {
             this.portal = portal;
             return this;
         }
 
-        public Builder setPortal(@Nullable AccessPolicyPortalArgs portal) {
+        public Builder portal(@Nullable AccessPolicyPortalArgs portal) {
             this.portal = Input.ofNullable(portal);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<AccessPolicyProjectArgs> project) {
+        public Builder project(@Nullable Input<AccessPolicyProjectArgs> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable AccessPolicyProjectArgs project) {
+        public Builder project(@Nullable AccessPolicyProjectArgs project) {
             this.project = Input.ofNullable(project);
             return this;
         }

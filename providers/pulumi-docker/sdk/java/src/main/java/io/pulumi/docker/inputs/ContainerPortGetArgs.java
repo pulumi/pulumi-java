@@ -87,42 +87,42 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setExternal(@Nullable Input<Integer> external) {
+        public Builder external(@Nullable Input<Integer> external) {
             this.external = external;
             return this;
         }
 
-        public Builder setExternal(@Nullable Integer external) {
+        public Builder external(@Nullable Integer external) {
             this.external = Input.ofNullable(external);
             return this;
         }
 
-        public Builder setInternal(Input<Integer> internal) {
+        public Builder internal(Input<Integer> internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
 
-        public Builder setInternal(Integer internal) {
+        public Builder internal(Integer internal) {
             this.internal = Input.of(Objects.requireNonNull(internal));
             return this;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

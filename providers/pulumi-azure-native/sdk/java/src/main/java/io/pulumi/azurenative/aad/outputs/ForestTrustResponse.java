@@ -115,27 +115,27 @@ public final class ForestTrustResponse {
     	      this.trustedDomainFqdn = defaults.trustedDomainFqdn;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setRemoteDnsIps(@Nullable String remoteDnsIps) {
+        public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
             this.remoteDnsIps = remoteDnsIps;
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable String trustDirection) {
+        public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
 
-        public Builder setTrustPassword(@Nullable String trustPassword) {
+        public Builder trustPassword(@Nullable String trustPassword) {
             this.trustPassword = trustPassword;
             return this;
         }
 
-        public Builder setTrustedDomainFqdn(@Nullable String trustedDomainFqdn) {
+        public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
             this.trustedDomainFqdn = trustedDomainFqdn;
             return this;
         }

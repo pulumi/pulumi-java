@@ -203,102 +203,102 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.useRoutes = defaults.useRoutes;
         }
 
-        public Builder setAllowRouteOverlap(@Nullable Input<Boolean> allowRouteOverlap) {
+        public Builder allowRouteOverlap(@Nullable Input<Boolean> allowRouteOverlap) {
             this.allowRouteOverlap = allowRouteOverlap;
             return this;
         }
 
-        public Builder setAllowRouteOverlap(@Nullable Boolean allowRouteOverlap) {
+        public Builder allowRouteOverlap(@Nullable Boolean allowRouteOverlap) {
             this.allowRouteOverlap = Input.ofNullable(allowRouteOverlap);
             return this;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable Input<String> clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable Input<String> clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Input.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable Input<String> clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable Input<String> clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Input.ofNullable(clusterSecondaryRangeName);
             return this;
         }
 
-        public Builder setCreateSubnetwork(@Nullable Input<Boolean> createSubnetwork) {
+        public Builder createSubnetwork(@Nullable Input<Boolean> createSubnetwork) {
             this.createSubnetwork = createSubnetwork;
             return this;
         }
 
-        public Builder setCreateSubnetwork(@Nullable Boolean createSubnetwork) {
+        public Builder createSubnetwork(@Nullable Boolean createSubnetwork) {
             this.createSubnetwork = Input.ofNullable(createSubnetwork);
             return this;
         }
 
-        public Builder setNodeIpv4CidrBlock(@Nullable Input<String> nodeIpv4CidrBlock) {
+        public Builder nodeIpv4CidrBlock(@Nullable Input<String> nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
             return this;
         }
 
-        public Builder setNodeIpv4CidrBlock(@Nullable String nodeIpv4CidrBlock) {
+        public Builder nodeIpv4CidrBlock(@Nullable String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Input.ofNullable(nodeIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable Input<String> servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable Input<String> servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Input.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable Input<String> servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable Input<String> servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Input.ofNullable(servicesSecondaryRangeName);
             return this;
         }
 
-        public Builder setSubnetworkName(@Nullable Input<String> subnetworkName) {
+        public Builder subnetworkName(@Nullable Input<String> subnetworkName) {
             this.subnetworkName = subnetworkName;
             return this;
         }
 
-        public Builder setSubnetworkName(@Nullable String subnetworkName) {
+        public Builder subnetworkName(@Nullable String subnetworkName) {
             this.subnetworkName = Input.ofNullable(subnetworkName);
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Input<Boolean> useIpAliases) {
+        public Builder useIpAliases(@Nullable Input<Boolean> useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Boolean useIpAliases) {
+        public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = Input.ofNullable(useIpAliases);
             return this;
         }
 
-        public Builder setUseRoutes(@Nullable Input<Boolean> useRoutes) {
+        public Builder useRoutes(@Nullable Input<Boolean> useRoutes) {
             this.useRoutes = useRoutes;
             return this;
         }
 
-        public Builder setUseRoutes(@Nullable Boolean useRoutes) {
+        public Builder useRoutes(@Nullable Boolean useRoutes) {
             this.useRoutes = Input.ofNullable(useRoutes);
             return this;
         }

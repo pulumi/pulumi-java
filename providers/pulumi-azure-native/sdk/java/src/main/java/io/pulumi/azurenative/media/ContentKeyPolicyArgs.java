@@ -120,52 +120,52 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setContentKeyPolicyName(@Nullable Input<String> contentKeyPolicyName) {
+        public Builder contentKeyPolicyName(@Nullable Input<String> contentKeyPolicyName) {
             this.contentKeyPolicyName = contentKeyPolicyName;
             return this;
         }
 
-        public Builder setContentKeyPolicyName(@Nullable String contentKeyPolicyName) {
+        public Builder contentKeyPolicyName(@Nullable String contentKeyPolicyName) {
             this.contentKeyPolicyName = Input.ofNullable(contentKeyPolicyName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOptions(Input<List<ContentKeyPolicyOptionArgs>> options) {
+        public Builder options(Input<List<ContentKeyPolicyOptionArgs>> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setOptions(List<ContentKeyPolicyOptionArgs> options) {
+        public Builder options(List<ContentKeyPolicyOptionArgs> options) {
             this.options = Input.of(Objects.requireNonNull(options));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

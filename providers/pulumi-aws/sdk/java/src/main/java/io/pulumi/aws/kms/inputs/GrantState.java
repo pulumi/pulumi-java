@@ -202,102 +202,102 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
     	      this.retiringPrincipal = defaults.retiringPrincipal;
         }
 
-        public Builder setConstraints(@Nullable Input<List<GrantConstraintGetArgs>> constraints) {
+        public Builder constraints(@Nullable Input<List<GrantConstraintGetArgs>> constraints) {
             this.constraints = constraints;
             return this;
         }
 
-        public Builder setConstraints(@Nullable List<GrantConstraintGetArgs> constraints) {
+        public Builder constraints(@Nullable List<GrantConstraintGetArgs> constraints) {
             this.constraints = Input.ofNullable(constraints);
             return this;
         }
 
-        public Builder setGrantCreationTokens(@Nullable Input<List<String>> grantCreationTokens) {
+        public Builder grantCreationTokens(@Nullable Input<List<String>> grantCreationTokens) {
             this.grantCreationTokens = grantCreationTokens;
             return this;
         }
 
-        public Builder setGrantCreationTokens(@Nullable List<String> grantCreationTokens) {
+        public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
             this.grantCreationTokens = Input.ofNullable(grantCreationTokens);
             return this;
         }
 
-        public Builder setGrantId(@Nullable Input<String> grantId) {
+        public Builder grantId(@Nullable Input<String> grantId) {
             this.grantId = grantId;
             return this;
         }
 
-        public Builder setGrantId(@Nullable String grantId) {
+        public Builder grantId(@Nullable String grantId) {
             this.grantId = Input.ofNullable(grantId);
             return this;
         }
 
-        public Builder setGrantToken(@Nullable Input<String> grantToken) {
+        public Builder grantToken(@Nullable Input<String> grantToken) {
             this.grantToken = grantToken;
             return this;
         }
 
-        public Builder setGrantToken(@Nullable String grantToken) {
+        public Builder grantToken(@Nullable String grantToken) {
             this.grantToken = Input.ofNullable(grantToken);
             return this;
         }
 
-        public Builder setGranteePrincipal(@Nullable Input<String> granteePrincipal) {
+        public Builder granteePrincipal(@Nullable Input<String> granteePrincipal) {
             this.granteePrincipal = granteePrincipal;
             return this;
         }
 
-        public Builder setGranteePrincipal(@Nullable String granteePrincipal) {
+        public Builder granteePrincipal(@Nullable String granteePrincipal) {
             this.granteePrincipal = Input.ofNullable(granteePrincipal);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperations(@Nullable Input<List<String>> operations) {
+        public Builder operations(@Nullable Input<List<String>> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setOperations(@Nullable List<String> operations) {
+        public Builder operations(@Nullable List<String> operations) {
             this.operations = Input.ofNullable(operations);
             return this;
         }
 
-        public Builder setRetireOnDelete(@Nullable Input<Boolean> retireOnDelete) {
+        public Builder retireOnDelete(@Nullable Input<Boolean> retireOnDelete) {
             this.retireOnDelete = retireOnDelete;
             return this;
         }
 
-        public Builder setRetireOnDelete(@Nullable Boolean retireOnDelete) {
+        public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
             this.retireOnDelete = Input.ofNullable(retireOnDelete);
             return this;
         }
 
-        public Builder setRetiringPrincipal(@Nullable Input<String> retiringPrincipal) {
+        public Builder retiringPrincipal(@Nullable Input<String> retiringPrincipal) {
             this.retiringPrincipal = retiringPrincipal;
             return this;
         }
 
-        public Builder setRetiringPrincipal(@Nullable String retiringPrincipal) {
+        public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
             this.retiringPrincipal = Input.ofNullable(retiringPrincipal);
             return this;
         }

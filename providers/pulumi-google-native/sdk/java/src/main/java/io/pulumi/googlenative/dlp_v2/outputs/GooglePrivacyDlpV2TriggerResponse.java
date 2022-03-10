@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2TriggerResponse {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setManual(GooglePrivacyDlpV2ManualResponse manual) {
+        public Builder manual(GooglePrivacyDlpV2ManualResponse manual) {
             this.manual = Objects.requireNonNull(manual);
             return this;
         }
 
-        public Builder setSchedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
+        public Builder schedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

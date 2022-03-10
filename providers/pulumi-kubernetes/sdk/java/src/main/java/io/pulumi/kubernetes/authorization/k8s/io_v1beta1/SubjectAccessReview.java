@@ -134,8 +134,8 @@ public class SubjectAccessReview extends io.pulumi.resources.CustomResource {
     private static SubjectAccessReviewArgs makeArgs(SubjectAccessReviewArgs args) {
         var builder = args == null ? SubjectAccessReviewArgs.builder() : SubjectAccessReviewArgs.builder(args);
         return builder
-            .setApiVersion("authorization.k8s.io/v1beta1")
-            .setKind("SubjectAccessReview")
+            .apiVersion("authorization.k8s.io/v1beta1")
+            .kind("SubjectAccessReview")
             .build();
     }
 

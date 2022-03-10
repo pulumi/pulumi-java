@@ -151,72 +151,72 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setConfigurationProfileId(Input<String> configurationProfileId) {
+        public Builder configurationProfileId(Input<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
 
-        public Builder setConfigurationProfileId(String configurationProfileId) {
+        public Builder configurationProfileId(String configurationProfileId) {
             this.configurationProfileId = Input.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
 
-        public Builder setConfigurationVersion(Input<String> configurationVersion) {
+        public Builder configurationVersion(Input<String> configurationVersion) {
             this.configurationVersion = Objects.requireNonNull(configurationVersion);
             return this;
         }
 
-        public Builder setConfigurationVersion(String configurationVersion) {
+        public Builder configurationVersion(String configurationVersion) {
             this.configurationVersion = Input.of(Objects.requireNonNull(configurationVersion));
             return this;
         }
 
-        public Builder setDeploymentStrategyId(Input<String> deploymentStrategyId) {
+        public Builder deploymentStrategyId(Input<String> deploymentStrategyId) {
             this.deploymentStrategyId = Objects.requireNonNull(deploymentStrategyId);
             return this;
         }
 
-        public Builder setDeploymentStrategyId(String deploymentStrategyId) {
+        public Builder deploymentStrategyId(String deploymentStrategyId) {
             this.deploymentStrategyId = Input.of(Objects.requireNonNull(deploymentStrategyId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

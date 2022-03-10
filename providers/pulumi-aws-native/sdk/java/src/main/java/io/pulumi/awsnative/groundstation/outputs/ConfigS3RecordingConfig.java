@@ -59,17 +59,17 @@ public final class ConfigS3RecordingConfig {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(@Nullable String bucketArn) {
+        public Builder bucketArn(@Nullable String bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

@@ -168,82 +168,82 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testSpecification = defaults.testSpecification;
         }
 
-        public Builder setClientInfo(@Nullable Input<ClientInfoArgs> clientInfo) {
+        public Builder clientInfo(@Nullable Input<ClientInfoArgs> clientInfo) {
             this.clientInfo = clientInfo;
             return this;
         }
 
-        public Builder setClientInfo(@Nullable ClientInfoArgs clientInfo) {
+        public Builder clientInfo(@Nullable ClientInfoArgs clientInfo) {
             this.clientInfo = Input.ofNullable(clientInfo);
             return this;
         }
 
-        public Builder setEnvironmentMatrix(Input<EnvironmentMatrixArgs> environmentMatrix) {
+        public Builder environmentMatrix(Input<EnvironmentMatrixArgs> environmentMatrix) {
             this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
             return this;
         }
 
-        public Builder setEnvironmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
+        public Builder environmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
             this.environmentMatrix = Input.of(Objects.requireNonNull(environmentMatrix));
             return this;
         }
 
-        public Builder setFailFast(@Nullable Input<Boolean> failFast) {
+        public Builder failFast(@Nullable Input<Boolean> failFast) {
             this.failFast = failFast;
             return this;
         }
 
-        public Builder setFailFast(@Nullable Boolean failFast) {
+        public Builder failFast(@Nullable Boolean failFast) {
             this.failFast = Input.ofNullable(failFast);
             return this;
         }
 
-        public Builder setFlakyTestAttempts(@Nullable Input<Integer> flakyTestAttempts) {
+        public Builder flakyTestAttempts(@Nullable Input<Integer> flakyTestAttempts) {
             this.flakyTestAttempts = flakyTestAttempts;
             return this;
         }
 
-        public Builder setFlakyTestAttempts(@Nullable Integer flakyTestAttempts) {
+        public Builder flakyTestAttempts(@Nullable Integer flakyTestAttempts) {
             this.flakyTestAttempts = Input.ofNullable(flakyTestAttempts);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setResultStorage(Input<ResultStorageArgs> resultStorage) {
+        public Builder resultStorage(Input<ResultStorageArgs> resultStorage) {
             this.resultStorage = Objects.requireNonNull(resultStorage);
             return this;
         }
 
-        public Builder setResultStorage(ResultStorageArgs resultStorage) {
+        public Builder resultStorage(ResultStorageArgs resultStorage) {
             this.resultStorage = Input.of(Objects.requireNonNull(resultStorage));
             return this;
         }
 
-        public Builder setTestSpecification(Input<TestSpecificationArgs> testSpecification) {
+        public Builder testSpecification(Input<TestSpecificationArgs> testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
 
-        public Builder setTestSpecification(TestSpecificationArgs testSpecification) {
+        public Builder testSpecification(TestSpecificationArgs testSpecification) {
             this.testSpecification = Input.of(Objects.requireNonNull(testSpecification));
             return this;
         }

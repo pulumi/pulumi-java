@@ -84,17 +84,17 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
     	      this.serverCollectorName = defaults.serverCollectorName;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerCollectorName(String serverCollectorName) {
+        public Builder serverCollectorName(String serverCollectorName) {
             this.serverCollectorName = Objects.requireNonNull(serverCollectorName);
             return this;
         }

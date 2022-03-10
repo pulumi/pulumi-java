@@ -60,12 +60,12 @@ public final class GetReplicationConfigurationResult {
     	      this.replicationConfiguration = defaults.replicationConfiguration;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable ReplicationConfiguration replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable ReplicationConfiguration replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }

@@ -92,32 +92,32 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setRegistrationTokenOperation(@Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
+        public Builder registrationTokenOperation(@Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
             this.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
 
-        public Builder setRegistrationTokenOperation(@Nullable Either<String,RegistrationTokenOperation> registrationTokenOperation) {
+        public Builder registrationTokenOperation(@Nullable Either<String,RegistrationTokenOperation> registrationTokenOperation) {
             this.registrationTokenOperation = Input.ofNullable(registrationTokenOperation);
             return this;
         }
 
-        public Builder setToken(@Nullable Input<String> token) {
+        public Builder token(@Nullable Input<String> token) {
             this.token = token;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = Input.ofNullable(token);
             return this;
         }

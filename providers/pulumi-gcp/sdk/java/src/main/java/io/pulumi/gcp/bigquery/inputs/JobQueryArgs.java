@@ -351,172 +351,172 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowLargeResults(@Nullable Input<Boolean> allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Input<Boolean> allowLargeResults) {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
 
-        public Builder setAllowLargeResults(@Nullable Boolean allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = Input.ofNullable(allowLargeResults);
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Input<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Input.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset) {
+        public Builder defaultDataset(@Nullable Input<JobQueryDefaultDatasetArgs> defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable JobQueryDefaultDatasetArgs defaultDataset) {
+        public Builder defaultDataset(@Nullable JobQueryDefaultDatasetArgs defaultDataset) {
             this.defaultDataset = Input.ofNullable(defaultDataset);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Input<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfigurationArgs destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfigurationArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable Input<JobQueryDestinationTableArgs> destinationTable) {
+        public Builder destinationTable(@Nullable Input<JobQueryDestinationTableArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable JobQueryDestinationTableArgs destinationTable) {
+        public Builder destinationTable(@Nullable JobQueryDestinationTableArgs destinationTable) {
             this.destinationTable = Input.ofNullable(destinationTable);
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Input<Boolean> flattenResults) {
+        public Builder flattenResults(@Nullable Input<Boolean> flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Boolean flattenResults) {
+        public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = Input.ofNullable(flattenResults);
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Input<Integer> maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Input<Integer> maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Integer maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = Input.ofNullable(maximumBillingTier);
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable Input<String> maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable Input<String> maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable String maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = Input.ofNullable(maximumBytesBilled);
             return this;
         }
 
-        public Builder setParameterMode(@Nullable Input<String> parameterMode) {
+        public Builder parameterMode(@Nullable Input<String> parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
 
-        public Builder setParameterMode(@Nullable String parameterMode) {
+        public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = Input.ofNullable(parameterMode);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<String> priority) {
+        public Builder priority(@Nullable Input<String> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Input.ofNullable(schemaUpdateOptions);
             return this;
         }
 
-        public Builder setScriptOptions(@Nullable Input<JobQueryScriptOptionsArgs> scriptOptions) {
+        public Builder scriptOptions(@Nullable Input<JobQueryScriptOptionsArgs> scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
 
-        public Builder setScriptOptions(@Nullable JobQueryScriptOptionsArgs scriptOptions) {
+        public Builder scriptOptions(@Nullable JobQueryScriptOptionsArgs scriptOptions) {
             this.scriptOptions = Input.ofNullable(scriptOptions);
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Input.ofNullable(useLegacySql);
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Input<Boolean> useQueryCache) {
+        public Builder useQueryCache(@Nullable Input<Boolean> useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Boolean useQueryCache) {
+        public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = Input.ofNullable(useQueryCache);
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable Input<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

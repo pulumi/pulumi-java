@@ -40,7 +40,7 @@ public final class RecordingConfigurationDestinationConfiguration {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setS3(RecordingConfigurationS3DestinationConfiguration s3) {
+        public Builder s3(RecordingConfigurationS3DestinationConfiguration s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }

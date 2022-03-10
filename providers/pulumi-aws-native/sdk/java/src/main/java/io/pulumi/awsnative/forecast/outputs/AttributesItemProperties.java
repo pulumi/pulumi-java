@@ -68,12 +68,12 @@ public final class AttributesItemProperties {
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder setAttributeName(@Nullable String attributeName) {
+        public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
-        public Builder setAttributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             this.attributeType = attributeType;
             return this;
         }

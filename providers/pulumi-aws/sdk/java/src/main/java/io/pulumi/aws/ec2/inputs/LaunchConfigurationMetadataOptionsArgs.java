@@ -87,32 +87,32 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder setHttpEndpoint(@Nullable Input<String> httpEndpoint) {
+        public Builder httpEndpoint(@Nullable Input<String> httpEndpoint) {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
 
-        public Builder setHttpEndpoint(@Nullable String httpEndpoint) {
+        public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = Input.ofNullable(httpEndpoint);
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Input<Integer> httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Input<Integer> httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Input.ofNullable(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable Input<String> httpTokens) {
+        public Builder httpTokens(@Nullable Input<String> httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable String httpTokens) {
+        public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = Input.ofNullable(httpTokens);
             return this;
         }

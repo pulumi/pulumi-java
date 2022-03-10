@@ -165,82 +165,82 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useLegacyStack = defaults.useLegacyStack;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable Input<ProjectLifecycleState> lifecycleState) {
+        public Builder lifecycleState(@Nullable Input<ProjectLifecycleState> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable ProjectLifecycleState lifecycleState) {
+        public Builder lifecycleState(@Nullable ProjectLifecycleState lifecycleState) {
             this.lifecycleState = Input.ofNullable(lifecycleState);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<ResourceIdArgs> parent) {
+        public Builder parent(@Nullable Input<ResourceIdArgs> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable ResourceIdArgs parent) {
+        public Builder parent(@Nullable ResourceIdArgs parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Input<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable String projectNumber) {
+        public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }
 
-        public Builder setUseLegacyStack(@Nullable Input<String> useLegacyStack) {
+        public Builder useLegacyStack(@Nullable Input<String> useLegacyStack) {
             this.useLegacyStack = useLegacyStack;
             return this;
         }
 
-        public Builder setUseLegacyStack(@Nullable String useLegacyStack) {
+        public Builder useLegacyStack(@Nullable String useLegacyStack) {
             this.useLegacyStack = Input.ofNullable(useLegacyStack);
             return this;
         }

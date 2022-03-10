@@ -88,32 +88,32 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(@Nullable Input<List<String>> destIpRanges) {
+        public Builder destIpRanges(@Nullable Input<List<String>> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
-        public Builder setDestIpRanges(@Nullable List<String> destIpRanges) {
+        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = Input.ofNullable(destIpRanges);
             return this;
         }
 
-        public Builder setLayer4Configs(@Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs) {
+        public Builder layer4Configs(@Nullable Input<List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs>> layer4Configs) {
             this.layer4Configs = layer4Configs;
             return this;
         }
 
-        public Builder setLayer4Configs(@Nullable List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs> layer4Configs) {
+        public Builder layer4Configs(@Nullable List<SecurityPolicyRuleMatcherConfigLayer4ConfigArgs> layer4Configs) {
             this.layer4Configs = Input.ofNullable(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }

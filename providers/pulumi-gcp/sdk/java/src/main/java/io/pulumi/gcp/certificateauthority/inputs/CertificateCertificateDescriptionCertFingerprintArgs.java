@@ -49,12 +49,12 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     	      this.sha256Hash = defaults.sha256Hash;
         }
 
-        public Builder setSha256Hash(@Nullable Input<String> sha256Hash) {
+        public Builder sha256Hash(@Nullable Input<String> sha256Hash) {
             this.sha256Hash = sha256Hash;
             return this;
         }
 
-        public Builder setSha256Hash(@Nullable String sha256Hash) {
+        public Builder sha256Hash(@Nullable String sha256Hash) {
             this.sha256Hash = Input.ofNullable(sha256Hash);
             return this;
         }

@@ -142,72 +142,72 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setParallelismConfiguration(@Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable Input<ParallelismConfigurationPropertiesArgs> parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
 
-        public Builder setParallelismConfiguration(@Nullable ParallelismConfigurationPropertiesArgs parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable ParallelismConfigurationPropertiesArgs parallelismConfiguration) {
             this.parallelismConfiguration = Input.ofNullable(parallelismConfiguration);
             return this;
         }
 
-        public Builder setPipelineDefinition(Input<Object> pipelineDefinition) {
+        public Builder pipelineDefinition(Input<Object> pipelineDefinition) {
             this.pipelineDefinition = Objects.requireNonNull(pipelineDefinition);
             return this;
         }
 
-        public Builder setPipelineDefinition(Object pipelineDefinition) {
+        public Builder pipelineDefinition(Object pipelineDefinition) {
             this.pipelineDefinition = Input.of(Objects.requireNonNull(pipelineDefinition));
             return this;
         }
 
-        public Builder setPipelineDescription(@Nullable Input<String> pipelineDescription) {
+        public Builder pipelineDescription(@Nullable Input<String> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
 
-        public Builder setPipelineDescription(@Nullable String pipelineDescription) {
+        public Builder pipelineDescription(@Nullable String pipelineDescription) {
             this.pipelineDescription = Input.ofNullable(pipelineDescription);
             return this;
         }
 
-        public Builder setPipelineDisplayName(@Nullable Input<String> pipelineDisplayName) {
+        public Builder pipelineDisplayName(@Nullable Input<String> pipelineDisplayName) {
             this.pipelineDisplayName = pipelineDisplayName;
             return this;
         }
 
-        public Builder setPipelineDisplayName(@Nullable String pipelineDisplayName) {
+        public Builder pipelineDisplayName(@Nullable String pipelineDisplayName) {
             this.pipelineDisplayName = Input.ofNullable(pipelineDisplayName);
             return this;
         }
 
-        public Builder setPipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Input<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
-        public Builder setPipelineName(@Nullable String pipelineName) {
+        public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Input.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PipelineTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PipelineTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PipelineTagArgs> tags) {
+        public Builder tags(@Nullable List<PipelineTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

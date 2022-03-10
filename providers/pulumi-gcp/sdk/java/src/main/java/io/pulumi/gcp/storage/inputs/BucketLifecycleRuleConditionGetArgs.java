@@ -184,92 +184,92 @@ public final class BucketLifecycleRuleConditionGetArgs extends io.pulumi.resourc
     	      this.withState = defaults.withState;
         }
 
-        public Builder setAge(@Nullable Input<Integer> age) {
+        public Builder age(@Nullable Input<Integer> age) {
             this.age = age;
             return this;
         }
 
-        public Builder setAge(@Nullable Integer age) {
+        public Builder age(@Nullable Integer age) {
             this.age = Input.ofNullable(age);
             return this;
         }
 
-        public Builder setCreatedBefore(@Nullable Input<String> createdBefore) {
+        public Builder createdBefore(@Nullable Input<String> createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
 
-        public Builder setCreatedBefore(@Nullable String createdBefore) {
+        public Builder createdBefore(@Nullable String createdBefore) {
             this.createdBefore = Input.ofNullable(createdBefore);
             return this;
         }
 
-        public Builder setCustomTimeBefore(@Nullable Input<String> customTimeBefore) {
+        public Builder customTimeBefore(@Nullable Input<String> customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
 
-        public Builder setCustomTimeBefore(@Nullable String customTimeBefore) {
+        public Builder customTimeBefore(@Nullable String customTimeBefore) {
             this.customTimeBefore = Input.ofNullable(customTimeBefore);
             return this;
         }
 
-        public Builder setDaysSinceCustomTime(@Nullable Input<Integer> daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(@Nullable Input<Integer> daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
 
-        public Builder setDaysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Input.ofNullable(daysSinceCustomTime);
             return this;
         }
 
-        public Builder setDaysSinceNoncurrentTime(@Nullable Input<Integer> daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(@Nullable Input<Integer> daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
 
-        public Builder setDaysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Input.ofNullable(daysSinceNoncurrentTime);
             return this;
         }
 
-        public Builder setMatchesStorageClasses(@Nullable Input<List<String>> matchesStorageClasses) {
+        public Builder matchesStorageClasses(@Nullable Input<List<String>> matchesStorageClasses) {
             this.matchesStorageClasses = matchesStorageClasses;
             return this;
         }
 
-        public Builder setMatchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
+        public Builder matchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
             this.matchesStorageClasses = Input.ofNullable(matchesStorageClasses);
             return this;
         }
 
-        public Builder setNoncurrentTimeBefore(@Nullable Input<String> noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(@Nullable Input<String> noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
 
-        public Builder setNoncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Input.ofNullable(noncurrentTimeBefore);
             return this;
         }
 
-        public Builder setNumNewerVersions(@Nullable Input<Integer> numNewerVersions) {
+        public Builder numNewerVersions(@Nullable Input<Integer> numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
 
-        public Builder setNumNewerVersions(@Nullable Integer numNewerVersions) {
+        public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
             this.numNewerVersions = Input.ofNullable(numNewerVersions);
             return this;
         }
 
-        public Builder setWithState(@Nullable Input<String> withState) {
+        public Builder withState(@Nullable Input<String> withState) {
             this.withState = withState;
             return this;
         }
 
-        public Builder setWithState(@Nullable String withState) {
+        public Builder withState(@Nullable String withState) {
             this.withState = Input.ofNullable(withState);
             return this;
         }

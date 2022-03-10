@@ -61,22 +61,22 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.imageName = defaults.imageName;
         }
 
-        public Builder setBaseImage(Input<String> baseImage) {
+        public Builder baseImage(Input<String> baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
 
-        public Builder setBaseImage(String baseImage) {
+        public Builder baseImage(String baseImage) {
             this.baseImage = Input.of(Objects.requireNonNull(baseImage));
             return this;
         }
 
-        public Builder setImageName(Input<String> imageName) {
+        public Builder imageName(Input<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Input.of(Objects.requireNonNull(imageName));
             return this;
         }

@@ -50,7 +50,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse {
     	      this.logs = defaults.logs;
         }
 
-        public Builder setLogs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
+        public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
             this.logs = logs;
             return this;
         }

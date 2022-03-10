@@ -65,12 +65,12 @@ public final class DomainValidationPropertiesResponse {
     	      this.validationToken = defaults.validationToken;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setValidationToken(String validationToken) {
+        public Builder validationToken(String validationToken) {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }

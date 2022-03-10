@@ -50,7 +50,7 @@ public final class JobExecutionsRetryConfigProperties extends io.pulumi.resource
     	      this.retryCriteriaList = defaults.retryCriteriaList;
         }
 
-        public Builder setRetryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
+        public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }

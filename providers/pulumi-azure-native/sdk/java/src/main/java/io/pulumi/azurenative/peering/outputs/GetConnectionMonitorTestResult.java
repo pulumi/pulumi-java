@@ -198,52 +198,52 @@ public final class GetConnectionMonitorTestResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsTestSuccessful(Boolean isTestSuccessful) {
+        public Builder isTestSuccessful(Boolean isTestSuccessful) {
             this.isTestSuccessful = Objects.requireNonNull(isTestSuccessful);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(List<String> path) {
+        public Builder path(List<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceAgent(@Nullable String sourceAgent) {
+        public Builder sourceAgent(@Nullable String sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
 
-        public Builder setTestFrequencyInSec(@Nullable Integer testFrequencyInSec) {
+        public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

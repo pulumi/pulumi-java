@@ -75,22 +75,22 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageName = defaults.packageName;
         }
 
-        public Builder setLocation(@Nullable Input<FileReferenceArgs> location) {
+        public Builder location(@Nullable Input<FileReferenceArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable FileReferenceArgs location) {
+        public Builder location(@Nullable FileReferenceArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }

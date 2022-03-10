@@ -57,12 +57,12 @@ public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs
     	      this.show = defaults.show;
         }
 
-        public Builder setShow(@Nullable Input<Boolean> show) {
+        public Builder show(@Nullable Input<Boolean> show) {
             this.show = show;
             return this;
         }
 
-        public Builder setShow(@Nullable Boolean show) {
+        public Builder show(@Nullable Boolean show) {
             this.show = Input.ofNullable(show);
             return this;
         }

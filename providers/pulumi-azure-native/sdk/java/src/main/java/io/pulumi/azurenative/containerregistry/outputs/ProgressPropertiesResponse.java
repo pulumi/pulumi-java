@@ -50,7 +50,7 @@ public final class ProgressPropertiesResponse {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setPercentage(@Nullable String percentage) {
+        public Builder percentage(@Nullable String percentage) {
             this.percentage = percentage;
             return this;
         }

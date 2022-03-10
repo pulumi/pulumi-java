@@ -171,42 +171,42 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
     	      this.restrictionTokenType = defaults.restrictionTokenType;
         }
 
-        public Builder setAlternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
+        public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOpenIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
+        public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
 
-        public Builder setPrimaryVerificationKey(Object primaryVerificationKey) {
+        public Builder primaryVerificationKey(Object primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
 
-        public Builder setRequiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
+        public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
-        public Builder setRestrictionTokenType(String restrictionTokenType) {
+        public Builder restrictionTokenType(String restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }

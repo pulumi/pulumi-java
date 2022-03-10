@@ -68,12 +68,12 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
     	      this.backendHealthHttpSettings = defaults.backendHealthHttpSettings;
         }
 
-        public Builder setBackendAddressPool(@Nullable ApplicationGatewayBackendAddressPoolResponse backendAddressPool) {
+        public Builder backendAddressPool(@Nullable ApplicationGatewayBackendAddressPoolResponse backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendHealthHttpSettings(@Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings) {
+        public Builder backendHealthHttpSettings(@Nullable ApplicationGatewayBackendHealthHttpSettingsResponse backendHealthHttpSettings) {
             this.backendHealthHttpSettings = backendHealthHttpSettings;
             return this;
         }

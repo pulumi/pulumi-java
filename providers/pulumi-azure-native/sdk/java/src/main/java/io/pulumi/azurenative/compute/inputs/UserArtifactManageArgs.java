@@ -86,32 +86,32 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     	      this.update = defaults.update;
         }
 
-        public Builder setInstall(Input<String> install) {
+        public Builder install(Input<String> install) {
             this.install = Objects.requireNonNull(install);
             return this;
         }
 
-        public Builder setInstall(String install) {
+        public Builder install(String install) {
             this.install = Input.of(Objects.requireNonNull(install));
             return this;
         }
 
-        public Builder setRemove(Input<String> remove) {
+        public Builder remove(Input<String> remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
 
-        public Builder setRemove(String remove) {
+        public Builder remove(String remove) {
             this.remove = Input.of(Objects.requireNonNull(remove));
             return this;
         }
 
-        public Builder setUpdate(@Nullable Input<String> update) {
+        public Builder update(@Nullable Input<String> update) {
             this.update = update;
             return this;
         }
 
-        public Builder setUpdate(@Nullable String update) {
+        public Builder update(@Nullable String update) {
             this.update = Input.ofNullable(update);
             return this;
         }

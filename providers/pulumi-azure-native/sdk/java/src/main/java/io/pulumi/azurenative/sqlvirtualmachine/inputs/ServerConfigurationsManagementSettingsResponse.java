@@ -109,22 +109,22 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
     	      this.sqlWorkloadTypeUpdateSettings = defaults.sqlWorkloadTypeUpdateSettings;
         }
 
-        public Builder setAdditionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations) {
+        public Builder additionalFeaturesServerConfigurations(@Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations) {
             this.additionalFeaturesServerConfigurations = additionalFeaturesServerConfigurations;
             return this;
         }
 
-        public Builder setSqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings) {
+        public Builder sqlConnectivityUpdateSettings(@Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings) {
             this.sqlConnectivityUpdateSettings = sqlConnectivityUpdateSettings;
             return this;
         }
 
-        public Builder setSqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings) {
+        public Builder sqlStorageUpdateSettings(@Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings) {
             this.sqlStorageUpdateSettings = sqlStorageUpdateSettings;
             return this;
         }
 
-        public Builder setSqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
+        public Builder sqlWorkloadTypeUpdateSettings(@Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings) {
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }

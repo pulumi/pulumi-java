@@ -108,22 +108,22 @@ public final class ExportDefinitionResponse extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setDataSet(@Nullable ExportDatasetResponse dataSet) {
+        public Builder dataSet(@Nullable ExportDatasetResponse dataSet) {
             this.dataSet = dataSet;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
+        public Builder timePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimeframe(String timeframe) {
+        public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

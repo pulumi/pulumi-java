@@ -59,12 +59,12 @@ public final class FunctionSourceRepository {
     	      this.url = defaults.url;
         }
 
-        public Builder setDeployedUrl(@Nullable String deployedUrl) {
+        public Builder deployedUrl(@Nullable String deployedUrl) {
             this.deployedUrl = deployedUrl;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

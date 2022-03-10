@@ -53,7 +53,7 @@ public final class CosmosDbSettingsResponse extends io.pulumi.resources.InvokeAr
     	      this.collectionsThroughput = defaults.collectionsThroughput;
         }
 
-        public Builder setCollectionsThroughput(@Nullable Integer collectionsThroughput) {
+        public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
             this.collectionsThroughput = collectionsThroughput;
             return this;
         }

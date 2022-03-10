@@ -374,102 +374,102 @@ public final class GetContainerGroupResult {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainers(List<ContainerResponse> containers) {
+        public Builder containers(List<ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable ContainerGroupDiagnosticsResponse diagnostics) {
+        public Builder diagnostics(@Nullable ContainerGroupDiagnosticsResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable DnsConfigurationResponse dnsConfig) {
+        public Builder dnsConfig(@Nullable DnsConfigurationResponse dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable EncryptionPropertiesResponse encryptionProperties) {
+        public Builder encryptionProperties(@Nullable EncryptionPropertiesResponse encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ContainerGroupIdentityResponse identity) {
+        public Builder identity(@Nullable ContainerGroupIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setImageRegistryCredentials(@Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials) {
+        public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials) {
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
 
-        public Builder setInitContainers(@Nullable List<InitContainerDefinitionResponse> initContainers) {
+        public Builder initContainers(@Nullable List<InitContainerDefinitionResponse> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
-        public Builder setInstanceView(ContainerGroupResponseInstanceView instanceView) {
+        public Builder instanceView(ContainerGroupResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable IpAddressResponse ipAddress) {
+        public Builder ipAddress(@Nullable IpAddressResponse ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable ContainerGroupNetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable ContainerGroupNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable String restartPolicy) {
+        public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeResponse> volumes) {
+        public Builder volumes(@Nullable List<VolumeResponse> volumes) {
             this.volumes = volumes;
             return this;
         }

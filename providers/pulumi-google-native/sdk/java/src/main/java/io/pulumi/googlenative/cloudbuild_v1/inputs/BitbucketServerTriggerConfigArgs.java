@@ -124,52 +124,52 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     	      this.repoSlug = defaults.repoSlug;
         }
 
-        public Builder setBitbucketServerConfigResource(Input<String> bitbucketServerConfigResource) {
+        public Builder bitbucketServerConfigResource(Input<String> bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
             return this;
         }
 
-        public Builder setBitbucketServerConfigResource(String bitbucketServerConfigResource) {
+        public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Input.of(Objects.requireNonNull(bitbucketServerConfigResource));
             return this;
         }
 
-        public Builder setProjectKey(Input<String> projectKey) {
+        public Builder projectKey(Input<String> projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
 
-        public Builder setProjectKey(String projectKey) {
+        public Builder projectKey(String projectKey) {
             this.projectKey = Input.of(Objects.requireNonNull(projectKey));
             return this;
         }
 
-        public Builder setPullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
+        public Builder pullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
-        public Builder setPullRequest(@Nullable PullRequestFilterArgs pullRequest) {
+        public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
             this.pullRequest = Input.ofNullable(pullRequest);
             return this;
         }
 
-        public Builder setPush(@Nullable Input<PushFilterArgs> push) {
+        public Builder push(@Nullable Input<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
 
-        public Builder setPush(@Nullable PushFilterArgs push) {
+        public Builder push(@Nullable PushFilterArgs push) {
             this.push = Input.ofNullable(push);
             return this;
         }
 
-        public Builder setRepoSlug(Input<String> repoSlug) {
+        public Builder repoSlug(Input<String> repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
 
-        public Builder setRepoSlug(String repoSlug) {
+        public Builder repoSlug(String repoSlug) {
             this.repoSlug = Input.of(Objects.requireNonNull(repoSlug));
             return this;
         }

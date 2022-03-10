@@ -127,8 +127,8 @@ public class Lease extends io.pulumi.resources.CustomResource {
     private static LeaseArgs makeArgs(@Nullable LeaseArgs args) {
         var builder = args == null ? LeaseArgs.builder() : LeaseArgs.builder(args);
         return builder
-            .setApiVersion("coordination.k8s.io/v1")
-            .setKind("Lease")
+            .apiVersion("coordination.k8s.io/v1")
+            .kind("Lease")
             .build();
     }
 

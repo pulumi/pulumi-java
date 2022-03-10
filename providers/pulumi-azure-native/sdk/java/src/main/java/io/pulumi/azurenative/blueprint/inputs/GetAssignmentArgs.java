@@ -68,12 +68,12 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder setAssignmentName(String assignmentName) {
+        public Builder assignmentName(String assignmentName) {
             this.assignmentName = Objects.requireNonNull(assignmentName);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }

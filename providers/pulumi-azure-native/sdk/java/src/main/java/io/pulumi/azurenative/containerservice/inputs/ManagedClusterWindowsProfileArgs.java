@@ -109,42 +109,42 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
     	      this.licenseType = defaults.licenseType;
         }
 
-        public Builder setAdminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Input<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Input.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder setAdminUsername(Input<String> adminUsername) {
+        public Builder adminUsername(Input<String> adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Input.of(Objects.requireNonNull(adminUsername));
             return this;
         }
 
-        public Builder setEnableCSIProxy(@Nullable Input<Boolean> enableCSIProxy) {
+        public Builder enableCSIProxy(@Nullable Input<Boolean> enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
 
-        public Builder setEnableCSIProxy(@Nullable Boolean enableCSIProxy) {
+        public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
             this.enableCSIProxy = Input.ofNullable(enableCSIProxy);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,LicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }

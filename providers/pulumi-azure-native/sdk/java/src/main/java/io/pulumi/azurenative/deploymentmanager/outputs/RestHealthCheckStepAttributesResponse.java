@@ -119,27 +119,27 @@ public final class RestHealthCheckStepAttributesResponse {
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder setHealthChecks(List<RestHealthCheckResponse> healthChecks) {
+        public Builder healthChecks(List<RestHealthCheckResponse> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setHealthyStateDuration(String healthyStateDuration) {
+        public Builder healthyStateDuration(String healthyStateDuration) {
             this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
             return this;
         }
 
-        public Builder setMaxElasticDuration(@Nullable String maxElasticDuration) {
+        public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
             this.maxElasticDuration = maxElasticDuration;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable String waitDuration) {
+        public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }

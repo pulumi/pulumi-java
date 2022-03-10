@@ -52,12 +52,12 @@ public final class IndexValueImportanceItem {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

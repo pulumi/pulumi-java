@@ -152,72 +152,72 @@ public final class GetAppResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable String customHeaders) {
+        public Builder customHeaders(@Nullable String customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomRules(@Nullable List<AppCustomRule> customRules) {
+        public Builder customRules(@Nullable List<AppCustomRule> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setDefaultDomain(@Nullable String defaultDomain) {
+        public Builder defaultDomain(@Nullable String defaultDomain) {
             this.defaultDomain = defaultDomain;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
+        public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setIAMServiceRole(@Nullable String iAMServiceRole) {
+        public Builder iAMServiceRole(@Nullable String iAMServiceRole) {
             this.iAMServiceRole = iAMServiceRole;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppTag> tags) {
+        public Builder tags(@Nullable List<AppTag> tags) {
             this.tags = tags;
             return this;
         }

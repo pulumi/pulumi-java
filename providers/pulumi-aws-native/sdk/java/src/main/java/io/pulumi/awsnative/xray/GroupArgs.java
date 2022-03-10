@@ -97,42 +97,42 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilterExpression(@Nullable Input<String> filterExpression) {
+        public Builder filterExpression(@Nullable Input<String> filterExpression) {
             this.filterExpression = filterExpression;
             return this;
         }
 
-        public Builder setFilterExpression(@Nullable String filterExpression) {
+        public Builder filterExpression(@Nullable String filterExpression) {
             this.filterExpression = Input.ofNullable(filterExpression);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setInsightsConfiguration(@Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration) {
+        public Builder insightsConfiguration(@Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration) {
             this.insightsConfiguration = insightsConfiguration;
             return this;
         }
 
-        public Builder setInsightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
+        public Builder insightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
             this.insightsConfiguration = Input.ofNullable(insightsConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagsItemPropertiesArgs> tags) {
+        public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

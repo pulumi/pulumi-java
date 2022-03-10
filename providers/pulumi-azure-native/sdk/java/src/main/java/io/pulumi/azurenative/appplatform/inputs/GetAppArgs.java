@@ -102,22 +102,22 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     	      this.syncStatus = defaults.syncStatus;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setSyncStatus(@Nullable String syncStatus) {
+        public Builder syncStatus(@Nullable String syncStatus) {
             this.syncStatus = syncStatus;
             return this;
         }

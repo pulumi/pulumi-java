@@ -79,22 +79,22 @@ public final class FhirStoreStreamConfigGetArgs extends io.pulumi.resources.Reso
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setBigqueryDestination(Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(Input<FhirStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setBigqueryDestination(FhirStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
+        public Builder bigqueryDestination(FhirStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
             this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }

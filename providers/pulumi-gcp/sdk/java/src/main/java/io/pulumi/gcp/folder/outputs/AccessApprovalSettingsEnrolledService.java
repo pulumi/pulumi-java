@@ -115,12 +115,12 @@ public final class AccessApprovalSettingsEnrolledService {
     	      this.enrollmentLevel = defaults.enrollmentLevel;
         }
 
-        public Builder setCloudProduct(String cloudProduct) {
+        public Builder cloudProduct(String cloudProduct) {
             this.cloudProduct = Objects.requireNonNull(cloudProduct);
             return this;
         }
 
-        public Builder setEnrollmentLevel(@Nullable String enrollmentLevel) {
+        public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }

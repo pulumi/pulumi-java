@@ -171,82 +171,82 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vCores = defaults.vCores;
         }
 
-        public Builder setInstancePoolName(@Nullable Input<String> instancePoolName) {
+        public Builder instancePoolName(@Nullable Input<String> instancePoolName) {
             this.instancePoolName = instancePoolName;
             return this;
         }
 
-        public Builder setInstancePoolName(@Nullable String instancePoolName) {
+        public Builder instancePoolName(@Nullable String instancePoolName) {
             this.instancePoolName = Input.ofNullable(instancePoolName);
             return this;
         }
 
-        public Builder setLicenseType(Input<Either<String,InstancePoolLicenseType>> licenseType) {
+        public Builder licenseType(Input<Either<String,InstancePoolLicenseType>> licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setLicenseType(Either<String,InstancePoolLicenseType> licenseType) {
+        public Builder licenseType(Either<String,InstancePoolLicenseType> licenseType) {
             this.licenseType = Input.of(Objects.requireNonNull(licenseType));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVCores(Input<Integer> vCores) {
+        public Builder vCores(Input<Integer> vCores) {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
 
-        public Builder setVCores(Integer vCores) {
+        public Builder vCores(Integer vCores) {
             this.vCores = Input.of(Objects.requireNonNull(vCores));
             return this;
         }

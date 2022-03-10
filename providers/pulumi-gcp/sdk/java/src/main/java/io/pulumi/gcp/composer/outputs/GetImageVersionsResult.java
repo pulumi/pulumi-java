@@ -83,22 +83,22 @@ public final class GetImageVersionsResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageVersions(List<GetImageVersionsImageVersion> imageVersions) {
+        public Builder imageVersions(List<GetImageVersionsImageVersion> imageVersions) {
             this.imageVersions = Objects.requireNonNull(imageVersions);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetGrantArgs extends io.pulumi.resources.InvokeArgs {
     	      this.grantArn = defaults.grantArn;
         }
 
-        public Builder setGrantArn(String grantArn) {
+        public Builder grantArn(String grantArn) {
             this.grantArn = Objects.requireNonNull(grantArn);
             return this;
         }

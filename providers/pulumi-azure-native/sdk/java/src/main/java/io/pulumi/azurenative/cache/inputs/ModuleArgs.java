@@ -74,22 +74,22 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArgs(@Nullable Input<String> args) {
+        public Builder args(@Nullable Input<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable String args) {
+        public Builder args(@Nullable String args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

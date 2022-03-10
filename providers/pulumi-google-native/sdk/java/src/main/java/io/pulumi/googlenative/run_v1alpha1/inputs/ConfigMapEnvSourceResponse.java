@@ -90,17 +90,17 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(LocalObjectReferenceResponse localObjectReference) {
+        public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

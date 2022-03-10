@@ -169,82 +169,82 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setDeadline(@Nullable Input<Double> deadline) {
+        public Builder deadline(@Nullable Input<Double> deadline) {
             this.deadline = deadline;
             return this;
         }
 
-        public Builder setDeadline(@Nullable Double deadline) {
+        public Builder deadline(@Nullable Double deadline) {
             this.deadline = Input.ofNullable(deadline);
             return this;
         }
 
-        public Builder setDisableAuth(@Nullable Input<Boolean> disableAuth) {
+        public Builder disableAuth(@Nullable Input<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
 
-        public Builder setDisableAuth(@Nullable Boolean disableAuth) {
+        public Builder disableAuth(@Nullable Boolean disableAuth) {
             this.disableAuth = Input.ofNullable(disableAuth);
             return this;
         }
 
-        public Builder setJwtAudience(@Nullable Input<String> jwtAudience) {
+        public Builder jwtAudience(@Nullable Input<String> jwtAudience) {
             this.jwtAudience = jwtAudience;
             return this;
         }
 
-        public Builder setJwtAudience(@Nullable String jwtAudience) {
+        public Builder jwtAudience(@Nullable String jwtAudience) {
             this.jwtAudience = Input.ofNullable(jwtAudience);
             return this;
         }
 
-        public Builder setOperationDeadline(@Nullable Input<Double> operationDeadline) {
+        public Builder operationDeadline(@Nullable Input<Double> operationDeadline) {
             this.operationDeadline = operationDeadline;
             return this;
         }
 
-        public Builder setOperationDeadline(@Nullable Double operationDeadline) {
+        public Builder operationDeadline(@Nullable Double operationDeadline) {
             this.operationDeadline = Input.ofNullable(operationDeadline);
             return this;
         }
 
-        public Builder setPathTranslation(@Nullable Input<BackendRulePathTranslation> pathTranslation) {
+        public Builder pathTranslation(@Nullable Input<BackendRulePathTranslation> pathTranslation) {
             this.pathTranslation = pathTranslation;
             return this;
         }
 
-        public Builder setPathTranslation(@Nullable BackendRulePathTranslation pathTranslation) {
+        public Builder pathTranslation(@Nullable BackendRulePathTranslation pathTranslation) {
             this.pathTranslation = Input.ofNullable(pathTranslation);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

@@ -140,32 +140,32 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
     	      this.routingRegistryName = defaults.routingRegistryName;
         }
 
-        public Builder setAdvertisedCommunities(@Nullable List<String> advertisedCommunities) {
+        public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
             this.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
+        public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
+        public Builder advertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
             this.advertisedPublicPrefixesState = Objects.requireNonNull(advertisedPublicPrefixesState);
             return this;
         }
 
-        public Builder setCustomerASN(@Nullable Integer customerASN) {
+        public Builder customerASN(@Nullable Integer customerASN) {
             this.customerASN = customerASN;
             return this;
         }
 
-        public Builder setLegacyMode(@Nullable Integer legacyMode) {
+        public Builder legacyMode(@Nullable Integer legacyMode) {
             this.legacyMode = legacyMode;
             return this;
         }
 
-        public Builder setRoutingRegistryName(@Nullable String routingRegistryName) {
+        public Builder routingRegistryName(@Nullable String routingRegistryName) {
             this.routingRegistryName = routingRegistryName;
             return this;
         }

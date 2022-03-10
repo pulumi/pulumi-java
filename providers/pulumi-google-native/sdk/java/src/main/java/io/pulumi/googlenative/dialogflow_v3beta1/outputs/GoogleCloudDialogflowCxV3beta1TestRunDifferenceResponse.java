@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

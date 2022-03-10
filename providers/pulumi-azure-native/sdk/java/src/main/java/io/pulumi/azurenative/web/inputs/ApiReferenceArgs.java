@@ -167,82 +167,82 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setBrandColor(@Nullable Input<String> brandColor) {
+        public Builder brandColor(@Nullable Input<String> brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
-        public Builder setBrandColor(@Nullable String brandColor) {
+        public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = Input.ofNullable(brandColor);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIconUri(@Nullable Input<String> iconUri) {
+        public Builder iconUri(@Nullable Input<String> iconUri) {
             this.iconUri = iconUri;
             return this;
         }
 
-        public Builder setIconUri(@Nullable String iconUri) {
+        public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = Input.ofNullable(iconUri);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSwagger(@Nullable Input<Object> swagger) {
+        public Builder swagger(@Nullable Input<Object> swagger) {
             this.swagger = swagger;
             return this;
         }
 
-        public Builder setSwagger(@Nullable Object swagger) {
+        public Builder swagger(@Nullable Object swagger) {
             this.swagger = Input.ofNullable(swagger);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

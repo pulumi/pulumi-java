@@ -119,27 +119,27 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
     	      this.upgradeFailureCount = defaults.upgradeFailureCount;
         }
 
-        public Builder setFailureCount(@Nullable Double failureCount) {
+        public Builder failureCount(@Nullable Double failureCount) {
             this.failureCount = failureCount;
             return this;
         }
 
-        public Builder setHelmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
+        public Builder helmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
             this.helmChartRef = helmChartRef;
             return this;
         }
 
-        public Builder setInstallFailureCount(@Nullable Double installFailureCount) {
+        public Builder installFailureCount(@Nullable Double installFailureCount) {
             this.installFailureCount = installFailureCount;
             return this;
         }
 
-        public Builder setLastRevisionApplied(@Nullable Double lastRevisionApplied) {
+        public Builder lastRevisionApplied(@Nullable Double lastRevisionApplied) {
             this.lastRevisionApplied = lastRevisionApplied;
             return this;
         }
 
-        public Builder setUpgradeFailureCount(@Nullable Double upgradeFailureCount) {
+        public Builder upgradeFailureCount(@Nullable Double upgradeFailureCount) {
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
         }

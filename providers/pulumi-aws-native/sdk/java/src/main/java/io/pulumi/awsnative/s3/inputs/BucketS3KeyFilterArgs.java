@@ -53,12 +53,12 @@ public final class BucketS3KeyFilterArgs extends io.pulumi.resources.ResourceArg
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(Input<List<BucketFilterRuleArgs>> rules) {
+        public Builder rules(Input<List<BucketFilterRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<BucketFilterRuleArgs> rules) {
+        public Builder rules(List<BucketFilterRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

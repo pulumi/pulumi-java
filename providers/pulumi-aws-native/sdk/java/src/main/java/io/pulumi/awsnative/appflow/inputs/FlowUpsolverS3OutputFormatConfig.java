@@ -76,17 +76,17 @@ public final class FlowUpsolverS3OutputFormatConfig extends io.pulumi.resources.
     	      this.prefixConfig = defaults.prefixConfig;
         }
 
-        public Builder setAggregationConfig(@Nullable FlowAggregationConfig aggregationConfig) {
+        public Builder aggregationConfig(@Nullable FlowAggregationConfig aggregationConfig) {
             this.aggregationConfig = aggregationConfig;
             return this;
         }
 
-        public Builder setFileType(@Nullable FlowFileType fileType) {
+        public Builder fileType(@Nullable FlowFileType fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setPrefixConfig(FlowPrefixConfig prefixConfig) {
+        public Builder prefixConfig(FlowPrefixConfig prefixConfig) {
             this.prefixConfig = Objects.requireNonNull(prefixConfig);
             return this;
         }

@@ -240,122 +240,122 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAccessRights = defaults.userAccessRights;
         }
 
-        public Builder setAccessProtocol(Input<Either<String,ShareAccessProtocol>> accessProtocol) {
+        public Builder accessProtocol(Input<Either<String,ShareAccessProtocol>> accessProtocol) {
             this.accessProtocol = Objects.requireNonNull(accessProtocol);
             return this;
         }
 
-        public Builder setAccessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
+        public Builder accessProtocol(Either<String,ShareAccessProtocol> accessProtocol) {
             this.accessProtocol = Input.of(Objects.requireNonNull(accessProtocol));
             return this;
         }
 
-        public Builder setAzureContainerInfo(@Nullable Input<AzureContainerInfoArgs> azureContainerInfo) {
+        public Builder azureContainerInfo(@Nullable Input<AzureContainerInfoArgs> azureContainerInfo) {
             this.azureContainerInfo = azureContainerInfo;
             return this;
         }
 
-        public Builder setAzureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
+        public Builder azureContainerInfo(@Nullable AzureContainerInfoArgs azureContainerInfo) {
             this.azureContainerInfo = Input.ofNullable(azureContainerInfo);
             return this;
         }
 
-        public Builder setClientAccessRights(@Nullable Input<List<ClientAccessRightArgs>> clientAccessRights) {
+        public Builder clientAccessRights(@Nullable Input<List<ClientAccessRightArgs>> clientAccessRights) {
             this.clientAccessRights = clientAccessRights;
             return this;
         }
 
-        public Builder setClientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
+        public Builder clientAccessRights(@Nullable List<ClientAccessRightArgs> clientAccessRights) {
             this.clientAccessRights = Input.ofNullable(clientAccessRights);
             return this;
         }
 
-        public Builder setDataPolicy(@Nullable Input<Either<String,DataPolicy>> dataPolicy) {
+        public Builder dataPolicy(@Nullable Input<Either<String,DataPolicy>> dataPolicy) {
             this.dataPolicy = dataPolicy;
             return this;
         }
 
-        public Builder setDataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
+        public Builder dataPolicy(@Nullable Either<String,DataPolicy> dataPolicy) {
             this.dataPolicy = Input.ofNullable(dataPolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setMonitoringStatus(Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(Input<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
-        public Builder setMonitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Input.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRefreshDetails(@Nullable Input<RefreshDetailsArgs> refreshDetails) {
+        public Builder refreshDetails(@Nullable Input<RefreshDetailsArgs> refreshDetails) {
             this.refreshDetails = refreshDetails;
             return this;
         }
 
-        public Builder setRefreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
+        public Builder refreshDetails(@Nullable RefreshDetailsArgs refreshDetails) {
             this.refreshDetails = Input.ofNullable(refreshDetails);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareStatus(Input<Either<String,ShareStatus>> shareStatus) {
+        public Builder shareStatus(Input<Either<String,ShareStatus>> shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
 
-        public Builder setShareStatus(Either<String,ShareStatus> shareStatus) {
+        public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
             this.shareStatus = Input.of(Objects.requireNonNull(shareStatus));
             return this;
         }
 
-        public Builder setUserAccessRights(@Nullable Input<List<UserAccessRightArgs>> userAccessRights) {
+        public Builder userAccessRights(@Nullable Input<List<UserAccessRightArgs>> userAccessRights) {
             this.userAccessRights = userAccessRights;
             return this;
         }
 
-        public Builder setUserAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
+        public Builder userAccessRights(@Nullable List<UserAccessRightArgs> userAccessRights) {
             this.userAccessRights = Input.ofNullable(userAccessRights);
             return this;
         }

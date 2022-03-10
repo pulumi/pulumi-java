@@ -40,7 +40,7 @@ public final class PrivateConnectivityResponse {
     	      this.privateConnectionName = defaults.privateConnectionName;
         }
 
-        public Builder setPrivateConnectionName(String privateConnectionName) {
+        public Builder privateConnectionName(String privateConnectionName) {
             this.privateConnectionName = Objects.requireNonNull(privateConnectionName);
             return this;
         }

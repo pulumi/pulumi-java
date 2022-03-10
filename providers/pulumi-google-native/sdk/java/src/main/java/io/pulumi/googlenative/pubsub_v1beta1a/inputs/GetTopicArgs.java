@@ -47,7 +47,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder setTopicId(String topicId) {
+        public Builder topicId(String topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }

@@ -82,17 +82,17 @@ public final class StandardSqlDataTypeResponse {
     	      this.typeKind = defaults.typeKind;
         }
 
-        public Builder setArrayElementType(StandardSqlDataTypeResponse arrayElementType) {
+        public Builder arrayElementType(StandardSqlDataTypeResponse arrayElementType) {
             this.arrayElementType = Objects.requireNonNull(arrayElementType);
             return this;
         }
 
-        public Builder setStructType(StandardSqlStructTypeResponse structType) {
+        public Builder structType(StandardSqlStructTypeResponse structType) {
             this.structType = Objects.requireNonNull(structType);
             return this;
         }
 
-        public Builder setTypeKind(String typeKind) {
+        public Builder typeKind(String typeKind) {
             this.typeKind = Objects.requireNonNull(typeKind);
             return this;
         }

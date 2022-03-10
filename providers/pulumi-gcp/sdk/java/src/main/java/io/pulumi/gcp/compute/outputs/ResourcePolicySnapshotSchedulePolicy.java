@@ -89,17 +89,17 @@ public final class ResourcePolicySnapshotSchedulePolicy {
     	      this.snapshotProperties = defaults.snapshotProperties;
         }
 
-        public Builder setRetentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy) {
+        public Builder retentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setSchedule(ResourcePolicySnapshotSchedulePolicySchedule schedule) {
+        public Builder schedule(ResourcePolicySnapshotSchedulePolicySchedule schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSnapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
+        public Builder snapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
             this.snapshotProperties = snapshotProperties;
             return this;
         }

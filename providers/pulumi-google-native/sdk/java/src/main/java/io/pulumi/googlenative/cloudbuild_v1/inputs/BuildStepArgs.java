@@ -220,112 +220,112 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitFor = defaults.waitFor;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setDir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Input<String> dir) {
             this.dir = dir;
             return this;
         }
 
-        public Builder setDir(@Nullable String dir) {
+        public Builder dir(@Nullable String dir) {
             this.dir = Input.ofNullable(dir);
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Input<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable String entrypoint) {
+        public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = Input.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<List<String>> env) {
+        public Builder env(@Nullable Input<List<String>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<String> env) {
+        public Builder env(@Nullable List<String> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setSecretEnv(@Nullable Input<List<String>> secretEnv) {
+        public Builder secretEnv(@Nullable Input<List<String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
 
-        public Builder setSecretEnv(@Nullable List<String> secretEnv) {
+        public Builder secretEnv(@Nullable List<String> secretEnv) {
             this.secretEnv = Input.ofNullable(secretEnv);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
 
-        public Builder setWaitFor(@Nullable Input<List<String>> waitFor) {
+        public Builder waitFor(@Nullable Input<List<String>> waitFor) {
             this.waitFor = waitFor;
             return this;
         }
 
-        public Builder setWaitFor(@Nullable List<String> waitFor) {
+        public Builder waitFor(@Nullable List<String> waitFor) {
             this.waitFor = Input.ofNullable(waitFor);
             return this;
         }

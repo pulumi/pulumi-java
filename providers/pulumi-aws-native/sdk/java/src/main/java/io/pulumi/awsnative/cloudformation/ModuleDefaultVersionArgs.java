@@ -86,32 +86,32 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setModuleName(@Nullable Input<String> moduleName) {
+        public Builder moduleName(@Nullable Input<String> moduleName) {
             this.moduleName = moduleName;
             return this;
         }
 
-        public Builder setModuleName(@Nullable String moduleName) {
+        public Builder moduleName(@Nullable String moduleName) {
             this.moduleName = Input.ofNullable(moduleName);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }

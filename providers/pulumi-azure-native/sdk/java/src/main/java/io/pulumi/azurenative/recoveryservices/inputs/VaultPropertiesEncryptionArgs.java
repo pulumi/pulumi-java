@@ -94,32 +94,32 @@ public final class VaultPropertiesEncryptionArgs extends io.pulumi.resources.Res
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setInfrastructureEncryption(@Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable Input<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
-        public Builder setInfrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
             this.infrastructureEncryption = Input.ofNullable(infrastructureEncryption);
             return this;
         }
 
-        public Builder setKekIdentity(@Nullable Input<CmkKekIdentityArgs> kekIdentity) {
+        public Builder kekIdentity(@Nullable Input<CmkKekIdentityArgs> kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
 
-        public Builder setKekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
+        public Builder kekIdentity(@Nullable CmkKekIdentityArgs kekIdentity) {
             this.kekIdentity = Input.ofNullable(kekIdentity);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }

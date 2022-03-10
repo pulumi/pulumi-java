@@ -75,22 +75,22 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     	      this.resource = defaults.resource;
         }
 
-        public Builder setMethods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Input<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setResource(Input<String> resource) {
+        public Builder resource(Input<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }

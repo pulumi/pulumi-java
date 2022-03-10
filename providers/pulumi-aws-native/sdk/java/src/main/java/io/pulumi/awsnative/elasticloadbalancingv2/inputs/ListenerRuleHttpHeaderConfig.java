@@ -63,12 +63,12 @@ public final class ListenerRuleHttpHeaderConfig extends io.pulumi.resources.Invo
     	      this.values = defaults.values;
         }
 
-        public Builder setHttpHeaderName(@Nullable String httpHeaderName) {
+        public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

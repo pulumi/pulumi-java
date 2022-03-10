@@ -69,22 +69,22 @@ public final class ServiceApi {
     	      this.version = defaults.version;
         }
 
-        public Builder setMethods(@Nullable List<ServiceApiMethod> methods) {
+        public Builder methods(@Nullable List<ServiceApiMethod> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

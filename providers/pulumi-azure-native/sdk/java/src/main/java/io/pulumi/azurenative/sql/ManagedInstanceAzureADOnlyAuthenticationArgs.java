@@ -103,42 +103,42 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAuthenticationName(@Nullable Input<String> authenticationName) {
+        public Builder authenticationName(@Nullable Input<String> authenticationName) {
             this.authenticationName = authenticationName;
             return this;
         }
 
-        public Builder setAuthenticationName(@Nullable String authenticationName) {
+        public Builder authenticationName(@Nullable String authenticationName) {
             this.authenticationName = Input.ofNullable(authenticationName);
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Input.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
 
-        public Builder setManagedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Input<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
-        public Builder setManagedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(String managedInstanceName) {
             this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -81,17 +81,17 @@ public final class PackageResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setManager(String manager) {
+        public Builder manager(String manager) {
             this.manager = Objects.requireNonNull(manager);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

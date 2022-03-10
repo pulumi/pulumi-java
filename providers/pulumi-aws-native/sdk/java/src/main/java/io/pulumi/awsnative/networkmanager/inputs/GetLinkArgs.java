@@ -68,12 +68,12 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setLinkId(String linkId) {
+        public Builder linkId(String linkId) {
             this.linkId = Objects.requireNonNull(linkId);
             return this;
         }

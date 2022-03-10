@@ -86,32 +86,32 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setGatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Input<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Input.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder setRouteTableId(@Nullable Input<String> routeTableId) {
+        public Builder routeTableId(@Nullable Input<String> routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = Input.ofNullable(routeTableId);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

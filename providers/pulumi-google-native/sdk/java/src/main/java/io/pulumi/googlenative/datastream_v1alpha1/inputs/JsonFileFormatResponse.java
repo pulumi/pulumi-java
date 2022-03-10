@@ -72,12 +72,12 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
     	      this.schemaFileFormat = defaults.schemaFileFormat;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setSchemaFileFormat(String schemaFileFormat) {
+        public Builder schemaFileFormat(String schemaFileFormat) {
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }

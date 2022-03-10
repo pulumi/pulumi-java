@@ -115,27 +115,27 @@ public final class ContainerStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDetailStatus(@Nullable String detailStatus) {
+        public Builder detailStatus(@Nullable String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
 
-        public Builder setExitCode(@Nullable String exitCode) {
+        public Builder exitCode(@Nullable String exitCode) {
             this.exitCode = exitCode;
             return this;
         }
 
-        public Builder setFinishTime(@Nullable String finishTime) {
+        public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

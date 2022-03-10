@@ -87,32 +87,32 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setBlockPublicPolicy(@Nullable Input<Boolean> blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Input<Boolean> blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
 
-        public Builder setBlockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = Input.ofNullable(blockPublicPolicy);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Input<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Input.ofNullable(secretArn);
             return this;
         }

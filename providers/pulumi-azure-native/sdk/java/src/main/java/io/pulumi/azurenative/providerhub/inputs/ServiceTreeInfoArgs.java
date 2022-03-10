@@ -62,22 +62,22 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setComponentId(@Nullable Input<String> componentId) {
+        public Builder componentId(@Nullable Input<String> componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = Input.ofNullable(componentId);
             return this;
         }
 
-        public Builder setServiceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Input<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Input.ofNullable(serviceId);
             return this;
         }

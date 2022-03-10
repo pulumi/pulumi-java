@@ -74,32 +74,32 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setMessageBody(@Nullable Input<String> messageBody) {
+        public Builder messageBody(@Nullable Input<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
-        public Builder setMessageBody(@Nullable String messageBody) {
+        public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = Input.ofNullable(messageBody);
             return this;
         }
 
-        public Builder setStatusCode(Input<String> statusCode) {
+        public Builder statusCode(Input<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }

@@ -72,12 +72,12 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
     	      this.startRange = defaults.startRange;
         }
 
-        public Builder setEndRange(String endRange) {
+        public Builder endRange(String endRange) {
             this.endRange = Objects.requireNonNull(endRange);
             return this;
         }
 
-        public Builder setStartRange(String startRange) {
+        public Builder startRange(String startRange) {
             this.startRange = Objects.requireNonNull(startRange);
             return this;
         }

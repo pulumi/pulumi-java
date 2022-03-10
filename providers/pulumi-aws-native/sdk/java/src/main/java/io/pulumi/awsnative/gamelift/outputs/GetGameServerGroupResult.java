@@ -251,67 +251,67 @@ public final class GetGameServerGroupResult {
     	      this.vpcSubnets = defaults.vpcSubnets;
         }
 
-        public Builder setAutoScalingGroupArn(@Nullable String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(@Nullable String autoScalingGroupArn) {
             this.autoScalingGroupArn = autoScalingGroupArn;
             return this;
         }
 
-        public Builder setAutoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy) {
+        public Builder autoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy) {
             this.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
 
-        public Builder setBalancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
+        public Builder balancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
             this.balancingStrategy = balancingStrategy;
             return this;
         }
 
-        public Builder setGameServerGroupArn(@Nullable String gameServerGroupArn) {
+        public Builder gameServerGroupArn(@Nullable String gameServerGroupArn) {
             this.gameServerGroupArn = gameServerGroupArn;
             return this;
         }
 
-        public Builder setGameServerGroupName(@Nullable String gameServerGroupName) {
+        public Builder gameServerGroupName(@Nullable String gameServerGroupName) {
             this.gameServerGroupName = gameServerGroupName;
             return this;
         }
 
-        public Builder setGameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
+        public Builder gameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
             this.gameServerProtectionPolicy = gameServerProtectionPolicy;
             return this;
         }
 
-        public Builder setInstanceDefinitions(@Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions) {
+        public Builder instanceDefinitions(@Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions) {
             this.instanceDefinitions = instanceDefinitions;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable GameServerGroupLaunchTemplate launchTemplate) {
+        public Builder launchTemplate(@Nullable GameServerGroupLaunchTemplate launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Double maxSize) {
+        public Builder maxSize(@Nullable Double maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Double minSize) {
+        public Builder minSize(@Nullable Double minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GameServerGroupTag> tags) {
+        public Builder tags(@Nullable List<GameServerGroupTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcSubnets(@Nullable List<String> vpcSubnets) {
+        public Builder vpcSubnets(@Nullable List<String> vpcSubnets) {
             this.vpcSubnets = vpcSubnets;
             return this;
         }

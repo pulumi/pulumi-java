@@ -73,12 +73,12 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.progressMessages = defaults.progressMessages;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setProgressMessages(List<String> progressMessages) {
+        public Builder progressMessages(List<String> progressMessages) {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }

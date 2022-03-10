@@ -119,52 +119,52 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder setCode(Input<String> code) {
+        public Builder code(Input<String> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Input.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublish(@Nullable Input<Boolean> publish) {
+        public Builder publish(@Nullable Input<Boolean> publish) {
             this.publish = publish;
             return this;
         }
 
-        public Builder setPublish(@Nullable Boolean publish) {
+        public Builder publish(@Nullable Boolean publish) {
             this.publish = Input.ofNullable(publish);
             return this;
         }
 
-        public Builder setRuntime(Input<String> runtime) {
+        public Builder runtime(Input<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Input.of(Objects.requireNonNull(runtime));
             return this;
         }

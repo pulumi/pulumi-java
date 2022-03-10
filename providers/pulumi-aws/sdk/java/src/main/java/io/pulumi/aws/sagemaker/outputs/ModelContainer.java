@@ -135,32 +135,32 @@ public final class ModelContainer {
     	      this.modelDataUrl = defaults.modelDataUrl;
         }
 
-        public Builder setContainerHostname(@Nullable String containerHostname) {
+        public Builder containerHostname(@Nullable String containerHostname) {
             this.containerHostname = containerHostname;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Map<String,String> environment) {
+        public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImageConfig(@Nullable ModelContainerImageConfig imageConfig) {
+        public Builder imageConfig(@Nullable ModelContainerImageConfig imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setModelDataUrl(@Nullable String modelDataUrl) {
+        public Builder modelDataUrl(@Nullable String modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
         }

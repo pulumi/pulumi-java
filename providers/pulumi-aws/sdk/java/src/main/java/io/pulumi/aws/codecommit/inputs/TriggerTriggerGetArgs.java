@@ -119,52 +119,52 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder setBranches(@Nullable Input<List<String>> branches) {
+        public Builder branches(@Nullable Input<List<String>> branches) {
             this.branches = branches;
             return this;
         }
 
-        public Builder setBranches(@Nullable List<String> branches) {
+        public Builder branches(@Nullable List<String> branches) {
             this.branches = Input.ofNullable(branches);
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setDestinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Input<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder setEvents(Input<List<String>> events) {
+        public Builder events(Input<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

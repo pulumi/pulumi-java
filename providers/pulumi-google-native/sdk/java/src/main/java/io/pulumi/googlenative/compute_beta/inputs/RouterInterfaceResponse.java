@@ -164,42 +164,42 @@ public final class RouterInterfaceResponse extends io.pulumi.resources.InvokeArg
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachment(String linkedInterconnectAttachment) {
+        public Builder linkedInterconnectAttachment(String linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment);
             return this;
         }
 
-        public Builder setLinkedVpnTunnel(String linkedVpnTunnel) {
+        public Builder linkedVpnTunnel(String linkedVpnTunnel) {
             this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel);
             return this;
         }
 
-        public Builder setManagementType(String managementType) {
+        public Builder managementType(String managementType) {
             this.managementType = Objects.requireNonNull(managementType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setRedundantInterface(String redundantInterface) {
+        public Builder redundantInterface(String redundantInterface) {
             this.redundantInterface = Objects.requireNonNull(redundantInterface);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

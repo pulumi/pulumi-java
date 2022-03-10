@@ -50,7 +50,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse {
     	      this.failoverPolicy = defaults.failoverPolicy;
         }
 
-        public Builder setFailoverPolicy(@Nullable String failoverPolicy) {
+        public Builder failoverPolicy(@Nullable String failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }

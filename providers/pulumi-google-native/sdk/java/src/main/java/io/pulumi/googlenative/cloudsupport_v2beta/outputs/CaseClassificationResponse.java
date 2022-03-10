@@ -48,7 +48,7 @@ public final class CaseClassificationResponse {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }

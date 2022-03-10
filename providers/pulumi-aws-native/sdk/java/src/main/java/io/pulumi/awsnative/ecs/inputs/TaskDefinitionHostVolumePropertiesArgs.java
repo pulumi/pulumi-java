@@ -49,12 +49,12 @@ public final class TaskDefinitionHostVolumePropertiesArgs extends io.pulumi.reso
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setSourcePath(@Nullable Input<String> sourcePath) {
+        public Builder sourcePath(@Nullable Input<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }

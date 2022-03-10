@@ -66,12 +66,12 @@ public final class MetricRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setMetricCosts(Map<String,String> metricCosts) {
+        public Builder metricCosts(Map<String,String> metricCosts) {
             this.metricCosts = Objects.requireNonNull(metricCosts);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

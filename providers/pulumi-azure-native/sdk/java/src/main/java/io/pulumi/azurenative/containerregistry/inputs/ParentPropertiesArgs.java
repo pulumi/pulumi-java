@@ -75,22 +75,22 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.syncProperties = defaults.syncProperties;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setSyncProperties(Input<SyncPropertiesArgs> syncProperties) {
+        public Builder syncProperties(Input<SyncPropertiesArgs> syncProperties) {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }
 
-        public Builder setSyncProperties(SyncPropertiesArgs syncProperties) {
+        public Builder syncProperties(SyncPropertiesArgs syncProperties) {
             this.syncProperties = Input.of(Objects.requireNonNull(syncProperties));
             return this;
         }

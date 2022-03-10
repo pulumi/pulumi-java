@@ -120,52 +120,52 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
     	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
         }
 
-        public Builder setCallerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Input<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
-        public Builder setCallerReference(@Nullable String callerReference) {
+        public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Input.ofNullable(callerReference);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setContentTypeProfileConfig(@Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(@Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
 
-        public Builder setContentTypeProfileConfig(@Nullable FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(@Nullable FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Input.ofNullable(contentTypeProfileConfig);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setQueryArgProfileConfig(@Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(@Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
 
-        public Builder setQueryArgProfileConfig(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs queryArgProfileConfig) {
             this.queryArgProfileConfig = Input.ofNullable(queryArgProfileConfig);
             return this;
         }

@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     	      this.transcriptUri = defaults.transcriptUri;
         }
 
-        public Builder setAudioUri(String audioUri) {
+        public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
 
-        public Builder setTranscriptUri(String transcriptUri) {
+        public Builder transcriptUri(String transcriptUri) {
             this.transcriptUri = Objects.requireNonNull(transcriptUri);
             return this;
         }

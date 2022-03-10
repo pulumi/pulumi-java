@@ -67,22 +67,22 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     	      this.isSandboxEnvironment = defaults.isSandboxEnvironment;
         }
 
-        public Builder setInstanceUrl(@Nullable Input<String> instanceUrl) {
+        public Builder instanceUrl(@Nullable Input<String> instanceUrl) {
             this.instanceUrl = instanceUrl;
             return this;
         }
 
-        public Builder setInstanceUrl(@Nullable String instanceUrl) {
+        public Builder instanceUrl(@Nullable String instanceUrl) {
             this.instanceUrl = Input.ofNullable(instanceUrl);
             return this;
         }
 
-        public Builder setIsSandboxEnvironment(@Nullable Input<Boolean> isSandboxEnvironment) {
+        public Builder isSandboxEnvironment(@Nullable Input<Boolean> isSandboxEnvironment) {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
         }
 
-        public Builder setIsSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
+        public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
             this.isSandboxEnvironment = Input.ofNullable(isSandboxEnvironment);
             return this;
         }

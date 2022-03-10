@@ -72,22 +72,22 @@ public final class DistributionTrustedKeyGroupArgs extends io.pulumi.resources.R
     	      this.items = defaults.items;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setItems(@Nullable Input<List<DistributionTrustedKeyGroupItemArgs>> items) {
+        public Builder items(@Nullable Input<List<DistributionTrustedKeyGroupItemArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DistributionTrustedKeyGroupItemArgs> items) {
+        public Builder items(@Nullable List<DistributionTrustedKeyGroupItemArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

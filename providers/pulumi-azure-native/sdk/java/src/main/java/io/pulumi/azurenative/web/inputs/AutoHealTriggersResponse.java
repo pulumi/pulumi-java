@@ -143,32 +143,32 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
     	      this.statusCodesRange = defaults.statusCodesRange;
         }
 
-        public Builder setPrivateBytesInKB(@Nullable Integer privateBytesInKB) {
+        public Builder privateBytesInKB(@Nullable Integer privateBytesInKB) {
             this.privateBytesInKB = privateBytesInKB;
             return this;
         }
 
-        public Builder setRequests(@Nullable RequestsBasedTriggerResponse requests) {
+        public Builder requests(@Nullable RequestsBasedTriggerResponse requests) {
             this.requests = requests;
             return this;
         }
 
-        public Builder setSlowRequests(@Nullable SlowRequestsBasedTriggerResponse slowRequests) {
+        public Builder slowRequests(@Nullable SlowRequestsBasedTriggerResponse slowRequests) {
             this.slowRequests = slowRequests;
             return this;
         }
 
-        public Builder setSlowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath) {
+        public Builder slowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath) {
             this.slowRequestsWithPath = slowRequestsWithPath;
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable List<StatusCodesBasedTriggerResponse> statusCodes) {
+        public Builder statusCodes(@Nullable List<StatusCodesBasedTriggerResponse> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
-        public Builder setStatusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
+        public Builder statusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
             this.statusCodesRange = statusCodesRange;
             return this;
         }

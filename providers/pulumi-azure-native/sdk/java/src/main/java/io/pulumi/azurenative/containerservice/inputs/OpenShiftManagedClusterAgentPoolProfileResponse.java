@@ -139,32 +139,32 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse extends io.pu
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setSubnetCidr(@Nullable String subnetCidr) {
+        public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
 
-        public Builder setVmSize(String vmSize) {
+        public Builder vmSize(String vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }

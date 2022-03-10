@@ -106,42 +106,42 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAttestationAuthorityNote(Input<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote) {
+        public Builder attestationAuthorityNote(Input<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote) {
             this.attestationAuthorityNote = Objects.requireNonNull(attestationAuthorityNote);
             return this;
         }
 
-        public Builder setAttestationAuthorityNote(AttestorAttestationAuthorityNoteArgs attestationAuthorityNote) {
+        public Builder attestationAuthorityNote(AttestorAttestationAuthorityNoteArgs attestationAuthorityNote) {
             this.attestationAuthorityNote = Input.of(Objects.requireNonNull(attestationAuthorityNote));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

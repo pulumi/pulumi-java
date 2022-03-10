@@ -84,17 +84,17 @@ public final class DevicePropertiesResponse {
     	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
         }
 
-        public Builder setDeviceModel(@Nullable String deviceModel) {
+        public Builder deviceModel(@Nullable String deviceModel) {
             this.deviceModel = deviceModel;
             return this;
         }
 
-        public Builder setDeviceVendor(@Nullable String deviceVendor) {
+        public Builder deviceVendor(@Nullable String deviceVendor) {
             this.deviceVendor = deviceVendor;
             return this;
         }
 
-        public Builder setLinkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }

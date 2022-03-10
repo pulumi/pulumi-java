@@ -84,32 +84,32 @@ public final class ServiceTaskSpecContainerSpecConfig {
     	      this.fileUid = defaults.fileUid;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigName(@Nullable String configName) {
+        public Builder configName(@Nullable String configName) {
             this.configName = configName;
             return this;
         }
 
-        public Builder setFileGid(@Nullable String fileGid) {
+        public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = fileGid;
             return this;
         }
 
-        public Builder setFileMode(@Nullable Integer fileMode) {
+        public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setFileUid(@Nullable String fileUid) {
+        public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = fileUid;
             return this;
         }

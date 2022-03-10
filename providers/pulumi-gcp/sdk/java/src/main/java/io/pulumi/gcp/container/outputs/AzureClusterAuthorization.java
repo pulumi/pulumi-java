@@ -49,7 +49,7 @@ public final class AzureClusterAuthorization {
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder setAdminUsers(List<AzureClusterAuthorizationAdminUser> adminUsers) {
+        public Builder adminUsers(List<AzureClusterAuthorizationAdminUser> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }

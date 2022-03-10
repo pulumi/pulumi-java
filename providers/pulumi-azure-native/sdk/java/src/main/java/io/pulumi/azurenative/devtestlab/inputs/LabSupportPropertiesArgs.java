@@ -76,22 +76,22 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
     	      this.markdown = defaults.markdown;
         }
 
-        public Builder setEnabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
+        public Builder enabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Either<String,EnableStatus> enabled) {
+        public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setMarkdown(@Nullable Input<String> markdown) {
+        public Builder markdown(@Nullable Input<String> markdown) {
             this.markdown = markdown;
             return this;
         }
 
-        public Builder setMarkdown(@Nullable String markdown) {
+        public Builder markdown(@Nullable String markdown) {
             this.markdown = Input.ofNullable(markdown);
             return this;
         }

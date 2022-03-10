@@ -56,12 +56,12 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder setGcsPath(Input<String> gcsPath) {
+        public Builder gcsPath(Input<String> gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Input.of(Objects.requireNonNull(gcsPath));
             return this;
         }

@@ -50,7 +50,7 @@ public final class ScopeSelector {
     	      this.matchExpressions = defaults.matchExpressions;
         }
 
-        public Builder setMatchExpressions(@Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }

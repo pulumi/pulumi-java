@@ -67,17 +67,17 @@ public final class LoggingConfigurationLogDestinationConfig {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setLogDestination(Object logDestination) {
+        public Builder logDestination(Object logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
+        public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
-        public Builder setLogType(LoggingConfigurationLogDestinationConfigLogType logType) {
+        public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

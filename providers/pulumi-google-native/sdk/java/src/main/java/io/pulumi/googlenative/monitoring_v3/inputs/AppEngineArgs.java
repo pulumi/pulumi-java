@@ -57,12 +57,12 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.moduleId = defaults.moduleId;
         }
 
-        public Builder setModuleId(@Nullable Input<String> moduleId) {
+        public Builder moduleId(@Nullable Input<String> moduleId) {
             this.moduleId = moduleId;
             return this;
         }
 
-        public Builder setModuleId(@Nullable String moduleId) {
+        public Builder moduleId(@Nullable String moduleId) {
             this.moduleId = Input.ofNullable(moduleId);
             return this;
         }

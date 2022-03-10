@@ -66,12 +66,12 @@ public final class QueryAnalysisValidationResultResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setQueryResults(QueryExecutionResultResponse queryResults) {
+        public Builder queryResults(QueryExecutionResultResponse queryResults) {
             this.queryResults = Objects.requireNonNull(queryResults);
             return this;
         }
 
-        public Builder setValidationErrors(ValidationErrorResponse validationErrors) {
+        public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

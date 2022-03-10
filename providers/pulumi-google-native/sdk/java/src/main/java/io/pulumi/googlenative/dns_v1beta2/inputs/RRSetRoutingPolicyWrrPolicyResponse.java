@@ -66,12 +66,12 @@ public final class RRSetRoutingPolicyWrrPolicyResponse extends io.pulumi.resourc
     	      this.kind = defaults.kind;
         }
 
-        public Builder setItems(List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items) {
+        public Builder items(List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

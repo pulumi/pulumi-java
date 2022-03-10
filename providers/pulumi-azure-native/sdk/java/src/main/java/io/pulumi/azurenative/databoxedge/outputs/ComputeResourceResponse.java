@@ -66,12 +66,12 @@ public final class ComputeResourceResponse {
     	      this.processorCount = defaults.processorCount;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
-        public Builder setProcessorCount(Integer processorCount) {
+        public Builder processorCount(Integer processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }

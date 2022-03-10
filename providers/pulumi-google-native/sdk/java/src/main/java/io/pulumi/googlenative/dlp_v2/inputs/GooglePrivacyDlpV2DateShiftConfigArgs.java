@@ -108,42 +108,42 @@ public final class GooglePrivacyDlpV2DateShiftConfigArgs extends io.pulumi.resou
     	      this.upperBoundDays = defaults.upperBoundDays;
         }
 
-        public Builder setContext(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
+        public Builder context(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
+        public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+        public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder setLowerBoundDays(Input<Integer> lowerBoundDays) {
+        public Builder lowerBoundDays(Input<Integer> lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
 
-        public Builder setLowerBoundDays(Integer lowerBoundDays) {
+        public Builder lowerBoundDays(Integer lowerBoundDays) {
             this.lowerBoundDays = Input.of(Objects.requireNonNull(lowerBoundDays));
             return this;
         }
 
-        public Builder setUpperBoundDays(Input<Integer> upperBoundDays) {
+        public Builder upperBoundDays(Input<Integer> upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
 
-        public Builder setUpperBoundDays(Integer upperBoundDays) {
+        public Builder upperBoundDays(Integer upperBoundDays) {
             this.upperBoundDays = Input.of(Objects.requireNonNull(upperBoundDays));
             return this;
         }

@@ -48,7 +48,7 @@ public final class OrganizationConfigurationDatasourcesS3Logs {
     	      this.autoEnable = defaults.autoEnable;
         }
 
-        public Builder setAutoEnable(Boolean autoEnable) {
+        public Builder autoEnable(Boolean autoEnable) {
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }

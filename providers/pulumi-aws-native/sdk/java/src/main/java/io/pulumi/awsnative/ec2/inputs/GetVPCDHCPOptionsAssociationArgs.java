@@ -68,12 +68,12 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setDhcpOptionsId(String dhcpOptionsId) {
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

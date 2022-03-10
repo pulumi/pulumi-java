@@ -72,12 +72,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     	      this.text = defaults.text;
         }
 
-        public Builder setSsml(String ssml) {
+        public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

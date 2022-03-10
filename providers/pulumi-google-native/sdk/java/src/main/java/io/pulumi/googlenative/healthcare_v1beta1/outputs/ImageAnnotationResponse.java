@@ -67,12 +67,12 @@ public final class ImageAnnotationResponse {
     	      this.frameIndex = defaults.frameIndex;
         }
 
-        public Builder setBoundingPolys(List<BoundingPolyResponse> boundingPolys) {
+        public Builder boundingPolys(List<BoundingPolyResponse> boundingPolys) {
             this.boundingPolys = Objects.requireNonNull(boundingPolys);
             return this;
         }
 
-        public Builder setFrameIndex(Integer frameIndex) {
+        public Builder frameIndex(Integer frameIndex) {
             this.frameIndex = Objects.requireNonNull(frameIndex);
             return this;
         }

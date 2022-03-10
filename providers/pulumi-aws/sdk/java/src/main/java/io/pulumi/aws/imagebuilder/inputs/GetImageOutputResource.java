@@ -52,7 +52,7 @@ public final class GetImageOutputResource extends io.pulumi.resources.InvokeArgs
     	      this.amis = defaults.amis;
         }
 
-        public Builder setAmis(List<GetImageOutputResourceAmi> amis) {
+        public Builder amis(List<GetImageOutputResourceAmi> amis) {
             this.amis = Objects.requireNonNull(amis);
             return this;
         }

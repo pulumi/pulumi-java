@@ -90,17 +90,17 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.startRestoreTime = defaults.startRestoreTime;
         }
 
-        public Builder setEndRestoreTime(@Nullable String endRestoreTime) {
+        public Builder endRestoreTime(@Nullable String endRestoreTime) {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setStartRestoreTime(@Nullable String startRestoreTime) {
+        public Builder startRestoreTime(@Nullable String startRestoreTime) {
             this.startRestoreTime = startRestoreTime;
             return this;
         }

@@ -75,22 +75,22 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stages = defaults.stages;
         }
 
-        public Builder setLevel(Input<String> level) {
+        public Builder level(Input<String> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Input.of(Objects.requireNonNull(level));
             return this;
         }
 
-        public Builder setStages(@Nullable Input<List<String>> stages) {
+        public Builder stages(@Nullable Input<List<String>> stages) {
             this.stages = stages;
             return this;
         }
 
-        public Builder setStages(@Nullable List<String> stages) {
+        public Builder stages(@Nullable List<String> stages) {
             this.stages = Input.ofNullable(stages);
             return this;
         }

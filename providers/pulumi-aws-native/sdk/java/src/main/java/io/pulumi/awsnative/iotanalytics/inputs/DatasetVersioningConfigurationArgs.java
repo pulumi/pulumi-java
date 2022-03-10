@@ -63,22 +63,22 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder setMaxVersions(@Nullable Input<Integer> maxVersions) {
+        public Builder maxVersions(@Nullable Input<Integer> maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
 
-        public Builder setMaxVersions(@Nullable Integer maxVersions) {
+        public Builder maxVersions(@Nullable Integer maxVersions) {
             this.maxVersions = Input.ofNullable(maxVersions);
             return this;
         }
 
-        public Builder setUnlimited(@Nullable Input<Boolean> unlimited) {
+        public Builder unlimited(@Nullable Input<Boolean> unlimited) {
             this.unlimited = unlimited;
             return this;
         }
 
-        public Builder setUnlimited(@Nullable Boolean unlimited) {
+        public Builder unlimited(@Nullable Boolean unlimited) {
             this.unlimited = Input.ofNullable(unlimited);
             return this;
         }

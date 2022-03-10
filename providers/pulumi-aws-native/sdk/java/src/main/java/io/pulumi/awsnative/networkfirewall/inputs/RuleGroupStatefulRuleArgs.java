@@ -76,32 +76,32 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder setAction(Input<RuleGroupStatefulRuleAction> action) {
+        public Builder action(Input<RuleGroupStatefulRuleAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RuleGroupStatefulRuleAction action) {
+        public Builder action(RuleGroupStatefulRuleAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setHeader(Input<RuleGroupHeaderArgs> header) {
+        public Builder header(Input<RuleGroupHeaderArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setHeader(RuleGroupHeaderArgs header) {
+        public Builder header(RuleGroupHeaderArgs header) {
             this.header = Input.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder setRuleOptions(Input<List<RuleGroupRuleOptionArgs>> ruleOptions) {
+        public Builder ruleOptions(Input<List<RuleGroupRuleOptionArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
 
-        public Builder setRuleOptions(List<RuleGroupRuleOptionArgs> ruleOptions) {
+        public Builder ruleOptions(List<RuleGroupRuleOptionArgs> ruleOptions) {
             this.ruleOptions = Input.of(Objects.requireNonNull(ruleOptions));
             return this;
         }

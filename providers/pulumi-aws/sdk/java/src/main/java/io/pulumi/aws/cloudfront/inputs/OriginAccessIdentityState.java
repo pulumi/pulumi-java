@@ -141,62 +141,62 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
     	      this.s3CanonicalUserId = defaults.s3CanonicalUserId;
         }
 
-        public Builder setCallerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Input<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
-        public Builder setCallerReference(@Nullable String callerReference) {
+        public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Input.ofNullable(callerReference);
             return this;
         }
 
-        public Builder setCloudfrontAccessIdentityPath(@Nullable Input<String> cloudfrontAccessIdentityPath) {
+        public Builder cloudfrontAccessIdentityPath(@Nullable Input<String> cloudfrontAccessIdentityPath) {
             this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
             return this;
         }
 
-        public Builder setCloudfrontAccessIdentityPath(@Nullable String cloudfrontAccessIdentityPath) {
+        public Builder cloudfrontAccessIdentityPath(@Nullable String cloudfrontAccessIdentityPath) {
             this.cloudfrontAccessIdentityPath = Input.ofNullable(cloudfrontAccessIdentityPath);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setIamArn(@Nullable Input<String> iamArn) {
+        public Builder iamArn(@Nullable Input<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
 
-        public Builder setIamArn(@Nullable String iamArn) {
+        public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Input.ofNullable(iamArn);
             return this;
         }
 
-        public Builder setS3CanonicalUserId(@Nullable Input<String> s3CanonicalUserId) {
+        public Builder s3CanonicalUserId(@Nullable Input<String> s3CanonicalUserId) {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
 
-        public Builder setS3CanonicalUserId(@Nullable String s3CanonicalUserId) {
+        public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
             this.s3CanonicalUserId = Input.ofNullable(s3CanonicalUserId);
             return this;
         }

@@ -191,47 +191,47 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     	      this.words = defaults.words;
         }
 
-        public Builder setChannelTag(Integer channelTag) {
+        public Builder channelTag(Integer channelTag) {
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
 
-        public Builder setConfidence(Double confidence) {
+        public Builder confidence(Double confidence) {
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
 
-        public Builder setDialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata) {
+        public Builder dialogflowSegmentMetadata(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata) {
             this.dialogflowSegmentMetadata = Objects.requireNonNull(dialogflowSegmentMetadata);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setMessageTime(String messageTime) {
+        public Builder messageTime(String messageTime) {
             this.messageTime = Objects.requireNonNull(messageTime);
             return this;
         }
 
-        public Builder setSegmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant) {
+        public Builder segmentParticipant(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant) {
             this.segmentParticipant = Objects.requireNonNull(segmentParticipant);
             return this;
         }
 
-        public Builder setSentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
+        public Builder sentiment(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment) {
             this.sentiment = Objects.requireNonNull(sentiment);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setWords(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
+        public Builder words(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
             this.words = Objects.requireNonNull(words);
             return this;
         }

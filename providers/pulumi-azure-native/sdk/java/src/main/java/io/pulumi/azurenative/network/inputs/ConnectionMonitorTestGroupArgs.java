@@ -124,52 +124,52 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
     	      this.testConfigurations = defaults.testConfigurations;
         }
 
-        public Builder setDestinations(Input<List<String>> destinations) {
+        public Builder destinations(Input<List<String>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Input.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder setDisable(@Nullable Input<Boolean> disable) {
+        public Builder disable(@Nullable Input<Boolean> disable) {
             this.disable = disable;
             return this;
         }
 
-        public Builder setDisable(@Nullable Boolean disable) {
+        public Builder disable(@Nullable Boolean disable) {
             this.disable = Input.ofNullable(disable);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSources(Input<List<String>> sources) {
+        public Builder sources(Input<List<String>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setSources(List<String> sources) {
+        public Builder sources(List<String> sources) {
             this.sources = Input.of(Objects.requireNonNull(sources));
             return this;
         }
 
-        public Builder setTestConfigurations(Input<List<String>> testConfigurations) {
+        public Builder testConfigurations(Input<List<String>> testConfigurations) {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
 
-        public Builder setTestConfigurations(List<String> testConfigurations) {
+        public Builder testConfigurations(List<String> testConfigurations) {
             this.testConfigurations = Input.of(Objects.requireNonNull(testConfigurations));
             return this;
         }

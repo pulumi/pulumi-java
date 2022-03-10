@@ -48,7 +48,7 @@ public final class GlossaryInputConfigResponse {
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder setGcsSource(GcsSourceResponse gcsSource) {
+        public Builder gcsSource(GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }

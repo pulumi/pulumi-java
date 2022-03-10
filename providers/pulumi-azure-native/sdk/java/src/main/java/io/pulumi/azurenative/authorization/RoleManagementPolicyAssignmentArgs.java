@@ -102,42 +102,42 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
     	      this.scope = defaults.scope;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder setRoleManagementPolicyAssignmentName(@Nullable Input<String> roleManagementPolicyAssignmentName) {
+        public Builder roleManagementPolicyAssignmentName(@Nullable Input<String> roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = roleManagementPolicyAssignmentName;
             return this;
         }
 
-        public Builder setRoleManagementPolicyAssignmentName(@Nullable String roleManagementPolicyAssignmentName) {
+        public Builder roleManagementPolicyAssignmentName(@Nullable String roleManagementPolicyAssignmentName) {
             this.roleManagementPolicyAssignmentName = Input.ofNullable(roleManagementPolicyAssignmentName);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

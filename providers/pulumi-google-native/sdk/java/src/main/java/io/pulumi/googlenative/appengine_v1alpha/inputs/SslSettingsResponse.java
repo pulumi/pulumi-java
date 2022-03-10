@@ -73,12 +73,12 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.isManagedCertificate = defaults.isManagedCertificate;
         }
 
-        public Builder setCertificateId(String certificateId) {
+        public Builder certificateId(String certificateId) {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
 
-        public Builder setIsManagedCertificate(Boolean isManagedCertificate) {
+        public Builder isManagedCertificate(Boolean isManagedCertificate) {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
         }

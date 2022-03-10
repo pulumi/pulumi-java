@@ -101,22 +101,22 @@ public final class DependencyResponse {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setDependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }

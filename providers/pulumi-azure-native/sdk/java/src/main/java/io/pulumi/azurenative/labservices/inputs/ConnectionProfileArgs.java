@@ -106,42 +106,42 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.webSshAccess = defaults.webSshAccess;
         }
 
-        public Builder setClientRdpAccess(@Nullable Input<ConnectionType> clientRdpAccess) {
+        public Builder clientRdpAccess(@Nullable Input<ConnectionType> clientRdpAccess) {
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
 
-        public Builder setClientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
+        public Builder clientRdpAccess(@Nullable ConnectionType clientRdpAccess) {
             this.clientRdpAccess = Input.ofNullable(clientRdpAccess);
             return this;
         }
 
-        public Builder setClientSshAccess(@Nullable Input<ConnectionType> clientSshAccess) {
+        public Builder clientSshAccess(@Nullable Input<ConnectionType> clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
 
-        public Builder setClientSshAccess(@Nullable ConnectionType clientSshAccess) {
+        public Builder clientSshAccess(@Nullable ConnectionType clientSshAccess) {
             this.clientSshAccess = Input.ofNullable(clientSshAccess);
             return this;
         }
 
-        public Builder setWebRdpAccess(@Nullable Input<ConnectionType> webRdpAccess) {
+        public Builder webRdpAccess(@Nullable Input<ConnectionType> webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
 
-        public Builder setWebRdpAccess(@Nullable ConnectionType webRdpAccess) {
+        public Builder webRdpAccess(@Nullable ConnectionType webRdpAccess) {
             this.webRdpAccess = Input.ofNullable(webRdpAccess);
             return this;
         }
 
-        public Builder setWebSshAccess(@Nullable Input<ConnectionType> webSshAccess) {
+        public Builder webSshAccess(@Nullable Input<ConnectionType> webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
         }
 
-        public Builder setWebSshAccess(@Nullable ConnectionType webSshAccess) {
+        public Builder webSshAccess(@Nullable ConnectionType webSshAccess) {
             this.webSshAccess = Input.ofNullable(webSshAccess);
             return this;
         }

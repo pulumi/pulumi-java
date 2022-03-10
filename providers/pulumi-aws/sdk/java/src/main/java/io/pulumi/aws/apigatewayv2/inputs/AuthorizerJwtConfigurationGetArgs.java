@@ -71,22 +71,22 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setAudiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Input<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = Input.ofNullable(audiences);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }

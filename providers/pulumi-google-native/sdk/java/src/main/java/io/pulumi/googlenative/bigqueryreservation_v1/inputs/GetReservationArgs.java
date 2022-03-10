@@ -74,17 +74,17 @@ public final class GetReservationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.reservationId = defaults.reservationId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setReservationId(String reservationId) {
+        public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }

@@ -77,22 +77,22 @@ public final class BudgetAmountGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Input<Boolean> lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Input<Boolean> lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
             this.lastPeriodAmount = Input.ofNullable(lastPeriodAmount);
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable Input<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount) {
+        public Builder specifiedAmount(@Nullable Input<BudgetAmountSpecifiedAmountGetArgs> specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable BudgetAmountSpecifiedAmountGetArgs specifiedAmount) {
+        public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmountGetArgs specifiedAmount) {
             this.specifiedAmount = Input.ofNullable(specifiedAmount);
             return this;
         }

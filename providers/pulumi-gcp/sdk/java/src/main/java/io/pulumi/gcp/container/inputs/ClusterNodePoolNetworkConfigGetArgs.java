@@ -87,32 +87,32 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
     	      this.podRange = defaults.podRange;
         }
 
-        public Builder setCreatePodRange(@Nullable Input<Boolean> createPodRange) {
+        public Builder createPodRange(@Nullable Input<Boolean> createPodRange) {
             this.createPodRange = createPodRange;
             return this;
         }
 
-        public Builder setCreatePodRange(@Nullable Boolean createPodRange) {
+        public Builder createPodRange(@Nullable Boolean createPodRange) {
             this.createPodRange = Input.ofNullable(createPodRange);
             return this;
         }
 
-        public Builder setPodIpv4CidrBlock(@Nullable Input<String> podIpv4CidrBlock) {
+        public Builder podIpv4CidrBlock(@Nullable Input<String> podIpv4CidrBlock) {
             this.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
 
-        public Builder setPodIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
+        public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
             this.podIpv4CidrBlock = Input.ofNullable(podIpv4CidrBlock);
             return this;
         }
 
-        public Builder setPodRange(Input<String> podRange) {
+        public Builder podRange(Input<String> podRange) {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
 
-        public Builder setPodRange(String podRange) {
+        public Builder podRange(String podRange) {
             this.podRange = Input.of(Objects.requireNonNull(podRange));
             return this;
         }

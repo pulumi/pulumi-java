@@ -221,112 +221,112 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setBackendHostHeader(@Nullable Input<String> backendHostHeader) {
+        public Builder backendHostHeader(@Nullable Input<String> backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
 
-        public Builder setBackendHostHeader(@Nullable String backendHostHeader) {
+        public Builder backendHostHeader(@Nullable String backendHostHeader) {
             this.backendHostHeader = Input.ofNullable(backendHostHeader);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,BackendEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,BackendEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,BackendEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Input<Integer> httpPort) {
+        public Builder httpPort(@Nullable Input<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = Input.ofNullable(httpPort);
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Input<Integer> httpsPort) {
+        public Builder httpsPort(@Nullable Input<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = Input.ofNullable(httpsPort);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setPrivateLinkAlias(@Nullable Input<String> privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable Input<String> privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
-        public Builder setPrivateLinkAlias(@Nullable String privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = Input.ofNullable(privateLinkAlias);
             return this;
         }
 
-        public Builder setPrivateLinkApprovalMessage(@Nullable Input<String> privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable Input<String> privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
-        public Builder setPrivateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = Input.ofNullable(privateLinkApprovalMessage);
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable Input<String> privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable Input<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = Input.ofNullable(privateLinkLocation);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

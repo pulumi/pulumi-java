@@ -70,22 +70,22 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder setResourceShareArn(@Nullable Input<String> resourceShareArn) {
+        public Builder resourceShareArn(@Nullable Input<String> resourceShareArn) {
             this.resourceShareArn = resourceShareArn;
             return this;
         }
 
-        public Builder setResourceShareArn(@Nullable String resourceShareArn) {
+        public Builder resourceShareArn(@Nullable String resourceShareArn) {
             this.resourceShareArn = Input.ofNullable(resourceShareArn);
             return this;
         }

@@ -103,42 +103,42 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Boolean sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder setStackName(Input<String> stackName) {
+        public Builder stackName(Input<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
-        public Builder setStackName(String stackName) {
+        public Builder stackName(String stackName) {
             this.stackName = Input.of(Objects.requireNonNull(stackName));
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

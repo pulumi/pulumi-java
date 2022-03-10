@@ -93,32 +93,32 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
     	      this.sourceTable = defaults.sourceTable;
         }
 
-        public Builder setActions(@Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
+        public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setPrivacyMetric(@Nullable Input<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric) {
+        public Builder privacyMetric(@Nullable Input<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric) {
             this.privacyMetric = privacyMetric;
             return this;
         }
 
-        public Builder setPrivacyMetric(@Nullable GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
+        public Builder privacyMetric(@Nullable GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
             this.privacyMetric = Input.ofNullable(privacyMetric);
             return this;
         }
 
-        public Builder setSourceTable(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
+        public Builder sourceTable(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
 
-        public Builder setSourceTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
+        public Builder sourceTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
             this.sourceTable = Input.ofNullable(sourceTable);
             return this;
         }

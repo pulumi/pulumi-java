@@ -71,22 +71,22 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subsetSize = defaults.subsetSize;
         }
 
-        public Builder setPolicy(@Nullable Input<SubsettingPolicy> policy) {
+        public Builder policy(@Nullable Input<SubsettingPolicy> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable SubsettingPolicy policy) {
+        public Builder policy(@Nullable SubsettingPolicy policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setSubsetSize(@Nullable Input<Integer> subsetSize) {
+        public Builder subsetSize(@Nullable Input<Integer> subsetSize) {
             this.subsetSize = subsetSize;
             return this;
         }
 
-        public Builder setSubsetSize(@Nullable Integer subsetSize) {
+        public Builder subsetSize(@Nullable Integer subsetSize) {
             this.subsetSize = Input.ofNullable(subsetSize);
             return this;
         }

@@ -53,7 +53,7 @@ public final class DatasetMetadata extends io.pulumi.resources.InvokeArgs {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }

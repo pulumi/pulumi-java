@@ -220,112 +220,112 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFailureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Input<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Input.ofNullable(failureReason);
             return this;
         }
 
-        public Builder setHiddenParameters(@Nullable Input<List<Object>> hiddenParameters) {
+        public Builder hiddenParameters(@Nullable Input<List<Object>> hiddenParameters) {
             this.hiddenParameters = hiddenParameters;
             return this;
         }
 
-        public Builder setHiddenParameters(@Nullable List<Object> hiddenParameters) {
+        public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
             this.hiddenParameters = Input.ofNullable(hiddenParameters);
             return this;
         }
 
-        public Builder setNamedOutputs(@Nullable Input<Map<String,Object>> namedOutputs) {
+        public Builder namedOutputs(@Nullable Input<Map<String,Object>> namedOutputs) {
             this.namedOutputs = namedOutputs;
             return this;
         }
 
-        public Builder setNamedOutputs(@Nullable Map<String,Object> namedOutputs) {
+        public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
             this.namedOutputs = Input.ofNullable(namedOutputs);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<List<String>> output) {
+        public Builder output(@Nullable Input<List<String>> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable List<String> output) {
+        public Builder output(@Nullable List<String> output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<Object>> parameters) {
+        public Builder parameters(@Nullable Input<List<Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<Object> parameters) {
+        public Builder parameters(@Nullable List<Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetention(@Nullable Input<String> retention) {
+        public Builder retention(@Nullable Input<String> retention) {
             this.retention = retention;
             return this;
         }
 
-        public Builder setRetention(@Nullable String retention) {
+        public Builder retention(@Nullable String retention) {
             this.retention = Input.ofNullable(retention);
             return this;
         }
 
-        public Builder setScriptCmdletId(@Nullable Input<String> scriptCmdletId) {
+        public Builder scriptCmdletId(@Nullable Input<String> scriptCmdletId) {
             this.scriptCmdletId = scriptCmdletId;
             return this;
         }
 
-        public Builder setScriptCmdletId(@Nullable String scriptCmdletId) {
+        public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
             this.scriptCmdletId = Input.ofNullable(scriptCmdletId);
             return this;
         }
 
-        public Builder setScriptExecutionName(@Nullable Input<String> scriptExecutionName) {
+        public Builder scriptExecutionName(@Nullable Input<String> scriptExecutionName) {
             this.scriptExecutionName = scriptExecutionName;
             return this;
         }
 
-        public Builder setScriptExecutionName(@Nullable String scriptExecutionName) {
+        public Builder scriptExecutionName(@Nullable String scriptExecutionName) {
             this.scriptExecutionName = Input.ofNullable(scriptExecutionName);
             return this;
         }
 
-        public Builder setTimeout(Input<String> timeout) {
+        public Builder timeout(Input<String> timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Input.of(Objects.requireNonNull(timeout));
             return this;
         }

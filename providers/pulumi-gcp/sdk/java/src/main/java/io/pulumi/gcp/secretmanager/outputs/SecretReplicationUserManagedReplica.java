@@ -70,12 +70,12 @@ public final class SecretReplicationUserManagedReplica {
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

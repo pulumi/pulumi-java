@@ -47,7 +47,7 @@ public final class GetFunctionTracingConfig extends io.pulumi.resources.InvokeAr
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

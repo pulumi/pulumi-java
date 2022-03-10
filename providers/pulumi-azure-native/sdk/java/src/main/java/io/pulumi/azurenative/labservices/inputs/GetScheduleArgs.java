@@ -84,17 +84,17 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.scheduleName = defaults.scheduleName;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setScheduleName(String scheduleName) {
+        public Builder scheduleName(String scheduleName) {
             this.scheduleName = Objects.requireNonNull(scheduleName);
             return this;
         }

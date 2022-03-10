@@ -106,42 +106,42 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     	      this.volumePath = defaults.volumePath;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setStoragePolicyID(@Nullable Input<String> storagePolicyID) {
+        public Builder storagePolicyID(@Nullable Input<String> storagePolicyID) {
             this.storagePolicyID = storagePolicyID;
             return this;
         }
 
-        public Builder setStoragePolicyID(@Nullable String storagePolicyID) {
+        public Builder storagePolicyID(@Nullable String storagePolicyID) {
             this.storagePolicyID = Input.ofNullable(storagePolicyID);
             return this;
         }
 
-        public Builder setStoragePolicyName(@Nullable Input<String> storagePolicyName) {
+        public Builder storagePolicyName(@Nullable Input<String> storagePolicyName) {
             this.storagePolicyName = storagePolicyName;
             return this;
         }
 
-        public Builder setStoragePolicyName(@Nullable String storagePolicyName) {
+        public Builder storagePolicyName(@Nullable String storagePolicyName) {
             this.storagePolicyName = Input.ofNullable(storagePolicyName);
             return this;
         }
 
-        public Builder setVolumePath(Input<String> volumePath) {
+        public Builder volumePath(Input<String> volumePath) {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }
 
-        public Builder setVolumePath(String volumePath) {
+        public Builder volumePath(String volumePath) {
             this.volumePath = Input.of(Objects.requireNonNull(volumePath));
             return this;
         }

@@ -85,32 +85,32 @@ public final class InsightFiltersResourceDetailsOtherArgs extends io.pulumi.reso
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(Input<String> comparison) {
+        public Builder comparison(Input<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Input.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

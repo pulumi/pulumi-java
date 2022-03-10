@@ -107,42 +107,42 @@ public final class ModelQualityJobDefinitionClusterConfigArgs extends io.pulumi.
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder setInstanceCount(Input<Integer> instanceCount) {
+        public Builder instanceCount(Input<Integer> instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
-        public Builder setInstanceCount(Integer instanceCount) {
+        public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Input.of(Objects.requireNonNull(instanceCount));
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setVolumeKmsKeyId(@Nullable Input<String> volumeKmsKeyId) {
+        public Builder volumeKmsKeyId(@Nullable Input<String> volumeKmsKeyId) {
             this.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
 
-        public Builder setVolumeKmsKeyId(@Nullable String volumeKmsKeyId) {
+        public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
             this.volumeKmsKeyId = Input.ofNullable(volumeKmsKeyId);
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Input<Integer> volumeSizeInGB) {
+        public Builder volumeSizeInGB(Input<Integer> volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Integer volumeSizeInGB) {
+        public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Input.of(Objects.requireNonNull(volumeSizeInGB));
             return this;
         }

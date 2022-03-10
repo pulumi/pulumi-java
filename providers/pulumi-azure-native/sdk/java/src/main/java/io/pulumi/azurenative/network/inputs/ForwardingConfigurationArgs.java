@@ -126,52 +126,52 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setBackendPool(@Nullable Input<SubResourceArgs> backendPool) {
+        public Builder backendPool(@Nullable Input<SubResourceArgs> backendPool) {
             this.backendPool = backendPool;
             return this;
         }
 
-        public Builder setBackendPool(@Nullable SubResourceArgs backendPool) {
+        public Builder backendPool(@Nullable SubResourceArgs backendPool) {
             this.backendPool = Input.ofNullable(backendPool);
             return this;
         }
 
-        public Builder setCacheConfiguration(@Nullable Input<CacheConfigurationArgs> cacheConfiguration) {
+        public Builder cacheConfiguration(@Nullable Input<CacheConfigurationArgs> cacheConfiguration) {
             this.cacheConfiguration = cacheConfiguration;
             return this;
         }
 
-        public Builder setCacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
+        public Builder cacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
             this.cacheConfiguration = Input.ofNullable(cacheConfiguration);
             return this;
         }
 
-        public Builder setCustomForwardingPath(@Nullable Input<String> customForwardingPath) {
+        public Builder customForwardingPath(@Nullable Input<String> customForwardingPath) {
             this.customForwardingPath = customForwardingPath;
             return this;
         }
 
-        public Builder setCustomForwardingPath(@Nullable String customForwardingPath) {
+        public Builder customForwardingPath(@Nullable String customForwardingPath) {
             this.customForwardingPath = Input.ofNullable(customForwardingPath);
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
             this.forwardingProtocol = Input.ofNullable(forwardingProtocol);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

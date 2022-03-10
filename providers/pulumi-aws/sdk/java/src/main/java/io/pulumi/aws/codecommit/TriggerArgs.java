@@ -67,22 +67,22 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder setTriggers(Input<List<TriggerTriggerArgs>> triggers) {
+        public Builder triggers(Input<List<TriggerTriggerArgs>> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
 
-        public Builder setTriggers(List<TriggerTriggerArgs> triggers) {
+        public Builder triggers(List<TriggerTriggerArgs> triggers) {
             this.triggers = Input.of(Objects.requireNonNull(triggers));
             return this;
         }

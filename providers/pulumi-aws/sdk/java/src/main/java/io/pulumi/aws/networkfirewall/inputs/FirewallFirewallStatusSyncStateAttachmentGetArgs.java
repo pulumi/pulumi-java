@@ -70,22 +70,22 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setEndpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Input<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
-        public Builder setEndpointId(@Nullable String endpointId) {
+        public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = Input.ofNullable(endpointId);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

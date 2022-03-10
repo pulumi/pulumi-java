@@ -68,12 +68,12 @@ public final class CostAllocationRuleDetailsResponse {
     	      this.targetResources = defaults.targetResources;
         }
 
-        public Builder setSourceResources(@Nullable List<SourceCostAllocationResourceResponse> sourceResources) {
+        public Builder sourceResources(@Nullable List<SourceCostAllocationResourceResponse> sourceResources) {
             this.sourceResources = sourceResources;
             return this;
         }
 
-        public Builder setTargetResources(@Nullable List<TargetCostAllocationResourceResponse> targetResources) {
+        public Builder targetResources(@Nullable List<TargetCostAllocationResourceResponse> targetResources) {
             this.targetResources = targetResources;
             return this;
         }

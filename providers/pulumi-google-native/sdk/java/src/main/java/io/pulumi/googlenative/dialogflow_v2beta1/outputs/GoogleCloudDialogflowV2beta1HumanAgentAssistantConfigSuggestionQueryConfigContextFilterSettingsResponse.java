@@ -81,17 +81,17 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.dropVirtualAgentMessages = defaults.dropVirtualAgentMessages;
         }
 
-        public Builder setDropHandoffMessages(Boolean dropHandoffMessages) {
+        public Builder dropHandoffMessages(Boolean dropHandoffMessages) {
             this.dropHandoffMessages = Objects.requireNonNull(dropHandoffMessages);
             return this;
         }
 
-        public Builder setDropIvrMessages(Boolean dropIvrMessages) {
+        public Builder dropIvrMessages(Boolean dropIvrMessages) {
             this.dropIvrMessages = Objects.requireNonNull(dropIvrMessages);
             return this;
         }
 
-        public Builder setDropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
+        public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
             this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
             return this;
         }

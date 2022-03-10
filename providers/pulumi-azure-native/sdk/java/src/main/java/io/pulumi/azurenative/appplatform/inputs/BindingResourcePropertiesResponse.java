@@ -172,42 +172,42 @@ public final class BindingResourcePropertiesResponse extends io.pulumi.resources
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setBindingParameters(@Nullable Map<String,Object> bindingParameters) {
+        public Builder bindingParameters(@Nullable Map<String,Object> bindingParameters) {
             this.bindingParameters = bindingParameters;
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setGeneratedProperties(String generatedProperties) {
+        public Builder generatedProperties(String generatedProperties) {
             this.generatedProperties = Objects.requireNonNull(generatedProperties);
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

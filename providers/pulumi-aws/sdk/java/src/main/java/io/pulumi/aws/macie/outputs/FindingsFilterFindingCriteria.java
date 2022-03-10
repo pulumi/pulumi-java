@@ -50,7 +50,7 @@ public final class FindingsFilterFindingCriteria {
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder setCriterions(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
+        public Builder criterions(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
             this.criterions = criterions;
             return this;
         }

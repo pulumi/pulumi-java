@@ -64,12 +64,12 @@ public final class WebACLGeoMatchStatement extends io.pulumi.resources.InvokeArg
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder setCountryCodes(@Nullable List<String> countryCodes) {
+        public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }

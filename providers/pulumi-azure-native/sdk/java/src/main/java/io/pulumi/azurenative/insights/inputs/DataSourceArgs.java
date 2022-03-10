@@ -84,32 +84,32 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder setConfiguration(Input<DataSourceConfigurationArgs> configuration) {
+        public Builder configuration(Input<DataSourceConfigurationArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(DataSourceConfigurationArgs configuration) {
+        public Builder configuration(DataSourceConfigurationArgs configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setSinks(Input<List<SinkConfigurationArgs>> sinks) {
+        public Builder sinks(Input<List<SinkConfigurationArgs>> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
-        public Builder setSinks(List<SinkConfigurationArgs> sinks) {
+        public Builder sinks(List<SinkConfigurationArgs> sinks) {
             this.sinks = Input.of(Objects.requireNonNull(sinks));
             return this;
         }

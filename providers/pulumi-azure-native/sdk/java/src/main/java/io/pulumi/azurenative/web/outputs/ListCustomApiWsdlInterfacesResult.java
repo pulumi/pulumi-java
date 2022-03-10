@@ -50,7 +50,7 @@ public final class ListCustomApiWsdlInterfacesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<WsdlServiceResponse> value) {
+        public Builder value(@Nullable List<WsdlServiceResponse> value) {
             this.value = value;
             return this;
         }

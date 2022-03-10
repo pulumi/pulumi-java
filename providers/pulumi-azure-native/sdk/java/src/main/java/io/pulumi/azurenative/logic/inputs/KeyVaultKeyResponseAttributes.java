@@ -91,17 +91,17 @@ public final class KeyVaultKeyResponseAttributes extends io.pulumi.resources.Inv
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(@Nullable Double created) {
+        public Builder created(@Nullable Double created) {
             this.created = created;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setUpdated(@Nullable Double updated) {
+        public Builder updated(@Nullable Double updated) {
             this.updated = updated;
             return this;
         }

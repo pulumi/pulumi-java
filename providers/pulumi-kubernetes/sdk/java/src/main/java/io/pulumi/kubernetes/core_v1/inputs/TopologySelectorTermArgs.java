@@ -58,12 +58,12 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
     	      this.matchLabelExpressions = defaults.matchLabelExpressions;
         }
 
-        public Builder setMatchLabelExpressions(@Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
+        public Builder matchLabelExpressions(@Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
 
-        public Builder setMatchLabelExpressions(@Nullable List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
+        public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
             this.matchLabelExpressions = Input.ofNullable(matchLabelExpressions);
             return this;
         }

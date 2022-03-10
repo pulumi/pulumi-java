@@ -84,22 +84,22 @@ public final class CertificateReferenceResponse {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setStoreLocation(@Nullable String storeLocation) {
+        public Builder storeLocation(@Nullable String storeLocation) {
             this.storeLocation = storeLocation;
             return this;
         }
 
-        public Builder setStoreName(@Nullable String storeName) {
+        public Builder storeName(@Nullable String storeName) {
             this.storeName = storeName;
             return this;
         }
 
-        public Builder setVisibility(@Nullable List<String> visibility) {
+        public Builder visibility(@Nullable List<String> visibility) {
             this.visibility = visibility;
             return this;
         }

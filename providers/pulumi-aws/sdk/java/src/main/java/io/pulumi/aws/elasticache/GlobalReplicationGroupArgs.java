@@ -86,32 +86,32 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     	      this.primaryReplicationGroupId = defaults.primaryReplicationGroupId;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
-        public Builder setGlobalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = Input.ofNullable(globalReplicationGroupDescription);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(Input<String> globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(Input<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Objects.requireNonNull(globalReplicationGroupIdSuffix);
             return this;
         }
 
-        public Builder setGlobalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = Input.of(Objects.requireNonNull(globalReplicationGroupIdSuffix));
             return this;
         }
 
-        public Builder setPrimaryReplicationGroupId(Input<String> primaryReplicationGroupId) {
+        public Builder primaryReplicationGroupId(Input<String> primaryReplicationGroupId) {
             this.primaryReplicationGroupId = Objects.requireNonNull(primaryReplicationGroupId);
             return this;
         }
 
-        public Builder setPrimaryReplicationGroupId(String primaryReplicationGroupId) {
+        public Builder primaryReplicationGroupId(String primaryReplicationGroupId) {
             this.primaryReplicationGroupId = Input.of(Objects.requireNonNull(primaryReplicationGroupId));
             return this;
         }

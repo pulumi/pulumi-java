@@ -175,82 +175,82 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uploadSizeBytes = defaults.uploadSizeBytes;
         }
 
-        public Builder setCreateOption(Input<Either<String,DiskCreateOption>> createOption) {
+        public Builder createOption(Input<Either<String,DiskCreateOption>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setCreateOption(Either<String,DiskCreateOption> createOption) {
+        public Builder createOption(Either<String,DiskCreateOption> createOption) {
             this.createOption = Input.of(Objects.requireNonNull(createOption));
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable Input<ImageDiskReferenceArgs> galleryImageReference) {
+        public Builder galleryImageReference(@Nullable Input<ImageDiskReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable ImageDiskReferenceArgs galleryImageReference) {
+        public Builder galleryImageReference(@Nullable ImageDiskReferenceArgs galleryImageReference) {
             this.galleryImageReference = Input.ofNullable(galleryImageReference);
             return this;
         }
 
-        public Builder setImageReference(@Nullable Input<ImageDiskReferenceArgs> imageReference) {
+        public Builder imageReference(@Nullable Input<ImageDiskReferenceArgs> imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageDiskReferenceArgs imageReference) {
+        public Builder imageReference(@Nullable ImageDiskReferenceArgs imageReference) {
             this.imageReference = Input.ofNullable(imageReference);
             return this;
         }
 
-        public Builder setLogicalSectorSize(@Nullable Input<Integer> logicalSectorSize) {
+        public Builder logicalSectorSize(@Nullable Input<Integer> logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
-        public Builder setLogicalSectorSize(@Nullable Integer logicalSectorSize) {
+        public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             this.logicalSectorSize = Input.ofNullable(logicalSectorSize);
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder setSourceUri(@Nullable Input<String> sourceUri) {
+        public Builder sourceUri(@Nullable Input<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = Input.ofNullable(sourceUri);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder setUploadSizeBytes(@Nullable Input<Double> uploadSizeBytes) {
+        public Builder uploadSizeBytes(@Nullable Input<Double> uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
 
-        public Builder setUploadSizeBytes(@Nullable Double uploadSizeBytes) {
+        public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             this.uploadSizeBytes = Input.ofNullable(uploadSizeBytes);
             return this;
         }

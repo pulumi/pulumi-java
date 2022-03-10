@@ -65,12 +65,12 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThreshold {
     	      this.intervalSec = defaults.intervalSec;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setIntervalSec(Integer intervalSec) {
+        public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }

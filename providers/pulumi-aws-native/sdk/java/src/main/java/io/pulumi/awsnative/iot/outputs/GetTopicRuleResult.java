@@ -62,17 +62,17 @@ public final class GetTopicRuleResult {
     	      this.topicRulePayload = defaults.topicRulePayload;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TopicRuleTag> tags) {
+        public Builder tags(@Nullable List<TopicRuleTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTopicRulePayload(@Nullable TopicRulePayload topicRulePayload) {
+        public Builder topicRulePayload(@Nullable TopicRulePayload topicRulePayload) {
             this.topicRulePayload = topicRulePayload;
             return this;
         }

@@ -89,17 +89,17 @@ public final class InstanceFileShares {
     	      this.nfsExportOptions = defaults.nfsExportOptions;
         }
 
-        public Builder setCapacityGb(Integer capacityGb) {
+        public Builder capacityGb(Integer capacityGb) {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
+        public Builder nfsExportOptions(@Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }

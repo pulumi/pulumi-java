@@ -107,52 +107,52 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder setArgument(@Nullable Input<String> argument) {
+        public Builder argument(@Nullable Input<String> argument) {
             this.argument = argument;
             return this;
         }
 
-        public Builder setArgument(@Nullable String argument) {
+        public Builder argument(@Nullable String argument) {
             this.argument = Input.ofNullable(argument);
             return this;
         }
 
-        public Builder setCallLogLevel(@Nullable Input<ExecutionCallLogLevel> callLogLevel) {
+        public Builder callLogLevel(@Nullable Input<ExecutionCallLogLevel> callLogLevel) {
             this.callLogLevel = callLogLevel;
             return this;
         }
 
-        public Builder setCallLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
+        public Builder callLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
             this.callLogLevel = Input.ofNullable(callLogLevel);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setWorkflowId(Input<String> workflowId) {
+        public Builder workflowId(Input<String> workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
 
-        public Builder setWorkflowId(String workflowId) {
+        public Builder workflowId(String workflowId) {
             this.workflowId = Input.of(Objects.requireNonNull(workflowId));
             return this;
         }

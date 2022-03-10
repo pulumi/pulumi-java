@@ -85,32 +85,32 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setParentId(Input<String> parentId) {
+        public Builder parentId(Input<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Input.of(Objects.requireNonNull(parentId));
             return this;
         }
 
-        public Builder setPathPart(Input<String> pathPart) {
+        public Builder pathPart(Input<String> pathPart) {
             this.pathPart = Objects.requireNonNull(pathPart);
             return this;
         }
 
-        public Builder setPathPart(String pathPart) {
+        public Builder pathPart(String pathPart) {
             this.pathPart = Input.of(Objects.requireNonNull(pathPart));
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }

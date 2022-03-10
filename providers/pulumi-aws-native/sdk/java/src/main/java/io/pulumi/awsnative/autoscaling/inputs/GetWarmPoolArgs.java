@@ -47,7 +47,7 @@ public final class GetWarmPoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.autoScalingGroupName = defaults.autoScalingGroupName;
         }
 
-        public Builder setAutoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }

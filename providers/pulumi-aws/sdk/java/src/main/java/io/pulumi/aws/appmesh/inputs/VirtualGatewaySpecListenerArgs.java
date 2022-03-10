@@ -105,42 +105,42 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
     	      this.tls = defaults.tls;
         }
 
-        public Builder setConnectionPool(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool) {
+        public Builder connectionPool(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
-        public Builder setConnectionPool(@Nullable VirtualGatewaySpecListenerConnectionPoolArgs connectionPool) {
+        public Builder connectionPool(@Nullable VirtualGatewaySpecListenerConnectionPoolArgs connectionPool) {
             this.connectionPool = Input.ofNullable(connectionPool);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable VirtualGatewaySpecListenerHealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable VirtualGatewaySpecListenerHealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setPortMapping(Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping) {
+        public Builder portMapping(Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
-        public Builder setPortMapping(VirtualGatewaySpecListenerPortMappingArgs portMapping) {
+        public Builder portMapping(VirtualGatewaySpecListenerPortMappingArgs portMapping) {
             this.portMapping = Input.of(Objects.requireNonNull(portMapping));
             return this;
         }
 
-        public Builder setTls(@Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls) {
+        public Builder tls(@Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualGatewaySpecListenerTlsArgs tls) {
+        public Builder tls(@Nullable VirtualGatewaySpecListenerTlsArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

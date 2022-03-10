@@ -91,32 +91,32 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetPrefixLength = defaults.subnetPrefixLength;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubnetPrefixLength(@Nullable Input<Integer> subnetPrefixLength) {
+        public Builder subnetPrefixLength(@Nullable Input<Integer> subnetPrefixLength) {
             this.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
 
-        public Builder setSubnetPrefixLength(@Nullable Integer subnetPrefixLength) {
+        public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
             this.subnetPrefixLength = Input.ofNullable(subnetPrefixLength);
             return this;
         }

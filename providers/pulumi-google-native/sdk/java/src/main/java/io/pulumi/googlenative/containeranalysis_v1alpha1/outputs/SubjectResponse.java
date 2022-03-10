@@ -66,12 +66,12 @@ public final class SubjectResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDigest(Map<String,String> digest) {
+        public Builder digest(Map<String,String> digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

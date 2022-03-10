@@ -55,7 +55,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
     	      this.bundleId = defaults.bundleId;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }

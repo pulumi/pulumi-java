@@ -50,7 +50,7 @@ public final class DiagnosticsProfileResponse {
     	      this.bootDiagnostics = defaults.bootDiagnostics;
         }
 
-        public Builder setBootDiagnostics(@Nullable BootDiagnosticsResponse bootDiagnostics) {
+        public Builder bootDiagnostics(@Nullable BootDiagnosticsResponse bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }

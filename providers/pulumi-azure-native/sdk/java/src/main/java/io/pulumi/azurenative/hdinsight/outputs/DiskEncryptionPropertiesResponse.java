@@ -132,32 +132,32 @@ public final class DiskEncryptionPropertiesResponse {
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setEncryptionAlgorithm(@Nullable String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Boolean encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setVaultUri(@Nullable String vaultUri) {
+        public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }

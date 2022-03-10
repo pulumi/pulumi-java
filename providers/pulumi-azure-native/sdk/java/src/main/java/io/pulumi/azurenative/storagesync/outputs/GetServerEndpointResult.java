@@ -375,107 +375,107 @@ public final class GetServerEndpointResult {
     	      this.volumeFreeSpacePercent = defaults.volumeFreeSpacePercent;
         }
 
-        public Builder setCloudTiering(@Nullable String cloudTiering) {
+        public Builder cloudTiering(@Nullable String cloudTiering) {
             this.cloudTiering = cloudTiering;
             return this;
         }
 
-        public Builder setCloudTieringStatus(ServerEndpointCloudTieringStatusResponse cloudTieringStatus) {
+        public Builder cloudTieringStatus(ServerEndpointCloudTieringStatusResponse cloudTieringStatus) {
             this.cloudTieringStatus = Objects.requireNonNull(cloudTieringStatus);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInitialDownloadPolicy(@Nullable String initialDownloadPolicy) {
+        public Builder initialDownloadPolicy(@Nullable String initialDownloadPolicy) {
             this.initialDownloadPolicy = initialDownloadPolicy;
             return this;
         }
 
-        public Builder setLastOperationName(String lastOperationName) {
+        public Builder lastOperationName(String lastOperationName) {
             this.lastOperationName = Objects.requireNonNull(lastOperationName);
             return this;
         }
 
-        public Builder setLastWorkflowId(String lastWorkflowId) {
+        public Builder lastWorkflowId(String lastWorkflowId) {
             this.lastWorkflowId = Objects.requireNonNull(lastWorkflowId);
             return this;
         }
 
-        public Builder setLocalCacheMode(@Nullable String localCacheMode) {
+        public Builder localCacheMode(@Nullable String localCacheMode) {
             this.localCacheMode = localCacheMode;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOfflineDataTransfer(@Nullable String offlineDataTransfer) {
+        public Builder offlineDataTransfer(@Nullable String offlineDataTransfer) {
             this.offlineDataTransfer = offlineDataTransfer;
             return this;
         }
 
-        public Builder setOfflineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
+        public Builder offlineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
             this.offlineDataTransferShareName = offlineDataTransferShareName;
             return this;
         }
 
-        public Builder setOfflineDataTransferStorageAccountResourceId(String offlineDataTransferStorageAccountResourceId) {
+        public Builder offlineDataTransferStorageAccountResourceId(String offlineDataTransferStorageAccountResourceId) {
             this.offlineDataTransferStorageAccountResourceId = Objects.requireNonNull(offlineDataTransferStorageAccountResourceId);
             return this;
         }
 
-        public Builder setOfflineDataTransferStorageAccountTenantId(String offlineDataTransferStorageAccountTenantId) {
+        public Builder offlineDataTransferStorageAccountTenantId(String offlineDataTransferStorageAccountTenantId) {
             this.offlineDataTransferStorageAccountTenantId = Objects.requireNonNull(offlineDataTransferStorageAccountTenantId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRecallStatus(ServerEndpointRecallStatusResponse recallStatus) {
+        public Builder recallStatus(ServerEndpointRecallStatusResponse recallStatus) {
             this.recallStatus = Objects.requireNonNull(recallStatus);
             return this;
         }
 
-        public Builder setServerLocalPath(@Nullable String serverLocalPath) {
+        public Builder serverLocalPath(@Nullable String serverLocalPath) {
             this.serverLocalPath = serverLocalPath;
             return this;
         }
 
-        public Builder setServerResourceId(@Nullable String serverResourceId) {
+        public Builder serverResourceId(@Nullable String serverResourceId) {
             this.serverResourceId = serverResourceId;
             return this;
         }
 
-        public Builder setSyncStatus(ServerEndpointSyncStatusResponse syncStatus) {
+        public Builder syncStatus(ServerEndpointSyncStatusResponse syncStatus) {
             this.syncStatus = Objects.requireNonNull(syncStatus);
             return this;
         }
 
-        public Builder setTierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
+        public Builder tierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = tierFilesOlderThanDays;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
+        public Builder volumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }

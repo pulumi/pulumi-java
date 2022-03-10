@@ -64,22 +64,22 @@ public final class JavaAppLayerCloudwatchConfigurationGetArgs extends io.pulumi.
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogStreams(@Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
+        public Builder logStreams(@Nullable Input<List<JavaAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<JavaAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
+        public Builder logStreams(@Nullable List<JavaAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Input.ofNullable(logStreams);
             return this;
         }

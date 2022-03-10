@@ -110,42 +110,42 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setCloudRepo(@Nullable Input<CloudRepoSourceContextArgs> cloudRepo) {
+        public Builder cloudRepo(@Nullable Input<CloudRepoSourceContextArgs> cloudRepo) {
             this.cloudRepo = cloudRepo;
             return this;
         }
 
-        public Builder setCloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
+        public Builder cloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
             this.cloudRepo = Input.ofNullable(cloudRepo);
             return this;
         }
 
-        public Builder setGerrit(@Nullable Input<GerritSourceContextArgs> gerrit) {
+        public Builder gerrit(@Nullable Input<GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
 
-        public Builder setGerrit(@Nullable GerritSourceContextArgs gerrit) {
+        public Builder gerrit(@Nullable GerritSourceContextArgs gerrit) {
             this.gerrit = Input.ofNullable(gerrit);
             return this;
         }
 
-        public Builder setGit(@Nullable Input<GitSourceContextArgs> git) {
+        public Builder git(@Nullable Input<GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
 
-        public Builder setGit(@Nullable GitSourceContextArgs git) {
+        public Builder git(@Nullable GitSourceContextArgs git) {
             this.git = Input.ofNullable(git);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }

@@ -75,22 +75,22 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setSecret(Input<String> secret) {
+        public Builder secret(Input<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
 
-        public Builder setState(@Nullable Input<WebhookConfigState> state) {
+        public Builder state(@Nullable Input<WebhookConfigState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable WebhookConfigState state) {
+        public Builder state(@Nullable WebhookConfigState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

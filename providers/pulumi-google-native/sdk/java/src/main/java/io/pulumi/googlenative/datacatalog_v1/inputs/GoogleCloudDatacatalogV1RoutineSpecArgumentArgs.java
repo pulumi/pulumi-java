@@ -91,32 +91,32 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
     	      this.type = defaults.type;
         }
 
-        public Builder setMode(@Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode) {
+        public Builder mode(@Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgumentMode mode) {
+        public Builder mode(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgumentMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

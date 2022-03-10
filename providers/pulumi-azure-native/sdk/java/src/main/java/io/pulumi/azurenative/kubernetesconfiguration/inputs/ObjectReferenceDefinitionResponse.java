@@ -74,12 +74,12 @@ public final class ObjectReferenceDefinitionResponse extends io.pulumi.resources
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

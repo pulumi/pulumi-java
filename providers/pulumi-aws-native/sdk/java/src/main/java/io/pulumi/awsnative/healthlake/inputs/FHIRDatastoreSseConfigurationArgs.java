@@ -52,12 +52,12 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     	      this.kmsEncryptionConfig = defaults.kmsEncryptionConfig;
         }
 
-        public Builder setKmsEncryptionConfig(Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
+        public Builder kmsEncryptionConfig(Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }
 
-        public Builder setKmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfigArgs kmsEncryptionConfig) {
+        public Builder kmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfigArgs kmsEncryptionConfig) {
             this.kmsEncryptionConfig = Input.of(Objects.requireNonNull(kmsEncryptionConfig));
             return this;
         }

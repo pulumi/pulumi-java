@@ -68,12 +68,12 @@ public final class KeyForDiskEncryptionSetResponse {
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setKeyUrl(String keyUrl) {
+        public Builder keyUrl(String keyUrl) {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
 
-        public Builder setSourceVault(@Nullable SourceVaultResponse sourceVault) {
+        public Builder sourceVault(@Nullable SourceVaultResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }

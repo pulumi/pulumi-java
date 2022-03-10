@@ -48,7 +48,7 @@ public final class NotificationRateLimitResponse {
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }

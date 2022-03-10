@@ -87,32 +87,32 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     	      this.logStreamName = defaults.logStreamName;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setLogStreamName(@Nullable Input<String> logStreamName) {
+        public Builder logStreamName(@Nullable Input<String> logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }
 
-        public Builder setLogStreamName(@Nullable String logStreamName) {
+        public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = Input.ofNullable(logStreamName);
             return this;
         }

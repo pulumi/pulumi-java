@@ -58,12 +58,12 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(@Nullable Input<List<BucketLifecycleRuleItemArgs>> rule) {
+        public Builder rule(@Nullable Input<List<BucketLifecycleRuleItemArgs>> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable List<BucketLifecycleRuleItemArgs> rule) {
+        public Builder rule(@Nullable List<BucketLifecycleRuleItemArgs> rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }

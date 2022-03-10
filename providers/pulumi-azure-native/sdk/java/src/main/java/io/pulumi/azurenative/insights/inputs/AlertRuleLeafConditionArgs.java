@@ -93,32 +93,32 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
     	      this.field = defaults.field;
         }
 
-        public Builder setContainsAny(@Nullable Input<List<String>> containsAny) {
+        public Builder containsAny(@Nullable Input<List<String>> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
 
-        public Builder setContainsAny(@Nullable List<String> containsAny) {
+        public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = Input.ofNullable(containsAny);
             return this;
         }
 
-        public Builder setEquals(@Nullable Input<String> equals) {
+        public Builder equals(@Nullable Input<String> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setEquals(@Nullable String equals) {
+        public Builder equals(@Nullable String equals) {
             this.equals = Input.ofNullable(equals);
             return this;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }

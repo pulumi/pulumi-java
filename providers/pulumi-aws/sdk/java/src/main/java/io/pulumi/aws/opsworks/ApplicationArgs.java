@@ -315,172 +315,172 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppSources(@Nullable Input<List<ApplicationAppSourceArgs>> appSources) {
+        public Builder appSources(@Nullable Input<List<ApplicationAppSourceArgs>> appSources) {
             this.appSources = appSources;
             return this;
         }
 
-        public Builder setAppSources(@Nullable List<ApplicationAppSourceArgs> appSources) {
+        public Builder appSources(@Nullable List<ApplicationAppSourceArgs> appSources) {
             this.appSources = Input.ofNullable(appSources);
             return this;
         }
 
-        public Builder setAutoBundleOnDeploy(@Nullable Input<String> autoBundleOnDeploy) {
+        public Builder autoBundleOnDeploy(@Nullable Input<String> autoBundleOnDeploy) {
             this.autoBundleOnDeploy = autoBundleOnDeploy;
             return this;
         }
 
-        public Builder setAutoBundleOnDeploy(@Nullable String autoBundleOnDeploy) {
+        public Builder autoBundleOnDeploy(@Nullable String autoBundleOnDeploy) {
             this.autoBundleOnDeploy = Input.ofNullable(autoBundleOnDeploy);
             return this;
         }
 
-        public Builder setAwsFlowRubySettings(@Nullable Input<String> awsFlowRubySettings) {
+        public Builder awsFlowRubySettings(@Nullable Input<String> awsFlowRubySettings) {
             this.awsFlowRubySettings = awsFlowRubySettings;
             return this;
         }
 
-        public Builder setAwsFlowRubySettings(@Nullable String awsFlowRubySettings) {
+        public Builder awsFlowRubySettings(@Nullable String awsFlowRubySettings) {
             this.awsFlowRubySettings = Input.ofNullable(awsFlowRubySettings);
             return this;
         }
 
-        public Builder setDataSourceArn(@Nullable Input<String> dataSourceArn) {
+        public Builder dataSourceArn(@Nullable Input<String> dataSourceArn) {
             this.dataSourceArn = dataSourceArn;
             return this;
         }
 
-        public Builder setDataSourceArn(@Nullable String dataSourceArn) {
+        public Builder dataSourceArn(@Nullable String dataSourceArn) {
             this.dataSourceArn = Input.ofNullable(dataSourceArn);
             return this;
         }
 
-        public Builder setDataSourceDatabaseName(@Nullable Input<String> dataSourceDatabaseName) {
+        public Builder dataSourceDatabaseName(@Nullable Input<String> dataSourceDatabaseName) {
             this.dataSourceDatabaseName = dataSourceDatabaseName;
             return this;
         }
 
-        public Builder setDataSourceDatabaseName(@Nullable String dataSourceDatabaseName) {
+        public Builder dataSourceDatabaseName(@Nullable String dataSourceDatabaseName) {
             this.dataSourceDatabaseName = Input.ofNullable(dataSourceDatabaseName);
             return this;
         }
 
-        public Builder setDataSourceType(@Nullable Input<String> dataSourceType) {
+        public Builder dataSourceType(@Nullable Input<String> dataSourceType) {
             this.dataSourceType = dataSourceType;
             return this;
         }
 
-        public Builder setDataSourceType(@Nullable String dataSourceType) {
+        public Builder dataSourceType(@Nullable String dataSourceType) {
             this.dataSourceType = Input.ofNullable(dataSourceType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentRoot(@Nullable Input<String> documentRoot) {
+        public Builder documentRoot(@Nullable Input<String> documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
 
-        public Builder setDocumentRoot(@Nullable String documentRoot) {
+        public Builder documentRoot(@Nullable String documentRoot) {
             this.documentRoot = Input.ofNullable(documentRoot);
             return this;
         }
 
-        public Builder setDomains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Input<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = Input.ofNullable(domains);
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Input<Boolean> enableSsl) {
+        public Builder enableSsl(@Nullable Input<Boolean> enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Boolean enableSsl) {
+        public Builder enableSsl(@Nullable Boolean enableSsl) {
             this.enableSsl = Input.ofNullable(enableSsl);
             return this;
         }
 
-        public Builder setEnvironments(@Nullable Input<List<ApplicationEnvironmentArgs>> environments) {
+        public Builder environments(@Nullable Input<List<ApplicationEnvironmentArgs>> environments) {
             this.environments = environments;
             return this;
         }
 
-        public Builder setEnvironments(@Nullable List<ApplicationEnvironmentArgs> environments) {
+        public Builder environments(@Nullable List<ApplicationEnvironmentArgs> environments) {
             this.environments = Input.ofNullable(environments);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRailsEnv(@Nullable Input<String> railsEnv) {
+        public Builder railsEnv(@Nullable Input<String> railsEnv) {
             this.railsEnv = railsEnv;
             return this;
         }
 
-        public Builder setRailsEnv(@Nullable String railsEnv) {
+        public Builder railsEnv(@Nullable String railsEnv) {
             this.railsEnv = Input.ofNullable(railsEnv);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
 
-        public Builder setSslConfigurations(@Nullable Input<List<ApplicationSslConfigurationArgs>> sslConfigurations) {
+        public Builder sslConfigurations(@Nullable Input<List<ApplicationSslConfigurationArgs>> sslConfigurations) {
             this.sslConfigurations = sslConfigurations;
             return this;
         }
 
-        public Builder setSslConfigurations(@Nullable List<ApplicationSslConfigurationArgs> sslConfigurations) {
+        public Builder sslConfigurations(@Nullable List<ApplicationSslConfigurationArgs> sslConfigurations) {
             this.sslConfigurations = Input.ofNullable(sslConfigurations);
             return this;
         }
 
-        public Builder setStackId(Input<String> stackId) {
+        public Builder stackId(Input<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
-        public Builder setStackId(String stackId) {
+        public Builder stackId(String stackId) {
             this.stackId = Input.of(Objects.requireNonNull(stackId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -106,22 +106,22 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
     	      this.username = defaults.username;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServerUrl(@Nullable String serverUrl) {
+        public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

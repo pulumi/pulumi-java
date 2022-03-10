@@ -323,172 +323,172 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terminationTime = defaults.terminationTime;
         }
 
-        public Builder setAutomaticRestart(@Nullable Input<Boolean> automaticRestart) {
+        public Builder automaticRestart(@Nullable Input<Boolean> automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Input.ofNullable(automaticRestart);
             return this;
         }
 
-        public Builder setAvailabilityDomain(@Nullable Input<Integer> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Input<Integer> availabilityDomain) {
             this.availabilityDomain = availabilityDomain;
             return this;
         }
 
-        public Builder setAvailabilityDomain(@Nullable Integer availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Integer availabilityDomain) {
             this.availabilityDomain = Input.ofNullable(availabilityDomain);
             return this;
         }
 
-        public Builder setCurrentCpus(@Nullable Input<Integer> currentCpus) {
+        public Builder currentCpus(@Nullable Input<Integer> currentCpus) {
             this.currentCpus = currentCpus;
             return this;
         }
 
-        public Builder setCurrentCpus(@Nullable Integer currentCpus) {
+        public Builder currentCpus(@Nullable Integer currentCpus) {
             this.currentCpus = Input.ofNullable(currentCpus);
             return this;
         }
 
-        public Builder setCurrentMemoryMb(@Nullable Input<String> currentMemoryMb) {
+        public Builder currentMemoryMb(@Nullable Input<String> currentMemoryMb) {
             this.currentMemoryMb = currentMemoryMb;
             return this;
         }
 
-        public Builder setCurrentMemoryMb(@Nullable String currentMemoryMb) {
+        public Builder currentMemoryMb(@Nullable String currentMemoryMb) {
             this.currentMemoryMb = Input.ofNullable(currentMemoryMb);
             return this;
         }
 
-        public Builder setHostErrorTimeoutSeconds(@Nullable Input<Integer> hostErrorTimeoutSeconds) {
+        public Builder hostErrorTimeoutSeconds(@Nullable Input<Integer> hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
 
-        public Builder setHostErrorTimeoutSeconds(@Nullable Integer hostErrorTimeoutSeconds) {
+        public Builder hostErrorTimeoutSeconds(@Nullable Integer hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = Input.ofNullable(hostErrorTimeoutSeconds);
             return this;
         }
 
-        public Builder setInstanceTerminationAction(@Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction) {
+        public Builder instanceTerminationAction(@Nullable Input<SchedulingInstanceTerminationAction> instanceTerminationAction) {
             this.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
 
-        public Builder setInstanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
+        public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
             this.instanceTerminationAction = Input.ofNullable(instanceTerminationAction);
             return this;
         }
 
-        public Builder setLatencyTolerant(@Nullable Input<Boolean> latencyTolerant) {
+        public Builder latencyTolerant(@Nullable Input<Boolean> latencyTolerant) {
             this.latencyTolerant = latencyTolerant;
             return this;
         }
 
-        public Builder setLatencyTolerant(@Nullable Boolean latencyTolerant) {
+        public Builder latencyTolerant(@Nullable Boolean latencyTolerant) {
             this.latencyTolerant = Input.ofNullable(latencyTolerant);
             return this;
         }
 
-        public Builder setLocationHint(@Nullable Input<String> locationHint) {
+        public Builder locationHint(@Nullable Input<String> locationHint) {
             this.locationHint = locationHint;
             return this;
         }
 
-        public Builder setLocationHint(@Nullable String locationHint) {
+        public Builder locationHint(@Nullable String locationHint) {
             this.locationHint = Input.ofNullable(locationHint);
             return this;
         }
 
-        public Builder setMaintenanceFreezeDurationHours(@Nullable Input<Integer> maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(@Nullable Input<Integer> maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
 
-        public Builder setMaintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Input.ofNullable(maintenanceFreezeDurationHours);
             return this;
         }
 
-        public Builder setMaintenanceInterval(@Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval) {
+        public Builder maintenanceInterval(@Nullable Input<SchedulingMaintenanceInterval> maintenanceInterval) {
             this.maintenanceInterval = maintenanceInterval;
             return this;
         }
 
-        public Builder setMaintenanceInterval(@Nullable SchedulingMaintenanceInterval maintenanceInterval) {
+        public Builder maintenanceInterval(@Nullable SchedulingMaintenanceInterval maintenanceInterval) {
             this.maintenanceInterval = Input.ofNullable(maintenanceInterval);
             return this;
         }
 
-        public Builder setMaxRunDuration(@Nullable Input<DurationArgs> maxRunDuration) {
+        public Builder maxRunDuration(@Nullable Input<DurationArgs> maxRunDuration) {
             this.maxRunDuration = maxRunDuration;
             return this;
         }
 
-        public Builder setMaxRunDuration(@Nullable DurationArgs maxRunDuration) {
+        public Builder maxRunDuration(@Nullable DurationArgs maxRunDuration) {
             this.maxRunDuration = Input.ofNullable(maxRunDuration);
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Input<Integer> minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Input<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Input.ofNullable(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
             this.nodeAffinities = Input.ofNullable(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Input<SchedulingOnHostMaintenance> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
             this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Input.ofNullable(preemptible);
             return this;
         }
 
-        public Builder setProvisioningModel(@Nullable Input<SchedulingProvisioningModel> provisioningModel) {
+        public Builder provisioningModel(@Nullable Input<SchedulingProvisioningModel> provisioningModel) {
             this.provisioningModel = provisioningModel;
             return this;
         }
 
-        public Builder setProvisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
+        public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
             this.provisioningModel = Input.ofNullable(provisioningModel);
             return this;
         }
 
-        public Builder setTerminationTime(@Nullable Input<String> terminationTime) {
+        public Builder terminationTime(@Nullable Input<String> terminationTime) {
             this.terminationTime = terminationTime;
             return this;
         }
 
-        public Builder setTerminationTime(@Nullable String terminationTime) {
+        public Builder terminationTime(@Nullable String terminationTime) {
             this.terminationTime = Input.ofNullable(terminationTime);
             return this;
         }

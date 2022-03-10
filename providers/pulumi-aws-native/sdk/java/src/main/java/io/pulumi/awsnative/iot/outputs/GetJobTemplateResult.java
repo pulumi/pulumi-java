@@ -52,12 +52,12 @@ public final class GetJobTemplateResult {
     	      this.jobExecutionsRetryConfig = defaults.jobExecutionsRetryConfig;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setJobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
+        public Builder jobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
         }

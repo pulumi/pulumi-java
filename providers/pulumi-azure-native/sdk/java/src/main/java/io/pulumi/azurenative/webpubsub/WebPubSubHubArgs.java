@@ -103,42 +103,42 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setHubName(@Nullable Input<String> hubName) {
+        public Builder hubName(@Nullable Input<String> hubName) {
             this.hubName = hubName;
             return this;
         }
 
-        public Builder setHubName(@Nullable String hubName) {
+        public Builder hubName(@Nullable String hubName) {
             this.hubName = Input.ofNullable(hubName);
             return this;
         }
 
-        public Builder setProperties(Input<WebPubSubHubPropertiesArgs> properties) {
+        public Builder properties(Input<WebPubSubHubPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(WebPubSubHubPropertiesArgs properties) {
+        public Builder properties(WebPubSubHubPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

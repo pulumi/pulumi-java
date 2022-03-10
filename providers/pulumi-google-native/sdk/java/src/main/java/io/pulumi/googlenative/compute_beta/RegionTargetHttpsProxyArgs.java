@@ -253,142 +253,142 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder setAuthorizationPolicy(@Nullable Input<String> authorizationPolicy) {
+        public Builder authorizationPolicy(@Nullable Input<String> authorizationPolicy) {
             this.authorizationPolicy = authorizationPolicy;
             return this;
         }
 
-        public Builder setAuthorizationPolicy(@Nullable String authorizationPolicy) {
+        public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
             this.authorizationPolicy = Input.ofNullable(authorizationPolicy);
             return this;
         }
 
-        public Builder setCertificateMap(@Nullable Input<String> certificateMap) {
+        public Builder certificateMap(@Nullable Input<String> certificateMap) {
             this.certificateMap = certificateMap;
             return this;
         }
 
-        public Builder setCertificateMap(@Nullable String certificateMap) {
+        public Builder certificateMap(@Nullable String certificateMap) {
             this.certificateMap = Input.ofNullable(certificateMap);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHttpFilters(@Nullable Input<List<String>> httpFilters) {
+        public Builder httpFilters(@Nullable Input<List<String>> httpFilters) {
             this.httpFilters = httpFilters;
             return this;
         }
 
-        public Builder setHttpFilters(@Nullable List<String> httpFilters) {
+        public Builder httpFilters(@Nullable List<String> httpFilters) {
             this.httpFilters = Input.ofNullable(httpFilters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Input<Boolean> proxyBind) {
+        public Builder proxyBind(@Nullable Input<Boolean> proxyBind) {
             this.proxyBind = proxyBind;
             return this;
         }
 
-        public Builder setProxyBind(@Nullable Boolean proxyBind) {
+        public Builder proxyBind(@Nullable Boolean proxyBind) {
             this.proxyBind = Input.ofNullable(proxyBind);
             return this;
         }
 
-        public Builder setQuicOverride(@Nullable Input<RegionTargetHttpsProxyQuicOverride> quicOverride) {
+        public Builder quicOverride(@Nullable Input<RegionTargetHttpsProxyQuicOverride> quicOverride) {
             this.quicOverride = quicOverride;
             return this;
         }
 
-        public Builder setQuicOverride(@Nullable RegionTargetHttpsProxyQuicOverride quicOverride) {
+        public Builder quicOverride(@Nullable RegionTargetHttpsProxyQuicOverride quicOverride) {
             this.quicOverride = Input.ofNullable(quicOverride);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setServerTlsPolicy(@Nullable Input<String> serverTlsPolicy) {
+        public Builder serverTlsPolicy(@Nullable Input<String> serverTlsPolicy) {
             this.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
 
-        public Builder setServerTlsPolicy(@Nullable String serverTlsPolicy) {
+        public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
             this.serverTlsPolicy = Input.ofNullable(serverTlsPolicy);
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable List<String> sslCertificates) {
+        public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Input.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder setUrlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Input<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
-        public Builder setUrlMap(@Nullable String urlMap) {
+        public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }

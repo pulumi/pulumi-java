@@ -79,12 +79,12 @@ public final class AlertPolicyConditionConditionMatchedLog {
     	      this.labelExtractors = defaults.labelExtractors;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setLabelExtractors(@Nullable Map<String,String> labelExtractors) {
+        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }

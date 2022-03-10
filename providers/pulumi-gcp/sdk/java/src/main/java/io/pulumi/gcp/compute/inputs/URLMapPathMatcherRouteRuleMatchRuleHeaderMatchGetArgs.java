@@ -187,82 +187,82 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs extends
     	      this.suffixMatch = defaults.suffixMatch;
         }
 
-        public Builder setExactMatch(@Nullable Input<String> exactMatch) {
+        public Builder exactMatch(@Nullable Input<String> exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = Input.ofNullable(exactMatch);
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setInvertMatch(@Nullable Input<Boolean> invertMatch) {
+        public Builder invertMatch(@Nullable Input<Boolean> invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
 
-        public Builder setInvertMatch(@Nullable Boolean invertMatch) {
+        public Builder invertMatch(@Nullable Boolean invertMatch) {
             this.invertMatch = Input.ofNullable(invertMatch);
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable Input<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable Input<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable String prefixMatch) {
+        public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Input<Boolean> presentMatch) {
+        public Builder presentMatch(@Nullable Input<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = Input.ofNullable(presentMatch);
             return this;
         }
 
-        public Builder setRangeMatch(@Nullable Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> rangeMatch) {
+        public Builder rangeMatch(@Nullable Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> rangeMatch) {
             this.rangeMatch = rangeMatch;
             return this;
         }
 
-        public Builder setRangeMatch(@Nullable URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs rangeMatch) {
+        public Builder rangeMatch(@Nullable URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs rangeMatch) {
             this.rangeMatch = Input.ofNullable(rangeMatch);
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable Input<String> regexMatch) {
+        public Builder regexMatch(@Nullable Input<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable String regexMatch) {
+        public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }
 
-        public Builder setSuffixMatch(@Nullable Input<String> suffixMatch) {
+        public Builder suffixMatch(@Nullable Input<String> suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
         }
 
-        public Builder setSuffixMatch(@Nullable String suffixMatch) {
+        public Builder suffixMatch(@Nullable String suffixMatch) {
             this.suffixMatch = Input.ofNullable(suffixMatch);
             return this;
         }

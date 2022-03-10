@@ -57,12 +57,12 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
     	      this.secretKey = defaults.secretKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setSecretKey(String secretKey) {
+        public Builder secretKey(String secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }

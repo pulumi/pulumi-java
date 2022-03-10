@@ -84,17 +84,17 @@ public final class GetObjectReplicationPolicyArgs extends io.pulumi.resources.In
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setObjectReplicationPolicyId(String objectReplicationPolicyId) {
+        public Builder objectReplicationPolicyId(String objectReplicationPolicyId) {
             this.objectReplicationPolicyId = Objects.requireNonNull(objectReplicationPolicyId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -75,12 +75,12 @@ public final class NotificationEventReceiverResponse extends io.pulumi.resources
     	      this.receiverValue = defaults.receiverValue;
         }
 
-        public Builder setReceiverType(@Nullable String receiverType) {
+        public Builder receiverType(@Nullable String receiverType) {
             this.receiverType = receiverType;
             return this;
         }
 
-        public Builder setReceiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
+        public Builder receiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
             this.receiverValue = receiverValue;
             return this;
         }

@@ -68,12 +68,12 @@ public final class DedicatedHostAllocatableVMResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setCount(@Nullable Double count) {
+        public Builder count(@Nullable Double count) {
             this.count = count;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

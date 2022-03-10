@@ -90,17 +90,17 @@ public final class GoogleIamV1BindingResponse extends io.pulumi.resources.Invoke
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

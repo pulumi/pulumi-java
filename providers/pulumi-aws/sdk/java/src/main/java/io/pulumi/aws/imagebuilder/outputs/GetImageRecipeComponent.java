@@ -48,7 +48,7 @@ public final class GetImageRecipeComponent {
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder setComponentArn(String componentArn) {
+        public Builder componentArn(String componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
         }

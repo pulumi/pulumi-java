@@ -149,82 +149,82 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
     	      this.sessionId = defaults.sessionId;
         }
 
-        public Builder setAgentId(Input<String> agentId) {
+        public Builder agentId(Input<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Input.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder setEntities(Input<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities) {
+        public Builder entities(Input<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
 
-        public Builder setEntities(List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs> entities) {
+        public Builder entities(List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs> entities) {
             this.entities = Input.of(Objects.requireNonNull(entities));
             return this;
         }
 
-        public Builder setEntityOverrideMode(Input<SessionEntityTypeEntityOverrideMode> entityOverrideMode) {
+        public Builder entityOverrideMode(Input<SessionEntityTypeEntityOverrideMode> entityOverrideMode) {
             this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
             return this;
         }
 
-        public Builder setEntityOverrideMode(SessionEntityTypeEntityOverrideMode entityOverrideMode) {
+        public Builder entityOverrideMode(SessionEntityTypeEntityOverrideMode entityOverrideMode) {
             this.entityOverrideMode = Input.of(Objects.requireNonNull(entityOverrideMode));
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSessionId(Input<String> sessionId) {
+        public Builder sessionId(Input<String> sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Input.of(Objects.requireNonNull(sessionId));
             return this;
         }

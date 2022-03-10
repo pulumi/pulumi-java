@@ -300,162 +300,162 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setContentTypes(Input<List<Either<String,ContentType>>> contentTypes) {
+        public Builder contentTypes(Input<List<Either<String,ContentType>>> contentTypes) {
             this.contentTypes = Objects.requireNonNull(contentTypes);
             return this;
         }
 
-        public Builder setContentTypes(List<Either<String,ContentType>> contentTypes) {
+        public Builder contentTypes(List<Either<String,ContentType>> contentTypes) {
             this.contentTypes = Input.of(Objects.requireNonNull(contentTypes));
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Input<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Either<String,CreatedByType> createdByType) {
+        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Input.ofNullable(createdByType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setRepoType(Input<Either<String,RepoType>> repoType) {
+        public Builder repoType(Input<Either<String,RepoType>> repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
-        public Builder setRepoType(Either<String,RepoType> repoType) {
+        public Builder repoType(Either<String,RepoType> repoType) {
             this.repoType = Input.of(Objects.requireNonNull(repoType));
             return this;
         }
 
-        public Builder setRepository(Input<RepositoryArgs> repository) {
+        public Builder repository(Input<RepositoryArgs> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepository(RepositoryArgs repository) {
+        public Builder repository(RepositoryArgs repository) {
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceControlId(@Nullable Input<String> sourceControlId) {
+        public Builder sourceControlId(@Nullable Input<String> sourceControlId) {
             this.sourceControlId = sourceControlId;
             return this;
         }
 
-        public Builder setSourceControlId(@Nullable String sourceControlId) {
+        public Builder sourceControlId(@Nullable String sourceControlId) {
             this.sourceControlId = Input.ofNullable(sourceControlId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

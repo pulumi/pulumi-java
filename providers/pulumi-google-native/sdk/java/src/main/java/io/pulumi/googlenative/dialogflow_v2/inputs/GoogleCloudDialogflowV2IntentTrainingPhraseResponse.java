@@ -107,22 +107,22 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParts(List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts) {
+        public Builder parts(List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setTimesAddedCount(Integer timesAddedCount) {
+        public Builder timesAddedCount(Integer timesAddedCount) {
             this.timesAddedCount = Objects.requireNonNull(timesAddedCount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -49,7 +49,7 @@ public final class LoggingConfigurationLoggingConfiguration {
     	      this.logDestinationConfigs = defaults.logDestinationConfigs;
         }
 
-        public Builder setLogDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+        public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }

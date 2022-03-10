@@ -343,97 +343,97 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder setCreatedDateTime(String createdDateTime) {
+        public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
 
-        public Builder setDecisions(@Nullable List<String> decisions) {
+        public Builder decisions(@Nullable List<String> decisions) {
             this.decisions = decisions;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstances(@Nullable List<AccessReviewHistoryInstanceResponse> instances) {
+        public Builder instances(@Nullable List<AccessReviewHistoryInstanceResponse> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfOccurrences(@Nullable Integer numberOfOccurrences) {
+        public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
             this.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalName(String principalName) {
+        public Builder principalName(String principalName) {
             this.principalName = Objects.requireNonNull(principalName);
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodEndDateTime(String reviewHistoryPeriodEndDateTime) {
+        public Builder reviewHistoryPeriodEndDateTime(String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = Objects.requireNonNull(reviewHistoryPeriodEndDateTime);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodStartDateTime(String reviewHistoryPeriodStartDateTime) {
+        public Builder reviewHistoryPeriodStartDateTime(String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = Objects.requireNonNull(reviewHistoryPeriodStartDateTime);
             return this;
         }
 
-        public Builder setScopes(@Nullable List<AccessReviewScopeResponse> scopes) {
+        public Builder scopes(@Nullable List<AccessReviewScopeResponse> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserPrincipalName(String userPrincipalName) {
+        public Builder userPrincipalName(String userPrincipalName) {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }

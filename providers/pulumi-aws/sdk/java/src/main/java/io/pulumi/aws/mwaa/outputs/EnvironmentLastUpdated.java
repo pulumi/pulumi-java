@@ -79,17 +79,17 @@ public final class EnvironmentLastUpdated {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<EnvironmentLastUpdatedError> errors) {
+        public Builder errors(@Nullable List<EnvironmentLastUpdatedError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

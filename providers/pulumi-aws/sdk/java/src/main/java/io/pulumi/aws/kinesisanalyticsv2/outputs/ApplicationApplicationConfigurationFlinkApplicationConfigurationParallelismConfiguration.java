@@ -101,22 +101,22 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.parallelismPerKpu = defaults.parallelismPerKpu;
         }
 
-        public Builder setAutoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
+        public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
             this.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelismPerKpu(@Nullable Integer parallelismPerKpu) {
+        public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
             this.parallelismPerKpu = parallelismPerKpu;
             return this;
         }

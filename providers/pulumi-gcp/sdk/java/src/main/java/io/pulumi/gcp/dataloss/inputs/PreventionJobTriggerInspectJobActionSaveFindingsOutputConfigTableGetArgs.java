@@ -87,32 +87,32 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setTableId(@Nullable Input<String> tableId) {
+        public Builder tableId(@Nullable Input<String> tableId) {
             this.tableId = tableId;
             return this;
         }
 
-        public Builder setTableId(@Nullable String tableId) {
+        public Builder tableId(@Nullable String tableId) {
             this.tableId = Input.ofNullable(tableId);
             return this;
         }

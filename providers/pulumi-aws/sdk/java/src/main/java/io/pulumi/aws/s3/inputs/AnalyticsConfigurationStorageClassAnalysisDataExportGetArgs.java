@@ -71,22 +71,22 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder setDestination(Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination) {
+        public Builder destination(Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs destination) {
+        public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setOutputSchemaVersion(@Nullable Input<String> outputSchemaVersion) {
+        public Builder outputSchemaVersion(@Nullable Input<String> outputSchemaVersion) {
             this.outputSchemaVersion = outputSchemaVersion;
             return this;
         }
 
-        public Builder setOutputSchemaVersion(@Nullable String outputSchemaVersion) {
+        public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
             this.outputSchemaVersion = Input.ofNullable(outputSchemaVersion);
             return this;
         }

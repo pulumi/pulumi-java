@@ -86,32 +86,32 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCustomEntityStoreAssignmentName(@Nullable Input<String> customEntityStoreAssignmentName) {
+        public Builder customEntityStoreAssignmentName(@Nullable Input<String> customEntityStoreAssignmentName) {
             this.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
             return this;
         }
 
-        public Builder setCustomEntityStoreAssignmentName(@Nullable String customEntityStoreAssignmentName) {
+        public Builder customEntityStoreAssignmentName(@Nullable String customEntityStoreAssignmentName) {
             this.customEntityStoreAssignmentName = Input.ofNullable(customEntityStoreAssignmentName);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

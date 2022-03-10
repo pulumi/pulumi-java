@@ -84,17 +84,17 @@ public final class AssetProperty {
     	      this.notificationState = defaults.notificationState;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setNotificationState(@Nullable AssetPropertyNotificationState notificationState) {
+        public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
             this.notificationState = notificationState;
             return this;
         }

@@ -73,12 +73,12 @@ public final class RedshiftUnloadSettingsResponse extends io.pulumi.resources.In
     	      this.s3LinkedServiceName = defaults.s3LinkedServiceName;
         }
 
-        public Builder setBucketName(Object bucketName) {
+        public Builder bucketName(Object bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setS3LinkedServiceName(LinkedServiceReferenceResponse s3LinkedServiceName) {
+        public Builder s3LinkedServiceName(LinkedServiceReferenceResponse s3LinkedServiceName) {
             this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
             return this;
         }

@@ -216,57 +216,57 @@ public final class GetWebAppVnetConnectionResult {
     	      this.vnetResourceId = defaults.vnetResourceId;
         }
 
-        public Builder setCertBlob(@Nullable String certBlob) {
+        public Builder certBlob(@Nullable String certBlob) {
             this.certBlob = certBlob;
             return this;
         }
 
-        public Builder setCertThumbprint(String certThumbprint) {
+        public Builder certThumbprint(String certThumbprint) {
             this.certThumbprint = Objects.requireNonNull(certThumbprint);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable String dnsServers) {
+        public Builder dnsServers(@Nullable String dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsSwift(@Nullable Boolean isSwift) {
+        public Builder isSwift(@Nullable Boolean isSwift) {
             this.isSwift = isSwift;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResyncRequired(Boolean resyncRequired) {
+        public Builder resyncRequired(Boolean resyncRequired) {
             this.resyncRequired = Objects.requireNonNull(resyncRequired);
             return this;
         }
 
-        public Builder setRoutes(List<VnetRouteResponse> routes) {
+        public Builder routes(List<VnetRouteResponse> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVnetResourceId(@Nullable String vnetResourceId) {
+        public Builder vnetResourceId(@Nullable String vnetResourceId) {
             this.vnetResourceId = vnetResourceId;
             return this;
         }

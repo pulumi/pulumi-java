@@ -98,22 +98,22 @@ public final class ContactSettingsResponse {
     	      this.technicalContact = defaults.technicalContact;
         }
 
-        public Builder setAdminContact(ContactResponse adminContact) {
+        public Builder adminContact(ContactResponse adminContact) {
             this.adminContact = Objects.requireNonNull(adminContact);
             return this;
         }
 
-        public Builder setPrivacy(String privacy) {
+        public Builder privacy(String privacy) {
             this.privacy = Objects.requireNonNull(privacy);
             return this;
         }
 
-        public Builder setRegistrantContact(ContactResponse registrantContact) {
+        public Builder registrantContact(ContactResponse registrantContact) {
             this.registrantContact = Objects.requireNonNull(registrantContact);
             return this;
         }
 
-        public Builder setTechnicalContact(ContactResponse technicalContact) {
+        public Builder technicalContact(ContactResponse technicalContact) {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }

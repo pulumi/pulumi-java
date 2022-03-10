@@ -59,17 +59,17 @@ public final class ServiceAuth {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServerAddress(String serverAddress) {
+        public Builder serverAddress(String serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

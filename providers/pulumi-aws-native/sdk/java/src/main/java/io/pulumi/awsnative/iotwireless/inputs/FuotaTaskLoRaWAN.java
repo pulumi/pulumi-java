@@ -70,12 +70,12 @@ public final class FuotaTaskLoRaWAN extends io.pulumi.resources.InvokeArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

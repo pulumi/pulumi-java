@@ -53,12 +53,12 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder setDayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Input<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }

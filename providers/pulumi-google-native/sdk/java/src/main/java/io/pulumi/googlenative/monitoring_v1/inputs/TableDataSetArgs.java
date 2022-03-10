@@ -108,42 +108,42 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setMinAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
-        public Builder setMinAlignmentPeriod(@Nullable String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
             this.minAlignmentPeriod = Input.ofNullable(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setTableDisplayOptions(@Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions) {
+        public Builder tableDisplayOptions(@Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions) {
             this.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
 
-        public Builder setTableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
+        public Builder tableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
             this.tableDisplayOptions = Input.ofNullable(tableDisplayOptions);
             return this;
         }
 
-        public Builder setTableTemplate(@Nullable Input<String> tableTemplate) {
+        public Builder tableTemplate(@Nullable Input<String> tableTemplate) {
             this.tableTemplate = tableTemplate;
             return this;
         }
 
-        public Builder setTableTemplate(@Nullable String tableTemplate) {
+        public Builder tableTemplate(@Nullable String tableTemplate) {
             this.tableTemplate = Input.ofNullable(tableTemplate);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }

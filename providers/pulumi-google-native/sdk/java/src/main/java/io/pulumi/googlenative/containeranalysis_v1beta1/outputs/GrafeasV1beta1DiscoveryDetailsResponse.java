@@ -48,7 +48,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
     	      this.discovered = defaults.discovered;
         }
 
-        public Builder setDiscovered(DiscoveredResponse discovered) {
+        public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }

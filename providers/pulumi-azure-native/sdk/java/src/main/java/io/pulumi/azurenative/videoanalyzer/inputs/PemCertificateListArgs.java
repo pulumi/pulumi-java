@@ -75,22 +75,22 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificates(Input<List<String>> certificates) {
+        public Builder certificates(Input<List<String>> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setCertificates(List<String> certificates) {
+        public Builder certificates(List<String> certificates) {
             this.certificates = Input.of(Objects.requireNonNull(certificates));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

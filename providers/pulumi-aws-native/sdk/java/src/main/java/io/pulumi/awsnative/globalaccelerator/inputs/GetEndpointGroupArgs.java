@@ -51,7 +51,7 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.endpointGroupArn = defaults.endpointGroupArn;
         }
 
-        public Builder setEndpointGroupArn(String endpointGroupArn) {
+        public Builder endpointGroupArn(String endpointGroupArn) {
             this.endpointGroupArn = Objects.requireNonNull(endpointGroupArn);
             return this;
         }

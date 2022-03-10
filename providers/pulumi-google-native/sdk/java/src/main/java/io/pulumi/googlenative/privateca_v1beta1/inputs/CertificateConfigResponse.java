@@ -90,17 +90,17 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
     	      this.subjectConfig = defaults.subjectConfig;
         }
 
-        public Builder setPublicKey(PublicKeyResponse publicKey) {
+        public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setReusableConfig(ReusableConfigWrapperResponse reusableConfig) {
+        public Builder reusableConfig(ReusableConfigWrapperResponse reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
 
-        public Builder setSubjectConfig(SubjectConfigResponse subjectConfig) {
+        public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }

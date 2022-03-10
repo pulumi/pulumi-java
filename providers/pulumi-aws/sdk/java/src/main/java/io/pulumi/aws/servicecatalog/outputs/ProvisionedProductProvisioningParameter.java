@@ -84,17 +84,17 @@ public final class ProvisionedProductProvisioningParameter {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setUsePreviousValue(@Nullable Boolean usePreviousValue) {
+        public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
             this.usePreviousValue = usePreviousValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

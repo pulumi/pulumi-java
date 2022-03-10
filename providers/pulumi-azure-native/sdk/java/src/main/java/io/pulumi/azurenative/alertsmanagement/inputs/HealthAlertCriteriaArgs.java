@@ -58,12 +58,12 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(@Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf) {
+        public Builder allOf(@Nullable Input<List<VmGuestHealthAlertCriterionArgs>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
-        public Builder setAllOf(@Nullable List<VmGuestHealthAlertCriterionArgs> allOf) {
+        public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionArgs> allOf) {
             this.allOf = Input.ofNullable(allOf);
             return this;
         }

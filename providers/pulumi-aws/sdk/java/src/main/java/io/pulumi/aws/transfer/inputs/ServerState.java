@@ -349,192 +349,192 @@ public final class ServerState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEndpointDetails(@Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails) {
+        public Builder endpointDetails(@Nullable Input<ServerEndpointDetailsGetArgs> endpointDetails) {
             this.endpointDetails = endpointDetails;
             return this;
         }
 
-        public Builder setEndpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
+        public Builder endpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
             this.endpointDetails = Input.ofNullable(endpointDetails);
             return this;
         }
 
-        public Builder setEndpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Input<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Input.ofNullable(endpointType);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setFunction(@Nullable Input<String> function) {
+        public Builder function(@Nullable Input<String> function) {
             this.function = function;
             return this;
         }
 
-        public Builder setFunction(@Nullable String function) {
+        public Builder function(@Nullable String function) {
             this.function = Input.ofNullable(function);
             return this;
         }
 
-        public Builder setHostKey(@Nullable Input<String> hostKey) {
+        public Builder hostKey(@Nullable Input<String> hostKey) {
             this.hostKey = hostKey;
             return this;
         }
 
-        public Builder setHostKey(@Nullable String hostKey) {
+        public Builder hostKey(@Nullable String hostKey) {
             this.hostKey = Input.ofNullable(hostKey);
             return this;
         }
 
-        public Builder setHostKeyFingerprint(@Nullable Input<String> hostKeyFingerprint) {
+        public Builder hostKeyFingerprint(@Nullable Input<String> hostKeyFingerprint) {
             this.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
 
-        public Builder setHostKeyFingerprint(@Nullable String hostKeyFingerprint) {
+        public Builder hostKeyFingerprint(@Nullable String hostKeyFingerprint) {
             this.hostKeyFingerprint = Input.ofNullable(hostKeyFingerprint);
             return this;
         }
 
-        public Builder setIdentityProviderType(@Nullable Input<String> identityProviderType) {
+        public Builder identityProviderType(@Nullable Input<String> identityProviderType) {
             this.identityProviderType = identityProviderType;
             return this;
         }
 
-        public Builder setIdentityProviderType(@Nullable String identityProviderType) {
+        public Builder identityProviderType(@Nullable String identityProviderType) {
             this.identityProviderType = Input.ofNullable(identityProviderType);
             return this;
         }
 
-        public Builder setInvocationRole(@Nullable Input<String> invocationRole) {
+        public Builder invocationRole(@Nullable Input<String> invocationRole) {
             this.invocationRole = invocationRole;
             return this;
         }
 
-        public Builder setInvocationRole(@Nullable String invocationRole) {
+        public Builder invocationRole(@Nullable String invocationRole) {
             this.invocationRole = Input.ofNullable(invocationRole);
             return this;
         }
 
-        public Builder setLoggingRole(@Nullable Input<String> loggingRole) {
+        public Builder loggingRole(@Nullable Input<String> loggingRole) {
             this.loggingRole = loggingRole;
             return this;
         }
 
-        public Builder setLoggingRole(@Nullable String loggingRole) {
+        public Builder loggingRole(@Nullable String loggingRole) {
             this.loggingRole = Input.ofNullable(loggingRole);
             return this;
         }
 
-        public Builder setProtocols(@Nullable Input<List<String>> protocols) {
+        public Builder protocols(@Nullable Input<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<String> protocols) {
+        public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = Input.ofNullable(protocols);
             return this;
         }
 
-        public Builder setSecurityPolicyName(@Nullable Input<String> securityPolicyName) {
+        public Builder securityPolicyName(@Nullable Input<String> securityPolicyName) {
             this.securityPolicyName = securityPolicyName;
             return this;
         }
 
-        public Builder setSecurityPolicyName(@Nullable String securityPolicyName) {
+        public Builder securityPolicyName(@Nullable String securityPolicyName) {
             this.securityPolicyName = Input.ofNullable(securityPolicyName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

@@ -66,12 +66,12 @@ public final class LogsPanelResponse {
     	      this.resourceNames = defaults.resourceNames;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setResourceNames(List<String> resourceNames) {
+        public Builder resourceNames(List<String> resourceNames) {
             this.resourceNames = Objects.requireNonNull(resourceNames);
             return this;
         }

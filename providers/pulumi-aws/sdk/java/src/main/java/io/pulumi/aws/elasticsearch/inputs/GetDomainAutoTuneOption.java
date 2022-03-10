@@ -86,17 +86,17 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
     	      this.rollbackOnDisable = defaults.rollbackOnDisable;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setMaintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
+        public Builder maintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
             return this;
         }
 
-        public Builder setRollbackOnDisable(String rollbackOnDisable) {
+        public Builder rollbackOnDisable(String rollbackOnDisable) {
             this.rollbackOnDisable = Objects.requireNonNull(rollbackOnDisable);
             return this;
         }

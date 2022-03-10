@@ -69,12 +69,12 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
     	      this.servers = defaults.servers;
         }
 
-        public Builder setBackendHttpSettings(@Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings) {
+        public Builder backendHttpSettings(@Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
-        public Builder setServers(@Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
+        public Builder servers(@Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
             this.servers = servers;
             return this;
         }

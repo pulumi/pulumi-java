@@ -185,102 +185,102 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagedZone(Input<String> managedZone) {
+        public Builder managedZone(Input<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
-        public Builder setManagedZone(String managedZone) {
+        public Builder managedZone(String managedZone) {
             this.managedZone = Input.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRoutingPolicy(@Nullable Input<RRSetRoutingPolicyArgs> routingPolicy) {
+        public Builder routingPolicy(@Nullable Input<RRSetRoutingPolicyArgs> routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }
 
-        public Builder setRoutingPolicy(@Nullable RRSetRoutingPolicyArgs routingPolicy) {
+        public Builder routingPolicy(@Nullable RRSetRoutingPolicyArgs routingPolicy) {
             this.routingPolicy = Input.ofNullable(routingPolicy);
             return this;
         }
 
-        public Builder setRrdatas(@Nullable Input<List<String>> rrdatas) {
+        public Builder rrdatas(@Nullable Input<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
 
-        public Builder setRrdatas(@Nullable List<String> rrdatas) {
+        public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Input.ofNullable(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
             this.signatureRrdatas = Input.ofNullable(signatureRrdatas);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Input<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

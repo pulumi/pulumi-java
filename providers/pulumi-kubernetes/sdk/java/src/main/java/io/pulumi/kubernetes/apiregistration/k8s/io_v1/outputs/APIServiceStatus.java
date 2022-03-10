@@ -50,7 +50,7 @@ public final class APIServiceStatus {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable List<APIServiceCondition> conditions) {
+        public Builder conditions(@Nullable List<APIServiceCondition> conditions) {
             this.conditions = conditions;
             return this;
         }

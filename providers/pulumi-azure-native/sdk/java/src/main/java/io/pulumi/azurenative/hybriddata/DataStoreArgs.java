@@ -170,82 +170,82 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setCustomerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
+        public Builder customerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
             this.customerSecrets = customerSecrets;
             return this;
         }
 
-        public Builder setCustomerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
+        public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
             this.customerSecrets = Input.ofNullable(customerSecrets);
             return this;
         }
 
-        public Builder setDataManagerName(Input<String> dataManagerName) {
+        public Builder dataManagerName(Input<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
 
-        public Builder setDataManagerName(String dataManagerName) {
+        public Builder dataManagerName(String dataManagerName) {
             this.dataManagerName = Input.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
 
-        public Builder setDataStoreName(@Nullable Input<String> dataStoreName) {
+        public Builder dataStoreName(@Nullable Input<String> dataStoreName) {
             this.dataStoreName = dataStoreName;
             return this;
         }
 
-        public Builder setDataStoreName(@Nullable String dataStoreName) {
+        public Builder dataStoreName(@Nullable String dataStoreName) {
             this.dataStoreName = Input.ofNullable(dataStoreName);
             return this;
         }
 
-        public Builder setDataStoreTypeId(Input<String> dataStoreTypeId) {
+        public Builder dataStoreTypeId(Input<String> dataStoreTypeId) {
             this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
             return this;
         }
 
-        public Builder setDataStoreTypeId(String dataStoreTypeId) {
+        public Builder dataStoreTypeId(String dataStoreTypeId) {
             this.dataStoreTypeId = Input.of(Objects.requireNonNull(dataStoreTypeId));
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Input<Object> extendedProperties) {
+        public Builder extendedProperties(@Nullable Input<Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Object extendedProperties) {
+        public Builder extendedProperties(@Nullable Object extendedProperties) {
             this.extendedProperties = Input.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder setRepositoryId(@Nullable Input<String> repositoryId) {
+        public Builder repositoryId(@Nullable Input<String> repositoryId) {
             this.repositoryId = repositoryId;
             return this;
         }
 
-        public Builder setRepositoryId(@Nullable String repositoryId) {
+        public Builder repositoryId(@Nullable String repositoryId) {
             this.repositoryId = Input.ofNullable(repositoryId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setState(Input<State> state) {
+        public Builder state(Input<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(State state) {
+        public Builder state(State state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }

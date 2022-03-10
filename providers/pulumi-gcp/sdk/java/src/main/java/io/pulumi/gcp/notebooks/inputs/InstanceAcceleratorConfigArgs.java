@@ -71,22 +71,22 @@ public final class InstanceAcceleratorConfigArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(Input<Integer> coreCount) {
+        public Builder coreCount(Input<Integer> coreCount) {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
 
-        public Builder setCoreCount(Integer coreCount) {
+        public Builder coreCount(Integer coreCount) {
             this.coreCount = Input.of(Objects.requireNonNull(coreCount));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

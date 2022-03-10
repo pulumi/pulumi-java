@@ -288,152 +288,152 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkPeerings = defaults.virtualNetworkPeerings;
         }
 
-        public Builder setAddressSpace(@Nullable Input<AddressSpaceArgs> addressSpace) {
+        public Builder addressSpace(@Nullable Input<AddressSpaceArgs> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setAddressSpace(@Nullable AddressSpaceArgs addressSpace) {
+        public Builder addressSpace(@Nullable AddressSpaceArgs addressSpace) {
             this.addressSpace = Input.ofNullable(addressSpace);
             return this;
         }
 
-        public Builder setBgpCommunities(@Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
+        public Builder bgpCommunities(@Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
             this.bgpCommunities = bgpCommunities;
             return this;
         }
 
-        public Builder setBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
+        public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
             this.bgpCommunities = Input.ofNullable(bgpCommunities);
             return this;
         }
 
-        public Builder setDdosProtectionPlan(@Nullable Input<SubResourceArgs> ddosProtectionPlan) {
+        public Builder ddosProtectionPlan(@Nullable Input<SubResourceArgs> ddosProtectionPlan) {
             this.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
 
-        public Builder setDdosProtectionPlan(@Nullable SubResourceArgs ddosProtectionPlan) {
+        public Builder ddosProtectionPlan(@Nullable SubResourceArgs ddosProtectionPlan) {
             this.ddosProtectionPlan = Input.ofNullable(ddosProtectionPlan);
             return this;
         }
 
-        public Builder setDhcpOptions(@Nullable Input<DhcpOptionsArgs> dhcpOptions) {
+        public Builder dhcpOptions(@Nullable Input<DhcpOptionsArgs> dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
             return this;
         }
 
-        public Builder setDhcpOptions(@Nullable DhcpOptionsArgs dhcpOptions) {
+        public Builder dhcpOptions(@Nullable DhcpOptionsArgs dhcpOptions) {
             this.dhcpOptions = Input.ofNullable(dhcpOptions);
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Input<Boolean> enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Boolean enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = Input.ofNullable(enableDdosProtection);
             return this;
         }
 
-        public Builder setEnableVmProtection(@Nullable Input<Boolean> enableVmProtection) {
+        public Builder enableVmProtection(@Nullable Input<Boolean> enableVmProtection) {
             this.enableVmProtection = enableVmProtection;
             return this;
         }
 
-        public Builder setEnableVmProtection(@Nullable Boolean enableVmProtection) {
+        public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
             this.enableVmProtection = Input.ofNullable(enableVmProtection);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
+        public Builder ipAllocations(@Nullable Input<List<SubResourceArgs>> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
+        public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
             this.ipAllocations = Input.ofNullable(ipAllocations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<SubnetArgs>> subnets) {
+        public Builder subnets(@Nullable Input<List<SubnetArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<SubnetArgs> subnets) {
+        public Builder subnets(@Nullable List<SubnetArgs> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualNetworkName(@Nullable Input<String> virtualNetworkName) {
+        public Builder virtualNetworkName(@Nullable Input<String> virtualNetworkName) {
             this.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
-        public Builder setVirtualNetworkName(@Nullable String virtualNetworkName) {
+        public Builder virtualNetworkName(@Nullable String virtualNetworkName) {
             this.virtualNetworkName = Input.ofNullable(virtualNetworkName);
             return this;
         }
 
-        public Builder setVirtualNetworkPeerings(@Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
+        public Builder virtualNetworkPeerings(@Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
 
-        public Builder setVirtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
+        public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = Input.ofNullable(virtualNetworkPeerings);
             return this;
         }

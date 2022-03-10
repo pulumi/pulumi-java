@@ -68,12 +68,12 @@ public final class WebChatChannelPropertiesResponse {
     	      this.webChatEmbedCode = defaults.webChatEmbedCode;
         }
 
-        public Builder setSites(@Nullable List<WebChatSiteResponse> sites) {
+        public Builder sites(@Nullable List<WebChatSiteResponse> sites) {
             this.sites = sites;
             return this;
         }
 
-        public Builder setWebChatEmbedCode(String webChatEmbedCode) {
+        public Builder webChatEmbedCode(String webChatEmbedCode) {
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
         }

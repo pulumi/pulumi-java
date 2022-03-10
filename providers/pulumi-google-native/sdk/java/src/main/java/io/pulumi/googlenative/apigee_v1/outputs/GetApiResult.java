@@ -116,27 +116,27 @@ public final class GetApiResult {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLatestRevisionId(String latestRevisionId) {
+        public Builder latestRevisionId(String latestRevisionId) {
             this.latestRevisionId = Objects.requireNonNull(latestRevisionId);
             return this;
         }
 
-        public Builder setMetaData(GoogleCloudApigeeV1EntityMetadataResponse metaData) {
+        public Builder metaData(GoogleCloudApigeeV1EntityMetadataResponse metaData) {
             this.metaData = Objects.requireNonNull(metaData);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRevision(List<String> revision) {
+        public Builder revision(List<String> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

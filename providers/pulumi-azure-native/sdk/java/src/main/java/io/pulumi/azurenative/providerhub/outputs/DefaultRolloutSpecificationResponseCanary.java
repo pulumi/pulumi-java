@@ -51,12 +51,12 @@ public final class DefaultRolloutSpecificationResponseCanary {
     	      this.skipRegions = defaults.skipRegions;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setSkipRegions(@Nullable List<String> skipRegions) {
+        public Builder skipRegions(@Nullable List<String> skipRegions) {
             this.skipRegions = skipRegions;
             return this;
         }

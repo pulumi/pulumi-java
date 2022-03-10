@@ -160,72 +160,72 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactTags(@Nullable Input<Map<String,String>> artifactTags) {
+        public Builder artifactTags(@Nullable Input<Map<String,String>> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
-        public Builder setArtifactTags(@Nullable Map<String,String> artifactTags) {
+        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = Input.ofNullable(artifactTags);
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Input<Boolean> excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Boolean excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = Input.ofNullable(excludeFromLatest);
             return this;
         }
 
-        public Builder setGalleryImageId(Input<String> galleryImageId) {
+        public Builder galleryImageId(Input<String> galleryImageId) {
             this.galleryImageId = Objects.requireNonNull(galleryImageId);
             return this;
         }
 
-        public Builder setGalleryImageId(String galleryImageId) {
+        public Builder galleryImageId(String galleryImageId) {
             this.galleryImageId = Input.of(Objects.requireNonNull(galleryImageId));
             return this;
         }
 
-        public Builder setReplicationRegions(Input<List<String>> replicationRegions) {
+        public Builder replicationRegions(Input<List<String>> replicationRegions) {
             this.replicationRegions = Objects.requireNonNull(replicationRegions);
             return this;
         }
 
-        public Builder setReplicationRegions(List<String> replicationRegions) {
+        public Builder replicationRegions(List<String> replicationRegions) {
             this.replicationRegions = Input.of(Objects.requireNonNull(replicationRegions));
             return this;
         }
 
-        public Builder setRunOutputName(Input<String> runOutputName) {
+        public Builder runOutputName(Input<String> runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
-        public Builder setRunOutputName(String runOutputName) {
+        public Builder runOutputName(String runOutputName) {
             this.runOutputName = Input.of(Objects.requireNonNull(runOutputName));
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Either<String,SharedImageStorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Either<String,SharedImageStorageAccountType> storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

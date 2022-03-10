@@ -100,22 +100,22 @@ public final class GetProjectResult {
     	      this.sample = defaults.sample;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setRecipeName(@Nullable String recipeName) {
+        public Builder recipeName(@Nullable String recipeName) {
             this.recipeName = recipeName;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSample(@Nullable ProjectSample sample) {
+        public Builder sample(@Nullable ProjectSample sample) {
             this.sample = sample;
             return this;
         }

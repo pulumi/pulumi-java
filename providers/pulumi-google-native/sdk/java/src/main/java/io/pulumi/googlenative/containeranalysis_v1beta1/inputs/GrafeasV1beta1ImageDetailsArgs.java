@@ -56,12 +56,12 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
     	      this.derivedImage = defaults.derivedImage;
         }
 
-        public Builder setDerivedImage(Input<DerivedArgs> derivedImage) {
+        public Builder derivedImage(Input<DerivedArgs> derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
 
-        public Builder setDerivedImage(DerivedArgs derivedImage) {
+        public Builder derivedImage(DerivedArgs derivedImage) {
             this.derivedImage = Input.of(Objects.requireNonNull(derivedImage));
             return this;
         }

@@ -107,42 +107,42 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
     	      this.vNetId = defaults.vNetId;
         }
 
-        public Builder setPublicIPs(@Nullable Input<List<String>> publicIPs) {
+        public Builder publicIPs(@Nullable Input<List<String>> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
 
-        public Builder setPublicIPs(@Nullable List<String> publicIPs) {
+        public Builder publicIPs(@Nullable List<String> publicIPs) {
             this.publicIPs = Input.ofNullable(publicIPs);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Input<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setVNetId(@Nullable Input<String> vNetId) {
+        public Builder vNetId(@Nullable Input<String> vNetId) {
             this.vNetId = vNetId;
             return this;
         }
 
-        public Builder setVNetId(@Nullable String vNetId) {
+        public Builder vNetId(@Nullable String vNetId) {
             this.vNetId = Input.ofNullable(vNetId);
             return this;
         }

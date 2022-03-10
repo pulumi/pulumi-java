@@ -50,7 +50,7 @@ public final class ManagedZonePeeringConfig {
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder setTargetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
+        public Builder targetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }

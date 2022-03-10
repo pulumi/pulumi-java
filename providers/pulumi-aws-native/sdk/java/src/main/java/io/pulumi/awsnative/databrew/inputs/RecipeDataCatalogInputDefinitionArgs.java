@@ -99,42 +99,42 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable Input<RecipeS3LocationArgs> tempDirectory) {
+        public Builder tempDirectory(@Nullable Input<RecipeS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable RecipeS3LocationArgs tempDirectory) {
+        public Builder tempDirectory(@Nullable RecipeS3LocationArgs tempDirectory) {
             this.tempDirectory = Input.ofNullable(tempDirectory);
             return this;
         }

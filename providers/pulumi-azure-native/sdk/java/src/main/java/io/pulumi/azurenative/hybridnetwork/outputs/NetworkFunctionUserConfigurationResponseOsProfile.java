@@ -50,7 +50,7 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile {
     	      this.customData = defaults.customData;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }

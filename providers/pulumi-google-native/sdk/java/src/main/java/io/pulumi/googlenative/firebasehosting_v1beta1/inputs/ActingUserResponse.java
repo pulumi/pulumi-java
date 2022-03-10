@@ -72,12 +72,12 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
     	      this.imageUrl = defaults.imageUrl;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setImageUrl(String imageUrl) {
+        public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }

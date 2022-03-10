@@ -64,12 +64,12 @@ public final class DeliveryStreamProcessor extends io.pulumi.resources.InvokeArg
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable List<DeliveryStreamProcessorParameter> parameters) {
+        public Builder parameters(@Nullable List<DeliveryStreamProcessorParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(DeliveryStreamProcessorType type) {
+        public Builder type(DeliveryStreamProcessorType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

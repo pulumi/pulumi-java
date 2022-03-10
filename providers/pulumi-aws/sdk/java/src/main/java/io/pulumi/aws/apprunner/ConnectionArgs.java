@@ -87,32 +87,32 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConnectionName(Input<String> connectionName) {
+        public Builder connectionName(Input<String> connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Input.of(Objects.requireNonNull(connectionName));
             return this;
         }
 
-        public Builder setProviderType(Input<String> providerType) {
+        public Builder providerType(Input<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
-        public Builder setProviderType(String providerType) {
+        public Builder providerType(String providerType) {
             this.providerType = Input.of(Objects.requireNonNull(providerType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

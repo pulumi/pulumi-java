@@ -78,27 +78,27 @@ public final class ResponseHeadersPolicyConfig {
     	      this.securityHeadersConfig = defaults.securityHeadersConfig;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setCorsConfig(@Nullable ResponseHeadersPolicyCorsConfig corsConfig) {
+        public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfig corsConfig) {
             this.corsConfig = corsConfig;
             return this;
         }
 
-        public Builder setCustomHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig) {
+        public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig) {
             this.customHeadersConfig = customHeadersConfig;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
+        public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }

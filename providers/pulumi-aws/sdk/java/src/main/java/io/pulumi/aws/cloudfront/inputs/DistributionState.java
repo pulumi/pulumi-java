@@ -568,302 +568,302 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
     	      this.webAclId = defaults.webAclId;
         }
 
-        public Builder setAliases(@Nullable Input<List<String>> aliases) {
+        public Builder aliases(@Nullable Input<List<String>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setAliases(@Nullable List<String> aliases) {
+        public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = Input.ofNullable(aliases);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCallerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Input<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
-        public Builder setCallerReference(@Nullable String callerReference) {
+        public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Input.ofNullable(callerReference);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setCustomErrorResponses(@Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses) {
+        public Builder customErrorResponses(@Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
 
-        public Builder setCustomErrorResponses(@Nullable List<DistributionCustomErrorResponseGetArgs> customErrorResponses) {
+        public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseGetArgs> customErrorResponses) {
             this.customErrorResponses = Input.ofNullable(customErrorResponses);
             return this;
         }
 
-        public Builder setDefaultCacheBehavior(@Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(@Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior) {
             this.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
 
-        public Builder setDefaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorGetArgs defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorGetArgs defaultCacheBehavior) {
             this.defaultCacheBehavior = Input.ofNullable(defaultCacheBehavior);
             return this;
         }
 
-        public Builder setDefaultRootObject(@Nullable Input<String> defaultRootObject) {
+        public Builder defaultRootObject(@Nullable Input<String> defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
 
-        public Builder setDefaultRootObject(@Nullable String defaultRootObject) {
+        public Builder defaultRootObject(@Nullable String defaultRootObject) {
             this.defaultRootObject = Input.ofNullable(defaultRootObject);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Input.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder setHttpVersion(@Nullable Input<String> httpVersion) {
+        public Builder httpVersion(@Nullable Input<String> httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
 
-        public Builder setHttpVersion(@Nullable String httpVersion) {
+        public Builder httpVersion(@Nullable String httpVersion) {
             this.httpVersion = Input.ofNullable(httpVersion);
             return this;
         }
 
-        public Builder setInProgressValidationBatches(@Nullable Input<Integer> inProgressValidationBatches) {
+        public Builder inProgressValidationBatches(@Nullable Input<Integer> inProgressValidationBatches) {
             this.inProgressValidationBatches = inProgressValidationBatches;
             return this;
         }
 
-        public Builder setInProgressValidationBatches(@Nullable Integer inProgressValidationBatches) {
+        public Builder inProgressValidationBatches(@Nullable Integer inProgressValidationBatches) {
             this.inProgressValidationBatches = Input.ofNullable(inProgressValidationBatches);
             return this;
         }
 
-        public Builder setIsIpv6Enabled(@Nullable Input<Boolean> isIpv6Enabled) {
+        public Builder isIpv6Enabled(@Nullable Input<Boolean> isIpv6Enabled) {
             this.isIpv6Enabled = isIpv6Enabled;
             return this;
         }
 
-        public Builder setIsIpv6Enabled(@Nullable Boolean isIpv6Enabled) {
+        public Builder isIpv6Enabled(@Nullable Boolean isIpv6Enabled) {
             this.isIpv6Enabled = Input.ofNullable(isIpv6Enabled);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable DistributionLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable DistributionLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setOrderedCacheBehaviors(@Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(@Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors) {
             this.orderedCacheBehaviors = orderedCacheBehaviors;
             return this;
         }
 
-        public Builder setOrderedCacheBehaviors(@Nullable List<DistributionOrderedCacheBehaviorGetArgs> orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(@Nullable List<DistributionOrderedCacheBehaviorGetArgs> orderedCacheBehaviors) {
             this.orderedCacheBehaviors = Input.ofNullable(orderedCacheBehaviors);
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups) {
+        public Builder originGroups(@Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable List<DistributionOriginGroupGetArgs> originGroups) {
+        public Builder originGroups(@Nullable List<DistributionOriginGroupGetArgs> originGroups) {
             this.originGroups = Input.ofNullable(originGroups);
             return this;
         }
 
-        public Builder setOrigins(@Nullable Input<List<DistributionOriginGetArgs>> origins) {
+        public Builder origins(@Nullable Input<List<DistributionOriginGetArgs>> origins) {
             this.origins = origins;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<DistributionOriginGetArgs> origins) {
+        public Builder origins(@Nullable List<DistributionOriginGetArgs> origins) {
             this.origins = Input.ofNullable(origins);
             return this;
         }
 
-        public Builder setPriceClass(@Nullable Input<String> priceClass) {
+        public Builder priceClass(@Nullable Input<String> priceClass) {
             this.priceClass = priceClass;
             return this;
         }
 
-        public Builder setPriceClass(@Nullable String priceClass) {
+        public Builder priceClass(@Nullable String priceClass) {
             this.priceClass = Input.ofNullable(priceClass);
             return this;
         }
 
-        public Builder setRestrictions(@Nullable Input<DistributionRestrictionsGetArgs> restrictions) {
+        public Builder restrictions(@Nullable Input<DistributionRestrictionsGetArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable DistributionRestrictionsGetArgs restrictions) {
+        public Builder restrictions(@Nullable DistributionRestrictionsGetArgs restrictions) {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }
 
-        public Builder setRetainOnDelete(@Nullable Input<Boolean> retainOnDelete) {
+        public Builder retainOnDelete(@Nullable Input<Boolean> retainOnDelete) {
             this.retainOnDelete = retainOnDelete;
             return this;
         }
 
-        public Builder setRetainOnDelete(@Nullable Boolean retainOnDelete) {
+        public Builder retainOnDelete(@Nullable Boolean retainOnDelete) {
             this.retainOnDelete = Input.ofNullable(retainOnDelete);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTrustedKeyGroups(@Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
 
-        public Builder setTrustedKeyGroups(@Nullable List<DistributionTrustedKeyGroupGetArgs> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable List<DistributionTrustedKeyGroupGetArgs> trustedKeyGroups) {
             this.trustedKeyGroups = Input.ofNullable(trustedKeyGroups);
             return this;
         }
 
-        public Builder setTrustedSigners(@Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners) {
+        public Builder trustedSigners(@Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
 
-        public Builder setTrustedSigners(@Nullable List<DistributionTrustedSignerGetArgs> trustedSigners) {
+        public Builder trustedSigners(@Nullable List<DistributionTrustedSignerGetArgs> trustedSigners) {
             this.trustedSigners = Input.ofNullable(trustedSigners);
             return this;
         }
 
-        public Builder setViewerCertificate(@Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate) {
+        public Builder viewerCertificate(@Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate) {
             this.viewerCertificate = viewerCertificate;
             return this;
         }
 
-        public Builder setViewerCertificate(@Nullable DistributionViewerCertificateGetArgs viewerCertificate) {
+        public Builder viewerCertificate(@Nullable DistributionViewerCertificateGetArgs viewerCertificate) {
             this.viewerCertificate = Input.ofNullable(viewerCertificate);
             return this;
         }
 
-        public Builder setWaitForDeployment(@Nullable Input<Boolean> waitForDeployment) {
+        public Builder waitForDeployment(@Nullable Input<Boolean> waitForDeployment) {
             this.waitForDeployment = waitForDeployment;
             return this;
         }
 
-        public Builder setWaitForDeployment(@Nullable Boolean waitForDeployment) {
+        public Builder waitForDeployment(@Nullable Boolean waitForDeployment) {
             this.waitForDeployment = Input.ofNullable(waitForDeployment);
             return this;
         }
 
-        public Builder setWebAclId(@Nullable Input<String> webAclId) {
+        public Builder webAclId(@Nullable Input<String> webAclId) {
             this.webAclId = webAclId;
             return this;
         }
 
-        public Builder setWebAclId(@Nullable String webAclId) {
+        public Builder webAclId(@Nullable String webAclId) {
             this.webAclId = Input.ofNullable(webAclId);
             return this;
         }

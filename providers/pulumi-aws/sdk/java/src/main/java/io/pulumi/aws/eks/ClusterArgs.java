@@ -171,82 +171,82 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setEnabledClusterLogTypes(@Nullable Input<List<String>> enabledClusterLogTypes) {
+        public Builder enabledClusterLogTypes(@Nullable Input<List<String>> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
 
-        public Builder setEnabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
+        public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = Input.ofNullable(enabledClusterLogTypes);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<ClusterEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<ClusterEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable ClusterEncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable ClusterEncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigArgs kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = Input.ofNullable(kubernetesNetworkConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVpcConfig(Input<ClusterVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(Input<ClusterVpcConfigArgs> vpcConfig) {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
         }
 
-        public Builder setVpcConfig(ClusterVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(ClusterVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.of(Objects.requireNonNull(vpcConfig));
             return this;
         }

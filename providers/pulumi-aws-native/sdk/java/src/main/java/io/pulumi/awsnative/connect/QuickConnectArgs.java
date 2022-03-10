@@ -121,52 +121,52 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQuickConnectConfig(Input<QuickConnectConfigArgs> quickConnectConfig) {
+        public Builder quickConnectConfig(Input<QuickConnectConfigArgs> quickConnectConfig) {
             this.quickConnectConfig = Objects.requireNonNull(quickConnectConfig);
             return this;
         }
 
-        public Builder setQuickConnectConfig(QuickConnectConfigArgs quickConnectConfig) {
+        public Builder quickConnectConfig(QuickConnectConfigArgs quickConnectConfig) {
             this.quickConnectConfig = Input.of(Objects.requireNonNull(quickConnectConfig));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<QuickConnectTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<QuickConnectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<QuickConnectTagArgs> tags) {
+        public Builder tags(@Nullable List<QuickConnectTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

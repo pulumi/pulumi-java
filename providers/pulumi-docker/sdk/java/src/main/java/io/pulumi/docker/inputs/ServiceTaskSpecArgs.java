@@ -141,82 +141,82 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder setContainerSpec(Input<ServiceTaskSpecContainerSpecArgs> containerSpec) {
+        public Builder containerSpec(Input<ServiceTaskSpecContainerSpecArgs> containerSpec) {
             this.containerSpec = Objects.requireNonNull(containerSpec);
             return this;
         }
 
-        public Builder setContainerSpec(ServiceTaskSpecContainerSpecArgs containerSpec) {
+        public Builder containerSpec(ServiceTaskSpecContainerSpecArgs containerSpec) {
             this.containerSpec = Input.of(Objects.requireNonNull(containerSpec));
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Input<Integer> forceUpdate) {
+        public Builder forceUpdate(@Nullable Input<Integer> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Integer forceUpdate) {
+        public Builder forceUpdate(@Nullable Integer forceUpdate) {
             this.forceUpdate = Input.ofNullable(forceUpdate);
             return this;
         }
 
-        public Builder setLogDriver(@Nullable Input<ServiceTaskSpecLogDriverArgs> logDriver) {
+        public Builder logDriver(@Nullable Input<ServiceTaskSpecLogDriverArgs> logDriver) {
             this.logDriver = logDriver;
             return this;
         }
 
-        public Builder setLogDriver(@Nullable ServiceTaskSpecLogDriverArgs logDriver) {
+        public Builder logDriver(@Nullable ServiceTaskSpecLogDriverArgs logDriver) {
             this.logDriver = Input.ofNullable(logDriver);
             return this;
         }
 
-        public Builder setNetworks(@Nullable Input<List<String>> networks) {
+        public Builder networks(@Nullable Input<List<String>> networks) {
             this.networks = networks;
             return this;
         }
 
-        public Builder setNetworks(@Nullable List<String> networks) {
+        public Builder networks(@Nullable List<String> networks) {
             this.networks = Input.ofNullable(networks);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<ServiceTaskSpecPlacementArgs> placement) {
+        public Builder placement(@Nullable Input<ServiceTaskSpecPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable ServiceTaskSpecPlacementArgs placement) {
+        public Builder placement(@Nullable ServiceTaskSpecPlacementArgs placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ServiceTaskSpecResourcesArgs> resources) {
+        public Builder resources(@Nullable Input<ServiceTaskSpecResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ServiceTaskSpecResourcesArgs resources) {
+        public Builder resources(@Nullable ServiceTaskSpecResourcesArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable Input<ServiceTaskSpecRestartPolicyArgs> restartPolicy) {
+        public Builder restartPolicy(@Nullable Input<ServiceTaskSpecRestartPolicyArgs> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable ServiceTaskSpecRestartPolicyArgs restartPolicy) {
+        public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicyArgs restartPolicy) {
             this.restartPolicy = Input.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder setRuntime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Input<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = Input.ofNullable(runtime);
             return this;
         }

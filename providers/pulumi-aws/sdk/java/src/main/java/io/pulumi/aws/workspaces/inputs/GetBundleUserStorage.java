@@ -51,7 +51,7 @@ public final class GetBundleUserStorage extends io.pulumi.resources.InvokeArgs {
     	      this.capacity = defaults.capacity;
         }
 
-        public Builder setCapacity(String capacity) {
+        public Builder capacity(String capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }

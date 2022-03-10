@@ -141,32 +141,32 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowCredentials(@Nullable Boolean allowCredentials) {
+        public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
-        public Builder setAllowedHeaders(@Nullable List<String> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedMethods(@Nullable List<String> allowedMethods) {
+        public Builder allowedMethods(@Nullable List<String> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable List<String> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Integer maxAge) {
+        public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = maxAge;
             return this;
         }

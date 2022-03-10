@@ -62,12 +62,12 @@ public final class NetworkInsightsAnalysisPortRange extends io.pulumi.resources.
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(@Nullable Integer from) {
+        public Builder from(@Nullable Integer from) {
             this.from = from;
             return this;
         }
 
-        public Builder setTo(@Nullable Integer to) {
+        public Builder to(@Nullable Integer to) {
             this.to = to;
             return this;
         }

@@ -107,22 +107,22 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setAvailableReplicas(@Nullable Integer availableReplicas) {
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
-        public Builder setDesiredReplicas(@Nullable Integer desiredReplicas) {
+        public Builder desiredReplicas(@Nullable Integer desiredReplicas) {
             this.desiredReplicas = desiredReplicas;
             return this;
         }
 
-        public Builder setError(@Nullable AKSReplicaStatusResponseError error) {
+        public Builder error(@Nullable AKSReplicaStatusResponseError error) {
             this.error = error;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }

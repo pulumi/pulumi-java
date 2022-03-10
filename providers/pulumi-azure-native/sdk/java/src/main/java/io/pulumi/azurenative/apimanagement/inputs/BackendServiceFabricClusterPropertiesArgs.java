@@ -141,62 +141,62 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
     	      this.serverX509Names = defaults.serverX509Names;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setClientCertificatethumbprint(@Nullable Input<String> clientCertificatethumbprint) {
+        public Builder clientCertificatethumbprint(@Nullable Input<String> clientCertificatethumbprint) {
             this.clientCertificatethumbprint = clientCertificatethumbprint;
             return this;
         }
 
-        public Builder setClientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
+        public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
             this.clientCertificatethumbprint = Input.ofNullable(clientCertificatethumbprint);
             return this;
         }
 
-        public Builder setManagementEndpoints(Input<List<String>> managementEndpoints) {
+        public Builder managementEndpoints(Input<List<String>> managementEndpoints) {
             this.managementEndpoints = Objects.requireNonNull(managementEndpoints);
             return this;
         }
 
-        public Builder setManagementEndpoints(List<String> managementEndpoints) {
+        public Builder managementEndpoints(List<String> managementEndpoints) {
             this.managementEndpoints = Input.of(Objects.requireNonNull(managementEndpoints));
             return this;
         }
 
-        public Builder setMaxPartitionResolutionRetries(@Nullable Input<Integer> maxPartitionResolutionRetries) {
+        public Builder maxPartitionResolutionRetries(@Nullable Input<Integer> maxPartitionResolutionRetries) {
             this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
             return this;
         }
 
-        public Builder setMaxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
+        public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
             this.maxPartitionResolutionRetries = Input.ofNullable(maxPartitionResolutionRetries);
             return this;
         }
 
-        public Builder setServerCertificateThumbprints(@Nullable Input<List<String>> serverCertificateThumbprints) {
+        public Builder serverCertificateThumbprints(@Nullable Input<List<String>> serverCertificateThumbprints) {
             this.serverCertificateThumbprints = serverCertificateThumbprints;
             return this;
         }
 
-        public Builder setServerCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
+        public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
             this.serverCertificateThumbprints = Input.ofNullable(serverCertificateThumbprints);
             return this;
         }
 
-        public Builder setServerX509Names(@Nullable Input<List<X509CertificateNameArgs>> serverX509Names) {
+        public Builder serverX509Names(@Nullable Input<List<X509CertificateNameArgs>> serverX509Names) {
             this.serverX509Names = serverX509Names;
             return this;
         }
 
-        public Builder setServerX509Names(@Nullable List<X509CertificateNameArgs> serverX509Names) {
+        public Builder serverX509Names(@Nullable List<X509CertificateNameArgs> serverX509Names) {
             this.serverX509Names = Input.ofNullable(serverX509Names);
             return this;
         }

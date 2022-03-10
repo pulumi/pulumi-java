@@ -118,27 +118,27 @@ public final class ServiceUnitResponse {
     	      this.targetResourceGroup = defaults.targetResourceGroup;
         }
 
-        public Builder setArtifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
+        public Builder artifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setDeploymentMode(String deploymentMode) {
+        public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSteps(@Nullable List<RolloutStepResponse> steps) {
+        public Builder steps(@Nullable List<RolloutStepResponse> steps) {
             this.steps = steps;
             return this;
         }
 
-        public Builder setTargetResourceGroup(String targetResourceGroup) {
+        public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }

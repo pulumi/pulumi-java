@@ -216,112 +216,112 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConfigurationProfileId(@Nullable Input<String> configurationProfileId) {
+        public Builder configurationProfileId(@Nullable Input<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
 
-        public Builder setConfigurationProfileId(@Nullable String configurationProfileId) {
+        public Builder configurationProfileId(@Nullable String configurationProfileId) {
             this.configurationProfileId = Input.ofNullable(configurationProfileId);
             return this;
         }
 
-        public Builder setConfigurationVersion(@Nullable Input<String> configurationVersion) {
+        public Builder configurationVersion(@Nullable Input<String> configurationVersion) {
             this.configurationVersion = configurationVersion;
             return this;
         }
 
-        public Builder setConfigurationVersion(@Nullable String configurationVersion) {
+        public Builder configurationVersion(@Nullable String configurationVersion) {
             this.configurationVersion = Input.ofNullable(configurationVersion);
             return this;
         }
 
-        public Builder setDeploymentNumber(@Nullable Input<Integer> deploymentNumber) {
+        public Builder deploymentNumber(@Nullable Input<Integer> deploymentNumber) {
             this.deploymentNumber = deploymentNumber;
             return this;
         }
 
-        public Builder setDeploymentNumber(@Nullable Integer deploymentNumber) {
+        public Builder deploymentNumber(@Nullable Integer deploymentNumber) {
             this.deploymentNumber = Input.ofNullable(deploymentNumber);
             return this;
         }
 
-        public Builder setDeploymentStrategyId(@Nullable Input<String> deploymentStrategyId) {
+        public Builder deploymentStrategyId(@Nullable Input<String> deploymentStrategyId) {
             this.deploymentStrategyId = deploymentStrategyId;
             return this;
         }
 
-        public Builder setDeploymentStrategyId(@Nullable String deploymentStrategyId) {
+        public Builder deploymentStrategyId(@Nullable String deploymentStrategyId) {
             this.deploymentStrategyId = Input.ofNullable(deploymentStrategyId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

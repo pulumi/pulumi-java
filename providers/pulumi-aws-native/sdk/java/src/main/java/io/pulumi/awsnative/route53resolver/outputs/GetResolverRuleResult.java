@@ -134,32 +134,32 @@ public final class GetResolverRuleResult {
     	      this.targetIps = defaults.targetIps;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverRuleId(@Nullable String resolverRuleId) {
+        public Builder resolverRuleId(@Nullable String resolverRuleId) {
             this.resolverRuleId = resolverRuleId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResolverRuleTag> tags) {
+        public Builder tags(@Nullable List<ResolverRuleTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetIps(@Nullable List<ResolverRuleTargetAddress> targetIps) {
+        public Builder targetIps(@Nullable List<ResolverRuleTargetAddress> targetIps) {
             this.targetIps = targetIps;
             return this;
         }

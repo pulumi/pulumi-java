@@ -62,12 +62,12 @@ public final class GetAndroidAppArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAndroidAppId(String androidAppId) {
+        public Builder androidAppId(String androidAppId) {
             this.androidAppId = Objects.requireNonNull(androidAppId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

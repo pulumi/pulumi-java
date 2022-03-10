@@ -88,32 +88,32 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends io.pulumi
     	      this.type = defaults.type;
         }
 
-        public Builder setTimeBasedCanary(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary) {
+        public Builder timeBasedCanary(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary) {
             this.timeBasedCanary = timeBasedCanary;
             return this;
         }
 
-        public Builder setTimeBasedCanary(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs timeBasedCanary) {
+        public Builder timeBasedCanary(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs timeBasedCanary) {
             this.timeBasedCanary = Input.ofNullable(timeBasedCanary);
             return this;
         }
 
-        public Builder setTimeBasedLinear(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear) {
+        public Builder timeBasedLinear(@Nullable Input<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear) {
             this.timeBasedLinear = timeBasedLinear;
             return this;
         }
 
-        public Builder setTimeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs timeBasedLinear) {
+        public Builder timeBasedLinear(@Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs timeBasedLinear) {
             this.timeBasedLinear = Input.ofNullable(timeBasedLinear);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

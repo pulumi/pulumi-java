@@ -185,122 +185,122 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uplinkLossPercent = defaults.uplinkLossPercent;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDownlinkBandwidthBits(@Nullable Input<Integer> downlinkBandwidthBits) {
+        public Builder downlinkBandwidthBits(@Nullable Input<Integer> downlinkBandwidthBits) {
             this.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
 
-        public Builder setDownlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
+        public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
             this.downlinkBandwidthBits = Input.ofNullable(downlinkBandwidthBits);
             return this;
         }
 
-        public Builder setDownlinkDelayMs(@Nullable Input<Integer> downlinkDelayMs) {
+        public Builder downlinkDelayMs(@Nullable Input<Integer> downlinkDelayMs) {
             this.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
 
-        public Builder setDownlinkDelayMs(@Nullable Integer downlinkDelayMs) {
+        public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
             this.downlinkDelayMs = Input.ofNullable(downlinkDelayMs);
             return this;
         }
 
-        public Builder setDownlinkJitterMs(@Nullable Input<Integer> downlinkJitterMs) {
+        public Builder downlinkJitterMs(@Nullable Input<Integer> downlinkJitterMs) {
             this.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
 
-        public Builder setDownlinkJitterMs(@Nullable Integer downlinkJitterMs) {
+        public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
             this.downlinkJitterMs = Input.ofNullable(downlinkJitterMs);
             return this;
         }
 
-        public Builder setDownlinkLossPercent(@Nullable Input<Integer> downlinkLossPercent) {
+        public Builder downlinkLossPercent(@Nullable Input<Integer> downlinkLossPercent) {
             this.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
 
-        public Builder setDownlinkLossPercent(@Nullable Integer downlinkLossPercent) {
+        public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
             this.downlinkLossPercent = Input.ofNullable(downlinkLossPercent);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProjectArn(Input<String> projectArn) {
+        public Builder projectArn(Input<String> projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }
 
-        public Builder setProjectArn(String projectArn) {
+        public Builder projectArn(String projectArn) {
             this.projectArn = Input.of(Objects.requireNonNull(projectArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<NetworkProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<NetworkProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<NetworkProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUplinkBandwidthBits(@Nullable Input<Integer> uplinkBandwidthBits) {
+        public Builder uplinkBandwidthBits(@Nullable Input<Integer> uplinkBandwidthBits) {
             this.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
 
-        public Builder setUplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
+        public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
             this.uplinkBandwidthBits = Input.ofNullable(uplinkBandwidthBits);
             return this;
         }
 
-        public Builder setUplinkDelayMs(@Nullable Input<Integer> uplinkDelayMs) {
+        public Builder uplinkDelayMs(@Nullable Input<Integer> uplinkDelayMs) {
             this.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
 
-        public Builder setUplinkDelayMs(@Nullable Integer uplinkDelayMs) {
+        public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
             this.uplinkDelayMs = Input.ofNullable(uplinkDelayMs);
             return this;
         }
 
-        public Builder setUplinkJitterMs(@Nullable Input<Integer> uplinkJitterMs) {
+        public Builder uplinkJitterMs(@Nullable Input<Integer> uplinkJitterMs) {
             this.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
 
-        public Builder setUplinkJitterMs(@Nullable Integer uplinkJitterMs) {
+        public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
             this.uplinkJitterMs = Input.ofNullable(uplinkJitterMs);
             return this;
         }
 
-        public Builder setUplinkLossPercent(@Nullable Input<Integer> uplinkLossPercent) {
+        public Builder uplinkLossPercent(@Nullable Input<Integer> uplinkLossPercent) {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
         }
 
-        public Builder setUplinkLossPercent(@Nullable Integer uplinkLossPercent) {
+        public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
             this.uplinkLossPercent = Input.ofNullable(uplinkLossPercent);
             return this;
         }

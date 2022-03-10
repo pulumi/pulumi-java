@@ -585,342 +585,342 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForJobs = defaults.waitForJobs;
         }
 
-        public Builder setAtomic(@Nullable Input<Boolean> atomic) {
+        public Builder atomic(@Nullable Input<Boolean> atomic) {
             this.atomic = atomic;
             return this;
         }
 
-        public Builder setAtomic(@Nullable Boolean atomic) {
+        public Builder atomic(@Nullable Boolean atomic) {
             this.atomic = Input.ofNullable(atomic);
             return this;
         }
 
-        public Builder setChart(Input<String> chart) {
+        public Builder chart(Input<String> chart) {
             this.chart = Objects.requireNonNull(chart);
             return this;
         }
 
-        public Builder setChart(String chart) {
+        public Builder chart(String chart) {
             this.chart = Input.of(Objects.requireNonNull(chart));
             return this;
         }
 
-        public Builder setCleanupOnFail(@Nullable Input<Boolean> cleanupOnFail) {
+        public Builder cleanupOnFail(@Nullable Input<Boolean> cleanupOnFail) {
             this.cleanupOnFail = cleanupOnFail;
             return this;
         }
 
-        public Builder setCleanupOnFail(@Nullable Boolean cleanupOnFail) {
+        public Builder cleanupOnFail(@Nullable Boolean cleanupOnFail) {
             this.cleanupOnFail = Input.ofNullable(cleanupOnFail);
             return this;
         }
 
-        public Builder setCompat(@Nullable Input<String> compat) {
+        public Builder compat(@Nullable Input<String> compat) {
             this.compat = compat;
             return this;
         }
 
-        public Builder setCompat(@Nullable String compat) {
+        public Builder compat(@Nullable String compat) {
             this.compat = Input.ofNullable(compat);
             return this;
         }
 
-        public Builder setCreateNamespace(@Nullable Input<Boolean> createNamespace) {
+        public Builder createNamespace(@Nullable Input<Boolean> createNamespace) {
             this.createNamespace = createNamespace;
             return this;
         }
 
-        public Builder setCreateNamespace(@Nullable Boolean createNamespace) {
+        public Builder createNamespace(@Nullable Boolean createNamespace) {
             this.createNamespace = Input.ofNullable(createNamespace);
             return this;
         }
 
-        public Builder setDependencyUpdate(@Nullable Input<Boolean> dependencyUpdate) {
+        public Builder dependencyUpdate(@Nullable Input<Boolean> dependencyUpdate) {
             this.dependencyUpdate = dependencyUpdate;
             return this;
         }
 
-        public Builder setDependencyUpdate(@Nullable Boolean dependencyUpdate) {
+        public Builder dependencyUpdate(@Nullable Boolean dependencyUpdate) {
             this.dependencyUpdate = Input.ofNullable(dependencyUpdate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDevel(@Nullable Input<Boolean> devel) {
+        public Builder devel(@Nullable Input<Boolean> devel) {
             this.devel = devel;
             return this;
         }
 
-        public Builder setDevel(@Nullable Boolean devel) {
+        public Builder devel(@Nullable Boolean devel) {
             this.devel = Input.ofNullable(devel);
             return this;
         }
 
-        public Builder setDisableCRDHooks(@Nullable Input<Boolean> disableCRDHooks) {
+        public Builder disableCRDHooks(@Nullable Input<Boolean> disableCRDHooks) {
             this.disableCRDHooks = disableCRDHooks;
             return this;
         }
 
-        public Builder setDisableCRDHooks(@Nullable Boolean disableCRDHooks) {
+        public Builder disableCRDHooks(@Nullable Boolean disableCRDHooks) {
             this.disableCRDHooks = Input.ofNullable(disableCRDHooks);
             return this;
         }
 
-        public Builder setDisableOpenapiValidation(@Nullable Input<Boolean> disableOpenapiValidation) {
+        public Builder disableOpenapiValidation(@Nullable Input<Boolean> disableOpenapiValidation) {
             this.disableOpenapiValidation = disableOpenapiValidation;
             return this;
         }
 
-        public Builder setDisableOpenapiValidation(@Nullable Boolean disableOpenapiValidation) {
+        public Builder disableOpenapiValidation(@Nullable Boolean disableOpenapiValidation) {
             this.disableOpenapiValidation = Input.ofNullable(disableOpenapiValidation);
             return this;
         }
 
-        public Builder setDisableWebhooks(@Nullable Input<Boolean> disableWebhooks) {
+        public Builder disableWebhooks(@Nullable Input<Boolean> disableWebhooks) {
             this.disableWebhooks = disableWebhooks;
             return this;
         }
 
-        public Builder setDisableWebhooks(@Nullable Boolean disableWebhooks) {
+        public Builder disableWebhooks(@Nullable Boolean disableWebhooks) {
             this.disableWebhooks = Input.ofNullable(disableWebhooks);
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Input<Boolean> forceUpdate) {
+        public Builder forceUpdate(@Nullable Input<Boolean> forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Boolean forceUpdate) {
+        public Builder forceUpdate(@Nullable Boolean forceUpdate) {
             this.forceUpdate = Input.ofNullable(forceUpdate);
             return this;
         }
 
-        public Builder setKeyring(@Nullable Input<String> keyring) {
+        public Builder keyring(@Nullable Input<String> keyring) {
             this.keyring = keyring;
             return this;
         }
 
-        public Builder setKeyring(@Nullable String keyring) {
+        public Builder keyring(@Nullable String keyring) {
             this.keyring = Input.ofNullable(keyring);
             return this;
         }
 
-        public Builder setLint(@Nullable Input<Boolean> lint) {
+        public Builder lint(@Nullable Input<Boolean> lint) {
             this.lint = lint;
             return this;
         }
 
-        public Builder setLint(@Nullable Boolean lint) {
+        public Builder lint(@Nullable Boolean lint) {
             this.lint = Input.ofNullable(lint);
             return this;
         }
 
-        public Builder setManifest(@Nullable Input<Map<String,Object>> manifest) {
+        public Builder manifest(@Nullable Input<Map<String,Object>> manifest) {
             this.manifest = manifest;
             return this;
         }
 
-        public Builder setManifest(@Nullable Map<String,Object> manifest) {
+        public Builder manifest(@Nullable Map<String,Object> manifest) {
             this.manifest = Input.ofNullable(manifest);
             return this;
         }
 
-        public Builder setMaxHistory(@Nullable Input<Integer> maxHistory) {
+        public Builder maxHistory(@Nullable Input<Integer> maxHistory) {
             this.maxHistory = maxHistory;
             return this;
         }
 
-        public Builder setMaxHistory(@Nullable Integer maxHistory) {
+        public Builder maxHistory(@Nullable Integer maxHistory) {
             this.maxHistory = Input.ofNullable(maxHistory);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setPostrender(@Nullable Input<String> postrender) {
+        public Builder postrender(@Nullable Input<String> postrender) {
             this.postrender = postrender;
             return this;
         }
 
-        public Builder setPostrender(@Nullable String postrender) {
+        public Builder postrender(@Nullable String postrender) {
             this.postrender = Input.ofNullable(postrender);
             return this;
         }
 
-        public Builder setRecreatePods(@Nullable Input<Boolean> recreatePods) {
+        public Builder recreatePods(@Nullable Input<Boolean> recreatePods) {
             this.recreatePods = recreatePods;
             return this;
         }
 
-        public Builder setRecreatePods(@Nullable Boolean recreatePods) {
+        public Builder recreatePods(@Nullable Boolean recreatePods) {
             this.recreatePods = Input.ofNullable(recreatePods);
             return this;
         }
 
-        public Builder setRenderSubchartNotes(@Nullable Input<Boolean> renderSubchartNotes) {
+        public Builder renderSubchartNotes(@Nullable Input<Boolean> renderSubchartNotes) {
             this.renderSubchartNotes = renderSubchartNotes;
             return this;
         }
 
-        public Builder setRenderSubchartNotes(@Nullable Boolean renderSubchartNotes) {
+        public Builder renderSubchartNotes(@Nullable Boolean renderSubchartNotes) {
             this.renderSubchartNotes = Input.ofNullable(renderSubchartNotes);
             return this;
         }
 
-        public Builder setReplace(@Nullable Input<Boolean> replace) {
+        public Builder replace(@Nullable Input<Boolean> replace) {
             this.replace = replace;
             return this;
         }
 
-        public Builder setReplace(@Nullable Boolean replace) {
+        public Builder replace(@Nullable Boolean replace) {
             this.replace = Input.ofNullable(replace);
             return this;
         }
 
-        public Builder setRepositoryOpts(@Nullable Input<RepositoryOptsArgs> repositoryOpts) {
+        public Builder repositoryOpts(@Nullable Input<RepositoryOptsArgs> repositoryOpts) {
             this.repositoryOpts = repositoryOpts;
             return this;
         }
 
-        public Builder setRepositoryOpts(@Nullable RepositoryOptsArgs repositoryOpts) {
+        public Builder repositoryOpts(@Nullable RepositoryOptsArgs repositoryOpts) {
             this.repositoryOpts = Input.ofNullable(repositoryOpts);
             return this;
         }
 
-        public Builder setResetValues(@Nullable Input<Boolean> resetValues) {
+        public Builder resetValues(@Nullable Input<Boolean> resetValues) {
             this.resetValues = resetValues;
             return this;
         }
 
-        public Builder setResetValues(@Nullable Boolean resetValues) {
+        public Builder resetValues(@Nullable Boolean resetValues) {
             this.resetValues = Input.ofNullable(resetValues);
             return this;
         }
 
-        public Builder setResourceNames(@Nullable Input<Map<String,List<String>>> resourceNames) {
+        public Builder resourceNames(@Nullable Input<Map<String,List<String>>> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
-        public Builder setResourceNames(@Nullable Map<String,List<String>> resourceNames) {
+        public Builder resourceNames(@Nullable Map<String,List<String>> resourceNames) {
             this.resourceNames = Input.ofNullable(resourceNames);
             return this;
         }
 
-        public Builder setReuseValues(@Nullable Input<Boolean> reuseValues) {
+        public Builder reuseValues(@Nullable Input<Boolean> reuseValues) {
             this.reuseValues = reuseValues;
             return this;
         }
 
-        public Builder setReuseValues(@Nullable Boolean reuseValues) {
+        public Builder reuseValues(@Nullable Boolean reuseValues) {
             this.reuseValues = Input.ofNullable(reuseValues);
             return this;
         }
 
-        public Builder setSkipAwait(@Nullable Input<Boolean> skipAwait) {
+        public Builder skipAwait(@Nullable Input<Boolean> skipAwait) {
             this.skipAwait = skipAwait;
             return this;
         }
 
-        public Builder setSkipAwait(@Nullable Boolean skipAwait) {
+        public Builder skipAwait(@Nullable Boolean skipAwait) {
             this.skipAwait = Input.ofNullable(skipAwait);
             return this;
         }
 
-        public Builder setSkipCrds(@Nullable Input<Boolean> skipCrds) {
+        public Builder skipCrds(@Nullable Input<Boolean> skipCrds) {
             this.skipCrds = skipCrds;
             return this;
         }
 
-        public Builder setSkipCrds(@Nullable Boolean skipCrds) {
+        public Builder skipCrds(@Nullable Boolean skipCrds) {
             this.skipCrds = Input.ofNullable(skipCrds);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setValueYamlFiles(@Nullable Input<List<AssetOrArchive>> valueYamlFiles) {
+        public Builder valueYamlFiles(@Nullable Input<List<AssetOrArchive>> valueYamlFiles) {
             this.valueYamlFiles = valueYamlFiles;
             return this;
         }
 
-        public Builder setValueYamlFiles(@Nullable List<AssetOrArchive> valueYamlFiles) {
+        public Builder valueYamlFiles(@Nullable List<AssetOrArchive> valueYamlFiles) {
             this.valueYamlFiles = Input.ofNullable(valueYamlFiles);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<Map<String,Object>> values) {
+        public Builder values(@Nullable Input<Map<String,Object>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable Map<String,Object> values) {
+        public Builder values(@Nullable Map<String,Object> values) {
             this.values = Input.ofNullable(values);
             return this;
         }
 
-        public Builder setVerify(@Nullable Input<Boolean> verify) {
+        public Builder verify(@Nullable Input<Boolean> verify) {
             this.verify = verify;
             return this;
         }
 
-        public Builder setVerify(@Nullable Boolean verify) {
+        public Builder verify(@Nullable Boolean verify) {
             this.verify = Input.ofNullable(verify);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWaitForJobs(@Nullable Input<Boolean> waitForJobs) {
+        public Builder waitForJobs(@Nullable Input<Boolean> waitForJobs) {
             this.waitForJobs = waitForJobs;
             return this;
         }
 
-        public Builder setWaitForJobs(@Nullable Boolean waitForJobs) {
+        public Builder waitForJobs(@Nullable Boolean waitForJobs) {
             this.waitForJobs = Input.ofNullable(waitForJobs);
             return this;
         }

@@ -227,122 +227,122 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestedLinkCount = defaults.requestedLinkCount;
         }
 
-        public Builder setAdminEnabled(@Nullable Input<Boolean> adminEnabled) {
+        public Builder adminEnabled(@Nullable Input<Boolean> adminEnabled) {
             this.adminEnabled = adminEnabled;
             return this;
         }
 
-        public Builder setAdminEnabled(@Nullable Boolean adminEnabled) {
+        public Builder adminEnabled(@Nullable Boolean adminEnabled) {
             this.adminEnabled = Input.ofNullable(adminEnabled);
             return this;
         }
 
-        public Builder setCustomerName(@Nullable Input<String> customerName) {
+        public Builder customerName(@Nullable Input<String> customerName) {
             this.customerName = customerName;
             return this;
         }
 
-        public Builder setCustomerName(@Nullable String customerName) {
+        public Builder customerName(@Nullable String customerName) {
             this.customerName = Input.ofNullable(customerName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInterconnectType(@Nullable Input<InterconnectInterconnectType> interconnectType) {
+        public Builder interconnectType(@Nullable Input<InterconnectInterconnectType> interconnectType) {
             this.interconnectType = interconnectType;
             return this;
         }
 
-        public Builder setInterconnectType(@Nullable InterconnectInterconnectType interconnectType) {
+        public Builder interconnectType(@Nullable InterconnectInterconnectType interconnectType) {
             this.interconnectType = Input.ofNullable(interconnectType);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLinkType(@Nullable Input<InterconnectLinkType> linkType) {
+        public Builder linkType(@Nullable Input<InterconnectLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setLinkType(@Nullable InterconnectLinkType linkType) {
+        public Builder linkType(@Nullable InterconnectLinkType linkType) {
             this.linkType = Input.ofNullable(linkType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNocContactEmail(@Nullable Input<String> nocContactEmail) {
+        public Builder nocContactEmail(@Nullable Input<String> nocContactEmail) {
             this.nocContactEmail = nocContactEmail;
             return this;
         }
 
-        public Builder setNocContactEmail(@Nullable String nocContactEmail) {
+        public Builder nocContactEmail(@Nullable String nocContactEmail) {
             this.nocContactEmail = Input.ofNullable(nocContactEmail);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRequestedLinkCount(@Nullable Input<Integer> requestedLinkCount) {
+        public Builder requestedLinkCount(@Nullable Input<Integer> requestedLinkCount) {
             this.requestedLinkCount = requestedLinkCount;
             return this;
         }
 
-        public Builder setRequestedLinkCount(@Nullable Integer requestedLinkCount) {
+        public Builder requestedLinkCount(@Nullable Integer requestedLinkCount) {
             this.requestedLinkCount = Input.ofNullable(requestedLinkCount);
             return this;
         }

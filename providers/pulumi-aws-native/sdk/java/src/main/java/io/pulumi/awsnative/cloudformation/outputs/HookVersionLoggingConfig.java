@@ -67,12 +67,12 @@ public final class HookVersionLoggingConfig {
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogRoleArn(@Nullable String logRoleArn) {
+        public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }

@@ -360,192 +360,192 @@ public final class ExecuteSSISPackageActivityArgs extends io.pulumi.resources.Re
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setConnectVia(Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = Objects.requireNonNull(connectVia);
             return this;
         }
 
-        public Builder setConnectVia(IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.of(Objects.requireNonNull(connectVia));
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentPath(@Nullable Input<Object> environmentPath) {
+        public Builder environmentPath(@Nullable Input<Object> environmentPath) {
             this.environmentPath = environmentPath;
             return this;
         }
 
-        public Builder setEnvironmentPath(@Nullable Object environmentPath) {
+        public Builder environmentPath(@Nullable Object environmentPath) {
             this.environmentPath = Input.ofNullable(environmentPath);
             return this;
         }
 
-        public Builder setExecutionCredential(@Nullable Input<SSISExecutionCredentialArgs> executionCredential) {
+        public Builder executionCredential(@Nullable Input<SSISExecutionCredentialArgs> executionCredential) {
             this.executionCredential = executionCredential;
             return this;
         }
 
-        public Builder setExecutionCredential(@Nullable SSISExecutionCredentialArgs executionCredential) {
+        public Builder executionCredential(@Nullable SSISExecutionCredentialArgs executionCredential) {
             this.executionCredential = Input.ofNullable(executionCredential);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setLogLocation(@Nullable Input<SSISLogLocationArgs> logLocation) {
+        public Builder logLocation(@Nullable Input<SSISLogLocationArgs> logLocation) {
             this.logLocation = logLocation;
             return this;
         }
 
-        public Builder setLogLocation(@Nullable SSISLogLocationArgs logLocation) {
+        public Builder logLocation(@Nullable SSISLogLocationArgs logLocation) {
             this.logLocation = Input.ofNullable(logLocation);
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<Object> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<Object> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Object loggingLevel) {
+        public Builder loggingLevel(@Nullable Object loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPackageConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers) {
+        public Builder packageConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> packageConnectionManagers) {
             this.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
 
-        public Builder setPackageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> packageConnectionManagers) {
+        public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> packageConnectionManagers) {
             this.packageConnectionManagers = Input.ofNullable(packageConnectionManagers);
             return this;
         }
 
-        public Builder setPackageLocation(Input<SSISPackageLocationArgs> packageLocation) {
+        public Builder packageLocation(Input<SSISPackageLocationArgs> packageLocation) {
             this.packageLocation = Objects.requireNonNull(packageLocation);
             return this;
         }
 
-        public Builder setPackageLocation(SSISPackageLocationArgs packageLocation) {
+        public Builder packageLocation(SSISPackageLocationArgs packageLocation) {
             this.packageLocation = Input.of(Objects.requireNonNull(packageLocation));
             return this;
         }
 
-        public Builder setPackageParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters) {
+        public Builder packageParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> packageParameters) {
             this.packageParameters = packageParameters;
             return this;
         }
 
-        public Builder setPackageParameters(@Nullable Map<String,SSISExecutionParameterArgs> packageParameters) {
+        public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterArgs> packageParameters) {
             this.packageParameters = Input.ofNullable(packageParameters);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setProjectConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
+        public Builder projectConnectionManagers(@Nullable Input<Map<String,Map<String,SSISExecutionParameterArgs>>> projectConnectionManagers) {
             this.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
 
-        public Builder setProjectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> projectConnectionManagers) {
+        public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterArgs>> projectConnectionManagers) {
             this.projectConnectionManagers = Input.ofNullable(projectConnectionManagers);
             return this;
         }
 
-        public Builder setProjectParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters) {
+        public Builder projectParameters(@Nullable Input<Map<String,SSISExecutionParameterArgs>> projectParameters) {
             this.projectParameters = projectParameters;
             return this;
         }
 
-        public Builder setProjectParameters(@Nullable Map<String,SSISExecutionParameterArgs> projectParameters) {
+        public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterArgs> projectParameters) {
             this.projectParameters = Input.ofNullable(projectParameters);
             return this;
         }
 
-        public Builder setPropertyOverrides(@Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
+        public Builder propertyOverrides(@Nullable Input<Map<String,SSISPropertyOverrideArgs>> propertyOverrides) {
             this.propertyOverrides = propertyOverrides;
             return this;
         }
 
-        public Builder setPropertyOverrides(@Nullable Map<String,SSISPropertyOverrideArgs> propertyOverrides) {
+        public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideArgs> propertyOverrides) {
             this.propertyOverrides = Input.ofNullable(propertyOverrides);
             return this;
         }
 
-        public Builder setRuntime(@Nullable Input<Object> runtime) {
+        public Builder runtime(@Nullable Input<Object> runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setRuntime(@Nullable Object runtime) {
+        public Builder runtime(@Nullable Object runtime) {
             this.runtime = Input.ofNullable(runtime);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

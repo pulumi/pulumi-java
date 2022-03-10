@@ -53,7 +53,7 @@ public final class ExcludedPathResponse extends io.pulumi.resources.InvokeArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

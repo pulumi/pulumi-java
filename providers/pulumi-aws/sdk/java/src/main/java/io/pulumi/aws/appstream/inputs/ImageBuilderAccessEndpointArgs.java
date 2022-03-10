@@ -70,22 +70,22 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
     	      this.vpceId = defaults.vpceId;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setVpceId(@Nullable Input<String> vpceId) {
+        public Builder vpceId(@Nullable Input<String> vpceId) {
             this.vpceId = vpceId;
             return this;
         }
 
-        public Builder setVpceId(@Nullable String vpceId) {
+        public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = Input.ofNullable(vpceId);
             return this;
         }

@@ -134,37 +134,37 @@ public final class GetPermissionSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInlinePolicy(@Nullable Object inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Object inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
 
-        public Builder setManagedPolicies(@Nullable List<String> managedPolicies) {
+        public Builder managedPolicies(@Nullable List<String> managedPolicies) {
             this.managedPolicies = managedPolicies;
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable String permissionSetArn) {
+        public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
-        public Builder setRelayStateType(@Nullable String relayStateType) {
+        public Builder relayStateType(@Nullable String relayStateType) {
             this.relayStateType = relayStateType;
             return this;
         }
 
-        public Builder setSessionDuration(@Nullable String sessionDuration) {
+        public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PermissionSetTag> tags) {
+        public Builder tags(@Nullable List<PermissionSetTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -167,42 +167,42 @@ public final class KustomizationDefinitionResponse {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDependsOn(@Nullable List<DependsOnDefinitionResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<DependsOnDefinitionResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = force;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPrune(@Nullable Boolean prune) {
+        public Builder prune(@Nullable Boolean prune) {
             this.prune = prune;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setValidation(@Nullable String validation) {
+        public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
         }

@@ -175,82 +175,82 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
+        public Builder env(@Nullable Input<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<GoogleCloudRunOpV2EnvVarArgs> env) {
+        public Builder env(@Nullable List<GoogleCloudRunOpV2EnvVarArgs> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
+        public Builder ports(@Nullable List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Input<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
+        public Builder resources(@Nullable GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }

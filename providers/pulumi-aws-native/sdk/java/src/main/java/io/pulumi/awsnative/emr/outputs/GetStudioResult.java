@@ -197,52 +197,52 @@ public final class GetStudioResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultS3Location(@Nullable String defaultS3Location) {
+        public Builder defaultS3Location(@Nullable String defaultS3Location) {
             this.defaultS3Location = defaultS3Location;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIdpAuthUrl(@Nullable String idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
 
-        public Builder setIdpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStudioId(@Nullable String studioId) {
+        public Builder studioId(@Nullable String studioId) {
             this.studioId = studioId;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StudioTag> tags) {
+        public Builder tags(@Nullable List<StudioTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

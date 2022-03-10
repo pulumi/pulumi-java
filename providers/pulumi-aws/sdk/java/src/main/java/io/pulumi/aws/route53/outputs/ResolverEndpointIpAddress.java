@@ -75,17 +75,17 @@ public final class ResolverEndpointIpAddress {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIpId(@Nullable String ipId) {
+        public Builder ipId(@Nullable String ipId) {
             this.ipId = ipId;
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

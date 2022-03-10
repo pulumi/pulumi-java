@@ -121,27 +121,27 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setColor(String color) {
+        public Builder color(String color) {
             this.color = Objects.requireNonNull(color);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setTargetAxis(String targetAxis) {
+        public Builder targetAxis(String targetAxis) {
             this.targetAxis = Objects.requireNonNull(targetAxis);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

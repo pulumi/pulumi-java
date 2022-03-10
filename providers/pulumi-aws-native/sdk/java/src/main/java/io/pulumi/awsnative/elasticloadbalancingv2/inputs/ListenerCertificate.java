@@ -49,7 +49,7 @@ public final class ListenerCertificate extends io.pulumi.resources.InvokeArgs {
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }

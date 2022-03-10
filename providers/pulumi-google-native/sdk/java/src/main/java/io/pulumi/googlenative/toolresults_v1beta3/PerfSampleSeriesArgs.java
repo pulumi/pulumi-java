@@ -103,52 +103,52 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setBasicPerfSampleSeries(@Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
+        public Builder basicPerfSampleSeries(@Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
             this.basicPerfSampleSeries = basicPerfSampleSeries;
             return this;
         }
 
-        public Builder setBasicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
+        public Builder basicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
             this.basicPerfSampleSeries = Input.ofNullable(basicPerfSampleSeries);
             return this;
         }
 
-        public Builder setExecutionId(Input<String> executionId) {
+        public Builder executionId(Input<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Input.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder setHistoryId(Input<String> historyId) {
+        public Builder historyId(Input<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Input.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStepId(Input<String> stepId) {
+        public Builder stepId(Input<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }

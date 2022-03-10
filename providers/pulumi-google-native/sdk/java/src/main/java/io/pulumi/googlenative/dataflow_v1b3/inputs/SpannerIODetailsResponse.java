@@ -88,17 +88,17 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
     	      this.project = defaults.project;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

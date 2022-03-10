@@ -85,17 +85,17 @@ public final class ClassificationJobScheduleFrequency {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable Boolean dailySchedule) {
+        public Builder dailySchedule(@Nullable Boolean dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable Integer monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable String weeklySchedule) {
+        public Builder weeklySchedule(@Nullable String weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }

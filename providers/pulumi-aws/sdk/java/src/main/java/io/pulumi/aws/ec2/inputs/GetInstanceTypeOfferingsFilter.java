@@ -69,12 +69,12 @@ public final class GetInstanceTypeOfferingsFilter extends io.pulumi.resources.In
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

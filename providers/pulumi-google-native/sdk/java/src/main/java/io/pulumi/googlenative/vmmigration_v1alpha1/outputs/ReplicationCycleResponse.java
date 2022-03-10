@@ -132,32 +132,32 @@ public final class ReplicationCycleResponse {
     	      this.totalPauseDuration = defaults.totalPauseDuration;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setProgress(Integer progress) {
+        public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setProgressPercent(Integer progressPercent) {
+        public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setSteps(List<CycleStepResponse> steps) {
+        public Builder steps(List<CycleStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setTotalPauseDuration(String totalPauseDuration) {
+        public Builder totalPauseDuration(String totalPauseDuration) {
             this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
             return this;
         }

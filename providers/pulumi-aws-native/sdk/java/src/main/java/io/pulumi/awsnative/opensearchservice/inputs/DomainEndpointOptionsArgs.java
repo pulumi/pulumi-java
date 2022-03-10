@@ -99,52 +99,52 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
     	      this.tLSSecurityPolicy = defaults.tLSSecurityPolicy;
         }
 
-        public Builder setCustomEndpoint(@Nullable Input<String> customEndpoint) {
+        public Builder customEndpoint(@Nullable Input<String> customEndpoint) {
             this.customEndpoint = customEndpoint;
             return this;
         }
 
-        public Builder setCustomEndpoint(@Nullable String customEndpoint) {
+        public Builder customEndpoint(@Nullable String customEndpoint) {
             this.customEndpoint = Input.ofNullable(customEndpoint);
             return this;
         }
 
-        public Builder setCustomEndpointCertificateArn(@Nullable Input<String> customEndpointCertificateArn) {
+        public Builder customEndpointCertificateArn(@Nullable Input<String> customEndpointCertificateArn) {
             this.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
 
-        public Builder setCustomEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
+        public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
             this.customEndpointCertificateArn = Input.ofNullable(customEndpointCertificateArn);
             return this;
         }
 
-        public Builder setCustomEndpointEnabled(@Nullable Input<Boolean> customEndpointEnabled) {
+        public Builder customEndpointEnabled(@Nullable Input<Boolean> customEndpointEnabled) {
             this.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
 
-        public Builder setCustomEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
+        public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
             this.customEndpointEnabled = Input.ofNullable(customEndpointEnabled);
             return this;
         }
 
-        public Builder setEnforceHTTPS(@Nullable Input<Boolean> enforceHTTPS) {
+        public Builder enforceHTTPS(@Nullable Input<Boolean> enforceHTTPS) {
             this.enforceHTTPS = enforceHTTPS;
             return this;
         }
 
-        public Builder setEnforceHTTPS(@Nullable Boolean enforceHTTPS) {
+        public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
             this.enforceHTTPS = Input.ofNullable(enforceHTTPS);
             return this;
         }
 
-        public Builder setTLSSecurityPolicy(@Nullable Input<String> tLSSecurityPolicy) {
+        public Builder tLSSecurityPolicy(@Nullable Input<String> tLSSecurityPolicy) {
             this.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
         }
 
-        public Builder setTLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
+        public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
             this.tLSSecurityPolicy = Input.ofNullable(tLSSecurityPolicy);
             return this;
         }

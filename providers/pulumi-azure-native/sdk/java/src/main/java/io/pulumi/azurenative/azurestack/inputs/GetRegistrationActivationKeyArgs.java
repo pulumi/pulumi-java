@@ -68,12 +68,12 @@ public final class GetRegistrationActivationKeyArgs extends io.pulumi.resources.
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setRegistrationName(String registrationName) {
+        public Builder registrationName(String registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }

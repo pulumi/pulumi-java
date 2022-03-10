@@ -86,32 +86,32 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     	      this.triggerTargetArn = defaults.triggerTargetArn;
         }
 
-        public Builder setTriggerEvents(Input<List<String>> triggerEvents) {
+        public Builder triggerEvents(Input<List<String>> triggerEvents) {
             this.triggerEvents = Objects.requireNonNull(triggerEvents);
             return this;
         }
 
-        public Builder setTriggerEvents(List<String> triggerEvents) {
+        public Builder triggerEvents(List<String> triggerEvents) {
             this.triggerEvents = Input.of(Objects.requireNonNull(triggerEvents));
             return this;
         }
 
-        public Builder setTriggerName(Input<String> triggerName) {
+        public Builder triggerName(Input<String> triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
 
-        public Builder setTriggerName(String triggerName) {
+        public Builder triggerName(String triggerName) {
             this.triggerName = Input.of(Objects.requireNonNull(triggerName));
             return this;
         }
 
-        public Builder setTriggerTargetArn(Input<String> triggerTargetArn) {
+        public Builder triggerTargetArn(Input<String> triggerTargetArn) {
             this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn);
             return this;
         }
 
-        public Builder setTriggerTargetArn(String triggerTargetArn) {
+        public Builder triggerTargetArn(String triggerTargetArn) {
             this.triggerTargetArn = Input.of(Objects.requireNonNull(triggerTargetArn));
             return this;
         }

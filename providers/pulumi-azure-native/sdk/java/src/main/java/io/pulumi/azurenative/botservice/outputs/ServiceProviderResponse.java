@@ -50,7 +50,7 @@ public final class ServiceProviderResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable ServiceProviderPropertiesResponse properties) {
+        public Builder properties(@Nullable ServiceProviderPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }

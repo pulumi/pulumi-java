@@ -280,77 +280,77 @@ public final class GetKubeEnvironmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAksResourceID(@Nullable String aksResourceID) {
+        public Builder aksResourceID(@Nullable String aksResourceID) {
             this.aksResourceID = aksResourceID;
             return this;
         }
 
-        public Builder setAppLogsConfiguration(@Nullable AppLogsConfigurationResponse appLogsConfiguration) {
+        public Builder appLogsConfiguration(@Nullable AppLogsConfigurationResponse appLogsConfiguration) {
             this.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
 
-        public Builder setArcConfiguration(@Nullable ArcConfigurationResponse arcConfiguration) {
+        public Builder arcConfiguration(@Nullable ArcConfigurationResponse arcConfiguration) {
             this.arcConfiguration = arcConfiguration;
             return this;
         }
 
-        public Builder setDefaultDomain(String defaultDomain) {
+        public Builder defaultDomain(String defaultDomain) {
             this.defaultDomain = Objects.requireNonNull(defaultDomain);
             return this;
         }
 
-        public Builder setDeploymentErrors(String deploymentErrors) {
+        public Builder deploymentErrors(String deploymentErrors) {
             this.deploymentErrors = Objects.requireNonNull(deploymentErrors);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInternalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
+        public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
             this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStaticIp(@Nullable String staticIp) {
+        public Builder staticIp(@Nullable String staticIp) {
             this.staticIp = staticIp;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

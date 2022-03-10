@@ -74,22 +74,22 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setIssuerCertificateThumbprint(@Nullable Input<String> issuerCertificateThumbprint) {
+        public Builder issuerCertificateThumbprint(@Nullable Input<String> issuerCertificateThumbprint) {
             this.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
-        public Builder setIssuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
+        public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
             this.issuerCertificateThumbprint = Input.ofNullable(issuerCertificateThumbprint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

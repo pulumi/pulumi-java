@@ -69,22 +69,22 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     	      this.dbClusterSnapshotIdentifier = defaults.dbClusterSnapshotIdentifier;
         }
 
-        public Builder setDbClusterIdentifier(Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(Input<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setDbClusterIdentifier(String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Input.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
 
-        public Builder setDbClusterSnapshotIdentifier(Input<String> dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(Input<String> dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier);
             return this;
         }
 
-        public Builder setDbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
             this.dbClusterSnapshotIdentifier = Input.of(Objects.requireNonNull(dbClusterSnapshotIdentifier));
             return this;
         }

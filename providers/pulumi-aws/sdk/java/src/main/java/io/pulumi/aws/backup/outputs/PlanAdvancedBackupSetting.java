@@ -66,12 +66,12 @@ public final class PlanAdvancedBackupSetting {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setBackupOptions(Map<String,String> backupOptions) {
+        public Builder backupOptions(Map<String,String> backupOptions) {
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

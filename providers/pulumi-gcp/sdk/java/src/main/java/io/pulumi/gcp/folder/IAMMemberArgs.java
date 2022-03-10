@@ -87,42 +87,42 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<IAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<IAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable IAMMemberConditionArgs condition) {
+        public Builder condition(@Nullable IAMMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setFolder(Input<String> folder) {
+        public Builder folder(Input<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Input.of(Objects.requireNonNull(folder));
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

@@ -66,22 +66,22 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.formula = defaults.formula;
         }
 
-        public Builder setEvaluationInterval(@Nullable Input<String> evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Input<String> evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable String evaluationInterval) {
+        public Builder evaluationInterval(@Nullable String evaluationInterval) {
             this.evaluationInterval = Input.ofNullable(evaluationInterval);
             return this;
         }
 
-        public Builder setFormula(Input<String> formula) {
+        public Builder formula(Input<String> formula) {
             this.formula = Objects.requireNonNull(formula);
             return this;
         }
 
-        public Builder setFormula(String formula) {
+        public Builder formula(String formula) {
             this.formula = Input.of(Objects.requireNonNull(formula));
             return this;
         }

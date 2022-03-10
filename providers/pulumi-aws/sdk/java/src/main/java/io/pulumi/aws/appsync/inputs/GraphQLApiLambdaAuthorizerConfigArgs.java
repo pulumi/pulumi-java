@@ -87,32 +87,32 @@ public final class GraphQLApiLambdaAuthorizerConfigArgs extends io.pulumi.resour
     	      this.identityValidationExpression = defaults.identityValidationExpression;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = Input.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
 
-        public Builder setAuthorizerUri(Input<String> authorizerUri) {
+        public Builder authorizerUri(Input<String> authorizerUri) {
             this.authorizerUri = Objects.requireNonNull(authorizerUri);
             return this;
         }
 
-        public Builder setAuthorizerUri(String authorizerUri) {
+        public Builder authorizerUri(String authorizerUri) {
             this.authorizerUri = Input.of(Objects.requireNonNull(authorizerUri));
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable Input<String> identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable Input<String> identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable String identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = Input.ofNullable(identityValidationExpression);
             return this;
         }

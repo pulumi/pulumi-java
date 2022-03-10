@@ -128,27 +128,27 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
     	      this.target = defaults.target;
         }
 
-        public Builder setArtifacts(@Nullable List<String> artifacts) {
+        public Builder artifacts(@Nullable List<String> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setCatalogDigest(@Nullable String catalogDigest) {
+        public Builder catalogDigest(@Nullable String catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
 
-        public Builder setPipelineResourceId(@Nullable String pipelineResourceId) {
+        public Builder pipelineResourceId(@Nullable String pipelineResourceId) {
             this.pipelineResourceId = pipelineResourceId;
             return this;
         }
 
-        public Builder setSource(@Nullable PipelineRunSourcePropertiesResponse source) {
+        public Builder source(@Nullable PipelineRunSourcePropertiesResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTarget(@Nullable PipelineRunTargetPropertiesResponse target) {
+        public Builder target(@Nullable PipelineRunTargetPropertiesResponse target) {
             this.target = target;
             return this;
         }

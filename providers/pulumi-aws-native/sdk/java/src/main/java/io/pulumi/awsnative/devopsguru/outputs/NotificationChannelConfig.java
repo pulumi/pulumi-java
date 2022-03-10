@@ -42,7 +42,7 @@ public final class NotificationChannelConfig {
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable NotificationChannelSnsChannelConfig sns) {
+        public Builder sns(@Nullable NotificationChannelSnsChannelConfig sns) {
             this.sns = sns;
             return this;
         }

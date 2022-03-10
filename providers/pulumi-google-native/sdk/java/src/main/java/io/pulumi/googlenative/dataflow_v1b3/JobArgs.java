@@ -445,252 +445,252 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setClientRequestId(@Nullable Input<String> clientRequestId) {
+        public Builder clientRequestId(@Nullable Input<String> clientRequestId) {
             this.clientRequestId = clientRequestId;
             return this;
         }
 
-        public Builder setClientRequestId(@Nullable String clientRequestId) {
+        public Builder clientRequestId(@Nullable String clientRequestId) {
             this.clientRequestId = Input.ofNullable(clientRequestId);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setCreatedFromSnapshotId(@Nullable Input<String> createdFromSnapshotId) {
+        public Builder createdFromSnapshotId(@Nullable Input<String> createdFromSnapshotId) {
             this.createdFromSnapshotId = createdFromSnapshotId;
             return this;
         }
 
-        public Builder setCreatedFromSnapshotId(@Nullable String createdFromSnapshotId) {
+        public Builder createdFromSnapshotId(@Nullable String createdFromSnapshotId) {
             this.createdFromSnapshotId = Input.ofNullable(createdFromSnapshotId);
             return this;
         }
 
-        public Builder setCurrentState(@Nullable Input<JobCurrentState> currentState) {
+        public Builder currentState(@Nullable Input<JobCurrentState> currentState) {
             this.currentState = currentState;
             return this;
         }
 
-        public Builder setCurrentState(@Nullable JobCurrentState currentState) {
+        public Builder currentState(@Nullable JobCurrentState currentState) {
             this.currentState = Input.ofNullable(currentState);
             return this;
         }
 
-        public Builder setCurrentStateTime(@Nullable Input<String> currentStateTime) {
+        public Builder currentStateTime(@Nullable Input<String> currentStateTime) {
             this.currentStateTime = currentStateTime;
             return this;
         }
 
-        public Builder setCurrentStateTime(@Nullable String currentStateTime) {
+        public Builder currentStateTime(@Nullable String currentStateTime) {
             this.currentStateTime = Input.ofNullable(currentStateTime);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<EnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<EnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable EnvironmentArgs environment) {
+        public Builder environment(@Nullable EnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setJobMetadata(@Nullable Input<JobMetadataArgs> jobMetadata) {
+        public Builder jobMetadata(@Nullable Input<JobMetadataArgs> jobMetadata) {
             this.jobMetadata = jobMetadata;
             return this;
         }
 
-        public Builder setJobMetadata(@Nullable JobMetadataArgs jobMetadata) {
+        public Builder jobMetadata(@Nullable JobMetadataArgs jobMetadata) {
             this.jobMetadata = Input.ofNullable(jobMetadata);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPipelineDescription(@Nullable Input<PipelineDescriptionArgs> pipelineDescription) {
+        public Builder pipelineDescription(@Nullable Input<PipelineDescriptionArgs> pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
 
-        public Builder setPipelineDescription(@Nullable PipelineDescriptionArgs pipelineDescription) {
+        public Builder pipelineDescription(@Nullable PipelineDescriptionArgs pipelineDescription) {
             this.pipelineDescription = Input.ofNullable(pipelineDescription);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReplaceJobId(@Nullable Input<String> replaceJobId) {
+        public Builder replaceJobId(@Nullable Input<String> replaceJobId) {
             this.replaceJobId = replaceJobId;
             return this;
         }
 
-        public Builder setReplaceJobId(@Nullable String replaceJobId) {
+        public Builder replaceJobId(@Nullable String replaceJobId) {
             this.replaceJobId = Input.ofNullable(replaceJobId);
             return this;
         }
 
-        public Builder setReplacedByJobId(@Nullable Input<String> replacedByJobId) {
+        public Builder replacedByJobId(@Nullable Input<String> replacedByJobId) {
             this.replacedByJobId = replacedByJobId;
             return this;
         }
 
-        public Builder setReplacedByJobId(@Nullable String replacedByJobId) {
+        public Builder replacedByJobId(@Nullable String replacedByJobId) {
             this.replacedByJobId = Input.ofNullable(replacedByJobId);
             return this;
         }
 
-        public Builder setRequestedState(@Nullable Input<JobRequestedState> requestedState) {
+        public Builder requestedState(@Nullable Input<JobRequestedState> requestedState) {
             this.requestedState = requestedState;
             return this;
         }
 
-        public Builder setRequestedState(@Nullable JobRequestedState requestedState) {
+        public Builder requestedState(@Nullable JobRequestedState requestedState) {
             this.requestedState = Input.ofNullable(requestedState);
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder setStageStates(@Nullable Input<List<ExecutionStageStateArgs>> stageStates) {
+        public Builder stageStates(@Nullable Input<List<ExecutionStageStateArgs>> stageStates) {
             this.stageStates = stageStates;
             return this;
         }
 
-        public Builder setStageStates(@Nullable List<ExecutionStageStateArgs> stageStates) {
+        public Builder stageStates(@Nullable List<ExecutionStageStateArgs> stageStates) {
             this.stageStates = Input.ofNullable(stageStates);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setSteps(@Nullable Input<List<StepArgs>> steps) {
+        public Builder steps(@Nullable Input<List<StepArgs>> steps) {
             this.steps = steps;
             return this;
         }
 
-        public Builder setSteps(@Nullable List<StepArgs> steps) {
+        public Builder steps(@Nullable List<StepArgs> steps) {
             this.steps = Input.ofNullable(steps);
             return this;
         }
 
-        public Builder setStepsLocation(@Nullable Input<String> stepsLocation) {
+        public Builder stepsLocation(@Nullable Input<String> stepsLocation) {
             this.stepsLocation = stepsLocation;
             return this;
         }
 
-        public Builder setStepsLocation(@Nullable String stepsLocation) {
+        public Builder stepsLocation(@Nullable String stepsLocation) {
             this.stepsLocation = Input.ofNullable(stepsLocation);
             return this;
         }
 
-        public Builder setTempFiles(@Nullable Input<List<String>> tempFiles) {
+        public Builder tempFiles(@Nullable Input<List<String>> tempFiles) {
             this.tempFiles = tempFiles;
             return this;
         }
 
-        public Builder setTempFiles(@Nullable List<String> tempFiles) {
+        public Builder tempFiles(@Nullable List<String> tempFiles) {
             this.tempFiles = Input.ofNullable(tempFiles);
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Input<Map<String,String>> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Input<Map<String,String>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Map<String,String> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
             this.transformNameMapping = Input.ofNullable(transformNameMapping);
             return this;
         }
 
-        public Builder setType(@Nullable Input<JobType> type) {
+        public Builder type(@Nullable Input<JobType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable JobType type) {
+        public Builder type(@Nullable JobType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setView(@Nullable Input<String> view) {
+        public Builder view(@Nullable Input<String> view) {
             this.view = view;
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = Input.ofNullable(view);
             return this;
         }

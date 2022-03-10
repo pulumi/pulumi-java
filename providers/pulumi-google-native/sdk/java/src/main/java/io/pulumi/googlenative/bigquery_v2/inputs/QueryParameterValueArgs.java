@@ -88,32 +88,32 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder setArrayValues(@Nullable Input<List<QueryParameterValueArgs>> arrayValues) {
+        public Builder arrayValues(@Nullable Input<List<QueryParameterValueArgs>> arrayValues) {
             this.arrayValues = arrayValues;
             return this;
         }
 
-        public Builder setArrayValues(@Nullable List<QueryParameterValueArgs> arrayValues) {
+        public Builder arrayValues(@Nullable List<QueryParameterValueArgs> arrayValues) {
             this.arrayValues = Input.ofNullable(arrayValues);
             return this;
         }
 
-        public Builder setStructValues(@Nullable Input<Map<String,String>> structValues) {
+        public Builder structValues(@Nullable Input<Map<String,String>> structValues) {
             this.structValues = structValues;
             return this;
         }
 
-        public Builder setStructValues(@Nullable Map<String,String> structValues) {
+        public Builder structValues(@Nullable Map<String,String> structValues) {
             this.structValues = Input.ofNullable(structValues);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

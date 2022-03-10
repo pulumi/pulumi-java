@@ -54,12 +54,12 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customValues = defaults.customValues;
         }
 
-        public Builder setCustomValues(@Nullable Input<Map<String,String>> customValues) {
+        public Builder customValues(@Nullable Input<Map<String,String>> customValues) {
             this.customValues = customValues;
             return this;
         }
 
-        public Builder setCustomValues(@Nullable Map<String,String> customValues) {
+        public Builder customValues(@Nullable Map<String,String> customValues) {
             this.customValues = Input.ofNullable(customValues);
             return this;
         }

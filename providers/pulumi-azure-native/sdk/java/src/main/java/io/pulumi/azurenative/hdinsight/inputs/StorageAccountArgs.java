@@ -187,92 +187,92 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saskey = defaults.saskey;
         }
 
-        public Builder setContainer(@Nullable Input<String> container) {
+        public Builder container(@Nullable Input<String> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<String> fileSystem) {
+        public Builder fileSystem(@Nullable Input<String> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable String fileSystem) {
+        public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder setFileshare(@Nullable Input<String> fileshare) {
+        public Builder fileshare(@Nullable Input<String> fileshare) {
             this.fileshare = fileshare;
             return this;
         }
 
-        public Builder setFileshare(@Nullable String fileshare) {
+        public Builder fileshare(@Nullable String fileshare) {
             this.fileshare = Input.ofNullable(fileshare);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Input.ofNullable(isDefault);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable Input<String> msiResourceId) {
+        public Builder msiResourceId(@Nullable Input<String> msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = Input.ofNullable(msiResourceId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setSaskey(@Nullable Input<String> saskey) {
+        public Builder saskey(@Nullable Input<String> saskey) {
             this.saskey = saskey;
             return this;
         }
 
-        public Builder setSaskey(@Nullable String saskey) {
+        public Builder saskey(@Nullable String saskey) {
             this.saskey = Input.ofNullable(saskey);
             return this;
         }

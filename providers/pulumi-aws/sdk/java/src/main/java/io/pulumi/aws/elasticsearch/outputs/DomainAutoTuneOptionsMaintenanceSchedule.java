@@ -82,17 +82,17 @@ public final class DomainAutoTuneOptionsMaintenanceSchedule {
     	      this.startAt = defaults.startAt;
         }
 
-        public Builder setCronExpressionForRecurrence(String cronExpressionForRecurrence) {
+        public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
             return this;
         }
 
-        public Builder setDuration(DomainAutoTuneOptionsMaintenanceScheduleDuration duration) {
+        public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDuration duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartAt(String startAt) {
+        public Builder startAt(String startAt) {
             this.startAt = Objects.requireNonNull(startAt);
             return this;
         }

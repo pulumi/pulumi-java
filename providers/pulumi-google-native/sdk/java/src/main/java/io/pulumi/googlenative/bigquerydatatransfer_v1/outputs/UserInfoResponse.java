@@ -48,7 +48,7 @@ public final class UserInfoResponse {
     	      this.email = defaults.email;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }

@@ -121,52 +121,52 @@ public final class RandomIntegerState extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setMax(@Nullable Input<Integer> max) {
+        public Builder max(@Nullable Input<Integer> max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMax(@Nullable Integer max) {
+        public Builder max(@Nullable Integer max) {
             this.max = Input.ofNullable(max);
             return this;
         }
 
-        public Builder setMin(@Nullable Input<Integer> min) {
+        public Builder min(@Nullable Input<Integer> min) {
             this.min = min;
             return this;
         }
 
-        public Builder setMin(@Nullable Integer min) {
+        public Builder min(@Nullable Integer min) {
             this.min = Input.ofNullable(min);
             return this;
         }
 
-        public Builder setResult(@Nullable Input<Integer> result) {
+        public Builder result(@Nullable Input<Integer> result) {
             this.result = result;
             return this;
         }
 
-        public Builder setResult(@Nullable Integer result) {
+        public Builder result(@Nullable Integer result) {
             this.result = Input.ofNullable(result);
             return this;
         }
 
-        public Builder setSeed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Input<String> seed) {
             this.seed = seed;
             return this;
         }
 
-        public Builder setSeed(@Nullable String seed) {
+        public Builder seed(@Nullable String seed) {
             this.seed = Input.ofNullable(seed);
             return this;
         }

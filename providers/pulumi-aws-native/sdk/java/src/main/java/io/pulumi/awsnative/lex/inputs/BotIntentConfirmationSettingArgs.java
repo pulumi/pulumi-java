@@ -80,32 +80,32 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
     	      this.promptSpecification = defaults.promptSpecification;
         }
 
-        public Builder setDeclinationResponse(Input<BotResponseSpecificationArgs> declinationResponse) {
+        public Builder declinationResponse(Input<BotResponseSpecificationArgs> declinationResponse) {
             this.declinationResponse = Objects.requireNonNull(declinationResponse);
             return this;
         }
 
-        public Builder setDeclinationResponse(BotResponseSpecificationArgs declinationResponse) {
+        public Builder declinationResponse(BotResponseSpecificationArgs declinationResponse) {
             this.declinationResponse = Input.of(Objects.requireNonNull(declinationResponse));
             return this;
         }
 
-        public Builder setIsActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Input<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Input.ofNullable(isActive);
             return this;
         }
 
-        public Builder setPromptSpecification(Input<BotPromptSpecificationArgs> promptSpecification) {
+        public Builder promptSpecification(Input<BotPromptSpecificationArgs> promptSpecification) {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
         }
 
-        public Builder setPromptSpecification(BotPromptSpecificationArgs promptSpecification) {
+        public Builder promptSpecification(BotPromptSpecificationArgs promptSpecification) {
             this.promptSpecification = Input.of(Objects.requireNonNull(promptSpecification));
             return this;
         }

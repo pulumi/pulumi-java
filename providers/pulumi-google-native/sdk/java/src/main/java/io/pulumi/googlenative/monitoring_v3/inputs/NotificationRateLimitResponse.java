@@ -55,7 +55,7 @@ public final class NotificationRateLimitResponse extends io.pulumi.resources.Inv
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }

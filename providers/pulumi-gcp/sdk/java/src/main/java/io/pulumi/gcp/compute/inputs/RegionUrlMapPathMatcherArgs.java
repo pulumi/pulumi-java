@@ -156,62 +156,62 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder setDefaultService(@Nullable Input<String> defaultService) {
+        public Builder defaultService(@Nullable Input<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
-        public Builder setDefaultService(@Nullable String defaultService) {
+        public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Input.ofNullable(defaultService);
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Input<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable RegionUrlMapPathMatcherDefaultUrlRedirectArgs defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable RegionUrlMapPathMatcherDefaultUrlRedirectArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Input.ofNullable(defaultUrlRedirect);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPathRules(@Nullable Input<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules) {
+        public Builder pathRules(@Nullable Input<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<RegionUrlMapPathMatcherPathRuleArgs> pathRules) {
+        public Builder pathRules(@Nullable List<RegionUrlMapPathMatcherPathRuleArgs> pathRules) {
             this.pathRules = Input.ofNullable(pathRules);
             return this;
         }
 
-        public Builder setRouteRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules) {
+        public Builder routeRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules) {
             this.routeRules = routeRules;
             return this;
         }
 
-        public Builder setRouteRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleArgs> routeRules) {
+        public Builder routeRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleArgs> routeRules) {
             this.routeRules = Input.ofNullable(routeRules);
             return this;
         }

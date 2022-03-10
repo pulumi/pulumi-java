@@ -231,62 +231,62 @@ public final class GetBackendResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setCredentials(@Nullable BackendCredentialsContractResponse credentials) {
+        public Builder credentials(@Nullable BackendCredentialsContractResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(BackendPropertiesResponse properties) {
+        public Builder properties(BackendPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProxy(@Nullable BackendProxyContractResponse proxy) {
+        public Builder proxy(@Nullable BackendProxyContractResponse proxy) {
             this.proxy = proxy;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTls(@Nullable BackendTlsPropertiesResponse tls) {
+        public Builder tls(@Nullable BackendTlsPropertiesResponse tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

@@ -171,42 +171,42 @@ public final class RampUpRuleResponse {
     	      this.reroutePercentage = defaults.reroutePercentage;
         }
 
-        public Builder setActionHostName(@Nullable String actionHostName) {
+        public Builder actionHostName(@Nullable String actionHostName) {
             this.actionHostName = actionHostName;
             return this;
         }
 
-        public Builder setChangeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
+        public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
             this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
             return this;
         }
 
-        public Builder setChangeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
+        public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
             this.changeIntervalInMinutes = changeIntervalInMinutes;
             return this;
         }
 
-        public Builder setChangeStep(@Nullable Double changeStep) {
+        public Builder changeStep(@Nullable Double changeStep) {
             this.changeStep = changeStep;
             return this;
         }
 
-        public Builder setMaxReroutePercentage(@Nullable Double maxReroutePercentage) {
+        public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
             this.maxReroutePercentage = maxReroutePercentage;
             return this;
         }
 
-        public Builder setMinReroutePercentage(@Nullable Double minReroutePercentage) {
+        public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
             this.minReroutePercentage = minReroutePercentage;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setReroutePercentage(@Nullable Double reroutePercentage) {
+        public Builder reroutePercentage(@Nullable Double reroutePercentage) {
             this.reroutePercentage = reroutePercentage;
             return this;
         }

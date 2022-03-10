@@ -68,12 +68,12 @@ public final class IngressClassSpec {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setController(@Nullable String controller) {
+        public Builder controller(@Nullable String controller) {
             this.controller = controller;
             return this;
         }
 
-        public Builder setParameters(@Nullable TypedLocalObjectReference parameters) {
+        public Builder parameters(@Nullable TypedLocalObjectReference parameters) {
             this.parameters = parameters;
             return this;
         }

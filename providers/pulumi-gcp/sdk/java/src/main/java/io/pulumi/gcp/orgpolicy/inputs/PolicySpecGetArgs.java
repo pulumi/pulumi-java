@@ -123,52 +123,52 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Input.ofNullable(inheritFromParent);
             return this;
         }
 
-        public Builder setReset(@Nullable Input<Boolean> reset) {
+        public Builder reset(@Nullable Input<Boolean> reset) {
             this.reset = reset;
             return this;
         }
 
-        public Builder setReset(@Nullable Boolean reset) {
+        public Builder reset(@Nullable Boolean reset) {
             this.reset = Input.ofNullable(reset);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<PolicySpecRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Input<List<PolicySpecRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<PolicySpecRuleGetArgs> rules) {
+        public Builder rules(@Nullable List<PolicySpecRuleGetArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

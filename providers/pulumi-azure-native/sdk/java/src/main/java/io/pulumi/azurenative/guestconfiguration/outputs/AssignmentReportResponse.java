@@ -183,47 +183,47 @@ public final class AssignmentReportResponse {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setAssignment(@Nullable AssignmentInfoResponse assignment) {
+        public Builder assignment(@Nullable AssignmentInfoResponse assignment) {
             this.assignment = assignment;
             return this;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOperationType(String operationType) {
+        public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
 
-        public Builder setReportId(String reportId) {
+        public Builder reportId(String reportId) {
             this.reportId = Objects.requireNonNull(reportId);
             return this;
         }
 
-        public Builder setResources(@Nullable List<AssignmentReportResourceResponse> resources) {
+        public Builder resources(@Nullable List<AssignmentReportResourceResponse> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setVm(@Nullable VMInfoResponse vm) {
+        public Builder vm(@Nullable VMInfoResponse vm) {
             this.vm = vm;
             return this;
         }

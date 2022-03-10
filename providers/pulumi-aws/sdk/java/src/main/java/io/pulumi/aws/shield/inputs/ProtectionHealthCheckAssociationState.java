@@ -70,22 +70,22 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
     	      this.shieldProtectionId = defaults.shieldProtectionId;
         }
 
-        public Builder setHealthCheckArn(@Nullable Input<String> healthCheckArn) {
+        public Builder healthCheckArn(@Nullable Input<String> healthCheckArn) {
             this.healthCheckArn = healthCheckArn;
             return this;
         }
 
-        public Builder setHealthCheckArn(@Nullable String healthCheckArn) {
+        public Builder healthCheckArn(@Nullable String healthCheckArn) {
             this.healthCheckArn = Input.ofNullable(healthCheckArn);
             return this;
         }
 
-        public Builder setShieldProtectionId(@Nullable Input<String> shieldProtectionId) {
+        public Builder shieldProtectionId(@Nullable Input<String> shieldProtectionId) {
             this.shieldProtectionId = shieldProtectionId;
             return this;
         }
 
-        public Builder setShieldProtectionId(@Nullable String shieldProtectionId) {
+        public Builder shieldProtectionId(@Nullable String shieldProtectionId) {
             this.shieldProtectionId = Input.ofNullable(shieldProtectionId);
             return this;
         }

@@ -139,62 +139,62 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     	      this.tensorBoardAppSettings = defaults.tensorBoardAppSettings;
         }
 
-        public Builder setExecutionRole(Input<String> executionRole) {
+        public Builder executionRole(Input<String> executionRole) {
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
 
-        public Builder setExecutionRole(String executionRole) {
+        public Builder executionRole(String executionRole) {
             this.executionRole = Input.of(Objects.requireNonNull(executionRole));
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable Input<UserProfileUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable Input<UserProfileUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable UserProfileUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable UserProfileUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
             this.jupyterServerAppSettings = Input.ofNullable(jupyterServerAppSettings);
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable Input<UserProfileUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable Input<UserProfileUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable UserProfileUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable UserProfileUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = Input.ofNullable(kernelGatewayAppSettings);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable Input<UserProfileUserSettingsSharingSettingsArgs> sharingSettings) {
+        public Builder sharingSettings(@Nullable Input<UserProfileUserSettingsSharingSettingsArgs> sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable UserProfileUserSettingsSharingSettingsArgs sharingSettings) {
+        public Builder sharingSettings(@Nullable UserProfileUserSettingsSharingSettingsArgs sharingSettings) {
             this.sharingSettings = Input.ofNullable(sharingSettings);
             return this;
         }
 
-        public Builder setTensorBoardAppSettings(@Nullable Input<UserProfileUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
+        public Builder tensorBoardAppSettings(@Nullable Input<UserProfileUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
         }
 
-        public Builder setTensorBoardAppSettings(@Nullable UserProfileUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
+        public Builder tensorBoardAppSettings(@Nullable UserProfileUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
             this.tensorBoardAppSettings = Input.ofNullable(tensorBoardAppSettings);
             return this;
         }

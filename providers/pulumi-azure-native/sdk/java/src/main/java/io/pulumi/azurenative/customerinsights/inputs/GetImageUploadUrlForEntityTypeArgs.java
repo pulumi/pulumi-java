@@ -118,27 +118,27 @@ public final class GetImageUploadUrlForEntityTypeArgs extends io.pulumi.resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setEntityTypeName(@Nullable String entityTypeName) {
+        public Builder entityTypeName(@Nullable String entityTypeName) {
             this.entityTypeName = entityTypeName;
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

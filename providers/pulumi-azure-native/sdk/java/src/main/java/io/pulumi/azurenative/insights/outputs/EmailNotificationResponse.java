@@ -85,17 +85,17 @@ public final class EmailNotificationResponse {
     	      this.sendToSubscriptionCoAdministrators = defaults.sendToSubscriptionCoAdministrators;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setSendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
+        public Builder sendToSubscriptionAdministrator(@Nullable Boolean sendToSubscriptionAdministrator) {
             this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
             return this;
         }
 
-        public Builder setSendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
+        public Builder sendToSubscriptionCoAdministrators(@Nullable Boolean sendToSubscriptionCoAdministrators) {
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }

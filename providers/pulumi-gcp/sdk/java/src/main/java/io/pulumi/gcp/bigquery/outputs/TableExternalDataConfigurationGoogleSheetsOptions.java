@@ -74,12 +74,12 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setRange(@Nullable String range) {
+        public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Integer skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }

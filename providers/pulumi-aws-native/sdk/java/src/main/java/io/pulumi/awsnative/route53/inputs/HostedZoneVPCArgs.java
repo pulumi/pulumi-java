@@ -73,22 +73,22 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vPCRegion = defaults.vPCRegion;
         }
 
-        public Builder setVPCId(Input<String> vPCId) {
+        public Builder vPCId(Input<String> vPCId) {
             this.vPCId = Objects.requireNonNull(vPCId);
             return this;
         }
 
-        public Builder setVPCId(String vPCId) {
+        public Builder vPCId(String vPCId) {
             this.vPCId = Input.of(Objects.requireNonNull(vPCId));
             return this;
         }
 
-        public Builder setVPCRegion(Input<String> vPCRegion) {
+        public Builder vPCRegion(Input<String> vPCRegion) {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
 
-        public Builder setVPCRegion(String vPCRegion) {
+        public Builder vPCRegion(String vPCRegion) {
             this.vPCRegion = Input.of(Objects.requireNonNull(vPCRegion));
             return this;
         }

@@ -156,72 +156,72 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeInGb = defaults.sizeInGb;
         }
 
-        public Builder setAttachedTo(@Nullable Input<String> attachedTo) {
+        public Builder attachedTo(@Nullable Input<String> attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
-        public Builder setAttachedTo(@Nullable String attachedTo) {
+        public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = Input.ofNullable(attachedTo);
             return this;
         }
 
-        public Builder setAttachmentState(@Nullable Input<String> attachmentState) {
+        public Builder attachmentState(@Nullable Input<String> attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
 
-        public Builder setAttachmentState(@Nullable String attachmentState) {
+        public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = Input.ofNullable(attachmentState);
             return this;
         }
 
-        public Builder setDiskName(Input<String> diskName) {
+        public Builder diskName(Input<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Input.of(Objects.requireNonNull(diskName));
             return this;
         }
 
-        public Builder setIOPS(@Nullable Input<Integer> iOPS) {
+        public Builder iOPS(@Nullable Input<Integer> iOPS) {
             this.iOPS = iOPS;
             return this;
         }
 
-        public Builder setIOPS(@Nullable Integer iOPS) {
+        public Builder iOPS(@Nullable Integer iOPS) {
             this.iOPS = Input.ofNullable(iOPS);
             return this;
         }
 
-        public Builder setIsSystemDisk(@Nullable Input<Boolean> isSystemDisk) {
+        public Builder isSystemDisk(@Nullable Input<Boolean> isSystemDisk) {
             this.isSystemDisk = isSystemDisk;
             return this;
         }
 
-        public Builder setIsSystemDisk(@Nullable Boolean isSystemDisk) {
+        public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
             this.isSystemDisk = Input.ofNullable(isSystemDisk);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setSizeInGb(@Nullable Input<String> sizeInGb) {
+        public Builder sizeInGb(@Nullable Input<String> sizeInGb) {
             this.sizeInGb = sizeInGb;
             return this;
         }
 
-        public Builder setSizeInGb(@Nullable String sizeInGb) {
+        public Builder sizeInGb(@Nullable String sizeInGb) {
             this.sizeInGb = Input.ofNullable(sizeInGb);
             return this;
         }

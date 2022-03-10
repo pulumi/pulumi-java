@@ -87,32 +87,32 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends io.pulumi.resour
     	      this.masterUserOptions = defaults.masterUserOptions;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setInternalUserDatabaseEnabled(@Nullable Input<Boolean> internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(@Nullable Input<Boolean> internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
 
-        public Builder setInternalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = Input.ofNullable(internalUserDatabaseEnabled);
             return this;
         }
 
-        public Builder setMasterUserOptions(@Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions) {
+        public Builder masterUserOptions(@Nullable Input<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }
 
-        public Builder setMasterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs masterUserOptions) {
+        public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs masterUserOptions) {
             this.masterUserOptions = Input.ofNullable(masterUserOptions);
             return this;
         }

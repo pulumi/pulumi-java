@@ -52,12 +52,12 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     	      this.timestreamConfiguration = defaults.timestreamConfiguration;
         }
 
-        public Builder setTimestreamConfiguration(Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration) {
+        public Builder timestreamConfiguration(Input<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration) {
             this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
             return this;
         }
 
-        public Builder setTimestreamConfiguration(ScheduledQueryTimestreamConfigurationArgs timestreamConfiguration) {
+        public Builder timestreamConfiguration(ScheduledQueryTimestreamConfigurationArgs timestreamConfiguration) {
             this.timestreamConfiguration = Input.of(Objects.requireNonNull(timestreamConfiguration));
             return this;
         }

@@ -93,32 +93,32 @@ public final class SqlDatabaseResourceSettingsArgs extends io.pulumi.resources.R
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setTargetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Input<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Input<Either<String,ZoneRedundant>> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Input<Either<String,ZoneRedundant>> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Either<String,ZoneRedundant> zoneRedundant) {
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }

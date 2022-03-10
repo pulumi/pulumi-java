@@ -65,12 +65,12 @@ public final class ServiceCorrelationDescriptionResponse {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

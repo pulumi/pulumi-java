@@ -118,62 +118,62 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uriPathRoute = defaults.uriPathRoute;
         }
 
-        public Builder setApplicationIdentifier(Input<String> applicationIdentifier) {
+        public Builder applicationIdentifier(Input<String> applicationIdentifier) {
             this.applicationIdentifier = Objects.requireNonNull(applicationIdentifier);
             return this;
         }
 
-        public Builder setApplicationIdentifier(String applicationIdentifier) {
+        public Builder applicationIdentifier(String applicationIdentifier) {
             this.applicationIdentifier = Input.of(Objects.requireNonNull(applicationIdentifier));
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(Input<String> environmentIdentifier) {
+        public Builder environmentIdentifier(Input<String> environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(String environmentIdentifier) {
+        public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Input.of(Objects.requireNonNull(environmentIdentifier));
             return this;
         }
 
-        public Builder setRouteType(@Nullable Input<RouteType> routeType) {
+        public Builder routeType(@Nullable Input<RouteType> routeType) {
             this.routeType = routeType;
             return this;
         }
 
-        public Builder setRouteType(@Nullable RouteType routeType) {
+        public Builder routeType(@Nullable RouteType routeType) {
             this.routeType = Input.ofNullable(routeType);
             return this;
         }
 
-        public Builder setServiceIdentifier(Input<String> serviceIdentifier) {
+        public Builder serviceIdentifier(Input<String> serviceIdentifier) {
             this.serviceIdentifier = Objects.requireNonNull(serviceIdentifier);
             return this;
         }
 
-        public Builder setServiceIdentifier(String serviceIdentifier) {
+        public Builder serviceIdentifier(String serviceIdentifier) {
             this.serviceIdentifier = Input.of(Objects.requireNonNull(serviceIdentifier));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RouteTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RouteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RouteTagArgs> tags) {
+        public Builder tags(@Nullable List<RouteTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUriPathRoute(@Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute) {
+        public Builder uriPathRoute(@Nullable Input<RouteUriPathRouteInputArgs> uriPathRoute) {
             this.uriPathRoute = uriPathRoute;
             return this;
         }
 
-        public Builder setUriPathRoute(@Nullable RouteUriPathRouteInputArgs uriPathRoute) {
+        public Builder uriPathRoute(@Nullable RouteUriPathRouteInputArgs uriPathRoute) {
             this.uriPathRoute = Input.ofNullable(uriPathRoute);
             return this;
         }

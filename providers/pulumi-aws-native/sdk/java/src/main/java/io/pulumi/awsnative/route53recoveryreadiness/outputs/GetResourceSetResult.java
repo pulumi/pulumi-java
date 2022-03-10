@@ -86,17 +86,17 @@ public final class GetResourceSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceSetArn(@Nullable String resourceSetArn) {
+        public Builder resourceSetArn(@Nullable String resourceSetArn) {
             this.resourceSetArn = resourceSetArn;
             return this;
         }
 
-        public Builder setResources(@Nullable List<ResourceSetResource> resources) {
+        public Builder resources(@Nullable List<ResourceSetResource> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResourceSetTag> tags) {
+        public Builder tags(@Nullable List<ResourceSetTag> tags) {
             this.tags = tags;
             return this;
         }

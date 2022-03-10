@@ -166,77 +166,77 @@ public final class GetLaunchTemplateNetworkInterface {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociateCarrierIpAddress(String associateCarrierIpAddress) {
+        public Builder associateCarrierIpAddress(String associateCarrierIpAddress) {
             this.associateCarrierIpAddress = Objects.requireNonNull(associateCarrierIpAddress);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setInterfaceType(String interfaceType) {
+        public Builder interfaceType(String interfaceType) {
             this.interfaceType = Objects.requireNonNull(interfaceType);
             return this;
         }
 
-        public Builder setIpv4AddressCount(Integer ipv4AddressCount) {
+        public Builder ipv4AddressCount(Integer ipv4AddressCount) {
             this.ipv4AddressCount = Objects.requireNonNull(ipv4AddressCount);
             return this;
         }
 
-        public Builder setIpv4Addresses(List<String> ipv4Addresses) {
+        public Builder ipv4Addresses(List<String> ipv4Addresses) {
             this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
             return this;
         }
 
-        public Builder setIpv6AddressCount(Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.ipv6AddressCount = Objects.requireNonNull(ipv6AddressCount);
             return this;
         }
 
-        public Builder setIpv6Addresses(List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
 
-        public Builder setNetworkCardIndex(@Nullable Integer networkCardIndex) {
+        public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

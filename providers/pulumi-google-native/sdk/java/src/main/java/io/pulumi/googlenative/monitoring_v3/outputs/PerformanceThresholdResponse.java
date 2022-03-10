@@ -83,17 +83,17 @@ public final class PerformanceThresholdResponse {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(BasicSliResponse basicSliPerformance) {
+        public Builder basicSliPerformance(BasicSliResponse basicSliPerformance) {
             this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance);
             return this;
         }
 
-        public Builder setPerformance(RequestBasedSliResponse performance) {
+        public Builder performance(RequestBasedSliResponse performance) {
             this.performance = Objects.requireNonNull(performance);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

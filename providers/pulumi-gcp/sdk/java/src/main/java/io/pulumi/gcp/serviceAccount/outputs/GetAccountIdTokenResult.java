@@ -101,32 +101,32 @@ public final class GetAccountIdTokenResult {
     	      this.targetServiceAccount = defaults.targetServiceAccount;
         }
 
-        public Builder setDelegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable List<String> delegates) {
             this.delegates = delegates;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdToken(String idToken) {
+        public Builder idToken(String idToken) {
             this.idToken = Objects.requireNonNull(idToken);
             return this;
         }
 
-        public Builder setIncludeEmail(@Nullable Boolean includeEmail) {
+        public Builder includeEmail(@Nullable Boolean includeEmail) {
             this.includeEmail = includeEmail;
             return this;
         }
 
-        public Builder setTargetAudience(String targetAudience) {
+        public Builder targetAudience(String targetAudience) {
             this.targetAudience = Objects.requireNonNull(targetAudience);
             return this;
         }
 
-        public Builder setTargetServiceAccount(@Nullable String targetServiceAccount) {
+        public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
             this.targetServiceAccount = targetServiceAccount;
             return this;
         }

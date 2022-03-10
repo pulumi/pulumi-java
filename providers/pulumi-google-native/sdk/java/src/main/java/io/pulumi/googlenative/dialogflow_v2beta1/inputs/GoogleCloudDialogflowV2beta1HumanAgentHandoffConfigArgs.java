@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigArgs exten
     	      this.salesforceLiveAgentConfig = defaults.salesforceLiveAgentConfig;
         }
 
-        public Builder setLivePersonConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig) {
+        public Builder livePersonConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig) {
             this.livePersonConfig = livePersonConfig;
             return this;
         }
 
-        public Builder setLivePersonConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs livePersonConfig) {
+        public Builder livePersonConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs livePersonConfig) {
             this.livePersonConfig = Input.ofNullable(livePersonConfig);
             return this;
         }
 
-        public Builder setSalesforceLiveAgentConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig) {
+        public Builder salesforceLiveAgentConfig(@Nullable Input<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
             return this;
         }
 
-        public Builder setSalesforceLiveAgentConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs salesforceLiveAgentConfig) {
+        public Builder salesforceLiveAgentConfig(@Nullable GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = Input.ofNullable(salesforceLiveAgentConfig);
             return this;
         }

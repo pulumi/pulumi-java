@@ -75,22 +75,22 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setAccessRules(Input<List<NfsAccessRuleArgs>> accessRules) {
+        public Builder accessRules(Input<List<NfsAccessRuleArgs>> accessRules) {
             this.accessRules = Objects.requireNonNull(accessRules);
             return this;
         }
 
-        public Builder setAccessRules(List<NfsAccessRuleArgs> accessRules) {
+        public Builder accessRules(List<NfsAccessRuleArgs> accessRules) {
             this.accessRules = Input.of(Objects.requireNonNull(accessRules));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

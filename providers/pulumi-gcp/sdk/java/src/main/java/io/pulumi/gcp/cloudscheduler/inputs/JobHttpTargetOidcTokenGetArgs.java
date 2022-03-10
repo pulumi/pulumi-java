@@ -72,22 +72,22 @@ public final class JobHttpTargetOidcTokenGetArgs extends io.pulumi.resources.Res
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setServiceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }

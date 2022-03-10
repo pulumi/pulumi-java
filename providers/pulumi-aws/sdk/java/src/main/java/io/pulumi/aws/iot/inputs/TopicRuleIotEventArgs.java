@@ -86,32 +86,32 @@ public final class TopicRuleIotEventArgs extends io.pulumi.resources.ResourceArg
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setInputName(Input<String> inputName) {
+        public Builder inputName(Input<String> inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Input.of(Objects.requireNonNull(inputName));
             return this;
         }
 
-        public Builder setMessageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Input<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = Input.ofNullable(messageId);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

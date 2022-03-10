@@ -104,42 +104,42 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<RegistrationDefinitionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<RegistrationDefinitionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
+        public Builder properties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRegistrationDefinitionId(@Nullable Input<String> registrationDefinitionId) {
+        public Builder registrationDefinitionId(@Nullable Input<String> registrationDefinitionId) {
             this.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
 
-        public Builder setRegistrationDefinitionId(@Nullable String registrationDefinitionId) {
+        public Builder registrationDefinitionId(@Nullable String registrationDefinitionId) {
             this.registrationDefinitionId = Input.ofNullable(registrationDefinitionId);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

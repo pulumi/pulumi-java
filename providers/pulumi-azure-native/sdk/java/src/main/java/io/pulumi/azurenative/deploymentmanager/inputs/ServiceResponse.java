@@ -108,22 +108,22 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.targetSubscriptionId = defaults.targetSubscriptionId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setServiceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
+        public Builder serviceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
             this.serviceUnits = serviceUnits;
             return this;
         }
 
-        public Builder setTargetLocation(String targetLocation) {
+        public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
 
-        public Builder setTargetSubscriptionId(String targetSubscriptionId) {
+        public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }

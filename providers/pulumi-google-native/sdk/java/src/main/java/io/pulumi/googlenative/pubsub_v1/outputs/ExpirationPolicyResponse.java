@@ -48,7 +48,7 @@ public final class ExpirationPolicyResponse {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

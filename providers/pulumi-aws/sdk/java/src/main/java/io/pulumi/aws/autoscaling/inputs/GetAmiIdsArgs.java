@@ -54,7 +54,7 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
             this.filters = filters;
             return this;
         }

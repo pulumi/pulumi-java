@@ -188,92 +188,92 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.templateData = defaults.templateData;
         }
 
-        public Builder setAuthor(@Nullable Input<String> author) {
+        public Builder author(@Nullable Input<String> author) {
             this.author = author;
             return this;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = Input.ofNullable(author);
             return this;
         }
 
-        public Builder setGalleries(Input<List<WorkbookTemplateGalleryArgs>> galleries) {
+        public Builder galleries(Input<List<WorkbookTemplateGalleryArgs>> galleries) {
             this.galleries = Objects.requireNonNull(galleries);
             return this;
         }
 
-        public Builder setGalleries(List<WorkbookTemplateGalleryArgs> galleries) {
+        public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
             this.galleries = Input.of(Objects.requireNonNull(galleries));
             return this;
         }
 
-        public Builder setLocalized(@Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
+        public Builder localized(@Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized) {
             this.localized = localized;
             return this;
         }
 
-        public Builder setLocalized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
+        public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
             this.localized = Input.ofNullable(localized);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateData(Input<Object> templateData) {
+        public Builder templateData(Input<Object> templateData) {
             this.templateData = Objects.requireNonNull(templateData);
             return this;
         }
 
-        public Builder setTemplateData(Object templateData) {
+        public Builder templateData(Object templateData) {
             this.templateData = Input.of(Objects.requireNonNull(templateData));
             return this;
         }

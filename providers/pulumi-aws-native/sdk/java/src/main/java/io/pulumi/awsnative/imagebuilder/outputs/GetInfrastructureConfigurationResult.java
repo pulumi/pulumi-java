@@ -248,67 +248,67 @@ public final class GetInfrastructureConfigurationResult {
     	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInstanceMetadataOptions(@Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions) {
+        public Builder instanceMetadataOptions(@Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions) {
             this.instanceMetadataOptions = instanceMetadataOptions;
             return this;
         }
 
-        public Builder setInstanceProfileName(@Nullable String instanceProfileName) {
+        public Builder instanceProfileName(@Nullable String instanceProfileName) {
             this.instanceProfileName = instanceProfileName;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setKeyPair(@Nullable String keyPair) {
+        public Builder keyPair(@Nullable String keyPair) {
             this.keyPair = keyPair;
             return this;
         }
 
-        public Builder setLogging(@Nullable InfrastructureConfigurationLogging logging) {
+        public Builder logging(@Nullable InfrastructureConfigurationLogging logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Object resourceTags) {
+        public Builder resourceTags(@Nullable Object resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }

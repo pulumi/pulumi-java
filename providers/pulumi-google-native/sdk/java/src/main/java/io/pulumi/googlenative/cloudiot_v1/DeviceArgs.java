@@ -209,112 +209,112 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setBlocked(@Nullable Input<Boolean> blocked) {
+        public Builder blocked(@Nullable Input<Boolean> blocked) {
             this.blocked = blocked;
             return this;
         }
 
-        public Builder setBlocked(@Nullable Boolean blocked) {
+        public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Input.ofNullable(blocked);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<DeviceConfigArgs> config) {
+        public Builder config(@Nullable Input<DeviceConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable DeviceConfigArgs config) {
+        public Builder config(@Nullable DeviceConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<List<DeviceCredentialArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<DeviceCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<DeviceCredentialArgs> credentials) {
+        public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<GatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<GatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable GatewayConfigArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable GatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<DeviceLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Input<DeviceLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable DeviceLogLevel logLevel) {
+        public Builder logLevel(@Nullable DeviceLogLevel logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegistryId(Input<String> registryId) {
+        public Builder registryId(Input<String> registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Input.of(Objects.requireNonNull(registryId));
             return this;
         }

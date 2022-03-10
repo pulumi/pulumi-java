@@ -90,32 +90,32 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder setAccessType(@Nullable Input<String> accessType) {
+        public Builder accessType(@Nullable Input<String> accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setAccessType(@Nullable String accessType) {
+        public Builder accessType(@Nullable String accessType) {
             this.accessType = Input.ofNullable(accessType);
             return this;
         }
 
-        public Builder setProxyUri(@Nullable Input<String> proxyUri) {
+        public Builder proxyUri(@Nullable Input<String> proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
 
-        public Builder setProxyUri(@Nullable String proxyUri) {
+        public Builder proxyUri(@Nullable String proxyUri) {
             this.proxyUri = Input.ofNullable(proxyUri);
             return this;
         }
 
-        public Builder setRuntimeOwner(@Nullable Input<String> runtimeOwner) {
+        public Builder runtimeOwner(@Nullable Input<String> runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }
 
-        public Builder setRuntimeOwner(@Nullable String runtimeOwner) {
+        public Builder runtimeOwner(@Nullable String runtimeOwner) {
             this.runtimeOwner = Input.ofNullable(runtimeOwner);
             return this;
         }

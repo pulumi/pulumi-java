@@ -77,22 +77,22 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setAuth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
+        public Builder auth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable List<ScaleRuleAuthArgs> auth) {
+        public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

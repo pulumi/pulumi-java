@@ -53,7 +53,7 @@ public final class ServiceManagedResourcesSettingsResponse extends io.pulumi.res
     	      this.cosmosDb = defaults.cosmosDb;
         }
 
-        public Builder setCosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
+        public Builder cosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
         }

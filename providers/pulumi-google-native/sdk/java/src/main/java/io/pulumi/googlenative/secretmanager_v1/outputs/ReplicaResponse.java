@@ -66,12 +66,12 @@ public final class ReplicaResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
+        public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

@@ -81,17 +81,17 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setGenerationNumber(String generationNumber) {
+        public Builder generationNumber(String generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

@@ -66,12 +66,12 @@ public final class ClusterMetricsResponse {
     	      this.yarnMetrics = defaults.yarnMetrics;
         }
 
-        public Builder setHdfsMetrics(Map<String,String> hdfsMetrics) {
+        public Builder hdfsMetrics(Map<String,String> hdfsMetrics) {
             this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics);
             return this;
         }
 
-        public Builder setYarnMetrics(Map<String,String> yarnMetrics) {
+        public Builder yarnMetrics(Map<String,String> yarnMetrics) {
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
         }

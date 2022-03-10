@@ -171,82 +171,82 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setCredentials(@Nullable Input<Map<String,String>> credentials) {
+        public Builder credentials(@Nullable Input<Map<String,String>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable Map<String,String> credentials) {
+        public Builder credentials(@Nullable Map<String,String> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsBuffered(@Nullable Input<Boolean> isBuffered) {
+        public Builder isBuffered(@Nullable Input<Boolean> isBuffered) {
             this.isBuffered = isBuffered;
             return this;
         }
 
-        public Builder setIsBuffered(@Nullable Boolean isBuffered) {
+        public Builder isBuffered(@Nullable Boolean isBuffered) {
             this.isBuffered = Input.ofNullable(isBuffered);
             return this;
         }
 
-        public Builder setLoggerId(@Nullable Input<String> loggerId) {
+        public Builder loggerId(@Nullable Input<String> loggerId) {
             this.loggerId = loggerId;
             return this;
         }
 
-        public Builder setLoggerId(@Nullable String loggerId) {
+        public Builder loggerId(@Nullable String loggerId) {
             this.loggerId = Input.ofNullable(loggerId);
             return this;
         }
 
-        public Builder setLoggerType(Input<Either<String,LoggerType>> loggerType) {
+        public Builder loggerType(Input<Either<String,LoggerType>> loggerType) {
             this.loggerType = Objects.requireNonNull(loggerType);
             return this;
         }
 
-        public Builder setLoggerType(Either<String,LoggerType> loggerType) {
+        public Builder loggerType(Either<String,LoggerType> loggerType) {
             this.loggerType = Input.of(Objects.requireNonNull(loggerType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

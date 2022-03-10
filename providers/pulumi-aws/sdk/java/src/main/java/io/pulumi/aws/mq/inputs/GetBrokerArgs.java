@@ -83,17 +83,17 @@ public final class GetBrokerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBrokerId(@Nullable String brokerId) {
+        public Builder brokerId(@Nullable String brokerId) {
             this.brokerId = brokerId;
             return this;
         }
 
-        public Builder setBrokerName(@Nullable String brokerName) {
+        public Builder brokerName(@Nullable String brokerName) {
             this.brokerName = brokerName;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -90,17 +90,17 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
     	      this.mode = defaults.mode;
         }
 
-        public Builder setConflictResolutionPath(@Nullable String conflictResolutionPath) {
+        public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
             this.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
 
-        public Builder setConflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
+        public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
             this.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

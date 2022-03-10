@@ -247,62 +247,62 @@ public final class AzureDataLakeStoreDatasetResponse extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setCompression(@Nullable DatasetCompressionResponse compression) {
+        public Builder compression(@Nullable DatasetCompressionResponse compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetResponseFolder folder) {
+        public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFormat(@Nullable Object format) {
+        public Builder format(@Nullable Object format) {
             this.format = format;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

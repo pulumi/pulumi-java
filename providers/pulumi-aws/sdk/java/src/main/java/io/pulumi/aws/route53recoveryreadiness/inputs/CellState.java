@@ -136,62 +136,62 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCellName(@Nullable Input<String> cellName) {
+        public Builder cellName(@Nullable Input<String> cellName) {
             this.cellName = cellName;
             return this;
         }
 
-        public Builder setCellName(@Nullable String cellName) {
+        public Builder cellName(@Nullable String cellName) {
             this.cellName = Input.ofNullable(cellName);
             return this;
         }
 
-        public Builder setCells(@Nullable Input<List<String>> cells) {
+        public Builder cells(@Nullable Input<List<String>> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setCells(@Nullable List<String> cells) {
+        public Builder cells(@Nullable List<String> cells) {
             this.cells = Input.ofNullable(cells);
             return this;
         }
 
-        public Builder setParentReadinessScopes(@Nullable Input<List<String>> parentReadinessScopes) {
+        public Builder parentReadinessScopes(@Nullable Input<List<String>> parentReadinessScopes) {
             this.parentReadinessScopes = parentReadinessScopes;
             return this;
         }
 
-        public Builder setParentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
+        public Builder parentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
             this.parentReadinessScopes = Input.ofNullable(parentReadinessScopes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

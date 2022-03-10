@@ -263,72 +263,72 @@ public final class GetConversationProfileResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAutomatedAgentConfig(GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse automatedAgentConfig) {
+        public Builder automatedAgentConfig(GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse automatedAgentConfig) {
             this.automatedAgentConfig = Objects.requireNonNull(automatedAgentConfig);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHumanAgentAssistantConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse humanAgentAssistantConfig) {
+        public Builder humanAgentAssistantConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = Objects.requireNonNull(humanAgentAssistantConfig);
             return this;
         }
 
-        public Builder setHumanAgentHandoffConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse humanAgentHandoffConfig) {
+        public Builder humanAgentHandoffConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = Objects.requireNonNull(humanAgentHandoffConfig);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setLoggingConfig(GoogleCloudDialogflowV2beta1LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(GoogleCloudDialogflowV2beta1LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewMessageEventNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse newMessageEventNotificationConfig) {
+        public Builder newMessageEventNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = Objects.requireNonNull(newMessageEventNotificationConfig);
             return this;
         }
 
-        public Builder setNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setSecuritySettings(String securitySettings) {
+        public Builder securitySettings(String securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSttConfig(GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse sttConfig) {
+        public Builder sttConfig(GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse sttConfig) {
             this.sttConfig = Objects.requireNonNull(sttConfig);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

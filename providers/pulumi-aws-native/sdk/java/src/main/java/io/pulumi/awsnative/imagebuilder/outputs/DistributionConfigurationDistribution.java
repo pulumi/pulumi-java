@@ -119,27 +119,27 @@ public final class DistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        public Builder setLaunchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
+        public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

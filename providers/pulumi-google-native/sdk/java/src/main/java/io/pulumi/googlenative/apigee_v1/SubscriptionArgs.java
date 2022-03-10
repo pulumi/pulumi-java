@@ -110,52 +110,52 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setApiproduct(@Nullable Input<String> apiproduct) {
+        public Builder apiproduct(@Nullable Input<String> apiproduct) {
             this.apiproduct = apiproduct;
             return this;
         }
 
-        public Builder setApiproduct(@Nullable String apiproduct) {
+        public Builder apiproduct(@Nullable String apiproduct) {
             this.apiproduct = Input.ofNullable(apiproduct);
             return this;
         }
 
-        public Builder setDeveloperId(Input<String> developerId) {
+        public Builder developerId(Input<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
-        public Builder setDeveloperId(String developerId) {
+        public Builder developerId(String developerId) {
             this.developerId = Input.of(Objects.requireNonNull(developerId));
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

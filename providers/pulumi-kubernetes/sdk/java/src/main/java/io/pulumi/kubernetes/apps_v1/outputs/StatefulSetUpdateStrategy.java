@@ -76,12 +76,12 @@ public final class StatefulSetUpdateStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateStatefulSetStrategy rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateStatefulSetStrategy rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

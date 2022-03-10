@@ -57,7 +57,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse extends io.pulu
     	      this.failoverPolicy = defaults.failoverPolicy;
         }
 
-        public Builder setFailoverPolicy(@Nullable String failoverPolicy) {
+        public Builder failoverPolicy(@Nullable String failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }

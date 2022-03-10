@@ -186,47 +186,47 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     	      this.packageType = defaults.packageType;
         }
 
-        public Builder setAffectedCpeUri(String affectedCpeUri) {
+        public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
-        public Builder setAffectedPackage(String affectedPackage) {
+        public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
-        public Builder setAffectedVersion(VersionResponse affectedVersion) {
+        public Builder affectedVersion(VersionResponse affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
 
-        public Builder setEffectiveSeverity(String effectiveSeverity) {
+        public Builder effectiveSeverity(String effectiveSeverity) {
             this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
             return this;
         }
 
-        public Builder setFixAvailable(Boolean fixAvailable) {
+        public Builder fixAvailable(Boolean fixAvailable) {
             this.fixAvailable = Objects.requireNonNull(fixAvailable);
             return this;
         }
 
-        public Builder setFixedCpeUri(String fixedCpeUri) {
+        public Builder fixedCpeUri(String fixedCpeUri) {
             this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
             return this;
         }
 
-        public Builder setFixedPackage(String fixedPackage) {
+        public Builder fixedPackage(String fixedPackage) {
             this.fixedPackage = Objects.requireNonNull(fixedPackage);
             return this;
         }
 
-        public Builder setFixedVersion(VersionResponse fixedVersion) {
+        public Builder fixedVersion(VersionResponse fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }

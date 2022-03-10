@@ -91,32 +91,32 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notificationState = defaults.notificationState;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setLogicalId(Input<String> logicalId) {
+        public Builder logicalId(Input<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Input.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder setNotificationState(@Nullable Input<AssetPropertyNotificationState> notificationState) {
+        public Builder notificationState(@Nullable Input<AssetPropertyNotificationState> notificationState) {
             this.notificationState = notificationState;
             return this;
         }
 
-        public Builder setNotificationState(@Nullable AssetPropertyNotificationState notificationState) {
+        public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
             this.notificationState = Input.ofNullable(notificationState);
             return this;
         }

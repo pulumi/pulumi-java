@@ -76,17 +76,17 @@ public final class GetEventCategoriesResult {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setEventCategories(List<String> eventCategories) {
+        public Builder eventCategories(List<String> eventCategories) {
             this.eventCategories = Objects.requireNonNull(eventCategories);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }

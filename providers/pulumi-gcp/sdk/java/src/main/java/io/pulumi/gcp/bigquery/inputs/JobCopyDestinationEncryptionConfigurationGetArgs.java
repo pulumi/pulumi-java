@@ -72,22 +72,22 @@ public final class JobCopyDestinationEncryptionConfigurationGetArgs extends io.p
     	      this.kmsKeyVersion = defaults.kmsKeyVersion;
         }
 
-        public Builder setKmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Input<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
 
-        public Builder setKmsKeyVersion(@Nullable Input<String> kmsKeyVersion) {
+        public Builder kmsKeyVersion(@Nullable Input<String> kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }
 
-        public Builder setKmsKeyVersion(@Nullable String kmsKeyVersion) {
+        public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = Input.ofNullable(kmsKeyVersion);
             return this;
         }

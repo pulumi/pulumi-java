@@ -86,32 +86,32 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setQuotaCode(Input<String> quotaCode) {
+        public Builder quotaCode(Input<String> quotaCode) {
             this.quotaCode = Objects.requireNonNull(quotaCode);
             return this;
         }
 
-        public Builder setQuotaCode(String quotaCode) {
+        public Builder quotaCode(String quotaCode) {
             this.quotaCode = Input.of(Objects.requireNonNull(quotaCode));
             return this;
         }
 
-        public Builder setServiceCode(Input<String> serviceCode) {
+        public Builder serviceCode(Input<String> serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Input.of(Objects.requireNonNull(serviceCode));
             return this;
         }
 
-        public Builder setValue(Input<Double> value) {
+        public Builder value(Input<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

@@ -105,22 +105,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     	      this.word = defaults.word;
         }
 
-        public Builder setConfidence(Double confidence) {
+        public Builder confidence(Double confidence) {
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
 
-        public Builder setEndOffset(String endOffset) {
+        public Builder endOffset(String endOffset) {
             this.endOffset = Objects.requireNonNull(endOffset);
             return this;
         }
 
-        public Builder setStartOffset(String startOffset) {
+        public Builder startOffset(String startOffset) {
             this.startOffset = Objects.requireNonNull(startOffset);
             return this;
         }
 
-        public Builder setWord(String word) {
+        public Builder word(String word) {
             this.word = Objects.requireNonNull(word);
             return this;
         }

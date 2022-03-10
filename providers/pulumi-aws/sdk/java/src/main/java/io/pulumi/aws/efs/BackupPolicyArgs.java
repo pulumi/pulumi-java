@@ -70,22 +70,22 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileSystemId = defaults.fileSystemId;
         }
 
-        public Builder setBackupPolicy(Input<BackupPolicyBackupPolicyArgs> backupPolicy) {
+        public Builder backupPolicy(Input<BackupPolicyBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = Objects.requireNonNull(backupPolicy);
             return this;
         }
 
-        public Builder setBackupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
+        public Builder backupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
             this.backupPolicy = Input.of(Objects.requireNonNull(backupPolicy));
             return this;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }

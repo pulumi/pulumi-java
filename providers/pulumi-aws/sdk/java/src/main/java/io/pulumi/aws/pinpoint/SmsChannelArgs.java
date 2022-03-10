@@ -103,42 +103,42 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortCode = defaults.shortCode;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setSenderId(@Nullable Input<String> senderId) {
+        public Builder senderId(@Nullable Input<String> senderId) {
             this.senderId = senderId;
             return this;
         }
 
-        public Builder setSenderId(@Nullable String senderId) {
+        public Builder senderId(@Nullable String senderId) {
             this.senderId = Input.ofNullable(senderId);
             return this;
         }
 
-        public Builder setShortCode(@Nullable Input<String> shortCode) {
+        public Builder shortCode(@Nullable Input<String> shortCode) {
             this.shortCode = shortCode;
             return this;
         }
 
-        public Builder setShortCode(@Nullable String shortCode) {
+        public Builder shortCode(@Nullable String shortCode) {
             this.shortCode = Input.ofNullable(shortCode);
             return this;
         }

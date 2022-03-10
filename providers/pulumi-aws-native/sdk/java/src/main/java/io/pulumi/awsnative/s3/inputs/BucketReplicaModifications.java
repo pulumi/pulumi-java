@@ -51,7 +51,7 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketReplicaModificationsStatus status) {
+        public Builder status(BucketReplicaModificationsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

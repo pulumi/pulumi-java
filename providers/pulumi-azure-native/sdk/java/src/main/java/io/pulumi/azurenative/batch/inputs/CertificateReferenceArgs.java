@@ -97,42 +97,42 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setStoreLocation(@Nullable Input<CertificateStoreLocation> storeLocation) {
+        public Builder storeLocation(@Nullable Input<CertificateStoreLocation> storeLocation) {
             this.storeLocation = storeLocation;
             return this;
         }
 
-        public Builder setStoreLocation(@Nullable CertificateStoreLocation storeLocation) {
+        public Builder storeLocation(@Nullable CertificateStoreLocation storeLocation) {
             this.storeLocation = Input.ofNullable(storeLocation);
             return this;
         }
 
-        public Builder setStoreName(@Nullable Input<String> storeName) {
+        public Builder storeName(@Nullable Input<String> storeName) {
             this.storeName = storeName;
             return this;
         }
 
-        public Builder setStoreName(@Nullable String storeName) {
+        public Builder storeName(@Nullable String storeName) {
             this.storeName = Input.ofNullable(storeName);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<List<CertificateVisibility>> visibility) {
+        public Builder visibility(@Nullable Input<List<CertificateVisibility>> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable List<CertificateVisibility> visibility) {
+        public Builder visibility(@Nullable List<CertificateVisibility> visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

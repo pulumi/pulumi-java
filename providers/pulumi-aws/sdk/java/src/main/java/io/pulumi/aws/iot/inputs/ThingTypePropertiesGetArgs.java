@@ -71,22 +71,22 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
     	      this.searchableAttributes = defaults.searchableAttributes;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setSearchableAttributes(@Nullable Input<List<String>> searchableAttributes) {
+        public Builder searchableAttributes(@Nullable Input<List<String>> searchableAttributes) {
             this.searchableAttributes = searchableAttributes;
             return this;
         }
 
-        public Builder setSearchableAttributes(@Nullable List<String> searchableAttributes) {
+        public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
             this.searchableAttributes = Input.ofNullable(searchableAttributes);
             return this;
         }

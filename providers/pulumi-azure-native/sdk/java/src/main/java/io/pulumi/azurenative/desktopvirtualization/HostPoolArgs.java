@@ -472,272 +472,272 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmTemplate = defaults.vmTemplate;
         }
 
-        public Builder setCustomRdpProperty(@Nullable Input<String> customRdpProperty) {
+        public Builder customRdpProperty(@Nullable Input<String> customRdpProperty) {
             this.customRdpProperty = customRdpProperty;
             return this;
         }
 
-        public Builder setCustomRdpProperty(@Nullable String customRdpProperty) {
+        public Builder customRdpProperty(@Nullable String customRdpProperty) {
             this.customRdpProperty = Input.ofNullable(customRdpProperty);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setHostPoolName(@Nullable Input<String> hostPoolName) {
+        public Builder hostPoolName(@Nullable Input<String> hostPoolName) {
             this.hostPoolName = hostPoolName;
             return this;
         }
 
-        public Builder setHostPoolName(@Nullable String hostPoolName) {
+        public Builder hostPoolName(@Nullable String hostPoolName) {
             this.hostPoolName = Input.ofNullable(hostPoolName);
             return this;
         }
 
-        public Builder setHostPoolType(Input<Either<String,HostPoolType>> hostPoolType) {
+        public Builder hostPoolType(Input<Either<String,HostPoolType>> hostPoolType) {
             this.hostPoolType = Objects.requireNonNull(hostPoolType);
             return this;
         }
 
-        public Builder setHostPoolType(Either<String,HostPoolType> hostPoolType) {
+        public Builder hostPoolType(Either<String,HostPoolType> hostPoolType) {
             this.hostPoolType = Input.of(Objects.requireNonNull(hostPoolType));
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLoadBalancerType(Input<Either<String,LoadBalancerType>> loadBalancerType) {
+        public Builder loadBalancerType(Input<Either<String,LoadBalancerType>> loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
 
-        public Builder setLoadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
+        public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
             this.loadBalancerType = Input.of(Objects.requireNonNull(loadBalancerType));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setMaxSessionLimit(@Nullable Input<Integer> maxSessionLimit) {
+        public Builder maxSessionLimit(@Nullable Input<Integer> maxSessionLimit) {
             this.maxSessionLimit = maxSessionLimit;
             return this;
         }
 
-        public Builder setMaxSessionLimit(@Nullable Integer maxSessionLimit) {
+        public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
             this.maxSessionLimit = Input.ofNullable(maxSessionLimit);
             return this;
         }
 
-        public Builder setMigrationRequest(@Nullable Input<MigrationRequestPropertiesArgs> migrationRequest) {
+        public Builder migrationRequest(@Nullable Input<MigrationRequestPropertiesArgs> migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
 
-        public Builder setMigrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
+        public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
             this.migrationRequest = Input.ofNullable(migrationRequest);
             return this;
         }
 
-        public Builder setPersonalDesktopAssignmentType(@Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
+        public Builder personalDesktopAssignmentType(@Nullable Input<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
 
-        public Builder setPersonalDesktopAssignmentType(@Nullable Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
+        public Builder personalDesktopAssignmentType(@Nullable Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = Input.ofNullable(personalDesktopAssignmentType);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
+        public Builder plan(@Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
+        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setPreferredAppGroupType(Input<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
+        public Builder preferredAppGroupType(Input<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
             this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
             return this;
         }
 
-        public Builder setPreferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
+        public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
             this.preferredAppGroupType = Input.of(Objects.requireNonNull(preferredAppGroupType));
             return this;
         }
 
-        public Builder setRegistrationInfo(@Nullable Input<RegistrationInfoArgs> registrationInfo) {
+        public Builder registrationInfo(@Nullable Input<RegistrationInfoArgs> registrationInfo) {
             this.registrationInfo = registrationInfo;
             return this;
         }
 
-        public Builder setRegistrationInfo(@Nullable RegistrationInfoArgs registrationInfo) {
+        public Builder registrationInfo(@Nullable RegistrationInfoArgs registrationInfo) {
             this.registrationInfo = Input.ofNullable(registrationInfo);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRing(@Nullable Input<Integer> ring) {
+        public Builder ring(@Nullable Input<Integer> ring) {
             this.ring = ring;
             return this;
         }
 
-        public Builder setRing(@Nullable Integer ring) {
+        public Builder ring(@Nullable Integer ring) {
             this.ring = Input.ofNullable(ring);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
+        public Builder sku(@Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
+        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSsoClientId(@Nullable Input<String> ssoClientId) {
+        public Builder ssoClientId(@Nullable Input<String> ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
 
-        public Builder setSsoClientId(@Nullable String ssoClientId) {
+        public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = Input.ofNullable(ssoClientId);
             return this;
         }
 
-        public Builder setSsoClientSecretKeyVaultPath(@Nullable Input<String> ssoClientSecretKeyVaultPath) {
+        public Builder ssoClientSecretKeyVaultPath(@Nullable Input<String> ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
 
-        public Builder setSsoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
+        public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = Input.ofNullable(ssoClientSecretKeyVaultPath);
             return this;
         }
 
-        public Builder setSsoSecretType(@Nullable Input<Either<String,SSOSecretType>> ssoSecretType) {
+        public Builder ssoSecretType(@Nullable Input<Either<String,SSOSecretType>> ssoSecretType) {
             this.ssoSecretType = ssoSecretType;
             return this;
         }
 
-        public Builder setSsoSecretType(@Nullable Either<String,SSOSecretType> ssoSecretType) {
+        public Builder ssoSecretType(@Nullable Either<String,SSOSecretType> ssoSecretType) {
             this.ssoSecretType = Input.ofNullable(ssoSecretType);
             return this;
         }
 
-        public Builder setSsoadfsAuthority(@Nullable Input<String> ssoadfsAuthority) {
+        public Builder ssoadfsAuthority(@Nullable Input<String> ssoadfsAuthority) {
             this.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
 
-        public Builder setSsoadfsAuthority(@Nullable String ssoadfsAuthority) {
+        public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
             this.ssoadfsAuthority = Input.ofNullable(ssoadfsAuthority);
             return this;
         }
 
-        public Builder setStartVMOnConnect(@Nullable Input<Boolean> startVMOnConnect) {
+        public Builder startVMOnConnect(@Nullable Input<Boolean> startVMOnConnect) {
             this.startVMOnConnect = startVMOnConnect;
             return this;
         }
 
-        public Builder setStartVMOnConnect(@Nullable Boolean startVMOnConnect) {
+        public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
             this.startVMOnConnect = Input.ofNullable(startVMOnConnect);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidationEnvironment(@Nullable Input<Boolean> validationEnvironment) {
+        public Builder validationEnvironment(@Nullable Input<Boolean> validationEnvironment) {
             this.validationEnvironment = validationEnvironment;
             return this;
         }
 
-        public Builder setValidationEnvironment(@Nullable Boolean validationEnvironment) {
+        public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
             this.validationEnvironment = Input.ofNullable(validationEnvironment);
             return this;
         }
 
-        public Builder setVmTemplate(@Nullable Input<String> vmTemplate) {
+        public Builder vmTemplate(@Nullable Input<String> vmTemplate) {
             this.vmTemplate = vmTemplate;
             return this;
         }
 
-        public Builder setVmTemplate(@Nullable String vmTemplate) {
+        public Builder vmTemplate(@Nullable String vmTemplate) {
             this.vmTemplate = Input.ofNullable(vmTemplate);
             return this;
         }

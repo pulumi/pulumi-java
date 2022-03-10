@@ -98,22 +98,22 @@ public final class HttpQueryParameterMatchResponse {
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setExactMatch(String exactMatch) {
+        public Builder exactMatch(String exactMatch) {
             this.exactMatch = Objects.requireNonNull(exactMatch);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPresentMatch(Boolean presentMatch) {
+        public Builder presentMatch(Boolean presentMatch) {
             this.presentMatch = Objects.requireNonNull(presentMatch);
             return this;
         }
 
-        public Builder setRegexMatch(String regexMatch) {
+        public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }

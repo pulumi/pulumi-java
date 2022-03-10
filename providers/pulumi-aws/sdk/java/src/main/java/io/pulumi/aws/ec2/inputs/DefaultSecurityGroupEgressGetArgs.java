@@ -185,92 +185,92 @@ public final class DefaultSecurityGroupEgressGetArgs extends io.pulumi.resources
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrBlocks(@Nullable Input<List<String>> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable Input<List<String>> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setCidrBlocks(@Nullable List<String> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = Input.ofNullable(cidrBlocks);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable Input<List<String>> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable Input<List<String>> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Input.ofNullable(ipv6CidrBlocks);
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable Input<List<String>> prefixListIds) {
+        public Builder prefixListIds(@Nullable Input<List<String>> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable List<String> prefixListIds) {
+        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = Input.ofNullable(prefixListIds);
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSelf(@Nullable Input<Boolean> self) {
+        public Builder self(@Nullable Input<Boolean> self) {
             this.self = self;
             return this;
         }
 
-        public Builder setSelf(@Nullable Boolean self) {
+        public Builder self(@Nullable Boolean self) {
             this.self = Input.ofNullable(self);
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }

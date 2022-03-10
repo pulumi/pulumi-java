@@ -55,7 +55,7 @@ public final class FirstQualityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.bitrate = defaults.bitrate;
         }
 
-        public Builder setBitrate(Integer bitrate) {
+        public Builder bitrate(Integer bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }

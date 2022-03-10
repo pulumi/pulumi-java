@@ -63,22 +63,22 @@ public final class OriginRequestPolicyHeadersConfigGetArgs extends io.pulumi.res
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(@Nullable Input<String> headerBehavior) {
+        public Builder headerBehavior(@Nullable Input<String> headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
-        public Builder setHeaderBehavior(@Nullable String headerBehavior) {
+        public Builder headerBehavior(@Nullable String headerBehavior) {
             this.headerBehavior = Input.ofNullable(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
+        public Builder headers(@Nullable Input<OriginRequestPolicyHeadersConfigHeadersGetArgs> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable OriginRequestPolicyHeadersConfigHeadersGetArgs headers) {
+        public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeadersGetArgs headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }

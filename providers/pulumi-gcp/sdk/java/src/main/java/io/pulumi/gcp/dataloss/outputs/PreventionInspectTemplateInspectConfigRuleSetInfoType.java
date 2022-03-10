@@ -50,7 +50,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ListDeviceFailoverTarsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<FailoverTargetResponse> value) {
+        public Builder value(@Nullable List<FailoverTargetResponse> value) {
             this.value = value;
             return this;
         }

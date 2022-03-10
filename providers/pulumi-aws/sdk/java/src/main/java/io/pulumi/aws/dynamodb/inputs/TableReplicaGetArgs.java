@@ -71,22 +71,22 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setRegionName(Input<String> regionName) {
+        public Builder regionName(Input<String> regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
 
-        public Builder setRegionName(String regionName) {
+        public Builder regionName(String regionName) {
             this.regionName = Input.of(Objects.requireNonNull(regionName));
             return this;
         }

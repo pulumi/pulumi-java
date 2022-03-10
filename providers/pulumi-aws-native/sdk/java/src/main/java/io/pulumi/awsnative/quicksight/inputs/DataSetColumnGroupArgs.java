@@ -55,12 +55,12 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
         }
 
-        public Builder setGeoSpatialColumnGroup(@Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
+        public Builder geoSpatialColumnGroup(@Nullable Input<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup) {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
 
-        public Builder setGeoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
+        public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroupArgs geoSpatialColumnGroup) {
             this.geoSpatialColumnGroup = Input.ofNullable(geoSpatialColumnGroup);
             return this;
         }

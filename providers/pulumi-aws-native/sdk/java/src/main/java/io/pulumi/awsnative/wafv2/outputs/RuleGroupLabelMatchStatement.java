@@ -50,12 +50,12 @@ public final class RuleGroupLabelMatchStatement {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setScope(RuleGroupLabelMatchScope scope) {
+        public Builder scope(RuleGroupLabelMatchScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

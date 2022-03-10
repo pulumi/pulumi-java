@@ -57,12 +57,12 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setStatistic(@Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic) {
+        public Builder statistic(@Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic) {
             this.statistic = statistic;
             return this;
         }
 
-        public Builder setStatistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
+        public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
             this.statistic = Input.ofNullable(statistic);
             return this;
         }

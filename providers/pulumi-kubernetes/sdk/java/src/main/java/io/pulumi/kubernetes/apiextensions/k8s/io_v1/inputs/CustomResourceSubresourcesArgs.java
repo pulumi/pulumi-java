@@ -75,22 +75,22 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     	      this.status = defaults.status;
         }
 
-        public Builder setScale(@Nullable Input<CustomResourceSubresourceScaleArgs> scale) {
+        public Builder scale(@Nullable Input<CustomResourceSubresourceScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable CustomResourceSubresourceScaleArgs scale) {
+        public Builder scale(@Nullable CustomResourceSubresourceScaleArgs scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<JsonElement> status) {
+        public Builder status(@Nullable Input<JsonElement> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable JsonElement status) {
+        public Builder status(@Nullable JsonElement status) {
             this.status = Input.ofNullable(status);
             return this;
         }

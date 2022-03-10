@@ -73,12 +73,12 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends io.pul
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setSampler(String sampler) {
+        public Builder sampler(String sampler) {
             this.sampler = Objects.requireNonNull(sampler);
             return this;
         }
 
-        public Builder setSamplingRate(Double samplingRate) {
+        public Builder samplingRate(Double samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }

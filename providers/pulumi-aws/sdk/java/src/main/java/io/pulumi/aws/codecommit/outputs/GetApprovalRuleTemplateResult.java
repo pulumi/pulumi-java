@@ -169,47 +169,47 @@ public final class GetApprovalRuleTemplateResult {
     	      this.ruleContentSha256 = defaults.ruleContentSha256;
         }
 
-        public Builder setApprovalRuleTemplateId(String approvalRuleTemplateId) {
+        public Builder approvalRuleTemplateId(String approvalRuleTemplateId) {
             this.approvalRuleTemplateId = Objects.requireNonNull(approvalRuleTemplateId);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedDate(String lastModifiedDate) {
+        public Builder lastModifiedDate(String lastModifiedDate) {
             this.lastModifiedDate = Objects.requireNonNull(lastModifiedDate);
             return this;
         }
 
-        public Builder setLastModifiedUser(String lastModifiedUser) {
+        public Builder lastModifiedUser(String lastModifiedUser) {
             this.lastModifiedUser = Objects.requireNonNull(lastModifiedUser);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRuleContentSha256(String ruleContentSha256) {
+        public Builder ruleContentSha256(String ruleContentSha256) {
             this.ruleContentSha256 = Objects.requireNonNull(ruleContentSha256);
             return this;
         }

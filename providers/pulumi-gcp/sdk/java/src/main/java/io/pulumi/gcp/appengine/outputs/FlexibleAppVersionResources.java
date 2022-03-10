@@ -104,22 +104,22 @@ public final class FlexibleAppVersionResources {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Integer diskGb) {
+        public Builder diskGb(@Nullable Integer diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
+        public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
             this.volumes = volumes;
             return this;
         }

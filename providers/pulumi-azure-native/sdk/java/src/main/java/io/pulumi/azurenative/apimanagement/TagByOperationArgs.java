@@ -118,52 +118,52 @@ public final class TagByOperationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagId = defaults.tagId;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setOperationId(Input<String> operationId) {
+        public Builder operationId(Input<String> operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
 
-        public Builder setOperationId(String operationId) {
+        public Builder operationId(String operationId) {
             this.operationId = Input.of(Objects.requireNonNull(operationId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTagId(@Nullable Input<String> tagId) {
+        public Builder tagId(@Nullable Input<String> tagId) {
             this.tagId = tagId;
             return this;
         }
 
-        public Builder setTagId(@Nullable String tagId) {
+        public Builder tagId(@Nullable String tagId) {
             this.tagId = Input.ofNullable(tagId);
             return this;
         }

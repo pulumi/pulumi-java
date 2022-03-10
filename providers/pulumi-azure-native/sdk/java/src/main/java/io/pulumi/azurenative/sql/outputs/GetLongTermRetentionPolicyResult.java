@@ -148,37 +148,37 @@ public final class GetLongTermRetentionPolicyResult {
     	      this.yearlyRetention = defaults.yearlyRetention;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMonthlyRetention(@Nullable String monthlyRetention) {
+        public Builder monthlyRetention(@Nullable String monthlyRetention) {
             this.monthlyRetention = monthlyRetention;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWeekOfYear(@Nullable Integer weekOfYear) {
+        public Builder weekOfYear(@Nullable Integer weekOfYear) {
             this.weekOfYear = weekOfYear;
             return this;
         }
 
-        public Builder setWeeklyRetention(@Nullable String weeklyRetention) {
+        public Builder weeklyRetention(@Nullable String weeklyRetention) {
             this.weeklyRetention = weeklyRetention;
             return this;
         }
 
-        public Builder setYearlyRetention(@Nullable String yearlyRetention) {
+        public Builder yearlyRetention(@Nullable String yearlyRetention) {
             this.yearlyRetention = yearlyRetention;
             return this;
         }

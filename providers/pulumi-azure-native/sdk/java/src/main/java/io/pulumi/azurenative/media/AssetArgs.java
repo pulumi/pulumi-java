@@ -150,72 +150,72 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAlternateId(@Nullable Input<String> alternateId) {
+        public Builder alternateId(@Nullable Input<String> alternateId) {
             this.alternateId = alternateId;
             return this;
         }
 
-        public Builder setAlternateId(@Nullable String alternateId) {
+        public Builder alternateId(@Nullable String alternateId) {
             this.alternateId = Input.ofNullable(alternateId);
             return this;
         }
 
-        public Builder setAssetName(@Nullable Input<String> assetName) {
+        public Builder assetName(@Nullable Input<String> assetName) {
             this.assetName = assetName;
             return this;
         }
 
-        public Builder setAssetName(@Nullable String assetName) {
+        public Builder assetName(@Nullable String assetName) {
             this.assetName = Input.ofNullable(assetName);
             return this;
         }
 
-        public Builder setContainer(@Nullable Input<String> container) {
+        public Builder container(@Nullable Input<String> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }

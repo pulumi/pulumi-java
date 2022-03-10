@@ -115,22 +115,22 @@ public final class ManagedZoneDnssecConfig {
     	      this.state = defaults.state;
         }
 
-        public Builder setDefaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs) {
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setNonExistence(@Nullable String nonExistence) {
+        public Builder nonExistence(@Nullable String nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

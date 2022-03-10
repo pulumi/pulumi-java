@@ -52,12 +52,12 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualServiceGetArgs e
     	      this.virtualServiceName = defaults.virtualServiceName;
         }
 
-        public Builder setVirtualServiceName(Input<String> virtualServiceName) {
+        public Builder virtualServiceName(Input<String> virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }
 
-        public Builder setVirtualServiceName(String virtualServiceName) {
+        public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Input.of(Objects.requireNonNull(virtualServiceName));
             return this;
         }

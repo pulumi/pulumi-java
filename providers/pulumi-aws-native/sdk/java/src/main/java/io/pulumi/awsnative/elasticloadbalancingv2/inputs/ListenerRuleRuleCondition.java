@@ -141,42 +141,42 @@ public final class ListenerRuleRuleCondition extends io.pulumi.resources.InvokeA
     	      this.values = defaults.values;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setHostHeaderConfig(@Nullable ListenerRuleHostHeaderConfig hostHeaderConfig) {
+        public Builder hostHeaderConfig(@Nullable ListenerRuleHostHeaderConfig hostHeaderConfig) {
             this.hostHeaderConfig = hostHeaderConfig;
             return this;
         }
 
-        public Builder setHttpHeaderConfig(@Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig) {
+        public Builder httpHeaderConfig(@Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig) {
             this.httpHeaderConfig = httpHeaderConfig;
             return this;
         }
 
-        public Builder setHttpRequestMethodConfig(@Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig) {
+        public Builder httpRequestMethodConfig(@Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig) {
             this.httpRequestMethodConfig = httpRequestMethodConfig;
             return this;
         }
 
-        public Builder setPathPatternConfig(@Nullable ListenerRulePathPatternConfig pathPatternConfig) {
+        public Builder pathPatternConfig(@Nullable ListenerRulePathPatternConfig pathPatternConfig) {
             this.pathPatternConfig = pathPatternConfig;
             return this;
         }
 
-        public Builder setQueryStringConfig(@Nullable ListenerRuleQueryStringConfig queryStringConfig) {
+        public Builder queryStringConfig(@Nullable ListenerRuleQueryStringConfig queryStringConfig) {
             this.queryStringConfig = queryStringConfig;
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable ListenerRuleSourceIpConfig sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable ListenerRuleSourceIpConfig sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

@@ -84,17 +84,17 @@ public final class PortworxVolumeSource {
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeID(String volumeID) {
+        public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }

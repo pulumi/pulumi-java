@@ -53,12 +53,12 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesArgs 
     	      this.propertyGroups = defaults.propertyGroups;
         }
 
-        public Builder setPropertyGroups(Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups) {
+        public Builder propertyGroups(Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups) {
             this.propertyGroups = Objects.requireNonNull(propertyGroups);
             return this;
         }
 
-        public Builder setPropertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs> propertyGroups) {
+        public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs> propertyGroups) {
             this.propertyGroups = Input.of(Objects.requireNonNull(propertyGroups));
             return this;
         }

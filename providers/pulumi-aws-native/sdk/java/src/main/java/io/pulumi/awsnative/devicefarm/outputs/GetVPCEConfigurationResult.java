@@ -85,32 +85,32 @@ public final class GetVPCEConfigurationResult {
     	      this.vpceServiceName = defaults.vpceServiceName;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setServiceDnsName(@Nullable String serviceDnsName) {
+        public Builder serviceDnsName(@Nullable String serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VPCEConfigurationTag> tags) {
+        public Builder tags(@Nullable List<VPCEConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
+        public Builder vpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
             this.vpceConfigurationDescription = vpceConfigurationDescription;
             return this;
         }
 
-        public Builder setVpceConfigurationName(@Nullable String vpceConfigurationName) {
+        public Builder vpceConfigurationName(@Nullable String vpceConfigurationName) {
             this.vpceConfigurationName = vpceConfigurationName;
             return this;
         }
 
-        public Builder setVpceServiceName(@Nullable String vpceServiceName) {
+        public Builder vpceServiceName(@Nullable String vpceServiceName) {
             this.vpceServiceName = vpceServiceName;
             return this;
         }

@@ -193,82 +193,82 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder setActions(Input<List<Object>> actions) {
+        public Builder actions(Input<List<Object>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<Object> actions) {
+        public Builder actions(List<Object> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<Object>> conditions) {
+        public Builder conditions(@Nullable Input<List<Object>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<Object> conditions) {
+        public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             this.matchProcessingBehavior = Input.ofNullable(matchProcessingBehavior);
             return this;
         }
 
-        public Builder setOrder(Input<Integer> order) {
+        public Builder order(Input<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Input.of(Objects.requireNonNull(order));
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setRuleSetName(Input<String> ruleSetName) {
+        public Builder ruleSetName(Input<String> ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
 
-        public Builder setRuleSetName(String ruleSetName) {
+        public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Input.of(Objects.requireNonNull(ruleSetName));
             return this;
         }

@@ -99,22 +99,22 @@ public final class GetIndexResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setFields(List<GoogleFirestoreAdminV1IndexFieldResponse> fields) {
+        public Builder fields(List<GoogleFirestoreAdminV1IndexFieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueryScope(String queryScope) {
+        public Builder queryScope(String queryScope) {
             this.queryScope = Objects.requireNonNull(queryScope);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

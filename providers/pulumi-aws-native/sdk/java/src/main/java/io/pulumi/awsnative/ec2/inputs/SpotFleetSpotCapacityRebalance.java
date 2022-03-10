@@ -63,12 +63,12 @@ public final class SpotFleetSpotCapacityRebalance extends io.pulumi.resources.In
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder setReplacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
+        public Builder replacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
-        public Builder setTerminationDelay(@Nullable Integer terminationDelay) {
+        public Builder terminationDelay(@Nullable Integer terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }

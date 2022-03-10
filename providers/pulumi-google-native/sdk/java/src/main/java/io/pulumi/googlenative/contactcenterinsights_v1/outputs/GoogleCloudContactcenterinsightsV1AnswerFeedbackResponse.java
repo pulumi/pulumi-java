@@ -82,17 +82,17 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     	      this.displayed = defaults.displayed;
         }
 
-        public Builder setClicked(Boolean clicked) {
+        public Builder clicked(Boolean clicked) {
             this.clicked = Objects.requireNonNull(clicked);
             return this;
         }
 
-        public Builder setCorrectnessLevel(String correctnessLevel) {
+        public Builder correctnessLevel(String correctnessLevel) {
             this.correctnessLevel = Objects.requireNonNull(correctnessLevel);
             return this;
         }
 
-        public Builder setDisplayed(Boolean displayed) {
+        public Builder displayed(Boolean displayed) {
             this.displayed = Objects.requireNonNull(displayed);
             return this;
         }

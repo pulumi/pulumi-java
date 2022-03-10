@@ -130,62 +130,62 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCurrentRevisionId(@Nullable Input<String> currentRevisionId) {
+        public Builder currentRevisionId(@Nullable Input<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
-        public Builder setCurrentRevisionId(@Nullable String currentRevisionId) {
+        public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = Input.ofNullable(currentRevisionId);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(Input<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
             this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite);
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(RobotApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(RobotApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
             this.robotSoftwareSuite = Input.of(Objects.requireNonNull(robotSoftwareSuite));
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<RobotApplicationSourceConfigArgs>> sources) {
+        public Builder sources(@Nullable Input<List<RobotApplicationSourceConfigArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<RobotApplicationSourceConfigArgs> sources) {
+        public Builder sources(@Nullable List<RobotApplicationSourceConfigArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<RobotApplicationTagsArgs> tags) {
+        public Builder tags(@Nullable Input<RobotApplicationTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable RobotApplicationTagsArgs tags) {
+        public Builder tags(@Nullable RobotApplicationTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -545,157 +545,157 @@ public final class GetVirtualMachineResult {
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setCustomResourceName(String customResourceName) {
+        public Builder customResourceName(String customResourceName) {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setFirmwareType(@Nullable String firmwareType) {
+        public Builder firmwareType(@Nullable String firmwareType) {
             this.firmwareType = firmwareType;
             return this;
         }
 
-        public Builder setFolderPath(String folderPath) {
+        public Builder folderPath(String folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
 
-        public Builder setGuestAgentProfile(@Nullable GuestAgentProfileResponse guestAgentProfile) {
+        public Builder guestAgentProfile(@Nullable GuestAgentProfileResponse guestAgentProfile) {
             this.guestAgentProfile = guestAgentProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInstanceUuid(String instanceUuid) {
+        public Builder instanceUuid(String instanceUuid) {
             this.instanceUuid = Objects.requireNonNull(instanceUuid);
             return this;
         }
 
-        public Builder setInventoryItemId(@Nullable String inventoryItemId) {
+        public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMoName(String moName) {
+        public Builder moName(String moName) {
             this.moName = Objects.requireNonNull(moName);
             return this;
         }
 
-        public Builder setMoRefId(@Nullable String moRefId) {
+        public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OsProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPlacementProfile(@Nullable PlacementProfileResponse placementProfile) {
+        public Builder placementProfile(@Nullable PlacementProfileResponse placementProfile) {
             this.placementProfile = placementProfile;
             return this;
         }
 
-        public Builder setPowerState(String powerState) {
+        public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable String resourcePoolId) {
+        public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
 
-        public Builder setSmbiosUuid(@Nullable String smbiosUuid) {
+        public Builder smbiosUuid(@Nullable String smbiosUuid) {
             this.smbiosUuid = smbiosUuid;
             return this;
         }
 
-        public Builder setStatuses(List<ResourceStatusResponse> statuses) {
+        public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
 
-        public Builder setVCenterId(@Nullable String vCenterId) {
+        public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }

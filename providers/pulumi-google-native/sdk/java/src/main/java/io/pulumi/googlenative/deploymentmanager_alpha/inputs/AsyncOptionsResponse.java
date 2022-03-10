@@ -73,12 +73,12 @@ public final class AsyncOptionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pollingOptions = defaults.pollingOptions;
         }
 
-        public Builder setMethodMatch(String methodMatch) {
+        public Builder methodMatch(String methodMatch) {
             this.methodMatch = Objects.requireNonNull(methodMatch);
             return this;
         }
 
-        public Builder setPollingOptions(PollingOptionsResponse pollingOptions) {
+        public Builder pollingOptions(PollingOptionsResponse pollingOptions) {
             this.pollingOptions = Objects.requireNonNull(pollingOptions);
             return this;
         }

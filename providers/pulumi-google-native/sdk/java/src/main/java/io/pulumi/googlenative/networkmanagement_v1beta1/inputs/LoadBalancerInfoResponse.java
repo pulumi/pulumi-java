@@ -122,27 +122,27 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setBackendType(String backendType) {
+        public Builder backendType(String backendType) {
             this.backendType = Objects.requireNonNull(backendType);
             return this;
         }
 
-        public Builder setBackendUri(String backendUri) {
+        public Builder backendUri(String backendUri) {
             this.backendUri = Objects.requireNonNull(backendUri);
             return this;
         }
 
-        public Builder setBackends(List<LoadBalancerBackendResponse> backends) {
+        public Builder backends(List<LoadBalancerBackendResponse> backends) {
             this.backends = Objects.requireNonNull(backends);
             return this;
         }
 
-        public Builder setHealthCheckUri(String healthCheckUri) {
+        public Builder healthCheckUri(String healthCheckUri) {
             this.healthCheckUri = Objects.requireNonNull(healthCheckUri);
             return this;
         }
 
-        public Builder setLoadBalancerType(String loadBalancerType) {
+        public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }

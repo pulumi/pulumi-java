@@ -61,12 +61,12 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
     	      this.loginMode = defaults.loginMode;
         }
 
-        public Builder setLoginMode(@Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode) {
+        public Builder loginMode(@Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode) {
             this.loginMode = loginMode;
             return this;
         }
 
-        public Builder setLoginMode(@Nullable Either<String,SourceRegistryLoginMode> loginMode) {
+        public Builder loginMode(@Nullable Either<String,SourceRegistryLoginMode> loginMode) {
             this.loginMode = Input.ofNullable(loginMode);
             return this;
         }

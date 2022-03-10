@@ -76,32 +76,32 @@ public final class RuleGroupRulesSourceListArgs extends io.pulumi.resources.Reso
     	      this.targets = defaults.targets;
         }
 
-        public Builder setGeneratedRulesType(Input<RuleGroupGeneratedRulesType> generatedRulesType) {
+        public Builder generatedRulesType(Input<RuleGroupGeneratedRulesType> generatedRulesType) {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
 
-        public Builder setGeneratedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
+        public Builder generatedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
             this.generatedRulesType = Input.of(Objects.requireNonNull(generatedRulesType));
             return this;
         }
 
-        public Builder setTargetTypes(Input<List<RuleGroupTargetType>> targetTypes) {
+        public Builder targetTypes(Input<List<RuleGroupTargetType>> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
 
-        public Builder setTargetTypes(List<RuleGroupTargetType> targetTypes) {
+        public Builder targetTypes(List<RuleGroupTargetType> targetTypes) {
             this.targetTypes = Input.of(Objects.requireNonNull(targetTypes));
             return this;
         }
 
-        public Builder setTargets(Input<List<String>> targets) {
+        public Builder targets(Input<List<String>> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
-        public Builder setTargets(List<String> targets) {
+        public Builder targets(List<String> targets) {
             this.targets = Input.of(Objects.requireNonNull(targets));
             return this;
         }

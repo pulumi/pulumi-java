@@ -178,82 +178,82 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
     	      this.waitOnCompletion = defaults.waitOnCompletion;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPipeline(Input<PipelineReferenceArgs> pipeline) {
+        public Builder pipeline(Input<PipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setPipeline(PipelineReferenceArgs pipeline) {
+        public Builder pipeline(PipelineReferenceArgs pipeline) {
             this.pipeline = Input.of(Objects.requireNonNull(pipeline));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
 
-        public Builder setWaitOnCompletion(@Nullable Input<Boolean> waitOnCompletion) {
+        public Builder waitOnCompletion(@Nullable Input<Boolean> waitOnCompletion) {
             this.waitOnCompletion = waitOnCompletion;
             return this;
         }
 
-        public Builder setWaitOnCompletion(@Nullable Boolean waitOnCompletion) {
+        public Builder waitOnCompletion(@Nullable Boolean waitOnCompletion) {
             this.waitOnCompletion = Input.ofNullable(waitOnCompletion);
             return this;
         }

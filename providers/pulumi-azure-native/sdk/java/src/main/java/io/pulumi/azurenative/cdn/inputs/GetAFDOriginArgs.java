@@ -100,22 +100,22 @@ public final class GetAFDOriginArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setOriginGroupName(String originGroupName) {
+        public Builder originGroupName(String originGroupName) {
             this.originGroupName = Objects.requireNonNull(originGroupName);
             return this;
         }
 
-        public Builder setOriginName(String originName) {
+        public Builder originName(String originName) {
             this.originName = Objects.requireNonNull(originName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

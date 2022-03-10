@@ -50,12 +50,12 @@ public final class DatasetRetentionPeriod {
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder setNumberOfDays(Integer numberOfDays) {
+        public Builder numberOfDays(Integer numberOfDays) {
             this.numberOfDays = Objects.requireNonNull(numberOfDays);
             return this;
         }
 
-        public Builder setUnlimited(Boolean unlimited) {
+        public Builder unlimited(Boolean unlimited) {
             this.unlimited = Objects.requireNonNull(unlimited);
             return this;
         }

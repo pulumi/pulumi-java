@@ -66,12 +66,12 @@ public final class OSPolicyAssignmentRolloutResponse {
     	      this.minWaitDuration = defaults.minWaitDuration;
         }
 
-        public Builder setDisruptionBudget(FixedOrPercentResponse disruptionBudget) {
+        public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
-        public Builder setMinWaitDuration(String minWaitDuration) {
+        public Builder minWaitDuration(String minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }

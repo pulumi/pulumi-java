@@ -150,37 +150,37 @@ public final class P2SConnectionConfigurationResponse {
     	      this.vpnClientAddressPool = defaults.vpnClientAddressPool;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
-        public Builder setVpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
+        public Builder vpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }

@@ -116,27 +116,27 @@ public final class ApiDeploymentParameterMetadataResponse {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = visibility;
             return this;
         }

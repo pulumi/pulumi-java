@@ -101,22 +101,22 @@ public final class GetACLResult {
     	      this.userNames = defaults.userNames;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ACLTag> tags) {
+        public Builder tags(@Nullable List<ACLTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserNames(@Nullable List<String> userNames) {
+        public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = userNames;
             return this;
         }

@@ -74,22 +74,22 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setPublicKeyId(@Nullable Input<String> publicKeyId) {
+        public Builder publicKeyId(@Nullable Input<String> publicKeyId) {
             this.publicKeyId = publicKeyId;
             return this;
         }
 
-        public Builder setPublicKeyId(@Nullable String publicKeyId) {
+        public Builder publicKeyId(@Nullable String publicKeyId) {
             this.publicKeyId = Input.ofNullable(publicKeyId);
             return this;
         }
 
-        public Builder setSignature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Input<String> signature) {
             this.signature = signature;
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = Input.ofNullable(signature);
             return this;
         }

@@ -110,42 +110,42 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.routes = defaults.routes;
         }
 
-        public Builder setEndpoints(@Nullable Input<RoutingEndpointsArgs> endpoints) {
+        public Builder endpoints(@Nullable Input<RoutingEndpointsArgs> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable RoutingEndpointsArgs endpoints) {
+        public Builder endpoints(@Nullable RoutingEndpointsArgs endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setEnrichments(@Nullable Input<List<EnrichmentPropertiesArgs>> enrichments) {
+        public Builder enrichments(@Nullable Input<List<EnrichmentPropertiesArgs>> enrichments) {
             this.enrichments = enrichments;
             return this;
         }
 
-        public Builder setEnrichments(@Nullable List<EnrichmentPropertiesArgs> enrichments) {
+        public Builder enrichments(@Nullable List<EnrichmentPropertiesArgs> enrichments) {
             this.enrichments = Input.ofNullable(enrichments);
             return this;
         }
 
-        public Builder setFallbackRoute(@Nullable Input<FallbackRoutePropertiesArgs> fallbackRoute) {
+        public Builder fallbackRoute(@Nullable Input<FallbackRoutePropertiesArgs> fallbackRoute) {
             this.fallbackRoute = fallbackRoute;
             return this;
         }
 
-        public Builder setFallbackRoute(@Nullable FallbackRoutePropertiesArgs fallbackRoute) {
+        public Builder fallbackRoute(@Nullable FallbackRoutePropertiesArgs fallbackRoute) {
             this.fallbackRoute = Input.ofNullable(fallbackRoute);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<RoutePropertiesArgs>> routes) {
+        public Builder routes(@Nullable Input<List<RoutePropertiesArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<RoutePropertiesArgs> routes) {
+        public Builder routes(@Nullable List<RoutePropertiesArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }

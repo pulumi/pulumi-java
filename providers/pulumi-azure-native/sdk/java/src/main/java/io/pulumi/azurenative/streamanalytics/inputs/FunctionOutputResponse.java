@@ -57,7 +57,7 @@ public final class FunctionOutputResponse extends io.pulumi.resources.InvokeArgs
     	      this.dataType = defaults.dataType;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }

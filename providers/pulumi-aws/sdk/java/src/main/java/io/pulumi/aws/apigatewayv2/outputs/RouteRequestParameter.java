@@ -66,12 +66,12 @@ public final class RouteRequestParameter {
     	      this.required = defaults.required;
         }
 
-        public Builder setRequestParameterKey(String requestParameterKey) {
+        public Builder requestParameterKey(String requestParameterKey) {
             this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
             return this;
         }
 
-        public Builder setRequired(Boolean required) {
+        public Builder required(Boolean required) {
             this.required = Objects.requireNonNull(required);
             return this;
         }

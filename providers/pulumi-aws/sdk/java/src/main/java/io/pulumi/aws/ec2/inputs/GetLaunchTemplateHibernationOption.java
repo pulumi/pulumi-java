@@ -47,7 +47,7 @@ public final class GetLaunchTemplateHibernationOption extends io.pulumi.resource
     	      this.configured = defaults.configured;
         }
 
-        public Builder setConfigured(Boolean configured) {
+        public Builder configured(Boolean configured) {
             this.configured = Objects.requireNonNull(configured);
             return this;
         }

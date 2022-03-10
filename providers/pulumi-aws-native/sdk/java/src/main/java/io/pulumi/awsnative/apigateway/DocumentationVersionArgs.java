@@ -86,32 +86,32 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationVersion(Input<String> documentationVersion) {
+        public Builder documentationVersion(Input<String> documentationVersion) {
             this.documentationVersion = Objects.requireNonNull(documentationVersion);
             return this;
         }
 
-        public Builder setDocumentationVersion(String documentationVersion) {
+        public Builder documentationVersion(String documentationVersion) {
             this.documentationVersion = Input.of(Objects.requireNonNull(documentationVersion));
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }

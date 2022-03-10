@@ -131,32 +131,32 @@ public final class ApiResourceGeneralInformationResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIconUrl(@Nullable String iconUrl) {
+        public Builder iconUrl(@Nullable String iconUrl) {
             this.iconUrl = iconUrl;
             return this;
         }
 
-        public Builder setReleaseTag(@Nullable String releaseTag) {
+        public Builder releaseTag(@Nullable String releaseTag) {
             this.releaseTag = releaseTag;
             return this;
         }
 
-        public Builder setTermsOfUseUrl(@Nullable String termsOfUseUrl) {
+        public Builder termsOfUseUrl(@Nullable String termsOfUseUrl) {
             this.termsOfUseUrl = termsOfUseUrl;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

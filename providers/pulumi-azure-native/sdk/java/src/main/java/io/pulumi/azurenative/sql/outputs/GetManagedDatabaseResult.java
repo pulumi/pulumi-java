@@ -228,62 +228,62 @@ public final class GetManagedDatabaseResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCatalogCollation(@Nullable String catalogCollation) {
+        public Builder catalogCollation(@Nullable String catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDefaultSecondaryLocation(String defaultSecondaryLocation) {
+        public Builder defaultSecondaryLocation(String defaultSecondaryLocation) {
             this.defaultSecondaryLocation = Objects.requireNonNull(defaultSecondaryLocation);
             return this;
         }
 
-        public Builder setEarliestRestorePoint(String earliestRestorePoint) {
+        public Builder earliestRestorePoint(String earliestRestorePoint) {
             this.earliestRestorePoint = Objects.requireNonNull(earliestRestorePoint);
             return this;
         }
 
-        public Builder setFailoverGroupId(String failoverGroupId) {
+        public Builder failoverGroupId(String failoverGroupId) {
             this.failoverGroupId = Objects.requireNonNull(failoverGroupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

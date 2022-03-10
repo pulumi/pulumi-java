@@ -200,102 +200,102 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setArchiveWindowLength(Input<String> archiveWindowLength) {
+        public Builder archiveWindowLength(Input<String> archiveWindowLength) {
             this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
             return this;
         }
 
-        public Builder setArchiveWindowLength(String archiveWindowLength) {
+        public Builder archiveWindowLength(String archiveWindowLength) {
             this.archiveWindowLength = Input.of(Objects.requireNonNull(archiveWindowLength));
             return this;
         }
 
-        public Builder setAssetName(Input<String> assetName) {
+        public Builder assetName(Input<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Input.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHls(@Nullable Input<HlsArgs> hls) {
+        public Builder hls(@Nullable Input<HlsArgs> hls) {
             this.hls = hls;
             return this;
         }
 
-        public Builder setHls(@Nullable HlsArgs hls) {
+        public Builder hls(@Nullable HlsArgs hls) {
             this.hls = Input.ofNullable(hls);
             return this;
         }
 
-        public Builder setLiveEventName(Input<String> liveEventName) {
+        public Builder liveEventName(Input<String> liveEventName) {
             this.liveEventName = Objects.requireNonNull(liveEventName);
             return this;
         }
 
-        public Builder setLiveEventName(String liveEventName) {
+        public Builder liveEventName(String liveEventName) {
             this.liveEventName = Input.of(Objects.requireNonNull(liveEventName));
             return this;
         }
 
-        public Builder setLiveOutputName(@Nullable Input<String> liveOutputName) {
+        public Builder liveOutputName(@Nullable Input<String> liveOutputName) {
             this.liveOutputName = liveOutputName;
             return this;
         }
 
-        public Builder setLiveOutputName(@Nullable String liveOutputName) {
+        public Builder liveOutputName(@Nullable String liveOutputName) {
             this.liveOutputName = Input.ofNullable(liveOutputName);
             return this;
         }
 
-        public Builder setManifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Input<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Input.ofNullable(manifestName);
             return this;
         }
 
-        public Builder setOutputSnapTime(@Nullable Input<Double> outputSnapTime) {
+        public Builder outputSnapTime(@Nullable Input<Double> outputSnapTime) {
             this.outputSnapTime = outputSnapTime;
             return this;
         }
 
-        public Builder setOutputSnapTime(@Nullable Double outputSnapTime) {
+        public Builder outputSnapTime(@Nullable Double outputSnapTime) {
             this.outputSnapTime = Input.ofNullable(outputSnapTime);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

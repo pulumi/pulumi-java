@@ -56,7 +56,7 @@ public final class BillingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.consumerDestinations = defaults.consumerDestinations;
         }
 
-        public Builder setConsumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
+        public Builder consumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }

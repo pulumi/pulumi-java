@@ -213,142 +213,142 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setAutoBranchCreationConfig(@Nullable Input<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig) {
+        public Builder autoBranchCreationConfig(@Nullable Input<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig) {
             this.autoBranchCreationConfig = autoBranchCreationConfig;
             return this;
         }
 
-        public Builder setAutoBranchCreationConfig(@Nullable AppAutoBranchCreationConfigArgs autoBranchCreationConfig) {
+        public Builder autoBranchCreationConfig(@Nullable AppAutoBranchCreationConfigArgs autoBranchCreationConfig) {
             this.autoBranchCreationConfig = Input.ofNullable(autoBranchCreationConfig);
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
             this.basicAuthConfig = Input.ofNullable(basicAuthConfig);
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Input<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Input.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable Input<String> customHeaders) {
+        public Builder customHeaders(@Nullable Input<String> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable String customHeaders) {
+        public Builder customHeaders(@Nullable String customHeaders) {
             this.customHeaders = Input.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder setCustomRules(@Nullable Input<List<AppCustomRuleArgs>> customRules) {
+        public Builder customRules(@Nullable Input<List<AppCustomRuleArgs>> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setCustomRules(@Nullable List<AppCustomRuleArgs> customRules) {
+        public Builder customRules(@Nullable List<AppCustomRuleArgs> customRules) {
             this.customRules = Input.ofNullable(customRules);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableBranchAutoDeletion(@Nullable Input<Boolean> enableBranchAutoDeletion) {
+        public Builder enableBranchAutoDeletion(@Nullable Input<Boolean> enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
 
-        public Builder setEnableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
+        public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = Input.ofNullable(enableBranchAutoDeletion);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setIAMServiceRole(@Nullable Input<String> iAMServiceRole) {
+        public Builder iAMServiceRole(@Nullable Input<String> iAMServiceRole) {
             this.iAMServiceRole = iAMServiceRole;
             return this;
         }
 
-        public Builder setIAMServiceRole(@Nullable String iAMServiceRole) {
+        public Builder iAMServiceRole(@Nullable String iAMServiceRole) {
             this.iAMServiceRole = Input.ofNullable(iAMServiceRole);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOauthToken(@Nullable Input<String> oauthToken) {
+        public Builder oauthToken(@Nullable Input<String> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
-        public Builder setOauthToken(@Nullable String oauthToken) {
+        public Builder oauthToken(@Nullable String oauthToken) {
             this.oauthToken = Input.ofNullable(oauthToken);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Input<String> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AppTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AppTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppTagArgs> tags) {
+        public Builder tags(@Nullable List<AppTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -52,12 +52,12 @@ public final class ProjectFeedFeedOutputConfigPubsubDestinationGetArgs extends i
     	      this.topic = defaults.topic;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

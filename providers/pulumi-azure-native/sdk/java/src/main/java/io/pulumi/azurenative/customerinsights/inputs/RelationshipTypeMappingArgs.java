@@ -57,12 +57,12 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder setFieldMappings(Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(Input<List<RelationshipTypeFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }
 
-        public Builder setFieldMappings(List<RelationshipTypeFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(List<RelationshipTypeFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.of(Objects.requireNonNull(fieldMappings));
             return this;
         }

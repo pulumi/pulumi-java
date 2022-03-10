@@ -53,12 +53,12 @@ public final class DeliveryStreamProcessingConfiguration {
     	      this.processors = defaults.processors;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<DeliveryStreamProcessor> processors) {
+        public Builder processors(@Nullable List<DeliveryStreamProcessor> processors) {
             this.processors = processors;
             return this;
         }

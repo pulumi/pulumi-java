@@ -100,22 +100,22 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
     	      this.restartCount = defaults.restartCount;
         }
 
-        public Builder setCurrentState(ContainerStateResponse currentState) {
+        public Builder currentState(ContainerStateResponse currentState) {
             this.currentState = Objects.requireNonNull(currentState);
             return this;
         }
 
-        public Builder setEvents(List<EventResponse> events) {
+        public Builder events(List<EventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setPreviousState(ContainerStateResponse previousState) {
+        public Builder previousState(ContainerStateResponse previousState) {
             this.previousState = Objects.requireNonNull(previousState);
             return this;
         }
 
-        public Builder setRestartCount(Integer restartCount) {
+        public Builder restartCount(Integer restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }

@@ -260,142 +260,142 @@ public final class HostedPrivateVirtualInterfaceState extends io.pulumi.resource
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setAddressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Input<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
-        public Builder setAddressFamily(@Nullable String addressFamily) {
+        public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Input.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable Input<String> amazonAddress) {
+        public Builder amazonAddress(@Nullable Input<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable String amazonAddress) {
+        public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Input.ofNullable(amazonAddress);
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable String amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Input<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable String awsDevice) {
+        public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Input.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Input<Integer> bgpAsn) {
+        public Builder bgpAsn(@Nullable Input<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Integer bgpAsn) {
+        public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Input.ofNullable(bgpAsn);
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable Input<String> bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable Input<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable String bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Input.ofNullable(bgpAuthKey);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable Input<String> customerAddress) {
+        public Builder customerAddress(@Nullable Input<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable String customerAddress) {
+        public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Input.ofNullable(customerAddress);
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable String ownerAccountId) {
+        public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Input.ofNullable(ownerAccountId);
             return this;
         }
 
-        public Builder setVlan(@Nullable Input<Integer> vlan) {
+        public Builder vlan(@Nullable Input<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
 
-        public Builder setVlan(@Nullable Integer vlan) {
+        public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Input.ofNullable(vlan);
             return this;
         }

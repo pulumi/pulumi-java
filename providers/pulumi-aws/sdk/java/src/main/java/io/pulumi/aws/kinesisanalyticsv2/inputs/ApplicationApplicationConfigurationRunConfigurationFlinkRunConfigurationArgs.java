@@ -53,12 +53,12 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     	      this.allowNonRestoredState = defaults.allowNonRestoredState;
         }
 
-        public Builder setAllowNonRestoredState(@Nullable Input<Boolean> allowNonRestoredState) {
+        public Builder allowNonRestoredState(@Nullable Input<Boolean> allowNonRestoredState) {
             this.allowNonRestoredState = allowNonRestoredState;
             return this;
         }
 
-        public Builder setAllowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
+        public Builder allowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
             this.allowNonRestoredState = Input.ofNullable(allowNonRestoredState);
             return this;
         }

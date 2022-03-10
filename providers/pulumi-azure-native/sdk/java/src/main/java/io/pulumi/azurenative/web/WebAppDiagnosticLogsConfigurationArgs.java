@@ -153,72 +153,72 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setApplicationLogs(@Nullable Input<ApplicationLogsConfigArgs> applicationLogs) {
+        public Builder applicationLogs(@Nullable Input<ApplicationLogsConfigArgs> applicationLogs) {
             this.applicationLogs = applicationLogs;
             return this;
         }
 
-        public Builder setApplicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
+        public Builder applicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
             this.applicationLogs = Input.ofNullable(applicationLogs);
             return this;
         }
 
-        public Builder setDetailedErrorMessages(@Nullable Input<EnabledConfigArgs> detailedErrorMessages) {
+        public Builder detailedErrorMessages(@Nullable Input<EnabledConfigArgs> detailedErrorMessages) {
             this.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
 
-        public Builder setDetailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
+        public Builder detailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
             this.detailedErrorMessages = Input.ofNullable(detailedErrorMessages);
             return this;
         }
 
-        public Builder setFailedRequestsTracing(@Nullable Input<EnabledConfigArgs> failedRequestsTracing) {
+        public Builder failedRequestsTracing(@Nullable Input<EnabledConfigArgs> failedRequestsTracing) {
             this.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
 
-        public Builder setFailedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
+        public Builder failedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
             this.failedRequestsTracing = Input.ofNullable(failedRequestsTracing);
             return this;
         }
 
-        public Builder setHttpLogs(@Nullable Input<HttpLogsConfigArgs> httpLogs) {
+        public Builder httpLogs(@Nullable Input<HttpLogsConfigArgs> httpLogs) {
             this.httpLogs = httpLogs;
             return this;
         }
 
-        public Builder setHttpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
+        public Builder httpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
             this.httpLogs = Input.ofNullable(httpLogs);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

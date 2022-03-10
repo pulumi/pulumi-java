@@ -150,72 +150,72 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useFromLocation = defaults.useFromLocation;
         }
 
-        public Builder setCacheId(@Nullable Input<String> cacheId) {
+        public Builder cacheId(@Nullable Input<String> cacheId) {
             this.cacheId = cacheId;
             return this;
         }
 
-        public Builder setCacheId(@Nullable String cacheId) {
+        public Builder cacheId(@Nullable String cacheId) {
             this.cacheId = Input.ofNullable(cacheId);
             return this;
         }
 
-        public Builder setConnectionString(Input<String> connectionString) {
+        public Builder connectionString(Input<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Input.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setUseFromLocation(Input<String> useFromLocation) {
+        public Builder useFromLocation(Input<String> useFromLocation) {
             this.useFromLocation = Objects.requireNonNull(useFromLocation);
             return this;
         }
 
-        public Builder setUseFromLocation(String useFromLocation) {
+        public Builder useFromLocation(String useFromLocation) {
             this.useFromLocation = Input.of(Objects.requireNonNull(useFromLocation));
             return this;
         }

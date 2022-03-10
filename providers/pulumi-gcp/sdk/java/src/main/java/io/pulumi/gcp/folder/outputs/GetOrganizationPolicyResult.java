@@ -118,47 +118,47 @@ public final class GetOrganizationPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setBooleanPolicies(List<GetOrganizationPolicyBooleanPolicy> booleanPolicies) {
+        public Builder booleanPolicies(List<GetOrganizationPolicyBooleanPolicy> booleanPolicies) {
             this.booleanPolicies = Objects.requireNonNull(booleanPolicies);
             return this;
         }
 
-        public Builder setConstraint(String constraint) {
+        public Builder constraint(String constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setListPolicies(List<GetOrganizationPolicyListPolicy> listPolicies) {
+        public Builder listPolicies(List<GetOrganizationPolicyListPolicy> listPolicies) {
             this.listPolicies = Objects.requireNonNull(listPolicies);
             return this;
         }
 
-        public Builder setRestorePolicies(List<GetOrganizationPolicyRestorePolicy> restorePolicies) {
+        public Builder restorePolicies(List<GetOrganizationPolicyRestorePolicy> restorePolicies) {
             this.restorePolicies = Objects.requireNonNull(restorePolicies);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

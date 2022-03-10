@@ -72,12 +72,12 @@ public final class BigQueryOptionsResponse extends io.pulumi.resources.InvokeArg
     	      this.usesTimestampColumnPartitioning = defaults.usesTimestampColumnPartitioning;
         }
 
-        public Builder setUsePartitionedTables(Boolean usePartitionedTables) {
+        public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
 
-        public Builder setUsesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
+        public Builder usesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
         }

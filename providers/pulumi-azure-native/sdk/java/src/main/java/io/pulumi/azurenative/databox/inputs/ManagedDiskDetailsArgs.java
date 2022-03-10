@@ -107,42 +107,42 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.stagingStorageAccountId = defaults.stagingStorageAccountId;
         }
 
-        public Builder setDataAccountType(Input<String> dataAccountType) {
+        public Builder dataAccountType(Input<String> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder setResourceGroupId(Input<String> resourceGroupId) {
+        public Builder resourceGroupId(Input<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
-        public Builder setResourceGroupId(String resourceGroupId) {
+        public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Input.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }
 
-        public Builder setSharePassword(@Nullable Input<String> sharePassword) {
+        public Builder sharePassword(@Nullable Input<String> sharePassword) {
             this.sharePassword = sharePassword;
             return this;
         }
 
-        public Builder setSharePassword(@Nullable String sharePassword) {
+        public Builder sharePassword(@Nullable String sharePassword) {
             this.sharePassword = Input.ofNullable(sharePassword);
             return this;
         }
 
-        public Builder setStagingStorageAccountId(Input<String> stagingStorageAccountId) {
+        public Builder stagingStorageAccountId(Input<String> stagingStorageAccountId) {
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
         }
 
-        public Builder setStagingStorageAccountId(String stagingStorageAccountId) {
+        public Builder stagingStorageAccountId(String stagingStorageAccountId) {
             this.stagingStorageAccountId = Input.of(Objects.requireNonNull(stagingStorageAccountId));
             return this;
         }

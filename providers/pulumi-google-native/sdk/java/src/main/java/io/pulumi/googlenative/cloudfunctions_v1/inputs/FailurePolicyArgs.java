@@ -57,12 +57,12 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retry = defaults.retry;
         }
 
-        public Builder setRetry(@Nullable Input<RetryArgs> retry) {
+        public Builder retry(@Nullable Input<RetryArgs> retry) {
             this.retry = retry;
             return this;
         }
 
-        public Builder setRetry(@Nullable RetryArgs retry) {
+        public Builder retry(@Nullable RetryArgs retry) {
             this.retry = Input.ofNullable(retry);
             return this;
         }

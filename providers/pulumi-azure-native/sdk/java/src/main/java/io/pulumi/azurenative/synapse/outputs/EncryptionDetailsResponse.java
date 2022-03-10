@@ -68,12 +68,12 @@ public final class EncryptionDetailsResponse {
     	      this.doubleEncryptionEnabled = defaults.doubleEncryptionEnabled;
         }
 
-        public Builder setCmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
+        public Builder cmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
             this.cmk = cmk;
             return this;
         }
 
-        public Builder setDoubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
+        public Builder doubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
             this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
             return this;
         }

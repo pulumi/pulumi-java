@@ -124,52 +124,52 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setGcsPath(@Nullable Input<String> gcsPath) {
+        public Builder gcsPath(@Nullable Input<String> gcsPath) {
             this.gcsPath = gcsPath;
             return this;
         }
 
-        public Builder setGcsPath(@Nullable String gcsPath) {
+        public Builder gcsPath(@Nullable String gcsPath) {
             this.gcsPath = Input.ofNullable(gcsPath);
             return this;
         }
 
-        public Builder setLaunchParameters(@Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters) {
+        public Builder launchParameters(@Nullable Input<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
 
-        public Builder setLaunchParameters(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
+        public Builder launchParameters(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs launchParameters) {
             this.launchParameters = Input.ofNullable(launchParameters);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<Boolean> validateOnly) {
+        public Builder validateOnly(@Nullable Input<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Boolean validateOnly) {
+        public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

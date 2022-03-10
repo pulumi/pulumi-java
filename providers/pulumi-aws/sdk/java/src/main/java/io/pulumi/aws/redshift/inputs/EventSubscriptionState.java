@@ -229,122 +229,122 @@ public final class EventSubscriptionState extends io.pulumi.resources.ResourceAr
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCustomerAwsId(@Nullable Input<String> customerAwsId) {
+        public Builder customerAwsId(@Nullable Input<String> customerAwsId) {
             this.customerAwsId = customerAwsId;
             return this;
         }
 
-        public Builder setCustomerAwsId(@Nullable String customerAwsId) {
+        public Builder customerAwsId(@Nullable String customerAwsId) {
             this.customerAwsId = Input.ofNullable(customerAwsId);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEventCategories(@Nullable Input<List<String>> eventCategories) {
+        public Builder eventCategories(@Nullable Input<List<String>> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
-        public Builder setEventCategories(@Nullable List<String> eventCategories) {
+        public Builder eventCategories(@Nullable List<String> eventCategories) {
             this.eventCategories = Input.ofNullable(eventCategories);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<String> severity) {
+        public Builder severity(@Nullable Input<String> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder setSourceIds(@Nullable Input<List<String>> sourceIds) {
+        public Builder sourceIds(@Nullable Input<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
-        public Builder setSourceIds(@Nullable List<String> sourceIds) {
+        public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = Input.ofNullable(sourceIds);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Input<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

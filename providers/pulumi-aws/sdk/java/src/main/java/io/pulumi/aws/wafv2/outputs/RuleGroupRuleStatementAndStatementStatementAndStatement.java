@@ -49,7 +49,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatement {
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<RuleGroupRuleStatementAndStatementStatementAndStatementStatement> statements) {
+        public Builder statements(List<RuleGroupRuleStatementAndStatementStatementAndStatementStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

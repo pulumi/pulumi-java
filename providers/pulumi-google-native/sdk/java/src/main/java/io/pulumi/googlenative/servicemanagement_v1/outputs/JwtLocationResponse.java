@@ -81,17 +81,17 @@ public final class JwtLocationResponse {
     	      this.valuePrefix = defaults.valuePrefix;
         }
 
-        public Builder setHeader(String header) {
+        public Builder header(String header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setValuePrefix(String valuePrefix) {
+        public Builder valuePrefix(String valuePrefix) {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
         }

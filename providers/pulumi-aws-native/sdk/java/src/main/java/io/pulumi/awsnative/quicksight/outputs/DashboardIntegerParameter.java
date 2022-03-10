@@ -67,12 +67,12 @@ public final class DashboardIntegerParameter {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValues(List<Double> values) {
+        public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

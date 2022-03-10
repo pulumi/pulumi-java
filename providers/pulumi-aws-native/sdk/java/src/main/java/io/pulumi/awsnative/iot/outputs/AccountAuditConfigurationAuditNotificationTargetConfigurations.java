@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
+        public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
             this.sns = sns;
             return this;
         }

@@ -74,22 +74,22 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
     	      this.wafService = defaults.wafService;
         }
 
-        public Builder setWafFeature(Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature) {
+        public Builder wafFeature(Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature) {
             this.wafFeature = Objects.requireNonNull(wafFeature);
             return this;
         }
 
-        public Builder setWafFeature(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature wafFeature) {
+        public Builder wafFeature(GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature wafFeature) {
             this.wafFeature = Input.of(Objects.requireNonNull(wafFeature));
             return this;
         }
 
-        public Builder setWafService(Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService) {
+        public Builder wafService(Input<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService) {
             this.wafService = Objects.requireNonNull(wafService);
             return this;
         }
 
-        public Builder setWafService(GoogleCloudRecaptchaenterpriseV1WafSettingsWafService wafService) {
+        public Builder wafService(GoogleCloudRecaptchaenterpriseV1WafSettingsWafService wafService) {
             this.wafService = Input.of(Objects.requireNonNull(wafService));
             return this;
         }

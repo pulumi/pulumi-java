@@ -68,12 +68,12 @@ public final class RunAsUserStrategyOptions {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRanges(@Nullable List<IDRange> ranges) {
+        public Builder ranges(@Nullable List<IDRange> ranges) {
             this.ranges = ranges;
             return this;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

@@ -83,17 +83,17 @@ public final class InstanceTemplateShieldedInstanceConfig {
     	      this.enableVtpm = defaults.enableVtpm;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
-        public Builder setEnableVtpm(@Nullable Boolean enableVtpm) {
+        public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
         }

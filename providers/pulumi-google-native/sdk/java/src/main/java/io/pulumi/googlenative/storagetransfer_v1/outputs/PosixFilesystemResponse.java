@@ -48,7 +48,7 @@ public final class PosixFilesystemResponse {
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setRootDirectory(String rootDirectory) {
+        public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }

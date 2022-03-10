@@ -69,12 +69,12 @@ public final class ListenerDefaultActionForward {
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setStickiness(@Nullable ListenerDefaultActionForwardStickiness stickiness) {
+        public Builder stickiness(@Nullable ListenerDefaultActionForwardStickiness stickiness) {
             this.stickiness = stickiness;
             return this;
         }
 
-        public Builder setTargetGroups(List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
+        public Builder targetGroups(List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }

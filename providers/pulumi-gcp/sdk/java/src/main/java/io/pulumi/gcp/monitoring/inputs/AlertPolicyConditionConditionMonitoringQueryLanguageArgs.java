@@ -109,32 +109,32 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setDuration(Input<String> duration) {
+        public Builder duration(Input<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
+        public Builder trigger(@Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

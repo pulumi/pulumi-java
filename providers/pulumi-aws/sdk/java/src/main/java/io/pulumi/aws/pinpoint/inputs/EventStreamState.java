@@ -86,32 +86,32 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setDestinationStreamArn(@Nullable Input<String> destinationStreamArn) {
+        public Builder destinationStreamArn(@Nullable Input<String> destinationStreamArn) {
             this.destinationStreamArn = destinationStreamArn;
             return this;
         }
 
-        public Builder setDestinationStreamArn(@Nullable String destinationStreamArn) {
+        public Builder destinationStreamArn(@Nullable String destinationStreamArn) {
             this.destinationStreamArn = Input.ofNullable(destinationStreamArn);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

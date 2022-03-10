@@ -66,12 +66,12 @@ public final class ReusableConfigWrapperResponse {
     	      this.reusableConfigValues = defaults.reusableConfigValues;
         }
 
-        public Builder setReusableConfig(String reusableConfig) {
+        public Builder reusableConfig(String reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
 
-        public Builder setReusableConfigValues(ReusableConfigValuesResponse reusableConfigValues) {
+        public Builder reusableConfigValues(ReusableConfigValuesResponse reusableConfigValues) {
             this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
             return this;
         }

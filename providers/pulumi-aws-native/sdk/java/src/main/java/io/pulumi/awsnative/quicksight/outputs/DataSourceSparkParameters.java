@@ -66,12 +66,12 @@ public final class DataSourceSparkParameters {
     	      this.port = defaults.port;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Double port) {
+        public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

@@ -83,17 +83,17 @@ public final class SecurityPolicyRuleMatcherResponse {
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder setConfig(SecurityPolicyRuleMatcherConfigResponse config) {
+        public Builder config(SecurityPolicyRuleMatcherConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setExpr(ExprResponse expr) {
+        public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
-        public Builder setVersionedExpr(String versionedExpr) {
+        public Builder versionedExpr(String versionedExpr) {
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
         }

@@ -85,17 +85,17 @@ public final class TransferConfigurationResponse {
     	      this.transferFilterDetails = defaults.transferFilterDetails;
         }
 
-        public Builder setTransferAllDetails(@Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails) {
+        public Builder transferAllDetails(@Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails) {
             this.transferAllDetails = transferAllDetails;
             return this;
         }
 
-        public Builder setTransferConfigurationType(String transferConfigurationType) {
+        public Builder transferConfigurationType(String transferConfigurationType) {
             this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
             return this;
         }
 
-        public Builder setTransferFilterDetails(@Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
+        public Builder transferFilterDetails(@Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }

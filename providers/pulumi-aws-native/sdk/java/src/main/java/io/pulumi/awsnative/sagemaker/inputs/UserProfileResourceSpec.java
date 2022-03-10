@@ -87,17 +87,17 @@ public final class UserProfileResourceSpec extends io.pulumi.resources.InvokeArg
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
+        public Builder instanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable String sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }

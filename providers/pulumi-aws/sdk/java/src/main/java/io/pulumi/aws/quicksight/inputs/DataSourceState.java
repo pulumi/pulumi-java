@@ -237,122 +237,122 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConnectionProperties = defaults.vpcConnectionProperties;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<DataSourceCredentialsGetArgs> credentials) {
+        public Builder credentials(@Nullable Input<DataSourceCredentialsGetArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable DataSourceCredentialsGetArgs credentials) {
+        public Builder credentials(@Nullable DataSourceCredentialsGetArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable Input<String> dataSourceId) {
+        public Builder dataSourceId(@Nullable Input<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable String dataSourceId) {
+        public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Input.ofNullable(dataSourceId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<DataSourceParametersGetArgs> parameters) {
+        public Builder parameters(@Nullable Input<DataSourceParametersGetArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable DataSourceParametersGetArgs parameters) {
+        public Builder parameters(@Nullable DataSourceParametersGetArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<DataSourcePermissionGetArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<DataSourcePermissionGetArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DataSourcePermissionGetArgs> permissions) {
+        public Builder permissions(@Nullable List<DataSourcePermissionGetArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setSslProperties(@Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties) {
+        public Builder sslProperties(@Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
 
-        public Builder setSslProperties(@Nullable DataSourceSslPropertiesGetArgs sslProperties) {
+        public Builder sslProperties(@Nullable DataSourceSslPropertiesGetArgs sslProperties) {
             this.sslProperties = Input.ofNullable(sslProperties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVpcConnectionProperties(@Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
 
-        public Builder setVpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesGetArgs vpcConnectionProperties) {
             this.vpcConnectionProperties = Input.ofNullable(vpcConnectionProperties);
             return this;
         }

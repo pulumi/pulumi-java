@@ -59,7 +59,7 @@ public final class OpenAuthenticationAccessPoliciesResponse extends io.pulumi.re
     	      this.policies = defaults.policies;
         }
 
-        public Builder setPolicies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
+        public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
             this.policies = policies;
             return this;
         }

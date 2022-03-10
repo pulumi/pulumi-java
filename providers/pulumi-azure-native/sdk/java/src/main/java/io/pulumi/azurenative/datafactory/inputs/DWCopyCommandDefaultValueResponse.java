@@ -74,12 +74,12 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setColumnName(@Nullable Object columnName) {
+        public Builder columnName(@Nullable Object columnName) {
             this.columnName = columnName;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }

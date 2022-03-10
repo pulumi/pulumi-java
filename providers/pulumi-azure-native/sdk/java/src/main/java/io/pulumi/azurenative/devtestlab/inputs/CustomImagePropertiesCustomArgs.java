@@ -93,32 +93,32 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
     	      this.sysPrep = defaults.sysPrep;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setOsType(Input<Either<String,CustomImageOsType>> osType) {
+        public Builder osType(Input<Either<String,CustomImageOsType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(Either<String,CustomImageOsType> osType) {
+        public Builder osType(Either<String,CustomImageOsType> osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder setSysPrep(@Nullable Input<Boolean> sysPrep) {
+        public Builder sysPrep(@Nullable Input<Boolean> sysPrep) {
             this.sysPrep = sysPrep;
             return this;
         }
 
-        public Builder setSysPrep(@Nullable Boolean sysPrep) {
+        public Builder sysPrep(@Nullable Boolean sysPrep) {
             this.sysPrep = Input.ofNullable(sysPrep);
             return this;
         }

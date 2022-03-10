@@ -86,17 +86,17 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(@Nullable String headerName) {
+        public Builder headerName(@Nullable String headerName) {
             this.headerName = headerName;
             return this;
         }
 
-        public Builder setHeaderValue(@Nullable String headerValue) {
+        public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = headerValue;
             return this;
         }
 
-        public Builder setReplace(@Nullable Boolean replace) {
+        public Builder replace(@Nullable Boolean replace) {
             this.replace = replace;
             return this;
         }

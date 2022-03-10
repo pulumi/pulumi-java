@@ -338,142 +338,142 @@ public final class ExtendedDatabaseBlobAuditingPolicyArgs extends io.pulumi.reso
     	      this.storageEndpoint = defaults.storageEndpoint;
         }
 
-        public Builder setAuditActionsAndGroups(@Nullable Input<List<String>> auditActionsAndGroups) {
+        public Builder auditActionsAndGroups(@Nullable Input<List<String>> auditActionsAndGroups) {
             this.auditActionsAndGroups = auditActionsAndGroups;
             return this;
         }
 
-        public Builder setAuditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
+        public Builder auditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
             this.auditActionsAndGroups = Input.ofNullable(auditActionsAndGroups);
             return this;
         }
 
-        public Builder setBlobAuditingPolicyName(@Nullable Input<String> blobAuditingPolicyName) {
+        public Builder blobAuditingPolicyName(@Nullable Input<String> blobAuditingPolicyName) {
             this.blobAuditingPolicyName = blobAuditingPolicyName;
             return this;
         }
 
-        public Builder setBlobAuditingPolicyName(@Nullable String blobAuditingPolicyName) {
+        public Builder blobAuditingPolicyName(@Nullable String blobAuditingPolicyName) {
             this.blobAuditingPolicyName = Input.ofNullable(blobAuditingPolicyName);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setIsAzureMonitorTargetEnabled(@Nullable Input<Boolean> isAzureMonitorTargetEnabled) {
+        public Builder isAzureMonitorTargetEnabled(@Nullable Input<Boolean> isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
             return this;
         }
 
-        public Builder setIsAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
+        public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = Input.ofNullable(isAzureMonitorTargetEnabled);
             return this;
         }
 
-        public Builder setIsStorageSecondaryKeyInUse(@Nullable Input<Boolean> isStorageSecondaryKeyInUse) {
+        public Builder isStorageSecondaryKeyInUse(@Nullable Input<Boolean> isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
             return this;
         }
 
-        public Builder setIsStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
+        public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = Input.ofNullable(isStorageSecondaryKeyInUse);
             return this;
         }
 
-        public Builder setPredicateExpression(@Nullable Input<String> predicateExpression) {
+        public Builder predicateExpression(@Nullable Input<String> predicateExpression) {
             this.predicateExpression = predicateExpression;
             return this;
         }
 
-        public Builder setPredicateExpression(@Nullable String predicateExpression) {
+        public Builder predicateExpression(@Nullable String predicateExpression) {
             this.predicateExpression = Input.ofNullable(predicateExpression);
             return this;
         }
 
-        public Builder setQueueDelayMs(@Nullable Input<Integer> queueDelayMs) {
+        public Builder queueDelayMs(@Nullable Input<Integer> queueDelayMs) {
             this.queueDelayMs = queueDelayMs;
             return this;
         }
 
-        public Builder setQueueDelayMs(@Nullable Integer queueDelayMs) {
+        public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
             this.queueDelayMs = Input.ofNullable(queueDelayMs);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setState(Input<BlobAuditingPolicyState> state) {
+        public Builder state(Input<BlobAuditingPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(BlobAuditingPolicyState state) {
+        public Builder state(BlobAuditingPolicyState state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setStorageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
 
-        public Builder setStorageAccountAccessKey(@Nullable String storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
             this.storageAccountAccessKey = Input.ofNullable(storageAccountAccessKey);
             return this;
         }
 
-        public Builder setStorageAccountSubscriptionId(@Nullable Input<String> storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable Input<String> storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
 
-        public Builder setStorageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = Input.ofNullable(storageAccountSubscriptionId);
             return this;
         }
 
-        public Builder setStorageEndpoint(@Nullable Input<String> storageEndpoint) {
+        public Builder storageEndpoint(@Nullable Input<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
 
-        public Builder setStorageEndpoint(@Nullable String storageEndpoint) {
+        public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = Input.ofNullable(storageEndpoint);
             return this;
         }

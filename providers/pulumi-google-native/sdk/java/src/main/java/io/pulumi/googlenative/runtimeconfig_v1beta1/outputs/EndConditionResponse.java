@@ -48,7 +48,7 @@ public final class EndConditionResponse {
     	      this.cardinality = defaults.cardinality;
         }
 
-        public Builder setCardinality(CardinalityResponse cardinality) {
+        public Builder cardinality(CardinalityResponse cardinality) {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }

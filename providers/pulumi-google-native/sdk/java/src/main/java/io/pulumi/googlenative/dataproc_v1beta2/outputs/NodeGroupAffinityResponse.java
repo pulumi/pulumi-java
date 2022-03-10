@@ -48,7 +48,7 @@ public final class NodeGroupAffinityResponse {
     	      this.nodeGroupUri = defaults.nodeGroupUri;
         }
 
-        public Builder setNodeGroupUri(String nodeGroupUri) {
+        public Builder nodeGroupUri(String nodeGroupUri) {
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetStaticIpArgs extends io.pulumi.resources.InvokeArgs {
     	      this.staticIpName = defaults.staticIpName;
         }
 
-        public Builder setStaticIpName(String staticIpName) {
+        public Builder staticIpName(String staticIpName) {
             this.staticIpName = Objects.requireNonNull(staticIpName);
             return this;
         }

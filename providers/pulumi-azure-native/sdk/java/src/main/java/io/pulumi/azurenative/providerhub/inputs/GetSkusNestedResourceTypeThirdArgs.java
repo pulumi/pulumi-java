@@ -132,32 +132,32 @@ public final class GetSkusNestedResourceTypeThirdArgs extends io.pulumi.resource
     	      this.sku = defaults.sku;
         }
 
-        public Builder setNestedResourceTypeFirst(String nestedResourceTypeFirst) {
+        public Builder nestedResourceTypeFirst(String nestedResourceTypeFirst) {
             this.nestedResourceTypeFirst = Objects.requireNonNull(nestedResourceTypeFirst);
             return this;
         }
 
-        public Builder setNestedResourceTypeSecond(String nestedResourceTypeSecond) {
+        public Builder nestedResourceTypeSecond(String nestedResourceTypeSecond) {
             this.nestedResourceTypeSecond = Objects.requireNonNull(nestedResourceTypeSecond);
             return this;
         }
 
-        public Builder setNestedResourceTypeThird(String nestedResourceTypeThird) {
+        public Builder nestedResourceTypeThird(String nestedResourceTypeThird) {
             this.nestedResourceTypeThird = Objects.requireNonNull(nestedResourceTypeThird);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }

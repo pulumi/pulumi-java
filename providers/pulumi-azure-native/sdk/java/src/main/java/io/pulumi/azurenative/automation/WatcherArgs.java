@@ -200,102 +200,102 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.watcherName = defaults.watcherName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionFrequencyInSeconds(@Nullable Input<Double> executionFrequencyInSeconds) {
+        public Builder executionFrequencyInSeconds(@Nullable Input<Double> executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
 
-        public Builder setExecutionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
+        public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = Input.ofNullable(executionFrequencyInSeconds);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScriptName(@Nullable Input<String> scriptName) {
+        public Builder scriptName(@Nullable Input<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
-        public Builder setScriptName(@Nullable String scriptName) {
+        public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Input.ofNullable(scriptName);
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable Input<Map<String,String>> scriptParameters) {
+        public Builder scriptParameters(@Nullable Input<Map<String,String>> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable Map<String,String> scriptParameters) {
+        public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
             this.scriptParameters = Input.ofNullable(scriptParameters);
             return this;
         }
 
-        public Builder setScriptRunOn(@Nullable Input<String> scriptRunOn) {
+        public Builder scriptRunOn(@Nullable Input<String> scriptRunOn) {
             this.scriptRunOn = scriptRunOn;
             return this;
         }
 
-        public Builder setScriptRunOn(@Nullable String scriptRunOn) {
+        public Builder scriptRunOn(@Nullable String scriptRunOn) {
             this.scriptRunOn = Input.ofNullable(scriptRunOn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWatcherName(@Nullable Input<String> watcherName) {
+        public Builder watcherName(@Nullable Input<String> watcherName) {
             this.watcherName = watcherName;
             return this;
         }
 
-        public Builder setWatcherName(@Nullable String watcherName) {
+        public Builder watcherName(@Nullable String watcherName) {
             this.watcherName = Input.ofNullable(watcherName);
             return this;
         }

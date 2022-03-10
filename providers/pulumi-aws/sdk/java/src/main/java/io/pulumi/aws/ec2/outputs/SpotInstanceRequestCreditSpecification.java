@@ -50,7 +50,7 @@ public final class SpotInstanceRequestCreditSpecification {
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder setCpuCredits(@Nullable String cpuCredits) {
+        public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
         }

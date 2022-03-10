@@ -50,7 +50,7 @@ public final class SapHanaPartitionSettingsResponse {
     	      this.partitionColumnName = defaults.partitionColumnName;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }

@@ -57,12 +57,12 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
     	      this.interconnectAttachment = defaults.interconnectAttachment;
         }
 
-        public Builder setInterconnectAttachment(@Nullable Input<String> interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable Input<String> interconnectAttachment) {
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
-        public Builder setInterconnectAttachment(@Nullable String interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
             this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
             return this;
         }

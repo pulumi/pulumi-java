@@ -67,12 +67,12 @@ public final class NonResourceAttributes {
     	      this.verb = defaults.verb;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setVerb(@Nullable String verb) {
+        public Builder verb(@Nullable String verb) {
             this.verb = verb;
             return this;
         }

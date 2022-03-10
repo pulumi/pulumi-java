@@ -157,72 +157,72 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPartitionConfig(@Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig) {
+        public Builder partitionConfig(@Nullable Input<LiteTopicPartitionConfigArgs> partitionConfig) {
             this.partitionConfig = partitionConfig;
             return this;
         }
 
-        public Builder setPartitionConfig(@Nullable LiteTopicPartitionConfigArgs partitionConfig) {
+        public Builder partitionConfig(@Nullable LiteTopicPartitionConfigArgs partitionConfig) {
             this.partitionConfig = Input.ofNullable(partitionConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReservationConfig(@Nullable Input<LiteTopicReservationConfigArgs> reservationConfig) {
+        public Builder reservationConfig(@Nullable Input<LiteTopicReservationConfigArgs> reservationConfig) {
             this.reservationConfig = reservationConfig;
             return this;
         }
 
-        public Builder setReservationConfig(@Nullable LiteTopicReservationConfigArgs reservationConfig) {
+        public Builder reservationConfig(@Nullable LiteTopicReservationConfigArgs reservationConfig) {
             this.reservationConfig = Input.ofNullable(reservationConfig);
             return this;
         }
 
-        public Builder setRetentionConfig(@Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig) {
+        public Builder retentionConfig(@Nullable Input<LiteTopicRetentionConfigArgs> retentionConfig) {
             this.retentionConfig = retentionConfig;
             return this;
         }
 
-        public Builder setRetentionConfig(@Nullable LiteTopicRetentionConfigArgs retentionConfig) {
+        public Builder retentionConfig(@Nullable LiteTopicRetentionConfigArgs retentionConfig) {
             this.retentionConfig = Input.ofNullable(retentionConfig);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

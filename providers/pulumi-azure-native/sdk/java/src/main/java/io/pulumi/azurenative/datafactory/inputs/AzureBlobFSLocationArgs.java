@@ -108,42 +108,42 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Input<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<Object> fileSystem) {
+        public Builder fileSystem(@Nullable Input<Object> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Object fileSystem) {
+        public Builder fileSystem(@Nullable Object fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Input<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

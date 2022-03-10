@@ -50,7 +50,7 @@ public final class HardwareProfileResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

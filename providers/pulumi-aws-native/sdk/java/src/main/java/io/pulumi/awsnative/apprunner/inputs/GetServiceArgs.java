@@ -51,7 +51,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceArn = defaults.serviceArn;
         }
 
-        public Builder setServiceArn(String serviceArn) {
+        public Builder serviceArn(String serviceArn) {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }

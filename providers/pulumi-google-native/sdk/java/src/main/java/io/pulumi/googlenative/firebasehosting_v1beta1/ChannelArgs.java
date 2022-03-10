@@ -156,82 +156,82 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setChannelId(Input<String> channelId) {
+        public Builder channelId(Input<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
-        public Builder setChannelId(String channelId) {
+        public Builder channelId(String channelId) {
             this.channelId = Input.of(Objects.requireNonNull(channelId));
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRetainedReleaseCount(@Nullable Input<Integer> retainedReleaseCount) {
+        public Builder retainedReleaseCount(@Nullable Input<Integer> retainedReleaseCount) {
             this.retainedReleaseCount = retainedReleaseCount;
             return this;
         }
 
-        public Builder setRetainedReleaseCount(@Nullable Integer retainedReleaseCount) {
+        public Builder retainedReleaseCount(@Nullable Integer retainedReleaseCount) {
             this.retainedReleaseCount = Input.ofNullable(retainedReleaseCount);
             return this;
         }
 
-        public Builder setSiteId(Input<String> siteId) {
+        public Builder siteId(Input<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

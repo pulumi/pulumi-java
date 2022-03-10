@@ -93,32 +93,32 @@ public final class AssignmentLockSettingsArgs extends io.pulumi.resources.Resour
     	      this.mode = defaults.mode;
         }
 
-        public Builder setExcludedActions(@Nullable Input<List<String>> excludedActions) {
+        public Builder excludedActions(@Nullable Input<List<String>> excludedActions) {
             this.excludedActions = excludedActions;
             return this;
         }
 
-        public Builder setExcludedActions(@Nullable List<String> excludedActions) {
+        public Builder excludedActions(@Nullable List<String> excludedActions) {
             this.excludedActions = Input.ofNullable(excludedActions);
             return this;
         }
 
-        public Builder setExcludedPrincipals(@Nullable Input<List<String>> excludedPrincipals) {
+        public Builder excludedPrincipals(@Nullable Input<List<String>> excludedPrincipals) {
             this.excludedPrincipals = excludedPrincipals;
             return this;
         }
 
-        public Builder setExcludedPrincipals(@Nullable List<String> excludedPrincipals) {
+        public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
             this.excludedPrincipals = Input.ofNullable(excludedPrincipals);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,AssignmentLockMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,AssignmentLockMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,AssignmentLockMode> mode) {
+        public Builder mode(@Nullable Either<String,AssignmentLockMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

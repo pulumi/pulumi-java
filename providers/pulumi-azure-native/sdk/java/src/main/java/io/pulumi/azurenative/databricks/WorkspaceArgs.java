@@ -187,92 +187,92 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAuthorizations(@Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Input<List<WorkspaceProviderAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<WorkspaceProviderAuthorizationArgs> authorizations) {
+        public Builder authorizations(@Nullable List<WorkspaceProviderAuthorizationArgs> authorizations) {
             this.authorizations = Input.ofNullable(authorizations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedResourceGroupId(Input<String> managedResourceGroupId) {
+        public Builder managedResourceGroupId(Input<String> managedResourceGroupId) {
             this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
             return this;
         }
 
-        public Builder setManagedResourceGroupId(String managedResourceGroupId) {
+        public Builder managedResourceGroupId(String managedResourceGroupId) {
             this.managedResourceGroupId = Input.of(Objects.requireNonNull(managedResourceGroupId));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<WorkspaceCustomParametersArgs> parameters) {
+        public Builder parameters(@Nullable Input<WorkspaceCustomParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable WorkspaceCustomParametersArgs parameters) {
+        public Builder parameters(@Nullable WorkspaceCustomParametersArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUiDefinitionUri(@Nullable Input<String> uiDefinitionUri) {
+        public Builder uiDefinitionUri(@Nullable Input<String> uiDefinitionUri) {
             this.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
 
-        public Builder setUiDefinitionUri(@Nullable String uiDefinitionUri) {
+        public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
             this.uiDefinitionUri = Input.ofNullable(uiDefinitionUri);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

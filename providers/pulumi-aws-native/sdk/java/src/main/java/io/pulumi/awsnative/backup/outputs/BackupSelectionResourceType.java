@@ -86,32 +86,32 @@ public final class BackupSelectionResourceType {
     	      this.selectionName = defaults.selectionName;
         }
 
-        public Builder setConditions(@Nullable BackupSelectionResourceTypeConditionsProperties conditions) {
+        public Builder conditions(@Nullable BackupSelectionResourceTypeConditionsProperties conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setListOfTags(@Nullable List<BackupSelectionConditionResourceType> listOfTags) {
+        public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceType> listOfTags) {
             this.listOfTags = listOfTags;
             return this;
         }
 
-        public Builder setNotResources(@Nullable List<String> notResources) {
+        public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = notResources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setSelectionName(String selectionName) {
+        public Builder selectionName(String selectionName) {
             this.selectionName = Objects.requireNonNull(selectionName);
             return this;
         }

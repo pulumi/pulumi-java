@@ -48,7 +48,7 @@ public final class BucketCorsConfiguration extends io.pulumi.resources.InvokeArg
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder setCorsRules(List<BucketCorsRule> corsRules) {
+        public Builder corsRules(List<BucketCorsRule> corsRules) {
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }

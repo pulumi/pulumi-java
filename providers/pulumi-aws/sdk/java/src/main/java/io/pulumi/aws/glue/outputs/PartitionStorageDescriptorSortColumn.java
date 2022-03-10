@@ -66,12 +66,12 @@ public final class PartitionStorageDescriptorSortColumn {
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setSortOrder(Integer sortOrder) {
+        public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }

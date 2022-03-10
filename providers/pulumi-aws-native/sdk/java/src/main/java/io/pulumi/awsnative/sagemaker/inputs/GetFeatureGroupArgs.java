@@ -51,7 +51,7 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.featureGroupName = defaults.featureGroupName;
         }
 
-        public Builder setFeatureGroupName(String featureGroupName) {
+        public Builder featureGroupName(String featureGroupName) {
             this.featureGroupName = Objects.requireNonNull(featureGroupName);
             return this;
         }

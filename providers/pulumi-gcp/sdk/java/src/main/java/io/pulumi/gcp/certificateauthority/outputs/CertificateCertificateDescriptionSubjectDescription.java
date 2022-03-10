@@ -118,32 +118,32 @@ public final class CertificateCertificateDescriptionSubjectDescription {
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setHexSerialNumber(@Nullable String hexSerialNumber) {
+        public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setNotAfterTime(@Nullable String notAfterTime) {
+        public Builder notAfterTime(@Nullable String notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
 
-        public Builder setNotBeforeTime(@Nullable String notBeforeTime) {
+        public Builder notBeforeTime(@Nullable String notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
-        public Builder setSubjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
+        public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
             this.subjects = subjects;
             return this;
         }

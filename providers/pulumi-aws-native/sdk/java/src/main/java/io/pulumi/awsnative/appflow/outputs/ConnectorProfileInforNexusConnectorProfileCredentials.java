@@ -97,22 +97,22 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccessKeyId(String accessKeyId) {
+        public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
-        public Builder setDatakey(String datakey) {
+        public Builder datakey(String datakey) {
             this.datakey = Objects.requireNonNull(datakey);
             return this;
         }
 
-        public Builder setSecretAccessKey(String secretAccessKey) {
+        public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

@@ -67,12 +67,12 @@ public final class ReplicationSetReplicationRegion extends io.pulumi.resources.I
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setRegionConfiguration(@Nullable ReplicationSetRegionConfiguration regionConfiguration) {
+        public Builder regionConfiguration(@Nullable ReplicationSetRegionConfiguration regionConfiguration) {
             this.regionConfiguration = regionConfiguration;
             return this;
         }
 
-        public Builder setRegionName(@Nullable String regionName) {
+        public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
         }

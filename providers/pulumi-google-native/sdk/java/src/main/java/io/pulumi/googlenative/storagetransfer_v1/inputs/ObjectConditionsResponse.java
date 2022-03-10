@@ -137,32 +137,32 @@ public final class ObjectConditionsResponse extends io.pulumi.resources.InvokeAr
     	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
         }
 
-        public Builder setExcludePrefixes(List<String> excludePrefixes) {
+        public Builder excludePrefixes(List<String> excludePrefixes) {
             this.excludePrefixes = Objects.requireNonNull(excludePrefixes);
             return this;
         }
 
-        public Builder setIncludePrefixes(List<String> includePrefixes) {
+        public Builder includePrefixes(List<String> includePrefixes) {
             this.includePrefixes = Objects.requireNonNull(includePrefixes);
             return this;
         }
 
-        public Builder setLastModifiedBefore(String lastModifiedBefore) {
+        public Builder lastModifiedBefore(String lastModifiedBefore) {
             this.lastModifiedBefore = Objects.requireNonNull(lastModifiedBefore);
             return this;
         }
 
-        public Builder setLastModifiedSince(String lastModifiedSince) {
+        public Builder lastModifiedSince(String lastModifiedSince) {
             this.lastModifiedSince = Objects.requireNonNull(lastModifiedSince);
             return this;
         }
 
-        public Builder setMaxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
+        public Builder maxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = Objects.requireNonNull(maxTimeElapsedSinceLastModification);
             return this;
         }
 
-        public Builder setMinTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
+        public Builder minTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
             return this;
         }

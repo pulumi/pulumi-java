@@ -125,52 +125,52 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
     	      this.replicationSchedule = defaults.replicationSchedule;
         }
 
-        public Builder setEndpointType(@Nullable Input<Either<String,EndpointType>> endpointType) {
+        public Builder endpointType(@Nullable Input<Either<String,EndpointType>> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable Either<String,EndpointType> endpointType) {
+        public Builder endpointType(@Nullable Either<String,EndpointType> endpointType) {
             this.endpointType = Input.ofNullable(endpointType);
             return this;
         }
 
-        public Builder setRemoteVolumeRegion(@Nullable Input<String> remoteVolumeRegion) {
+        public Builder remoteVolumeRegion(@Nullable Input<String> remoteVolumeRegion) {
             this.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
 
-        public Builder setRemoteVolumeRegion(@Nullable String remoteVolumeRegion) {
+        public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
             this.remoteVolumeRegion = Input.ofNullable(remoteVolumeRegion);
             return this;
         }
 
-        public Builder setRemoteVolumeResourceId(Input<String> remoteVolumeResourceId) {
+        public Builder remoteVolumeResourceId(Input<String> remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
             return this;
         }
 
-        public Builder setRemoteVolumeResourceId(String remoteVolumeResourceId) {
+        public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Input.of(Objects.requireNonNull(remoteVolumeResourceId));
             return this;
         }
 
-        public Builder setReplicationId(@Nullable Input<String> replicationId) {
+        public Builder replicationId(@Nullable Input<String> replicationId) {
             this.replicationId = replicationId;
             return this;
         }
 
-        public Builder setReplicationId(@Nullable String replicationId) {
+        public Builder replicationId(@Nullable String replicationId) {
             this.replicationId = Input.ofNullable(replicationId);
             return this;
         }
 
-        public Builder setReplicationSchedule(Input<Either<String,ReplicationSchedule>> replicationSchedule) {
+        public Builder replicationSchedule(Input<Either<String,ReplicationSchedule>> replicationSchedule) {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }
 
-        public Builder setReplicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
+        public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
             this.replicationSchedule = Input.of(Objects.requireNonNull(replicationSchedule));
             return this;
         }

@@ -72,12 +72,12 @@ public final class EndpointRangeDescriptionResponse extends io.pulumi.resources.
     	      this.startPort = defaults.startPort;
         }
 
-        public Builder setEndPort(Integer endPort) {
+        public Builder endPort(Integer endPort) {
             this.endPort = Objects.requireNonNull(endPort);
             return this;
         }
 
-        public Builder setStartPort(Integer startPort) {
+        public Builder startPort(Integer startPort) {
             this.startPort = Objects.requireNonNull(startPort);
             return this;
         }

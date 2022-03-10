@@ -50,12 +50,12 @@ public final class ResponseHeadersPolicyReferrerPolicy {
     	      this.referrerPolicy = defaults.referrerPolicy;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setReferrerPolicy(String referrerPolicy) {
+        public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }

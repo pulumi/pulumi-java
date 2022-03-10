@@ -109,42 +109,42 @@ public final class WindowsPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.rebootSetting = defaults.rebootSetting;
         }
 
-        public Builder setExcludedKbNumbers(@Nullable Input<List<String>> excludedKbNumbers) {
+        public Builder excludedKbNumbers(@Nullable Input<List<String>> excludedKbNumbers) {
             this.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
 
-        public Builder setExcludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
+        public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
             this.excludedKbNumbers = Input.ofNullable(excludedKbNumbers);
             return this;
         }
 
-        public Builder setIncludedKbNumbers(@Nullable Input<List<String>> includedKbNumbers) {
+        public Builder includedKbNumbers(@Nullable Input<List<String>> includedKbNumbers) {
             this.includedKbNumbers = includedKbNumbers;
             return this;
         }
 
-        public Builder setIncludedKbNumbers(@Nullable List<String> includedKbNumbers) {
+        public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
             this.includedKbNumbers = Input.ofNullable(includedKbNumbers);
             return this;
         }
 
-        public Builder setIncludedUpdateClassifications(@Nullable Input<Either<String,WindowsUpdateClasses>> includedUpdateClassifications) {
+        public Builder includedUpdateClassifications(@Nullable Input<Either<String,WindowsUpdateClasses>> includedUpdateClassifications) {
             this.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
 
-        public Builder setIncludedUpdateClassifications(@Nullable Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
+        public Builder includedUpdateClassifications(@Nullable Either<String,WindowsUpdateClasses> includedUpdateClassifications) {
             this.includedUpdateClassifications = Input.ofNullable(includedUpdateClassifications);
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable Input<String> rebootSetting) {
+        public Builder rebootSetting(@Nullable Input<String> rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable String rebootSetting) {
+        public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = Input.ofNullable(rebootSetting);
             return this;
         }

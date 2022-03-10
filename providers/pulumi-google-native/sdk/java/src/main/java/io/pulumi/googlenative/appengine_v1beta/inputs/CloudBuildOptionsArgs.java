@@ -74,22 +74,22 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder setAppYamlPath(@Nullable Input<String> appYamlPath) {
+        public Builder appYamlPath(@Nullable Input<String> appYamlPath) {
             this.appYamlPath = appYamlPath;
             return this;
         }
 
-        public Builder setAppYamlPath(@Nullable String appYamlPath) {
+        public Builder appYamlPath(@Nullable String appYamlPath) {
             this.appYamlPath = Input.ofNullable(appYamlPath);
             return this;
         }
 
-        public Builder setCloudBuildTimeout(@Nullable Input<String> cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(@Nullable Input<String> cloudBuildTimeout) {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
 
-        public Builder setCloudBuildTimeout(@Nullable String cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
             this.cloudBuildTimeout = Input.ofNullable(cloudBuildTimeout);
             return this;
         }

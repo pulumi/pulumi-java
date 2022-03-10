@@ -50,7 +50,7 @@ public final class ListConnectionConsentLinksResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<ConsentLinkDefinitionResponse> value) {
+        public Builder value(@Nullable List<ConsentLinkDefinitionResponse> value) {
             this.value = value;
             return this;
         }

@@ -164,42 +164,42 @@ public final class ProbeResponse {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setExec(ExecActionResponse exec) {
+        public Builder exec(ExecActionResponse exec) {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
 
-        public Builder setFailureThreshold(Integer failureThreshold) {
+        public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
 
-        public Builder setHttpGet(HTTPGetActionResponse httpGet) {
+        public Builder httpGet(HTTPGetActionResponse httpGet) {
             this.httpGet = Objects.requireNonNull(httpGet);
             return this;
         }
 
-        public Builder setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds);
             return this;
         }
 
-        public Builder setPeriodSeconds(Integer periodSeconds) {
+        public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
 
-        public Builder setSuccessThreshold(Integer successThreshold) {
+        public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
 
-        public Builder setTcpSocket(TCPSocketActionResponse tcpSocket) {
+        public Builder tcpSocket(TCPSocketActionResponse tcpSocket) {
             this.tcpSocket = Objects.requireNonNull(tcpSocket);
             return this;
         }
 
-        public Builder setTimeoutSeconds(Integer timeoutSeconds) {
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }

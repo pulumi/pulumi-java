@@ -322,167 +322,167 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCacheKeyParameters(@Nullable Input<List<String>> cacheKeyParameters) {
+        public Builder cacheKeyParameters(@Nullable Input<List<String>> cacheKeyParameters) {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
 
-        public Builder setCacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
+        public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             this.cacheKeyParameters = Input.ofNullable(cacheKeyParameters);
             return this;
         }
 
-        public Builder setCacheNamespace(@Nullable Input<String> cacheNamespace) {
+        public Builder cacheNamespace(@Nullable Input<String> cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
 
-        public Builder setCacheNamespace(@Nullable String cacheNamespace) {
+        public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = Input.ofNullable(cacheNamespace);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setConnectionType(@Nullable Input<String> connectionType) {
+        public Builder connectionType(@Nullable Input<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable String connectionType) {
+        public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Input.ofNullable(connectionType);
             return this;
         }
 
-        public Builder setContentHandling(@Nullable Input<String> contentHandling) {
+        public Builder contentHandling(@Nullable Input<String> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setContentHandling(@Nullable String contentHandling) {
+        public Builder contentHandling(@Nullable String contentHandling) {
             this.contentHandling = Input.ofNullable(contentHandling);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<String> credentials) {
+        public Builder credentials(@Nullable Input<String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setHttpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Input<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setIntegrationHttpMethod(@Nullable Input<String> integrationHttpMethod) {
+        public Builder integrationHttpMethod(@Nullable Input<String> integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
 
-        public Builder setIntegrationHttpMethod(@Nullable String integrationHttpMethod) {
+        public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = Input.ofNullable(integrationHttpMethod);
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable Input<String> passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable Input<String> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable String passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
             this.passthroughBehavior = Input.ofNullable(passthroughBehavior);
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Input<Map<String,String>> requestParameters) {
+        public Builder requestParameters(@Nullable Input<Map<String,String>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Map<String,String> requestParameters) {
+        public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
             this.requestParameters = Input.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Input<Map<String,String>> requestTemplates) {
+        public Builder requestTemplates(@Nullable Input<Map<String,String>> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Map<String,String> requestTemplates) {
+        public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
             this.requestTemplates = Input.ofNullable(requestTemplates);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setRestApi(Input<String> restApi) {
+        public Builder restApi(Input<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder setTimeoutMilliseconds(@Nullable Input<Integer> timeoutMilliseconds) {
+        public Builder timeoutMilliseconds(@Nullable Input<Integer> timeoutMilliseconds) {
             this.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
 
-        public Builder setTimeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
+        public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
             this.timeoutMilliseconds = Input.ofNullable(timeoutMilliseconds);
             return this;
         }
 
-        public Builder setTlsConfig(@Nullable Input<IntegrationTlsConfigArgs> tlsConfig) {
+        public Builder tlsConfig(@Nullable Input<IntegrationTlsConfigArgs> tlsConfig) {
             this.tlsConfig = tlsConfig;
             return this;
         }
 
-        public Builder setTlsConfig(@Nullable IntegrationTlsConfigArgs tlsConfig) {
+        public Builder tlsConfig(@Nullable IntegrationTlsConfigArgs tlsConfig) {
             this.tlsConfig = Input.ofNullable(tlsConfig);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

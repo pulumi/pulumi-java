@@ -83,17 +83,17 @@ public final class RuleSourceSourceDetail {
     	      this.messageType = defaults.messageType;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
-        public Builder setMessageType(@Nullable String messageType) {
+        public Builder messageType(@Nullable String messageType) {
             this.messageType = messageType;
             return this;
         }

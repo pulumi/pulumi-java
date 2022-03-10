@@ -154,72 +154,72 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     	      this.targets = defaults.targets;
         }
 
-        public Builder setDetailType(Input<String> detailType) {
+        public Builder detailType(Input<String> detailType) {
             this.detailType = Objects.requireNonNull(detailType);
             return this;
         }
 
-        public Builder setDetailType(String detailType) {
+        public Builder detailType(String detailType) {
             this.detailType = Input.of(Objects.requireNonNull(detailType));
             return this;
         }
 
-        public Builder setEventTypeIds(Input<List<String>> eventTypeIds) {
+        public Builder eventTypeIds(Input<List<String>> eventTypeIds) {
             this.eventTypeIds = Objects.requireNonNull(eventTypeIds);
             return this;
         }
 
-        public Builder setEventTypeIds(List<String> eventTypeIds) {
+        public Builder eventTypeIds(List<String> eventTypeIds) {
             this.eventTypeIds = Input.of(Objects.requireNonNull(eventTypeIds));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResource(Input<String> resource) {
+        public Builder resource(Input<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<List<NotificationRuleTargetArgs>> targets) {
+        public Builder targets(@Nullable Input<List<NotificationRuleTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<NotificationRuleTargetArgs> targets) {
+        public Builder targets(@Nullable List<NotificationRuleTargetArgs> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }

@@ -188,92 +188,92 @@ public final class FactoryGitHubConfigurationArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<GitHubClientSecretArgs> clientSecret) {
+        public Builder clientSecret(@Nullable Input<GitHubClientSecretArgs> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable GitHubClientSecretArgs clientSecret) {
+        public Builder clientSecret(@Nullable GitHubClientSecretArgs clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setCollaborationBranch(Input<String> collaborationBranch) {
+        public Builder collaborationBranch(Input<String> collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
 
-        public Builder setCollaborationBranch(String collaborationBranch) {
+        public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Input.of(Objects.requireNonNull(collaborationBranch));
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable String lastCommitId) {
+        public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = Input.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder setRootFolder(Input<String> rootFolder) {
+        public Builder rootFolder(Input<String> rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
 
-        public Builder setRootFolder(String rootFolder) {
+        public Builder rootFolder(String rootFolder) {
             this.rootFolder = Input.of(Objects.requireNonNull(rootFolder));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

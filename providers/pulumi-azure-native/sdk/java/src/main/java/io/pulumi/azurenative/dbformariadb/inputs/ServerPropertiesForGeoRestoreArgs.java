@@ -161,72 +161,72 @@ public final class ServerPropertiesForGeoRestoreArgs extends io.pulumi.resources
     	      this.version = defaults.version;
         }
 
-        public Builder setCreateMode(Input<String> createMode) {
+        public Builder createMode(Input<String> createMode) {
             this.createMode = Objects.requireNonNull(createMode);
             return this;
         }
 
-        public Builder setCreateMode(String createMode) {
+        public Builder createMode(String createMode) {
             this.createMode = Input.of(Objects.requireNonNull(createMode));
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
             this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setSourceServerId(Input<String> sourceServerId) {
+        public Builder sourceServerId(Input<String> sourceServerId) {
             this.sourceServerId = Objects.requireNonNull(sourceServerId);
             return this;
         }
 
-        public Builder setSourceServerId(String sourceServerId) {
+        public Builder sourceServerId(String sourceServerId) {
             this.sourceServerId = Input.of(Objects.requireNonNull(sourceServerId));
             return this;
         }
 
-        public Builder setSslEnforcement(@Nullable Input<SslEnforcementEnum> sslEnforcement) {
+        public Builder sslEnforcement(@Nullable Input<SslEnforcementEnum> sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
 
-        public Builder setSslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
+        public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
             this.sslEnforcement = Input.ofNullable(sslEnforcement);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Either<String,ServerVersion>> version) {
+        public Builder version(@Nullable Input<Either<String,ServerVersion>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Either<String,ServerVersion> version) {
+        public Builder version(@Nullable Either<String,ServerVersion> version) {
             this.version = Input.ofNullable(version);
             return this;
         }

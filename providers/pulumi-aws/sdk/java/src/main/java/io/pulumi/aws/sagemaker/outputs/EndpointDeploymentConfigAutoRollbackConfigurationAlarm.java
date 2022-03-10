@@ -48,7 +48,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
     	      this.alarmName = defaults.alarmName;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }

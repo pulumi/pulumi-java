@@ -166,72 +166,72 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topology = defaults.topology;
         }
 
-        public Builder setAddresses(Input<List<String>> addresses) {
+        public Builder addresses(Input<List<String>> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Input.of(Objects.requireNonNull(addresses));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<EndpointConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Input<EndpointConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable EndpointConditionsArgs conditions) {
+        public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setHints(@Nullable Input<EndpointHintsArgs> hints) {
+        public Builder hints(@Nullable Input<EndpointHintsArgs> hints) {
             this.hints = hints;
             return this;
         }
 
-        public Builder setHints(@Nullable EndpointHintsArgs hints) {
+        public Builder hints(@Nullable EndpointHintsArgs hints) {
             this.hints = Input.ofNullable(hints);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setNodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Input<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Input.ofNullable(nodeName);
             return this;
         }
 
-        public Builder setTargetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
+        public Builder targetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReferenceArgs targetRef) {
+        public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
             this.targetRef = Input.ofNullable(targetRef);
             return this;
         }
 
-        public Builder setTopology(@Nullable Input<Map<String,String>> topology) {
+        public Builder topology(@Nullable Input<Map<String,String>> topology) {
             this.topology = topology;
             return this;
         }
 
-        public Builder setTopology(@Nullable Map<String,String> topology) {
+        public Builder topology(@Nullable Map<String,String> topology) {
             this.topology = Input.ofNullable(topology);
             return this;
         }

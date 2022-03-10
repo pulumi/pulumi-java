@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs extends io.
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setVersionVariants(@Nullable Input<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
+        public Builder versionVariants(@Nullable Input<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
             this.versionVariants = versionVariants;
             return this;
         }
 
-        public Builder setVersionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
+        public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
             this.versionVariants = Input.ofNullable(versionVariants);
             return this;
         }

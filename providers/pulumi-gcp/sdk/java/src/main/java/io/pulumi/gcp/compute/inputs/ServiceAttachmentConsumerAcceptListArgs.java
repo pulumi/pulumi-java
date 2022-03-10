@@ -71,22 +71,22 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
     	      this.projectIdOrNum = defaults.projectIdOrNum;
         }
 
-        public Builder setConnectionLimit(Input<Integer> connectionLimit) {
+        public Builder connectionLimit(Input<Integer> connectionLimit) {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
 
-        public Builder setConnectionLimit(Integer connectionLimit) {
+        public Builder connectionLimit(Integer connectionLimit) {
             this.connectionLimit = Input.of(Objects.requireNonNull(connectionLimit));
             return this;
         }
 
-        public Builder setProjectIdOrNum(Input<String> projectIdOrNum) {
+        public Builder projectIdOrNum(Input<String> projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }
 
-        public Builder setProjectIdOrNum(String projectIdOrNum) {
+        public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Input.of(Objects.requireNonNull(projectIdOrNum));
             return this;
         }

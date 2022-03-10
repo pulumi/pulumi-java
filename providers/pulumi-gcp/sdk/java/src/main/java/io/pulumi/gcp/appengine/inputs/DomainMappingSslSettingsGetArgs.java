@@ -98,32 +98,32 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setPendingManagedCertificateId(@Nullable Input<String> pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(@Nullable Input<String> pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
 
-        public Builder setPendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = Input.ofNullable(pendingManagedCertificateId);
             return this;
         }
 
-        public Builder setSslManagementType(Input<String> sslManagementType) {
+        public Builder sslManagementType(Input<String> sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
 
-        public Builder setSslManagementType(String sslManagementType) {
+        public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Input.of(Objects.requireNonNull(sslManagementType));
             return this;
         }

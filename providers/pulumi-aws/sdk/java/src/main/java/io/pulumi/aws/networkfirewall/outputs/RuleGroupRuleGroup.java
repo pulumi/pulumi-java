@@ -85,17 +85,17 @@ public final class RuleGroupRuleGroup {
     	      this.statefulRuleOptions = defaults.statefulRuleOptions;
         }
 
-        public Builder setRuleVariables(@Nullable RuleGroupRuleGroupRuleVariables ruleVariables) {
+        public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariables ruleVariables) {
             this.ruleVariables = ruleVariables;
             return this;
         }
 
-        public Builder setRulesSource(RuleGroupRuleGroupRulesSource rulesSource) {
+        public Builder rulesSource(RuleGroupRuleGroupRulesSource rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }

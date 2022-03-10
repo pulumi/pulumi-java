@@ -137,62 +137,62 @@ public final class OriginRequestPolicyState extends io.pulumi.resources.Resource
     	      this.queryStringsConfig = defaults.queryStringsConfig;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setCookiesConfig(@Nullable Input<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig) {
+        public Builder cookiesConfig(@Nullable Input<OriginRequestPolicyCookiesConfigGetArgs> cookiesConfig) {
             this.cookiesConfig = cookiesConfig;
             return this;
         }
 
-        public Builder setCookiesConfig(@Nullable OriginRequestPolicyCookiesConfigGetArgs cookiesConfig) {
+        public Builder cookiesConfig(@Nullable OriginRequestPolicyCookiesConfigGetArgs cookiesConfig) {
             this.cookiesConfig = Input.ofNullable(cookiesConfig);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setHeadersConfig(@Nullable Input<OriginRequestPolicyHeadersConfigGetArgs> headersConfig) {
+        public Builder headersConfig(@Nullable Input<OriginRequestPolicyHeadersConfigGetArgs> headersConfig) {
             this.headersConfig = headersConfig;
             return this;
         }
 
-        public Builder setHeadersConfig(@Nullable OriginRequestPolicyHeadersConfigGetArgs headersConfig) {
+        public Builder headersConfig(@Nullable OriginRequestPolicyHeadersConfigGetArgs headersConfig) {
             this.headersConfig = Input.ofNullable(headersConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryStringsConfig(@Nullable Input<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig) {
+        public Builder queryStringsConfig(@Nullable Input<OriginRequestPolicyQueryStringsConfigGetArgs> queryStringsConfig) {
             this.queryStringsConfig = queryStringsConfig;
             return this;
         }
 
-        public Builder setQueryStringsConfig(@Nullable OriginRequestPolicyQueryStringsConfigGetArgs queryStringsConfig) {
+        public Builder queryStringsConfig(@Nullable OriginRequestPolicyQueryStringsConfigGetArgs queryStringsConfig) {
             this.queryStringsConfig = Input.ofNullable(queryStringsConfig);
             return this;
         }

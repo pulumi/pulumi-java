@@ -85,32 +85,32 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Input<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder setTimeOfDay(Input<String> timeOfDay) {
+        public Builder timeOfDay(Input<String> timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
-        public Builder setTimeOfDay(String timeOfDay) {
+        public Builder timeOfDay(String timeOfDay) {
             this.timeOfDay = Input.of(Objects.requireNonNull(timeOfDay));
             return this;
         }
 
-        public Builder setTimeZone(Input<String> timeZone) {
+        public Builder timeZone(Input<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Input.of(Objects.requireNonNull(timeZone));
             return this;
         }

@@ -86,32 +86,32 @@ public final class TopicRuleErrorActionFirehoseGetArgs extends io.pulumi.resourc
     	      this.separator = defaults.separator;
         }
 
-        public Builder setDeliveryStreamName(Input<String> deliveryStreamName) {
+        public Builder deliveryStreamName(Input<String> deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Input.of(Objects.requireNonNull(deliveryStreamName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSeparator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Input<String> separator) {
             this.separator = separator;
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = Input.ofNullable(separator);
             return this;
         }

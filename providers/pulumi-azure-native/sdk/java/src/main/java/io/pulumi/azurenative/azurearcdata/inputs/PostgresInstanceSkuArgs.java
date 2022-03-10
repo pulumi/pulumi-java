@@ -141,62 +141,62 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setDev(@Nullable Input<Boolean> dev) {
+        public Builder dev(@Nullable Input<Boolean> dev) {
             this.dev = dev;
             return this;
         }
 
-        public Builder setDev(@Nullable Boolean dev) {
+        public Builder dev(@Nullable Boolean dev) {
             this.dev = Input.ofNullable(dev);
             return this;
         }
 
-        public Builder setFamily(@Nullable Input<String> family) {
+        public Builder family(@Nullable Input<String> family) {
             this.family = family;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = Input.ofNullable(family);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<PostgresInstanceSkuTier> tier) {
+        public Builder tier(@Nullable Input<PostgresInstanceSkuTier> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable PostgresInstanceSkuTier tier) {
+        public Builder tier(@Nullable PostgresInstanceSkuTier tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

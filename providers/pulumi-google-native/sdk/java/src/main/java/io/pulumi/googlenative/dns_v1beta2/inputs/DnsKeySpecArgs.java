@@ -105,42 +105,42 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setAlgorithm(@Nullable Input<DnsKeySpecAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Input<DnsKeySpecAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable DnsKeySpecAlgorithm algorithm) {
+        public Builder algorithm(@Nullable DnsKeySpecAlgorithm algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setKeyLength(@Nullable Input<Integer> keyLength) {
+        public Builder keyLength(@Nullable Input<Integer> keyLength) {
             this.keyLength = keyLength;
             return this;
         }
 
-        public Builder setKeyLength(@Nullable Integer keyLength) {
+        public Builder keyLength(@Nullable Integer keyLength) {
             this.keyLength = Input.ofNullable(keyLength);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<DnsKeySpecKeyType> keyType) {
+        public Builder keyType(@Nullable Input<DnsKeySpecKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable DnsKeySpecKeyType keyType) {
+        public Builder keyType(@Nullable DnsKeySpecKeyType keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

@@ -145,37 +145,37 @@ public final class BucketInventoryConfiguration {
     	      this.scheduleFrequency = defaults.scheduleFrequency;
         }
 
-        public Builder setDestination(BucketDestination destination) {
+        public Builder destination(BucketDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncludedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
+        public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
+        public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setScheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
+        public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }

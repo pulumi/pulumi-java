@@ -93,32 +93,32 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     	      this.failoverTypes = defaults.failoverTypes;
         }
 
-        public Builder setActionName(Input<String> actionName) {
+        public Builder actionName(Input<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }
 
-        public Builder setFailoverDirections(Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
+        public Builder failoverDirections(Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
             this.failoverDirections = Objects.requireNonNull(failoverDirections);
             return this;
         }
 
-        public Builder setFailoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
+        public Builder failoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
             this.failoverDirections = Input.of(Objects.requireNonNull(failoverDirections));
             return this;
         }
 
-        public Builder setFailoverTypes(Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
+        public Builder failoverTypes(Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
             this.failoverTypes = Objects.requireNonNull(failoverTypes);
             return this;
         }
 
-        public Builder setFailoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
+        public Builder failoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
             this.failoverTypes = Input.of(Objects.requireNonNull(failoverTypes));
             return this;
         }

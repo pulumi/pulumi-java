@@ -55,7 +55,7 @@ public final class NodeGroupAffinityResponse extends io.pulumi.resources.InvokeA
     	      this.nodeGroupUri = defaults.nodeGroupUri;
         }
 
-        public Builder setNodeGroupUri(String nodeGroupUri) {
+        public Builder nodeGroupUri(String nodeGroupUri) {
             this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
             return this;
         }

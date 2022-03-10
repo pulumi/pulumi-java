@@ -68,12 +68,12 @@ public final class FhirStoreStreamConfigBigqueryDestination {
     	      this.schemaConfig = defaults.schemaConfig;
         }
 
-        public Builder setDatasetUri(String datasetUri) {
+        public Builder datasetUri(String datasetUri) {
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
 
-        public Builder setSchemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
+        public Builder schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }

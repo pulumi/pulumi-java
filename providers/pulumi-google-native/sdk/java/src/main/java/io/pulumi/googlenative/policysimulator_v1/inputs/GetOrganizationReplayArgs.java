@@ -72,17 +72,17 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
     	      this.replayId = defaults.replayId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setReplayId(String replayId) {
+        public Builder replayId(String replayId) {
             this.replayId = Objects.requireNonNull(replayId);
             return this;
         }

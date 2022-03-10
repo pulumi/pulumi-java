@@ -92,32 +92,32 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
     	      this.xraiAttribution = defaults.xraiAttribution;
         }
 
-        public Builder setIntegratedGradientsAttribution(@Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution) {
+        public Builder integratedGradientsAttribution(@Nullable Input<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution) {
             this.integratedGradientsAttribution = integratedGradientsAttribution;
             return this;
         }
 
-        public Builder setIntegratedGradientsAttribution(@Nullable GoogleCloudMlV1__IntegratedGradientsAttributionArgs integratedGradientsAttribution) {
+        public Builder integratedGradientsAttribution(@Nullable GoogleCloudMlV1__IntegratedGradientsAttributionArgs integratedGradientsAttribution) {
             this.integratedGradientsAttribution = Input.ofNullable(integratedGradientsAttribution);
             return this;
         }
 
-        public Builder setSampledShapleyAttribution(@Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
+        public Builder sampledShapleyAttribution(@Nullable Input<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution) {
             this.sampledShapleyAttribution = sampledShapleyAttribution;
             return this;
         }
 
-        public Builder setSampledShapleyAttribution(@Nullable GoogleCloudMlV1__SampledShapleyAttributionArgs sampledShapleyAttribution) {
+        public Builder sampledShapleyAttribution(@Nullable GoogleCloudMlV1__SampledShapleyAttributionArgs sampledShapleyAttribution) {
             this.sampledShapleyAttribution = Input.ofNullable(sampledShapleyAttribution);
             return this;
         }
 
-        public Builder setXraiAttribution(@Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
+        public Builder xraiAttribution(@Nullable Input<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution) {
             this.xraiAttribution = xraiAttribution;
             return this;
         }
 
-        public Builder setXraiAttribution(@Nullable GoogleCloudMlV1__XraiAttributionArgs xraiAttribution) {
+        public Builder xraiAttribution(@Nullable GoogleCloudMlV1__XraiAttributionArgs xraiAttribution) {
             this.xraiAttribution = Input.ofNullable(xraiAttribution);
             return this;
         }

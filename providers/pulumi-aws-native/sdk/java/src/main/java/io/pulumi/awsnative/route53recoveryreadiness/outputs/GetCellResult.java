@@ -101,22 +101,22 @@ public final class GetCellResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCellArn(@Nullable String cellArn) {
+        public Builder cellArn(@Nullable String cellArn) {
             this.cellArn = cellArn;
             return this;
         }
 
-        public Builder setCells(@Nullable List<String> cells) {
+        public Builder cells(@Nullable List<String> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setParentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
+        public Builder parentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
             this.parentReadinessScopes = parentReadinessScopes;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CellTag> tags) {
+        public Builder tags(@Nullable List<CellTag> tags) {
             this.tags = tags;
             return this;
         }

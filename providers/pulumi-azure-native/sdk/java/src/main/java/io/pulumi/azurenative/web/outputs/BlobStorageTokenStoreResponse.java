@@ -50,7 +50,7 @@ public final class BlobStorageTokenStoreResponse {
     	      this.sasUrlSettingName = defaults.sasUrlSettingName;
         }
 
-        public Builder setSasUrlSettingName(@Nullable String sasUrlSettingName) {
+        public Builder sasUrlSettingName(@Nullable String sasUrlSettingName) {
             this.sasUrlSettingName = sasUrlSettingName;
             return this;
         }

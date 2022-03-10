@@ -122,52 +122,52 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     	      this.windowsMountDrive = defaults.windowsMountDrive;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setLinuxMountPoint(@Nullable Input<String> linuxMountPoint) {
+        public Builder linuxMountPoint(@Nullable Input<String> linuxMountPoint) {
             this.linuxMountPoint = linuxMountPoint;
             return this;
         }
 
-        public Builder setLinuxMountPoint(@Nullable String linuxMountPoint) {
+        public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
             this.linuxMountPoint = Input.ofNullable(linuxMountPoint);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setWindowsMountDrive(@Nullable Input<String> windowsMountDrive) {
+        public Builder windowsMountDrive(@Nullable Input<String> windowsMountDrive) {
             this.windowsMountDrive = windowsMountDrive;
             return this;
         }
 
-        public Builder setWindowsMountDrive(@Nullable String windowsMountDrive) {
+        public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
             this.windowsMountDrive = Input.ofNullable(windowsMountDrive);
             return this;
         }

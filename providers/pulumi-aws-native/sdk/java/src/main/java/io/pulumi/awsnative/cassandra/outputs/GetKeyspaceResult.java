@@ -42,7 +42,7 @@ public final class GetKeyspaceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable List<KeyspaceTag> tags) {
+        public Builder tags(@Nullable List<KeyspaceTag> tags) {
             this.tags = tags;
             return this;
         }

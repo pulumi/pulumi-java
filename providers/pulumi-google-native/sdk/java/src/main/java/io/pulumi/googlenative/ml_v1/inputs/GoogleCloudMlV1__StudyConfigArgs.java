@@ -110,42 +110,42 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAlgorithm(@Nullable Input<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Input<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
+        public Builder algorithm(@Nullable GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setAutomatedStoppingConfig(@Nullable Input<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig) {
+        public Builder automatedStoppingConfig(@Nullable Input<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig) {
             this.automatedStoppingConfig = automatedStoppingConfig;
             return this;
         }
 
-        public Builder setAutomatedStoppingConfig(@Nullable GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
+        public Builder automatedStoppingConfig(@Nullable GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
             this.automatedStoppingConfig = Input.ofNullable(automatedStoppingConfig);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
+        public Builder metrics(@Nullable List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setParameters(Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters) {
+        public Builder parameters(Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> parameters) {
+        public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

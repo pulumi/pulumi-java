@@ -84,17 +84,17 @@ public final class ExportResponse {
     	      this.blobPathPrefix = defaults.blobPathPrefix;
         }
 
-        public Builder setBlobListBlobPath(@Nullable String blobListBlobPath) {
+        public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
             this.blobListBlobPath = blobListBlobPath;
             return this;
         }
 
-        public Builder setBlobPath(@Nullable List<String> blobPath) {
+        public Builder blobPath(@Nullable List<String> blobPath) {
             this.blobPath = blobPath;
             return this;
         }
 
-        public Builder setBlobPathPrefix(@Nullable List<String> blobPathPrefix) {
+        public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
             this.blobPathPrefix = blobPathPrefix;
             return this;
         }

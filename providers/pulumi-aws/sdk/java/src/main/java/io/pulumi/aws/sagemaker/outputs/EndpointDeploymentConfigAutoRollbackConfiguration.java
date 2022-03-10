@@ -50,7 +50,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfiguration {
     	      this.alarms = defaults.alarms;
         }
 
-        public Builder setAlarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms) {
+        public Builder alarms(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms) {
             this.alarms = alarms;
             return this;
         }

@@ -91,32 +91,32 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(@Nullable Input<Integer> height) {
+        public Builder height(@Nullable Input<Integer> height) {
             this.height = height;
             return this;
         }
 
-        public Builder setHeight(@Nullable Integer height) {
+        public Builder height(@Nullable Integer height) {
             this.height = Input.ofNullable(height);
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
 
-        public Builder setWidth(@Nullable Input<Integer> width) {
+        public Builder width(@Nullable Input<Integer> width) {
             this.width = width;
             return this;
         }
 
-        public Builder setWidth(@Nullable Integer width) {
+        public Builder width(@Nullable Integer width) {
             this.width = Input.ofNullable(width);
             return this;
         }

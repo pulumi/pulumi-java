@@ -70,12 +70,12 @@ public final class DeadLetterWithResourceIdentityResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setDeadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EventSubscriptionIdentityResponse identity) {
+        public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
         }

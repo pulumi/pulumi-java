@@ -236,152 +236,152 @@ public final class FlowSourceConnectorPropertiesArgs extends io.pulumi.resources
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setAmplitude(@Nullable Input<FlowAmplitudeSourcePropertiesArgs> amplitude) {
+        public Builder amplitude(@Nullable Input<FlowAmplitudeSourcePropertiesArgs> amplitude) {
             this.amplitude = amplitude;
             return this;
         }
 
-        public Builder setAmplitude(@Nullable FlowAmplitudeSourcePropertiesArgs amplitude) {
+        public Builder amplitude(@Nullable FlowAmplitudeSourcePropertiesArgs amplitude) {
             this.amplitude = Input.ofNullable(amplitude);
             return this;
         }
 
-        public Builder setDatadog(@Nullable Input<FlowDatadogSourcePropertiesArgs> datadog) {
+        public Builder datadog(@Nullable Input<FlowDatadogSourcePropertiesArgs> datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDatadog(@Nullable FlowDatadogSourcePropertiesArgs datadog) {
+        public Builder datadog(@Nullable FlowDatadogSourcePropertiesArgs datadog) {
             this.datadog = Input.ofNullable(datadog);
             return this;
         }
 
-        public Builder setDynatrace(@Nullable Input<FlowDynatraceSourcePropertiesArgs> dynatrace) {
+        public Builder dynatrace(@Nullable Input<FlowDynatraceSourcePropertiesArgs> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable FlowDynatraceSourcePropertiesArgs dynatrace) {
+        public Builder dynatrace(@Nullable FlowDynatraceSourcePropertiesArgs dynatrace) {
             this.dynatrace = Input.ofNullable(dynatrace);
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable Input<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics) {
+        public Builder googleAnalytics(@Nullable Input<FlowGoogleAnalyticsSourcePropertiesArgs> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable FlowGoogleAnalyticsSourcePropertiesArgs googleAnalytics) {
+        public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourcePropertiesArgs googleAnalytics) {
             this.googleAnalytics = Input.ofNullable(googleAnalytics);
             return this;
         }
 
-        public Builder setInforNexus(@Nullable Input<FlowInforNexusSourcePropertiesArgs> inforNexus) {
+        public Builder inforNexus(@Nullable Input<FlowInforNexusSourcePropertiesArgs> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable FlowInforNexusSourcePropertiesArgs inforNexus) {
+        public Builder inforNexus(@Nullable FlowInforNexusSourcePropertiesArgs inforNexus) {
             this.inforNexus = Input.ofNullable(inforNexus);
             return this;
         }
 
-        public Builder setMarketo(@Nullable Input<FlowMarketoSourcePropertiesArgs> marketo) {
+        public Builder marketo(@Nullable Input<FlowMarketoSourcePropertiesArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable FlowMarketoSourcePropertiesArgs marketo) {
+        public Builder marketo(@Nullable FlowMarketoSourcePropertiesArgs marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<FlowS3SourcePropertiesArgs> s3) {
+        public Builder s3(@Nullable Input<FlowS3SourcePropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable FlowS3SourcePropertiesArgs s3) {
+        public Builder s3(@Nullable FlowS3SourcePropertiesArgs s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSAPOData(@Nullable Input<FlowSAPODataSourcePropertiesArgs> sAPOData) {
+        public Builder sAPOData(@Nullable Input<FlowSAPODataSourcePropertiesArgs> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable FlowSAPODataSourcePropertiesArgs sAPOData) {
+        public Builder sAPOData(@Nullable FlowSAPODataSourcePropertiesArgs sAPOData) {
             this.sAPOData = Input.ofNullable(sAPOData);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<FlowSalesforceSourcePropertiesArgs> salesforce) {
+        public Builder salesforce(@Nullable Input<FlowSalesforceSourcePropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable FlowSalesforceSourcePropertiesArgs salesforce) {
+        public Builder salesforce(@Nullable FlowSalesforceSourcePropertiesArgs salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<FlowServiceNowSourcePropertiesArgs> serviceNow) {
+        public Builder serviceNow(@Nullable Input<FlowServiceNowSourcePropertiesArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable FlowServiceNowSourcePropertiesArgs serviceNow) {
+        public Builder serviceNow(@Nullable FlowServiceNowSourcePropertiesArgs serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setSingular(@Nullable Input<FlowSingularSourcePropertiesArgs> singular) {
+        public Builder singular(@Nullable Input<FlowSingularSourcePropertiesArgs> singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSingular(@Nullable FlowSingularSourcePropertiesArgs singular) {
+        public Builder singular(@Nullable FlowSingularSourcePropertiesArgs singular) {
             this.singular = Input.ofNullable(singular);
             return this;
         }
 
-        public Builder setSlack(@Nullable Input<FlowSlackSourcePropertiesArgs> slack) {
+        public Builder slack(@Nullable Input<FlowSlackSourcePropertiesArgs> slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSlack(@Nullable FlowSlackSourcePropertiesArgs slack) {
+        public Builder slack(@Nullable FlowSlackSourcePropertiesArgs slack) {
             this.slack = Input.ofNullable(slack);
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable Input<FlowTrendmicroSourcePropertiesArgs> trendmicro) {
+        public Builder trendmicro(@Nullable Input<FlowTrendmicroSourcePropertiesArgs> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable FlowTrendmicroSourcePropertiesArgs trendmicro) {
+        public Builder trendmicro(@Nullable FlowTrendmicroSourcePropertiesArgs trendmicro) {
             this.trendmicro = Input.ofNullable(trendmicro);
             return this;
         }
 
-        public Builder setVeeva(@Nullable Input<FlowVeevaSourcePropertiesArgs> veeva) {
+        public Builder veeva(@Nullable Input<FlowVeevaSourcePropertiesArgs> veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setVeeva(@Nullable FlowVeevaSourcePropertiesArgs veeva) {
+        public Builder veeva(@Nullable FlowVeevaSourcePropertiesArgs veeva) {
             this.veeva = Input.ofNullable(veeva);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<FlowZendeskSourcePropertiesArgs> zendesk) {
+        public Builder zendesk(@Nullable Input<FlowZendeskSourcePropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable FlowZendeskSourcePropertiesArgs zendesk) {
+        public Builder zendesk(@Nullable FlowZendeskSourcePropertiesArgs zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

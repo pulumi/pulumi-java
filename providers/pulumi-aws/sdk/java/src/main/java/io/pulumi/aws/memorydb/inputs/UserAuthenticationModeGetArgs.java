@@ -88,32 +88,32 @@ public final class UserAuthenticationModeGetArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setPasswordCount(@Nullable Input<Integer> passwordCount) {
+        public Builder passwordCount(@Nullable Input<Integer> passwordCount) {
             this.passwordCount = passwordCount;
             return this;
         }
 
-        public Builder setPasswordCount(@Nullable Integer passwordCount) {
+        public Builder passwordCount(@Nullable Integer passwordCount) {
             this.passwordCount = Input.ofNullable(passwordCount);
             return this;
         }
 
-        public Builder setPasswords(Input<List<String>> passwords) {
+        public Builder passwords(Input<List<String>> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
 
-        public Builder setPasswords(List<String> passwords) {
+        public Builder passwords(List<String> passwords) {
             this.passwords = Input.of(Objects.requireNonNull(passwords));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

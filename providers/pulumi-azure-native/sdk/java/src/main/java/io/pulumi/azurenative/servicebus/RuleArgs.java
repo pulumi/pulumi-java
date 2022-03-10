@@ -186,92 +186,92 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAction(@Nullable Input<ActionArgs> action) {
+        public Builder action(@Nullable Input<ActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable ActionArgs action) {
+        public Builder action(@Nullable ActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCorrelationFilter(@Nullable Input<CorrelationFilterArgs> correlationFilter) {
+        public Builder correlationFilter(@Nullable Input<CorrelationFilterArgs> correlationFilter) {
             this.correlationFilter = correlationFilter;
             return this;
         }
 
-        public Builder setCorrelationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
+        public Builder correlationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
             this.correlationFilter = Input.ofNullable(correlationFilter);
             return this;
         }
 
-        public Builder setFilterType(@Nullable Input<FilterType> filterType) {
+        public Builder filterType(@Nullable Input<FilterType> filterType) {
             this.filterType = filterType;
             return this;
         }
 
-        public Builder setFilterType(@Nullable FilterType filterType) {
+        public Builder filterType(@Nullable FilterType filterType) {
             this.filterType = Input.ofNullable(filterType);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setSqlFilter(@Nullable Input<SqlFilterArgs> sqlFilter) {
+        public Builder sqlFilter(@Nullable Input<SqlFilterArgs> sqlFilter) {
             this.sqlFilter = sqlFilter;
             return this;
         }
 
-        public Builder setSqlFilter(@Nullable SqlFilterArgs sqlFilter) {
+        public Builder sqlFilter(@Nullable SqlFilterArgs sqlFilter) {
             this.sqlFilter = Input.ofNullable(sqlFilter);
             return this;
         }
 
-        public Builder setSubscriptionName(Input<String> subscriptionName) {
+        public Builder subscriptionName(Input<String> subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
 
-        public Builder setSubscriptionName(String subscriptionName) {
+        public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = Input.of(Objects.requireNonNull(subscriptionName));
             return this;
         }
 
-        public Builder setTopicName(Input<String> topicName) {
+        public Builder topicName(Input<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }

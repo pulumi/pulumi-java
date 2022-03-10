@@ -69,22 +69,22 @@ public final class DirectoryConfigServiceAccountCredentialsGetArgs extends io.pu
     	      this.accountPassword = defaults.accountPassword;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAccountPassword(Input<String> accountPassword) {
+        public Builder accountPassword(Input<String> accountPassword) {
             this.accountPassword = Objects.requireNonNull(accountPassword);
             return this;
         }
 
-        public Builder setAccountPassword(String accountPassword) {
+        public Builder accountPassword(String accountPassword) {
             this.accountPassword = Input.of(Objects.requireNonNull(accountPassword));
             return this;
         }

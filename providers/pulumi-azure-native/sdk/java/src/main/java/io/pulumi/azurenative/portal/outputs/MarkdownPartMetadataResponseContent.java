@@ -50,7 +50,7 @@ public final class MarkdownPartMetadataResponseContent {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setSettings(@Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
+        public Builder settings(@Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
             this.settings = settings;
             return this;
         }

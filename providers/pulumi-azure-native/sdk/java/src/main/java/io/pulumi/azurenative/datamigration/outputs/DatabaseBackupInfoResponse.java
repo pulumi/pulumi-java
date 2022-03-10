@@ -164,42 +164,42 @@ public final class DatabaseBackupInfoResponse {
     	      this.position = defaults.position;
         }
 
-        public Builder setBackupFiles(List<String> backupFiles) {
+        public Builder backupFiles(List<String> backupFiles) {
             this.backupFiles = Objects.requireNonNull(backupFiles);
             return this;
         }
 
-        public Builder setBackupFinishDate(String backupFinishDate) {
+        public Builder backupFinishDate(String backupFinishDate) {
             this.backupFinishDate = Objects.requireNonNull(backupFinishDate);
             return this;
         }
 
-        public Builder setBackupType(String backupType) {
+        public Builder backupType(String backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setFamilyCount(Integer familyCount) {
+        public Builder familyCount(Integer familyCount) {
             this.familyCount = Objects.requireNonNull(familyCount);
             return this;
         }
 
-        public Builder setIsCompressed(Boolean isCompressed) {
+        public Builder isCompressed(Boolean isCompressed) {
             this.isCompressed = Objects.requireNonNull(isCompressed);
             return this;
         }
 
-        public Builder setIsDamaged(Boolean isDamaged) {
+        public Builder isDamaged(Boolean isDamaged) {
             this.isDamaged = Objects.requireNonNull(isDamaged);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

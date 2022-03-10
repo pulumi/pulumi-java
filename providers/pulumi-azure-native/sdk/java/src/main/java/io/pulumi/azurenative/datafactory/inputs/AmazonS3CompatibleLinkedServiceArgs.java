@@ -211,102 +211,102 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessKeyId(@Nullable Input<Object> accessKeyId) {
+        public Builder accessKeyId(@Nullable Input<Object> accessKeyId) {
             this.accessKeyId = accessKeyId;
             return this;
         }
 
-        public Builder setAccessKeyId(@Nullable Object accessKeyId) {
+        public Builder accessKeyId(@Nullable Object accessKeyId) {
             this.accessKeyId = Input.ofNullable(accessKeyId);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setForcePathStyle(@Nullable Input<Object> forcePathStyle) {
+        public Builder forcePathStyle(@Nullable Input<Object> forcePathStyle) {
             this.forcePathStyle = forcePathStyle;
             return this;
         }
 
-        public Builder setForcePathStyle(@Nullable Object forcePathStyle) {
+        public Builder forcePathStyle(@Nullable Object forcePathStyle) {
             this.forcePathStyle = Input.ofNullable(forcePathStyle);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSecretAccessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
+        public Builder secretAccessKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey) {
             this.secretAccessKey = secretAccessKey;
             return this;
         }
 
-        public Builder setSecretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
+        public Builder secretAccessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretAccessKey) {
             this.secretAccessKey = Input.ofNullable(secretAccessKey);
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable Input<Object> serviceUrl) {
+        public Builder serviceUrl(@Nullable Input<Object> serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable Object serviceUrl) {
+        public Builder serviceUrl(@Nullable Object serviceUrl) {
             this.serviceUrl = Input.ofNullable(serviceUrl);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

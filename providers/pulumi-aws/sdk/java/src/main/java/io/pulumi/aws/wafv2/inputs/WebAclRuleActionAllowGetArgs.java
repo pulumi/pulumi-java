@@ -53,12 +53,12 @@ public final class WebAclRuleActionAllowGetArgs extends io.pulumi.resources.Reso
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable Input<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Input<WebAclRuleActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebAclRuleActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
             this.customRequestHandling = Input.ofNullable(customRequestHandling);
             return this;
         }

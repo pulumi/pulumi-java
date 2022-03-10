@@ -110,42 +110,42 @@ public final class SecretVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(@Nullable Input<Integer> defaultMode) {
+        public Builder defaultMode(@Nullable Input<Integer> defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = Input.ofNullable(defaultMode);
             return this;
         }
 
-        public Builder setItems(@Nullable Input<List<KeyToPathArgs>> items) {
+        public Builder items(@Nullable Input<List<KeyToPathArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPathArgs> items) {
+        public Builder items(@Nullable List<KeyToPathArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }
 
-        public Builder setOptional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Input<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = Input.ofNullable(optional);
             return this;
         }
 
-        public Builder setSecretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Input<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = Input.ofNullable(secretName);
             return this;
         }

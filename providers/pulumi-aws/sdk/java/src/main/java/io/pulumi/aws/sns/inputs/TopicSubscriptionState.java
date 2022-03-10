@@ -264,137 +264,137 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
     	      this.topic = defaults.topic;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConfirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
 
-        public Builder setConfirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = Input.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
 
-        public Builder setConfirmationWasAuthenticated(@Nullable Input<Boolean> confirmationWasAuthenticated) {
+        public Builder confirmationWasAuthenticated(@Nullable Input<Boolean> confirmationWasAuthenticated) {
             this.confirmationWasAuthenticated = confirmationWasAuthenticated;
             return this;
         }
 
-        public Builder setConfirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
+        public Builder confirmationWasAuthenticated(@Nullable Boolean confirmationWasAuthenticated) {
             this.confirmationWasAuthenticated = Input.ofNullable(confirmationWasAuthenticated);
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable Input<String> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Input<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable String deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
             this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEndpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
 
-        public Builder setEndpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
             this.endpointAutoConfirms = Input.ofNullable(endpointAutoConfirms);
             return this;
         }
 
-        public Builder setFilterPolicy(@Nullable Input<String> filterPolicy) {
+        public Builder filterPolicy(@Nullable Input<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
 
-        public Builder setFilterPolicy(@Nullable String filterPolicy) {
+        public Builder filterPolicy(@Nullable String filterPolicy) {
             this.filterPolicy = Input.ofNullable(filterPolicy);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPendingConfirmation(@Nullable Input<Boolean> pendingConfirmation) {
+        public Builder pendingConfirmation(@Nullable Input<Boolean> pendingConfirmation) {
             this.pendingConfirmation = pendingConfirmation;
             return this;
         }
 
-        public Builder setPendingConfirmation(@Nullable Boolean pendingConfirmation) {
+        public Builder pendingConfirmation(@Nullable Boolean pendingConfirmation) {
             this.pendingConfirmation = Input.ofNullable(pendingConfirmation);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
 
-        public Builder setRawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
             this.rawMessageDelivery = Input.ofNullable(rawMessageDelivery);
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable Input<String> redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Input<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable String redrivePolicy) {
+        public Builder redrivePolicy(@Nullable String redrivePolicy) {
             this.redrivePolicy = Input.ofNullable(redrivePolicy);
             return this;
         }
 
-        public Builder setSubscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
 
-        public Builder setSubscriptionRoleArn(@Nullable String subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
             this.subscriptionRoleArn = Input.ofNullable(subscriptionRoleArn);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }

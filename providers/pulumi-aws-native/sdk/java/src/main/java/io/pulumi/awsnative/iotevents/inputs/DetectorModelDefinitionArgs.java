@@ -75,22 +75,22 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
     	      this.states = defaults.states;
         }
 
-        public Builder setInitialStateName(Input<String> initialStateName) {
+        public Builder initialStateName(Input<String> initialStateName) {
             this.initialStateName = Objects.requireNonNull(initialStateName);
             return this;
         }
 
-        public Builder setInitialStateName(String initialStateName) {
+        public Builder initialStateName(String initialStateName) {
             this.initialStateName = Input.of(Objects.requireNonNull(initialStateName));
             return this;
         }
 
-        public Builder setStates(Input<List<DetectorModelStateArgs>> states) {
+        public Builder states(Input<List<DetectorModelStateArgs>> states) {
             this.states = Objects.requireNonNull(states);
             return this;
         }
 
-        public Builder setStates(List<DetectorModelStateArgs> states) {
+        public Builder states(List<DetectorModelStateArgs> states) {
             this.states = Input.of(Objects.requireNonNull(states));
             return this;
         }

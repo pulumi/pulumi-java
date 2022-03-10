@@ -218,112 +218,112 @@ public final class AzureNodePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAutoscaling(Input<AzureNodePoolAutoscalingArgs> autoscaling) {
+        public Builder autoscaling(Input<AzureNodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
 
-        public Builder setAutoscaling(AzureNodePoolAutoscalingArgs autoscaling) {
+        public Builder autoscaling(AzureNodePoolAutoscalingArgs autoscaling) {
             this.autoscaling = Input.of(Objects.requireNonNull(autoscaling));
             return this;
         }
 
-        public Builder setAzureAvailabilityZone(@Nullable Input<String> azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(@Nullable Input<String> azureAvailabilityZone) {
             this.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
 
-        public Builder setAzureAvailabilityZone(@Nullable String azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(@Nullable String azureAvailabilityZone) {
             this.azureAvailabilityZone = Input.ofNullable(azureAvailabilityZone);
             return this;
         }
 
-        public Builder setCluster(Input<String> cluster) {
+        public Builder cluster(Input<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Input.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder setConfig(Input<AzureNodePoolConfigArgs> config) {
+        public Builder config(Input<AzureNodePoolConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(AzureNodePoolConfigArgs config) {
+        public Builder config(AzureNodePoolConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMaxPodsConstraint(Input<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(Input<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
             return this;
         }
 
-        public Builder setMaxPodsConstraint(AzureNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
+        public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
             this.maxPodsConstraint = Input.of(Objects.requireNonNull(maxPodsConstraint));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

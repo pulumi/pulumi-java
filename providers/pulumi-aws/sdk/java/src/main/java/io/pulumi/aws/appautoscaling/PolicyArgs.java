@@ -152,72 +152,72 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetTrackingScalingPolicyConfiguration = defaults.targetTrackingScalingPolicyConfiguration;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Input<String> policyType) {
+        public Builder policyType(@Nullable Input<String> policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = Input.ofNullable(policyType);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setScalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Input<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder setServiceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Input<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
 
-        public Builder setStepScalingPolicyConfiguration(@Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
+        public Builder stepScalingPolicyConfiguration(@Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
             this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
             return this;
         }
 
-        public Builder setStepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
+        public Builder stepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
             this.stepScalingPolicyConfiguration = Input.ofNullable(stepScalingPolicyConfiguration);
             return this;
         }
 
-        public Builder setTargetTrackingScalingPolicyConfiguration(@Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(@Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
 
-        public Builder setTargetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Input.ofNullable(targetTrackingScalingPolicyConfiguration);
             return this;
         }

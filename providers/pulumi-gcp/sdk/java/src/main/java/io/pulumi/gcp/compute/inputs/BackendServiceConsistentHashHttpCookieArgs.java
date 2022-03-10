@@ -88,32 +88,32 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
+        public Builder ttl(@Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable BackendServiceConsistentHashHttpCookieTtlArgs ttl) {
+        public Builder ttl(@Nullable BackendServiceConsistentHashHttpCookieTtlArgs ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

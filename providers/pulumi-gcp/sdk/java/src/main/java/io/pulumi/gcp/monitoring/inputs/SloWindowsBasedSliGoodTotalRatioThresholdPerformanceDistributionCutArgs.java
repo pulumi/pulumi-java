@@ -79,22 +79,22 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(Input<String> distributionFilter) {
+        public Builder distributionFilter(Input<String> distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Input.of(Objects.requireNonNull(distributionFilter));
             return this;
         }
 
-        public Builder setRange(Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs> range) {
+        public Builder range(Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setRange(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs range) {
+        public Builder range(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs range) {
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }

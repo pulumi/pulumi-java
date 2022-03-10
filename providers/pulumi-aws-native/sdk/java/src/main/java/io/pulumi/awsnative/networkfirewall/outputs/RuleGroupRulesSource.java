@@ -71,22 +71,22 @@ public final class RuleGroupRulesSource {
     	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
         }
 
-        public Builder setRulesSourceList(@Nullable RuleGroupRulesSourceList rulesSourceList) {
+        public Builder rulesSourceList(@Nullable RuleGroupRulesSourceList rulesSourceList) {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
 
-        public Builder setRulesString(@Nullable String rulesString) {
+        public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = rulesString;
             return this;
         }
 
-        public Builder setStatefulRules(@Nullable List<RuleGroupStatefulRule> statefulRules) {
+        public Builder statefulRules(@Nullable List<RuleGroupStatefulRule> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
 
-        public Builder setStatelessRulesAndCustomActions(@Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }

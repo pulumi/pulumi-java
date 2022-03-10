@@ -269,152 +269,152 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setBinaryAuthorization(@Nullable Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
+        public Builder binaryAuthorization(@Nullable Input<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
             this.binaryAuthorization = binaryAuthorization;
             return this;
         }
 
-        public Builder setBinaryAuthorization(@Nullable GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
+        public Builder binaryAuthorization(@Nullable GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
             this.binaryAuthorization = Input.ofNullable(binaryAuthorization);
             return this;
         }
 
-        public Builder setClient(@Nullable Input<String> client) {
+        public Builder client(@Nullable Input<String> client) {
             this.client = client;
             return this;
         }
 
-        public Builder setClient(@Nullable String client) {
+        public Builder client(@Nullable String client) {
             this.client = Input.ofNullable(client);
             return this;
         }
 
-        public Builder setClientVersion(@Nullable Input<String> clientVersion) {
+        public Builder clientVersion(@Nullable Input<String> clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
 
-        public Builder setClientVersion(@Nullable String clientVersion) {
+        public Builder clientVersion(@Nullable String clientVersion) {
             this.clientVersion = Input.ofNullable(clientVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<ServiceIngress> ingress) {
+        public Builder ingress(@Nullable Input<ServiceIngress> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable ServiceIngress ingress) {
+        public Builder ingress(@Nullable ServiceIngress ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable Input<ServiceLaunchStage> launchStage) {
+        public Builder launchStage(@Nullable Input<ServiceLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable ServiceLaunchStage launchStage) {
+        public Builder launchStage(@Nullable ServiceLaunchStage launchStage) {
             this.launchStage = Input.ofNullable(launchStage);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder setTemplate(Input<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
+        public Builder template(Input<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(GoogleCloudRunOpV2RevisionTemplateArgs template) {
+        public Builder template(GoogleCloudRunOpV2RevisionTemplateArgs template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder setTraffic(@Nullable Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
+        public Builder traffic(@Nullable Input<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
-        public Builder setTraffic(@Nullable List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
+        public Builder traffic(@Nullable List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

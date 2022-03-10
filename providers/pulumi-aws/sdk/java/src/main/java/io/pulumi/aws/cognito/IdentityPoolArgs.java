@@ -187,92 +187,92 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllowClassicFlow(@Nullable Input<Boolean> allowClassicFlow) {
+        public Builder allowClassicFlow(@Nullable Input<Boolean> allowClassicFlow) {
             this.allowClassicFlow = allowClassicFlow;
             return this;
         }
 
-        public Builder setAllowClassicFlow(@Nullable Boolean allowClassicFlow) {
+        public Builder allowClassicFlow(@Nullable Boolean allowClassicFlow) {
             this.allowClassicFlow = Input.ofNullable(allowClassicFlow);
             return this;
         }
 
-        public Builder setAllowUnauthenticatedIdentities(@Nullable Input<Boolean> allowUnauthenticatedIdentities) {
+        public Builder allowUnauthenticatedIdentities(@Nullable Input<Boolean> allowUnauthenticatedIdentities) {
             this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
             return this;
         }
 
-        public Builder setAllowUnauthenticatedIdentities(@Nullable Boolean allowUnauthenticatedIdentities) {
+        public Builder allowUnauthenticatedIdentities(@Nullable Boolean allowUnauthenticatedIdentities) {
             this.allowUnauthenticatedIdentities = Input.ofNullable(allowUnauthenticatedIdentities);
             return this;
         }
 
-        public Builder setCognitoIdentityProviders(@Nullable Input<List<IdentityPoolCognitoIdentityProviderArgs>> cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(@Nullable Input<List<IdentityPoolCognitoIdentityProviderArgs>> cognitoIdentityProviders) {
             this.cognitoIdentityProviders = cognitoIdentityProviders;
             return this;
         }
 
-        public Builder setCognitoIdentityProviders(@Nullable List<IdentityPoolCognitoIdentityProviderArgs> cognitoIdentityProviders) {
+        public Builder cognitoIdentityProviders(@Nullable List<IdentityPoolCognitoIdentityProviderArgs> cognitoIdentityProviders) {
             this.cognitoIdentityProviders = Input.ofNullable(cognitoIdentityProviders);
             return this;
         }
 
-        public Builder setDeveloperProviderName(@Nullable Input<String> developerProviderName) {
+        public Builder developerProviderName(@Nullable Input<String> developerProviderName) {
             this.developerProviderName = developerProviderName;
             return this;
         }
 
-        public Builder setDeveloperProviderName(@Nullable String developerProviderName) {
+        public Builder developerProviderName(@Nullable String developerProviderName) {
             this.developerProviderName = Input.ofNullable(developerProviderName);
             return this;
         }
 
-        public Builder setIdentityPoolName(Input<String> identityPoolName) {
+        public Builder identityPoolName(Input<String> identityPoolName) {
             this.identityPoolName = Objects.requireNonNull(identityPoolName);
             return this;
         }
 
-        public Builder setIdentityPoolName(String identityPoolName) {
+        public Builder identityPoolName(String identityPoolName) {
             this.identityPoolName = Input.of(Objects.requireNonNull(identityPoolName));
             return this;
         }
 
-        public Builder setOpenidConnectProviderArns(@Nullable Input<List<String>> openidConnectProviderArns) {
+        public Builder openidConnectProviderArns(@Nullable Input<List<String>> openidConnectProviderArns) {
             this.openidConnectProviderArns = openidConnectProviderArns;
             return this;
         }
 
-        public Builder setOpenidConnectProviderArns(@Nullable List<String> openidConnectProviderArns) {
+        public Builder openidConnectProviderArns(@Nullable List<String> openidConnectProviderArns) {
             this.openidConnectProviderArns = Input.ofNullable(openidConnectProviderArns);
             return this;
         }
 
-        public Builder setSamlProviderArns(@Nullable Input<List<String>> samlProviderArns) {
+        public Builder samlProviderArns(@Nullable Input<List<String>> samlProviderArns) {
             this.samlProviderArns = samlProviderArns;
             return this;
         }
 
-        public Builder setSamlProviderArns(@Nullable List<String> samlProviderArns) {
+        public Builder samlProviderArns(@Nullable List<String> samlProviderArns) {
             this.samlProviderArns = Input.ofNullable(samlProviderArns);
             return this;
         }
 
-        public Builder setSupportedLoginProviders(@Nullable Input<Map<String,String>> supportedLoginProviders) {
+        public Builder supportedLoginProviders(@Nullable Input<Map<String,String>> supportedLoginProviders) {
             this.supportedLoginProviders = supportedLoginProviders;
             return this;
         }
 
-        public Builder setSupportedLoginProviders(@Nullable Map<String,String> supportedLoginProviders) {
+        public Builder supportedLoginProviders(@Nullable Map<String,String> supportedLoginProviders) {
             this.supportedLoginProviders = Input.ofNullable(supportedLoginProviders);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

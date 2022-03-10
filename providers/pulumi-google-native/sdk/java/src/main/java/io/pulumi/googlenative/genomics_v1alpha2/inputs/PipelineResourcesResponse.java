@@ -189,47 +189,47 @@ public final class PipelineResourcesResponse extends io.pulumi.resources.InvokeA
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAcceleratorCount(String acceleratorCount) {
+        public Builder acceleratorCount(String acceleratorCount) {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
-        public Builder setBootDiskSizeGb(Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setDisks(List<DiskResponse> disks) {
+        public Builder disks(List<DiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setMinimumCpuCores(Integer minimumCpuCores) {
+        public Builder minimumCpuCores(Integer minimumCpuCores) {
             this.minimumCpuCores = Objects.requireNonNull(minimumCpuCores);
             return this;
         }
 
-        public Builder setMinimumRamGb(Double minimumRamGb) {
+        public Builder minimumRamGb(Double minimumRamGb) {
             this.minimumRamGb = Objects.requireNonNull(minimumRamGb);
             return this;
         }
 
-        public Builder setNoAddress(Boolean noAddress) {
+        public Builder noAddress(Boolean noAddress) {
             this.noAddress = Objects.requireNonNull(noAddress);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

@@ -108,42 +108,42 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
     	      this.isLinux = defaults.isLinux;
         }
 
-        public Builder setCodeConfiguration(@Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration) {
+        public Builder codeConfiguration(@Nullable Input<GitHubActionCodeConfigurationArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable GitHubActionCodeConfigurationArgs codeConfiguration) {
+        public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Input.ofNullable(codeConfiguration);
             return this;
         }
 
-        public Builder setContainerConfiguration(@Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration) {
+        public Builder containerConfiguration(@Nullable Input<GitHubActionContainerConfigurationArgs> containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setContainerConfiguration(@Nullable GitHubActionContainerConfigurationArgs containerConfiguration) {
+        public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationArgs containerConfiguration) {
             this.containerConfiguration = Input.ofNullable(containerConfiguration);
             return this;
         }
 
-        public Builder setGenerateWorkflowFile(@Nullable Input<Boolean> generateWorkflowFile) {
+        public Builder generateWorkflowFile(@Nullable Input<Boolean> generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
 
-        public Builder setGenerateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
+        public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
             this.generateWorkflowFile = Input.ofNullable(generateWorkflowFile);
             return this;
         }
 
-        public Builder setIsLinux(@Nullable Input<Boolean> isLinux) {
+        public Builder isLinux(@Nullable Input<Boolean> isLinux) {
             this.isLinux = isLinux;
             return this;
         }
 
-        public Builder setIsLinux(@Nullable Boolean isLinux) {
+        public Builder isLinux(@Nullable Boolean isLinux) {
             this.isLinux = Input.ofNullable(isLinux);
             return this;
         }

@@ -100,22 +100,22 @@ public final class DiskDetailsResponse {
     	      this.vhdType = defaults.vhdType;
         }
 
-        public Builder setMaxSizeMB(@Nullable Double maxSizeMB) {
+        public Builder maxSizeMB(@Nullable Double maxSizeMB) {
             this.maxSizeMB = maxSizeMB;
             return this;
         }
 
-        public Builder setVhdId(@Nullable String vhdId) {
+        public Builder vhdId(@Nullable String vhdId) {
             this.vhdId = vhdId;
             return this;
         }
 
-        public Builder setVhdName(@Nullable String vhdName) {
+        public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
 
-        public Builder setVhdType(@Nullable String vhdType) {
+        public Builder vhdType(@Nullable String vhdType) {
             this.vhdType = vhdType;
             return this;
         }

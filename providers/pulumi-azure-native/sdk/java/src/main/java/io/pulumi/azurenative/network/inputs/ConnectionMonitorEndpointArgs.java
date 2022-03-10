@@ -159,72 +159,72 @@ public final class ConnectionMonitorEndpointArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setCoverageLevel(@Nullable Input<Either<String,CoverageLevel>> coverageLevel) {
+        public Builder coverageLevel(@Nullable Input<Either<String,CoverageLevel>> coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
 
-        public Builder setCoverageLevel(@Nullable Either<String,CoverageLevel> coverageLevel) {
+        public Builder coverageLevel(@Nullable Either<String,CoverageLevel> coverageLevel) {
             this.coverageLevel = Input.ofNullable(coverageLevel);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<ConnectionMonitorEndpointFilterArgs> filter) {
+        public Builder filter(@Nullable Input<ConnectionMonitorEndpointFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable ConnectionMonitorEndpointFilterArgs filter) {
+        public Builder filter(@Nullable ConnectionMonitorEndpointFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<ConnectionMonitorEndpointScopeArgs> scope) {
+        public Builder scope(@Nullable Input<ConnectionMonitorEndpointScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable ConnectionMonitorEndpointScopeArgs scope) {
+        public Builder scope(@Nullable ConnectionMonitorEndpointScopeArgs scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,EndpointType>> type) {
+        public Builder type(@Nullable Input<Either<String,EndpointType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,EndpointType> type) {
+        public Builder type(@Nullable Either<String,EndpointType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

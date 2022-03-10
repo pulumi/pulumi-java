@@ -50,7 +50,7 @@ public final class ListTransactionNodeApiKeysResult {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(@Nullable List<ApiKeyResponse> keys) {
+        public Builder keys(@Nullable List<ApiKeyResponse> keys) {
             this.keys = keys;
             return this;
         }

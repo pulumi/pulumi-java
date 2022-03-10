@@ -296,82 +296,82 @@ public final class PropertyDefinitionResponse {
     	      this.schemaItemPropLink = defaults.schemaItemPropLink;
         }
 
-        public Builder setArrayValueSeparator(@Nullable String arrayValueSeparator) {
+        public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
             this.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
 
-        public Builder setDataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
+        public Builder dataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
             this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules);
             return this;
         }
 
-        public Builder setEnumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
+        public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
             this.enumValidValues = enumValidValues;
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setFieldType(String fieldType) {
+        public Builder fieldType(String fieldType) {
             this.fieldType = Objects.requireNonNull(fieldType);
             return this;
         }
 
-        public Builder setIsArray(@Nullable Boolean isArray) {
+        public Builder isArray(@Nullable Boolean isArray) {
             this.isArray = isArray;
             return this;
         }
 
-        public Builder setIsAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
+        public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             this.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
 
-        public Builder setIsEnum(@Nullable Boolean isEnum) {
+        public Builder isEnum(@Nullable Boolean isEnum) {
             this.isEnum = isEnum;
             return this;
         }
 
-        public Builder setIsFlagEnum(@Nullable Boolean isFlagEnum) {
+        public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             this.isFlagEnum = isFlagEnum;
             return this;
         }
 
-        public Builder setIsImage(@Nullable Boolean isImage) {
+        public Builder isImage(@Nullable Boolean isImage) {
             this.isImage = isImage;
             return this;
         }
 
-        public Builder setIsLocalizedString(@Nullable Boolean isLocalizedString) {
+        public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             this.isLocalizedString = isLocalizedString;
             return this;
         }
 
-        public Builder setIsName(@Nullable Boolean isName) {
+        public Builder isName(@Nullable Boolean isName) {
             this.isName = isName;
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Integer maxLength) {
+        public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setSchemaItemPropLink(@Nullable String schemaItemPropLink) {
+        public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }

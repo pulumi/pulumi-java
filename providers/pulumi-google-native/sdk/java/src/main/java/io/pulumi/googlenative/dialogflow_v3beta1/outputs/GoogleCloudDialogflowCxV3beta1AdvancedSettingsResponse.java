@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
     	      this.loggingSettings = defaults.loggingSettings;
         }
 
-        public Builder setLoggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
+        public Builder loggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
             this.loggingSettings = Objects.requireNonNull(loggingSettings);
             return this;
         }

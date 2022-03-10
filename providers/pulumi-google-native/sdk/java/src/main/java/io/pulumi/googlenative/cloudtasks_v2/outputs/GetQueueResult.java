@@ -149,37 +149,37 @@ public final class GetQueueResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAppEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
+        public Builder appEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPurgeTime(String purgeTime) {
+        public Builder purgeTime(String purgeTime) {
             this.purgeTime = Objects.requireNonNull(purgeTime);
             return this;
         }
 
-        public Builder setRateLimits(RateLimitsResponse rateLimits) {
+        public Builder rateLimits(RateLimitsResponse rateLimits) {
             this.rateLimits = Objects.requireNonNull(rateLimits);
             return this;
         }
 
-        public Builder setRetryConfig(RetryConfigResponse retryConfig) {
+        public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
 
-        public Builder setStackdriverLoggingConfig(StackdriverLoggingConfigResponse stackdriverLoggingConfig) {
+        public Builder stackdriverLoggingConfig(StackdriverLoggingConfigResponse stackdriverLoggingConfig) {
             this.stackdriverLoggingConfig = Objects.requireNonNull(stackdriverLoggingConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

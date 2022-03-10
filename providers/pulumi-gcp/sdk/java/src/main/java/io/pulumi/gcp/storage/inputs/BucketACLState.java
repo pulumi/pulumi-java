@@ -103,42 +103,42 @@ public final class BucketACLState extends io.pulumi.resources.ResourceArgs {
     	      this.roleEntities = defaults.roleEntities;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setDefaultAcl(@Nullable Input<String> defaultAcl) {
+        public Builder defaultAcl(@Nullable Input<String> defaultAcl) {
             this.defaultAcl = defaultAcl;
             return this;
         }
 
-        public Builder setDefaultAcl(@Nullable String defaultAcl) {
+        public Builder defaultAcl(@Nullable String defaultAcl) {
             this.defaultAcl = Input.ofNullable(defaultAcl);
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable String predefinedAcl) {
+        public Builder predefinedAcl(@Nullable String predefinedAcl) {
             this.predefinedAcl = Input.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder setRoleEntities(@Nullable Input<List<String>> roleEntities) {
+        public Builder roleEntities(@Nullable Input<List<String>> roleEntities) {
             this.roleEntities = roleEntities;
             return this;
         }
 
-        public Builder setRoleEntities(@Nullable List<String> roleEntities) {
+        public Builder roleEntities(@Nullable List<String> roleEntities) {
             this.roleEntities = Input.ofNullable(roleEntities);
             return this;
         }

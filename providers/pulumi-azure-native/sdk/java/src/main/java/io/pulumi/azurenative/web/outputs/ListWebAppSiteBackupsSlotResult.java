@@ -67,12 +67,12 @@ public final class ListWebAppSiteBackupsSlotResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<BackupItemResponse> value) {
+        public Builder value(List<BackupItemResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

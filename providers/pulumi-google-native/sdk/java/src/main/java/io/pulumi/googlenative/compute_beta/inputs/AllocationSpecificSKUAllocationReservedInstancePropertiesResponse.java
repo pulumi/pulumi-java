@@ -156,37 +156,37 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder setGuestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
+        public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setLocalSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
+        public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
             this.localSsds = Objects.requireNonNull(localSsds);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMaintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
             return this;
         }
 
-        public Builder setMaintenanceInterval(String maintenanceInterval) {
+        public Builder maintenanceInterval(String maintenanceInterval) {
             this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }

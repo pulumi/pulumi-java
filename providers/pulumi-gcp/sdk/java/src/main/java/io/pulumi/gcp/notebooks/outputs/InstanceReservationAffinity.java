@@ -86,17 +86,17 @@ public final class InstanceReservationAffinity {
     	      this.values = defaults.values;
         }
 
-        public Builder setConsumeReservationType(String consumeReservationType) {
+        public Builder consumeReservationType(String consumeReservationType) {
             this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

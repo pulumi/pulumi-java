@@ -121,52 +121,52 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventBridgeBus(Input<String> eventBridgeBus) {
+        public Builder eventBridgeBus(Input<String> eventBridgeBus) {
             this.eventBridgeBus = Objects.requireNonNull(eventBridgeBus);
             return this;
         }
 
-        public Builder setEventBridgeBus(String eventBridgeBus) {
+        public Builder eventBridgeBus(String eventBridgeBus) {
             this.eventBridgeBus = Input.of(Objects.requireNonNull(eventBridgeBus));
             return this;
         }
 
-        public Builder setEventFilter(Input<EventIntegrationEventFilterArgs> eventFilter) {
+        public Builder eventFilter(Input<EventIntegrationEventFilterArgs> eventFilter) {
             this.eventFilter = Objects.requireNonNull(eventFilter);
             return this;
         }
 
-        public Builder setEventFilter(EventIntegrationEventFilterArgs eventFilter) {
+        public Builder eventFilter(EventIntegrationEventFilterArgs eventFilter) {
             this.eventFilter = Input.of(Objects.requireNonNull(eventFilter));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<EventIntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<EventIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventIntegrationTagArgs> tags) {
+        public Builder tags(@Nullable List<EventIntegrationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

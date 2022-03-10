@@ -48,7 +48,7 @@ public final class SecretResponse {
     	      this.cloudSecret = defaults.cloudSecret;
         }
 
-        public Builder setCloudSecret(String cloudSecret) {
+        public Builder cloudSecret(String cloudSecret) {
             this.cloudSecret = Objects.requireNonNull(cloudSecret);
             return this;
         }

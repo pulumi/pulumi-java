@@ -84,17 +84,17 @@ public final class PersistentDiskResponse {
     	      this.usedInGB = defaults.usedInGB;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setSizeInGB(@Nullable Integer sizeInGB) {
+        public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
 
-        public Builder setUsedInGB(Integer usedInGB) {
+        public Builder usedInGB(Integer usedInGB) {
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
         }

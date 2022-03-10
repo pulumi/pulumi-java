@@ -162,72 +162,72 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
     	      this.userOwnedStorage = defaults.userOwnedStorage;
         }
 
-        public Builder setApiProperties(@Nullable Input<CognitiveServicesAccountApiPropertiesArgs> apiProperties) {
+        public Builder apiProperties(@Nullable Input<CognitiveServicesAccountApiPropertiesArgs> apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
 
-        public Builder setApiProperties(@Nullable CognitiveServicesAccountApiPropertiesArgs apiProperties) {
+        public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesArgs apiProperties) {
             this.apiProperties = Input.ofNullable(apiProperties);
             return this;
         }
 
-        public Builder setCustomSubDomainName(@Nullable Input<String> customSubDomainName) {
+        public Builder customSubDomainName(@Nullable Input<String> customSubDomainName) {
             this.customSubDomainName = customSubDomainName;
             return this;
         }
 
-        public Builder setCustomSubDomainName(@Nullable String customSubDomainName) {
+        public Builder customSubDomainName(@Nullable String customSubDomainName) {
             this.customSubDomainName = Input.ofNullable(customSubDomainName);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionArgs encryption) {
+        public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable Input<NetworkRuleSetArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Input<NetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
+        public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
             this.networkAcls = Input.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setUserOwnedStorage(@Nullable Input<List<UserOwnedStorageArgs>> userOwnedStorage) {
+        public Builder userOwnedStorage(@Nullable Input<List<UserOwnedStorageArgs>> userOwnedStorage) {
             this.userOwnedStorage = userOwnedStorage;
             return this;
         }
 
-        public Builder setUserOwnedStorage(@Nullable List<UserOwnedStorageArgs> userOwnedStorage) {
+        public Builder userOwnedStorage(@Nullable List<UserOwnedStorageArgs> userOwnedStorage) {
             this.userOwnedStorage = Input.ofNullable(userOwnedStorage);
             return this;
         }

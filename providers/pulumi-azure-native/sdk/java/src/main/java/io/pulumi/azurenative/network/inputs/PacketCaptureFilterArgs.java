@@ -124,52 +124,52 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
     	      this.remotePort = defaults.remotePort;
         }
 
-        public Builder setLocalIPAddress(@Nullable Input<String> localIPAddress) {
+        public Builder localIPAddress(@Nullable Input<String> localIPAddress) {
             this.localIPAddress = localIPAddress;
             return this;
         }
 
-        public Builder setLocalIPAddress(@Nullable String localIPAddress) {
+        public Builder localIPAddress(@Nullable String localIPAddress) {
             this.localIPAddress = Input.ofNullable(localIPAddress);
             return this;
         }
 
-        public Builder setLocalPort(@Nullable Input<String> localPort) {
+        public Builder localPort(@Nullable Input<String> localPort) {
             this.localPort = localPort;
             return this;
         }
 
-        public Builder setLocalPort(@Nullable String localPort) {
+        public Builder localPort(@Nullable String localPort) {
             this.localPort = Input.ofNullable(localPort);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,PcProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,PcProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,PcProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,PcProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRemoteIPAddress(@Nullable Input<String> remoteIPAddress) {
+        public Builder remoteIPAddress(@Nullable Input<String> remoteIPAddress) {
             this.remoteIPAddress = remoteIPAddress;
             return this;
         }
 
-        public Builder setRemoteIPAddress(@Nullable String remoteIPAddress) {
+        public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
             this.remoteIPAddress = Input.ofNullable(remoteIPAddress);
             return this;
         }
 
-        public Builder setRemotePort(@Nullable Input<String> remotePort) {
+        public Builder remotePort(@Nullable Input<String> remotePort) {
             this.remotePort = remotePort;
             return this;
         }
 
-        public Builder setRemotePort(@Nullable String remotePort) {
+        public Builder remotePort(@Nullable String remotePort) {
             this.remotePort = Input.ofNullable(remotePort);
             return this;
         }

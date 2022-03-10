@@ -99,22 +99,22 @@ public final class ParserConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAllowNullHeader(Boolean allowNullHeader) {
+        public Builder allowNullHeader(Boolean allowNullHeader) {
             this.allowNullHeader = Objects.requireNonNull(allowNullHeader);
             return this;
         }
 
-        public Builder setSchema(SchemaPackageResponse schema) {
+        public Builder schema(SchemaPackageResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSegmentTerminator(String segmentTerminator) {
+        public Builder segmentTerminator(String segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

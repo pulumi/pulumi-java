@@ -75,22 +75,22 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setAppdevexperience(@Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience) {
+        public Builder appdevexperience(@Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience) {
             this.appdevexperience = appdevexperience;
             return this;
         }
 
-        public Builder setAppdevexperience(@Nullable AppDevExperienceFeatureSpecArgs appdevexperience) {
+        public Builder appdevexperience(@Nullable AppDevExperienceFeatureSpecArgs appdevexperience) {
             this.appdevexperience = Input.ofNullable(appdevexperience);
             return this;
         }
 
-        public Builder setMulticlusteringress(@Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
+        public Builder multiclusteringress(@Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }
 
-        public Builder setMulticlusteringress(@Nullable MultiClusterIngressFeatureSpecArgs multiclusteringress) {
+        public Builder multiclusteringress(@Nullable MultiClusterIngressFeatureSpecArgs multiclusteringress) {
             this.multiclusteringress = Input.ofNullable(multiclusteringress);
             return this;
         }

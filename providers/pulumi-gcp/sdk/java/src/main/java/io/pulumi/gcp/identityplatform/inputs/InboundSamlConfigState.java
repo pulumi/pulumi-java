@@ -143,62 +143,62 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
     	      this.spConfig = defaults.spConfig;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdpConfig(@Nullable Input<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
+        public Builder idpConfig(@Nullable Input<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
             this.idpConfig = idpConfig;
             return this;
         }
 
-        public Builder setIdpConfig(@Nullable InboundSamlConfigIdpConfigGetArgs idpConfig) {
+        public Builder idpConfig(@Nullable InboundSamlConfigIdpConfigGetArgs idpConfig) {
             this.idpConfig = Input.ofNullable(idpConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpConfig(@Nullable Input<InboundSamlConfigSpConfigGetArgs> spConfig) {
+        public Builder spConfig(@Nullable Input<InboundSamlConfigSpConfigGetArgs> spConfig) {
             this.spConfig = spConfig;
             return this;
         }
 
-        public Builder setSpConfig(@Nullable InboundSamlConfigSpConfigGetArgs spConfig) {
+        public Builder spConfig(@Nullable InboundSamlConfigSpConfigGetArgs spConfig) {
             this.spConfig = Input.ofNullable(spConfig);
             return this;
         }

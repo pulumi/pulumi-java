@@ -75,17 +75,17 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setLimit(Double limit) {
+        public Builder limit(Double limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

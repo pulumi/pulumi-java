@@ -87,32 +87,32 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(Input<String> gid) {
+        public Builder gid(Input<String> gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Input.of(Objects.requireNonNull(gid));
             return this;
         }
 
-        public Builder setSecondaryGids(@Nullable Input<List<String>> secondaryGids) {
+        public Builder secondaryGids(@Nullable Input<List<String>> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
 
-        public Builder setSecondaryGids(@Nullable List<String> secondaryGids) {
+        public Builder secondaryGids(@Nullable List<String> secondaryGids) {
             this.secondaryGids = Input.ofNullable(secondaryGids);
             return this;
         }
 
-        public Builder setUid(Input<String> uid) {
+        public Builder uid(Input<String> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Input.of(Objects.requireNonNull(uid));
             return this;
         }

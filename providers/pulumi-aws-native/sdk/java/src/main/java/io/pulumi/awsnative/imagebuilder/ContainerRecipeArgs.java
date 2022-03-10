@@ -285,152 +285,152 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setComponents(@Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components) {
+        public Builder components(@Nullable Input<List<ContainerRecipeComponentConfigurationArgs>> components) {
             this.components = components;
             return this;
         }
 
-        public Builder setComponents(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
+        public Builder components(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
             this.components = Input.ofNullable(components);
             return this;
         }
 
-        public Builder setContainerType(@Nullable Input<ContainerRecipeContainerType> containerType) {
+        public Builder containerType(@Nullable Input<ContainerRecipeContainerType> containerType) {
             this.containerType = containerType;
             return this;
         }
 
-        public Builder setContainerType(@Nullable ContainerRecipeContainerType containerType) {
+        public Builder containerType(@Nullable ContainerRecipeContainerType containerType) {
             this.containerType = Input.ofNullable(containerType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDockerfileTemplateData(@Nullable Input<String> dockerfileTemplateData) {
+        public Builder dockerfileTemplateData(@Nullable Input<String> dockerfileTemplateData) {
             this.dockerfileTemplateData = dockerfileTemplateData;
             return this;
         }
 
-        public Builder setDockerfileTemplateData(@Nullable String dockerfileTemplateData) {
+        public Builder dockerfileTemplateData(@Nullable String dockerfileTemplateData) {
             this.dockerfileTemplateData = Input.ofNullable(dockerfileTemplateData);
             return this;
         }
 
-        public Builder setDockerfileTemplateUri(@Nullable Input<String> dockerfileTemplateUri) {
+        public Builder dockerfileTemplateUri(@Nullable Input<String> dockerfileTemplateUri) {
             this.dockerfileTemplateUri = dockerfileTemplateUri;
             return this;
         }
 
-        public Builder setDockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
+        public Builder dockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
             this.dockerfileTemplateUri = Input.ofNullable(dockerfileTemplateUri);
             return this;
         }
 
-        public Builder setImageOsVersionOverride(@Nullable Input<String> imageOsVersionOverride) {
+        public Builder imageOsVersionOverride(@Nullable Input<String> imageOsVersionOverride) {
             this.imageOsVersionOverride = imageOsVersionOverride;
             return this;
         }
 
-        public Builder setImageOsVersionOverride(@Nullable String imageOsVersionOverride) {
+        public Builder imageOsVersionOverride(@Nullable String imageOsVersionOverride) {
             this.imageOsVersionOverride = Input.ofNullable(imageOsVersionOverride);
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable Input<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
             this.instanceConfiguration = Input.ofNullable(instanceConfiguration);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentImage(@Nullable Input<String> parentImage) {
+        public Builder parentImage(@Nullable Input<String> parentImage) {
             this.parentImage = parentImage;
             return this;
         }
 
-        public Builder setParentImage(@Nullable String parentImage) {
+        public Builder parentImage(@Nullable String parentImage) {
             this.parentImage = Input.ofNullable(parentImage);
             return this;
         }
 
-        public Builder setPlatformOverride(@Nullable Input<ContainerRecipePlatformOverride> platformOverride) {
+        public Builder platformOverride(@Nullable Input<ContainerRecipePlatformOverride> platformOverride) {
             this.platformOverride = platformOverride;
             return this;
         }
 
-        public Builder setPlatformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
+        public Builder platformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
             this.platformOverride = Input.ofNullable(platformOverride);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetRepository(@Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
+        public Builder targetRepository(@Nullable Input<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
             this.targetRepository = targetRepository;
             return this;
         }
 
-        public Builder setTargetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
+        public Builder targetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
             this.targetRepository = Input.ofNullable(targetRepository);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

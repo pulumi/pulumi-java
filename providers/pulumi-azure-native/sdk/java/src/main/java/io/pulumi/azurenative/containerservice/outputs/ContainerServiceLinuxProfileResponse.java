@@ -66,12 +66,12 @@ public final class ContainerServiceLinuxProfileResponse {
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setSsh(ContainerServiceSshConfigurationResponse ssh) {
+        public Builder ssh(ContainerServiceSshConfigurationResponse ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }

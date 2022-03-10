@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse {
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setClassificationThreshold(Double classificationThreshold) {
+        public Builder classificationThreshold(Double classificationThreshold) {
             this.classificationThreshold = Objects.requireNonNull(classificationThreshold);
             return this;
         }
 
-        public Builder setModelTrainingMode(String modelTrainingMode) {
+        public Builder modelTrainingMode(String modelTrainingMode) {
             this.modelTrainingMode = Objects.requireNonNull(modelTrainingMode);
             return this;
         }
 
-        public Builder setModelType(String modelType) {
+        public Builder modelType(String modelType) {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }

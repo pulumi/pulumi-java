@@ -76,27 +76,27 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setMinCount(@Nullable Integer minCount) {
+        public Builder minCount(@Nullable Integer minCount) {
             this.minCount = minCount;
             return this;
         }
 
-        public Builder setStorageGb(@Nullable Double storageGb) {
+        public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
         }

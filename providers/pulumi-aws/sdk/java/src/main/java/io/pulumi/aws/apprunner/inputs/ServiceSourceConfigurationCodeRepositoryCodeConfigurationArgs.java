@@ -71,22 +71,22 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs codeConfigurationValues) {
             this.codeConfigurationValues = Input.ofNullable(codeConfigurationValues);
             return this;
         }
 
-        public Builder setConfigurationSource(Input<String> configurationSource) {
+        public Builder configurationSource(Input<String> configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
 
-        public Builder setConfigurationSource(String configurationSource) {
+        public Builder configurationSource(String configurationSource) {
             this.configurationSource = Input.of(Objects.requireNonNull(configurationSource));
             return this;
         }

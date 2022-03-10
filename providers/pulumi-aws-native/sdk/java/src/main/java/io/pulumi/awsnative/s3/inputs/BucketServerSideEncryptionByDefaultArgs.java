@@ -71,22 +71,22 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
     	      this.sSEAlgorithm = defaults.sSEAlgorithm;
         }
 
-        public Builder setKMSMasterKeyID(@Nullable Input<String> kMSMasterKeyID) {
+        public Builder kMSMasterKeyID(@Nullable Input<String> kMSMasterKeyID) {
             this.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
 
-        public Builder setKMSMasterKeyID(@Nullable String kMSMasterKeyID) {
+        public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
             this.kMSMasterKeyID = Input.ofNullable(kMSMasterKeyID);
             return this;
         }
 
-        public Builder setSSEAlgorithm(Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
+        public Builder sSEAlgorithm(Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }
 
-        public Builder setSSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
+        public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
             this.sSEAlgorithm = Input.of(Objects.requireNonNull(sSEAlgorithm));
             return this;
         }

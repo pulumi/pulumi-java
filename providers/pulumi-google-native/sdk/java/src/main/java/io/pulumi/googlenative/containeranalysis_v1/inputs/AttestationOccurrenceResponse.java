@@ -91,17 +91,17 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setJwts(List<JwtResponse> jwts) {
+        public Builder jwts(List<JwtResponse> jwts) {
             this.jwts = Objects.requireNonNull(jwts);
             return this;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(List<SignatureResponse> signatures) {
+        public Builder signatures(List<SignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

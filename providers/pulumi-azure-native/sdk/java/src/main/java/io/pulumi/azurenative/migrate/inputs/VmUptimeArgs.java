@@ -70,22 +70,22 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hoursPerDay = defaults.hoursPerDay;
         }
 
-        public Builder setDaysPerMonth(@Nullable Input<Double> daysPerMonth) {
+        public Builder daysPerMonth(@Nullable Input<Double> daysPerMonth) {
             this.daysPerMonth = daysPerMonth;
             return this;
         }
 
-        public Builder setDaysPerMonth(@Nullable Double daysPerMonth) {
+        public Builder daysPerMonth(@Nullable Double daysPerMonth) {
             this.daysPerMonth = Input.ofNullable(daysPerMonth);
             return this;
         }
 
-        public Builder setHoursPerDay(@Nullable Input<Double> hoursPerDay) {
+        public Builder hoursPerDay(@Nullable Input<Double> hoursPerDay) {
             this.hoursPerDay = hoursPerDay;
             return this;
         }
 
-        public Builder setHoursPerDay(@Nullable Double hoursPerDay) {
+        public Builder hoursPerDay(@Nullable Double hoursPerDay) {
             this.hoursPerDay = Input.ofNullable(hoursPerDay);
             return this;
         }

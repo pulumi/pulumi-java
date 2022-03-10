@@ -76,17 +76,17 @@ public final class DatasetAction extends io.pulumi.resources.InvokeArgs {
     	      this.queryAction = defaults.queryAction;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setContainerAction(@Nullable DatasetContainerAction containerAction) {
+        public Builder containerAction(@Nullable DatasetContainerAction containerAction) {
             this.containerAction = containerAction;
             return this;
         }
 
-        public Builder setQueryAction(@Nullable DatasetQueryAction queryAction) {
+        public Builder queryAction(@Nullable DatasetQueryAction queryAction) {
             this.queryAction = queryAction;
             return this;
         }

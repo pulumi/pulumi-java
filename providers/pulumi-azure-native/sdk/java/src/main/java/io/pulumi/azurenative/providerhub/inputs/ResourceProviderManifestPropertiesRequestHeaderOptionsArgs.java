@@ -51,12 +51,12 @@ public final class ResourceProviderManifestPropertiesRequestHeaderOptionsArgs ex
     	      this.optInHeaders = defaults.optInHeaders;
         }
 
-        public Builder setOptInHeaders(@Nullable Input<Either<String,OptInHeaderType>> optInHeaders) {
+        public Builder optInHeaders(@Nullable Input<Either<String,OptInHeaderType>> optInHeaders) {
             this.optInHeaders = optInHeaders;
             return this;
         }
 
-        public Builder setOptInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
+        public Builder optInHeaders(@Nullable Either<String,OptInHeaderType> optInHeaders) {
             this.optInHeaders = Input.ofNullable(optInHeaders);
             return this;
         }

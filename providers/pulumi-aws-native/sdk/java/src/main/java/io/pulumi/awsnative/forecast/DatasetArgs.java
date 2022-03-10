@@ -144,72 +144,72 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataFrequency(@Nullable Input<String> dataFrequency) {
+        public Builder dataFrequency(@Nullable Input<String> dataFrequency) {
             this.dataFrequency = dataFrequency;
             return this;
         }
 
-        public Builder setDataFrequency(@Nullable String dataFrequency) {
+        public Builder dataFrequency(@Nullable String dataFrequency) {
             this.dataFrequency = Input.ofNullable(dataFrequency);
             return this;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setDatasetType(Input<DatasetType> datasetType) {
+        public Builder datasetType(Input<DatasetType> datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
 
-        public Builder setDatasetType(DatasetType datasetType) {
+        public Builder datasetType(DatasetType datasetType) {
             this.datasetType = Input.of(Objects.requireNonNull(datasetType));
             return this;
         }
 
-        public Builder setDomain(Input<DatasetDomain> domain) {
+        public Builder domain(Input<DatasetDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(DatasetDomain domain) {
+        public Builder domain(DatasetDomain domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<EncryptionConfigPropertiesArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setSchema(Input<SchemaPropertiesArgs> schema) {
+        public Builder schema(Input<SchemaPropertiesArgs> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(SchemaPropertiesArgs schema) {
+        public Builder schema(SchemaPropertiesArgs schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagsItemPropertiesArgs> tags) {
+        public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -74,22 +74,22 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.pemIssuerChain = defaults.pemIssuerChain;
         }
 
-        public Builder setCertificateAuthority(Input<String> certificateAuthority) {
+        public Builder certificateAuthority(Input<String> certificateAuthority) {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
 
-        public Builder setCertificateAuthority(String certificateAuthority) {
+        public Builder certificateAuthority(String certificateAuthority) {
             this.certificateAuthority = Input.of(Objects.requireNonNull(certificateAuthority));
             return this;
         }
 
-        public Builder setPemIssuerChain(Input<SubordinateConfigChainArgs> pemIssuerChain) {
+        public Builder pemIssuerChain(Input<SubordinateConfigChainArgs> pemIssuerChain) {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }
 
-        public Builder setPemIssuerChain(SubordinateConfigChainArgs pemIssuerChain) {
+        public Builder pemIssuerChain(SubordinateConfigChainArgs pemIssuerChain) {
             this.pemIssuerChain = Input.of(Objects.requireNonNull(pemIssuerChain));
             return this;
         }

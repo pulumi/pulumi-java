@@ -185,47 +185,47 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
     	      this.version = defaults.version;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setFilename(String filename) {
+        public Builder filename(String filename) {
             this.filename = Objects.requireNonNull(filename);
             return this;
         }
 
-        public Builder setHomePage(String homePage) {
+        public Builder homePage(String homePage) {
             this.homePage = Objects.requireNonNull(homePage);
             return this;
         }
 
-        public Builder setLicenseConcluded(LicenseResponse licenseConcluded) {
+        public Builder licenseConcluded(LicenseResponse licenseConcluded) {
             this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSourceInfo(String sourceInfo) {
+        public Builder sourceInfo(String sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
 
-        public Builder setSummaryDescription(String summaryDescription) {
+        public Builder summaryDescription(String summaryDescription) {
             this.summaryDescription = Objects.requireNonNull(summaryDescription);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -66,12 +66,12 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     	      this.trainingStep = defaults.trainingStep;
         }
 
-        public Builder setObjectiveValue(Double objectiveValue) {
+        public Builder objectiveValue(Double objectiveValue) {
             this.objectiveValue = Objects.requireNonNull(objectiveValue);
             return this;
         }
 
-        public Builder setTrainingStep(String trainingStep) {
+        public Builder trainingStep(String trainingStep) {
             this.trainingStep = Objects.requireNonNull(trainingStep);
             return this;
         }

@@ -73,22 +73,22 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder setCustomAccount(@Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
+        public Builder customAccount(@Nullable Input<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
-        public Builder setCustomAccount(@Nullable SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
+        public Builder customAccount(@Nullable SecurityScanConfigAuthenticationCustomAccountGetArgs customAccount) {
             this.customAccount = Input.ofNullable(customAccount);
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Input<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
+        public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccountGetArgs googleAccount) {
             this.googleAccount = Input.ofNullable(googleAccount);
             return this;
         }

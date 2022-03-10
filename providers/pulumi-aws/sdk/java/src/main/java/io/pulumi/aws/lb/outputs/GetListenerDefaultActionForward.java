@@ -51,12 +51,12 @@ public final class GetListenerDefaultActionForward {
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setStickinesses(List<GetListenerDefaultActionForwardStickiness> stickinesses) {
+        public Builder stickinesses(List<GetListenerDefaultActionForwardStickiness> stickinesses) {
             this.stickinesses = Objects.requireNonNull(stickinesses);
             return this;
         }
 
-        public Builder setTargetGroups(List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
+        public Builder targetGroups(List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }

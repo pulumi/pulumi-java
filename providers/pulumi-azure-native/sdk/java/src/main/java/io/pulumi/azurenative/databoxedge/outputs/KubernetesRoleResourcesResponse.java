@@ -85,17 +85,17 @@ public final class KubernetesRoleResourcesResponse {
     	      this.storage = defaults.storage;
         }
 
-        public Builder setCompute(KubernetesRoleComputeResponse compute) {
+        public Builder compute(KubernetesRoleComputeResponse compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
 
-        public Builder setNetwork(KubernetesRoleNetworkResponse network) {
+        public Builder network(KubernetesRoleNetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setStorage(@Nullable KubernetesRoleStorageResponse storage) {
+        public Builder storage(@Nullable KubernetesRoleStorageResponse storage) {
             this.storage = storage;
             return this;
         }

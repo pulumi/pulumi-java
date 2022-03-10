@@ -73,22 +73,22 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setCodeHookInterfaceVersion(Input<String> codeHookInterfaceVersion) {
+        public Builder codeHookInterfaceVersion(Input<String> codeHookInterfaceVersion) {
             this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
             return this;
         }
 
-        public Builder setCodeHookInterfaceVersion(String codeHookInterfaceVersion) {
+        public Builder codeHookInterfaceVersion(String codeHookInterfaceVersion) {
             this.codeHookInterfaceVersion = Input.of(Objects.requireNonNull(codeHookInterfaceVersion));
             return this;
         }
 
-        public Builder setLambdaArn(Input<String> lambdaArn) {
+        public Builder lambdaArn(Input<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
             return this;
         }

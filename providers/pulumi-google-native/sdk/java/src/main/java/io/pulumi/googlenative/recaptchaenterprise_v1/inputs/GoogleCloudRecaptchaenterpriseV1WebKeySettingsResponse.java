@@ -122,27 +122,27 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     	      this.integrationType = defaults.integrationType;
         }
 
-        public Builder setAllowAllDomains(Boolean allowAllDomains) {
+        public Builder allowAllDomains(Boolean allowAllDomains) {
             this.allowAllDomains = Objects.requireNonNull(allowAllDomains);
             return this;
         }
 
-        public Builder setAllowAmpTraffic(Boolean allowAmpTraffic) {
+        public Builder allowAmpTraffic(Boolean allowAmpTraffic) {
             this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic);
             return this;
         }
 
-        public Builder setAllowedDomains(List<String> allowedDomains) {
+        public Builder allowedDomains(List<String> allowedDomains) {
             this.allowedDomains = Objects.requireNonNull(allowedDomains);
             return this;
         }
 
-        public Builder setChallengeSecurityPreference(String challengeSecurityPreference) {
+        public Builder challengeSecurityPreference(String challengeSecurityPreference) {
             this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference);
             return this;
         }
 
-        public Builder setIntegrationType(String integrationType) {
+        public Builder integrationType(String integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }

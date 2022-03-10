@@ -52,12 +52,12 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
     	      this.policyUri = defaults.policyUri;
         }
 
-        public Builder setPolicyUri(Input<String> policyUri) {
+        public Builder policyUri(Input<String> policyUri) {
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
 
-        public Builder setPolicyUri(String policyUri) {
+        public Builder policyUri(String policyUri) {
             this.policyUri = Input.of(Objects.requireNonNull(policyUri));
             return this;
         }

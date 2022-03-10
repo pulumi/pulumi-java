@@ -74,12 +74,12 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setFailedObjects(Map<String,String> failedObjects) {
+        public Builder failedObjects(Map<String,String> failedObjects) {
             this.failedObjects = Objects.requireNonNull(failedObjects);
             return this;
         }
 
-        public Builder setValidationErrors(ValidationErrorResponse validationErrors) {
+        public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

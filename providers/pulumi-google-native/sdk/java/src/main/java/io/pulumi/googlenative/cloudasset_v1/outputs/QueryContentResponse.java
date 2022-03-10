@@ -48,7 +48,7 @@ public final class QueryContentResponse {
     	      this.iamPolicyAnalysisQuery = defaults.iamPolicyAnalysisQuery;
         }
 
-        public Builder setIamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
+        public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
         }

@@ -48,7 +48,7 @@ public final class HostedZoneQueryLoggingConfig {
     	      this.cloudWatchLogsLogGroupArn = defaults.cloudWatchLogsLogGroupArn;
         }
 
-        public Builder setCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
         }

@@ -235,62 +235,62 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.versionBytes = defaults.versionBytes;
         }
 
-        public Builder setConfig(ServingConfigResponse config) {
+        public Builder config(ServingConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreateUser(ActingUserResponse createUser) {
+        public Builder createUser(ActingUserResponse createUser) {
             this.createUser = Objects.requireNonNull(createUser);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setDeleteUser(ActingUserResponse deleteUser) {
+        public Builder deleteUser(ActingUserResponse deleteUser) {
             this.deleteUser = Objects.requireNonNull(deleteUser);
             return this;
         }
 
-        public Builder setFileCount(String fileCount) {
+        public Builder fileCount(String fileCount) {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
 
-        public Builder setFinalizeTime(String finalizeTime) {
+        public Builder finalizeTime(String finalizeTime) {
             this.finalizeTime = Objects.requireNonNull(finalizeTime);
             return this;
         }
 
-        public Builder setFinalizeUser(ActingUserResponse finalizeUser) {
+        public Builder finalizeUser(ActingUserResponse finalizeUser) {
             this.finalizeUser = Objects.requireNonNull(finalizeUser);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersionBytes(String versionBytes) {
+        public Builder versionBytes(String versionBytes) {
             this.versionBytes = Objects.requireNonNull(versionBytes);
             return this;
         }

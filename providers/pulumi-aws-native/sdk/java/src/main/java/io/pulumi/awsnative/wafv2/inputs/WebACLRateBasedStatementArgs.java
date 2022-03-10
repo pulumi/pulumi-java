@@ -89,42 +89,42 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType) {
+        public Builder aggregateKeyType(Input<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setAggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Input.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
             return this;
         }
 
-        public Builder setLimit(Input<Integer> limit) {
+        public Builder limit(Input<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Input.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<WebACLStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<WebACLStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }

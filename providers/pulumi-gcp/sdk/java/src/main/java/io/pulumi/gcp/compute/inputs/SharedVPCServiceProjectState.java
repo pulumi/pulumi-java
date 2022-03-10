@@ -70,22 +70,22 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     	      this.serviceProject = defaults.serviceProject;
         }
 
-        public Builder setHostProject(@Nullable Input<String> hostProject) {
+        public Builder hostProject(@Nullable Input<String> hostProject) {
             this.hostProject = hostProject;
             return this;
         }
 
-        public Builder setHostProject(@Nullable String hostProject) {
+        public Builder hostProject(@Nullable String hostProject) {
             this.hostProject = Input.ofNullable(hostProject);
             return this;
         }
 
-        public Builder setServiceProject(@Nullable Input<String> serviceProject) {
+        public Builder serviceProject(@Nullable Input<String> serviceProject) {
             this.serviceProject = serviceProject;
             return this;
         }
 
-        public Builder setServiceProject(@Nullable String serviceProject) {
+        public Builder serviceProject(@Nullable String serviceProject) {
             this.serviceProject = Input.ofNullable(serviceProject);
             return this;
         }

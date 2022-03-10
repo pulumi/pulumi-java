@@ -101,22 +101,22 @@ public final class TargetGroupStickiness {
     	      this.type = defaults.type;
         }
 
-        public Builder setCookieDuration(@Nullable Integer cookieDuration) {
+        public Builder cookieDuration(@Nullable Integer cookieDuration) {
             this.cookieDuration = cookieDuration;
             return this;
         }
 
-        public Builder setCookieName(@Nullable String cookieName) {
+        public Builder cookieName(@Nullable String cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

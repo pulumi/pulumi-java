@@ -53,12 +53,12 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.onPremiseSensorName = defaults.onPremiseSensorName;
         }
 
-        public Builder setOnPremiseSensorName(@Nullable Input<String> onPremiseSensorName) {
+        public Builder onPremiseSensorName(@Nullable Input<String> onPremiseSensorName) {
             this.onPremiseSensorName = onPremiseSensorName;
             return this;
         }
 
-        public Builder setOnPremiseSensorName(@Nullable String onPremiseSensorName) {
+        public Builder onPremiseSensorName(@Nullable String onPremiseSensorName) {
             this.onPremiseSensorName = Input.ofNullable(onPremiseSensorName);
             return this;
         }

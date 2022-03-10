@@ -76,22 +76,22 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setFamily(Input<Either<String,ManagedHsmSkuFamily>> family) {
+        public Builder family(Input<Either<String,ManagedHsmSkuFamily>> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setFamily(Either<String,ManagedHsmSkuFamily> family) {
+        public Builder family(Either<String,ManagedHsmSkuFamily> family) {
             this.family = Input.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder setName(Input<ManagedHsmSkuName> name) {
+        public Builder name(Input<ManagedHsmSkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(ManagedHsmSkuName name) {
+        public Builder name(ManagedHsmSkuName name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

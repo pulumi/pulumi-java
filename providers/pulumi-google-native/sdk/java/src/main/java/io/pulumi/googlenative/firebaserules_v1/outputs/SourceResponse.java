@@ -49,7 +49,7 @@ public final class SourceResponse {
     	      this.files = defaults.files;
         }
 
-        public Builder setFiles(List<FileResponse> files) {
+        public Builder files(List<FileResponse> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }

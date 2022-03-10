@@ -52,12 +52,12 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
-        public Builder setClusterConfig(ModelQualityJobDefinitionClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(ModelQualityJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }

@@ -230,122 +230,122 @@ public final class ExportConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setDestinationAccountId(@Nullable Input<String> destinationAccountId) {
+        public Builder destinationAccountId(@Nullable Input<String> destinationAccountId) {
             this.destinationAccountId = destinationAccountId;
             return this;
         }
 
-        public Builder setDestinationAccountId(@Nullable String destinationAccountId) {
+        public Builder destinationAccountId(@Nullable String destinationAccountId) {
             this.destinationAccountId = Input.ofNullable(destinationAccountId);
             return this;
         }
 
-        public Builder setDestinationAddress(@Nullable Input<String> destinationAddress) {
+        public Builder destinationAddress(@Nullable Input<String> destinationAddress) {
             this.destinationAddress = destinationAddress;
             return this;
         }
 
-        public Builder setDestinationAddress(@Nullable String destinationAddress) {
+        public Builder destinationAddress(@Nullable String destinationAddress) {
             this.destinationAddress = Input.ofNullable(destinationAddress);
             return this;
         }
 
-        public Builder setDestinationStorageLocationId(@Nullable Input<String> destinationStorageLocationId) {
+        public Builder destinationStorageLocationId(@Nullable Input<String> destinationStorageLocationId) {
             this.destinationStorageLocationId = destinationStorageLocationId;
             return this;
         }
 
-        public Builder setDestinationStorageLocationId(@Nullable String destinationStorageLocationId) {
+        public Builder destinationStorageLocationId(@Nullable String destinationStorageLocationId) {
             this.destinationStorageLocationId = Input.ofNullable(destinationStorageLocationId);
             return this;
         }
 
-        public Builder setDestinationStorageSubscriptionId(@Nullable Input<String> destinationStorageSubscriptionId) {
+        public Builder destinationStorageSubscriptionId(@Nullable Input<String> destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
             return this;
         }
 
-        public Builder setDestinationStorageSubscriptionId(@Nullable String destinationStorageSubscriptionId) {
+        public Builder destinationStorageSubscriptionId(@Nullable String destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = Input.ofNullable(destinationStorageSubscriptionId);
             return this;
         }
 
-        public Builder setDestinationType(@Nullable Input<String> destinationType) {
+        public Builder destinationType(@Nullable Input<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Input.ofNullable(destinationType);
             return this;
         }
 
-        public Builder setExportId(@Nullable Input<String> exportId) {
+        public Builder exportId(@Nullable Input<String> exportId) {
             this.exportId = exportId;
             return this;
         }
 
-        public Builder setExportId(@Nullable String exportId) {
+        public Builder exportId(@Nullable String exportId) {
             this.exportId = Input.ofNullable(exportId);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<String> isEnabled) {
+        public Builder isEnabled(@Nullable Input<String> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable String isEnabled) {
+        public Builder isEnabled(@Nullable String isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setNotificationQueueEnabled(@Nullable Input<String> notificationQueueEnabled) {
+        public Builder notificationQueueEnabled(@Nullable Input<String> notificationQueueEnabled) {
             this.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
 
-        public Builder setNotificationQueueEnabled(@Nullable String notificationQueueEnabled) {
+        public Builder notificationQueueEnabled(@Nullable String notificationQueueEnabled) {
             this.notificationQueueEnabled = Input.ofNullable(notificationQueueEnabled);
             return this;
         }
 
-        public Builder setNotificationQueueUri(@Nullable Input<String> notificationQueueUri) {
+        public Builder notificationQueueUri(@Nullable Input<String> notificationQueueUri) {
             this.notificationQueueUri = notificationQueueUri;
             return this;
         }
 
-        public Builder setNotificationQueueUri(@Nullable String notificationQueueUri) {
+        public Builder notificationQueueUri(@Nullable String notificationQueueUri) {
             this.notificationQueueUri = Input.ofNullable(notificationQueueUri);
             return this;
         }
 
-        public Builder setRecordTypes(@Nullable Input<String> recordTypes) {
+        public Builder recordTypes(@Nullable Input<String> recordTypes) {
             this.recordTypes = recordTypes;
             return this;
         }
 
-        public Builder setRecordTypes(@Nullable String recordTypes) {
+        public Builder recordTypes(@Nullable String recordTypes) {
             this.recordTypes = Input.ofNullable(recordTypes);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

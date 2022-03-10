@@ -380,107 +380,107 @@ public final class GetClusterResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setACLName(@Nullable String aCLName) {
+        public Builder aCLName(@Nullable String aCLName) {
             this.aCLName = aCLName;
             return this;
         }
 
-        public Builder setARN(@Nullable String aRN) {
+        public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
-        public Builder setClusterEndpoint(@Nullable ClusterEndpoint clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable ClusterEndpoint clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setFinalSnapshotName(@Nullable String finalSnapshotName) {
+        public Builder finalSnapshotName(@Nullable String finalSnapshotName) {
             this.finalSnapshotName = finalSnapshotName;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable String maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNumReplicasPerShard(@Nullable Integer numReplicasPerShard) {
+        public Builder numReplicasPerShard(@Nullable Integer numReplicasPerShard) {
             this.numReplicasPerShard = numReplicasPerShard;
             return this;
         }
 
-        public Builder setNumShards(@Nullable Integer numShards) {
+        public Builder numShards(@Nullable Integer numShards) {
             this.numShards = numShards;
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable String parameterGroupName) {
+        public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
-        public Builder setParameterGroupStatus(@Nullable String parameterGroupStatus) {
+        public Builder parameterGroupStatus(@Nullable String parameterGroupStatus) {
             this.parameterGroupStatus = parameterGroupStatus;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSnapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
-        public Builder setSnapshotWindow(@Nullable String snapshotWindow) {
+        public Builder snapshotWindow(@Nullable String snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicStatus(@Nullable String snsTopicStatus) {
+        public Builder snsTopicStatus(@Nullable String snsTopicStatus) {
             this.snsTopicStatus = snsTopicStatus;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable String subnetGroupName) {
+        public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ClusterTag> tags) {
+        public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }

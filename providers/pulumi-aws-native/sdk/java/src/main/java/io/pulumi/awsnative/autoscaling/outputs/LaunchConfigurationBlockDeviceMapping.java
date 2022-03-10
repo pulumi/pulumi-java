@@ -101,22 +101,22 @@ public final class LaunchConfigurationBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setEbs(@Nullable LaunchConfigurationBlockDevice ebs) {
+        public Builder ebs(@Nullable LaunchConfigurationBlockDevice ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Boolean noDevice) {
+        public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

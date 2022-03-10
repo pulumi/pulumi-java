@@ -74,22 +74,22 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder setPodCidr(@Nullable Input<String> podCidr) {
+        public Builder podCidr(@Nullable Input<String> podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
-        public Builder setPodCidr(@Nullable String podCidr) {
+        public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = Input.ofNullable(podCidr);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }

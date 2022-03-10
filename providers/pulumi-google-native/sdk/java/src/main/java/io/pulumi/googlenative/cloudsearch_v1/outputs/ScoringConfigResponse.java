@@ -65,12 +65,12 @@ public final class ScoringConfigResponse {
     	      this.disablePersonalization = defaults.disablePersonalization;
         }
 
-        public Builder setDisableFreshness(Boolean disableFreshness) {
+        public Builder disableFreshness(Boolean disableFreshness) {
             this.disableFreshness = Objects.requireNonNull(disableFreshness);
             return this;
         }
 
-        public Builder setDisablePersonalization(Boolean disablePersonalization) {
+        public Builder disablePersonalization(Boolean disablePersonalization) {
             this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
             return this;
         }

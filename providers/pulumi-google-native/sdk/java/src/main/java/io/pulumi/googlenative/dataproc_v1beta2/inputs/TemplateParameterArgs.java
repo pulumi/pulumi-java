@@ -108,42 +108,42 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFields(Input<List<String>> fields) {
+        public Builder fields(Input<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<String> fields) {
+        public Builder fields(List<String> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<ParameterValidationArgs> validation) {
+        public Builder validation(@Nullable Input<ParameterValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable ParameterValidationArgs validation) {
+        public Builder validation(@Nullable ParameterValidationArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

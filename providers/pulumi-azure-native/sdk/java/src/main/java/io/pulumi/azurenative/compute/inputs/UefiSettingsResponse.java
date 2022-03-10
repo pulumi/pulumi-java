@@ -74,12 +74,12 @@ public final class UefiSettingsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vTpmEnabled = defaults.vTpmEnabled;
         }
 
-        public Builder setSecureBootEnabled(@Nullable Boolean secureBootEnabled) {
+        public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
             this.secureBootEnabled = secureBootEnabled;
             return this;
         }
 
-        public Builder setVTpmEnabled(@Nullable Boolean vTpmEnabled) {
+        public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }

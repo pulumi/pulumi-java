@@ -83,17 +83,17 @@ public final class UserPoolClientTokenValidityUnits {
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setIdToken(@Nullable String idToken) {
+        public Builder idToken(@Nullable String idToken) {
             this.idToken = idToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }

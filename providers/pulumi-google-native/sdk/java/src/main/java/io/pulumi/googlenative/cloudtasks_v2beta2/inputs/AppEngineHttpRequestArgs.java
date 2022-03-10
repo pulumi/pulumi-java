@@ -125,52 +125,52 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     	      this.relativeUrl = defaults.relativeUrl;
         }
 
-        public Builder setAppEngineRouting(@Nullable Input<AppEngineRoutingArgs> appEngineRouting) {
+        public Builder appEngineRouting(@Nullable Input<AppEngineRoutingArgs> appEngineRouting) {
             this.appEngineRouting = appEngineRouting;
             return this;
         }
 
-        public Builder setAppEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
+        public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
             this.appEngineRouting = Input.ofNullable(appEngineRouting);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Input<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod) {
+        public Builder httpMethod(@Nullable Input<AppEngineHttpRequestHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
+        public Builder httpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Input<String> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable String payload) {
+        public Builder payload(@Nullable String payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable Input<String> relativeUrl) {
+        public Builder relativeUrl(@Nullable Input<String> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable String relativeUrl) {
+        public Builder relativeUrl(@Nullable String relativeUrl) {
             this.relativeUrl = Input.ofNullable(relativeUrl);
             return this;
         }

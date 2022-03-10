@@ -308,162 +308,162 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAgentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
             this.agentConfiguration = Input.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = Input.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsArgs credentials) {
+        public Builder credentials(@Nullable CredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesArgs identity) {
+        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIsSystemTask(@Nullable Input<Boolean> isSystemTask) {
+        public Builder isSystemTask(@Nullable Input<Boolean> isSystemTask) {
             this.isSystemTask = isSystemTask;
             return this;
         }
 
-        public Builder setIsSystemTask(@Nullable Boolean isSystemTask) {
+        public Builder isSystemTask(@Nullable Boolean isSystemTask) {
             this.isSystemTask = Input.ofNullable(isSystemTask);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Input<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = Input.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(@Nullable Input<PlatformPropertiesArgs> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable PlatformPropertiesArgs platform) {
+        public Builder platform(@Nullable PlatformPropertiesArgs platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TaskStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TaskStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TaskStatus> status) {
+        public Builder status(@Nullable Either<String,TaskStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStep(@Nullable Input<Object> step) {
+        public Builder step(@Nullable Input<Object> step) {
             this.step = step;
             return this;
         }
 
-        public Builder setStep(@Nullable Object step) {
+        public Builder step(@Nullable Object step) {
             this.step = Input.ofNullable(step);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaskName(@Nullable Input<String> taskName) {
+        public Builder taskName(@Nullable Input<String> taskName) {
             this.taskName = taskName;
             return this;
         }
 
-        public Builder setTaskName(@Nullable String taskName) {
+        public Builder taskName(@Nullable String taskName) {
             this.taskName = Input.ofNullable(taskName);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<TriggerPropertiesArgs> trigger) {
+        public Builder trigger(@Nullable Input<TriggerPropertiesArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable TriggerPropertiesArgs trigger) {
+        public Builder trigger(@Nullable TriggerPropertiesArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

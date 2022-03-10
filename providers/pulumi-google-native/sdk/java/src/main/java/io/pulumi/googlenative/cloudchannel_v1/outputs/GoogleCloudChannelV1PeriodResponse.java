@@ -66,12 +66,12 @@ public final class GoogleCloudChannelV1PeriodResponse {
     	      this.periodType = defaults.periodType;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setPeriodType(String periodType) {
+        public Builder periodType(String periodType) {
             this.periodType = Objects.requireNonNull(periodType);
             return this;
         }

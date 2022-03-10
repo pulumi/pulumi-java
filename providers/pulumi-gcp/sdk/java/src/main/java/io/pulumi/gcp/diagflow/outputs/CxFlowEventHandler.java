@@ -124,27 +124,27 @@ public final class CxFlowEventHandler {
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setEvent(@Nullable String event) {
+        public Builder event(@Nullable String event) {
             this.event = event;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable String targetFlow) {
+        public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
-        public Builder setTargetPage(@Nullable String targetPage) {
+        public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillment triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable CxFlowEventHandlerTriggerFulfillment triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }

@@ -212,57 +212,57 @@ public final class GetEncryptionProtectorResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAutoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
+        public Builder autoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
             this.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServerKeyName(@Nullable String serverKeyName) {
+        public Builder serverKeyName(@Nullable String serverKeyName) {
             this.serverKeyName = serverKeyName;
             return this;
         }
 
-        public Builder setServerKeyType(String serverKeyType) {
+        public Builder serverKeyType(String serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
 
-        public Builder setSubregion(String subregion) {
+        public Builder subregion(String subregion) {
             this.subregion = Objects.requireNonNull(subregion);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

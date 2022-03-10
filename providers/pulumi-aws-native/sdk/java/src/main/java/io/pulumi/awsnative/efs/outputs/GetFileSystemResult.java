@@ -105,42 +105,42 @@ public final class GetFileSystemResult {
     	      this.throughputMode = defaults.throughputMode;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable FileSystemBackupPolicy backupPolicy) {
+        public Builder backupPolicy(@Nullable FileSystemBackupPolicy backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemPolicy(@Nullable Object fileSystemPolicy) {
+        public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
             this.fileSystemPolicy = fileSystemPolicy;
             return this;
         }
 
-        public Builder setFileSystemTags(@Nullable List<FileSystemElasticFileSystemTag> fileSystemTags) {
+        public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTag> fileSystemTags) {
             this.fileSystemTags = fileSystemTags;
             return this;
         }
 
-        public Builder setLifecyclePolicies(@Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies) {
+        public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable String throughputMode) {
+        public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }

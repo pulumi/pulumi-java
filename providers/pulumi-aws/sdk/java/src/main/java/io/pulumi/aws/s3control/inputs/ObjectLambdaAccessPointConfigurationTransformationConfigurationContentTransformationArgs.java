@@ -52,12 +52,12 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.awsLambda = defaults.awsLambda;
         }
 
-        public Builder setAwsLambda(Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs> awsLambda) {
+        public Builder awsLambda(Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs> awsLambda) {
             this.awsLambda = Objects.requireNonNull(awsLambda);
             return this;
         }
 
-        public Builder setAwsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs awsLambda) {
+        public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs awsLambda) {
             this.awsLambda = Input.of(Objects.requireNonNull(awsLambda));
             return this;
         }

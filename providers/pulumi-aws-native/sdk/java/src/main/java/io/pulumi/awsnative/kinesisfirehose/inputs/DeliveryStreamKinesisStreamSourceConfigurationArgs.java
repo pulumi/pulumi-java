@@ -61,22 +61,22 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setKinesisStreamARN(Input<String> kinesisStreamARN) {
+        public Builder kinesisStreamARN(Input<String> kinesisStreamARN) {
             this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
             return this;
         }
 
-        public Builder setKinesisStreamARN(String kinesisStreamARN) {
+        public Builder kinesisStreamARN(String kinesisStreamARN) {
             this.kinesisStreamARN = Input.of(Objects.requireNonNull(kinesisStreamARN));
             return this;
         }
 
-        public Builder setRoleARN(Input<String> roleARN) {
+        public Builder roleARN(Input<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Input.of(Objects.requireNonNull(roleARN));
             return this;
         }

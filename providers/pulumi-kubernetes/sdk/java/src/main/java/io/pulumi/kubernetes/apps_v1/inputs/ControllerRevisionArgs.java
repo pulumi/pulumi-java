@@ -125,52 +125,52 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
     	      this.revision = defaults.revision;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setData(@Nullable Input<JsonElement> data) {
+        public Builder data(@Nullable Input<JsonElement> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable JsonElement data) {
+        public Builder data(@Nullable JsonElement data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setRevision(Input<Integer> revision) {
+        public Builder revision(Input<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Input.of(Objects.requireNonNull(revision));
             return this;
         }

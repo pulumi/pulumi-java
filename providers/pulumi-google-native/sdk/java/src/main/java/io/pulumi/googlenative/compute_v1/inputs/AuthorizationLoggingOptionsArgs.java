@@ -57,12 +57,12 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
     	      this.permissionType = defaults.permissionType;
         }
 
-        public Builder setPermissionType(@Nullable Input<AuthorizationLoggingOptionsPermissionType> permissionType) {
+        public Builder permissionType(@Nullable Input<AuthorizationLoggingOptionsPermissionType> permissionType) {
             this.permissionType = permissionType;
             return this;
         }
 
-        public Builder setPermissionType(@Nullable AuthorizationLoggingOptionsPermissionType permissionType) {
+        public Builder permissionType(@Nullable AuthorizationLoggingOptionsPermissionType permissionType) {
             this.permissionType = Input.ofNullable(permissionType);
             return this;
         }

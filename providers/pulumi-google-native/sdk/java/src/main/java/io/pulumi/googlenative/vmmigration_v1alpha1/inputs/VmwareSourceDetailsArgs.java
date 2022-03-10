@@ -106,42 +106,42 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     	      this.vcenterIp = defaults.vcenterIp;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }
 
-        public Builder setVcenterIp(@Nullable Input<String> vcenterIp) {
+        public Builder vcenterIp(@Nullable Input<String> vcenterIp) {
             this.vcenterIp = vcenterIp;
             return this;
         }
 
-        public Builder setVcenterIp(@Nullable String vcenterIp) {
+        public Builder vcenterIp(@Nullable String vcenterIp) {
             this.vcenterIp = Input.ofNullable(vcenterIp);
             return this;
         }

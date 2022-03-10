@@ -127,52 +127,52 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setEnv(@Nullable Input<List<EnvVarArgs>> env) {
+        public Builder env(@Nullable Input<List<EnvVarArgs>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<EnvVarArgs> env) {
+        public Builder env(@Nullable List<EnvVarArgs> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
+        public Builder envFrom(@Nullable Input<List<EnvFromSourceArgs>> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
+        public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
             this.envFrom = Input.ofNullable(envFrom);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

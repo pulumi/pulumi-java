@@ -71,12 +71,12 @@ public final class SecurityProfileMetricToRetain extends io.pulumi.resources.Inv
     	      this.metricDimension = defaults.metricDimension;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }

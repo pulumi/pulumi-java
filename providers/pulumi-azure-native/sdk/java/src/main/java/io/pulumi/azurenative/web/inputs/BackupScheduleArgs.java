@@ -125,52 +125,52 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setFrequencyInterval(Input<Integer> frequencyInterval) {
+        public Builder frequencyInterval(Input<Integer> frequencyInterval) {
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
 
-        public Builder setFrequencyInterval(Integer frequencyInterval) {
+        public Builder frequencyInterval(Integer frequencyInterval) {
             this.frequencyInterval = Input.of(Objects.requireNonNull(frequencyInterval));
             return this;
         }
 
-        public Builder setFrequencyUnit(Input<FrequencyUnit> frequencyUnit) {
+        public Builder frequencyUnit(Input<FrequencyUnit> frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
 
-        public Builder setFrequencyUnit(FrequencyUnit frequencyUnit) {
+        public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
             this.frequencyUnit = Input.of(Objects.requireNonNull(frequencyUnit));
             return this;
         }
 
-        public Builder setKeepAtLeastOneBackup(Input<Boolean> keepAtLeastOneBackup) {
+        public Builder keepAtLeastOneBackup(Input<Boolean> keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
 
-        public Builder setKeepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
+        public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Input.of(Objects.requireNonNull(keepAtLeastOneBackup));
             return this;
         }
 
-        public Builder setRetentionPeriodInDays(Input<Integer> retentionPeriodInDays) {
+        public Builder retentionPeriodInDays(Input<Integer> retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
 
-        public Builder setRetentionPeriodInDays(Integer retentionPeriodInDays) {
+        public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             this.retentionPeriodInDays = Input.of(Objects.requireNonNull(retentionPeriodInDays));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

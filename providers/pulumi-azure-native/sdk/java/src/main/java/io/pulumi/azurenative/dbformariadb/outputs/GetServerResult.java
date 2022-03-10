@@ -345,97 +345,97 @@ public final class GetServerResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setEarliestRestoreDate(@Nullable String earliestRestoreDate) {
+        public Builder earliestRestoreDate(@Nullable String earliestRestoreDate) {
             this.earliestRestoreDate = earliestRestoreDate;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMasterServerId(@Nullable String masterServerId) {
+        public Builder masterServerId(@Nullable String masterServerId) {
             this.masterServerId = masterServerId;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setReplicaCapacity(@Nullable Integer replicaCapacity) {
+        public Builder replicaCapacity(@Nullable Integer replicaCapacity) {
             this.replicaCapacity = replicaCapacity;
             return this;
         }
 
-        public Builder setReplicationRole(@Nullable String replicationRole) {
+        public Builder replicationRole(@Nullable String replicationRole) {
             this.replicationRole = replicationRole;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSslEnforcement(@Nullable String sslEnforcement) {
+        public Builder sslEnforcement(@Nullable String sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserVisibleState(@Nullable String userVisibleState) {
+        public Builder userVisibleState(@Nullable String userVisibleState) {
             this.userVisibleState = userVisibleState;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

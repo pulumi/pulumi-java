@@ -74,22 +74,22 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     	      this.instructionMessage = defaults.instructionMessage;
         }
 
-        public Builder setAnnotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder setInstructionMessage(@Nullable Input<String> instructionMessage) {
+        public Builder instructionMessage(@Nullable Input<String> instructionMessage) {
             this.instructionMessage = instructionMessage;
             return this;
         }
 
-        public Builder setInstructionMessage(@Nullable String instructionMessage) {
+        public Builder instructionMessage(@Nullable String instructionMessage) {
             this.instructionMessage = Input.ofNullable(instructionMessage);
             return this;
         }

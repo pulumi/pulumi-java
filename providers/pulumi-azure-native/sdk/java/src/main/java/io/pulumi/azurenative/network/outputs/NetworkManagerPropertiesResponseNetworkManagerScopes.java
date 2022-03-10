@@ -67,12 +67,12 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setManagementGroups(@Nullable List<String> managementGroups) {
+        public Builder managementGroups(@Nullable List<String> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

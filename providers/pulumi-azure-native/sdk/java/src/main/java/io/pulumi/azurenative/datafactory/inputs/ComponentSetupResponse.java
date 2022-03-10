@@ -94,17 +94,17 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setComponentName(String componentName) {
+        public Builder componentName(String componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
-        public Builder setLicenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
+        public Builder licenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

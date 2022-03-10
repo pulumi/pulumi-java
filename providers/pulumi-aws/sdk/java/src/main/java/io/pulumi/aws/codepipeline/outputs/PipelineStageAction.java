@@ -230,62 +230,62 @@ public final class PipelineStageAction {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Map<String,String> configuration) {
+        public Builder configuration(@Nullable Map<String,String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setInputArtifacts(@Nullable List<String> inputArtifacts) {
+        public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setOutputArtifacts(@Nullable List<String> outputArtifacts) {
+        public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRunOrder(@Nullable Integer runOrder) {
+        public Builder runOrder(@Nullable Integer runOrder) {
             this.runOrder = runOrder;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

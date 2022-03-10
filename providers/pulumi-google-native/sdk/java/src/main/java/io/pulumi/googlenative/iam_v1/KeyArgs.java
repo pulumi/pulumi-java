@@ -96,42 +96,42 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder setKeyAlgorithm(@Nullable Input<KeyKeyAlgorithm> keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable Input<KeyKeyAlgorithm> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
-        public Builder setKeyAlgorithm(@Nullable KeyKeyAlgorithm keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable KeyKeyAlgorithm keyAlgorithm) {
             this.keyAlgorithm = Input.ofNullable(keyAlgorithm);
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable Input<KeyPrivateKeyType> privateKeyType) {
+        public Builder privateKeyType(@Nullable Input<KeyPrivateKeyType> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable KeyPrivateKeyType privateKeyType) {
+        public Builder privateKeyType(@Nullable KeyPrivateKeyType privateKeyType) {
             this.privateKeyType = Input.ofNullable(privateKeyType);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceAccountId(Input<String> serviceAccountId) {
+        public Builder serviceAccountId(Input<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
 
-        public Builder setServiceAccountId(String serviceAccountId) {
+        public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }

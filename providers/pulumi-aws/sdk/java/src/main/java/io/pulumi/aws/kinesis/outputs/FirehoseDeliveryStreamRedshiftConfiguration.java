@@ -231,62 +231,62 @@ public final class FirehoseDeliveryStreamRedshiftConfiguration {
     	      this.username = defaults.username;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setClusterJdbcurl(String clusterJdbcurl) {
+        public Builder clusterJdbcurl(String clusterJdbcurl) {
             this.clusterJdbcurl = Objects.requireNonNull(clusterJdbcurl);
             return this;
         }
 
-        public Builder setCopyOptions(@Nullable String copyOptions) {
+        public Builder copyOptions(@Nullable String copyOptions) {
             this.copyOptions = copyOptions;
             return this;
         }
 
-        public Builder setDataTableColumns(@Nullable String dataTableColumns) {
+        public Builder dataTableColumns(@Nullable String dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
 
-        public Builder setDataTableName(String dataTableName) {
+        public Builder dataTableName(String dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Integer retryDuration) {
+        public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

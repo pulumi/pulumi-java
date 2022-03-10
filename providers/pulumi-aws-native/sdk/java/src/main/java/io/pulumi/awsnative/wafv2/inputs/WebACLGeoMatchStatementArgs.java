@@ -64,22 +64,22 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder setCountryCodes(@Nullable Input<List<String>> countryCodes) {
+        public Builder countryCodes(@Nullable Input<List<String>> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
-        public Builder setCountryCodes(@Nullable List<String> countryCodes) {
+        public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = Input.ofNullable(countryCodes);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
             return this;
         }

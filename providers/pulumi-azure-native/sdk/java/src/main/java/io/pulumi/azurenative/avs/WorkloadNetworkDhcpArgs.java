@@ -137,62 +137,62 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
     	      this.revision = defaults.revision;
         }
 
-        public Builder setDhcpId(@Nullable Input<String> dhcpId) {
+        public Builder dhcpId(@Nullable Input<String> dhcpId) {
             this.dhcpId = dhcpId;
             return this;
         }
 
-        public Builder setDhcpId(@Nullable String dhcpId) {
+        public Builder dhcpId(@Nullable String dhcpId) {
             this.dhcpId = Input.ofNullable(dhcpId);
             return this;
         }
 
-        public Builder setDhcpType(Input<Either<String,DhcpTypeEnum>> dhcpType) {
+        public Builder dhcpType(Input<Either<String,DhcpTypeEnum>> dhcpType) {
             this.dhcpType = Objects.requireNonNull(dhcpType);
             return this;
         }
 
-        public Builder setDhcpType(Either<String,DhcpTypeEnum> dhcpType) {
+        public Builder dhcpType(Either<String,DhcpTypeEnum> dhcpType) {
             this.dhcpType = Input.of(Objects.requireNonNull(dhcpType));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Double> revision) {
+        public Builder revision(@Nullable Input<Double> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }

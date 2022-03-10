@@ -103,22 +103,22 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
     	      this.top = defaults.top;
         }
 
-        public Builder setManagementGroupId(String managementGroupId) {
+        public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
-        public Builder setManagementGroupsNamespace(String managementGroupsNamespace) {
+        public Builder managementGroupsNamespace(String managementGroupsNamespace) {
             this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace);
             return this;
         }
 
-        public Builder setRemediationName(String remediationName) {
+        public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
 
-        public Builder setTop(@Nullable Integer top) {
+        public Builder top(@Nullable Integer top) {
             this.top = top;
             return this;
         }

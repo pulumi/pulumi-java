@@ -52,12 +52,12 @@ public final class VirtualServiceSpecProviderVirtualNodeGetArgs extends io.pulum
     	      this.virtualNodeName = defaults.virtualNodeName;
         }
 
-        public Builder setVirtualNodeName(Input<String> virtualNodeName) {
+        public Builder virtualNodeName(Input<String> virtualNodeName) {
             this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
             return this;
         }
 
-        public Builder setVirtualNodeName(String virtualNodeName) {
+        public Builder virtualNodeName(String virtualNodeName) {
             this.virtualNodeName = Input.of(Objects.requireNonNull(virtualNodeName));
             return this;
         }

@@ -67,12 +67,12 @@ public final class EndpointConfigResponse {
     	      this.httpPorts = defaults.httpPorts;
         }
 
-        public Builder setEnableHttpPortAccess(Boolean enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
 
-        public Builder setHttpPorts(Map<String,String> httpPorts) {
+        public Builder httpPorts(Map<String,String> httpPorts) {
             this.httpPorts = Objects.requireNonNull(httpPorts);
             return this;
         }

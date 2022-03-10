@@ -90,17 +90,17 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable String cpu) {
+        public Builder cpu(@Nullable String cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable String instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
         }

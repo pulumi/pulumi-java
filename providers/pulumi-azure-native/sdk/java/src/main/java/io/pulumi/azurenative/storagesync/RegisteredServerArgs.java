@@ -214,112 +214,112 @@ public final class RegisteredServerArgs extends io.pulumi.resources.ResourceArgs
     	      this.storageSyncServiceName = defaults.storageSyncServiceName;
         }
 
-        public Builder setAgentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Input<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Input.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setLastHeartBeat(@Nullable Input<String> lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable Input<String> lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
-        public Builder setLastHeartBeat(@Nullable String lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = Input.ofNullable(lastHeartBeat);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerCertificate(@Nullable Input<String> serverCertificate) {
+        public Builder serverCertificate(@Nullable Input<String> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
 
-        public Builder setServerCertificate(@Nullable String serverCertificate) {
+        public Builder serverCertificate(@Nullable String serverCertificate) {
             this.serverCertificate = Input.ofNullable(serverCertificate);
             return this;
         }
 
-        public Builder setServerId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Input<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
-        public Builder setServerId(@Nullable String serverId) {
+        public Builder serverId(@Nullable String serverId) {
             this.serverId = Input.ofNullable(serverId);
             return this;
         }
 
-        public Builder setServerOSVersion(@Nullable Input<String> serverOSVersion) {
+        public Builder serverOSVersion(@Nullable Input<String> serverOSVersion) {
             this.serverOSVersion = serverOSVersion;
             return this;
         }
 
-        public Builder setServerOSVersion(@Nullable String serverOSVersion) {
+        public Builder serverOSVersion(@Nullable String serverOSVersion) {
             this.serverOSVersion = Input.ofNullable(serverOSVersion);
             return this;
         }
 
-        public Builder setServerRole(@Nullable Input<String> serverRole) {
+        public Builder serverRole(@Nullable Input<String> serverRole) {
             this.serverRole = serverRole;
             return this;
         }
 
-        public Builder setServerRole(@Nullable String serverRole) {
+        public Builder serverRole(@Nullable String serverRole) {
             this.serverRole = Input.ofNullable(serverRole);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }

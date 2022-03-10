@@ -87,32 +87,32 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.featureSet = defaults.featureSet;
         }
 
-        public Builder setAwsServiceAccessPrincipals(@Nullable Input<List<String>> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(@Nullable Input<List<String>> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
 
-        public Builder setAwsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Input.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
 
-        public Builder setEnabledPolicyTypes(@Nullable Input<List<String>> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(@Nullable Input<List<String>> enabledPolicyTypes) {
             this.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
 
-        public Builder setEnabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Input.ofNullable(enabledPolicyTypes);
             return this;
         }
 
-        public Builder setFeatureSet(@Nullable Input<String> featureSet) {
+        public Builder featureSet(@Nullable Input<String> featureSet) {
             this.featureSet = featureSet;
             return this;
         }
 
-        public Builder setFeatureSet(@Nullable String featureSet) {
+        public Builder featureSet(@Nullable String featureSet) {
             this.featureSet = Input.ofNullable(featureSet);
             return this;
         }

@@ -225,57 +225,57 @@ public final class DatabaseInstanceReplicaConfiguration {
     	      this.verifyServerCertificate = defaults.verifyServerCertificate;
         }
 
-        public Builder setCaCertificate(@Nullable String caCertificate) {
+        public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable String clientCertificate) {
+        public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientKey(@Nullable String clientKey) {
+        public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setConnectRetryInterval(@Nullable Integer connectRetryInterval) {
+        public Builder connectRetryInterval(@Nullable Integer connectRetryInterval) {
             this.connectRetryInterval = connectRetryInterval;
             return this;
         }
 
-        public Builder setDumpFilePath(@Nullable String dumpFilePath) {
+        public Builder dumpFilePath(@Nullable String dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
 
-        public Builder setFailoverTarget(@Nullable Boolean failoverTarget) {
+        public Builder failoverTarget(@Nullable Boolean failoverTarget) {
             this.failoverTarget = failoverTarget;
             return this;
         }
 
-        public Builder setMasterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(@Nullable Integer masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSslCipher(@Nullable String sslCipher) {
+        public Builder sslCipher(@Nullable String sslCipher) {
             this.sslCipher = sslCipher;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }
 
-        public Builder setVerifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
+        public Builder verifyServerCertificate(@Nullable Boolean verifyServerCertificate) {
             this.verifyServerCertificate = verifyServerCertificate;
             return this;
         }

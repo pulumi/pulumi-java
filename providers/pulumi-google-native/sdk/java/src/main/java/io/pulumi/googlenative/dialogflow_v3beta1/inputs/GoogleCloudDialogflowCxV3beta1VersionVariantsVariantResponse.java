@@ -90,17 +90,17 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
     	      this.version = defaults.version;
         }
 
-        public Builder setIsControlGroup(Boolean isControlGroup) {
+        public Builder isControlGroup(Boolean isControlGroup) {
             this.isControlGroup = Objects.requireNonNull(isControlGroup);
             return this;
         }
 
-        public Builder setTrafficAllocation(Double trafficAllocation) {
+        public Builder trafficAllocation(Double trafficAllocation) {
             this.trafficAllocation = Objects.requireNonNull(trafficAllocation);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

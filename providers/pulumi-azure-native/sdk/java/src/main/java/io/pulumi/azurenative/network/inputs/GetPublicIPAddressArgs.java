@@ -86,17 +86,17 @@ public final class GetPublicIPAddressArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setPublicIpAddressName(String publicIpAddressName) {
+        public Builder publicIpAddressName(String publicIpAddressName) {
             this.publicIpAddressName = Objects.requireNonNull(publicIpAddressName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

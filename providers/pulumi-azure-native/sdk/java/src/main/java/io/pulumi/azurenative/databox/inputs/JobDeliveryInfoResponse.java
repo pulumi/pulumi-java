@@ -57,7 +57,7 @@ public final class JobDeliveryInfoResponse extends io.pulumi.resources.InvokeArg
     	      this.scheduledDateTime = defaults.scheduledDateTime;
         }
 
-        public Builder setScheduledDateTime(@Nullable String scheduledDateTime) {
+        public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
             this.scheduledDateTime = scheduledDateTime;
             return this;
         }

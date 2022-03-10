@@ -185,47 +185,47 @@ public final class BucketReplicationConfigRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplication(@Nullable BucketReplicationConfigRuleDeleteMarkerReplication deleteMarkerReplication) {
+        public Builder deleteMarkerReplication(@Nullable BucketReplicationConfigRuleDeleteMarkerReplication deleteMarkerReplication) {
             this.deleteMarkerReplication = deleteMarkerReplication;
             return this;
         }
 
-        public Builder setDestination(BucketReplicationConfigRuleDestination destination) {
+        public Builder destination(BucketReplicationConfigRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setExistingObjectReplication(@Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication) {
+        public Builder existingObjectReplication(@Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication) {
             this.existingObjectReplication = existingObjectReplication;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationConfigRuleFilter filter) {
+        public Builder filter(@Nullable BucketReplicationConfigRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

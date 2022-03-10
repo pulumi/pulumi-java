@@ -105,42 +105,42 @@ public final class VoiceConnectorStreamingArgs extends io.pulumi.resources.Resou
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder setDataRetention(Input<Integer> dataRetention) {
+        public Builder dataRetention(Input<Integer> dataRetention) {
             this.dataRetention = Objects.requireNonNull(dataRetention);
             return this;
         }
 
-        public Builder setDataRetention(Integer dataRetention) {
+        public Builder dataRetention(Integer dataRetention) {
             this.dataRetention = Input.of(Objects.requireNonNull(dataRetention));
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setStreamingNotificationTargets(@Nullable Input<List<String>> streamingNotificationTargets) {
+        public Builder streamingNotificationTargets(@Nullable Input<List<String>> streamingNotificationTargets) {
             this.streamingNotificationTargets = streamingNotificationTargets;
             return this;
         }
 
-        public Builder setStreamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
+        public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
             this.streamingNotificationTargets = Input.ofNullable(streamingNotificationTargets);
             return this;
         }
 
-        public Builder setVoiceConnectorId(Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(Input<String> voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }
 
-        public Builder setVoiceConnectorId(String voiceConnectorId) {
+        public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Input.of(Objects.requireNonNull(voiceConnectorId));
             return this;
         }

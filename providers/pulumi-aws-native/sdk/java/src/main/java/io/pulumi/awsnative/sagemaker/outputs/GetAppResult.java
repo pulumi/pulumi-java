@@ -68,12 +68,12 @@ public final class GetAppResult {
     	      this.resourceSpec = defaults.resourceSpec;
         }
 
-        public Builder setAppArn(@Nullable String appArn) {
+        public Builder appArn(@Nullable String appArn) {
             this.appArn = appArn;
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable AppResourceSpec resourceSpec) {
+        public Builder resourceSpec(@Nullable AppResourceSpec resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }

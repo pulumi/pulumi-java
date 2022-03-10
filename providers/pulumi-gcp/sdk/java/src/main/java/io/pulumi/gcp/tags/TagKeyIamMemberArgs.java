@@ -97,42 +97,42 @@ public final class TagKeyIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tagKey = defaults.tagKey;
         }
 
-        public Builder setCondition(@Nullable Input<TagKeyIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<TagKeyIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TagKeyIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable TagKeyIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setTagKey(Input<String> tagKey) {
+        public Builder tagKey(Input<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
-        public Builder setTagKey(String tagKey) {
+        public Builder tagKey(String tagKey) {
             this.tagKey = Input.of(Objects.requireNonNull(tagKey));
             return this;
         }

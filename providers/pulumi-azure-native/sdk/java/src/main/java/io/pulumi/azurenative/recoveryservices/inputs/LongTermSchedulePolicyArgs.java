@@ -57,12 +57,12 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder setSchedulePolicyType(Input<String> schedulePolicyType) {
+        public Builder schedulePolicyType(Input<String> schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }

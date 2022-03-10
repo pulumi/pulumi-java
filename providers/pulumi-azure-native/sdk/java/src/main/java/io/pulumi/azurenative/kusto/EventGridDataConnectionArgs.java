@@ -267,142 +267,142 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setBlobStorageEventType(@Nullable Input<Either<String,BlobStorageEventType>> blobStorageEventType) {
+        public Builder blobStorageEventType(@Nullable Input<Either<String,BlobStorageEventType>> blobStorageEventType) {
             this.blobStorageEventType = blobStorageEventType;
             return this;
         }
 
-        public Builder setBlobStorageEventType(@Nullable Either<String,BlobStorageEventType> blobStorageEventType) {
+        public Builder blobStorageEventType(@Nullable Either<String,BlobStorageEventType> blobStorageEventType) {
             this.blobStorageEventType = Input.ofNullable(blobStorageEventType);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setConsumerGroup(Input<String> consumerGroup) {
+        public Builder consumerGroup(Input<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
 
-        public Builder setConsumerGroup(String consumerGroup) {
+        public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Input.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
 
-        public Builder setDataConnectionName(@Nullable Input<String> dataConnectionName) {
+        public Builder dataConnectionName(@Nullable Input<String> dataConnectionName) {
             this.dataConnectionName = dataConnectionName;
             return this;
         }
 
-        public Builder setDataConnectionName(@Nullable String dataConnectionName) {
+        public Builder dataConnectionName(@Nullable String dataConnectionName) {
             this.dataConnectionName = Input.ofNullable(dataConnectionName);
             return this;
         }
 
-        public Builder setDataFormat(@Nullable Input<Either<String,EventGridDataFormat>> dataFormat) {
+        public Builder dataFormat(@Nullable Input<Either<String,EventGridDataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
-        public Builder setDataFormat(@Nullable Either<String,EventGridDataFormat> dataFormat) {
+        public Builder dataFormat(@Nullable Either<String,EventGridDataFormat> dataFormat) {
             this.dataFormat = Input.ofNullable(dataFormat);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setEventHubResourceId(Input<String> eventHubResourceId) {
+        public Builder eventHubResourceId(Input<String> eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
 
-        public Builder setEventHubResourceId(String eventHubResourceId) {
+        public Builder eventHubResourceId(String eventHubResourceId) {
             this.eventHubResourceId = Input.of(Objects.requireNonNull(eventHubResourceId));
             return this;
         }
 
-        public Builder setIgnoreFirstRecord(@Nullable Input<Boolean> ignoreFirstRecord) {
+        public Builder ignoreFirstRecord(@Nullable Input<Boolean> ignoreFirstRecord) {
             this.ignoreFirstRecord = ignoreFirstRecord;
             return this;
         }
 
-        public Builder setIgnoreFirstRecord(@Nullable Boolean ignoreFirstRecord) {
+        public Builder ignoreFirstRecord(@Nullable Boolean ignoreFirstRecord) {
             this.ignoreFirstRecord = Input.ofNullable(ignoreFirstRecord);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMappingRuleName(@Nullable Input<String> mappingRuleName) {
+        public Builder mappingRuleName(@Nullable Input<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
 
-        public Builder setMappingRuleName(@Nullable String mappingRuleName) {
+        public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = Input.ofNullable(mappingRuleName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountResourceId(Input<String> storageAccountResourceId) {
+        public Builder storageAccountResourceId(Input<String> storageAccountResourceId) {
             this.storageAccountResourceId = Objects.requireNonNull(storageAccountResourceId);
             return this;
         }
 
-        public Builder setStorageAccountResourceId(String storageAccountResourceId) {
+        public Builder storageAccountResourceId(String storageAccountResourceId) {
             this.storageAccountResourceId = Input.of(Objects.requireNonNull(storageAccountResourceId));
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

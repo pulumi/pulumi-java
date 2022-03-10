@@ -94,17 +94,17 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
     	      this.wafPolicy = defaults.wafPolicy;
         }
 
-        public Builder setAssociations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
+        public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
+        public Builder wafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
         }

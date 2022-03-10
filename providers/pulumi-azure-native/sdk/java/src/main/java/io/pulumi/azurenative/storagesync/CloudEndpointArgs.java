@@ -166,82 +166,82 @@ public final class CloudEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncGroupName = defaults.syncGroupName;
         }
 
-        public Builder setAzureFileShareName(@Nullable Input<String> azureFileShareName) {
+        public Builder azureFileShareName(@Nullable Input<String> azureFileShareName) {
             this.azureFileShareName = azureFileShareName;
             return this;
         }
 
-        public Builder setAzureFileShareName(@Nullable String azureFileShareName) {
+        public Builder azureFileShareName(@Nullable String azureFileShareName) {
             this.azureFileShareName = Input.ofNullable(azureFileShareName);
             return this;
         }
 
-        public Builder setCloudEndpointName(@Nullable Input<String> cloudEndpointName) {
+        public Builder cloudEndpointName(@Nullable Input<String> cloudEndpointName) {
             this.cloudEndpointName = cloudEndpointName;
             return this;
         }
 
-        public Builder setCloudEndpointName(@Nullable String cloudEndpointName) {
+        public Builder cloudEndpointName(@Nullable String cloudEndpointName) {
             this.cloudEndpointName = Input.ofNullable(cloudEndpointName);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable Input<String> storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable Input<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = Input.ofNullable(storageAccountResourceId);
             return this;
         }
 
-        public Builder setStorageAccountTenantId(@Nullable Input<String> storageAccountTenantId) {
+        public Builder storageAccountTenantId(@Nullable Input<String> storageAccountTenantId) {
             this.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
 
-        public Builder setStorageAccountTenantId(@Nullable String storageAccountTenantId) {
+        public Builder storageAccountTenantId(@Nullable String storageAccountTenantId) {
             this.storageAccountTenantId = Input.ofNullable(storageAccountTenantId);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
 
-        public Builder setSyncGroupName(Input<String> syncGroupName) {
+        public Builder syncGroupName(Input<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
 
-        public Builder setSyncGroupName(String syncGroupName) {
+        public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
             return this;
         }

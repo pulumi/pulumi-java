@@ -254,72 +254,72 @@ public final class GetTransitGatewayResult {
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder setAmazonSideAsn(Integer amazonSideAsn) {
+        public Builder amazonSideAsn(Integer amazonSideAsn) {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = Objects.requireNonNull(associationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(String autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = Objects.requireNonNull(autoAcceptSharedAttachments);
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(String defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = Objects.requireNonNull(defaultRouteTableAssociation);
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(String defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = Objects.requireNonNull(defaultRouteTablePropagation);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDnsSupport(String dnsSupport) {
+        public Builder dnsSupport(String dnsSupport) {
             this.dnsSupport = Objects.requireNonNull(dnsSupport);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetTransitGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetTransitGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = Objects.requireNonNull(propagationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpnEcmpSupport(String vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(String vpnEcmpSupport) {
             this.vpnEcmpSupport = Objects.requireNonNull(vpnEcmpSupport);
             return this;
         }

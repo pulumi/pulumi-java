@@ -124,52 +124,52 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
     	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
         }
 
-        public Builder setCloudComposerNetworkIpv4CidrBlock(@Nullable Input<String> cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable Input<String> cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
 
-        public Builder setCloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Input.ofNullable(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
 
-        public Builder setCloudSqlIpv4CidrBlock(@Nullable Input<String> cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(@Nullable Input<String> cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
 
-        public Builder setCloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = Input.ofNullable(cloudSqlIpv4CidrBlock);
             return this;
         }
 
-        public Builder setEnablePrivateEnvironment(@Nullable Input<Boolean> enablePrivateEnvironment) {
+        public Builder enablePrivateEnvironment(@Nullable Input<Boolean> enablePrivateEnvironment) {
             this.enablePrivateEnvironment = enablePrivateEnvironment;
             return this;
         }
 
-        public Builder setEnablePrivateEnvironment(@Nullable Boolean enablePrivateEnvironment) {
+        public Builder enablePrivateEnvironment(@Nullable Boolean enablePrivateEnvironment) {
             this.enablePrivateEnvironment = Input.ofNullable(enablePrivateEnvironment);
             return this;
         }
 
-        public Builder setPrivateClusterConfig(@Nullable Input<PrivateClusterConfigArgs> privateClusterConfig) {
+        public Builder privateClusterConfig(@Nullable Input<PrivateClusterConfigArgs> privateClusterConfig) {
             this.privateClusterConfig = privateClusterConfig;
             return this;
         }
 
-        public Builder setPrivateClusterConfig(@Nullable PrivateClusterConfigArgs privateClusterConfig) {
+        public Builder privateClusterConfig(@Nullable PrivateClusterConfigArgs privateClusterConfig) {
             this.privateClusterConfig = Input.ofNullable(privateClusterConfig);
             return this;
         }
 
-        public Builder setWebServerIpv4CidrBlock(@Nullable Input<String> webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(@Nullable Input<String> webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }
 
-        public Builder setWebServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = Input.ofNullable(webServerIpv4CidrBlock);
             return this;
         }

@@ -50,7 +50,7 @@ public final class PolicyParametersResponse {
     	      this.dataStoreParametersList = defaults.dataStoreParametersList;
         }
 
-        public Builder setDataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
+        public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }

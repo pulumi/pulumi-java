@@ -53,12 +53,12 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
     	      this.backendConfig = defaults.backendConfig;
         }
 
-        public Builder setBackendConfig(Input<ApiConfigGatewayConfigBackendConfigArgs> backendConfig) {
+        public Builder backendConfig(Input<ApiConfigGatewayConfigBackendConfigArgs> backendConfig) {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
 
-        public Builder setBackendConfig(ApiConfigGatewayConfigBackendConfigArgs backendConfig) {
+        public Builder backendConfig(ApiConfigGatewayConfigBackendConfigArgs backendConfig) {
             this.backendConfig = Input.of(Objects.requireNonNull(backendConfig));
             return this;
         }

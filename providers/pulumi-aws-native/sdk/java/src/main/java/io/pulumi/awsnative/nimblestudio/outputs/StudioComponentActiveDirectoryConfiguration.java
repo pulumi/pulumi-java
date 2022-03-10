@@ -85,17 +85,17 @@ public final class StudioComponentActiveDirectoryConfiguration {
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder setComputerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
+        public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
             this.computerAttributes = computerAttributes;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }

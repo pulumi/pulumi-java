@@ -152,72 +152,72 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setConfigurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Input<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
-        public Builder setConfigurationSet(@Nullable String configurationSet) {
+        public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Input.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFromAddress(@Nullable Input<String> fromAddress) {
+        public Builder fromAddress(@Nullable Input<String> fromAddress) {
             this.fromAddress = fromAddress;
             return this;
         }
 
-        public Builder setFromAddress(@Nullable String fromAddress) {
+        public Builder fromAddress(@Nullable String fromAddress) {
             this.fromAddress = Input.ofNullable(fromAddress);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Input<String> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable String identity) {
+        public Builder identity(@Nullable String identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setMessagesPerSecond(@Nullable Input<Integer> messagesPerSecond) {
+        public Builder messagesPerSecond(@Nullable Input<Integer> messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
 
-        public Builder setMessagesPerSecond(@Nullable Integer messagesPerSecond) {
+        public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
             this.messagesPerSecond = Input.ofNullable(messagesPerSecond);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

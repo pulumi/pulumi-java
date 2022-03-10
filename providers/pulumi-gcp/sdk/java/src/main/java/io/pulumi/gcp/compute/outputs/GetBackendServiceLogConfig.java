@@ -50,12 +50,12 @@ public final class GetBackendServiceLogConfig {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setSampleRate(Double sampleRate) {
+        public Builder sampleRate(Double sampleRate) {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }

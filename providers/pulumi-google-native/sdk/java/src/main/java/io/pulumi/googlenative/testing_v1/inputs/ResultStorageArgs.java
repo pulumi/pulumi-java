@@ -75,22 +75,22 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toolResultsHistory = defaults.toolResultsHistory;
         }
 
-        public Builder setGoogleCloudStorage(Input<GoogleCloudStorageArgs> googleCloudStorage) {
+        public Builder googleCloudStorage(Input<GoogleCloudStorageArgs> googleCloudStorage) {
             this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
             return this;
         }
 
-        public Builder setGoogleCloudStorage(GoogleCloudStorageArgs googleCloudStorage) {
+        public Builder googleCloudStorage(GoogleCloudStorageArgs googleCloudStorage) {
             this.googleCloudStorage = Input.of(Objects.requireNonNull(googleCloudStorage));
             return this;
         }
 
-        public Builder setToolResultsHistory(@Nullable Input<ToolResultsHistoryArgs> toolResultsHistory) {
+        public Builder toolResultsHistory(@Nullable Input<ToolResultsHistoryArgs> toolResultsHistory) {
             this.toolResultsHistory = toolResultsHistory;
             return this;
         }
 
-        public Builder setToolResultsHistory(@Nullable ToolResultsHistoryArgs toolResultsHistory) {
+        public Builder toolResultsHistory(@Nullable ToolResultsHistoryArgs toolResultsHistory) {
             this.toolResultsHistory = Input.ofNullable(toolResultsHistory);
             return this;
         }

@@ -274,72 +274,72 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCompilationMode(@Nullable Object compilationMode) {
+        public Builder compilationMode(@Nullable Object compilationMode) {
             this.compilationMode = compilationMode;
             return this;
         }
 
-        public Builder setDegreeOfParallelism(@Nullable Object degreeOfParallelism) {
+        public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
             this.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPriority(@Nullable Object priority) {
+        public Builder priority(@Nullable Object priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Object runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Object runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setScriptLinkedService(LinkedServiceReferenceResponse scriptLinkedService) {
+        public Builder scriptLinkedService(LinkedServiceReferenceResponse scriptLinkedService) {
             this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
             return this;
         }
 
-        public Builder setScriptPath(Object scriptPath) {
+        public Builder scriptPath(Object scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

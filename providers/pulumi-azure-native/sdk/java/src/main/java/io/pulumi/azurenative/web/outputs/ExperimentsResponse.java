@@ -50,7 +50,7 @@ public final class ExperimentsResponse {
     	      this.rampUpRules = defaults.rampUpRules;
         }
 
-        public Builder setRampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
+        public Builder rampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
             this.rampUpRules = rampUpRules;
             return this;
         }

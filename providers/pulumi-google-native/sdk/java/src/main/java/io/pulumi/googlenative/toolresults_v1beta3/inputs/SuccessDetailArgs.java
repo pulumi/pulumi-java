@@ -57,12 +57,12 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.otherNativeCrash = defaults.otherNativeCrash;
         }
 
-        public Builder setOtherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
-        public Builder setOtherNativeCrash(@Nullable Boolean otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
             this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
             return this;
         }

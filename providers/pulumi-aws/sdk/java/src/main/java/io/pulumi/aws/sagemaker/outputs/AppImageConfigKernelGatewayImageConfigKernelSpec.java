@@ -67,12 +67,12 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpec {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

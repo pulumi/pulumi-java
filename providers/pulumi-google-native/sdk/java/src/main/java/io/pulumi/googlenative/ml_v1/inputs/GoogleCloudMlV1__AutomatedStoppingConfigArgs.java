@@ -67,22 +67,22 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
     	      this.medianAutomatedStoppingConfig = defaults.medianAutomatedStoppingConfig;
         }
 
-        public Builder setDecayCurveStoppingConfig(@Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig) {
+        public Builder decayCurveStoppingConfig(@Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig) {
             this.decayCurveStoppingConfig = decayCurveStoppingConfig;
             return this;
         }
 
-        public Builder setDecayCurveStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs decayCurveStoppingConfig) {
+        public Builder decayCurveStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs decayCurveStoppingConfig) {
             this.decayCurveStoppingConfig = Input.ofNullable(decayCurveStoppingConfig);
             return this;
         }
 
-        public Builder setMedianAutomatedStoppingConfig(@Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig) {
+        public Builder medianAutomatedStoppingConfig(@Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig) {
             this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
             return this;
         }
 
-        public Builder setMedianAutomatedStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs medianAutomatedStoppingConfig) {
+        public Builder medianAutomatedStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs medianAutomatedStoppingConfig) {
             this.medianAutomatedStoppingConfig = Input.ofNullable(medianAutomatedStoppingConfig);
             return this;
         }

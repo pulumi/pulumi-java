@@ -72,12 +72,12 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
     	      this.project = defaults.project;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

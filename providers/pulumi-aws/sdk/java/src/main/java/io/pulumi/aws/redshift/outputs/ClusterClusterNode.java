@@ -83,17 +83,17 @@ public final class ClusterClusterNode {
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setNodeRole(@Nullable String nodeRole) {
+        public Builder nodeRole(@Nullable String nodeRole) {
             this.nodeRole = nodeRole;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }

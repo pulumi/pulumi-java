@@ -88,17 +88,17 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
     	      this.skuId = defaults.skuId;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProvisioningId(String provisioningId) {
+        public Builder provisioningId(String provisioningId) {
             this.provisioningId = Objects.requireNonNull(provisioningId);
             return this;
         }
 
-        public Builder setSkuId(String skuId) {
+        public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }

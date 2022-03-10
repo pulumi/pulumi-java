@@ -152,72 +152,72 @@ public final class UserRuleCollectionArgs extends io.pulumi.resources.ResourceAr
     	      this.ruleCollectionName = defaults.ruleCollectionName;
         }
 
-        public Builder setAppliesToGroups(@Nullable Input<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable Input<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups) {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
 
-        public Builder setAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
             this.appliesToGroups = Input.ofNullable(appliesToGroups);
             return this;
         }
 
-        public Builder setConfigurationName(Input<String> configurationName) {
+        public Builder configurationName(Input<String> configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Input.of(Objects.requireNonNull(configurationName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleCollectionName(@Nullable Input<String> ruleCollectionName) {
+        public Builder ruleCollectionName(@Nullable Input<String> ruleCollectionName) {
             this.ruleCollectionName = ruleCollectionName;
             return this;
         }
 
-        public Builder setRuleCollectionName(@Nullable String ruleCollectionName) {
+        public Builder ruleCollectionName(@Nullable String ruleCollectionName) {
             this.ruleCollectionName = Input.ofNullable(ruleCollectionName);
             return this;
         }

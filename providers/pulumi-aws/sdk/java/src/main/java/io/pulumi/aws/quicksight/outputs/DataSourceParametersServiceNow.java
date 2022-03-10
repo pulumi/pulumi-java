@@ -48,7 +48,7 @@ public final class DataSourceParametersServiceNow {
     	      this.siteBaseUrl = defaults.siteBaseUrl;
         }
 
-        public Builder setSiteBaseUrl(String siteBaseUrl) {
+        public Builder siteBaseUrl(String siteBaseUrl) {
             this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
             return this;
         }

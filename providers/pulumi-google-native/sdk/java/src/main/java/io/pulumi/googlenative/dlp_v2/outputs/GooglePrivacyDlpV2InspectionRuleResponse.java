@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
+        public Builder exclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
             this.exclusionRule = Objects.requireNonNull(exclusionRule);
             return this;
         }
 
-        public Builder setHotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }

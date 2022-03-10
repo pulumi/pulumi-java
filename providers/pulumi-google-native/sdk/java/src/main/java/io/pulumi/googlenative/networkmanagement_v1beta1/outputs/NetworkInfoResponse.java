@@ -81,17 +81,17 @@ public final class NetworkInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMatchedIpRange(String matchedIpRange) {
+        public Builder matchedIpRange(String matchedIpRange) {
             this.matchedIpRange = Objects.requireNonNull(matchedIpRange);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

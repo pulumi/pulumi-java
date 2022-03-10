@@ -62,12 +62,12 @@ public final class DistributionOriginGroupMembers extends io.pulumi.resources.In
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setItems(List<DistributionOriginGroupMember> items) {
+        public Builder items(List<DistributionOriginGroupMember> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setQuantity(Integer quantity) {
+        public Builder quantity(Integer quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }

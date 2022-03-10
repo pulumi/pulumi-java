@@ -87,32 +87,32 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setEnableInterContainerTrafficEncryption(@Nullable Input<Boolean> enableInterContainerTrafficEncryption) {
+        public Builder enableInterContainerTrafficEncryption(@Nullable Input<Boolean> enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
-        public Builder setEnableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
+        public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = Input.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Input.ofNullable(enableNetworkIsolation);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<DataQualityJobDefinitionVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<DataQualityJobDefinitionVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable DataQualityJobDefinitionVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable DataQualityJobDefinitionVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

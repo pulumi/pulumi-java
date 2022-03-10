@@ -67,12 +67,12 @@ public final class PhotonPersistentDiskVolumeSource {
     	      this.pdID = defaults.pdID;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setPdID(String pdID) {
+        public Builder pdID(String pdID) {
             this.pdID = Objects.requireNonNull(pdID);
             return this;
         }

@@ -165,82 +165,82 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder setExternalId(Input<String> externalId) {
+        public Builder externalId(Input<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Input.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Input.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Input<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable List<AccessHomeDirectoryMappingArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable String homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable Input<AccessPosixProfileArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Input<AccessPosixProfileArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable AccessPosixProfileArgs posixProfile) {
+        public Builder posixProfile(@Nullable AccessPosixProfileArgs posixProfile) {
             this.posixProfile = Input.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setServerId(Input<String> serverId) {
+        public Builder serverId(Input<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Input.of(Objects.requireNonNull(serverId));
             return this;
         }

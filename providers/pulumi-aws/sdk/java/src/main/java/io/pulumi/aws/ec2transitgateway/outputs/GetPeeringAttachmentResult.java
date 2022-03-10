@@ -125,37 +125,37 @@ public final class GetPeeringAttachmentResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setFilters(@Nullable List<GetPeeringAttachmentFilter> filters) {
+        public Builder filters(@Nullable List<GetPeeringAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPeerAccountId(String peerAccountId) {
+        public Builder peerAccountId(String peerAccountId) {
             this.peerAccountId = Objects.requireNonNull(peerAccountId);
             return this;
         }
 
-        public Builder setPeerRegion(String peerRegion) {
+        public Builder peerRegion(String peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
 
-        public Builder setPeerTransitGatewayId(String peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }

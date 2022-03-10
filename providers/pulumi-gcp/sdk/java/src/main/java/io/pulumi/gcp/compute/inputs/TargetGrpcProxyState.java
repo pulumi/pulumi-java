@@ -204,92 +204,92 @@ public final class TargetGrpcProxyState extends io.pulumi.resources.ResourceArgs
     	      this.validateForProxyless = defaults.validateForProxyless;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(@Nullable Input<String> selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable Input<String> selfLinkWithId) {
             this.selfLinkWithId = selfLinkWithId;
             return this;
         }
 
-        public Builder setSelfLinkWithId(@Nullable String selfLinkWithId) {
+        public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
             this.selfLinkWithId = Input.ofNullable(selfLinkWithId);
             return this;
         }
 
-        public Builder setUrlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Input<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
-        public Builder setUrlMap(@Nullable String urlMap) {
+        public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }
 
-        public Builder setValidateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
             this.validateForProxyless = validateForProxyless;
             return this;
         }
 
-        public Builder setValidateForProxyless(@Nullable Boolean validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
             this.validateForProxyless = Input.ofNullable(validateForProxyless);
             return this;
         }

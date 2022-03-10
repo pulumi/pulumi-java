@@ -72,12 +72,12 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder setAllowlist(MysqlRdbmsResponse allowlist) {
+        public Builder allowlist(MysqlRdbmsResponse allowlist) {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
 
-        public Builder setRejectlist(MysqlRdbmsResponse rejectlist) {
+        public Builder rejectlist(MysqlRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }

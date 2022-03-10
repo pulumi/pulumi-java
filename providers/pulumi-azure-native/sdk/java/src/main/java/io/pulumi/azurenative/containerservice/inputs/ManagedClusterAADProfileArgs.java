@@ -156,72 +156,72 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     	      this.tenantID = defaults.tenantID;
         }
 
-        public Builder setAdminGroupObjectIDs(@Nullable Input<List<String>> adminGroupObjectIDs) {
+        public Builder adminGroupObjectIDs(@Nullable Input<List<String>> adminGroupObjectIDs) {
             this.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
 
-        public Builder setAdminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
+        public Builder adminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
             this.adminGroupObjectIDs = Input.ofNullable(adminGroupObjectIDs);
             return this;
         }
 
-        public Builder setClientAppID(@Nullable Input<String> clientAppID) {
+        public Builder clientAppID(@Nullable Input<String> clientAppID) {
             this.clientAppID = clientAppID;
             return this;
         }
 
-        public Builder setClientAppID(@Nullable String clientAppID) {
+        public Builder clientAppID(@Nullable String clientAppID) {
             this.clientAppID = Input.ofNullable(clientAppID);
             return this;
         }
 
-        public Builder setEnableAzureRBAC(@Nullable Input<Boolean> enableAzureRBAC) {
+        public Builder enableAzureRBAC(@Nullable Input<Boolean> enableAzureRBAC) {
             this.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
 
-        public Builder setEnableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
+        public Builder enableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
             this.enableAzureRBAC = Input.ofNullable(enableAzureRBAC);
             return this;
         }
 
-        public Builder setManaged(@Nullable Input<Boolean> managed) {
+        public Builder managed(@Nullable Input<Boolean> managed) {
             this.managed = managed;
             return this;
         }
 
-        public Builder setManaged(@Nullable Boolean managed) {
+        public Builder managed(@Nullable Boolean managed) {
             this.managed = Input.ofNullable(managed);
             return this;
         }
 
-        public Builder setServerAppID(@Nullable Input<String> serverAppID) {
+        public Builder serverAppID(@Nullable Input<String> serverAppID) {
             this.serverAppID = serverAppID;
             return this;
         }
 
-        public Builder setServerAppID(@Nullable String serverAppID) {
+        public Builder serverAppID(@Nullable String serverAppID) {
             this.serverAppID = Input.ofNullable(serverAppID);
             return this;
         }
 
-        public Builder setServerAppSecret(@Nullable Input<String> serverAppSecret) {
+        public Builder serverAppSecret(@Nullable Input<String> serverAppSecret) {
             this.serverAppSecret = serverAppSecret;
             return this;
         }
 
-        public Builder setServerAppSecret(@Nullable String serverAppSecret) {
+        public Builder serverAppSecret(@Nullable String serverAppSecret) {
             this.serverAppSecret = Input.ofNullable(serverAppSecret);
             return this;
         }
 
-        public Builder setTenantID(@Nullable Input<String> tenantID) {
+        public Builder tenantID(@Nullable Input<String> tenantID) {
             this.tenantID = tenantID;
             return this;
         }
 
-        public Builder setTenantID(@Nullable String tenantID) {
+        public Builder tenantID(@Nullable String tenantID) {
             this.tenantID = Input.ofNullable(tenantID);
             return this;
         }

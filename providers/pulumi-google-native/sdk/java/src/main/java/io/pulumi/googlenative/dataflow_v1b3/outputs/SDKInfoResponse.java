@@ -65,12 +65,12 @@ public final class SDKInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setLanguage(String language) {
+        public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

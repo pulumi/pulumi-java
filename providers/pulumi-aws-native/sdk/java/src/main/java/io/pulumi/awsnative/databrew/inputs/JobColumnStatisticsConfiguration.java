@@ -64,12 +64,12 @@ public final class JobColumnStatisticsConfiguration extends io.pulumi.resources.
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder setSelectors(@Nullable List<JobColumnSelector> selectors) {
+        public Builder selectors(@Nullable List<JobColumnSelector> selectors) {
             this.selectors = selectors;
             return this;
         }
 
-        public Builder setStatistics(JobStatisticsConfiguration statistics) {
+        public Builder statistics(JobStatisticsConfiguration statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }

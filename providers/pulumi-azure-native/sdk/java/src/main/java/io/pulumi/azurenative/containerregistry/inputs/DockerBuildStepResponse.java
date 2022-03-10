@@ -207,52 +207,52 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
     	      this.type = defaults.type;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentResponse> arguments) {
+        public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setBaseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
+        public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setDockerFilePath(String dockerFilePath) {
+        public Builder dockerFilePath(String dockerFilePath) {
             this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
             return this;
         }
 
-        public Builder setImageNames(@Nullable List<String> imageNames) {
+        public Builder imageNames(@Nullable List<String> imageNames) {
             this.imageNames = imageNames;
             return this;
         }
 
-        public Builder setIsPushEnabled(@Nullable Boolean isPushEnabled) {
+        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             this.isPushEnabled = isPushEnabled;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -48,7 +48,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
     	      this.layer7DdosDefenseConfig = defaults.layer7DdosDefenseConfig;
         }
 
-        public Builder setLayer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
+        public Builder layer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
             this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig);
             return this;
         }

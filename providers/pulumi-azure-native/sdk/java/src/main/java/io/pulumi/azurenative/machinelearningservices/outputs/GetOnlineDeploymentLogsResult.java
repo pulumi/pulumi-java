@@ -50,7 +50,7 @@ public final class GetOnlineDeploymentLogsResult {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }

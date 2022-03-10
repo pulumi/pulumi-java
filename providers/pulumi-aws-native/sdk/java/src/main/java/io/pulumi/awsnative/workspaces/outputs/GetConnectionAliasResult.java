@@ -62,17 +62,17 @@ public final class GetConnectionAliasResult {
     	      this.connectionAliasState = defaults.connectionAliasState;
         }
 
-        public Builder setAliasId(@Nullable String aliasId) {
+        public Builder aliasId(@Nullable String aliasId) {
             this.aliasId = aliasId;
             return this;
         }
 
-        public Builder setAssociations(@Nullable List<ConnectionAliasAssociation> associations) {
+        public Builder associations(@Nullable List<ConnectionAliasAssociation> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setConnectionAliasState(@Nullable ConnectionAliasState connectionAliasState) {
+        public Builder connectionAliasState(@Nullable ConnectionAliasState connectionAliasState) {
             this.connectionAliasState = connectionAliasState;
             return this;
         }

@@ -125,37 +125,37 @@ public final class GetUserResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessString(@Nullable String accessString) {
+        public Builder accessString(@Nullable String accessString) {
             this.accessString = accessString;
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNoPasswordRequired(@Nullable Boolean noPasswordRequired) {
+        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<String> passwords) {
+        public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

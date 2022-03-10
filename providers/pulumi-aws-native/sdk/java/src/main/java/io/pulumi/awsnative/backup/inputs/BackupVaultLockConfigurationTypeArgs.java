@@ -74,32 +74,32 @@ public final class BackupVaultLockConfigurationTypeArgs extends io.pulumi.resour
     	      this.minRetentionDays = defaults.minRetentionDays;
         }
 
-        public Builder setChangeableForDays(@Nullable Input<Double> changeableForDays) {
+        public Builder changeableForDays(@Nullable Input<Double> changeableForDays) {
             this.changeableForDays = changeableForDays;
             return this;
         }
 
-        public Builder setChangeableForDays(@Nullable Double changeableForDays) {
+        public Builder changeableForDays(@Nullable Double changeableForDays) {
             this.changeableForDays = Input.ofNullable(changeableForDays);
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Input<Double> maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Input<Double> maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Double maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Double maxRetentionDays) {
             this.maxRetentionDays = Input.ofNullable(maxRetentionDays);
             return this;
         }
 
-        public Builder setMinRetentionDays(Input<Double> minRetentionDays) {
+        public Builder minRetentionDays(Input<Double> minRetentionDays) {
             this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
             return this;
         }
 
-        public Builder setMinRetentionDays(Double minRetentionDays) {
+        public Builder minRetentionDays(Double minRetentionDays) {
             this.minRetentionDays = Input.of(Objects.requireNonNull(minRetentionDays));
             return this;
         }

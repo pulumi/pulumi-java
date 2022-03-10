@@ -86,17 +86,17 @@ public final class DedicatedHostInstanceViewResponse {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setAssetId(String assetId) {
+        public Builder assetId(String assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
 
-        public Builder setAvailableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
+        public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
             this.availableCapacity = availableCapacity;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }

@@ -120,22 +120,22 @@ public final class ByteMatchSetByteMatchTuple {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setPositionalConstraint(String positionalConstraint) {
+        public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setTargetString(@Nullable String targetString) {
+        public Builder targetString(@Nullable String targetString) {
             this.targetString = targetString;
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

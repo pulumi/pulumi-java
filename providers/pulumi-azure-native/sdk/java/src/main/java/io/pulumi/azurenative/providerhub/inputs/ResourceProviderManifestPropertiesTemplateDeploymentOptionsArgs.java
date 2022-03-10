@@ -66,22 +66,22 @@ public final class ResourceProviderManifestPropertiesTemplateDeploymentOptionsAr
     	      this.preflightSupported = defaults.preflightSupported;
         }
 
-        public Builder setPreflightOptions(@Nullable Input<List<Either<String,PreflightOption>>> preflightOptions) {
+        public Builder preflightOptions(@Nullable Input<List<Either<String,PreflightOption>>> preflightOptions) {
             this.preflightOptions = preflightOptions;
             return this;
         }
 
-        public Builder setPreflightOptions(@Nullable List<Either<String,PreflightOption>> preflightOptions) {
+        public Builder preflightOptions(@Nullable List<Either<String,PreflightOption>> preflightOptions) {
             this.preflightOptions = Input.ofNullable(preflightOptions);
             return this;
         }
 
-        public Builder setPreflightSupported(@Nullable Input<Boolean> preflightSupported) {
+        public Builder preflightSupported(@Nullable Input<Boolean> preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
         }
 
-        public Builder setPreflightSupported(@Nullable Boolean preflightSupported) {
+        public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = Input.ofNullable(preflightSupported);
             return this;
         }

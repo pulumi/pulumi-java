@@ -52,12 +52,12 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends io.pulum
     	      this.listUrl = defaults.listUrl;
         }
 
-        public Builder setListUrl(Input<String> listUrl) {
+        public Builder listUrl(Input<String> listUrl) {
             this.listUrl = Objects.requireNonNull(listUrl);
             return this;
         }
 
-        public Builder setListUrl(String listUrl) {
+        public Builder listUrl(String listUrl) {
             this.listUrl = Input.of(Objects.requireNonNull(listUrl));
             return this;
         }

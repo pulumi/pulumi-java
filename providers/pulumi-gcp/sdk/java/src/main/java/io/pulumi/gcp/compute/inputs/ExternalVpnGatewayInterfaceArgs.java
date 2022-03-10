@@ -78,22 +78,22 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setId(@Nullable Input<Integer> id) {
+        public Builder id(@Nullable Input<Integer> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable Integer id) {
+        public Builder id(@Nullable Integer id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }

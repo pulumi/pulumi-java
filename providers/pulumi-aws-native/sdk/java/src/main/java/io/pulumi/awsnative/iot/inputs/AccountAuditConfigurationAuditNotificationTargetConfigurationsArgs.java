@@ -53,12 +53,12 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
+        public Builder sns(@Nullable Input<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
+        public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
             this.sns = Input.ofNullable(sns);
             return this;
         }

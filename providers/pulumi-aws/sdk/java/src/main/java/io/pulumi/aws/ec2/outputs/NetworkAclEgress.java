@@ -184,47 +184,47 @@ public final class NetworkAclEgress {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable Integer icmpCode) {
+        public Builder icmpCode(@Nullable Integer icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
 
-        public Builder setIcmpType(@Nullable Integer icmpType) {
+        public Builder icmpType(@Nullable Integer icmpType) {
             this.icmpType = icmpType;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setRuleNo(Integer ruleNo) {
+        public Builder ruleNo(Integer ruleNo) {
             this.ruleNo = Objects.requireNonNull(ruleNo);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

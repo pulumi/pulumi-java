@@ -109,22 +109,22 @@ public final class PerfCounterDataSourceResponse {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setCounterSpecifiers(@Nullable List<String> counterSpecifiers) {
+        public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
             this.counterSpecifiers = counterSpecifiers;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSamplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
+        public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }

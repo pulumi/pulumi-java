@@ -62,22 +62,22 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigMana
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder setInstanceGroupManagerName(@Nullable Input<String> instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(@Nullable Input<String> instanceGroupManagerName) {
             this.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
 
-        public Builder setInstanceGroupManagerName(@Nullable String instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
             this.instanceGroupManagerName = Input.ofNullable(instanceGroupManagerName);
             return this;
         }
 
-        public Builder setInstanceTemplateName(@Nullable Input<String> instanceTemplateName) {
+        public Builder instanceTemplateName(@Nullable Input<String> instanceTemplateName) {
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }
 
-        public Builder setInstanceTemplateName(@Nullable String instanceTemplateName) {
+        public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
             this.instanceTemplateName = Input.ofNullable(instanceTemplateName);
             return this;
         }

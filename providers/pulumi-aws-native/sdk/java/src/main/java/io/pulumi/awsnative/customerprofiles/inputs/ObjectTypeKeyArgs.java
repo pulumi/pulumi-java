@@ -76,22 +76,22 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.standardIdentifiers = defaults.standardIdentifiers;
         }
 
-        public Builder setFieldNames(@Nullable Input<List<String>> fieldNames) {
+        public Builder fieldNames(@Nullable Input<List<String>> fieldNames) {
             this.fieldNames = fieldNames;
             return this;
         }
 
-        public Builder setFieldNames(@Nullable List<String> fieldNames) {
+        public Builder fieldNames(@Nullable List<String> fieldNames) {
             this.fieldNames = Input.ofNullable(fieldNames);
             return this;
         }
 
-        public Builder setStandardIdentifiers(@Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
+        public Builder standardIdentifiers(@Nullable Input<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers) {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }
 
-        public Builder setStandardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+        public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
             this.standardIdentifiers = Input.ofNullable(standardIdentifiers);
             return this;
         }

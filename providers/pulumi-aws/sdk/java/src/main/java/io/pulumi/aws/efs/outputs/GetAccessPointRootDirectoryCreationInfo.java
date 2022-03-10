@@ -82,17 +82,17 @@ public final class GetAccessPointRootDirectoryCreationInfo {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setOwnerGid(Integer ownerGid) {
+        public Builder ownerGid(Integer ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
-        public Builder setOwnerUid(Integer ownerUid) {
+        public Builder ownerUid(Integer ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

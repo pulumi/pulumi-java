@@ -224,57 +224,57 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
     	      this.uninstallScriptActions = defaults.uninstallScriptActions;
         }
 
-        public Builder setApplicationState(String applicationState) {
+        public Builder applicationState(String applicationState) {
             this.applicationState = Objects.requireNonNull(applicationState);
             return this;
         }
 
-        public Builder setApplicationType(@Nullable String applicationType) {
+        public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable ComputeProfileResponse computeProfile) {
+        public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ErrorsResponse> errors) {
+        public Builder errors(@Nullable List<ErrorsResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setHttpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
+        public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
             this.httpsEndpoints = httpsEndpoints;
             return this;
         }
 
-        public Builder setInstallScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
+        public Builder installScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
             this.installScriptActions = installScriptActions;
             return this;
         }
 
-        public Builder setMarketplaceIdentifier(String marketplaceIdentifier) {
+        public Builder marketplaceIdentifier(String marketplaceIdentifier) {
             this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
+        public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
             this.sshEndpoints = sshEndpoints;
             return this;
         }
 
-        public Builder setUninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
+        public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }

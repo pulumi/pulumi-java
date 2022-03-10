@@ -70,22 +70,22 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
     	      this.mfaDelete = defaults.mfaDelete;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setMfaDelete(@Nullable Input<Boolean> mfaDelete) {
+        public Builder mfaDelete(@Nullable Input<Boolean> mfaDelete) {
             this.mfaDelete = mfaDelete;
             return this;
         }
 
-        public Builder setMfaDelete(@Nullable Boolean mfaDelete) {
+        public Builder mfaDelete(@Nullable Boolean mfaDelete) {
             this.mfaDelete = Input.ofNullable(mfaDelete);
             return this;
         }

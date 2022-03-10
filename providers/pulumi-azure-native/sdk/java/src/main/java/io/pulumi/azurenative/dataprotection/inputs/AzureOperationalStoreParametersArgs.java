@@ -93,32 +93,32 @@ public final class AzureOperationalStoreParametersArgs extends io.pulumi.resourc
     	      this.resourceGroupId = defaults.resourceGroupId;
         }
 
-        public Builder setDataStoreType(Input<Either<String,DataStoreTypes>> dataStoreType) {
+        public Builder dataStoreType(Input<Either<String,DataStoreTypes>> dataStoreType) {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
 
-        public Builder setDataStoreType(Either<String,DataStoreTypes> dataStoreType) {
+        public Builder dataStoreType(Either<String,DataStoreTypes> dataStoreType) {
             this.dataStoreType = Input.of(Objects.requireNonNull(dataStoreType));
             return this;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable Input<String> resourceGroupId) {
+        public Builder resourceGroupId(@Nullable Input<String> resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable String resourceGroupId) {
+        public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = Input.ofNullable(resourceGroupId);
             return this;
         }

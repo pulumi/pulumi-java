@@ -108,42 +108,42 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setKeyId(Input<String> keyId) {
+        public Builder keyId(Input<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder setSecretSource(Input<ResourceReferenceArgs> secretSource) {
+        public Builder secretSource(Input<ResourceReferenceArgs> secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
-        public Builder setSecretSource(ResourceReferenceArgs secretSource) {
+        public Builder secretSource(ResourceReferenceArgs secretSource) {
             this.secretSource = Input.of(Objects.requireNonNull(secretSource));
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Input<String> secretVersion) {
+        public Builder secretVersion(@Nullable Input<String> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = Input.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

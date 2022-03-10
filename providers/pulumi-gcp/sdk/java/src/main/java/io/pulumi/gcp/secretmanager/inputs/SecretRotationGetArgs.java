@@ -72,22 +72,22 @@ public final class SecretRotationGetArgs extends io.pulumi.resources.ResourceArg
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder setNextRotationTime(@Nullable Input<String> nextRotationTime) {
+        public Builder nextRotationTime(@Nullable Input<String> nextRotationTime) {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
 
-        public Builder setNextRotationTime(@Nullable String nextRotationTime) {
+        public Builder nextRotationTime(@Nullable String nextRotationTime) {
             this.nextRotationTime = Input.ofNullable(nextRotationTime);
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable Input<String> rotationPeriod) {
+        public Builder rotationPeriod(@Nullable Input<String> rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable String rotationPeriod) {
+        public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = Input.ofNullable(rotationPeriod);
             return this;
         }

@@ -87,32 +87,32 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder setDiskCount(@Nullable Input<Integer> diskCount) {
+        public Builder diskCount(@Nullable Input<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Integer diskCount) {
+        public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = Input.ofNullable(diskCount);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }

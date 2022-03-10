@@ -125,52 +125,52 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
     	      this.reuseInterval = defaults.reuseInterval;
         }
 
-        public Builder setComplexity(@Nullable Input<PasswordValidationPolicyComplexity> complexity) {
+        public Builder complexity(@Nullable Input<PasswordValidationPolicyComplexity> complexity) {
             this.complexity = complexity;
             return this;
         }
 
-        public Builder setComplexity(@Nullable PasswordValidationPolicyComplexity complexity) {
+        public Builder complexity(@Nullable PasswordValidationPolicyComplexity complexity) {
             this.complexity = Input.ofNullable(complexity);
             return this;
         }
 
-        public Builder setDisallowUsernameSubstring(@Nullable Input<Boolean> disallowUsernameSubstring) {
+        public Builder disallowUsernameSubstring(@Nullable Input<Boolean> disallowUsernameSubstring) {
             this.disallowUsernameSubstring = disallowUsernameSubstring;
             return this;
         }
 
-        public Builder setDisallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
+        public Builder disallowUsernameSubstring(@Nullable Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Input.ofNullable(disallowUsernameSubstring);
             return this;
         }
 
-        public Builder setMinLength(@Nullable Input<Integer> minLength) {
+        public Builder minLength(@Nullable Input<Integer> minLength) {
             this.minLength = minLength;
             return this;
         }
 
-        public Builder setMinLength(@Nullable Integer minLength) {
+        public Builder minLength(@Nullable Integer minLength) {
             this.minLength = Input.ofNullable(minLength);
             return this;
         }
 
-        public Builder setPasswordChangeInterval(@Nullable Input<String> passwordChangeInterval) {
+        public Builder passwordChangeInterval(@Nullable Input<String> passwordChangeInterval) {
             this.passwordChangeInterval = passwordChangeInterval;
             return this;
         }
 
-        public Builder setPasswordChangeInterval(@Nullable String passwordChangeInterval) {
+        public Builder passwordChangeInterval(@Nullable String passwordChangeInterval) {
             this.passwordChangeInterval = Input.ofNullable(passwordChangeInterval);
             return this;
         }
 
-        public Builder setReuseInterval(@Nullable Input<Integer> reuseInterval) {
+        public Builder reuseInterval(@Nullable Input<Integer> reuseInterval) {
             this.reuseInterval = reuseInterval;
             return this;
         }
 
-        public Builder setReuseInterval(@Nullable Integer reuseInterval) {
+        public Builder reuseInterval(@Nullable Integer reuseInterval) {
             this.reuseInterval = Input.ofNullable(reuseInterval);
             return this;
         }

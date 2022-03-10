@@ -47,7 +47,7 @@ public final class DatasetSchedule extends io.pulumi.resources.InvokeArgs {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

@@ -163,42 +163,42 @@ public final class InstanceStatusResponse {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setCompletionTime(String completionTime) {
+        public Builder completionTime(String completionTime) {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
 
-        public Builder setFailed(Integer failed) {
+        public Builder failed(Integer failed) {
             this.failed = Objects.requireNonNull(failed);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder setLastAttemptResult(InstanceAttemptResultResponse lastAttemptResult) {
+        public Builder lastAttemptResult(InstanceAttemptResultResponse lastAttemptResult) {
             this.lastAttemptResult = Objects.requireNonNull(lastAttemptResult);
             return this;
         }
 
-        public Builder setLastExitCode(Integer lastExitCode) {
+        public Builder lastExitCode(Integer lastExitCode) {
             this.lastExitCode = Objects.requireNonNull(lastExitCode);
             return this;
         }
 
-        public Builder setRestarted(Integer restarted) {
+        public Builder restarted(Integer restarted) {
             this.restarted = Objects.requireNonNull(restarted);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setSucceeded(Integer succeeded) {
+        public Builder succeeded(Integer succeeded) {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }

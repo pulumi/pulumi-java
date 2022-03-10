@@ -53,12 +53,12 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs ex
     	      this.replacementStrategy = defaults.replacementStrategy;
         }
 
-        public Builder setReplacementStrategy(@Nullable Input<String> replacementStrategy) {
+        public Builder replacementStrategy(@Nullable Input<String> replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
-        public Builder setReplacementStrategy(@Nullable String replacementStrategy) {
+        public Builder replacementStrategy(@Nullable String replacementStrategy) {
             this.replacementStrategy = Input.ofNullable(replacementStrategy);
             return this;
         }

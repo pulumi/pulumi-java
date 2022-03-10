@@ -106,42 +106,42 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.seed = defaults.seed;
         }
 
-        public Builder setInputs(Input<List<String>> inputs) {
+        public Builder inputs(Input<List<String>> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setInputs(List<String> inputs) {
+        public Builder inputs(List<String> inputs) {
             this.inputs = Input.of(Objects.requireNonNull(inputs));
             return this;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setResultCount(@Nullable Input<Integer> resultCount) {
+        public Builder resultCount(@Nullable Input<Integer> resultCount) {
             this.resultCount = resultCount;
             return this;
         }
 
-        public Builder setResultCount(@Nullable Integer resultCount) {
+        public Builder resultCount(@Nullable Integer resultCount) {
             this.resultCount = Input.ofNullable(resultCount);
             return this;
         }
 
-        public Builder setSeed(@Nullable Input<String> seed) {
+        public Builder seed(@Nullable Input<String> seed) {
             this.seed = seed;
             return this;
         }
 
-        public Builder setSeed(@Nullable String seed) {
+        public Builder seed(@Nullable String seed) {
             this.seed = Input.ofNullable(seed);
             return this;
         }

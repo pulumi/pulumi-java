@@ -90,17 +90,17 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
     	      this.timing = defaults.timing;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setTiming(TimeSpanResponse timing) {
+        public Builder timing(TimeSpanResponse timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }

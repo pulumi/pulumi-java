@@ -70,22 +70,22 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.functionPayload = defaults.functionPayload;
         }
 
-        public Builder setFunctionArn(Input<String> functionArn) {
+        public Builder functionArn(Input<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Input.of(Objects.requireNonNull(functionArn));
             return this;
         }
 
-        public Builder setFunctionPayload(@Nullable Input<String> functionPayload) {
+        public Builder functionPayload(@Nullable Input<String> functionPayload) {
             this.functionPayload = functionPayload;
             return this;
         }
 
-        public Builder setFunctionPayload(@Nullable String functionPayload) {
+        public Builder functionPayload(@Nullable String functionPayload) {
             this.functionPayload = Input.ofNullable(functionPayload);
             return this;
         }

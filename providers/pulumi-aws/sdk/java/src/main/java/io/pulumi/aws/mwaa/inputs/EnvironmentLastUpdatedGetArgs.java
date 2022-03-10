@@ -85,32 +85,32 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     	      this.status = defaults.status;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setErrors(@Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
+        public Builder errors(@Nullable Input<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<EnvironmentLastUpdatedErrorGetArgs> errors) {
+        public Builder errors(@Nullable List<EnvironmentLastUpdatedErrorGetArgs> errors) {
             this.errors = Input.ofNullable(errors);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

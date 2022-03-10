@@ -183,92 +183,92 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setCollectionOverrides(@Nullable Input<List<CollectionOverrideArgs>> collectionOverrides) {
+        public Builder collectionOverrides(@Nullable Input<List<CollectionOverrideArgs>> collectionOverrides) {
             this.collectionOverrides = collectionOverrides;
             return this;
         }
 
-        public Builder setCollectionOverrides(@Nullable List<CollectionOverrideArgs> collectionOverrides) {
+        public Builder collectionOverrides(@Nullable List<CollectionOverrideArgs> collectionOverrides) {
             this.collectionOverrides = Input.ofNullable(collectionOverrides);
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialArgs credential) {
+        public Builder credential(@Nullable CredentialArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setCustomCertificateAuthorityRoots(@Nullable Input<List<String>> customCertificateAuthorityRoots) {
+        public Builder customCertificateAuthorityRoots(@Nullable Input<List<String>> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
             return this;
         }
 
-        public Builder setCustomCertificateAuthorityRoots(@Nullable List<String> customCertificateAuthorityRoots) {
+        public Builder customCertificateAuthorityRoots(@Nullable List<String> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = Input.ofNullable(customCertificateAuthorityRoots);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDescriptorUrl(@Nullable Input<String> descriptorUrl) {
+        public Builder descriptorUrl(@Nullable Input<String> descriptorUrl) {
             this.descriptorUrl = descriptorUrl;
             return this;
         }
 
-        public Builder setDescriptorUrl(@Nullable String descriptorUrl) {
+        public Builder descriptorUrl(@Nullable String descriptorUrl) {
             this.descriptorUrl = Input.ofNullable(descriptorUrl);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<TypeProviderLabelEntryArgs>> labels) {
+        public Builder labels(@Nullable Input<List<TypeProviderLabelEntryArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<TypeProviderLabelEntryArgs> labels) {
+        public Builder labels(@Nullable List<TypeProviderLabelEntryArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Input<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsArgs options) {
+        public Builder options(@Nullable OptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetCollectionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.collectionId = defaults.collectionId;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }

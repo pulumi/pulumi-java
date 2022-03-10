@@ -90,32 +90,32 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setIdentityNamespace(@Nullable Input<String> identityNamespace) {
+        public Builder identityNamespace(@Nullable Input<String> identityNamespace) {
             this.identityNamespace = identityNamespace;
             return this;
         }
 
-        public Builder setIdentityNamespace(@Nullable String identityNamespace) {
+        public Builder identityNamespace(@Nullable String identityNamespace) {
             this.identityNamespace = Input.ofNullable(identityNamespace);
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable Input<String> identityProvider) {
+        public Builder identityProvider(@Nullable Input<String> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable String identityProvider) {
+        public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = Input.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder setWorkloadPool(@Nullable Input<String> workloadPool) {
+        public Builder workloadPool(@Nullable Input<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
 
-        public Builder setWorkloadPool(@Nullable String workloadPool) {
+        public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }

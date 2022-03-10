@@ -214,57 +214,57 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAttachedDatabaseNames(List<String> attachedDatabaseNames) {
+        public Builder attachedDatabaseNames(List<String> attachedDatabaseNames) {
             this.attachedDatabaseNames = Objects.requireNonNull(attachedDatabaseNames);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDefaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKustoPoolResourceId(String kustoPoolResourceId) {
+        public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTableLevelSharingProperties(@Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -99,32 +99,32 @@ public final class GetOrderableClusterResult {
     	      this.preferredNodeTypes = defaults.preferredNodeTypes;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setClusterType(String clusterType) {
+        public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setPreferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
+        public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
             this.preferredNodeTypes = preferredNodeTypes;
             return this;
         }

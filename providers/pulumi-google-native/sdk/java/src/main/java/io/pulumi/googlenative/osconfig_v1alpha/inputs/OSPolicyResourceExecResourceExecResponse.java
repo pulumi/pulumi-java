@@ -122,27 +122,27 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     	      this.script = defaults.script;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResponse file) {
+        public Builder file(OSPolicyResourceFileResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setOutputFilePath(String outputFilePath) {
+        public Builder outputFilePath(String outputFilePath) {
             this.outputFilePath = Objects.requireNonNull(outputFilePath);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

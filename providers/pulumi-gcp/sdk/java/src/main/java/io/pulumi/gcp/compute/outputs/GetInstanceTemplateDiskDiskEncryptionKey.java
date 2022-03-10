@@ -48,7 +48,7 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey {
     	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
         }
 
-        public Builder setKmsKeySelfLink(String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }

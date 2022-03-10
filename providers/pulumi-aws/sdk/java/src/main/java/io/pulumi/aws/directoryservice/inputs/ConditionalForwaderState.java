@@ -87,32 +87,32 @@ public final class ConditionalForwaderState extends io.pulumi.resources.Resource
     	      this.remoteDomainName = defaults.remoteDomainName;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setDnsIps(@Nullable Input<List<String>> dnsIps) {
+        public Builder dnsIps(@Nullable Input<List<String>> dnsIps) {
             this.dnsIps = dnsIps;
             return this;
         }
 
-        public Builder setDnsIps(@Nullable List<String> dnsIps) {
+        public Builder dnsIps(@Nullable List<String> dnsIps) {
             this.dnsIps = Input.ofNullable(dnsIps);
             return this;
         }
 
-        public Builder setRemoteDomainName(@Nullable Input<String> remoteDomainName) {
+        public Builder remoteDomainName(@Nullable Input<String> remoteDomainName) {
             this.remoteDomainName = remoteDomainName;
             return this;
         }
 
-        public Builder setRemoteDomainName(@Nullable String remoteDomainName) {
+        public Builder remoteDomainName(@Nullable String remoteDomainName) {
             this.remoteDomainName = Input.ofNullable(remoteDomainName);
             return this;
         }

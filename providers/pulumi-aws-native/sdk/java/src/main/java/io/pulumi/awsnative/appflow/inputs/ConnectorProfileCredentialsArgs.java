@@ -249,162 +249,162 @@ public final class ConnectorProfileCredentialsArgs extends io.pulumi.resources.R
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setAmplitude(@Nullable Input<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude) {
+        public Builder amplitude(@Nullable Input<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude) {
             this.amplitude = amplitude;
             return this;
         }
 
-        public Builder setAmplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentialsArgs amplitude) {
+        public Builder amplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentialsArgs amplitude) {
             this.amplitude = Input.ofNullable(amplitude);
             return this;
         }
 
-        public Builder setDatadog(@Nullable Input<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog) {
+        public Builder datadog(@Nullable Input<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDatadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentialsArgs datadog) {
+        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentialsArgs datadog) {
             this.datadog = Input.ofNullable(datadog);
             return this;
         }
 
-        public Builder setDynatrace(@Nullable Input<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace) {
+        public Builder dynatrace(@Nullable Input<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentialsArgs dynatrace) {
+        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentialsArgs dynatrace) {
             this.dynatrace = Input.ofNullable(dynatrace);
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable Input<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics) {
+        public Builder googleAnalytics(@Nullable Input<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs googleAnalytics) {
+        public Builder googleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs googleAnalytics) {
             this.googleAnalytics = Input.ofNullable(googleAnalytics);
             return this;
         }
 
-        public Builder setInforNexus(@Nullable Input<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus) {
+        public Builder inforNexus(@Nullable Input<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentialsArgs inforNexus) {
+        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentialsArgs inforNexus) {
             this.inforNexus = Input.ofNullable(inforNexus);
             return this;
         }
 
-        public Builder setMarketo(@Nullable Input<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo) {
+        public Builder marketo(@Nullable Input<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentialsArgs marketo) {
+        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentialsArgs marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setRedshift(@Nullable Input<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift) {
+        public Builder redshift(@Nullable Input<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setRedshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentialsArgs redshift) {
+        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentialsArgs redshift) {
             this.redshift = Input.ofNullable(redshift);
             return this;
         }
 
-        public Builder setSAPOData(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData) {
+        public Builder sAPOData(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsArgs sAPOData) {
+        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsArgs sAPOData) {
             this.sAPOData = Input.ofNullable(sAPOData);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce) {
+        public Builder salesforce(@Nullable Input<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentialsArgs salesforce) {
+        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentialsArgs salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow) {
+        public Builder serviceNow(@Nullable Input<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentialsArgs serviceNow) {
+        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentialsArgs serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setSingular(@Nullable Input<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular) {
+        public Builder singular(@Nullable Input<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSingular(@Nullable ConnectorProfileSingularConnectorProfileCredentialsArgs singular) {
+        public Builder singular(@Nullable ConnectorProfileSingularConnectorProfileCredentialsArgs singular) {
             this.singular = Input.ofNullable(singular);
             return this;
         }
 
-        public Builder setSlack(@Nullable Input<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack) {
+        public Builder slack(@Nullable Input<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSlack(@Nullable ConnectorProfileSlackConnectorProfileCredentialsArgs slack) {
+        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileCredentialsArgs slack) {
             this.slack = Input.ofNullable(slack);
             return this;
         }
 
-        public Builder setSnowflake(@Nullable Input<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake) {
+        public Builder snowflake(@Nullable Input<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentialsArgs snowflake) {
+        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentialsArgs snowflake) {
             this.snowflake = Input.ofNullable(snowflake);
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable Input<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro) {
+        public Builder trendmicro(@Nullable Input<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentialsArgs trendmicro) {
+        public Builder trendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentialsArgs trendmicro) {
             this.trendmicro = Input.ofNullable(trendmicro);
             return this;
         }
 
-        public Builder setVeeva(@Nullable Input<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva) {
+        public Builder veeva(@Nullable Input<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setVeeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentialsArgs veeva) {
+        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentialsArgs veeva) {
             this.veeva = Input.ofNullable(veeva);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk) {
+        public Builder zendesk(@Nullable Input<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentialsArgs zendesk) {
+        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentialsArgs zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

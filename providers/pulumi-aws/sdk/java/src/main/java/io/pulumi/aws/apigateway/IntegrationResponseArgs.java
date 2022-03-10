@@ -171,77 +171,77 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentHandling(@Nullable Input<String> contentHandling) {
+        public Builder contentHandling(@Nullable Input<String> contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setContentHandling(@Nullable String contentHandling) {
+        public Builder contentHandling(@Nullable String contentHandling) {
             this.contentHandling = Input.ofNullable(contentHandling);
             return this;
         }
 
-        public Builder setHttpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Input<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Input<Map<String,String>> responseParameters) {
+        public Builder responseParameters(@Nullable Input<Map<String,String>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Map<String,String> responseParameters) {
+        public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
             this.responseParameters = Input.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Map<String,String> responseTemplates) {
+        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Input.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder setRestApi(Input<String> restApi) {
+        public Builder restApi(Input<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder setSelectionPattern(@Nullable Input<String> selectionPattern) {
+        public Builder selectionPattern(@Nullable Input<String> selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
 
-        public Builder setSelectionPattern(@Nullable String selectionPattern) {
+        public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = Input.ofNullable(selectionPattern);
             return this;
         }
 
-        public Builder setStatusCode(Input<String> statusCode) {
+        public Builder statusCode(Input<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }

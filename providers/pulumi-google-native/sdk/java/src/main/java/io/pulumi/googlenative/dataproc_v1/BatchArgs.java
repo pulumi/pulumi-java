@@ -205,112 +205,112 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sparkSqlBatch = defaults.sparkSqlBatch;
         }
 
-        public Builder setBatchId(@Nullable Input<String> batchId) {
+        public Builder batchId(@Nullable Input<String> batchId) {
             this.batchId = batchId;
             return this;
         }
 
-        public Builder setBatchId(@Nullable String batchId) {
+        public Builder batchId(@Nullable String batchId) {
             this.batchId = Input.ofNullable(batchId);
             return this;
         }
 
-        public Builder setEnvironmentConfig(@Nullable Input<EnvironmentConfigArgs> environmentConfig) {
+        public Builder environmentConfig(@Nullable Input<EnvironmentConfigArgs> environmentConfig) {
             this.environmentConfig = environmentConfig;
             return this;
         }
 
-        public Builder setEnvironmentConfig(@Nullable EnvironmentConfigArgs environmentConfig) {
+        public Builder environmentConfig(@Nullable EnvironmentConfigArgs environmentConfig) {
             this.environmentConfig = Input.ofNullable(environmentConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPysparkBatch(@Nullable Input<PySparkBatchArgs> pysparkBatch) {
+        public Builder pysparkBatch(@Nullable Input<PySparkBatchArgs> pysparkBatch) {
             this.pysparkBatch = pysparkBatch;
             return this;
         }
 
-        public Builder setPysparkBatch(@Nullable PySparkBatchArgs pysparkBatch) {
+        public Builder pysparkBatch(@Nullable PySparkBatchArgs pysparkBatch) {
             this.pysparkBatch = Input.ofNullable(pysparkBatch);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRuntimeConfig(@Nullable Input<RuntimeConfigArgs> runtimeConfig) {
+        public Builder runtimeConfig(@Nullable Input<RuntimeConfigArgs> runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
             return this;
         }
 
-        public Builder setRuntimeConfig(@Nullable RuntimeConfigArgs runtimeConfig) {
+        public Builder runtimeConfig(@Nullable RuntimeConfigArgs runtimeConfig) {
             this.runtimeConfig = Input.ofNullable(runtimeConfig);
             return this;
         }
 
-        public Builder setSparkBatch(@Nullable Input<SparkBatchArgs> sparkBatch) {
+        public Builder sparkBatch(@Nullable Input<SparkBatchArgs> sparkBatch) {
             this.sparkBatch = sparkBatch;
             return this;
         }
 
-        public Builder setSparkBatch(@Nullable SparkBatchArgs sparkBatch) {
+        public Builder sparkBatch(@Nullable SparkBatchArgs sparkBatch) {
             this.sparkBatch = Input.ofNullable(sparkBatch);
             return this;
         }
 
-        public Builder setSparkRBatch(@Nullable Input<SparkRBatchArgs> sparkRBatch) {
+        public Builder sparkRBatch(@Nullable Input<SparkRBatchArgs> sparkRBatch) {
             this.sparkRBatch = sparkRBatch;
             return this;
         }
 
-        public Builder setSparkRBatch(@Nullable SparkRBatchArgs sparkRBatch) {
+        public Builder sparkRBatch(@Nullable SparkRBatchArgs sparkRBatch) {
             this.sparkRBatch = Input.ofNullable(sparkRBatch);
             return this;
         }
 
-        public Builder setSparkSqlBatch(@Nullable Input<SparkSqlBatchArgs> sparkSqlBatch) {
+        public Builder sparkSqlBatch(@Nullable Input<SparkSqlBatchArgs> sparkSqlBatch) {
             this.sparkSqlBatch = sparkSqlBatch;
             return this;
         }
 
-        public Builder setSparkSqlBatch(@Nullable SparkSqlBatchArgs sparkSqlBatch) {
+        public Builder sparkSqlBatch(@Nullable SparkSqlBatchArgs sparkSqlBatch) {
             this.sparkSqlBatch = Input.ofNullable(sparkSqlBatch);
             return this;
         }

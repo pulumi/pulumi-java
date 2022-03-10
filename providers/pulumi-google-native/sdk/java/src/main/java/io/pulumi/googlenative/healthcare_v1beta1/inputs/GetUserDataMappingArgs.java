@@ -98,27 +98,27 @@ public final class GetUserDataMappingArgs extends io.pulumi.resources.InvokeArgs
     	      this.userDataMappingId = defaults.userDataMappingId;
         }
 
-        public Builder setConsentStoreId(String consentStoreId) {
+        public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setUserDataMappingId(String userDataMappingId) {
+        public Builder userDataMappingId(String userDataMappingId) {
             this.userDataMappingId = Objects.requireNonNull(userDataMappingId);
             return this;
         }

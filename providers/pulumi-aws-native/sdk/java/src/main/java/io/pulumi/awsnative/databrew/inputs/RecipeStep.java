@@ -68,12 +68,12 @@ public final class RecipeStep extends io.pulumi.resources.InvokeArgs {
     	      this.conditionExpressions = defaults.conditionExpressions;
         }
 
-        public Builder setAction(RecipeAction action) {
+        public Builder action(RecipeAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setConditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
+        public Builder conditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
             this.conditionExpressions = conditionExpressions;
             return this;
         }

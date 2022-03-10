@@ -51,7 +51,7 @@ public final class GetSigningJobArgs extends io.pulumi.resources.InvokeArgs {
     	      this.jobId = defaults.jobId;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }

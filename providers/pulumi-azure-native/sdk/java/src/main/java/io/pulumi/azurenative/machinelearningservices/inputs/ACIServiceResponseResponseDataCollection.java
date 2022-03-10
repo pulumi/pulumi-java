@@ -74,12 +74,12 @@ public final class ACIServiceResponseResponseDataCollection extends io.pulumi.re
     	      this.storageEnabled = defaults.storageEnabled;
         }
 
-        public Builder setEventHubEnabled(@Nullable Boolean eventHubEnabled) {
+        public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
 
-        public Builder setStorageEnabled(@Nullable Boolean storageEnabled) {
+        public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
         }

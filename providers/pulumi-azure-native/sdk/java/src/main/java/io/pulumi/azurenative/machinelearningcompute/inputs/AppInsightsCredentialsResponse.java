@@ -74,12 +74,12 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
     	      this.instrumentationKey = defaults.instrumentationKey;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setInstrumentationKey(@Nullable String instrumentationKey) {
+        public Builder instrumentationKey(@Nullable String instrumentationKey) {
             this.instrumentationKey = instrumentationKey;
             return this;
         }

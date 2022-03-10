@@ -91,32 +91,32 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setMode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Input<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -77,22 +77,22 @@ public final class MigrateProjectPropertiesArgs extends io.pulumi.resources.Reso
     	      this.registeredTools = defaults.registeredTools;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setRegisteredTools(@Nullable Input<List<String>> registeredTools) {
+        public Builder registeredTools(@Nullable Input<List<String>> registeredTools) {
             this.registeredTools = registeredTools;
             return this;
         }
 
-        public Builder setRegisteredTools(@Nullable List<String> registeredTools) {
+        public Builder registeredTools(@Nullable List<String> registeredTools) {
             this.registeredTools = Input.ofNullable(registeredTools);
             return this;
         }

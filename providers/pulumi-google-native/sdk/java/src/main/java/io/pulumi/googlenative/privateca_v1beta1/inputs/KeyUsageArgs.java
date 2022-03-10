@@ -93,32 +93,32 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsage(@Nullable Input<KeyUsageOptionsArgs> baseKeyUsage) {
+        public Builder baseKeyUsage(@Nullable Input<KeyUsageOptionsArgs> baseKeyUsage) {
             this.baseKeyUsage = baseKeyUsage;
             return this;
         }
 
-        public Builder setBaseKeyUsage(@Nullable KeyUsageOptionsArgs baseKeyUsage) {
+        public Builder baseKeyUsage(@Nullable KeyUsageOptionsArgs baseKeyUsage) {
             this.baseKeyUsage = Input.ofNullable(baseKeyUsage);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable Input<ExtendedKeyUsageOptionsArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable Input<ExtendedKeyUsageOptionsArgs> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
             this.extendedKeyUsage = Input.ofNullable(extendedKeyUsage);
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable Input<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Input<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<ObjectIdArgs> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<ObjectIdArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }

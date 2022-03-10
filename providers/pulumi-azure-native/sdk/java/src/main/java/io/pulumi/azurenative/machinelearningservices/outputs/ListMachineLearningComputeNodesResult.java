@@ -85,17 +85,17 @@ public final class ListMachineLearningComputeNodesResult {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setNodes(List<AmlComputeNodeInformationResponse> nodes) {
+        public Builder nodes(List<AmlComputeNodeInformationResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }

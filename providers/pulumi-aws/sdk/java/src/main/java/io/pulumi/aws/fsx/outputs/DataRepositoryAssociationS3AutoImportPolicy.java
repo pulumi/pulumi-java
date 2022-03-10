@@ -50,7 +50,7 @@ public final class DataRepositoryAssociationS3AutoImportPolicy {
     	      this.events = defaults.events;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = events;
             return this;
         }

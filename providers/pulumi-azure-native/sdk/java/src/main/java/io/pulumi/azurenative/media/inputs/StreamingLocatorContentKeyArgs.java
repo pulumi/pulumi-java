@@ -90,32 +90,32 @@ public final class StreamingLocatorContentKeyArgs extends io.pulumi.resources.Re
     	      this.value = defaults.value;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLabelReferenceInStreamingPolicy(@Nullable Input<String> labelReferenceInStreamingPolicy) {
+        public Builder labelReferenceInStreamingPolicy(@Nullable Input<String> labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
 
-        public Builder setLabelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
+        public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = Input.ofNullable(labelReferenceInStreamingPolicy);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -57,12 +57,12 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.number = defaults.number;
         }
 
-        public Builder setNumber(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Input<Integer> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = Input.ofNullable(number);
             return this;
         }

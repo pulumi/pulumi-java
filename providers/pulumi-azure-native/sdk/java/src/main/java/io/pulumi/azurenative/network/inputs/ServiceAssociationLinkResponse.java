@@ -188,47 +188,47 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowDelete(@Nullable Boolean allowDelete) {
+        public Builder allowDelete(@Nullable Boolean allowDelete) {
             this.allowDelete = allowDelete;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLinkedResourceType(@Nullable String linkedResourceType) {
+        public Builder linkedResourceType(@Nullable String linkedResourceType) {
             this.linkedResourceType = linkedResourceType;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

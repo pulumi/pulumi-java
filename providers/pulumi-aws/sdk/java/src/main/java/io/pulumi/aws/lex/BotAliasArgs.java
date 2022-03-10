@@ -119,52 +119,52 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setBotName(Input<String> botName) {
+        public Builder botName(Input<String> botName) {
             this.botName = Objects.requireNonNull(botName);
             return this;
         }
 
-        public Builder setBotName(String botName) {
+        public Builder botName(String botName) {
             this.botName = Input.of(Objects.requireNonNull(botName));
             return this;
         }
 
-        public Builder setBotVersion(Input<String> botVersion) {
+        public Builder botVersion(Input<String> botVersion) {
             this.botVersion = Objects.requireNonNull(botVersion);
             return this;
         }
 
-        public Builder setBotVersion(String botVersion) {
+        public Builder botVersion(String botVersion) {
             this.botVersion = Input.of(Objects.requireNonNull(botVersion));
             return this;
         }
 
-        public Builder setConversationLogs(@Nullable Input<BotAliasConversationLogsArgs> conversationLogs) {
+        public Builder conversationLogs(@Nullable Input<BotAliasConversationLogsArgs> conversationLogs) {
             this.conversationLogs = conversationLogs;
             return this;
         }
 
-        public Builder setConversationLogs(@Nullable BotAliasConversationLogsArgs conversationLogs) {
+        public Builder conversationLogs(@Nullable BotAliasConversationLogsArgs conversationLogs) {
             this.conversationLogs = Input.ofNullable(conversationLogs);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

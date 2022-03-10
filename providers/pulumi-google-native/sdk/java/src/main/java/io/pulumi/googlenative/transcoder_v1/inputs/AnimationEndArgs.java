@@ -57,12 +57,12 @@ public final class AnimationEndArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }

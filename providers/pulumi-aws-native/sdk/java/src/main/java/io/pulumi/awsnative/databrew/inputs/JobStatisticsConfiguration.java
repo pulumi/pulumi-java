@@ -64,12 +64,12 @@ public final class JobStatisticsConfiguration extends io.pulumi.resources.Invoke
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setIncludedStatistics(@Nullable List<String> includedStatistics) {
+        public Builder includedStatistics(@Nullable List<String> includedStatistics) {
             this.includedStatistics = includedStatistics;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<JobStatisticOverride> overrides) {
+        public Builder overrides(@Nullable List<JobStatisticOverride> overrides) {
             this.overrides = overrides;
             return this;
         }

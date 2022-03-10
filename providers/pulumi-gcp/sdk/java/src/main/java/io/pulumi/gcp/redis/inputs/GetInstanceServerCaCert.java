@@ -96,27 +96,27 @@ public final class GetInstanceServerCaCert extends io.pulumi.resources.InvokeArg
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(String cert) {
+        public Builder cert(String cert) {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSha1Fingerprint(String sha1Fingerprint) {
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }

@@ -81,17 +81,17 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setUserGroup(String userGroup) {
+        public Builder userGroup(String userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
 
-        public Builder setUserPool(String userPool) {
+        public Builder userPool(String userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }

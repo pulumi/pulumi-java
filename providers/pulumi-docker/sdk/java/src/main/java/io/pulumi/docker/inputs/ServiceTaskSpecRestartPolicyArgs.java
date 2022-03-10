@@ -87,42 +87,42 @@ public final class ServiceTaskSpecRestartPolicyArgs extends io.pulumi.resources.
     	      this.window = defaults.window;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<String> delay) {
+        public Builder delay(@Nullable Input<String> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }
 
-        public Builder setMaxAttempts(@Nullable Input<Integer> maxAttempts) {
+        public Builder maxAttempts(@Nullable Input<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
-        public Builder setMaxAttempts(@Nullable Integer maxAttempts) {
+        public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Input.ofNullable(maxAttempts);
             return this;
         }
 
-        public Builder setWindow(@Nullable Input<String> window) {
+        public Builder window(@Nullable Input<String> window) {
             this.window = window;
             return this;
         }
 
-        public Builder setWindow(@Nullable String window) {
+        public Builder window(@Nullable String window) {
             this.window = Input.ofNullable(window);
             return this;
         }

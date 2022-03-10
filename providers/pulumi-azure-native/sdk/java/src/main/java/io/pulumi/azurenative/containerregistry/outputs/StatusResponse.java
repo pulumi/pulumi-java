@@ -81,17 +81,17 @@ public final class StatusResponse {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setDisplayStatus(String displayStatus) {
+        public Builder displayStatus(String displayStatus) {
             this.displayStatus = Objects.requireNonNull(displayStatus);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }

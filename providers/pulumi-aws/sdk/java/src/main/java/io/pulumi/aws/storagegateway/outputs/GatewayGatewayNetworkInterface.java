@@ -50,7 +50,7 @@ public final class GatewayGatewayNetworkInterface {
     	      this.ipv4Address = defaults.ipv4Address;
         }
 
-        public Builder setIpv4Address(@Nullable String ipv4Address) {
+        public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }

@@ -63,22 +63,22 @@ public final class ChannelStorageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceManagedS3 = defaults.serviceManagedS3;
         }
 
-        public Builder setCustomerManagedS3(@Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3) {
+        public Builder customerManagedS3(@Nullable Input<ChannelCustomerManagedS3Args> customerManagedS3) {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
 
-        public Builder setCustomerManagedS3(@Nullable ChannelCustomerManagedS3Args customerManagedS3) {
+        public Builder customerManagedS3(@Nullable ChannelCustomerManagedS3Args customerManagedS3) {
             this.customerManagedS3 = Input.ofNullable(customerManagedS3);
             return this;
         }
 
-        public Builder setServiceManagedS3(@Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable Input<ChannelServiceManagedS3Args> serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
 
-        public Builder setServiceManagedS3(@Nullable ChannelServiceManagedS3Args serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable ChannelServiceManagedS3Args serviceManagedS3) {
             this.serviceManagedS3 = Input.ofNullable(serviceManagedS3);
             return this;
         }

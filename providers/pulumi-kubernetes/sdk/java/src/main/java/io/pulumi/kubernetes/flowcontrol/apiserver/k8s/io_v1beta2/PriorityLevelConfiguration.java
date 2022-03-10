@@ -142,8 +142,8 @@ public class PriorityLevelConfiguration extends io.pulumi.resources.CustomResour
     private static PriorityLevelConfigurationArgs makeArgs(@Nullable PriorityLevelConfigurationArgs args) {
         var builder = args == null ? PriorityLevelConfigurationArgs.builder() : PriorityLevelConfigurationArgs.builder(args);
         return builder
-            .setApiVersion("flowcontrol.apiserver.k8s.io/v1beta2")
-            .setKind("PriorityLevelConfiguration")
+            .apiVersion("flowcontrol.apiserver.k8s.io/v1beta2")
+            .kind("PriorityLevelConfiguration")
             .build();
     }
 

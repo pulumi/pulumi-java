@@ -102,42 +102,42 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuthType(Input<String> authType) {
+        public Builder authType(Input<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder setServerType(Input<String> serverType) {
+        public Builder serverType(Input<String> serverType) {
             this.serverType = Objects.requireNonNull(serverType);
             return this;
         }
 
-        public Builder setServerType(String serverType) {
+        public Builder serverType(String serverType) {
             this.serverType = Input.of(Objects.requireNonNull(serverType));
             return this;
         }
 
-        public Builder setToken(Input<String> token) {
+        public Builder token(Input<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Input.of(Objects.requireNonNull(token));
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

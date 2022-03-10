@@ -74,22 +74,22 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setActiveDirectoryUser(@Nullable Input<String> activeDirectoryUser) {
+        public Builder activeDirectoryUser(@Nullable Input<String> activeDirectoryUser) {
             this.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
 
-        public Builder setActiveDirectoryUser(@Nullable String activeDirectoryUser) {
+        public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
             this.activeDirectoryUser = Input.ofNullable(activeDirectoryUser);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }

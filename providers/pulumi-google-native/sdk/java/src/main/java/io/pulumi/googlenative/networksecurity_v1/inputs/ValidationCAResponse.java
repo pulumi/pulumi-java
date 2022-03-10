@@ -73,12 +73,12 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
     	      this.grpcEndpoint = defaults.grpcEndpoint;
         }
 
-        public Builder setCertificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
+        public Builder certificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
             this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
             return this;
         }
 
-        public Builder setGrpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
+        public Builder grpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }

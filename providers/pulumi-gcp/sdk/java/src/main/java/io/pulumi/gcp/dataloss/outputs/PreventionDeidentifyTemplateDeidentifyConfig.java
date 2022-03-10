@@ -50,7 +50,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
     	      this.infoTypeTransformations = defaults.infoTypeTransformations;
         }
 
-        public Builder setInfoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
+        public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }

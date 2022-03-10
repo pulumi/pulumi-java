@@ -135,62 +135,62 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoPlacement(@Nullable Input<String> autoPlacement) {
+        public Builder autoPlacement(@Nullable Input<String> autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
 
-        public Builder setAutoPlacement(@Nullable String autoPlacement) {
+        public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = Input.ofNullable(autoPlacement);
             return this;
         }
 
-        public Builder setAvailabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Input<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder setHostRecovery(@Nullable Input<String> hostRecovery) {
+        public Builder hostRecovery(@Nullable Input<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
 
-        public Builder setHostRecovery(@Nullable String hostRecovery) {
+        public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = Input.ofNullable(hostRecovery);
             return this;
         }
 
-        public Builder setInstanceFamily(@Nullable Input<String> instanceFamily) {
+        public Builder instanceFamily(@Nullable Input<String> instanceFamily) {
             this.instanceFamily = instanceFamily;
             return this;
         }
 
-        public Builder setInstanceFamily(@Nullable String instanceFamily) {
+        public Builder instanceFamily(@Nullable String instanceFamily) {
             this.instanceFamily = Input.ofNullable(instanceFamily);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

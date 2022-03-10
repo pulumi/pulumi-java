@@ -54,7 +54,7 @@ public final class SourceRegistryCredentialsResponse {
     	      this.loginMode = defaults.loginMode;
         }
 
-        public Builder setLoginMode(@Nullable String loginMode) {
+        public Builder loginMode(@Nullable String loginMode) {
             this.loginMode = loginMode;
             return this;
         }

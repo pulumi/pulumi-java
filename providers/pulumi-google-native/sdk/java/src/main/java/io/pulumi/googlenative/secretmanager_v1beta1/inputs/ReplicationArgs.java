@@ -75,22 +75,22 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(@Nullable Input<AutomaticArgs> automatic) {
+        public Builder automatic(@Nullable Input<AutomaticArgs> automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setAutomatic(@Nullable AutomaticArgs automatic) {
+        public Builder automatic(@Nullable AutomaticArgs automatic) {
             this.automatic = Input.ofNullable(automatic);
             return this;
         }
 
-        public Builder setUserManaged(@Nullable Input<UserManagedArgs> userManaged) {
+        public Builder userManaged(@Nullable Input<UserManagedArgs> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable UserManagedArgs userManaged) {
+        public Builder userManaged(@Nullable UserManagedArgs userManaged) {
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }

@@ -115,42 +115,42 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
     	      this.userEventPattern = defaults.userEventPattern;
         }
 
-        public Builder setAuth(@Nullable Input<UpstreamAuthSettingsArgs> auth) {
+        public Builder auth(@Nullable Input<UpstreamAuthSettingsArgs> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable UpstreamAuthSettingsArgs auth) {
+        public Builder auth(@Nullable UpstreamAuthSettingsArgs auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setSystemEventPattern(@Nullable Input<String> systemEventPattern) {
+        public Builder systemEventPattern(@Nullable Input<String> systemEventPattern) {
             this.systemEventPattern = systemEventPattern;
             return this;
         }
 
-        public Builder setSystemEventPattern(@Nullable String systemEventPattern) {
+        public Builder systemEventPattern(@Nullable String systemEventPattern) {
             this.systemEventPattern = Input.ofNullable(systemEventPattern);
             return this;
         }
 
-        public Builder setUrlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Input<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
             return this;
         }
 
-        public Builder setUserEventPattern(@Nullable Input<String> userEventPattern) {
+        public Builder userEventPattern(@Nullable Input<String> userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }
 
-        public Builder setUserEventPattern(@Nullable String userEventPattern) {
+        public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = Input.ofNullable(userEventPattern);
             return this;
         }

@@ -152,72 +152,72 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     	      this.s3InputMode = defaults.s3InputMode;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setFeaturesAttribute(@Nullable Input<String> featuresAttribute) {
+        public Builder featuresAttribute(@Nullable Input<String> featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
 
-        public Builder setFeaturesAttribute(@Nullable String featuresAttribute) {
+        public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = Input.ofNullable(featuresAttribute);
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable Input<String> inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable Input<String> inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable String inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = Input.ofNullable(inferenceAttribute);
             return this;
         }
 
-        public Builder setLocalPath(Input<String> localPath) {
+        public Builder localPath(Input<String> localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Input.of(Objects.requireNonNull(localPath));
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable Input<String> probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable Input<String> probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable String probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = Input.ofNullable(probabilityAttribute);
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = Input.ofNullable(s3DataDistributionType);
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
+        public Builder s3InputMode(@Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }

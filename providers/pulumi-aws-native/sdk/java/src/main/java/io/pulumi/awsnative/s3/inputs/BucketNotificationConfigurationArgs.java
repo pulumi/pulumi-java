@@ -94,42 +94,42 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     	      this.topicConfigurations = defaults.topicConfigurations;
         }
 
-        public Builder setEventBridgeConfiguration(@Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration) {
+        public Builder eventBridgeConfiguration(@Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration) {
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
 
-        public Builder setEventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
+        public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
             this.eventBridgeConfiguration = Input.ofNullable(eventBridgeConfiguration);
             return this;
         }
 
-        public Builder setLambdaConfigurations(@Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
+        public Builder lambdaConfigurations(@Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
 
-        public Builder setLambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
+        public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
             this.lambdaConfigurations = Input.ofNullable(lambdaConfigurations);
             return this;
         }
 
-        public Builder setQueueConfigurations(@Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations) {
+        public Builder queueConfigurations(@Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
 
-        public Builder setQueueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
+        public Builder queueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
             this.queueConfigurations = Input.ofNullable(queueConfigurations);
             return this;
         }
 
-        public Builder setTopicConfigurations(@Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations) {
+        public Builder topicConfigurations(@Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }
 
-        public Builder setTopicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
+        public Builder topicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
             this.topicConfigurations = Input.ofNullable(topicConfigurations);
             return this;
         }

@@ -123,52 +123,52 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setCustomerAdminGroupId(@Nullable Input<String> customerAdminGroupId) {
+        public Builder customerAdminGroupId(@Nullable Input<String> customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
-        public Builder setCustomerAdminGroupId(@Nullable String customerAdminGroupId) {
+        public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             this.customerAdminGroupId = Input.ofNullable(customerAdminGroupId);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

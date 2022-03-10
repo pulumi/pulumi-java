@@ -50,12 +50,12 @@ public final class LaunchGroupToWeight {
     	      this.splitWeight = defaults.splitWeight;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setSplitWeight(Integer splitWeight) {
+        public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }

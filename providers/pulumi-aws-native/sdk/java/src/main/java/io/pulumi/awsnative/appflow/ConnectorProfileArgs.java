@@ -121,52 +121,52 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.kMSArn = defaults.kMSArn;
         }
 
-        public Builder setConnectionMode(Input<ConnectorProfileConnectionMode> connectionMode) {
+        public Builder connectionMode(Input<ConnectorProfileConnectionMode> connectionMode) {
             this.connectionMode = Objects.requireNonNull(connectionMode);
             return this;
         }
 
-        public Builder setConnectionMode(ConnectorProfileConnectionMode connectionMode) {
+        public Builder connectionMode(ConnectorProfileConnectionMode connectionMode) {
             this.connectionMode = Input.of(Objects.requireNonNull(connectionMode));
             return this;
         }
 
-        public Builder setConnectorProfileConfig(@Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig) {
+        public Builder connectorProfileConfig(@Nullable Input<ConnectorProfileConfigArgs> connectorProfileConfig) {
             this.connectorProfileConfig = connectorProfileConfig;
             return this;
         }
 
-        public Builder setConnectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
+        public Builder connectorProfileConfig(@Nullable ConnectorProfileConfigArgs connectorProfileConfig) {
             this.connectorProfileConfig = Input.ofNullable(connectorProfileConfig);
             return this;
         }
 
-        public Builder setConnectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Input.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder setConnectorType(Input<ConnectorProfileConnectorType> connectorType) {
+        public Builder connectorType(Input<ConnectorProfileConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(ConnectorProfileConnectorType connectorType) {
+        public Builder connectorType(ConnectorProfileConnectorType connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setKMSArn(@Nullable Input<String> kMSArn) {
+        public Builder kMSArn(@Nullable Input<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
 
-        public Builder setKMSArn(@Nullable String kMSArn) {
+        public Builder kMSArn(@Nullable String kMSArn) {
             this.kMSArn = Input.ofNullable(kMSArn);
             return this;
         }

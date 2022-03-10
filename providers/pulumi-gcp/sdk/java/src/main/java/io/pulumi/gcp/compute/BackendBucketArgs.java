@@ -162,72 +162,72 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
+        public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Input.ofNullable(cdnPolicy);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Input.ofNullable(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Input<Boolean> enableCdn) {
+        public Builder enableCdn(@Nullable Input<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Boolean enableCdn) {
+        public Builder enableCdn(@Nullable Boolean enableCdn) {
             this.enableCdn = Input.ofNullable(enableCdn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

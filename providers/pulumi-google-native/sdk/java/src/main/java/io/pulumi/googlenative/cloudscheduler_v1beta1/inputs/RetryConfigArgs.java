@@ -123,52 +123,52 @@ public final class RetryConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retryCount = defaults.retryCount;
         }
 
-        public Builder setMaxBackoffDuration(@Nullable Input<String> maxBackoffDuration) {
+        public Builder maxBackoffDuration(@Nullable Input<String> maxBackoffDuration) {
             this.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
 
-        public Builder setMaxBackoffDuration(@Nullable String maxBackoffDuration) {
+        public Builder maxBackoffDuration(@Nullable String maxBackoffDuration) {
             this.maxBackoffDuration = Input.ofNullable(maxBackoffDuration);
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Input<Integer> maxDoublings) {
+        public Builder maxDoublings(@Nullable Input<Integer> maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Integer maxDoublings) {
+        public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = Input.ofNullable(maxDoublings);
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable Input<String> maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable Input<String> maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable String maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = Input.ofNullable(maxRetryDuration);
             return this;
         }
 
-        public Builder setMinBackoffDuration(@Nullable Input<String> minBackoffDuration) {
+        public Builder minBackoffDuration(@Nullable Input<String> minBackoffDuration) {
             this.minBackoffDuration = minBackoffDuration;
             return this;
         }
 
-        public Builder setMinBackoffDuration(@Nullable String minBackoffDuration) {
+        public Builder minBackoffDuration(@Nullable String minBackoffDuration) {
             this.minBackoffDuration = Input.ofNullable(minBackoffDuration);
             return this;
         }
 
-        public Builder setRetryCount(@Nullable Input<Integer> retryCount) {
+        public Builder retryCount(@Nullable Input<Integer> retryCount) {
             this.retryCount = retryCount;
             return this;
         }
 
-        public Builder setRetryCount(@Nullable Integer retryCount) {
+        public Builder retryCount(@Nullable Integer retryCount) {
             this.retryCount = Input.ofNullable(retryCount);
             return this;
         }

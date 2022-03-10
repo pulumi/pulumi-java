@@ -75,22 +75,22 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDaysInCycle(@Nullable Input<Integer> daysInCycle) {
+        public Builder daysInCycle(@Nullable Input<Integer> daysInCycle) {
             this.daysInCycle = daysInCycle;
             return this;
         }
 
-        public Builder setDaysInCycle(@Nullable Integer daysInCycle) {
+        public Builder daysInCycle(@Nullable Integer daysInCycle) {
             this.daysInCycle = Input.ofNullable(daysInCycle);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

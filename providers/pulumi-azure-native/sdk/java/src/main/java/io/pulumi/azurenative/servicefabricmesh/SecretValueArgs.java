@@ -135,62 +135,62 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecretResourceName(Input<String> secretResourceName) {
+        public Builder secretResourceName(Input<String> secretResourceName) {
             this.secretResourceName = Objects.requireNonNull(secretResourceName);
             return this;
         }
 
-        public Builder setSecretResourceName(String secretResourceName) {
+        public Builder secretResourceName(String secretResourceName) {
             this.secretResourceName = Input.of(Objects.requireNonNull(secretResourceName));
             return this;
         }
 
-        public Builder setSecretValueResourceName(@Nullable Input<String> secretValueResourceName) {
+        public Builder secretValueResourceName(@Nullable Input<String> secretValueResourceName) {
             this.secretValueResourceName = secretValueResourceName;
             return this;
         }
 
-        public Builder setSecretValueResourceName(@Nullable String secretValueResourceName) {
+        public Builder secretValueResourceName(@Nullable String secretValueResourceName) {
             this.secretValueResourceName = Input.ofNullable(secretValueResourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

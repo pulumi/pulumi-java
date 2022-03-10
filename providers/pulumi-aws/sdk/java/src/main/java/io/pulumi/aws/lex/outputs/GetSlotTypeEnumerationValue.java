@@ -50,12 +50,12 @@ public final class GetSlotTypeEnumerationValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

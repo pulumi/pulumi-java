@@ -71,22 +71,22 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
     	      this.dataCatalogEncryptionSettings = defaults.dataCatalogEncryptionSettings;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDataCatalogEncryptionSettings(@Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(@Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
             return this;
         }
 
-        public Builder setDataCatalogEncryptionSettings(@Nullable DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(@Nullable DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = Input.ofNullable(dataCatalogEncryptionSettings);
             return this;
         }

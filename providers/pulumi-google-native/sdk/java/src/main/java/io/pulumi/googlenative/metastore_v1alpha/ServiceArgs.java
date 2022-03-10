@@ -288,162 +288,162 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setDatabaseType(@Nullable Input<ServiceDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Input<ServiceDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable ServiceDatabaseType databaseType) {
+        public Builder databaseType(@Nullable ServiceDatabaseType databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setHiveMetastoreConfig(@Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
-        public Builder setHiveMetastoreConfig(@Nullable HiveMetastoreConfigArgs hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable HiveMetastoreConfigArgs hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Input.ofNullable(hiveMetastoreConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setMetadataIntegration(@Nullable Input<MetadataIntegrationArgs> metadataIntegration) {
+        public Builder metadataIntegration(@Nullable Input<MetadataIntegrationArgs> metadataIntegration) {
             this.metadataIntegration = metadataIntegration;
             return this;
         }
 
-        public Builder setMetadataIntegration(@Nullable MetadataIntegrationArgs metadataIntegration) {
+        public Builder metadataIntegration(@Nullable MetadataIntegrationArgs metadataIntegration) {
             this.metadataIntegration = Input.ofNullable(metadataIntegration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReleaseChannel(@Nullable Input<ServiceReleaseChannel> releaseChannel) {
+        public Builder releaseChannel(@Nullable Input<ServiceReleaseChannel> releaseChannel) {
             this.releaseChannel = releaseChannel;
             return this;
         }
 
-        public Builder setReleaseChannel(@Nullable ServiceReleaseChannel releaseChannel) {
+        public Builder releaseChannel(@Nullable ServiceReleaseChannel releaseChannel) {
             this.releaseChannel = Input.ofNullable(releaseChannel);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder setTier(@Nullable Input<ServiceTier> tier) {
+        public Builder tier(@Nullable Input<ServiceTier> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable ServiceTier tier) {
+        public Builder tier(@Nullable ServiceTier tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

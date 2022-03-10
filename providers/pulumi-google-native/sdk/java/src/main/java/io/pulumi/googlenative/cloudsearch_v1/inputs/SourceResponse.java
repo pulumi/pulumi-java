@@ -72,12 +72,12 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.predefinedSource = defaults.predefinedSource;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPredefinedSource(String predefinedSource) {
+        public Builder predefinedSource(String predefinedSource) {
             this.predefinedSource = Objects.requireNonNull(predefinedSource);
             return this;
         }

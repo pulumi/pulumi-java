@@ -67,12 +67,12 @@ public final class GetVirtualServiceSpecProvider {
     	      this.virtualRouters = defaults.virtualRouters;
         }
 
-        public Builder setVirtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
+        public Builder virtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
             this.virtualNodes = Objects.requireNonNull(virtualNodes);
             return this;
         }
 
-        public Builder setVirtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
+        public Builder virtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
             this.virtualRouters = Objects.requireNonNull(virtualRouters);
             return this;
         }

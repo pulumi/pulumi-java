@@ -42,7 +42,7 @@ public final class TopicRuleHttpAuthorization {
     	      this.sigv4 = defaults.sigv4;
         }
 
-        public Builder setSigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
+        public Builder sigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
             this.sigv4 = sigv4;
             return this;
         }

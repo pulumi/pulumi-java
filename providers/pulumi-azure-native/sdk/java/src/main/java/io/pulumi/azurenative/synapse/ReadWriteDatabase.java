@@ -225,7 +225,7 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
     private static ReadWriteDatabaseArgs makeArgs(ReadWriteDatabaseArgs args) {
         var builder = args == null ? ReadWriteDatabaseArgs.builder() : ReadWriteDatabaseArgs.builder(args);
         return builder
-            .setKind("ReadWrite")
+            .kind("ReadWrite")
             .build();
     }
 

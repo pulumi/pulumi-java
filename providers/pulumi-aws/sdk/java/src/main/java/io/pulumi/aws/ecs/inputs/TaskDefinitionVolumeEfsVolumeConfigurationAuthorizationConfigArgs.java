@@ -70,22 +70,22 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     	      this.iam = defaults.iam;
         }
 
-        public Builder setAccessPointId(@Nullable Input<String> accessPointId) {
+        public Builder accessPointId(@Nullable Input<String> accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = Input.ofNullable(accessPointId);
             return this;
         }
 
-        public Builder setIam(@Nullable Input<String> iam) {
+        public Builder iam(@Nullable Input<String> iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setIam(@Nullable String iam) {
+        public Builder iam(@Nullable String iam) {
             this.iam = Input.ofNullable(iam);
             return this;
         }

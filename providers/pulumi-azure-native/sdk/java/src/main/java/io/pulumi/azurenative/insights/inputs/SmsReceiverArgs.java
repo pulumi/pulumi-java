@@ -89,32 +89,32 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setCountryCode(Input<String> countryCode) {
+        public Builder countryCode(Input<String> countryCode) {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
 
-        public Builder setCountryCode(String countryCode) {
+        public Builder countryCode(String countryCode) {
             this.countryCode = Input.of(Objects.requireNonNull(countryCode));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPhoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Input<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }

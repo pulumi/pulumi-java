@@ -51,7 +51,7 @@ public final class GetCompositeAlarmArgs extends io.pulumi.resources.InvokeArgs 
     	      this.alarmName = defaults.alarmName;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }

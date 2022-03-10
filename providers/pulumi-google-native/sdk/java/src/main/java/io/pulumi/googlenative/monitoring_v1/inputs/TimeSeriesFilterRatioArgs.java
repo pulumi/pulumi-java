@@ -108,42 +108,42 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     	      this.secondaryAggregation = defaults.secondaryAggregation;
         }
 
-        public Builder setDenominator(@Nullable Input<RatioPartArgs> denominator) {
+        public Builder denominator(@Nullable Input<RatioPartArgs> denominator) {
             this.denominator = denominator;
             return this;
         }
 
-        public Builder setDenominator(@Nullable RatioPartArgs denominator) {
+        public Builder denominator(@Nullable RatioPartArgs denominator) {
             this.denominator = Input.ofNullable(denominator);
             return this;
         }
 
-        public Builder setNumerator(@Nullable Input<RatioPartArgs> numerator) {
+        public Builder numerator(@Nullable Input<RatioPartArgs> numerator) {
             this.numerator = numerator;
             return this;
         }
 
-        public Builder setNumerator(@Nullable RatioPartArgs numerator) {
+        public Builder numerator(@Nullable RatioPartArgs numerator) {
             this.numerator = Input.ofNullable(numerator);
             return this;
         }
 
-        public Builder setPickTimeSeriesFilter(@Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(@Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
 
-        public Builder setPickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Input.ofNullable(pickTimeSeriesFilter);
             return this;
         }
 
-        public Builder setSecondaryAggregation(@Nullable Input<AggregationArgs> secondaryAggregation) {
+        public Builder secondaryAggregation(@Nullable Input<AggregationArgs> secondaryAggregation) {
             this.secondaryAggregation = secondaryAggregation;
             return this;
         }
 
-        public Builder setSecondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
+        public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
             this.secondaryAggregation = Input.ofNullable(secondaryAggregation);
             return this;
         }

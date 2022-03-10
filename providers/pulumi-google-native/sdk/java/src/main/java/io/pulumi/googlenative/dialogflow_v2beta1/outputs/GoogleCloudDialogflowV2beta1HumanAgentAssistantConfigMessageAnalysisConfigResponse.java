@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     	      this.enableSentimentAnalysis = defaults.enableSentimentAnalysis;
         }
 
-        public Builder setEnableEntityExtraction(Boolean enableEntityExtraction) {
+        public Builder enableEntityExtraction(Boolean enableEntityExtraction) {
             this.enableEntityExtraction = Objects.requireNonNull(enableEntityExtraction);
             return this;
         }
 
-        public Builder setEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }

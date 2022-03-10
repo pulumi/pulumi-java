@@ -52,12 +52,12 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     	      this.sourceBotVersion = defaults.sourceBotVersion;
         }
 
-        public Builder setSourceBotVersion(Input<String> sourceBotVersion) {
+        public Builder sourceBotVersion(Input<String> sourceBotVersion) {
             this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
             return this;
         }
 
-        public Builder setSourceBotVersion(String sourceBotVersion) {
+        public Builder sourceBotVersion(String sourceBotVersion) {
             this.sourceBotVersion = Input.of(Objects.requireNonNull(sourceBotVersion));
             return this;
         }

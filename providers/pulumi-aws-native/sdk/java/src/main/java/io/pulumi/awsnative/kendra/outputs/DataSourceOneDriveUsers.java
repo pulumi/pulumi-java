@@ -53,12 +53,12 @@ public final class DataSourceOneDriveUsers {
     	      this.oneDriveUserS3Path = defaults.oneDriveUserS3Path;
         }
 
-        public Builder setOneDriveUserList(@Nullable List<String> oneDriveUserList) {
+        public Builder oneDriveUserList(@Nullable List<String> oneDriveUserList) {
             this.oneDriveUserList = oneDriveUserList;
             return this;
         }
 
-        public Builder setOneDriveUserS3Path(@Nullable DataSourceS3Path oneDriveUserS3Path) {
+        public Builder oneDriveUserS3Path(@Nullable DataSourceS3Path oneDriveUserS3Path) {
             this.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
         }

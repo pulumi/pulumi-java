@@ -86,32 +86,32 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expires = defaults.expires;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpires(@Nullable Input<String> expires) {
+        public Builder expires(@Nullable Input<String> expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setExpires(@Nullable String expires) {
+        public Builder expires(@Nullable String expires) {
             this.expires = Input.ofNullable(expires);
             return this;
         }

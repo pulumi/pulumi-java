@@ -92,32 +92,32 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder setCertificateMode(@Nullable Input<DomainMappingSpecCertificateMode> certificateMode) {
+        public Builder certificateMode(@Nullable Input<DomainMappingSpecCertificateMode> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
-        public Builder setCertificateMode(@Nullable DomainMappingSpecCertificateMode certificateMode) {
+        public Builder certificateMode(@Nullable DomainMappingSpecCertificateMode certificateMode) {
             this.certificateMode = Input.ofNullable(certificateMode);
             return this;
         }
 
-        public Builder setForceOverride(@Nullable Input<Boolean> forceOverride) {
+        public Builder forceOverride(@Nullable Input<Boolean> forceOverride) {
             this.forceOverride = forceOverride;
             return this;
         }
 
-        public Builder setForceOverride(@Nullable Boolean forceOverride) {
+        public Builder forceOverride(@Nullable Boolean forceOverride) {
             this.forceOverride = Input.ofNullable(forceOverride);
             return this;
         }
 
-        public Builder setRouteName(@Nullable Input<String> routeName) {
+        public Builder routeName(@Nullable Input<String> routeName) {
             this.routeName = routeName;
             return this;
         }
 
-        public Builder setRouteName(@Nullable String routeName) {
+        public Builder routeName(@Nullable String routeName) {
             this.routeName = Input.ofNullable(routeName);
             return this;
         }

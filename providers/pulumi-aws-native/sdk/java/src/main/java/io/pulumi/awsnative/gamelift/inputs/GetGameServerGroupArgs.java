@@ -51,7 +51,7 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
     	      this.gameServerGroupArn = defaults.gameServerGroupArn;
         }
 
-        public Builder setGameServerGroupArn(String gameServerGroupArn) {
+        public Builder gameServerGroupArn(String gameServerGroupArn) {
             this.gameServerGroupArn = Objects.requireNonNull(gameServerGroupArn);
             return this;
         }

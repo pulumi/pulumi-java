@@ -484,137 +484,137 @@ public final class GetVirtualMachineScaleSetVMResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable SubResourceResponse availabilitySet) {
+        public Builder availabilitySet(@Nullable SubResourceResponse availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceView(VirtualMachineScaleSetVMInstanceViewResponse instanceView) {
+        public Builder instanceView(VirtualMachineScaleSetVMInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLatestModelApplied(Boolean latestModelApplied) {
+        public Builder latestModelApplied(Boolean latestModelApplied) {
             this.latestModelApplied = Objects.requireNonNull(latestModelApplied);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setModelDefinitionApplied(String modelDefinitionApplied) {
+        public Builder modelDefinitionApplied(String modelDefinitionApplied) {
             this.modelDefinitionApplied = Objects.requireNonNull(modelDefinitionApplied);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration) {
+        public Builder networkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration) {
             this.networkProfileConfiguration = networkProfileConfiguration;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProtectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy) {
+        public Builder protectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy) {
             this.protectionPolicy = protectionPolicy;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResources(List<VirtualMachineExtensionResponse> resources) {
+        public Builder resources(List<VirtualMachineExtensionResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileResponse securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

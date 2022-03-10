@@ -236,77 +236,77 @@ public final class FlowSourceConnectorProperties extends io.pulumi.resources.Inv
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setAmplitude(@Nullable FlowAmplitudeSourceProperties amplitude) {
+        public Builder amplitude(@Nullable FlowAmplitudeSourceProperties amplitude) {
             this.amplitude = amplitude;
             return this;
         }
 
-        public Builder setDatadog(@Nullable FlowDatadogSourceProperties datadog) {
+        public Builder datadog(@Nullable FlowDatadogSourceProperties datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable FlowDynatraceSourceProperties dynatrace) {
+        public Builder dynatrace(@Nullable FlowDynatraceSourceProperties dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics) {
+        public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable FlowInforNexusSourceProperties inforNexus) {
+        public Builder inforNexus(@Nullable FlowInforNexusSourceProperties inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setMarketo(@Nullable FlowMarketoSourceProperties marketo) {
+        public Builder marketo(@Nullable FlowMarketoSourceProperties marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setS3(@Nullable FlowS3SourceProperties s3) {
+        public Builder s3(@Nullable FlowS3SourceProperties s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable FlowSAPODataSourceProperties sAPOData) {
+        public Builder sAPOData(@Nullable FlowSAPODataSourceProperties sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable FlowSalesforceSourceProperties salesforce) {
+        public Builder salesforce(@Nullable FlowSalesforceSourceProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable FlowServiceNowSourceProperties serviceNow) {
+        public Builder serviceNow(@Nullable FlowServiceNowSourceProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setSingular(@Nullable FlowSingularSourceProperties singular) {
+        public Builder singular(@Nullable FlowSingularSourceProperties singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSlack(@Nullable FlowSlackSourceProperties slack) {
+        public Builder slack(@Nullable FlowSlackSourceProperties slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable FlowTrendmicroSourceProperties trendmicro) {
+        public Builder trendmicro(@Nullable FlowTrendmicroSourceProperties trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
 
-        public Builder setVeeva(@Nullable FlowVeevaSourceProperties veeva) {
+        public Builder veeva(@Nullable FlowVeevaSourceProperties veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setZendesk(@Nullable FlowZendeskSourceProperties zendesk) {
+        public Builder zendesk(@Nullable FlowZendeskSourceProperties zendesk) {
             this.zendesk = zendesk;
             return this;
         }

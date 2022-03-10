@@ -102,42 +102,42 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     	      this.storageType = defaults.storageType;
         }
 
-        public Builder setLinkedStorageAccount(@Nullable Input<String> linkedStorageAccount) {
+        public Builder linkedStorageAccount(@Nullable Input<String> linkedStorageAccount) {
             this.linkedStorageAccount = linkedStorageAccount;
             return this;
         }
 
-        public Builder setLinkedStorageAccount(@Nullable String linkedStorageAccount) {
+        public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
             this.linkedStorageAccount = Input.ofNullable(linkedStorageAccount);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }

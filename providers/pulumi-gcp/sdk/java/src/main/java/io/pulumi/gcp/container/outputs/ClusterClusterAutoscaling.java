@@ -119,22 +119,22 @@ public final class ClusterClusterAutoscaling {
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder setAutoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaults autoProvisioningDefaults) {
+        public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaults autoProvisioningDefaults) {
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
 
-        public Builder setAutoscalingProfile(@Nullable String autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setResourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
+        public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }

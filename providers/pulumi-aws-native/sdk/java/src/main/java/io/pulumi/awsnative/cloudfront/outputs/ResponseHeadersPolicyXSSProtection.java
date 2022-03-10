@@ -68,22 +68,22 @@ public final class ResponseHeadersPolicyXSSProtection {
     	      this.reportUri = defaults.reportUri;
         }
 
-        public Builder setModeBlock(@Nullable Boolean modeBlock) {
+        public Builder modeBlock(@Nullable Boolean modeBlock) {
             this.modeBlock = modeBlock;
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setProtection(Boolean protection) {
+        public Builder protection(Boolean protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
 
-        public Builder setReportUri(@Nullable String reportUri) {
+        public Builder reportUri(@Nullable String reportUri) {
             this.reportUri = reportUri;
             return this;
         }

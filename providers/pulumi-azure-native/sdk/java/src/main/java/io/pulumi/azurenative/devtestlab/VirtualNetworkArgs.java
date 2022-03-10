@@ -186,92 +186,92 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllowedSubnets(@Nullable Input<List<SubnetArgs>> allowedSubnets) {
+        public Builder allowedSubnets(@Nullable Input<List<SubnetArgs>> allowedSubnets) {
             this.allowedSubnets = allowedSubnets;
             return this;
         }
 
-        public Builder setAllowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
+        public Builder allowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
             this.allowedSubnets = Input.ofNullable(allowedSubnets);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExternalProviderResourceId(@Nullable Input<String> externalProviderResourceId) {
+        public Builder externalProviderResourceId(@Nullable Input<String> externalProviderResourceId) {
             this.externalProviderResourceId = externalProviderResourceId;
             return this;
         }
 
-        public Builder setExternalProviderResourceId(@Nullable String externalProviderResourceId) {
+        public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
             this.externalProviderResourceId = Input.ofNullable(externalProviderResourceId);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnetOverrides(@Nullable Input<List<SubnetOverrideArgs>> subnetOverrides) {
+        public Builder subnetOverrides(@Nullable Input<List<SubnetOverrideArgs>> subnetOverrides) {
             this.subnetOverrides = subnetOverrides;
             return this;
         }
 
-        public Builder setSubnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
+        public Builder subnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
             this.subnetOverrides = Input.ofNullable(subnetOverrides);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

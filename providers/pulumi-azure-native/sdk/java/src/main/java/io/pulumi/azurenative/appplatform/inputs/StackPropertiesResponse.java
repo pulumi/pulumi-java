@@ -74,12 +74,12 @@ public final class StackPropertiesResponse extends io.pulumi.resources.InvokeArg
     	      this.version = defaults.version;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

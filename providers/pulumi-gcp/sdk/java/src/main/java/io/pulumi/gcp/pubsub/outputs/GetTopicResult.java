@@ -111,42 +111,42 @@ public final class GetTopicResult {
     	      this.schemaSettings = defaults.schemaSettings;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(String messageRetentionDuration) {
+        public Builder messageRetentionDuration(String messageRetentionDuration) {
             this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
             return this;
         }
 
-        public Builder setMessageStoragePolicies(List<GetTopicMessageStoragePolicy> messageStoragePolicies) {
+        public Builder messageStoragePolicies(List<GetTopicMessageStoragePolicy> messageStoragePolicies) {
             this.messageStoragePolicies = Objects.requireNonNull(messageStoragePolicies);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSchemaSettings(List<GetTopicSchemaSetting> schemaSettings) {
+        public Builder schemaSettings(List<GetTopicSchemaSetting> schemaSettings) {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }

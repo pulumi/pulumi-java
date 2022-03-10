@@ -60,12 +60,12 @@ public final class TableColumn extends io.pulumi.resources.InvokeArgs {
     	      this.columnType = defaults.columnType;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setColumnType(String columnType) {
+        public Builder columnType(String columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }

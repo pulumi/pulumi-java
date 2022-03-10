@@ -65,12 +65,12 @@ public final class GetReservationResult {
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setThroughputCapacity(String throughputCapacity) {
+        public Builder throughputCapacity(String throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }

@@ -113,42 +113,42 @@ public final class ArmApplicationHealthPolicyArgs extends io.pulumi.resources.Re
     	      this.serviceTypeHealthPolicyMap = defaults.serviceTypeHealthPolicyMap;
         }
 
-        public Builder setConsiderWarningAsError(@Nullable Input<Boolean> considerWarningAsError) {
+        public Builder considerWarningAsError(@Nullable Input<Boolean> considerWarningAsError) {
             this.considerWarningAsError = considerWarningAsError;
             return this;
         }
 
-        public Builder setConsiderWarningAsError(@Nullable Boolean considerWarningAsError) {
+        public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
             this.considerWarningAsError = Input.ofNullable(considerWarningAsError);
             return this;
         }
 
-        public Builder setDefaultServiceTypeHealthPolicy(@Nullable Input<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable Input<ArmServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
-        public Builder setDefaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = Input.ofNullable(defaultServiceTypeHealthPolicy);
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyDeployedApplications(@Nullable Input<Integer> maxPercentUnhealthyDeployedApplications) {
+        public Builder maxPercentUnhealthyDeployedApplications(@Nullable Input<Integer> maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
+        public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = Input.ofNullable(maxPercentUnhealthyDeployedApplications);
             return this;
         }
 
-        public Builder setServiceTypeHealthPolicyMap(@Nullable Input<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
+        public Builder serviceTypeHealthPolicyMap(@Nullable Input<Map<String,ArmServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }
 
-        public Builder setServiceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyArgs> serviceTypeHealthPolicyMap) {
+        public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyArgs> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = Input.ofNullable(serviceTypeHealthPolicyMap);
             return this;
         }

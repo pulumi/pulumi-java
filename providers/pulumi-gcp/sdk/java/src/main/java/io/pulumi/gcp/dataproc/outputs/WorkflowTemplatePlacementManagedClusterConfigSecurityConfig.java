@@ -50,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+        public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }

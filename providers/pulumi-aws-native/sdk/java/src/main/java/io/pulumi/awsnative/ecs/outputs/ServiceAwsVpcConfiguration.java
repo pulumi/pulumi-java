@@ -61,17 +61,17 @@ public final class ServiceAwsVpcConfiguration {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+        public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = subnets;
             return this;
         }

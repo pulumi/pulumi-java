@@ -172,82 +172,82 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setCompletionTime(@Nullable Input<String> completionTime) {
+        public Builder completionTime(@Nullable Input<String> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable String completionTime) {
+        public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = Input.ofNullable(completionTime);
             return this;
         }
 
-        public Builder setFailed(@Nullable Input<Integer> failed) {
+        public Builder failed(@Nullable Input<Integer> failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setFailed(@Nullable Integer failed) {
+        public Builder failed(@Nullable Integer failed) {
             this.failed = Input.ofNullable(failed);
             return this;
         }
 
-        public Builder setIndex(Input<Integer> index) {
+        public Builder index(Input<Integer> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Input.of(Objects.requireNonNull(index));
             return this;
         }
 
-        public Builder setLastAttemptResult(@Nullable Input<InstanceAttemptResultArgs> lastAttemptResult) {
+        public Builder lastAttemptResult(@Nullable Input<InstanceAttemptResultArgs> lastAttemptResult) {
             this.lastAttemptResult = lastAttemptResult;
             return this;
         }
 
-        public Builder setLastAttemptResult(@Nullable InstanceAttemptResultArgs lastAttemptResult) {
+        public Builder lastAttemptResult(@Nullable InstanceAttemptResultArgs lastAttemptResult) {
             this.lastAttemptResult = Input.ofNullable(lastAttemptResult);
             return this;
         }
 
-        public Builder setLastExitCode(@Nullable Input<Integer> lastExitCode) {
+        public Builder lastExitCode(@Nullable Input<Integer> lastExitCode) {
             this.lastExitCode = lastExitCode;
             return this;
         }
 
-        public Builder setLastExitCode(@Nullable Integer lastExitCode) {
+        public Builder lastExitCode(@Nullable Integer lastExitCode) {
             this.lastExitCode = Input.ofNullable(lastExitCode);
             return this;
         }
 
-        public Builder setRestarted(@Nullable Input<Integer> restarted) {
+        public Builder restarted(@Nullable Input<Integer> restarted) {
             this.restarted = restarted;
             return this;
         }
 
-        public Builder setRestarted(@Nullable Integer restarted) {
+        public Builder restarted(@Nullable Integer restarted) {
             this.restarted = Input.ofNullable(restarted);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Input<Integer> succeeded) {
+        public Builder succeeded(@Nullable Input<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Integer succeeded) {
+        public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = Input.ofNullable(succeeded);
             return this;
         }

@@ -50,7 +50,7 @@ public final class RollingUpdateStatefulSetStrategy {
     	      this.partition = defaults.partition;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }

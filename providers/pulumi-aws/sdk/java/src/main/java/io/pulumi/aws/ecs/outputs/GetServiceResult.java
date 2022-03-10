@@ -146,42 +146,42 @@ public final class GetServiceResult {
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setClusterArn(String clusterArn) {
+        public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
-        public Builder setDesiredCount(Integer desiredCount) {
+        public Builder desiredCount(Integer desiredCount) {
             this.desiredCount = Objects.requireNonNull(desiredCount);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLaunchType(String launchType) {
+        public Builder launchType(String launchType) {
             this.launchType = Objects.requireNonNull(launchType);
             return this;
         }
 
-        public Builder setSchedulingStrategy(String schedulingStrategy) {
+        public Builder schedulingStrategy(String schedulingStrategy) {
             this.schedulingStrategy = Objects.requireNonNull(schedulingStrategy);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setTaskDefinition(String taskDefinition) {
+        public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }

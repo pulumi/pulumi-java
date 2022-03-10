@@ -124,52 +124,52 @@ public final class DataSourceConfiguration {
     	      this.workDocsConfiguration = defaults.workDocsConfiguration;
         }
 
-        public Builder setConfluenceConfiguration(@Nullable DataSourceConfluenceConfiguration confluenceConfiguration) {
+        public Builder confluenceConfiguration(@Nullable DataSourceConfluenceConfiguration confluenceConfiguration) {
             this.confluenceConfiguration = confluenceConfiguration;
             return this;
         }
 
-        public Builder setDatabaseConfiguration(@Nullable DataSourceDatabaseConfiguration databaseConfiguration) {
+        public Builder databaseConfiguration(@Nullable DataSourceDatabaseConfiguration databaseConfiguration) {
             this.databaseConfiguration = databaseConfiguration;
             return this;
         }
 
-        public Builder setGoogleDriveConfiguration(@Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration) {
+        public Builder googleDriveConfiguration(@Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration) {
             this.googleDriveConfiguration = googleDriveConfiguration;
             return this;
         }
 
-        public Builder setOneDriveConfiguration(@Nullable DataSourceOneDriveConfiguration oneDriveConfiguration) {
+        public Builder oneDriveConfiguration(@Nullable DataSourceOneDriveConfiguration oneDriveConfiguration) {
             this.oneDriveConfiguration = oneDriveConfiguration;
             return this;
         }
 
-        public Builder setS3Configuration(@Nullable DataSourceS3DataSourceConfiguration s3Configuration) {
+        public Builder s3Configuration(@Nullable DataSourceS3DataSourceConfiguration s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
 
-        public Builder setSalesforceConfiguration(@Nullable DataSourceSalesforceConfiguration salesforceConfiguration) {
+        public Builder salesforceConfiguration(@Nullable DataSourceSalesforceConfiguration salesforceConfiguration) {
             this.salesforceConfiguration = salesforceConfiguration;
             return this;
         }
 
-        public Builder setServiceNowConfiguration(@Nullable DataSourceServiceNowConfiguration serviceNowConfiguration) {
+        public Builder serviceNowConfiguration(@Nullable DataSourceServiceNowConfiguration serviceNowConfiguration) {
             this.serviceNowConfiguration = serviceNowConfiguration;
             return this;
         }
 
-        public Builder setSharePointConfiguration(@Nullable DataSourceSharePointConfiguration sharePointConfiguration) {
+        public Builder sharePointConfiguration(@Nullable DataSourceSharePointConfiguration sharePointConfiguration) {
             this.sharePointConfiguration = sharePointConfiguration;
             return this;
         }
 
-        public Builder setWebCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration) {
+        public Builder webCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration) {
             this.webCrawlerConfiguration = webCrawlerConfiguration;
             return this;
         }
 
-        public Builder setWorkDocsConfiguration(@Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
+        public Builder workDocsConfiguration(@Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
             this.workDocsConfiguration = workDocsConfiguration;
             return this;
         }

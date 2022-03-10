@@ -99,52 +99,52 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
     	      this.user = defaults.user;
         }
 
-        public Builder setDisable(@Nullable Input<Boolean> disable) {
+        public Builder disable(@Nullable Input<Boolean> disable) {
             this.disable = disable;
             return this;
         }
 
-        public Builder setDisable(@Nullable Boolean disable) {
+        public Builder disable(@Nullable Boolean disable) {
             this.disable = Input.ofNullable(disable);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<String> level) {
+        public Builder level(@Nullable Input<String> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

@@ -234,122 +234,122 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setDocumentName(@Nullable Input<String> documentName) {
+        public Builder documentName(@Nullable Input<String> documentName) {
             this.documentName = documentName;
             return this;
         }
 
-        public Builder setDocumentName(@Nullable String documentName) {
+        public Builder documentName(@Nullable String documentName) {
             this.documentName = Input.ofNullable(documentName);
             return this;
         }
 
-        public Builder setFileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Input<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable String fileName) {
+        public Builder fileName(@Nullable String fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Input<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Input.ofNullable(schemaName);
             return this;
         }
 
-        public Builder setSchemaType(Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(Input<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
-        public Builder setSchemaType(Either<String,SchemaType> schemaType) {
+        public Builder schemaType(Either<String,SchemaType> schemaType) {
             this.schemaType = Input.of(Objects.requireNonNull(schemaType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }

@@ -141,62 +141,62 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     	      this.outputCollectionName = defaults.outputCollectionName;
         }
 
-        public Builder setDisplayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
+        public Builder displayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
             this.displayData = displayData;
             return this;
         }
 
-        public Builder setDisplayData(@Nullable List<DisplayDataArgs> displayData) {
+        public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
             this.displayData = Input.ofNullable(displayData);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInputCollectionName(@Nullable Input<List<String>> inputCollectionName) {
+        public Builder inputCollectionName(@Nullable Input<List<String>> inputCollectionName) {
             this.inputCollectionName = inputCollectionName;
             return this;
         }
 
-        public Builder setInputCollectionName(@Nullable List<String> inputCollectionName) {
+        public Builder inputCollectionName(@Nullable List<String> inputCollectionName) {
             this.inputCollectionName = Input.ofNullable(inputCollectionName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<TransformSummaryKind> kind) {
+        public Builder kind(@Nullable Input<TransformSummaryKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable TransformSummaryKind kind) {
+        public Builder kind(@Nullable TransformSummaryKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputCollectionName(@Nullable Input<List<String>> outputCollectionName) {
+        public Builder outputCollectionName(@Nullable Input<List<String>> outputCollectionName) {
             this.outputCollectionName = outputCollectionName;
             return this;
         }
 
-        public Builder setOutputCollectionName(@Nullable List<String> outputCollectionName) {
+        public Builder outputCollectionName(@Nullable List<String> outputCollectionName) {
             this.outputCollectionName = Input.ofNullable(outputCollectionName);
             return this;
         }

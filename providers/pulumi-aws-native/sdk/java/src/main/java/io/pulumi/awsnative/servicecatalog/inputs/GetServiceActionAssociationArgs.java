@@ -72,17 +72,17 @@ public final class GetServiceActionAssociationArgs extends io.pulumi.resources.I
     	      this.serviceActionId = defaults.serviceActionId;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProvisioningArtifactId(String provisioningArtifactId) {
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
             this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
             return this;
         }
 
-        public Builder setServiceActionId(String serviceActionId) {
+        public Builder serviceActionId(String serviceActionId) {
             this.serviceActionId = Objects.requireNonNull(serviceActionId);
             return this;
         }

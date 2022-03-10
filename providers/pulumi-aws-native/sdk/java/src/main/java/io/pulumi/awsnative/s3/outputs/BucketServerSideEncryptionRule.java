@@ -60,12 +60,12 @@ public final class BucketServerSideEncryptionRule {
     	      this.serverSideEncryptionByDefault = defaults.serverSideEncryptionByDefault;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
-        public Builder setServerSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
+        public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
             this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
         }

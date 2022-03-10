@@ -50,12 +50,12 @@ public final class RuleGroupForwardedIPConfiguration {
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }

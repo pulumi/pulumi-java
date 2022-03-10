@@ -118,52 +118,52 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryString(Input<String> queryString) {
+        public Builder queryString(Input<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
-        public Builder setQueryString(String queryString) {
+        public Builder queryString(String queryString) {
             this.queryString = Input.of(Objects.requireNonNull(queryString));
             return this;
         }
 
-        public Builder setWorkGroup(@Nullable Input<String> workGroup) {
+        public Builder workGroup(@Nullable Input<String> workGroup) {
             this.workGroup = workGroup;
             return this;
         }
 
-        public Builder setWorkGroup(@Nullable String workGroup) {
+        public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = Input.ofNullable(workGroup);
             return this;
         }

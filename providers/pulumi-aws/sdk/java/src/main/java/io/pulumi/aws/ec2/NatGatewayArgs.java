@@ -103,42 +103,42 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Input<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
-        public Builder setAllocationId(@Nullable String allocationId) {
+        public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Input.ofNullable(allocationId);
             return this;
         }
 
-        public Builder setConnectivityType(@Nullable Input<String> connectivityType) {
+        public Builder connectivityType(@Nullable Input<String> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
 
-        public Builder setConnectivityType(@Nullable String connectivityType) {
+        public Builder connectivityType(@Nullable String connectivityType) {
             this.connectivityType = Input.ofNullable(connectivityType);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

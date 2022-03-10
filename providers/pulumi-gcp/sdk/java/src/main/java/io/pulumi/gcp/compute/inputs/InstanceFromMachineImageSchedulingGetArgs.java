@@ -102,52 +102,52 @@ public final class InstanceFromMachineImageSchedulingGetArgs extends io.pulumi.r
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setAutomaticRestart(@Nullable Input<Boolean> automaticRestart) {
+        public Builder automaticRestart(@Nullable Input<Boolean> automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Input.ofNullable(automaticRestart);
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Input<Integer> minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Input<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Input.ofNullable(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable Input<List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs>> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable Input<List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinityGetArgs> nodeAffinities) {
             this.nodeAffinities = Input.ofNullable(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable Input<String> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Input<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable String onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Input.ofNullable(preemptible);
             return this;
         }

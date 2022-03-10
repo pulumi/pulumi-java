@@ -77,22 +77,22 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ContainerGroupNetworkProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,ContainerGroupNetworkProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }

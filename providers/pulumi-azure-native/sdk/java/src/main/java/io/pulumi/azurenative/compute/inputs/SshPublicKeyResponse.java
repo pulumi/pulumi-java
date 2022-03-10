@@ -74,12 +74,12 @@ public final class SshPublicKeyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setKeyData(@Nullable String keyData) {
+        public Builder keyData(@Nullable String keyData) {
             this.keyData = keyData;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

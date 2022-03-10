@@ -82,17 +82,17 @@ public final class VolumeAttachmentSpec {
     	      this.source = defaults.source;
         }
 
-        public Builder setAttacher(String attacher) {
+        public Builder attacher(String attacher) {
             this.attacher = Objects.requireNonNull(attacher);
             return this;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
-        public Builder setSource(VolumeAttachmentSource source) {
+        public Builder source(VolumeAttachmentSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

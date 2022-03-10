@@ -69,12 +69,12 @@ public final class ManagedZoneCloudLoggingConfigResponse extends io.pulumi.resou
     	      this.kind = defaults.kind;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

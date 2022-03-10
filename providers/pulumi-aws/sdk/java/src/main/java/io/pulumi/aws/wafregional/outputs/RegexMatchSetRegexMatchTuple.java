@@ -88,17 +88,17 @@ public final class RegexMatchSetRegexMatchTuple {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setRegexPatternSetId(String regexPatternSetId) {
+        public Builder regexPatternSetId(String regexPatternSetId) {
             this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

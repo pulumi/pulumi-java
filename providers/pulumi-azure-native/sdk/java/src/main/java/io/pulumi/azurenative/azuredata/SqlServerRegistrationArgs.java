@@ -151,72 +151,72 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPropertyBag(@Nullable Input<String> propertyBag) {
+        public Builder propertyBag(@Nullable Input<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
 
-        public Builder setPropertyBag(@Nullable String propertyBag) {
+        public Builder propertyBag(@Nullable String propertyBag) {
             this.propertyBag = Input.ofNullable(propertyBag);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(@Nullable Input<String> sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(@Nullable Input<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Input.ofNullable(sqlServerRegistrationName);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

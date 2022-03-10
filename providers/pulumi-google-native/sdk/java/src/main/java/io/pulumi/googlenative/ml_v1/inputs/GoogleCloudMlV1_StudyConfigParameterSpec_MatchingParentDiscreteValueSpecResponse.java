@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(List<Double> values) {
+        public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -187,92 +187,92 @@ public final class PolicyDefinitionAtManagementGroupArgs extends io.pulumi.resou
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setManagementGroupId(Input<String> managementGroupId) {
+        public Builder managementGroupId(Input<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
-        public Builder setManagementGroupId(String managementGroupId) {
+        public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Input.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicyDefinitionName(@Nullable Input<String> policyDefinitionName) {
+        public Builder policyDefinitionName(@Nullable Input<String> policyDefinitionName) {
             this.policyDefinitionName = policyDefinitionName;
             return this;
         }
 
-        public Builder setPolicyDefinitionName(@Nullable String policyDefinitionName) {
+        public Builder policyDefinitionName(@Nullable String policyDefinitionName) {
             this.policyDefinitionName = Input.ofNullable(policyDefinitionName);
             return this;
         }
 
-        public Builder setPolicyRule(@Nullable Input<Object> policyRule) {
+        public Builder policyRule(@Nullable Input<Object> policyRule) {
             this.policyRule = policyRule;
             return this;
         }
 
-        public Builder setPolicyRule(@Nullable Object policyRule) {
+        public Builder policyRule(@Nullable Object policyRule) {
             this.policyRule = Input.ofNullable(policyRule);
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Input<Either<String,PolicyType>> policyType) {
+        public Builder policyType(@Nullable Input<Either<String,PolicyType>> policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Either<String,PolicyType> policyType) {
+        public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
             this.policyType = Input.ofNullable(policyType);
             return this;
         }

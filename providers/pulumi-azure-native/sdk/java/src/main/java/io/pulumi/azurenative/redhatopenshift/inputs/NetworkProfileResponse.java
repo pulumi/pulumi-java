@@ -74,12 +74,12 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder setPodCidr(@Nullable String podCidr) {
+        public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetHierarchySettingArgs extends io.pulumi.resources.InvokeArg
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }

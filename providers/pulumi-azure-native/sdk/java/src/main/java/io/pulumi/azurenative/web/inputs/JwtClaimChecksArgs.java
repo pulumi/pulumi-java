@@ -75,22 +75,22 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     	      this.allowedGroups = defaults.allowedGroups;
         }
 
-        public Builder setAllowedClientApplications(@Nullable Input<List<String>> allowedClientApplications) {
+        public Builder allowedClientApplications(@Nullable Input<List<String>> allowedClientApplications) {
             this.allowedClientApplications = allowedClientApplications;
             return this;
         }
 
-        public Builder setAllowedClientApplications(@Nullable List<String> allowedClientApplications) {
+        public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
             this.allowedClientApplications = Input.ofNullable(allowedClientApplications);
             return this;
         }
 
-        public Builder setAllowedGroups(@Nullable Input<List<String>> allowedGroups) {
+        public Builder allowedGroups(@Nullable Input<List<String>> allowedGroups) {
             this.allowedGroups = allowedGroups;
             return this;
         }
 
-        public Builder setAllowedGroups(@Nullable List<String> allowedGroups) {
+        public Builder allowedGroups(@Nullable List<String> allowedGroups) {
             this.allowedGroups = Input.ofNullable(allowedGroups);
             return this;
         }

@@ -246,132 +246,132 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setExcludeFilters(@Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
+        public Builder excludeFilters(@Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
-        public Builder setExcludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
+        public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterGetArgs> excludeFilters) {
             this.excludeFilters = Input.ofNullable(excludeFilters);
             return this;
         }
 
-        public Builder setFirehoseArn(@Nullable Input<String> firehoseArn) {
+        public Builder firehoseArn(@Nullable Input<String> firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
 
-        public Builder setFirehoseArn(@Nullable String firehoseArn) {
+        public Builder firehoseArn(@Nullable String firehoseArn) {
             this.firehoseArn = Input.ofNullable(firehoseArn);
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
+        public Builder includeFilters(@Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
+        public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterGetArgs> includeFilters) {
             this.includeFilters = Input.ofNullable(includeFilters);
             return this;
         }
 
-        public Builder setLastUpdateDate(@Nullable Input<String> lastUpdateDate) {
+        public Builder lastUpdateDate(@Nullable Input<String> lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
 
-        public Builder setLastUpdateDate(@Nullable String lastUpdateDate) {
+        public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
             this.lastUpdateDate = Input.ofNullable(lastUpdateDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

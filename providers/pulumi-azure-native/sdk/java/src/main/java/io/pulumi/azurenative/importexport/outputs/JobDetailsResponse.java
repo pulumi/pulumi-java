@@ -334,92 +334,92 @@ public final class JobDetailsResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setBackupDriveManifest(@Nullable Boolean backupDriveManifest) {
+        public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
             this.backupDriveManifest = backupDriveManifest;
             return this;
         }
 
-        public Builder setCancelRequested(@Nullable Boolean cancelRequested) {
+        public Builder cancelRequested(@Nullable Boolean cancelRequested) {
             this.cancelRequested = cancelRequested;
             return this;
         }
 
-        public Builder setDeliveryPackage(@Nullable DeliveryPackageInformationResponse deliveryPackage) {
+        public Builder deliveryPackage(@Nullable DeliveryPackageInformationResponse deliveryPackage) {
             this.deliveryPackage = deliveryPackage;
             return this;
         }
 
-        public Builder setDiagnosticsPath(@Nullable String diagnosticsPath) {
+        public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
             this.diagnosticsPath = diagnosticsPath;
             return this;
         }
 
-        public Builder setDriveList(@Nullable List<DriveStatusResponse> driveList) {
+        public Builder driveList(@Nullable List<DriveStatusResponse> driveList) {
             this.driveList = driveList;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable EncryptionKeyDetailsResponse encryptionKey) {
+        public Builder encryptionKey(@Nullable EncryptionKeyDetailsResponse encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setExport(@Nullable ExportResponse export) {
+        public Builder export(@Nullable ExportResponse export) {
             this.export = export;
             return this;
         }
 
-        public Builder setIncompleteBlobListUri(@Nullable String incompleteBlobListUri) {
+        public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
             this.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
 
-        public Builder setJobType(@Nullable String jobType) {
+        public Builder jobType(@Nullable String jobType) {
             this.jobType = jobType;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setPercentComplete(@Nullable Integer percentComplete) {
+        public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setReturnAddress(@Nullable ReturnAddressResponse returnAddress) {
+        public Builder returnAddress(@Nullable ReturnAddressResponse returnAddress) {
             this.returnAddress = returnAddress;
             return this;
         }
 
-        public Builder setReturnPackage(@Nullable PackageInformationResponse returnPackage) {
+        public Builder returnPackage(@Nullable PackageInformationResponse returnPackage) {
             this.returnPackage = returnPackage;
             return this;
         }
 
-        public Builder setReturnShipping(@Nullable ReturnShippingResponse returnShipping) {
+        public Builder returnShipping(@Nullable ReturnShippingResponse returnShipping) {
             this.returnShipping = returnShipping;
             return this;
         }
 
-        public Builder setShippingInformation(@Nullable ShippingInformationResponse shippingInformation) {
+        public Builder shippingInformation(@Nullable ShippingInformationResponse shippingInformation) {
             this.shippingInformation = shippingInformation;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }

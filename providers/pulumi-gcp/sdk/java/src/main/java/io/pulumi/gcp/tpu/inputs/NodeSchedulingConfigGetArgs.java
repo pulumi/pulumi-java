@@ -52,12 +52,12 @@ public final class NodeSchedulingConfigGetArgs extends io.pulumi.resources.Resou
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setPreemptible(Input<Boolean> preemptible) {
+        public Builder preemptible(Input<Boolean> preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Input.of(Objects.requireNonNull(preemptible));
             return this;
         }

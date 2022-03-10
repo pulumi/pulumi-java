@@ -74,12 +74,12 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
     	      this.allowedPackageNames = defaults.allowedPackageNames;
         }
 
-        public Builder setAllowAllPackageNames(Boolean allowAllPackageNames) {
+        public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
             this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames);
             return this;
         }
 
-        public Builder setAllowedPackageNames(List<String> allowedPackageNames) {
+        public Builder allowedPackageNames(List<String> allowedPackageNames) {
             this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
             return this;
         }

@@ -106,42 +106,42 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setMaximum(Input<Integer> maximum) {
+        public Builder maximum(Input<Integer> maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMaximum(Integer maximum) {
+        public Builder maximum(Integer maximum) {
             this.maximum = Input.of(Objects.requireNonNull(maximum));
             return this;
         }
 
-        public Builder setMinimum(Input<Integer> minimum) {
+        public Builder minimum(Input<Integer> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setMinimum(Integer minimum) {
+        public Builder minimum(Integer minimum) {
             this.minimum = Input.of(Objects.requireNonNull(minimum));
             return this;
         }
 
-        public Builder setVersion(Input<Integer> version) {
+        public Builder version(Input<Integer> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

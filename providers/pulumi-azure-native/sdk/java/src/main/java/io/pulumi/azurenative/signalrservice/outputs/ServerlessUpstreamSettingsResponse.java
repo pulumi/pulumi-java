@@ -50,7 +50,7 @@ public final class ServerlessUpstreamSettingsResponse {
     	      this.templates = defaults.templates;
         }
 
-        public Builder setTemplates(@Nullable List<UpstreamTemplateResponse> templates) {
+        public Builder templates(@Nullable List<UpstreamTemplateResponse> templates) {
             this.templates = templates;
             return this;
         }

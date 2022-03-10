@@ -94,32 +94,32 @@ public final class ImageRawDiskGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.source = defaults.source;
         }
 
-        public Builder setContainerType(@Nullable Input<String> containerType) {
+        public Builder containerType(@Nullable Input<String> containerType) {
             this.containerType = containerType;
             return this;
         }
 
-        public Builder setContainerType(@Nullable String containerType) {
+        public Builder containerType(@Nullable String containerType) {
             this.containerType = Input.ofNullable(containerType);
             return this;
         }
 
-        public Builder setSha1(@Nullable Input<String> sha1) {
+        public Builder sha1(@Nullable Input<String> sha1) {
             this.sha1 = sha1;
             return this;
         }
 
-        public Builder setSha1(@Nullable String sha1) {
+        public Builder sha1(@Nullable String sha1) {
             this.sha1 = Input.ofNullable(sha1);
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

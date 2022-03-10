@@ -84,17 +84,17 @@ public final class ScheduleEntryResponse {
     	      this.startHourUtc = defaults.startHourUtc;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable String maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setStartHourUtc(Integer startHourUtc) {
+        public Builder startHourUtc(Integer startHourUtc) {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }

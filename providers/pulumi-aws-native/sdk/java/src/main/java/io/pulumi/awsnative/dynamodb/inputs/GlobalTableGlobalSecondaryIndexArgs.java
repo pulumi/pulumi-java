@@ -90,42 +90,42 @@ public final class GlobalTableGlobalSecondaryIndexArgs extends io.pulumi.resourc
     	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
         }
 
-        public Builder setIndexName(Input<String> indexName) {
+        public Builder indexName(Input<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Input.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder setKeySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
+        public Builder keySchema(Input<List<GlobalTableKeySchemaArgs>> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
-        public Builder setKeySchema(List<GlobalTableKeySchemaArgs> keySchema) {
+        public Builder keySchema(List<GlobalTableKeySchemaArgs> keySchema) {
             this.keySchema = Input.of(Objects.requireNonNull(keySchema));
             return this;
         }
 
-        public Builder setProjection(Input<GlobalTableProjectionArgs> projection) {
+        public Builder projection(Input<GlobalTableProjectionArgs> projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
 
-        public Builder setProjection(GlobalTableProjectionArgs projection) {
+        public Builder projection(GlobalTableProjectionArgs projection) {
             this.projection = Input.of(Objects.requireNonNull(projection));
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable Input<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettingsArgs writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = Input.ofNullable(writeProvisionedThroughputSettings);
             return this;
         }

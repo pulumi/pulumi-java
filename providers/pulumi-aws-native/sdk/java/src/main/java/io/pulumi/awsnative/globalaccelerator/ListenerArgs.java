@@ -102,42 +102,42 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAcceleratorArn(Input<String> acceleratorArn) {
+        public Builder acceleratorArn(Input<String> acceleratorArn) {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }
 
-        public Builder setAcceleratorArn(String acceleratorArn) {
+        public Builder acceleratorArn(String acceleratorArn) {
             this.acceleratorArn = Input.of(Objects.requireNonNull(acceleratorArn));
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable Input<ListenerClientAffinity> clientAffinity) {
+        public Builder clientAffinity(@Nullable Input<ListenerClientAffinity> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
+        public Builder clientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
             this.clientAffinity = Input.ofNullable(clientAffinity);
             return this;
         }
 
-        public Builder setPortRanges(Input<List<ListenerPortRangeArgs>> portRanges) {
+        public Builder portRanges(Input<List<ListenerPortRangeArgs>> portRanges) {
             this.portRanges = Objects.requireNonNull(portRanges);
             return this;
         }
 
-        public Builder setPortRanges(List<ListenerPortRangeArgs> portRanges) {
+        public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
             this.portRanges = Input.of(Objects.requireNonNull(portRanges));
             return this;
         }
 
-        public Builder setProtocol(Input<ListenerProtocol> protocol) {
+        public Builder protocol(Input<ListenerProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(ListenerProtocol protocol) {
+        public Builder protocol(ListenerProtocol protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

@@ -86,32 +86,32 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable Input<String> cpu) {
+        public Builder cpu(@Nullable Input<String> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable String cpu) {
+        public Builder cpu(@Nullable String cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable Input<String> instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable Input<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable String instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = Input.ofNullable(instanceRoleArn);
             return this;
         }
 
-        public Builder setMemory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Input<String> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }

@@ -150,72 +150,72 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }
 
-        public Builder setHsmEniId(@Nullable Input<String> hsmEniId) {
+        public Builder hsmEniId(@Nullable Input<String> hsmEniId) {
             this.hsmEniId = hsmEniId;
             return this;
         }
 
-        public Builder setHsmEniId(@Nullable String hsmEniId) {
+        public Builder hsmEniId(@Nullable String hsmEniId) {
             this.hsmEniId = Input.ofNullable(hsmEniId);
             return this;
         }
 
-        public Builder setHsmId(@Nullable Input<String> hsmId) {
+        public Builder hsmId(@Nullable Input<String> hsmId) {
             this.hsmId = hsmId;
             return this;
         }
 
-        public Builder setHsmId(@Nullable String hsmId) {
+        public Builder hsmId(@Nullable String hsmId) {
             this.hsmId = Input.ofNullable(hsmId);
             return this;
         }
 
-        public Builder setHsmState(@Nullable Input<String> hsmState) {
+        public Builder hsmState(@Nullable Input<String> hsmState) {
             this.hsmState = hsmState;
             return this;
         }
 
-        public Builder setHsmState(@Nullable String hsmState) {
+        public Builder hsmState(@Nullable String hsmState) {
             this.hsmState = Input.ofNullable(hsmState);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }

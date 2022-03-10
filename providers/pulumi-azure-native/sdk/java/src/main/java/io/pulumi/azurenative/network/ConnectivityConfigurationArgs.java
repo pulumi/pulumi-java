@@ -205,102 +205,102 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAppliesToGroups(@Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable Input<List<ConnectivityGroupItemArgs>> appliesToGroups) {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
 
-        public Builder setAppliesToGroups(@Nullable List<ConnectivityGroupItemArgs> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemArgs> appliesToGroups) {
             this.appliesToGroups = Input.ofNullable(appliesToGroups);
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setConnectivityTopology(Input<Either<String,ConnectivityTopology>> connectivityTopology) {
+        public Builder connectivityTopology(Input<Either<String,ConnectivityTopology>> connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
 
-        public Builder setConnectivityTopology(Either<String,ConnectivityTopology> connectivityTopology) {
+        public Builder connectivityTopology(Either<String,ConnectivityTopology> connectivityTopology) {
             this.connectivityTopology = Input.of(Objects.requireNonNull(connectivityTopology));
             return this;
         }
 
-        public Builder setDeleteExistingPeering(@Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
+        public Builder deleteExistingPeering(@Nullable Input<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
-        public Builder setDeleteExistingPeering(@Nullable Either<String,DeleteExistingPeering> deleteExistingPeering) {
+        public Builder deleteExistingPeering(@Nullable Either<String,DeleteExistingPeering> deleteExistingPeering) {
             this.deleteExistingPeering = Input.ofNullable(deleteExistingPeering);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHubs(@Nullable Input<List<HubArgs>> hubs) {
+        public Builder hubs(@Nullable Input<List<HubArgs>> hubs) {
             this.hubs = hubs;
             return this;
         }
 
-        public Builder setHubs(@Nullable List<HubArgs> hubs) {
+        public Builder hubs(@Nullable List<HubArgs> hubs) {
             this.hubs = Input.ofNullable(hubs);
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
+        public Builder isGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
+        public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
             this.isGlobal = Input.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

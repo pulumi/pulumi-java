@@ -49,7 +49,7 @@ public final class CapacityReservationGroupInstanceViewResponse {
     	      this.capacityReservations = defaults.capacityReservations;
         }
 
-        public Builder setCapacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
+        public Builder capacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }

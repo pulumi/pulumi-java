@@ -73,22 +73,22 @@ public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDevicePath(Input<String> devicePath) {
+        public Builder devicePath(Input<String> devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Input.of(Objects.requireNonNull(devicePath));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

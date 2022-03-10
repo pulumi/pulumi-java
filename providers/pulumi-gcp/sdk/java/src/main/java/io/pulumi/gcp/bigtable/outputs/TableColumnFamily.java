@@ -48,7 +48,7 @@ public final class TableColumnFamily {
     	      this.family = defaults.family;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }

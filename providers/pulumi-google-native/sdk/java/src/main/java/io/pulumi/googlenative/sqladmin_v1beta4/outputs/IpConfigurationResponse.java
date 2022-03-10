@@ -116,27 +116,27 @@ public final class IpConfigurationResponse {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAllocatedIpRange(String allocatedIpRange) {
+        public Builder allocatedIpRange(String allocatedIpRange) {
             this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
             return this;
         }
 
-        public Builder setAuthorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
+        public Builder authorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
 
-        public Builder setIpv4Enabled(Boolean ipv4Enabled) {
+        public Builder ipv4Enabled(Boolean ipv4Enabled) {
             this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
             return this;
         }
 
-        public Builder setPrivateNetwork(String privateNetwork) {
+        public Builder privateNetwork(String privateNetwork) {
             this.privateNetwork = Objects.requireNonNull(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(Boolean requireSsl) {
+        public Builder requireSsl(Boolean requireSsl) {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }

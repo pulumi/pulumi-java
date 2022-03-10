@@ -107,22 +107,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMedia(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
+        public Builder media(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
             this.media = Objects.requireNonNull(media);
             return this;
         }
 
-        public Builder setSuggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
+        public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

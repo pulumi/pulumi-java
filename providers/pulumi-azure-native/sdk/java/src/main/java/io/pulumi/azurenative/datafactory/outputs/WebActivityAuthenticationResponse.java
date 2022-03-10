@@ -152,37 +152,37 @@ public final class WebActivityAuthenticationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPfx(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
+        public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             this.pfx = pfx;
             return this;
         }
 
-        public Builder setResource(@Nullable Object resource) {
+        public Builder resource(@Nullable Object resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserTenant(@Nullable Object userTenant) {
+        public Builder userTenant(@Nullable Object userTenant) {
             this.userTenant = userTenant;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
         }

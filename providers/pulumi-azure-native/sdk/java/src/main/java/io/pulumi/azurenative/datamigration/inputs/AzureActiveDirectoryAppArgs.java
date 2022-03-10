@@ -89,32 +89,32 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAppKey(Input<String> appKey) {
+        public Builder appKey(Input<String> appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Input.of(Objects.requireNonNull(appKey));
             return this;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }

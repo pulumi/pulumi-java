@@ -220,57 +220,57 @@ public final class Office365SourceResponse extends io.pulumi.resources.InvokeArg
     	      this.userScopeFilterUri = defaults.userScopeFilterUri;
         }
 
-        public Builder setAllowedGroups(@Nullable Object allowedGroups) {
+        public Builder allowedGroups(@Nullable Object allowedGroups) {
             this.allowedGroups = allowedGroups;
             return this;
         }
 
-        public Builder setDateFilterColumn(@Nullable Object dateFilterColumn) {
+        public Builder dateFilterColumn(@Nullable Object dateFilterColumn) {
             this.dateFilterColumn = dateFilterColumn;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setEndTime(@Nullable Object endTime) {
+        public Builder endTime(@Nullable Object endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setOutputColumns(@Nullable Object outputColumns) {
+        public Builder outputColumns(@Nullable Object outputColumns) {
             this.outputColumns = outputColumns;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setStartTime(@Nullable Object startTime) {
+        public Builder startTime(@Nullable Object startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserScopeFilterUri(@Nullable Object userScopeFilterUri) {
+        public Builder userScopeFilterUri(@Nullable Object userScopeFilterUri) {
             this.userScopeFilterUri = userScopeFilterUri;
             return this;
         }

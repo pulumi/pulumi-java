@@ -108,22 +108,22 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
     	      this.value = defaults.value;
         }
 
-        public Builder setIsSecret(@Nullable Boolean isSecret) {
+        public Builder isSecret(@Nullable Boolean isSecret) {
             this.isSecret = isSecret;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

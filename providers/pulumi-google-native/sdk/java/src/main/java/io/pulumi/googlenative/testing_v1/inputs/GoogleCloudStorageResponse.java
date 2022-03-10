@@ -55,7 +55,7 @@ public final class GoogleCloudStorageResponse extends io.pulumi.resources.Invoke
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }

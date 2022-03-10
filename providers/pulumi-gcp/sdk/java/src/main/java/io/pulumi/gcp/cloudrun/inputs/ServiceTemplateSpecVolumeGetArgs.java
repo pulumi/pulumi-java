@@ -73,22 +73,22 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
     	      this.secret = defaults.secret;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSecret(Input<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
+        public Builder secret(Input<ServiceTemplateSpecVolumeSecretGetArgs> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecret(ServiceTemplateSpecVolumeSecretGetArgs secret) {
+        public Builder secret(ServiceTemplateSpecVolumeSecretGetArgs secret) {
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }

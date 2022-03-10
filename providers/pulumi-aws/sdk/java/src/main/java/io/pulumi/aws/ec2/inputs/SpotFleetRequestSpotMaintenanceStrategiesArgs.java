@@ -53,12 +53,12 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesArgs extends io.pulu
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
-        public Builder setCapacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
+        public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }

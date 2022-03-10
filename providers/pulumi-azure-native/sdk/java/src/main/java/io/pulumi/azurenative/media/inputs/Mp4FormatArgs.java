@@ -93,32 +93,32 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputFiles = defaults.outputFiles;
         }
 
-        public Builder setFilenamePattern(Input<String> filenamePattern) {
+        public Builder filenamePattern(Input<String> filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
-        public Builder setFilenamePattern(String filenamePattern) {
+        public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Input.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOutputFiles(@Nullable Input<List<OutputFileArgs>> outputFiles) {
+        public Builder outputFiles(@Nullable Input<List<OutputFileArgs>> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
 
-        public Builder setOutputFiles(@Nullable List<OutputFileArgs> outputFiles) {
+        public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
             this.outputFiles = Input.ofNullable(outputFiles);
             return this;
         }

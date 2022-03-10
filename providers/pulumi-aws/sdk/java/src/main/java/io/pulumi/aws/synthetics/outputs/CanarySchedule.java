@@ -68,12 +68,12 @@ public final class CanarySchedule {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setDurationInSeconds(@Nullable Integer durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

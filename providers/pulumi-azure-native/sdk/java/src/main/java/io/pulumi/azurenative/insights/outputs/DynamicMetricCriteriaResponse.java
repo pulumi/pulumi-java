@@ -217,57 +217,57 @@ public final class DynamicMetricCriteriaResponse {
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder setAlertSensitivity(String alertSensitivity) {
+        public Builder alertSensitivity(String alertSensitivity) {
             this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
             return this;
         }
 
-        public Builder setCriterionType(String criterionType) {
+        public Builder criterionType(String criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<MetricDimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<MetricDimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setFailingPeriods(DynamicThresholdFailingPeriodsResponse failingPeriods) {
+        public Builder failingPeriods(DynamicThresholdFailingPeriodsResponse failingPeriods) {
             this.failingPeriods = Objects.requireNonNull(failingPeriods);
             return this;
         }
 
-        public Builder setIgnoreDataBefore(@Nullable String ignoreDataBefore) {
+        public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
             this.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Boolean skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
-        public Builder setTimeAggregation(String timeAggregation) {
+        public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }

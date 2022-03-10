@@ -52,12 +52,12 @@ public final class InAppTemplateOverrideButtonConfiguration {
     	      this.link = defaults.link;
         }
 
-        public Builder setButtonAction(@Nullable InAppTemplateButtonAction buttonAction) {
+        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }

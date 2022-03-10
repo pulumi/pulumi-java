@@ -52,12 +52,12 @@ public final class InstanceTemplateDiskDiskEncryptionKeyGetArgs extends io.pulum
     	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
         }
 
-        public Builder setKmsKeySelfLink(Input<String> kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(Input<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }
 
-        public Builder setKmsKeySelfLink(String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Input.of(Objects.requireNonNull(kmsKeySelfLink));
             return this;
         }

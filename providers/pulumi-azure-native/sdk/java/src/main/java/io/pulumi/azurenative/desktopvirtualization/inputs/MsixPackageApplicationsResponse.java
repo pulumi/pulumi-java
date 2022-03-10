@@ -154,37 +154,37 @@ public final class MsixPackageApplicationsResponse extends io.pulumi.resources.I
     	      this.rawPng = defaults.rawPng;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppUserModelID(@Nullable String appUserModelID) {
+        public Builder appUserModelID(@Nullable String appUserModelID) {
             this.appUserModelID = appUserModelID;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setIconImageName(@Nullable String iconImageName) {
+        public Builder iconImageName(@Nullable String iconImageName) {
             this.iconImageName = iconImageName;
             return this;
         }
 
-        public Builder setRawIcon(@Nullable String rawIcon) {
+        public Builder rawIcon(@Nullable String rawIcon) {
             this.rawIcon = rawIcon;
             return this;
         }
 
-        public Builder setRawPng(@Nullable String rawPng) {
+        public Builder rawPng(@Nullable String rawPng) {
             this.rawPng = rawPng;
             return this;
         }

@@ -51,12 +51,12 @@ public final class ServiceTreeInfoResponse {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = serviceId;
             return this;
         }

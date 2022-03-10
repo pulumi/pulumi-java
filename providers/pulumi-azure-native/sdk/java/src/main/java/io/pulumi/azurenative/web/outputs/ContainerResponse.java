@@ -134,32 +134,32 @@ public final class ContainerResponse {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<EnvironmentVarResponse> env) {
+        public Builder env(@Nullable List<EnvironmentVarResponse> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResources(@Nullable ContainerResourcesResponse resources) {
+        public Builder resources(@Nullable ContainerResourcesResponse resources) {
             this.resources = resources;
             return this;
         }

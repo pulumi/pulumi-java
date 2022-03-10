@@ -70,22 +70,22 @@ public final class CanaryArtifactConfigS3EncryptionGetArgs extends io.pulumi.res
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEncryptionMode(@Nullable Input<String> encryptionMode) {
+        public Builder encryptionMode(@Nullable Input<String> encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable String encryptionMode) {
+        public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = Input.ofNullable(encryptionMode);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

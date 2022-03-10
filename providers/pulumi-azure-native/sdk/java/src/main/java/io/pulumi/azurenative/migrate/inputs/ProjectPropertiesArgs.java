@@ -140,62 +140,62 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder setAssessmentSolutionId(@Nullable Input<String> assessmentSolutionId) {
+        public Builder assessmentSolutionId(@Nullable Input<String> assessmentSolutionId) {
             this.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
 
-        public Builder setAssessmentSolutionId(@Nullable String assessmentSolutionId) {
+        public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
             this.assessmentSolutionId = Input.ofNullable(assessmentSolutionId);
             return this;
         }
 
-        public Builder setCustomerStorageAccountArmId(@Nullable Input<String> customerStorageAccountArmId) {
+        public Builder customerStorageAccountArmId(@Nullable Input<String> customerStorageAccountArmId) {
             this.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
 
-        public Builder setCustomerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
+        public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
             this.customerStorageAccountArmId = Input.ofNullable(customerStorageAccountArmId);
             return this;
         }
 
-        public Builder setCustomerWorkspaceId(@Nullable Input<String> customerWorkspaceId) {
+        public Builder customerWorkspaceId(@Nullable Input<String> customerWorkspaceId) {
             this.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
 
-        public Builder setCustomerWorkspaceId(@Nullable String customerWorkspaceId) {
+        public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
             this.customerWorkspaceId = Input.ofNullable(customerWorkspaceId);
             return this;
         }
 
-        public Builder setCustomerWorkspaceLocation(@Nullable Input<String> customerWorkspaceLocation) {
+        public Builder customerWorkspaceLocation(@Nullable Input<String> customerWorkspaceLocation) {
             this.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
 
-        public Builder setCustomerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
+        public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
             this.customerWorkspaceLocation = Input.ofNullable(customerWorkspaceLocation);
             return this;
         }
 
-        public Builder setProjectStatus(@Nullable Input<Either<String,ProjectStatus>> projectStatus) {
+        public Builder projectStatus(@Nullable Input<Either<String,ProjectStatus>> projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
 
-        public Builder setProjectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
+        public Builder projectStatus(@Nullable Either<String,ProjectStatus> projectStatus) {
             this.projectStatus = Input.ofNullable(projectStatus);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }

@@ -48,7 +48,7 @@ public final class BucketEventBridgeConfiguration {
     	      this.eventBridgeEnabled = defaults.eventBridgeEnabled;
         }
 
-        public Builder setEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
         }

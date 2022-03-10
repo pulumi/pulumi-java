@@ -209,102 +209,102 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPlatform = defaults.targetPlatform;
         }
 
-        public Builder setDatabasesInfo(@Nullable Input<List<DatabaseInfoArgs>> databasesInfo) {
+        public Builder databasesInfo(@Nullable Input<List<DatabaseInfoArgs>> databasesInfo) {
             this.databasesInfo = databasesInfo;
             return this;
         }
 
-        public Builder setDatabasesInfo(@Nullable List<DatabaseInfoArgs> databasesInfo) {
+        public Builder databasesInfo(@Nullable List<DatabaseInfoArgs> databasesInfo) {
             this.databasesInfo = Input.ofNullable(databasesInfo);
             return this;
         }
 
-        public Builder setGroupName(Input<String> groupName) {
+        public Builder groupName(Input<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Input.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSourceConnectionInfo(@Nullable Input<Object> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(@Nullable Input<Object> sourceConnectionInfo) {
             this.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
-        public Builder setSourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.ofNullable(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourcePlatform(Input<Either<String,ProjectSourcePlatform>> sourcePlatform) {
+        public Builder sourcePlatform(Input<Either<String,ProjectSourcePlatform>> sourcePlatform) {
             this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
             return this;
         }
 
-        public Builder setSourcePlatform(Either<String,ProjectSourcePlatform> sourcePlatform) {
+        public Builder sourcePlatform(Either<String,ProjectSourcePlatform> sourcePlatform) {
             this.sourcePlatform = Input.of(Objects.requireNonNull(sourcePlatform));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(@Nullable Input<Object> targetConnectionInfo) {
+        public Builder targetConnectionInfo(@Nullable Input<Object> targetConnectionInfo) {
             this.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
-        public Builder setTargetConnectionInfo(@Nullable Object targetConnectionInfo) {
+        public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
             this.targetConnectionInfo = Input.ofNullable(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetPlatform(Input<Either<String,ProjectTargetPlatform>> targetPlatform) {
+        public Builder targetPlatform(Input<Either<String,ProjectTargetPlatform>> targetPlatform) {
             this.targetPlatform = Objects.requireNonNull(targetPlatform);
             return this;
         }
 
-        public Builder setTargetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
+        public Builder targetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
             this.targetPlatform = Input.of(Objects.requireNonNull(targetPlatform));
             return this;
         }

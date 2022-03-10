@@ -106,22 +106,22 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder setAadTenantId(@Nullable String aadTenantId) {
+        public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setServicePrincipalClientId(@Nullable String servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
-        public Builder setUniqueName(@Nullable String uniqueName) {
+        public Builder uniqueName(@Nullable String uniqueName) {
             this.uniqueName = uniqueName;
             return this;
         }

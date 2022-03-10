@@ -120,52 +120,52 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAddonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Input<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
-        public Builder setAddonName(@Nullable String addonName) {
+        public Builder addonName(@Nullable String addonName) {
             this.addonName = Input.ofNullable(addonName);
             return this;
         }
 
-        public Builder setAddonType(@Nullable Input<Either<String,AddonType>> addonType) {
+        public Builder addonType(@Nullable Input<Either<String,AddonType>> addonType) {
             this.addonType = addonType;
             return this;
         }
 
-        public Builder setAddonType(@Nullable Either<String,AddonType> addonType) {
+        public Builder addonType(@Nullable Either<String,AddonType> addonType) {
             this.addonType = Input.ofNullable(addonType);
             return this;
         }
 
-        public Builder setLicenseKey(@Nullable Input<String> licenseKey) {
+        public Builder licenseKey(@Nullable Input<String> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
 
-        public Builder setLicenseKey(@Nullable String licenseKey) {
+        public Builder licenseKey(@Nullable String licenseKey) {
             this.licenseKey = Input.ofNullable(licenseKey);
             return this;
         }
 
-        public Builder setPrivateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Input<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

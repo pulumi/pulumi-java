@@ -50,7 +50,7 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
     	      this.disableTraceRoute = defaults.disableTraceRoute;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Boolean disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }

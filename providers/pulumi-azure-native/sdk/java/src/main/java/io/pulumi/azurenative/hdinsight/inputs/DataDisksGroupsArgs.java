@@ -57,12 +57,12 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.disksPerNode = defaults.disksPerNode;
         }
 
-        public Builder setDisksPerNode(@Nullable Input<Integer> disksPerNode) {
+        public Builder disksPerNode(@Nullable Input<Integer> disksPerNode) {
             this.disksPerNode = disksPerNode;
             return this;
         }
 
-        public Builder setDisksPerNode(@Nullable Integer disksPerNode) {
+        public Builder disksPerNode(@Nullable Integer disksPerNode) {
             this.disksPerNode = Input.ofNullable(disksPerNode);
             return this;
         }

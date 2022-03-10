@@ -217,57 +217,57 @@ public final class GetNetworkInterfaceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGroupSet(@Nullable List<String> groupSet) {
+        public Builder groupSet(@Nullable List<String> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setPrimaryPrivateIpAddress(@Nullable String primaryPrivateIpAddress) {
+        public Builder primaryPrivateIpAddress(@Nullable String primaryPrivateIpAddress) {
             this.primaryPrivateIpAddress = primaryPrivateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddresses(@Nullable List<String> secondaryPrivateIpAddresses) {
+        public Builder secondaryPrivateIpAddresses(@Nullable List<String> secondaryPrivateIpAddresses) {
             this.secondaryPrivateIpAddresses = secondaryPrivateIpAddresses;
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Boolean sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInterfaceTag> tags) {
+        public Builder tags(@Nullable List<NetworkInterfaceTag> tags) {
             this.tags = tags;
             return this;
         }

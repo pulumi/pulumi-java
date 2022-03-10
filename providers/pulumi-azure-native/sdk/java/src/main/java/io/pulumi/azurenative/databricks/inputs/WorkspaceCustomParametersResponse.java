@@ -301,82 +301,82 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
     	      this.vnetAddressPrefix = defaults.vnetAddressPrefix;
         }
 
-        public Builder setAmlWorkspaceId(@Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId) {
+        public Builder amlWorkspaceId(@Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId) {
             this.amlWorkspaceId = amlWorkspaceId;
             return this;
         }
 
-        public Builder setCustomPrivateSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName) {
+        public Builder customPrivateSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName) {
             this.customPrivateSubnetName = customPrivateSubnetName;
             return this;
         }
 
-        public Builder setCustomPublicSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName) {
+        public Builder customPublicSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName) {
             this.customPublicSubnetName = customPublicSubnetName;
             return this;
         }
 
-        public Builder setCustomVirtualNetworkId(@Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId) {
+        public Builder customVirtualNetworkId(@Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId) {
             this.customVirtualNetworkId = customVirtualNetworkId;
             return this;
         }
 
-        public Builder setEnableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp) {
+        public Builder enableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp) {
             this.enableNoPublicIp = enableNoPublicIp;
             return this;
         }
 
-        public Builder setEncryption(@Nullable WorkspaceEncryptionParameterResponse encryption) {
+        public Builder encryption(@Nullable WorkspaceEncryptionParameterResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setLoadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName) {
+        public Builder loadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName) {
             this.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
             return this;
         }
 
-        public Builder setLoadBalancerId(@Nullable WorkspaceCustomStringParameterResponse loadBalancerId) {
+        public Builder loadBalancerId(@Nullable WorkspaceCustomStringParameterResponse loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
             return this;
         }
 
-        public Builder setNatGatewayName(@Nullable WorkspaceCustomStringParameterResponse natGatewayName) {
+        public Builder natGatewayName(@Nullable WorkspaceCustomStringParameterResponse natGatewayName) {
             this.natGatewayName = natGatewayName;
             return this;
         }
 
-        public Builder setPrepareEncryption(@Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption) {
+        public Builder prepareEncryption(@Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption) {
             this.prepareEncryption = prepareEncryption;
             return this;
         }
 
-        public Builder setPublicIpName(@Nullable WorkspaceCustomStringParameterResponse publicIpName) {
+        public Builder publicIpName(@Nullable WorkspaceCustomStringParameterResponse publicIpName) {
             this.publicIpName = publicIpName;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setResourceTags(WorkspaceCustomObjectParameterResponse resourceTags) {
+        public Builder resourceTags(WorkspaceCustomObjectParameterResponse resourceTags) {
             this.resourceTags = Objects.requireNonNull(resourceTags);
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable WorkspaceCustomStringParameterResponse storageAccountName) {
+        public Builder storageAccountName(@Nullable WorkspaceCustomStringParameterResponse storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageAccountSkuName(@Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName) {
+        public Builder storageAccountSkuName(@Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName) {
             this.storageAccountSkuName = storageAccountSkuName;
             return this;
         }
 
-        public Builder setVnetAddressPrefix(@Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
+        public Builder vnetAddressPrefix(@Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
             this.vnetAddressPrefix = vnetAddressPrefix;
             return this;
         }

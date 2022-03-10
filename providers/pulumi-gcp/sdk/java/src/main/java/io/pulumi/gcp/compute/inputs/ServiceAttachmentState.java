@@ -263,132 +263,132 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
     	      this.targetService = defaults.targetService;
         }
 
-        public Builder setConnectedEndpoints(@Nullable Input<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints) {
+        public Builder connectedEndpoints(@Nullable Input<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints) {
             this.connectedEndpoints = connectedEndpoints;
             return this;
         }
 
-        public Builder setConnectedEndpoints(@Nullable List<ServiceAttachmentConnectedEndpointGetArgs> connectedEndpoints) {
+        public Builder connectedEndpoints(@Nullable List<ServiceAttachmentConnectedEndpointGetArgs> connectedEndpoints) {
             this.connectedEndpoints = Input.ofNullable(connectedEndpoints);
             return this;
         }
 
-        public Builder setConnectionPreference(@Nullable Input<String> connectionPreference) {
+        public Builder connectionPreference(@Nullable Input<String> connectionPreference) {
             this.connectionPreference = connectionPreference;
             return this;
         }
 
-        public Builder setConnectionPreference(@Nullable String connectionPreference) {
+        public Builder connectionPreference(@Nullable String connectionPreference) {
             this.connectionPreference = Input.ofNullable(connectionPreference);
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListGetArgs> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListGetArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Input.ofNullable(consumerAcceptLists);
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable List<String> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Input.ofNullable(consumerRejectLists);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Input.ofNullable(enableProxyProtocol);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatSubnets(@Nullable Input<List<String>> natSubnets) {
+        public Builder natSubnets(@Nullable Input<List<String>> natSubnets) {
             this.natSubnets = natSubnets;
             return this;
         }
 
-        public Builder setNatSubnets(@Nullable List<String> natSubnets) {
+        public Builder natSubnets(@Nullable List<String> natSubnets) {
             this.natSubnets = Input.ofNullable(natSubnets);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setTargetService(@Nullable Input<String> targetService) {
+        public Builder targetService(@Nullable Input<String> targetService) {
             this.targetService = targetService;
             return this;
         }
 
-        public Builder setTargetService(@Nullable String targetService) {
+        public Builder targetService(@Nullable String targetService) {
             this.targetService = Input.ofNullable(targetService);
             return this;
         }

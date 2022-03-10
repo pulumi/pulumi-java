@@ -123,27 +123,27 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
     	      this.version = defaults.version;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setReasonPhrase(@Nullable String reasonPhrase) {
+        public Builder reasonPhrase(@Nullable String reasonPhrase) {
             this.reasonPhrase = reasonPhrase;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

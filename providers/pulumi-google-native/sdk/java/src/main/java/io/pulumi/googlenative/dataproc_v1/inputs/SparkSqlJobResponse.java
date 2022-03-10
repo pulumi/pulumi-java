@@ -140,32 +140,32 @@ public final class SparkSqlJobResponse extends io.pulumi.resources.InvokeArgs {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(String queryFileUri) {
+        public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
 
-        public Builder setQueryList(QueryListResponse queryList) {
+        public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
 
-        public Builder setScriptVariables(Map<String,String> scriptVariables) {
+        public Builder scriptVariables(Map<String,String> scriptVariables) {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }

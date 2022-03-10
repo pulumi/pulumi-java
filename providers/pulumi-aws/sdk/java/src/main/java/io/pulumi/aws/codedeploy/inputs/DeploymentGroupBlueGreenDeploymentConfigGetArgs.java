@@ -88,32 +88,32 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGetArgs extends io.pu
     	      this.terminateBlueInstancesOnDeploymentSuccess = defaults.terminateBlueInstancesOnDeploymentSuccess;
         }
 
-        public Builder setDeploymentReadyOption(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs> deploymentReadyOption) {
+        public Builder deploymentReadyOption(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs> deploymentReadyOption) {
             this.deploymentReadyOption = deploymentReadyOption;
             return this;
         }
 
-        public Builder setDeploymentReadyOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs deploymentReadyOption) {
+        public Builder deploymentReadyOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs deploymentReadyOption) {
             this.deploymentReadyOption = Input.ofNullable(deploymentReadyOption);
             return this;
         }
 
-        public Builder setGreenFleetProvisioningOption(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> greenFleetProvisioningOption) {
+        public Builder greenFleetProvisioningOption(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs> greenFleetProvisioningOption) {
             this.greenFleetProvisioningOption = greenFleetProvisioningOption;
             return this;
         }
 
-        public Builder setGreenFleetProvisioningOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs greenFleetProvisioningOption) {
+        public Builder greenFleetProvisioningOption(@Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionGetArgs greenFleetProvisioningOption) {
             this.greenFleetProvisioningOption = Input.ofNullable(greenFleetProvisioningOption);
             return this;
         }
 
-        public Builder setTerminateBlueInstancesOnDeploymentSuccess(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> terminateBlueInstancesOnDeploymentSuccess) {
+        public Builder terminateBlueInstancesOnDeploymentSuccess(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs> terminateBlueInstancesOnDeploymentSuccess) {
             this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;
             return this;
         }
 
-        public Builder setTerminateBlueInstancesOnDeploymentSuccess(@Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs terminateBlueInstancesOnDeploymentSuccess) {
+        public Builder terminateBlueInstancesOnDeploymentSuccess(@Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs terminateBlueInstancesOnDeploymentSuccess) {
             this.terminateBlueInstancesOnDeploymentSuccess = Input.ofNullable(terminateBlueInstancesOnDeploymentSuccess);
             return this;
         }

@@ -177,82 +177,82 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setCreateMode(@Nullable Input<CreateMode> createMode) {
+        public Builder createMode(@Nullable Input<CreateMode> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable CreateMode createMode) {
+        public Builder createMode(@Nullable CreateMode createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Input<Boolean> enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Input<Boolean> enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = Input.ofNullable(enablePurgeProtection);
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Input<Boolean> enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Input<Boolean> enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Boolean enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = Input.ofNullable(enableSoftDelete);
             return this;
         }
 
-        public Builder setInitialAdminObjectIds(@Nullable Input<List<String>> initialAdminObjectIds) {
+        public Builder initialAdminObjectIds(@Nullable Input<List<String>> initialAdminObjectIds) {
             this.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
 
-        public Builder setInitialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
+        public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
             this.initialAdminObjectIds = Input.ofNullable(initialAdminObjectIds);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable Input<MHSMNetworkRuleSetArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Input<MHSMNetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable MHSMNetworkRuleSetArgs networkAcls) {
+        public Builder networkAcls(@Nullable MHSMNetworkRuleSetArgs networkAcls) {
             this.networkAcls = Input.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Input<Integer> softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Input<Integer> softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = Input.ofNullable(softDeleteRetentionInDays);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

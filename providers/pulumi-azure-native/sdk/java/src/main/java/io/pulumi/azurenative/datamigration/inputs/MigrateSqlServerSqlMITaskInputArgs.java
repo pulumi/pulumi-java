@@ -177,82 +177,82 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setBackupBlobShare(Input<BlobShareArgs> backupBlobShare) {
+        public Builder backupBlobShare(Input<BlobShareArgs> backupBlobShare) {
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
 
-        public Builder setBackupBlobShare(BlobShareArgs backupBlobShare) {
+        public Builder backupBlobShare(BlobShareArgs backupBlobShare) {
             this.backupBlobShare = Input.of(Objects.requireNonNull(backupBlobShare));
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
+        public Builder backupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareArgs backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Input.ofNullable(backupFileShare);
             return this;
         }
 
-        public Builder setBackupMode(@Nullable Input<Either<String,BackupMode>> backupMode) {
+        public Builder backupMode(@Nullable Input<Either<String,BackupMode>> backupMode) {
             this.backupMode = backupMode;
             return this;
         }
 
-        public Builder setBackupMode(@Nullable Either<String,BackupMode> backupMode) {
+        public Builder backupMode(@Nullable Either<String,BackupMode> backupMode) {
             this.backupMode = Input.ofNullable(backupMode);
             return this;
         }
 
-        public Builder setSelectedAgentJobs(@Nullable Input<List<String>> selectedAgentJobs) {
+        public Builder selectedAgentJobs(@Nullable Input<List<String>> selectedAgentJobs) {
             this.selectedAgentJobs = selectedAgentJobs;
             return this;
         }
 
-        public Builder setSelectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
+        public Builder selectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
             this.selectedAgentJobs = Input.ofNullable(selectedAgentJobs);
             return this;
         }
 
-        public Builder setSelectedDatabases(Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder setSelectedLogins(@Nullable Input<List<String>> selectedLogins) {
+        public Builder selectedLogins(@Nullable Input<List<String>> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
 
-        public Builder setSelectedLogins(@Nullable List<String> selectedLogins) {
+        public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = Input.ofNullable(selectedLogins);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

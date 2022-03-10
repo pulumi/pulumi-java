@@ -115,27 +115,27 @@ public final class GetWorkflowAccessKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable String notBefore) {
+        public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

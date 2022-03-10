@@ -91,32 +91,32 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
     	      this.redirectMapId = defaults.redirectMapId;
         }
 
-        public Builder setCustomerVisibleFqdns(@Nullable Input<List<String>> customerVisibleFqdns) {
+        public Builder customerVisibleFqdns(@Nullable Input<List<String>> customerVisibleFqdns) {
             this.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
 
-        public Builder setCustomerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
+        public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
             this.customerVisibleFqdns = Input.ofNullable(customerVisibleFqdns);
             return this;
         }
 
-        public Builder setPrivateLinkServiceArmRegion(@Nullable Input<String> privateLinkServiceArmRegion) {
+        public Builder privateLinkServiceArmRegion(@Nullable Input<String> privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
 
-        public Builder setPrivateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
+        public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = Input.ofNullable(privateLinkServiceArmRegion);
             return this;
         }
 
-        public Builder setRedirectMapId(@Nullable Input<String> redirectMapId) {
+        public Builder redirectMapId(@Nullable Input<String> redirectMapId) {
             this.redirectMapId = redirectMapId;
             return this;
         }
 
-        public Builder setRedirectMapId(@Nullable String redirectMapId) {
+        public Builder redirectMapId(@Nullable String redirectMapId) {
             this.redirectMapId = Input.ofNullable(redirectMapId);
             return this;
         }

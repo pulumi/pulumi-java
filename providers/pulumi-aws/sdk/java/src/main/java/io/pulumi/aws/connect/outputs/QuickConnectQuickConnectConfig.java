@@ -102,22 +102,22 @@ public final class QuickConnectQuickConnectConfig {
     	      this.userConfigs = defaults.userConfigs;
         }
 
-        public Builder setPhoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
+        public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
             this.phoneConfigs = phoneConfigs;
             return this;
         }
 
-        public Builder setQueueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
+        public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
             this.queueConfigs = queueConfigs;
             return this;
         }
 
-        public Builder setQuickConnectType(String quickConnectType) {
+        public Builder quickConnectType(String quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
 
-        public Builder setUserConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
             this.userConfigs = userConfigs;
             return this;
         }

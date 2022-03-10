@@ -90,32 +90,32 @@ public final class AadAuthenticationParametersArgs extends io.pulumi.resources.R
     	      this.aadTenant = defaults.aadTenant;
         }
 
-        public Builder setAadAudience(@Nullable Input<String> aadAudience) {
+        public Builder aadAudience(@Nullable Input<String> aadAudience) {
             this.aadAudience = aadAudience;
             return this;
         }
 
-        public Builder setAadAudience(@Nullable String aadAudience) {
+        public Builder aadAudience(@Nullable String aadAudience) {
             this.aadAudience = Input.ofNullable(aadAudience);
             return this;
         }
 
-        public Builder setAadIssuer(@Nullable Input<String> aadIssuer) {
+        public Builder aadIssuer(@Nullable Input<String> aadIssuer) {
             this.aadIssuer = aadIssuer;
             return this;
         }
 
-        public Builder setAadIssuer(@Nullable String aadIssuer) {
+        public Builder aadIssuer(@Nullable String aadIssuer) {
             this.aadIssuer = Input.ofNullable(aadIssuer);
             return this;
         }
 
-        public Builder setAadTenant(@Nullable Input<String> aadTenant) {
+        public Builder aadTenant(@Nullable Input<String> aadTenant) {
             this.aadTenant = aadTenant;
             return this;
         }
 
-        public Builder setAadTenant(@Nullable String aadTenant) {
+        public Builder aadTenant(@Nullable String aadTenant) {
             this.aadTenant = Input.ofNullable(aadTenant);
             return this;
         }

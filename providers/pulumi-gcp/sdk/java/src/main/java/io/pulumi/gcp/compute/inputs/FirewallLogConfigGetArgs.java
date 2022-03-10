@@ -53,12 +53,12 @@ public final class FirewallLogConfigGetArgs extends io.pulumi.resources.Resource
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setMetadata(Input<String> metadata) {
+        public Builder metadata(Input<String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Input.of(Objects.requireNonNull(metadata));
             return this;
         }

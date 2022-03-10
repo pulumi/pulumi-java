@@ -69,12 +69,12 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
+        public Builder monitoringOutputs(List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }

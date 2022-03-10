@@ -74,12 +74,12 @@ public final class ScaleRuleAuthResponse extends io.pulumi.resources.InvokeArgs 
     	      this.triggerParameter = defaults.triggerParameter;
         }
 
-        public Builder setSecretRef(@Nullable String secretRef) {
+        public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setTriggerParameter(@Nullable String triggerParameter) {
+        public Builder triggerParameter(@Nullable String triggerParameter) {
             this.triggerParameter = triggerParameter;
             return this;
         }

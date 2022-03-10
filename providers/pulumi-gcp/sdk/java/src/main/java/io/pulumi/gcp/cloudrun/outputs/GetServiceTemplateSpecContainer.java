@@ -111,47 +111,47 @@ public final class GetServiceTemplateSpecContainer {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommands(List<String> commands) {
+        public Builder commands(List<String> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setEnvFroms(List<GetServiceTemplateSpecContainerEnvFrom> envFroms) {
+        public Builder envFroms(List<GetServiceTemplateSpecContainerEnvFrom> envFroms) {
             this.envFroms = Objects.requireNonNull(envFroms);
             return this;
         }
 
-        public Builder setEnvs(List<GetServiceTemplateSpecContainerEnv> envs) {
+        public Builder envs(List<GetServiceTemplateSpecContainerEnv> envs) {
             this.envs = Objects.requireNonNull(envs);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setPorts(List<GetServiceTemplateSpecContainerPort> ports) {
+        public Builder ports(List<GetServiceTemplateSpecContainerPort> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setResources(List<GetServiceTemplateSpecContainerResource> resources) {
+        public Builder resources(List<GetServiceTemplateSpecContainerResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setVolumeMounts(List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts) {
+        public Builder volumeMounts(List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
 
-        public Builder setWorkingDir(String workingDir) {
+        public Builder workingDir(String workingDir) {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }

@@ -109,42 +109,42 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<AptRepositoryArgs> apt) {
+        public Builder apt(@Nullable Input<AptRepositoryArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable AptRepositoryArgs apt) {
+        public Builder apt(@Nullable AptRepositoryArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<GooRepositoryArgs> goo) {
+        public Builder goo(@Nullable Input<GooRepositoryArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable GooRepositoryArgs goo) {
+        public Builder goo(@Nullable GooRepositoryArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<YumRepositoryArgs> yum) {
+        public Builder yum(@Nullable Input<YumRepositoryArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable YumRepositoryArgs yum) {
+        public Builder yum(@Nullable YumRepositoryArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<ZypperRepositoryArgs> zypper) {
+        public Builder zypper(@Nullable Input<ZypperRepositoryArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable ZypperRepositoryArgs zypper) {
+        public Builder zypper(@Nullable ZypperRepositoryArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

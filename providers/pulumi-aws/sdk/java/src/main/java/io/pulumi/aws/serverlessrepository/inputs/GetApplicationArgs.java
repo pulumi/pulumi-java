@@ -70,12 +70,12 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.semanticVersion = defaults.semanticVersion;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setSemanticVersion(@Nullable String semanticVersion) {
+        public Builder semanticVersion(@Nullable String semanticVersion) {
             this.semanticVersion = semanticVersion;
             return this;
         }

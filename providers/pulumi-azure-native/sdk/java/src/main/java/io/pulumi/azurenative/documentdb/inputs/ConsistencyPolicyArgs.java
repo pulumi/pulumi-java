@@ -92,32 +92,32 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.maxStalenessPrefix = defaults.maxStalenessPrefix;
         }
 
-        public Builder setDefaultConsistencyLevel(Input<DefaultConsistencyLevel> defaultConsistencyLevel) {
+        public Builder defaultConsistencyLevel(Input<DefaultConsistencyLevel> defaultConsistencyLevel) {
             this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
             return this;
         }
 
-        public Builder setDefaultConsistencyLevel(DefaultConsistencyLevel defaultConsistencyLevel) {
+        public Builder defaultConsistencyLevel(DefaultConsistencyLevel defaultConsistencyLevel) {
             this.defaultConsistencyLevel = Input.of(Objects.requireNonNull(defaultConsistencyLevel));
             return this;
         }
 
-        public Builder setMaxIntervalInSeconds(@Nullable Input<Integer> maxIntervalInSeconds) {
+        public Builder maxIntervalInSeconds(@Nullable Input<Integer> maxIntervalInSeconds) {
             this.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
 
-        public Builder setMaxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
+        public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
             this.maxIntervalInSeconds = Input.ofNullable(maxIntervalInSeconds);
             return this;
         }
 
-        public Builder setMaxStalenessPrefix(@Nullable Input<Double> maxStalenessPrefix) {
+        public Builder maxStalenessPrefix(@Nullable Input<Double> maxStalenessPrefix) {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }
 
-        public Builder setMaxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
+        public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
             this.maxStalenessPrefix = Input.ofNullable(maxStalenessPrefix);
             return this;
         }

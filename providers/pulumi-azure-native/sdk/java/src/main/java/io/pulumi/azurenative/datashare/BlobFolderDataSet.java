@@ -223,7 +223,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
     private static BlobFolderDataSetArgs makeArgs(BlobFolderDataSetArgs args) {
         var builder = args == null ? BlobFolderDataSetArgs.builder() : BlobFolderDataSetArgs.builder(args);
         return builder
-            .setKind("BlobFolder")
+            .kind("BlobFolder")
             .build();
     }
 

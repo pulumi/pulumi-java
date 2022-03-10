@@ -92,17 +92,17 @@ public final class ManagementPolicyFilterResponse extends io.pulumi.resources.In
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setBlobIndexMatch(@Nullable List<TagFilterResponse> blobIndexMatch) {
+        public Builder blobIndexMatch(@Nullable List<TagFilterResponse> blobIndexMatch) {
             this.blobIndexMatch = blobIndexMatch;
             return this;
         }
 
-        public Builder setBlobTypes(List<String> blobTypes) {
+        public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }

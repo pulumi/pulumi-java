@@ -136,32 +136,32 @@ public final class InstanceFleetInstanceTypeConfig {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setBidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
+        public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations) {
+        public Builder configurations(@Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Integer weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

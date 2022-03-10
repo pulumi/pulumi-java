@@ -65,12 +65,12 @@ public final class ProjectEnvironmentRegistryCredential {
     	      this.credentialProvider = defaults.credentialProvider;
         }
 
-        public Builder setCredential(String credential) {
+        public Builder credential(String credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setCredentialProvider(String credentialProvider) {
+        public Builder credentialProvider(String credentialProvider) {
             this.credentialProvider = Objects.requireNonNull(credentialProvider);
             return this;
         }

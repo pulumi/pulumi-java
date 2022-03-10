@@ -141,62 +141,62 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowedHeaders(@Nullable Input<List<String>> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable Input<List<String>> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedHeaders(@Nullable List<String> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = Input.ofNullable(allowedHeaders);
             return this;
         }
 
-        public Builder setAllowedMethods(Input<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods) {
+        public Builder allowedMethods(Input<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
+        public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
             this.allowedMethods = Input.of(Objects.requireNonNull(allowedMethods));
             return this;
         }
 
-        public Builder setAllowedOrigins(Input<List<String>> allowedOrigins) {
+        public Builder allowedOrigins(Input<List<String>> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setAllowedOrigins(List<String> allowedOrigins) {
+        public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Input.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable Input<List<String>> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable Input<List<String>> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable List<String> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = Input.ofNullable(exposedHeaders);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Input<Integer> maxAge) {
+        public Builder maxAge(@Nullable Input<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Integer maxAge) {
+        public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = Input.ofNullable(maxAge);
             return this;
         }

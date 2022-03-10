@@ -55,12 +55,12 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accessibility = defaults.accessibility;
         }
 
-        public Builder setAccessibility(@Nullable Input<Either<String,Accessibility>> accessibility) {
+        public Builder accessibility(@Nullable Input<Either<String,Accessibility>> accessibility) {
             this.accessibility = accessibility;
             return this;
         }
 
-        public Builder setAccessibility(@Nullable Either<String,Accessibility> accessibility) {
+        public Builder accessibility(@Nullable Either<String,Accessibility> accessibility) {
             this.accessibility = Input.ofNullable(accessibility);
             return this;
         }

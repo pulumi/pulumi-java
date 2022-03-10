@@ -68,12 +68,12 @@ public final class CertificateTemplatePassthroughExtensions {
     	      this.knownExtensions = defaults.knownExtensions;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setKnownExtensions(@Nullable List<String> knownExtensions) {
+        public Builder knownExtensions(@Nullable List<String> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }

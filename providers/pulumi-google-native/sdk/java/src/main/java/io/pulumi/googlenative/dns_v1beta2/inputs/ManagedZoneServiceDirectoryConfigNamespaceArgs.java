@@ -82,32 +82,32 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder setDeletionTime(@Nullable Input<String> deletionTime) {
+        public Builder deletionTime(@Nullable Input<String> deletionTime) {
             this.deletionTime = deletionTime;
             return this;
         }
 
-        public Builder setDeletionTime(@Nullable String deletionTime) {
+        public Builder deletionTime(@Nullable String deletionTime) {
             this.deletionTime = Input.ofNullable(deletionTime);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setNamespaceUrl(@Nullable Input<String> namespaceUrl) {
+        public Builder namespaceUrl(@Nullable Input<String> namespaceUrl) {
             this.namespaceUrl = namespaceUrl;
             return this;
         }
 
-        public Builder setNamespaceUrl(@Nullable String namespaceUrl) {
+        public Builder namespaceUrl(@Nullable String namespaceUrl) {
             this.namespaceUrl = Input.ofNullable(namespaceUrl);
             return this;
         }

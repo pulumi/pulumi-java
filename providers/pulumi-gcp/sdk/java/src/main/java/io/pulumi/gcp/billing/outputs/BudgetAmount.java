@@ -80,12 +80,12 @@ public final class BudgetAmount {
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
+        public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }

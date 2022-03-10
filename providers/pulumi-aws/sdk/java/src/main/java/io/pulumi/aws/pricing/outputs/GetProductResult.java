@@ -83,22 +83,22 @@ public final class GetProductResult {
     	      this.serviceCode = defaults.serviceCode;
         }
 
-        public Builder setFilters(List<GetProductFilter> filters) {
+        public Builder filters(List<GetProductFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }

@@ -123,27 +123,27 @@ public final class ResourcePolicyInstanceSchedulePolicy {
     	      this.vmStopSchedule = defaults.vmStopSchedule;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setVmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule) {
+        public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule) {
             this.vmStartSchedule = vmStartSchedule;
             return this;
         }
 
-        public Builder setVmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule) {
+        public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule) {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }

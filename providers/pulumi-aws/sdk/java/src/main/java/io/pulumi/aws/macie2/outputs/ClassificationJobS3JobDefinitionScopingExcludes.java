@@ -50,7 +50,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludes {
     	      this.ands = defaults.ands;
         }
 
-        public Builder setAnds(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
+        public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
             this.ands = ands;
             return this;
         }

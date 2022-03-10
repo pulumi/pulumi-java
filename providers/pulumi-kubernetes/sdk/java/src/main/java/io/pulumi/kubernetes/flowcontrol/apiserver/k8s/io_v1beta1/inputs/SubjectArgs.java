@@ -109,42 +109,42 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setGroup(@Nullable Input<GroupSubjectArgs> group) {
+        public Builder group(@Nullable Input<GroupSubjectArgs> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable GroupSubjectArgs group) {
+        public Builder group(@Nullable GroupSubjectArgs group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<ServiceAccountSubjectArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<ServiceAccountSubjectArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
+        public Builder serviceAccount(@Nullable ServiceAccountSubjectArgs serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<UserSubjectArgs> user) {
+        public Builder user(@Nullable Input<UserSubjectArgs> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable UserSubjectArgs user) {
+        public Builder user(@Nullable UserSubjectArgs user) {
             this.user = Input.ofNullable(user);
             return this;
         }

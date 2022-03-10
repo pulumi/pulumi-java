@@ -107,42 +107,42 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetRef = defaults.targetRef;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setIp(Input<String> ip) {
+        public Builder ip(Input<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Input.of(Objects.requireNonNull(ip));
             return this;
         }
 
-        public Builder setNodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Input<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Input.ofNullable(nodeName);
             return this;
         }
 
-        public Builder setTargetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
+        public Builder targetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReferenceArgs targetRef) {
+        public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
             this.targetRef = Input.ofNullable(targetRef);
             return this;
         }

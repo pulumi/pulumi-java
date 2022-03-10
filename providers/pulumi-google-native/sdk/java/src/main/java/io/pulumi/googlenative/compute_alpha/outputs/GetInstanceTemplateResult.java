@@ -179,47 +179,47 @@ public final class GetInstanceTemplateResult {
     	      this.sourceInstanceParams = defaults.sourceInstanceParams;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(InstancePropertiesResponse properties) {
+        public Builder properties(InstancePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSourceInstance(String sourceInstance) {
+        public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setSourceInstanceParams(SourceInstanceParamsResponse sourceInstanceParams) {
+        public Builder sourceInstanceParams(SourceInstanceParamsResponse sourceInstanceParams) {
             this.sourceInstanceParams = Objects.requireNonNull(sourceInstanceParams);
             return this;
         }

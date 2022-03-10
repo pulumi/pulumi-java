@@ -84,17 +84,17 @@ public final class ApiOAuthSettingsParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
 
-        public Builder setUiDefinition(@Nullable Object uiDefinition) {
+        public Builder uiDefinition(@Nullable Object uiDefinition) {
             this.uiDefinition = uiDefinition;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

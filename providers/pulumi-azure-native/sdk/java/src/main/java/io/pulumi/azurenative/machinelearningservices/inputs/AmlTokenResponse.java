@@ -56,7 +56,7 @@ public final class AmlTokenResponse extends io.pulumi.resources.InvokeArgs {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }

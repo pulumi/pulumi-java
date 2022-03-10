@@ -134,32 +134,32 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.targetAccountIds = defaults.targetAccountIds;
         }
 
-        public Builder setAmiTags(@Nullable Map<String,String> amiTags) {
+        public Builder amiTags(@Nullable Map<String,String> amiTags) {
             this.amiTags = amiTags;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setLaunchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission launchPermission) {
+        public Builder launchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission launchPermission) {
             this.launchPermission = launchPermission;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetAccountIds(@Nullable List<String> targetAccountIds) {
+        public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }

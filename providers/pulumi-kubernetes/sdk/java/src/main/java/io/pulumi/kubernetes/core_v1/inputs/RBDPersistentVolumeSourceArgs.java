@@ -173,82 +173,82 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     	      this.user = defaults.user;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setKeyring(@Nullable Input<String> keyring) {
+        public Builder keyring(@Nullable Input<String> keyring) {
             this.keyring = keyring;
             return this;
         }
 
-        public Builder setKeyring(@Nullable String keyring) {
+        public Builder keyring(@Nullable String keyring) {
             this.keyring = Input.ofNullable(keyring);
             return this;
         }
 
-        public Builder setMonitors(Input<List<String>> monitors) {
+        public Builder monitors(Input<List<String>> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
 
-        public Builder setMonitors(List<String> monitors) {
+        public Builder monitors(List<String> monitors) {
             this.monitors = Input.of(Objects.requireNonNull(monitors));
             return this;
         }
 
-        public Builder setPool(@Nullable Input<String> pool) {
+        public Builder pool(@Nullable Input<String> pool) {
             this.pool = pool;
             return this;
         }
 
-        public Builder setPool(@Nullable String pool) {
+        public Builder pool(@Nullable String pool) {
             this.pool = Input.ofNullable(pool);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSecretRef(@Nullable Input<SecretReferenceArgs> secretRef) {
+        public Builder secretRef(@Nullable Input<SecretReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretReferenceArgs secretRef) {
+        public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

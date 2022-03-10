@@ -154,37 +154,37 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
     	      this.senderApplicationQualifier = defaults.senderApplicationQualifier;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable String associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageRelease(String messageRelease) {
+        public Builder messageRelease(String messageRelease) {
             this.messageRelease = Objects.requireNonNull(messageRelease);
             return this;
         }
 
-        public Builder setMessageVersion(String messageVersion) {
+        public Builder messageVersion(String messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable String senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }

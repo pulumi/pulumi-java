@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2FindingLimitsArgs extends io.pulumi.resourc
     	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
         }
 
-        public Builder setMaxFindingsPerInfoType(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType) {
+        public Builder maxFindingsPerInfoType(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeLimitArgs>> maxFindingsPerInfoType) {
             this.maxFindingsPerInfoType = maxFindingsPerInfoType;
             return this;
         }
 
-        public Builder setMaxFindingsPerInfoType(@Nullable List<GooglePrivacyDlpV2InfoTypeLimitArgs> maxFindingsPerInfoType) {
+        public Builder maxFindingsPerInfoType(@Nullable List<GooglePrivacyDlpV2InfoTypeLimitArgs> maxFindingsPerInfoType) {
             this.maxFindingsPerInfoType = Input.ofNullable(maxFindingsPerInfoType);
             return this;
         }
 
-        public Builder setMaxFindingsPerItem(@Nullable Input<Integer> maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(@Nullable Input<Integer> maxFindingsPerItem) {
             this.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
 
-        public Builder setMaxFindingsPerItem(@Nullable Integer maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(@Nullable Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Input.ofNullable(maxFindingsPerItem);
             return this;
         }
 
-        public Builder setMaxFindingsPerRequest(@Nullable Input<Integer> maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(@Nullable Input<Integer> maxFindingsPerRequest) {
             this.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
         }
 
-        public Builder setMaxFindingsPerRequest(@Nullable Integer maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(@Nullable Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Input.ofNullable(maxFindingsPerRequest);
             return this;
         }

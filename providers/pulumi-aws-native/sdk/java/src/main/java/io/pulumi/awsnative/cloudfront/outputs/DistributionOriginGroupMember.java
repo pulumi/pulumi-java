@@ -40,7 +40,7 @@ public final class DistributionOriginGroupMember {
     	      this.originId = defaults.originId;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }

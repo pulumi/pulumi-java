@@ -137,62 +137,62 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceEndpointPolicyDefinitions(@Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
+        public Builder serviceEndpointPolicyDefinitions(@Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = serviceEndpointPolicyDefinitions;
             return this;
         }
 
-        public Builder setServiceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
+        public Builder serviceEndpointPolicyDefinitions(@Nullable List<ServiceEndpointPolicyDefinitionArgs> serviceEndpointPolicyDefinitions) {
             this.serviceEndpointPolicyDefinitions = Input.ofNullable(serviceEndpointPolicyDefinitions);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyName(@Nullable Input<String> serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(@Nullable Input<String> serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
         }
 
-        public Builder setServiceEndpointPolicyName(@Nullable String serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(@Nullable String serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = Input.ofNullable(serviceEndpointPolicyName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

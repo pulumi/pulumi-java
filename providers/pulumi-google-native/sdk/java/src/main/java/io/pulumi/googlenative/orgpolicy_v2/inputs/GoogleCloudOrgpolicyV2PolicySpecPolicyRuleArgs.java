@@ -124,52 +124,52 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     	      this.values = defaults.values;
         }
 
-        public Builder setAllowAll(@Nullable Input<Boolean> allowAll) {
+        public Builder allowAll(@Nullable Input<Boolean> allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
-        public Builder setAllowAll(@Nullable Boolean allowAll) {
+        public Builder allowAll(@Nullable Boolean allowAll) {
             this.allowAll = Input.ofNullable(allowAll);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<GoogleTypeExprArgs> condition) {
+        public Builder condition(@Nullable Input<GoogleTypeExprArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable GoogleTypeExprArgs condition) {
+        public Builder condition(@Nullable GoogleTypeExprArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setDenyAll(@Nullable Input<Boolean> denyAll) {
+        public Builder denyAll(@Nullable Input<Boolean> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
-        public Builder setDenyAll(@Nullable Boolean denyAll) {
+        public Builder denyAll(@Nullable Boolean denyAll) {
             this.denyAll = Input.ofNullable(denyAll);
             return this;
         }
 
-        public Builder setEnforce(@Nullable Input<Boolean> enforce) {
+        public Builder enforce(@Nullable Input<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = Input.ofNullable(enforce);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
+        public Builder values(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
+        public Builder values(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
             this.values = Input.ofNullable(values);
             return this;
         }

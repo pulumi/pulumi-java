@@ -136,62 +136,62 @@ public final class ASCDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setDataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
-        public Builder setDataConnectorId(@Nullable String dataConnectorId) {
+        public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Input.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder setDataTypes(@Nullable Input<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
+        public Builder dataTypes(@Nullable Input<AlertsDataTypeOfDataConnectorArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setDataTypes(@Nullable AlertsDataTypeOfDataConnectorArgs dataTypes) {
+        public Builder dataTypes(@Nullable AlertsDataTypeOfDataConnectorArgs dataTypes) {
             this.dataTypes = Input.ofNullable(dataTypes);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

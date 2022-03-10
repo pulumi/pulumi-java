@@ -93,32 +93,32 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
     	      this.targetProtectionContainerId = defaults.targetProtectionContainerId;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProviderSpecificInput(@Nullable Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
+        public Builder providerSpecificInput(@Nullable Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
             this.providerSpecificInput = providerSpecificInput;
             return this;
         }
 
-        public Builder setProviderSpecificInput(@Nullable Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
+        public Builder providerSpecificInput(@Nullable Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
             this.providerSpecificInput = Input.ofNullable(providerSpecificInput);
             return this;
         }
 
-        public Builder setTargetProtectionContainerId(@Nullable Input<String> targetProtectionContainerId) {
+        public Builder targetProtectionContainerId(@Nullable Input<String> targetProtectionContainerId) {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
 
-        public Builder setTargetProtectionContainerId(@Nullable String targetProtectionContainerId) {
+        public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
             this.targetProtectionContainerId = Input.ofNullable(targetProtectionContainerId);
             return this;
         }

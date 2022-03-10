@@ -72,12 +72,12 @@ public final class GetInstanceTypeOfferingsArgs extends io.pulumi.resources.Invo
     	      this.locationType = defaults.locationType;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceTypeOfferingsFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceTypeOfferingsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setLocationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }

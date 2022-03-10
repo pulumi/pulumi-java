@@ -102,22 +102,22 @@ public final class GetApplicationAppversionLifecycle extends io.pulumi.resources
     	      this.serviceRole = defaults.serviceRole;
         }
 
-        public Builder setDeleteSourceFromS3(Boolean deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(Boolean deleteSourceFromS3) {
             this.deleteSourceFromS3 = Objects.requireNonNull(deleteSourceFromS3);
             return this;
         }
 
-        public Builder setMaxAgeInDays(Integer maxAgeInDays) {
+        public Builder maxAgeInDays(Integer maxAgeInDays) {
             this.maxAgeInDays = Objects.requireNonNull(maxAgeInDays);
             return this;
         }
 
-        public Builder setMaxCount(Integer maxCount) {
+        public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }

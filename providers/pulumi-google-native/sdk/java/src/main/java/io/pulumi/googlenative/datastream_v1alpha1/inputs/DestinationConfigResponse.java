@@ -73,12 +73,12 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
     	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
         }
 
-        public Builder setDestinationConnectionProfileName(String destinationConnectionProfileName) {
+        public Builder destinationConnectionProfileName(String destinationConnectionProfileName) {
             this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName);
             return this;
         }
 
-        public Builder setGcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
+        public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
         }

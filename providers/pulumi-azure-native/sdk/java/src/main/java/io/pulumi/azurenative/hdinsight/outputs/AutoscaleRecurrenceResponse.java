@@ -69,12 +69,12 @@ public final class AutoscaleRecurrenceResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setSchedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
+        public Builder schedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

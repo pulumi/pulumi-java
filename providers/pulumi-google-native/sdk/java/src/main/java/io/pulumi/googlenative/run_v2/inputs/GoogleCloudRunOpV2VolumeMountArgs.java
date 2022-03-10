@@ -73,22 +73,22 @@ public final class GoogleCloudRunOpV2VolumeMountArgs extends io.pulumi.resources
     	      this.name = defaults.name;
         }
 
-        public Builder setMountPath(Input<String> mountPath) {
+        public Builder mountPath(Input<String> mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Input.of(Objects.requireNonNull(mountPath));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

@@ -71,22 +71,22 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends io.pulumi
     	      this.awsIamConfig = defaults.awsIamConfig;
         }
 
-        public Builder setAuthorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Input<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable String authorizationType) {
+        public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Input.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder setAwsIamConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig) {
+        public Builder awsIamConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig) {
             this.awsIamConfig = awsIamConfig;
             return this;
         }
 
-        public Builder setAwsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs awsIamConfig) {
+        public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs awsIamConfig) {
             this.awsIamConfig = Input.ofNullable(awsIamConfig);
             return this;
         }

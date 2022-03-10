@@ -74,12 +74,12 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }

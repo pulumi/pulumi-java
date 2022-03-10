@@ -48,7 +48,7 @@ public final class DataSourceLambdaConfig {
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }

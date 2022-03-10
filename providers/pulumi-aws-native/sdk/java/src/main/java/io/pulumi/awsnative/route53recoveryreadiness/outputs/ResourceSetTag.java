@@ -50,12 +50,12 @@ public final class ResourceSetTag {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

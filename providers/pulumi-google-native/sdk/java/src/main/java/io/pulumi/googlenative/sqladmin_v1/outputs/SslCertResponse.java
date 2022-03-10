@@ -177,47 +177,47 @@ public final class SslCertResponse {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(String cert) {
+        public Builder cert(String cert) {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
 
-        public Builder setCertSerialNumber(String certSerialNumber) {
+        public Builder certSerialNumber(String certSerialNumber) {
             this.certSerialNumber = Objects.requireNonNull(certSerialNumber);
             return this;
         }
 
-        public Builder setCommonName(String commonName) {
+        public Builder commonName(String commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSha1Fingerprint(String sha1Fingerprint) {
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }

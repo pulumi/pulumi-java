@@ -199,102 +199,102 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setDbProxyName(@Nullable Input<String> dbProxyName) {
+        public Builder dbProxyName(@Nullable Input<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
 
-        public Builder setDbProxyName(@Nullable String dbProxyName) {
+        public Builder dbProxyName(@Nullable String dbProxyName) {
             this.dbProxyName = Input.ofNullable(dbProxyName);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRdsResourceId(@Nullable Input<String> rdsResourceId) {
+        public Builder rdsResourceId(@Nullable Input<String> rdsResourceId) {
             this.rdsResourceId = rdsResourceId;
             return this;
         }
 
-        public Builder setRdsResourceId(@Nullable String rdsResourceId) {
+        public Builder rdsResourceId(@Nullable String rdsResourceId) {
             this.rdsResourceId = Input.ofNullable(rdsResourceId);
             return this;
         }
 
-        public Builder setTargetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Input<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }
 
-        public Builder setTargetGroupName(@Nullable Input<String> targetGroupName) {
+        public Builder targetGroupName(@Nullable Input<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
 
-        public Builder setTargetGroupName(@Nullable String targetGroupName) {
+        public Builder targetGroupName(@Nullable String targetGroupName) {
             this.targetGroupName = Input.ofNullable(targetGroupName);
             return this;
         }
 
-        public Builder setTrackedClusterId(@Nullable Input<String> trackedClusterId) {
+        public Builder trackedClusterId(@Nullable Input<String> trackedClusterId) {
             this.trackedClusterId = trackedClusterId;
             return this;
         }
 
-        public Builder setTrackedClusterId(@Nullable String trackedClusterId) {
+        public Builder trackedClusterId(@Nullable String trackedClusterId) {
             this.trackedClusterId = Input.ofNullable(trackedClusterId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

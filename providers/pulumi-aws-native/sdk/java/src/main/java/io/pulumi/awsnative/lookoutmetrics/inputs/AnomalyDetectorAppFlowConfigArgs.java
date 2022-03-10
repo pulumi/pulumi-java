@@ -61,22 +61,22 @@ public final class AnomalyDetectorAppFlowConfigArgs extends io.pulumi.resources.
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setFlowName(Input<String> flowName) {
+        public Builder flowName(Input<String> flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
-        public Builder setFlowName(String flowName) {
+        public Builder flowName(String flowName) {
             this.flowName = Input.of(Objects.requireNonNull(flowName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

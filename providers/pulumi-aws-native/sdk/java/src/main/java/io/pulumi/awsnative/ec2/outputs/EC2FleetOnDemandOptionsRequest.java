@@ -86,32 +86,32 @@ public final class EC2FleetOnDemandOptionsRequest {
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setCapacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions) {
+        public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions) {
             this.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable String maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Integer minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Boolean singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }

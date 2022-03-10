@@ -57,12 +57,12 @@ public final class MonitoringScheduleConstraintsResourceArgs extends io.pulumi.r
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setS3Uri(@Nullable Input<String> s3Uri) {
+        public Builder s3Uri(@Nullable Input<String> s3Uri) {
             this.s3Uri = s3Uri;
             return this;
         }
 
-        public Builder setS3Uri(@Nullable String s3Uri) {
+        public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = Input.ofNullable(s3Uri);
             return this;
         }

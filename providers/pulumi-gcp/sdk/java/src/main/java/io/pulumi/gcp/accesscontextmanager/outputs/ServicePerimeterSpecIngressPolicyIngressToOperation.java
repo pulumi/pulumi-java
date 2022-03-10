@@ -81,12 +81,12 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperation {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMethodSelectors(@Nullable List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector> methodSelectors) {
+        public Builder methodSelectors(@Nullable List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector> methodSelectors) {
             this.methodSelectors = methodSelectors;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }

@@ -110,42 +110,42 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable Input<List<Integer>> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable Input<List<Integer>> allowedSuccessCodes) {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = Input.ofNullable(allowedSuccessCodes);
             return this;
         }
 
-        public Builder setGcsObject(@Nullable Input<GcsObjectArgs> gcsObject) {
+        public Builder gcsObject(@Nullable Input<GcsObjectArgs> gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
 
-        public Builder setGcsObject(@Nullable GcsObjectArgs gcsObject) {
+        public Builder gcsObject(@Nullable GcsObjectArgs gcsObject) {
             this.gcsObject = Input.ofNullable(gcsObject);
             return this;
         }
 
-        public Builder setInterpreter(@Nullable Input<ExecStepConfigInterpreter> interpreter) {
+        public Builder interpreter(@Nullable Input<ExecStepConfigInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable ExecStepConfigInterpreter interpreter) {
+        public Builder interpreter(@Nullable ExecStepConfigInterpreter interpreter) {
             this.interpreter = Input.ofNullable(interpreter);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }

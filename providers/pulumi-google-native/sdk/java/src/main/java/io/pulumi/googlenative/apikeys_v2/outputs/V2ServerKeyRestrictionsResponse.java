@@ -49,7 +49,7 @@ public final class V2ServerKeyRestrictionsResponse {
     	      this.allowedIps = defaults.allowedIps;
         }
 
-        public Builder setAllowedIps(List<String> allowedIps) {
+        public Builder allowedIps(List<String> allowedIps) {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }

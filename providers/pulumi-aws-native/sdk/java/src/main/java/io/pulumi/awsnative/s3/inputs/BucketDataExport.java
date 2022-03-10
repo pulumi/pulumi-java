@@ -69,12 +69,12 @@ public final class BucketDataExport extends io.pulumi.resources.InvokeArgs {
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder setDestination(BucketDestination destination) {
+        public Builder destination(BucketDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOutputSchemaVersion(String outputSchemaVersion) {
+        public Builder outputSchemaVersion(String outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }

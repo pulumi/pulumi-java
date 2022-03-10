@@ -320,92 +320,92 @@ public final class GetDatasetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccess(List<DatasetAccessItemResponse> access) {
+        public Builder access(List<DatasetAccessItemResponse> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDatasetReference(DatasetReferenceResponse datasetReference) {
+        public Builder datasetReference(DatasetReferenceResponse datasetReference) {
             this.datasetReference = Objects.requireNonNull(datasetReference);
             return this;
         }
 
-        public Builder setDefaultCollation(String defaultCollation) {
+        public Builder defaultCollation(String defaultCollation) {
             this.defaultCollation = Objects.requireNonNull(defaultCollation);
             return this;
         }
 
-        public Builder setDefaultEncryptionConfiguration(EncryptionConfigurationResponse defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(EncryptionConfigurationResponse defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Objects.requireNonNull(defaultEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDefaultPartitionExpirationMs(String defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(String defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Objects.requireNonNull(defaultPartitionExpirationMs);
             return this;
         }
 
-        public Builder setDefaultTableExpirationMs(String defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(String defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Objects.requireNonNull(defaultTableExpirationMs);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setIsCaseInsensitive(Boolean isCaseInsensitive) {
+        public Builder isCaseInsensitive(Boolean isCaseInsensitive) {
             this.isCaseInsensitive = Objects.requireNonNull(isCaseInsensitive);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setSatisfiesPZS(Boolean satisfiesPZS) {
+        public Builder satisfiesPZS(Boolean satisfiesPZS) {
             this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTags(List<DatasetTagsItemResponse> tags) {
+        public Builder tags(List<DatasetTagsItemResponse> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

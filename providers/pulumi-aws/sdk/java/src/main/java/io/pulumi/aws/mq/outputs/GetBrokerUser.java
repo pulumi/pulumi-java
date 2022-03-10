@@ -59,17 +59,17 @@ public final class GetBrokerUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setConsoleAccess(Boolean consoleAccess) {
+        public Builder consoleAccess(Boolean consoleAccess) {
             this.consoleAccess = Objects.requireNonNull(consoleAccess);
             return this;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

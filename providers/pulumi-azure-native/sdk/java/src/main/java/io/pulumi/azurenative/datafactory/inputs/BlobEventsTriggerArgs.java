@@ -193,92 +193,92 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setBlobPathBeginsWith(@Nullable Input<String> blobPathBeginsWith) {
+        public Builder blobPathBeginsWith(@Nullable Input<String> blobPathBeginsWith) {
             this.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
 
-        public Builder setBlobPathBeginsWith(@Nullable String blobPathBeginsWith) {
+        public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
             this.blobPathBeginsWith = Input.ofNullable(blobPathBeginsWith);
             return this;
         }
 
-        public Builder setBlobPathEndsWith(@Nullable Input<String> blobPathEndsWith) {
+        public Builder blobPathEndsWith(@Nullable Input<String> blobPathEndsWith) {
             this.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
 
-        public Builder setBlobPathEndsWith(@Nullable String blobPathEndsWith) {
+        public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
             this.blobPathEndsWith = Input.ofNullable(blobPathEndsWith);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEvents(Input<List<Either<String,BlobEventTypes>>> events) {
+        public Builder events(Input<List<Either<String,BlobEventTypes>>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<Either<String,BlobEventTypes>> events) {
+        public Builder events(List<Either<String,BlobEventTypes>> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setIgnoreEmptyBlobs(@Nullable Input<Boolean> ignoreEmptyBlobs) {
+        public Builder ignoreEmptyBlobs(@Nullable Input<Boolean> ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
 
-        public Builder setIgnoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
+        public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
             this.ignoreEmptyBlobs = Input.ofNullable(ignoreEmptyBlobs);
             return this;
         }
 
-        public Builder setPipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Input.ofNullable(pipelines);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

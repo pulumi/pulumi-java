@@ -108,42 +108,42 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.linuxConfiguration = defaults.linuxConfiguration;
         }
 
-        public Builder setAdminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Input<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Input.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setCustomDataRequired(@Nullable Input<Boolean> customDataRequired) {
+        public Builder customDataRequired(@Nullable Input<Boolean> customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
 
-        public Builder setCustomDataRequired(@Nullable Boolean customDataRequired) {
+        public Builder customDataRequired(@Nullable Boolean customDataRequired) {
             this.customDataRequired = Input.ofNullable(customDataRequired);
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
             return this;
         }

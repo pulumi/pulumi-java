@@ -390,117 +390,117 @@ public final class GetBucketResult {
     	      this.websiteURL = defaults.websiteURL;
         }
 
-        public Builder setAccelerateConfiguration(@Nullable BucketAccelerateConfiguration accelerateConfiguration) {
+        public Builder accelerateConfiguration(@Nullable BucketAccelerateConfiguration accelerateConfiguration) {
             this.accelerateConfiguration = accelerateConfiguration;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable BucketAccessControl accessControl) {
+        public Builder accessControl(@Nullable BucketAccessControl accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAnalyticsConfigurations(@Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations) {
+        public Builder analyticsConfigurations(@Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations) {
             this.analyticsConfigurations = analyticsConfigurations;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBucketEncryption(@Nullable BucketEncryption bucketEncryption) {
+        public Builder bucketEncryption(@Nullable BucketEncryption bucketEncryption) {
             this.bucketEncryption = bucketEncryption;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable BucketCorsConfiguration corsConfiguration) {
+        public Builder corsConfiguration(@Nullable BucketCorsConfiguration corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDualStackDomainName(@Nullable String dualStackDomainName) {
+        public Builder dualStackDomainName(@Nullable String dualStackDomainName) {
             this.dualStackDomainName = dualStackDomainName;
             return this;
         }
 
-        public Builder setIntelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations) {
+        public Builder intelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations) {
             this.intelligentTieringConfigurations = intelligentTieringConfigurations;
             return this;
         }
 
-        public Builder setInventoryConfigurations(@Nullable List<BucketInventoryConfiguration> inventoryConfigurations) {
+        public Builder inventoryConfigurations(@Nullable List<BucketInventoryConfiguration> inventoryConfigurations) {
             this.inventoryConfigurations = inventoryConfigurations;
             return this;
         }
 
-        public Builder setLifecycleConfiguration(@Nullable BucketLifecycleConfiguration lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfiguration lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable BucketLoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable BucketLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setMetricsConfigurations(@Nullable List<BucketMetricsConfiguration> metricsConfigurations) {
+        public Builder metricsConfigurations(@Nullable List<BucketMetricsConfiguration> metricsConfigurations) {
             this.metricsConfigurations = metricsConfigurations;
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable BucketNotificationConfiguration notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable BucketNotificationConfiguration notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
-        public Builder setObjectLockConfiguration(@Nullable BucketObjectLockConfiguration objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable BucketObjectLockConfiguration objectLockConfiguration) {
             this.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
 
-        public Builder setOwnershipControls(@Nullable BucketOwnershipControls ownershipControls) {
+        public Builder ownershipControls(@Nullable BucketOwnershipControls ownershipControls) {
             this.ownershipControls = ownershipControls;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
-        public Builder setRegionalDomainName(@Nullable String regionalDomainName) {
+        public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable BucketReplicationConfiguration replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable BucketReplicationConfiguration replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTag> tags) {
+        public Builder tags(@Nullable List<BucketTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVersioningConfiguration(@Nullable BucketVersioningConfiguration versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable BucketVersioningConfiguration versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
 
-        public Builder setWebsiteConfiguration(@Nullable BucketWebsiteConfiguration websiteConfiguration) {
+        public Builder websiteConfiguration(@Nullable BucketWebsiteConfiguration websiteConfiguration) {
             this.websiteConfiguration = websiteConfiguration;
             return this;
         }
 
-        public Builder setWebsiteURL(@Nullable String websiteURL) {
+        public Builder websiteURL(@Nullable String websiteURL) {
             this.websiteURL = websiteURL;
             return this;
         }

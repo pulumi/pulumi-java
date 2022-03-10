@@ -98,52 +98,52 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder setAttribute(Input<String> attribute) {
+        public Builder attribute(Input<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Input.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNext(@Nullable Input<String> next) {
+        public Builder next(@Nullable Input<String> next) {
             this.next = next;
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = Input.ofNullable(next);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setThingName(Input<String> thingName) {
+        public Builder thingName(Input<String> thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
 
-        public Builder setThingName(String thingName) {
+        public Builder thingName(String thingName) {
             this.thingName = Input.of(Objects.requireNonNull(thingName));
             return this;
         }

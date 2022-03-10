@@ -93,42 +93,42 @@ public final class DatasetInputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.s3InputDefinition = defaults.s3InputDefinition;
         }
 
-        public Builder setDataCatalogInputDefinition(@Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition) {
+        public Builder dataCatalogInputDefinition(@Nullable Input<DatasetDataCatalogInputDefinitionArgs> dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
 
-        public Builder setDataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
+        public Builder dataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinitionArgs dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = Input.ofNullable(dataCatalogInputDefinition);
             return this;
         }
 
-        public Builder setDatabaseInputDefinition(@Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition) {
+        public Builder databaseInputDefinition(@Nullable Input<DatasetDatabaseInputDefinitionArgs> databaseInputDefinition) {
             this.databaseInputDefinition = databaseInputDefinition;
             return this;
         }
 
-        public Builder setDatabaseInputDefinition(@Nullable DatasetDatabaseInputDefinitionArgs databaseInputDefinition) {
+        public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinitionArgs databaseInputDefinition) {
             this.databaseInputDefinition = Input.ofNullable(databaseInputDefinition);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<DatasetMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<DatasetMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable DatasetMetadataArgs metadata) {
+        public Builder metadata(@Nullable DatasetMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setS3InputDefinition(@Nullable Input<DatasetS3LocationArgs> s3InputDefinition) {
+        public Builder s3InputDefinition(@Nullable Input<DatasetS3LocationArgs> s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }
 
-        public Builder setS3InputDefinition(@Nullable DatasetS3LocationArgs s3InputDefinition) {
+        public Builder s3InputDefinition(@Nullable DatasetS3LocationArgs s3InputDefinition) {
             this.s3InputDefinition = Input.ofNullable(s3InputDefinition);
             return this;
         }

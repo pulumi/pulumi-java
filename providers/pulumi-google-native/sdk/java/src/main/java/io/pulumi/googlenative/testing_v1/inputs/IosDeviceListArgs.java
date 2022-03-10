@@ -57,12 +57,12 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iosDevices = defaults.iosDevices;
         }
 
-        public Builder setIosDevices(Input<List<IosDeviceArgs>> iosDevices) {
+        public Builder iosDevices(Input<List<IosDeviceArgs>> iosDevices) {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }
 
-        public Builder setIosDevices(List<IosDeviceArgs> iosDevices) {
+        public Builder iosDevices(List<IosDeviceArgs> iosDevices) {
             this.iosDevices = Input.of(Objects.requireNonNull(iosDevices));
             return this;
         }

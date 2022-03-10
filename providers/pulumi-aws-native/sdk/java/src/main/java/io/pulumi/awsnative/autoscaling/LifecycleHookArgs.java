@@ -167,82 +167,82 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setAutoScalingGroupName(Input<String> autoScalingGroupName) {
+        public Builder autoScalingGroupName(Input<String> autoScalingGroupName) {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
 
-        public Builder setAutoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Input.of(Objects.requireNonNull(autoScalingGroupName));
             return this;
         }
 
-        public Builder setDefaultResult(@Nullable Input<String> defaultResult) {
+        public Builder defaultResult(@Nullable Input<String> defaultResult) {
             this.defaultResult = defaultResult;
             return this;
         }
 
-        public Builder setDefaultResult(@Nullable String defaultResult) {
+        public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = Input.ofNullable(defaultResult);
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Input<Integer> heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Input<Integer> heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Integer heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = Input.ofNullable(heartbeatTimeout);
             return this;
         }
 
-        public Builder setLifecycleHookName(@Nullable Input<String> lifecycleHookName) {
+        public Builder lifecycleHookName(@Nullable Input<String> lifecycleHookName) {
             this.lifecycleHookName = lifecycleHookName;
             return this;
         }
 
-        public Builder setLifecycleHookName(@Nullable String lifecycleHookName) {
+        public Builder lifecycleHookName(@Nullable String lifecycleHookName) {
             this.lifecycleHookName = Input.ofNullable(lifecycleHookName);
             return this;
         }
 
-        public Builder setLifecycleTransition(Input<String> lifecycleTransition) {
+        public Builder lifecycleTransition(Input<String> lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
 
-        public Builder setLifecycleTransition(String lifecycleTransition) {
+        public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Input.of(Objects.requireNonNull(lifecycleTransition));
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable Input<String> notificationMetadata) {
+        public Builder notificationMetadata(@Nullable Input<String> notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable String notificationMetadata) {
+        public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = Input.ofNullable(notificationMetadata);
             return this;
         }
 
-        public Builder setNotificationTargetARN(@Nullable Input<String> notificationTargetARN) {
+        public Builder notificationTargetARN(@Nullable Input<String> notificationTargetARN) {
             this.notificationTargetARN = notificationTargetARN;
             return this;
         }
 
-        public Builder setNotificationTargetARN(@Nullable String notificationTargetARN) {
+        public Builder notificationTargetARN(@Nullable String notificationTargetARN) {
             this.notificationTargetARN = Input.ofNullable(notificationTargetARN);
             return this;
         }
 
-        public Builder setRoleARN(@Nullable Input<String> roleARN) {
+        public Builder roleARN(@Nullable Input<String> roleARN) {
             this.roleARN = roleARN;
             return this;
         }
 
-        public Builder setRoleARN(@Nullable String roleARN) {
+        public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = Input.ofNullable(roleARN);
             return this;
         }

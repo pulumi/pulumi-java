@@ -64,22 +64,22 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPackageName(@Nullable Input<String> packageName) {
+        public Builder packageName(@Nullable Input<String> packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = Input.ofNullable(packageName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PackageTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PackageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PackageTagArgs> tags) {
+        public Builder tags(@Nullable List<PackageTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

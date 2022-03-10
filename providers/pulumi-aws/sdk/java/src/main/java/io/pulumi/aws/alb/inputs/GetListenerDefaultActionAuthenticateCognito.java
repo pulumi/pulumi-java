@@ -134,42 +134,42 @@ public final class GetListenerDefaultActionAuthenticateCognito extends io.pulumi
     	      this.userPoolDomain = defaults.userPoolDomain;
         }
 
-        public Builder setAuthenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
             return this;
         }
 
-        public Builder setOnUnauthenticatedRequest(String onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSessionCookieName(String sessionCookieName) {
+        public Builder sessionCookieName(String sessionCookieName) {
             this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
             return this;
         }
 
-        public Builder setSessionTimeout(Integer sessionTimeout) {
+        public Builder sessionTimeout(Integer sessionTimeout) {
             this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
             return this;
         }
 
-        public Builder setUserPoolArn(String userPoolArn) {
+        public Builder userPoolArn(String userPoolArn) {
             this.userPoolArn = Objects.requireNonNull(userPoolArn);
             return this;
         }
 
-        public Builder setUserPoolClientId(String userPoolClientId) {
+        public Builder userPoolClientId(String userPoolClientId) {
             this.userPoolClientId = Objects.requireNonNull(userPoolClientId);
             return this;
         }
 
-        public Builder setUserPoolDomain(String userPoolDomain) {
+        public Builder userPoolDomain(String userPoolDomain) {
             this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
             return this;
         }

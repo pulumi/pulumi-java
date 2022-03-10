@@ -53,12 +53,12 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder setEndpoints(Input<Map<String,String>> endpoints) {
+        public Builder endpoints(Input<Map<String,String>> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setEndpoints(Map<String,String> endpoints) {
+        public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Input.of(Objects.requireNonNull(endpoints));
             return this;
         }

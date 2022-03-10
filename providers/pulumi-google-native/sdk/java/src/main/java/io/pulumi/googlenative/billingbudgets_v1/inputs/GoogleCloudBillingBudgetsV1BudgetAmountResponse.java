@@ -73,12 +73,12 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse extends io.pu
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount) {
+        public Builder lastPeriodAmount(GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount) {
             this.lastPeriodAmount = Objects.requireNonNull(lastPeriodAmount);
             return this;
         }
 
-        public Builder setSpecifiedAmount(GoogleTypeMoneyResponse specifiedAmount) {
+        public Builder specifiedAmount(GoogleTypeMoneyResponse specifiedAmount) {
             this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
             return this;
         }

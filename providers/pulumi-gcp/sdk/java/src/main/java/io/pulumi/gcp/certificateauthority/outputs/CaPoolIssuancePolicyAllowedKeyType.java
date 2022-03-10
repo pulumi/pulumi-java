@@ -72,12 +72,12 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder setEllipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve) {
+        public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve) {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
 
-        public Builder setRsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
+        public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
             this.rsa = rsa;
             return this;
         }

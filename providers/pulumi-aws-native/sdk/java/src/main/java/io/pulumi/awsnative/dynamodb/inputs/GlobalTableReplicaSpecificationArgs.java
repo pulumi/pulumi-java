@@ -129,72 +129,72 @@ public final class GlobalTableReplicaSpecificationArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
             this.contributorInsightsSpecification = Input.ofNullable(contributorInsightsSpecification);
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable Input<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable Input<List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs>> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = Input.ofNullable(globalSecondaryIndexes);
             return this;
         }
 
-        public Builder setPointInTimeRecoverySpecification(@Nullable Input<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification) {
+        public Builder pointInTimeRecoverySpecification(@Nullable Input<GlobalTablePointInTimeRecoverySpecificationArgs> pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
 
-        public Builder setPointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
+        public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecificationArgs pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = Input.ofNullable(pointInTimeRecoverySpecification);
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = Input.ofNullable(readProvisionedThroughputSettings);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable Input<GlobalTableReplicaSSESpecificationArgs> sSESpecification) {
+        public Builder sSESpecification(@Nullable Input<GlobalTableReplicaSSESpecificationArgs> sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable GlobalTableReplicaSSESpecificationArgs sSESpecification) {
+        public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecificationArgs sSESpecification) {
             this.sSESpecification = Input.ofNullable(sSESpecification);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<GlobalTableTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<GlobalTableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GlobalTableTagArgs> tags) {
+        public Builder tags(@Nullable List<GlobalTableTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

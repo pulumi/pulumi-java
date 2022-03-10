@@ -90,17 +90,17 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
     	      this.testCase = defaults.testCase;
         }
 
-        public Builder setCreationTime(TimestampResponse creationTime) {
+        public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setOutput(FileReferenceResponse output) {
+        public Builder output(FileReferenceResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setTestCase(TestCaseReferenceResponse testCase) {
+        public Builder testCase(TestCaseReferenceResponse testCase) {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }

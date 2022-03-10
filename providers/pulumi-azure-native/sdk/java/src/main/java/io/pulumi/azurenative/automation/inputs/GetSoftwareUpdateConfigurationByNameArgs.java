@@ -84,17 +84,17 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
     	      this.softwareUpdateConfigurationName = defaults.softwareUpdateConfigurationName;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSoftwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
+        public Builder softwareUpdateConfigurationName(String softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = Objects.requireNonNull(softwareUpdateConfigurationName);
             return this;
         }

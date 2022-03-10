@@ -68,12 +68,12 @@ public final class KubeClientSettingsArgs {
     	      this.qps = defaults.qps;
         }
 
-        public Builder setBurst(@Nullable Input<Integer> burst) {
+        public Builder burst(@Nullable Input<Integer> burst) {
             this.burst = burst;
             return this;
         }
 
-        public Builder setQps(@Nullable Input<Double> qps) {
+        public Builder qps(@Nullable Input<Double> qps) {
             this.qps = qps;
             return this;
         }

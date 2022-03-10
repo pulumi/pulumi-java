@@ -84,17 +84,17 @@ public final class CaaRecordResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFlags(@Nullable Integer flags) {
+        public Builder flags(@Nullable Integer flags) {
             this.flags = flags;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -144,62 +144,62 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setAzureApp(Input<AzureActiveDirectoryAppArgs> azureApp) {
+        public Builder azureApp(Input<AzureActiveDirectoryAppArgs> azureApp) {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
 
-        public Builder setAzureApp(AzureActiveDirectoryAppArgs azureApp) {
+        public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
             this.azureApp = Input.of(Objects.requireNonNull(azureApp));
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
+        public Builder backupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareArgs backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Input.ofNullable(backupFileShare);
             return this;
         }
 
-        public Builder setSelectedDatabases(Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Input<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setStorageResourceId(Input<String> storageResourceId) {
+        public Builder storageResourceId(Input<String> storageResourceId) {
             this.storageResourceId = Objects.requireNonNull(storageResourceId);
             return this;
         }
 
-        public Builder setStorageResourceId(String storageResourceId) {
+        public Builder storageResourceId(String storageResourceId) {
             this.storageResourceId = Input.of(Objects.requireNonNull(storageResourceId));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

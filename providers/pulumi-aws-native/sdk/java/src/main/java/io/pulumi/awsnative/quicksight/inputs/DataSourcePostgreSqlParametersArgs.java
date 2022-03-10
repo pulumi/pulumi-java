@@ -90,32 +90,32 @@ public final class DataSourcePostgreSqlParametersArgs extends io.pulumi.resource
     	      this.port = defaults.port;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setPort(Input<Double> port) {
+        public Builder port(Input<Double> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Double port) {
+        public Builder port(Double port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInstanceGroupManager(String instanceGroupManager) {
+        public Builder instanceGroupManager(String instanceGroupManager) {
             this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

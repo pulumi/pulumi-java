@@ -315,87 +315,87 @@ public final class DeploymentPropertiesExtendedResponse {
     	      this.validatedResources = defaults.validatedResources;
         }
 
-        public Builder setCorrelationId(String correlationId) {
+        public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
 
-        public Builder setDebugSetting(DebugSettingResponse debugSetting) {
+        public Builder debugSetting(DebugSettingResponse debugSetting) {
             this.debugSetting = Objects.requireNonNull(debugSetting);
             return this;
         }
 
-        public Builder setDependencies(List<DependencyResponse> dependencies) {
+        public Builder dependencies(List<DependencyResponse> dependencies) {
             this.dependencies = Objects.requireNonNull(dependencies);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setError(ErrorResponseResponse error) {
+        public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setOnErrorDeployment(OnErrorDeploymentExtendedResponse onErrorDeployment) {
+        public Builder onErrorDeployment(OnErrorDeploymentExtendedResponse onErrorDeployment) {
             this.onErrorDeployment = Objects.requireNonNull(onErrorDeployment);
             return this;
         }
 
-        public Builder setOutputResources(List<ResourceReferenceResponse> outputResources) {
+        public Builder outputResources(List<ResourceReferenceResponse> outputResources) {
             this.outputResources = Objects.requireNonNull(outputResources);
             return this;
         }
 
-        public Builder setOutputs(Object outputs) {
+        public Builder outputs(Object outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setParameters(Object parameters) {
+        public Builder parameters(Object parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParametersLink(ParametersLinkResponse parametersLink) {
+        public Builder parametersLink(ParametersLinkResponse parametersLink) {
             this.parametersLink = Objects.requireNonNull(parametersLink);
             return this;
         }
 
-        public Builder setProviders(List<ProviderResponse> providers) {
+        public Builder providers(List<ProviderResponse> providers) {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTemplateHash(String templateHash) {
+        public Builder templateHash(String templateHash) {
             this.templateHash = Objects.requireNonNull(templateHash);
             return this;
         }
 
-        public Builder setTemplateLink(TemplateLinkResponse templateLink) {
+        public Builder templateLink(TemplateLinkResponse templateLink) {
             this.templateLink = Objects.requireNonNull(templateLink);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setValidatedResources(List<ResourceReferenceResponse> validatedResources) {
+        public Builder validatedResources(List<ResourceReferenceResponse> validatedResources) {
             this.validatedResources = Objects.requireNonNull(validatedResources);
             return this;
         }

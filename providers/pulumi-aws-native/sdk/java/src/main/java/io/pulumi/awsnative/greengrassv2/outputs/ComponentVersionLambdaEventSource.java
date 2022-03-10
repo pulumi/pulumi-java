@@ -52,12 +52,12 @@ public final class ComponentVersionLambdaEventSource {
     	      this.type = defaults.type;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setType(@Nullable ComponentVersionLambdaEventSourceType type) {
+        public Builder type(@Nullable ComponentVersionLambdaEventSourceType type) {
             this.type = type;
             return this;
         }

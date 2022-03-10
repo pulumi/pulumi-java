@@ -53,12 +53,12 @@ public final class ScheduledEventsProfileArgs extends io.pulumi.resources.Resour
     	      this.terminateNotificationProfile = defaults.terminateNotificationProfile;
         }
 
-        public Builder setTerminateNotificationProfile(@Nullable Input<TerminateNotificationProfileArgs> terminateNotificationProfile) {
+        public Builder terminateNotificationProfile(@Nullable Input<TerminateNotificationProfileArgs> terminateNotificationProfile) {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
         }
 
-        public Builder setTerminateNotificationProfile(@Nullable TerminateNotificationProfileArgs terminateNotificationProfile) {
+        public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileArgs terminateNotificationProfile) {
             this.terminateNotificationProfile = Input.ofNullable(terminateNotificationProfile);
             return this;
         }

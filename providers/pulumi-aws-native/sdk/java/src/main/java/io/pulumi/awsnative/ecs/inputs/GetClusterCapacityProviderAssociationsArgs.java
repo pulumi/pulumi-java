@@ -47,7 +47,7 @@ public final class GetClusterCapacityProviderAssociationsArgs extends io.pulumi.
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }

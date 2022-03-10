@@ -60,12 +60,12 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items) {
+        public Builder items(@Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable Map<String,List<EventHandlerTemplateArgs>> items) {
+        public Builder items(@Nullable Map<String,List<EventHandlerTemplateArgs>> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

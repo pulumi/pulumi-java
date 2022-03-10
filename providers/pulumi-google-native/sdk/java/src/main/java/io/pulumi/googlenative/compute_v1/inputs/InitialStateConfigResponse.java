@@ -105,22 +105,22 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
     	      this.pk = defaults.pk;
         }
 
-        public Builder setDbs(List<FileContentBufferResponse> dbs) {
+        public Builder dbs(List<FileContentBufferResponse> dbs) {
             this.dbs = Objects.requireNonNull(dbs);
             return this;
         }
 
-        public Builder setDbxs(List<FileContentBufferResponse> dbxs) {
+        public Builder dbxs(List<FileContentBufferResponse> dbxs) {
             this.dbxs = Objects.requireNonNull(dbxs);
             return this;
         }
 
-        public Builder setKeks(List<FileContentBufferResponse> keks) {
+        public Builder keks(List<FileContentBufferResponse> keks) {
             this.keks = Objects.requireNonNull(keks);
             return this;
         }
 
-        public Builder setPk(FileContentBufferResponse pk) {
+        public Builder pk(FileContentBufferResponse pk) {
             this.pk = Objects.requireNonNull(pk);
             return this;
         }

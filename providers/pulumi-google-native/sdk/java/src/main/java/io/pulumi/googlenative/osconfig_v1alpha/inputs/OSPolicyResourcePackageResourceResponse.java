@@ -175,42 +175,42 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(OSPolicyResourcePackageResourceAPTResponse apt) {
+        public Builder apt(OSPolicyResourcePackageResourceAPTResponse apt) {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
 
-        public Builder setDeb(OSPolicyResourcePackageResourceDebResponse deb) {
+        public Builder deb(OSPolicyResourcePackageResourceDebResponse deb) {
             this.deb = Objects.requireNonNull(deb);
             return this;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setGooget(OSPolicyResourcePackageResourceGooGetResponse googet) {
+        public Builder googet(OSPolicyResourcePackageResourceGooGetResponse googet) {
             this.googet = Objects.requireNonNull(googet);
             return this;
         }
 
-        public Builder setMsi(OSPolicyResourcePackageResourceMSIResponse msi) {
+        public Builder msi(OSPolicyResourcePackageResourceMSIResponse msi) {
             this.msi = Objects.requireNonNull(msi);
             return this;
         }
 
-        public Builder setRpm(OSPolicyResourcePackageResourceRPMResponse rpm) {
+        public Builder rpm(OSPolicyResourcePackageResourceRPMResponse rpm) {
             this.rpm = Objects.requireNonNull(rpm);
             return this;
         }
 
-        public Builder setYum(OSPolicyResourcePackageResourceYUMResponse yum) {
+        public Builder yum(OSPolicyResourcePackageResourceYUMResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
 
-        public Builder setZypper(OSPolicyResourcePackageResourceZypperResponse zypper) {
+        public Builder zypper(OSPolicyResourcePackageResourceZypperResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }

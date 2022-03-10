@@ -115,42 +115,42 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     	      this.streams = defaults.streams;
         }
 
-        public Builder setCounterSpecifiers(@Nullable Input<List<String>> counterSpecifiers) {
+        public Builder counterSpecifiers(@Nullable Input<List<String>> counterSpecifiers) {
             this.counterSpecifiers = counterSpecifiers;
             return this;
         }
 
-        public Builder setCounterSpecifiers(@Nullable List<String> counterSpecifiers) {
+        public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
             this.counterSpecifiers = Input.ofNullable(counterSpecifiers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSamplingFrequencyInSeconds(@Nullable Input<Integer> samplingFrequencyInSeconds) {
+        public Builder samplingFrequencyInSeconds(@Nullable Input<Integer> samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;
             return this;
         }
 
-        public Builder setSamplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
+        public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
             this.samplingFrequencyInSeconds = Input.ofNullable(samplingFrequencyInSeconds);
             return this;
         }
 
-        public Builder setStreams(@Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
+        public Builder streams(@Nullable Input<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<Either<String,KnownPerfCounterDataSourceStreams>> streams) {
+        public Builder streams(@Nullable List<Either<String,KnownPerfCounterDataSourceStreams>> streams) {
             this.streams = Input.ofNullable(streams);
             return this;
         }

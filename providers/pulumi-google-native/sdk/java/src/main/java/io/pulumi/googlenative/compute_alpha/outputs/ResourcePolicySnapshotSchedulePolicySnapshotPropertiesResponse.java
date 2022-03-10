@@ -100,22 +100,22 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setChainName(String chainName) {
+        public Builder chainName(String chainName) {
             this.chainName = Objects.requireNonNull(chainName);
             return this;
         }
 
-        public Builder setGuestFlush(Boolean guestFlush) {
+        public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setStorageLocations(List<String> storageLocations) {
+        public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }

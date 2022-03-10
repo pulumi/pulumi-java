@@ -75,27 +75,27 @@ public final class PackageStorageLocation {
     	      this.repoPrefixLocation = defaults.repoPrefixLocation;
         }
 
-        public Builder setBinaryPrefixLocation(@Nullable String binaryPrefixLocation) {
+        public Builder binaryPrefixLocation(@Nullable String binaryPrefixLocation) {
             this.binaryPrefixLocation = binaryPrefixLocation;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setGeneratedPrefixLocation(@Nullable String generatedPrefixLocation) {
+        public Builder generatedPrefixLocation(@Nullable String generatedPrefixLocation) {
             this.generatedPrefixLocation = generatedPrefixLocation;
             return this;
         }
 
-        public Builder setManifestPrefixLocation(@Nullable String manifestPrefixLocation) {
+        public Builder manifestPrefixLocation(@Nullable String manifestPrefixLocation) {
             this.manifestPrefixLocation = manifestPrefixLocation;
             return this;
         }
 
-        public Builder setRepoPrefixLocation(@Nullable String repoPrefixLocation) {
+        public Builder repoPrefixLocation(@Nullable String repoPrefixLocation) {
             this.repoPrefixLocation = repoPrefixLocation;
             return this;
         }

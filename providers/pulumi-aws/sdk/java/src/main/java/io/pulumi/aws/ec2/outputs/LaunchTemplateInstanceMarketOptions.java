@@ -68,12 +68,12 @@ public final class LaunchTemplateInstanceMarketOptions {
     	      this.spotOptions = defaults.spotOptions;
         }
 
-        public Builder setMarketType(@Nullable String marketType) {
+        public Builder marketType(@Nullable String marketType) {
             this.marketType = marketType;
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
+        public Builder spotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }

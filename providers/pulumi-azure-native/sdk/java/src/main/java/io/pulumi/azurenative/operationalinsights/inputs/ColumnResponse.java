@@ -155,37 +155,37 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataTypeHint(@Nullable String dataTypeHint) {
+        public Builder dataTypeHint(@Nullable String dataTypeHint) {
             this.dataTypeHint = dataTypeHint;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIsDefaultDisplay(Boolean isDefaultDisplay) {
+        public Builder isDefaultDisplay(Boolean isDefaultDisplay) {
             this.isDefaultDisplay = Objects.requireNonNull(isDefaultDisplay);
             return this;
         }
 
-        public Builder setIsHidden(Boolean isHidden) {
+        public Builder isHidden(Boolean isHidden) {
             this.isHidden = Objects.requireNonNull(isHidden);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

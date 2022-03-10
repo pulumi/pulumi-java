@@ -51,12 +51,12 @@ public final class GetOriginRequestPolicyHeadersConfig {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(String headerBehavior) {
+        public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
+        public Builder headers(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }

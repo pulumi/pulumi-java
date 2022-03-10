@@ -91,17 +91,17 @@ public final class LabelingDatasetConfigurationResponse extends io.pulumi.resour
     	      this.enableIncrementalDatasetRefresh = defaults.enableIncrementalDatasetRefresh;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setDatasetVersion(String datasetVersion) {
+        public Builder datasetVersion(String datasetVersion) {
             this.datasetVersion = Objects.requireNonNull(datasetVersion);
             return this;
         }
 
-        public Builder setEnableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
+        public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
             this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
         }

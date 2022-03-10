@@ -75,22 +75,22 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preference = defaults.preference;
         }
 
-        public Builder setExchange(@Nullable Input<String> exchange) {
+        public Builder exchange(@Nullable Input<String> exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setExchange(@Nullable String exchange) {
+        public Builder exchange(@Nullable String exchange) {
             this.exchange = Input.ofNullable(exchange);
             return this;
         }
 
-        public Builder setPreference(@Nullable Input<Integer> preference) {
+        public Builder preference(@Nullable Input<Integer> preference) {
             this.preference = preference;
             return this;
         }
 
-        public Builder setPreference(@Nullable Integer preference) {
+        public Builder preference(@Nullable Integer preference) {
             this.preference = Input.ofNullable(preference);
             return this;
         }

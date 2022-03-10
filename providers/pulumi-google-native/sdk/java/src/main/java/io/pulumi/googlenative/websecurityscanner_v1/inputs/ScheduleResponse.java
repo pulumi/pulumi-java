@@ -73,12 +73,12 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setIntervalDurationDays(Integer intervalDurationDays) {
+        public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }

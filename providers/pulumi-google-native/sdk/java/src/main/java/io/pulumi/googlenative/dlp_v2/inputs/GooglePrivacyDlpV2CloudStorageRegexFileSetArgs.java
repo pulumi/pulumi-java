@@ -91,32 +91,32 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     	      this.includeRegex = defaults.includeRegex;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setExcludeRegex(@Nullable Input<List<String>> excludeRegex) {
+        public Builder excludeRegex(@Nullable Input<List<String>> excludeRegex) {
             this.excludeRegex = excludeRegex;
             return this;
         }
 
-        public Builder setExcludeRegex(@Nullable List<String> excludeRegex) {
+        public Builder excludeRegex(@Nullable List<String> excludeRegex) {
             this.excludeRegex = Input.ofNullable(excludeRegex);
             return this;
         }
 
-        public Builder setIncludeRegex(@Nullable Input<List<String>> includeRegex) {
+        public Builder includeRegex(@Nullable Input<List<String>> includeRegex) {
             this.includeRegex = includeRegex;
             return this;
         }
 
-        public Builder setIncludeRegex(@Nullable List<String> includeRegex) {
+        public Builder includeRegex(@Nullable List<String> includeRegex) {
             this.includeRegex = Input.ofNullable(includeRegex);
             return this;
         }

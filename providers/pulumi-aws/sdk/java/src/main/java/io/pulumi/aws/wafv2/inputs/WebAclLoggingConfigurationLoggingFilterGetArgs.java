@@ -71,22 +71,22 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(Input<String> defaultBehavior) {
+        public Builder defaultBehavior(Input<String> defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setDefaultBehavior(String defaultBehavior) {
+        public Builder defaultBehavior(String defaultBehavior) {
             this.defaultBehavior = Input.of(Objects.requireNonNull(defaultBehavior));
             return this;
         }
 
-        public Builder setFilters(Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
+        public Builder filters(Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs> filters) {
+        public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs> filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }

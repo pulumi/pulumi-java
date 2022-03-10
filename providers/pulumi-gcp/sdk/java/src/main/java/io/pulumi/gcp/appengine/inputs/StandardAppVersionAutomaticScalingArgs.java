@@ -140,62 +140,62 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
     	      this.standardSchedulerSettings = defaults.standardSchedulerSettings;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Input<Integer> maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Input<Integer> maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = Input.ofNullable(maxConcurrentRequests);
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Input<Integer> maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Input<Integer> maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Integer maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = Input.ofNullable(maxIdleInstances);
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable Input<String> maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable Input<String> maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable String maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = Input.ofNullable(maxPendingLatency);
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Input<Integer> minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Input<Integer> minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Integer minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = Input.ofNullable(minIdleInstances);
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable Input<String> minPendingLatency) {
+        public Builder minPendingLatency(@Nullable Input<String> minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable String minPendingLatency) {
+        public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = Input.ofNullable(minPendingLatency);
             return this;
         }
 
-        public Builder setStandardSchedulerSettings(@Nullable Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> standardSchedulerSettings) {
+        public Builder standardSchedulerSettings(@Nullable Input<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> standardSchedulerSettings) {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
 
-        public Builder setStandardSchedulerSettings(@Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs standardSchedulerSettings) {
+        public Builder standardSchedulerSettings(@Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs standardSchedulerSettings) {
             this.standardSchedulerSettings = Input.ofNullable(standardSchedulerSettings);
             return this;
         }

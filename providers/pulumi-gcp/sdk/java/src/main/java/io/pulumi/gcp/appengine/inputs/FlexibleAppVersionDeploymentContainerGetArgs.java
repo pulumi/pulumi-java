@@ -53,12 +53,12 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends io.pulum
     	      this.image = defaults.image;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }

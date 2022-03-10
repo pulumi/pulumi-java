@@ -105,42 +105,42 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDefaultRouteTableId(Input<String> defaultRouteTableId) {
+        public Builder defaultRouteTableId(Input<String> defaultRouteTableId) {
             this.defaultRouteTableId = Objects.requireNonNull(defaultRouteTableId);
             return this;
         }
 
-        public Builder setDefaultRouteTableId(String defaultRouteTableId) {
+        public Builder defaultRouteTableId(String defaultRouteTableId) {
             this.defaultRouteTableId = Input.of(Objects.requireNonNull(defaultRouteTableId));
             return this;
         }
 
-        public Builder setPropagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
 
-        public Builder setPropagatingVgws(@Nullable List<String> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Input.ofNullable(propagatingVgws);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<DefaultRouteTableRouteArgs>> routes) {
+        public Builder routes(@Nullable Input<List<DefaultRouteTableRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<DefaultRouteTableRouteArgs> routes) {
+        public Builder routes(@Nullable List<DefaultRouteTableRouteArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

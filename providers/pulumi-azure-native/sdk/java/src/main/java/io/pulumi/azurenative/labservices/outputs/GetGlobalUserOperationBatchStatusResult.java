@@ -49,7 +49,7 @@ public final class GetGlobalUserOperationBatchStatusResult {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<OperationBatchStatusResponseItemResponse> items) {
+        public Builder items(List<OperationBatchStatusResponseItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

@@ -162,72 +162,72 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
     	      this.status = defaults.status;
         }
 
-        public Builder setClassification(@Nullable Input<Either<String,IncidentClassification>> classification) {
+        public Builder classification(@Nullable Input<Either<String,IncidentClassification>> classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassification(@Nullable Either<String,IncidentClassification> classification) {
+        public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
             this.classification = Input.ofNullable(classification);
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable Input<String> classificationComment) {
+        public Builder classificationComment(@Nullable Input<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable String classificationComment) {
+        public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = Input.ofNullable(classificationComment);
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
+        public Builder classificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
+        public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
             this.classificationReason = Input.ofNullable(classificationReason);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<IncidentLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<IncidentLabelArgs> labels) {
+        public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
+        public Builder owner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable IncidentOwnerInfoArgs owner) {
+        public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable Either<String,IncidentSeverity> severity) {
+        public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,IncidentStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,IncidentStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,IncidentStatus> status) {
+        public Builder status(@Nullable Either<String,IncidentStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

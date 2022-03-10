@@ -194,92 +194,92 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder setCriterionType(Input<String> criterionType) {
+        public Builder criterionType(Input<String> criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
-        public Builder setCriterionType(String criterionType) {
+        public Builder criterionType(String criterionType) {
             this.criterionType = Input.of(Objects.requireNonNull(criterionType));
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<MetricDimensionArgs> dimensions) {
+        public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Input.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Input<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,Operator> operator) {
+        public Builder operator(Either<String,Operator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Boolean skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = Input.ofNullable(skipMetricValidation);
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setTimeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        public Builder timeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
-        public Builder setTimeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
+        public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
             return this;
         }

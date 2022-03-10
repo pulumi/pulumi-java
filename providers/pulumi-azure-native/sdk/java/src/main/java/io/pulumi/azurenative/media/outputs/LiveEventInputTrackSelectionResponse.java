@@ -83,17 +83,17 @@ public final class LiveEventInputTrackSelectionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setProperty(@Nullable String property) {
+        public Builder property(@Nullable String property) {
             this.property = property;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

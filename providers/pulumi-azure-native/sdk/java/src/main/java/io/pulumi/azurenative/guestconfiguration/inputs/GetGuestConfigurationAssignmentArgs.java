@@ -84,17 +84,17 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setGuestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
             this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }

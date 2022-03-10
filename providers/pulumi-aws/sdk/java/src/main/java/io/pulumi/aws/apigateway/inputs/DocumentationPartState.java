@@ -87,32 +87,32 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setLocation(@Nullable Input<DocumentationPartLocationGetArgs> location) {
+        public Builder location(@Nullable Input<DocumentationPartLocationGetArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable DocumentationPartLocationGetArgs location) {
+        public Builder location(@Nullable DocumentationPartLocationGetArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<String> properties) {
+        public Builder properties(@Nullable Input<String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable String properties) {
+        public Builder properties(@Nullable String properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRestApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Input<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
-        public Builder setRestApiId(@Nullable String restApiId) {
+        public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Input.ofNullable(restApiId);
             return this;
         }

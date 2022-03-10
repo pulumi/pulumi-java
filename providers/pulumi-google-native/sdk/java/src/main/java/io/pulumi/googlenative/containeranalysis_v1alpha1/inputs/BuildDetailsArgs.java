@@ -92,32 +92,32 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder setIntotoStatement(@Nullable Input<InTotoStatementArgs> intotoStatement) {
+        public Builder intotoStatement(@Nullable Input<InTotoStatementArgs> intotoStatement) {
             this.intotoStatement = intotoStatement;
             return this;
         }
 
-        public Builder setIntotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
+        public Builder intotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
             this.intotoStatement = Input.ofNullable(intotoStatement);
             return this;
         }
 
-        public Builder setProvenance(@Nullable Input<BuildProvenanceArgs> provenance) {
+        public Builder provenance(@Nullable Input<BuildProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
 
-        public Builder setProvenance(@Nullable BuildProvenanceArgs provenance) {
+        public Builder provenance(@Nullable BuildProvenanceArgs provenance) {
             this.provenance = Input.ofNullable(provenance);
             return this;
         }
 
-        public Builder setProvenanceBytes(@Nullable Input<String> provenanceBytes) {
+        public Builder provenanceBytes(@Nullable Input<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
 
-        public Builder setProvenanceBytes(@Nullable String provenanceBytes) {
+        public Builder provenanceBytes(@Nullable String provenanceBytes) {
             this.provenanceBytes = Input.ofNullable(provenanceBytes);
             return this;
         }

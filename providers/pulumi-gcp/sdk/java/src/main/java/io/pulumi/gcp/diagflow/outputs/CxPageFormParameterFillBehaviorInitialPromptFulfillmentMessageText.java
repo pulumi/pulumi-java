@@ -71,12 +71,12 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     	      this.texts = defaults.texts;
         }
 
-        public Builder setAllowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
-        public Builder setTexts(@Nullable List<String> texts) {
+        public Builder texts(@Nullable List<String> texts) {
             this.texts = texts;
             return this;
         }

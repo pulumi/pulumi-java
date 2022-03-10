@@ -140,32 +140,32 @@ public final class ValidateMigrationInputSqlServerSqlDbSyncTaskPropertiesRespons
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setCommands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
+        public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable ValidateSyncMigrationInputSqlServerTaskInputResponse input) {
+        public Builder input(@Nullable ValidateSyncMigrationInputSqlServerTaskInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(List<ValidateSyncMigrationInputSqlServerTaskOutputResponse> output) {
+        public Builder output(List<ValidateSyncMigrationInputSqlServerTaskOutputResponse> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

@@ -85,32 +85,32 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Input<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder setFileKey(Input<String> fileKey) {
+        public Builder fileKey(Input<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
-        public Builder setFileKey(String fileKey) {
+        public Builder fileKey(String fileKey) {
             this.fileKey = Input.of(Objects.requireNonNull(fileKey));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

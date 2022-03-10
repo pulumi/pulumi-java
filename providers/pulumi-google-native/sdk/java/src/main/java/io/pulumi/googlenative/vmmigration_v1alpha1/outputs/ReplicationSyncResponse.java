@@ -48,7 +48,7 @@ public final class ReplicationSyncResponse {
     	      this.lastSyncTime = defaults.lastSyncTime;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }

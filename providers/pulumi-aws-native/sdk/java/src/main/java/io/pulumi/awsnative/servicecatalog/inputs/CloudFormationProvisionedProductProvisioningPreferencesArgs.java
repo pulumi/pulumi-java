@@ -125,72 +125,72 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     	      this.stackSetRegions = defaults.stackSetRegions;
         }
 
-        public Builder setStackSetAccounts(@Nullable Input<List<String>> stackSetAccounts) {
+        public Builder stackSetAccounts(@Nullable Input<List<String>> stackSetAccounts) {
             this.stackSetAccounts = stackSetAccounts;
             return this;
         }
 
-        public Builder setStackSetAccounts(@Nullable List<String> stackSetAccounts) {
+        public Builder stackSetAccounts(@Nullable List<String> stackSetAccounts) {
             this.stackSetAccounts = Input.ofNullable(stackSetAccounts);
             return this;
         }
 
-        public Builder setStackSetFailureToleranceCount(@Nullable Input<Integer> stackSetFailureToleranceCount) {
+        public Builder stackSetFailureToleranceCount(@Nullable Input<Integer> stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
             return this;
         }
 
-        public Builder setStackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
+        public Builder stackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = Input.ofNullable(stackSetFailureToleranceCount);
             return this;
         }
 
-        public Builder setStackSetFailureTolerancePercentage(@Nullable Input<Integer> stackSetFailureTolerancePercentage) {
+        public Builder stackSetFailureTolerancePercentage(@Nullable Input<Integer> stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
             return this;
         }
 
-        public Builder setStackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
+        public Builder stackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = Input.ofNullable(stackSetFailureTolerancePercentage);
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyCount(@Nullable Input<Integer> stackSetMaxConcurrencyCount) {
+        public Builder stackSetMaxConcurrencyCount(@Nullable Input<Integer> stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
+        public Builder stackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = Input.ofNullable(stackSetMaxConcurrencyCount);
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyPercentage(@Nullable Input<Integer> stackSetMaxConcurrencyPercentage) {
+        public Builder stackSetMaxConcurrencyPercentage(@Nullable Input<Integer> stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
+        public Builder stackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = Input.ofNullable(stackSetMaxConcurrencyPercentage);
             return this;
         }
 
-        public Builder setStackSetOperationType(@Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType) {
+        public Builder stackSetOperationType(@Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType) {
             this.stackSetOperationType = stackSetOperationType;
             return this;
         }
 
-        public Builder setStackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
+        public Builder stackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
             this.stackSetOperationType = Input.ofNullable(stackSetOperationType);
             return this;
         }
 
-        public Builder setStackSetRegions(@Nullable Input<List<String>> stackSetRegions) {
+        public Builder stackSetRegions(@Nullable Input<List<String>> stackSetRegions) {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
 
-        public Builder setStackSetRegions(@Nullable List<String> stackSetRegions) {
+        public Builder stackSetRegions(@Nullable List<String> stackSetRegions) {
             this.stackSetRegions = Input.ofNullable(stackSetRegions);
             return this;
         }

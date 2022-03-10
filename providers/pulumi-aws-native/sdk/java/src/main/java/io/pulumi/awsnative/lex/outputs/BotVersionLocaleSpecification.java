@@ -50,12 +50,12 @@ public final class BotVersionLocaleSpecification {
     	      this.localeId = defaults.localeId;
         }
 
-        public Builder setBotVersionLocaleDetails(BotVersionLocaleDetails botVersionLocaleDetails) {
+        public Builder botVersionLocaleDetails(BotVersionLocaleDetails botVersionLocaleDetails) {
             this.botVersionLocaleDetails = Objects.requireNonNull(botVersionLocaleDetails);
             return this;
         }
 
-        public Builder setLocaleId(String localeId) {
+        public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }

@@ -67,12 +67,12 @@ public final class MasterAuthorizedNetworksConfigResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCidrBlocks(List<CidrBlockResponse> cidrBlocks) {
+        public Builder cidrBlocks(List<CidrBlockResponse> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

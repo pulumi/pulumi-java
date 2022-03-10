@@ -56,12 +56,12 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.Port = defaults.Port;
         }
 
-        public Builder setPort(Input<Integer> Port) {
+        public Builder port(Input<Integer> Port) {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }
 
-        public Builder setPort(Integer Port) {
+        public Builder port(Integer Port) {
             this.Port = Input.of(Objects.requireNonNull(Port));
             return this;
         }

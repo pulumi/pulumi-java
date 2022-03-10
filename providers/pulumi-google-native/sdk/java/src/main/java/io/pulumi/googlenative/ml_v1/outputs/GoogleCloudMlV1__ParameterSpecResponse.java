@@ -147,37 +147,37 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategoricalValues(List<String> categoricalValues) {
+        public Builder categoricalValues(List<String> categoricalValues) {
             this.categoricalValues = Objects.requireNonNull(categoricalValues);
             return this;
         }
 
-        public Builder setDiscreteValues(List<Double> discreteValues) {
+        public Builder discreteValues(List<Double> discreteValues) {
             this.discreteValues = Objects.requireNonNull(discreteValues);
             return this;
         }
 
-        public Builder setMaxValue(Double maxValue) {
+        public Builder maxValue(Double maxValue) {
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
 
-        public Builder setMinValue(Double minValue) {
+        public Builder minValue(Double minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

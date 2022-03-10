@@ -84,17 +84,17 @@ public final class GetAccessPointPosixUser {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(Integer gid) {
+        public Builder gid(Integer gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setSecondaryGids(List<Integer> secondaryGids) {
+        public Builder secondaryGids(List<Integer> secondaryGids) {
             this.secondaryGids = Objects.requireNonNull(secondaryGids);
             return this;
         }
 
-        public Builder setUid(Integer uid) {
+        public Builder uid(Integer uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

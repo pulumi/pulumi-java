@@ -40,7 +40,7 @@ public final class GetWorkloadIdentityPoolProviderAw {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }

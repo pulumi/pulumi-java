@@ -69,12 +69,12 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setKeyword(String keyword) {
+        public Builder keyword(String keyword) {
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
 
-        public Builder setSettings(@Nullable List<String> settings) {
+        public Builder settings(@Nullable List<String> settings) {
             this.settings = settings;
             return this;
         }

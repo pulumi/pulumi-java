@@ -251,132 +251,132 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAzureOrigin(@Nullable Input<ResourceReferenceArgs> azureOrigin) {
+        public Builder azureOrigin(@Nullable Input<ResourceReferenceArgs> azureOrigin) {
             this.azureOrigin = azureOrigin;
             return this;
         }
 
-        public Builder setAzureOrigin(@Nullable ResourceReferenceArgs azureOrigin) {
+        public Builder azureOrigin(@Nullable ResourceReferenceArgs azureOrigin) {
             this.azureOrigin = Input.ofNullable(azureOrigin);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,EnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Input<Integer> httpPort) {
+        public Builder httpPort(@Nullable Input<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = Input.ofNullable(httpPort);
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Input<Integer> httpsPort) {
+        public Builder httpsPort(@Nullable Input<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = Input.ofNullable(httpsPort);
             return this;
         }
 
-        public Builder setOriginGroupName(Input<String> originGroupName) {
+        public Builder originGroupName(Input<String> originGroupName) {
             this.originGroupName = Objects.requireNonNull(originGroupName);
             return this;
         }
 
-        public Builder setOriginGroupName(String originGroupName) {
+        public Builder originGroupName(String originGroupName) {
             this.originGroupName = Input.of(Objects.requireNonNull(originGroupName));
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable Input<String> originHostHeader) {
+        public Builder originHostHeader(@Nullable Input<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = Input.ofNullable(originHostHeader);
             return this;
         }
 
-        public Builder setOriginName(@Nullable Input<String> originName) {
+        public Builder originName(@Nullable Input<String> originName) {
             this.originName = originName;
             return this;
         }
 
-        public Builder setOriginName(@Nullable String originName) {
+        public Builder originName(@Nullable String originName) {
             this.originName = Input.ofNullable(originName);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSharedPrivateLinkResource(@Nullable Input<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource) {
+        public Builder sharedPrivateLinkResource(@Nullable Input<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
 
-        public Builder setSharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesArgs sharedPrivateLinkResource) {
+        public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesArgs sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = Input.ofNullable(sharedPrivateLinkResource);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

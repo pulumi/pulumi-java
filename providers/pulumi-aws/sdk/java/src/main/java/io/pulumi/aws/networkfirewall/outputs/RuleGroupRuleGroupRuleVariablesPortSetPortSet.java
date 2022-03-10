@@ -49,7 +49,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
     	      this.definitions = defaults.definitions;
         }
 
-        public Builder setDefinitions(List<String> definitions) {
+        public Builder definitions(List<String> definitions) {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }

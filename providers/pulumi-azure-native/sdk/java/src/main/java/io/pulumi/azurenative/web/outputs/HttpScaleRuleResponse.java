@@ -69,12 +69,12 @@ public final class HttpScaleRuleResponse {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setAuth(@Nullable List<ScaleRuleAuthResponse> auth) {
+        public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }

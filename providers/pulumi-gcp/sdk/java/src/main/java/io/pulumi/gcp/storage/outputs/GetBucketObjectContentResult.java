@@ -231,112 +231,112 @@ public final class GetBucketObjectContentResult {
     	      this.temporaryHold = defaults.temporaryHold;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setCacheControl(String cacheControl) {
+        public Builder cacheControl(String cacheControl) {
             this.cacheControl = Objects.requireNonNull(cacheControl);
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentDisposition(String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
 
-        public Builder setContentEncoding(String contentEncoding) {
+        public Builder contentEncoding(String contentEncoding) {
             this.contentEncoding = Objects.requireNonNull(contentEncoding);
             return this;
         }
 
-        public Builder setContentLanguage(String contentLanguage) {
+        public Builder contentLanguage(String contentLanguage) {
             this.contentLanguage = Objects.requireNonNull(contentLanguage);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setCrc32c(String crc32c) {
+        public Builder crc32c(String crc32c) {
             this.crc32c = Objects.requireNonNull(crc32c);
             return this;
         }
 
-        public Builder setCustomerEncryptions(List<GetBucketObjectContentCustomerEncryption> customerEncryptions) {
+        public Builder customerEncryptions(List<GetBucketObjectContentCustomerEncryption> customerEncryptions) {
             this.customerEncryptions = Objects.requireNonNull(customerEncryptions);
             return this;
         }
 
-        public Builder setDetectMd5hash(String detectMd5hash) {
+        public Builder detectMd5hash(String detectMd5hash) {
             this.detectMd5hash = Objects.requireNonNull(detectMd5hash);
             return this;
         }
 
-        public Builder setEventBasedHold(Boolean eventBasedHold) {
+        public Builder eventBasedHold(Boolean eventBasedHold) {
             this.eventBasedHold = Objects.requireNonNull(eventBasedHold);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setMd5hash(String md5hash) {
+        public Builder md5hash(String md5hash) {
             this.md5hash = Objects.requireNonNull(md5hash);
             return this;
         }
 
-        public Builder setMediaLink(String mediaLink) {
+        public Builder mediaLink(String mediaLink) {
             this.mediaLink = Objects.requireNonNull(mediaLink);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputName(String outputName) {
+        public Builder outputName(String outputName) {
             this.outputName = Objects.requireNonNull(outputName);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setTemporaryHold(Boolean temporaryHold) {
+        public Builder temporaryHold(Boolean temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }

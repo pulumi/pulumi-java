@@ -56,12 +56,12 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setShareId(Input<String> shareId) {
+        public Builder shareId(Input<String> shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Input.of(Objects.requireNonNull(shareId));
             return this;
         }

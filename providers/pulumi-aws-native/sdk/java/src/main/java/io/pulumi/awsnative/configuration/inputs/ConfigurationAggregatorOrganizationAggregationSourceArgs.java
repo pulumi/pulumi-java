@@ -76,32 +76,32 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAllAwsRegions(@Nullable Input<Boolean> allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Input<Boolean> allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
-        public Builder setAllAwsRegions(@Nullable Boolean allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = Input.ofNullable(allAwsRegions);
             return this;
         }
 
-        public Builder setAwsRegions(@Nullable Input<List<String>> awsRegions) {
+        public Builder awsRegions(@Nullable Input<List<String>> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
 
-        public Builder setAwsRegions(@Nullable List<String> awsRegions) {
+        public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = Input.ofNullable(awsRegions);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

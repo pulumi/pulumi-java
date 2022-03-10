@@ -155,72 +155,72 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
     	      this.recoveryTargetDiskAccountType = defaults.recoveryTargetDiskAccountType;
         }
 
-        public Builder setDiskEncryptionInfo(@Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo) {
+        public Builder diskEncryptionInfo(@Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo) {
             this.diskEncryptionInfo = diskEncryptionInfo;
             return this;
         }
 
-        public Builder setDiskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
+        public Builder diskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
             this.diskEncryptionInfo = Input.ofNullable(diskEncryptionInfo);
             return this;
         }
 
-        public Builder setDiskId(@Nullable Input<String> diskId) {
+        public Builder diskId(@Nullable Input<String> diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = Input.ofNullable(diskId);
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable Input<String> primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable Input<String> primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = Input.ofNullable(primaryStagingAzureStorageAccountId);
             return this;
         }
 
-        public Builder setRecoveryDiskEncryptionSetId(@Nullable Input<String> recoveryDiskEncryptionSetId) {
+        public Builder recoveryDiskEncryptionSetId(@Nullable Input<String> recoveryDiskEncryptionSetId) {
             this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
             return this;
         }
 
-        public Builder setRecoveryDiskEncryptionSetId(@Nullable String recoveryDiskEncryptionSetId) {
+        public Builder recoveryDiskEncryptionSetId(@Nullable String recoveryDiskEncryptionSetId) {
             this.recoveryDiskEncryptionSetId = Input.ofNullable(recoveryDiskEncryptionSetId);
             return this;
         }
 
-        public Builder setRecoveryReplicaDiskAccountType(@Nullable Input<String> recoveryReplicaDiskAccountType) {
+        public Builder recoveryReplicaDiskAccountType(@Nullable Input<String> recoveryReplicaDiskAccountType) {
             this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
             return this;
         }
 
-        public Builder setRecoveryReplicaDiskAccountType(@Nullable String recoveryReplicaDiskAccountType) {
+        public Builder recoveryReplicaDiskAccountType(@Nullable String recoveryReplicaDiskAccountType) {
             this.recoveryReplicaDiskAccountType = Input.ofNullable(recoveryReplicaDiskAccountType);
             return this;
         }
 
-        public Builder setRecoveryResourceGroupId(@Nullable Input<String> recoveryResourceGroupId) {
+        public Builder recoveryResourceGroupId(@Nullable Input<String> recoveryResourceGroupId) {
             this.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
 
-        public Builder setRecoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
+        public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
             this.recoveryResourceGroupId = Input.ofNullable(recoveryResourceGroupId);
             return this;
         }
 
-        public Builder setRecoveryTargetDiskAccountType(@Nullable Input<String> recoveryTargetDiskAccountType) {
+        public Builder recoveryTargetDiskAccountType(@Nullable Input<String> recoveryTargetDiskAccountType) {
             this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
             return this;
         }
 
-        public Builder setRecoveryTargetDiskAccountType(@Nullable String recoveryTargetDiskAccountType) {
+        public Builder recoveryTargetDiskAccountType(@Nullable String recoveryTargetDiskAccountType) {
             this.recoveryTargetDiskAccountType = Input.ofNullable(recoveryTargetDiskAccountType);
             return this;
         }

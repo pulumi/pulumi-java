@@ -112,62 +112,62 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setDefaultTTL(Input<Double> defaultTTL) {
+        public Builder defaultTTL(Input<Double> defaultTTL) {
             this.defaultTTL = Objects.requireNonNull(defaultTTL);
             return this;
         }
 
-        public Builder setDefaultTTL(Double defaultTTL) {
+        public Builder defaultTTL(Double defaultTTL) {
             this.defaultTTL = Input.of(Objects.requireNonNull(defaultTTL));
             return this;
         }
 
-        public Builder setMaxTTL(Input<Double> maxTTL) {
+        public Builder maxTTL(Input<Double> maxTTL) {
             this.maxTTL = Objects.requireNonNull(maxTTL);
             return this;
         }
 
-        public Builder setMaxTTL(Double maxTTL) {
+        public Builder maxTTL(Double maxTTL) {
             this.maxTTL = Input.of(Objects.requireNonNull(maxTTL));
             return this;
         }
 
-        public Builder setMinTTL(Input<Double> minTTL) {
+        public Builder minTTL(Input<Double> minTTL) {
             this.minTTL = Objects.requireNonNull(minTTL);
             return this;
         }
 
-        public Builder setMinTTL(Double minTTL) {
+        public Builder minTTL(Double minTTL) {
             this.minTTL = Input.of(Objects.requireNonNull(minTTL));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigin(Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(Input<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOriginArgs parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Input.of(Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin));
             return this;
         }

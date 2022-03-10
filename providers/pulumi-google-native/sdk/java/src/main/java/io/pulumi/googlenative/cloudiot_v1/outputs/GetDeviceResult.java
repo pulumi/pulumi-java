@@ -297,82 +297,82 @@ public final class GetDeviceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setBlocked(Boolean blocked) {
+        public Builder blocked(Boolean blocked) {
             this.blocked = Objects.requireNonNull(blocked);
             return this;
         }
 
-        public Builder setConfig(DeviceConfigResponse config) {
+        public Builder config(DeviceConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCredentials(List<DeviceCredentialResponse> credentials) {
+        public Builder credentials(List<DeviceCredentialResponse> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setGatewayConfig(GatewayConfigResponse gatewayConfig) {
+        public Builder gatewayConfig(GatewayConfigResponse gatewayConfig) {
             this.gatewayConfig = Objects.requireNonNull(gatewayConfig);
             return this;
         }
 
-        public Builder setLastConfigAckTime(String lastConfigAckTime) {
+        public Builder lastConfigAckTime(String lastConfigAckTime) {
             this.lastConfigAckTime = Objects.requireNonNull(lastConfigAckTime);
             return this;
         }
 
-        public Builder setLastConfigSendTime(String lastConfigSendTime) {
+        public Builder lastConfigSendTime(String lastConfigSendTime) {
             this.lastConfigSendTime = Objects.requireNonNull(lastConfigSendTime);
             return this;
         }
 
-        public Builder setLastErrorStatus(StatusResponse lastErrorStatus) {
+        public Builder lastErrorStatus(StatusResponse lastErrorStatus) {
             this.lastErrorStatus = Objects.requireNonNull(lastErrorStatus);
             return this;
         }
 
-        public Builder setLastErrorTime(String lastErrorTime) {
+        public Builder lastErrorTime(String lastErrorTime) {
             this.lastErrorTime = Objects.requireNonNull(lastErrorTime);
             return this;
         }
 
-        public Builder setLastEventTime(String lastEventTime) {
+        public Builder lastEventTime(String lastEventTime) {
             this.lastEventTime = Objects.requireNonNull(lastEventTime);
             return this;
         }
 
-        public Builder setLastHeartbeatTime(String lastHeartbeatTime) {
+        public Builder lastHeartbeatTime(String lastHeartbeatTime) {
             this.lastHeartbeatTime = Objects.requireNonNull(lastHeartbeatTime);
             return this;
         }
 
-        public Builder setLastStateTime(String lastStateTime) {
+        public Builder lastStateTime(String lastStateTime) {
             this.lastStateTime = Objects.requireNonNull(lastStateTime);
             return this;
         }
 
-        public Builder setLogLevel(String logLevel) {
+        public Builder logLevel(String logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumId(String numId) {
+        public Builder numId(String numId) {
             this.numId = Objects.requireNonNull(numId);
             return this;
         }
 
-        public Builder setState(DeviceStateResponse state) {
+        public Builder state(DeviceStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

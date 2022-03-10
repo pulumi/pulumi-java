@@ -145,72 +145,72 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable RepositoryEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Input.ofNullable(imageScanningConfiguration);
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable Input<RepositoryImageTagMutability> imageTagMutability) {
+        public Builder imageTagMutability(@Nullable Input<RepositoryImageTagMutability> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
+        public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
             this.imageTagMutability = Input.ofNullable(imageTagMutability);
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicyArgs lifecyclePolicy) {
             this.lifecyclePolicy = Input.ofNullable(lifecyclePolicy);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryPolicyText(@Nullable Input<Object> repositoryPolicyText) {
+        public Builder repositoryPolicyText(@Nullable Input<Object> repositoryPolicyText) {
             this.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
 
-        public Builder setRepositoryPolicyText(@Nullable Object repositoryPolicyText) {
+        public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
             this.repositoryPolicyText = Input.ofNullable(repositoryPolicyText);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RepositoryTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RepositoryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RepositoryTagArgs> tags) {
+        public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

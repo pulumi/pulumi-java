@@ -71,22 +71,22 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Input<SessionFindingPublishingFrequency> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
             this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<SessionStatus> status) {
+        public Builder status(@Nullable Input<SessionStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable SessionStatus status) {
+        public Builder status(@Nullable SessionStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

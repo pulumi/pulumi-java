@@ -213,57 +213,57 @@ public final class GetPipelineResult {
     	      this.workload = defaults.workload;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setJobCount(Integer jobCount) {
+        public Builder jobCount(Integer jobCount) {
             this.jobCount = Objects.requireNonNull(jobCount);
             return this;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPipelineSources(Map<String,String> pipelineSources) {
+        public Builder pipelineSources(Map<String,String> pipelineSources) {
             this.pipelineSources = Objects.requireNonNull(pipelineSources);
             return this;
         }
 
-        public Builder setScheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo) {
+        public Builder scheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
 
-        public Builder setSchedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
+        public Builder schedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = Objects.requireNonNull(schedulerServiceAccountEmail);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkload(GoogleCloudDatapipelinesV1WorkloadResponse workload) {
+        public Builder workload(GoogleCloudDatapipelinesV1WorkloadResponse workload) {
             this.workload = Objects.requireNonNull(workload);
             return this;
         }

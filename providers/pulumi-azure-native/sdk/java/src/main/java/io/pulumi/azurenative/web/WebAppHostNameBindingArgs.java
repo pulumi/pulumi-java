@@ -234,122 +234,122 @@ public final class WebAppHostNameBindingArgs extends io.pulumi.resources.Resourc
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setAzureResourceName(@Nullable Input<String> azureResourceName) {
+        public Builder azureResourceName(@Nullable Input<String> azureResourceName) {
             this.azureResourceName = azureResourceName;
             return this;
         }
 
-        public Builder setAzureResourceName(@Nullable String azureResourceName) {
+        public Builder azureResourceName(@Nullable String azureResourceName) {
             this.azureResourceName = Input.ofNullable(azureResourceName);
             return this;
         }
 
-        public Builder setAzureResourceType(@Nullable Input<AzureResourceType> azureResourceType) {
+        public Builder azureResourceType(@Nullable Input<AzureResourceType> azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
 
-        public Builder setAzureResourceType(@Nullable AzureResourceType azureResourceType) {
+        public Builder azureResourceType(@Nullable AzureResourceType azureResourceType) {
             this.azureResourceType = Input.ofNullable(azureResourceType);
             return this;
         }
 
-        public Builder setCustomHostNameDnsRecordType(@Nullable Input<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
+        public Builder customHostNameDnsRecordType(@Nullable Input<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
-        public Builder setCustomHostNameDnsRecordType(@Nullable CustomHostNameDnsRecordType customHostNameDnsRecordType) {
+        public Builder customHostNameDnsRecordType(@Nullable CustomHostNameDnsRecordType customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = Input.ofNullable(customHostNameDnsRecordType);
             return this;
         }
 
-        public Builder setDomainId(@Nullable Input<String> domainId) {
+        public Builder domainId(@Nullable Input<String> domainId) {
             this.domainId = domainId;
             return this;
         }
 
-        public Builder setDomainId(@Nullable String domainId) {
+        public Builder domainId(@Nullable String domainId) {
             this.domainId = Input.ofNullable(domainId);
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setHostNameType(@Nullable Input<HostNameType> hostNameType) {
+        public Builder hostNameType(@Nullable Input<HostNameType> hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
 
-        public Builder setHostNameType(@Nullable HostNameType hostNameType) {
+        public Builder hostNameType(@Nullable HostNameType hostNameType) {
             this.hostNameType = Input.ofNullable(hostNameType);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSiteName(@Nullable Input<String> siteName) {
+        public Builder siteName(@Nullable Input<String> siteName) {
             this.siteName = siteName;
             return this;
         }
 
-        public Builder setSiteName(@Nullable String siteName) {
+        public Builder siteName(@Nullable String siteName) {
             this.siteName = Input.ofNullable(siteName);
             return this;
         }
 
-        public Builder setSslState(@Nullable Input<SslState> sslState) {
+        public Builder sslState(@Nullable Input<SslState> sslState) {
             this.sslState = sslState;
             return this;
         }
 
-        public Builder setSslState(@Nullable SslState sslState) {
+        public Builder sslState(@Nullable SslState sslState) {
             this.sslState = Input.ofNullable(sslState);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

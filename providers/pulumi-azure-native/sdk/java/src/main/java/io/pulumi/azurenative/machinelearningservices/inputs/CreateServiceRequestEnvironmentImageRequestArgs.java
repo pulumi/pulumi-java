@@ -143,62 +143,62 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
     	      this.models = defaults.models;
         }
 
-        public Builder setAssets(@Nullable Input<List<ImageAssetArgs>> assets) {
+        public Builder assets(@Nullable Input<List<ImageAssetArgs>> assets) {
             this.assets = assets;
             return this;
         }
 
-        public Builder setAssets(@Nullable List<ImageAssetArgs> assets) {
+        public Builder assets(@Nullable List<ImageAssetArgs> assets) {
             this.assets = Input.ofNullable(assets);
             return this;
         }
 
-        public Builder setDriverProgram(@Nullable Input<String> driverProgram) {
+        public Builder driverProgram(@Nullable Input<String> driverProgram) {
             this.driverProgram = driverProgram;
             return this;
         }
 
-        public Builder setDriverProgram(@Nullable String driverProgram) {
+        public Builder driverProgram(@Nullable String driverProgram) {
             this.driverProgram = Input.ofNullable(driverProgram);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<EnvironmentImageRequestEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable EnvironmentImageRequestEnvironmentArgs environment) {
+        public Builder environment(@Nullable EnvironmentImageRequestEnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setEnvironmentReference(@Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference) {
+        public Builder environmentReference(@Nullable Input<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference) {
             this.environmentReference = environmentReference;
             return this;
         }
 
-        public Builder setEnvironmentReference(@Nullable EnvironmentImageRequestEnvironmentReferenceArgs environmentReference) {
+        public Builder environmentReference(@Nullable EnvironmentImageRequestEnvironmentReferenceArgs environmentReference) {
             this.environmentReference = Input.ofNullable(environmentReference);
             return this;
         }
 
-        public Builder setModelIds(@Nullable Input<List<String>> modelIds) {
+        public Builder modelIds(@Nullable Input<List<String>> modelIds) {
             this.modelIds = modelIds;
             return this;
         }
 
-        public Builder setModelIds(@Nullable List<String> modelIds) {
+        public Builder modelIds(@Nullable List<String> modelIds) {
             this.modelIds = Input.ofNullable(modelIds);
             return this;
         }
 
-        public Builder setModels(@Nullable Input<List<ModelArgs>> models) {
+        public Builder models(@Nullable Input<List<ModelArgs>> models) {
             this.models = models;
             return this;
         }
 
-        public Builder setModels(@Nullable List<ModelArgs> models) {
+        public Builder models(@Nullable List<ModelArgs> models) {
             this.models = Input.ofNullable(models);
             return this;
         }

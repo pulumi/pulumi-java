@@ -41,7 +41,7 @@ public final class JobAllowedStatistics {
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder setStatistics(List<String> statistics) {
+        public Builder statistics(List<String> statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }

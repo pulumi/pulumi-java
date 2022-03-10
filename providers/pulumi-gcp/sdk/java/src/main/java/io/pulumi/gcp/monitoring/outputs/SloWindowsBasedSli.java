@@ -166,27 +166,27 @@ public final class SloWindowsBasedSli {
     	      this.windowPeriod = defaults.windowPeriod;
         }
 
-        public Builder setGoodBadMetricFilter(@Nullable String goodBadMetricFilter) {
+        public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
 
-        public Builder setGoodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold) {
+        public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
 
-        public Builder setMetricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange) {
+        public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
 
-        public Builder setMetricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange) {
+        public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
 
-        public Builder setWindowPeriod(@Nullable String windowPeriod) {
+        public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
     	      this.trustedIdProviderName = defaults.trustedIdProviderName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTrustedIdProviderName(String trustedIdProviderName) {
+        public Builder trustedIdProviderName(String trustedIdProviderName) {
             this.trustedIdProviderName = Objects.requireNonNull(trustedIdProviderName);
             return this;
         }

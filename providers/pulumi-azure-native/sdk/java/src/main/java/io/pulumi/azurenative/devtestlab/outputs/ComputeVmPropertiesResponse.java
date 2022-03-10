@@ -150,37 +150,37 @@ public final class ComputeVmPropertiesResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setDataDiskIds(@Nullable List<String> dataDiskIds) {
+        public Builder dataDiskIds(@Nullable List<String> dataDiskIds) {
             this.dataDiskIds = dataDiskIds;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<ComputeDataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<ComputeDataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setOsDiskId(@Nullable String osDiskId) {
+        public Builder osDiskId(@Nullable String osDiskId) {
             this.osDiskId = osDiskId;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ComputeVmInstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<ComputeVmInstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

@@ -72,22 +72,22 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
-        public Builder setSynonyms(@Nullable List<String> synonyms) {
+        public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

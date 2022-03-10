@@ -73,12 +73,12 @@ public final class RecurringTimeWindowResponse extends io.pulumi.resources.Invok
     	      this.window = defaults.window;
         }
 
-        public Builder setRecurrence(String recurrence) {
+        public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setWindow(TimeWindowResponse window) {
+        public Builder window(TimeWindowResponse window) {
             this.window = Objects.requireNonNull(window);
             return this;
         }

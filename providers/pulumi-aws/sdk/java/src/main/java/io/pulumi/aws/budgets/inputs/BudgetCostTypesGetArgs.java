@@ -214,112 +214,112 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
     	      this.useBlended = defaults.useBlended;
         }
 
-        public Builder setIncludeCredit(@Nullable Input<Boolean> includeCredit) {
+        public Builder includeCredit(@Nullable Input<Boolean> includeCredit) {
             this.includeCredit = includeCredit;
             return this;
         }
 
-        public Builder setIncludeCredit(@Nullable Boolean includeCredit) {
+        public Builder includeCredit(@Nullable Boolean includeCredit) {
             this.includeCredit = Input.ofNullable(includeCredit);
             return this;
         }
 
-        public Builder setIncludeDiscount(@Nullable Input<Boolean> includeDiscount) {
+        public Builder includeDiscount(@Nullable Input<Boolean> includeDiscount) {
             this.includeDiscount = includeDiscount;
             return this;
         }
 
-        public Builder setIncludeDiscount(@Nullable Boolean includeDiscount) {
+        public Builder includeDiscount(@Nullable Boolean includeDiscount) {
             this.includeDiscount = Input.ofNullable(includeDiscount);
             return this;
         }
 
-        public Builder setIncludeOtherSubscription(@Nullable Input<Boolean> includeOtherSubscription) {
+        public Builder includeOtherSubscription(@Nullable Input<Boolean> includeOtherSubscription) {
             this.includeOtherSubscription = includeOtherSubscription;
             return this;
         }
 
-        public Builder setIncludeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
+        public Builder includeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
             this.includeOtherSubscription = Input.ofNullable(includeOtherSubscription);
             return this;
         }
 
-        public Builder setIncludeRecurring(@Nullable Input<Boolean> includeRecurring) {
+        public Builder includeRecurring(@Nullable Input<Boolean> includeRecurring) {
             this.includeRecurring = includeRecurring;
             return this;
         }
 
-        public Builder setIncludeRecurring(@Nullable Boolean includeRecurring) {
+        public Builder includeRecurring(@Nullable Boolean includeRecurring) {
             this.includeRecurring = Input.ofNullable(includeRecurring);
             return this;
         }
 
-        public Builder setIncludeRefund(@Nullable Input<Boolean> includeRefund) {
+        public Builder includeRefund(@Nullable Input<Boolean> includeRefund) {
             this.includeRefund = includeRefund;
             return this;
         }
 
-        public Builder setIncludeRefund(@Nullable Boolean includeRefund) {
+        public Builder includeRefund(@Nullable Boolean includeRefund) {
             this.includeRefund = Input.ofNullable(includeRefund);
             return this;
         }
 
-        public Builder setIncludeSubscription(@Nullable Input<Boolean> includeSubscription) {
+        public Builder includeSubscription(@Nullable Input<Boolean> includeSubscription) {
             this.includeSubscription = includeSubscription;
             return this;
         }
 
-        public Builder setIncludeSubscription(@Nullable Boolean includeSubscription) {
+        public Builder includeSubscription(@Nullable Boolean includeSubscription) {
             this.includeSubscription = Input.ofNullable(includeSubscription);
             return this;
         }
 
-        public Builder setIncludeSupport(@Nullable Input<Boolean> includeSupport) {
+        public Builder includeSupport(@Nullable Input<Boolean> includeSupport) {
             this.includeSupport = includeSupport;
             return this;
         }
 
-        public Builder setIncludeSupport(@Nullable Boolean includeSupport) {
+        public Builder includeSupport(@Nullable Boolean includeSupport) {
             this.includeSupport = Input.ofNullable(includeSupport);
             return this;
         }
 
-        public Builder setIncludeTax(@Nullable Input<Boolean> includeTax) {
+        public Builder includeTax(@Nullable Input<Boolean> includeTax) {
             this.includeTax = includeTax;
             return this;
         }
 
-        public Builder setIncludeTax(@Nullable Boolean includeTax) {
+        public Builder includeTax(@Nullable Boolean includeTax) {
             this.includeTax = Input.ofNullable(includeTax);
             return this;
         }
 
-        public Builder setIncludeUpfront(@Nullable Input<Boolean> includeUpfront) {
+        public Builder includeUpfront(@Nullable Input<Boolean> includeUpfront) {
             this.includeUpfront = includeUpfront;
             return this;
         }
 
-        public Builder setIncludeUpfront(@Nullable Boolean includeUpfront) {
+        public Builder includeUpfront(@Nullable Boolean includeUpfront) {
             this.includeUpfront = Input.ofNullable(includeUpfront);
             return this;
         }
 
-        public Builder setUseAmortized(@Nullable Input<Boolean> useAmortized) {
+        public Builder useAmortized(@Nullable Input<Boolean> useAmortized) {
             this.useAmortized = useAmortized;
             return this;
         }
 
-        public Builder setUseAmortized(@Nullable Boolean useAmortized) {
+        public Builder useAmortized(@Nullable Boolean useAmortized) {
             this.useAmortized = Input.ofNullable(useAmortized);
             return this;
         }
 
-        public Builder setUseBlended(@Nullable Input<Boolean> useBlended) {
+        public Builder useBlended(@Nullable Input<Boolean> useBlended) {
             this.useBlended = useBlended;
             return this;
         }
 
-        public Builder setUseBlended(@Nullable Boolean useBlended) {
+        public Builder useBlended(@Nullable Boolean useBlended) {
             this.useBlended = Input.ofNullable(useBlended);
             return this;
         }

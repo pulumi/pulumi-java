@@ -48,7 +48,7 @@ public final class BucketBillingResponse {
     	      this.requesterPays = defaults.requesterPays;
         }
 
-        public Builder setRequesterPays(Boolean requesterPays) {
+        public Builder requesterPays(Boolean requesterPays) {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }

@@ -52,12 +52,12 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
     	      this.oAuthCredentials = defaults.oAuthCredentials;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
-        public Builder setOAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
+        public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
             this.oAuthCredentials = oAuthCredentials;
             return this;
         }

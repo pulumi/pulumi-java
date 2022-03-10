@@ -134,62 +134,62 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
     	      this.tagOptionId = defaults.tagOptionId;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder setResourceCreatedTime(@Nullable Input<String> resourceCreatedTime) {
+        public Builder resourceCreatedTime(@Nullable Input<String> resourceCreatedTime) {
             this.resourceCreatedTime = resourceCreatedTime;
             return this;
         }
 
-        public Builder setResourceCreatedTime(@Nullable String resourceCreatedTime) {
+        public Builder resourceCreatedTime(@Nullable String resourceCreatedTime) {
             this.resourceCreatedTime = Input.ofNullable(resourceCreatedTime);
             return this;
         }
 
-        public Builder setResourceDescription(@Nullable Input<String> resourceDescription) {
+        public Builder resourceDescription(@Nullable Input<String> resourceDescription) {
             this.resourceDescription = resourceDescription;
             return this;
         }
 
-        public Builder setResourceDescription(@Nullable String resourceDescription) {
+        public Builder resourceDescription(@Nullable String resourceDescription) {
             this.resourceDescription = Input.ofNullable(resourceDescription);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTagOptionId(@Nullable Input<String> tagOptionId) {
+        public Builder tagOptionId(@Nullable Input<String> tagOptionId) {
             this.tagOptionId = tagOptionId;
             return this;
         }
 
-        public Builder setTagOptionId(@Nullable String tagOptionId) {
+        public Builder tagOptionId(@Nullable String tagOptionId) {
             this.tagOptionId = Input.ofNullable(tagOptionId);
             return this;
         }

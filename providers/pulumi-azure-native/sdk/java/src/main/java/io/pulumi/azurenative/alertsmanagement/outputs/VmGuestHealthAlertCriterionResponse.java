@@ -102,22 +102,22 @@ public final class VmGuestHealthAlertCriterionResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setHealthStates(List<HealthStateResponse> healthStates) {
+        public Builder healthStates(List<HealthStateResponse> healthStates) {
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
 
-        public Builder setMonitorNames(@Nullable List<String> monitorNames) {
+        public Builder monitorNames(@Nullable List<String> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
 
-        public Builder setMonitorTypes(@Nullable List<String> monitorTypes) {
+        public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

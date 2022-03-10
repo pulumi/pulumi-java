@@ -170,92 +170,92 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setCertificateTemplateId(Input<String> certificateTemplateId) {
+        public Builder certificateTemplateId(Input<String> certificateTemplateId) {
             this.certificateTemplateId = Objects.requireNonNull(certificateTemplateId);
             return this;
         }
 
-        public Builder setCertificateTemplateId(String certificateTemplateId) {
+        public Builder certificateTemplateId(String certificateTemplateId) {
             this.certificateTemplateId = Input.of(Objects.requireNonNull(certificateTemplateId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints) {
+        public Builder identityConstraints(@Nullable Input<CertificateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
+        public Builder identityConstraints(@Nullable CertificateIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Input.ofNullable(identityConstraints);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable Input<CertificateExtensionConstraintsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable CertificateExtensionConstraintsArgs passthroughExtensions) {
             this.passthroughExtensions = Input.ofNullable(passthroughExtensions);
             return this;
         }
 
-        public Builder setPredefinedValues(@Nullable Input<X509ParametersArgs> predefinedValues) {
+        public Builder predefinedValues(@Nullable Input<X509ParametersArgs> predefinedValues) {
             this.predefinedValues = predefinedValues;
             return this;
         }
 
-        public Builder setPredefinedValues(@Nullable X509ParametersArgs predefinedValues) {
+        public Builder predefinedValues(@Nullable X509ParametersArgs predefinedValues) {
             this.predefinedValues = Input.ofNullable(predefinedValues);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

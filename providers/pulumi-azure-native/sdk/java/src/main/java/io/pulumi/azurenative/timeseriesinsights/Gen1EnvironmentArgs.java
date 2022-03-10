@@ -189,92 +189,92 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataRetentionTime(Input<String> dataRetentionTime) {
+        public Builder dataRetentionTime(Input<String> dataRetentionTime) {
             this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
             return this;
         }
 
-        public Builder setDataRetentionTime(String dataRetentionTime) {
+        public Builder dataRetentionTime(String dataRetentionTime) {
             this.dataRetentionTime = Input.of(Objects.requireNonNull(dataRetentionTime));
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Input<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Input.ofNullable(environmentName);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPartitionKeyProperties(@Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
+        public Builder partitionKeyProperties(@Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties) {
             this.partitionKeyProperties = partitionKeyProperties;
             return this;
         }
 
-        public Builder setPartitionKeyProperties(@Nullable List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
+        public Builder partitionKeyProperties(@Nullable List<TimeSeriesIdPropertyArgs> partitionKeyProperties) {
             this.partitionKeyProperties = Input.ofNullable(partitionKeyProperties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setStorageLimitExceededBehavior(@Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
+        public Builder storageLimitExceededBehavior(@Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = storageLimitExceededBehavior;
             return this;
         }
 
-        public Builder setStorageLimitExceededBehavior(@Nullable Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
+        public Builder storageLimitExceededBehavior(@Nullable Either<String,StorageLimitExceededBehavior> storageLimitExceededBehavior) {
             this.storageLimitExceededBehavior = Input.ofNullable(storageLimitExceededBehavior);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

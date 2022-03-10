@@ -74,12 +74,12 @@ public final class HttpResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setFullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
+        public Builder fullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
             this.fullyDecodeReservedExpansion = Objects.requireNonNull(fullyDecodeReservedExpansion);
             return this;
         }
 
-        public Builder setRules(List<HttpRuleResponse> rules) {
+        public Builder rules(List<HttpRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

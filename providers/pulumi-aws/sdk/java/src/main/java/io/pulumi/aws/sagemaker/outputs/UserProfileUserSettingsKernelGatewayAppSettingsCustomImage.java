@@ -84,17 +84,17 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImage {
     	      this.imageVersionNumber = defaults.imageVersionNumber;
         }
 
-        public Builder setAppImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageVersionNumber(@Nullable Integer imageVersionNumber) {
+        public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }

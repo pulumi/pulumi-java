@@ -77,32 +77,32 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     	      this.defaultCapacityProviderStrategy = defaults.defaultCapacityProviderStrategy;
         }
 
-        public Builder setCapacityProviders(Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders) {
+        public Builder capacityProviders(Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders) {
             this.capacityProviders = Objects.requireNonNull(capacityProviders);
             return this;
         }
 
-        public Builder setCapacityProviders(List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProviders) {
+        public Builder capacityProviders(List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProviders) {
             this.capacityProviders = Input.of(Objects.requireNonNull(capacityProviders));
             return this;
         }
 
-        public Builder setCluster(Input<String> cluster) {
+        public Builder cluster(Input<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Input.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategy(Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Objects.requireNonNull(defaultCapacityProviderStrategy);
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategy(List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs> defaultCapacityProviderStrategy) {
+        public Builder defaultCapacityProviderStrategy(List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs> defaultCapacityProviderStrategy) {
             this.defaultCapacityProviderStrategy = Input.of(Objects.requireNonNull(defaultCapacityProviderStrategy));
             return this;
         }

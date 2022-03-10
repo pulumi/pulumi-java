@@ -48,7 +48,7 @@ public final class BucketOwnershipControlsRule {
     	      this.objectOwnership = defaults.objectOwnership;
         }
 
-        public Builder setObjectOwnership(String objectOwnership) {
+        public Builder objectOwnership(String objectOwnership) {
             this.objectOwnership = Objects.requireNonNull(objectOwnership);
             return this;
         }

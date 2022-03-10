@@ -144,42 +144,42 @@ public final class GetStudioComponentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfiguration(@Nullable StudioComponentConfiguration configuration) {
+        public Builder configuration(@Nullable StudioComponentConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEc2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
+        public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
 
-        public Builder setInitializationScripts(@Nullable List<StudioComponentInitializationScript> initializationScripts) {
+        public Builder initializationScripts(@Nullable List<StudioComponentInitializationScript> initializationScripts) {
             this.initializationScripts = initializationScripts;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters) {
+        public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
 
-        public Builder setStudioComponentId(@Nullable String studioComponentId) {
+        public Builder studioComponentId(@Nullable String studioComponentId) {
             this.studioComponentId = studioComponentId;
             return this;
         }
 
-        public Builder setType(@Nullable StudioComponentType type) {
+        public Builder type(@Nullable StudioComponentType type) {
             this.type = type;
             return this;
         }

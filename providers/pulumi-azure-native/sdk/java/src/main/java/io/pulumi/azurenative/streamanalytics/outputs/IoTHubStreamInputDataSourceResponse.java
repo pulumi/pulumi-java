@@ -133,32 +133,32 @@ public final class IoTHubStreamInputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setConsumerGroupName(@Nullable String consumerGroupName) {
+        public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIotHubNamespace(@Nullable String iotHubNamespace) {
+        public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
             this.iotHubNamespace = iotHubNamespace;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -99,22 +99,22 @@ public final class LogzOrganizationPropertiesResponse {
     	      this.singleSignOnUrl = defaults.singleSignOnUrl;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setEnterpriseAppId(@Nullable String enterpriseAppId) {
+        public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
             this.enterpriseAppId = enterpriseAppId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSingleSignOnUrl(@Nullable String singleSignOnUrl) {
+        public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
             this.singleSignOnUrl = singleSignOnUrl;
             return this;
         }

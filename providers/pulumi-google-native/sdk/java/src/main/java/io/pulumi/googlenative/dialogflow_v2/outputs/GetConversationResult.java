@@ -146,37 +146,37 @@ public final class GetConversationResult {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setConversationProfile(String conversationProfile) {
+        public Builder conversationProfile(String conversationProfile) {
             this.conversationProfile = Objects.requireNonNull(conversationProfile);
             return this;
         }
 
-        public Builder setConversationStage(String conversationStage) {
+        public Builder conversationStage(String conversationStage) {
             this.conversationStage = Objects.requireNonNull(conversationStage);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setLifecycleState(String lifecycleState) {
+        public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhoneNumber(GoogleCloudDialogflowV2ConversationPhoneNumberResponse phoneNumber) {
+        public Builder phoneNumber(GoogleCloudDialogflowV2ConversationPhoneNumberResponse phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

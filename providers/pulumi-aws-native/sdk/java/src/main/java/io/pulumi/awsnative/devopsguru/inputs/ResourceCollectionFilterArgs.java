@@ -53,12 +53,12 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     	      this.cloudFormation = defaults.cloudFormation;
         }
 
-        public Builder setCloudFormation(@Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
+        public Builder cloudFormation(@Nullable Input<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
         }
 
-        public Builder setCloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
+        public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilterArgs cloudFormation) {
             this.cloudFormation = Input.ofNullable(cloudFormation);
             return this;
         }

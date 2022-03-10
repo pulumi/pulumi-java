@@ -141,62 +141,62 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnv(@Nullable Input<List<EnvironmentVarArgs>> env) {
+        public Builder env(@Nullable Input<List<EnvironmentVarArgs>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<EnvironmentVarArgs> env) {
+        public Builder env(@Nullable List<EnvironmentVarArgs> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ContainerResourcesArgs> resources) {
+        public Builder resources(@Nullable Input<ContainerResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ContainerResourcesArgs resources) {
+        public Builder resources(@Nullable ContainerResourcesArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }

@@ -75,12 +75,12 @@ public final class EnterpriseSkuResponse extends io.pulumi.resources.InvokeArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

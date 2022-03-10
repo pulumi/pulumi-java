@@ -91,32 +91,32 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(@Nullable Input<List<String>> destIpRanges) {
+        public Builder destIpRanges(@Nullable Input<List<String>> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
-        public Builder setDestIpRanges(@Nullable List<String> destIpRanges) {
+        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = Input.ofNullable(destIpRanges);
             return this;
         }
 
-        public Builder setLayer4Configs(Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs) {
+        public Builder layer4Configs(Input<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs>> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setLayer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs> layer4Configs) {
+        public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs> layer4Configs) {
             this.layer4Configs = Input.of(Objects.requireNonNull(layer4Configs));
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }

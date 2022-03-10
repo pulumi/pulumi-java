@@ -50,7 +50,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

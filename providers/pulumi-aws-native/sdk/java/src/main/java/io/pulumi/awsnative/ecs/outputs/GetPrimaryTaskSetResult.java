@@ -50,7 +50,7 @@ public final class GetPrimaryTaskSetResult {
     	      this.taskSetId = defaults.taskSetId;
         }
 
-        public Builder setTaskSetId(@Nullable String taskSetId) {
+        public Builder taskSetId(@Nullable String taskSetId) {
             this.taskSetId = taskSetId;
             return this;
         }

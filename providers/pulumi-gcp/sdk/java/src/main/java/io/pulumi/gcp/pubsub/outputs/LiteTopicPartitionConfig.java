@@ -70,12 +70,12 @@ public final class LiteTopicPartitionConfig {
     	      this.count = defaults.count;
         }
 
-        public Builder setCapacity(@Nullable LiteTopicPartitionConfigCapacity capacity) {
+        public Builder capacity(@Nullable LiteTopicPartitionConfigCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }

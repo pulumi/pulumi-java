@@ -52,12 +52,12 @@ public final class MonitoringSubscriptionMonitoringSubscriptionArgs extends io.p
     	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
         }
 
-        public Builder setRealtimeMetricsSubscriptionConfig(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
             return this;
         }
 
-        public Builder setRealtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Input.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
             return this;
         }

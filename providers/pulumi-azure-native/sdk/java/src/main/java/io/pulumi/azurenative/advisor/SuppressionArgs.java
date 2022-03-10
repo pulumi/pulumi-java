@@ -118,52 +118,52 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecommendationId(Input<String> recommendationId) {
+        public Builder recommendationId(Input<String> recommendationId) {
             this.recommendationId = Objects.requireNonNull(recommendationId);
             return this;
         }
 
-        public Builder setRecommendationId(String recommendationId) {
+        public Builder recommendationId(String recommendationId) {
             this.recommendationId = Input.of(Objects.requireNonNull(recommendationId));
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder setSuppressionId(@Nullable Input<String> suppressionId) {
+        public Builder suppressionId(@Nullable Input<String> suppressionId) {
             this.suppressionId = suppressionId;
             return this;
         }
 
-        public Builder setSuppressionId(@Nullable String suppressionId) {
+        public Builder suppressionId(@Nullable String suppressionId) {
             this.suppressionId = Input.ofNullable(suppressionId);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

@@ -67,12 +67,12 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfig {
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setS3Uri(String s3Uri) {
+        public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }

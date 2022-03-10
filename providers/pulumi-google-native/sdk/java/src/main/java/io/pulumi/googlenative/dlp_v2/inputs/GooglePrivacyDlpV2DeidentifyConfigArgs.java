@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
     	      this.transformationErrorHandling = defaults.transformationErrorHandling;
         }
 
-        public Builder setInfoTypeTransformations(@Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
+        public Builder infoTypeTransformations(@Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
             this.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
-        public Builder setInfoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
+        public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
             this.infoTypeTransformations = Input.ofNullable(infoTypeTransformations);
             return this;
         }
 
-        public Builder setRecordTransformations(@Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
+        public Builder recordTransformations(@Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations) {
             this.recordTransformations = recordTransformations;
             return this;
         }
 
-        public Builder setRecordTransformations(@Nullable GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
+        public Builder recordTransformations(@Nullable GooglePrivacyDlpV2RecordTransformationsArgs recordTransformations) {
             this.recordTransformations = Input.ofNullable(recordTransformations);
             return this;
         }
 
-        public Builder setTransformationErrorHandling(@Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
+        public Builder transformationErrorHandling(@Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling) {
             this.transformationErrorHandling = transformationErrorHandling;
             return this;
         }
 
-        public Builder setTransformationErrorHandling(@Nullable GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
+        public Builder transformationErrorHandling(@Nullable GooglePrivacyDlpV2TransformationErrorHandlingArgs transformationErrorHandling) {
             this.transformationErrorHandling = Input.ofNullable(transformationErrorHandling);
             return this;
         }

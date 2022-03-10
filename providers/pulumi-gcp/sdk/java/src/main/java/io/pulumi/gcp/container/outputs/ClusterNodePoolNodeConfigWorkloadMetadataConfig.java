@@ -56,7 +56,7 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

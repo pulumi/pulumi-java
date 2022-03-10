@@ -125,42 +125,42 @@ public final class GetGroupMembershipsMembership {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setMemberKeys(List<GetGroupMembershipsMembershipMemberKey> memberKeys) {
+        public Builder memberKeys(List<GetGroupMembershipsMembershipMemberKey> memberKeys) {
             this.memberKeys = Objects.requireNonNull(memberKeys);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreferredMemberKeys(List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys) {
+        public Builder preferredMemberKeys(List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys) {
             this.preferredMemberKeys = Objects.requireNonNull(preferredMemberKeys);
             return this;
         }
 
-        public Builder setRoles(List<GetGroupMembershipsMembershipRole> roles) {
+        public Builder roles(List<GetGroupMembershipsMembershipRole> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

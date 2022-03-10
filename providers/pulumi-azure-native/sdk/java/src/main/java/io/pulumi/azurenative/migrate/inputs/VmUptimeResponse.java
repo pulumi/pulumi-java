@@ -70,12 +70,12 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.hoursPerDay = defaults.hoursPerDay;
         }
 
-        public Builder setDaysPerMonth(@Nullable Double daysPerMonth) {
+        public Builder daysPerMonth(@Nullable Double daysPerMonth) {
             this.daysPerMonth = daysPerMonth;
             return this;
         }
 
-        public Builder setHoursPerDay(@Nullable Double hoursPerDay) {
+        public Builder hoursPerDay(@Nullable Double hoursPerDay) {
             this.hoursPerDay = hoursPerDay;
             return this;
         }

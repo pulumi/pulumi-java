@@ -73,12 +73,12 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
     	      this.channelCredentialType = defaults.channelCredentialType;
         }
 
-        public Builder setCertificates(TlsCertificatePathsResponse certificates) {
+        public Builder certificates(TlsCertificatePathsResponse certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setChannelCredentialType(String channelCredentialType) {
+        public Builder channelCredentialType(String channelCredentialType) {
             this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
             return this;
         }

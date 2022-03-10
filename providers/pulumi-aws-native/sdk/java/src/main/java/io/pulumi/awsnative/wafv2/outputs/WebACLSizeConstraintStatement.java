@@ -69,22 +69,22 @@ public final class WebACLSizeConstraintStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setComparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformation> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

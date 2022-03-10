@@ -60,12 +60,12 @@ public final class GetScheduleResult {
     	      this.jobNames = defaults.jobNames;
         }
 
-        public Builder setCronExpression(@Nullable String cronExpression) {
+        public Builder cronExpression(@Nullable String cronExpression) {
             this.cronExpression = cronExpression;
             return this;
         }
 
-        public Builder setJobNames(@Nullable List<String> jobNames) {
+        public Builder jobNames(@Nullable List<String> jobNames) {
             this.jobNames = jobNames;
             return this;
         }

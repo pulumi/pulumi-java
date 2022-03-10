@@ -227,112 +227,112 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     	      this.timeAggregation = defaults.timeAggregation;
         }
 
-        public Builder setAlertSensitivity(Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
+        public Builder alertSensitivity(Input<Either<String,DynamicThresholdSensitivity>> alertSensitivity) {
             this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
             return this;
         }
 
-        public Builder setAlertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
+        public Builder alertSensitivity(Either<String,DynamicThresholdSensitivity> alertSensitivity) {
             this.alertSensitivity = Input.of(Objects.requireNonNull(alertSensitivity));
             return this;
         }
 
-        public Builder setCriterionType(Input<String> criterionType) {
+        public Builder criterionType(Input<String> criterionType) {
             this.criterionType = Objects.requireNonNull(criterionType);
             return this;
         }
 
-        public Builder setCriterionType(String criterionType) {
+        public Builder criterionType(String criterionType) {
             this.criterionType = Input.of(Objects.requireNonNull(criterionType));
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<MetricDimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<MetricDimensionArgs> dimensions) {
+        public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setFailingPeriods(Input<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
+        public Builder failingPeriods(Input<DynamicThresholdFailingPeriodsArgs> failingPeriods) {
             this.failingPeriods = Objects.requireNonNull(failingPeriods);
             return this;
         }
 
-        public Builder setFailingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
+        public Builder failingPeriods(DynamicThresholdFailingPeriodsArgs failingPeriods) {
             this.failingPeriods = Input.of(Objects.requireNonNull(failingPeriods));
             return this;
         }
 
-        public Builder setIgnoreDataBefore(@Nullable Input<String> ignoreDataBefore) {
+        public Builder ignoreDataBefore(@Nullable Input<String> ignoreDataBefore) {
             this.ignoreDataBefore = ignoreDataBefore;
             return this;
         }
 
-        public Builder setIgnoreDataBefore(@Nullable String ignoreDataBefore) {
+        public Builder ignoreDataBefore(@Nullable String ignoreDataBefore) {
             this.ignoreDataBefore = Input.ofNullable(ignoreDataBefore);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable Input<String> metricNamespace) {
+        public Builder metricNamespace(@Nullable Input<String> metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = Input.ofNullable(metricNamespace);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,DynamicThresholdOperator>> operator) {
+        public Builder operator(Input<Either<String,DynamicThresholdOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,DynamicThresholdOperator> operator) {
+        public Builder operator(Either<String,DynamicThresholdOperator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Input<Boolean> skipMetricValidation) {
             this.skipMetricValidation = skipMetricValidation;
             return this;
         }
 
-        public Builder setSkipMetricValidation(@Nullable Boolean skipMetricValidation) {
+        public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
             this.skipMetricValidation = Input.ofNullable(skipMetricValidation);
             return this;
         }
 
-        public Builder setTimeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
+        public Builder timeAggregation(Input<Either<String,AggregationTypeEnum>> timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
-        public Builder setTimeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
+        public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
             return this;
         }

@@ -42,7 +42,7 @@ public final class ServiceModeReplicated {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }

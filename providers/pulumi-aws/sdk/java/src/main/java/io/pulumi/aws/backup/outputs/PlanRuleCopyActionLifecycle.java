@@ -67,12 +67,12 @@ public final class PlanRuleCopyActionLifecycle {
     	      this.deleteAfter = defaults.deleteAfter;
         }
 
-        public Builder setColdStorageAfter(@Nullable Integer coldStorageAfter) {
+        public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
             this.coldStorageAfter = coldStorageAfter;
             return this;
         }
 
-        public Builder setDeleteAfter(@Nullable Integer deleteAfter) {
+        public Builder deleteAfter(@Nullable Integer deleteAfter) {
             this.deleteAfter = deleteAfter;
             return this;
         }

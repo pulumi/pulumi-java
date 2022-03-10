@@ -52,12 +52,12 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
+        public Builder virtualService(Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
 
-        public Builder setVirtualService(VirtualNodeSpecBackendVirtualServiceGetArgs virtualService) {
+        public Builder virtualService(VirtualNodeSpecBackendVirtualServiceGetArgs virtualService) {
             this.virtualService = Input.of(Objects.requireNonNull(virtualService));
             return this;
         }

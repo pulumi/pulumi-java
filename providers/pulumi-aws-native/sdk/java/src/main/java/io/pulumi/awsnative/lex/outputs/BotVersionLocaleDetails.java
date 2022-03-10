@@ -40,7 +40,7 @@ public final class BotVersionLocaleDetails {
     	      this.sourceBotVersion = defaults.sourceBotVersion;
         }
 
-        public Builder setSourceBotVersion(String sourceBotVersion) {
+        public Builder sourceBotVersion(String sourceBotVersion) {
             this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
             return this;
         }

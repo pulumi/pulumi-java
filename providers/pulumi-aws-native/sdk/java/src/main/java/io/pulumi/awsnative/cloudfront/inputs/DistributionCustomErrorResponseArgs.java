@@ -88,42 +88,42 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
     	      this.responsePagePath = defaults.responsePagePath;
         }
 
-        public Builder setErrorCachingMinTTL(@Nullable Input<Double> errorCachingMinTTL) {
+        public Builder errorCachingMinTTL(@Nullable Input<Double> errorCachingMinTTL) {
             this.errorCachingMinTTL = errorCachingMinTTL;
             return this;
         }
 
-        public Builder setErrorCachingMinTTL(@Nullable Double errorCachingMinTTL) {
+        public Builder errorCachingMinTTL(@Nullable Double errorCachingMinTTL) {
             this.errorCachingMinTTL = Input.ofNullable(errorCachingMinTTL);
             return this;
         }
 
-        public Builder setErrorCode(Input<Integer> errorCode) {
+        public Builder errorCode(Input<Integer> errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorCode(Integer errorCode) {
+        public Builder errorCode(Integer errorCode) {
             this.errorCode = Input.of(Objects.requireNonNull(errorCode));
             return this;
         }
 
-        public Builder setResponseCode(@Nullable Input<Integer> responseCode) {
+        public Builder responseCode(@Nullable Input<Integer> responseCode) {
             this.responseCode = responseCode;
             return this;
         }
 
-        public Builder setResponseCode(@Nullable Integer responseCode) {
+        public Builder responseCode(@Nullable Integer responseCode) {
             this.responseCode = Input.ofNullable(responseCode);
             return this;
         }
 
-        public Builder setResponsePagePath(@Nullable Input<String> responsePagePath) {
+        public Builder responsePagePath(@Nullable Input<String> responsePagePath) {
             this.responsePagePath = responsePagePath;
             return this;
         }
 
-        public Builder setResponsePagePath(@Nullable String responsePagePath) {
+        public Builder responsePagePath(@Nullable String responsePagePath) {
             this.responsePagePath = Input.ofNullable(responsePagePath);
             return this;
         }

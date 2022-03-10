@@ -122,52 +122,52 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     	      this.value = defaults.value;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setFunction(@Nullable Input<String> function) {
+        public Builder function(@Nullable Input<String> function) {
             this.function = function;
             return this;
         }
 
-        public Builder setFunction(@Nullable String function) {
+        public Builder function(@Nullable String function) {
             this.function = Input.ofNullable(function);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOperator(@Nullable Input<String> operator) {
+        public Builder operator(@Nullable Input<String> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

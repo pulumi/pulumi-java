@@ -120,27 +120,27 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setMountType(String mountType) {
+        public Builder mountType(String mountType) {
             this.mountType = Objects.requireNonNull(mountType);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setRoleType(String roleType) {
+        public Builder roleType(String roleType) {
             this.roleType = Objects.requireNonNull(roleType);
             return this;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

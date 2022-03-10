@@ -86,32 +86,32 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
     	      this.onStart = defaults.onStart;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnCreate(@Nullable Input<String> onCreate) {
+        public Builder onCreate(@Nullable Input<String> onCreate) {
             this.onCreate = onCreate;
             return this;
         }
 
-        public Builder setOnCreate(@Nullable String onCreate) {
+        public Builder onCreate(@Nullable String onCreate) {
             this.onCreate = Input.ofNullable(onCreate);
             return this;
         }
 
-        public Builder setOnStart(@Nullable Input<String> onStart) {
+        public Builder onStart(@Nullable Input<String> onStart) {
             this.onStart = onStart;
             return this;
         }
 
-        public Builder setOnStart(@Nullable String onStart) {
+        public Builder onStart(@Nullable String onStart) {
             this.onStart = Input.ofNullable(onStart);
             return this;
         }

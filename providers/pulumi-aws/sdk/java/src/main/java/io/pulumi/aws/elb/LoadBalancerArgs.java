@@ -321,172 +321,172 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessLogs(@Nullable Input<LoadBalancerAccessLogsArgs> accessLogs) {
+        public Builder accessLogs(@Nullable Input<LoadBalancerAccessLogsArgs> accessLogs) {
             this.accessLogs = accessLogs;
             return this;
         }
 
-        public Builder setAccessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
+        public Builder accessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
             this.accessLogs = Input.ofNullable(accessLogs);
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable Input<Boolean> connectionDraining) {
+        public Builder connectionDraining(@Nullable Input<Boolean> connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable Boolean connectionDraining) {
+        public Builder connectionDraining(@Nullable Boolean connectionDraining) {
             this.connectionDraining = Input.ofNullable(connectionDraining);
             return this;
         }
 
-        public Builder setConnectionDrainingTimeout(@Nullable Input<Integer> connectionDrainingTimeout) {
+        public Builder connectionDrainingTimeout(@Nullable Input<Integer> connectionDrainingTimeout) {
             this.connectionDrainingTimeout = connectionDrainingTimeout;
             return this;
         }
 
-        public Builder setConnectionDrainingTimeout(@Nullable Integer connectionDrainingTimeout) {
+        public Builder connectionDrainingTimeout(@Nullable Integer connectionDrainingTimeout) {
             this.connectionDrainingTimeout = Input.ofNullable(connectionDrainingTimeout);
             return this;
         }
 
-        public Builder setCrossZoneLoadBalancing(@Nullable Input<Boolean> crossZoneLoadBalancing) {
+        public Builder crossZoneLoadBalancing(@Nullable Input<Boolean> crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = crossZoneLoadBalancing;
             return this;
         }
 
-        public Builder setCrossZoneLoadBalancing(@Nullable Boolean crossZoneLoadBalancing) {
+        public Builder crossZoneLoadBalancing(@Nullable Boolean crossZoneLoadBalancing) {
             this.crossZoneLoadBalancing = Input.ofNullable(crossZoneLoadBalancing);
             return this;
         }
 
-        public Builder setDesyncMitigationMode(@Nullable Input<String> desyncMitigationMode) {
+        public Builder desyncMitigationMode(@Nullable Input<String> desyncMitigationMode) {
             this.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
 
-        public Builder setDesyncMitigationMode(@Nullable String desyncMitigationMode) {
+        public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
             this.desyncMitigationMode = Input.ofNullable(desyncMitigationMode);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<LoadBalancerHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<LoadBalancerHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable LoadBalancerHealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable LoadBalancerHealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable Input<Integer> idleTimeout) {
+        public Builder idleTimeout(@Nullable Input<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable Integer idleTimeout) {
+        public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Input.ofNullable(idleTimeout);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Input<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setInternal(@Nullable Input<Boolean> internal) {
+        public Builder internal(@Nullable Input<Boolean> internal) {
             this.internal = internal;
             return this;
         }
 
-        public Builder setInternal(@Nullable Boolean internal) {
+        public Builder internal(@Nullable Boolean internal) {
             this.internal = Input.ofNullable(internal);
             return this;
         }
 
-        public Builder setListeners(Input<List<LoadBalancerListenerArgs>> listeners) {
+        public Builder listeners(Input<List<LoadBalancerListenerArgs>> listeners) {
             this.listeners = Objects.requireNonNull(listeners);
             return this;
         }
 
-        public Builder setListeners(List<LoadBalancerListenerArgs> listeners) {
+        public Builder listeners(List<LoadBalancerListenerArgs> listeners) {
             this.listeners = Input.of(Objects.requireNonNull(listeners));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSourceSecurityGroup(@Nullable Input<String> sourceSecurityGroup) {
+        public Builder sourceSecurityGroup(@Nullable Input<String> sourceSecurityGroup) {
             this.sourceSecurityGroup = sourceSecurityGroup;
             return this;
         }
 
-        public Builder setSourceSecurityGroup(@Nullable String sourceSecurityGroup) {
+        public Builder sourceSecurityGroup(@Nullable String sourceSecurityGroup) {
             this.sourceSecurityGroup = Input.ofNullable(sourceSecurityGroup);
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Input<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

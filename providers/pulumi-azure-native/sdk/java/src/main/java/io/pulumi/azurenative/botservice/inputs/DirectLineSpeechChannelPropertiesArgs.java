@@ -139,62 +139,62 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setCognitiveServiceRegion(Input<String> cognitiveServiceRegion) {
+        public Builder cognitiveServiceRegion(Input<String> cognitiveServiceRegion) {
             this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
             return this;
         }
 
-        public Builder setCognitiveServiceRegion(String cognitiveServiceRegion) {
+        public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
             this.cognitiveServiceRegion = Input.of(Objects.requireNonNull(cognitiveServiceRegion));
             return this;
         }
 
-        public Builder setCognitiveServiceSubscriptionKey(Input<String> cognitiveServiceSubscriptionKey) {
+        public Builder cognitiveServiceSubscriptionKey(Input<String> cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
             return this;
         }
 
-        public Builder setCognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
+        public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Input.of(Objects.requireNonNull(cognitiveServiceSubscriptionKey));
             return this;
         }
 
-        public Builder setCustomSpeechModelId(@Nullable Input<String> customSpeechModelId) {
+        public Builder customSpeechModelId(@Nullable Input<String> customSpeechModelId) {
             this.customSpeechModelId = customSpeechModelId;
             return this;
         }
 
-        public Builder setCustomSpeechModelId(@Nullable String customSpeechModelId) {
+        public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
             this.customSpeechModelId = Input.ofNullable(customSpeechModelId);
             return this;
         }
 
-        public Builder setCustomVoiceDeploymentId(@Nullable Input<String> customVoiceDeploymentId) {
+        public Builder customVoiceDeploymentId(@Nullable Input<String> customVoiceDeploymentId) {
             this.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
 
-        public Builder setCustomVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
+        public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
             this.customVoiceDeploymentId = Input.ofNullable(customVoiceDeploymentId);
             return this;
         }
 
-        public Builder setIsDefaultBotForCogSvcAccount(@Nullable Input<Boolean> isDefaultBotForCogSvcAccount) {
+        public Builder isDefaultBotForCogSvcAccount(@Nullable Input<Boolean> isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
 
-        public Builder setIsDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
+        public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = Input.ofNullable(isDefaultBotForCogSvcAccount);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }

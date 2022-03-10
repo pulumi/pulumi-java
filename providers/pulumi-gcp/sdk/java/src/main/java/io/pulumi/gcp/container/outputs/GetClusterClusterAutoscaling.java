@@ -69,22 +69,22 @@ public final class GetClusterClusterAutoscaling {
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder setAutoProvisioningDefaults(List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults) {
+        public Builder autoProvisioningDefaults(List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults) {
             this.autoProvisioningDefaults = Objects.requireNonNull(autoProvisioningDefaults);
             return this;
         }
 
-        public Builder setAutoscalingProfile(String autoscalingProfile) {
+        public Builder autoscalingProfile(String autoscalingProfile) {
             this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setResourceLimits(List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
+        public Builder resourceLimits(List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }

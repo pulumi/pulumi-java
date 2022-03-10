@@ -57,12 +57,12 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterAutoscalingConfig = defaults.clusterAutoscalingConfig;
         }
 
-        public Builder setClusterAutoscalingConfig(@Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
+        public Builder clusterAutoscalingConfig(@Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
             this.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;
         }
 
-        public Builder setClusterAutoscalingConfig(@Nullable ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
+        public Builder clusterAutoscalingConfig(@Nullable ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
             this.clusterAutoscalingConfig = Input.ofNullable(clusterAutoscalingConfig);
             return this;
         }

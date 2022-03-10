@@ -91,32 +91,32 @@ public final class RecoveryPlanA2AInputArgs extends io.pulumi.resources.Resource
     	      this.recoveryZone = defaults.recoveryZone;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setPrimaryZone(@Nullable Input<String> primaryZone) {
+        public Builder primaryZone(@Nullable Input<String> primaryZone) {
             this.primaryZone = primaryZone;
             return this;
         }
 
-        public Builder setPrimaryZone(@Nullable String primaryZone) {
+        public Builder primaryZone(@Nullable String primaryZone) {
             this.primaryZone = Input.ofNullable(primaryZone);
             return this;
         }
 
-        public Builder setRecoveryZone(@Nullable Input<String> recoveryZone) {
+        public Builder recoveryZone(@Nullable Input<String> recoveryZone) {
             this.recoveryZone = recoveryZone;
             return this;
         }
 
-        public Builder setRecoveryZone(@Nullable String recoveryZone) {
+        public Builder recoveryZone(@Nullable String recoveryZone) {
             this.recoveryZone = Input.ofNullable(recoveryZone);
             return this;
         }

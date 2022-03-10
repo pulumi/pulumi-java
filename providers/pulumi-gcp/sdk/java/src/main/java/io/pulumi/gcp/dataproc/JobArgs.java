@@ -261,132 +261,132 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sparksqlConfig = defaults.sparksqlConfig;
         }
 
-        public Builder setForceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Boolean forceDelete) {
+        public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Input.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder setHadoopConfig(@Nullable Input<JobHadoopConfigArgs> hadoopConfig) {
+        public Builder hadoopConfig(@Nullable Input<JobHadoopConfigArgs> hadoopConfig) {
             this.hadoopConfig = hadoopConfig;
             return this;
         }
 
-        public Builder setHadoopConfig(@Nullable JobHadoopConfigArgs hadoopConfig) {
+        public Builder hadoopConfig(@Nullable JobHadoopConfigArgs hadoopConfig) {
             this.hadoopConfig = Input.ofNullable(hadoopConfig);
             return this;
         }
 
-        public Builder setHiveConfig(@Nullable Input<JobHiveConfigArgs> hiveConfig) {
+        public Builder hiveConfig(@Nullable Input<JobHiveConfigArgs> hiveConfig) {
             this.hiveConfig = hiveConfig;
             return this;
         }
 
-        public Builder setHiveConfig(@Nullable JobHiveConfigArgs hiveConfig) {
+        public Builder hiveConfig(@Nullable JobHiveConfigArgs hiveConfig) {
             this.hiveConfig = Input.ofNullable(hiveConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPigConfig(@Nullable Input<JobPigConfigArgs> pigConfig) {
+        public Builder pigConfig(@Nullable Input<JobPigConfigArgs> pigConfig) {
             this.pigConfig = pigConfig;
             return this;
         }
 
-        public Builder setPigConfig(@Nullable JobPigConfigArgs pigConfig) {
+        public Builder pigConfig(@Nullable JobPigConfigArgs pigConfig) {
             this.pigConfig = Input.ofNullable(pigConfig);
             return this;
         }
 
-        public Builder setPlacement(Input<JobPlacementArgs> placement) {
+        public Builder placement(Input<JobPlacementArgs> placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
 
-        public Builder setPlacement(JobPlacementArgs placement) {
+        public Builder placement(JobPlacementArgs placement) {
             this.placement = Input.of(Objects.requireNonNull(placement));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPysparkConfig(@Nullable Input<JobPysparkConfigArgs> pysparkConfig) {
+        public Builder pysparkConfig(@Nullable Input<JobPysparkConfigArgs> pysparkConfig) {
             this.pysparkConfig = pysparkConfig;
             return this;
         }
 
-        public Builder setPysparkConfig(@Nullable JobPysparkConfigArgs pysparkConfig) {
+        public Builder pysparkConfig(@Nullable JobPysparkConfigArgs pysparkConfig) {
             this.pysparkConfig = Input.ofNullable(pysparkConfig);
             return this;
         }
 
-        public Builder setReference(@Nullable Input<JobReferenceArgs> reference) {
+        public Builder reference(@Nullable Input<JobReferenceArgs> reference) {
             this.reference = reference;
             return this;
         }
 
-        public Builder setReference(@Nullable JobReferenceArgs reference) {
+        public Builder reference(@Nullable JobReferenceArgs reference) {
             this.reference = Input.ofNullable(reference);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<JobSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<JobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable JobSchedulingArgs scheduling) {
+        public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable Input<JobSparkConfigArgs> sparkConfig) {
+        public Builder sparkConfig(@Nullable Input<JobSparkConfigArgs> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable JobSparkConfigArgs sparkConfig) {
+        public Builder sparkConfig(@Nullable JobSparkConfigArgs sparkConfig) {
             this.sparkConfig = Input.ofNullable(sparkConfig);
             return this;
         }
 
-        public Builder setSparksqlConfig(@Nullable Input<JobSparksqlConfigArgs> sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable Input<JobSparksqlConfigArgs> sparksqlConfig) {
             this.sparksqlConfig = sparksqlConfig;
             return this;
         }
 
-        public Builder setSparksqlConfig(@Nullable JobSparksqlConfigArgs sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable JobSparksqlConfigArgs sparksqlConfig) {
             this.sparksqlConfig = Input.ofNullable(sparksqlConfig);
             return this;
         }

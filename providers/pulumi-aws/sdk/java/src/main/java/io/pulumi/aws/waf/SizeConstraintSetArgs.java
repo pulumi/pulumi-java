@@ -72,22 +72,22 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     	      this.sizeConstraints = defaults.sizeConstraints;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSizeConstraints(@Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
+        public Builder sizeConstraints(@Nullable Input<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
             this.sizeConstraints = sizeConstraints;
             return this;
         }
 
-        public Builder setSizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
+        public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
             this.sizeConstraints = Input.ofNullable(sizeConstraints);
             return this;
         }

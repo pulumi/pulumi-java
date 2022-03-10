@@ -79,22 +79,22 @@ public final class CorsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportCredentials = defaults.supportCredentials;
         }
 
-        public Builder setAllowedOrigins(@Nullable Input<List<String>> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable Input<List<String>> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = Input.ofNullable(allowedOrigins);
             return this;
         }
 
-        public Builder setSupportCredentials(@Nullable Input<Boolean> supportCredentials) {
+        public Builder supportCredentials(@Nullable Input<Boolean> supportCredentials) {
             this.supportCredentials = supportCredentials;
             return this;
         }
 
-        public Builder setSupportCredentials(@Nullable Boolean supportCredentials) {
+        public Builder supportCredentials(@Nullable Boolean supportCredentials) {
             this.supportCredentials = Input.ofNullable(supportCredentials);
             return this;
         }

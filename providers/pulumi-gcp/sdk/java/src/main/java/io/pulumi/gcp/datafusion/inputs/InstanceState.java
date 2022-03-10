@@ -362,192 +362,192 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
-        public Builder setDataprocServiceAccount(@Nullable String dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
             this.dataprocServiceAccount = Input.ofNullable(dataprocServiceAccount);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setEnableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
-        public Builder setEnableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Input.ofNullable(enableStackdriverMonitoring);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<InstanceNetworkConfigGetArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<InstanceNetworkConfigGetArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable InstanceNetworkConfigGetArgs networkConfig) {
+        public Builder networkConfig(@Nullable InstanceNetworkConfigGetArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Input<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPrivateInstance(@Nullable Input<Boolean> privateInstance) {
+        public Builder privateInstance(@Nullable Input<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
 
-        public Builder setPrivateInstance(@Nullable Boolean privateInstance) {
+        public Builder privateInstance(@Nullable Boolean privateInstance) {
             this.privateInstance = Input.ofNullable(privateInstance);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServiceEndpoint(@Nullable Input<String> serviceEndpoint) {
+        public Builder serviceEndpoint(@Nullable Input<String> serviceEndpoint) {
             this.serviceEndpoint = serviceEndpoint;
             return this;
         }
 
-        public Builder setServiceEndpoint(@Nullable String serviceEndpoint) {
+        public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
             this.serviceEndpoint = Input.ofNullable(serviceEndpoint);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStateMessage(@Nullable Input<String> stateMessage) {
+        public Builder stateMessage(@Nullable Input<String> stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
 
-        public Builder setStateMessage(@Nullable String stateMessage) {
+        public Builder stateMessage(@Nullable String stateMessage) {
             this.stateMessage = Input.ofNullable(stateMessage);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

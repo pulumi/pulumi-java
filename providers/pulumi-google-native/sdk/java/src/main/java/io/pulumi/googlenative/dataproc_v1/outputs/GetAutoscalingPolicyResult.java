@@ -108,27 +108,27 @@ public final class GetAutoscalingPolicyResult {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setBasicAlgorithm(BasicAutoscalingAlgorithmResponse basicAlgorithm) {
+        public Builder basicAlgorithm(BasicAutoscalingAlgorithmResponse basicAlgorithm) {
             this.basicAlgorithm = Objects.requireNonNull(basicAlgorithm);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
+        public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }

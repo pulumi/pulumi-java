@@ -53,12 +53,12 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
     	      this.idleTimeout = defaults.idleTimeout;
         }
 
-        public Builder setIdleTimeout(@Nullable Input<Integer> idleTimeout) {
+        public Builder idleTimeout(@Nullable Input<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable Integer idleTimeout) {
+        public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Input.ofNullable(idleTimeout);
             return this;
         }

@@ -57,7 +57,7 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceFiles = defaults.sourceFiles;
         }
 
-        public Builder setSourceFiles(List<Map<String,String>> sourceFiles) {
+        public Builder sourceFiles(List<Map<String,String>> sourceFiles) {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }

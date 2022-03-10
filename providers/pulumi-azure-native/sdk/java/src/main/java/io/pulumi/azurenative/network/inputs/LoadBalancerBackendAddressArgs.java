@@ -123,52 +123,52 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     	      this.virtualNetwork = defaults.virtualNetwork;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIPConfiguration(@Nullable Input<SubResourceArgs> loadBalancerFrontendIPConfiguration) {
+        public Builder loadBalancerFrontendIPConfiguration(@Nullable Input<SubResourceArgs> loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIPConfiguration(@Nullable SubResourceArgs loadBalancerFrontendIPConfiguration) {
+        public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceArgs loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = Input.ofNullable(loadBalancerFrontendIPConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubResourceArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceArgs subnet) {
+        public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setVirtualNetwork(@Nullable Input<SubResourceArgs> virtualNetwork) {
+        public Builder virtualNetwork(@Nullable Input<SubResourceArgs> virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
 
-        public Builder setVirtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
+        public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
             this.virtualNetwork = Input.ofNullable(virtualNetwork);
             return this;
         }

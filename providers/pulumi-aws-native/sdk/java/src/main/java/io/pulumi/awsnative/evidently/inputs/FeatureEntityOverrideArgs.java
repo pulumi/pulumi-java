@@ -62,22 +62,22 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
     	      this.variation = defaults.variation;
         }
 
-        public Builder setEntityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Input<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setEntityId(@Nullable String entityId) {
+        public Builder entityId(@Nullable String entityId) {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
 
-        public Builder setVariation(@Nullable Input<String> variation) {
+        public Builder variation(@Nullable Input<String> variation) {
             this.variation = variation;
             return this;
         }
 
-        public Builder setVariation(@Nullable String variation) {
+        public Builder variation(@Nullable String variation) {
             this.variation = Input.ofNullable(variation);
             return this;
         }

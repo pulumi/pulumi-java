@@ -70,22 +70,22 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     	      this.user = defaults.user;
         }
 
-        public Builder setGroups(Input<List<String>> groups) {
+        public Builder groups(Input<List<String>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Input.of(Objects.requireNonNull(groups));
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

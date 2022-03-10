@@ -208,102 +208,102 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setChildItems(@Nullable Input<Object> childItems) {
+        public Builder childItems(@Nullable Input<Object> childItems) {
             this.childItems = childItems;
             return this;
         }
 
-        public Builder setChildItems(@Nullable Object childItems) {
+        public Builder childItems(@Nullable Object childItems) {
             this.childItems = Input.ofNullable(childItems);
             return this;
         }
 
-        public Builder setDataset(Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(Input<DatasetReferenceArgs> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDataset(DatasetReferenceArgs dataset) {
+        public Builder dataset(DatasetReferenceArgs dataset) {
             this.dataset = Input.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMinimumSize(@Nullable Input<Object> minimumSize) {
+        public Builder minimumSize(@Nullable Input<Object> minimumSize) {
             this.minimumSize = minimumSize;
             return this;
         }
 
-        public Builder setMinimumSize(@Nullable Object minimumSize) {
+        public Builder minimumSize(@Nullable Object minimumSize) {
             this.minimumSize = Input.ofNullable(minimumSize);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSleep(@Nullable Input<Object> sleep) {
+        public Builder sleep(@Nullable Input<Object> sleep) {
             this.sleep = sleep;
             return this;
         }
 
-        public Builder setSleep(@Nullable Object sleep) {
+        public Builder sleep(@Nullable Object sleep) {
             this.sleep = Input.ofNullable(sleep);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Object> timeout) {
+        public Builder timeout(@Nullable Input<Object> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

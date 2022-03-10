@@ -57,12 +57,12 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
     	      this.document = defaults.document;
         }
 
-        public Builder setDocument(@Nullable Input<ApigatewayApiConfigFileArgs> document) {
+        public Builder document(@Nullable Input<ApigatewayApiConfigFileArgs> document) {
             this.document = document;
             return this;
         }
 
-        public Builder setDocument(@Nullable ApigatewayApiConfigFileArgs document) {
+        public Builder document(@Nullable ApigatewayApiConfigFileArgs document) {
             this.document = Input.ofNullable(document);
             return this;
         }

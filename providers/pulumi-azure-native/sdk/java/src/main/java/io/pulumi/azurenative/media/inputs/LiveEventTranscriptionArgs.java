@@ -93,32 +93,32 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
     	      this.outputTranscriptionTrack = defaults.outputTranscriptionTrack;
         }
 
-        public Builder setInputTrackSelection(@Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
+        public Builder inputTrackSelection(@Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection) {
             this.inputTrackSelection = inputTrackSelection;
             return this;
         }
 
-        public Builder setInputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
+        public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
             this.inputTrackSelection = Input.ofNullable(inputTrackSelection);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<String> language) {
+        public Builder language(@Nullable Input<String> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setOutputTranscriptionTrack(@Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
+        public Builder outputTranscriptionTrack(@Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }
 
-        public Builder setOutputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
+        public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
             this.outputTranscriptionTrack = Input.ofNullable(outputTranscriptionTrack);
             return this;
         }

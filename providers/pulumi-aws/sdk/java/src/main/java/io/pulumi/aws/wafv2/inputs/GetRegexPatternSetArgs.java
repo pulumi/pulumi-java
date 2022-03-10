@@ -68,12 +68,12 @@ public final class GetRegexPatternSetArgs extends io.pulumi.resources.InvokeArgs
     	      this.scope = defaults.scope;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

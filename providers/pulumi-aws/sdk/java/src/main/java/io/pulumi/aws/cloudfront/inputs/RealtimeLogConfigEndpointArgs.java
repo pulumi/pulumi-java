@@ -70,22 +70,22 @@ public final class RealtimeLogConfigEndpointArgs extends io.pulumi.resources.Res
     	      this.streamType = defaults.streamType;
         }
 
-        public Builder setKinesisStreamConfig(Input<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig) {
+        public Builder kinesisStreamConfig(Input<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig) {
             this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
             return this;
         }
 
-        public Builder setKinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfigArgs kinesisStreamConfig) {
+        public Builder kinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfigArgs kinesisStreamConfig) {
             this.kinesisStreamConfig = Input.of(Objects.requireNonNull(kinesisStreamConfig));
             return this;
         }
 
-        public Builder setStreamType(Input<String> streamType) {
+        public Builder streamType(Input<String> streamType) {
             this.streamType = Objects.requireNonNull(streamType);
             return this;
         }
 
-        public Builder setStreamType(String streamType) {
+        public Builder streamType(String streamType) {
             this.streamType = Input.of(Objects.requireNonNull(streamType));
             return this;
         }

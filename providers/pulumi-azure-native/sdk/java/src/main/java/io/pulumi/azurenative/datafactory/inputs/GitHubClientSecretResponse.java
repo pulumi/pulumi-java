@@ -74,12 +74,12 @@ public final class GitHubClientSecretResponse extends io.pulumi.resources.Invoke
     	      this.byoaSecretName = defaults.byoaSecretName;
         }
 
-        public Builder setByoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
+        public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
             this.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
 
-        public Builder setByoaSecretName(@Nullable String byoaSecretName) {
+        public Builder byoaSecretName(@Nullable String byoaSecretName) {
             this.byoaSecretName = byoaSecretName;
             return this;
         }

@@ -194,122 +194,122 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAmazonopensearchserviceDestinationConfiguration(@Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration) {
+        public Builder amazonopensearchserviceDestinationConfiguration(@Nullable Input<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration) {
             this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
             return this;
         }
 
-        public Builder setAmazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs amazonopensearchserviceDestinationConfiguration) {
+        public Builder amazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs amazonopensearchserviceDestinationConfiguration) {
             this.amazonopensearchserviceDestinationConfiguration = Input.ofNullable(amazonopensearchserviceDestinationConfiguration);
             return this;
         }
 
-        public Builder setDeliveryStreamEncryptionConfigurationInput(@Nullable Input<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput) {
+        public Builder deliveryStreamEncryptionConfigurationInput(@Nullable Input<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput) {
             this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
             return this;
         }
 
-        public Builder setDeliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInputArgs deliveryStreamEncryptionConfigurationInput) {
+        public Builder deliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInputArgs deliveryStreamEncryptionConfigurationInput) {
             this.deliveryStreamEncryptionConfigurationInput = Input.ofNullable(deliveryStreamEncryptionConfigurationInput);
             return this;
         }
 
-        public Builder setDeliveryStreamName(@Nullable Input<String> deliveryStreamName) {
+        public Builder deliveryStreamName(@Nullable Input<String> deliveryStreamName) {
             this.deliveryStreamName = deliveryStreamName;
             return this;
         }
 
-        public Builder setDeliveryStreamName(@Nullable String deliveryStreamName) {
+        public Builder deliveryStreamName(@Nullable String deliveryStreamName) {
             this.deliveryStreamName = Input.ofNullable(deliveryStreamName);
             return this;
         }
 
-        public Builder setDeliveryStreamType(@Nullable Input<DeliveryStreamType> deliveryStreamType) {
+        public Builder deliveryStreamType(@Nullable Input<DeliveryStreamType> deliveryStreamType) {
             this.deliveryStreamType = deliveryStreamType;
             return this;
         }
 
-        public Builder setDeliveryStreamType(@Nullable DeliveryStreamType deliveryStreamType) {
+        public Builder deliveryStreamType(@Nullable DeliveryStreamType deliveryStreamType) {
             this.deliveryStreamType = Input.ofNullable(deliveryStreamType);
             return this;
         }
 
-        public Builder setElasticsearchDestinationConfiguration(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration) {
+        public Builder elasticsearchDestinationConfiguration(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration) {
             this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
             return this;
         }
 
-        public Builder setElasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfigurationArgs elasticsearchDestinationConfiguration) {
+        public Builder elasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfigurationArgs elasticsearchDestinationConfiguration) {
             this.elasticsearchDestinationConfiguration = Input.ofNullable(elasticsearchDestinationConfiguration);
             return this;
         }
 
-        public Builder setExtendedS3DestinationConfiguration(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration) {
+        public Builder extendedS3DestinationConfiguration(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration) {
             this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
             return this;
         }
 
-        public Builder setExtendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfigurationArgs extendedS3DestinationConfiguration) {
+        public Builder extendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfigurationArgs extendedS3DestinationConfiguration) {
             this.extendedS3DestinationConfiguration = Input.ofNullable(extendedS3DestinationConfiguration);
             return this;
         }
 
-        public Builder setHttpEndpointDestinationConfiguration(@Nullable Input<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration) {
+        public Builder httpEndpointDestinationConfiguration(@Nullable Input<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration) {
             this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
             return this;
         }
 
-        public Builder setHttpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfigurationArgs httpEndpointDestinationConfiguration) {
+        public Builder httpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfigurationArgs httpEndpointDestinationConfiguration) {
             this.httpEndpointDestinationConfiguration = Input.ofNullable(httpEndpointDestinationConfiguration);
             return this;
         }
 
-        public Builder setKinesisStreamSourceConfiguration(@Nullable Input<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration) {
+        public Builder kinesisStreamSourceConfiguration(@Nullable Input<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration) {
             this.kinesisStreamSourceConfiguration = kinesisStreamSourceConfiguration;
             return this;
         }
 
-        public Builder setKinesisStreamSourceConfiguration(@Nullable DeliveryStreamKinesisStreamSourceConfigurationArgs kinesisStreamSourceConfiguration) {
+        public Builder kinesisStreamSourceConfiguration(@Nullable DeliveryStreamKinesisStreamSourceConfigurationArgs kinesisStreamSourceConfiguration) {
             this.kinesisStreamSourceConfiguration = Input.ofNullable(kinesisStreamSourceConfiguration);
             return this;
         }
 
-        public Builder setRedshiftDestinationConfiguration(@Nullable Input<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration) {
+        public Builder redshiftDestinationConfiguration(@Nullable Input<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration) {
             this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
             return this;
         }
 
-        public Builder setRedshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfigurationArgs redshiftDestinationConfiguration) {
+        public Builder redshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfigurationArgs redshiftDestinationConfiguration) {
             this.redshiftDestinationConfiguration = Input.ofNullable(redshiftDestinationConfiguration);
             return this;
         }
 
-        public Builder setS3DestinationConfiguration(@Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
 
-        public Builder setS3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3DestinationConfiguration) {
             this.s3DestinationConfiguration = Input.ofNullable(s3DestinationConfiguration);
             return this;
         }
 
-        public Builder setSplunkDestinationConfiguration(@Nullable Input<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration) {
+        public Builder splunkDestinationConfiguration(@Nullable Input<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration) {
             this.splunkDestinationConfiguration = splunkDestinationConfiguration;
             return this;
         }
 
-        public Builder setSplunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfigurationArgs splunkDestinationConfiguration) {
+        public Builder splunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfigurationArgs splunkDestinationConfiguration) {
             this.splunkDestinationConfiguration = Input.ofNullable(splunkDestinationConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DeliveryStreamTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DeliveryStreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeliveryStreamTagArgs> tags) {
+        public Builder tags(@Nullable List<DeliveryStreamTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

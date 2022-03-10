@@ -215,92 +215,92 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setAlertStrategy(@Nullable Input<AlertPolicyAlertStrategyArgs> alertStrategy) {
+        public Builder alertStrategy(@Nullable Input<AlertPolicyAlertStrategyArgs> alertStrategy) {
             this.alertStrategy = alertStrategy;
             return this;
         }
 
-        public Builder setAlertStrategy(@Nullable AlertPolicyAlertStrategyArgs alertStrategy) {
+        public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyArgs alertStrategy) {
             this.alertStrategy = Input.ofNullable(alertStrategy);
             return this;
         }
 
-        public Builder setCombiner(Input<String> combiner) {
+        public Builder combiner(Input<String> combiner) {
             this.combiner = Objects.requireNonNull(combiner);
             return this;
         }
 
-        public Builder setCombiner(String combiner) {
+        public Builder combiner(String combiner) {
             this.combiner = Input.of(Objects.requireNonNull(combiner));
             return this;
         }
 
-        public Builder setConditions(Input<List<AlertPolicyConditionArgs>> conditions) {
+        public Builder conditions(Input<List<AlertPolicyConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<AlertPolicyConditionArgs> conditions) {
+        public Builder conditions(List<AlertPolicyConditionArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setDocumentation(@Nullable Input<AlertPolicyDocumentationArgs> documentation) {
+        public Builder documentation(@Nullable Input<AlertPolicyDocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable AlertPolicyDocumentationArgs documentation) {
+        public Builder documentation(@Nullable AlertPolicyDocumentationArgs documentation) {
             this.documentation = Input.ofNullable(documentation);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable Input<List<String>> notificationChannels) {
+        public Builder notificationChannels(@Nullable Input<List<String>> notificationChannels) {
             this.notificationChannels = notificationChannels;
             return this;
         }
 
-        public Builder setNotificationChannels(@Nullable List<String> notificationChannels) {
+        public Builder notificationChannels(@Nullable List<String> notificationChannels) {
             this.notificationChannels = Input.ofNullable(notificationChannels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }

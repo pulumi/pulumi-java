@@ -132,52 +132,52 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
     	      this.squashMode = defaults.squashMode;
         }
 
-        public Builder setAccessMode(@Nullable Input<String> accessMode) {
+        public Builder accessMode(@Nullable Input<String> accessMode) {
             this.accessMode = accessMode;
             return this;
         }
 
-        public Builder setAccessMode(@Nullable String accessMode) {
+        public Builder accessMode(@Nullable String accessMode) {
             this.accessMode = Input.ofNullable(accessMode);
             return this;
         }
 
-        public Builder setAnonGid(@Nullable Input<Integer> anonGid) {
+        public Builder anonGid(@Nullable Input<Integer> anonGid) {
             this.anonGid = anonGid;
             return this;
         }
 
-        public Builder setAnonGid(@Nullable Integer anonGid) {
+        public Builder anonGid(@Nullable Integer anonGid) {
             this.anonGid = Input.ofNullable(anonGid);
             return this;
         }
 
-        public Builder setAnonUid(@Nullable Input<Integer> anonUid) {
+        public Builder anonUid(@Nullable Input<Integer> anonUid) {
             this.anonUid = anonUid;
             return this;
         }
 
-        public Builder setAnonUid(@Nullable Integer anonUid) {
+        public Builder anonUid(@Nullable Integer anonUid) {
             this.anonUid = Input.ofNullable(anonUid);
             return this;
         }
 
-        public Builder setIpRanges(@Nullable Input<List<String>> ipRanges) {
+        public Builder ipRanges(@Nullable Input<List<String>> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
 
-        public Builder setIpRanges(@Nullable List<String> ipRanges) {
+        public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = Input.ofNullable(ipRanges);
             return this;
         }
 
-        public Builder setSquashMode(@Nullable Input<String> squashMode) {
+        public Builder squashMode(@Nullable Input<String> squashMode) {
             this.squashMode = squashMode;
             return this;
         }
 
-        public Builder setSquashMode(@Nullable String squashMode) {
+        public Builder squashMode(@Nullable String squashMode) {
             this.squashMode = Input.ofNullable(squashMode);
             return this;
         }

@@ -91,17 +91,17 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAuthentication(Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication) {
+        public Builder authentication(Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -53,12 +53,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
     	      this.tls = defaults.tls;
         }
 
-        public Builder setTls(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
+        public Builder tls(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
+        public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

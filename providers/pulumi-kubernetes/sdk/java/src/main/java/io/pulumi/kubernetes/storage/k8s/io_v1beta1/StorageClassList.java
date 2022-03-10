@@ -126,8 +126,8 @@ public class StorageClassList extends io.pulumi.resources.CustomResource {
     private static StorageClassListArgs makeArgs(StorageClassListArgs args) {
         var builder = args == null ? StorageClassListArgs.builder() : StorageClassListArgs.builder(args);
         return builder
-            .setApiVersion("storage.k8s.io/v1beta1")
-            .setKind("StorageClassList")
+            .apiVersion("storage.k8s.io/v1beta1")
+            .kind("StorageClassList")
             .build();
     }
 

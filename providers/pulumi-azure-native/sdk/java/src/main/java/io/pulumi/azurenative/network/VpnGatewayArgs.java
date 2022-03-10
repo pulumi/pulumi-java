@@ -222,112 +222,112 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGatewayScaleUnit = defaults.vpnGatewayScaleUnit;
         }
 
-        public Builder setBgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
+        public Builder bgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
             this.bgpSettings = Input.ofNullable(bgpSettings);
             return this;
         }
 
-        public Builder setConnections(@Nullable Input<List<VpnConnectionArgs>> connections) {
+        public Builder connections(@Nullable Input<List<VpnConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<VpnConnectionArgs> connections) {
+        public Builder connections(@Nullable List<VpnConnectionArgs> connections) {
             this.connections = Input.ofNullable(connections);
             return this;
         }
 
-        public Builder setGatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Input<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
-        public Builder setGatewayName(@Nullable String gatewayName) {
+        public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Input.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIsRoutingPreferenceInternet(@Nullable Input<Boolean> isRoutingPreferenceInternet) {
+        public Builder isRoutingPreferenceInternet(@Nullable Input<Boolean> isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
-        public Builder setIsRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
+        public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = Input.ofNullable(isRoutingPreferenceInternet);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNatRules(@Nullable Input<List<VpnGatewayNatRuleArgs>> natRules) {
+        public Builder natRules(@Nullable Input<List<VpnGatewayNatRuleArgs>> natRules) {
             this.natRules = natRules;
             return this;
         }
 
-        public Builder setNatRules(@Nullable List<VpnGatewayNatRuleArgs> natRules) {
+        public Builder natRules(@Nullable List<VpnGatewayNatRuleArgs> natRules) {
             this.natRules = Input.ofNullable(natRules);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
+        public Builder virtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceArgs virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
             this.virtualHub = Input.ofNullable(virtualHub);
             return this;
         }
 
-        public Builder setVpnGatewayScaleUnit(@Nullable Input<Integer> vpnGatewayScaleUnit) {
+        public Builder vpnGatewayScaleUnit(@Nullable Input<Integer> vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
 
-        public Builder setVpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
+        public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = Input.ofNullable(vpnGatewayScaleUnit);
             return this;
         }

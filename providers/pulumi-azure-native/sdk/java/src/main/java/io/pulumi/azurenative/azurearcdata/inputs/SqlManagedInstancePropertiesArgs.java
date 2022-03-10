@@ -156,72 +156,72 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setAdmin(@Nullable Input<String> admin) {
+        public Builder admin(@Nullable Input<String> admin) {
             this.admin = admin;
             return this;
         }
 
-        public Builder setAdmin(@Nullable String admin) {
+        public Builder admin(@Nullable String admin) {
             this.admin = Input.ofNullable(admin);
             return this;
         }
 
-        public Builder setBasicLoginInformation(@Nullable Input<BasicLoginInformationArgs> basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable Input<BasicLoginInformationArgs> basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
             this.basicLoginInformation = Input.ofNullable(basicLoginInformation);
             return this;
         }
 
-        public Builder setDataControllerId(@Nullable Input<String> dataControllerId) {
+        public Builder dataControllerId(@Nullable Input<String> dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
 
-        public Builder setDataControllerId(@Nullable String dataControllerId) {
+        public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = Input.ofNullable(dataControllerId);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Input<Object> k8sRaw) {
+        public Builder k8sRaw(@Nullable Input<Object> k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = Input.ofNullable(k8sRaw);
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable Input<String> lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable Input<String> lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = Input.ofNullable(lastUploadedDate);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

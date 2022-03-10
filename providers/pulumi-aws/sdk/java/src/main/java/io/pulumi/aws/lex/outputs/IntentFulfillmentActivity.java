@@ -72,12 +72,12 @@ public final class IntentFulfillmentActivity {
     	      this.type = defaults.type;
         }
 
-        public Builder setCodeHook(@Nullable IntentFulfillmentActivityCodeHook codeHook) {
+        public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHook codeHook) {
             this.codeHook = codeHook;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -106,42 +106,42 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     	      this.split = defaults.split;
         }
 
-        public Builder setMigrateTraffic(@Nullable Input<Boolean> migrateTraffic) {
+        public Builder migrateTraffic(@Nullable Input<Boolean> migrateTraffic) {
             this.migrateTraffic = migrateTraffic;
             return this;
         }
 
-        public Builder setMigrateTraffic(@Nullable Boolean migrateTraffic) {
+        public Builder migrateTraffic(@Nullable Boolean migrateTraffic) {
             this.migrateTraffic = Input.ofNullable(migrateTraffic);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setSplit(@Nullable Input<EngineSplitTrafficSplitGetArgs> split) {
+        public Builder split(@Nullable Input<EngineSplitTrafficSplitGetArgs> split) {
             this.split = split;
             return this;
         }
 
-        public Builder setSplit(@Nullable EngineSplitTrafficSplitGetArgs split) {
+        public Builder split(@Nullable EngineSplitTrafficSplitGetArgs split) {
             this.split = Input.ofNullable(split);
             return this;
         }

@@ -74,22 +74,22 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTarget(Input<MetricTargetArgs> target) {
+        public Builder target(Input<MetricTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(MetricTargetArgs target) {
+        public Builder target(MetricTargetArgs target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

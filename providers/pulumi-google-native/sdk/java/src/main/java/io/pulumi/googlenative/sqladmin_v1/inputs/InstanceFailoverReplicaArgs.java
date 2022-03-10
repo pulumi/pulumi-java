@@ -75,22 +75,22 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder setAvailable(@Nullable Input<Boolean> available) {
+        public Builder available(@Nullable Input<Boolean> available) {
             this.available = available;
             return this;
         }
 
-        public Builder setAvailable(@Nullable Boolean available) {
+        public Builder available(@Nullable Boolean available) {
             this.available = Input.ofNullable(available);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

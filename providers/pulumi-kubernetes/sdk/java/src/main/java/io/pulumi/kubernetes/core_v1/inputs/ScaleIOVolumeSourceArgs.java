@@ -204,102 +204,102 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setGateway(Input<String> gateway) {
+        public Builder gateway(Input<String> gateway) {
             this.gateway = Objects.requireNonNull(gateway);
             return this;
         }
 
-        public Builder setGateway(String gateway) {
+        public Builder gateway(String gateway) {
             this.gateway = Input.of(Objects.requireNonNull(gateway));
             return this;
         }
 
-        public Builder setProtectionDomain(@Nullable Input<String> protectionDomain) {
+        public Builder protectionDomain(@Nullable Input<String> protectionDomain) {
             this.protectionDomain = protectionDomain;
             return this;
         }
 
-        public Builder setProtectionDomain(@Nullable String protectionDomain) {
+        public Builder protectionDomain(@Nullable String protectionDomain) {
             this.protectionDomain = Input.ofNullable(protectionDomain);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSecretRef(Input<LocalObjectReferenceArgs> secretRef) {
+        public Builder secretRef(Input<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
 
-        public Builder setSecretRef(LocalObjectReferenceArgs secretRef) {
+        public Builder secretRef(LocalObjectReferenceArgs secretRef) {
             this.secretRef = Input.of(Objects.requireNonNull(secretRef));
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Input<Boolean> sslEnabled) {
+        public Builder sslEnabled(@Nullable Input<Boolean> sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Boolean sslEnabled) {
+        public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = Input.ofNullable(sslEnabled);
             return this;
         }
 
-        public Builder setStorageMode(@Nullable Input<String> storageMode) {
+        public Builder storageMode(@Nullable Input<String> storageMode) {
             this.storageMode = storageMode;
             return this;
         }
 
-        public Builder setStorageMode(@Nullable String storageMode) {
+        public Builder storageMode(@Nullable String storageMode) {
             this.storageMode = Input.ofNullable(storageMode);
             return this;
         }
 
-        public Builder setStoragePool(@Nullable Input<String> storagePool) {
+        public Builder storagePool(@Nullable Input<String> storagePool) {
             this.storagePool = storagePool;
             return this;
         }
 
-        public Builder setStoragePool(@Nullable String storagePool) {
+        public Builder storagePool(@Nullable String storagePool) {
             this.storagePool = Input.ofNullable(storagePool);
             return this;
         }
 
-        public Builder setSystem(Input<String> system) {
+        public Builder system(Input<String> system) {
             this.system = Objects.requireNonNull(system);
             return this;
         }
 
-        public Builder setSystem(String system) {
+        public Builder system(String system) {
             this.system = Input.of(Objects.requireNonNull(system));
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }

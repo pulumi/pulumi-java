@@ -83,17 +83,17 @@ public final class EnvironmentVariableResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecureValue(@Nullable String secureValue) {
+        public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = secureValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

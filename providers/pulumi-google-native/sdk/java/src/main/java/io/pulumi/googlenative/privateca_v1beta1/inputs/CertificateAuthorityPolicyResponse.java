@@ -158,37 +158,37 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
     	      this.overwriteConfigValues = defaults.overwriteConfigValues;
         }
 
-        public Builder setAllowedCommonNames(List<String> allowedCommonNames) {
+        public Builder allowedCommonNames(List<String> allowedCommonNames) {
             this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames);
             return this;
         }
 
-        public Builder setAllowedConfigList(AllowedConfigListResponse allowedConfigList) {
+        public Builder allowedConfigList(AllowedConfigListResponse allowedConfigList) {
             this.allowedConfigList = Objects.requireNonNull(allowedConfigList);
             return this;
         }
 
-        public Builder setAllowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
             this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
             return this;
         }
 
-        public Builder setAllowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
+        public Builder allowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations);
             return this;
         }
 
-        public Builder setAllowedSans(AllowedSubjectAltNamesResponse allowedSans) {
+        public Builder allowedSans(AllowedSubjectAltNamesResponse allowedSans) {
             this.allowedSans = Objects.requireNonNull(allowedSans);
             return this;
         }
 
-        public Builder setMaximumLifetime(String maximumLifetime) {
+        public Builder maximumLifetime(String maximumLifetime) {
             this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
             return this;
         }
 
-        public Builder setOverwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
+        public Builder overwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
             this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
             return this;
         }

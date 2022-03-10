@@ -53,7 +53,7 @@ public final class ProgressPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setPercentage(@Nullable String percentage) {
+        public Builder percentage(@Nullable String percentage) {
             this.percentage = percentage;
             return this;
         }

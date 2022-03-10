@@ -53,12 +53,12 @@ public final class MysqlLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

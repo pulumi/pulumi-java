@@ -88,42 +88,42 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
     	      this.templatedPathList = defaults.templatedPathList;
         }
 
-        public Builder setFileFormatDescriptor(Input<AnomalyDetectorFileFormatDescriptorArgs> fileFormatDescriptor) {
+        public Builder fileFormatDescriptor(Input<AnomalyDetectorFileFormatDescriptorArgs> fileFormatDescriptor) {
             this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
             return this;
         }
 
-        public Builder setFileFormatDescriptor(AnomalyDetectorFileFormatDescriptorArgs fileFormatDescriptor) {
+        public Builder fileFormatDescriptor(AnomalyDetectorFileFormatDescriptorArgs fileFormatDescriptor) {
             this.fileFormatDescriptor = Input.of(Objects.requireNonNull(fileFormatDescriptor));
             return this;
         }
 
-        public Builder setHistoricalDataPathList(@Nullable Input<List<String>> historicalDataPathList) {
+        public Builder historicalDataPathList(@Nullable Input<List<String>> historicalDataPathList) {
             this.historicalDataPathList = historicalDataPathList;
             return this;
         }
 
-        public Builder setHistoricalDataPathList(@Nullable List<String> historicalDataPathList) {
+        public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
             this.historicalDataPathList = Input.ofNullable(historicalDataPathList);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTemplatedPathList(@Nullable Input<List<String>> templatedPathList) {
+        public Builder templatedPathList(@Nullable Input<List<String>> templatedPathList) {
             this.templatedPathList = templatedPathList;
             return this;
         }
 
-        public Builder setTemplatedPathList(@Nullable List<String> templatedPathList) {
+        public Builder templatedPathList(@Nullable List<String> templatedPathList) {
             this.templatedPathList = Input.ofNullable(templatedPathList);
             return this;
         }

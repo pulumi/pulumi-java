@@ -105,22 +105,22 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
     	      this.state = defaults.state;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setProgress(Integer progress) {
+        public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

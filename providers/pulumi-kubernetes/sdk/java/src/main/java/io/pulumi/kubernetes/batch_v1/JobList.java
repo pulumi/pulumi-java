@@ -126,8 +126,8 @@ public class JobList extends io.pulumi.resources.CustomResource {
     private static JobListArgs makeArgs(JobListArgs args) {
         var builder = args == null ? JobListArgs.builder() : JobListArgs.builder(args);
         return builder
-            .setApiVersion("batch/v1")
-            .setKind("JobList")
+            .apiVersion("batch/v1")
+            .kind("JobList")
             .build();
     }
 

@@ -273,152 +273,152 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceleratorType(Input<String> acceleratorType) {
+        public Builder acceleratorType(Input<String> acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Input.of(Objects.requireNonNull(acceleratorType));
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setDataDisks(@Nullable Input<List<AttachedDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Input<List<AttachedDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
+        public Builder dataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
             this.dataDisks = Input.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHealth(@Nullable Input<NodeHealth> health) {
+        public Builder health(@Nullable Input<NodeHealth> health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealth(@Nullable NodeHealth health) {
+        public Builder health(@Nullable NodeHealth health) {
             this.health = Input.ofNullable(health);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setNodeId(@Nullable Input<String> nodeId) {
+        public Builder nodeId(@Nullable Input<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
-        public Builder setNodeId(@Nullable String nodeId) {
+        public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = Input.ofNullable(nodeId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRuntimeVersion(Input<String> runtimeVersion) {
+        public Builder runtimeVersion(Input<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Input.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
 
-        public Builder setSchedulingConfig(@Nullable Input<SchedulingConfigArgs> schedulingConfig) {
+        public Builder schedulingConfig(@Nullable Input<SchedulingConfigArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
 
-        public Builder setSchedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
+        public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
             this.schedulingConfig = Input.ofNullable(schedulingConfig);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<ServiceAccountArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable ServiceAccountArgs serviceAccount) {
+        public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -58,7 +58,7 @@ public final class ReportConfigDatasetConfigurationResponse extends io.pulumi.re
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable List<String> columns) {
+        public Builder columns(@Nullable List<String> columns) {
             this.columns = columns;
             return this;
         }

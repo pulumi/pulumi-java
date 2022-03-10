@@ -302,122 +302,122 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setIpProtocol(@Nullable Input<String> ipProtocol) {
+        public Builder ipProtocol(@Nullable Input<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
 
-        public Builder setIpProtocol(@Nullable String ipProtocol) {
+        public Builder ipProtocol(@Nullable String ipProtocol) {
             this.ipProtocol = Input.ofNullable(ipProtocol);
             return this;
         }
 
-        public Builder setIpVersion(@Nullable Input<String> ipVersion) {
+        public Builder ipVersion(@Nullable Input<String> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
-        public Builder setIpVersion(@Nullable String ipVersion) {
+        public Builder ipVersion(@Nullable String ipVersion) {
             this.ipVersion = Input.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
-        public Builder setLoadBalancingScheme(@Nullable String loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
             this.loadBalancingScheme = Input.ofNullable(loadBalancingScheme);
             return this;
         }
 
-        public Builder setMetadataFilters(@Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters) {
+        public Builder metadataFilters(@Nullable Input<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
 
-        public Builder setMetadataFilters(@Nullable List<GlobalForwardingRuleMetadataFilterArgs> metadataFilters) {
+        public Builder metadataFilters(@Nullable List<GlobalForwardingRuleMetadataFilterArgs> metadataFilters) {
             this.metadataFilters = Input.ofNullable(metadataFilters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPortRange(@Nullable Input<String> portRange) {
+        public Builder portRange(@Nullable Input<String> portRange) {
             this.portRange = portRange;
             return this;
         }
 
-        public Builder setPortRange(@Nullable String portRange) {
+        public Builder portRange(@Nullable String portRange) {
             this.portRange = Input.ofNullable(portRange);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

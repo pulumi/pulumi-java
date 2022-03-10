@@ -84,17 +84,17 @@ public final class IdentityPoolCognitoIdentityProvider {
     	      this.serverSideTokenCheck = defaults.serverSideTokenCheck;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setProviderName(@Nullable String providerName) {
+        public Builder providerName(@Nullable String providerName) {
             this.providerName = providerName;
             return this;
         }
 
-        public Builder setServerSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
+        public Builder serverSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
             this.serverSideTokenCheck = serverSideTokenCheck;
             return this;
         }

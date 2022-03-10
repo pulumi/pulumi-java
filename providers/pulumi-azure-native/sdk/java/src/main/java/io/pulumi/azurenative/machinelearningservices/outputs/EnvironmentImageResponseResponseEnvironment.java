@@ -168,42 +168,42 @@ public final class EnvironmentImageResponseResponseEnvironment {
     	      this.version = defaults.version;
         }
 
-        public Builder setDocker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
+        public Builder docker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setInferencingStackVersion(@Nullable String inferencingStackVersion) {
+        public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             this.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPython(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
+        public Builder python(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
             this.python = python;
             return this;
         }
 
-        public Builder setR(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
+        public Builder r(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
             this.r = r;
             return this;
         }
 
-        public Builder setSpark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
+        public Builder spark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
             this.spark = spark;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

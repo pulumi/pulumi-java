@@ -76,12 +76,12 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
     	      this.hourSlots = defaults.hourSlots;
         }
 
-        public Builder setDay(@Nullable String day) {
+        public Builder day(@Nullable String day) {
             this.day = day;
             return this;
         }
 
-        public Builder setHourSlots(@Nullable List<Integer> hourSlots) {
+        public Builder hourSlots(@Nullable List<Integer> hourSlots) {
             this.hourSlots = hourSlots;
             return this;
         }

@@ -167,72 +167,72 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setData(@Nullable Input<Map<String,String>> data) {
+        public Builder data(@Nullable Input<Map<String,String>> data) {
             this.data = Input.ofNullable(data).asSecret();
             return this;
         }
 
-        public Builder setData(@Nullable Map<String,String> data) {
+        public Builder data(@Nullable Map<String,String> data) {
             this.data = Input.ofNullable(data).asSecret();
             return this;
         }
 
-        public Builder setImmutable(@Nullable Input<Boolean> immutable) {
+        public Builder immutable(@Nullable Input<Boolean> immutable) {
             this.immutable = immutable;
             return this;
         }
 
-        public Builder setImmutable(@Nullable Boolean immutable) {
+        public Builder immutable(@Nullable Boolean immutable) {
             this.immutable = Input.ofNullable(immutable);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setStringData(@Nullable Input<Map<String,String>> stringData) {
+        public Builder stringData(@Nullable Input<Map<String,String>> stringData) {
             this.stringData = Input.ofNullable(stringData).asSecret();
             return this;
         }
 
-        public Builder setStringData(@Nullable Map<String,String> stringData) {
+        public Builder stringData(@Nullable Map<String,String> stringData) {
             this.stringData = Input.ofNullable(stringData).asSecret();
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

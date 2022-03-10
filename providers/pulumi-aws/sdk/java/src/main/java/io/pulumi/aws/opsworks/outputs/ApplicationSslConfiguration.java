@@ -83,17 +83,17 @@ public final class ApplicationSslConfiguration {
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setChain(@Nullable String chain) {
+        public Builder chain(@Nullable String chain) {
             this.chain = chain;
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }

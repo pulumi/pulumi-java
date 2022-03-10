@@ -84,17 +84,17 @@ public final class URLMapHeaderActionRequestHeadersToAdd {
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setReplace(Boolean replace) {
+        public Builder replace(Boolean replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }

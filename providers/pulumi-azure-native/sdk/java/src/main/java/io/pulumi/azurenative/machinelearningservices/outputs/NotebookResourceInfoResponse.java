@@ -76,17 +76,17 @@ public final class NotebookResourceInfoResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setNotebookPreparationError(@Nullable NotebookPreparationErrorResponse notebookPreparationError) {
+        public Builder notebookPreparationError(@Nullable NotebookPreparationErrorResponse notebookPreparationError) {
             this.notebookPreparationError = notebookPreparationError;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

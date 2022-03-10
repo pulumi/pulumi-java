@@ -72,22 +72,22 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setIpSetDescriptors(@Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
             this.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
 
-        public Builder setIpSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
             this.ipSetDescriptors = Input.ofNullable(ipSetDescriptors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

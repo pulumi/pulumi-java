@@ -153,72 +153,72 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     	      this.storageAccountCredentialName = defaults.storageAccountCredentialName;
         }
 
-        public Builder setAccessKey(@Nullable Input<AsymmetricEncryptedSecretArgs> accessKey) {
+        public Builder accessKey(@Nullable Input<AsymmetricEncryptedSecretArgs> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAccessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
+        public Builder accessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
             this.accessKey = Input.ofNullable(accessKey);
             return this;
         }
 
-        public Builder setEndPoint(Input<String> endPoint) {
+        public Builder endPoint(Input<String> endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
-        public Builder setEndPoint(String endPoint) {
+        public Builder endPoint(String endPoint) {
             this.endPoint = Input.of(Objects.requireNonNull(endPoint));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSslStatus(Input<SslStatus> sslStatus) {
+        public Builder sslStatus(Input<SslStatus> sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
 
-        public Builder setSslStatus(SslStatus sslStatus) {
+        public Builder sslStatus(SslStatus sslStatus) {
             this.sslStatus = Input.of(Objects.requireNonNull(sslStatus));
             return this;
         }
 
-        public Builder setStorageAccountCredentialName(@Nullable Input<String> storageAccountCredentialName) {
+        public Builder storageAccountCredentialName(@Nullable Input<String> storageAccountCredentialName) {
             this.storageAccountCredentialName = storageAccountCredentialName;
             return this;
         }
 
-        public Builder setStorageAccountCredentialName(@Nullable String storageAccountCredentialName) {
+        public Builder storageAccountCredentialName(@Nullable String storageAccountCredentialName) {
             this.storageAccountCredentialName = Input.ofNullable(storageAccountCredentialName);
             return this;
         }

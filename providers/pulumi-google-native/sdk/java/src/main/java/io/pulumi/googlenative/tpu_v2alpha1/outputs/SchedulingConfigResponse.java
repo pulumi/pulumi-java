@@ -65,12 +65,12 @@ public final class SchedulingConfigResponse {
     	      this.reserved = defaults.reserved;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setReserved(Boolean reserved) {
+        public Builder reserved(Boolean reserved) {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }

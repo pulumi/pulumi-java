@@ -118,52 +118,52 @@ public final class UsagePlanKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Input<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUsagePlanId(@Nullable Input<String> usagePlanId) {
+        public Builder usagePlanId(@Nullable Input<String> usagePlanId) {
             this.usagePlanId = usagePlanId;
             return this;
         }
 
-        public Builder setUsagePlanId(@Nullable String usagePlanId) {
+        public Builder usagePlanId(@Nullable String usagePlanId) {
             this.usagePlanId = Input.ofNullable(usagePlanId);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

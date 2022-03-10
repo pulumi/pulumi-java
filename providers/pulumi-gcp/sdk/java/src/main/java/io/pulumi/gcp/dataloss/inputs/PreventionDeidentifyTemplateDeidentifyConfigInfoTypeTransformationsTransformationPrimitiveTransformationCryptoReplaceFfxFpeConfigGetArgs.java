@@ -154,62 +154,62 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setCommonAlphabet(@Nullable Input<String> commonAlphabet) {
+        public Builder commonAlphabet(@Nullable Input<String> commonAlphabet) {
             this.commonAlphabet = commonAlphabet;
             return this;
         }
 
-        public Builder setCommonAlphabet(@Nullable String commonAlphabet) {
+        public Builder commonAlphabet(@Nullable String commonAlphabet) {
             this.commonAlphabet = Input.ofNullable(commonAlphabet);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context) {
+        public Builder context(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs context) {
+        public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextGetArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs cryptoKey) {
+        public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyGetArgs cryptoKey) {
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder setCustomAlphabet(@Nullable Input<String> customAlphabet) {
+        public Builder customAlphabet(@Nullable Input<String> customAlphabet) {
             this.customAlphabet = customAlphabet;
             return this;
         }
 
-        public Builder setCustomAlphabet(@Nullable String customAlphabet) {
+        public Builder customAlphabet(@Nullable String customAlphabet) {
             this.customAlphabet = Input.ofNullable(customAlphabet);
             return this;
         }
 
-        public Builder setRadix(@Nullable Input<Integer> radix) {
+        public Builder radix(@Nullable Input<Integer> radix) {
             this.radix = radix;
             return this;
         }
 
-        public Builder setRadix(@Nullable Integer radix) {
+        public Builder radix(@Nullable Integer radix) {
             this.radix = Input.ofNullable(radix);
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeGetArgs surrogateInfoType) {
             this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
             return this;
         }

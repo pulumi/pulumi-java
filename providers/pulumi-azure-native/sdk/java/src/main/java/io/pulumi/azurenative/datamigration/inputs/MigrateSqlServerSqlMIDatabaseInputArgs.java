@@ -108,42 +108,42 @@ public final class MigrateSqlServerSqlMIDatabaseInputArgs extends io.pulumi.reso
     	      this.restoreDatabaseName = defaults.restoreDatabaseName;
         }
 
-        public Builder setBackupFilePaths(@Nullable Input<List<String>> backupFilePaths) {
+        public Builder backupFilePaths(@Nullable Input<List<String>> backupFilePaths) {
             this.backupFilePaths = backupFilePaths;
             return this;
         }
 
-        public Builder setBackupFilePaths(@Nullable List<String> backupFilePaths) {
+        public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
             this.backupFilePaths = Input.ofNullable(backupFilePaths);
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
+        public Builder backupFileShare(@Nullable Input<FileShareArgs> backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareArgs backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
             this.backupFileShare = Input.ofNullable(backupFileShare);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRestoreDatabaseName(Input<String> restoreDatabaseName) {
+        public Builder restoreDatabaseName(Input<String> restoreDatabaseName) {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }
 
-        public Builder setRestoreDatabaseName(String restoreDatabaseName) {
+        public Builder restoreDatabaseName(String restoreDatabaseName) {
             this.restoreDatabaseName = Input.of(Objects.requireNonNull(restoreDatabaseName));
             return this;
         }

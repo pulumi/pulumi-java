@@ -56,7 +56,7 @@ public final class CopyOnExpiryOptionResponse extends io.pulumi.resources.Invoke
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

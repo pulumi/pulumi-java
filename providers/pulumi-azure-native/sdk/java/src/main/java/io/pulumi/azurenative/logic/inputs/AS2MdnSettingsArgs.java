@@ -189,92 +189,92 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signOutboundMDNIfOptional = defaults.signOutboundMDNIfOptional;
         }
 
-        public Builder setDispositionNotificationTo(@Nullable Input<String> dispositionNotificationTo) {
+        public Builder dispositionNotificationTo(@Nullable Input<String> dispositionNotificationTo) {
             this.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
 
-        public Builder setDispositionNotificationTo(@Nullable String dispositionNotificationTo) {
+        public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
             this.dispositionNotificationTo = Input.ofNullable(dispositionNotificationTo);
             return this;
         }
 
-        public Builder setMdnText(@Nullable Input<String> mdnText) {
+        public Builder mdnText(@Nullable Input<String> mdnText) {
             this.mdnText = mdnText;
             return this;
         }
 
-        public Builder setMdnText(@Nullable String mdnText) {
+        public Builder mdnText(@Nullable String mdnText) {
             this.mdnText = Input.ofNullable(mdnText);
             return this;
         }
 
-        public Builder setMicHashingAlgorithm(Input<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
+        public Builder micHashingAlgorithm(Input<Either<String,HashingAlgorithm>> micHashingAlgorithm) {
             this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
             return this;
         }
 
-        public Builder setMicHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
+        public Builder micHashingAlgorithm(Either<String,HashingAlgorithm> micHashingAlgorithm) {
             this.micHashingAlgorithm = Input.of(Objects.requireNonNull(micHashingAlgorithm));
             return this;
         }
 
-        public Builder setNeedMDN(Input<Boolean> needMDN) {
+        public Builder needMDN(Input<Boolean> needMDN) {
             this.needMDN = Objects.requireNonNull(needMDN);
             return this;
         }
 
-        public Builder setNeedMDN(Boolean needMDN) {
+        public Builder needMDN(Boolean needMDN) {
             this.needMDN = Input.of(Objects.requireNonNull(needMDN));
             return this;
         }
 
-        public Builder setReceiptDeliveryUrl(@Nullable Input<String> receiptDeliveryUrl) {
+        public Builder receiptDeliveryUrl(@Nullable Input<String> receiptDeliveryUrl) {
             this.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
 
-        public Builder setReceiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
+        public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
             this.receiptDeliveryUrl = Input.ofNullable(receiptDeliveryUrl);
             return this;
         }
 
-        public Builder setSendInboundMDNToMessageBox(Input<Boolean> sendInboundMDNToMessageBox) {
+        public Builder sendInboundMDNToMessageBox(Input<Boolean> sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
             return this;
         }
 
-        public Builder setSendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
+        public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Input.of(Objects.requireNonNull(sendInboundMDNToMessageBox));
             return this;
         }
 
-        public Builder setSendMDNAsynchronously(Input<Boolean> sendMDNAsynchronously) {
+        public Builder sendMDNAsynchronously(Input<Boolean> sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
             return this;
         }
 
-        public Builder setSendMDNAsynchronously(Boolean sendMDNAsynchronously) {
+        public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Input.of(Objects.requireNonNull(sendMDNAsynchronously));
             return this;
         }
 
-        public Builder setSignMDN(Input<Boolean> signMDN) {
+        public Builder signMDN(Input<Boolean> signMDN) {
             this.signMDN = Objects.requireNonNull(signMDN);
             return this;
         }
 
-        public Builder setSignMDN(Boolean signMDN) {
+        public Builder signMDN(Boolean signMDN) {
             this.signMDN = Input.of(Objects.requireNonNull(signMDN));
             return this;
         }
 
-        public Builder setSignOutboundMDNIfOptional(Input<Boolean> signOutboundMDNIfOptional) {
+        public Builder signOutboundMDNIfOptional(Input<Boolean> signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }
 
-        public Builder setSignOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
+        public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Input.of(Objects.requireNonNull(signOutboundMDNIfOptional));
             return this;
         }

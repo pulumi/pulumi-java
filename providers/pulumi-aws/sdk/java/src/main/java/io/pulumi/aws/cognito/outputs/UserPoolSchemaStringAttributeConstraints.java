@@ -67,12 +67,12 @@ public final class UserPoolSchemaStringAttributeConstraints {
     	      this.minLength = defaults.minLength;
         }
 
-        public Builder setMaxLength(@Nullable String maxLength) {
+        public Builder maxLength(@Nullable String maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMinLength(@Nullable String minLength) {
+        public Builder minLength(@Nullable String minLength) {
             this.minLength = minLength;
             return this;
         }

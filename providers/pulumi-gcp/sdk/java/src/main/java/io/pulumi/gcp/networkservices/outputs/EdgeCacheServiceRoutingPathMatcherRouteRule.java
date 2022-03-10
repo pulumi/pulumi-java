@@ -170,37 +170,37 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction) {
+        public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setMatchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules) {
+        public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setPriority(String priority) {
+        public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

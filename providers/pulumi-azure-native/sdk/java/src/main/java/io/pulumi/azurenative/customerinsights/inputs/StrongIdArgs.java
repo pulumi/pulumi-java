@@ -108,42 +108,42 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.strongIdName = defaults.strongIdName;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKeyPropertyNames(Input<List<String>> keyPropertyNames) {
+        public Builder keyPropertyNames(Input<List<String>> keyPropertyNames) {
             this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
             return this;
         }
 
-        public Builder setKeyPropertyNames(List<String> keyPropertyNames) {
+        public Builder keyPropertyNames(List<String> keyPropertyNames) {
             this.keyPropertyNames = Input.of(Objects.requireNonNull(keyPropertyNames));
             return this;
         }
 
-        public Builder setStrongIdName(Input<String> strongIdName) {
+        public Builder strongIdName(Input<String> strongIdName) {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
 
-        public Builder setStrongIdName(String strongIdName) {
+        public Builder strongIdName(String strongIdName) {
             this.strongIdName = Input.of(Objects.requireNonNull(strongIdName));
             return this;
         }

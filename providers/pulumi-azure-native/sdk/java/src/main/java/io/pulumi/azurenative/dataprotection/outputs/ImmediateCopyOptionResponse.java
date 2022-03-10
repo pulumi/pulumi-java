@@ -50,7 +50,7 @@ public final class ImmediateCopyOptionResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

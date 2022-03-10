@@ -217,112 +217,112 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
     	      this.trafficMirrorFilterId = defaults.trafficMirrorFilterId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange) {
+        public Builder destinationPortRange(@Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable TrafficMirrorFilterRuleDestinationPortRangeGetArgs destinationPortRange) {
+        public Builder destinationPortRange(@Nullable TrafficMirrorFilterRuleDestinationPortRangeGetArgs destinationPortRange) {
             this.destinationPortRange = Input.ofNullable(destinationPortRange);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Integer> protocol) {
+        public Builder protocol(@Nullable Input<Integer> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Integer protocol) {
+        public Builder protocol(@Nullable Integer protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRuleAction(@Nullable Input<String> ruleAction) {
+        public Builder ruleAction(@Nullable Input<String> ruleAction) {
             this.ruleAction = ruleAction;
             return this;
         }
 
-        public Builder setRuleAction(@Nullable String ruleAction) {
+        public Builder ruleAction(@Nullable String ruleAction) {
             this.ruleAction = Input.ofNullable(ruleAction);
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Input<Integer> ruleNumber) {
+        public Builder ruleNumber(@Nullable Input<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Integer ruleNumber) {
+        public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = Input.ofNullable(ruleNumber);
             return this;
         }
 
-        public Builder setSourceCidrBlock(@Nullable Input<String> sourceCidrBlock) {
+        public Builder sourceCidrBlock(@Nullable Input<String> sourceCidrBlock) {
             this.sourceCidrBlock = sourceCidrBlock;
             return this;
         }
 
-        public Builder setSourceCidrBlock(@Nullable String sourceCidrBlock) {
+        public Builder sourceCidrBlock(@Nullable String sourceCidrBlock) {
             this.sourceCidrBlock = Input.ofNullable(sourceCidrBlock);
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable Input<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange) {
+        public Builder sourcePortRange(@Nullable Input<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable TrafficMirrorFilterRuleSourcePortRangeGetArgs sourcePortRange) {
+        public Builder sourcePortRange(@Nullable TrafficMirrorFilterRuleSourcePortRangeGetArgs sourcePortRange) {
             this.sourcePortRange = Input.ofNullable(sourcePortRange);
             return this;
         }
 
-        public Builder setTrafficDirection(@Nullable Input<String> trafficDirection) {
+        public Builder trafficDirection(@Nullable Input<String> trafficDirection) {
             this.trafficDirection = trafficDirection;
             return this;
         }
 
-        public Builder setTrafficDirection(@Nullable String trafficDirection) {
+        public Builder trafficDirection(@Nullable String trafficDirection) {
             this.trafficDirection = Input.ofNullable(trafficDirection);
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(@Nullable Input<String> trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(@Nullable Input<String> trafficMirrorFilterId) {
             this.trafficMirrorFilterId = trafficMirrorFilterId;
             return this;
         }
 
-        public Builder setTrafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
+        public Builder trafficMirrorFilterId(@Nullable String trafficMirrorFilterId) {
             this.trafficMirrorFilterId = Input.ofNullable(trafficMirrorFilterId);
             return this;
         }

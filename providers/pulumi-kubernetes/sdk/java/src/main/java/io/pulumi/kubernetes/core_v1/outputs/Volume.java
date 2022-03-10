@@ -570,152 +570,152 @@ public final class Volume {
     	      this.vsphereVolume = defaults.vsphereVolume;
         }
 
-        public Builder setAwsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore) {
+        public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore) {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
 
-        public Builder setAzureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
+        public Builder azureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
 
-        public Builder setAzureFile(@Nullable AzureFileVolumeSource azureFile) {
+        public Builder azureFile(@Nullable AzureFileVolumeSource azureFile) {
             this.azureFile = azureFile;
             return this;
         }
 
-        public Builder setCephfs(@Nullable CephFSVolumeSource cephfs) {
+        public Builder cephfs(@Nullable CephFSVolumeSource cephfs) {
             this.cephfs = cephfs;
             return this;
         }
 
-        public Builder setCinder(@Nullable CinderVolumeSource cinder) {
+        public Builder cinder(@Nullable CinderVolumeSource cinder) {
             this.cinder = cinder;
             return this;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapVolumeSource configMap) {
+        public Builder configMap(@Nullable ConfigMapVolumeSource configMap) {
             this.configMap = configMap;
             return this;
         }
 
-        public Builder setCsi(@Nullable CSIVolumeSource csi) {
+        public Builder csi(@Nullable CSIVolumeSource csi) {
             this.csi = csi;
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable DownwardAPIVolumeSource downwardAPI) {
+        public Builder downwardAPI(@Nullable DownwardAPIVolumeSource downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable EmptyDirVolumeSource emptyDir) {
+        public Builder emptyDir(@Nullable EmptyDirVolumeSource emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
 
-        public Builder setEphemeral(@Nullable EphemeralVolumeSource ephemeral) {
+        public Builder ephemeral(@Nullable EphemeralVolumeSource ephemeral) {
             this.ephemeral = ephemeral;
             return this;
         }
 
-        public Builder setFc(@Nullable FCVolumeSource fc) {
+        public Builder fc(@Nullable FCVolumeSource fc) {
             this.fc = fc;
             return this;
         }
 
-        public Builder setFlexVolume(@Nullable FlexVolumeSource flexVolume) {
+        public Builder flexVolume(@Nullable FlexVolumeSource flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
 
-        public Builder setFlocker(@Nullable FlockerVolumeSource flocker) {
+        public Builder flocker(@Nullable FlockerVolumeSource flocker) {
             this.flocker = flocker;
             return this;
         }
 
-        public Builder setGcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
+        public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
 
-        public Builder setGitRepo(@Nullable GitRepoVolumeSource gitRepo) {
+        public Builder gitRepo(@Nullable GitRepoVolumeSource gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
 
-        public Builder setGlusterfs(@Nullable GlusterfsVolumeSource glusterfs) {
+        public Builder glusterfs(@Nullable GlusterfsVolumeSource glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
 
-        public Builder setHostPath(@Nullable HostPathVolumeSource hostPath) {
+        public Builder hostPath(@Nullable HostPathVolumeSource hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setIscsi(@Nullable ISCSIVolumeSource iscsi) {
+        public Builder iscsi(@Nullable ISCSIVolumeSource iscsi) {
             this.iscsi = iscsi;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNfs(@Nullable NFSVolumeSource nfs) {
+        public Builder nfs(@Nullable NFSVolumeSource nfs) {
             this.nfs = nfs;
             return this;
         }
 
-        public Builder setPersistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim) {
+        public Builder persistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim) {
             this.persistentVolumeClaim = persistentVolumeClaim;
             return this;
         }
 
-        public Builder setPhotonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
+        public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
 
-        public Builder setPortworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
+        public Builder portworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
 
-        public Builder setProjected(@Nullable ProjectedVolumeSource projected) {
+        public Builder projected(@Nullable ProjectedVolumeSource projected) {
             this.projected = projected;
             return this;
         }
 
-        public Builder setQuobyte(@Nullable QuobyteVolumeSource quobyte) {
+        public Builder quobyte(@Nullable QuobyteVolumeSource quobyte) {
             this.quobyte = quobyte;
             return this;
         }
 
-        public Builder setRbd(@Nullable RBDVolumeSource rbd) {
+        public Builder rbd(@Nullable RBDVolumeSource rbd) {
             this.rbd = rbd;
             return this;
         }
 
-        public Builder setScaleIO(@Nullable ScaleIOVolumeSource scaleIO) {
+        public Builder scaleIO(@Nullable ScaleIOVolumeSource scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
 
-        public Builder setSecret(@Nullable SecretVolumeSource secret) {
+        public Builder secret(@Nullable SecretVolumeSource secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setStorageos(@Nullable StorageOSVolumeSource storageos) {
+        public Builder storageos(@Nullable StorageOSVolumeSource storageos) {
             this.storageos = storageos;
             return this;
         }
 
-        public Builder setVsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
+        public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
         }

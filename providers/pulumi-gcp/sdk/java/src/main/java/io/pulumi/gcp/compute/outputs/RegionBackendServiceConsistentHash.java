@@ -105,17 +105,17 @@ public final class RegionBackendServiceConsistentHash {
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookie(@Nullable RegionBackendServiceConsistentHashHttpCookie httpCookie) {
+        public Builder httpCookie(@Nullable RegionBackendServiceConsistentHashHttpCookie httpCookie) {
             this.httpCookie = httpCookie;
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable String httpHeaderName) {
+        public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable Integer minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }

@@ -213,57 +213,57 @@ public final class SchedulingResponse {
     	      this.provisioningModel = defaults.provisioningModel;
         }
 
-        public Builder setAutomaticRestart(Boolean automaticRestart) {
+        public Builder automaticRestart(Boolean automaticRestart) {
             this.automaticRestart = Objects.requireNonNull(automaticRestart);
             return this;
         }
 
-        public Builder setHostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
+        public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
             return this;
         }
 
-        public Builder setInstanceTerminationAction(String instanceTerminationAction) {
+        public Builder instanceTerminationAction(String instanceTerminationAction) {
             this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setMaintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
             return this;
         }
 
-        public Builder setMaintenanceInterval(String maintenanceInterval) {
+        public Builder maintenanceInterval(String maintenanceInterval) {
             this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
             return this;
         }
 
-        public Builder setMinNodeCpus(Integer minNodeCpus) {
+        public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
+        public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setProvisioningModel(String provisioningModel) {
+        public Builder provisioningModel(String provisioningModel) {
             this.provisioningModel = Objects.requireNonNull(provisioningModel);
             return this;
         }

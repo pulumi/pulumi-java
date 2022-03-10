@@ -139,62 +139,62 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
     	      this.quoteEscapeCharacter = defaults.quoteEscapeCharacter;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setArraySeparator(@Nullable Input<String> arraySeparator) {
+        public Builder arraySeparator(@Nullable Input<String> arraySeparator) {
             this.arraySeparator = arraySeparator;
             return this;
         }
 
-        public Builder setArraySeparator(@Nullable String arraySeparator) {
+        public Builder arraySeparator(@Nullable String arraySeparator) {
             this.arraySeparator = Input.ofNullable(arraySeparator);
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable Input<String> columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Input<String> columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable String columnDelimiter) {
+        public Builder columnDelimiter(@Nullable String columnDelimiter) {
             this.columnDelimiter = Input.ofNullable(columnDelimiter);
             return this;
         }
 
-        public Builder setFormatType(Input<FormatTypes> formatType) {
+        public Builder formatType(Input<FormatTypes> formatType) {
             this.formatType = Objects.requireNonNull(formatType);
             return this;
         }
 
-        public Builder setFormatType(FormatTypes formatType) {
+        public Builder formatType(FormatTypes formatType) {
             this.formatType = Input.of(Objects.requireNonNull(formatType));
             return this;
         }
 
-        public Builder setQuoteCharacter(@Nullable Input<String> quoteCharacter) {
+        public Builder quoteCharacter(@Nullable Input<String> quoteCharacter) {
             this.quoteCharacter = quoteCharacter;
             return this;
         }
 
-        public Builder setQuoteCharacter(@Nullable String quoteCharacter) {
+        public Builder quoteCharacter(@Nullable String quoteCharacter) {
             this.quoteCharacter = Input.ofNullable(quoteCharacter);
             return this;
         }
 
-        public Builder setQuoteEscapeCharacter(@Nullable Input<String> quoteEscapeCharacter) {
+        public Builder quoteEscapeCharacter(@Nullable Input<String> quoteEscapeCharacter) {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
 
-        public Builder setQuoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
+        public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
             this.quoteEscapeCharacter = Input.ofNullable(quoteEscapeCharacter);
             return this;
         }

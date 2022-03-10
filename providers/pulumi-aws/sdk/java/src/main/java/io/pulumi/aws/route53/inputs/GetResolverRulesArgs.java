@@ -102,22 +102,22 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
     	      this.shareStatus = defaults.shareStatus;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setRuleType(@Nullable String ruleType) {
+        public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
-        public Builder setShareStatus(@Nullable String shareStatus) {
+        public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }

@@ -69,12 +69,12 @@ public final class KubernetesConnectionDetailsResponse {
     	      this.kubeConfig = defaults.kubeConfig;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKubeConfig(@Nullable String kubeConfig) {
+        public Builder kubeConfig(@Nullable String kubeConfig) {
             this.kubeConfig = kubeConfig;
             return this;
         }

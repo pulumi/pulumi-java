@@ -107,17 +107,17 @@ public final class DomainMappingSslSettings {
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setPendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
 
-        public Builder setSslManagementType(String sslManagementType) {
+        public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }

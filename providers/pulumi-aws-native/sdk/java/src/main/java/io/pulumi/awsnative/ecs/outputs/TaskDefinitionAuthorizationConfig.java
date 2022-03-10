@@ -52,12 +52,12 @@ public final class TaskDefinitionAuthorizationConfig {
     	      this.iAM = defaults.iAM;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setIAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
+        public Builder iAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
             this.iAM = iAM;
             return this;
         }

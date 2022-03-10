@@ -57,12 +57,12 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repeatingTimeIntervals = defaults.repeatingTimeIntervals;
         }
 
-        public Builder setRepeatingTimeIntervals(Input<List<String>> repeatingTimeIntervals) {
+        public Builder repeatingTimeIntervals(Input<List<String>> repeatingTimeIntervals) {
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }
 
-        public Builder setRepeatingTimeIntervals(List<String> repeatingTimeIntervals) {
+        public Builder repeatingTimeIntervals(List<String> repeatingTimeIntervals) {
             this.repeatingTimeIntervals = Input.of(Objects.requireNonNull(repeatingTimeIntervals));
             return this;
         }

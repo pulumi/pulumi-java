@@ -62,12 +62,12 @@ public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setPeeringId(String peeringId) {
+        public Builder peeringId(String peeringId) {
             this.peeringId = Objects.requireNonNull(peeringId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

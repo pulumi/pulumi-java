@@ -237,7 +237,7 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
     private static ReadOnlyFollowingDatabaseArgs makeArgs(ReadOnlyFollowingDatabaseArgs args) {
         var builder = args == null ? ReadOnlyFollowingDatabaseArgs.builder() : ReadOnlyFollowingDatabaseArgs.builder(args);
         return builder
-            .setKind("ReadOnlyFollowing")
+            .kind("ReadOnlyFollowing")
             .build();
     }
 

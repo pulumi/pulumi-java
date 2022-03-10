@@ -57,12 +57,12 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
     	      this.purviewResourceId = defaults.purviewResourceId;
         }
 
-        public Builder setPurviewResourceId(@Nullable Input<String> purviewResourceId) {
+        public Builder purviewResourceId(@Nullable Input<String> purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
         }
 
-        public Builder setPurviewResourceId(@Nullable String purviewResourceId) {
+        public Builder purviewResourceId(@Nullable String purviewResourceId) {
             this.purviewResourceId = Input.ofNullable(purviewResourceId);
             return this;
         }

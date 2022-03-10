@@ -93,32 +93,32 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     	      this.webhookClientConfig = defaults.webhookClientConfig;
         }
 
-        public Builder setConversionReviewVersions(@Nullable Input<List<String>> conversionReviewVersions) {
+        public Builder conversionReviewVersions(@Nullable Input<List<String>> conversionReviewVersions) {
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
 
-        public Builder setConversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
+        public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
             this.conversionReviewVersions = Input.ofNullable(conversionReviewVersions);
             return this;
         }
 
-        public Builder setStrategy(Input<String> strategy) {
+        public Builder strategy(Input<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Input.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder setWebhookClientConfig(@Nullable Input<WebhookClientConfigArgs> webhookClientConfig) {
+        public Builder webhookClientConfig(@Nullable Input<WebhookClientConfigArgs> webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }
 
-        public Builder setWebhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
+        public Builder webhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
             this.webhookClientConfig = Input.ofNullable(webhookClientConfig);
             return this;
         }

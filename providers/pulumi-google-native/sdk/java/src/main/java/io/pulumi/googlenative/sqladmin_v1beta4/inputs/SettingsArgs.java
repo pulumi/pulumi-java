@@ -443,242 +443,242 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setActivationPolicy(@Nullable Input<SettingsActivationPolicy> activationPolicy) {
+        public Builder activationPolicy(@Nullable Input<SettingsActivationPolicy> activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
-        public Builder setActivationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
+        public Builder activationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
             this.activationPolicy = Input.ofNullable(activationPolicy);
             return this;
         }
 
-        public Builder setActiveDirectoryConfig(@Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
+        public Builder activeDirectoryConfig(@Nullable Input<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
             this.activeDirectoryConfig = activeDirectoryConfig;
             return this;
         }
 
-        public Builder setActiveDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
+        public Builder activeDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
             this.activeDirectoryConfig = Input.ofNullable(activeDirectoryConfig);
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable Input<SettingsAvailabilityType> availabilityType) {
+        public Builder availabilityType(@Nullable Input<SettingsAvailabilityType> availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable SettingsAvailabilityType availabilityType) {
+        public Builder availabilityType(@Nullable SettingsAvailabilityType availabilityType) {
             this.availabilityType = Input.ofNullable(availabilityType);
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable Input<BackupConfigurationArgs> backupConfiguration) {
+        public Builder backupConfiguration(@Nullable Input<BackupConfigurationArgs> backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
+        public Builder backupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
             this.backupConfiguration = Input.ofNullable(backupConfiguration);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setCrashSafeReplicationEnabled(@Nullable Input<Boolean> crashSafeReplicationEnabled) {
+        public Builder crashSafeReplicationEnabled(@Nullable Input<Boolean> crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
             return this;
         }
 
-        public Builder setCrashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
+        public Builder crashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = Input.ofNullable(crashSafeReplicationEnabled);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable Input<String> dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable Input<String> dataDiskSizeGb) {
             this.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
 
-        public Builder setDataDiskSizeGb(@Nullable String dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
             this.dataDiskSizeGb = Input.ofNullable(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable Input<SettingsDataDiskType> dataDiskType) {
+        public Builder dataDiskType(@Nullable Input<SettingsDataDiskType> dataDiskType) {
             this.dataDiskType = dataDiskType;
             return this;
         }
 
-        public Builder setDataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
+        public Builder dataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
             this.dataDiskType = Input.ofNullable(dataDiskType);
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable Input<List<DatabaseFlagsArgs>> databaseFlags) {
+        public Builder databaseFlags(@Nullable Input<List<DatabaseFlagsArgs>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
+        public Builder databaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
             this.databaseFlags = Input.ofNullable(databaseFlags);
             return this;
         }
 
-        public Builder setDatabaseReplicationEnabled(@Nullable Input<Boolean> databaseReplicationEnabled) {
+        public Builder databaseReplicationEnabled(@Nullable Input<Boolean> databaseReplicationEnabled) {
             this.databaseReplicationEnabled = databaseReplicationEnabled;
             return this;
         }
 
-        public Builder setDatabaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
+        public Builder databaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
             this.databaseReplicationEnabled = Input.ofNullable(databaseReplicationEnabled);
             return this;
         }
 
-        public Builder setDenyMaintenancePeriods(@Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
+        public Builder denyMaintenancePeriods(@Nullable Input<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = denyMaintenancePeriods;
             return this;
         }
 
-        public Builder setDenyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
+        public Builder denyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = Input.ofNullable(denyMaintenancePeriods);
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable Input<InsightsConfigArgs> insightsConfig) {
+        public Builder insightsConfig(@Nullable Input<InsightsConfigArgs> insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
+        public Builder insightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
             this.insightsConfig = Input.ofNullable(insightsConfig);
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable Input<IpConfigurationArgs> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Input<IpConfigurationArgs> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
+        public Builder ipConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
             this.ipConfiguration = Input.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable Input<LocationPreferenceArgs> locationPreference) {
+        public Builder locationPreference(@Nullable Input<LocationPreferenceArgs> locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable LocationPreferenceArgs locationPreference) {
+        public Builder locationPreference(@Nullable LocationPreferenceArgs locationPreference) {
             this.locationPreference = Input.ofNullable(locationPreference);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setPasswordValidationPolicy(@Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy) {
+        public Builder passwordValidationPolicy(@Nullable Input<PasswordValidationPolicyArgs> passwordValidationPolicy) {
             this.passwordValidationPolicy = passwordValidationPolicy;
             return this;
         }
 
-        public Builder setPasswordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
+        public Builder passwordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
             this.passwordValidationPolicy = Input.ofNullable(passwordValidationPolicy);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<SettingsPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<SettingsPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder setSettingsVersion(@Nullable Input<String> settingsVersion) {
+        public Builder settingsVersion(@Nullable Input<String> settingsVersion) {
             this.settingsVersion = settingsVersion;
             return this;
         }
 
-        public Builder setSettingsVersion(@Nullable String settingsVersion) {
+        public Builder settingsVersion(@Nullable String settingsVersion) {
             this.settingsVersion = Input.ofNullable(settingsVersion);
             return this;
         }
 
-        public Builder setSqlServerAuditConfig(@Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
+        public Builder sqlServerAuditConfig(@Nullable Input<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
             this.sqlServerAuditConfig = sqlServerAuditConfig;
             return this;
         }
 
-        public Builder setSqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
+        public Builder sqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
             this.sqlServerAuditConfig = Input.ofNullable(sqlServerAuditConfig);
             return this;
         }
 
-        public Builder setStorageAutoResize(@Nullable Input<Boolean> storageAutoResize) {
+        public Builder storageAutoResize(@Nullable Input<Boolean> storageAutoResize) {
             this.storageAutoResize = storageAutoResize;
             return this;
         }
 
-        public Builder setStorageAutoResize(@Nullable Boolean storageAutoResize) {
+        public Builder storageAutoResize(@Nullable Boolean storageAutoResize) {
             this.storageAutoResize = Input.ofNullable(storageAutoResize);
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(@Nullable Input<String> storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(@Nullable Input<String> storageAutoResizeLimit) {
             this.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Input.ofNullable(storageAutoResizeLimit);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }

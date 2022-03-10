@@ -83,17 +83,17 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
     	      this.xraiAttribution = defaults.xraiAttribution;
         }
 
-        public Builder setIntegratedGradientsAttribution(GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution) {
+        public Builder integratedGradientsAttribution(GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution) {
             this.integratedGradientsAttribution = Objects.requireNonNull(integratedGradientsAttribution);
             return this;
         }
 
-        public Builder setSampledShapleyAttribution(GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution) {
+        public Builder sampledShapleyAttribution(GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution) {
             this.sampledShapleyAttribution = Objects.requireNonNull(sampledShapleyAttribution);
             return this;
         }
 
-        public Builder setXraiAttribution(GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
+        public Builder xraiAttribution(GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
         }

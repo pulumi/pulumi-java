@@ -282,152 +282,152 @@ public final class EdifactEnvelopeOverrideArgs extends io.pulumi.resources.Resou
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setApplicationPassword(@Nullable Input<String> applicationPassword) {
+        public Builder applicationPassword(@Nullable Input<String> applicationPassword) {
             this.applicationPassword = applicationPassword;
             return this;
         }
 
-        public Builder setApplicationPassword(@Nullable String applicationPassword) {
+        public Builder applicationPassword(@Nullable String applicationPassword) {
             this.applicationPassword = Input.ofNullable(applicationPassword);
             return this;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable Input<String> associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable Input<String> associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable String associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = Input.ofNullable(associationAssignedCode);
             return this;
         }
 
-        public Builder setControllingAgencyCode(@Nullable Input<String> controllingAgencyCode) {
+        public Builder controllingAgencyCode(@Nullable Input<String> controllingAgencyCode) {
             this.controllingAgencyCode = controllingAgencyCode;
             return this;
         }
 
-        public Builder setControllingAgencyCode(@Nullable String controllingAgencyCode) {
+        public Builder controllingAgencyCode(@Nullable String controllingAgencyCode) {
             this.controllingAgencyCode = Input.ofNullable(controllingAgencyCode);
             return this;
         }
 
-        public Builder setFunctionalGroupId(@Nullable Input<String> functionalGroupId) {
+        public Builder functionalGroupId(@Nullable Input<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
-        public Builder setFunctionalGroupId(@Nullable String functionalGroupId) {
+        public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = Input.ofNullable(functionalGroupId);
             return this;
         }
 
-        public Builder setGroupHeaderMessageRelease(@Nullable Input<String> groupHeaderMessageRelease) {
+        public Builder groupHeaderMessageRelease(@Nullable Input<String> groupHeaderMessageRelease) {
             this.groupHeaderMessageRelease = groupHeaderMessageRelease;
             return this;
         }
 
-        public Builder setGroupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
+        public Builder groupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
             this.groupHeaderMessageRelease = Input.ofNullable(groupHeaderMessageRelease);
             return this;
         }
 
-        public Builder setGroupHeaderMessageVersion(@Nullable Input<String> groupHeaderMessageVersion) {
+        public Builder groupHeaderMessageVersion(@Nullable Input<String> groupHeaderMessageVersion) {
             this.groupHeaderMessageVersion = groupHeaderMessageVersion;
             return this;
         }
 
-        public Builder setGroupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
+        public Builder groupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
             this.groupHeaderMessageVersion = Input.ofNullable(groupHeaderMessageVersion);
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable Input<String> messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = Input.ofNullable(messageAssociationAssignedCode);
             return this;
         }
 
-        public Builder setMessageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Input<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = Input.ofNullable(messageId);
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable Input<String> messageRelease) {
+        public Builder messageRelease(@Nullable Input<String> messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable String messageRelease) {
+        public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = Input.ofNullable(messageRelease);
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable Input<String> messageVersion) {
+        public Builder messageVersion(@Nullable Input<String> messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable String messageVersion) {
+        public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = Input.ofNullable(messageVersion);
             return this;
         }
 
-        public Builder setReceiverApplicationId(@Nullable Input<String> receiverApplicationId) {
+        public Builder receiverApplicationId(@Nullable Input<String> receiverApplicationId) {
             this.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
-        public Builder setReceiverApplicationId(@Nullable String receiverApplicationId) {
+        public Builder receiverApplicationId(@Nullable String receiverApplicationId) {
             this.receiverApplicationId = Input.ofNullable(receiverApplicationId);
             return this;
         }
 
-        public Builder setReceiverApplicationQualifier(@Nullable Input<String> receiverApplicationQualifier) {
+        public Builder receiverApplicationQualifier(@Nullable Input<String> receiverApplicationQualifier) {
             this.receiverApplicationQualifier = receiverApplicationQualifier;
             return this;
         }
 
-        public Builder setReceiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
+        public Builder receiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
             this.receiverApplicationQualifier = Input.ofNullable(receiverApplicationQualifier);
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable Input<String> senderApplicationId) {
+        public Builder senderApplicationId(@Nullable Input<String> senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = Input.ofNullable(senderApplicationId);
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable Input<String> senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable String senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = Input.ofNullable(senderApplicationQualifier);
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = Input.ofNullable(targetNamespace);
             return this;
         }

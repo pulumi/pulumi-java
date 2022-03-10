@@ -74,17 +74,17 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setNodeGroup(String nodeGroup) {
+        public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -158,67 +158,67 @@ public final class BotIntent {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable BotDialogCodeHookSetting dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable BotDialogCodeHookSetting dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
-        public Builder setFulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook) {
+        public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook) {
             this.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
 
-        public Builder setInputContexts(@Nullable List<BotInputContext> inputContexts) {
+        public Builder inputContexts(@Nullable List<BotInputContext> inputContexts) {
             this.inputContexts = inputContexts;
             return this;
         }
 
-        public Builder setIntentClosingSetting(@Nullable BotIntentClosingSetting intentClosingSetting) {
+        public Builder intentClosingSetting(@Nullable BotIntentClosingSetting intentClosingSetting) {
             this.intentClosingSetting = intentClosingSetting;
             return this;
         }
 
-        public Builder setIntentConfirmationSetting(@Nullable BotIntentConfirmationSetting intentConfirmationSetting) {
+        public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSetting intentConfirmationSetting) {
             this.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
 
-        public Builder setKendraConfiguration(@Nullable BotKendraConfiguration kendraConfiguration) {
+        public Builder kendraConfiguration(@Nullable BotKendraConfiguration kendraConfiguration) {
             this.kendraConfiguration = kendraConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable List<BotOutputContext> outputContexts) {
+        public Builder outputContexts(@Nullable List<BotOutputContext> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable String parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSlotPriorities(@Nullable List<BotSlotPriority> slotPriorities) {
+        public Builder slotPriorities(@Nullable List<BotSlotPriority> slotPriorities) {
             this.slotPriorities = slotPriorities;
             return this;
         }
 
-        public Builder setSlots(@Nullable List<BotSlot> slots) {
+        public Builder slots(@Nullable List<BotSlot> slots) {
             this.slots = slots;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }

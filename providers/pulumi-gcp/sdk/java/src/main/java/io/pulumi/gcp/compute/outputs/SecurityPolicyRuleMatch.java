@@ -97,17 +97,17 @@ public final class SecurityPolicyRuleMatch {
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder setConfig(@Nullable SecurityPolicyRuleMatchConfig config) {
+        public Builder config(@Nullable SecurityPolicyRuleMatchConfig config) {
             this.config = config;
             return this;
         }
 
-        public Builder setExpr(@Nullable SecurityPolicyRuleMatchExpr expr) {
+        public Builder expr(@Nullable SecurityPolicyRuleMatchExpr expr) {
             this.expr = expr;
             return this;
         }
 
-        public Builder setVersionedExpr(@Nullable String versionedExpr) {
+        public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }

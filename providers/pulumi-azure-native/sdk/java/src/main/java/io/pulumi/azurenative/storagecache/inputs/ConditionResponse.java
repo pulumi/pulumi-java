@@ -72,12 +72,12 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }

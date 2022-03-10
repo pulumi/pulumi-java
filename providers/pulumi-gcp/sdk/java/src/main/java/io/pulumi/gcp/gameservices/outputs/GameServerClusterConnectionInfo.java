@@ -72,12 +72,12 @@ public final class GameServerClusterConnectionInfo {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setGkeClusterReference(GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference) {
+        public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference) {
             this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

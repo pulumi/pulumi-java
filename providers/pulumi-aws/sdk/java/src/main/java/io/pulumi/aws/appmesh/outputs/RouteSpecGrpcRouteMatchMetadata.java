@@ -85,17 +85,17 @@ public final class RouteSpecGrpcRouteMatchMetadata {
     	      this.name = defaults.name;
         }
 
-        public Builder setInvert(@Nullable Boolean invert) {
+        public Builder invert(@Nullable Boolean invert) {
             this.invert = invert;
             return this;
         }
 
-        public Builder setMatch(@Nullable RouteSpecGrpcRouteMatchMetadataMatch match) {
+        public Builder match(@Nullable RouteSpecGrpcRouteMatchMetadataMatch match) {
             this.match = match;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

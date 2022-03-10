@@ -102,22 +102,22 @@ public final class WebAclRuleStatementRateBasedStatement {
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(@Nullable String aggregateKeyType) {
+        public Builder aggregateKeyType(@Nullable String aggregateKeyType) {
             this.aggregateKeyType = aggregateKeyType;
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }

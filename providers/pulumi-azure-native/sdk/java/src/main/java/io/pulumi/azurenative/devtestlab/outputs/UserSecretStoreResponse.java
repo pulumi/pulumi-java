@@ -67,12 +67,12 @@ public final class UserSecretStoreResponse {
     	      this.keyVaultUri = defaults.keyVaultUri;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }

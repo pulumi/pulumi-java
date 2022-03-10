@@ -72,12 +72,12 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     	      this.wordIndex = defaults.wordIndex;
         }
 
-        public Builder setTranscriptIndex(Integer transcriptIndex) {
+        public Builder transcriptIndex(Integer transcriptIndex) {
             this.transcriptIndex = Objects.requireNonNull(transcriptIndex);
             return this;
         }
 
-        public Builder setWordIndex(Integer wordIndex) {
+        public Builder wordIndex(Integer wordIndex) {
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
         }

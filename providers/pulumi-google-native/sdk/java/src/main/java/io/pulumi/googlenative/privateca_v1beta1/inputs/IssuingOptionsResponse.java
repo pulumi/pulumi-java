@@ -72,12 +72,12 @@ public final class IssuingOptionsResponse extends io.pulumi.resources.InvokeArgs
     	      this.includeCrlAccessUrl = defaults.includeCrlAccessUrl;
         }
 
-        public Builder setIncludeCaCertUrl(Boolean includeCaCertUrl) {
+        public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
             this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
             return this;
         }
 
-        public Builder setIncludeCrlAccessUrl(Boolean includeCrlAccessUrl) {
+        public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }

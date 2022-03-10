@@ -122,52 +122,52 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
     	      this.runAsAccountId = defaults.runAsAccountId;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable Input<String> processServerId) {
+        public Builder processServerId(@Nullable Input<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable String processServerId) {
+        public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = Input.ofNullable(processServerId);
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable String runAsAccountId) {
+        public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Input.ofNullable(runAsAccountId);
             return this;
         }

@@ -75,22 +75,22 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     	      this.channelCredentialType = defaults.channelCredentialType;
         }
 
-        public Builder setCertificates(@Nullable Input<TlsCertificatePathsArgs> certificates) {
+        public Builder certificates(@Nullable Input<TlsCertificatePathsArgs> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCertificates(@Nullable TlsCertificatePathsArgs certificates) {
+        public Builder certificates(@Nullable TlsCertificatePathsArgs certificates) {
             this.certificates = Input.ofNullable(certificates);
             return this;
         }
 
-        public Builder setChannelCredentialType(@Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType) {
+        public Builder channelCredentialType(@Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType) {
             this.channelCredentialType = channelCredentialType;
             return this;
         }
 
-        public Builder setChannelCredentialType(@Nullable ChannelCredentialsChannelCredentialType channelCredentialType) {
+        public Builder channelCredentialType(@Nullable ChannelCredentialsChannelCredentialType channelCredentialType) {
             this.channelCredentialType = Input.ofNullable(channelCredentialType);
             return this;
         }

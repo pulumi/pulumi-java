@@ -84,17 +84,17 @@ public final class GetTopicRuleDestinationResult {
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable TopicRuleDestinationStatus status) {
+        public Builder status(@Nullable TopicRuleDestinationStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusReason(@Nullable String statusReason) {
+        public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = statusReason;
             return this;
         }

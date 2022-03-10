@@ -69,17 +69,17 @@ public final class ThingGroupMetadata {
     	      this.rootToParentGroups = defaults.rootToParentGroups;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setParentGroupName(@Nullable String parentGroupName) {
+        public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
 
-        public Builder setRootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
+        public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
             this.rootToParentGroups = rootToParentGroups;
             return this;
         }

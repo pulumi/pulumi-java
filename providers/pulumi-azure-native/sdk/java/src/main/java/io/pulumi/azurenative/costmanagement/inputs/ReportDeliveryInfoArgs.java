@@ -56,12 +56,12 @@ public final class ReportDeliveryInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(Input<ReportDeliveryDestinationArgs> destination) {
+        public Builder destination(Input<ReportDeliveryDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(ReportDeliveryDestinationArgs destination) {
+        public Builder destination(ReportDeliveryDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }

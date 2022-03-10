@@ -71,22 +71,22 @@ public final class ApplicationApplicationConfigurationRunConfigurationGetArgs ex
     	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = Input.ofNullable(applicationRestoreConfiguration);
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs flinkRunConfiguration) {
             this.flinkRunConfiguration = Input.ofNullable(flinkRunConfiguration);
             return this;
         }

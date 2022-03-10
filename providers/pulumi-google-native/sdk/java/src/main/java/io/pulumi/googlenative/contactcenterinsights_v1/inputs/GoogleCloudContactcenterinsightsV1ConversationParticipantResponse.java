@@ -104,22 +104,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     	      this.userId = defaults.userId;
         }
 
-        public Builder setDialogflowParticipantName(String dialogflowParticipantName) {
+        public Builder dialogflowParticipantName(String dialogflowParticipantName) {
             this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
             return this;
         }
 
-        public Builder setObfuscatedExternalUserId(String obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

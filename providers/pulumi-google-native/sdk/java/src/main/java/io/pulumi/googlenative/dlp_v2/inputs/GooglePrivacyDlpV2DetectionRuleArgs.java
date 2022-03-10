@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setHotwordRule(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
+        public Builder hotwordRule(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
+        public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }

@@ -77,17 +77,17 @@ public final class GetDelegatedAdministratorsResult {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setDelegatedAdministrators(List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators) {
+        public Builder delegatedAdministrators(List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators) {
             this.delegatedAdministrators = Objects.requireNonNull(delegatedAdministrators);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable String servicePrincipal) {
+        public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

@@ -172,92 +172,92 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable Input<List<String>> healthChecks) {
+        public Builder healthChecks(@Nullable Input<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable List<String> healthChecks) {
+        public Builder healthChecks(@Nullable List<String> healthChecks) {
             this.healthChecks = Input.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder setHealthStatusAggregationPolicy(@Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy) {
+        public Builder healthStatusAggregationPolicy(@Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
             return this;
         }
 
-        public Builder setHealthStatusAggregationPolicy(@Nullable RegionHealthCheckServiceHealthStatusAggregationPolicy healthStatusAggregationPolicy) {
+        public Builder healthStatusAggregationPolicy(@Nullable RegionHealthCheckServiceHealthStatusAggregationPolicy healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = Input.ofNullable(healthStatusAggregationPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkEndpointGroups(@Nullable Input<List<String>> networkEndpointGroups) {
+        public Builder networkEndpointGroups(@Nullable Input<List<String>> networkEndpointGroups) {
             this.networkEndpointGroups = networkEndpointGroups;
             return this;
         }
 
-        public Builder setNetworkEndpointGroups(@Nullable List<String> networkEndpointGroups) {
+        public Builder networkEndpointGroups(@Nullable List<String> networkEndpointGroups) {
             this.networkEndpointGroups = Input.ofNullable(networkEndpointGroups);
             return this;
         }
 
-        public Builder setNotificationEndpoints(@Nullable Input<List<String>> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable Input<List<String>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
-        public Builder setNotificationEndpoints(@Nullable List<String> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable List<String> notificationEndpoints) {
             this.notificationEndpoints = Input.ofNullable(notificationEndpoints);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

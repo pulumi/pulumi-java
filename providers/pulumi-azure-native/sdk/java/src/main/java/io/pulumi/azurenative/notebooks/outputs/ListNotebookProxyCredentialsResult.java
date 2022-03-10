@@ -99,22 +99,22 @@ public final class ListNotebookProxyCredentialsResult {
     	      this.secondaryAccessKey = defaults.secondaryAccessKey;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setPrimaryAccessKey(@Nullable String primaryAccessKey) {
+        public Builder primaryAccessKey(@Nullable String primaryAccessKey) {
             this.primaryAccessKey = primaryAccessKey;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setSecondaryAccessKey(@Nullable String secondaryAccessKey) {
+        public Builder secondaryAccessKey(@Nullable String secondaryAccessKey) {
             this.secondaryAccessKey = secondaryAccessKey;
             return this;
         }

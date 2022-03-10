@@ -72,12 +72,12 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
     	      this.secret = defaults.secret;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

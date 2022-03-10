@@ -147,37 +147,37 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildResult 
     	      this.type = defaults.type;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setFunctionAppRegion(@Nullable String functionAppRegion) {
+        public Builder functionAppRegion(@Nullable String functionAppRegion) {
             this.functionAppRegion = functionAppRegion;
             return this;
         }
 
-        public Builder setFunctionAppResourceId(@Nullable String functionAppResourceId) {
+        public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
             this.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

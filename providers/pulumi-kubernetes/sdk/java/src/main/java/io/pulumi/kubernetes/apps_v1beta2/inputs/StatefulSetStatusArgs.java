@@ -189,92 +189,92 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setCollisionCount(@Nullable Input<Integer> collisionCount) {
+        public Builder collisionCount(@Nullable Input<Integer> collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = Input.ofNullable(collisionCount);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<StatefulSetConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<StatefulSetConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<StatefulSetConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<StatefulSetConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setCurrentReplicas(@Nullable Input<Integer> currentReplicas) {
+        public Builder currentReplicas(@Nullable Input<Integer> currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
 
-        public Builder setCurrentReplicas(@Nullable Integer currentReplicas) {
+        public Builder currentReplicas(@Nullable Integer currentReplicas) {
             this.currentReplicas = Input.ofNullable(currentReplicas);
             return this;
         }
 
-        public Builder setCurrentRevision(@Nullable Input<String> currentRevision) {
+        public Builder currentRevision(@Nullable Input<String> currentRevision) {
             this.currentRevision = currentRevision;
             return this;
         }
 
-        public Builder setCurrentRevision(@Nullable String currentRevision) {
+        public Builder currentRevision(@Nullable String currentRevision) {
             this.currentRevision = Input.ofNullable(currentRevision);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Input<Integer> readyReplicas) {
+        public Builder readyReplicas(@Nullable Input<Integer> readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Integer readyReplicas) {
+        public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = Input.ofNullable(readyReplicas);
             return this;
         }
 
-        public Builder setReplicas(Input<Integer> replicas) {
+        public Builder replicas(Input<Integer> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
-        public Builder setReplicas(Integer replicas) {
+        public Builder replicas(Integer replicas) {
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }
 
-        public Builder setUpdateRevision(@Nullable Input<String> updateRevision) {
+        public Builder updateRevision(@Nullable Input<String> updateRevision) {
             this.updateRevision = updateRevision;
             return this;
         }
 
-        public Builder setUpdateRevision(@Nullable String updateRevision) {
+        public Builder updateRevision(@Nullable String updateRevision) {
             this.updateRevision = Input.ofNullable(updateRevision);
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Input<Integer> updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Input<Integer> updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = Input.ofNullable(updatedReplicas);
             return this;
         }

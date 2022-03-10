@@ -91,32 +91,32 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
     	      this.activityType = defaults.activityType;
         }
 
-        public Builder setAcknowledgmentOfReceiptSettings(Input<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings) {
+        public Builder acknowledgmentOfReceiptSettings(Input<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings) {
             this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
             return this;
         }
 
-        public Builder setAcknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs acknowledgmentOfReceiptSettings) {
+        public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs acknowledgmentOfReceiptSettings) {
             this.acknowledgmentOfReceiptSettings = Input.of(Objects.requireNonNull(acknowledgmentOfReceiptSettings));
             return this;
         }
 
-        public Builder setActivityBehavior(Input<RosettaNetPipActivityBehaviorArgs> activityBehavior) {
+        public Builder activityBehavior(Input<RosettaNetPipActivityBehaviorArgs> activityBehavior) {
             this.activityBehavior = Objects.requireNonNull(activityBehavior);
             return this;
         }
 
-        public Builder setActivityBehavior(RosettaNetPipActivityBehaviorArgs activityBehavior) {
+        public Builder activityBehavior(RosettaNetPipActivityBehaviorArgs activityBehavior) {
             this.activityBehavior = Input.of(Objects.requireNonNull(activityBehavior));
             return this;
         }
 
-        public Builder setActivityType(Input<RosettaNetPipActivityType> activityType) {
+        public Builder activityType(Input<RosettaNetPipActivityType> activityType) {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }
 
-        public Builder setActivityType(RosettaNetPipActivityType activityType) {
+        public Builder activityType(RosettaNetPipActivityType activityType) {
             this.activityType = Input.of(Objects.requireNonNull(activityType));
             return this;
         }

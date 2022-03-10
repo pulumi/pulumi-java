@@ -75,22 +75,22 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.directive = defaults.directive;
         }
 
-        public Builder setArguments(@Nullable Input<String> arguments) {
+        public Builder arguments(@Nullable Input<String> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable String arguments) {
+        public Builder arguments(@Nullable String arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setDirective(@Nullable Input<LayerDirective> directive) {
+        public Builder directive(@Nullable Input<LayerDirective> directive) {
             this.directive = directive;
             return this;
         }
 
-        public Builder setDirective(@Nullable LayerDirective directive) {
+        public Builder directive(@Nullable LayerDirective directive) {
             this.directive = Input.ofNullable(directive);
             return this;
         }

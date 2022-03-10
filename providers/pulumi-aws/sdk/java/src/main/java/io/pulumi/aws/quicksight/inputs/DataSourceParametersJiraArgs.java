@@ -52,12 +52,12 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
     	      this.siteBaseUrl = defaults.siteBaseUrl;
         }
 
-        public Builder setSiteBaseUrl(Input<String> siteBaseUrl) {
+        public Builder siteBaseUrl(Input<String> siteBaseUrl) {
             this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
             return this;
         }
 
-        public Builder setSiteBaseUrl(String siteBaseUrl) {
+        public Builder siteBaseUrl(String siteBaseUrl) {
             this.siteBaseUrl = Input.of(Objects.requireNonNull(siteBaseUrl));
             return this;
         }

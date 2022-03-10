@@ -71,22 +71,22 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setBrand(Input<String> brand) {
+        public Builder brand(Input<String> brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
 
-        public Builder setBrand(String brand) {
+        public Builder brand(String brand) {
             this.brand = Input.of(Objects.requireNonNull(brand));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }

@@ -127,8 +127,8 @@ public class IngressClass extends io.pulumi.resources.CustomResource {
     private static IngressClassArgs makeArgs(@Nullable IngressClassArgs args) {
         var builder = args == null ? IngressClassArgs.builder() : IngressClassArgs.builder(args);
         return builder
-            .setApiVersion("networking.k8s.io/v1beta1")
-            .setKind("IngressClass")
+            .apiVersion("networking.k8s.io/v1beta1")
+            .kind("IngressClass")
             .build();
     }
 

@@ -200,102 +200,102 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setImportance(@Nullable Input<String> importance) {
+        public Builder importance(@Nullable Input<String> importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setImportance(@Nullable String importance) {
+        public Builder importance(@Nullable String importance) {
             this.importance = Input.ofNullable(importance);
             return this;
         }
 
-        public Builder setMaxResourcePercent(Input<Integer> maxResourcePercent) {
+        public Builder maxResourcePercent(Input<Integer> maxResourcePercent) {
             this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
             return this;
         }
 
-        public Builder setMaxResourcePercent(Integer maxResourcePercent) {
+        public Builder maxResourcePercent(Integer maxResourcePercent) {
             this.maxResourcePercent = Input.of(Objects.requireNonNull(maxResourcePercent));
             return this;
         }
 
-        public Builder setMaxResourcePercentPerRequest(@Nullable Input<Double> maxResourcePercentPerRequest) {
+        public Builder maxResourcePercentPerRequest(@Nullable Input<Double> maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
 
-        public Builder setMaxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
+        public Builder maxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = Input.ofNullable(maxResourcePercentPerRequest);
             return this;
         }
 
-        public Builder setMinResourcePercent(Input<Integer> minResourcePercent) {
+        public Builder minResourcePercent(Input<Integer> minResourcePercent) {
             this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
             return this;
         }
 
-        public Builder setMinResourcePercent(Integer minResourcePercent) {
+        public Builder minResourcePercent(Integer minResourcePercent) {
             this.minResourcePercent = Input.of(Objects.requireNonNull(minResourcePercent));
             return this;
         }
 
-        public Builder setMinResourcePercentPerRequest(Input<Double> minResourcePercentPerRequest) {
+        public Builder minResourcePercentPerRequest(Input<Double> minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
             return this;
         }
 
-        public Builder setMinResourcePercentPerRequest(Double minResourcePercentPerRequest) {
+        public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Input.of(Objects.requireNonNull(minResourcePercentPerRequest));
             return this;
         }
 
-        public Builder setQueryExecutionTimeout(@Nullable Input<Integer> queryExecutionTimeout) {
+        public Builder queryExecutionTimeout(@Nullable Input<Integer> queryExecutionTimeout) {
             this.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
 
-        public Builder setQueryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
+        public Builder queryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
             this.queryExecutionTimeout = Input.ofNullable(queryExecutionTimeout);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlPoolName(Input<String> sqlPoolName) {
+        public Builder sqlPoolName(Input<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
-        public Builder setSqlPoolName(String sqlPoolName) {
+        public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Input.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
 
-        public Builder setWorkloadGroupName(@Nullable Input<String> workloadGroupName) {
+        public Builder workloadGroupName(@Nullable Input<String> workloadGroupName) {
             this.workloadGroupName = workloadGroupName;
             return this;
         }
 
-        public Builder setWorkloadGroupName(@Nullable String workloadGroupName) {
+        public Builder workloadGroupName(@Nullable String workloadGroupName) {
             this.workloadGroupName = Input.ofNullable(workloadGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

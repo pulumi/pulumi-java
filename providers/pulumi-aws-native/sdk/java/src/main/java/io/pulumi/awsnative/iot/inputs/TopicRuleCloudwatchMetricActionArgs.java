@@ -110,62 +110,62 @@ public final class TopicRuleCloudwatchMetricActionArgs extends io.pulumi.resourc
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setMetricNamespace(Input<String> metricNamespace) {
+        public Builder metricNamespace(Input<String> metricNamespace) {
             this.metricNamespace = Objects.requireNonNull(metricNamespace);
             return this;
         }
 
-        public Builder setMetricNamespace(String metricNamespace) {
+        public Builder metricNamespace(String metricNamespace) {
             this.metricNamespace = Input.of(Objects.requireNonNull(metricNamespace));
             return this;
         }
 
-        public Builder setMetricTimestamp(@Nullable Input<String> metricTimestamp) {
+        public Builder metricTimestamp(@Nullable Input<String> metricTimestamp) {
             this.metricTimestamp = metricTimestamp;
             return this;
         }
 
-        public Builder setMetricTimestamp(@Nullable String metricTimestamp) {
+        public Builder metricTimestamp(@Nullable String metricTimestamp) {
             this.metricTimestamp = Input.ofNullable(metricTimestamp);
             return this;
         }
 
-        public Builder setMetricUnit(Input<String> metricUnit) {
+        public Builder metricUnit(Input<String> metricUnit) {
             this.metricUnit = Objects.requireNonNull(metricUnit);
             return this;
         }
 
-        public Builder setMetricUnit(String metricUnit) {
+        public Builder metricUnit(String metricUnit) {
             this.metricUnit = Input.of(Objects.requireNonNull(metricUnit));
             return this;
         }
 
-        public Builder setMetricValue(Input<String> metricValue) {
+        public Builder metricValue(Input<String> metricValue) {
             this.metricValue = Objects.requireNonNull(metricValue);
             return this;
         }
 
-        public Builder setMetricValue(String metricValue) {
+        public Builder metricValue(String metricValue) {
             this.metricValue = Input.of(Objects.requireNonNull(metricValue));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

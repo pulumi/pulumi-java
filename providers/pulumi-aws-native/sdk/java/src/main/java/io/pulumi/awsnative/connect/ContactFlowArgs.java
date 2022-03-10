@@ -154,72 +154,72 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ContactFlowState> state) {
+        public Builder state(@Nullable Input<ContactFlowState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ContactFlowState state) {
+        public Builder state(@Nullable ContactFlowState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ContactFlowTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ContactFlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContactFlowTagArgs> tags) {
+        public Builder tags(@Nullable List<ContactFlowTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ContactFlowType> type) {
+        public Builder type(@Nullable Input<ContactFlowType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ContactFlowType type) {
+        public Builder type(@Nullable ContactFlowType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

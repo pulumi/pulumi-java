@@ -56,12 +56,12 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
     	      this.detectSentiment = defaults.detectSentiment;
         }
 
-        public Builder setDetectSentiment(Input<Boolean> detectSentiment) {
+        public Builder detectSentiment(Input<Boolean> detectSentiment) {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
 
-        public Builder setDetectSentiment(Boolean detectSentiment) {
+        public Builder detectSentiment(Boolean detectSentiment) {
             this.detectSentiment = Input.of(Objects.requireNonNull(detectSentiment));
             return this;
         }

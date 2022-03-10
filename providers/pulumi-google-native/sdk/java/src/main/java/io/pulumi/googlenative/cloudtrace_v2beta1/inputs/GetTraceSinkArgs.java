@@ -62,12 +62,12 @@ public final class GetTraceSinkArgs extends io.pulumi.resources.InvokeArgs {
     	      this.traceSinkId = defaults.traceSinkId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTraceSinkId(String traceSinkId) {
+        public Builder traceSinkId(String traceSinkId) {
             this.traceSinkId = Objects.requireNonNull(traceSinkId);
             return this;
         }

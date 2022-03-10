@@ -69,22 +69,22 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     	      this.listenerArn = defaults.listenerArn;
         }
 
-        public Builder setCertificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Input<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder setListenerArn(Input<String> listenerArn) {
+        public Builder listenerArn(Input<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
 
-        public Builder setListenerArn(String listenerArn) {
+        public Builder listenerArn(String listenerArn) {
             this.listenerArn = Input.of(Objects.requireNonNull(listenerArn));
             return this;
         }

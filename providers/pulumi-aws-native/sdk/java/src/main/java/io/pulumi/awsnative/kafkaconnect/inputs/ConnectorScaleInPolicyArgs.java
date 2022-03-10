@@ -56,12 +56,12 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
     	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
         }
 
-        public Builder setCpuUtilizationPercentage(Input<Integer> cpuUtilizationPercentage) {
+        public Builder cpuUtilizationPercentage(Input<Integer> cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }
 
-        public Builder setCpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
+        public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Input.of(Objects.requireNonNull(cpuUtilizationPercentage));
             return this;
         }

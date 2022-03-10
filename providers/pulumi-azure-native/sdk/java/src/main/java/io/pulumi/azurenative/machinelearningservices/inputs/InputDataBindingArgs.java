@@ -88,32 +88,32 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
     	      this.pathOnCompute = defaults.pathOnCompute;
         }
 
-        public Builder setDataId(@Nullable Input<String> dataId) {
+        public Builder dataId(@Nullable Input<String> dataId) {
             this.dataId = dataId;
             return this;
         }
 
-        public Builder setDataId(@Nullable String dataId) {
+        public Builder dataId(@Nullable String dataId) {
             this.dataId = Input.ofNullable(dataId);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,DataBindingMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,DataBindingMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,DataBindingMode> mode) {
+        public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable Input<String> pathOnCompute) {
+        public Builder pathOnCompute(@Nullable Input<String> pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable String pathOnCompute) {
+        public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = Input.ofNullable(pathOnCompute);
             return this;
         }

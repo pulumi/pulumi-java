@@ -90,32 +90,32 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.selector = defaults.selector;
         }
 
-        public Builder setDeprecationDescription(@Nullable Input<String> deprecationDescription) {
+        public Builder deprecationDescription(@Nullable Input<String> deprecationDescription) {
             this.deprecationDescription = deprecationDescription;
             return this;
         }
 
-        public Builder setDeprecationDescription(@Nullable String deprecationDescription) {
+        public Builder deprecationDescription(@Nullable String deprecationDescription) {
             this.deprecationDescription = Input.ofNullable(deprecationDescription);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

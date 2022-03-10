@@ -48,12 +48,12 @@ public final class SinkConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }

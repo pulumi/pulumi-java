@@ -58,7 +58,7 @@ public final class ManagedIdentitySettingsResponse extends io.pulumi.resources.I
     	      this.resource = defaults.resource;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }

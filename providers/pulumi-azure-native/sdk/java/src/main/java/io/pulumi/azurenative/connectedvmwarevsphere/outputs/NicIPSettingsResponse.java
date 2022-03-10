@@ -165,42 +165,42 @@ public final class NicIPSettingsResponse {
     	      this.subnetMask = defaults.subnetMask;
         }
 
-        public Builder setAllocationMethod(@Nullable String allocationMethod) {
+        public Builder allocationMethod(@Nullable String allocationMethod) {
             this.allocationMethod = allocationMethod;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setGateway(@Nullable List<String> gateway) {
+        public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddressInfo(List<NicIPAddressSettingsResponse> ipAddressInfo) {
+        public Builder ipAddressInfo(List<NicIPAddressSettingsResponse> ipAddressInfo) {
             this.ipAddressInfo = Objects.requireNonNull(ipAddressInfo);
             return this;
         }
 
-        public Builder setPrimaryWinsServer(String primaryWinsServer) {
+        public Builder primaryWinsServer(String primaryWinsServer) {
             this.primaryWinsServer = Objects.requireNonNull(primaryWinsServer);
             return this;
         }
 
-        public Builder setSecondaryWinsServer(String secondaryWinsServer) {
+        public Builder secondaryWinsServer(String secondaryWinsServer) {
             this.secondaryWinsServer = Objects.requireNonNull(secondaryWinsServer);
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable String subnetMask) {
+        public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }

@@ -92,32 +92,32 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAndOperator(@Nullable Input<BucketFilterAndOperatorArgs> andOperator) {
+        public Builder andOperator(@Nullable Input<BucketFilterAndOperatorArgs> andOperator) {
             this.andOperator = andOperator;
             return this;
         }
 
-        public Builder setAndOperator(@Nullable BucketFilterAndOperatorArgs andOperator) {
+        public Builder andOperator(@Nullable BucketFilterAndOperatorArgs andOperator) {
             this.andOperator = Input.ofNullable(andOperator);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<BucketFilterTagArgs> tag) {
+        public Builder tag(@Nullable Input<BucketFilterTagArgs> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable BucketFilterTagArgs tag) {
+        public Builder tag(@Nullable BucketFilterTagArgs tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

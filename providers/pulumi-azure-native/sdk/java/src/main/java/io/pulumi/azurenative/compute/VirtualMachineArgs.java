@@ -505,282 +505,282 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
             this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable Input<SubResourceArgs> availabilitySet) {
+        public Builder availabilitySet(@Nullable Input<SubResourceArgs> availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable SubResourceArgs availabilitySet) {
+        public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
             this.availabilitySet = Input.ofNullable(availabilitySet);
             return this;
         }
 
-        public Builder setBillingProfile(@Nullable Input<BillingProfileArgs> billingProfile) {
+        public Builder billingProfile(@Nullable Input<BillingProfileArgs> billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
 
-        public Builder setBillingProfile(@Nullable BillingProfileArgs billingProfile) {
+        public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
             this.billingProfile = Input.ofNullable(billingProfile);
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
             this.diagnosticsProfile = Input.ofNullable(diagnosticsProfile);
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
             this.evictionPolicy = Input.ofNullable(evictionPolicy);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setExtensionsTimeBudget(@Nullable Input<String> extensionsTimeBudget) {
+        public Builder extensionsTimeBudget(@Nullable Input<String> extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
 
-        public Builder setExtensionsTimeBudget(@Nullable String extensionsTimeBudget) {
+        public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = Input.ofNullable(extensionsTimeBudget);
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Input.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<SubResourceArgs> host) {
+        public Builder host(@Nullable Input<SubResourceArgs> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable SubResourceArgs host) {
+        public Builder host(@Nullable SubResourceArgs host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setHostGroup(@Nullable Input<SubResourceArgs> hostGroup) {
+        public Builder hostGroup(@Nullable Input<SubResourceArgs> hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
 
-        public Builder setHostGroup(@Nullable SubResourceArgs hostGroup) {
+        public Builder hostGroup(@Nullable SubResourceArgs hostGroup) {
             this.hostGroup = Input.ofNullable(hostGroup);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<VirtualMachineIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<VirtualMachineIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable VirtualMachineIdentityArgs identity) {
+        public Builder identity(@Nullable VirtualMachineIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Input<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Input<Integer> platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Input<Integer> platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Integer platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = Input.ofNullable(platformFaultDomain);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority) {
+        public Builder priority(@Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
+        public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable Input<SubResourceArgs> proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
             this.proximityPlacementGroup = Input.ofNullable(proximityPlacementGroup);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
             this.scheduledEventsProfile = Input.ofNullable(scheduledEventsProfile);
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileArgs securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Input.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setVirtualMachineScaleSet(@Nullable Input<SubResourceArgs> virtualMachineScaleSet) {
+        public Builder virtualMachineScaleSet(@Nullable Input<SubResourceArgs> virtualMachineScaleSet) {
             this.virtualMachineScaleSet = virtualMachineScaleSet;
             return this;
         }
 
-        public Builder setVirtualMachineScaleSet(@Nullable SubResourceArgs virtualMachineScaleSet) {
+        public Builder virtualMachineScaleSet(@Nullable SubResourceArgs virtualMachineScaleSet) {
             this.virtualMachineScaleSet = Input.ofNullable(virtualMachineScaleSet);
             return this;
         }
 
-        public Builder setVmName(@Nullable Input<String> vmName) {
+        public Builder vmName(@Nullable Input<String> vmName) {
             this.vmName = vmName;
             return this;
         }
 
-        public Builder setVmName(@Nullable String vmName) {
+        public Builder vmName(@Nullable String vmName) {
             this.vmName = Input.ofNullable(vmName);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

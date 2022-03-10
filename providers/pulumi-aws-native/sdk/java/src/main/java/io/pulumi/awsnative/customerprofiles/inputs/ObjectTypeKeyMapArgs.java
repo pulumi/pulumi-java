@@ -64,22 +64,22 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     	      this.objectTypeKeyList = defaults.objectTypeKeyList;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setObjectTypeKeyList(@Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
+        public Builder objectTypeKeyList(@Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
 
-        public Builder setObjectTypeKeyList(@Nullable List<ObjectTypeKeyArgs> objectTypeKeyList) {
+        public Builder objectTypeKeyList(@Nullable List<ObjectTypeKeyArgs> objectTypeKeyList) {
             this.objectTypeKeyList = Input.ofNullable(objectTypeKeyList);
             return this;
         }

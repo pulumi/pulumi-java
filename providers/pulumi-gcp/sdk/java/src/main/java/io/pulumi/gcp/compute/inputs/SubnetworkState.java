@@ -401,202 +401,202 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
     	      this.stackType = defaults.stackType;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExternalIpv6Prefix(@Nullable Input<String> externalIpv6Prefix) {
+        public Builder externalIpv6Prefix(@Nullable Input<String> externalIpv6Prefix) {
             this.externalIpv6Prefix = externalIpv6Prefix;
             return this;
         }
 
-        public Builder setExternalIpv6Prefix(@Nullable String externalIpv6Prefix) {
+        public Builder externalIpv6Prefix(@Nullable String externalIpv6Prefix) {
             this.externalIpv6Prefix = Input.ofNullable(externalIpv6Prefix);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setGatewayAddress(@Nullable Input<String> gatewayAddress) {
+        public Builder gatewayAddress(@Nullable Input<String> gatewayAddress) {
             this.gatewayAddress = gatewayAddress;
             return this;
         }
 
-        public Builder setGatewayAddress(@Nullable String gatewayAddress) {
+        public Builder gatewayAddress(@Nullable String gatewayAddress) {
             this.gatewayAddress = Input.ofNullable(gatewayAddress);
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable String ipCidrRange) {
+        public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Input.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable String ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
             this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder setIpv6CidrRange(@Nullable Input<String> ipv6CidrRange) {
+        public Builder ipv6CidrRange(@Nullable Input<String> ipv6CidrRange) {
             this.ipv6CidrRange = ipv6CidrRange;
             return this;
         }
 
-        public Builder setIpv6CidrRange(@Nullable String ipv6CidrRange) {
+        public Builder ipv6CidrRange(@Nullable String ipv6CidrRange) {
             this.ipv6CidrRange = Input.ofNullable(ipv6CidrRange);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<SubnetworkLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<SubnetworkLogConfigGetArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable SubnetworkLogConfigGetArgs logConfig) {
+        public Builder logConfig(@Nullable SubnetworkLogConfigGetArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPrivateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Input.ofNullable(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Input<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setSecondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeGetArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
-        public Builder setSecondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeGetArgs> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeGetArgs> secondaryIpRanges) {
             this.secondaryIpRanges = Input.ofNullable(secondaryIpRanges);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Input<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable String stackType) {
+        public Builder stackType(@Nullable String stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }

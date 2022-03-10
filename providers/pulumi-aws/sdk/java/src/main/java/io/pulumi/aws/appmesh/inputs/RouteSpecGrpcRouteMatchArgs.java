@@ -105,42 +105,42 @@ public final class RouteSpecGrpcRouteMatchArgs extends io.pulumi.resources.Resou
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMetadatas(@Nullable Input<List<RouteSpecGrpcRouteMatchMetadataArgs>> metadatas) {
+        public Builder metadatas(@Nullable Input<List<RouteSpecGrpcRouteMatchMetadataArgs>> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
 
-        public Builder setMetadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadataArgs> metadatas) {
+        public Builder metadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadataArgs> metadatas) {
             this.metadatas = Input.ofNullable(metadatas);
             return this;
         }
 
-        public Builder setMethodName(@Nullable Input<String> methodName) {
+        public Builder methodName(@Nullable Input<String> methodName) {
             this.methodName = methodName;
             return this;
         }
 
-        public Builder setMethodName(@Nullable String methodName) {
+        public Builder methodName(@Nullable String methodName) {
             this.methodName = Input.ofNullable(methodName);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }

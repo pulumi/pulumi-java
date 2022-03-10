@@ -101,42 +101,42 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     	      this.value = defaults.value;
         }
 
-        public Builder setClaim(Input<String> claim) {
+        public Builder claim(Input<String> claim) {
             this.claim = Objects.requireNonNull(claim);
             return this;
         }
 
-        public Builder setClaim(String claim) {
+        public Builder claim(String claim) {
             this.claim = Input.of(Objects.requireNonNull(claim));
             return this;
         }
 
-        public Builder setMatchType(Input<String> matchType) {
+        public Builder matchType(Input<String> matchType) {
             this.matchType = Objects.requireNonNull(matchType);
             return this;
         }
 
-        public Builder setMatchType(String matchType) {
+        public Builder matchType(String matchType) {
             this.matchType = Input.of(Objects.requireNonNull(matchType));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

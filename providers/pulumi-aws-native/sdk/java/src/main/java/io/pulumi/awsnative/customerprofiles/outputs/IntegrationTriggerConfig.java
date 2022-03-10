@@ -52,12 +52,12 @@ public final class IntegrationTriggerConfig {
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setTriggerProperties(@Nullable IntegrationTriggerProperties triggerProperties) {
+        public Builder triggerProperties(@Nullable IntegrationTriggerProperties triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
-        public Builder setTriggerType(IntegrationTriggerType triggerType) {
+        public Builder triggerType(IntegrationTriggerType triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }

@@ -49,12 +49,12 @@ public final class BasicAuthResponse {
     	      this.user = defaults.user;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }

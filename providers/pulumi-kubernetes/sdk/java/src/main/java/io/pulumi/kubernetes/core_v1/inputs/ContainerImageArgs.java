@@ -76,22 +76,22 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setNames(Input<List<String>> names) {
+        public Builder names(Input<List<String>> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Input.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Input<Integer> sizeBytes) {
+        public Builder sizeBytes(@Nullable Input<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }

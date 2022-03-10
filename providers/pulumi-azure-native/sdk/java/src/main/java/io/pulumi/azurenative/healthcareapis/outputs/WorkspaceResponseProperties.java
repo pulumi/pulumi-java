@@ -48,7 +48,7 @@ public final class WorkspaceResponseProperties {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

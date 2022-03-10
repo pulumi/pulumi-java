@@ -92,32 +92,32 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
     	      this.hasCredential = defaults.hasCredential;
         }
 
-        public Builder setCloudSql(@Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql) {
+        public Builder cloudSql(@Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql) {
             this.cloudSql = cloudSql;
             return this;
         }
 
-        public Builder setCloudSql(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
+        public Builder cloudSql(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
             this.cloudSql = Input.ofNullable(cloudSql);
             return this;
         }
 
-        public Builder setConnectionType(@Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType) {
+        public Builder connectionType(@Nullable Input<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
+        public Builder connectionType(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
             this.connectionType = Input.ofNullable(connectionType);
             return this;
         }
 
-        public Builder setHasCredential(@Nullable Input<Boolean> hasCredential) {
+        public Builder hasCredential(@Nullable Input<Boolean> hasCredential) {
             this.hasCredential = hasCredential;
             return this;
         }
 
-        public Builder setHasCredential(@Nullable Boolean hasCredential) {
+        public Builder hasCredential(@Nullable Boolean hasCredential) {
             this.hasCredential = Input.ofNullable(hasCredential);
             return this;
         }

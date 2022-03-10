@@ -103,42 +103,42 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setJobCollectionName(Input<String> jobCollectionName) {
+        public Builder jobCollectionName(Input<String> jobCollectionName) {
             this.jobCollectionName = Objects.requireNonNull(jobCollectionName);
             return this;
         }
 
-        public Builder setJobCollectionName(String jobCollectionName) {
+        public Builder jobCollectionName(String jobCollectionName) {
             this.jobCollectionName = Input.of(Objects.requireNonNull(jobCollectionName));
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<JobPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<JobPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable JobPropertiesArgs properties) {
+        public Builder properties(@Nullable JobPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

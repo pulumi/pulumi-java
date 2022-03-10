@@ -85,17 +85,17 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder setContainerTags(@Nullable List<String> containerTags) {
+        public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTargetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
+        public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
             this.targetRepository = Objects.requireNonNull(targetRepository);
             return this;
         }

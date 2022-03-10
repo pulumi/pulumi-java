@@ -66,22 +66,22 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setNetworkUrl(@Nullable Input<String> networkUrl) {
+        public Builder networkUrl(@Nullable Input<String> networkUrl) {
             this.networkUrl = networkUrl;
             return this;
         }
 
-        public Builder setNetworkUrl(@Nullable String networkUrl) {
+        public Builder networkUrl(@Nullable String networkUrl) {
             this.networkUrl = Input.ofNullable(networkUrl);
             return this;
         }

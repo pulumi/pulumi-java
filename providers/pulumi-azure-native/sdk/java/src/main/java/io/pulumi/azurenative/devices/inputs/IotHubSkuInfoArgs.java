@@ -77,22 +77,22 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Input<Double> capacity) {
+        public Builder capacity(@Nullable Input<Double> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Double capacity) {
+        public Builder capacity(@Nullable Double capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setName(Input<Either<String,IotHubSku>> name) {
+        public Builder name(Input<Either<String,IotHubSku>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,IotHubSku> name) {
+        public Builder name(Either<String,IotHubSku> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

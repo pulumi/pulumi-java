@@ -99,22 +99,22 @@ public final class AccountCredentialDetailsResponse {
     	      this.shareCredentialDetails = defaults.shareCredentialDetails;
         }
 
-        public Builder setAccountConnectionString(String accountConnectionString) {
+        public Builder accountConnectionString(String accountConnectionString) {
             this.accountConnectionString = Objects.requireNonNull(accountConnectionString);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setShareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
+        public Builder shareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
             this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
             return this;
         }

@@ -117,27 +117,27 @@ public final class AutoScaleConfigurationResponse {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Double targetUtilization) {
+        public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }

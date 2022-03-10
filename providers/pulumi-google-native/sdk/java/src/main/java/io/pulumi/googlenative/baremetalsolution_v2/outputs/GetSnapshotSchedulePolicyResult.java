@@ -100,22 +100,22 @@ public final class GetSnapshotSchedulePolicyResult {
     	      this.schedules = defaults.schedules;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedules(List<ScheduleResponse> schedules) {
+        public Builder schedules(List<ScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }

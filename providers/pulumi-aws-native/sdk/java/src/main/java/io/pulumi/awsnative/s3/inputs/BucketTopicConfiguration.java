@@ -91,17 +91,17 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilter filter) {
+        public Builder filter(@Nullable BucketNotificationFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

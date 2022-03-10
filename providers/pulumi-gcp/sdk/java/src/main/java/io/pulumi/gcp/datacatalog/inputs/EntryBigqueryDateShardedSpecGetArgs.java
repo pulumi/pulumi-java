@@ -75,32 +75,32 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setShardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Input<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Input.ofNullable(shardCount);
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable String tablePrefix) {
+        public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }

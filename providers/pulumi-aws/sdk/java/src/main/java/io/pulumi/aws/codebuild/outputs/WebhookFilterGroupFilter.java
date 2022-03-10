@@ -84,17 +84,17 @@ public final class WebhookFilterGroupFilter {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
+        public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
             this.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

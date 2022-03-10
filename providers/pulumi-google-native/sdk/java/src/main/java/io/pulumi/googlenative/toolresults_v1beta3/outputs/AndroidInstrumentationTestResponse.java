@@ -99,22 +99,22 @@ public final class AndroidInstrumentationTestResponse {
     	      this.useOrchestrator = defaults.useOrchestrator;
         }
 
-        public Builder setTestPackageId(String testPackageId) {
+        public Builder testPackageId(String testPackageId) {
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(String testRunnerClass) {
+        public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
 
-        public Builder setUseOrchestrator(Boolean useOrchestrator) {
+        public Builder useOrchestrator(Boolean useOrchestrator) {
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
         }

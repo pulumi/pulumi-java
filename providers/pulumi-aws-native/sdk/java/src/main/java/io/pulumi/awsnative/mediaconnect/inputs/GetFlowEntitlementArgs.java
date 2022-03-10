@@ -51,7 +51,7 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
     	      this.entitlementArn = defaults.entitlementArn;
         }
 
-        public Builder setEntitlementArn(String entitlementArn) {
+        public Builder entitlementArn(String entitlementArn) {
             this.entitlementArn = Objects.requireNonNull(entitlementArn);
             return this;
         }

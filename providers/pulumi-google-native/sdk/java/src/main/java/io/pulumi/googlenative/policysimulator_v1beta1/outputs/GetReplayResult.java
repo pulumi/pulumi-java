@@ -99,22 +99,22 @@ public final class GetReplayResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config) {
+        public Builder config(GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResultsSummary(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary) {
+        public Builder resultsSummary(GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary) {
             this.resultsSummary = Objects.requireNonNull(resultsSummary);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

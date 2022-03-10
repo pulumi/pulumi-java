@@ -89,32 +89,32 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder setIsStable(@Nullable Input<Boolean> isStable) {
+        public Builder isStable(@Nullable Input<Boolean> isStable) {
             this.isStable = isStable;
             return this;
         }
 
-        public Builder setIsStable(@Nullable Boolean isStable) {
+        public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = Input.ofNullable(isStable);
             return this;
         }
 
-        public Builder setStatefuls(@Nullable Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls) {
+        public Builder statefuls(@Nullable Input<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
-        public Builder setStatefuls(@Nullable List<RegionInstanceGroupManagerStatusStatefulArgs> statefuls) {
+        public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStatefulArgs> statefuls) {
             this.statefuls = Input.ofNullable(statefuls);
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
+        public Builder versionTargets(@Nullable Input<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
+        public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
             this.versionTargets = Input.ofNullable(versionTargets);
             return this;
         }

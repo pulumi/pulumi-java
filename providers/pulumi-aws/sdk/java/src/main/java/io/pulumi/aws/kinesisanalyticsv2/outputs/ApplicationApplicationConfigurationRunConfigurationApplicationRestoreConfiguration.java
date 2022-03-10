@@ -67,12 +67,12 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder setApplicationRestoreType(@Nullable String applicationRestoreType) {
+        public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
             this.applicationRestoreType = applicationRestoreType;
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable String snapshotName) {
+        public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }

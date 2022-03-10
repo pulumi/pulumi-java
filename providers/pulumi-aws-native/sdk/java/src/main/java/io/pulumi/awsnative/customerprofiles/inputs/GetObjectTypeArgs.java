@@ -68,12 +68,12 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
     	      this.objectTypeName = defaults.objectTypeName;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setObjectTypeName(String objectTypeName) {
+        public Builder objectTypeName(String objectTypeName) {
             this.objectTypeName = Objects.requireNonNull(objectTypeName);
             return this;
         }

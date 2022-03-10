@@ -161,37 +161,37 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     	      this.windowsEvents = defaults.windowsEvents;
         }
 
-        public Builder setAlarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
+        public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
             this.alarmMetrics = alarmMetrics;
             return this;
         }
 
-        public Builder setAlarms(@Nullable List<ApplicationAlarm> alarms) {
+        public Builder alarms(@Nullable List<ApplicationAlarm> alarms) {
             this.alarms = alarms;
             return this;
         }
 
-        public Builder setHAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
+        public Builder hAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
             this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;
             return this;
         }
 
-        public Builder setHANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
+        public Builder hANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
             this.hANAPrometheusExporter = hANAPrometheusExporter;
             return this;
         }
 
-        public Builder setJMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
+        public Builder jMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
             this.jMXPrometheusExporter = jMXPrometheusExporter;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<ApplicationLog> logs) {
+        public Builder logs(@Nullable List<ApplicationLog> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setWindowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }

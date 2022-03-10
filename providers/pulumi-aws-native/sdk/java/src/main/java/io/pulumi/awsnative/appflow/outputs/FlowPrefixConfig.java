@@ -52,12 +52,12 @@ public final class FlowPrefixConfig {
     	      this.prefixType = defaults.prefixType;
         }
 
-        public Builder setPrefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
+        public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
             this.prefixFormat = prefixFormat;
             return this;
         }
 
-        public Builder setPrefixType(@Nullable FlowPrefixType prefixType) {
+        public Builder prefixType(@Nullable FlowPrefixType prefixType) {
             this.prefixType = prefixType;
             return this;
         }

@@ -55,7 +55,7 @@ public final class DatabaseInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceDatabaseName = defaults.sourceDatabaseName;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }

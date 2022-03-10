@@ -220,57 +220,57 @@ public final class AzureTableSinkResponse extends io.pulumi.resources.InvokeArgs
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setAzureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
+        public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
             this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
             return this;
         }
 
-        public Builder setAzureTableInsertType(@Nullable Object azureTableInsertType) {
+        public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
             this.azureTableInsertType = azureTableInsertType;
             return this;
         }
 
-        public Builder setAzureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
+        public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
             this.azureTablePartitionKeyName = azureTablePartitionKeyName;
             return this;
         }
 
-        public Builder setAzureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
+        public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
             this.azureTableRowKeyName = azureTableRowKeyName;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }

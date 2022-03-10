@@ -123,52 +123,52 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAuthenticationMethods(@Nullable Input<String> authenticationMethods) {
+        public Builder authenticationMethods(@Nullable Input<String> authenticationMethods) {
             this.authenticationMethods = authenticationMethods;
             return this;
         }
 
-        public Builder setAuthenticationMethods(@Nullable String authenticationMethods) {
+        public Builder authenticationMethods(@Nullable String authenticationMethods) {
             this.authenticationMethods = Input.ofNullable(authenticationMethods);
             return this;
         }
 
-        public Builder setChannelEncryption(@Nullable Input<String> channelEncryption) {
+        public Builder channelEncryption(@Nullable Input<String> channelEncryption) {
             this.channelEncryption = channelEncryption;
             return this;
         }
 
-        public Builder setChannelEncryption(@Nullable String channelEncryption) {
+        public Builder channelEncryption(@Nullable String channelEncryption) {
             this.channelEncryption = Input.ofNullable(channelEncryption);
             return this;
         }
 
-        public Builder setKerberosTicketEncryption(@Nullable Input<String> kerberosTicketEncryption) {
+        public Builder kerberosTicketEncryption(@Nullable Input<String> kerberosTicketEncryption) {
             this.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
 
-        public Builder setKerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
+        public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             this.kerberosTicketEncryption = Input.ofNullable(kerberosTicketEncryption);
             return this;
         }
 
-        public Builder setMultichannel(@Nullable Input<MultichannelArgs> multichannel) {
+        public Builder multichannel(@Nullable Input<MultichannelArgs> multichannel) {
             this.multichannel = multichannel;
             return this;
         }
 
-        public Builder setMultichannel(@Nullable MultichannelArgs multichannel) {
+        public Builder multichannel(@Nullable MultichannelArgs multichannel) {
             this.multichannel = Input.ofNullable(multichannel);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<String> versions) {
+        public Builder versions(@Nullable Input<String> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable String versions) {
+        public Builder versions(@Nullable String versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

@@ -40,7 +40,7 @@ public final class CloudFrontOriginAccessIdentityConfig {
     	      this.comment = defaults.comment;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }

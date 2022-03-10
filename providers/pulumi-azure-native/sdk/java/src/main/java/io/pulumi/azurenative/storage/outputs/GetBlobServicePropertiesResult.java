@@ -250,67 +250,67 @@ public final class GetBlobServicePropertiesResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutomaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
+        public Builder automaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
             this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
 
-        public Builder setChangeFeed(@Nullable ChangeFeedResponse changeFeed) {
+        public Builder changeFeed(@Nullable ChangeFeedResponse changeFeed) {
             this.changeFeed = changeFeed;
             return this;
         }
 
-        public Builder setContainerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy) {
+        public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy) {
             this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsRulesResponse cors) {
+        public Builder cors(@Nullable CorsRulesResponse cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setDefaultServiceVersion(@Nullable String defaultServiceVersion) {
+        public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
             this.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
 
-        public Builder setDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy) {
+        public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy) {
             this.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
+        public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
             this.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
 
-        public Builder setLastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy) {
+        public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy) {
             this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable RestorePolicyPropertiesResponse restorePolicy) {
+        public Builder restorePolicy(@Nullable RestorePolicyPropertiesResponse restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

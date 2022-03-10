@@ -119,52 +119,52 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
     	      this.message = defaults.message;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder setGraphArn(Input<String> graphArn) {
+        public Builder graphArn(Input<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
-        public Builder setGraphArn(String graphArn) {
+        public Builder graphArn(String graphArn) {
             this.graphArn = Input.of(Objects.requireNonNull(graphArn));
             return this;
         }
 
-        public Builder setMemberEmailAddress(Input<String> memberEmailAddress) {
+        public Builder memberEmailAddress(Input<String> memberEmailAddress) {
             this.memberEmailAddress = Objects.requireNonNull(memberEmailAddress);
             return this;
         }
 
-        public Builder setMemberEmailAddress(String memberEmailAddress) {
+        public Builder memberEmailAddress(String memberEmailAddress) {
             this.memberEmailAddress = Input.of(Objects.requireNonNull(memberEmailAddress));
             return this;
         }
 
-        public Builder setMemberId(Input<String> memberId) {
+        public Builder memberId(Input<String> memberId) {
             this.memberId = Objects.requireNonNull(memberId);
             return this;
         }
 
-        public Builder setMemberId(String memberId) {
+        public Builder memberId(String memberId) {
             this.memberId = Input.of(Objects.requireNonNull(memberId));
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }

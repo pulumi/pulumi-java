@@ -172,42 +172,42 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(List<AggregationResponse> aggregations) {
+        public Builder aggregations(List<AggregationResponse> aggregations) {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setDenominatorAggregations(List<AggregationResponse> denominatorAggregations) {
+        public Builder denominatorAggregations(List<AggregationResponse> denominatorAggregations) {
             this.denominatorAggregations = Objects.requireNonNull(denominatorAggregations);
             return this;
         }
 
-        public Builder setDenominatorFilter(String denominatorFilter) {
+        public Builder denominatorFilter(String denominatorFilter) {
             this.denominatorFilter = Objects.requireNonNull(denominatorFilter);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setThresholdValue(Double thresholdValue) {
+        public Builder thresholdValue(Double thresholdValue) {
             this.thresholdValue = Objects.requireNonNull(thresholdValue);
             return this;
         }
 
-        public Builder setTrigger(TriggerResponse trigger) {
+        public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

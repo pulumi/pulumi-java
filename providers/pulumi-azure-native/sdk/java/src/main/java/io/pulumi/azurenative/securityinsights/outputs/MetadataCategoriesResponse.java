@@ -67,12 +67,12 @@ public final class MetadataCategoriesResponse {
     	      this.verticals = defaults.verticals;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setVerticals(@Nullable List<String> verticals) {
+        public Builder verticals(@Nullable List<String> verticals) {
             this.verticals = verticals;
             return this;
         }

@@ -268,72 +268,72 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     	      this.unixReadWrite = defaults.unixReadWrite;
         }
 
-        public Builder setAllowedClients(@Nullable String allowedClients) {
+        public Builder allowedClients(@Nullable String allowedClients) {
             this.allowedClients = allowedClients;
             return this;
         }
 
-        public Builder setCifs(@Nullable Boolean cifs) {
+        public Builder cifs(@Nullable Boolean cifs) {
             this.cifs = cifs;
             return this;
         }
 
-        public Builder setHasRootAccess(@Nullable Boolean hasRootAccess) {
+        public Builder hasRootAccess(@Nullable Boolean hasRootAccess) {
             this.hasRootAccess = hasRootAccess;
             return this;
         }
 
-        public Builder setKerberos5ReadOnly(@Nullable Boolean kerberos5ReadOnly) {
+        public Builder kerberos5ReadOnly(@Nullable Boolean kerberos5ReadOnly) {
             this.kerberos5ReadOnly = kerberos5ReadOnly;
             return this;
         }
 
-        public Builder setKerberos5ReadWrite(@Nullable Boolean kerberos5ReadWrite) {
+        public Builder kerberos5ReadWrite(@Nullable Boolean kerberos5ReadWrite) {
             this.kerberos5ReadWrite = kerberos5ReadWrite;
             return this;
         }
 
-        public Builder setKerberos5iReadOnly(@Nullable Boolean kerberos5iReadOnly) {
+        public Builder kerberos5iReadOnly(@Nullable Boolean kerberos5iReadOnly) {
             this.kerberos5iReadOnly = kerberos5iReadOnly;
             return this;
         }
 
-        public Builder setKerberos5iReadWrite(@Nullable Boolean kerberos5iReadWrite) {
+        public Builder kerberos5iReadWrite(@Nullable Boolean kerberos5iReadWrite) {
             this.kerberos5iReadWrite = kerberos5iReadWrite;
             return this;
         }
 
-        public Builder setKerberos5pReadOnly(@Nullable Boolean kerberos5pReadOnly) {
+        public Builder kerberos5pReadOnly(@Nullable Boolean kerberos5pReadOnly) {
             this.kerberos5pReadOnly = kerberos5pReadOnly;
             return this;
         }
 
-        public Builder setKerberos5pReadWrite(@Nullable Boolean kerberos5pReadWrite) {
+        public Builder kerberos5pReadWrite(@Nullable Boolean kerberos5pReadWrite) {
             this.kerberos5pReadWrite = kerberos5pReadWrite;
             return this;
         }
 
-        public Builder setNfsv3(@Nullable Boolean nfsv3) {
+        public Builder nfsv3(@Nullable Boolean nfsv3) {
             this.nfsv3 = nfsv3;
             return this;
         }
 
-        public Builder setNfsv41(@Nullable Boolean nfsv41) {
+        public Builder nfsv41(@Nullable Boolean nfsv41) {
             this.nfsv41 = nfsv41;
             return this;
         }
 
-        public Builder setRuleIndex(@Nullable Integer ruleIndex) {
+        public Builder ruleIndex(@Nullable Integer ruleIndex) {
             this.ruleIndex = ruleIndex;
             return this;
         }
 
-        public Builder setUnixReadOnly(@Nullable Boolean unixReadOnly) {
+        public Builder unixReadOnly(@Nullable Boolean unixReadOnly) {
             this.unixReadOnly = unixReadOnly;
             return this;
         }
 
-        public Builder setUnixReadWrite(@Nullable Boolean unixReadWrite) {
+        public Builder unixReadWrite(@Nullable Boolean unixReadWrite) {
             this.unixReadWrite = unixReadWrite;
             return this;
         }

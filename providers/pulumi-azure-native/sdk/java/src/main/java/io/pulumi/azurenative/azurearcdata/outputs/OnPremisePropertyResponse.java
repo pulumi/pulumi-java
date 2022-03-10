@@ -83,17 +83,17 @@ public final class OnPremisePropertyResponse {
     	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPublicSigningKey(String publicSigningKey) {
+        public Builder publicSigningKey(String publicSigningKey) {
             this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
             return this;
         }
 
-        public Builder setSigningCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
+        public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }

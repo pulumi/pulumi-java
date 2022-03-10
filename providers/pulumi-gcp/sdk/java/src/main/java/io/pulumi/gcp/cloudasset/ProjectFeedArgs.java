@@ -187,82 +187,82 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setBillingProject(@Nullable Input<String> billingProject) {
+        public Builder billingProject(@Nullable Input<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
 
-        public Builder setBillingProject(@Nullable String billingProject) {
+        public Builder billingProject(@Nullable String billingProject) {
             this.billingProject = Input.ofNullable(billingProject);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<ProjectFeedConditionArgs> condition) {
+        public Builder condition(@Nullable Input<ProjectFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable ProjectFeedConditionArgs condition) {
+        public Builder condition(@Nullable ProjectFeedConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(Input<String> feedId) {
+        public Builder feedId(Input<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
-        public Builder setFeedId(String feedId) {
+        public Builder feedId(String feedId) {
             this.feedId = Input.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder setFeedOutputConfig(Input<ProjectFeedFeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Input<ProjectFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setFeedOutputConfig(ProjectFeedFeedOutputConfigArgs feedOutputConfig) {
+        public Builder feedOutputConfig(ProjectFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

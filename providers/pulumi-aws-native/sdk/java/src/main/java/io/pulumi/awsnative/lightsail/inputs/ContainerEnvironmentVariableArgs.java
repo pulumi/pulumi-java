@@ -62,22 +62,22 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     	      this.variable = defaults.variable;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setVariable(@Nullable Input<String> variable) {
+        public Builder variable(@Nullable Input<String> variable) {
             this.variable = variable;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = Input.ofNullable(variable);
             return this;
         }

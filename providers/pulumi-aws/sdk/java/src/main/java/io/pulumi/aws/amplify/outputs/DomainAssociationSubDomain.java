@@ -100,22 +100,22 @@ public final class DomainAssociationSubDomain {
     	      this.verified = defaults.verified;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setDnsRecord(@Nullable String dnsRecord) {
+        public Builder dnsRecord(@Nullable String dnsRecord) {
             this.dnsRecord = dnsRecord;
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setVerified(@Nullable Boolean verified) {
+        public Builder verified(@Nullable Boolean verified) {
             this.verified = verified;
             return this;
         }

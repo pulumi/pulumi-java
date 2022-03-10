@@ -108,42 +108,42 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder set$default(@Nullable Input<String> $default) {
+        public Builder $default(@Nullable Input<String> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable String $default) {
+        public Builder $default(@Nullable String $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<Either<String,ParameterType>> type) {
+        public Builder type(Input<Either<String,ParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ParameterType> type) {
+        public Builder type(Either<String,ParameterType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

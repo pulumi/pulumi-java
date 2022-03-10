@@ -87,32 +87,32 @@ public final class GetExperimentTemplateResult {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setActions(@Nullable ExperimentTemplateActionMap actions) {
+        public Builder actions(@Nullable ExperimentTemplateActionMap actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setStopConditions(@Nullable List<ExperimentTemplateStopCondition> stopConditions) {
+        public Builder stopConditions(@Nullable List<ExperimentTemplateStopCondition> stopConditions) {
             this.stopConditions = stopConditions;
             return this;
         }
 
-        public Builder setTargets(@Nullable ExperimentTemplateTargetMap targets) {
+        public Builder targets(@Nullable ExperimentTemplateTargetMap targets) {
             this.targets = targets;
             return this;
         }

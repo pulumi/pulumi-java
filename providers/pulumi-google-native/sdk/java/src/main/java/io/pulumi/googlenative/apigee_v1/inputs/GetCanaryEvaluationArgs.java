@@ -72,17 +72,17 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setCanaryevaluationId(String canaryevaluationId) {
+        public Builder canaryevaluationId(String canaryevaluationId) {
             this.canaryevaluationId = Objects.requireNonNull(canaryevaluationId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

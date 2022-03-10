@@ -84,17 +84,17 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
     	      this.scopeConnectionName = defaults.scopeConnectionName;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setScopeConnectionName(String scopeConnectionName) {
+        public Builder scopeConnectionName(String scopeConnectionName) {
             this.scopeConnectionName = Objects.requireNonNull(scopeConnectionName);
             return this;
         }

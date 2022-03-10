@@ -134,62 +134,62 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGet
     	      this.timeStamping = defaults.timeStamping;
         }
 
-        public Builder setClientAuth(@Nullable Input<Boolean> clientAuth) {
+        public Builder clientAuth(@Nullable Input<Boolean> clientAuth) {
             this.clientAuth = clientAuth;
             return this;
         }
 
-        public Builder setClientAuth(@Nullable Boolean clientAuth) {
+        public Builder clientAuth(@Nullable Boolean clientAuth) {
             this.clientAuth = Input.ofNullable(clientAuth);
             return this;
         }
 
-        public Builder setCodeSigning(@Nullable Input<Boolean> codeSigning) {
+        public Builder codeSigning(@Nullable Input<Boolean> codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
 
-        public Builder setCodeSigning(@Nullable Boolean codeSigning) {
+        public Builder codeSigning(@Nullable Boolean codeSigning) {
             this.codeSigning = Input.ofNullable(codeSigning);
             return this;
         }
 
-        public Builder setEmailProtection(@Nullable Input<Boolean> emailProtection) {
+        public Builder emailProtection(@Nullable Input<Boolean> emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
 
-        public Builder setEmailProtection(@Nullable Boolean emailProtection) {
+        public Builder emailProtection(@Nullable Boolean emailProtection) {
             this.emailProtection = Input.ofNullable(emailProtection);
             return this;
         }
 
-        public Builder setOcspSigning(@Nullable Input<Boolean> ocspSigning) {
+        public Builder ocspSigning(@Nullable Input<Boolean> ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
 
-        public Builder setOcspSigning(@Nullable Boolean ocspSigning) {
+        public Builder ocspSigning(@Nullable Boolean ocspSigning) {
             this.ocspSigning = Input.ofNullable(ocspSigning);
             return this;
         }
 
-        public Builder setServerAuth(@Nullable Input<Boolean> serverAuth) {
+        public Builder serverAuth(@Nullable Input<Boolean> serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
 
-        public Builder setServerAuth(@Nullable Boolean serverAuth) {
+        public Builder serverAuth(@Nullable Boolean serverAuth) {
             this.serverAuth = Input.ofNullable(serverAuth);
             return this;
         }
 
-        public Builder setTimeStamping(@Nullable Input<Boolean> timeStamping) {
+        public Builder timeStamping(@Nullable Input<Boolean> timeStamping) {
             this.timeStamping = timeStamping;
             return this;
         }
 
-        public Builder setTimeStamping(@Nullable Boolean timeStamping) {
+        public Builder timeStamping(@Nullable Boolean timeStamping) {
             this.timeStamping = Input.ofNullable(timeStamping);
             return this;
         }

@@ -163,82 +163,82 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sqlserverDatabaseDetails = defaults.sqlserverDatabaseDetails;
         }
 
-        public Builder setCharset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Input<String> charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = Input.ofNullable(charset);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setInstance(Input<String> instance) {
+        public Builder instance(Input<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Input.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSqlserverDatabaseDetails(@Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
+        public Builder sqlserverDatabaseDetails(@Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
             return this;
         }
 
-        public Builder setSqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
+        public Builder sqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = Input.ofNullable(sqlserverDatabaseDetails);
             return this;
         }

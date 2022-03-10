@@ -66,12 +66,12 @@ public final class PodsMetricSource {
     	      this.target = defaults.target;
         }
 
-        public Builder setMetric(MetricIdentifier metric) {
+        public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setTarget(MetricTarget target) {
+        public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

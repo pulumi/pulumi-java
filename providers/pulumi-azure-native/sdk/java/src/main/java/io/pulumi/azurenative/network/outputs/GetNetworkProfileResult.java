@@ -199,52 +199,52 @@ public final class GetNetworkProfileResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations) {
+        public Builder containerNetworkInterfaceConfigurations(@Nullable List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations) {
             this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setContainerNetworkInterfaces(List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces) {
+        public Builder containerNetworkInterfaces(List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = Objects.requireNonNull(containerNetworkInterfaces);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

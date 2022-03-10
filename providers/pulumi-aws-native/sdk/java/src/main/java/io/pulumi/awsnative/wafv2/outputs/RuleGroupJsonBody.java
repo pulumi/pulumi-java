@@ -61,17 +61,17 @@ public final class RuleGroupJsonBody {
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
-        public Builder setMatchPattern(RuleGroupJsonMatchPattern matchPattern) {
+        public Builder matchPattern(RuleGroupJsonMatchPattern matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
-        public Builder setMatchScope(RuleGroupJsonMatchScope matchScope) {
+        public Builder matchScope(RuleGroupJsonMatchScope matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }

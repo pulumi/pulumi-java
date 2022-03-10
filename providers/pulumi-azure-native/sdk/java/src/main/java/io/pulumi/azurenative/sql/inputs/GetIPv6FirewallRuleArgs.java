@@ -84,17 +84,17 @@ public final class GetIPv6FirewallRuleArgs extends io.pulumi.resources.InvokeArg
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setFirewallRuleName(String firewallRuleName) {
+        public Builder firewallRuleName(String firewallRuleName) {
             this.firewallRuleName = Objects.requireNonNull(firewallRuleName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

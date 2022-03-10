@@ -116,27 +116,27 @@ public final class LeaseSpec {
     	      this.renewTime = defaults.renewTime;
         }
 
-        public Builder setAcquireTime(@Nullable String acquireTime) {
+        public Builder acquireTime(@Nullable String acquireTime) {
             this.acquireTime = acquireTime;
             return this;
         }
 
-        public Builder setHolderIdentity(@Nullable String holderIdentity) {
+        public Builder holderIdentity(@Nullable String holderIdentity) {
             this.holderIdentity = holderIdentity;
             return this;
         }
 
-        public Builder setLeaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
+        public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
             this.leaseDurationSeconds = leaseDurationSeconds;
             return this;
         }
 
-        public Builder setLeaseTransitions(@Nullable Integer leaseTransitions) {
+        public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
             this.leaseTransitions = leaseTransitions;
             return this;
         }
 
-        public Builder setRenewTime(@Nullable String renewTime) {
+        public Builder renewTime(@Nullable String renewTime) {
             this.renewTime = renewTime;
             return this;
         }

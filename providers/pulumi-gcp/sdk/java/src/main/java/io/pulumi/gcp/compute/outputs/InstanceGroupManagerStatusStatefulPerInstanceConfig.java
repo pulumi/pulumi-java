@@ -50,7 +50,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
     	      this.allEffective = defaults.allEffective;
         }
 
-        public Builder setAllEffective(@Nullable Boolean allEffective) {
+        public Builder allEffective(@Nullable Boolean allEffective) {
             this.allEffective = allEffective;
             return this;
         }

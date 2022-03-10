@@ -86,17 +86,17 @@ public final class RegionInstanceGroupManagerStatus {
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder setIsStable(@Nullable Boolean isStable) {
+        public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = isStable;
             return this;
         }
 
-        public Builder setStatefuls(@Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls) {
+        public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
+        public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }

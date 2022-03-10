@@ -76,22 +76,22 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,EncryptionType>> type) {
+        public Builder type(@Nullable Input<Either<String,EncryptionType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,EncryptionType> type) {
+        public Builder type(@Nullable Either<String,EncryptionType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

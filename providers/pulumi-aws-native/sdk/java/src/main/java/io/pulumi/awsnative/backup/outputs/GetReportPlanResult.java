@@ -119,27 +119,27 @@ public final class GetReportPlanResult {
     	      this.reportSetting = defaults.reportSetting;
         }
 
-        public Builder setReportDeliveryChannel(@Nullable ReportDeliveryChannelProperties reportDeliveryChannel) {
+        public Builder reportDeliveryChannel(@Nullable ReportDeliveryChannelProperties reportDeliveryChannel) {
             this.reportDeliveryChannel = reportDeliveryChannel;
             return this;
         }
 
-        public Builder setReportPlanArn(@Nullable String reportPlanArn) {
+        public Builder reportPlanArn(@Nullable String reportPlanArn) {
             this.reportPlanArn = reportPlanArn;
             return this;
         }
 
-        public Builder setReportPlanDescription(@Nullable String reportPlanDescription) {
+        public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
             this.reportPlanDescription = reportPlanDescription;
             return this;
         }
 
-        public Builder setReportPlanTags(@Nullable List<ReportPlanTag> reportPlanTags) {
+        public Builder reportPlanTags(@Nullable List<ReportPlanTag> reportPlanTags) {
             this.reportPlanTags = reportPlanTags;
             return this;
         }
 
-        public Builder setReportSetting(@Nullable ReportSettingProperties reportSetting) {
+        public Builder reportSetting(@Nullable ReportSettingProperties reportSetting) {
             this.reportSetting = reportSetting;
             return this;
         }

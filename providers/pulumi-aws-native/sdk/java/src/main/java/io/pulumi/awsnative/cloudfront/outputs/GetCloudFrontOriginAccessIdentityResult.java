@@ -60,17 +60,17 @@ public final class GetCloudFrontOriginAccessIdentityResult {
     	      this.s3CanonicalUserId = defaults.s3CanonicalUserId;
         }
 
-        public Builder setCloudFrontOriginAccessIdentityConfig(@Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig) {
+        public Builder cloudFrontOriginAccessIdentityConfig(@Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig) {
             this.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setS3CanonicalUserId(@Nullable String s3CanonicalUserId) {
+        public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
             this.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }

@@ -54,7 +54,7 @@ public final class CustomServiceTelemetry {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }

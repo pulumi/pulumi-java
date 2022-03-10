@@ -75,22 +75,22 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     	      this.status = defaults.status;
         }
 
-        public Builder setNodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Input<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Input.ofNullable(nodeName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -64,22 +64,22 @@ public final class PhpAppLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogStreams(@Nullable Input<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
+        public Builder logStreams(@Nullable Input<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams) {
             this.logStreams = logStreams;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
+        public Builder logStreams(@Nullable List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs> logStreams) {
             this.logStreams = Input.ofNullable(logStreams);
             return this;
         }

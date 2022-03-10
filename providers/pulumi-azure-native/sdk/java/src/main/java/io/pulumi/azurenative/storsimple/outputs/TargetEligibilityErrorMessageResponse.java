@@ -83,17 +83,17 @@ public final class TargetEligibilityErrorMessageResponse {
     	      this.resultCode = defaults.resultCode;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setResultCode(@Nullable String resultCode) {
+        public Builder resultCode(@Nullable String resultCode) {
             this.resultCode = resultCode;
             return this;
         }

@@ -74,12 +74,12 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
+        public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setFilters(List<LoggingConfigurationFilter> filters) {
+        public Builder filters(List<LoggingConfigurationFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }

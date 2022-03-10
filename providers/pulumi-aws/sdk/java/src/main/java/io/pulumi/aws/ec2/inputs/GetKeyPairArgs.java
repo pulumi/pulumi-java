@@ -101,22 +101,22 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetKeyPairFilter> filters) {
+        public Builder filters(@Nullable List<GetKeyPairFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyPairId(@Nullable String keyPairId) {
+        public Builder keyPairId(@Nullable String keyPairId) {
             this.keyPairId = keyPairId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

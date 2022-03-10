@@ -303,162 +303,162 @@ public final class SqlDWSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setAllowCopyCommand(@Nullable Input<Object> allowCopyCommand) {
+        public Builder allowCopyCommand(@Nullable Input<Object> allowCopyCommand) {
             this.allowCopyCommand = allowCopyCommand;
             return this;
         }
 
-        public Builder setAllowCopyCommand(@Nullable Object allowCopyCommand) {
+        public Builder allowCopyCommand(@Nullable Object allowCopyCommand) {
             this.allowCopyCommand = Input.ofNullable(allowCopyCommand);
             return this;
         }
 
-        public Builder setAllowPolyBase(@Nullable Input<Object> allowPolyBase) {
+        public Builder allowPolyBase(@Nullable Input<Object> allowPolyBase) {
             this.allowPolyBase = allowPolyBase;
             return this;
         }
 
-        public Builder setAllowPolyBase(@Nullable Object allowPolyBase) {
+        public Builder allowPolyBase(@Nullable Object allowPolyBase) {
             this.allowPolyBase = Input.ofNullable(allowPolyBase);
             return this;
         }
 
-        public Builder setCopyCommandSettings(@Nullable Input<DWCopyCommandSettingsArgs> copyCommandSettings) {
+        public Builder copyCommandSettings(@Nullable Input<DWCopyCommandSettingsArgs> copyCommandSettings) {
             this.copyCommandSettings = copyCommandSettings;
             return this;
         }
 
-        public Builder setCopyCommandSettings(@Nullable DWCopyCommandSettingsArgs copyCommandSettings) {
+        public Builder copyCommandSettings(@Nullable DWCopyCommandSettingsArgs copyCommandSettings) {
             this.copyCommandSettings = Input.ofNullable(copyCommandSettings);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPolyBaseSettings(@Nullable Input<PolybaseSettingsArgs> polyBaseSettings) {
+        public Builder polyBaseSettings(@Nullable Input<PolybaseSettingsArgs> polyBaseSettings) {
             this.polyBaseSettings = polyBaseSettings;
             return this;
         }
 
-        public Builder setPolyBaseSettings(@Nullable PolybaseSettingsArgs polyBaseSettings) {
+        public Builder polyBaseSettings(@Nullable PolybaseSettingsArgs polyBaseSettings) {
             this.polyBaseSettings = Input.ofNullable(polyBaseSettings);
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Input<Object> preCopyScript) {
+        public Builder preCopyScript(@Nullable Input<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Object preCopyScript) {
+        public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = Input.ofNullable(preCopyScript);
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Input<Object> sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Input<Object> sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = Input.ofNullable(sqlWriterUseTableLock);
             return this;
         }
 
-        public Builder setTableOption(@Nullable Input<Object> tableOption) {
+        public Builder tableOption(@Nullable Input<Object> tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
-        public Builder setTableOption(@Nullable Object tableOption) {
+        public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = Input.ofNullable(tableOption);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable Input<SqlDWUpsertSettingsArgs> upsertSettings) {
+        public Builder upsertSettings(@Nullable Input<SqlDWUpsertSettingsArgs> upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable SqlDWUpsertSettingsArgs upsertSettings) {
+        public Builder upsertSettings(@Nullable SqlDWUpsertSettingsArgs upsertSettings) {
             this.upsertSettings = Input.ofNullable(upsertSettings);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Input.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Input<Object> writeBehavior) {
+        public Builder writeBehavior(@Nullable Input<Object> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = Input.ofNullable(writeBehavior);
             return this;
         }

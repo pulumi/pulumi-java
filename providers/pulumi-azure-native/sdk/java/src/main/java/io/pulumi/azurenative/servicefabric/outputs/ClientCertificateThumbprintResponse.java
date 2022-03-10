@@ -66,12 +66,12 @@ public final class ClientCertificateThumbprintResponse {
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateThumbprint(String certificateThumbprint) {
+        public Builder certificateThumbprint(String certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }

@@ -169,82 +169,82 @@ public final class FirehoseDeliveryStreamSplunkConfigurationGetArgs extends io.p
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder setHecAcknowledgmentTimeout(@Nullable Input<Integer> hecAcknowledgmentTimeout) {
+        public Builder hecAcknowledgmentTimeout(@Nullable Input<Integer> hecAcknowledgmentTimeout) {
             this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
             return this;
         }
 
-        public Builder setHecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
+        public Builder hecAcknowledgmentTimeout(@Nullable Integer hecAcknowledgmentTimeout) {
             this.hecAcknowledgmentTimeout = Input.ofNullable(hecAcknowledgmentTimeout);
             return this;
         }
 
-        public Builder setHecEndpoint(Input<String> hecEndpoint) {
+        public Builder hecEndpoint(Input<String> hecEndpoint) {
             this.hecEndpoint = Objects.requireNonNull(hecEndpoint);
             return this;
         }
 
-        public Builder setHecEndpoint(String hecEndpoint) {
+        public Builder hecEndpoint(String hecEndpoint) {
             this.hecEndpoint = Input.of(Objects.requireNonNull(hecEndpoint));
             return this;
         }
 
-        public Builder setHecEndpointType(@Nullable Input<String> hecEndpointType) {
+        public Builder hecEndpointType(@Nullable Input<String> hecEndpointType) {
             this.hecEndpointType = hecEndpointType;
             return this;
         }
 
-        public Builder setHecEndpointType(@Nullable String hecEndpointType) {
+        public Builder hecEndpointType(@Nullable String hecEndpointType) {
             this.hecEndpointType = Input.ofNullable(hecEndpointType);
             return this;
         }
 
-        public Builder setHecToken(Input<String> hecToken) {
+        public Builder hecToken(Input<String> hecToken) {
             this.hecToken = Objects.requireNonNull(hecToken);
             return this;
         }
 
-        public Builder setHecToken(String hecToken) {
+        public Builder hecToken(String hecToken) {
             this.hecToken = Input.of(Objects.requireNonNull(hecToken));
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationGetArgs processingConfiguration) {
             this.processingConfiguration = Input.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Input<Integer> retryDuration) {
+        public Builder retryDuration(@Nullable Input<Integer> retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Integer retryDuration) {
+        public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = Input.ofNullable(retryDuration);
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable Input<String> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Input<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = Input.ofNullable(s3BackupMode);
             return this;
         }

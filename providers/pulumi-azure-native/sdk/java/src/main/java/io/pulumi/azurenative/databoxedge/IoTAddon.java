@@ -224,7 +224,7 @@ public class IoTAddon extends io.pulumi.resources.CustomResource {
     private static IoTAddonArgs makeArgs(IoTAddonArgs args) {
         var builder = args == null ? IoTAddonArgs.builder() : IoTAddonArgs.builder(args);
         return builder
-            .setKind("IotEdge")
+            .kind("IotEdge")
             .build();
     }
 

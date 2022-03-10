@@ -67,12 +67,12 @@ public final class PipelineDiagnosticSettingsResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setRequest(@Nullable HttpMessageDiagnosticResponse request) {
+        public Builder request(@Nullable HttpMessageDiagnosticResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setResponse(@Nullable HttpMessageDiagnosticResponse response) {
+        public Builder response(@Nullable HttpMessageDiagnosticResponse response) {
             this.response = response;
             return this;
         }

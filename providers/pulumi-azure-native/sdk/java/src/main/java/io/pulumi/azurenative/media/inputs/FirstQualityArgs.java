@@ -56,12 +56,12 @@ public final class FirstQualityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bitrate = defaults.bitrate;
         }
 
-        public Builder setBitrate(Input<Integer> bitrate) {
+        public Builder bitrate(Input<Integer> bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
 
-        public Builder setBitrate(Integer bitrate) {
+        public Builder bitrate(Integer bitrate) {
             this.bitrate = Input.of(Objects.requireNonNull(bitrate));
             return this;
         }

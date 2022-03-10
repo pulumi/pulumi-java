@@ -383,222 +383,222 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookState = defaults.webhookState;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDefaultResponsePlatforms(@Nullable Input<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms) {
+        public Builder defaultResponsePlatforms(@Nullable Input<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = defaultResponsePlatforms;
             return this;
         }
 
-        public Builder setDefaultResponsePlatforms(@Nullable List<IntentDefaultResponsePlatformsItem> defaultResponsePlatforms) {
+        public Builder defaultResponsePlatforms(@Nullable List<IntentDefaultResponsePlatformsItem> defaultResponsePlatforms) {
             this.defaultResponsePlatforms = Input.ofNullable(defaultResponsePlatforms);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEndInteraction(@Nullable Input<Boolean> endInteraction) {
+        public Builder endInteraction(@Nullable Input<Boolean> endInteraction) {
             this.endInteraction = endInteraction;
             return this;
         }
 
-        public Builder setEndInteraction(@Nullable Boolean endInteraction) {
+        public Builder endInteraction(@Nullable Boolean endInteraction) {
             this.endInteraction = Input.ofNullable(endInteraction);
             return this;
         }
 
-        public Builder setEvents(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Input<List<String>> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = Input.ofNullable(events);
             return this;
         }
 
-        public Builder setInputContextNames(@Nullable Input<List<String>> inputContextNames) {
+        public Builder inputContextNames(@Nullable Input<List<String>> inputContextNames) {
             this.inputContextNames = inputContextNames;
             return this;
         }
 
-        public Builder setInputContextNames(@Nullable List<String> inputContextNames) {
+        public Builder inputContextNames(@Nullable List<String> inputContextNames) {
             this.inputContextNames = Input.ofNullable(inputContextNames);
             return this;
         }
 
-        public Builder setIntentView(@Nullable Input<String> intentView) {
+        public Builder intentView(@Nullable Input<String> intentView) {
             this.intentView = intentView;
             return this;
         }
 
-        public Builder setIntentView(@Nullable String intentView) {
+        public Builder intentView(@Nullable String intentView) {
             this.intentView = Input.ofNullable(intentView);
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Boolean isFallback) {
+        public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Input.ofNullable(isFallback);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLiveAgentHandoff(@Nullable Input<Boolean> liveAgentHandoff) {
+        public Builder liveAgentHandoff(@Nullable Input<Boolean> liveAgentHandoff) {
             this.liveAgentHandoff = liveAgentHandoff;
             return this;
         }
 
-        public Builder setLiveAgentHandoff(@Nullable Boolean liveAgentHandoff) {
+        public Builder liveAgentHandoff(@Nullable Boolean liveAgentHandoff) {
             this.liveAgentHandoff = Input.ofNullable(liveAgentHandoff);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMessages(@Nullable Input<List<GoogleCloudDialogflowV2IntentMessageArgs>> messages) {
+        public Builder messages(@Nullable Input<List<GoogleCloudDialogflowV2IntentMessageArgs>> messages) {
             this.messages = messages;
             return this;
         }
 
-        public Builder setMessages(@Nullable List<GoogleCloudDialogflowV2IntentMessageArgs> messages) {
+        public Builder messages(@Nullable List<GoogleCloudDialogflowV2IntentMessageArgs> messages) {
             this.messages = Input.ofNullable(messages);
             return this;
         }
 
-        public Builder setMlDisabled(@Nullable Input<Boolean> mlDisabled) {
+        public Builder mlDisabled(@Nullable Input<Boolean> mlDisabled) {
             this.mlDisabled = mlDisabled;
             return this;
         }
 
-        public Builder setMlDisabled(@Nullable Boolean mlDisabled) {
+        public Builder mlDisabled(@Nullable Boolean mlDisabled) {
             this.mlDisabled = Input.ofNullable(mlDisabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable Input<List<GoogleCloudDialogflowV2ContextArgs>> outputContexts) {
+        public Builder outputContexts(@Nullable Input<List<GoogleCloudDialogflowV2ContextArgs>> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable List<GoogleCloudDialogflowV2ContextArgs> outputContexts) {
+        public Builder outputContexts(@Nullable List<GoogleCloudDialogflowV2ContextArgs> outputContexts) {
             this.outputContexts = Input.ofNullable(outputContexts);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<GoogleCloudDialogflowV2IntentParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<GoogleCloudDialogflowV2IntentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<GoogleCloudDialogflowV2IntentParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<GoogleCloudDialogflowV2IntentParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setParentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable Input<String> parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
 
-        public Builder setParentFollowupIntentName(@Nullable String parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = Input.ofNullable(parentFollowupIntentName);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResetContexts(@Nullable Input<Boolean> resetContexts) {
+        public Builder resetContexts(@Nullable Input<Boolean> resetContexts) {
             this.resetContexts = resetContexts;
             return this;
         }
 
-        public Builder setResetContexts(@Nullable Boolean resetContexts) {
+        public Builder resetContexts(@Nullable Boolean resetContexts) {
             this.resetContexts = Input.ofNullable(resetContexts);
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable Input<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable Input<List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowV2IntentTrainingPhraseArgs> trainingPhrases) {
             this.trainingPhrases = Input.ofNullable(trainingPhrases);
             return this;
         }
 
-        public Builder setWebhookState(@Nullable Input<IntentWebhookState> webhookState) {
+        public Builder webhookState(@Nullable Input<IntentWebhookState> webhookState) {
             this.webhookState = webhookState;
             return this;
         }
 
-        public Builder setWebhookState(@Nullable IntentWebhookState webhookState) {
+        public Builder webhookState(@Nullable IntentWebhookState webhookState) {
             this.webhookState = Input.ofNullable(webhookState);
             return this;
         }

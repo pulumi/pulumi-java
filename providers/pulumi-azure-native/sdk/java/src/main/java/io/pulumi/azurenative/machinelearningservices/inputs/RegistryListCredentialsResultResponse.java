@@ -76,17 +76,17 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
     	      this.username = defaults.username;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<PasswordResponse> passwords) {
+        public Builder passwords(@Nullable List<PasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

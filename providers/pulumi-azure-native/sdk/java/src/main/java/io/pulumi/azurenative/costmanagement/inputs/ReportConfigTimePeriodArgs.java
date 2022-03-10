@@ -73,22 +73,22 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(Input<String> from) {
+        public Builder from(Input<String> from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Input.of(Objects.requireNonNull(from));
             return this;
         }
 
-        public Builder setTo(Input<String> to) {
+        public Builder to(Input<String> to) {
             this.to = Objects.requireNonNull(to);
             return this;
         }
 
-        public Builder setTo(String to) {
+        public Builder to(String to) {
             this.to = Input.of(Objects.requireNonNull(to));
             return this;
         }

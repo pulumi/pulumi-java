@@ -163,37 +163,37 @@ public final class FlexibleAppVersionHandlerStaticFiles {
     	      this.uploadPathRegex = defaults.uploadPathRegex;
         }
 
-        public Builder setApplicationReadable(@Nullable Boolean applicationReadable) {
+        public Builder applicationReadable(@Nullable Boolean applicationReadable) {
             this.applicationReadable = applicationReadable;
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable Map<String,String> httpHeaders) {
+        public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setRequireMatchingFile(@Nullable Boolean requireMatchingFile) {
+        public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
             this.requireMatchingFile = requireMatchingFile;
             return this;
         }
 
-        public Builder setUploadPathRegex(@Nullable String uploadPathRegex) {
+        public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }

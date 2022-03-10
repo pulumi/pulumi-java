@@ -102,22 +102,22 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetCoipPoolFilter> filters) {
+        public Builder filters(@Nullable List<GetCoipPoolFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
-        public Builder setPoolId(@Nullable String poolId) {
+        public Builder poolId(@Nullable String poolId) {
             this.poolId = poolId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -154,72 +154,72 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     	      this.username = defaults.username;
         }
 
-        public Builder setDnsIps(Input<List<String>> dnsIps) {
+        public Builder dnsIps(Input<List<String>> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
 
-        public Builder setDnsIps(List<String> dnsIps) {
+        public Builder dnsIps(List<String> dnsIps) {
             this.dnsIps = Input.of(Objects.requireNonNull(dnsIps));
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setFileSystemAdministratorsGroup(@Nullable Input<String> fileSystemAdministratorsGroup) {
+        public Builder fileSystemAdministratorsGroup(@Nullable Input<String> fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
 
-        public Builder setFileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
+        public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = Input.ofNullable(fileSystemAdministratorsGroup);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguidshedName(@Nullable Input<String> organizationalUnitDistinguidshedName) {
+        public Builder organizationalUnitDistinguidshedName(@Nullable Input<String> organizationalUnitDistinguidshedName) {
             this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
+        public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
             this.organizationalUnitDistinguidshedName = Input.ofNullable(organizationalUnitDistinguidshedName);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

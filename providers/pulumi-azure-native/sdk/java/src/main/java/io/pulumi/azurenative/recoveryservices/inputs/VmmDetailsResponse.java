@@ -56,7 +56,7 @@ public final class VmmDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }

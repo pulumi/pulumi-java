@@ -76,12 +76,12 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
     	      this.timeAndCapacity = defaults.timeAndCapacity;
         }
 
-        public Builder setDays(@Nullable List<String> days) {
+        public Builder days(@Nullable List<String> days) {
             this.days = days;
             return this;
         }
 
-        public Builder setTimeAndCapacity(@Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
+        public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }

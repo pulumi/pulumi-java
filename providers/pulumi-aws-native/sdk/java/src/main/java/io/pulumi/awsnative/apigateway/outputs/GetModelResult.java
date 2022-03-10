@@ -68,12 +68,12 @@ public final class GetModelResult {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }

@@ -109,42 +109,42 @@ public final class GuestPoliciesRecipeInstallStepFileCopyGetArgs extends io.pulu
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setArtifactId(Input<String> artifactId) {
+        public Builder artifactId(Input<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Input.ofNullable(overwrite);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Input<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }

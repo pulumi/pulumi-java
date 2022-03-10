@@ -75,22 +75,22 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.acceleratorTypeUri = defaults.acceleratorTypeUri;
         }
 
-        public Builder setAcceleratorCount(@Nullable Input<Integer> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Input<Integer> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
-        public Builder setAcceleratorCount(@Nullable Integer acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
             this.acceleratorCount = Input.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorTypeUri(@Nullable Input<String> acceleratorTypeUri) {
+        public Builder acceleratorTypeUri(@Nullable Input<String> acceleratorTypeUri) {
             this.acceleratorTypeUri = acceleratorTypeUri;
             return this;
         }
 
-        public Builder setAcceleratorTypeUri(@Nullable String acceleratorTypeUri) {
+        public Builder acceleratorTypeUri(@Nullable String acceleratorTypeUri) {
             this.acceleratorTypeUri = Input.ofNullable(acceleratorTypeUri);
             return this;
         }

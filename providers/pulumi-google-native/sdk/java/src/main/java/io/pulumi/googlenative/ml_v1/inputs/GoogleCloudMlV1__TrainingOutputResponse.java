@@ -174,42 +174,42 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
     	      this.webAccessUris = defaults.webAccessUris;
         }
 
-        public Builder setBuiltInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
             return this;
         }
 
-        public Builder setCompletedTrialCount(String completedTrialCount) {
+        public Builder completedTrialCount(String completedTrialCount) {
             this.completedTrialCount = Objects.requireNonNull(completedTrialCount);
             return this;
         }
 
-        public Builder setConsumedMLUnits(Double consumedMLUnits) {
+        public Builder consumedMLUnits(Double consumedMLUnits) {
             this.consumedMLUnits = Objects.requireNonNull(consumedMLUnits);
             return this;
         }
 
-        public Builder setHyperparameterMetricTag(String hyperparameterMetricTag) {
+        public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
             this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
             return this;
         }
 
-        public Builder setIsBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
+        public Builder isBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
             this.isBuiltInAlgorithmJob = Objects.requireNonNull(isBuiltInAlgorithmJob);
             return this;
         }
 
-        public Builder setIsHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
+        public Builder isHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
             this.isHyperparameterTuningJob = Objects.requireNonNull(isHyperparameterTuningJob);
             return this;
         }
 
-        public Builder setTrials(List<GoogleCloudMlV1__HyperparameterOutputResponse> trials) {
+        public Builder trials(List<GoogleCloudMlV1__HyperparameterOutputResponse> trials) {
             this.trials = Objects.requireNonNull(trials);
             return this;
         }
 
-        public Builder setWebAccessUris(Map<String,String> webAccessUris) {
+        public Builder webAccessUris(Map<String,String> webAccessUris) {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }

@@ -48,7 +48,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     	      this.recordRowPath = defaults.recordRowPath;
         }
 
-        public Builder setRecordRowPath(String recordRowPath) {
+        public Builder recordRowPath(String recordRowPath) {
             this.recordRowPath = Objects.requireNonNull(recordRowPath);
             return this;
         }

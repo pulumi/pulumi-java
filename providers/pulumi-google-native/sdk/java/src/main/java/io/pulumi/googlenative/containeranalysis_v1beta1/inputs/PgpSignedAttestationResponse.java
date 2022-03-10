@@ -88,17 +88,17 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
     	      this.signature = defaults.signature;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setPgpKeyId(String pgpKeyId) {
+        public Builder pgpKeyId(String pgpKeyId) {
             this.pgpKeyId = Objects.requireNonNull(pgpKeyId);
             return this;
         }
 
-        public Builder setSignature(String signature) {
+        public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }

@@ -106,22 +106,22 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierName(@Nullable String carrierName) {
+        public Builder carrierName(@Nullable String carrierName) {
             this.carrierName = carrierName;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setTrackingId(@Nullable String trackingId) {
+        public Builder trackingId(@Nullable String trackingId) {
             this.trackingId = trackingId;
             return this;
         }
 
-        public Builder setTrackingUrl(@Nullable String trackingUrl) {
+        public Builder trackingUrl(@Nullable String trackingUrl) {
             this.trackingUrl = trackingUrl;
             return this;
         }

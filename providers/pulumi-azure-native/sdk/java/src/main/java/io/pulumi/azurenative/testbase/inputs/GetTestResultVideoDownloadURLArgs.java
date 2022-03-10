@@ -100,22 +100,22 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
     	      this.testResultName = defaults.testResultName;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTestBaseAccountName(String testBaseAccountName) {
+        public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
-        public Builder setTestResultName(String testResultName) {
+        public Builder testResultName(String testResultName) {
             this.testResultName = Objects.requireNonNull(testResultName);
             return this;
         }

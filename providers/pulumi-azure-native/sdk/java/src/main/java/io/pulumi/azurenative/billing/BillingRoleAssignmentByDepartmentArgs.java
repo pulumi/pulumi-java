@@ -166,82 +166,82 @@ public final class BillingRoleAssignmentByDepartmentArgs extends io.pulumi.resou
     	      this.userEmailAddress = defaults.userEmailAddress;
         }
 
-        public Builder setBillingAccountName(Input<String> billingAccountName) {
+        public Builder billingAccountName(Input<String> billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
 
-        public Builder setBillingAccountName(String billingAccountName) {
+        public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Input.of(Objects.requireNonNull(billingAccountName));
             return this;
         }
 
-        public Builder setBillingRoleAssignmentName(@Nullable Input<String> billingRoleAssignmentName) {
+        public Builder billingRoleAssignmentName(@Nullable Input<String> billingRoleAssignmentName) {
             this.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
-        public Builder setBillingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
+        public Builder billingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
             this.billingRoleAssignmentName = Input.ofNullable(billingRoleAssignmentName);
             return this;
         }
 
-        public Builder setDepartmentName(Input<String> departmentName) {
+        public Builder departmentName(Input<String> departmentName) {
             this.departmentName = Objects.requireNonNull(departmentName);
             return this;
         }
 
-        public Builder setDepartmentName(String departmentName) {
+        public Builder departmentName(String departmentName) {
             this.departmentName = Input.of(Objects.requireNonNull(departmentName));
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setPrincipalTenantId(@Nullable Input<String> principalTenantId) {
+        public Builder principalTenantId(@Nullable Input<String> principalTenantId) {
             this.principalTenantId = principalTenantId;
             return this;
         }
 
-        public Builder setPrincipalTenantId(@Nullable String principalTenantId) {
+        public Builder principalTenantId(@Nullable String principalTenantId) {
             this.principalTenantId = Input.ofNullable(principalTenantId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder setUserAuthenticationType(@Nullable Input<String> userAuthenticationType) {
+        public Builder userAuthenticationType(@Nullable Input<String> userAuthenticationType) {
             this.userAuthenticationType = userAuthenticationType;
             return this;
         }
 
-        public Builder setUserAuthenticationType(@Nullable String userAuthenticationType) {
+        public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
             this.userAuthenticationType = Input.ofNullable(userAuthenticationType);
             return this;
         }
 
-        public Builder setUserEmailAddress(@Nullable Input<String> userEmailAddress) {
+        public Builder userEmailAddress(@Nullable Input<String> userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
 
-        public Builder setUserEmailAddress(@Nullable String userEmailAddress) {
+        public Builder userEmailAddress(@Nullable String userEmailAddress) {
             this.userEmailAddress = Input.ofNullable(userEmailAddress);
             return this;
         }

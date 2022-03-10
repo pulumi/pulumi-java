@@ -263,72 +263,72 @@ public final class GetRoutineResult {
     	      this.strictMode = defaults.strictMode;
         }
 
-        public Builder setArguments(List<ArgumentResponse> arguments) {
+        public Builder arguments(List<ArgumentResponse> arguments) {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDefinitionBody(String definitionBody) {
+        public Builder definitionBody(String definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDeterminismLevel(String determinismLevel) {
+        public Builder determinismLevel(String determinismLevel) {
             this.determinismLevel = Objects.requireNonNull(determinismLevel);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setImportedLibraries(List<String> importedLibraries) {
+        public Builder importedLibraries(List<String> importedLibraries) {
             this.importedLibraries = Objects.requireNonNull(importedLibraries);
             return this;
         }
 
-        public Builder setLanguage(String language) {
+        public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setReturnTableType(StandardSqlTableTypeResponse returnTableType) {
+        public Builder returnTableType(StandardSqlTableTypeResponse returnTableType) {
             this.returnTableType = Objects.requireNonNull(returnTableType);
             return this;
         }
 
-        public Builder setReturnType(StandardSqlDataTypeResponse returnType) {
+        public Builder returnType(StandardSqlDataTypeResponse returnType) {
             this.returnType = Objects.requireNonNull(returnType);
             return this;
         }
 
-        public Builder setRoutineReference(RoutineReferenceResponse routineReference) {
+        public Builder routineReference(RoutineReferenceResponse routineReference) {
             this.routineReference = Objects.requireNonNull(routineReference);
             return this;
         }
 
-        public Builder setRoutineType(String routineType) {
+        public Builder routineType(String routineType) {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }
 
-        public Builder setStrictMode(Boolean strictMode) {
+        public Builder strictMode(Boolean strictMode) {
             this.strictMode = Objects.requireNonNull(strictMode);
             return this;
         }

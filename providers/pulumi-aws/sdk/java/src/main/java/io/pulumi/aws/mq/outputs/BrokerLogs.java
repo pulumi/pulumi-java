@@ -67,12 +67,12 @@ public final class BrokerLogs {
     	      this.general = defaults.general;
         }
 
-        public Builder setAudit(@Nullable Boolean audit) {
+        public Builder audit(@Nullable Boolean audit) {
             this.audit = audit;
             return this;
         }
 
-        public Builder setGeneral(@Nullable Boolean general) {
+        public Builder general(@Nullable Boolean general) {
             this.general = general;
             return this;
         }

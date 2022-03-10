@@ -134,62 +134,62 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Input<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Input.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder setPolicyDocument(@Nullable Input<String> policyDocument) {
+        public Builder policyDocument(@Nullable Input<String> policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }
 
-        public Builder setPolicyDocument(@Nullable String policyDocument) {
+        public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = Input.ofNullable(policyDocument);
             return this;
         }
 
-        public Builder setPolicyRevision(@Nullable Input<String> policyRevision) {
+        public Builder policyRevision(@Nullable Input<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
 
-        public Builder setPolicyRevision(@Nullable String policyRevision) {
+        public Builder policyRevision(@Nullable String policyRevision) {
             this.policyRevision = Input.ofNullable(policyRevision);
             return this;
         }
 
-        public Builder setRepository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Input<String> repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = Input.ofNullable(repository);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }

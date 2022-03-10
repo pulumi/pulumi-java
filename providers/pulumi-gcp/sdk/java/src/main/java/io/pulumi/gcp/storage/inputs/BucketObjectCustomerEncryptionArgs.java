@@ -70,22 +70,22 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     	      this.encryptionKey = defaults.encryptionKey;
         }
 
-        public Builder setEncryptionAlgorithm(@Nullable Input<String> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable Input<String> encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(@Nullable String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = Input.ofNullable(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setEncryptionKey(Input<String> encryptionKey) {
+        public Builder encryptionKey(Input<String> encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
 
-        public Builder setEncryptionKey(String encryptionKey) {
+        public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Input.of(Objects.requireNonNull(encryptionKey));
             return this;
         }

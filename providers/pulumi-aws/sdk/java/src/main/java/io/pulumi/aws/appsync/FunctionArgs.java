@@ -184,92 +184,92 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncConfig = defaults.syncConfig;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setDataSource(Input<String> dataSource) {
+        public Builder dataSource(Input<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDataSource(String dataSource) {
+        public Builder dataSource(String dataSource) {
             this.dataSource = Input.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFunctionVersion(@Nullable Input<String> functionVersion) {
+        public Builder functionVersion(@Nullable Input<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
 
-        public Builder setFunctionVersion(@Nullable String functionVersion) {
+        public Builder functionVersion(@Nullable String functionVersion) {
             this.functionVersion = Input.ofNullable(functionVersion);
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Input<Integer> maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Input<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Integer maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Input.ofNullable(maxBatchSize);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequestMappingTemplate(Input<String> requestMappingTemplate) {
+        public Builder requestMappingTemplate(Input<String> requestMappingTemplate) {
             this.requestMappingTemplate = Objects.requireNonNull(requestMappingTemplate);
             return this;
         }
 
-        public Builder setRequestMappingTemplate(String requestMappingTemplate) {
+        public Builder requestMappingTemplate(String requestMappingTemplate) {
             this.requestMappingTemplate = Input.of(Objects.requireNonNull(requestMappingTemplate));
             return this;
         }
 
-        public Builder setResponseMappingTemplate(Input<String> responseMappingTemplate) {
+        public Builder responseMappingTemplate(Input<String> responseMappingTemplate) {
             this.responseMappingTemplate = Objects.requireNonNull(responseMappingTemplate);
             return this;
         }
 
-        public Builder setResponseMappingTemplate(String responseMappingTemplate) {
+        public Builder responseMappingTemplate(String responseMappingTemplate) {
             this.responseMappingTemplate = Input.of(Objects.requireNonNull(responseMappingTemplate));
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable Input<FunctionSyncConfigArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Input<FunctionSyncConfigArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable FunctionSyncConfigArgs syncConfig) {
+        public Builder syncConfig(@Nullable FunctionSyncConfigArgs syncConfig) {
             this.syncConfig = Input.ofNullable(syncConfig);
             return this;
         }

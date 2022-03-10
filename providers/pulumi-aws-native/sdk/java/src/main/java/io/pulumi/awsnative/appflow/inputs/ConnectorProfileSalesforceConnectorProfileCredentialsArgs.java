@@ -103,42 +103,42 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setClientCredentialsArn(@Nullable Input<String> clientCredentialsArn) {
+        public Builder clientCredentialsArn(@Nullable Input<String> clientCredentialsArn) {
             this.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
 
-        public Builder setClientCredentialsArn(@Nullable String clientCredentialsArn) {
+        public Builder clientCredentialsArn(@Nullable String clientCredentialsArn) {
             this.clientCredentialsArn = Input.ofNullable(clientCredentialsArn);
             return this;
         }
 
-        public Builder setConnectorOAuthRequest(@Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
-        public Builder setConnectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
             this.connectorOAuthRequest = Input.ofNullable(connectorOAuthRequest);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Input<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }

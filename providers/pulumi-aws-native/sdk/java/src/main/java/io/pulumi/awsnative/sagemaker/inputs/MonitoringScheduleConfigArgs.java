@@ -97,42 +97,42 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
     	      this.scheduleConfig = defaults.scheduleConfig;
         }
 
-        public Builder setMonitoringJobDefinition(@Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition) {
+        public Builder monitoringJobDefinition(@Nullable Input<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition) {
             this.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
 
-        public Builder setMonitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
+        public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinitionArgs monitoringJobDefinition) {
             this.monitoringJobDefinition = Input.ofNullable(monitoringJobDefinition);
             return this;
         }
 
-        public Builder setMonitoringJobDefinitionName(@Nullable Input<String> monitoringJobDefinitionName) {
+        public Builder monitoringJobDefinitionName(@Nullable Input<String> monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
 
-        public Builder setMonitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
+        public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = Input.ofNullable(monitoringJobDefinitionName);
             return this;
         }
 
-        public Builder setMonitoringType(@Nullable Input<MonitoringScheduleMonitoringType> monitoringType) {
+        public Builder monitoringType(@Nullable Input<MonitoringScheduleMonitoringType> monitoringType) {
             this.monitoringType = monitoringType;
             return this;
         }
 
-        public Builder setMonitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
+        public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
             this.monitoringType = Input.ofNullable(monitoringType);
             return this;
         }
 
-        public Builder setScheduleConfig(@Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
+        public Builder scheduleConfig(@Nullable Input<MonitoringScheduleScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
             return this;
         }
 
-        public Builder setScheduleConfig(@Nullable MonitoringScheduleScheduleConfigArgs scheduleConfig) {
+        public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfigArgs scheduleConfig) {
             this.scheduleConfig = Input.ofNullable(scheduleConfig);
             return this;
         }

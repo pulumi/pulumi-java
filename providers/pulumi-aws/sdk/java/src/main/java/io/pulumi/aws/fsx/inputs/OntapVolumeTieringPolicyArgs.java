@@ -67,22 +67,22 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder setCoolingPeriod(@Nullable Input<Integer> coolingPeriod) {
+        public Builder coolingPeriod(@Nullable Input<Integer> coolingPeriod) {
             this.coolingPeriod = coolingPeriod;
             return this;
         }
 
-        public Builder setCoolingPeriod(@Nullable Integer coolingPeriod) {
+        public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
             this.coolingPeriod = Input.ofNullable(coolingPeriod);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

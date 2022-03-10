@@ -109,42 +109,42 @@ public final class PolicyDefinitionReferenceArgs extends io.pulumi.resources.Res
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder setGroupNames(@Nullable Input<List<String>> groupNames) {
+        public Builder groupNames(@Nullable Input<List<String>> groupNames) {
             this.groupNames = groupNames;
             return this;
         }
 
-        public Builder setGroupNames(@Nullable List<String> groupNames) {
+        public Builder groupNames(@Nullable List<String> groupNames) {
             this.groupNames = Input.ofNullable(groupNames);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicyDefinitionId(Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(Input<String> policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
-        public Builder setPolicyDefinitionId(String policyDefinitionId) {
+        public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Input.of(Objects.requireNonNull(policyDefinitionId));
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
             return this;
         }

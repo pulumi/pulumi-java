@@ -58,12 +58,12 @@ public final class ConnectorApacheKafkaCluster {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setBootstrapServers(String bootstrapServers) {
+        public Builder bootstrapServers(String bootstrapServers) {
             this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
             return this;
         }
 
-        public Builder setVpc(ConnectorVpc vpc) {
+        public Builder vpc(ConnectorVpc vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

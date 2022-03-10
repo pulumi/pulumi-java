@@ -48,7 +48,7 @@ public final class ListMachineLearningComputeKeysResult {
     	      this.computeType = defaults.computeType;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }

@@ -104,52 +104,52 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
     	      this.s3ObjectAcl = defaults.s3ObjectAcl;
         }
 
-        public Builder setCustomCname(@Nullable Input<String> customCname) {
+        public Builder customCname(@Nullable Input<String> customCname) {
             this.customCname = customCname;
             return this;
         }
 
-        public Builder setCustomCname(@Nullable String customCname) {
+        public Builder customCname(@Nullable String customCname) {
             this.customCname = Input.ofNullable(customCname);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Input<Integer> expirationInDays) {
+        public Builder expirationInDays(@Nullable Input<Integer> expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = Input.ofNullable(expirationInDays);
             return this;
         }
 
-        public Builder setS3BucketName(@Nullable Input<String> s3BucketName) {
+        public Builder s3BucketName(@Nullable Input<String> s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
 
-        public Builder setS3BucketName(@Nullable String s3BucketName) {
+        public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = Input.ofNullable(s3BucketName);
             return this;
         }
 
-        public Builder setS3ObjectAcl(@Nullable Input<String> s3ObjectAcl) {
+        public Builder s3ObjectAcl(@Nullable Input<String> s3ObjectAcl) {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }
 
-        public Builder setS3ObjectAcl(@Nullable String s3ObjectAcl) {
+        public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
             this.s3ObjectAcl = Input.ofNullable(s3ObjectAcl);
             return this;
         }

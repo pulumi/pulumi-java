@@ -117,27 +117,27 @@ public final class ClusterBrokerNodeGroupInfo {
     	      this.securityGroups = defaults.securityGroups;
         }
 
-        public Builder setAzDistribution(@Nullable String azDistribution) {
+        public Builder azDistribution(@Nullable String azDistribution) {
             this.azDistribution = azDistribution;
             return this;
         }
 
-        public Builder setClientSubnets(List<String> clientSubnets) {
+        public Builder clientSubnets(List<String> clientSubnets) {
             this.clientSubnets = Objects.requireNonNull(clientSubnets);
             return this;
         }
 
-        public Builder setEbsVolumeSize(Integer ebsVolumeSize) {
+        public Builder ebsVolumeSize(Integer ebsVolumeSize) {
             this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }

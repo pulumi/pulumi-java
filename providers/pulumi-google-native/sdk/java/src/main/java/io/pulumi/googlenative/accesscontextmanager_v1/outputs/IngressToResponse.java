@@ -67,12 +67,12 @@ public final class IngressToResponse {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setOperations(List<ApiOperationResponse> operations) {
+        public Builder operations(List<ApiOperationResponse> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
 
-        public Builder setResources(List<String> resources) {
+        public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }

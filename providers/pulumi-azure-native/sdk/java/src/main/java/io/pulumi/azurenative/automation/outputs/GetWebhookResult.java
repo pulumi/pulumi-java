@@ -262,72 +262,72 @@ public final class GetWebhookResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setLastInvokedTime(@Nullable String lastInvokedTime) {
+        public Builder lastInvokedTime(@Nullable String lastInvokedTime) {
             this.lastInvokedTime = lastInvokedTime;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRunOn(@Nullable String runOn) {
+        public Builder runOn(@Nullable String runOn) {
             this.runOn = runOn;
             return this;
         }
 
-        public Builder setRunbook(@Nullable RunbookAssociationPropertyResponse runbook) {
+        public Builder runbook(@Nullable RunbookAssociationPropertyResponse runbook) {
             this.runbook = runbook;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

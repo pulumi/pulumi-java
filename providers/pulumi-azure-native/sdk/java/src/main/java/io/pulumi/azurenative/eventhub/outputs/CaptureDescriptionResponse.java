@@ -134,32 +134,32 @@ public final class CaptureDescriptionResponse {
     	      this.skipEmptyArchives = defaults.skipEmptyArchives;
         }
 
-        public Builder setDestination(@Nullable DestinationResponse destination) {
+        public Builder destination(@Nullable DestinationResponse destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setSizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
+        public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
             this.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
 
-        public Builder setSkipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
+        public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }

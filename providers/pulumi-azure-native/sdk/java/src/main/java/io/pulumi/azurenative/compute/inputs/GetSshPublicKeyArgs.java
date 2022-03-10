@@ -68,12 +68,12 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sshPublicKeyName = defaults.sshPublicKeyName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSshPublicKeyName(String sshPublicKeyName) {
+        public Builder sshPublicKeyName(String sshPublicKeyName) {
             this.sshPublicKeyName = Objects.requireNonNull(sshPublicKeyName);
             return this;
         }

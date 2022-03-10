@@ -65,12 +65,12 @@ public final class GetRepositoryEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionType(String encryptionType) {
+        public Builder encryptionType(String encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }

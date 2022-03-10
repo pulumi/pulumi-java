@@ -75,22 +75,22 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
     	      this.bootDiskType = defaults.bootDiskType;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable String bootDiskType) {
+        public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = Input.ofNullable(bootDiskType);
             return this;
         }

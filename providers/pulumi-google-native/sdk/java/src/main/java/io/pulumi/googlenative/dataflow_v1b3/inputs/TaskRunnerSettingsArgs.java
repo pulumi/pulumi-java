@@ -349,192 +349,192 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.workflowFileName = defaults.workflowFileName;
         }
 
-        public Builder setAlsologtostderr(@Nullable Input<Boolean> alsologtostderr) {
+        public Builder alsologtostderr(@Nullable Input<Boolean> alsologtostderr) {
             this.alsologtostderr = alsologtostderr;
             return this;
         }
 
-        public Builder setAlsologtostderr(@Nullable Boolean alsologtostderr) {
+        public Builder alsologtostderr(@Nullable Boolean alsologtostderr) {
             this.alsologtostderr = Input.ofNullable(alsologtostderr);
             return this;
         }
 
-        public Builder setBaseTaskDir(@Nullable Input<String> baseTaskDir) {
+        public Builder baseTaskDir(@Nullable Input<String> baseTaskDir) {
             this.baseTaskDir = baseTaskDir;
             return this;
         }
 
-        public Builder setBaseTaskDir(@Nullable String baseTaskDir) {
+        public Builder baseTaskDir(@Nullable String baseTaskDir) {
             this.baseTaskDir = Input.ofNullable(baseTaskDir);
             return this;
         }
 
-        public Builder setBaseUrl(@Nullable Input<String> baseUrl) {
+        public Builder baseUrl(@Nullable Input<String> baseUrl) {
             this.baseUrl = baseUrl;
             return this;
         }
 
-        public Builder setBaseUrl(@Nullable String baseUrl) {
+        public Builder baseUrl(@Nullable String baseUrl) {
             this.baseUrl = Input.ofNullable(baseUrl);
             return this;
         }
 
-        public Builder setCommandlinesFileName(@Nullable Input<String> commandlinesFileName) {
+        public Builder commandlinesFileName(@Nullable Input<String> commandlinesFileName) {
             this.commandlinesFileName = commandlinesFileName;
             return this;
         }
 
-        public Builder setCommandlinesFileName(@Nullable String commandlinesFileName) {
+        public Builder commandlinesFileName(@Nullable String commandlinesFileName) {
             this.commandlinesFileName = Input.ofNullable(commandlinesFileName);
             return this;
         }
 
-        public Builder setContinueOnException(@Nullable Input<Boolean> continueOnException) {
+        public Builder continueOnException(@Nullable Input<Boolean> continueOnException) {
             this.continueOnException = continueOnException;
             return this;
         }
 
-        public Builder setContinueOnException(@Nullable Boolean continueOnException) {
+        public Builder continueOnException(@Nullable Boolean continueOnException) {
             this.continueOnException = Input.ofNullable(continueOnException);
             return this;
         }
 
-        public Builder setDataflowApiVersion(@Nullable Input<String> dataflowApiVersion) {
+        public Builder dataflowApiVersion(@Nullable Input<String> dataflowApiVersion) {
             this.dataflowApiVersion = dataflowApiVersion;
             return this;
         }
 
-        public Builder setDataflowApiVersion(@Nullable String dataflowApiVersion) {
+        public Builder dataflowApiVersion(@Nullable String dataflowApiVersion) {
             this.dataflowApiVersion = Input.ofNullable(dataflowApiVersion);
             return this;
         }
 
-        public Builder setHarnessCommand(@Nullable Input<String> harnessCommand) {
+        public Builder harnessCommand(@Nullable Input<String> harnessCommand) {
             this.harnessCommand = harnessCommand;
             return this;
         }
 
-        public Builder setHarnessCommand(@Nullable String harnessCommand) {
+        public Builder harnessCommand(@Nullable String harnessCommand) {
             this.harnessCommand = Input.ofNullable(harnessCommand);
             return this;
         }
 
-        public Builder setLanguageHint(@Nullable Input<String> languageHint) {
+        public Builder languageHint(@Nullable Input<String> languageHint) {
             this.languageHint = languageHint;
             return this;
         }
 
-        public Builder setLanguageHint(@Nullable String languageHint) {
+        public Builder languageHint(@Nullable String languageHint) {
             this.languageHint = Input.ofNullable(languageHint);
             return this;
         }
 
-        public Builder setLogDir(@Nullable Input<String> logDir) {
+        public Builder logDir(@Nullable Input<String> logDir) {
             this.logDir = logDir;
             return this;
         }
 
-        public Builder setLogDir(@Nullable String logDir) {
+        public Builder logDir(@Nullable String logDir) {
             this.logDir = Input.ofNullable(logDir);
             return this;
         }
 
-        public Builder setLogToSerialconsole(@Nullable Input<Boolean> logToSerialconsole) {
+        public Builder logToSerialconsole(@Nullable Input<Boolean> logToSerialconsole) {
             this.logToSerialconsole = logToSerialconsole;
             return this;
         }
 
-        public Builder setLogToSerialconsole(@Nullable Boolean logToSerialconsole) {
+        public Builder logToSerialconsole(@Nullable Boolean logToSerialconsole) {
             this.logToSerialconsole = Input.ofNullable(logToSerialconsole);
             return this;
         }
 
-        public Builder setLogUploadLocation(@Nullable Input<String> logUploadLocation) {
+        public Builder logUploadLocation(@Nullable Input<String> logUploadLocation) {
             this.logUploadLocation = logUploadLocation;
             return this;
         }
 
-        public Builder setLogUploadLocation(@Nullable String logUploadLocation) {
+        public Builder logUploadLocation(@Nullable String logUploadLocation) {
             this.logUploadLocation = Input.ofNullable(logUploadLocation);
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Input.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder setParallelWorkerSettings(@Nullable Input<WorkerSettingsArgs> parallelWorkerSettings) {
+        public Builder parallelWorkerSettings(@Nullable Input<WorkerSettingsArgs> parallelWorkerSettings) {
             this.parallelWorkerSettings = parallelWorkerSettings;
             return this;
         }
 
-        public Builder setParallelWorkerSettings(@Nullable WorkerSettingsArgs parallelWorkerSettings) {
+        public Builder parallelWorkerSettings(@Nullable WorkerSettingsArgs parallelWorkerSettings) {
             this.parallelWorkerSettings = Input.ofNullable(parallelWorkerSettings);
             return this;
         }
 
-        public Builder setStreamingWorkerMainClass(@Nullable Input<String> streamingWorkerMainClass) {
+        public Builder streamingWorkerMainClass(@Nullable Input<String> streamingWorkerMainClass) {
             this.streamingWorkerMainClass = streamingWorkerMainClass;
             return this;
         }
 
-        public Builder setStreamingWorkerMainClass(@Nullable String streamingWorkerMainClass) {
+        public Builder streamingWorkerMainClass(@Nullable String streamingWorkerMainClass) {
             this.streamingWorkerMainClass = Input.ofNullable(streamingWorkerMainClass);
             return this;
         }
 
-        public Builder setTaskGroup(@Nullable Input<String> taskGroup) {
+        public Builder taskGroup(@Nullable Input<String> taskGroup) {
             this.taskGroup = taskGroup;
             return this;
         }
 
-        public Builder setTaskGroup(@Nullable String taskGroup) {
+        public Builder taskGroup(@Nullable String taskGroup) {
             this.taskGroup = Input.ofNullable(taskGroup);
             return this;
         }
 
-        public Builder setTaskUser(@Nullable Input<String> taskUser) {
+        public Builder taskUser(@Nullable Input<String> taskUser) {
             this.taskUser = taskUser;
             return this;
         }
 
-        public Builder setTaskUser(@Nullable String taskUser) {
+        public Builder taskUser(@Nullable String taskUser) {
             this.taskUser = Input.ofNullable(taskUser);
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable String tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder setVmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Input<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = Input.ofNullable(vmId);
             return this;
         }
 
-        public Builder setWorkflowFileName(@Nullable Input<String> workflowFileName) {
+        public Builder workflowFileName(@Nullable Input<String> workflowFileName) {
             this.workflowFileName = workflowFileName;
             return this;
         }
 
-        public Builder setWorkflowFileName(@Nullable String workflowFileName) {
+        public Builder workflowFileName(@Nullable String workflowFileName) {
             this.workflowFileName = Input.ofNullable(workflowFileName);
             return this;
         }

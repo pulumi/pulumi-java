@@ -92,32 +92,32 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setMaxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Input.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Input.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<ScaleRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<ScaleRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<ScaleRuleArgs> rules) {
+        public Builder rules(@Nullable List<ScaleRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

@@ -76,22 +76,22 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.osDisks = defaults.osDisks;
         }
 
-        public Builder setHanaSids(@Nullable Input<List<SAPSystemIDArgs>> hanaSids) {
+        public Builder hanaSids(@Nullable Input<List<SAPSystemIDArgs>> hanaSids) {
             this.hanaSids = hanaSids;
             return this;
         }
 
-        public Builder setHanaSids(@Nullable List<SAPSystemIDArgs> hanaSids) {
+        public Builder hanaSids(@Nullable List<SAPSystemIDArgs> hanaSids) {
             this.hanaSids = Input.ofNullable(hanaSids);
             return this;
         }
 
-        public Builder setOsDisks(@Nullable Input<List<DiskArgs>> osDisks) {
+        public Builder osDisks(@Nullable Input<List<DiskArgs>> osDisks) {
             this.osDisks = osDisks;
             return this;
         }
 
-        public Builder setOsDisks(@Nullable List<DiskArgs> osDisks) {
+        public Builder osDisks(@Nullable List<DiskArgs> osDisks) {
             this.osDisks = Input.ofNullable(osDisks);
             return this;
         }

@@ -52,12 +52,12 @@ public final class ReceiptRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder setRuleSetName(Input<String> ruleSetName) {
+        public Builder ruleSetName(Input<String> ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }
 
-        public Builder setRuleSetName(String ruleSetName) {
+        public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Input.of(Objects.requireNonNull(ruleSetName));
             return this;
         }

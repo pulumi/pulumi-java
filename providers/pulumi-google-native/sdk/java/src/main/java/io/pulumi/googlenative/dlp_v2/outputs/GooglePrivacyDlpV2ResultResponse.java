@@ -100,22 +100,22 @@ public final class GooglePrivacyDlpV2ResultResponse {
     	      this.totalEstimatedBytes = defaults.totalEstimatedBytes;
         }
 
-        public Builder setHybridStats(GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats) {
+        public Builder hybridStats(GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats) {
             this.hybridStats = Objects.requireNonNull(hybridStats);
             return this;
         }
 
-        public Builder setInfoTypeStats(List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats) {
+        public Builder infoTypeStats(List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats) {
             this.infoTypeStats = Objects.requireNonNull(infoTypeStats);
             return this;
         }
 
-        public Builder setProcessedBytes(String processedBytes) {
+        public Builder processedBytes(String processedBytes) {
             this.processedBytes = Objects.requireNonNull(processedBytes);
             return this;
         }
 
-        public Builder setTotalEstimatedBytes(String totalEstimatedBytes) {
+        public Builder totalEstimatedBytes(String totalEstimatedBytes) {
             this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
             return this;
         }

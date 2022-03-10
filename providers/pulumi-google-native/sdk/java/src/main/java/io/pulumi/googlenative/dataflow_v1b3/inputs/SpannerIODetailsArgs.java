@@ -90,32 +90,32 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     	      this.project = defaults.project;
         }
 
-        public Builder setDatabaseId(@Nullable Input<String> databaseId) {
+        public Builder databaseId(@Nullable Input<String> databaseId) {
             this.databaseId = databaseId;
             return this;
         }
 
-        public Builder setDatabaseId(@Nullable String databaseId) {
+        public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = Input.ofNullable(databaseId);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

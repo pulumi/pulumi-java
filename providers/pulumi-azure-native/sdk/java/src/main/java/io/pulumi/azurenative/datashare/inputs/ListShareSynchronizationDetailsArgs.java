@@ -279,77 +279,77 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
     	      this.synchronizationId = defaults.synchronizationId;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setConsumerEmail(@Nullable String consumerEmail) {
+        public Builder consumerEmail(@Nullable String consumerEmail) {
             this.consumerEmail = consumerEmail;
             return this;
         }
 
-        public Builder setConsumerName(@Nullable String consumerName) {
+        public Builder consumerName(@Nullable String consumerName) {
             this.consumerName = consumerName;
             return this;
         }
 
-        public Builder setConsumerTenantName(@Nullable String consumerTenantName) {
+        public Builder consumerTenantName(@Nullable String consumerTenantName) {
             this.consumerTenantName = consumerTenantName;
             return this;
         }
 
-        public Builder setDurationMs(@Nullable Integer durationMs) {
+        public Builder durationMs(@Nullable Integer durationMs) {
             this.durationMs = durationMs;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setOrderby(@Nullable String orderby) {
+        public Builder orderby(@Nullable String orderby) {
             this.orderby = orderby;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSynchronizationId(@Nullable String synchronizationId) {
+        public Builder synchronizationId(@Nullable String synchronizationId) {
             this.synchronizationId = synchronizationId;
             return this;
         }

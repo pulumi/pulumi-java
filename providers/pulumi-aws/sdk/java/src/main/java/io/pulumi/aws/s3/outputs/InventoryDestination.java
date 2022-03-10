@@ -48,7 +48,7 @@ public final class InventoryDestination {
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(InventoryDestinationBucket bucket) {
+        public Builder bucket(InventoryDestinationBucket bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }

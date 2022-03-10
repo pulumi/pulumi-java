@@ -57,12 +57,12 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cname = defaults.cname;
         }
 
-        public Builder setCname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Input<String> cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = Input.ofNullable(cname);
             return this;
         }

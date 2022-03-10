@@ -103,22 +103,22 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
     	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
         }
 
-        public Builder setNodeDeallocationOption(@Nullable String nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
-        public Builder setResizeTimeout(@Nullable String resizeTimeout) {
+        public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
 
-        public Builder setTargetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
-        public Builder setTargetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }

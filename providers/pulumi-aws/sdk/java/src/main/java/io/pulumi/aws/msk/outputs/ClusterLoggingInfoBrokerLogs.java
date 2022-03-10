@@ -61,17 +61,17 @@ public final class ClusterLoggingInfoBrokerLogs {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setCloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
-        public Builder setFirehose(@Nullable ClusterLoggingInfoBrokerLogsFirehose firehose) {
+        public Builder firehose(@Nullable ClusterLoggingInfoBrokerLogsFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setS3(@Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
+        public Builder s3(@Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
             this.s3 = s3;
             return this;
         }

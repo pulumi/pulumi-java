@@ -69,22 +69,22 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     	      this.rollback = defaults.rollback;
         }
 
-        public Builder setEnable(Input<Boolean> enable) {
+        public Builder enable(Input<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Input.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder setRollback(Input<Boolean> rollback) {
+        public Builder rollback(Input<Boolean> rollback) {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }
 
-        public Builder setRollback(Boolean rollback) {
+        public Builder rollback(Boolean rollback) {
             this.rollback = Input.of(Objects.requireNonNull(rollback));
             return this;
         }

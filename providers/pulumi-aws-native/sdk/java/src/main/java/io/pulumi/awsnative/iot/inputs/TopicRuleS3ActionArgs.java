@@ -87,42 +87,42 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setCannedAcl(@Nullable Input<TopicRuleCannedAccessControlList> cannedAcl) {
+        public Builder cannedAcl(@Nullable Input<TopicRuleCannedAccessControlList> cannedAcl) {
             this.cannedAcl = cannedAcl;
             return this;
         }
 
-        public Builder setCannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
+        public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
             this.cannedAcl = Input.ofNullable(cannedAcl);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

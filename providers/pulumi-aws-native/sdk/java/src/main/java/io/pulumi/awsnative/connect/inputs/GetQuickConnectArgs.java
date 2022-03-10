@@ -51,7 +51,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.quickConnectArn = defaults.quickConnectArn;
         }
 
-        public Builder setQuickConnectArn(String quickConnectArn) {
+        public Builder quickConnectArn(String quickConnectArn) {
             this.quickConnectArn = Objects.requireNonNull(quickConnectArn);
             return this;
         }

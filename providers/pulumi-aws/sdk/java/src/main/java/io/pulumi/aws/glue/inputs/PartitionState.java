@@ -181,92 +181,92 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setLastAccessedTime(@Nullable Input<String> lastAccessedTime) {
+        public Builder lastAccessedTime(@Nullable Input<String> lastAccessedTime) {
             this.lastAccessedTime = lastAccessedTime;
             return this;
         }
 
-        public Builder setLastAccessedTime(@Nullable String lastAccessedTime) {
+        public Builder lastAccessedTime(@Nullable String lastAccessedTime) {
             this.lastAccessedTime = Input.ofNullable(lastAccessedTime);
             return this;
         }
 
-        public Builder setLastAnalyzedTime(@Nullable Input<String> lastAnalyzedTime) {
+        public Builder lastAnalyzedTime(@Nullable Input<String> lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
             return this;
         }
 
-        public Builder setLastAnalyzedTime(@Nullable String lastAnalyzedTime) {
+        public Builder lastAnalyzedTime(@Nullable String lastAnalyzedTime) {
             this.lastAnalyzedTime = Input.ofNullable(lastAnalyzedTime);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPartitionValues(@Nullable Input<List<String>> partitionValues) {
+        public Builder partitionValues(@Nullable Input<List<String>> partitionValues) {
             this.partitionValues = partitionValues;
             return this;
         }
 
-        public Builder setPartitionValues(@Nullable List<String> partitionValues) {
+        public Builder partitionValues(@Nullable List<String> partitionValues) {
             this.partitionValues = Input.ofNullable(partitionValues);
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
 
-        public Builder setStorageDescriptor(@Nullable PartitionStorageDescriptorGetArgs storageDescriptor) {
+        public Builder storageDescriptor(@Nullable PartitionStorageDescriptorGetArgs storageDescriptor) {
             this.storageDescriptor = Input.ofNullable(storageDescriptor);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

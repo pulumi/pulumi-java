@@ -153,37 +153,37 @@ public final class ManagedIntegrationRuntimeResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
+        public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
             this.computeProperties = computeProperties;
             return this;
         }
 
-        public Builder setCustomerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork) {
+        public Builder customerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork) {
             this.customerVirtualNetwork = customerVirtualNetwork;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setManagedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
-        public Builder setSsisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
+        public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

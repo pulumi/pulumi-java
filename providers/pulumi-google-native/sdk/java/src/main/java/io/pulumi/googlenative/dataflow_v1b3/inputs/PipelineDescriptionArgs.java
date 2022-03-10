@@ -93,32 +93,32 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     	      this.originalPipelineTransform = defaults.originalPipelineTransform;
         }
 
-        public Builder setDisplayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
+        public Builder displayData(@Nullable Input<List<DisplayDataArgs>> displayData) {
             this.displayData = displayData;
             return this;
         }
 
-        public Builder setDisplayData(@Nullable List<DisplayDataArgs> displayData) {
+        public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
             this.displayData = Input.ofNullable(displayData);
             return this;
         }
 
-        public Builder setExecutionPipelineStage(@Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
+        public Builder executionPipelineStage(@Nullable Input<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
             this.executionPipelineStage = executionPipelineStage;
             return this;
         }
 
-        public Builder setExecutionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
+        public Builder executionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
             this.executionPipelineStage = Input.ofNullable(executionPipelineStage);
             return this;
         }
 
-        public Builder setOriginalPipelineTransform(@Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform) {
+        public Builder originalPipelineTransform(@Nullable Input<List<TransformSummaryArgs>> originalPipelineTransform) {
             this.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
 
-        public Builder setOriginalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
+        public Builder originalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
             this.originalPipelineTransform = Input.ofNullable(originalPipelineTransform);
             return this;
         }

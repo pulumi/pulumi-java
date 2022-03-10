@@ -86,32 +86,32 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResolverRuleId(Input<String> resolverRuleId) {
+        public Builder resolverRuleId(Input<String> resolverRuleId) {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }
 
-        public Builder setResolverRuleId(String resolverRuleId) {
+        public Builder resolverRuleId(String resolverRuleId) {
             this.resolverRuleId = Input.of(Objects.requireNonNull(resolverRuleId));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

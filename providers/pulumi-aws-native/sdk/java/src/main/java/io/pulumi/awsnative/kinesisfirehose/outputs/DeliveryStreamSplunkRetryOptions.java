@@ -42,7 +42,7 @@ public final class DeliveryStreamSplunkRetryOptions {
     	      this.durationInSeconds = defaults.durationInSeconds;
         }
 
-        public Builder setDurationInSeconds(@Nullable Integer durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }

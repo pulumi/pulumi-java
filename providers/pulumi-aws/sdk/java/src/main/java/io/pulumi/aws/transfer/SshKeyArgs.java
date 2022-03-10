@@ -85,32 +85,32 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setBody(Input<String> body) {
+        public Builder body(Input<String> body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Input.of(Objects.requireNonNull(body));
             return this;
         }
 
-        public Builder setServerId(Input<String> serverId) {
+        public Builder serverId(Input<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Input.of(Objects.requireNonNull(serverId));
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

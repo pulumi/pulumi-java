@@ -72,12 +72,12 @@ public final class AzureFirewallIpGroupsResponse extends io.pulumi.resources.Inv
     	      this.id = defaults.id;
         }
 
-        public Builder setChangeNumber(String changeNumber) {
+        public Builder changeNumber(String changeNumber) {
             this.changeNumber = Objects.requireNonNull(changeNumber);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

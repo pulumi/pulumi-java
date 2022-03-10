@@ -122,52 +122,52 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentVersion(@Nullable Input<String> contentVersion) {
+        public Builder contentVersion(@Nullable Input<String> contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
-        public Builder setContentVersion(@Nullable String contentVersion) {
+        public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = Input.ofNullable(contentVersion);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Input<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setRelativePath(@Nullable Input<String> relativePath) {
+        public Builder relativePath(@Nullable Input<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = Input.ofNullable(relativePath);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

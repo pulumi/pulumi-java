@@ -85,17 +85,17 @@ public final class VirtualNodeSpecListenerTlsCertificate {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecListenerTlsCertificateAcm acm) {
+        public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcm acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

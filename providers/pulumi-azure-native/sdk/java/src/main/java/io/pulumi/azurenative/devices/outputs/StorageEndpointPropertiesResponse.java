@@ -99,22 +99,22 @@ public final class StorageEndpointPropertiesResponse {
     	      this.sasTtlAsIso8601 = defaults.sasTtlAsIso8601;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setSasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
+        public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }

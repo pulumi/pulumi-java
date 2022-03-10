@@ -53,7 +53,7 @@ public final class ResponsePlanNotificationTargetItem extends io.pulumi.resource
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }

@@ -92,32 +92,32 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
     	      this.name = defaults.name;
         }
 
-        public Builder setBackendAddresses(@Nullable Input<List<ApplicationGatewayBackendAddressArgs>> backendAddresses) {
+        public Builder backendAddresses(@Nullable Input<List<ApplicationGatewayBackendAddressArgs>> backendAddresses) {
             this.backendAddresses = backendAddresses;
             return this;
         }
 
-        public Builder setBackendAddresses(@Nullable List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
+        public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
             this.backendAddresses = Input.ofNullable(backendAddresses);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

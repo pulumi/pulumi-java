@@ -74,22 +74,22 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
     	      this.servicePerimeters = defaults.servicePerimeters;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setServicePerimeters(@Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
+        public Builder servicePerimeters(@Nullable Input<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters) {
             this.servicePerimeters = servicePerimeters;
             return this;
         }
 
-        public Builder setServicePerimeters(@Nullable List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
+        public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterGetArgs> servicePerimeters) {
             this.servicePerimeters = Input.ofNullable(servicePerimeters);
             return this;
         }

@@ -243,122 +243,122 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable Input<CachingTypes> caching) {
+        public Builder caching(@Nullable Input<CachingTypes> caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCaching(@Nullable CachingTypes caching) {
+        public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Input.ofNullable(caching);
             return this;
         }
 
-        public Builder setCreateOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
+        public Builder createOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setCreateOption(Either<String,DiskCreateOptionTypes> createOption) {
+        public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Input.of(Objects.requireNonNull(createOption));
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption) {
+        public Builder deleteOption(@Nullable Input<Either<String,DiskDeleteOptionTypes>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
+        public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
             this.deleteOption = Input.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder setDetachOption(@Nullable Input<Either<String,DiskDetachOptionTypes>> detachOption) {
+        public Builder detachOption(@Nullable Input<Either<String,DiskDetachOptionTypes>> detachOption) {
             this.detachOption = detachOption;
             return this;
         }
 
-        public Builder setDetachOption(@Nullable Either<String,DiskDetachOptionTypes> detachOption) {
+        public Builder detachOption(@Nullable Either<String,DiskDetachOptionTypes> detachOption) {
             this.detachOption = Input.ofNullable(detachOption);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<VirtualHardDiskArgs> image) {
+        public Builder image(@Nullable Input<VirtualHardDiskArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable VirtualHardDiskArgs image) {
+        public Builder image(@Nullable VirtualHardDiskArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setLun(Input<Integer> lun) {
+        public Builder lun(Input<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Input.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable Input<ManagedDiskParametersArgs> managedDisk) {
+        public Builder managedDisk(@Nullable Input<ManagedDiskParametersArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
             this.managedDisk = Input.ofNullable(managedDisk);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setToBeDetached(@Nullable Input<Boolean> toBeDetached) {
+        public Builder toBeDetached(@Nullable Input<Boolean> toBeDetached) {
             this.toBeDetached = toBeDetached;
             return this;
         }
 
-        public Builder setToBeDetached(@Nullable Boolean toBeDetached) {
+        public Builder toBeDetached(@Nullable Boolean toBeDetached) {
             this.toBeDetached = Input.ofNullable(toBeDetached);
             return this;
         }
 
-        public Builder setVhd(@Nullable Input<VirtualHardDiskArgs> vhd) {
+        public Builder vhd(@Nullable Input<VirtualHardDiskArgs> vhd) {
             this.vhd = vhd;
             return this;
         }
 
-        public Builder setVhd(@Nullable VirtualHardDiskArgs vhd) {
+        public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
             this.vhd = Input.ofNullable(vhd);
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
     	      this.variableId = defaults.variableId;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setVariableId(String variableId) {
+        public Builder variableId(String variableId) {
             this.variableId = Objects.requireNonNull(variableId);
             return this;
         }

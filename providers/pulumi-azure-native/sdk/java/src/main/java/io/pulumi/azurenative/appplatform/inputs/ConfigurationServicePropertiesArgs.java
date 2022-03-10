@@ -57,12 +57,12 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     	      this.settings = defaults.settings;
         }
 
-        public Builder setSettings(@Nullable Input<ConfigurationServiceSettingsArgs> settings) {
+        public Builder settings(@Nullable Input<ConfigurationServiceSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable ConfigurationServiceSettingsArgs settings) {
+        public Builder settings(@Nullable ConfigurationServiceSettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

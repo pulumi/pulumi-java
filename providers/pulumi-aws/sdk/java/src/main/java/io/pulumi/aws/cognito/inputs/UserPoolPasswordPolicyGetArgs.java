@@ -135,62 +135,62 @@ public final class UserPoolPasswordPolicyGetArgs extends io.pulumi.resources.Res
     	      this.temporaryPasswordValidityDays = defaults.temporaryPasswordValidityDays;
         }
 
-        public Builder setMinimumLength(@Nullable Input<Integer> minimumLength) {
+        public Builder minimumLength(@Nullable Input<Integer> minimumLength) {
             this.minimumLength = minimumLength;
             return this;
         }
 
-        public Builder setMinimumLength(@Nullable Integer minimumLength) {
+        public Builder minimumLength(@Nullable Integer minimumLength) {
             this.minimumLength = Input.ofNullable(minimumLength);
             return this;
         }
 
-        public Builder setRequireLowercase(@Nullable Input<Boolean> requireLowercase) {
+        public Builder requireLowercase(@Nullable Input<Boolean> requireLowercase) {
             this.requireLowercase = requireLowercase;
             return this;
         }
 
-        public Builder setRequireLowercase(@Nullable Boolean requireLowercase) {
+        public Builder requireLowercase(@Nullable Boolean requireLowercase) {
             this.requireLowercase = Input.ofNullable(requireLowercase);
             return this;
         }
 
-        public Builder setRequireNumbers(@Nullable Input<Boolean> requireNumbers) {
+        public Builder requireNumbers(@Nullable Input<Boolean> requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
 
-        public Builder setRequireNumbers(@Nullable Boolean requireNumbers) {
+        public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = Input.ofNullable(requireNumbers);
             return this;
         }
 
-        public Builder setRequireSymbols(@Nullable Input<Boolean> requireSymbols) {
+        public Builder requireSymbols(@Nullable Input<Boolean> requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
 
-        public Builder setRequireSymbols(@Nullable Boolean requireSymbols) {
+        public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = Input.ofNullable(requireSymbols);
             return this;
         }
 
-        public Builder setRequireUppercase(@Nullable Input<Boolean> requireUppercase) {
+        public Builder requireUppercase(@Nullable Input<Boolean> requireUppercase) {
             this.requireUppercase = requireUppercase;
             return this;
         }
 
-        public Builder setRequireUppercase(@Nullable Boolean requireUppercase) {
+        public Builder requireUppercase(@Nullable Boolean requireUppercase) {
             this.requireUppercase = Input.ofNullable(requireUppercase);
             return this;
         }
 
-        public Builder setTemporaryPasswordValidityDays(@Nullable Input<Integer> temporaryPasswordValidityDays) {
+        public Builder temporaryPasswordValidityDays(@Nullable Input<Integer> temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
             return this;
         }
 
-        public Builder setTemporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
+        public Builder temporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = Input.ofNullable(temporaryPasswordValidityDays);
             return this;
         }

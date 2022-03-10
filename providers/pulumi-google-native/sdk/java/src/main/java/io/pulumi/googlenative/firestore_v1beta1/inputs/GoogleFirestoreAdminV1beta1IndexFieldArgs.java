@@ -75,22 +75,22 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     	      this.mode = defaults.mode;
         }
 
-        public Builder setFieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Input<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
-        public Builder setFieldPath(@Nullable String fieldPath) {
+        public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = Input.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
+        public Builder mode(@Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
+        public Builder mode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

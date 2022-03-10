@@ -76,12 +76,12 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setExclusions(@Nullable List<OwaspCrsExclusionEntryResponse> exclusions) {
+        public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setManagedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
+        public Builder managedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }

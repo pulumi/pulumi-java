@@ -108,42 +108,42 @@ public final class BlobInventoryPolicyFilterArgs extends io.pulumi.resources.Res
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setBlobTypes(Input<List<String>> blobTypes) {
+        public Builder blobTypes(Input<List<String>> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
-        public Builder setBlobTypes(List<String> blobTypes) {
+        public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Input.of(Objects.requireNonNull(blobTypes));
             return this;
         }
 
-        public Builder setIncludeBlobVersions(@Nullable Input<Boolean> includeBlobVersions) {
+        public Builder includeBlobVersions(@Nullable Input<Boolean> includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
-        public Builder setIncludeBlobVersions(@Nullable Boolean includeBlobVersions) {
+        public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             this.includeBlobVersions = Input.ofNullable(includeBlobVersions);
             return this;
         }
 
-        public Builder setIncludeSnapshots(@Nullable Input<Boolean> includeSnapshots) {
+        public Builder includeSnapshots(@Nullable Input<Boolean> includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
 
-        public Builder setIncludeSnapshots(@Nullable Boolean includeSnapshots) {
+        public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             this.includeSnapshots = Input.ofNullable(includeSnapshots);
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }

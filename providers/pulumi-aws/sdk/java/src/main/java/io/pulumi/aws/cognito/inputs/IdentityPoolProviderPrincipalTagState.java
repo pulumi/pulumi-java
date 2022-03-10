@@ -98,42 +98,42 @@ public final class IdentityPoolProviderPrincipalTagState extends io.pulumi.resou
     	      this.useDefaults = defaults.useDefaults;
         }
 
-        public Builder setIdentityPoolId(@Nullable Input<String> identityPoolId) {
+        public Builder identityPoolId(@Nullable Input<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Input.ofNullable(identityPoolId);
             return this;
         }
 
-        public Builder setIdentityProviderName(@Nullable Input<String> identityProviderName) {
+        public Builder identityProviderName(@Nullable Input<String> identityProviderName) {
             this.identityProviderName = identityProviderName;
             return this;
         }
 
-        public Builder setIdentityProviderName(@Nullable String identityProviderName) {
+        public Builder identityProviderName(@Nullable String identityProviderName) {
             this.identityProviderName = Input.ofNullable(identityProviderName);
             return this;
         }
 
-        public Builder setPrincipalTags(@Nullable Input<Map<String,String>> principalTags) {
+        public Builder principalTags(@Nullable Input<Map<String,String>> principalTags) {
             this.principalTags = principalTags;
             return this;
         }
 
-        public Builder setPrincipalTags(@Nullable Map<String,String> principalTags) {
+        public Builder principalTags(@Nullable Map<String,String> principalTags) {
             this.principalTags = Input.ofNullable(principalTags);
             return this;
         }
 
-        public Builder setUseDefaults(@Nullable Input<Boolean> useDefaults) {
+        public Builder useDefaults(@Nullable Input<Boolean> useDefaults) {
             this.useDefaults = useDefaults;
             return this;
         }
 
-        public Builder setUseDefaults(@Nullable Boolean useDefaults) {
+        public Builder useDefaults(@Nullable Boolean useDefaults) {
             this.useDefaults = Input.ofNullable(useDefaults);
             return this;
         }

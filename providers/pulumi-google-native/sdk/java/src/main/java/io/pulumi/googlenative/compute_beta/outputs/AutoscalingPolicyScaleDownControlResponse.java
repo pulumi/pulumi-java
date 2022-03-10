@@ -66,12 +66,12 @@ public final class AutoscalingPolicyScaleDownControlResponse {
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledDownReplicas(FixedOrPercentResponse maxScaledDownReplicas) {
+        public Builder maxScaledDownReplicas(FixedOrPercentResponse maxScaledDownReplicas) {
             this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas);
             return this;
         }
 
-        public Builder setTimeWindowSec(Integer timeWindowSec) {
+        public Builder timeWindowSec(Integer timeWindowSec) {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }

@@ -70,22 +70,22 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
     	      this.minLength = defaults.minLength;
         }
 
-        public Builder setMaxLength(@Nullable Input<String> maxLength) {
+        public Builder maxLength(@Nullable Input<String> maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable String maxLength) {
+        public Builder maxLength(@Nullable String maxLength) {
             this.maxLength = Input.ofNullable(maxLength);
             return this;
         }
 
-        public Builder setMinLength(@Nullable Input<String> minLength) {
+        public Builder minLength(@Nullable Input<String> minLength) {
             this.minLength = minLength;
             return this;
         }
 
-        public Builder setMinLength(@Nullable String minLength) {
+        public Builder minLength(@Nullable String minLength) {
             this.minLength = Input.ofNullable(minLength);
             return this;
         }

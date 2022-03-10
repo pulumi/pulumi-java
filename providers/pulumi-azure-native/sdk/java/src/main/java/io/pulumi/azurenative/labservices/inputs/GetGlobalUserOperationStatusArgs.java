@@ -68,12 +68,12 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
     	      this.userName = defaults.userName;
         }
 
-        public Builder setOperationUrl(String operationUrl) {
+        public Builder operationUrl(String operationUrl) {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

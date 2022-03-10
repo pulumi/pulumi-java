@@ -136,52 +136,52 @@ public final class SubnetworkLogConfigGetArgs extends io.pulumi.resources.Resour
     	      this.metadataFields = defaults.metadataFields;
         }
 
-        public Builder setAggregationInterval(@Nullable Input<String> aggregationInterval) {
+        public Builder aggregationInterval(@Nullable Input<String> aggregationInterval) {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
 
-        public Builder setAggregationInterval(@Nullable String aggregationInterval) {
+        public Builder aggregationInterval(@Nullable String aggregationInterval) {
             this.aggregationInterval = Input.ofNullable(aggregationInterval);
             return this;
         }
 
-        public Builder setFilterExpr(@Nullable Input<String> filterExpr) {
+        public Builder filterExpr(@Nullable Input<String> filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
 
-        public Builder setFilterExpr(@Nullable String filterExpr) {
+        public Builder filterExpr(@Nullable String filterExpr) {
             this.filterExpr = Input.ofNullable(filterExpr);
             return this;
         }
 
-        public Builder setFlowSampling(@Nullable Input<Double> flowSampling) {
+        public Builder flowSampling(@Nullable Input<Double> flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
 
-        public Builder setFlowSampling(@Nullable Double flowSampling) {
+        public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = Input.ofNullable(flowSampling);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<String> metadata) {
+        public Builder metadata(@Nullable Input<String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable String metadata) {
+        public Builder metadata(@Nullable String metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetadataFields(@Nullable Input<List<String>> metadataFields) {
+        public Builder metadataFields(@Nullable Input<List<String>> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }
 
-        public Builder setMetadataFields(@Nullable List<String> metadataFields) {
+        public Builder metadataFields(@Nullable List<String> metadataFields) {
             this.metadataFields = Input.ofNullable(metadataFields);
             return this;
         }

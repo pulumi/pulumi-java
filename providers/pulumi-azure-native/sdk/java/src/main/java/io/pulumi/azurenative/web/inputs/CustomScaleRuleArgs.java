@@ -94,32 +94,32 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
+        public Builder auth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable List<ScaleRuleAuthArgs> auth) {
+        public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

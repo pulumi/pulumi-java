@@ -108,42 +108,42 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Input<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Input<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable Input<Object> relativeUrl) {
+        public Builder relativeUrl(@Nullable Input<Object> relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable Object relativeUrl) {
+        public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = Input.ofNullable(relativeUrl);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

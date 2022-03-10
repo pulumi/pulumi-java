@@ -98,22 +98,22 @@ public final class PlanQuantityResponse {
     	      this.overageMeter = defaults.overageMeter;
         }
 
-        public Builder setAllowance(Double allowance) {
+        public Builder allowance(Double allowance) {
             this.allowance = Objects.requireNonNull(allowance);
             return this;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setIncludedQuantityMeter(String includedQuantityMeter) {
+        public Builder includedQuantityMeter(String includedQuantityMeter) {
             this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter);
             return this;
         }
 
-        public Builder setOverageMeter(String overageMeter) {
+        public Builder overageMeter(String overageMeter) {
             this.overageMeter = Objects.requireNonNull(overageMeter);
             return this;
         }

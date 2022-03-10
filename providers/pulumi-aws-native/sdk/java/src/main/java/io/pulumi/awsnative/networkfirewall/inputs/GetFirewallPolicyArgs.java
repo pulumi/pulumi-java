@@ -47,7 +47,7 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.firewallPolicyArn = defaults.firewallPolicyArn;
         }
 
-        public Builder setFirewallPolicyArn(String firewallPolicyArn) {
+        public Builder firewallPolicyArn(String firewallPolicyArn) {
             this.firewallPolicyArn = Objects.requireNonNull(firewallPolicyArn);
             return this;
         }

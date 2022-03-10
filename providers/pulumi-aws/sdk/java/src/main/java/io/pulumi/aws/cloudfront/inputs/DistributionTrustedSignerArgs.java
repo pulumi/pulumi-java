@@ -72,22 +72,22 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
     	      this.items = defaults.items;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setItems(@Nullable Input<List<DistributionTrustedSignerItemArgs>> items) {
+        public Builder items(@Nullable Input<List<DistributionTrustedSignerItemArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DistributionTrustedSignerItemArgs> items) {
+        public Builder items(@Nullable List<DistributionTrustedSignerItemArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

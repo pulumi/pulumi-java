@@ -124,52 +124,52 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlg(Input<Either<String,AccessPolicyRsaAlgo>> alg) {
+        public Builder alg(Input<Either<String,AccessPolicyRsaAlgo>> alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
-        public Builder setAlg(Either<String,AccessPolicyRsaAlgo> alg) {
+        public Builder alg(Either<String,AccessPolicyRsaAlgo> alg) {
             this.alg = Input.of(Objects.requireNonNull(alg));
             return this;
         }
 
-        public Builder setE(Input<String> e) {
+        public Builder e(Input<String> e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
-        public Builder setE(String e) {
+        public Builder e(String e) {
             this.e = Input.of(Objects.requireNonNull(e));
             return this;
         }
 
-        public Builder setKid(Input<String> kid) {
+        public Builder kid(Input<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
-        public Builder setKid(String kid) {
+        public Builder kid(String kid) {
             this.kid = Input.of(Objects.requireNonNull(kid));
             return this;
         }
 
-        public Builder setN(Input<String> n) {
+        public Builder n(Input<String> n) {
             this.n = Objects.requireNonNull(n);
             return this;
         }
 
-        public Builder setN(String n) {
+        public Builder n(String n) {
             this.n = Input.of(Objects.requireNonNull(n));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

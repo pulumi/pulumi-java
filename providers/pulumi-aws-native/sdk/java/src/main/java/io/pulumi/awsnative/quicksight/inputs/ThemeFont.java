@@ -49,7 +49,7 @@ public final class ThemeFont extends io.pulumi.resources.InvokeArgs {
     	      this.fontFamily = defaults.fontFamily;
         }
 
-        public Builder setFontFamily(@Nullable String fontFamily) {
+        public Builder fontFamily(@Nullable String fontFamily) {
             this.fontFamily = fontFamily;
             return this;
         }

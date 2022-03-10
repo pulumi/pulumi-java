@@ -103,22 +103,22 @@ public final class CommonEncryptionCencResponse {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setClearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
+        public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
+        public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setDrm(@Nullable CencDrmConfigurationResponse drm) {
+        public Builder drm(@Nullable CencDrmConfigurationResponse drm) {
             this.drm = drm;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

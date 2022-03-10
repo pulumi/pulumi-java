@@ -52,12 +52,12 @@ public final class QuickConnectQuickConnectConfigPhoneConfigGetArgs extends io.p
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setPhoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Input<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }

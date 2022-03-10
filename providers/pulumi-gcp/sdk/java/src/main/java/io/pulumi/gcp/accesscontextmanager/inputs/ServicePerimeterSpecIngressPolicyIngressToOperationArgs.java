@@ -78,22 +78,22 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationArgs exten
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMethodSelectors(@Nullable Input<List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors) {
+        public Builder methodSelectors(@Nullable Input<List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors) {
             this.methodSelectors = methodSelectors;
             return this;
         }
 
-        public Builder setMethodSelectors(@Nullable List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs> methodSelectors) {
+        public Builder methodSelectors(@Nullable List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs> methodSelectors) {
             this.methodSelectors = Input.ofNullable(methodSelectors);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }

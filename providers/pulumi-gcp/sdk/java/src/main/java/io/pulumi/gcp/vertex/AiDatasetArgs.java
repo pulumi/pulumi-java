@@ -138,62 +138,62 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Input<AiDatasetEncryptionSpecArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
+        public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
             this.encryptionSpec = Input.ofNullable(encryptionSpec);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMetadataSchemaUri(Input<String> metadataSchemaUri) {
+        public Builder metadataSchemaUri(Input<String> metadataSchemaUri) {
             this.metadataSchemaUri = Objects.requireNonNull(metadataSchemaUri);
             return this;
         }
 
-        public Builder setMetadataSchemaUri(String metadataSchemaUri) {
+        public Builder metadataSchemaUri(String metadataSchemaUri) {
             this.metadataSchemaUri = Input.of(Objects.requireNonNull(metadataSchemaUri));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

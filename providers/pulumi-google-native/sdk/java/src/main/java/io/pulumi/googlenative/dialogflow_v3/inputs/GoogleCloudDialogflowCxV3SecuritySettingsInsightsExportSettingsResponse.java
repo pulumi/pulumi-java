@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
     	      this.enableInsightsExport = defaults.enableInsightsExport;
         }
 
-        public Builder setEnableInsightsExport(Boolean enableInsightsExport) {
+        public Builder enableInsightsExport(Boolean enableInsightsExport) {
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }

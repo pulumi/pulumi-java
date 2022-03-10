@@ -52,7 +52,7 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.artifactRule = defaults.artifactRule;
         }
 
-        public Builder setArtifactRule(List<String> artifactRule) {
+        public Builder artifactRule(List<String> artifactRule) {
             this.artifactRule = Objects.requireNonNull(artifactRule);
             return this;
         }

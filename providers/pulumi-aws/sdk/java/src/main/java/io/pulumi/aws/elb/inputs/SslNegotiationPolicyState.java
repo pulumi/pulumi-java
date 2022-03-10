@@ -108,42 +108,42 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder setAttributes(@Nullable Input<List<SslNegotiationPolicyAttributeGetArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<SslNegotiationPolicyAttributeGetArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<SslNegotiationPolicyAttributeGetArgs> attributes) {
+        public Builder attributes(@Nullable List<SslNegotiationPolicyAttributeGetArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setLbPort(@Nullable Input<Integer> lbPort) {
+        public Builder lbPort(@Nullable Input<Integer> lbPort) {
             this.lbPort = lbPort;
             return this;
         }
 
-        public Builder setLbPort(@Nullable Integer lbPort) {
+        public Builder lbPort(@Nullable Integer lbPort) {
             this.lbPort = Input.ofNullable(lbPort);
             return this;
         }
 
-        public Builder setLoadBalancer(@Nullable Input<String> loadBalancer) {
+        public Builder loadBalancer(@Nullable Input<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
-        public Builder setLoadBalancer(@Nullable String loadBalancer) {
+        public Builder loadBalancer(@Nullable String loadBalancer) {
             this.loadBalancer = Input.ofNullable(loadBalancer);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -554,392 +554,392 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setCpu(@Nullable Input<Integer> cpu) {
+        public Builder cpu(@Nullable Input<Integer> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<TaskDefinitionContainerDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<TaskDefinitionContainerDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<TaskDefinitionContainerDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDisableNetworking(@Nullable Input<Boolean> disableNetworking) {
+        public Builder disableNetworking(@Nullable Input<Boolean> disableNetworking) {
             this.disableNetworking = disableNetworking;
             return this;
         }
 
-        public Builder setDisableNetworking(@Nullable Boolean disableNetworking) {
+        public Builder disableNetworking(@Nullable Boolean disableNetworking) {
             this.disableNetworking = Input.ofNullable(disableNetworking);
             return this;
         }
 
-        public Builder setDnsSearchDomains(@Nullable Input<List<String>> dnsSearchDomains) {
+        public Builder dnsSearchDomains(@Nullable Input<List<String>> dnsSearchDomains) {
             this.dnsSearchDomains = dnsSearchDomains;
             return this;
         }
 
-        public Builder setDnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
+        public Builder dnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
             this.dnsSearchDomains = Input.ofNullable(dnsSearchDomains);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setDockerLabels(@Nullable Input<Object> dockerLabels) {
+        public Builder dockerLabels(@Nullable Input<Object> dockerLabels) {
             this.dockerLabels = dockerLabels;
             return this;
         }
 
-        public Builder setDockerLabels(@Nullable Object dockerLabels) {
+        public Builder dockerLabels(@Nullable Object dockerLabels) {
             this.dockerLabels = Input.ofNullable(dockerLabels);
             return this;
         }
 
-        public Builder setDockerSecurityOptions(@Nullable Input<List<String>> dockerSecurityOptions) {
+        public Builder dockerSecurityOptions(@Nullable Input<List<String>> dockerSecurityOptions) {
             this.dockerSecurityOptions = dockerSecurityOptions;
             return this;
         }
 
-        public Builder setDockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
+        public Builder dockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
             this.dockerSecurityOptions = Input.ofNullable(dockerSecurityOptions);
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable Input<List<String>> entryPoint) {
+        public Builder entryPoint(@Nullable Input<List<String>> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable List<String> entryPoint) {
+        public Builder entryPoint(@Nullable List<String> entryPoint) {
             this.entryPoint = Input.ofNullable(entryPoint);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment) {
+        public Builder environment(@Nullable Input<List<TaskDefinitionKeyValuePairArgs>> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable List<TaskDefinitionKeyValuePairArgs> environment) {
+        public Builder environment(@Nullable List<TaskDefinitionKeyValuePairArgs> environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setEnvironmentFiles(@Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
+        public Builder environmentFiles(@Nullable Input<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
             this.environmentFiles = environmentFiles;
             return this;
         }
 
-        public Builder setEnvironmentFiles(@Nullable List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
+        public Builder environmentFiles(@Nullable List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
             this.environmentFiles = Input.ofNullable(environmentFiles);
             return this;
         }
 
-        public Builder setEssential(@Nullable Input<Boolean> essential) {
+        public Builder essential(@Nullable Input<Boolean> essential) {
             this.essential = essential;
             return this;
         }
 
-        public Builder setEssential(@Nullable Boolean essential) {
+        public Builder essential(@Nullable Boolean essential) {
             this.essential = Input.ofNullable(essential);
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts) {
+        public Builder extraHosts(@Nullable Input<List<TaskDefinitionHostEntryArgs>> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable List<TaskDefinitionHostEntryArgs> extraHosts) {
+        public Builder extraHosts(@Nullable List<TaskDefinitionHostEntryArgs> extraHosts) {
             this.extraHosts = Input.ofNullable(extraHosts);
             return this;
         }
 
-        public Builder setFirelensConfiguration(@Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration) {
+        public Builder firelensConfiguration(@Nullable Input<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration) {
             this.firelensConfiguration = firelensConfiguration;
             return this;
         }
 
-        public Builder setFirelensConfiguration(@Nullable TaskDefinitionFirelensConfigurationArgs firelensConfiguration) {
+        public Builder firelensConfiguration(@Nullable TaskDefinitionFirelensConfigurationArgs firelensConfiguration) {
             this.firelensConfiguration = Input.ofNullable(firelensConfiguration);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<TaskDefinitionHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable TaskDefinitionHealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable TaskDefinitionHealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setInteractive(@Nullable Input<Boolean> interactive) {
+        public Builder interactive(@Nullable Input<Boolean> interactive) {
             this.interactive = interactive;
             return this;
         }
 
-        public Builder setInteractive(@Nullable Boolean interactive) {
+        public Builder interactive(@Nullable Boolean interactive) {
             this.interactive = Input.ofNullable(interactive);
             return this;
         }
 
-        public Builder setLinks(@Nullable Input<List<String>> links) {
+        public Builder links(@Nullable Input<List<String>> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<String> links) {
+        public Builder links(@Nullable List<String> links) {
             this.links = Input.ofNullable(links);
             return this;
         }
 
-        public Builder setLinuxParameters(@Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters) {
+        public Builder linuxParameters(@Nullable Input<TaskDefinitionLinuxParametersArgs> linuxParameters) {
             this.linuxParameters = linuxParameters;
             return this;
         }
 
-        public Builder setLinuxParameters(@Nullable TaskDefinitionLinuxParametersArgs linuxParameters) {
+        public Builder linuxParameters(@Nullable TaskDefinitionLinuxParametersArgs linuxParameters) {
             this.linuxParameters = Input.ofNullable(linuxParameters);
             return this;
         }
 
-        public Builder setLogConfiguration(@Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration) {
+        public Builder logConfiguration(@Nullable Input<TaskDefinitionLogConfigurationArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
-        public Builder setLogConfiguration(@Nullable TaskDefinitionLogConfigurationArgs logConfiguration) {
+        public Builder logConfiguration(@Nullable TaskDefinitionLogConfigurationArgs logConfiguration) {
             this.logConfiguration = Input.ofNullable(logConfiguration);
             return this;
         }
 
-        public Builder setMemory(@Nullable Input<Integer> memory) {
+        public Builder memory(@Nullable Input<Integer> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable Integer memory) {
+        public Builder memory(@Nullable Integer memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }
 
-        public Builder setMemoryReservation(@Nullable Input<Integer> memoryReservation) {
+        public Builder memoryReservation(@Nullable Input<Integer> memoryReservation) {
             this.memoryReservation = memoryReservation;
             return this;
         }
 
-        public Builder setMemoryReservation(@Nullable Integer memoryReservation) {
+        public Builder memoryReservation(@Nullable Integer memoryReservation) {
             this.memoryReservation = Input.ofNullable(memoryReservation);
             return this;
         }
 
-        public Builder setMountPoints(@Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints) {
+        public Builder mountPoints(@Nullable Input<List<TaskDefinitionMountPointArgs>> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
 
-        public Builder setMountPoints(@Nullable List<TaskDefinitionMountPointArgs> mountPoints) {
+        public Builder mountPoints(@Nullable List<TaskDefinitionMountPointArgs> mountPoints) {
             this.mountPoints = Input.ofNullable(mountPoints);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPortMappings(@Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings) {
+        public Builder portMappings(@Nullable Input<List<TaskDefinitionPortMappingArgs>> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
 
-        public Builder setPortMappings(@Nullable List<TaskDefinitionPortMappingArgs> portMappings) {
+        public Builder portMappings(@Nullable List<TaskDefinitionPortMappingArgs> portMappings) {
             this.portMappings = Input.ofNullable(portMappings);
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Input<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Input.ofNullable(privileged);
             return this;
         }
 
-        public Builder setPseudoTerminal(@Nullable Input<Boolean> pseudoTerminal) {
+        public Builder pseudoTerminal(@Nullable Input<Boolean> pseudoTerminal) {
             this.pseudoTerminal = pseudoTerminal;
             return this;
         }
 
-        public Builder setPseudoTerminal(@Nullable Boolean pseudoTerminal) {
+        public Builder pseudoTerminal(@Nullable Boolean pseudoTerminal) {
             this.pseudoTerminal = Input.ofNullable(pseudoTerminal);
             return this;
         }
 
-        public Builder setReadonlyRootFilesystem(@Nullable Input<Boolean> readonlyRootFilesystem) {
+        public Builder readonlyRootFilesystem(@Nullable Input<Boolean> readonlyRootFilesystem) {
             this.readonlyRootFilesystem = readonlyRootFilesystem;
             return this;
         }
 
-        public Builder setReadonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
+        public Builder readonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
             this.readonlyRootFilesystem = Input.ofNullable(readonlyRootFilesystem);
             return this;
         }
 
-        public Builder setRepositoryCredentials(@Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials) {
+        public Builder repositoryCredentials(@Nullable Input<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials) {
             this.repositoryCredentials = repositoryCredentials;
             return this;
         }
 
-        public Builder setRepositoryCredentials(@Nullable TaskDefinitionRepositoryCredentialsArgs repositoryCredentials) {
+        public Builder repositoryCredentials(@Nullable TaskDefinitionRepositoryCredentialsArgs repositoryCredentials) {
             this.repositoryCredentials = Input.ofNullable(repositoryCredentials);
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable Input<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable List<TaskDefinitionResourceRequirementArgs> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable List<TaskDefinitionResourceRequirementArgs> resourceRequirements) {
             this.resourceRequirements = Input.ofNullable(resourceRequirements);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<TaskDefinitionSecretArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<TaskDefinitionSecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<TaskDefinitionSecretArgs> secrets) {
+        public Builder secrets(@Nullable List<TaskDefinitionSecretArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setStartTimeout(@Nullable Input<Integer> startTimeout) {
+        public Builder startTimeout(@Nullable Input<Integer> startTimeout) {
             this.startTimeout = startTimeout;
             return this;
         }
 
-        public Builder setStartTimeout(@Nullable Integer startTimeout) {
+        public Builder startTimeout(@Nullable Integer startTimeout) {
             this.startTimeout = Input.ofNullable(startTimeout);
             return this;
         }
 
-        public Builder setStopTimeout(@Nullable Input<Integer> stopTimeout) {
+        public Builder stopTimeout(@Nullable Input<Integer> stopTimeout) {
             this.stopTimeout = stopTimeout;
             return this;
         }
 
-        public Builder setStopTimeout(@Nullable Integer stopTimeout) {
+        public Builder stopTimeout(@Nullable Integer stopTimeout) {
             this.stopTimeout = Input.ofNullable(stopTimeout);
             return this;
         }
 
-        public Builder setSystemControls(@Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls) {
+        public Builder systemControls(@Nullable Input<List<TaskDefinitionSystemControlArgs>> systemControls) {
             this.systemControls = systemControls;
             return this;
         }
 
-        public Builder setSystemControls(@Nullable List<TaskDefinitionSystemControlArgs> systemControls) {
+        public Builder systemControls(@Nullable List<TaskDefinitionSystemControlArgs> systemControls) {
             this.systemControls = Input.ofNullable(systemControls);
             return this;
         }
 
-        public Builder setUlimits(@Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits) {
+        public Builder ulimits(@Nullable Input<List<TaskDefinitionUlimitArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
-        public Builder setUlimits(@Nullable List<TaskDefinitionUlimitArgs> ulimits) {
+        public Builder ulimits(@Nullable List<TaskDefinitionUlimitArgs> ulimits) {
             this.ulimits = Input.ofNullable(ulimits);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }
 
-        public Builder setVolumesFrom(@Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom) {
+        public Builder volumesFrom(@Nullable Input<List<TaskDefinitionVolumeFromArgs>> volumesFrom) {
             this.volumesFrom = volumesFrom;
             return this;
         }
 
-        public Builder setVolumesFrom(@Nullable List<TaskDefinitionVolumeFromArgs> volumesFrom) {
+        public Builder volumesFrom(@Nullable List<TaskDefinitionVolumeFromArgs> volumesFrom) {
             this.volumesFrom = Input.ofNullable(volumesFrom);
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

@@ -74,12 +74,12 @@ public final class ContentKeyPolicyTokenClaimResponse extends io.pulumi.resource
     	      this.claimValue = defaults.claimValue;
         }
 
-        public Builder setClaimType(@Nullable String claimType) {
+        public Builder claimType(@Nullable String claimType) {
             this.claimType = claimType;
             return this;
         }
 
-        public Builder setClaimValue(@Nullable String claimValue) {
+        public Builder claimValue(@Nullable String claimValue) {
             this.claimValue = claimValue;
             return this;
         }

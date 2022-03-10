@@ -55,7 +55,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
     	      this.gcsFileUri = defaults.gcsFileUri;
         }
 
-        public Builder setGcsFileUri(String gcsFileUri) {
+        public Builder gcsFileUri(String gcsFileUri) {
             this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
             return this;
         }

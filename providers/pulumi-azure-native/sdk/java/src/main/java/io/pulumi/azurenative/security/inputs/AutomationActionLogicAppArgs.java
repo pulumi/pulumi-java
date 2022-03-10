@@ -91,32 +91,32 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
     	      this.uri = defaults.uri;
         }
 
-        public Builder setActionType(Input<String> actionType) {
+        public Builder actionType(Input<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Input.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder setLogicAppResourceId(@Nullable Input<String> logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable Input<String> logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
-        public Builder setLogicAppResourceId(@Nullable String logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = Input.ofNullable(logicAppResourceId);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

@@ -99,22 +99,22 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse {
     	      this.schemaVersion = defaults.schemaVersion;
         }
 
-        public Builder setDisableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
+        public Builder disableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients);
             return this;
         }
 
-        public Builder setMonitoringNotificationChannels(List<String> monitoringNotificationChannels) {
+        public Builder monitoringNotificationChannels(List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
-        public Builder setSchemaVersion(String schemaVersion) {
+        public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }

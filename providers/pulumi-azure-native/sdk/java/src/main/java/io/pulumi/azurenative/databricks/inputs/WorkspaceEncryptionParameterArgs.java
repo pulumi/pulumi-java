@@ -57,12 +57,12 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Input<EncryptionArgs> value) {
+        public Builder value(@Nullable Input<EncryptionArgs> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable EncryptionArgs value) {
+        public Builder value(@Nullable EncryptionArgs value) {
             this.value = Input.ofNullable(value);
             return this;
         }

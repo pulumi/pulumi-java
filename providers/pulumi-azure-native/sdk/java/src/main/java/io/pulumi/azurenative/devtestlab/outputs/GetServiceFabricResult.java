@@ -197,52 +197,52 @@ public final class GetServiceFabricResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setApplicableSchedule(ApplicableScheduleResponse applicableSchedule) {
+        public Builder applicableSchedule(ApplicableScheduleResponse applicableSchedule) {
             this.applicableSchedule = Objects.requireNonNull(applicableSchedule);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setExternalServiceFabricId(@Nullable String externalServiceFabricId) {
+        public Builder externalServiceFabricId(@Nullable String externalServiceFabricId) {
             this.externalServiceFabricId = externalServiceFabricId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

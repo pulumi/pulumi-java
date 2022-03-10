@@ -142,72 +142,72 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackingConfigArn = defaults.trackingConfigArn;
         }
 
-        public Builder setContactPostPassDurationSeconds(@Nullable Input<Integer> contactPostPassDurationSeconds) {
+        public Builder contactPostPassDurationSeconds(@Nullable Input<Integer> contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
 
-        public Builder setContactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
+        public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = Input.ofNullable(contactPostPassDurationSeconds);
             return this;
         }
 
-        public Builder setContactPrePassDurationSeconds(@Nullable Input<Integer> contactPrePassDurationSeconds) {
+        public Builder contactPrePassDurationSeconds(@Nullable Input<Integer> contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
 
-        public Builder setContactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
+        public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = Input.ofNullable(contactPrePassDurationSeconds);
             return this;
         }
 
-        public Builder setDataflowEdges(Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
+        public Builder dataflowEdges(Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
             this.dataflowEdges = Objects.requireNonNull(dataflowEdges);
             return this;
         }
 
-        public Builder setDataflowEdges(List<MissionProfileDataflowEdgeArgs> dataflowEdges) {
+        public Builder dataflowEdges(List<MissionProfileDataflowEdgeArgs> dataflowEdges) {
             this.dataflowEdges = Input.of(Objects.requireNonNull(dataflowEdges));
             return this;
         }
 
-        public Builder setMinimumViableContactDurationSeconds(Input<Integer> minimumViableContactDurationSeconds) {
+        public Builder minimumViableContactDurationSeconds(Input<Integer> minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = Objects.requireNonNull(minimumViableContactDurationSeconds);
             return this;
         }
 
-        public Builder setMinimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
+        public Builder minimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = Input.of(Objects.requireNonNull(minimumViableContactDurationSeconds));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<MissionProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<MissionProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MissionProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<MissionProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrackingConfigArn(Input<String> trackingConfigArn) {
+        public Builder trackingConfigArn(Input<String> trackingConfigArn) {
             this.trackingConfigArn = Objects.requireNonNull(trackingConfigArn);
             return this;
         }
 
-        public Builder setTrackingConfigArn(String trackingConfigArn) {
+        public Builder trackingConfigArn(String trackingConfigArn) {
             this.trackingConfigArn = Input.of(Objects.requireNonNull(trackingConfigArn));
             return this;
         }

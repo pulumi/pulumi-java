@@ -84,17 +84,17 @@ public final class UsagePlanApiStage {
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setThrottle(@Nullable Object throttle) {
+        public Builder throttle(@Nullable Object throttle) {
             this.throttle = throttle;
             return this;
         }

@@ -75,22 +75,22 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setHostnames(@Nullable Input<List<String>> hostnames) {
+        public Builder hostnames(@Nullable Input<List<String>> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
-        public Builder setHostnames(@Nullable List<String> hostnames) {
+        public Builder hostnames(@Nullable List<String> hostnames) {
             this.hostnames = Input.ofNullable(hostnames);
             return this;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }

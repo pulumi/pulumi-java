@@ -52,12 +52,12 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
     	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
         }
 
-        public Builder setRealtimeMetricsSubscriptionConfig(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
             return this;
         }
 
-        public Builder setRealtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Input.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
             return this;
         }

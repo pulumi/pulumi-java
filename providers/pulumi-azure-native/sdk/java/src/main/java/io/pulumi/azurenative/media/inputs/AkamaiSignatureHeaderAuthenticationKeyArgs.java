@@ -90,32 +90,32 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     	      this.identifier = defaults.identifier;
         }
 
-        public Builder setBase64Key(@Nullable Input<String> base64Key) {
+        public Builder base64Key(@Nullable Input<String> base64Key) {
             this.base64Key = base64Key;
             return this;
         }
 
-        public Builder setBase64Key(@Nullable String base64Key) {
+        public Builder base64Key(@Nullable String base64Key) {
             this.base64Key = Input.ofNullable(base64Key);
             return this;
         }
 
-        public Builder setExpiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Input<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = Input.ofNullable(expiration);
             return this;
         }
 
-        public Builder setIdentifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Input<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = Input.ofNullable(identifier);
             return this;
         }

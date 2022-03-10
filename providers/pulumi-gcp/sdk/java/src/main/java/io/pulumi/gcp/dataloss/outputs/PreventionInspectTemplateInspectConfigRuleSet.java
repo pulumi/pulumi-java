@@ -71,12 +71,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setInfoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes) {
+        public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
-        public Builder setRules(List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
+        public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

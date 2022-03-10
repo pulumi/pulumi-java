@@ -169,82 +169,82 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
     	      this.tableLevelSharingProperties = defaults.tableLevelSharingProperties;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(@Nullable Input<String> attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(@Nullable Input<String> attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Input.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setClusterResourceId(Input<String> clusterResourceId) {
+        public Builder clusterResourceId(Input<String> clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
 
-        public Builder setClusterResourceId(String clusterResourceId) {
+        public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Input.of(Objects.requireNonNull(clusterResourceId));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDefaultPrincipalsModificationKind(Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
 
-        public Builder setDefaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Input.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTableLevelSharingProperties(@Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
 
-        public Builder setTableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
             this.tableLevelSharingProperties = Input.ofNullable(tableLevelSharingProperties);
             return this;
         }

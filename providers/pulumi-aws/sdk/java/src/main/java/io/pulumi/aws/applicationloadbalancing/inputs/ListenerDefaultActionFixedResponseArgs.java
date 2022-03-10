@@ -86,32 +86,32 @@ public final class ListenerDefaultActionFixedResponseArgs extends io.pulumi.reso
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(Input<String> contentType) {
+        public Builder contentType(Input<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setMessageBody(@Nullable Input<String> messageBody) {
+        public Builder messageBody(@Nullable Input<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
-        public Builder setMessageBody(@Nullable String messageBody) {
+        public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = Input.ofNullable(messageBody);
             return this;
         }
 
-        public Builder setStatusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Input<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Input.ofNullable(statusCode);
             return this;
         }

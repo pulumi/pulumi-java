@@ -69,12 +69,12 @@ public final class PowerQuerySinkMappingResponse {
     	      this.queryName = defaults.queryName;
         }
 
-        public Builder setDataflowSinks(@Nullable List<PowerQuerySinkResponse> dataflowSinks) {
+        public Builder dataflowSinks(@Nullable List<PowerQuerySinkResponse> dataflowSinks) {
             this.dataflowSinks = dataflowSinks;
             return this;
         }
 
-        public Builder setQueryName(@Nullable String queryName) {
+        public Builder queryName(@Nullable String queryName) {
             this.queryName = queryName;
             return this;
         }

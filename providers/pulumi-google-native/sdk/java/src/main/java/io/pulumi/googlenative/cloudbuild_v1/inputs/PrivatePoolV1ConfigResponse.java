@@ -73,12 +73,12 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setNetworkConfig(NetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(WorkerConfigResponse workerConfig) {
+        public Builder workerConfig(WorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }

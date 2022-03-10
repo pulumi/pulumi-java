@@ -74,17 +74,17 @@ public final class GetCertificateTemplateArgs extends io.pulumi.resources.Invoke
     	      this.project = defaults.project;
         }
 
-        public Builder setCertificateTemplateId(String certificateTemplateId) {
+        public Builder certificateTemplateId(String certificateTemplateId) {
             this.certificateTemplateId = Objects.requireNonNull(certificateTemplateId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

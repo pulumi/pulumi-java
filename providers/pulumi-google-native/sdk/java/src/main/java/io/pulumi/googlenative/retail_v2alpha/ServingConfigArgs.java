@@ -361,212 +361,212 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.twowaySynonymsControlIds = defaults.twowaySynonymsControlIds;
         }
 
-        public Builder setBoostControlIds(@Nullable Input<List<String>> boostControlIds) {
+        public Builder boostControlIds(@Nullable Input<List<String>> boostControlIds) {
             this.boostControlIds = boostControlIds;
             return this;
         }
 
-        public Builder setBoostControlIds(@Nullable List<String> boostControlIds) {
+        public Builder boostControlIds(@Nullable List<String> boostControlIds) {
             this.boostControlIds = Input.ofNullable(boostControlIds);
             return this;
         }
 
-        public Builder setCatalogId(Input<String> catalogId) {
+        public Builder catalogId(Input<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Input.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setDiversityLevel(@Nullable Input<String> diversityLevel) {
+        public Builder diversityLevel(@Nullable Input<String> diversityLevel) {
             this.diversityLevel = diversityLevel;
             return this;
         }
 
-        public Builder setDiversityLevel(@Nullable String diversityLevel) {
+        public Builder diversityLevel(@Nullable String diversityLevel) {
             this.diversityLevel = Input.ofNullable(diversityLevel);
             return this;
         }
 
-        public Builder setDoNotAssociateControlIds(@Nullable Input<List<String>> doNotAssociateControlIds) {
+        public Builder doNotAssociateControlIds(@Nullable Input<List<String>> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = doNotAssociateControlIds;
             return this;
         }
 
-        public Builder setDoNotAssociateControlIds(@Nullable List<String> doNotAssociateControlIds) {
+        public Builder doNotAssociateControlIds(@Nullable List<String> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = Input.ofNullable(doNotAssociateControlIds);
             return this;
         }
 
-        public Builder setDynamicFacetSpec(@Nullable Input<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec) {
+        public Builder dynamicFacetSpec(@Nullable Input<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec) {
             this.dynamicFacetSpec = dynamicFacetSpec;
             return this;
         }
 
-        public Builder setDynamicFacetSpec(@Nullable GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs dynamicFacetSpec) {
+        public Builder dynamicFacetSpec(@Nullable GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs dynamicFacetSpec) {
             this.dynamicFacetSpec = Input.ofNullable(dynamicFacetSpec);
             return this;
         }
 
-        public Builder setEnableCategoryFilterLevel(@Nullable Input<String> enableCategoryFilterLevel) {
+        public Builder enableCategoryFilterLevel(@Nullable Input<String> enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = enableCategoryFilterLevel;
             return this;
         }
 
-        public Builder setEnableCategoryFilterLevel(@Nullable String enableCategoryFilterLevel) {
+        public Builder enableCategoryFilterLevel(@Nullable String enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = Input.ofNullable(enableCategoryFilterLevel);
             return this;
         }
 
-        public Builder setFacetControlIds(@Nullable Input<List<String>> facetControlIds) {
+        public Builder facetControlIds(@Nullable Input<List<String>> facetControlIds) {
             this.facetControlIds = facetControlIds;
             return this;
         }
 
-        public Builder setFacetControlIds(@Nullable List<String> facetControlIds) {
+        public Builder facetControlIds(@Nullable List<String> facetControlIds) {
             this.facetControlIds = Input.ofNullable(facetControlIds);
             return this;
         }
 
-        public Builder setFilterControlIds(@Nullable Input<List<String>> filterControlIds) {
+        public Builder filterControlIds(@Nullable Input<List<String>> filterControlIds) {
             this.filterControlIds = filterControlIds;
             return this;
         }
 
-        public Builder setFilterControlIds(@Nullable List<String> filterControlIds) {
+        public Builder filterControlIds(@Nullable List<String> filterControlIds) {
             this.filterControlIds = Input.ofNullable(filterControlIds);
             return this;
         }
 
-        public Builder setIgnoreControlIds(@Nullable Input<List<String>> ignoreControlIds) {
+        public Builder ignoreControlIds(@Nullable Input<List<String>> ignoreControlIds) {
             this.ignoreControlIds = ignoreControlIds;
             return this;
         }
 
-        public Builder setIgnoreControlIds(@Nullable List<String> ignoreControlIds) {
+        public Builder ignoreControlIds(@Nullable List<String> ignoreControlIds) {
             this.ignoreControlIds = Input.ofNullable(ignoreControlIds);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setModelId(@Nullable Input<String> modelId) {
+        public Builder modelId(@Nullable Input<String> modelId) {
             this.modelId = modelId;
             return this;
         }
 
-        public Builder setModelId(@Nullable String modelId) {
+        public Builder modelId(@Nullable String modelId) {
             this.modelId = Input.ofNullable(modelId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnewaySynonymsControlIds(@Nullable Input<List<String>> onewaySynonymsControlIds) {
+        public Builder onewaySynonymsControlIds(@Nullable Input<List<String>> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = onewaySynonymsControlIds;
             return this;
         }
 
-        public Builder setOnewaySynonymsControlIds(@Nullable List<String> onewaySynonymsControlIds) {
+        public Builder onewaySynonymsControlIds(@Nullable List<String> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = Input.ofNullable(onewaySynonymsControlIds);
             return this;
         }
 
-        public Builder setPriceRerankingLevel(@Nullable Input<String> priceRerankingLevel) {
+        public Builder priceRerankingLevel(@Nullable Input<String> priceRerankingLevel) {
             this.priceRerankingLevel = priceRerankingLevel;
             return this;
         }
 
-        public Builder setPriceRerankingLevel(@Nullable String priceRerankingLevel) {
+        public Builder priceRerankingLevel(@Nullable String priceRerankingLevel) {
             this.priceRerankingLevel = Input.ofNullable(priceRerankingLevel);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRedirectControlIds(@Nullable Input<List<String>> redirectControlIds) {
+        public Builder redirectControlIds(@Nullable Input<List<String>> redirectControlIds) {
             this.redirectControlIds = redirectControlIds;
             return this;
         }
 
-        public Builder setRedirectControlIds(@Nullable List<String> redirectControlIds) {
+        public Builder redirectControlIds(@Nullable List<String> redirectControlIds) {
             this.redirectControlIds = Input.ofNullable(redirectControlIds);
             return this;
         }
 
-        public Builder setReplacementControlIds(@Nullable Input<List<String>> replacementControlIds) {
+        public Builder replacementControlIds(@Nullable Input<List<String>> replacementControlIds) {
             this.replacementControlIds = replacementControlIds;
             return this;
         }
 
-        public Builder setReplacementControlIds(@Nullable List<String> replacementControlIds) {
+        public Builder replacementControlIds(@Nullable List<String> replacementControlIds) {
             this.replacementControlIds = Input.ofNullable(replacementControlIds);
             return this;
         }
 
-        public Builder setServingConfigId(Input<String> servingConfigId) {
+        public Builder servingConfigId(Input<String> servingConfigId) {
             this.servingConfigId = Objects.requireNonNull(servingConfigId);
             return this;
         }
 
-        public Builder setServingConfigId(String servingConfigId) {
+        public Builder servingConfigId(String servingConfigId) {
             this.servingConfigId = Input.of(Objects.requireNonNull(servingConfigId));
             return this;
         }
 
-        public Builder setSolutionTypes(Input<List<ServingConfigSolutionTypesItem>> solutionTypes) {
+        public Builder solutionTypes(Input<List<ServingConfigSolutionTypesItem>> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
 
-        public Builder setSolutionTypes(List<ServingConfigSolutionTypesItem> solutionTypes) {
+        public Builder solutionTypes(List<ServingConfigSolutionTypesItem> solutionTypes) {
             this.solutionTypes = Input.of(Objects.requireNonNull(solutionTypes));
             return this;
         }
 
-        public Builder setTwowaySynonymsControlIds(@Nullable Input<List<String>> twowaySynonymsControlIds) {
+        public Builder twowaySynonymsControlIds(@Nullable Input<List<String>> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = twowaySynonymsControlIds;
             return this;
         }
 
-        public Builder setTwowaySynonymsControlIds(@Nullable List<String> twowaySynonymsControlIds) {
+        public Builder twowaySynonymsControlIds(@Nullable List<String> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = Input.ofNullable(twowaySynonymsControlIds);
             return this;
         }

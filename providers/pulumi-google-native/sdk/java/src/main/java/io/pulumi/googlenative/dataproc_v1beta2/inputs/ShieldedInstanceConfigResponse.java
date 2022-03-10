@@ -88,17 +88,17 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
     	      this.enableVtpm = defaults.enableVtpm;
         }
 
-        public Builder setEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder setEnableSecureBoot(Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
 
-        public Builder setEnableVtpm(Boolean enableVtpm) {
+        public Builder enableVtpm(Boolean enableVtpm) {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }

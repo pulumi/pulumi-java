@@ -91,17 +91,17 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
     	      this.retryConditions = defaults.retryConditions;
         }
 
-        public Builder setNumRetries(Integer numRetries) {
+        public Builder numRetries(Integer numRetries) {
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
 
-        public Builder setPerTryTimeout(DurationResponse perTryTimeout) {
+        public Builder perTryTimeout(DurationResponse perTryTimeout) {
             this.perTryTimeout = Objects.requireNonNull(perTryTimeout);
             return this;
         }
 
-        public Builder setRetryConditions(List<String> retryConditions) {
+        public Builder retryConditions(List<String> retryConditions) {
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }

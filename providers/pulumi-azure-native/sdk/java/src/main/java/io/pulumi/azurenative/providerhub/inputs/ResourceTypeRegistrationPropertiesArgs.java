@@ -410,292 +410,292 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
     	      this.throttlingRules = defaults.throttlingRules;
         }
 
-        public Builder setAllowedUnauthorizedActions(@Nullable Input<List<String>> allowedUnauthorizedActions) {
+        public Builder allowedUnauthorizedActions(@Nullable Input<List<String>> allowedUnauthorizedActions) {
             this.allowedUnauthorizedActions = allowedUnauthorizedActions;
             return this;
         }
 
-        public Builder setAllowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
+        public Builder allowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
             this.allowedUnauthorizedActions = Input.ofNullable(allowedUnauthorizedActions);
             return this;
         }
 
-        public Builder setAuthorizationActionMappings(@Nullable Input<List<AuthorizationActionMappingArgs>> authorizationActionMappings) {
+        public Builder authorizationActionMappings(@Nullable Input<List<AuthorizationActionMappingArgs>> authorizationActionMappings) {
             this.authorizationActionMappings = authorizationActionMappings;
             return this;
         }
 
-        public Builder setAuthorizationActionMappings(@Nullable List<AuthorizationActionMappingArgs> authorizationActionMappings) {
+        public Builder authorizationActionMappings(@Nullable List<AuthorizationActionMappingArgs> authorizationActionMappings) {
             this.authorizationActionMappings = Input.ofNullable(authorizationActionMappings);
             return this;
         }
 
-        public Builder setCheckNameAvailabilitySpecifications(@Nullable Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications) {
+        public Builder checkNameAvailabilitySpecifications(@Nullable Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;
             return this;
         }
 
-        public Builder setCheckNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs checkNameAvailabilitySpecifications) {
+        public Builder checkNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = Input.ofNullable(checkNameAvailabilitySpecifications);
             return this;
         }
 
-        public Builder setDefaultApiVersion(@Nullable Input<String> defaultApiVersion) {
+        public Builder defaultApiVersion(@Nullable Input<String> defaultApiVersion) {
             this.defaultApiVersion = defaultApiVersion;
             return this;
         }
 
-        public Builder setDefaultApiVersion(@Nullable String defaultApiVersion) {
+        public Builder defaultApiVersion(@Nullable String defaultApiVersion) {
             this.defaultApiVersion = Input.ofNullable(defaultApiVersion);
             return this;
         }
 
-        public Builder setDisallowedActionVerbs(@Nullable Input<List<String>> disallowedActionVerbs) {
+        public Builder disallowedActionVerbs(@Nullable Input<List<String>> disallowedActionVerbs) {
             this.disallowedActionVerbs = disallowedActionVerbs;
             return this;
         }
 
-        public Builder setDisallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
+        public Builder disallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
             this.disallowedActionVerbs = Input.ofNullable(disallowedActionVerbs);
             return this;
         }
 
-        public Builder setEnableAsyncOperation(@Nullable Input<Boolean> enableAsyncOperation) {
+        public Builder enableAsyncOperation(@Nullable Input<Boolean> enableAsyncOperation) {
             this.enableAsyncOperation = enableAsyncOperation;
             return this;
         }
 
-        public Builder setEnableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
+        public Builder enableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
             this.enableAsyncOperation = Input.ofNullable(enableAsyncOperation);
             return this;
         }
 
-        public Builder setEnableThirdPartyS2S(@Nullable Input<Boolean> enableThirdPartyS2S) {
+        public Builder enableThirdPartyS2S(@Nullable Input<Boolean> enableThirdPartyS2S) {
             this.enableThirdPartyS2S = enableThirdPartyS2S;
             return this;
         }
 
-        public Builder setEnableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
+        public Builder enableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
             this.enableThirdPartyS2S = Input.ofNullable(enableThirdPartyS2S);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<ResourceTypeEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<ResourceTypeEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ResourceTypeEndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<ResourceTypeEndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setExtendedLocations(@Nullable Input<List<ExtendedLocationOptionsArgs>> extendedLocations) {
+        public Builder extendedLocations(@Nullable Input<List<ExtendedLocationOptionsArgs>> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setExtendedLocations(@Nullable List<ExtendedLocationOptionsArgs> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<ExtendedLocationOptionsArgs> extendedLocations) {
             this.extendedLocations = Input.ofNullable(extendedLocations);
             return this;
         }
 
-        public Builder setExtensionOptions(@Nullable Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions) {
+        public Builder extensionOptions(@Nullable Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions) {
             this.extensionOptions = extensionOptions;
             return this;
         }
 
-        public Builder setExtensionOptions(@Nullable ResourceTypeRegistrationPropertiesExtensionOptionsArgs extensionOptions) {
+        public Builder extensionOptions(@Nullable ResourceTypeRegistrationPropertiesExtensionOptionsArgs extensionOptions) {
             this.extensionOptions = Input.ofNullable(extensionOptions);
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule) {
+        public Builder featuresRule(@Nullable Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceTypeRegistrationPropertiesFeaturesRuleArgs featuresRule) {
+        public Builder featuresRule(@Nullable ResourceTypeRegistrationPropertiesFeaturesRuleArgs featuresRule) {
             this.featuresRule = Input.ofNullable(featuresRule);
             return this;
         }
 
-        public Builder setIdentityManagement(@Nullable Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement) {
+        public Builder identityManagement(@Nullable Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement) {
             this.identityManagement = identityManagement;
             return this;
         }
 
-        public Builder setIdentityManagement(@Nullable ResourceTypeRegistrationPropertiesIdentityManagementArgs identityManagement) {
+        public Builder identityManagement(@Nullable ResourceTypeRegistrationPropertiesIdentityManagementArgs identityManagement) {
             this.identityManagement = Input.ofNullable(identityManagement);
             return this;
         }
 
-        public Builder setIsPureProxy(@Nullable Input<Boolean> isPureProxy) {
+        public Builder isPureProxy(@Nullable Input<Boolean> isPureProxy) {
             this.isPureProxy = isPureProxy;
             return this;
         }
 
-        public Builder setIsPureProxy(@Nullable Boolean isPureProxy) {
+        public Builder isPureProxy(@Nullable Boolean isPureProxy) {
             this.isPureProxy = Input.ofNullable(isPureProxy);
             return this;
         }
 
-        public Builder setLinkedAccessChecks(@Nullable Input<List<LinkedAccessCheckArgs>> linkedAccessChecks) {
+        public Builder linkedAccessChecks(@Nullable Input<List<LinkedAccessCheckArgs>> linkedAccessChecks) {
             this.linkedAccessChecks = linkedAccessChecks;
             return this;
         }
 
-        public Builder setLinkedAccessChecks(@Nullable List<LinkedAccessCheckArgs> linkedAccessChecks) {
+        public Builder linkedAccessChecks(@Nullable List<LinkedAccessCheckArgs> linkedAccessChecks) {
             this.linkedAccessChecks = Input.ofNullable(linkedAccessChecks);
             return this;
         }
 
-        public Builder setLoggingRules(@Nullable Input<List<LoggingRuleArgs>> loggingRules) {
+        public Builder loggingRules(@Nullable Input<List<LoggingRuleArgs>> loggingRules) {
             this.loggingRules = loggingRules;
             return this;
         }
 
-        public Builder setLoggingRules(@Nullable List<LoggingRuleArgs> loggingRules) {
+        public Builder loggingRules(@Nullable List<LoggingRuleArgs> loggingRules) {
             this.loggingRules = Input.ofNullable(loggingRules);
             return this;
         }
 
-        public Builder setMarketplaceType(@Nullable Input<String> marketplaceType) {
+        public Builder marketplaceType(@Nullable Input<String> marketplaceType) {
             this.marketplaceType = marketplaceType;
             return this;
         }
 
-        public Builder setMarketplaceType(@Nullable String marketplaceType) {
+        public Builder marketplaceType(@Nullable String marketplaceType) {
             this.marketplaceType = Input.ofNullable(marketplaceType);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setRegionality(@Nullable Input<Either<String,Regionality>> regionality) {
+        public Builder regionality(@Nullable Input<Either<String,Regionality>> regionality) {
             this.regionality = regionality;
             return this;
         }
 
-        public Builder setRegionality(@Nullable Either<String,Regionality> regionality) {
+        public Builder regionality(@Nullable Either<String,Regionality> regionality) {
             this.regionality = Input.ofNullable(regionality);
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs requestHeaderOptions) {
             this.requestHeaderOptions = Input.ofNullable(requestHeaderOptions);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Input.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder setResourceDeletionPolicy(@Nullable Input<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy) {
+        public Builder resourceDeletionPolicy(@Nullable Input<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy) {
             this.resourceDeletionPolicy = resourceDeletionPolicy;
             return this;
         }
 
-        public Builder setResourceDeletionPolicy(@Nullable Either<String,ResourceDeletionPolicy> resourceDeletionPolicy) {
+        public Builder resourceDeletionPolicy(@Nullable Either<String,ResourceDeletionPolicy> resourceDeletionPolicy) {
             this.resourceDeletionPolicy = Input.ofNullable(resourceDeletionPolicy);
             return this;
         }
 
-        public Builder setResourceMovePolicy(@Nullable Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy) {
+        public Builder resourceMovePolicy(@Nullable Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy) {
             this.resourceMovePolicy = resourceMovePolicy;
             return this;
         }
 
-        public Builder setResourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResourceMovePolicyArgs resourceMovePolicy) {
+        public Builder resourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResourceMovePolicyArgs resourceMovePolicy) {
             this.resourceMovePolicy = Input.ofNullable(resourceMovePolicy);
             return this;
         }
 
-        public Builder setRoutingType(@Nullable Input<Either<String,RoutingType>> routingType) {
+        public Builder routingType(@Nullable Input<Either<String,RoutingType>> routingType) {
             this.routingType = routingType;
             return this;
         }
 
-        public Builder setRoutingType(@Nullable Either<String,RoutingType> routingType) {
+        public Builder routingType(@Nullable Either<String,RoutingType> routingType) {
             this.routingType = Input.ofNullable(routingType);
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
             this.serviceTreeInfos = Input.ofNullable(serviceTreeInfos);
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = Input.ofNullable(subscriptionLifecycleNotificationSpecifications);
             return this;
         }
 
-        public Builder setSubscriptionStateRules(@Nullable Input<List<SubscriptionStateRuleArgs>> subscriptionStateRules) {
+        public Builder subscriptionStateRules(@Nullable Input<List<SubscriptionStateRuleArgs>> subscriptionStateRules) {
             this.subscriptionStateRules = subscriptionStateRules;
             return this;
         }
 
-        public Builder setSubscriptionStateRules(@Nullable List<SubscriptionStateRuleArgs> subscriptionStateRules) {
+        public Builder subscriptionStateRules(@Nullable List<SubscriptionStateRuleArgs> subscriptionStateRules) {
             this.subscriptionStateRules = Input.ofNullable(subscriptionStateRules);
             return this;
         }
 
-        public Builder setSwaggerSpecifications(@Nullable Input<List<SwaggerSpecificationArgs>> swaggerSpecifications) {
+        public Builder swaggerSpecifications(@Nullable Input<List<SwaggerSpecificationArgs>> swaggerSpecifications) {
             this.swaggerSpecifications = swaggerSpecifications;
             return this;
         }
 
-        public Builder setSwaggerSpecifications(@Nullable List<SwaggerSpecificationArgs> swaggerSpecifications) {
+        public Builder swaggerSpecifications(@Nullable List<SwaggerSpecificationArgs> swaggerSpecifications) {
             this.swaggerSpecifications = Input.ofNullable(swaggerSpecifications);
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs templateDeploymentOptions) {
             this.templateDeploymentOptions = Input.ofNullable(templateDeploymentOptions);
             return this;
         }
 
-        public Builder setThrottlingRules(@Nullable Input<List<ThrottlingRuleArgs>> throttlingRules) {
+        public Builder throttlingRules(@Nullable Input<List<ThrottlingRuleArgs>> throttlingRules) {
             this.throttlingRules = throttlingRules;
             return this;
         }
 
-        public Builder setThrottlingRules(@Nullable List<ThrottlingRuleArgs> throttlingRules) {
+        public Builder throttlingRules(@Nullable List<ThrottlingRuleArgs> throttlingRules) {
             this.throttlingRules = Input.ofNullable(throttlingRules);
             return this;
         }

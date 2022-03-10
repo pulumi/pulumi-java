@@ -136,62 +136,62 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
     	      this.url = defaults.url;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClientIdLists(@Nullable Input<List<String>> clientIdLists) {
+        public Builder clientIdLists(@Nullable Input<List<String>> clientIdLists) {
             this.clientIdLists = clientIdLists;
             return this;
         }
 
-        public Builder setClientIdLists(@Nullable List<String> clientIdLists) {
+        public Builder clientIdLists(@Nullable List<String> clientIdLists) {
             this.clientIdLists = Input.ofNullable(clientIdLists);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setThumbprintLists(@Nullable Input<List<String>> thumbprintLists) {
+        public Builder thumbprintLists(@Nullable Input<List<String>> thumbprintLists) {
             this.thumbprintLists = thumbprintLists;
             return this;
         }
 
-        public Builder setThumbprintLists(@Nullable List<String> thumbprintLists) {
+        public Builder thumbprintLists(@Nullable List<String> thumbprintLists) {
             this.thumbprintLists = Input.ofNullable(thumbprintLists);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

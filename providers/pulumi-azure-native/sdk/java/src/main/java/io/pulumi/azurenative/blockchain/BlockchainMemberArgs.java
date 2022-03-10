@@ -253,132 +253,132 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     	      this.validatorNodesSku = defaults.validatorNodesSku;
         }
 
-        public Builder setBlockchainMemberName(@Nullable Input<String> blockchainMemberName) {
+        public Builder blockchainMemberName(@Nullable Input<String> blockchainMemberName) {
             this.blockchainMemberName = blockchainMemberName;
             return this;
         }
 
-        public Builder setBlockchainMemberName(@Nullable String blockchainMemberName) {
+        public Builder blockchainMemberName(@Nullable String blockchainMemberName) {
             this.blockchainMemberName = Input.ofNullable(blockchainMemberName);
             return this;
         }
 
-        public Builder setConsortium(@Nullable Input<String> consortium) {
+        public Builder consortium(@Nullable Input<String> consortium) {
             this.consortium = consortium;
             return this;
         }
 
-        public Builder setConsortium(@Nullable String consortium) {
+        public Builder consortium(@Nullable String consortium) {
             this.consortium = Input.ofNullable(consortium);
             return this;
         }
 
-        public Builder setConsortiumManagementAccountPassword(@Nullable Input<String> consortiumManagementAccountPassword) {
+        public Builder consortiumManagementAccountPassword(@Nullable Input<String> consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
 
-        public Builder setConsortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
+        public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = Input.ofNullable(consortiumManagementAccountPassword);
             return this;
         }
 
-        public Builder setConsortiumMemberDisplayName(@Nullable Input<String> consortiumMemberDisplayName) {
+        public Builder consortiumMemberDisplayName(@Nullable Input<String> consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
 
-        public Builder setConsortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
+        public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = Input.ofNullable(consortiumMemberDisplayName);
             return this;
         }
 
-        public Builder setConsortiumRole(@Nullable Input<String> consortiumRole) {
+        public Builder consortiumRole(@Nullable Input<String> consortiumRole) {
             this.consortiumRole = consortiumRole;
             return this;
         }
 
-        public Builder setConsortiumRole(@Nullable String consortiumRole) {
+        public Builder consortiumRole(@Nullable String consortiumRole) {
             this.consortiumRole = Input.ofNullable(consortiumRole);
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable Input<List<FirewallRuleArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Input<List<FirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
             this.firewallRules = Input.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,BlockchainProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,BlockchainProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,BlockchainProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,BlockchainProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidatorNodesSku(@Nullable Input<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
+        public Builder validatorNodesSku(@Nullable Input<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }
 
-        public Builder setValidatorNodesSku(@Nullable BlockchainMemberNodesSkuArgs validatorNodesSku) {
+        public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuArgs validatorNodesSku) {
             this.validatorNodesSku = Input.ofNullable(validatorNodesSku);
             return this;
         }

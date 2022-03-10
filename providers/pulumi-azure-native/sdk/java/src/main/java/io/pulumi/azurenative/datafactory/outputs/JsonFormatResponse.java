@@ -166,42 +166,42 @@ public final class JsonFormatResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setJsonNodeReference(@Nullable Object jsonNodeReference) {
+        public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             this.jsonNodeReference = jsonNodeReference;
             return this;
         }
 
-        public Builder setJsonPathDefinition(@Nullable Object jsonPathDefinition) {
+        public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             this.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
 
-        public Builder setNestingSeparator(@Nullable Object nestingSeparator) {
+        public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             this.nestingSeparator = nestingSeparator;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

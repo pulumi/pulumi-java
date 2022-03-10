@@ -71,22 +71,22 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSubscription(@Nullable Input<String> subscription) {
+        public Builder subscription(@Nullable Input<String> subscription) {
             this.subscription = subscription;
             return this;
         }
 
-        public Builder setSubscription(@Nullable String subscription) {
+        public Builder subscription(@Nullable String subscription) {
             this.subscription = Input.ofNullable(subscription);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

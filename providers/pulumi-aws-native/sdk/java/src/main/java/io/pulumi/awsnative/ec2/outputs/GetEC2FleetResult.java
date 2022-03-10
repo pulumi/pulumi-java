@@ -69,22 +69,22 @@ public final class GetEC2FleetResult {
     	      this.targetCapacitySpecification = defaults.targetCapacitySpecification;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
 
-        public Builder setExcessCapacityTerminationPolicy(@Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
 
-        public Builder setFleetId(@Nullable String fleetId) {
+        public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = fleetId;
             return this;
         }
 
-        public Builder setTargetCapacitySpecification(@Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(@Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
             this.targetCapacitySpecification = targetCapacitySpecification;
             return this;
         }

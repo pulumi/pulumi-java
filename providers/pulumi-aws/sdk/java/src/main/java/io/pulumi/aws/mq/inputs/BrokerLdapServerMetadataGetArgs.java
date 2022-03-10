@@ -216,112 +216,112 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
     	      this.userSearchSubtree = defaults.userSearchSubtree;
         }
 
-        public Builder setHosts(@Nullable Input<List<String>> hosts) {
+        public Builder hosts(@Nullable Input<List<String>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = Input.ofNullable(hosts);
             return this;
         }
 
-        public Builder setRoleBase(@Nullable Input<String> roleBase) {
+        public Builder roleBase(@Nullable Input<String> roleBase) {
             this.roleBase = roleBase;
             return this;
         }
 
-        public Builder setRoleBase(@Nullable String roleBase) {
+        public Builder roleBase(@Nullable String roleBase) {
             this.roleBase = Input.ofNullable(roleBase);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setRoleSearchMatching(@Nullable Input<String> roleSearchMatching) {
+        public Builder roleSearchMatching(@Nullable Input<String> roleSearchMatching) {
             this.roleSearchMatching = roleSearchMatching;
             return this;
         }
 
-        public Builder setRoleSearchMatching(@Nullable String roleSearchMatching) {
+        public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
             this.roleSearchMatching = Input.ofNullable(roleSearchMatching);
             return this;
         }
 
-        public Builder setRoleSearchSubtree(@Nullable Input<Boolean> roleSearchSubtree) {
+        public Builder roleSearchSubtree(@Nullable Input<Boolean> roleSearchSubtree) {
             this.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
 
-        public Builder setRoleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
+        public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
             this.roleSearchSubtree = Input.ofNullable(roleSearchSubtree);
             return this;
         }
 
-        public Builder setServiceAccountPassword(@Nullable Input<String> serviceAccountPassword) {
+        public Builder serviceAccountPassword(@Nullable Input<String> serviceAccountPassword) {
             this.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
 
-        public Builder setServiceAccountPassword(@Nullable String serviceAccountPassword) {
+        public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
             this.serviceAccountPassword = Input.ofNullable(serviceAccountPassword);
             return this;
         }
 
-        public Builder setServiceAccountUsername(@Nullable Input<String> serviceAccountUsername) {
+        public Builder serviceAccountUsername(@Nullable Input<String> serviceAccountUsername) {
             this.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
 
-        public Builder setServiceAccountUsername(@Nullable String serviceAccountUsername) {
+        public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
             this.serviceAccountUsername = Input.ofNullable(serviceAccountUsername);
             return this;
         }
 
-        public Builder setUserBase(@Nullable Input<String> userBase) {
+        public Builder userBase(@Nullable Input<String> userBase) {
             this.userBase = userBase;
             return this;
         }
 
-        public Builder setUserBase(@Nullable String userBase) {
+        public Builder userBase(@Nullable String userBase) {
             this.userBase = Input.ofNullable(userBase);
             return this;
         }
 
-        public Builder setUserRoleName(@Nullable Input<String> userRoleName) {
+        public Builder userRoleName(@Nullable Input<String> userRoleName) {
             this.userRoleName = userRoleName;
             return this;
         }
 
-        public Builder setUserRoleName(@Nullable String userRoleName) {
+        public Builder userRoleName(@Nullable String userRoleName) {
             this.userRoleName = Input.ofNullable(userRoleName);
             return this;
         }
 
-        public Builder setUserSearchMatching(@Nullable Input<String> userSearchMatching) {
+        public Builder userSearchMatching(@Nullable Input<String> userSearchMatching) {
             this.userSearchMatching = userSearchMatching;
             return this;
         }
 
-        public Builder setUserSearchMatching(@Nullable String userSearchMatching) {
+        public Builder userSearchMatching(@Nullable String userSearchMatching) {
             this.userSearchMatching = Input.ofNullable(userSearchMatching);
             return this;
         }
 
-        public Builder setUserSearchSubtree(@Nullable Input<Boolean> userSearchSubtree) {
+        public Builder userSearchSubtree(@Nullable Input<Boolean> userSearchSubtree) {
             this.userSearchSubtree = userSearchSubtree;
             return this;
         }
 
-        public Builder setUserSearchSubtree(@Nullable Boolean userSearchSubtree) {
+        public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
             this.userSearchSubtree = Input.ofNullable(userSearchSubtree);
             return this;
         }

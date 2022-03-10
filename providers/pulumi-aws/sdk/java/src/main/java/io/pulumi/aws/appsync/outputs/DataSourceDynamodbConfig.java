@@ -101,27 +101,27 @@ public final class DataSourceDynamodbConfig {
     	      this.versioned = defaults.versioned;
         }
 
-        public Builder setDeltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig) {
+        public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig) {
             this.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setUseCallerCredentials(@Nullable Boolean useCallerCredentials) {
+        public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
             this.useCallerCredentials = useCallerCredentials;
             return this;
         }
 
-        public Builder setVersioned(@Nullable Boolean versioned) {
+        public Builder versioned(@Nullable Boolean versioned) {
             this.versioned = versioned;
             return this;
         }

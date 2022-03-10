@@ -55,7 +55,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder setIsPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
+        public Builder isPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }

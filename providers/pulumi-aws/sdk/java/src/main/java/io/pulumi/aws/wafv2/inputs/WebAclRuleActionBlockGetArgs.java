@@ -53,12 +53,12 @@ public final class WebAclRuleActionBlockGetArgs extends io.pulumi.resources.Reso
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable Input<WebAclRuleActionBlockCustomResponseGetArgs> customResponse) {
+        public Builder customResponse(@Nullable Input<WebAclRuleActionBlockCustomResponseGetArgs> customResponse) {
             this.customResponse = customResponse;
             return this;
         }
 
-        public Builder setCustomResponse(@Nullable WebAclRuleActionBlockCustomResponseGetArgs customResponse) {
+        public Builder customResponse(@Nullable WebAclRuleActionBlockCustomResponseGetArgs customResponse) {
             this.customResponse = Input.ofNullable(customResponse);
             return this;
         }

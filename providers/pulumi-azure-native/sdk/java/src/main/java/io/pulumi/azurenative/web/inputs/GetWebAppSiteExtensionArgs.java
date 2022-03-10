@@ -84,17 +84,17 @@ public final class GetWebAppSiteExtensionArgs extends io.pulumi.resources.Invoke
     	      this.siteExtensionId = defaults.siteExtensionId;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSiteExtensionId(String siteExtensionId) {
+        public Builder siteExtensionId(String siteExtensionId) {
             this.siteExtensionId = Objects.requireNonNull(siteExtensionId);
             return this;
         }

@@ -261,72 +261,72 @@ public final class GetSensorResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setConnectivityTime(String connectivityTime) {
+        public Builder connectivityTime(String connectivityTime) {
             this.connectivityTime = Objects.requireNonNull(connectivityTime);
             return this;
         }
 
-        public Builder setDynamicLearning(Boolean dynamicLearning) {
+        public Builder dynamicLearning(Boolean dynamicLearning) {
             this.dynamicLearning = Objects.requireNonNull(dynamicLearning);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLearningMode(Boolean learningMode) {
+        public Builder learningMode(Boolean learningMode) {
             this.learningMode = Objects.requireNonNull(learningMode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSensorStatus(String sensorStatus) {
+        public Builder sensorStatus(String sensorStatus) {
             this.sensorStatus = Objects.requireNonNull(sensorStatus);
             return this;
         }
 
-        public Builder setSensorType(@Nullable String sensorType) {
+        public Builder sensorType(@Nullable String sensorType) {
             this.sensorType = sensorType;
             return this;
         }
 
-        public Builder setSensorVersion(String sensorVersion) {
+        public Builder sensorVersion(String sensorVersion) {
             this.sensorVersion = Objects.requireNonNull(sensorVersion);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
+        public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
             this.tiAutomaticUpdates = tiAutomaticUpdates;
             return this;
         }
 
-        public Builder setTiStatus(String tiStatus) {
+        public Builder tiStatus(String tiStatus) {
             this.tiStatus = Objects.requireNonNull(tiStatus);
             return this;
         }
 
-        public Builder setTiVersion(String tiVersion) {
+        public Builder tiVersion(String tiVersion) {
             this.tiVersion = Objects.requireNonNull(tiVersion);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

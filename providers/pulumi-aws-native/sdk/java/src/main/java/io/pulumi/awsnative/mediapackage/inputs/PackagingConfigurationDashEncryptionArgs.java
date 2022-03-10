@@ -52,12 +52,12 @@ public final class PackagingConfigurationDashEncryptionArgs extends io.pulumi.re
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

@@ -120,52 +120,52 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
     	      this.releaseCriteria = defaults.releaseCriteria;
         }
 
-        public Builder setBatchGroupName(Input<String> batchGroupName) {
+        public Builder batchGroupName(Input<String> batchGroupName) {
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
 
-        public Builder setBatchGroupName(String batchGroupName) {
+        public Builder batchGroupName(String batchGroupName) {
             this.batchGroupName = Input.of(Objects.requireNonNull(batchGroupName));
             return this;
         }
 
-        public Builder setChangedTime(@Nullable Input<String> changedTime) {
+        public Builder changedTime(@Nullable Input<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = Input.ofNullable(changedTime);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setReleaseCriteria(Input<BatchReleaseCriteriaArgs> releaseCriteria) {
+        public Builder releaseCriteria(Input<BatchReleaseCriteriaArgs> releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }
 
-        public Builder setReleaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
+        public Builder releaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
             this.releaseCriteria = Input.of(Objects.requireNonNull(releaseCriteria));
             return this;
         }

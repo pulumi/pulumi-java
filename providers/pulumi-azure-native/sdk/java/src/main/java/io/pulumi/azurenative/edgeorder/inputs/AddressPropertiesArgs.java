@@ -75,22 +75,22 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder setContactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
-        public Builder setContactDetails(ContactDetailsArgs contactDetails) {
+        public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
+        public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Input.ofNullable(shippingAddress);
             return this;
         }

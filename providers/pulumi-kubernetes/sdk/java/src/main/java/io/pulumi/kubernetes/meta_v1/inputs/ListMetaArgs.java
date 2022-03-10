@@ -109,42 +109,42 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder set$continue(@Nullable Input<String> $continue) {
+        public Builder $continue(@Nullable Input<String> $continue) {
             this.$continue = $continue;
             return this;
         }
 
-        public Builder set$continue(@Nullable String $continue) {
+        public Builder $continue(@Nullable String $continue) {
             this.$continue = Input.ofNullable($continue);
             return this;
         }
 
-        public Builder setRemainingItemCount(@Nullable Input<Integer> remainingItemCount) {
+        public Builder remainingItemCount(@Nullable Input<Integer> remainingItemCount) {
             this.remainingItemCount = remainingItemCount;
             return this;
         }
 
-        public Builder setRemainingItemCount(@Nullable Integer remainingItemCount) {
+        public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
             this.remainingItemCount = Input.ofNullable(remainingItemCount);
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Input.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

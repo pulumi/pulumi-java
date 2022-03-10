@@ -65,12 +65,12 @@ public final class RetryPolicyResponse {
     	      this.minimumBackoff = defaults.minimumBackoff;
         }
 
-        public Builder setMaximumBackoff(String maximumBackoff) {
+        public Builder maximumBackoff(String maximumBackoff) {
             this.maximumBackoff = Objects.requireNonNull(maximumBackoff);
             return this;
         }
 
-        public Builder setMinimumBackoff(String minimumBackoff) {
+        public Builder minimumBackoff(String minimumBackoff) {
             this.minimumBackoff = Objects.requireNonNull(minimumBackoff);
             return this;
         }

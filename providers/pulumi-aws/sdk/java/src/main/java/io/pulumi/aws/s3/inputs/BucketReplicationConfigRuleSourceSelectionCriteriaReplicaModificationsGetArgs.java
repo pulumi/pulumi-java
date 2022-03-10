@@ -52,12 +52,12 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(Input<String> status) {
+        public Builder status(Input<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

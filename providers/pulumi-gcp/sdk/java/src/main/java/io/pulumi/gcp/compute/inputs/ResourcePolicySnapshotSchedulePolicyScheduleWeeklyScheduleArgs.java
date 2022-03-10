@@ -54,12 +54,12 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder setDayOfWeeks(Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks) {
+        public Builder dayOfWeeks(Input<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks) {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }
 
-        public Builder setDayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs> dayOfWeeks) {
+        public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs> dayOfWeeks) {
             this.dayOfWeeks = Input.of(Objects.requireNonNull(dayOfWeeks));
             return this;
         }

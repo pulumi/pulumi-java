@@ -136,32 +136,32 @@ public final class CustomResourceDefinitionSpec {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setConversion(@Nullable CustomResourceConversion conversion) {
+        public Builder conversion(@Nullable CustomResourceConversion conversion) {
             this.conversion = conversion;
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setNames(CustomResourceDefinitionNames names) {
+        public Builder names(CustomResourceDefinitionNames names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setVersions(List<CustomResourceDefinitionVersion> versions) {
+        public Builder versions(List<CustomResourceDefinitionVersion> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }

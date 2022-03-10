@@ -209,7 +209,7 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
     private static ScheduledSynchronizationSettingArgs makeArgs(ScheduledSynchronizationSettingArgs args) {
         var builder = args == null ? ScheduledSynchronizationSettingArgs.builder() : ScheduledSynchronizationSettingArgs.builder(args);
         return builder
-            .setKind("ScheduleBased")
+            .kind("ScheduleBased")
             .build();
     }
 

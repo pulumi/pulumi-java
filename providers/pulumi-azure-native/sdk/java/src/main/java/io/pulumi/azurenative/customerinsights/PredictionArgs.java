@@ -299,162 +299,162 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scoreLabel = defaults.scoreLabel;
         }
 
-        public Builder setAutoAnalyze(Input<Boolean> autoAnalyze) {
+        public Builder autoAnalyze(Input<Boolean> autoAnalyze) {
             this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
             return this;
         }
 
-        public Builder setAutoAnalyze(Boolean autoAnalyze) {
+        public Builder autoAnalyze(Boolean autoAnalyze) {
             this.autoAnalyze = Input.of(Objects.requireNonNull(autoAnalyze));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGrades(@Nullable Input<List<PredictionGradesArgs>> grades) {
+        public Builder grades(@Nullable Input<List<PredictionGradesArgs>> grades) {
             this.grades = grades;
             return this;
         }
 
-        public Builder setGrades(@Nullable List<PredictionGradesArgs> grades) {
+        public Builder grades(@Nullable List<PredictionGradesArgs> grades) {
             this.grades = Input.ofNullable(grades);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setInvolvedInteractionTypes(@Nullable Input<List<String>> involvedInteractionTypes) {
+        public Builder involvedInteractionTypes(@Nullable Input<List<String>> involvedInteractionTypes) {
             this.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
 
-        public Builder setInvolvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
+        public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
             this.involvedInteractionTypes = Input.ofNullable(involvedInteractionTypes);
             return this;
         }
 
-        public Builder setInvolvedKpiTypes(@Nullable Input<List<String>> involvedKpiTypes) {
+        public Builder involvedKpiTypes(@Nullable Input<List<String>> involvedKpiTypes) {
             this.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
 
-        public Builder setInvolvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
+        public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
             this.involvedKpiTypes = Input.ofNullable(involvedKpiTypes);
             return this;
         }
 
-        public Builder setInvolvedRelationships(@Nullable Input<List<String>> involvedRelationships) {
+        public Builder involvedRelationships(@Nullable Input<List<String>> involvedRelationships) {
             this.involvedRelationships = involvedRelationships;
             return this;
         }
 
-        public Builder setInvolvedRelationships(@Nullable List<String> involvedRelationships) {
+        public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
             this.involvedRelationships = Input.ofNullable(involvedRelationships);
             return this;
         }
 
-        public Builder setMappings(Input<PredictionMappingsArgs> mappings) {
+        public Builder mappings(Input<PredictionMappingsArgs> mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
 
-        public Builder setMappings(PredictionMappingsArgs mappings) {
+        public Builder mappings(PredictionMappingsArgs mappings) {
             this.mappings = Input.of(Objects.requireNonNull(mappings));
             return this;
         }
 
-        public Builder setNegativeOutcomeExpression(Input<String> negativeOutcomeExpression) {
+        public Builder negativeOutcomeExpression(Input<String> negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
             return this;
         }
 
-        public Builder setNegativeOutcomeExpression(String negativeOutcomeExpression) {
+        public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Input.of(Objects.requireNonNull(negativeOutcomeExpression));
             return this;
         }
 
-        public Builder setPositiveOutcomeExpression(Input<String> positiveOutcomeExpression) {
+        public Builder positiveOutcomeExpression(Input<String> positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
             return this;
         }
 
-        public Builder setPositiveOutcomeExpression(String positiveOutcomeExpression) {
+        public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Input.of(Objects.requireNonNull(positiveOutcomeExpression));
             return this;
         }
 
-        public Builder setPredictionName(@Nullable Input<String> predictionName) {
+        public Builder predictionName(@Nullable Input<String> predictionName) {
             this.predictionName = predictionName;
             return this;
         }
 
-        public Builder setPredictionName(@Nullable String predictionName) {
+        public Builder predictionName(@Nullable String predictionName) {
             this.predictionName = Input.ofNullable(predictionName);
             return this;
         }
 
-        public Builder setPrimaryProfileType(Input<String> primaryProfileType) {
+        public Builder primaryProfileType(Input<String> primaryProfileType) {
             this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
             return this;
         }
 
-        public Builder setPrimaryProfileType(String primaryProfileType) {
+        public Builder primaryProfileType(String primaryProfileType) {
             this.primaryProfileType = Input.of(Objects.requireNonNull(primaryProfileType));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScopeExpression(Input<String> scopeExpression) {
+        public Builder scopeExpression(Input<String> scopeExpression) {
             this.scopeExpression = Objects.requireNonNull(scopeExpression);
             return this;
         }
 
-        public Builder setScopeExpression(String scopeExpression) {
+        public Builder scopeExpression(String scopeExpression) {
             this.scopeExpression = Input.of(Objects.requireNonNull(scopeExpression));
             return this;
         }
 
-        public Builder setScoreLabel(Input<String> scoreLabel) {
+        public Builder scoreLabel(Input<String> scoreLabel) {
             this.scoreLabel = Objects.requireNonNull(scoreLabel);
             return this;
         }
 
-        public Builder setScoreLabel(String scoreLabel) {
+        public Builder scoreLabel(String scoreLabel) {
             this.scoreLabel = Input.of(Objects.requireNonNull(scoreLabel));
             return this;
         }

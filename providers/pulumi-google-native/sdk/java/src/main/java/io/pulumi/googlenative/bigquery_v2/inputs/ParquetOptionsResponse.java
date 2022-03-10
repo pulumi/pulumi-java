@@ -68,12 +68,12 @@ public final class ParquetOptionsResponse extends io.pulumi.resources.InvokeArgs
     	      this.enumAsString = defaults.enumAsString;
         }
 
-        public Builder setEnableListInference(Boolean enableListInference) {
+        public Builder enableListInference(Boolean enableListInference) {
             this.enableListInference = Objects.requireNonNull(enableListInference);
             return this;
         }
 
-        public Builder setEnumAsString(Boolean enumAsString) {
+        public Builder enumAsString(Boolean enumAsString) {
             this.enumAsString = Objects.requireNonNull(enumAsString);
             return this;
         }

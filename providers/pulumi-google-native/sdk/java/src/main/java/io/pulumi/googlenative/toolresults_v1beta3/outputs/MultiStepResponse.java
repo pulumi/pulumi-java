@@ -83,17 +83,17 @@ public final class MultiStepResponse {
     	      this.primaryStepId = defaults.primaryStepId;
         }
 
-        public Builder setMultistepNumber(Integer multistepNumber) {
+        public Builder multistepNumber(Integer multistepNumber) {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
 
-        public Builder setPrimaryStep(PrimaryStepResponse primaryStep) {
+        public Builder primaryStep(PrimaryStepResponse primaryStep) {
             this.primaryStep = Objects.requireNonNull(primaryStep);
             return this;
         }
 
-        public Builder setPrimaryStepId(String primaryStepId) {
+        public Builder primaryStepId(String primaryStepId) {
             this.primaryStepId = Objects.requireNonNull(primaryStepId);
             return this;
         }

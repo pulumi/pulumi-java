@@ -88,32 +88,32 @@ public final class ConfigurationAggregatorAccountAggregationSourceGetArgs extend
     	      this.regions = defaults.regions;
         }
 
-        public Builder setAccountIds(Input<List<String>> accountIds) {
+        public Builder accountIds(Input<List<String>> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
-        public Builder setAccountIds(List<String> accountIds) {
+        public Builder accountIds(List<String> accountIds) {
             this.accountIds = Input.of(Objects.requireNonNull(accountIds));
             return this;
         }
 
-        public Builder setAllRegions(@Nullable Input<Boolean> allRegions) {
+        public Builder allRegions(@Nullable Input<Boolean> allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = Input.ofNullable(allRegions);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }

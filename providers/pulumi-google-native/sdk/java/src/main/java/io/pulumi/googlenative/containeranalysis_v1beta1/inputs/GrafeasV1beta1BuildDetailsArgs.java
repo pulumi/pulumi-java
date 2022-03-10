@@ -75,22 +75,22 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder setProvenance(Input<BuildProvenanceArgs> provenance) {
+        public Builder provenance(Input<BuildProvenanceArgs> provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
-        public Builder setProvenance(BuildProvenanceArgs provenance) {
+        public Builder provenance(BuildProvenanceArgs provenance) {
             this.provenance = Input.of(Objects.requireNonNull(provenance));
             return this;
         }
 
-        public Builder setProvenanceBytes(@Nullable Input<String> provenanceBytes) {
+        public Builder provenanceBytes(@Nullable Input<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
 
-        public Builder setProvenanceBytes(@Nullable String provenanceBytes) {
+        public Builder provenanceBytes(@Nullable String provenanceBytes) {
             this.provenanceBytes = Input.ofNullable(provenanceBytes);
             return this;
         }

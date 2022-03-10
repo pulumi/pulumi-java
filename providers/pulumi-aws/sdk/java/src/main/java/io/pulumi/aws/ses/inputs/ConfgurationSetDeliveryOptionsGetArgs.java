@@ -53,12 +53,12 @@ public final class ConfgurationSetDeliveryOptionsGetArgs extends io.pulumi.resou
     	      this.tlsPolicy = defaults.tlsPolicy;
         }
 
-        public Builder setTlsPolicy(@Nullable Input<String> tlsPolicy) {
+        public Builder tlsPolicy(@Nullable Input<String> tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
         }
 
-        public Builder setTlsPolicy(@Nullable String tlsPolicy) {
+        public Builder tlsPolicy(@Nullable String tlsPolicy) {
             this.tlsPolicy = Input.ofNullable(tlsPolicy);
             return this;
         }

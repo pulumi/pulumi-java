@@ -71,22 +71,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs 
     	      this.source = defaults.source;
         }
 
-        public Builder setPullDeps(@Nullable Input<Boolean> pullDeps) {
+        public Builder pullDeps(@Nullable Input<Boolean> pullDeps) {
             this.pullDeps = pullDeps;
             return this;
         }
 
-        public Builder setPullDeps(@Nullable Boolean pullDeps) {
+        public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = Input.ofNullable(pullDeps);
             return this;
         }
 
-        public Builder setSource(Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source) {
+        public Builder source(Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs source) {
+        public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

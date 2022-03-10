@@ -50,12 +50,12 @@ public final class BucketReplicationTime {
     	      this.time = defaults.time;
         }
 
-        public Builder setStatus(BucketReplicationTimeStatus status) {
+        public Builder status(BucketReplicationTimeStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTime(BucketReplicationTimeValue time) {
+        public Builder time(BucketReplicationTimeValue time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

@@ -84,12 +84,12 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
     	      this.table = defaults.table;
         }
 
-        public Builder setOutputSchema(@Nullable String outputSchema) {
+        public Builder outputSchema(@Nullable String outputSchema) {
             this.outputSchema = outputSchema;
             return this;
         }
 
-        public Builder setTable(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
+        public Builder table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

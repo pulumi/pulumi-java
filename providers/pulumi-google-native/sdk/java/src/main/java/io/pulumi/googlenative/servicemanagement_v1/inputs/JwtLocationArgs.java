@@ -90,32 +90,32 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valuePrefix = defaults.valuePrefix;
         }
 
-        public Builder setHeader(@Nullable Input<String> header) {
+        public Builder header(@Nullable Input<String> header) {
             this.header = header;
             return this;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = Input.ofNullable(header);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setValuePrefix(@Nullable Input<String> valuePrefix) {
+        public Builder valuePrefix(@Nullable Input<String> valuePrefix) {
             this.valuePrefix = valuePrefix;
             return this;
         }
 
-        public Builder setValuePrefix(@Nullable String valuePrefix) {
+        public Builder valuePrefix(@Nullable String valuePrefix) {
             this.valuePrefix = Input.ofNullable(valuePrefix);
             return this;
         }

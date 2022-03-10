@@ -57,12 +57,12 @@ public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enableHotKeyLogging = defaults.enableHotKeyLogging;
         }
 
-        public Builder setEnableHotKeyLogging(@Nullable Input<Boolean> enableHotKeyLogging) {
+        public Builder enableHotKeyLogging(@Nullable Input<Boolean> enableHotKeyLogging) {
             this.enableHotKeyLogging = enableHotKeyLogging;
             return this;
         }
 
-        public Builder setEnableHotKeyLogging(@Nullable Boolean enableHotKeyLogging) {
+        public Builder enableHotKeyLogging(@Nullable Boolean enableHotKeyLogging) {
             this.enableHotKeyLogging = Input.ofNullable(enableHotKeyLogging);
             return this;
         }

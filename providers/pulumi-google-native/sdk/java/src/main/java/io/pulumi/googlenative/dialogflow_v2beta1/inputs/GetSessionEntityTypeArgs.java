@@ -110,32 +110,32 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
     	      this.userId = defaults.userId;
         }
 
-        public Builder setEntityTypeId(String entityTypeId) {
+        public Builder entityTypeId(String entityTypeId) {
             this.entityTypeId = Objects.requireNonNull(entityTypeId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

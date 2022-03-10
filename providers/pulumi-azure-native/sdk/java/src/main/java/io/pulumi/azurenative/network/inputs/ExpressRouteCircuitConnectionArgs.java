@@ -156,72 +156,72 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
     	      this.peerExpressRouteCircuitPeering = defaults.peerExpressRouteCircuitPeering;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(@Nullable Input<SubResourceArgs> expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(@Nullable SubResourceArgs expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(@Nullable SubResourceArgs expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Input.ofNullable(expressRouteCircuitPeering);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpv6CircuitConnectionConfig(@Nullable Input<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig) {
+        public Builder ipv6CircuitConnectionConfig(@Nullable Input<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
 
-        public Builder setIpv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
+        public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = Input.ofNullable(ipv6CircuitConnectionConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> peerExpressRouteCircuitPeering) {
+        public Builder peerExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuitPeering(@Nullable SubResourceArgs peerExpressRouteCircuitPeering) {
+        public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceArgs peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = Input.ofNullable(peerExpressRouteCircuitPeering);
             return this;
         }

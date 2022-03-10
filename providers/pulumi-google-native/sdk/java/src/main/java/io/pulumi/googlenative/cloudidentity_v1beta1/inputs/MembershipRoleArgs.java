@@ -92,32 +92,32 @@ public final class MembershipRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictionEvaluations = defaults.restrictionEvaluations;
         }
 
-        public Builder setExpiryDetail(@Nullable Input<ExpiryDetailArgs> expiryDetail) {
+        public Builder expiryDetail(@Nullable Input<ExpiryDetailArgs> expiryDetail) {
             this.expiryDetail = expiryDetail;
             return this;
         }
 
-        public Builder setExpiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
+        public Builder expiryDetail(@Nullable ExpiryDetailArgs expiryDetail) {
             this.expiryDetail = Input.ofNullable(expiryDetail);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRestrictionEvaluations(@Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations) {
+        public Builder restrictionEvaluations(@Nullable Input<RestrictionEvaluationsArgs> restrictionEvaluations) {
             this.restrictionEvaluations = restrictionEvaluations;
             return this;
         }
 
-        public Builder setRestrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
+        public Builder restrictionEvaluations(@Nullable RestrictionEvaluationsArgs restrictionEvaluations) {
             this.restrictionEvaluations = Input.ofNullable(restrictionEvaluations);
             return this;
         }

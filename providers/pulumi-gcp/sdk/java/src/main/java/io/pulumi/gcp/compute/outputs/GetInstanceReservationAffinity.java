@@ -59,12 +59,12 @@ public final class GetInstanceReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservations(List<GetInstanceReservationAffinitySpecificReservation> specificReservations) {
+        public Builder specificReservations(List<GetInstanceReservationAffinitySpecificReservation> specificReservations) {
             this.specificReservations = Objects.requireNonNull(specificReservations);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

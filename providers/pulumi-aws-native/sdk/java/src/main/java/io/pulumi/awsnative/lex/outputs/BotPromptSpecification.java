@@ -70,17 +70,17 @@ public final class BotPromptSpecification {
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroup> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }

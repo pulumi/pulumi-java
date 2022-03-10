@@ -54,12 +54,12 @@ public final class RouteSpecTcpRouteActionGetArgs extends io.pulumi.resources.Re
     	      this.weightedTargets = defaults.weightedTargets;
         }
 
-        public Builder setWeightedTargets(Input<List<RouteSpecTcpRouteActionWeightedTargetGetArgs>> weightedTargets) {
+        public Builder weightedTargets(Input<List<RouteSpecTcpRouteActionWeightedTargetGetArgs>> weightedTargets) {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }
 
-        public Builder setWeightedTargets(List<RouteSpecTcpRouteActionWeightedTargetGetArgs> weightedTargets) {
+        public Builder weightedTargets(List<RouteSpecTcpRouteActionWeightedTargetGetArgs> weightedTargets) {
             this.weightedTargets = Input.of(Objects.requireNonNull(weightedTargets));
             return this;
         }

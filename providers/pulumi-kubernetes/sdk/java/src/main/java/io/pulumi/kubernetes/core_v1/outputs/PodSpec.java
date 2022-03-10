@@ -657,182 +657,182 @@ public final class PodSpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setAffinity(@Nullable Affinity affinity) {
+        public Builder affinity(@Nullable Affinity affinity) {
             this.affinity = affinity;
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
-        public Builder setContainers(List<Container> containers) {
+        public Builder containers(List<Container> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable PodDNSConfig dnsConfig) {
+        public Builder dnsConfig(@Nullable PodDNSConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsPolicy(@Nullable String dnsPolicy) {
+        public Builder dnsPolicy(@Nullable String dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Boolean enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
-        public Builder setEphemeralContainers(@Nullable List<EphemeralContainer> ephemeralContainers) {
+        public Builder ephemeralContainers(@Nullable List<EphemeralContainer> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
 
-        public Builder setHostAliases(@Nullable List<HostAlias> hostAliases) {
+        public Builder hostAliases(@Nullable List<HostAlias> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Boolean hostIPC) {
+        public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Boolean hostNetwork) {
+        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
-        public Builder setHostPID(@Nullable Boolean hostPID) {
+        public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setInitContainers(@Nullable List<Container> initContainers) {
+        public Builder initContainers(@Nullable List<Container> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeSelector(@Nullable Map<String,String> nodeSelector) {
+        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
-        public Builder setOs(@Nullable PodOS os) {
+        public Builder os(@Nullable PodOS os) {
             this.os = os;
             return this;
         }
 
-        public Builder setOverhead(@Nullable Map<String,String> overhead) {
+        public Builder overhead(@Nullable Map<String,String> overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable String preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriorityClassName(@Nullable String priorityClassName) {
+        public Builder priorityClassName(@Nullable String priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
 
-        public Builder setReadinessGates(@Nullable List<PodReadinessGate> readinessGates) {
+        public Builder readinessGates(@Nullable List<PodReadinessGate> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable String restartPolicy) {
+        public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRuntimeClassName(@Nullable String runtimeClassName) {
+        public Builder runtimeClassName(@Nullable String runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
 
-        public Builder setSchedulerName(@Nullable String schedulerName) {
+        public Builder schedulerName(@Nullable String schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable PodSecurityContext securityContext) {
+        public Builder securityContext(@Nullable PodSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setSetHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
+        public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
 
-        public Builder setShareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
+        public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
-        public Builder setTolerations(@Nullable List<Toleration> tolerations) {
+        public Builder tolerations(@Nullable List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
-        public Builder setTopologySpreadConstraints(@Nullable List<TopologySpreadConstraint> topologySpreadConstraints) {
+        public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraint> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<Volume> volumes) {
+        public Builder volumes(@Nullable List<Volume> volumes) {
             this.volumes = volumes;
             return this;
         }

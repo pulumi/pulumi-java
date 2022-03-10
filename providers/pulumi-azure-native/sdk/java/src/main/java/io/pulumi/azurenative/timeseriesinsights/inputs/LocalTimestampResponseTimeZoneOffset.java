@@ -57,7 +57,7 @@ public final class LocalTimestampResponseTimeZoneOffset extends io.pulumi.resour
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder setPropertyName(@Nullable String propertyName) {
+        public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }

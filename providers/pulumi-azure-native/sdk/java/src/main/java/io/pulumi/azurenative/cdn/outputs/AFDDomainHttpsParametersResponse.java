@@ -84,17 +84,17 @@ public final class AFDDomainHttpsParametersResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setCertificateType(String certificateType) {
+        public Builder certificateType(String certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable String minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setSecret(@Nullable ResourceReferenceResponse secret) {
+        public Builder secret(@Nullable ResourceReferenceResponse secret) {
             this.secret = secret;
             return this;
         }

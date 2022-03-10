@@ -74,22 +74,22 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setEventTimeToLiveInMinutes(@Nullable Input<Integer> eventTimeToLiveInMinutes) {
+        public Builder eventTimeToLiveInMinutes(@Nullable Input<Integer> eventTimeToLiveInMinutes) {
             this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
-        public Builder setEventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
+        public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
             this.eventTimeToLiveInMinutes = Input.ofNullable(eventTimeToLiveInMinutes);
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Input.ofNullable(maxDeliveryAttempts);
             return this;
         }

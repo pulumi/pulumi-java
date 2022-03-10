@@ -100,52 +100,52 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder setAppVisibility(Input<String> appVisibility) {
+        public Builder appVisibility(Input<String> appVisibility) {
             this.appVisibility = Objects.requireNonNull(appVisibility);
             return this;
         }
 
-        public Builder setAppVisibility(String appVisibility) {
+        public Builder appVisibility(String appVisibility) {
             this.appVisibility = Input.of(Objects.requireNonNull(appVisibility));
             return this;
         }
 
-        public Builder setAttributes(Input<List<EntitlementAttributeArgs>> attributes) {
+        public Builder attributes(Input<List<EntitlementAttributeArgs>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setAttributes(List<EntitlementAttributeArgs> attributes) {
+        public Builder attributes(List<EntitlementAttributeArgs> attributes) {
             this.attributes = Input.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStackName(Input<String> stackName) {
+        public Builder stackName(Input<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
-        public Builder setStackName(String stackName) {
+        public Builder stackName(String stackName) {
             this.stackName = Input.of(Objects.requireNonNull(stackName));
             return this;
         }

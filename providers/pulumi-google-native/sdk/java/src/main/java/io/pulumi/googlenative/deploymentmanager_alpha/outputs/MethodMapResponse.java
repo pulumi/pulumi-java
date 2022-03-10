@@ -113,27 +113,27 @@ public final class MethodMapResponse {
     	      this.update = defaults.update;
         }
 
-        public Builder setCreate(String create) {
+        public Builder create(String create) {
             this.create = Objects.requireNonNull(create);
             return this;
         }
 
-        public Builder setDelete(String delete) {
+        public Builder delete(String delete) {
             this.delete = Objects.requireNonNull(delete);
             return this;
         }
 
-        public Builder setGet(String get) {
+        public Builder get(String get) {
             this.get = Objects.requireNonNull(get);
             return this;
         }
 
-        public Builder setSetIamPolicy(String setIamPolicy) {
+        public Builder setIamPolicy(String setIamPolicy) {
             this.setIamPolicy = Objects.requireNonNull(setIamPolicy);
             return this;
         }
 
-        public Builder setUpdate(String update) {
+        public Builder update(String update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }

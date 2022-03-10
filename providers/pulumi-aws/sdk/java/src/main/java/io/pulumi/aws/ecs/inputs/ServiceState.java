@@ -466,262 +466,262 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.waitForSteadyState = defaults.waitForSteadyState;
         }
 
-        public Builder setCapacityProviderStrategies(@Nullable Input<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Input<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             this.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
-        public Builder setCapacityProviderStrategies(@Nullable List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable List<ServiceCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
             this.capacityProviderStrategies = Input.ofNullable(capacityProviderStrategies);
             return this;
         }
 
-        public Builder setCluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Input<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setCluster(@Nullable String cluster) {
+        public Builder cluster(@Nullable String cluster) {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
 
-        public Builder setDeploymentCircuitBreaker(@Nullable Input<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable Input<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
 
-        public Builder setDeploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerGetArgs deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = Input.ofNullable(deploymentCircuitBreaker);
             return this;
         }
 
-        public Builder setDeploymentController(@Nullable Input<ServiceDeploymentControllerGetArgs> deploymentController) {
+        public Builder deploymentController(@Nullable Input<ServiceDeploymentControllerGetArgs> deploymentController) {
             this.deploymentController = deploymentController;
             return this;
         }
 
-        public Builder setDeploymentController(@Nullable ServiceDeploymentControllerGetArgs deploymentController) {
+        public Builder deploymentController(@Nullable ServiceDeploymentControllerGetArgs deploymentController) {
             this.deploymentController = Input.ofNullable(deploymentController);
             return this;
         }
 
-        public Builder setDeploymentMaximumPercent(@Nullable Input<Integer> deploymentMaximumPercent) {
+        public Builder deploymentMaximumPercent(@Nullable Input<Integer> deploymentMaximumPercent) {
             this.deploymentMaximumPercent = deploymentMaximumPercent;
             return this;
         }
 
-        public Builder setDeploymentMaximumPercent(@Nullable Integer deploymentMaximumPercent) {
+        public Builder deploymentMaximumPercent(@Nullable Integer deploymentMaximumPercent) {
             this.deploymentMaximumPercent = Input.ofNullable(deploymentMaximumPercent);
             return this;
         }
 
-        public Builder setDeploymentMinimumHealthyPercent(@Nullable Input<Integer> deploymentMinimumHealthyPercent) {
+        public Builder deploymentMinimumHealthyPercent(@Nullable Input<Integer> deploymentMinimumHealthyPercent) {
             this.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
             return this;
         }
 
-        public Builder setDeploymentMinimumHealthyPercent(@Nullable Integer deploymentMinimumHealthyPercent) {
+        public Builder deploymentMinimumHealthyPercent(@Nullable Integer deploymentMinimumHealthyPercent) {
             this.deploymentMinimumHealthyPercent = Input.ofNullable(deploymentMinimumHealthyPercent);
             return this;
         }
 
-        public Builder setDesiredCount(@Nullable Input<Integer> desiredCount) {
+        public Builder desiredCount(@Nullable Input<Integer> desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
 
-        public Builder setDesiredCount(@Nullable Integer desiredCount) {
+        public Builder desiredCount(@Nullable Integer desiredCount) {
             this.desiredCount = Input.ofNullable(desiredCount);
             return this;
         }
 
-        public Builder setEnableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
-        public Builder setEnableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
             this.enableEcsManagedTags = Input.ofNullable(enableEcsManagedTags);
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = Input.ofNullable(enableExecuteCommand);
             return this;
         }
 
-        public Builder setForceNewDeployment(@Nullable Input<Boolean> forceNewDeployment) {
+        public Builder forceNewDeployment(@Nullable Input<Boolean> forceNewDeployment) {
             this.forceNewDeployment = forceNewDeployment;
             return this;
         }
 
-        public Builder setForceNewDeployment(@Nullable Boolean forceNewDeployment) {
+        public Builder forceNewDeployment(@Nullable Boolean forceNewDeployment) {
             this.forceNewDeployment = Input.ofNullable(forceNewDeployment);
             return this;
         }
 
-        public Builder setHealthCheckGracePeriodSeconds(@Nullable Input<Integer> healthCheckGracePeriodSeconds) {
+        public Builder healthCheckGracePeriodSeconds(@Nullable Input<Integer> healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
 
-        public Builder setHealthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
+        public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = Input.ofNullable(healthCheckGracePeriodSeconds);
             return this;
         }
 
-        public Builder setIamRole(@Nullable Input<String> iamRole) {
+        public Builder iamRole(@Nullable Input<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setIamRole(@Nullable String iamRole) {
+        public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = Input.ofNullable(iamRole);
             return this;
         }
 
-        public Builder setLaunchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Input<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
-        public Builder setLaunchType(@Nullable String launchType) {
+        public Builder launchType(@Nullable String launchType) {
             this.launchType = Input.ofNullable(launchType);
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable Input<List<ServiceLoadBalancerGetArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Input<List<ServiceLoadBalancerGetArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable List<ServiceLoadBalancerGetArgs> loadBalancers) {
+        public Builder loadBalancers(@Nullable List<ServiceLoadBalancerGetArgs> loadBalancers) {
             this.loadBalancers = Input.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<ServiceNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<ServiceNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable ServiceNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationGetArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setOrderedPlacementStrategies(@Nullable Input<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(@Nullable Input<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies) {
             this.orderedPlacementStrategies = orderedPlacementStrategies;
             return this;
         }
 
-        public Builder setOrderedPlacementStrategies(@Nullable List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(@Nullable List<ServiceOrderedPlacementStrategyGetArgs> orderedPlacementStrategies) {
             this.orderedPlacementStrategies = Input.ofNullable(orderedPlacementStrategies);
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable Input<List<ServicePlacementConstraintGetArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Input<List<ServicePlacementConstraintGetArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable List<ServicePlacementConstraintGetArgs> placementConstraints) {
+        public Builder placementConstraints(@Nullable List<ServicePlacementConstraintGetArgs> placementConstraints) {
             this.placementConstraints = Input.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Input<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Input.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable Input<String> propagateTags) {
+        public Builder propagateTags(@Nullable Input<String> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable String propagateTags) {
+        public Builder propagateTags(@Nullable String propagateTags) {
             this.propagateTags = Input.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder setSchedulingStrategy(@Nullable Input<String> schedulingStrategy) {
+        public Builder schedulingStrategy(@Nullable Input<String> schedulingStrategy) {
             this.schedulingStrategy = schedulingStrategy;
             return this;
         }
 
-        public Builder setSchedulingStrategy(@Nullable String schedulingStrategy) {
+        public Builder schedulingStrategy(@Nullable String schedulingStrategy) {
             this.schedulingStrategy = Input.ofNullable(schedulingStrategy);
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable Input<ServiceServiceRegistriesGetArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Input<ServiceServiceRegistriesGetArgs> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable ServiceServiceRegistriesGetArgs serviceRegistries) {
+        public Builder serviceRegistries(@Nullable ServiceServiceRegistriesGetArgs serviceRegistries) {
             this.serviceRegistries = Input.ofNullable(serviceRegistries);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable Input<String> taskDefinition) {
+        public Builder taskDefinition(@Nullable Input<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable String taskDefinition) {
+        public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = Input.ofNullable(taskDefinition);
             return this;
         }
 
-        public Builder setWaitForSteadyState(@Nullable Input<Boolean> waitForSteadyState) {
+        public Builder waitForSteadyState(@Nullable Input<Boolean> waitForSteadyState) {
             this.waitForSteadyState = waitForSteadyState;
             return this;
         }
 
-        public Builder setWaitForSteadyState(@Nullable Boolean waitForSteadyState) {
+        public Builder waitForSteadyState(@Nullable Boolean waitForSteadyState) {
             this.waitForSteadyState = Input.ofNullable(waitForSteadyState);
             return this;
         }

@@ -140,62 +140,62 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.jwtLocations = defaults.jwtLocations;
         }
 
-        public Builder setAudiences(@Nullable Input<String> audiences) {
+        public Builder audiences(@Nullable Input<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAudiences(@Nullable String audiences) {
+        public Builder audiences(@Nullable String audiences) {
             this.audiences = Input.ofNullable(audiences);
             return this;
         }
 
-        public Builder setAuthorizationUrl(@Nullable Input<String> authorizationUrl) {
+        public Builder authorizationUrl(@Nullable Input<String> authorizationUrl) {
             this.authorizationUrl = authorizationUrl;
             return this;
         }
 
-        public Builder setAuthorizationUrl(@Nullable String authorizationUrl) {
+        public Builder authorizationUrl(@Nullable String authorizationUrl) {
             this.authorizationUrl = Input.ofNullable(authorizationUrl);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setJwksUri(@Nullable Input<String> jwksUri) {
+        public Builder jwksUri(@Nullable Input<String> jwksUri) {
             this.jwksUri = jwksUri;
             return this;
         }
 
-        public Builder setJwksUri(@Nullable String jwksUri) {
+        public Builder jwksUri(@Nullable String jwksUri) {
             this.jwksUri = Input.ofNullable(jwksUri);
             return this;
         }
 
-        public Builder setJwtLocations(@Nullable Input<List<JwtLocationArgs>> jwtLocations) {
+        public Builder jwtLocations(@Nullable Input<List<JwtLocationArgs>> jwtLocations) {
             this.jwtLocations = jwtLocations;
             return this;
         }
 
-        public Builder setJwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
+        public Builder jwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
             this.jwtLocations = Input.ofNullable(jwtLocations);
             return this;
         }

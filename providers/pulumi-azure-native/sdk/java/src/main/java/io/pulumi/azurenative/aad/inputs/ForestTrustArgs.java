@@ -122,52 +122,52 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustedDomainFqdn = defaults.trustedDomainFqdn;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setRemoteDnsIps(@Nullable Input<String> remoteDnsIps) {
+        public Builder remoteDnsIps(@Nullable Input<String> remoteDnsIps) {
             this.remoteDnsIps = remoteDnsIps;
             return this;
         }
 
-        public Builder setRemoteDnsIps(@Nullable String remoteDnsIps) {
+        public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
             this.remoteDnsIps = Input.ofNullable(remoteDnsIps);
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable Input<String> trustDirection) {
+        public Builder trustDirection(@Nullable Input<String> trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable String trustDirection) {
+        public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = Input.ofNullable(trustDirection);
             return this;
         }
 
-        public Builder setTrustPassword(@Nullable Input<String> trustPassword) {
+        public Builder trustPassword(@Nullable Input<String> trustPassword) {
             this.trustPassword = trustPassword;
             return this;
         }
 
-        public Builder setTrustPassword(@Nullable String trustPassword) {
+        public Builder trustPassword(@Nullable String trustPassword) {
             this.trustPassword = Input.ofNullable(trustPassword);
             return this;
         }
 
-        public Builder setTrustedDomainFqdn(@Nullable Input<String> trustedDomainFqdn) {
+        public Builder trustedDomainFqdn(@Nullable Input<String> trustedDomainFqdn) {
             this.trustedDomainFqdn = trustedDomainFqdn;
             return this;
         }
 
-        public Builder setTrustedDomainFqdn(@Nullable String trustedDomainFqdn) {
+        public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
             this.trustedDomainFqdn = Input.ofNullable(trustedDomainFqdn);
             return this;
         }

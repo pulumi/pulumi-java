@@ -214,112 +214,112 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = Input.ofNullable(activeDirectoryConfiguration);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<OntapStorageVirtualMachineEndpointGetArgs> endpoints) {
+        public Builder endpoints(@Nullable List<OntapStorageVirtualMachineEndpointGetArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRootVolumeSecurityStyle(@Nullable Input<String> rootVolumeSecurityStyle) {
+        public Builder rootVolumeSecurityStyle(@Nullable Input<String> rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
             return this;
         }
 
-        public Builder setRootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
+        public Builder rootVolumeSecurityStyle(@Nullable String rootVolumeSecurityStyle) {
             this.rootVolumeSecurityStyle = Input.ofNullable(rootVolumeSecurityStyle);
             return this;
         }
 
-        public Builder setSubtype(@Nullable Input<String> subtype) {
+        public Builder subtype(@Nullable Input<String> subtype) {
             this.subtype = subtype;
             return this;
         }
 
-        public Builder setSubtype(@Nullable String subtype) {
+        public Builder subtype(@Nullable String subtype) {
             this.subtype = Input.ofNullable(subtype);
             return this;
         }
 
-        public Builder setSvmAdminPassword(@Nullable Input<String> svmAdminPassword) {
+        public Builder svmAdminPassword(@Nullable Input<String> svmAdminPassword) {
             this.svmAdminPassword = svmAdminPassword;
             return this;
         }
 
-        public Builder setSvmAdminPassword(@Nullable String svmAdminPassword) {
+        public Builder svmAdminPassword(@Nullable String svmAdminPassword) {
             this.svmAdminPassword = Input.ofNullable(svmAdminPassword);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUuid(@Nullable Input<String> uuid) {
+        public Builder uuid(@Nullable Input<String> uuid) {
             this.uuid = uuid;
             return this;
         }
 
-        public Builder setUuid(@Nullable String uuid) {
+        public Builder uuid(@Nullable String uuid) {
             this.uuid = Input.ofNullable(uuid);
             return this;
         }

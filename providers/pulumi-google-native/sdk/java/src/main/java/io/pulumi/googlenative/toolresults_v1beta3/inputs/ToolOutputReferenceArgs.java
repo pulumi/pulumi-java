@@ -92,32 +92,32 @@ public final class ToolOutputReferenceArgs extends io.pulumi.resources.ResourceA
     	      this.testCase = defaults.testCase;
         }
 
-        public Builder setCreationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable TimestampArgs creationTime) {
+        public Builder creationTime(@Nullable TimestampArgs creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<FileReferenceArgs> output) {
+        public Builder output(@Nullable Input<FileReferenceArgs> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable FileReferenceArgs output) {
+        public Builder output(@Nullable FileReferenceArgs output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setTestCase(@Nullable Input<TestCaseReferenceArgs> testCase) {
+        public Builder testCase(@Nullable Input<TestCaseReferenceArgs> testCase) {
             this.testCase = testCase;
             return this;
         }
 
-        public Builder setTestCase(@Nullable TestCaseReferenceArgs testCase) {
+        public Builder testCase(@Nullable TestCaseReferenceArgs testCase) {
             this.testCase = Input.ofNullable(testCase);
             return this;
         }

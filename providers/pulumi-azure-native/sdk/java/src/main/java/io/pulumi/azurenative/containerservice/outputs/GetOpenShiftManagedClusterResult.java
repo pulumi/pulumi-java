@@ -299,82 +299,82 @@ public final class GetOpenShiftManagedClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
-        public Builder setAuthProfile(@Nullable OpenShiftManagedClusterAuthProfileResponse authProfile) {
+        public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileResponse authProfile) {
             this.authProfile = authProfile;
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMasterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile) {
+        public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile) {
             this.masterPoolProfile = masterPoolProfile;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOpenShiftVersion(String openShiftVersion) {
+        public Builder openShiftVersion(String openShiftVersion) {
             this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
             return this;
         }
 
-        public Builder setPlan(@Nullable PurchasePlanResponse plan) {
+        public Builder plan(@Nullable PurchasePlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicHostname(String publicHostname) {
+        public Builder publicHostname(String publicHostname) {
             this.publicHostname = Objects.requireNonNull(publicHostname);
             return this;
         }
 
-        public Builder setRouterProfiles(@Nullable List<OpenShiftRouterProfileResponse> routerProfiles) {
+        public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileResponse> routerProfiles) {
             this.routerProfiles = routerProfiles;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

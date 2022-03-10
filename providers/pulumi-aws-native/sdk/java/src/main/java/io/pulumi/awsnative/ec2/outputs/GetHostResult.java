@@ -83,17 +83,17 @@ public final class GetHostResult {
     	      this.hostRecovery = defaults.hostRecovery;
         }
 
-        public Builder setAutoPlacement(@Nullable String autoPlacement) {
+        public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
 
-        public Builder setHostId(@Nullable String hostId) {
+        public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
 
-        public Builder setHostRecovery(@Nullable String hostRecovery) {
+        public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }

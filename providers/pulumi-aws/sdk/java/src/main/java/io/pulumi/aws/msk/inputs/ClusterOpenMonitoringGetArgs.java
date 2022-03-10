@@ -52,12 +52,12 @@ public final class ClusterOpenMonitoringGetArgs extends io.pulumi.resources.Reso
     	      this.prometheus = defaults.prometheus;
         }
 
-        public Builder setPrometheus(Input<ClusterOpenMonitoringPrometheusGetArgs> prometheus) {
+        public Builder prometheus(Input<ClusterOpenMonitoringPrometheusGetArgs> prometheus) {
             this.prometheus = Objects.requireNonNull(prometheus);
             return this;
         }
 
-        public Builder setPrometheus(ClusterOpenMonitoringPrometheusGetArgs prometheus) {
+        public Builder prometheus(ClusterOpenMonitoringPrometheusGetArgs prometheus) {
             this.prometheus = Input.of(Objects.requireNonNull(prometheus));
             return this;
         }

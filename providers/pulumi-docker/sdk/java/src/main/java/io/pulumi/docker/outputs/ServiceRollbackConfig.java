@@ -84,32 +84,32 @@ public final class ServiceRollbackConfig {
     	      this.parallelism = defaults.parallelism;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setFailureAction(@Nullable String failureAction) {
+        public Builder failureAction(@Nullable String failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
-        public Builder setMaxFailureRatio(@Nullable String maxFailureRatio) {
+        public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
             this.maxFailureRatio = maxFailureRatio;
             return this;
         }
 
-        public Builder setMonitor(@Nullable String monitor) {
+        public Builder monitor(@Nullable String monitor) {
             this.monitor = monitor;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }

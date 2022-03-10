@@ -73,22 +73,22 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setAttribute(Input<String> attribute) {
+        public Builder attribute(Input<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Input.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

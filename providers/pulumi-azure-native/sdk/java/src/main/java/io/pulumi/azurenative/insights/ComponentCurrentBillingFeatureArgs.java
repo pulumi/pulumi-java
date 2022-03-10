@@ -104,42 +104,42 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setCurrentBillingFeatures(@Nullable Input<List<String>> currentBillingFeatures) {
+        public Builder currentBillingFeatures(@Nullable Input<List<String>> currentBillingFeatures) {
             this.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
 
-        public Builder setCurrentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
+        public Builder currentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
             this.currentBillingFeatures = Input.ofNullable(currentBillingFeatures);
             return this;
         }
 
-        public Builder setDataVolumeCap(@Nullable Input<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap) {
+        public Builder dataVolumeCap(@Nullable Input<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap) {
             this.dataVolumeCap = dataVolumeCap;
             return this;
         }
 
-        public Builder setDataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
+        public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
             this.dataVolumeCap = Input.ofNullable(dataVolumeCap);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

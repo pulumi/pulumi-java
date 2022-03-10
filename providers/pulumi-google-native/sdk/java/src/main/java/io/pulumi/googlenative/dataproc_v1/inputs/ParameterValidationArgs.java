@@ -75,22 +75,22 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     	      this.values = defaults.values;
         }
 
-        public Builder setRegex(@Nullable Input<RegexValidationArgs> regex) {
+        public Builder regex(@Nullable Input<RegexValidationArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable RegexValidationArgs regex) {
+        public Builder regex(@Nullable RegexValidationArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<ValueValidationArgs> values) {
+        public Builder values(@Nullable Input<ValueValidationArgs> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable ValueValidationArgs values) {
+        public Builder values(@Nullable ValueValidationArgs values) {
             this.values = Input.ofNullable(values);
             return this;
         }

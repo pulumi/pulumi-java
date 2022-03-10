@@ -184,47 +184,47 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRemoteGateway(String remoteGateway) {
+        public Builder remoteGateway(String remoteGateway) {
             this.remoteGateway = Objects.requireNonNull(remoteGateway);
             return this;
         }
 
-        public Builder setRemoteGatewayIp(String remoteGatewayIp) {
+        public Builder remoteGatewayIp(String remoteGatewayIp) {
             this.remoteGatewayIp = Objects.requireNonNull(remoteGatewayIp);
             return this;
         }
 
-        public Builder setRoutingType(String routingType) {
+        public Builder routingType(String routingType) {
             this.routingType = Objects.requireNonNull(routingType);
             return this;
         }
 
-        public Builder setSourceGateway(String sourceGateway) {
+        public Builder sourceGateway(String sourceGateway) {
             this.sourceGateway = Objects.requireNonNull(sourceGateway);
             return this;
         }
 
-        public Builder setSourceGatewayIp(String sourceGatewayIp) {
+        public Builder sourceGatewayIp(String sourceGatewayIp) {
             this.sourceGatewayIp = Objects.requireNonNull(sourceGatewayIp);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

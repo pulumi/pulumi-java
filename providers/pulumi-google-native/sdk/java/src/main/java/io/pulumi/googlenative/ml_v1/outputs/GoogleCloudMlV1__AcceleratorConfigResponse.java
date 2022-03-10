@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

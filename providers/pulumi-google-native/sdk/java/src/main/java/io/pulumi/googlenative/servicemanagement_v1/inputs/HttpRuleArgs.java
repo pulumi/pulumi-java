@@ -204,102 +204,102 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAdditionalBindings(@Nullable Input<List<HttpRuleArgs>> additionalBindings) {
+        public Builder additionalBindings(@Nullable Input<List<HttpRuleArgs>> additionalBindings) {
             this.additionalBindings = additionalBindings;
             return this;
         }
 
-        public Builder setAdditionalBindings(@Nullable List<HttpRuleArgs> additionalBindings) {
+        public Builder additionalBindings(@Nullable List<HttpRuleArgs> additionalBindings) {
             this.additionalBindings = Input.ofNullable(additionalBindings);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setCustom(@Nullable Input<CustomHttpPatternArgs> custom) {
+        public Builder custom(@Nullable Input<CustomHttpPatternArgs> custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setCustom(@Nullable CustomHttpPatternArgs custom) {
+        public Builder custom(@Nullable CustomHttpPatternArgs custom) {
             this.custom = Input.ofNullable(custom);
             return this;
         }
 
-        public Builder setDelete(@Nullable Input<String> delete) {
+        public Builder delete(@Nullable Input<String> delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setDelete(@Nullable String delete) {
+        public Builder delete(@Nullable String delete) {
             this.delete = Input.ofNullable(delete);
             return this;
         }
 
-        public Builder setGet(@Nullable Input<String> get) {
+        public Builder get(@Nullable Input<String> get) {
             this.get = get;
             return this;
         }
 
-        public Builder setGet(@Nullable String get) {
+        public Builder get(@Nullable String get) {
             this.get = Input.ofNullable(get);
             return this;
         }
 
-        public Builder setPatch(@Nullable Input<String> patch) {
+        public Builder patch(@Nullable Input<String> patch) {
             this.patch = patch;
             return this;
         }
 
-        public Builder setPatch(@Nullable String patch) {
+        public Builder patch(@Nullable String patch) {
             this.patch = Input.ofNullable(patch);
             return this;
         }
 
-        public Builder setPost(@Nullable Input<String> post) {
+        public Builder post(@Nullable Input<String> post) {
             this.post = post;
             return this;
         }
 
-        public Builder setPost(@Nullable String post) {
+        public Builder post(@Nullable String post) {
             this.post = Input.ofNullable(post);
             return this;
         }
 
-        public Builder setPut(@Nullable Input<String> put) {
+        public Builder put(@Nullable Input<String> put) {
             this.put = put;
             return this;
         }
 
-        public Builder setPut(@Nullable String put) {
+        public Builder put(@Nullable String put) {
             this.put = Input.ofNullable(put);
             return this;
         }
 
-        public Builder setResponseBody(@Nullable Input<String> responseBody) {
+        public Builder responseBody(@Nullable Input<String> responseBody) {
             this.responseBody = responseBody;
             return this;
         }
 
-        public Builder setResponseBody(@Nullable String responseBody) {
+        public Builder responseBody(@Nullable String responseBody) {
             this.responseBody = Input.ofNullable(responseBody);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

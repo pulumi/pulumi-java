@@ -58,12 +58,12 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulum
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(Input<Either<String,MdeIntegration>> status) {
+        public Builder status(Input<Either<String,MdeIntegration>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,MdeIntegration> status) {
+        public Builder status(Either<String,MdeIntegration> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

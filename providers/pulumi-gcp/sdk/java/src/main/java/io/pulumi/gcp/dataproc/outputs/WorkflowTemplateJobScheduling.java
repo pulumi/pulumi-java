@@ -67,12 +67,12 @@ public final class WorkflowTemplateJobScheduling {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder setMaxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
-        public Builder setMaxFailuresTotal(@Nullable Integer maxFailuresTotal) {
+        public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }

@@ -116,27 +116,27 @@ public final class HorizontalPodAutoscalerStatus {
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder setCurrentCPUUtilizationPercentage(@Nullable Integer currentCPUUtilizationPercentage) {
+        public Builder currentCPUUtilizationPercentage(@Nullable Integer currentCPUUtilizationPercentage) {
             this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
             return this;
         }
 
-        public Builder setCurrentReplicas(Integer currentReplicas) {
+        public Builder currentReplicas(Integer currentReplicas) {
             this.currentReplicas = Objects.requireNonNull(currentReplicas);
             return this;
         }
 
-        public Builder setDesiredReplicas(Integer desiredReplicas) {
+        public Builder desiredReplicas(Integer desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
 
-        public Builder setLastScaleTime(@Nullable String lastScaleTime) {
+        public Builder lastScaleTime(@Nullable String lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }

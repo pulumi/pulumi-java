@@ -178,47 +178,47 @@ public final class GetExecutionResult {
     	      this.workflowRevisionId = defaults.workflowRevisionId;
         }
 
-        public Builder setArgument(String argument) {
+        public Builder argument(String argument) {
             this.argument = Objects.requireNonNull(argument);
             return this;
         }
 
-        public Builder setCallLogLevel(String callLogLevel) {
+        public Builder callLogLevel(String callLogLevel) {
             this.callLogLevel = Objects.requireNonNull(callLogLevel);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(ErrorResponse error) {
+        public Builder error(ErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setWorkflowRevisionId(String workflowRevisionId) {
+        public Builder workflowRevisionId(String workflowRevisionId) {
             this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
             return this;
         }

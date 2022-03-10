@@ -159,72 +159,72 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNicId = defaults.virtualNicId;
         }
 
-        public Builder setCustomization(@Nullable Input<GuestOSNICCustomizationArgs> customization) {
+        public Builder customization(@Nullable Input<GuestOSNICCustomizationArgs> customization) {
             this.customization = customization;
             return this;
         }
 
-        public Builder setCustomization(@Nullable GuestOSNICCustomizationArgs customization) {
+        public Builder customization(@Nullable GuestOSNICCustomizationArgs customization) {
             this.customization = Input.ofNullable(customization);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder setMacAddress(@Nullable Input<String> macAddress) {
+        public Builder macAddress(@Nullable Input<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = Input.ofNullable(macAddress);
             return this;
         }
 
-        public Builder setNetwork(Input<VirtualNetworkArgs> network) {
+        public Builder network(Input<VirtualNetworkArgs> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(VirtualNetworkArgs network) {
+        public Builder network(VirtualNetworkArgs network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setNicType(Input<NICType> nicType) {
+        public Builder nicType(Input<NICType> nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
-        public Builder setNicType(NICType nicType) {
+        public Builder nicType(NICType nicType) {
             this.nicType = Input.of(Objects.requireNonNull(nicType));
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable Input<Boolean> powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Input<Boolean> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable Boolean powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
             this.powerOnBoot = Input.ofNullable(powerOnBoot);
             return this;
         }
 
-        public Builder setVirtualNicId(@Nullable Input<String> virtualNicId) {
+        public Builder virtualNicId(@Nullable Input<String> virtualNicId) {
             this.virtualNicId = virtualNicId;
             return this;
         }
 
-        public Builder setVirtualNicId(@Nullable String virtualNicId) {
+        public Builder virtualNicId(@Nullable String virtualNicId) {
             this.virtualNicId = Input.ofNullable(virtualNicId);
             return this;
         }

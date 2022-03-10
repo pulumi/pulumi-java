@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
         }
 
-        public Builder setEnableInteractionLogging(@Nullable Input<Boolean> enableInteractionLogging) {
+        public Builder enableInteractionLogging(@Nullable Input<Boolean> enableInteractionLogging) {
             this.enableInteractionLogging = enableInteractionLogging;
             return this;
         }
 
-        public Builder setEnableInteractionLogging(@Nullable Boolean enableInteractionLogging) {
+        public Builder enableInteractionLogging(@Nullable Boolean enableInteractionLogging) {
             this.enableInteractionLogging = Input.ofNullable(enableInteractionLogging);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }

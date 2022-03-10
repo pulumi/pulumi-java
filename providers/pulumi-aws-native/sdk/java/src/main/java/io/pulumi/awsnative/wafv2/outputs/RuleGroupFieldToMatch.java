@@ -150,42 +150,42 @@ public final class RuleGroupFieldToMatch {
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable Object allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Object allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
 
-        public Builder setJsonBody(@Nullable RuleGroupJsonBody jsonBody) {
+        public Builder jsonBody(@Nullable RuleGroupJsonBody jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
-        public Builder setMethod(@Nullable Object method) {
+        public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
 
-        public Builder setQueryString(@Nullable Object queryString) {
+        public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader) {
+        public Builder singleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setUriPath(@Nullable Object uriPath) {
+        public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
         }

@@ -57,12 +57,12 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     	      this.contentLinkDefinition = defaults.contentLinkDefinition;
         }
 
-        public Builder setContentLinkDefinition(@Nullable Input<ContentLinkArgs> contentLinkDefinition) {
+        public Builder contentLinkDefinition(@Nullable Input<ContentLinkArgs> contentLinkDefinition) {
             this.contentLinkDefinition = contentLinkDefinition;
             return this;
         }
 
-        public Builder setContentLinkDefinition(@Nullable ContentLinkArgs contentLinkDefinition) {
+        public Builder contentLinkDefinition(@Nullable ContentLinkArgs contentLinkDefinition) {
             this.contentLinkDefinition = Input.ofNullable(contentLinkDefinition);
             return this;
         }

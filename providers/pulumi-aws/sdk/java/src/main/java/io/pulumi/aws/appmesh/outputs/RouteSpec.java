@@ -121,27 +121,27 @@ public final class RouteSpec {
     	      this.tcpRoute = defaults.tcpRoute;
         }
 
-        public Builder setGrpcRoute(@Nullable RouteSpecGrpcRoute grpcRoute) {
+        public Builder grpcRoute(@Nullable RouteSpecGrpcRoute grpcRoute) {
             this.grpcRoute = grpcRoute;
             return this;
         }
 
-        public Builder setHttp2Route(@Nullable RouteSpecHttp2Route http2Route) {
+        public Builder http2Route(@Nullable RouteSpecHttp2Route http2Route) {
             this.http2Route = http2Route;
             return this;
         }
 
-        public Builder setHttpRoute(@Nullable RouteSpecHttpRoute httpRoute) {
+        public Builder httpRoute(@Nullable RouteSpecHttpRoute httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setTcpRoute(@Nullable RouteSpecTcpRoute tcpRoute) {
+        public Builder tcpRoute(@Nullable RouteSpecTcpRoute tcpRoute) {
             this.tcpRoute = tcpRoute;
             return this;
         }

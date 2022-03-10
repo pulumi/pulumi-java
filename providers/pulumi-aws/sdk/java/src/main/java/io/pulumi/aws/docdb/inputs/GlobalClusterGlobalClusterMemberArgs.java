@@ -71,22 +71,22 @@ public final class GlobalClusterGlobalClusterMemberArgs extends io.pulumi.resour
     	      this.isWriter = defaults.isWriter;
         }
 
-        public Builder setDbClusterArn(@Nullable Input<String> dbClusterArn) {
+        public Builder dbClusterArn(@Nullable Input<String> dbClusterArn) {
             this.dbClusterArn = dbClusterArn;
             return this;
         }
 
-        public Builder setDbClusterArn(@Nullable String dbClusterArn) {
+        public Builder dbClusterArn(@Nullable String dbClusterArn) {
             this.dbClusterArn = Input.ofNullable(dbClusterArn);
             return this;
         }
 
-        public Builder setIsWriter(@Nullable Input<Boolean> isWriter) {
+        public Builder isWriter(@Nullable Input<Boolean> isWriter) {
             this.isWriter = isWriter;
             return this;
         }
 
-        public Builder setIsWriter(@Nullable Boolean isWriter) {
+        public Builder isWriter(@Nullable Boolean isWriter) {
             this.isWriter = Input.ofNullable(isWriter);
             return this;
         }

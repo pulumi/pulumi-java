@@ -109,42 +109,42 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setConfigMapKeyRef(@Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef) {
+        public Builder configMapKeyRef(@Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef) {
             this.configMapKeyRef = configMapKeyRef;
             return this;
         }
 
-        public Builder setConfigMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
+        public Builder configMapKeyRef(@Nullable ConfigMapKeySelectorArgs configMapKeyRef) {
             this.configMapKeyRef = Input.ofNullable(configMapKeyRef);
             return this;
         }
 
-        public Builder setFieldRef(@Nullable Input<ObjectFieldSelectorArgs> fieldRef) {
+        public Builder fieldRef(@Nullable Input<ObjectFieldSelectorArgs> fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
 
-        public Builder setFieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
+        public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
             this.fieldRef = Input.ofNullable(fieldRef);
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
             this.resourceFieldRef = Input.ofNullable(resourceFieldRef);
             return this;
         }
 
-        public Builder setSecretKeyRef(@Nullable Input<SecretKeySelectorArgs> secretKeyRef) {
+        public Builder secretKeyRef(@Nullable Input<SecretKeySelectorArgs> secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
 
-        public Builder setSecretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
+        public Builder secretKeyRef(@Nullable SecretKeySelectorArgs secretKeyRef) {
             this.secretKeyRef = Input.ofNullable(secretKeyRef);
             return this;
         }

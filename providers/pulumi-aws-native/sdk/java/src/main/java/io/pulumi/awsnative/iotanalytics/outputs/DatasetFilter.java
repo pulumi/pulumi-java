@@ -42,7 +42,7 @@ public final class DatasetFilter {
     	      this.deltaTime = defaults.deltaTime;
         }
 
-        public Builder setDeltaTime(@Nullable DatasetDeltaTime deltaTime) {
+        public Builder deltaTime(@Nullable DatasetDeltaTime deltaTime) {
             this.deltaTime = deltaTime;
             return this;
         }

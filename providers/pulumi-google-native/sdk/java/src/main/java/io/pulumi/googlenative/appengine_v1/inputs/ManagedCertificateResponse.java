@@ -72,12 +72,12 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
     	      this.status = defaults.status;
         }
 
-        public Builder setLastRenewalTime(String lastRenewalTime) {
+        public Builder lastRenewalTime(String lastRenewalTime) {
             this.lastRenewalTime = Objects.requireNonNull(lastRenewalTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

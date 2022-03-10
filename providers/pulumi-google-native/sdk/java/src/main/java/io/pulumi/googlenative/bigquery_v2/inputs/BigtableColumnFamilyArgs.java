@@ -121,52 +121,52 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setColumns(@Nullable Input<List<BigtableColumnArgs>> columns) {
+        public Builder columns(@Nullable Input<List<BigtableColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<BigtableColumnArgs> columns) {
+        public Builder columns(@Nullable List<BigtableColumnArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFamilyId(@Nullable Input<String> familyId) {
+        public Builder familyId(@Nullable Input<String> familyId) {
             this.familyId = familyId;
             return this;
         }
 
-        public Builder setFamilyId(@Nullable String familyId) {
+        public Builder familyId(@Nullable String familyId) {
             this.familyId = Input.ofNullable(familyId);
             return this;
         }
 
-        public Builder setOnlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Input<Boolean> onlyReadLatest) {
             this.onlyReadLatest = onlyReadLatest;
             return this;
         }
 
-        public Builder setOnlyReadLatest(@Nullable Boolean onlyReadLatest) {
+        public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
             this.onlyReadLatest = Input.ofNullable(onlyReadLatest);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

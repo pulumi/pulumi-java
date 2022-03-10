@@ -85,17 +85,17 @@ public final class JobCollectionPropertiesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setQuota(@Nullable JobCollectionQuotaResponse quota) {
+        public Builder quota(@Nullable JobCollectionQuotaResponse quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

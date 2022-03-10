@@ -106,22 +106,22 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
     	      this.responseHeadersToRemove = defaults.responseHeadersToRemove;
         }
 
-        public Builder setRequestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
+        public Builder requestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
             this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd);
             return this;
         }
 
-        public Builder setRequestHeadersToRemove(List<String> requestHeadersToRemove) {
+        public Builder requestHeadersToRemove(List<String> requestHeadersToRemove) {
             this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove);
             return this;
         }
 
-        public Builder setResponseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
+        public Builder responseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
             this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd);
             return this;
         }
 
-        public Builder setResponseHeadersToRemove(List<String> responseHeadersToRemove) {
+        public Builder responseHeadersToRemove(List<String> responseHeadersToRemove) {
             this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
             return this;
         }

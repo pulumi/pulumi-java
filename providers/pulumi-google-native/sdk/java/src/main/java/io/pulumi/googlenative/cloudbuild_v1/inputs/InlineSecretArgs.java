@@ -75,22 +75,22 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setEnvMap(@Nullable Input<Map<String,String>> envMap) {
+        public Builder envMap(@Nullable Input<Map<String,String>> envMap) {
             this.envMap = envMap;
             return this;
         }
 
-        public Builder setEnvMap(@Nullable Map<String,String> envMap) {
+        public Builder envMap(@Nullable Map<String,String> envMap) {
             this.envMap = Input.ofNullable(envMap);
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }

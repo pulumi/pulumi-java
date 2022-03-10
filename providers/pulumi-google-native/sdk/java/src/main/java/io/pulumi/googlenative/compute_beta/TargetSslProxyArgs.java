@@ -176,92 +176,92 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setCertificateMap(@Nullable Input<String> certificateMap) {
+        public Builder certificateMap(@Nullable Input<String> certificateMap) {
             this.certificateMap = certificateMap;
             return this;
         }
 
-        public Builder setCertificateMap(@Nullable String certificateMap) {
+        public Builder certificateMap(@Nullable String certificateMap) {
             this.certificateMap = Input.ofNullable(certificateMap);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable Input<TargetSslProxyProxyHeader> proxyHeader) {
+        public Builder proxyHeader(@Nullable Input<TargetSslProxyProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable TargetSslProxyProxyHeader proxyHeader) {
+        public Builder proxyHeader(@Nullable TargetSslProxyProxyHeader proxyHeader) {
             this.proxyHeader = Input.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
-        public Builder setSslCertificates(@Nullable List<String> sslCertificates) {
+        public Builder sslCertificates(@Nullable List<String> sslCertificates) {
             this.sslCertificates = Input.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }

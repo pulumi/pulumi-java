@@ -141,37 +141,37 @@ public final class StaticWebLayerEbsVolume {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setNumberOfDisks(Integer numberOfDisks) {
+        public Builder numberOfDisks(Integer numberOfDisks) {
             this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
             return this;
         }
 
-        public Builder setRaidLevel(@Nullable String raidLevel) {
+        public Builder raidLevel(@Nullable String raidLevel) {
             this.raidLevel = raidLevel;
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

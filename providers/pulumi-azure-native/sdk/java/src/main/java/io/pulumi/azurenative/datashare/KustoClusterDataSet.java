@@ -195,7 +195,7 @@ public class KustoClusterDataSet extends io.pulumi.resources.CustomResource {
     private static KustoClusterDataSetArgs makeArgs(KustoClusterDataSetArgs args) {
         var builder = args == null ? KustoClusterDataSetArgs.builder() : KustoClusterDataSetArgs.builder(args);
         return builder
-            .setKind("KustoCluster")
+            .kind("KustoCluster")
             .build();
     }
 

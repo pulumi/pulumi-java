@@ -68,12 +68,12 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
     	      this.lifecycleHookName = defaults.lifecycleHookName;
         }
 
-        public Builder setAutoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
 
-        public Builder setLifecycleHookName(String lifecycleHookName) {
+        public Builder lifecycleHookName(String lifecycleHookName) {
             this.lifecycleHookName = Objects.requireNonNull(lifecycleHookName);
             return this;
         }

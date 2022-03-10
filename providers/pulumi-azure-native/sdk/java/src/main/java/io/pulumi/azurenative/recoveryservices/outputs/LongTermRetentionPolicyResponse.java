@@ -121,27 +121,27 @@ public final class LongTermRetentionPolicyResponse {
     	      this.yearlySchedule = defaults.yearlySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable DailyRetentionScheduleResponse dailySchedule) {
+        public Builder dailySchedule(@Nullable DailyRetentionScheduleResponse dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable MonthlyRetentionScheduleResponse monthlySchedule) {
+        public Builder monthlySchedule(@Nullable MonthlyRetentionScheduleResponse monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setRetentionPolicyType(String retentionPolicyType) {
+        public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable WeeklyRetentionScheduleResponse weeklySchedule) {
+        public Builder weeklySchedule(@Nullable WeeklyRetentionScheduleResponse weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
-        public Builder setYearlySchedule(@Nullable YearlyRetentionScheduleResponse yearlySchedule) {
+        public Builder yearlySchedule(@Nullable YearlyRetentionScheduleResponse yearlySchedule) {
             this.yearlySchedule = yearlySchedule;
             return this;
         }

@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCaseContent(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent) {
+        public Builder caseContent(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent) {
             this.caseContent = caseContent;
             return this;
         }
 
-        public Builder setCaseContent(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
+        public Builder caseContent(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
             this.caseContent = Input.ofNullable(caseContent);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }

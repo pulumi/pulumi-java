@@ -302,82 +302,82 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     	      this.zones = defaults.zones;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInboundNatPools(List<SubResourceResponse> inboundNatPools) {
+        public Builder inboundNatPools(List<SubResourceResponse> inboundNatPools) {
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }
 
-        public Builder setInboundNatRules(List<SubResourceResponse> inboundNatRules) {
+        public Builder inboundNatRules(List<SubResourceResponse> inboundNatRules) {
             this.inboundNatRules = Objects.requireNonNull(inboundNatRules);
             return this;
         }
 
-        public Builder setLoadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
+        public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOutboundRules(List<SubResourceResponse> outboundRules) {
+        public Builder outboundRules(List<SubResourceResponse> outboundRules) {
             this.outboundRules = Objects.requireNonNull(outboundRules);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable String privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
+        public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetResponse subnet) {
+        public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -87,32 +87,32 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
         }
 
-        public Builder setDirectoryName(Input<String> directoryName) {
+        public Builder directoryName(Input<String> directoryName) {
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
 
-        public Builder setDirectoryName(String directoryName) {
+        public Builder directoryName(String directoryName) {
             this.directoryName = Input.of(Objects.requireNonNull(directoryName));
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedNames(Input<List<String>> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(Input<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames);
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Input.of(Objects.requireNonNull(organizationalUnitDistinguishedNames));
             return this;
         }
 
-        public Builder setServiceAccountCredentials(Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials);
             return this;
         }
 
-        public Builder setServiceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
             this.serviceAccountCredentials = Input.of(Objects.requireNonNull(serviceAccountCredentials));
             return this;
         }

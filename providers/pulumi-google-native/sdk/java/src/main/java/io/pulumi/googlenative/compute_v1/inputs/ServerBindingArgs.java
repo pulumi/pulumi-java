@@ -49,12 +49,12 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<ServerBindingType> type) {
+        public Builder type(@Nullable Input<ServerBindingType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ServerBindingType type) {
+        public Builder type(@Nullable ServerBindingType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

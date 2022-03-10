@@ -86,17 +86,17 @@ public final class SnowflakeExportCopyCommandResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
+        public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
 
-        public Builder setAdditionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
+        public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

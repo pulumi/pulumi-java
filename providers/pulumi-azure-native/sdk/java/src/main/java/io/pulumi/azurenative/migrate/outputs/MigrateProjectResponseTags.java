@@ -42,7 +42,7 @@ public final class MigrateProjectResponseTags {
     	      this.additionalProperties = defaults.additionalProperties;
         }
 
-        public Builder setAdditionalProperties(@Nullable String additionalProperties) {
+        public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }

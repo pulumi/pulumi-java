@@ -124,52 +124,52 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setArguments(@Nullable Input<List<Map<String,String>>> arguments) {
+        public Builder arguments(@Nullable Input<List<Map<String,String>>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<Map<String,String>> arguments) {
+        public Builder arguments(@Nullable List<Map<String,String>> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setDefinedInMaterial(@Nullable Input<String> definedInMaterial) {
+        public Builder definedInMaterial(@Nullable Input<String> definedInMaterial) {
             this.definedInMaterial = definedInMaterial;
             return this;
         }
 
-        public Builder setDefinedInMaterial(@Nullable String definedInMaterial) {
+        public Builder definedInMaterial(@Nullable String definedInMaterial) {
             this.definedInMaterial = Input.ofNullable(definedInMaterial);
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable Input<String> entryPoint) {
+        public Builder entryPoint(@Nullable Input<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable String entryPoint) {
+        public Builder entryPoint(@Nullable String entryPoint) {
             this.entryPoint = Input.ofNullable(entryPoint);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<List<Map<String,String>>> environment) {
+        public Builder environment(@Nullable Input<List<Map<String,String>>> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable List<Map<String,String>> environment) {
+        public Builder environment(@Nullable List<Map<String,String>> environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

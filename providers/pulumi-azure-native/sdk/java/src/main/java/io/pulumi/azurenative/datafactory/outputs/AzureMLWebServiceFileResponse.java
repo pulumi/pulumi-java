@@ -66,12 +66,12 @@ public final class AzureMLWebServiceFileResponse {
     	      this.linkedServiceName = defaults.linkedServiceName;
         }
 
-        public Builder setFilePath(Object filePath) {
+        public Builder filePath(Object filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }

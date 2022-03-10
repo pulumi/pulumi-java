@@ -107,22 +107,22 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilterValue(@Nullable String filterValue) {
+        public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = filterValue;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

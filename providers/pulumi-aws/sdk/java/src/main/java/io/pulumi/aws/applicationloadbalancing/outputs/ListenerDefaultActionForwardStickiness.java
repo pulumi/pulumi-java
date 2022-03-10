@@ -68,12 +68,12 @@ public final class ListenerDefaultActionForwardStickiness {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

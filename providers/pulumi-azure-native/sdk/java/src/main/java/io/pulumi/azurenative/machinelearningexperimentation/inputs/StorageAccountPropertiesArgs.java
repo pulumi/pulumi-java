@@ -73,22 +73,22 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setAccessKey(Input<String> accessKey) {
+        public Builder accessKey(Input<String> accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
-        public Builder setAccessKey(String accessKey) {
+        public Builder accessKey(String accessKey) {
             this.accessKey = Input.of(Objects.requireNonNull(accessKey));
             return this;
         }
 
-        public Builder setStorageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Input<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
             return this;
         }

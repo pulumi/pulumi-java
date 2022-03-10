@@ -74,12 +74,12 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }

@@ -92,32 +92,32 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setLogAnalyticsResources(@Nullable Input<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources) {
+        public Builder logAnalyticsResources(@Nullable Input<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources) {
             this.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
 
-        public Builder setLogAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesArgs logAnalyticsResources) {
+        public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesArgs logAnalyticsResources) {
             this.logAnalyticsResources = Input.ofNullable(logAnalyticsResources);
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }

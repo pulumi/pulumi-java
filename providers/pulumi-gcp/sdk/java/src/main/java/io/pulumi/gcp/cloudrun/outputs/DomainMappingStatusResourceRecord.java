@@ -67,17 +67,17 @@ public final class DomainMappingStatusResourceRecord {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRrdata(@Nullable String rrdata) {
+        public Builder rrdata(@Nullable String rrdata) {
             this.rrdata = rrdata;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

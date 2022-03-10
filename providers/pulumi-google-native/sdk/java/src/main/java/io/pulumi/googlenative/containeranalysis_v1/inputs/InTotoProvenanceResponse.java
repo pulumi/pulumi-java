@@ -100,22 +100,22 @@ public final class InTotoProvenanceResponse extends io.pulumi.resources.InvokeAr
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder setBuilderConfig(BuilderConfigResponse builderConfig) {
+        public Builder builderConfig(BuilderConfigResponse builderConfig) {
             this.builderConfig = Objects.requireNonNull(builderConfig);
             return this;
         }
 
-        public Builder setMaterials(List<String> materials) {
+        public Builder materials(List<String> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setRecipe(RecipeResponse recipe) {
+        public Builder recipe(RecipeResponse recipe) {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }

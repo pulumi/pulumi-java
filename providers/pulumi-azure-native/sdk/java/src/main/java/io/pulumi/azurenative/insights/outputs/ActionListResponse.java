@@ -50,7 +50,7 @@ public final class ActionListResponse {
     	      this.actionGroups = defaults.actionGroups;
         }
 
-        public Builder setActionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
+        public Builder actionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
             this.actionGroups = actionGroups;
             return this;
         }

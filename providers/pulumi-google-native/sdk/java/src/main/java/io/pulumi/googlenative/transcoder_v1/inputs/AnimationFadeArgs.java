@@ -108,42 +108,42 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xy = defaults.xy;
         }
 
-        public Builder setEndTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
-        public Builder setEndTimeOffset(@Nullable String endTimeOffset) {
+        public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Input.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder setFadeType(Input<AnimationFadeFadeType> fadeType) {
+        public Builder fadeType(Input<AnimationFadeFadeType> fadeType) {
             this.fadeType = Objects.requireNonNull(fadeType);
             return this;
         }
 
-        public Builder setFadeType(AnimationFadeFadeType fadeType) {
+        public Builder fadeType(AnimationFadeFadeType fadeType) {
             this.fadeType = Input.of(Objects.requireNonNull(fadeType));
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
 
-        public Builder setXy(@Nullable Input<NormalizedCoordinateArgs> xy) {
+        public Builder xy(@Nullable Input<NormalizedCoordinateArgs> xy) {
             this.xy = xy;
             return this;
         }
 
-        public Builder setXy(@Nullable NormalizedCoordinateArgs xy) {
+        public Builder xy(@Nullable NormalizedCoordinateArgs xy) {
             this.xy = Input.ofNullable(xy);
             return this;
         }

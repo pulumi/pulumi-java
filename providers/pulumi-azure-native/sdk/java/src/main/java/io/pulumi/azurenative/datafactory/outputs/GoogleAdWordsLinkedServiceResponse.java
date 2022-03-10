@@ -317,87 +317,87 @@ public final class GoogleAdWordsLinkedServiceResponse {
     	      this.useSystemTrustStore = defaults.useSystemTrustStore;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setClientCustomerID(@Nullable Object clientCustomerID) {
+        public Builder clientCustomerID(@Nullable Object clientCustomerID) {
             this.clientCustomerID = clientCustomerID;
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
+        public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Object connectionProperties) {
+        public Builder connectionProperties(@Nullable Object connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeveloperToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
+        public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
             this.developerToken = developerToken;
             return this;
         }
 
-        public Builder setEmail(@Nullable Object email) {
+        public Builder email(@Nullable Object email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setKeyFilePath(@Nullable Object keyFilePath) {
+        public Builder keyFilePath(@Nullable Object keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
+        public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }

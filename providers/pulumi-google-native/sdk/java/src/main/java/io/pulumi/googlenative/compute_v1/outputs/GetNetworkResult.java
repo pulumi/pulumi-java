@@ -214,57 +214,57 @@ public final class GetNetworkResult {
     	      this.subnetworks = defaults.subnetworks;
         }
 
-        public Builder setAutoCreateSubnetworks(Boolean autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Objects.requireNonNull(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGatewayIPv4(String gatewayIPv4) {
+        public Builder gatewayIPv4(String gatewayIPv4) {
             this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMtu(Integer mtu) {
+        public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerings(List<NetworkPeeringResponse> peerings) {
+        public Builder peerings(List<NetworkPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
 
-        public Builder setRoutingConfig(NetworkRoutingConfigResponse routingConfig) {
+        public Builder routingConfig(NetworkRoutingConfigResponse routingConfig) {
             this.routingConfig = Objects.requireNonNull(routingConfig);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSubnetworks(List<String> subnetworks) {
+        public Builder subnetworks(List<String> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }

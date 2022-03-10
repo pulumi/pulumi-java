@@ -65,12 +65,12 @@ public final class StackUserSetting {
     	      this.permission = defaults.permission;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setPermission(String permission) {
+        public Builder permission(String permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }

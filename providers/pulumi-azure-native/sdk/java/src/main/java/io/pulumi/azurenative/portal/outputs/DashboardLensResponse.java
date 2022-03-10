@@ -87,17 +87,17 @@ public final class DashboardLensResponse {
     	      this.parts = defaults.parts;
         }
 
-        public Builder setMetadata(@Nullable Map<String,Object> metadata) {
+        public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setParts(List<DashboardPartsResponse> parts) {
+        public Builder parts(List<DashboardPartsResponse> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }

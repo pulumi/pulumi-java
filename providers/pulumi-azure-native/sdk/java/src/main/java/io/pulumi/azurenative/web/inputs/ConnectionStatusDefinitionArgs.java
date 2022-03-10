@@ -91,32 +91,32 @@ public final class ConnectionStatusDefinitionArgs extends io.pulumi.resources.Re
     	      this.target = defaults.target;
         }
 
-        public Builder setError(@Nullable Input<ConnectionErrorArgs> error) {
+        public Builder error(@Nullable Input<ConnectionErrorArgs> error) {
             this.error = error;
             return this;
         }
 
-        public Builder setError(@Nullable ConnectionErrorArgs error) {
+        public Builder error(@Nullable ConnectionErrorArgs error) {
             this.error = Input.ofNullable(error);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

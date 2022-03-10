@@ -118,62 +118,62 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddresses(Input<List<String>> addresses) {
+        public Builder addresses(Input<List<String>> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Input.of(Objects.requireNonNull(addresses));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIPAddressVersion(Input<IPSetIPAddressVersion> iPAddressVersion) {
+        public Builder iPAddressVersion(Input<IPSetIPAddressVersion> iPAddressVersion) {
             this.iPAddressVersion = Objects.requireNonNull(iPAddressVersion);
             return this;
         }
 
-        public Builder setIPAddressVersion(IPSetIPAddressVersion iPAddressVersion) {
+        public Builder iPAddressVersion(IPSetIPAddressVersion iPAddressVersion) {
             this.iPAddressVersion = Input.of(Objects.requireNonNull(iPAddressVersion));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScope(Input<IPSetScope> scope) {
+        public Builder scope(Input<IPSetScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(IPSetScope scope) {
+        public Builder scope(IPSetScope scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<IPSetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<IPSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPSetTagArgs> tags) {
+        public Builder tags(@Nullable List<IPSetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

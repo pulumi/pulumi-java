@@ -57,7 +57,7 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
     	      this.labVmId = defaults.labVmId;
         }
 
-        public Builder setLabVmId(@Nullable String labVmId) {
+        public Builder labVmId(@Nullable String labVmId) {
             this.labVmId = labVmId;
             return this;
         }

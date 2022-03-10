@@ -61,17 +61,17 @@ public final class BucketReplicationRuleFilter {
     	      this.tagFilter = defaults.tagFilter;
         }
 
-        public Builder setAnd(@Nullable BucketReplicationRuleAndOperator and) {
+        public Builder and(@Nullable BucketReplicationRuleAndOperator and) {
             this.and = and;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTagFilter(@Nullable BucketTagFilter tagFilter) {
+        public Builder tagFilter(@Nullable BucketTagFilter tagFilter) {
             this.tagFilter = tagFilter;
             return this;
         }

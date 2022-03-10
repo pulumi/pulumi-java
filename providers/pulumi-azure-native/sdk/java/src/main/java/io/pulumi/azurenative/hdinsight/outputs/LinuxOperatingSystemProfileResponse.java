@@ -84,17 +84,17 @@ public final class LinuxOperatingSystemProfileResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSshProfile(@Nullable SshProfileResponse sshProfile) {
+        public Builder sshProfile(@Nullable SshProfileResponse sshProfile) {
             this.sshProfile = sshProfile;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

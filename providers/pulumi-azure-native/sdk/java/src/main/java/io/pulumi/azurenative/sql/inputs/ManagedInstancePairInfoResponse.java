@@ -74,12 +74,12 @@ public final class ManagedInstancePairInfoResponse extends io.pulumi.resources.I
     	      this.primaryManagedInstanceId = defaults.primaryManagedInstanceId;
         }
 
-        public Builder setPartnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
+        public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
             this.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
 
-        public Builder setPrimaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
+        public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }

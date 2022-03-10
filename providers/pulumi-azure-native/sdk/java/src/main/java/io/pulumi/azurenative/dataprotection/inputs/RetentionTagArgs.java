@@ -56,12 +56,12 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setTagName(Input<String> tagName) {
+        public Builder tagName(Input<String> tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
 
-        public Builder setTagName(String tagName) {
+        public Builder tagName(String tagName) {
             this.tagName = Input.of(Objects.requireNonNull(tagName));
             return this;
         }

@@ -53,12 +53,12 @@ public final class ServiceEndpointSpec {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ServiceEndpointSpecPort> ports) {
+        public Builder ports(@Nullable List<ServiceEndpointSpecPort> ports) {
             this.ports = ports;
             return this;
         }

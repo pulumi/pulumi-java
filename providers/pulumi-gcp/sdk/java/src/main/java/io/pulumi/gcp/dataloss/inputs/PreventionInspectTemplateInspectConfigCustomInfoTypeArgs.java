@@ -149,62 +149,62 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     	      this.storedType = defaults.storedType;
         }
 
-        public Builder setDictionary(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
+        public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setExclusionType(@Nullable Input<String> exclusionType) {
+        public Builder exclusionType(@Nullable Input<String> exclusionType) {
             this.exclusionType = exclusionType;
             return this;
         }
 
-        public Builder setExclusionType(@Nullable String exclusionType) {
+        public Builder exclusionType(@Nullable String exclusionType) {
             this.exclusionType = Input.ofNullable(exclusionType);
             return this;
         }
 
-        public Builder setInfoType(Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType) {
+        public Builder infoType(Input<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setInfoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs infoType) {
+        public Builder infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs infoType) {
             this.infoType = Input.of(Objects.requireNonNull(infoType));
             return this;
         }
 
-        public Builder setLikelihood(@Nullable Input<String> likelihood) {
+        public Builder likelihood(@Nullable Input<String> likelihood) {
             this.likelihood = likelihood;
             return this;
         }
 
-        public Builder setLikelihood(@Nullable String likelihood) {
+        public Builder likelihood(@Nullable String likelihood) {
             this.likelihood = Input.ofNullable(likelihood);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex) {
+        public Builder regex(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
+        public Builder regex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }
 
-        public Builder setStoredType(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
+        public Builder storedType(@Nullable Input<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
             this.storedType = storedType;
             return this;
         }
 
-        public Builder setStoredType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
+        public Builder storedType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
             this.storedType = Input.ofNullable(storedType);
             return this;
         }

@@ -109,42 +109,42 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
     	      this.privateLinkServiceProxies = defaults.privateLinkServiceProxies;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = Input.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = Input.ofNullable(privateLinkServiceConnections);
             return this;
         }
 
-        public Builder setPrivateLinkServiceProxies(@Nullable Input<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies) {
+        public Builder privateLinkServiceProxies(@Nullable Input<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies) {
             this.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
 
-        public Builder setPrivateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
+        public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyArgs> privateLinkServiceProxies) {
             this.privateLinkServiceProxies = Input.ofNullable(privateLinkServiceProxies);
             return this;
         }

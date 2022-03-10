@@ -92,32 +92,32 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.targetUri = defaults.targetUri;
         }
 
-        public Builder setCallCredentials(@Nullable Input<CallCredentialsArgs> callCredentials) {
+        public Builder callCredentials(@Nullable Input<CallCredentialsArgs> callCredentials) {
             this.callCredentials = callCredentials;
             return this;
         }
 
-        public Builder setCallCredentials(@Nullable CallCredentialsArgs callCredentials) {
+        public Builder callCredentials(@Nullable CallCredentialsArgs callCredentials) {
             this.callCredentials = Input.ofNullable(callCredentials);
             return this;
         }
 
-        public Builder setChannelCredentials(@Nullable Input<ChannelCredentialsArgs> channelCredentials) {
+        public Builder channelCredentials(@Nullable Input<ChannelCredentialsArgs> channelCredentials) {
             this.channelCredentials = channelCredentials;
             return this;
         }
 
-        public Builder setChannelCredentials(@Nullable ChannelCredentialsArgs channelCredentials) {
+        public Builder channelCredentials(@Nullable ChannelCredentialsArgs channelCredentials) {
             this.channelCredentials = Input.ofNullable(channelCredentials);
             return this;
         }
 
-        public Builder setTargetUri(@Nullable Input<String> targetUri) {
+        public Builder targetUri(@Nullable Input<String> targetUri) {
             this.targetUri = targetUri;
             return this;
         }
 
-        public Builder setTargetUri(@Nullable String targetUri) {
+        public Builder targetUri(@Nullable String targetUri) {
             this.targetUri = Input.ofNullable(targetUri);
             return this;
         }

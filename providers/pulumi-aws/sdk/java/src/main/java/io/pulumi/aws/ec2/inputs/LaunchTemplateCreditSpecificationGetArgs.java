@@ -53,12 +53,12 @@ public final class LaunchTemplateCreditSpecificationGetArgs extends io.pulumi.re
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder setCpuCredits(@Nullable Input<String> cpuCredits) {
+        public Builder cpuCredits(@Nullable Input<String> cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
         }
 
-        public Builder setCpuCredits(@Nullable String cpuCredits) {
+        public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = Input.ofNullable(cpuCredits);
             return this;
         }

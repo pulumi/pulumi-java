@@ -74,22 +74,22 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setAzureApp(Input<AzureActiveDirectoryAppArgs> azureApp) {
+        public Builder azureApp(Input<AzureActiveDirectoryAppArgs> azureApp) {
             this.azureApp = Objects.requireNonNull(azureApp);
             return this;
         }
 
-        public Builder setAzureApp(AzureActiveDirectoryAppArgs azureApp) {
+        public Builder azureApp(AzureActiveDirectoryAppArgs azureApp) {
             this.azureApp = Input.of(Objects.requireNonNull(azureApp));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<MiSqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(MiSqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

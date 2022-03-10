@@ -89,32 +89,32 @@ public final class RegionDiskSourceSnapshotEncryptionKeyGetArgs extends io.pulum
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setRawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Input<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Input.ofNullable(rawKey);
             return this;
         }
 
-        public Builder setSha256(@Nullable Input<String> sha256) {
+        public Builder sha256(@Nullable Input<String> sha256) {
             this.sha256 = sha256;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }

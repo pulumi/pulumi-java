@@ -146,62 +146,62 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setGroupByEmail(@Nullable Input<String> groupByEmail) {
+        public Builder groupByEmail(@Nullable Input<String> groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
 
-        public Builder setGroupByEmail(@Nullable String groupByEmail) {
+        public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = Input.ofNullable(groupByEmail);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setSpecialGroup(@Nullable Input<String> specialGroup) {
+        public Builder specialGroup(@Nullable Input<String> specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
 
-        public Builder setSpecialGroup(@Nullable String specialGroup) {
+        public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = Input.ofNullable(specialGroup);
             return this;
         }
 
-        public Builder setUserByEmail(@Nullable Input<String> userByEmail) {
+        public Builder userByEmail(@Nullable Input<String> userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
 
-        public Builder setUserByEmail(@Nullable String userByEmail) {
+        public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = Input.ofNullable(userByEmail);
             return this;
         }
 
-        public Builder setView(@Nullable Input<DatasetAccessViewArgs> view) {
+        public Builder view(@Nullable Input<DatasetAccessViewArgs> view) {
             this.view = view;
             return this;
         }
 
-        public Builder setView(@Nullable DatasetAccessViewArgs view) {
+        public Builder view(@Nullable DatasetAccessViewArgs view) {
             this.view = Input.ofNullable(view);
             return this;
         }

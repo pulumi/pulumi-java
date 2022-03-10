@@ -67,12 +67,12 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     	      this.cookies = defaults.cookies;
         }
 
-        public Builder setCookieBehavior(String cookieBehavior) {
+        public Builder cookieBehavior(String cookieBehavior) {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
 
-        public Builder setCookies(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
+        public Builder cookies(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
             this.cookies = Objects.requireNonNull(cookies);
             return this;
         }

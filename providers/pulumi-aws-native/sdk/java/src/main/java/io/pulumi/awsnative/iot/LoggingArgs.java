@@ -86,32 +86,32 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setDefaultLogLevel(Input<LoggingDefaultLogLevel> defaultLogLevel) {
+        public Builder defaultLogLevel(Input<LoggingDefaultLogLevel> defaultLogLevel) {
             this.defaultLogLevel = Objects.requireNonNull(defaultLogLevel);
             return this;
         }
 
-        public Builder setDefaultLogLevel(LoggingDefaultLogLevel defaultLogLevel) {
+        public Builder defaultLogLevel(LoggingDefaultLogLevel defaultLogLevel) {
             this.defaultLogLevel = Input.of(Objects.requireNonNull(defaultLogLevel));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

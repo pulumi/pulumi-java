@@ -111,52 +111,52 @@ public final class VMwareCollectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vmWareCollectorName = defaults.vmWareCollectorName;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<CollectorPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<CollectorPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable CollectorPropertiesArgs properties) {
+        public Builder properties(@Nullable CollectorPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVmWareCollectorName(@Nullable Input<String> vmWareCollectorName) {
+        public Builder vmWareCollectorName(@Nullable Input<String> vmWareCollectorName) {
             this.vmWareCollectorName = vmWareCollectorName;
             return this;
         }
 
-        public Builder setVmWareCollectorName(@Nullable String vmWareCollectorName) {
+        public Builder vmWareCollectorName(@Nullable String vmWareCollectorName) {
             this.vmWareCollectorName = Input.ofNullable(vmWareCollectorName);
             return this;
         }

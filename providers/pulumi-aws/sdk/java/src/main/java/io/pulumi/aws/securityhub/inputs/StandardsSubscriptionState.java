@@ -53,12 +53,12 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
     	      this.standardsArn = defaults.standardsArn;
         }
 
-        public Builder setStandardsArn(@Nullable Input<String> standardsArn) {
+        public Builder standardsArn(@Nullable Input<String> standardsArn) {
             this.standardsArn = standardsArn;
             return this;
         }
 
-        public Builder setStandardsArn(@Nullable String standardsArn) {
+        public Builder standardsArn(@Nullable String standardsArn) {
             this.standardsArn = Input.ofNullable(standardsArn);
             return this;
         }

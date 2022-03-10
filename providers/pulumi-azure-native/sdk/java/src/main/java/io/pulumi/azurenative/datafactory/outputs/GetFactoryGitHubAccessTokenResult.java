@@ -50,7 +50,7 @@ public final class GetFactoryGitHubAccessTokenResult {
     	      this.gitHubAccessToken = defaults.gitHubAccessToken;
         }
 
-        public Builder setGitHubAccessToken(@Nullable String gitHubAccessToken) {
+        public Builder gitHubAccessToken(@Nullable String gitHubAccessToken) {
             this.gitHubAccessToken = gitHubAccessToken;
             return this;
         }

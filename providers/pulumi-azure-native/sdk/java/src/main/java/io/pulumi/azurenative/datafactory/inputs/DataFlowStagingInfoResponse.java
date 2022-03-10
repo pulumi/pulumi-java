@@ -75,12 +75,12 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
     	      this.linkedService = defaults.linkedService;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setLinkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
+        public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }

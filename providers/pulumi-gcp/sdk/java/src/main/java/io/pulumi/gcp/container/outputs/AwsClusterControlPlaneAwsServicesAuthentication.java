@@ -67,12 +67,12 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
     	      this.roleSessionName = defaults.roleSessionName;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleSessionName(@Nullable String roleSessionName) {
+        public Builder roleSessionName(@Nullable String roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
         }

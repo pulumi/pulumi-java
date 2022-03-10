@@ -83,17 +83,17 @@ public final class CredentialResponse {
     	      this.useProjectDefault = defaults.useProjectDefault;
         }
 
-        public Builder setBasicAuth(BasicAuthResponse basicAuth) {
+        public Builder basicAuth(BasicAuthResponse basicAuth) {
             this.basicAuth = Objects.requireNonNull(basicAuth);
             return this;
         }
 
-        public Builder setServiceAccount(ServiceAccountResponse serviceAccount) {
+        public Builder serviceAccount(ServiceAccountResponse serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setUseProjectDefault(Boolean useProjectDefault) {
+        public Builder useProjectDefault(Boolean useProjectDefault) {
             this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
             return this;
         }

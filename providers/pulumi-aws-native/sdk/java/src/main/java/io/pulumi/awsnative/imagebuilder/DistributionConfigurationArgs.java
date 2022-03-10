@@ -105,42 +105,42 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributions(Input<List<DistributionConfigurationDistributionArgs>> distributions) {
+        public Builder distributions(Input<List<DistributionConfigurationDistributionArgs>> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
 
-        public Builder setDistributions(List<DistributionConfigurationDistributionArgs> distributions) {
+        public Builder distributions(List<DistributionConfigurationDistributionArgs> distributions) {
             this.distributions = Input.of(Objects.requireNonNull(distributions));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

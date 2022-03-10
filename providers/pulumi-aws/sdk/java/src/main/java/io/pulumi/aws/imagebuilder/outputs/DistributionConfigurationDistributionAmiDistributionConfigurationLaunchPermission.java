@@ -67,12 +67,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setUserGroups(@Nullable List<String> userGroups) {
+        public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }

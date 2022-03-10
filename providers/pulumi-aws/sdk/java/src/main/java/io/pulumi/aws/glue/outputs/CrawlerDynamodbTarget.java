@@ -85,17 +85,17 @@ public final class CrawlerDynamodbTarget {
     	      this.scanRate = defaults.scanRate;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setScanAll(@Nullable Boolean scanAll) {
+        public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = scanAll;
             return this;
         }
 
-        public Builder setScanRate(@Nullable Double scanRate) {
+        public Builder scanRate(@Nullable Double scanRate) {
             this.scanRate = scanRate;
             return this;
         }

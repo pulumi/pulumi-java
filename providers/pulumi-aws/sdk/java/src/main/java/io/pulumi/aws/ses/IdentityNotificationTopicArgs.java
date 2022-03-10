@@ -103,42 +103,42 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setIdentity(Input<String> identity) {
+        public Builder identity(Input<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(String identity) {
+        public Builder identity(String identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setIncludeOriginalHeaders(@Nullable Input<Boolean> includeOriginalHeaders) {
+        public Builder includeOriginalHeaders(@Nullable Input<Boolean> includeOriginalHeaders) {
             this.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
 
-        public Builder setIncludeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
+        public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
             this.includeOriginalHeaders = Input.ofNullable(includeOriginalHeaders);
             return this;
         }
 
-        public Builder setNotificationType(Input<String> notificationType) {
+        public Builder notificationType(Input<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
 
-        public Builder setNotificationType(String notificationType) {
+        public Builder notificationType(String notificationType) {
             this.notificationType = Input.of(Objects.requireNonNull(notificationType));
             return this;
         }
 
-        public Builder setTopicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Input<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }

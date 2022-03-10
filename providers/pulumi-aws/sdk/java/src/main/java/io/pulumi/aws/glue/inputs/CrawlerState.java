@@ -377,212 +377,212 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCatalogTargets(@Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets) {
+        public Builder catalogTargets(@Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets) {
             this.catalogTargets = catalogTargets;
             return this;
         }
 
-        public Builder setCatalogTargets(@Nullable List<CrawlerCatalogTargetGetArgs> catalogTargets) {
+        public Builder catalogTargets(@Nullable List<CrawlerCatalogTargetGetArgs> catalogTargets) {
             this.catalogTargets = Input.ofNullable(catalogTargets);
             return this;
         }
 
-        public Builder setClassifiers(@Nullable Input<List<String>> classifiers) {
+        public Builder classifiers(@Nullable Input<List<String>> classifiers) {
             this.classifiers = classifiers;
             return this;
         }
 
-        public Builder setClassifiers(@Nullable List<String> classifiers) {
+        public Builder classifiers(@Nullable List<String> classifiers) {
             this.classifiers = Input.ofNullable(classifiers);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Input<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setDeltaTargets(@Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets) {
+        public Builder deltaTargets(@Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets) {
             this.deltaTargets = deltaTargets;
             return this;
         }
 
-        public Builder setDeltaTargets(@Nullable List<CrawlerDeltaTargetGetArgs> deltaTargets) {
+        public Builder deltaTargets(@Nullable List<CrawlerDeltaTargetGetArgs> deltaTargets) {
             this.deltaTargets = Input.ofNullable(deltaTargets);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDynamodbTargets(@Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
+        public Builder dynamodbTargets(@Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
             this.dynamodbTargets = dynamodbTargets;
             return this;
         }
 
-        public Builder setDynamodbTargets(@Nullable List<CrawlerDynamodbTargetGetArgs> dynamodbTargets) {
+        public Builder dynamodbTargets(@Nullable List<CrawlerDynamodbTargetGetArgs> dynamodbTargets) {
             this.dynamodbTargets = Input.ofNullable(dynamodbTargets);
             return this;
         }
 
-        public Builder setJdbcTargets(@Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
+        public Builder jdbcTargets(@Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
             this.jdbcTargets = jdbcTargets;
             return this;
         }
 
-        public Builder setJdbcTargets(@Nullable List<CrawlerJdbcTargetGetArgs> jdbcTargets) {
+        public Builder jdbcTargets(@Nullable List<CrawlerJdbcTargetGetArgs> jdbcTargets) {
             this.jdbcTargets = Input.ofNullable(jdbcTargets);
             return this;
         }
 
-        public Builder setLineageConfiguration(@Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
+        public Builder lineageConfiguration(@Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
             this.lineageConfiguration = lineageConfiguration;
             return this;
         }
 
-        public Builder setLineageConfiguration(@Nullable CrawlerLineageConfigurationGetArgs lineageConfiguration) {
+        public Builder lineageConfiguration(@Nullable CrawlerLineageConfigurationGetArgs lineageConfiguration) {
             this.lineageConfiguration = Input.ofNullable(lineageConfiguration);
             return this;
         }
 
-        public Builder setMongodbTargets(@Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
+        public Builder mongodbTargets(@Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
             this.mongodbTargets = mongodbTargets;
             return this;
         }
 
-        public Builder setMongodbTargets(@Nullable List<CrawlerMongodbTargetGetArgs> mongodbTargets) {
+        public Builder mongodbTargets(@Nullable List<CrawlerMongodbTargetGetArgs> mongodbTargets) {
             this.mongodbTargets = Input.ofNullable(mongodbTargets);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecrawlPolicy(@Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
+        public Builder recrawlPolicy(@Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
             this.recrawlPolicy = recrawlPolicy;
             return this;
         }
 
-        public Builder setRecrawlPolicy(@Nullable CrawlerRecrawlPolicyGetArgs recrawlPolicy) {
+        public Builder recrawlPolicy(@Nullable CrawlerRecrawlPolicyGetArgs recrawlPolicy) {
             this.recrawlPolicy = Input.ofNullable(recrawlPolicy);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setS3Targets(@Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets) {
+        public Builder s3Targets(@Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets) {
             this.s3Targets = s3Targets;
             return this;
         }
 
-        public Builder setS3Targets(@Nullable List<CrawlerS3TargetGetArgs> s3Targets) {
+        public Builder s3Targets(@Nullable List<CrawlerS3TargetGetArgs> s3Targets) {
             this.s3Targets = Input.ofNullable(s3Targets);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setSchemaChangePolicy(@Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
+        public Builder schemaChangePolicy(@Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
             this.schemaChangePolicy = schemaChangePolicy;
             return this;
         }
 
-        public Builder setSchemaChangePolicy(@Nullable CrawlerSchemaChangePolicyGetArgs schemaChangePolicy) {
+        public Builder schemaChangePolicy(@Nullable CrawlerSchemaChangePolicyGetArgs schemaChangePolicy) {
             this.schemaChangePolicy = Input.ofNullable(schemaChangePolicy);
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Input.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable String tablePrefix) {
+        public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

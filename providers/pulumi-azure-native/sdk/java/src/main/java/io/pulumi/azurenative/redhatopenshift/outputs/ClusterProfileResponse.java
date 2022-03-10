@@ -99,22 +99,22 @@ public final class ClusterProfileResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setPullSecret(@Nullable String pullSecret) {
+        public Builder pullSecret(@Nullable String pullSecret) {
             this.pullSecret = pullSecret;
             return this;
         }
 
-        public Builder setResourceGroupId(@Nullable String resourceGroupId) {
+        public Builder resourceGroupId(@Nullable String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

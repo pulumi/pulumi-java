@@ -60,12 +60,12 @@ public final class GetBudgetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.budgetId = defaults.budgetId;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
-        public Builder setBudgetId(String budgetId) {
+        public Builder budgetId(String budgetId) {
             this.budgetId = Objects.requireNonNull(budgetId);
             return this;
         }

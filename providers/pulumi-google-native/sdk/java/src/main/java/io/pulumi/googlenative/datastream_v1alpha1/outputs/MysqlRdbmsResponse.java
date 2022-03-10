@@ -49,7 +49,7 @@ public final class MysqlRdbmsResponse {
     	      this.mysqlDatabases = defaults.mysqlDatabases;
         }
 
-        public Builder setMysqlDatabases(List<MysqlDatabaseResponse> mysqlDatabases) {
+        public Builder mysqlDatabases(List<MysqlDatabaseResponse> mysqlDatabases) {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }

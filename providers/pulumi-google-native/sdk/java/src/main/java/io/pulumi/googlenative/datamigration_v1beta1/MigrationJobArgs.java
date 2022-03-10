@@ -301,172 +301,172 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcPeeringConnectivity = defaults.vpcPeeringConnectivity;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setDestinationDatabase(@Nullable Input<DatabaseTypeArgs> destinationDatabase) {
+        public Builder destinationDatabase(@Nullable Input<DatabaseTypeArgs> destinationDatabase) {
             this.destinationDatabase = destinationDatabase;
             return this;
         }
 
-        public Builder setDestinationDatabase(@Nullable DatabaseTypeArgs destinationDatabase) {
+        public Builder destinationDatabase(@Nullable DatabaseTypeArgs destinationDatabase) {
             this.destinationDatabase = Input.ofNullable(destinationDatabase);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDumpPath(@Nullable Input<String> dumpPath) {
+        public Builder dumpPath(@Nullable Input<String> dumpPath) {
             this.dumpPath = dumpPath;
             return this;
         }
 
-        public Builder setDumpPath(@Nullable String dumpPath) {
+        public Builder dumpPath(@Nullable String dumpPath) {
             this.dumpPath = Input.ofNullable(dumpPath);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMigrationJobId(Input<String> migrationJobId) {
+        public Builder migrationJobId(Input<String> migrationJobId) {
             this.migrationJobId = Objects.requireNonNull(migrationJobId);
             return this;
         }
 
-        public Builder setMigrationJobId(String migrationJobId) {
+        public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = Input.of(Objects.requireNonNull(migrationJobId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setReverseSshConnectivity(@Nullable Input<ReverseSshConnectivityArgs> reverseSshConnectivity) {
+        public Builder reverseSshConnectivity(@Nullable Input<ReverseSshConnectivityArgs> reverseSshConnectivity) {
             this.reverseSshConnectivity = reverseSshConnectivity;
             return this;
         }
 
-        public Builder setReverseSshConnectivity(@Nullable ReverseSshConnectivityArgs reverseSshConnectivity) {
+        public Builder reverseSshConnectivity(@Nullable ReverseSshConnectivityArgs reverseSshConnectivity) {
             this.reverseSshConnectivity = Input.ofNullable(reverseSshConnectivity);
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourceDatabase(@Nullable Input<DatabaseTypeArgs> sourceDatabase) {
+        public Builder sourceDatabase(@Nullable Input<DatabaseTypeArgs> sourceDatabase) {
             this.sourceDatabase = sourceDatabase;
             return this;
         }
 
-        public Builder setSourceDatabase(@Nullable DatabaseTypeArgs sourceDatabase) {
+        public Builder sourceDatabase(@Nullable DatabaseTypeArgs sourceDatabase) {
             this.sourceDatabase = Input.ofNullable(sourceDatabase);
             return this;
         }
 
-        public Builder setState(@Nullable Input<MigrationJobState> state) {
+        public Builder state(@Nullable Input<MigrationJobState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable MigrationJobState state) {
+        public Builder state(@Nullable MigrationJobState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStaticIpConnectivity(@Nullable Input<StaticIpConnectivityArgs> staticIpConnectivity) {
+        public Builder staticIpConnectivity(@Nullable Input<StaticIpConnectivityArgs> staticIpConnectivity) {
             this.staticIpConnectivity = staticIpConnectivity;
             return this;
         }
 
-        public Builder setStaticIpConnectivity(@Nullable StaticIpConnectivityArgs staticIpConnectivity) {
+        public Builder staticIpConnectivity(@Nullable StaticIpConnectivityArgs staticIpConnectivity) {
             this.staticIpConnectivity = Input.ofNullable(staticIpConnectivity);
             return this;
         }
 
-        public Builder setType(Input<MigrationJobType> type) {
+        public Builder type(Input<MigrationJobType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(MigrationJobType type) {
+        public Builder type(MigrationJobType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVpcPeeringConnectivity(@Nullable Input<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
+        public Builder vpcPeeringConnectivity(@Nullable Input<VpcPeeringConnectivityArgs> vpcPeeringConnectivity) {
             this.vpcPeeringConnectivity = vpcPeeringConnectivity;
             return this;
         }
 
-        public Builder setVpcPeeringConnectivity(@Nullable VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
+        public Builder vpcPeeringConnectivity(@Nullable VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
             this.vpcPeeringConnectivity = Input.ofNullable(vpcPeeringConnectivity);
             return this;
         }

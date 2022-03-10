@@ -56,12 +56,12 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setS3Uri(Input<String> s3Uri) {
+        public Builder s3Uri(Input<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
 
-        public Builder setS3Uri(String s3Uri) {
+        public Builder s3Uri(String s3Uri) {
             this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
             return this;
         }

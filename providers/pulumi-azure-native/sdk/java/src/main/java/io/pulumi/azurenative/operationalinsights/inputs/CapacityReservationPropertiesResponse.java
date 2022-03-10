@@ -73,12 +73,12 @@ public final class CapacityReservationPropertiesResponse extends io.pulumi.resou
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setLastSkuUpdate(String lastSkuUpdate) {
+        public Builder lastSkuUpdate(String lastSkuUpdate) {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
 
-        public Builder setMinCapacity(Double minCapacity) {
+        public Builder minCapacity(Double minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }

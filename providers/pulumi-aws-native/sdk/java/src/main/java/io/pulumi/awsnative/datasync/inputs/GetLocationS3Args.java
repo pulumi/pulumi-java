@@ -51,7 +51,7 @@ public final class GetLocationS3Args extends io.pulumi.resources.InvokeArgs {
     	      this.locationArn = defaults.locationArn;
         }
 
-        public Builder setLocationArn(String locationArn) {
+        public Builder locationArn(String locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }

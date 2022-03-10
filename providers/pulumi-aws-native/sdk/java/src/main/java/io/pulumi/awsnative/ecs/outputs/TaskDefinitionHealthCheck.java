@@ -117,27 +117,27 @@ public final class TaskDefinitionHealthCheck {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setRetries(@Nullable Integer retries) {
+        public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable Integer startPeriod) {
+        public Builder startPeriod(@Nullable Integer startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }

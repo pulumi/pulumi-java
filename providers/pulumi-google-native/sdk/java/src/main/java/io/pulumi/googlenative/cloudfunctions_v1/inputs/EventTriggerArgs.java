@@ -107,42 +107,42 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setEventType(Input<String> eventType) {
+        public Builder eventType(Input<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Input.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable Input<FailurePolicyArgs> failurePolicy) {
+        public Builder failurePolicy(@Nullable Input<FailurePolicyArgs> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable FailurePolicyArgs failurePolicy) {
+        public Builder failurePolicy(@Nullable FailurePolicyArgs failurePolicy) {
             this.failurePolicy = Input.ofNullable(failurePolicy);
             return this;
         }
 
-        public Builder setResource(Input<String> resource) {
+        public Builder resource(Input<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

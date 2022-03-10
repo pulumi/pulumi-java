@@ -109,42 +109,42 @@ public final class ExpressRouteLinkMacSecConfigArgs extends io.pulumi.resources.
     	      this.sciState = defaults.sciState;
         }
 
-        public Builder setCakSecretIdentifier(@Nullable Input<String> cakSecretIdentifier) {
+        public Builder cakSecretIdentifier(@Nullable Input<String> cakSecretIdentifier) {
             this.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
 
-        public Builder setCakSecretIdentifier(@Nullable String cakSecretIdentifier) {
+        public Builder cakSecretIdentifier(@Nullable String cakSecretIdentifier) {
             this.cakSecretIdentifier = Input.ofNullable(cakSecretIdentifier);
             return this;
         }
 
-        public Builder setCipher(@Nullable Input<Either<String,ExpressRouteLinkMacSecCipher>> cipher) {
+        public Builder cipher(@Nullable Input<Either<String,ExpressRouteLinkMacSecCipher>> cipher) {
             this.cipher = cipher;
             return this;
         }
 
-        public Builder setCipher(@Nullable Either<String,ExpressRouteLinkMacSecCipher> cipher) {
+        public Builder cipher(@Nullable Either<String,ExpressRouteLinkMacSecCipher> cipher) {
             this.cipher = Input.ofNullable(cipher);
             return this;
         }
 
-        public Builder setCknSecretIdentifier(@Nullable Input<String> cknSecretIdentifier) {
+        public Builder cknSecretIdentifier(@Nullable Input<String> cknSecretIdentifier) {
             this.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
 
-        public Builder setCknSecretIdentifier(@Nullable String cknSecretIdentifier) {
+        public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
             this.cknSecretIdentifier = Input.ofNullable(cknSecretIdentifier);
             return this;
         }
 
-        public Builder setSciState(@Nullable Input<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
+        public Builder sciState(@Nullable Input<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
             this.sciState = sciState;
             return this;
         }
 
-        public Builder setSciState(@Nullable Either<String,ExpressRouteLinkMacSecSciState> sciState) {
+        public Builder sciState(@Nullable Either<String,ExpressRouteLinkMacSecSciState> sciState) {
             this.sciState = Input.ofNullable(sciState);
             return this;
         }

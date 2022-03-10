@@ -124,27 +124,27 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setAdditionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
+        public Builder additionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(List<CloudErrorResponse> details) {
+        public Builder details(List<CloudErrorResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

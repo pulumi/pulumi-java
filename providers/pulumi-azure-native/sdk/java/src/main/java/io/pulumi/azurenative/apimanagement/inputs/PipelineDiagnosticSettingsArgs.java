@@ -74,22 +74,22 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
     	      this.response = defaults.response;
         }
 
-        public Builder setRequest(@Nullable Input<HttpMessageDiagnosticArgs> request) {
+        public Builder request(@Nullable Input<HttpMessageDiagnosticArgs> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRequest(@Nullable HttpMessageDiagnosticArgs request) {
+        public Builder request(@Nullable HttpMessageDiagnosticArgs request) {
             this.request = Input.ofNullable(request);
             return this;
         }
 
-        public Builder setResponse(@Nullable Input<HttpMessageDiagnosticArgs> response) {
+        public Builder response(@Nullable Input<HttpMessageDiagnosticArgs> response) {
             this.response = response;
             return this;
         }
 
-        public Builder setResponse(@Nullable HttpMessageDiagnosticArgs response) {
+        public Builder response(@Nullable HttpMessageDiagnosticArgs response) {
             this.response = Input.ofNullable(response);
             return this;
         }

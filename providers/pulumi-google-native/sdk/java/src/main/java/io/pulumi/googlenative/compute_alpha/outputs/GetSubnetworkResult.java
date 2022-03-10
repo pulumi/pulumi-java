@@ -519,152 +519,152 @@ public final class GetSubnetworkResult {
     	      this.vlans = defaults.vlans;
         }
 
-        public Builder setAggregationInterval(String aggregationInterval) {
+        public Builder aggregationInterval(String aggregationInterval) {
             this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
             return this;
         }
 
-        public Builder setAllowSubnetCidrRoutesOverlap(Boolean allowSubnetCidrRoutesOverlap) {
+        public Builder allowSubnetCidrRoutesOverlap(Boolean allowSubnetCidrRoutesOverlap) {
             this.allowSubnetCidrRoutesOverlap = Objects.requireNonNull(allowSubnetCidrRoutesOverlap);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableFlowLogs(Boolean enableFlowLogs) {
+        public Builder enableFlowLogs(Boolean enableFlowLogs) {
             this.enableFlowLogs = Objects.requireNonNull(enableFlowLogs);
             return this;
         }
 
-        public Builder setEnableL2(Boolean enableL2) {
+        public Builder enableL2(Boolean enableL2) {
             this.enableL2 = Objects.requireNonNull(enableL2);
             return this;
         }
 
-        public Builder setExternalIpv6Prefix(String externalIpv6Prefix) {
+        public Builder externalIpv6Prefix(String externalIpv6Prefix) {
             this.externalIpv6Prefix = Objects.requireNonNull(externalIpv6Prefix);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setFlowSampling(Double flowSampling) {
+        public Builder flowSampling(Double flowSampling) {
             this.flowSampling = Objects.requireNonNull(flowSampling);
             return this;
         }
 
-        public Builder setGatewayAddress(String gatewayAddress) {
+        public Builder gatewayAddress(String gatewayAddress) {
             this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setIpv6AccessType(String ipv6AccessType) {
+        public Builder ipv6AccessType(String ipv6AccessType) {
             this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
             return this;
         }
 
-        public Builder setIpv6CidrRange(String ipv6CidrRange) {
+        public Builder ipv6CidrRange(String ipv6CidrRange) {
             this.ipv6CidrRange = Objects.requireNonNull(ipv6CidrRange);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLogConfig(SubnetworkLogConfigResponse logConfig) {
+        public Builder logConfig(SubnetworkLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPrivateIpGoogleAccess(Boolean privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Objects.requireNonNull(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setPurpose(String purpose) {
+        public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReservedInternalRange(String reservedInternalRange) {
+        public Builder reservedInternalRange(String reservedInternalRange) {
             this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setSecondaryIpRanges(List<SubnetworkSecondaryRangeResponse> secondaryIpRanges) {
+        public Builder secondaryIpRanges(List<SubnetworkSecondaryRangeResponse> secondaryIpRanges) {
             this.secondaryIpRanges = Objects.requireNonNull(secondaryIpRanges);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setStackType(String stackType) {
+        public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVlans(List<Integer> vlans) {
+        public Builder vlans(List<Integer> vlans) {
             this.vlans = Objects.requireNonNull(vlans);
             return this;
         }

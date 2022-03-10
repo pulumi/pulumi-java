@@ -698,217 +698,217 @@ public final class GetInstanceResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAmi(String ami) {
+        public Builder ami(String ami) {
             this.ami = Objects.requireNonNull(ami);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Objects.requireNonNull(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setCreditSpecifications(List<GetInstanceCreditSpecification> creditSpecifications) {
+        public Builder creditSpecifications(List<GetInstanceCreditSpecification> creditSpecifications) {
             this.creditSpecifications = Objects.requireNonNull(creditSpecifications);
             return this;
         }
 
-        public Builder setDisableApiTermination(Boolean disableApiTermination) {
+        public Builder disableApiTermination(Boolean disableApiTermination) {
             this.disableApiTermination = Objects.requireNonNull(disableApiTermination);
             return this;
         }
 
-        public Builder setEbsBlockDevices(List<GetInstanceEbsBlockDevice> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<GetInstanceEbsBlockDevice> ebsBlockDevices) {
             this.ebsBlockDevices = Objects.requireNonNull(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEbsOptimized(Boolean ebsOptimized) {
+        public Builder ebsOptimized(Boolean ebsOptimized) {
             this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
             return this;
         }
 
-        public Builder setEnclaveOptions(List<GetInstanceEnclaveOption> enclaveOptions) {
+        public Builder enclaveOptions(List<GetInstanceEnclaveOption> enclaveOptions) {
             this.enclaveOptions = Objects.requireNonNull(enclaveOptions);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(List<GetInstanceEphemeralBlockDevice> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<GetInstanceEphemeralBlockDevice> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Objects.requireNonNull(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGetPasswordData(@Nullable Boolean getPasswordData) {
+        public Builder getPasswordData(@Nullable Boolean getPasswordData) {
             this.getPasswordData = getPasswordData;
             return this;
         }
 
-        public Builder setGetUserData(@Nullable Boolean getUserData) {
+        public Builder getUserData(@Nullable Boolean getUserData) {
             this.getUserData = getUserData;
             return this;
         }
 
-        public Builder setHostId(String hostId) {
+        public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
 
-        public Builder setIamInstanceProfile(String iamInstanceProfile) {
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceState(String instanceState) {
+        public Builder instanceState(String instanceState) {
             this.instanceState = Objects.requireNonNull(instanceState);
             return this;
         }
 
-        public Builder setInstanceTags(Map<String,String> instanceTags) {
+        public Builder instanceTags(Map<String,String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpv6Addresses(List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setMetadataOptions(List<GetInstanceMetadataOption> metadataOptions) {
+        public Builder metadataOptions(List<GetInstanceMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
 
-        public Builder setMonitoring(Boolean monitoring) {
+        public Builder monitoring(Boolean monitoring) {
             this.monitoring = Objects.requireNonNull(monitoring);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setOutpostArn(String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
 
-        public Builder setPasswordData(String passwordData) {
+        public Builder passwordData(String passwordData) {
             this.passwordData = Objects.requireNonNull(passwordData);
             return this;
         }
 
-        public Builder setPlacementGroup(String placementGroup) {
+        public Builder placementGroup(String placementGroup) {
             this.placementGroup = Objects.requireNonNull(placementGroup);
             return this;
         }
 
-        public Builder setPlacementPartitionNumber(Integer placementPartitionNumber) {
+        public Builder placementPartitionNumber(Integer placementPartitionNumber) {
             this.placementPartitionNumber = Objects.requireNonNull(placementPartitionNumber);
             return this;
         }
 
-        public Builder setPrivateDns(String privateDns) {
+        public Builder privateDns(String privateDns) {
             this.privateDns = Objects.requireNonNull(privateDns);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPublicDns(String publicDns) {
+        public Builder publicDns(String publicDns) {
             this.publicDns = Objects.requireNonNull(publicDns);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
 
-        public Builder setRootBlockDevices(List<GetInstanceRootBlockDevice> rootBlockDevices) {
+        public Builder rootBlockDevices(List<GetInstanceRootBlockDevice> rootBlockDevices) {
             this.rootBlockDevices = Objects.requireNonNull(rootBlockDevices);
             return this;
         }
 
-        public Builder setSecondaryPrivateIps(List<String> secondaryPrivateIps) {
+        public Builder secondaryPrivateIps(List<String> secondaryPrivateIps) {
             this.secondaryPrivateIps = Objects.requireNonNull(secondaryPrivateIps);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSourceDestCheck(Boolean sourceDestCheck) {
+        public Builder sourceDestCheck(Boolean sourceDestCheck) {
             this.sourceDestCheck = Objects.requireNonNull(sourceDestCheck);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTenancy(String tenancy) {
+        public Builder tenancy(String tenancy) {
             this.tenancy = Objects.requireNonNull(tenancy);
             return this;
         }
 
-        public Builder setUserData(String userData) {
+        public Builder userData(String userData) {
             this.userData = Objects.requireNonNull(userData);
             return this;
         }
 
-        public Builder setUserDataBase64(String userDataBase64) {
+        public Builder userDataBase64(String userDataBase64) {
             this.userDataBase64 = Objects.requireNonNull(userDataBase64);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }

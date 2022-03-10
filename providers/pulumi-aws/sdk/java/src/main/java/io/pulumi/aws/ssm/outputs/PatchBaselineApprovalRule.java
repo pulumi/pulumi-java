@@ -119,27 +119,27 @@ public final class PatchBaselineApprovalRule {
     	      this.patchFilters = defaults.patchFilters;
         }
 
-        public Builder setApproveAfterDays(@Nullable Integer approveAfterDays) {
+        public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
             this.approveAfterDays = approveAfterDays;
             return this;
         }
 
-        public Builder setApproveUntilDate(@Nullable String approveUntilDate) {
+        public Builder approveUntilDate(@Nullable String approveUntilDate) {
             this.approveUntilDate = approveUntilDate;
             return this;
         }
 
-        public Builder setComplianceLevel(@Nullable String complianceLevel) {
+        public Builder complianceLevel(@Nullable String complianceLevel) {
             this.complianceLevel = complianceLevel;
             return this;
         }
 
-        public Builder setEnableNonSecurity(@Nullable Boolean enableNonSecurity) {
+        public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
             this.enableNonSecurity = enableNonSecurity;
             return this;
         }
 
-        public Builder setPatchFilters(List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
+        public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
             this.patchFilters = Objects.requireNonNull(patchFilters);
             return this;
         }

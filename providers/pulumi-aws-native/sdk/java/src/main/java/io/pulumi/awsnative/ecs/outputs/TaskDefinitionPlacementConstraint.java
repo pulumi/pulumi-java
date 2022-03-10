@@ -51,12 +51,12 @@ public final class TaskDefinitionPlacementConstraint {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

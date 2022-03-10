@@ -102,22 +102,22 @@ public final class VirtualNodeSpecListenerTimeout {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerTimeoutGrpc grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerTimeoutGrpc grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerTimeoutHttp http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttp http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerTimeoutHttp2 http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2 http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
             this.tcp = tcp;
             return this;
         }

@@ -85,17 +85,17 @@ public final class GetConformancePackResult {
     	      this.deliveryS3KeyPrefix = defaults.deliveryS3KeyPrefix;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable List<ConformancePackInputParameter> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable List<ConformancePackInputParameter> conformancePackInputParameters) {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable String deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }

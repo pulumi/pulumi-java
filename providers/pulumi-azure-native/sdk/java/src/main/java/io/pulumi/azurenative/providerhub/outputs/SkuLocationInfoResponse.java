@@ -77,27 +77,27 @@ public final class SkuLocationInfoResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setExtendedLocations(@Nullable List<String> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setZoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
+        public Builder zoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

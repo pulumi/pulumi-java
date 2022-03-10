@@ -148,62 +148,62 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     	      this.includedQueryParameters = defaults.includedQueryParameters;
         }
 
-        public Builder setExcludeHost(@Nullable Input<Boolean> excludeHost) {
+        public Builder excludeHost(@Nullable Input<Boolean> excludeHost) {
             this.excludeHost = excludeHost;
             return this;
         }
 
-        public Builder setExcludeHost(@Nullable Boolean excludeHost) {
+        public Builder excludeHost(@Nullable Boolean excludeHost) {
             this.excludeHost = Input.ofNullable(excludeHost);
             return this;
         }
 
-        public Builder setExcludeQueryString(@Nullable Input<Boolean> excludeQueryString) {
+        public Builder excludeQueryString(@Nullable Input<Boolean> excludeQueryString) {
             this.excludeQueryString = excludeQueryString;
             return this;
         }
 
-        public Builder setExcludeQueryString(@Nullable Boolean excludeQueryString) {
+        public Builder excludeQueryString(@Nullable Boolean excludeQueryString) {
             this.excludeQueryString = Input.ofNullable(excludeQueryString);
             return this;
         }
 
-        public Builder setExcludedQueryParameters(@Nullable Input<List<String>> excludedQueryParameters) {
+        public Builder excludedQueryParameters(@Nullable Input<List<String>> excludedQueryParameters) {
             this.excludedQueryParameters = excludedQueryParameters;
             return this;
         }
 
-        public Builder setExcludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
+        public Builder excludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
             this.excludedQueryParameters = Input.ofNullable(excludedQueryParameters);
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Input<Boolean> includeProtocol) {
+        public Builder includeProtocol(@Nullable Input<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = Input.ofNullable(includeProtocol);
             return this;
         }
 
-        public Builder setIncludedHeaderNames(@Nullable Input<List<String>> includedHeaderNames) {
+        public Builder includedHeaderNames(@Nullable Input<List<String>> includedHeaderNames) {
             this.includedHeaderNames = includedHeaderNames;
             return this;
         }
 
-        public Builder setIncludedHeaderNames(@Nullable List<String> includedHeaderNames) {
+        public Builder includedHeaderNames(@Nullable List<String> includedHeaderNames) {
             this.includedHeaderNames = Input.ofNullable(includedHeaderNames);
             return this;
         }
 
-        public Builder setIncludedQueryParameters(@Nullable Input<List<String>> includedQueryParameters) {
+        public Builder includedQueryParameters(@Nullable Input<List<String>> includedQueryParameters) {
             this.includedQueryParameters = includedQueryParameters;
             return this;
         }
 
-        public Builder setIncludedQueryParameters(@Nullable List<String> includedQueryParameters) {
+        public Builder includedQueryParameters(@Nullable List<String> includedQueryParameters) {
             this.includedQueryParameters = Input.ofNullable(includedQueryParameters);
             return this;
         }

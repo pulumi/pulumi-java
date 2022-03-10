@@ -85,12 +85,12 @@ public final class TriggerBuildArtifacts {
     	      this.objects = defaults.objects;
         }
 
-        public Builder setImages(@Nullable List<String> images) {
+        public Builder images(@Nullable List<String> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setObjects(@Nullable TriggerBuildArtifactsObjects objects) {
+        public Builder objects(@Nullable TriggerBuildArtifactsObjects objects) {
             this.objects = objects;
             return this;
         }

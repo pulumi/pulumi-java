@@ -140,62 +140,62 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setConnectionAttributes(@Nullable Input<Map<String,String>> connectionAttributes) {
+        public Builder connectionAttributes(@Nullable Input<Map<String,String>> connectionAttributes) {
             this.connectionAttributes = connectionAttributes;
             return this;
         }
 
-        public Builder setConnectionAttributes(@Nullable Map<String,String> connectionAttributes) {
+        public Builder connectionAttributes(@Nullable Map<String,String> connectionAttributes) {
             this.connectionAttributes = Input.ofNullable(connectionAttributes);
             return this;
         }
 
-        public Builder setDatabaseService(Input<String> databaseService) {
+        public Builder databaseService(Input<String> databaseService) {
             this.databaseService = Objects.requireNonNull(databaseService);
             return this;
         }
 
-        public Builder setDatabaseService(String databaseService) {
+        public Builder databaseService(String databaseService) {
             this.databaseService = Input.of(Objects.requireNonNull(databaseService));
             return this;
         }
 
-        public Builder setHostname(Input<String> hostname) {
+        public Builder hostname(Input<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Input.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

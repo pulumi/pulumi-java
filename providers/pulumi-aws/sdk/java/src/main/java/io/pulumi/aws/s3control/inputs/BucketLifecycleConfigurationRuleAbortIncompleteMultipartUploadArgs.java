@@ -52,12 +52,12 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     	      this.daysAfterInitiation = defaults.daysAfterInitiation;
         }
 
-        public Builder setDaysAfterInitiation(Input<Integer> daysAfterInitiation) {
+        public Builder daysAfterInitiation(Input<Integer> daysAfterInitiation) {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
         }
 
-        public Builder setDaysAfterInitiation(Integer daysAfterInitiation) {
+        public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             this.daysAfterInitiation = Input.of(Objects.requireNonNull(daysAfterInitiation));
             return this;
         }

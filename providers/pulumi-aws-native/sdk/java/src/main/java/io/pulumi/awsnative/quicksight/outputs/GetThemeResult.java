@@ -156,42 +156,42 @@ public final class GetThemeResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<ThemeResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<ThemeResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ThemeTag> tags) {
+        public Builder tags(@Nullable List<ThemeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable ThemeType type) {
+        public Builder type(@Nullable ThemeType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable ThemeVersion version) {
+        public Builder version(@Nullable ThemeVersion version) {
             this.version = version;
             return this;
         }

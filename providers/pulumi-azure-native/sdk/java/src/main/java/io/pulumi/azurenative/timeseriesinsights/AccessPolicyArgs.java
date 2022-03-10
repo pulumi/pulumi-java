@@ -137,62 +137,62 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setAccessPolicyName(@Nullable Input<String> accessPolicyName) {
+        public Builder accessPolicyName(@Nullable Input<String> accessPolicyName) {
             this.accessPolicyName = accessPolicyName;
             return this;
         }
 
-        public Builder setAccessPolicyName(@Nullable String accessPolicyName) {
+        public Builder accessPolicyName(@Nullable String accessPolicyName) {
             this.accessPolicyName = Input.ofNullable(accessPolicyName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentName(Input<String> environmentName) {
+        public Builder environmentName(Input<String> environmentName) {
             this.environmentName = Objects.requireNonNull(environmentName);
             return this;
         }
 
-        public Builder setEnvironmentName(String environmentName) {
+        public Builder environmentName(String environmentName) {
             this.environmentName = Input.of(Objects.requireNonNull(environmentName));
             return this;
         }
 
-        public Builder setPrincipalObjectId(@Nullable Input<String> principalObjectId) {
+        public Builder principalObjectId(@Nullable Input<String> principalObjectId) {
             this.principalObjectId = principalObjectId;
             return this;
         }
 
-        public Builder setPrincipalObjectId(@Nullable String principalObjectId) {
+        public Builder principalObjectId(@Nullable String principalObjectId) {
             this.principalObjectId = Input.ofNullable(principalObjectId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<Either<String,AccessPolicyRole>>> roles) {
+        public Builder roles(@Nullable Input<List<Either<String,AccessPolicyRole>>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<Either<String,AccessPolicyRole>> roles) {
+        public Builder roles(@Nullable List<Either<String,AccessPolicyRole>> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }

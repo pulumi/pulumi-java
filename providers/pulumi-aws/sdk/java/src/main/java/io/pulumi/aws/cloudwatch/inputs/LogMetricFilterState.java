@@ -104,42 +104,42 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setMetricTransformation(@Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
+        public Builder metricTransformation(@Nullable Input<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
             this.metricTransformation = metricTransformation;
             return this;
         }
 
-        public Builder setMetricTransformation(@Nullable LogMetricFilterMetricTransformationGetArgs metricTransformation) {
+        public Builder metricTransformation(@Nullable LogMetricFilterMetricTransformationGetArgs metricTransformation) {
             this.metricTransformation = Input.ofNullable(metricTransformation);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }

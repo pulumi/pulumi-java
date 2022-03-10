@@ -102,42 +102,42 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setIdentityName(Input<String> identityName) {
+        public Builder identityName(Input<String> identityName) {
             this.identityName = Objects.requireNonNull(identityName);
             return this;
         }
 
-        public Builder setIdentityName(String identityName) {
+        public Builder identityName(String identityName) {
             this.identityName = Input.of(Objects.requireNonNull(identityName));
             return this;
         }
 
-        public Builder setIdentityType(Input<StudioSessionMappingIdentityType> identityType) {
+        public Builder identityType(Input<StudioSessionMappingIdentityType> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setIdentityType(StudioSessionMappingIdentityType identityType) {
+        public Builder identityType(StudioSessionMappingIdentityType identityType) {
             this.identityType = Input.of(Objects.requireNonNull(identityType));
             return this;
         }
 
-        public Builder setSessionPolicyArn(Input<String> sessionPolicyArn) {
+        public Builder sessionPolicyArn(Input<String> sessionPolicyArn) {
             this.sessionPolicyArn = Objects.requireNonNull(sessionPolicyArn);
             return this;
         }
 
-        public Builder setSessionPolicyArn(String sessionPolicyArn) {
+        public Builder sessionPolicyArn(String sessionPolicyArn) {
             this.sessionPolicyArn = Input.of(Objects.requireNonNull(sessionPolicyArn));
             return this;
         }
 
-        public Builder setStudioId(Input<String> studioId) {
+        public Builder studioId(Input<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Input.of(Objects.requireNonNull(studioId));
             return this;
         }

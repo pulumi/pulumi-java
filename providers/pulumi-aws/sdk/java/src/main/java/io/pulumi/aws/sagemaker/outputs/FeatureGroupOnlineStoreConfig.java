@@ -68,12 +68,12 @@ public final class FeatureGroupOnlineStoreConfig {
     	      this.securityConfig = defaults.securityConfig;
         }
 
-        public Builder setEnableOnlineStore(@Nullable Boolean enableOnlineStore) {
+        public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
             this.enableOnlineStore = enableOnlineStore;
             return this;
         }
 
-        public Builder setSecurityConfig(@Nullable FeatureGroupOnlineStoreConfigSecurityConfig securityConfig) {
+        public Builder securityConfig(@Nullable FeatureGroupOnlineStoreConfigSecurityConfig securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }

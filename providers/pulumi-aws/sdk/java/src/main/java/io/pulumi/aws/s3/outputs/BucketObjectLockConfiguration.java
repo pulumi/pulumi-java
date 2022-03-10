@@ -68,12 +68,12 @@ public final class BucketObjectLockConfiguration {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setObjectLockEnabled(String objectLockEnabled) {
+        public Builder objectLockEnabled(String objectLockEnabled) {
             this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled);
             return this;
         }
 
-        public Builder setRule(@Nullable BucketObjectLockConfigurationRule rule) {
+        public Builder rule(@Nullable BucketObjectLockConfigurationRule rule) {
             this.rule = rule;
             return this;
         }

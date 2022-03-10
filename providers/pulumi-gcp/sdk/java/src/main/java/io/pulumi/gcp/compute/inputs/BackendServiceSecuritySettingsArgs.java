@@ -74,22 +74,22 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
-        public Builder setClientTlsPolicy(Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(Input<String> clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
 
-        public Builder setClientTlsPolicy(String clientTlsPolicy) {
+        public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Input.of(Objects.requireNonNull(clientTlsPolicy));
             return this;
         }
 
-        public Builder setSubjectAltNames(Input<List<String>> subjectAltNames) {
+        public Builder subjectAltNames(Input<List<String>> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
 
-        public Builder setSubjectAltNames(List<String> subjectAltNames) {
+        public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Input.of(Objects.requireNonNull(subjectAltNames));
             return this;
         }

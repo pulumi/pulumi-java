@@ -74,12 +74,12 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
     	      this.quasiIdsValues = defaults.quasiIdsValues;
         }
 
-        public Builder setEstimatedAnonymity(String estimatedAnonymity) {
+        public Builder estimatedAnonymity(String estimatedAnonymity) {
             this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity);
             return this;
         }
 
-        public Builder setQuasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }

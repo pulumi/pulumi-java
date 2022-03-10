@@ -181,112 +181,112 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throughputMode = defaults.throughputMode;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable Input<String> availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable Input<String> availabilityZoneName) {
             this.availabilityZoneName = availabilityZoneName;
             return this;
         }
 
-        public Builder setAvailabilityZoneName(@Nullable String availabilityZoneName) {
+        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
             this.availabilityZoneName = Input.ofNullable(availabilityZoneName);
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable Input<FileSystemBackupPolicyArgs> backupPolicy) {
+        public Builder backupPolicy(@Nullable Input<FileSystemBackupPolicyArgs> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable FileSystemBackupPolicyArgs backupPolicy) {
+        public Builder backupPolicy(@Nullable FileSystemBackupPolicyArgs backupPolicy) {
             this.backupPolicy = Input.ofNullable(backupPolicy);
             return this;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setFileSystemPolicy(@Nullable Input<Object> fileSystemPolicy) {
+        public Builder fileSystemPolicy(@Nullable Input<Object> fileSystemPolicy) {
             this.fileSystemPolicy = fileSystemPolicy;
             return this;
         }
 
-        public Builder setFileSystemPolicy(@Nullable Object fileSystemPolicy) {
+        public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
             this.fileSystemPolicy = Input.ofNullable(fileSystemPolicy);
             return this;
         }
 
-        public Builder setFileSystemTags(@Nullable Input<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags) {
+        public Builder fileSystemTags(@Nullable Input<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags) {
             this.fileSystemTags = fileSystemTags;
             return this;
         }
 
-        public Builder setFileSystemTags(@Nullable List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
+        public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
             this.fileSystemTags = Input.ofNullable(fileSystemTags);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLifecyclePolicies(@Nullable Input<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
+        public Builder lifecyclePolicies(@Nullable Input<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
 
-        public Builder setLifecyclePolicies(@Nullable List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
+        public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
             this.lifecyclePolicies = Input.ofNullable(lifecyclePolicies);
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable Input<String> performanceMode) {
+        public Builder performanceMode(@Nullable Input<String> performanceMode) {
             this.performanceMode = performanceMode;
             return this;
         }
 
-        public Builder setPerformanceMode(@Nullable String performanceMode) {
+        public Builder performanceMode(@Nullable String performanceMode) {
             this.performanceMode = Input.ofNullable(performanceMode);
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Input<Double> provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
 
-        public Builder setProvisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
+        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
             this.provisionedThroughputInMibps = Input.ofNullable(provisionedThroughputInMibps);
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable Input<String> throughputMode) {
+        public Builder throughputMode(@Nullable Input<String> throughputMode) {
             this.throughputMode = throughputMode;
             return this;
         }
 
-        public Builder setThroughputMode(@Nullable String throughputMode) {
+        public Builder throughputMode(@Nullable String throughputMode) {
             this.throughputMode = Input.ofNullable(throughputMode);
             return this;
         }

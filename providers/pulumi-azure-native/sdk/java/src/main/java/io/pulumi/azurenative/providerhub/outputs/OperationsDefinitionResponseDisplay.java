@@ -65,22 +65,22 @@ public final class OperationsDefinitionResponseDisplay {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

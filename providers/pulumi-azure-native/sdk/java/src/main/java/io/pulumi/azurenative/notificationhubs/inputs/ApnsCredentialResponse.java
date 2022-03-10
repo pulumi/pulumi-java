@@ -170,42 +170,42 @@ public final class ApnsCredentialResponse extends io.pulumi.resources.InvokeArgs
     	      this.token = defaults.token;
         }
 
-        public Builder setApnsCertificate(@Nullable String apnsCertificate) {
+        public Builder apnsCertificate(@Nullable String apnsCertificate) {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setCertificateKey(@Nullable String certificateKey) {
+        public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

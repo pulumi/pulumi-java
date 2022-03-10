@@ -85,17 +85,17 @@ public final class CsvSerializationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

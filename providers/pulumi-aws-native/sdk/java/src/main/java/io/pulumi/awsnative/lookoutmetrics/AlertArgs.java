@@ -120,52 +120,52 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.anomalyDetectorArn = defaults.anomalyDetectorArn;
         }
 
-        public Builder setAction(Input<AlertActionArgs> action) {
+        public Builder action(Input<AlertActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(AlertActionArgs action) {
+        public Builder action(AlertActionArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setAlertDescription(@Nullable Input<String> alertDescription) {
+        public Builder alertDescription(@Nullable Input<String> alertDescription) {
             this.alertDescription = alertDescription;
             return this;
         }
 
-        public Builder setAlertDescription(@Nullable String alertDescription) {
+        public Builder alertDescription(@Nullable String alertDescription) {
             this.alertDescription = Input.ofNullable(alertDescription);
             return this;
         }
 
-        public Builder setAlertName(@Nullable Input<String> alertName) {
+        public Builder alertName(@Nullable Input<String> alertName) {
             this.alertName = alertName;
             return this;
         }
 
-        public Builder setAlertName(@Nullable String alertName) {
+        public Builder alertName(@Nullable String alertName) {
             this.alertName = Input.ofNullable(alertName);
             return this;
         }
 
-        public Builder setAlertSensitivityThreshold(Input<Integer> alertSensitivityThreshold) {
+        public Builder alertSensitivityThreshold(Input<Integer> alertSensitivityThreshold) {
             this.alertSensitivityThreshold = Objects.requireNonNull(alertSensitivityThreshold);
             return this;
         }
 
-        public Builder setAlertSensitivityThreshold(Integer alertSensitivityThreshold) {
+        public Builder alertSensitivityThreshold(Integer alertSensitivityThreshold) {
             this.alertSensitivityThreshold = Input.of(Objects.requireNonNull(alertSensitivityThreshold));
             return this;
         }
 
-        public Builder setAnomalyDetectorArn(Input<String> anomalyDetectorArn) {
+        public Builder anomalyDetectorArn(Input<String> anomalyDetectorArn) {
             this.anomalyDetectorArn = Objects.requireNonNull(anomalyDetectorArn);
             return this;
         }
 
-        public Builder setAnomalyDetectorArn(String anomalyDetectorArn) {
+        public Builder anomalyDetectorArn(String anomalyDetectorArn) {
             this.anomalyDetectorArn = Input.of(Objects.requireNonNull(anomalyDetectorArn));
             return this;
         }

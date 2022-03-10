@@ -103,42 +103,42 @@ public final class PrivateDnsNamespaceArgs extends io.pulumi.resources.ResourceA
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpc(Input<String> vpc) {
+        public Builder vpc(Input<String> vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Input.of(Objects.requireNonNull(vpc));
             return this;
         }

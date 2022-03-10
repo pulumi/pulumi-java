@@ -67,17 +67,17 @@ public final class GetServiceTemplateSpecContainerEnv {
     	      this.valueFroms = defaults.valueFroms;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueFroms(List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
+        public Builder valueFroms(List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
             this.valueFroms = Objects.requireNonNull(valueFroms);
             return this;
         }

@@ -92,32 +92,32 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends io.pulumi.res
     	      this.routingType = defaults.routingType;
         }
 
-        public Builder setEndpoint(Input<String> endpoint) {
+        public Builder endpoint(Input<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRoutingType(@Nullable Input<Either<String,ResourceTypeRouting>> routingType) {
+        public Builder routingType(@Nullable Input<Either<String,ResourceTypeRouting>> routingType) {
             this.routingType = routingType;
             return this;
         }
 
-        public Builder setRoutingType(@Nullable Either<String,ResourceTypeRouting> routingType) {
+        public Builder routingType(@Nullable Either<String,ResourceTypeRouting> routingType) {
             this.routingType = Input.ofNullable(routingType);
             return this;
         }

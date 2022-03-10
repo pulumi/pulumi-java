@@ -136,62 +136,62 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder setAllowSingleColumn(@Nullable Input<Boolean> allowSingleColumn) {
+        public Builder allowSingleColumn(@Nullable Input<Boolean> allowSingleColumn) {
             this.allowSingleColumn = allowSingleColumn;
             return this;
         }
 
-        public Builder setAllowSingleColumn(@Nullable Boolean allowSingleColumn) {
+        public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
             this.allowSingleColumn = Input.ofNullable(allowSingleColumn);
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable Input<String> containsHeader) {
+        public Builder containsHeader(@Nullable Input<String> containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable String containsHeader) {
+        public Builder containsHeader(@Nullable String containsHeader) {
             this.containsHeader = Input.ofNullable(containsHeader);
             return this;
         }
 
-        public Builder setDelimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Input<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Input.ofNullable(delimiter);
             return this;
         }
 
-        public Builder setDisableValueTrimming(@Nullable Input<Boolean> disableValueTrimming) {
+        public Builder disableValueTrimming(@Nullable Input<Boolean> disableValueTrimming) {
             this.disableValueTrimming = disableValueTrimming;
             return this;
         }
 
-        public Builder setDisableValueTrimming(@Nullable Boolean disableValueTrimming) {
+        public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
             this.disableValueTrimming = Input.ofNullable(disableValueTrimming);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<String>> headers) {
+        public Builder headers(@Nullable Input<List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable Input<String> quoteSymbol) {
+        public Builder quoteSymbol(@Nullable Input<String> quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable String quoteSymbol) {
+        public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = Input.ofNullable(quoteSymbol);
             return this;
         }

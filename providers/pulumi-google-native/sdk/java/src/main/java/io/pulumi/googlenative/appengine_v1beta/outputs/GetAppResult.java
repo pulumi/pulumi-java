@@ -253,72 +253,72 @@ public final class GetAppResult {
     	      this.servingStatus = defaults.servingStatus;
         }
 
-        public Builder setAuthDomain(String authDomain) {
+        public Builder authDomain(String authDomain) {
             this.authDomain = Objects.requireNonNull(authDomain);
             return this;
         }
 
-        public Builder setCodeBucket(String codeBucket) {
+        public Builder codeBucket(String codeBucket) {
             this.codeBucket = Objects.requireNonNull(codeBucket);
             return this;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setDefaultBucket(String defaultBucket) {
+        public Builder defaultBucket(String defaultBucket) {
             this.defaultBucket = Objects.requireNonNull(defaultBucket);
             return this;
         }
 
-        public Builder setDefaultCookieExpiration(String defaultCookieExpiration) {
+        public Builder defaultCookieExpiration(String defaultCookieExpiration) {
             this.defaultCookieExpiration = Objects.requireNonNull(defaultCookieExpiration);
             return this;
         }
 
-        public Builder setDefaultHostname(String defaultHostname) {
+        public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
 
-        public Builder setDispatchRules(List<UrlDispatchRuleResponse> dispatchRules) {
+        public Builder dispatchRules(List<UrlDispatchRuleResponse> dispatchRules) {
             this.dispatchRules = Objects.requireNonNull(dispatchRules);
             return this;
         }
 
-        public Builder setFeatureSettings(FeatureSettingsResponse featureSettings) {
+        public Builder featureSettings(FeatureSettingsResponse featureSettings) {
             this.featureSettings = Objects.requireNonNull(featureSettings);
             return this;
         }
 
-        public Builder setGcrDomain(String gcrDomain) {
+        public Builder gcrDomain(String gcrDomain) {
             this.gcrDomain = Objects.requireNonNull(gcrDomain);
             return this;
         }
 
-        public Builder setIap(IdentityAwareProxyResponse iap) {
+        public Builder iap(IdentityAwareProxyResponse iap) {
             this.iap = Objects.requireNonNull(iap);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServingStatus(String servingStatus) {
+        public Builder servingStatus(String servingStatus) {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }

@@ -57,12 +57,12 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fragmentsPerTsSegment = defaults.fragmentsPerTsSegment;
         }
 
-        public Builder setFragmentsPerTsSegment(@Nullable Input<Integer> fragmentsPerTsSegment) {
+        public Builder fragmentsPerTsSegment(@Nullable Input<Integer> fragmentsPerTsSegment) {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
 
-        public Builder setFragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
+        public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
             this.fragmentsPerTsSegment = Input.ofNullable(fragmentsPerTsSegment);
             return this;
         }

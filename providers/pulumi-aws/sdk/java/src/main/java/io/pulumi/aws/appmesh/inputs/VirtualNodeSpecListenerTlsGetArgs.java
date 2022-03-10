@@ -88,32 +88,32 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(Input<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate) {
+        public Builder certificate(Input<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(VirtualNodeSpecListenerTlsCertificateGetArgs certificate) {
+        public Builder certificate(VirtualNodeSpecListenerTlsCertificateGetArgs certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setMode(Input<String> mode) {
+        public Builder mode(Input<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<VirtualNodeSpecListenerTlsValidationGetArgs> validation) {
+        public Builder validation(@Nullable Input<VirtualNodeSpecListenerTlsValidationGetArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable VirtualNodeSpecListenerTlsValidationGetArgs validation) {
+        public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidationGetArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

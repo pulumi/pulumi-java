@@ -85,17 +85,17 @@ public final class FleetRuntimeConfiguration {
     	      this.serverProcesses = defaults.serverProcesses;
         }
 
-        public Builder setGameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
+        public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
 
-        public Builder setMaxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
+        public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
 
-        public Builder setServerProcesses(@Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
+        public Builder serverProcesses(@Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
             this.serverProcesses = serverProcesses;
             return this;
         }

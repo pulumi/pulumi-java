@@ -66,12 +66,12 @@ public final class InlineSecretResponse {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setEnvMap(Map<String,String> envMap) {
+        public Builder envMap(Map<String,String> envMap) {
             this.envMap = Objects.requireNonNull(envMap);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

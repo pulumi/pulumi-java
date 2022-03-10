@@ -85,17 +85,17 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setExclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
+        public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
+        public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
             this.rules = rules;
             return this;
         }

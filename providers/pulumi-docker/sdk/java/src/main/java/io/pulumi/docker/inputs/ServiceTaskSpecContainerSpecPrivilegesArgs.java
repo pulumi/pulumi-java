@@ -63,22 +63,22 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
     	      this.seLinuxContext = defaults.seLinuxContext;
         }
 
-        public Builder setCredentialSpec(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec) {
+        public Builder credentialSpec(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec) {
             this.credentialSpec = credentialSpec;
             return this;
         }
 
-        public Builder setCredentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs credentialSpec) {
+        public Builder credentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs credentialSpec) {
             this.credentialSpec = Input.ofNullable(credentialSpec);
             return this;
         }
 
-        public Builder setSeLinuxContext(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
+        public Builder seLinuxContext(@Nullable Input<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext) {
             this.seLinuxContext = seLinuxContext;
             return this;
         }
 
-        public Builder setSeLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs seLinuxContext) {
+        public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs seLinuxContext) {
             this.seLinuxContext = Input.ofNullable(seLinuxContext);
             return this;
         }

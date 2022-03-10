@@ -158,72 +158,72 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registry = defaults.registry;
         }
 
-        public Builder setBlocked(@Nullable Input<Boolean> blocked) {
+        public Builder blocked(@Nullable Input<Boolean> blocked) {
             this.blocked = blocked;
             return this;
         }
 
-        public Builder setBlocked(@Nullable Boolean blocked) {
+        public Builder blocked(@Nullable Boolean blocked) {
             this.blocked = Input.ofNullable(blocked);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<List<DeviceCredentialArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<DeviceCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<DeviceCredentialArgs> credentials) {
+        public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable Input<DeviceGatewayConfigArgs> gatewayConfig) {
+        public Builder gatewayConfig(@Nullable Input<DeviceGatewayConfigArgs> gatewayConfig) {
             this.gatewayConfig = gatewayConfig;
             return this;
         }
 
-        public Builder setGatewayConfig(@Nullable DeviceGatewayConfigArgs gatewayConfig) {
+        public Builder gatewayConfig(@Nullable DeviceGatewayConfigArgs gatewayConfig) {
             this.gatewayConfig = Input.ofNullable(gatewayConfig);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegistry(Input<String> registry) {
+        public Builder registry(Input<String> registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
-        public Builder setRegistry(String registry) {
+        public Builder registry(String registry) {
             this.registry = Input.of(Objects.requireNonNull(registry));
             return this;
         }

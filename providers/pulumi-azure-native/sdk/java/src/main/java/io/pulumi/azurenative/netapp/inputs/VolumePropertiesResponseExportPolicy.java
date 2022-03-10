@@ -58,7 +58,7 @@ public final class VolumePropertiesResponseExportPolicy extends io.pulumi.resour
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<ExportPolicyRuleResponse> rules) {
+        public Builder rules(@Nullable List<ExportPolicyRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

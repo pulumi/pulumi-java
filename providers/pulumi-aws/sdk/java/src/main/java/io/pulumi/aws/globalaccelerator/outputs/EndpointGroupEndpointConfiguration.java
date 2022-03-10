@@ -87,17 +87,17 @@ public final class EndpointGroupEndpointConfiguration {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setClientIpPreservationEnabled(@Nullable Boolean clientIpPreservationEnabled) {
+        public Builder clientIpPreservationEnabled(@Nullable Boolean clientIpPreservationEnabled) {
             this.clientIpPreservationEnabled = clientIpPreservationEnabled;
             return this;
         }
 
-        public Builder setEndpointId(@Nullable String endpointId) {
+        public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

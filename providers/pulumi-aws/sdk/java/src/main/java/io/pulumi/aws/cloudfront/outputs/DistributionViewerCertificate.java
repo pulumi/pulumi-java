@@ -144,27 +144,27 @@ public final class DistributionViewerCertificate {
     	      this.sslSupportMethod = defaults.sslSupportMethod;
         }
 
-        public Builder setAcmCertificateArn(@Nullable String acmCertificateArn) {
+        public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
 
-        public Builder setCloudfrontDefaultCertificate(@Nullable Boolean cloudfrontDefaultCertificate) {
+        public Builder cloudfrontDefaultCertificate(@Nullable Boolean cloudfrontDefaultCertificate) {
             this.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
             return this;
         }
 
-        public Builder setIamCertificateId(@Nullable String iamCertificateId) {
+        public Builder iamCertificateId(@Nullable String iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
 
-        public Builder setMinimumProtocolVersion(@Nullable String minimumProtocolVersion) {
+        public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
 
-        public Builder setSslSupportMethod(@Nullable String sslSupportMethod) {
+        public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }

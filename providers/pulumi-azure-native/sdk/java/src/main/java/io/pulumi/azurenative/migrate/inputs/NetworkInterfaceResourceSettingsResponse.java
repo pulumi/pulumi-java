@@ -110,22 +110,22 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }

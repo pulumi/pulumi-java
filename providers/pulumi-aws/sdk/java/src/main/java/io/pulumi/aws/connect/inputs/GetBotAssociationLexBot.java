@@ -68,12 +68,12 @@ public final class GetBotAssociationLexBot extends io.pulumi.resources.InvokeArg
     	      this.name = defaults.name;
         }
 
-        public Builder setLexRegion(String lexRegion) {
+        public Builder lexRegion(String lexRegion) {
             this.lexRegion = Objects.requireNonNull(lexRegion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -91,17 +91,17 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     	      this.sizeDisk = defaults.sizeDisk;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSizeDisk(String sizeDisk) {
+        public Builder sizeDisk(String sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }

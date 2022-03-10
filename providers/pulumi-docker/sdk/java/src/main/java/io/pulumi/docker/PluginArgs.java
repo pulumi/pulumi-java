@@ -186,92 +186,92 @@ public final class PluginArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setEnableTimeout(@Nullable Input<Integer> enableTimeout) {
+        public Builder enableTimeout(@Nullable Input<Integer> enableTimeout) {
             this.enableTimeout = enableTimeout;
             return this;
         }
 
-        public Builder setEnableTimeout(@Nullable Integer enableTimeout) {
+        public Builder enableTimeout(@Nullable Integer enableTimeout) {
             this.enableTimeout = Input.ofNullable(enableTimeout);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEnvs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Input<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<String> envs) {
+        public Builder envs(@Nullable List<String> envs) {
             this.envs = Input.ofNullable(envs);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setForceDisable(@Nullable Input<Boolean> forceDisable) {
+        public Builder forceDisable(@Nullable Input<Boolean> forceDisable) {
             this.forceDisable = forceDisable;
             return this;
         }
 
-        public Builder setForceDisable(@Nullable Boolean forceDisable) {
+        public Builder forceDisable(@Nullable Boolean forceDisable) {
             this.forceDisable = Input.ofNullable(forceDisable);
             return this;
         }
 
-        public Builder setGrantAllPermissions(@Nullable Input<Boolean> grantAllPermissions) {
+        public Builder grantAllPermissions(@Nullable Input<Boolean> grantAllPermissions) {
             this.grantAllPermissions = grantAllPermissions;
             return this;
         }
 
-        public Builder setGrantAllPermissions(@Nullable Boolean grantAllPermissions) {
+        public Builder grantAllPermissions(@Nullable Boolean grantAllPermissions) {
             this.grantAllPermissions = Input.ofNullable(grantAllPermissions);
             return this;
         }
 
-        public Builder setGrantPermissions(@Nullable Input<List<PluginGrantPermissionArgs>> grantPermissions) {
+        public Builder grantPermissions(@Nullable Input<List<PluginGrantPermissionArgs>> grantPermissions) {
             this.grantPermissions = grantPermissions;
             return this;
         }
 
-        public Builder setGrantPermissions(@Nullable List<PluginGrantPermissionArgs> grantPermissions) {
+        public Builder grantPermissions(@Nullable List<PluginGrantPermissionArgs> grantPermissions) {
             this.grantPermissions = Input.ofNullable(grantPermissions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

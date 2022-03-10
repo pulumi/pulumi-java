@@ -62,12 +62,12 @@ public final class ContainerEnvironmentVariable extends io.pulumi.resources.Invo
     	      this.variable = defaults.variable;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
         }

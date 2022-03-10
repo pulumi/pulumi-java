@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }

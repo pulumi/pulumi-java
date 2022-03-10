@@ -72,12 +72,12 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setSha1Fingerprint(String sha1Fingerprint) {
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }

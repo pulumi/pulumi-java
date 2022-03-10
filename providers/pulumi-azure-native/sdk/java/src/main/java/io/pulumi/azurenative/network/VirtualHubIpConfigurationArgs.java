@@ -186,92 +186,92 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigName(@Nullable Input<String> ipConfigName) {
+        public Builder ipConfigName(@Nullable Input<String> ipConfigName) {
             this.ipConfigName = ipConfigName;
             return this;
         }
 
-        public Builder setIpConfigName(@Nullable String ipConfigName) {
+        public Builder ipConfigName(@Nullable String ipConfigName) {
             this.ipConfigName = Input.ofNullable(ipConfigName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Input.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
+        public Builder publicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
+        public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
             this.publicIPAddress = Input.ofNullable(publicIPAddress);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetArgs subnet) {
+        public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setVirtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Input<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
-        public Builder setVirtualHubName(String virtualHubName) {
+        public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }

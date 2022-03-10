@@ -89,17 +89,17 @@ public final class PacketMirroringMirroredResources {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInstances(@Nullable List<PacketMirroringMirroredResourcesInstance> instances) {
+        public Builder instances(@Nullable List<PacketMirroringMirroredResourcesInstance> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setSubnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks) {
+        public Builder subnetworks(@Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks) {
             this.subnetworks = subnetworks;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }

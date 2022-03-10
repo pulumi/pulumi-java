@@ -104,22 +104,22 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setHighKey(String highKey) {
+        public Builder highKey(String highKey) {
             this.highKey = Objects.requireNonNull(highKey);
             return this;
         }
 
-        public Builder setLowKey(String lowKey) {
+        public Builder lowKey(String lowKey) {
             this.lowKey = Objects.requireNonNull(lowKey);
             return this;
         }
 
-        public Builder setPartitionScheme(String partitionScheme) {
+        public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }

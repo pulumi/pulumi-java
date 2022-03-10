@@ -175,57 +175,57 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification extends io.pul
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

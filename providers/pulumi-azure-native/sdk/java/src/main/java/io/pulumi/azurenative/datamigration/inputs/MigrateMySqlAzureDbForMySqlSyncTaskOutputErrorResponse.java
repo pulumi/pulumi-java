@@ -86,17 +86,17 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
     	      this.resultType = defaults.resultType;
         }
 
-        public Builder setError(ReportableExceptionResponse error) {
+        public Builder error(ReportableExceptionResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }

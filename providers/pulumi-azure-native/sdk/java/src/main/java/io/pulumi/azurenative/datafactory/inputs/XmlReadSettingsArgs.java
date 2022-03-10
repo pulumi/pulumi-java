@@ -143,62 +143,62 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.validationMode = defaults.validationMode;
         }
 
-        public Builder setCompressionProperties(@Nullable Input<Object> compressionProperties) {
+        public Builder compressionProperties(@Nullable Input<Object> compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = Input.ofNullable(compressionProperties);
             return this;
         }
 
-        public Builder setDetectDataType(@Nullable Input<Object> detectDataType) {
+        public Builder detectDataType(@Nullable Input<Object> detectDataType) {
             this.detectDataType = detectDataType;
             return this;
         }
 
-        public Builder setDetectDataType(@Nullable Object detectDataType) {
+        public Builder detectDataType(@Nullable Object detectDataType) {
             this.detectDataType = Input.ofNullable(detectDataType);
             return this;
         }
 
-        public Builder setNamespacePrefixes(@Nullable Input<Object> namespacePrefixes) {
+        public Builder namespacePrefixes(@Nullable Input<Object> namespacePrefixes) {
             this.namespacePrefixes = namespacePrefixes;
             return this;
         }
 
-        public Builder setNamespacePrefixes(@Nullable Object namespacePrefixes) {
+        public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
             this.namespacePrefixes = Input.ofNullable(namespacePrefixes);
             return this;
         }
 
-        public Builder setNamespaces(@Nullable Input<Object> namespaces) {
+        public Builder namespaces(@Nullable Input<Object> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
-        public Builder setNamespaces(@Nullable Object namespaces) {
+        public Builder namespaces(@Nullable Object namespaces) {
             this.namespaces = Input.ofNullable(namespaces);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValidationMode(@Nullable Input<Object> validationMode) {
+        public Builder validationMode(@Nullable Input<Object> validationMode) {
             this.validationMode = validationMode;
             return this;
         }
 
-        public Builder setValidationMode(@Nullable Object validationMode) {
+        public Builder validationMode(@Nullable Object validationMode) {
             this.validationMode = Input.ofNullable(validationMode);
             return this;
         }

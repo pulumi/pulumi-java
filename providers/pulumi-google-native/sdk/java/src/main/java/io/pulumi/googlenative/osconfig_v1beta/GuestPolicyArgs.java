@@ -179,92 +179,92 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipes = defaults.recipes;
         }
 
-        public Builder setAssignment(Input<AssignmentArgs> assignment) {
+        public Builder assignment(Input<AssignmentArgs> assignment) {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
 
-        public Builder setAssignment(AssignmentArgs assignment) {
+        public Builder assignment(AssignmentArgs assignment) {
             this.assignment = Input.of(Objects.requireNonNull(assignment));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setGuestPolicyId(Input<String> guestPolicyId) {
+        public Builder guestPolicyId(Input<String> guestPolicyId) {
             this.guestPolicyId = Objects.requireNonNull(guestPolicyId);
             return this;
         }
 
-        public Builder setGuestPolicyId(String guestPolicyId) {
+        public Builder guestPolicyId(String guestPolicyId) {
             this.guestPolicyId = Input.of(Objects.requireNonNull(guestPolicyId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable Input<List<PackageRepositoryArgs>> packageRepositories) {
+        public Builder packageRepositories(@Nullable Input<List<PackageRepositoryArgs>> packageRepositories) {
             this.packageRepositories = packageRepositories;
             return this;
         }
 
-        public Builder setPackageRepositories(@Nullable List<PackageRepositoryArgs> packageRepositories) {
+        public Builder packageRepositories(@Nullable List<PackageRepositoryArgs> packageRepositories) {
             this.packageRepositories = Input.ofNullable(packageRepositories);
             return this;
         }
 
-        public Builder setPackages(@Nullable Input<List<PackageArgs>> packages) {
+        public Builder packages(@Nullable Input<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPackages(@Nullable List<PackageArgs> packages) {
+        public Builder packages(@Nullable List<PackageArgs> packages) {
             this.packages = Input.ofNullable(packages);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecipes(@Nullable Input<List<SoftwareRecipeArgs>> recipes) {
+        public Builder recipes(@Nullable Input<List<SoftwareRecipeArgs>> recipes) {
             this.recipes = recipes;
             return this;
         }
 
-        public Builder setRecipes(@Nullable List<SoftwareRecipeArgs> recipes) {
+        public Builder recipes(@Nullable List<SoftwareRecipeArgs> recipes) {
             this.recipes = Input.ofNullable(recipes);
             return this;
         }

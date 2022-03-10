@@ -94,32 +94,32 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
     	      this.thresholdOperator = defaults.thresholdOperator;
         }
 
-        public Builder setMetricTrigger(@Nullable Input<LogMetricTriggerArgs> metricTrigger) {
+        public Builder metricTrigger(@Nullable Input<LogMetricTriggerArgs> metricTrigger) {
             this.metricTrigger = metricTrigger;
             return this;
         }
 
-        public Builder setMetricTrigger(@Nullable LogMetricTriggerArgs metricTrigger) {
+        public Builder metricTrigger(@Nullable LogMetricTriggerArgs metricTrigger) {
             this.metricTrigger = Input.ofNullable(metricTrigger);
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setThresholdOperator(Input<Either<String,ConditionalOperator>> thresholdOperator) {
+        public Builder thresholdOperator(Input<Either<String,ConditionalOperator>> thresholdOperator) {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
         }
 
-        public Builder setThresholdOperator(Either<String,ConditionalOperator> thresholdOperator) {
+        public Builder thresholdOperator(Either<String,ConditionalOperator> thresholdOperator) {
             this.thresholdOperator = Input.of(Objects.requireNonNull(thresholdOperator));
             return this;
         }

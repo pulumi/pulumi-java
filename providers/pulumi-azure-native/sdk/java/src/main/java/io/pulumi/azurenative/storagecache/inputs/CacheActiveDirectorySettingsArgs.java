@@ -139,62 +139,62 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
     	      this.secondaryDnsIpAddress = defaults.secondaryDnsIpAddress;
         }
 
-        public Builder setCacheNetBiosName(Input<String> cacheNetBiosName) {
+        public Builder cacheNetBiosName(Input<String> cacheNetBiosName) {
             this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
             return this;
         }
 
-        public Builder setCacheNetBiosName(String cacheNetBiosName) {
+        public Builder cacheNetBiosName(String cacheNetBiosName) {
             this.cacheNetBiosName = Input.of(Objects.requireNonNull(cacheNetBiosName));
             return this;
         }
 
-        public Builder setCredentials(@Nullable Input<CacheActiveDirectorySettingsCredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Input<CacheActiveDirectorySettingsCredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CacheActiveDirectorySettingsCredentialsArgs credentials) {
+        public Builder credentials(@Nullable CacheActiveDirectorySettingsCredentialsArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setDomainNetBiosName(Input<String> domainNetBiosName) {
+        public Builder domainNetBiosName(Input<String> domainNetBiosName) {
             this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
             return this;
         }
 
-        public Builder setDomainNetBiosName(String domainNetBiosName) {
+        public Builder domainNetBiosName(String domainNetBiosName) {
             this.domainNetBiosName = Input.of(Objects.requireNonNull(domainNetBiosName));
             return this;
         }
 
-        public Builder setPrimaryDnsIpAddress(Input<String> primaryDnsIpAddress) {
+        public Builder primaryDnsIpAddress(Input<String> primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
             return this;
         }
 
-        public Builder setPrimaryDnsIpAddress(String primaryDnsIpAddress) {
+        public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
             this.primaryDnsIpAddress = Input.of(Objects.requireNonNull(primaryDnsIpAddress));
             return this;
         }
 
-        public Builder setSecondaryDnsIpAddress(@Nullable Input<String> secondaryDnsIpAddress) {
+        public Builder secondaryDnsIpAddress(@Nullable Input<String> secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
 
-        public Builder setSecondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
+        public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
             this.secondaryDnsIpAddress = Input.ofNullable(secondaryDnsIpAddress);
             return this;
         }

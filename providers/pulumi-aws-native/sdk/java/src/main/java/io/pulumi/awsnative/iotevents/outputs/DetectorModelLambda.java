@@ -60,12 +60,12 @@ public final class DetectorModelLambda {
     	      this.payload = defaults.payload;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }

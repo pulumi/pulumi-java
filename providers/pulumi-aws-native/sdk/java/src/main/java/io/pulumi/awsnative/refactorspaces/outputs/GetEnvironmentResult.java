@@ -77,22 +77,22 @@ public final class GetEnvironmentResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(@Nullable String environmentIdentifier) {
+        public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EnvironmentTag> tags) {
+        public Builder tags(@Nullable List<EnvironmentTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }

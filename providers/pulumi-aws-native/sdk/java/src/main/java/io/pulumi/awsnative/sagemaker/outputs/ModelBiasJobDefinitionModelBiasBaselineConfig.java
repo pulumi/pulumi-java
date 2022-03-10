@@ -52,12 +52,12 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfig {
     	      this.constraintsResource = defaults.constraintsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }

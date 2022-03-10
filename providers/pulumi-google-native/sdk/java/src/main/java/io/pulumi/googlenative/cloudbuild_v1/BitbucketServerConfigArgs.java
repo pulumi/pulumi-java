@@ -203,112 +203,112 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     	      this.username = defaults.username;
         }
 
-        public Builder setApiKey(Input<String> apiKey) {
+        public Builder apiKey(Input<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder setBitbucketServerConfigId(@Nullable Input<String> bitbucketServerConfigId) {
+        public Builder bitbucketServerConfigId(@Nullable Input<String> bitbucketServerConfigId) {
             this.bitbucketServerConfigId = bitbucketServerConfigId;
             return this;
         }
 
-        public Builder setBitbucketServerConfigId(@Nullable String bitbucketServerConfigId) {
+        public Builder bitbucketServerConfigId(@Nullable String bitbucketServerConfigId) {
             this.bitbucketServerConfigId = Input.ofNullable(bitbucketServerConfigId);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setHostUri(Input<String> hostUri) {
+        public Builder hostUri(Input<String> hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
 
-        public Builder setHostUri(String hostUri) {
+        public Builder hostUri(String hostUri) {
             this.hostUri = Input.of(Objects.requireNonNull(hostUri));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeeredNetwork(@Nullable Input<String> peeredNetwork) {
+        public Builder peeredNetwork(@Nullable Input<String> peeredNetwork) {
             this.peeredNetwork = peeredNetwork;
             return this;
         }
 
-        public Builder setPeeredNetwork(@Nullable String peeredNetwork) {
+        public Builder peeredNetwork(@Nullable String peeredNetwork) {
             this.peeredNetwork = Input.ofNullable(peeredNetwork);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecrets(Input<BitbucketServerSecretsArgs> secrets) {
+        public Builder secrets(Input<BitbucketServerSecretsArgs> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
-        public Builder setSecrets(BitbucketServerSecretsArgs secrets) {
+        public Builder secrets(BitbucketServerSecretsArgs secrets) {
             this.secrets = Input.of(Objects.requireNonNull(secrets));
             return this;
         }
 
-        public Builder setSslCa(@Nullable Input<String> sslCa) {
+        public Builder sslCa(@Nullable Input<String> sslCa) {
             this.sslCa = sslCa;
             return this;
         }
 
-        public Builder setSslCa(@Nullable String sslCa) {
+        public Builder sslCa(@Nullable String sslCa) {
             this.sslCa = Input.ofNullable(sslCa);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

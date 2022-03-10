@@ -245,67 +245,67 @@ public final class GetCaseResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setClassification(CaseClassificationResponse classification) {
+        public Builder classification(CaseClassificationResponse classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreator(ActorResponse creator) {
+        public Builder creator(ActorResponse creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEscalated(Boolean escalated) {
+        public Builder escalated(Boolean escalated) {
             this.escalated = Objects.requireNonNull(escalated);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(String priority) {
+        public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubscriberEmailAddresses(List<String> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Objects.requireNonNull(subscriberEmailAddresses);
             return this;
         }
 
-        public Builder setTestCase(Boolean testCase) {
+        public Builder testCase(Boolean testCase) {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

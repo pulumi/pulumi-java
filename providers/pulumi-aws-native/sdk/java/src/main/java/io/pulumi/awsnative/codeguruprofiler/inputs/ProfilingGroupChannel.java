@@ -66,12 +66,12 @@ public final class ProfilingGroupChannel extends io.pulumi.resources.InvokeArgs 
     	      this.channelUri = defaults.channelUri;
         }
 
-        public Builder setChannelId(@Nullable String channelId) {
+        public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
 
-        public Builder setChannelUri(String channelUri) {
+        public Builder channelUri(String channelUri) {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }

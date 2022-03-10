@@ -92,32 +92,32 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Input<Boolean> allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Input<Boolean> allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Input.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Input<Boolean> allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Input<Boolean> allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Boolean allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Input.of(Objects.requireNonNull(allowSubjectPassthrough));
             return this;
         }
 
-        public Builder setCelExpression(@Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
+        public Builder celExpression(@Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
             this.celExpression = celExpression;
             return this;
         }
 
-        public Builder setCelExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
+        public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
             this.celExpression = Input.ofNullable(celExpression);
             return this;
         }

@@ -76,17 +76,17 @@ public final class ConfigAntennaUplinkConfig extends io.pulumi.resources.InvokeA
     	      this.transmitDisabled = defaults.transmitDisabled;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigUplinkSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
 
-        public Builder setTargetEirp(@Nullable ConfigEirp targetEirp) {
+        public Builder targetEirp(@Nullable ConfigEirp targetEirp) {
             this.targetEirp = targetEirp;
             return this;
         }
 
-        public Builder setTransmitDisabled(@Nullable Boolean transmitDisabled) {
+        public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
             this.transmitDisabled = transmitDisabled;
             return this;
         }

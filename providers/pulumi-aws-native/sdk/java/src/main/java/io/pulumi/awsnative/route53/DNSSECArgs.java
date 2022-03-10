@@ -52,12 +52,12 @@ public final class DNSSECArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setHostedZoneId(Input<String> hostedZoneId) {
+        public Builder hostedZoneId(Input<String> hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Input.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }

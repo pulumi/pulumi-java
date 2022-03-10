@@ -186,92 +186,92 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,Kind> kind) {
+        public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedNetworkGroupName(@Nullable Input<String> managedNetworkGroupName) {
+        public Builder managedNetworkGroupName(@Nullable Input<String> managedNetworkGroupName) {
             this.managedNetworkGroupName = managedNetworkGroupName;
             return this;
         }
 
-        public Builder setManagedNetworkGroupName(@Nullable String managedNetworkGroupName) {
+        public Builder managedNetworkGroupName(@Nullable String managedNetworkGroupName) {
             this.managedNetworkGroupName = Input.ofNullable(managedNetworkGroupName);
             return this;
         }
 
-        public Builder setManagedNetworkName(Input<String> managedNetworkName) {
+        public Builder managedNetworkName(Input<String> managedNetworkName) {
             this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
             return this;
         }
 
-        public Builder setManagedNetworkName(String managedNetworkName) {
+        public Builder managedNetworkName(String managedNetworkName) {
             this.managedNetworkName = Input.of(Objects.requireNonNull(managedNetworkName));
             return this;
         }
 
-        public Builder setManagementGroups(@Nullable Input<List<ResourceIdArgs>> managementGroups) {
+        public Builder managementGroups(@Nullable Input<List<ResourceIdArgs>> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setManagementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
+        public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
             this.managementGroups = Input.ofNullable(managementGroups);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<ResourceIdArgs>> subnets) {
+        public Builder subnets(@Nullable Input<List<ResourceIdArgs>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<ResourceIdArgs> subnets) {
+        public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable Input<List<ResourceIdArgs>> subscriptions) {
+        public Builder subscriptions(@Nullable Input<List<ResourceIdArgs>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
+        public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable Input<List<ResourceIdArgs>> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
             this.virtualNetworks = Input.ofNullable(virtualNetworks);
             return this;
         }

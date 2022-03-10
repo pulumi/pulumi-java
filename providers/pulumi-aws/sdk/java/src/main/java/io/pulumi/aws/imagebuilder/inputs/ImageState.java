@@ -267,142 +267,142 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDateCreated(@Nullable Input<String> dateCreated) {
+        public Builder dateCreated(@Nullable Input<String> dateCreated) {
             this.dateCreated = dateCreated;
             return this;
         }
 
-        public Builder setDateCreated(@Nullable String dateCreated) {
+        public Builder dateCreated(@Nullable String dateCreated) {
             this.dateCreated = Input.ofNullable(dateCreated);
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable String distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = Input.ofNullable(distributionConfigurationArn);
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Input.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder setImageRecipeArn(@Nullable Input<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Input<String> imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
-        public Builder setImageRecipeArn(@Nullable String imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
             this.imageRecipeArn = Input.ofNullable(imageRecipeArn);
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable Input<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Input<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
             this.imageTestsConfiguration = Input.ofNullable(imageTestsConfiguration);
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable Input<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Input.ofNullable(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsVersion(@Nullable Input<String> osVersion) {
+        public Builder osVersion(@Nullable Input<String> osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }
 
-        public Builder setOutputResources(@Nullable Input<List<ImageOutputResourceGetArgs>> outputResources) {
+        public Builder outputResources(@Nullable Input<List<ImageOutputResourceGetArgs>> outputResources) {
             this.outputResources = outputResources;
             return this;
         }
 
-        public Builder setOutputResources(@Nullable List<ImageOutputResourceGetArgs> outputResources) {
+        public Builder outputResources(@Nullable List<ImageOutputResourceGetArgs> outputResources) {
             this.outputResources = Input.ofNullable(outputResources);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Input<String> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

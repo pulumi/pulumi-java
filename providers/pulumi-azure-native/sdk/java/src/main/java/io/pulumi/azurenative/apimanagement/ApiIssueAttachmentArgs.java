@@ -166,82 +166,82 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setAttachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Input<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder setAttachmentId(@Nullable String attachmentId) {
+        public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Input.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setContentFormat(Input<String> contentFormat) {
+        public Builder contentFormat(Input<String> contentFormat) {
             this.contentFormat = Objects.requireNonNull(contentFormat);
             return this;
         }
 
-        public Builder setContentFormat(String contentFormat) {
+        public Builder contentFormat(String contentFormat) {
             this.contentFormat = Input.of(Objects.requireNonNull(contentFormat));
             return this;
         }
 
-        public Builder setIssueId(Input<String> issueId) {
+        public Builder issueId(Input<String> issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
 
-        public Builder setIssueId(String issueId) {
+        public Builder issueId(String issueId) {
             this.issueId = Input.of(Objects.requireNonNull(issueId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

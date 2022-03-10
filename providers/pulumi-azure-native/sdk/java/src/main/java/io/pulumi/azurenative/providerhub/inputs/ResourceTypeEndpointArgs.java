@@ -126,72 +126,72 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setApiVersions(@Nullable Input<List<String>> apiVersions) {
+        public Builder apiVersions(@Nullable Input<List<String>> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = Input.ofNullable(apiVersions);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExtensions(@Nullable Input<List<ResourceTypeExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Input<List<ResourceTypeExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<ResourceTypeExtensionArgs> extensions) {
+        public Builder extensions(@Nullable List<ResourceTypeExtensionArgs> extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule) {
+        public Builder featuresRule(@Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceTypeEndpointFeaturesRuleArgs featuresRule) {
+        public Builder featuresRule(@Nullable ResourceTypeEndpointFeaturesRuleArgs featuresRule) {
             this.featuresRule = Input.ofNullable(featuresRule);
             return this;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Input.ofNullable(requiredFeatures);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

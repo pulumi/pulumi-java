@@ -186,92 +186,92 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEncryptionConfigurations(@Nullable Input<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable Input<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations) {
             this.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
 
-        public Builder setEncryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationGetArgs> encryptionConfigurations) {
             this.encryptionConfigurations = Input.ofNullable(encryptionConfigurations);
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationGetArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Input.ofNullable(imageScanningConfiguration);
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable Input<String> imageTagMutability) {
+        public Builder imageTagMutability(@Nullable Input<String> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable String imageTagMutability) {
+        public Builder imageTagMutability(@Nullable String imageTagMutability) {
             this.imageTagMutability = Input.ofNullable(imageTagMutability);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegistryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Input<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = Input.ofNullable(registryId);
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable Input<String> repositoryUrl) {
+        public Builder repositoryUrl(@Nullable Input<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Input.ofNullable(repositoryUrl);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

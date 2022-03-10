@@ -88,32 +88,32 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder setHostnames(@Nullable Input<List<String>> hostnames) {
+        public Builder hostnames(@Nullable Input<List<String>> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
-        public Builder setHostnames(@Nullable List<String> hostnames) {
+        public Builder hostnames(@Nullable List<String> hostnames) {
             this.hostnames = Input.ofNullable(hostnames);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }

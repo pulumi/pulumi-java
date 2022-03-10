@@ -91,17 +91,17 @@ public final class BackupFileInfoResponse extends io.pulumi.resources.InvokeArgs
     	      this.status = defaults.status;
         }
 
-        public Builder setFamilySequenceNumber(@Nullable Integer familySequenceNumber) {
+        public Builder familySequenceNumber(@Nullable Integer familySequenceNumber) {
             this.familySequenceNumber = familySequenceNumber;
             return this;
         }
 
-        public Builder setFileLocation(@Nullable String fileLocation) {
+        public Builder fileLocation(@Nullable String fileLocation) {
             this.fileLocation = fileLocation;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

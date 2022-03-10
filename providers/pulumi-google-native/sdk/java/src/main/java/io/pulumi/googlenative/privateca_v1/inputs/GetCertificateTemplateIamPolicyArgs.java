@@ -86,22 +86,22 @@ public final class GetCertificateTemplateIamPolicyArgs extends io.pulumi.resourc
     	      this.project = defaults.project;
         }
 
-        public Builder setCertificateTemplateId(String certificateTemplateId) {
+        public Builder certificateTemplateId(String certificateTemplateId) {
             this.certificateTemplateId = Objects.requireNonNull(certificateTemplateId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

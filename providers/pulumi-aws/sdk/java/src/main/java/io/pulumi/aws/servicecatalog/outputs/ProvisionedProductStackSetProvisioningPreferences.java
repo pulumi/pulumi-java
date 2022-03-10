@@ -133,32 +133,32 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setFailureToleranceCount(@Nullable Integer failureToleranceCount) {
+        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
 
-        public Builder setFailureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
+        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
 
-        public Builder setMaxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
+        public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
             this.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
 
-        public Builder setMaxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
+        public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }

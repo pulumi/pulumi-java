@@ -121,27 +121,27 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
     	      this.state = defaults.state;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResponse file) {
+        public Builder file(OSPolicyResourceFileResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

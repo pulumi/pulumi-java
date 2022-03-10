@@ -90,17 +90,17 @@ public final class RuntimeVirtualMachine {
     	      this.virtualMachineConfig = defaults.virtualMachineConfig;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setVirtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
+        public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }

@@ -87,32 +87,32 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setClientVpnEndpointId(Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Input<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
 
-        public Builder setClientVpnEndpointId(String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Input.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

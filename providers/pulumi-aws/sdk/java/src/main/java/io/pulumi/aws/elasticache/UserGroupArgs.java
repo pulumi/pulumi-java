@@ -112,52 +112,52 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEngine(Input<String> engine) {
+        public Builder engine(Input<String> engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Input.of(Objects.requireNonNull(engine));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserGroupId(Input<String> userGroupId) {
+        public Builder userGroupId(Input<String> userGroupId) {
             this.userGroupId = Objects.requireNonNull(userGroupId);
             return this;
         }
 
-        public Builder setUserGroupId(String userGroupId) {
+        public Builder userGroupId(String userGroupId) {
             this.userGroupId = Input.of(Objects.requireNonNull(userGroupId));
             return this;
         }
 
-        public Builder setUserIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Input<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Input.ofNullable(userIds);
             return this;
         }

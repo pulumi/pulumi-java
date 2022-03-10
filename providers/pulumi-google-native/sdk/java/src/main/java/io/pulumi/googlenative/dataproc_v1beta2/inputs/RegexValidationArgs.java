@@ -57,12 +57,12 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder setRegexes(Input<List<String>> regexes) {
+        public Builder regexes(Input<List<String>> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
 
-        public Builder setRegexes(List<String> regexes) {
+        public Builder regexes(List<String> regexes) {
             this.regexes = Input.of(Objects.requireNonNull(regexes));
             return this;
         }

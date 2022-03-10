@@ -107,22 +107,22 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rdbFrequency = defaults.rdbFrequency;
         }
 
-        public Builder setAofEnabled(@Nullable Boolean aofEnabled) {
+        public Builder aofEnabled(@Nullable Boolean aofEnabled) {
             this.aofEnabled = aofEnabled;
             return this;
         }
 
-        public Builder setAofFrequency(@Nullable String aofFrequency) {
+        public Builder aofFrequency(@Nullable String aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
 
-        public Builder setRdbEnabled(@Nullable Boolean rdbEnabled) {
+        public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
 
-        public Builder setRdbFrequency(@Nullable String rdbFrequency) {
+        public Builder rdbFrequency(@Nullable String rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
         }

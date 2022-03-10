@@ -132,62 +132,62 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.role = defaults.role;
         }
 
-        public Builder setCaPool(Input<String> caPool) {
+        public Builder caPool(Input<String> caPool) {
             this.caPool = Objects.requireNonNull(caPool);
             return this;
         }
 
-        public Builder setCaPool(String caPool) {
+        public Builder caPool(String caPool) {
             this.caPool = Input.of(Objects.requireNonNull(caPool));
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<CaPoolIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<CaPoolIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable CaPoolIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable CaPoolIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

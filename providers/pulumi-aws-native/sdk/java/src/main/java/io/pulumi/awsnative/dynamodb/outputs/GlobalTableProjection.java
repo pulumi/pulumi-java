@@ -52,12 +52,12 @@ public final class GlobalTableProjection {
     	      this.projectionType = defaults.projectionType;
         }
 
-        public Builder setNonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
-        public Builder setProjectionType(@Nullable String projectionType) {
+        public Builder projectionType(@Nullable String projectionType) {
             this.projectionType = projectionType;
             return this;
         }

@@ -152,37 +152,37 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
     	      this.name = defaults.name;
         }
 
-        public Builder setAzureSubscriptionId(String azureSubscriptionId) {
+        public Builder azureSubscriptionId(String azureSubscriptionId) {
             this.azureSubscriptionId = Objects.requireNonNull(azureSubscriptionId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setElasticsearchRegion(String elasticsearchRegion) {
+        public Builder elasticsearchRegion(String elasticsearchRegion) {
             this.elasticsearchRegion = Objects.requireNonNull(elasticsearchRegion);
             return this;
         }
 
-        public Builder setElasticsearchServiceUrl(String elasticsearchServiceUrl) {
+        public Builder elasticsearchServiceUrl(String elasticsearchServiceUrl) {
             this.elasticsearchServiceUrl = Objects.requireNonNull(elasticsearchServiceUrl);
             return this;
         }
 
-        public Builder setKibanaServiceUrl(String kibanaServiceUrl) {
+        public Builder kibanaServiceUrl(String kibanaServiceUrl) {
             this.kibanaServiceUrl = Objects.requireNonNull(kibanaServiceUrl);
             return this;
         }
 
-        public Builder setKibanaSsoUrl(String kibanaSsoUrl) {
+        public Builder kibanaSsoUrl(String kibanaSsoUrl) {
             this.kibanaSsoUrl = Objects.requireNonNull(kibanaSsoUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -294,82 +294,82 @@ public final class RouterBgpPeerResponse {
     	      this.routerApplianceInstance = defaults.routerApplianceInstance;
         }
 
-        public Builder setAdvertiseMode(String advertiseMode) {
+        public Builder advertiseMode(String advertiseMode) {
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(List<String> advertisedGroups) {
+        public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
+        public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAdvertisedRoutePriority(Integer advertisedRoutePriority) {
+        public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
             this.advertisedRoutePriority = Objects.requireNonNull(advertisedRoutePriority);
             return this;
         }
 
-        public Builder setBfd(RouterBgpPeerBfdResponse bfd) {
+        public Builder bfd(RouterBgpPeerBfdResponse bfd) {
             this.bfd = Objects.requireNonNull(bfd);
             return this;
         }
 
-        public Builder setEnable(String enable) {
+        public Builder enable(String enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setEnableIpv6(Boolean enableIpv6) {
+        public Builder enableIpv6(Boolean enableIpv6) {
             this.enableIpv6 = Objects.requireNonNull(enableIpv6);
             return this;
         }
 
-        public Builder setInterfaceName(String interfaceName) {
+        public Builder interfaceName(String interfaceName) {
             this.interfaceName = Objects.requireNonNull(interfaceName);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setIpv6NexthopAddress(String ipv6NexthopAddress) {
+        public Builder ipv6NexthopAddress(String ipv6NexthopAddress) {
             this.ipv6NexthopAddress = Objects.requireNonNull(ipv6NexthopAddress);
             return this;
         }
 
-        public Builder setManagementType(String managementType) {
+        public Builder managementType(String managementType) {
             this.managementType = Objects.requireNonNull(managementType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerAsn(Integer peerAsn) {
+        public Builder peerAsn(Integer peerAsn) {
             this.peerAsn = Objects.requireNonNull(peerAsn);
             return this;
         }
 
-        public Builder setPeerIpAddress(String peerIpAddress) {
+        public Builder peerIpAddress(String peerIpAddress) {
             this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
             return this;
         }
 
-        public Builder setPeerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
+        public Builder peerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
             this.peerIpv6NexthopAddress = Objects.requireNonNull(peerIpv6NexthopAddress);
             return this;
         }
 
-        public Builder setRouterApplianceInstance(String routerApplianceInstance) {
+        public Builder routerApplianceInstance(String routerApplianceInstance) {
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
         }

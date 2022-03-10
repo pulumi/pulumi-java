@@ -50,7 +50,7 @@ public final class ListStreamingLocatorContentKeysResult {
     	      this.contentKeys = defaults.contentKeys;
         }
 
-        public Builder setContentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
+        public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }

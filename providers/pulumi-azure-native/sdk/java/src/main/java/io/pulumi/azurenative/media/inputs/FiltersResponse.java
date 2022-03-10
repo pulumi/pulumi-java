@@ -112,22 +112,22 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rotation = defaults.rotation;
         }
 
-        public Builder setCrop(@Nullable RectangleResponse crop) {
+        public Builder crop(@Nullable RectangleResponse crop) {
             this.crop = crop;
             return this;
         }
 
-        public Builder setDeinterlace(@Nullable DeinterlaceResponse deinterlace) {
+        public Builder deinterlace(@Nullable DeinterlaceResponse deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
 
-        public Builder setOverlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
+        public Builder overlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
-        public Builder setRotation(@Nullable String rotation) {
+        public Builder rotation(@Nullable String rotation) {
             this.rotation = rotation;
             return this;
         }

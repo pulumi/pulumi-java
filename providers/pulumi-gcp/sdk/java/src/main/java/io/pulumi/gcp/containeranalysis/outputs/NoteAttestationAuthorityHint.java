@@ -50,7 +50,7 @@ public final class NoteAttestationAuthorityHint {
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder setHumanReadableName(String humanReadableName) {
+        public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }

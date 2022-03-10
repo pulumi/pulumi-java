@@ -338,182 +338,182 @@ public final class VirtualMachineScaleSetVMArgs extends io.pulumi.resources.Reso
     	      this.vmScaleSetName = defaults.vmScaleSetName;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
             this.additionalCapabilities = Input.ofNullable(additionalCapabilities);
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable Input<SubResourceArgs> availabilitySet) {
+        public Builder availabilitySet(@Nullable Input<SubResourceArgs> availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable SubResourceArgs availabilitySet) {
+        public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
             this.availabilitySet = Input.ofNullable(availabilitySet);
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
             this.diagnosticsProfile = Input.ofNullable(diagnosticsProfile);
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Input.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Input<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setNetworkProfileConfiguration(@Nullable Input<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration) {
+        public Builder networkProfileConfiguration(@Nullable Input<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration) {
             this.networkProfileConfiguration = networkProfileConfiguration;
             return this;
         }
 
-        public Builder setNetworkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationArgs networkProfileConfiguration) {
+        public Builder networkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationArgs networkProfileConfiguration) {
             this.networkProfileConfiguration = Input.ofNullable(networkProfileConfiguration);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProtectionPolicy(@Nullable Input<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy) {
+        public Builder protectionPolicy(@Nullable Input<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy) {
             this.protectionPolicy = protectionPolicy;
             return this;
         }
 
-        public Builder setProtectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyArgs protectionPolicy) {
+        public Builder protectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyArgs protectionPolicy) {
             this.protectionPolicy = Input.ofNullable(protectionPolicy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileArgs securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Input.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setVmScaleSetName(Input<String> vmScaleSetName) {
+        public Builder vmScaleSetName(Input<String> vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }
 
-        public Builder setVmScaleSetName(String vmScaleSetName) {
+        public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Input.of(Objects.requireNonNull(vmScaleSetName));
             return this;
         }

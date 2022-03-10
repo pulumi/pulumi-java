@@ -204,102 +204,102 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAction(@Nullable Input<UpgradeHistoryEntryAction> action) {
+        public Builder action(@Nullable Input<UpgradeHistoryEntryAction> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable UpgradeHistoryEntryAction action) {
+        public Builder action(@Nullable UpgradeHistoryEntryAction action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setContainerImage(@Nullable Input<String> containerImage) {
+        public Builder containerImage(@Nullable Input<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setContainerImage(@Nullable String containerImage) {
+        public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Input.ofNullable(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setFramework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Input<String> framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = Input.ofNullable(framework);
             return this;
         }
 
-        public Builder setSnapshot(@Nullable Input<String> snapshot) {
+        public Builder snapshot(@Nullable Input<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable String snapshot) {
+        public Builder snapshot(@Nullable String snapshot) {
             this.snapshot = Input.ofNullable(snapshot);
             return this;
         }
 
-        public Builder setState(@Nullable Input<UpgradeHistoryEntryState> state) {
+        public Builder state(@Nullable Input<UpgradeHistoryEntryState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable UpgradeHistoryEntryState state) {
+        public Builder state(@Nullable UpgradeHistoryEntryState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTargetImage(@Nullable Input<String> targetImage) {
+        public Builder targetImage(@Nullable Input<String> targetImage) {
             this.targetImage = targetImage;
             return this;
         }
 
-        public Builder setTargetImage(@Nullable String targetImage) {
+        public Builder targetImage(@Nullable String targetImage) {
             this.targetImage = Input.ofNullable(targetImage);
             return this;
         }
 
-        public Builder setTargetVersion(@Nullable Input<String> targetVersion) {
+        public Builder targetVersion(@Nullable Input<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
 
-        public Builder setTargetVersion(@Nullable String targetVersion) {
+        public Builder targetVersion(@Nullable String targetVersion) {
             this.targetVersion = Input.ofNullable(targetVersion);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVmImage(@Nullable Input<String> vmImage) {
+        public Builder vmImage(@Nullable Input<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
-        public Builder setVmImage(@Nullable String vmImage) {
+        public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }

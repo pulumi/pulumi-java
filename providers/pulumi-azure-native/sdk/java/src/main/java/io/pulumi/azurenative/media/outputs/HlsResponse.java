@@ -50,7 +50,7 @@ public final class HlsResponse {
     	      this.fragmentsPerTsSegment = defaults.fragmentsPerTsSegment;
         }
 
-        public Builder setFragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
+        public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }

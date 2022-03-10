@@ -75,22 +75,22 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
     	      this.uRI = defaults.uRI;
         }
 
-        public Builder setType(@Nullable Input<EventSourceMappingSourceAccessConfigurationType> type) {
+        public Builder type(@Nullable Input<EventSourceMappingSourceAccessConfigurationType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
+        public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setURI(@Nullable Input<String> uRI) {
+        public Builder uRI(@Nullable Input<String> uRI) {
             this.uRI = uRI;
             return this;
         }
 
-        public Builder setURI(@Nullable String uRI) {
+        public Builder uRI(@Nullable String uRI) {
             this.uRI = Input.ofNullable(uRI);
             return this;
         }

@@ -139,62 +139,62 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDefaultAction(Input<WebAclDefaultActionArgs> defaultAction) {
+        public Builder defaultAction(Input<WebAclDefaultActionArgs> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setDefaultAction(WebAclDefaultActionArgs defaultAction) {
+        public Builder defaultAction(WebAclDefaultActionArgs defaultAction) {
             this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<WebAclLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<WebAclLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable WebAclLoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable WebAclLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<WebAclRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<WebAclRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<WebAclRuleArgs> rules) {
+        public Builder rules(@Nullable List<WebAclRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

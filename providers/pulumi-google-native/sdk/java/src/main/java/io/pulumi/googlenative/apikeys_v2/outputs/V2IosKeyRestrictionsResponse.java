@@ -49,7 +49,7 @@ public final class V2IosKeyRestrictionsResponse {
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder setAllowedBundleIds(List<String> allowedBundleIds) {
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }

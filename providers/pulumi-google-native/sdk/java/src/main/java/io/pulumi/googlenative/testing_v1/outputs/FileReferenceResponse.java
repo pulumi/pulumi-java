@@ -48,7 +48,7 @@ public final class FileReferenceResponse {
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }

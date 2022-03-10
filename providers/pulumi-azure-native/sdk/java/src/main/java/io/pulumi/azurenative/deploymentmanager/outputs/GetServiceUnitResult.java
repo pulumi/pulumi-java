@@ -165,42 +165,42 @@ public final class GetServiceUnitResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
+        public Builder artifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setDeploymentMode(String deploymentMode) {
+        public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceGroup(String targetResourceGroup) {
+        public Builder targetResourceGroup(String targetResourceGroup) {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

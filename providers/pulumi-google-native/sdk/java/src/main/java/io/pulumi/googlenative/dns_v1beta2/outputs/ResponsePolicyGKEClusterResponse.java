@@ -57,12 +57,12 @@ public final class ResponsePolicyGKEClusterResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setGkeClusterName(String gkeClusterName) {
+        public Builder gkeClusterName(String gkeClusterName) {
             this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

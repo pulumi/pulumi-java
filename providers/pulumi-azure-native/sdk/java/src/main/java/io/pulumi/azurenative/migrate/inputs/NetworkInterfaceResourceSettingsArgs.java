@@ -110,42 +110,42 @@ public final class NetworkInterfaceResourceSettingsArgs extends io.pulumi.resour
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = Input.ofNullable(enableAcceleratedNetworking);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<NicIpConfigurationResourceSettingsArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setTargetResourceName(Input<String> targetResourceName) {
+        public Builder targetResourceName(Input<String> targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Input.of(Objects.requireNonNull(targetResourceName));
             return this;
         }

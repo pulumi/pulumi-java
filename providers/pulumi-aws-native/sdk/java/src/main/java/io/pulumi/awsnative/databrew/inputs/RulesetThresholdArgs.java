@@ -76,32 +76,32 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable Input<RulesetThresholdType> type) {
+        public Builder type(@Nullable Input<RulesetThresholdType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RulesetThresholdType type) {
+        public Builder type(@Nullable RulesetThresholdType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<RulesetThresholdUnit> unit) {
+        public Builder unit(@Nullable Input<RulesetThresholdUnit> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable RulesetThresholdUnit unit) {
+        public Builder unit(@Nullable RulesetThresholdUnit unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }
 
-        public Builder setValue(Input<Double> value) {
+        public Builder value(Input<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

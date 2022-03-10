@@ -151,67 +151,67 @@ public final class DetectorModelAction {
     	      this.sqs = defaults.sqs;
         }
 
-        public Builder setClearTimer(@Nullable DetectorModelClearTimer clearTimer) {
+        public Builder clearTimer(@Nullable DetectorModelClearTimer clearTimer) {
             this.clearTimer = clearTimer;
             return this;
         }
 
-        public Builder setDynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
+        public Builder dynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
             this.dynamoDB = dynamoDB;
             return this;
         }
 
-        public Builder setDynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
+        public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
             this.dynamoDBv2 = dynamoDBv2;
             return this;
         }
 
-        public Builder setFirehose(@Nullable DetectorModelFirehose firehose) {
+        public Builder firehose(@Nullable DetectorModelFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setIotEvents(@Nullable DetectorModelIotEvents iotEvents) {
+        public Builder iotEvents(@Nullable DetectorModelIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder setIotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
+        public Builder iotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
             this.iotSiteWise = iotSiteWise;
             return this;
         }
 
-        public Builder setIotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
+        public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
             this.iotTopicPublish = iotTopicPublish;
             return this;
         }
 
-        public Builder setLambda(@Nullable DetectorModelLambda lambda) {
+        public Builder lambda(@Nullable DetectorModelLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setResetTimer(@Nullable DetectorModelResetTimer resetTimer) {
+        public Builder resetTimer(@Nullable DetectorModelResetTimer resetTimer) {
             this.resetTimer = resetTimer;
             return this;
         }
 
-        public Builder setSetTimer(@Nullable DetectorModelSetTimer setTimer) {
+        public Builder setTimer(@Nullable DetectorModelSetTimer setTimer) {
             this.setTimer = setTimer;
             return this;
         }
 
-        public Builder setSetVariable(@Nullable DetectorModelSetVariable setVariable) {
+        public Builder setVariable(@Nullable DetectorModelSetVariable setVariable) {
             this.setVariable = setVariable;
             return this;
         }
 
-        public Builder setSns(@Nullable DetectorModelSns sns) {
+        public Builder sns(@Nullable DetectorModelSns sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable DetectorModelSqs sqs) {
+        public Builder sqs(@Nullable DetectorModelSqs sqs) {
             this.sqs = sqs;
             return this;
         }

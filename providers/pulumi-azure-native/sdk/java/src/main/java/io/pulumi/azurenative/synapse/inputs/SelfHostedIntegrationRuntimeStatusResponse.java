@@ -367,102 +367,102 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
     	      this.versionStatus = defaults.versionStatus;
         }
 
-        public Builder setAutoUpdate(String autoUpdate) {
+        public Builder autoUpdate(String autoUpdate) {
             this.autoUpdate = Objects.requireNonNull(autoUpdate);
             return this;
         }
 
-        public Builder setAutoUpdateETA(String autoUpdateETA) {
+        public Builder autoUpdateETA(String autoUpdateETA) {
             this.autoUpdateETA = Objects.requireNonNull(autoUpdateETA);
             return this;
         }
 
-        public Builder setCapabilities(Map<String,String> capabilities) {
+        public Builder capabilities(Map<String,String> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataFactoryName(String dataFactoryName) {
+        public Builder dataFactoryName(String dataFactoryName) {
             this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
             return this;
         }
 
-        public Builder setInternalChannelEncryption(String internalChannelEncryption) {
+        public Builder internalChannelEncryption(String internalChannelEncryption) {
             this.internalChannelEncryption = Objects.requireNonNull(internalChannelEncryption);
             return this;
         }
 
-        public Builder setLatestVersion(String latestVersion) {
+        public Builder latestVersion(String latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
 
-        public Builder setLinks(@Nullable List<LinkedIntegrationRuntimeResponse> links) {
+        public Builder links(@Nullable List<LinkedIntegrationRuntimeResponse> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLocalTimeZoneOffset(String localTimeZoneOffset) {
+        public Builder localTimeZoneOffset(String localTimeZoneOffset) {
             this.localTimeZoneOffset = Objects.requireNonNull(localTimeZoneOffset);
             return this;
         }
 
-        public Builder setNodeCommunicationChannelEncryptionMode(String nodeCommunicationChannelEncryptionMode) {
+        public Builder nodeCommunicationChannelEncryptionMode(String nodeCommunicationChannelEncryptionMode) {
             this.nodeCommunicationChannelEncryptionMode = Objects.requireNonNull(nodeCommunicationChannelEncryptionMode);
             return this;
         }
 
-        public Builder setNodes(@Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes) {
+        public Builder nodes(@Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setPushedVersion(String pushedVersion) {
+        public Builder pushedVersion(String pushedVersion) {
             this.pushedVersion = Objects.requireNonNull(pushedVersion);
             return this;
         }
 
-        public Builder setScheduledUpdateDate(String scheduledUpdateDate) {
+        public Builder scheduledUpdateDate(String scheduledUpdateDate) {
             this.scheduledUpdateDate = Objects.requireNonNull(scheduledUpdateDate);
             return this;
         }
 
-        public Builder setServiceUrls(List<String> serviceUrls) {
+        public Builder serviceUrls(List<String> serviceUrls) {
             this.serviceUrls = Objects.requireNonNull(serviceUrls);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskQueueId(String taskQueueId) {
+        public Builder taskQueueId(String taskQueueId) {
             this.taskQueueId = Objects.requireNonNull(taskQueueId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateDelayOffset(String updateDelayOffset) {
+        public Builder updateDelayOffset(String updateDelayOffset) {
             this.updateDelayOffset = Objects.requireNonNull(updateDelayOffset);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionStatus(String versionStatus) {
+        public Builder versionStatus(String versionStatus) {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }

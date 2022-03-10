@@ -42,7 +42,7 @@ public final class BotExternalSourceSetting {
     	      this.grammarSlotTypeSetting = defaults.grammarSlotTypeSetting;
         }
 
-        public Builder setGrammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSetting grammarSlotTypeSetting) {
+        public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSetting grammarSlotTypeSetting) {
             this.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
         }

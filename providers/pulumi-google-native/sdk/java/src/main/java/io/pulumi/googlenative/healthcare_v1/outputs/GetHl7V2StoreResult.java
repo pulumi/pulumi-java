@@ -118,27 +118,27 @@ public final class GetHl7V2StoreResult {
     	      this.rejectDuplicateMessage = defaults.rejectDuplicateMessage;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationConfigs(List<Hl7V2NotificationConfigResponse> notificationConfigs) {
+        public Builder notificationConfigs(List<Hl7V2NotificationConfigResponse> notificationConfigs) {
             this.notificationConfigs = Objects.requireNonNull(notificationConfigs);
             return this;
         }
 
-        public Builder setParserConfig(ParserConfigResponse parserConfig) {
+        public Builder parserConfig(ParserConfigResponse parserConfig) {
             this.parserConfig = Objects.requireNonNull(parserConfig);
             return this;
         }
 
-        public Builder setRejectDuplicateMessage(Boolean rejectDuplicateMessage) {
+        public Builder rejectDuplicateMessage(Boolean rejectDuplicateMessage) {
             this.rejectDuplicateMessage = Objects.requireNonNull(rejectDuplicateMessage);
             return this;
         }

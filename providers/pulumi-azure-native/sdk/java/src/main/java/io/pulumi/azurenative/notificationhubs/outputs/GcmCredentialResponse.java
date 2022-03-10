@@ -67,12 +67,12 @@ public final class GcmCredentialResponse {
     	      this.googleApiKey = defaults.googleApiKey;
         }
 
-        public Builder setGcmEndpoint(@Nullable String gcmEndpoint) {
+        public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
             this.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
-        public Builder setGoogleApiKey(@Nullable String googleApiKey) {
+        public Builder googleApiKey(@Nullable String googleApiKey) {
             this.googleApiKey = googleApiKey;
             return this;
         }

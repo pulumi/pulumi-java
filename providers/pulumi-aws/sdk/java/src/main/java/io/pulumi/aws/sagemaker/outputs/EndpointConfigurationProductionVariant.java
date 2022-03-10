@@ -133,32 +133,32 @@ public final class EndpointConfigurationProductionVariant {
     	      this.variantName = defaults.variantName;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setInitialInstanceCount(Integer initialInstanceCount) {
+        public Builder initialInstanceCount(Integer initialInstanceCount) {
             this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
             return this;
         }
 
-        public Builder setInitialVariantWeight(@Nullable Double initialVariantWeight) {
+        public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
             this.initialVariantWeight = initialVariantWeight;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setModelName(String modelName) {
+        public Builder modelName(String modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
 
-        public Builder setVariantName(@Nullable String variantName) {
+        public Builder variantName(@Nullable String variantName) {
             this.variantName = variantName;
             return this;
         }

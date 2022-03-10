@@ -92,17 +92,17 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
     	      this.url = defaults.url;
         }
 
-        public Builder setCredentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

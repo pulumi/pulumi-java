@@ -68,12 +68,12 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setTagKey(String tagKey) {
+        public Builder tagKey(String tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }

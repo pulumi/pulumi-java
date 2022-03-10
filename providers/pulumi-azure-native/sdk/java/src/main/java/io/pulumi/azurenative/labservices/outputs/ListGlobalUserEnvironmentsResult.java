@@ -50,7 +50,7 @@ public final class ListGlobalUserEnvironmentsResult {
     	      this.environments = defaults.environments;
         }
 
-        public Builder setEnvironments(@Nullable List<EnvironmentDetailsResponse> environments) {
+        public Builder environments(@Nullable List<EnvironmentDetailsResponse> environments) {
             this.environments = environments;
             return this;
         }

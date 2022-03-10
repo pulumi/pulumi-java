@@ -115,27 +115,27 @@ public final class RequestResponse {
     	      this.useragent = defaults.useragent;
         }
 
-        public Builder setAddr(@Nullable String addr) {
+        public Builder addr(@Nullable String addr) {
             this.addr = addr;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setUseragent(@Nullable String useragent) {
+        public Builder useragent(@Nullable String useragent) {
             this.useragent = useragent;
             return this;
         }

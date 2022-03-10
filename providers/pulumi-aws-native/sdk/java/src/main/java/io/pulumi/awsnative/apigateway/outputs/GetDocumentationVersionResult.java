@@ -50,7 +50,7 @@ public final class GetDocumentationVersionResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

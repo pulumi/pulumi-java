@@ -601,182 +601,182 @@ public final class GetRegionBackendServiceResult {
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setAffinityCookieTtlSec(Integer affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
             this.affinityCookieTtlSec = Objects.requireNonNull(affinityCookieTtlSec);
             return this;
         }
 
-        public Builder setBackends(List<BackendResponse> backends) {
+        public Builder backends(List<BackendResponse> backends) {
             this.backends = Objects.requireNonNull(backends);
             return this;
         }
 
-        public Builder setCdnPolicy(BackendServiceCdnPolicyResponse cdnPolicy) {
+        public Builder cdnPolicy(BackendServiceCdnPolicyResponse cdnPolicy) {
             this.cdnPolicy = Objects.requireNonNull(cdnPolicy);
             return this;
         }
 
-        public Builder setCircuitBreakers(CircuitBreakersResponse circuitBreakers) {
+        public Builder circuitBreakers(CircuitBreakersResponse circuitBreakers) {
             this.circuitBreakers = Objects.requireNonNull(circuitBreakers);
             return this;
         }
 
-        public Builder setCompressionMode(String compressionMode) {
+        public Builder compressionMode(String compressionMode) {
             this.compressionMode = Objects.requireNonNull(compressionMode);
             return this;
         }
 
-        public Builder setConnectionDraining(ConnectionDrainingResponse connectionDraining) {
+        public Builder connectionDraining(ConnectionDrainingResponse connectionDraining) {
             this.connectionDraining = Objects.requireNonNull(connectionDraining);
             return this;
         }
 
-        public Builder setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy) {
+        public Builder connectionTrackingPolicy(BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy) {
             this.connectionTrackingPolicy = Objects.requireNonNull(connectionTrackingPolicy);
             return this;
         }
 
-        public Builder setConsistentHash(ConsistentHashLoadBalancerSettingsResponse consistentHash) {
+        public Builder consistentHash(ConsistentHashLoadBalancerSettingsResponse consistentHash) {
             this.consistentHash = Objects.requireNonNull(consistentHash);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomRequestHeaders(List<String> customRequestHeaders) {
+        public Builder customRequestHeaders(List<String> customRequestHeaders) {
             this.customRequestHeaders = Objects.requireNonNull(customRequestHeaders);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEdgeSecurityPolicy(String edgeSecurityPolicy) {
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
             return this;
         }
 
-        public Builder setEnableCDN(Boolean enableCDN) {
+        public Builder enableCDN(Boolean enableCDN) {
             this.enableCDN = Objects.requireNonNull(enableCDN);
             return this;
         }
 
-        public Builder setFailoverPolicy(BackendServiceFailoverPolicyResponse failoverPolicy) {
+        public Builder failoverPolicy(BackendServiceFailoverPolicyResponse failoverPolicy) {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHealthChecks(List<String> healthChecks) {
+        public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setIap(BackendServiceIAPResponse iap) {
+        public Builder iap(BackendServiceIAPResponse iap) {
             this.iap = Objects.requireNonNull(iap);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(String loadBalancingScheme) {
+        public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
 
-        public Builder setLocalityLbPolicy(String localityLbPolicy) {
+        public Builder localityLbPolicy(String localityLbPolicy) {
             this.localityLbPolicy = Objects.requireNonNull(localityLbPolicy);
             return this;
         }
 
-        public Builder setLogConfig(BackendServiceLogConfigResponse logConfig) {
+        public Builder logConfig(BackendServiceLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setMaxStreamDuration(DurationResponse maxStreamDuration) {
+        public Builder maxStreamDuration(DurationResponse maxStreamDuration) {
             this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setOutlierDetection(OutlierDetectionResponse outlierDetection) {
+        public Builder outlierDetection(OutlierDetectionResponse outlierDetection) {
             this.outlierDetection = Objects.requireNonNull(outlierDetection);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setSecuritySettings(SecuritySettingsResponse securitySettings) {
+        public Builder securitySettings(SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServiceBindings(List<String> serviceBindings) {
+        public Builder serviceBindings(List<String> serviceBindings) {
             this.serviceBindings = Objects.requireNonNull(serviceBindings);
             return this;
         }
 
-        public Builder setSessionAffinity(String sessionAffinity) {
+        public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
 
-        public Builder setSubsetting(SubsettingResponse subsetting) {
+        public Builder subsetting(SubsettingResponse subsetting) {
             this.subsetting = Objects.requireNonNull(subsetting);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }

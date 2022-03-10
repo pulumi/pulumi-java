@@ -72,12 +72,12 @@ public final class PatchDeploymentPatchConfigPostStep {
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder setLinuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfig linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfig linuxExecStepConfig) {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfig windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfig windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }

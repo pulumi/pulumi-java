@@ -174,92 +174,92 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     	      this.rollout = defaults.rollout;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setInstanceFilter(Input<OSPolicyAssignmentInstanceFilterArgs> instanceFilter) {
+        public Builder instanceFilter(Input<OSPolicyAssignmentInstanceFilterArgs> instanceFilter) {
             this.instanceFilter = Objects.requireNonNull(instanceFilter);
             return this;
         }
 
-        public Builder setInstanceFilter(OSPolicyAssignmentInstanceFilterArgs instanceFilter) {
+        public Builder instanceFilter(OSPolicyAssignmentInstanceFilterArgs instanceFilter) {
             this.instanceFilter = Input.of(Objects.requireNonNull(instanceFilter));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsPolicies(Input<List<OSPolicyArgs>> osPolicies) {
+        public Builder osPolicies(Input<List<OSPolicyArgs>> osPolicies) {
             this.osPolicies = Objects.requireNonNull(osPolicies);
             return this;
         }
 
-        public Builder setOsPolicies(List<OSPolicyArgs> osPolicies) {
+        public Builder osPolicies(List<OSPolicyArgs> osPolicies) {
             this.osPolicies = Input.of(Objects.requireNonNull(osPolicies));
             return this;
         }
 
-        public Builder setOsPolicyAssignmentId(Input<String> osPolicyAssignmentId) {
+        public Builder osPolicyAssignmentId(Input<String> osPolicyAssignmentId) {
             this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId);
             return this;
         }
 
-        public Builder setOsPolicyAssignmentId(String osPolicyAssignmentId) {
+        public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
             this.osPolicyAssignmentId = Input.of(Objects.requireNonNull(osPolicyAssignmentId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRollout(Input<OSPolicyAssignmentRolloutArgs> rollout) {
+        public Builder rollout(Input<OSPolicyAssignmentRolloutArgs> rollout) {
             this.rollout = Objects.requireNonNull(rollout);
             return this;
         }
 
-        public Builder setRollout(OSPolicyAssignmentRolloutArgs rollout) {
+        public Builder rollout(OSPolicyAssignmentRolloutArgs rollout) {
             this.rollout = Input.of(Objects.requireNonNull(rollout));
             return this;
         }

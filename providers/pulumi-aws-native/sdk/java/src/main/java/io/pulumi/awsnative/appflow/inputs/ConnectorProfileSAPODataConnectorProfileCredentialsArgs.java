@@ -63,22 +63,22 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     	      this.oAuthCredentials = defaults.oAuthCredentials;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs basicAuthCredentials) {
             this.basicAuthCredentials = Input.ofNullable(basicAuthCredentials);
             return this;
         }
 
-        public Builder setOAuthCredentials(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
+        public Builder oAuthCredentials(@Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials) {
             this.oAuthCredentials = oAuthCredentials;
             return this;
         }
 
-        public Builder setOAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
+        public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs oAuthCredentials) {
             this.oAuthCredentials = Input.ofNullable(oAuthCredentials);
             return this;
         }

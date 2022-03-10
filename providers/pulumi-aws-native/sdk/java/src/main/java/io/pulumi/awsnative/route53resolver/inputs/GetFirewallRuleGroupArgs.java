@@ -51,7 +51,7 @@ public final class GetFirewallRuleGroupArgs extends io.pulumi.resources.InvokeAr
     	      this.id = defaults.id;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

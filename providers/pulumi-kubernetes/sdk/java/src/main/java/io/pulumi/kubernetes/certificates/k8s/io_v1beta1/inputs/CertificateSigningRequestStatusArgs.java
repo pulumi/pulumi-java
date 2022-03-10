@@ -72,22 +72,22 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<CertificateSigningRequestConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<CertificateSigningRequestConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }

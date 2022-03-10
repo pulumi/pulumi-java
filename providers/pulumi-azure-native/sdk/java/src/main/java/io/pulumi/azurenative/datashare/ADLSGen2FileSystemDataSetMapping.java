@@ -237,7 +237,7 @@ public class ADLSGen2FileSystemDataSetMapping extends io.pulumi.resources.Custom
     private static ADLSGen2FileSystemDataSetMappingArgs makeArgs(ADLSGen2FileSystemDataSetMappingArgs args) {
         var builder = args == null ? ADLSGen2FileSystemDataSetMappingArgs.builder() : ADLSGen2FileSystemDataSetMappingArgs.builder(args);
         return builder
-            .setKind("AdlsGen2FileSystem")
+            .kind("AdlsGen2FileSystem")
             .build();
     }
 

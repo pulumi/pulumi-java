@@ -67,12 +67,12 @@ public final class DatabaseInstanceClone {
     	      this.sourceInstanceName = defaults.sourceInstanceName;
         }
 
-        public Builder setPointInTime(@Nullable String pointInTime) {
+        public Builder pointInTime(@Nullable String pointInTime) {
             this.pointInTime = pointInTime;
             return this;
         }
 
-        public Builder setSourceInstanceName(String sourceInstanceName) {
+        public Builder sourceInstanceName(String sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }

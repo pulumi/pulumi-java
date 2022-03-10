@@ -202,102 +202,102 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAlpnPolicy(@Nullable Input<String> alpnPolicy) {
+        public Builder alpnPolicy(@Nullable Input<String> alpnPolicy) {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
 
-        public Builder setAlpnPolicy(@Nullable String alpnPolicy) {
+        public Builder alpnPolicy(@Nullable String alpnPolicy) {
             this.alpnPolicy = Input.ofNullable(alpnPolicy);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setDefaultActions(@Nullable Input<List<ListenerDefaultActionGetArgs>> defaultActions) {
+        public Builder defaultActions(@Nullable Input<List<ListenerDefaultActionGetArgs>> defaultActions) {
             this.defaultActions = defaultActions;
             return this;
         }
 
-        public Builder setDefaultActions(@Nullable List<ListenerDefaultActionGetArgs> defaultActions) {
+        public Builder defaultActions(@Nullable List<ListenerDefaultActionGetArgs> defaultActions) {
             this.defaultActions = Input.ofNullable(defaultActions);
             return this;
         }
 
-        public Builder setLoadBalancerArn(@Nullable Input<String> loadBalancerArn) {
+        public Builder loadBalancerArn(@Nullable Input<String> loadBalancerArn) {
             this.loadBalancerArn = loadBalancerArn;
             return this;
         }
 
-        public Builder setLoadBalancerArn(@Nullable String loadBalancerArn) {
+        public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
             this.loadBalancerArn = Input.ofNullable(loadBalancerArn);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

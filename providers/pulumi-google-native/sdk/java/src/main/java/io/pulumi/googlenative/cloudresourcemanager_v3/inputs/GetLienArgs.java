@@ -47,7 +47,7 @@ public final class GetLienArgs extends io.pulumi.resources.InvokeArgs {
     	      this.lienId = defaults.lienId;
         }
 
-        public Builder setLienId(String lienId) {
+        public Builder lienId(String lienId) {
             this.lienId = Objects.requireNonNull(lienId);
             return this;
         }

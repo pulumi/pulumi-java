@@ -98,42 +98,42 @@ public final class GetLaunchTemplatePlacement {
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAffinity(String affinity) {
+        public Builder affinity(String affinity) {
             this.affinity = Objects.requireNonNull(affinity);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setHostId(String hostId) {
+        public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
 
-        public Builder setHostResourceGroupArn(String hostResourceGroupArn) {
+        public Builder hostResourceGroupArn(String hostResourceGroupArn) {
             this.hostResourceGroupArn = Objects.requireNonNull(hostResourceGroupArn);
             return this;
         }
 
-        public Builder setPartitionNumber(Integer partitionNumber) {
+        public Builder partitionNumber(Integer partitionNumber) {
             this.partitionNumber = Objects.requireNonNull(partitionNumber);
             return this;
         }
 
-        public Builder setSpreadDomain(String spreadDomain) {
+        public Builder spreadDomain(String spreadDomain) {
             this.spreadDomain = Objects.requireNonNull(spreadDomain);
             return this;
         }
 
-        public Builder setTenancy(String tenancy) {
+        public Builder tenancy(String tenancy) {
             this.tenancy = Objects.requireNonNull(tenancy);
             return this;
         }

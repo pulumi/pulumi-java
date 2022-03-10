@@ -167,42 +167,42 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     	      this.rateLimitThreshold = defaults.rateLimitThreshold;
         }
 
-        public Builder setBanDurationSec(Integer banDurationSec) {
+        public Builder banDurationSec(Integer banDurationSec) {
             this.banDurationSec = Objects.requireNonNull(banDurationSec);
             return this;
         }
 
-        public Builder setBanThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold) {
+        public Builder banThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold) {
             this.banThreshold = Objects.requireNonNull(banThreshold);
             return this;
         }
 
-        public Builder setConformAction(String conformAction) {
+        public Builder conformAction(String conformAction) {
             this.conformAction = Objects.requireNonNull(conformAction);
             return this;
         }
 
-        public Builder setEnforceOnKey(String enforceOnKey) {
+        public Builder enforceOnKey(String enforceOnKey) {
             this.enforceOnKey = Objects.requireNonNull(enforceOnKey);
             return this;
         }
 
-        public Builder setEnforceOnKeyName(String enforceOnKeyName) {
+        public Builder enforceOnKeyName(String enforceOnKeyName) {
             this.enforceOnKeyName = Objects.requireNonNull(enforceOnKeyName);
             return this;
         }
 
-        public Builder setExceedAction(String exceedAction) {
+        public Builder exceedAction(String exceedAction) {
             this.exceedAction = Objects.requireNonNull(exceedAction);
             return this;
         }
 
-        public Builder setExceedRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions) {
+        public Builder exceedRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions) {
             this.exceedRedirectOptions = Objects.requireNonNull(exceedRedirectOptions);
             return this;
         }
 
-        public Builder setRateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
+        public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }

@@ -40,7 +40,7 @@ public final class GetRegionResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

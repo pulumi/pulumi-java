@@ -226,112 +226,112 @@ public final class EdgeCacheServiceArgs extends io.pulumi.resources.ResourceArgs
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisableQuic(@Nullable Input<Boolean> disableQuic) {
+        public Builder disableQuic(@Nullable Input<Boolean> disableQuic) {
             this.disableQuic = disableQuic;
             return this;
         }
 
-        public Builder setDisableQuic(@Nullable Boolean disableQuic) {
+        public Builder disableQuic(@Nullable Boolean disableQuic) {
             this.disableQuic = Input.ofNullable(disableQuic);
             return this;
         }
 
-        public Builder setEdgeSecurityPolicy(@Nullable Input<String> edgeSecurityPolicy) {
+        public Builder edgeSecurityPolicy(@Nullable Input<String> edgeSecurityPolicy) {
             this.edgeSecurityPolicy = edgeSecurityPolicy;
             return this;
         }
 
-        public Builder setEdgeSecurityPolicy(@Nullable String edgeSecurityPolicy) {
+        public Builder edgeSecurityPolicy(@Nullable String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Input.ofNullable(edgeSecurityPolicy);
             return this;
         }
 
-        public Builder setEdgeSslCertificates(@Nullable Input<List<String>> edgeSslCertificates) {
+        public Builder edgeSslCertificates(@Nullable Input<List<String>> edgeSslCertificates) {
             this.edgeSslCertificates = edgeSslCertificates;
             return this;
         }
 
-        public Builder setEdgeSslCertificates(@Nullable List<String> edgeSslCertificates) {
+        public Builder edgeSslCertificates(@Nullable List<String> edgeSslCertificates) {
             this.edgeSslCertificates = Input.ofNullable(edgeSslCertificates);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<EdgeCacheServiceLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<EdgeCacheServiceLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable EdgeCacheServiceLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable EdgeCacheServiceLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Input<Boolean> requireTls) {
+        public Builder requireTls(@Nullable Input<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Boolean requireTls) {
+        public Builder requireTls(@Nullable Boolean requireTls) {
             this.requireTls = Input.ofNullable(requireTls);
             return this;
         }
 
-        public Builder setRouting(Input<EdgeCacheServiceRoutingArgs> routing) {
+        public Builder routing(Input<EdgeCacheServiceRoutingArgs> routing) {
             this.routing = Objects.requireNonNull(routing);
             return this;
         }
 
-        public Builder setRouting(EdgeCacheServiceRoutingArgs routing) {
+        public Builder routing(EdgeCacheServiceRoutingArgs routing) {
             this.routing = Input.of(Objects.requireNonNull(routing));
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }

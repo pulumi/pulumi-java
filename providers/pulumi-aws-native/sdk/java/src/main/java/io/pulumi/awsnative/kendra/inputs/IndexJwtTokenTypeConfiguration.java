@@ -123,37 +123,37 @@ public final class IndexJwtTokenTypeConfiguration extends io.pulumi.resources.In
     	      this.userNameAttributeField = defaults.userNameAttributeField;
         }
 
-        public Builder setClaimRegex(@Nullable String claimRegex) {
+        public Builder claimRegex(@Nullable String claimRegex) {
             this.claimRegex = claimRegex;
             return this;
         }
 
-        public Builder setGroupAttributeField(@Nullable String groupAttributeField) {
+        public Builder groupAttributeField(@Nullable String groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setKeyLocation(IndexKeyLocation keyLocation) {
+        public Builder keyLocation(IndexKeyLocation keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
 
-        public Builder setSecretManagerArn(@Nullable String secretManagerArn) {
+        public Builder secretManagerArn(@Nullable String secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
 
-        public Builder setURL(@Nullable String uRL) {
+        public Builder uRL(@Nullable String uRL) {
             this.uRL = uRL;
             return this;
         }
 
-        public Builder setUserNameAttributeField(@Nullable String userNameAttributeField) {
+        public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }

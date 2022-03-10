@@ -100,32 +100,32 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     	      this.username = defaults.username;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = Input.ofNullable(alternateDataSourceParameters);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

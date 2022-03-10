@@ -57,12 +57,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     	      this.exactMatchConfig = defaults.exactMatchConfig;
         }
 
-        public Builder setExactMatchConfig(@Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
+        public Builder exactMatchConfig(@Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
             this.exactMatchConfig = exactMatchConfig;
             return this;
         }
 
-        public Builder setExactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
+        public Builder exactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
             this.exactMatchConfig = Input.ofNullable(exactMatchConfig);
             return this;
         }

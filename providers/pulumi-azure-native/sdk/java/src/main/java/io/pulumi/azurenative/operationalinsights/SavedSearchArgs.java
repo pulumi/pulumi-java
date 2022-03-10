@@ -201,102 +201,102 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setCategory(Input<String> category) {
+        public Builder category(Input<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Input.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setFunctionAlias(@Nullable Input<String> functionAlias) {
+        public Builder functionAlias(@Nullable Input<String> functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = Input.ofNullable(functionAlias);
             return this;
         }
 
-        public Builder setFunctionParameters(@Nullable Input<String> functionParameters) {
+        public Builder functionParameters(@Nullable Input<String> functionParameters) {
             this.functionParameters = functionParameters;
             return this;
         }
 
-        public Builder setFunctionParameters(@Nullable String functionParameters) {
+        public Builder functionParameters(@Nullable String functionParameters) {
             this.functionParameters = Input.ofNullable(functionParameters);
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSavedSearchId(@Nullable Input<String> savedSearchId) {
+        public Builder savedSearchId(@Nullable Input<String> savedSearchId) {
             this.savedSearchId = savedSearchId;
             return this;
         }
 
-        public Builder setSavedSearchId(@Nullable String savedSearchId) {
+        public Builder savedSearchId(@Nullable String savedSearchId) {
             this.savedSearchId = Input.ofNullable(savedSearchId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagArgs> tags) {
+        public Builder tags(@Nullable List<TagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Double> version) {
+        public Builder version(@Nullable Input<Double> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

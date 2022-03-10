@@ -105,22 +105,22 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
     	      this.urlFragment = defaults.urlFragment;
         }
 
-        public Builder setAlexaSkillId(String alexaSkillId) {
+        public Builder alexaSkillId(String alexaSkillId) {
             this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setServiceEndpointUri(String serviceEndpointUri) {
+        public Builder serviceEndpointUri(String serviceEndpointUri) {
             this.serviceEndpointUri = Objects.requireNonNull(serviceEndpointUri);
             return this;
         }
 
-        public Builder setUrlFragment(String urlFragment) {
+        public Builder urlFragment(String urlFragment) {
             this.urlFragment = Objects.requireNonNull(urlFragment);
             return this;
         }

@@ -79,22 +79,22 @@ public final class JsonReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setCompressionProperties(@Nullable Input<Object> compressionProperties) {
+        public Builder compressionProperties(@Nullable Input<Object> compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = Input.ofNullable(compressionProperties);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

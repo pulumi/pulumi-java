@@ -69,12 +69,12 @@ public final class EdgeCacheServiceRouting {
     	      this.pathMatchers = defaults.pathMatchers;
         }
 
-        public Builder setHostRules(List<EdgeCacheServiceRoutingHostRule> hostRules) {
+        public Builder hostRules(List<EdgeCacheServiceRoutingHostRule> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
 
-        public Builder setPathMatchers(List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
+        public Builder pathMatchers(List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }

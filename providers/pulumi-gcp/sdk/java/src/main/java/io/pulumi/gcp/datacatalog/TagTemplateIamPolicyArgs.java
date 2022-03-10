@@ -86,42 +86,42 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTagTemplate(Input<String> tagTemplate) {
+        public Builder tagTemplate(Input<String> tagTemplate) {
             this.tagTemplate = Objects.requireNonNull(tagTemplate);
             return this;
         }
 
-        public Builder setTagTemplate(String tagTemplate) {
+        public Builder tagTemplate(String tagTemplate) {
             this.tagTemplate = Input.of(Objects.requireNonNull(tagTemplate));
             return this;
         }

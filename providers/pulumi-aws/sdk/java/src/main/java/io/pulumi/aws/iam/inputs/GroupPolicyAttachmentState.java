@@ -70,17 +70,17 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     	      this.policyArn = defaults.policyArn;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setPolicyArn(@Nullable Input<String> policyArn) {
+        public Builder policyArn(@Nullable Input<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
-        public Builder setPolicyArn(@Nullable String policyArn) {
+        public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = Input.ofNullable(policyArn);
             return this;
         }

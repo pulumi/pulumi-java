@@ -75,22 +75,22 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
     	      this.windows = defaults.windows;
         }
 
-        public Builder setLinux(@Nullable Input<String> linux) {
+        public Builder linux(@Nullable Input<String> linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setLinux(@Nullable String linux) {
+        public Builder linux(@Nullable String linux) {
             this.linux = Input.ofNullable(linux);
             return this;
         }
 
-        public Builder setWindows(@Nullable Input<String> windows) {
+        public Builder windows(@Nullable Input<String> windows) {
             this.windows = windows;
             return this;
         }
 
-        public Builder setWindows(@Nullable String windows) {
+        public Builder windows(@Nullable String windows) {
             this.windows = Input.ofNullable(windows);
             return this;
         }

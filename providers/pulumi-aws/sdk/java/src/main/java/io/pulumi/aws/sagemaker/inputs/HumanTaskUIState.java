@@ -120,52 +120,52 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     	      this.uiTemplate = defaults.uiTemplate;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setHumanTaskUiName(@Nullable Input<String> humanTaskUiName) {
+        public Builder humanTaskUiName(@Nullable Input<String> humanTaskUiName) {
             this.humanTaskUiName = humanTaskUiName;
             return this;
         }
 
-        public Builder setHumanTaskUiName(@Nullable String humanTaskUiName) {
+        public Builder humanTaskUiName(@Nullable String humanTaskUiName) {
             this.humanTaskUiName = Input.ofNullable(humanTaskUiName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUiTemplate(@Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
+        public Builder uiTemplate(@Nullable Input<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
             this.uiTemplate = uiTemplate;
             return this;
         }
 
-        public Builder setUiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
+        public Builder uiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
             this.uiTemplate = Input.ofNullable(uiTemplate);
             return this;
         }

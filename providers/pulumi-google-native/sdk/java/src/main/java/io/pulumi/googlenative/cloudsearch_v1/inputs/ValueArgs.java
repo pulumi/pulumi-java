@@ -117,62 +117,62 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBooleanValue(@Nullable Input<Boolean> booleanValue) {
+        public Builder booleanValue(@Nullable Input<Boolean> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setBooleanValue(@Nullable Boolean booleanValue) {
+        public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Input.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder setDateValue(@Nullable Input<DateArgs> dateValue) {
+        public Builder dateValue(@Nullable Input<DateArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
 
-        public Builder setDateValue(@Nullable DateArgs dateValue) {
+        public Builder dateValue(@Nullable DateArgs dateValue) {
             this.dateValue = Input.ofNullable(dateValue);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable Input<String> integerValue) {
+        public Builder integerValue(@Nullable Input<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable String integerValue) {
+        public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Input.ofNullable(integerValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Input<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }

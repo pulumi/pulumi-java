@@ -151,72 +151,72 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setBucketId(@Nullable Input<String> bucketId) {
+        public Builder bucketId(@Nullable Input<String> bucketId) {
             this.bucketId = bucketId;
             return this;
         }
 
-        public Builder setBucketId(@Nullable String bucketId) {
+        public Builder bucketId(@Nullable String bucketId) {
             this.bucketId = Input.ofNullable(bucketId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable Input<String> lifecycleState) {
+        public Builder lifecycleState(@Nullable Input<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable String lifecycleState) {
+        public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Input.ofNullable(lifecycleState);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }

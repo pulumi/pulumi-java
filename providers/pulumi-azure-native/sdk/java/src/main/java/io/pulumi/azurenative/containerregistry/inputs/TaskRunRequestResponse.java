@@ -141,32 +141,32 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setOverrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties) {
+        public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties) {
             this.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
 
-        public Builder setTaskId(String taskId) {
+        public Builder taskId(String taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

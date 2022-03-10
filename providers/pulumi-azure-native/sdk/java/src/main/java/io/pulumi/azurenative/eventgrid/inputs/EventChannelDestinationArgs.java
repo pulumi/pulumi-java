@@ -92,32 +92,32 @@ public final class EventChannelDestinationArgs extends io.pulumi.resources.Resou
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setAzureSubscriptionId(@Nullable Input<String> azureSubscriptionId) {
+        public Builder azureSubscriptionId(@Nullable Input<String> azureSubscriptionId) {
             this.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
 
-        public Builder setAzureSubscriptionId(@Nullable String azureSubscriptionId) {
+        public Builder azureSubscriptionId(@Nullable String azureSubscriptionId) {
             this.azureSubscriptionId = Input.ofNullable(azureSubscriptionId);
             return this;
         }
 
-        public Builder setPartnerTopicName(@Nullable Input<String> partnerTopicName) {
+        public Builder partnerTopicName(@Nullable Input<String> partnerTopicName) {
             this.partnerTopicName = partnerTopicName;
             return this;
         }
 
-        public Builder setPartnerTopicName(@Nullable String partnerTopicName) {
+        public Builder partnerTopicName(@Nullable String partnerTopicName) {
             this.partnerTopicName = Input.ofNullable(partnerTopicName);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }

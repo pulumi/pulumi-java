@@ -126,32 +126,32 @@ public final class GetEndpointResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<EndpointNetworkInterface> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<EndpointNetworkInterface> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setStatus(@Nullable EndpointStatus status) {
+        public Builder status(@Nullable EndpointStatus status) {
             this.status = status;
             return this;
         }

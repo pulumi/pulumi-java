@@ -69,12 +69,12 @@ public final class ScalingPlanApplicationSource {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setCloudformationStackArn(@Nullable String cloudformationStackArn) {
+        public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
             this.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

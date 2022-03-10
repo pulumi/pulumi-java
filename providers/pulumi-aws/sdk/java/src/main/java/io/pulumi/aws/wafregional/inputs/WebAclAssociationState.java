@@ -70,22 +70,22 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     	      this.webAclId = defaults.webAclId;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder setWebAclId(@Nullable Input<String> webAclId) {
+        public Builder webAclId(@Nullable Input<String> webAclId) {
             this.webAclId = webAclId;
             return this;
         }
 
-        public Builder setWebAclId(@Nullable String webAclId) {
+        public Builder webAclId(@Nullable String webAclId) {
             this.webAclId = Input.ofNullable(webAclId);
             return this;
         }

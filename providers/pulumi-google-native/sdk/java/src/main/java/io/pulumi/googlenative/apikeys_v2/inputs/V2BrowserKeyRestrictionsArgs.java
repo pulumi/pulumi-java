@@ -58,12 +58,12 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.allowedReferrers = defaults.allowedReferrers;
         }
 
-        public Builder setAllowedReferrers(@Nullable Input<List<String>> allowedReferrers) {
+        public Builder allowedReferrers(@Nullable Input<List<String>> allowedReferrers) {
             this.allowedReferrers = allowedReferrers;
             return this;
         }
 
-        public Builder setAllowedReferrers(@Nullable List<String> allowedReferrers) {
+        public Builder allowedReferrers(@Nullable List<String> allowedReferrers) {
             this.allowedReferrers = Input.ofNullable(allowedReferrers);
             return this;
         }

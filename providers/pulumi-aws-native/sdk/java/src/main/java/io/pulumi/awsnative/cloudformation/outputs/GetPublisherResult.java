@@ -101,22 +101,22 @@ public final class GetPublisherResult {
     	      this.publisherStatus = defaults.publisherStatus;
         }
 
-        public Builder setIdentityProvider(@Nullable PublisherIdentityProvider identityProvider) {
+        public Builder identityProvider(@Nullable PublisherIdentityProvider identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setPublisherProfile(@Nullable String publisherProfile) {
+        public Builder publisherProfile(@Nullable String publisherProfile) {
             this.publisherProfile = publisherProfile;
             return this;
         }
 
-        public Builder setPublisherStatus(@Nullable PublisherStatus publisherStatus) {
+        public Builder publisherStatus(@Nullable PublisherStatus publisherStatus) {
             this.publisherStatus = publisherStatus;
             return this;
         }

@@ -115,27 +115,27 @@ public final class GetInstanceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setFeaturePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy) {
+        public Builder featurePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy) {
             this.featurePolicy = Objects.requireNonNull(featurePolicy);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLoggingEnabled(Boolean loggingEnabled) {
+        public Builder loggingEnabled(Boolean loggingEnabled) {
             this.loggingEnabled = Objects.requireNonNull(loggingEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

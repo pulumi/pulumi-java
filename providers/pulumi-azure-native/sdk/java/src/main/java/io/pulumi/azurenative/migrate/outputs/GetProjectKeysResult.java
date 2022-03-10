@@ -65,12 +65,12 @@ public final class GetProjectKeysResult {
     	      this.workspaceKey = defaults.workspaceKey;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceKey(String workspaceKey) {
+        public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }

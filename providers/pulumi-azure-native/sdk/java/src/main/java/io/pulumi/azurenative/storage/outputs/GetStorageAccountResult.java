@@ -661,192 +661,192 @@ public final class GetStorageAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessTier(String accessTier) {
+        public Builder accessTier(String accessTier) {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
 
-        public Builder setAllowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
+        public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
             this.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
 
-        public Builder setAllowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
+        public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
             this.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
 
-        public Builder setAzureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationResponse azureFilesIdentityBasedAuthentication) {
+        public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationResponse azureFilesIdentityBasedAuthentication) {
             this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
 
-        public Builder setBlobRestoreStatus(BlobRestoreStatusResponse blobRestoreStatus) {
+        public Builder blobRestoreStatus(BlobRestoreStatusResponse blobRestoreStatus) {
             this.blobRestoreStatus = Objects.requireNonNull(blobRestoreStatus);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setCustomDomain(CustomDomainResponse customDomain) {
+        public Builder customDomain(CustomDomainResponse customDomain) {
             this.customDomain = Objects.requireNonNull(customDomain);
             return this;
         }
 
-        public Builder setEnableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
+        public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
             this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
 
-        public Builder setEnableNfsV3(@Nullable Boolean enableNfsV3) {
+        public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
             this.enableNfsV3 = enableNfsV3;
             return this;
         }
 
-        public Builder setEncryption(EncryptionResponse encryption) {
+        public Builder encryption(EncryptionResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setFailoverInProgress(Boolean failoverInProgress) {
+        public Builder failoverInProgress(Boolean failoverInProgress) {
             this.failoverInProgress = Objects.requireNonNull(failoverInProgress);
             return this;
         }
 
-        public Builder setGeoReplicationStats(GeoReplicationStatsResponse geoReplicationStats) {
+        public Builder geoReplicationStats(GeoReplicationStatsResponse geoReplicationStats) {
             this.geoReplicationStats = Objects.requireNonNull(geoReplicationStats);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIsHnsEnabled(@Nullable Boolean isHnsEnabled) {
+        public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
             this.isHnsEnabled = isHnsEnabled;
             return this;
         }
 
-        public Builder setKeyCreationTime(KeyCreationTimeResponse keyCreationTime) {
+        public Builder keyCreationTime(KeyCreationTimeResponse keyCreationTime) {
             this.keyCreationTime = Objects.requireNonNull(keyCreationTime);
             return this;
         }
 
-        public Builder setKeyPolicy(KeyPolicyResponse keyPolicy) {
+        public Builder keyPolicy(KeyPolicyResponse keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLargeFileSharesState(@Nullable String largeFileSharesState) {
+        public Builder largeFileSharesState(@Nullable String largeFileSharesState) {
             this.largeFileSharesState = largeFileSharesState;
             return this;
         }
 
-        public Builder setLastGeoFailoverTime(String lastGeoFailoverTime) {
+        public Builder lastGeoFailoverTime(String lastGeoFailoverTime) {
             this.lastGeoFailoverTime = Objects.requireNonNull(lastGeoFailoverTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable String minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkRuleSet(NetworkRuleSetResponse networkRuleSet) {
+        public Builder networkRuleSet(NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = Objects.requireNonNull(networkRuleSet);
             return this;
         }
 
-        public Builder setPrimaryEndpoints(EndpointsResponse primaryEndpoints) {
+        public Builder primaryEndpoints(EndpointsResponse primaryEndpoints) {
             this.primaryEndpoints = Objects.requireNonNull(primaryEndpoints);
             return this;
         }
 
-        public Builder setPrimaryLocation(String primaryLocation) {
+        public Builder primaryLocation(String primaryLocation) {
             this.primaryLocation = Objects.requireNonNull(primaryLocation);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingPreference(@Nullable RoutingPreferenceResponse routingPreference) {
+        public Builder routingPreference(@Nullable RoutingPreferenceResponse routingPreference) {
             this.routingPreference = routingPreference;
             return this;
         }
 
-        public Builder setSasPolicy(SasPolicyResponse sasPolicy) {
+        public Builder sasPolicy(SasPolicyResponse sasPolicy) {
             this.sasPolicy = Objects.requireNonNull(sasPolicy);
             return this;
         }
 
-        public Builder setSecondaryEndpoints(EndpointsResponse secondaryEndpoints) {
+        public Builder secondaryEndpoints(EndpointsResponse secondaryEndpoints) {
             this.secondaryEndpoints = Objects.requireNonNull(secondaryEndpoints);
             return this;
         }
 
-        public Builder setSecondaryLocation(String secondaryLocation) {
+        public Builder secondaryLocation(String secondaryLocation) {
             this.secondaryLocation = Objects.requireNonNull(secondaryLocation);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setStatusOfPrimary(String statusOfPrimary) {
+        public Builder statusOfPrimary(String statusOfPrimary) {
             this.statusOfPrimary = Objects.requireNonNull(statusOfPrimary);
             return this;
         }
 
-        public Builder setStatusOfSecondary(String statusOfSecondary) {
+        public Builder statusOfSecondary(String statusOfSecondary) {
             this.statusOfSecondary = Objects.requireNonNull(statusOfSecondary);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

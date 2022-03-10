@@ -50,7 +50,7 @@ public final class HttpProxyConfigurationResponse {
     	      this.httpsProxy = defaults.httpsProxy;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }

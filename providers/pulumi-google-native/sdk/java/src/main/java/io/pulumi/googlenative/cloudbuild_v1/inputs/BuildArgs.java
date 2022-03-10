@@ -258,132 +258,132 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setArtifacts(@Nullable Input<ArtifactsArgs> artifacts) {
+        public Builder artifacts(@Nullable Input<ArtifactsArgs> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setArtifacts(@Nullable ArtifactsArgs artifacts) {
+        public Builder artifacts(@Nullable ArtifactsArgs artifacts) {
             this.artifacts = Input.ofNullable(artifacts);
             return this;
         }
 
-        public Builder setAvailableSecrets(@Nullable Input<SecretsArgs> availableSecrets) {
+        public Builder availableSecrets(@Nullable Input<SecretsArgs> availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
 
-        public Builder setAvailableSecrets(@Nullable SecretsArgs availableSecrets) {
+        public Builder availableSecrets(@Nullable SecretsArgs availableSecrets) {
             this.availableSecrets = Input.ofNullable(availableSecrets);
             return this;
         }
 
-        public Builder setImages(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Input<List<String>> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setImages(@Nullable List<String> images) {
+        public Builder images(@Nullable List<String> images) {
             this.images = Input.ofNullable(images);
             return this;
         }
 
-        public Builder setLogsBucket(@Nullable Input<String> logsBucket) {
+        public Builder logsBucket(@Nullable Input<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
 
-        public Builder setLogsBucket(@Nullable String logsBucket) {
+        public Builder logsBucket(@Nullable String logsBucket) {
             this.logsBucket = Input.ofNullable(logsBucket);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<BuildOptionsArgs> options) {
+        public Builder options(@Nullable Input<BuildOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable BuildOptionsArgs options) {
+        public Builder options(@Nullable BuildOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setQueueTtl(@Nullable Input<String> queueTtl) {
+        public Builder queueTtl(@Nullable Input<String> queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
 
-        public Builder setQueueTtl(@Nullable String queueTtl) {
+        public Builder queueTtl(@Nullable String queueTtl) {
             this.queueTtl = Input.ofNullable(queueTtl);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<SecretArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<SecretArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<SecretArgs> secrets) {
+        public Builder secrets(@Nullable List<SecretArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<SourceArgs> source) {
+        public Builder source(@Nullable Input<SourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable SourceArgs source) {
+        public Builder source(@Nullable SourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSteps(Input<List<BuildStepArgs>> steps) {
+        public Builder steps(Input<List<BuildStepArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setSteps(List<BuildStepArgs> steps) {
+        public Builder steps(List<BuildStepArgs> steps) {
             this.steps = Input.of(Objects.requireNonNull(steps));
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Map<String,String> substitutions) {
+        public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Input.ofNullable(substitutions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

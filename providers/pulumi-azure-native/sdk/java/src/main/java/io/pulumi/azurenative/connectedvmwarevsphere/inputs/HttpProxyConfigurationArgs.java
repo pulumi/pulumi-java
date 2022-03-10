@@ -57,12 +57,12 @@ public final class HttpProxyConfigurationArgs extends io.pulumi.resources.Resour
     	      this.httpsProxy = defaults.httpsProxy;
         }
 
-        public Builder setHttpsProxy(@Nullable Input<String> httpsProxy) {
+        public Builder httpsProxy(@Nullable Input<String> httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = Input.ofNullable(httpsProxy);
             return this;
         }

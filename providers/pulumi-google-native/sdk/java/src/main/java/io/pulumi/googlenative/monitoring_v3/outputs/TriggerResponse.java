@@ -66,12 +66,12 @@ public final class TriggerResponse {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setPercent(Double percent) {
+        public Builder percent(Double percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }

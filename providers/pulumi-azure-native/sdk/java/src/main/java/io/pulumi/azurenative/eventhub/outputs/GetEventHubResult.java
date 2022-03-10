@@ -198,52 +198,52 @@ public final class GetEventHubResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCaptureDescription(@Nullable CaptureDescriptionResponse captureDescription) {
+        public Builder captureDescription(@Nullable CaptureDescriptionResponse captureDescription) {
             this.captureDescription = captureDescription;
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMessageRetentionInDays(@Nullable Double messageRetentionInDays) {
+        public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
             this.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Double partitionCount) {
+        public Builder partitionCount(@Nullable Double partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
-        public Builder setPartitionIds(List<String> partitionIds) {
+        public Builder partitionIds(List<String> partitionIds) {
             this.partitionIds = Objects.requireNonNull(partitionIds);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

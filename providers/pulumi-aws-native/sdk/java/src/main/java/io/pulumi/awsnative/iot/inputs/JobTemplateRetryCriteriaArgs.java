@@ -67,22 +67,22 @@ public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.Reso
     	      this.numberOfRetries = defaults.numberOfRetries;
         }
 
-        public Builder setFailureType(@Nullable Input<JobTemplateJobRetryFailureType> failureType) {
+        public Builder failureType(@Nullable Input<JobTemplateJobRetryFailureType> failureType) {
             this.failureType = failureType;
             return this;
         }
 
-        public Builder setFailureType(@Nullable JobTemplateJobRetryFailureType failureType) {
+        public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
             this.failureType = Input.ofNullable(failureType);
             return this;
         }
 
-        public Builder setNumberOfRetries(@Nullable Input<Integer> numberOfRetries) {
+        public Builder numberOfRetries(@Nullable Input<Integer> numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
         }
 
-        public Builder setNumberOfRetries(@Nullable Integer numberOfRetries) {
+        public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
             this.numberOfRetries = Input.ofNullable(numberOfRetries);
             return this;
         }

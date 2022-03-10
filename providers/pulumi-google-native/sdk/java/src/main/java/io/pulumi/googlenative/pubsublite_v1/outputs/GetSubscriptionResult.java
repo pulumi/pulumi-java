@@ -82,17 +82,17 @@ public final class GetSubscriptionResult {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setDeliveryConfig(DeliveryConfigResponse deliveryConfig) {
+        public Builder deliveryConfig(DeliveryConfigResponse deliveryConfig) {
             this.deliveryConfig = Objects.requireNonNull(deliveryConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

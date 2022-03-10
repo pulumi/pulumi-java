@@ -83,17 +83,17 @@ public final class TypeResponse {
     	      this.primitive = defaults.primitive;
         }
 
-        public Builder setFields(List<FieldResponse> fields) {
+        public Builder fields(List<FieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimitive(String primitive) {
+        public Builder primitive(String primitive) {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
         }

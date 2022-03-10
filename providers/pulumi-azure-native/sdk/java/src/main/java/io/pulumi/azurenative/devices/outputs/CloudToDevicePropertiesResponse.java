@@ -85,17 +85,17 @@ public final class CloudToDevicePropertiesResponse {
     	      this.maxDeliveryCount = defaults.maxDeliveryCount;
         }
 
-        public Builder setDefaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
+        public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
             this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
 
-        public Builder setFeedback(@Nullable FeedbackPropertiesResponse feedback) {
+        public Builder feedback(@Nullable FeedbackPropertiesResponse feedback) {
             this.feedback = feedback;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }

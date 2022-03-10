@@ -251,132 +251,132 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuths(@Nullable Input<List<ProxyAuthGetArgs>> auths) {
+        public Builder auths(@Nullable Input<List<ProxyAuthGetArgs>> auths) {
             this.auths = auths;
             return this;
         }
 
-        public Builder setAuths(@Nullable List<ProxyAuthGetArgs> auths) {
+        public Builder auths(@Nullable List<ProxyAuthGetArgs> auths) {
             this.auths = Input.ofNullable(auths);
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Input<Boolean> debugLogging) {
+        public Builder debugLogging(@Nullable Input<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Boolean debugLogging) {
+        public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = Input.ofNullable(debugLogging);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEngineFamily(@Nullable Input<String> engineFamily) {
+        public Builder engineFamily(@Nullable Input<String> engineFamily) {
             this.engineFamily = engineFamily;
             return this;
         }
 
-        public Builder setEngineFamily(@Nullable String engineFamily) {
+        public Builder engineFamily(@Nullable String engineFamily) {
             this.engineFamily = Input.ofNullable(engineFamily);
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Integer idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = Input.ofNullable(idleClientTimeout);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Input<Boolean> requireTls) {
+        public Builder requireTls(@Nullable Input<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Boolean requireTls) {
+        public Builder requireTls(@Nullable Boolean requireTls) {
             this.requireTls = Input.ofNullable(requireTls);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(@Nullable Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(@Nullable Input<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
 
-        public Builder setVpcSubnetIds(@Nullable List<String> vpcSubnetIds) {
+        public Builder vpcSubnetIds(@Nullable List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Input.ofNullable(vpcSubnetIds);
             return this;
         }

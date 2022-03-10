@@ -66,22 +66,22 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Input<String> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Input<String> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable String weightedCapacity) {
+        public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }

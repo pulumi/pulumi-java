@@ -311,87 +311,87 @@ public final class GetScheduleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdvancedSchedule(@Nullable AdvancedScheduleResponse advancedSchedule) {
+        public Builder advancedSchedule(@Nullable AdvancedScheduleResponse advancedSchedule) {
             this.advancedSchedule = advancedSchedule;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
-        public Builder setExpiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
+        public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
             this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInterval(@Nullable Object interval) {
+        public Builder interval(@Nullable Object interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextRun(@Nullable String nextRun) {
+        public Builder nextRun(@Nullable String nextRun) {
             this.nextRun = nextRun;
             return this;
         }
 
-        public Builder setNextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
+        public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
             this.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTimeOffsetMinutes(Double startTimeOffsetMinutes) {
+        public Builder startTimeOffsetMinutes(Double startTimeOffsetMinutes) {
             this.startTimeOffsetMinutes = Objects.requireNonNull(startTimeOffsetMinutes);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

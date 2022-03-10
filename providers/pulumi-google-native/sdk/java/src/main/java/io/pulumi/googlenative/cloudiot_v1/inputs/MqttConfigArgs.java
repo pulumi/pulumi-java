@@ -57,12 +57,12 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mqttEnabledState = defaults.mqttEnabledState;
         }
 
-        public Builder setMqttEnabledState(@Nullable Input<MqttConfigMqttEnabledState> mqttEnabledState) {
+        public Builder mqttEnabledState(@Nullable Input<MqttConfigMqttEnabledState> mqttEnabledState) {
             this.mqttEnabledState = mqttEnabledState;
             return this;
         }
 
-        public Builder setMqttEnabledState(@Nullable MqttConfigMqttEnabledState mqttEnabledState) {
+        public Builder mqttEnabledState(@Nullable MqttConfigMqttEnabledState mqttEnabledState) {
             this.mqttEnabledState = Input.ofNullable(mqttEnabledState);
             return this;
         }

@@ -119,52 +119,52 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setAllowSsh(@Nullable Input<Boolean> allowSsh) {
+        public Builder allowSsh(@Nullable Input<Boolean> allowSsh) {
             this.allowSsh = allowSsh;
             return this;
         }
 
-        public Builder setAllowSsh(@Nullable Boolean allowSsh) {
+        public Builder allowSsh(@Nullable Boolean allowSsh) {
             this.allowSsh = Input.ofNullable(allowSsh);
             return this;
         }
 
-        public Builder setAllowSudo(@Nullable Input<Boolean> allowSudo) {
+        public Builder allowSudo(@Nullable Input<Boolean> allowSudo) {
             this.allowSudo = allowSudo;
             return this;
         }
 
-        public Builder setAllowSudo(@Nullable Boolean allowSudo) {
+        public Builder allowSudo(@Nullable Boolean allowSudo) {
             this.allowSudo = Input.ofNullable(allowSudo);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<String> level) {
+        public Builder level(@Nullable Input<String> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setStackId(@Nullable Input<String> stackId) {
+        public Builder stackId(@Nullable Input<String> stackId) {
             this.stackId = stackId;
             return this;
         }
 
-        public Builder setStackId(@Nullable String stackId) {
+        public Builder stackId(@Nullable String stackId) {
             this.stackId = Input.ofNullable(stackId);
             return this;
         }
 
-        public Builder setUserArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Input<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
-        public Builder setUserArn(@Nullable String userArn) {
+        public Builder userArn(@Nullable String userArn) {
             this.userArn = Input.ofNullable(userArn);
             return this;
         }

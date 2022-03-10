@@ -312,172 +312,172 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDefaultVersionId(@Nullable Input<String> defaultVersionId) {
+        public Builder defaultVersionId(@Nullable Input<String> defaultVersionId) {
             this.defaultVersionId = defaultVersionId;
             return this;
         }
 
-        public Builder setDefaultVersionId(@Nullable String defaultVersionId) {
+        public Builder defaultVersionId(@Nullable String defaultVersionId) {
             this.defaultVersionId = Input.ofNullable(defaultVersionId);
             return this;
         }
 
-        public Builder setDeprecatedStatus(@Nullable Input<String> deprecatedStatus) {
+        public Builder deprecatedStatus(@Nullable Input<String> deprecatedStatus) {
             this.deprecatedStatus = deprecatedStatus;
             return this;
         }
 
-        public Builder setDeprecatedStatus(@Nullable String deprecatedStatus) {
+        public Builder deprecatedStatus(@Nullable String deprecatedStatus) {
             this.deprecatedStatus = Input.ofNullable(deprecatedStatus);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationUrl(@Nullable Input<String> documentationUrl) {
+        public Builder documentationUrl(@Nullable Input<String> documentationUrl) {
             this.documentationUrl = documentationUrl;
             return this;
         }
 
-        public Builder setDocumentationUrl(@Nullable String documentationUrl) {
+        public Builder documentationUrl(@Nullable String documentationUrl) {
             this.documentationUrl = Input.ofNullable(documentationUrl);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setIsDefaultVersion(@Nullable Input<Boolean> isDefaultVersion) {
+        public Builder isDefaultVersion(@Nullable Input<Boolean> isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
 
-        public Builder setIsDefaultVersion(@Nullable Boolean isDefaultVersion) {
+        public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = Input.ofNullable(isDefaultVersion);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setProvisioningType(@Nullable Input<String> provisioningType) {
+        public Builder provisioningType(@Nullable Input<String> provisioningType) {
             this.provisioningType = provisioningType;
             return this;
         }
 
-        public Builder setProvisioningType(@Nullable String provisioningType) {
+        public Builder provisioningType(@Nullable String provisioningType) {
             this.provisioningType = Input.ofNullable(provisioningType);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSchemaHandlerPackage(@Nullable Input<String> schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(@Nullable Input<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
 
-        public Builder setSchemaHandlerPackage(@Nullable String schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(@Nullable String schemaHandlerPackage) {
             this.schemaHandlerPackage = Input.ofNullable(schemaHandlerPackage);
             return this;
         }
 
-        public Builder setSourceUrl(@Nullable Input<String> sourceUrl) {
+        public Builder sourceUrl(@Nullable Input<String> sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
 
-        public Builder setSourceUrl(@Nullable String sourceUrl) {
+        public Builder sourceUrl(@Nullable String sourceUrl) {
             this.sourceUrl = Input.ofNullable(sourceUrl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeArn(@Nullable Input<String> typeArn) {
+        public Builder typeArn(@Nullable Input<String> typeArn) {
             this.typeArn = typeArn;
             return this;
         }
 
-        public Builder setTypeArn(@Nullable String typeArn) {
+        public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = Input.ofNullable(typeArn);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Input<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

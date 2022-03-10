@@ -331,182 +331,182 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAuditDestinationArn(@Nullable Input<String> auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable Input<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable String auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Input.ofNullable(auditDestinationArn);
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable Input<NfsFileShareCacheAttributesArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Input<NfsFileShareCacheAttributesArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable NfsFileShareCacheAttributesArgs cacheAttributes) {
+        public Builder cacheAttributes(@Nullable NfsFileShareCacheAttributesArgs cacheAttributes) {
             this.cacheAttributes = Input.ofNullable(cacheAttributes);
             return this;
         }
 
-        public Builder setClientLists(Input<List<String>> clientLists) {
+        public Builder clientLists(Input<List<String>> clientLists) {
             this.clientLists = Objects.requireNonNull(clientLists);
             return this;
         }
 
-        public Builder setClientLists(List<String> clientLists) {
+        public Builder clientLists(List<String> clientLists) {
             this.clientLists = Input.of(Objects.requireNonNull(clientLists));
             return this;
         }
 
-        public Builder setDefaultStorageClass(@Nullable Input<String> defaultStorageClass) {
+        public Builder defaultStorageClass(@Nullable Input<String> defaultStorageClass) {
             this.defaultStorageClass = defaultStorageClass;
             return this;
         }
 
-        public Builder setDefaultStorageClass(@Nullable String defaultStorageClass) {
+        public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
             this.defaultStorageClass = Input.ofNullable(defaultStorageClass);
             return this;
         }
 
-        public Builder setFileShareName(@Nullable Input<String> fileShareName) {
+        public Builder fileShareName(@Nullable Input<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
 
-        public Builder setFileShareName(@Nullable String fileShareName) {
+        public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = Input.ofNullable(fileShareName);
             return this;
         }
 
-        public Builder setGatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Input<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
 
-        public Builder setGuessMimeTypeEnabled(@Nullable Input<Boolean> guessMimeTypeEnabled) {
+        public Builder guessMimeTypeEnabled(@Nullable Input<Boolean> guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
 
-        public Builder setGuessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
+        public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = Input.ofNullable(guessMimeTypeEnabled);
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Boolean kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setLocationArn(Input<String> locationArn) {
+        public Builder locationArn(Input<String> locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
 
-        public Builder setLocationArn(String locationArn) {
+        public Builder locationArn(String locationArn) {
             this.locationArn = Input.of(Objects.requireNonNull(locationArn));
             return this;
         }
 
-        public Builder setNfsFileShareDefaults(@Nullable Input<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults) {
+        public Builder nfsFileShareDefaults(@Nullable Input<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults) {
             this.nfsFileShareDefaults = nfsFileShareDefaults;
             return this;
         }
 
-        public Builder setNfsFileShareDefaults(@Nullable NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
+        public Builder nfsFileShareDefaults(@Nullable NfsFileShareNfsFileShareDefaultsArgs nfsFileShareDefaults) {
             this.nfsFileShareDefaults = Input.ofNullable(nfsFileShareDefaults);
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable Input<String> notificationPolicy) {
+        public Builder notificationPolicy(@Nullable Input<String> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable String notificationPolicy) {
+        public Builder notificationPolicy(@Nullable String notificationPolicy) {
             this.notificationPolicy = Input.ofNullable(notificationPolicy);
             return this;
         }
 
-        public Builder setObjectAcl(@Nullable Input<String> objectAcl) {
+        public Builder objectAcl(@Nullable Input<String> objectAcl) {
             this.objectAcl = objectAcl;
             return this;
         }
 
-        public Builder setObjectAcl(@Nullable String objectAcl) {
+        public Builder objectAcl(@Nullable String objectAcl) {
             this.objectAcl = Input.ofNullable(objectAcl);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Boolean requesterPays) {
+        public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSquash(@Nullable Input<String> squash) {
+        public Builder squash(@Nullable Input<String> squash) {
             this.squash = squash;
             return this;
         }
 
-        public Builder setSquash(@Nullable String squash) {
+        public Builder squash(@Nullable String squash) {
             this.squash = Input.ofNullable(squash);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

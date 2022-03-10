@@ -66,22 +66,22 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setPolicyQualifierId(Input<String> policyQualifierId) {
+        public Builder policyQualifierId(Input<String> policyQualifierId) {
             this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
             return this;
         }
 
-        public Builder setPolicyQualifierId(String policyQualifierId) {
+        public Builder policyQualifierId(String policyQualifierId) {
             this.policyQualifierId = Input.of(Objects.requireNonNull(policyQualifierId));
             return this;
         }
 
-        public Builder setQualifier(Input<CertificateQualifierArgs> qualifier) {
+        public Builder qualifier(Input<CertificateQualifierArgs> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
-        public Builder setQualifier(CertificateQualifierArgs qualifier) {
+        public Builder qualifier(CertificateQualifierArgs qualifier) {
             this.qualifier = Input.of(Objects.requireNonNull(qualifier));
             return this;
         }

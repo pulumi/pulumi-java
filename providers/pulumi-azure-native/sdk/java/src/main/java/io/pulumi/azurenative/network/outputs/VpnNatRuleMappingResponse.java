@@ -50,7 +50,7 @@ public final class VpnNatRuleMappingResponse {
     	      this.addressSpace = defaults.addressSpace;
         }
 
-        public Builder setAddressSpace(@Nullable String addressSpace) {
+        public Builder addressSpace(@Nullable String addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }

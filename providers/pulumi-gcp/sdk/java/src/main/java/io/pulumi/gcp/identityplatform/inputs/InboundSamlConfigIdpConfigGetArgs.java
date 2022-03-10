@@ -106,42 +106,42 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
     	      this.ssoUrl = defaults.ssoUrl;
         }
 
-        public Builder setIdpCertificates(Input<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates) {
+        public Builder idpCertificates(Input<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates) {
             this.idpCertificates = Objects.requireNonNull(idpCertificates);
             return this;
         }
 
-        public Builder setIdpCertificates(List<InboundSamlConfigIdpConfigIdpCertificateGetArgs> idpCertificates) {
+        public Builder idpCertificates(List<InboundSamlConfigIdpConfigIdpCertificateGetArgs> idpCertificates) {
             this.idpCertificates = Input.of(Objects.requireNonNull(idpCertificates));
             return this;
         }
 
-        public Builder setIdpEntityId(Input<String> idpEntityId) {
+        public Builder idpEntityId(Input<String> idpEntityId) {
             this.idpEntityId = Objects.requireNonNull(idpEntityId);
             return this;
         }
 
-        public Builder setIdpEntityId(String idpEntityId) {
+        public Builder idpEntityId(String idpEntityId) {
             this.idpEntityId = Input.of(Objects.requireNonNull(idpEntityId));
             return this;
         }
 
-        public Builder setSignRequest(@Nullable Input<Boolean> signRequest) {
+        public Builder signRequest(@Nullable Input<Boolean> signRequest) {
             this.signRequest = signRequest;
             return this;
         }
 
-        public Builder setSignRequest(@Nullable Boolean signRequest) {
+        public Builder signRequest(@Nullable Boolean signRequest) {
             this.signRequest = Input.ofNullable(signRequest);
             return this;
         }
 
-        public Builder setSsoUrl(Input<String> ssoUrl) {
+        public Builder ssoUrl(Input<String> ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
 
-        public Builder setSsoUrl(String ssoUrl) {
+        public Builder ssoUrl(String ssoUrl) {
             this.ssoUrl = Input.of(Objects.requireNonNull(ssoUrl));
             return this;
         }

@@ -266,72 +266,72 @@ public final class GetLabPlanResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedRegions(@Nullable List<String> allowedRegions) {
+        public Builder allowedRegions(@Nullable List<String> allowedRegions) {
             this.allowedRegions = allowedRegions;
             return this;
         }
 
-        public Builder setDefaultAutoShutdownProfile(@Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile) {
+        public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile) {
             this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
 
-        public Builder setDefaultConnectionProfile(@Nullable ConnectionProfileResponse defaultConnectionProfile) {
+        public Builder defaultConnectionProfile(@Nullable ConnectionProfileResponse defaultConnectionProfile) {
             this.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
 
-        public Builder setDefaultNetworkProfile(@Nullable LabPlanNetworkProfileResponse defaultNetworkProfile) {
+        public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileResponse defaultNetworkProfile) {
             this.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedLmsInstance(@Nullable String linkedLmsInstance) {
+        public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
             this.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSharedGalleryId(@Nullable String sharedGalleryId) {
+        public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
             this.sharedGalleryId = sharedGalleryId;
             return this;
         }
 
-        public Builder setSupportInfo(@Nullable SupportInfoResponse supportInfo) {
+        public Builder supportInfo(@Nullable SupportInfoResponse supportInfo) {
             this.supportInfo = supportInfo;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

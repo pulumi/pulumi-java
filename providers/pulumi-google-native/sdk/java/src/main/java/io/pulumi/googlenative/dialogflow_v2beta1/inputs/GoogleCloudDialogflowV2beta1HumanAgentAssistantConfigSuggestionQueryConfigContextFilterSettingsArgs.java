@@ -90,32 +90,32 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.dropVirtualAgentMessages = defaults.dropVirtualAgentMessages;
         }
 
-        public Builder setDropHandoffMessages(@Nullable Input<Boolean> dropHandoffMessages) {
+        public Builder dropHandoffMessages(@Nullable Input<Boolean> dropHandoffMessages) {
             this.dropHandoffMessages = dropHandoffMessages;
             return this;
         }
 
-        public Builder setDropHandoffMessages(@Nullable Boolean dropHandoffMessages) {
+        public Builder dropHandoffMessages(@Nullable Boolean dropHandoffMessages) {
             this.dropHandoffMessages = Input.ofNullable(dropHandoffMessages);
             return this;
         }
 
-        public Builder setDropIvrMessages(@Nullable Input<Boolean> dropIvrMessages) {
+        public Builder dropIvrMessages(@Nullable Input<Boolean> dropIvrMessages) {
             this.dropIvrMessages = dropIvrMessages;
             return this;
         }
 
-        public Builder setDropIvrMessages(@Nullable Boolean dropIvrMessages) {
+        public Builder dropIvrMessages(@Nullable Boolean dropIvrMessages) {
             this.dropIvrMessages = Input.ofNullable(dropIvrMessages);
             return this;
         }
 
-        public Builder setDropVirtualAgentMessages(@Nullable Input<Boolean> dropVirtualAgentMessages) {
+        public Builder dropVirtualAgentMessages(@Nullable Input<Boolean> dropVirtualAgentMessages) {
             this.dropVirtualAgentMessages = dropVirtualAgentMessages;
             return this;
         }
 
-        public Builder setDropVirtualAgentMessages(@Nullable Boolean dropVirtualAgentMessages) {
+        public Builder dropVirtualAgentMessages(@Nullable Boolean dropVirtualAgentMessages) {
             this.dropVirtualAgentMessages = Input.ofNullable(dropVirtualAgentMessages);
             return this;
         }

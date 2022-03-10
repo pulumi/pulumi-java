@@ -316,162 +316,162 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
     	      this.xrayTracingEnabled = defaults.xrayTracingEnabled;
         }
 
-        public Builder setAccessLogSettings(@Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsGetArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
-        public Builder setAccessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
+        public Builder accessLogSettings(@Nullable StageAccessLogSettingsGetArgs accessLogSettings) {
             this.accessLogSettings = Input.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDeployment(@Nullable Input<String> deployment) {
+        public Builder deployment(@Nullable Input<String> deployment) {
             this.deployment = deployment;
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Input.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Input<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
-        public Builder setExecutionArn(@Nullable String executionArn) {
+        public Builder executionArn(@Nullable String executionArn) {
             this.executionArn = Input.ofNullable(executionArn);
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable Input<String> invokeUrl) {
+        public Builder invokeUrl(@Nullable Input<String> invokeUrl) {
             this.invokeUrl = invokeUrl;
             return this;
         }
 
-        public Builder setInvokeUrl(@Nullable String invokeUrl) {
+        public Builder invokeUrl(@Nullable String invokeUrl) {
             this.invokeUrl = Input.ofNullable(invokeUrl);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Input<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Map<String,String> variables) {
+        public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }
 
-        public Builder setWebAclArn(@Nullable Input<String> webAclArn) {
+        public Builder webAclArn(@Nullable Input<String> webAclArn) {
             this.webAclArn = webAclArn;
             return this;
         }
 
-        public Builder setWebAclArn(@Nullable String webAclArn) {
+        public Builder webAclArn(@Nullable String webAclArn) {
             this.webAclArn = Input.ofNullable(webAclArn);
             return this;
         }
 
-        public Builder setXrayTracingEnabled(@Nullable Input<Boolean> xrayTracingEnabled) {
+        public Builder xrayTracingEnabled(@Nullable Input<Boolean> xrayTracingEnabled) {
             this.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
 
-        public Builder setXrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
+        public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
             this.xrayTracingEnabled = Input.ofNullable(xrayTracingEnabled);
             return this;
         }

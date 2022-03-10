@@ -58,12 +58,12 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
     	      this.inboundNatRules = defaults.inboundNatRules;
         }
 
-        public Builder setInboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
 
-        public Builder setInboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
             this.inboundNatRules = Input.ofNullable(inboundNatRules);
             return this;
         }

@@ -156,42 +156,42 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplication(@Nullable BucketDeleteMarkerReplication deleteMarkerReplication) {
+        public Builder deleteMarkerReplication(@Nullable BucketDeleteMarkerReplication deleteMarkerReplication) {
             this.deleteMarkerReplication = deleteMarkerReplication;
             return this;
         }
 
-        public Builder setDestination(BucketReplicationDestination destination) {
+        public Builder destination(BucketReplicationDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationRuleFilter filter) {
+        public Builder filter(@Nullable BucketReplicationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketSourceSelectionCriteria sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setStatus(BucketReplicationRuleStatus status) {
+        public Builder status(BucketReplicationRuleStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

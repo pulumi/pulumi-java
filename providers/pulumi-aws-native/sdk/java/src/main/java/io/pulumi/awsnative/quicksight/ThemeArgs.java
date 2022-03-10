@@ -166,82 +166,82 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setAwsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Input<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder setBaseThemeId(@Nullable Input<String> baseThemeId) {
+        public Builder baseThemeId(@Nullable Input<String> baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
 
-        public Builder setBaseThemeId(@Nullable String baseThemeId) {
+        public Builder baseThemeId(@Nullable String baseThemeId) {
             this.baseThemeId = Input.ofNullable(baseThemeId);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<ThemeConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<ThemeConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ThemeConfigurationArgs configuration) {
+        public Builder configuration(@Nullable ThemeConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<ThemeResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<ThemeResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ThemeTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ThemeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ThemeTagArgs> tags) {
+        public Builder tags(@Nullable List<ThemeTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThemeId(Input<String> themeId) {
+        public Builder themeId(Input<String> themeId) {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
         }
 
-        public Builder setThemeId(String themeId) {
+        public Builder themeId(String themeId) {
             this.themeId = Input.of(Objects.requireNonNull(themeId));
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Input<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable String versionDescription) {
+        public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Input.ofNullable(versionDescription);
             return this;
         }

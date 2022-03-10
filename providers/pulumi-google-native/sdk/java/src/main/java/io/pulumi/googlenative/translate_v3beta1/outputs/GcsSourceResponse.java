@@ -48,7 +48,7 @@ public final class GcsSourceResponse {
     	      this.inputUri = defaults.inputUri;
         }
 
-        public Builder setInputUri(String inputUri) {
+        public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }

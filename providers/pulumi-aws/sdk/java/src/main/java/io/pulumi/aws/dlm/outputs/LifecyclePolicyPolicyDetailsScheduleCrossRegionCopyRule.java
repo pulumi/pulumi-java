@@ -134,32 +134,32 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
     	      this.target = defaults.target;
         }
 
-        public Builder setCmkArn(@Nullable String cmkArn) {
+        public Builder cmkArn(@Nullable String cmkArn) {
             this.cmkArn = cmkArn;
             return this;
         }
 
-        public Builder setCopyTags(@Nullable Boolean copyTags) {
+        public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
-        public Builder setDeprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule) {
+        public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule) {
             this.deprecateRule = deprecateRule;
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setRetainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule) {
+        public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule) {
             this.retainRule = retainRule;
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

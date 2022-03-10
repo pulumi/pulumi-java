@@ -69,12 +69,12 @@ public final class ListMonitorVMHostsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<VMResourcesResponse> value) {
+        public Builder value(@Nullable List<VMResourcesResponse> value) {
             this.value = value;
             return this;
         }

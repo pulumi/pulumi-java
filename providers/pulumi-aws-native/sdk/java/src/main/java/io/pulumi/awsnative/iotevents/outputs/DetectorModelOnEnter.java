@@ -50,7 +50,7 @@ public final class DetectorModelOnEnter {
     	      this.events = defaults.events;
         }
 
-        public Builder setEvents(@Nullable List<DetectorModelEvent> events) {
+        public Builder events(@Nullable List<DetectorModelEvent> events) {
             this.events = events;
             return this;
         }

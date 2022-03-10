@@ -65,12 +65,12 @@ public final class TemplateDataSetReference {
     	      this.dataSetPlaceholder = defaults.dataSetPlaceholder;
         }
 
-        public Builder setDataSetArn(String dataSetArn) {
+        public Builder dataSetArn(String dataSetArn) {
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
 
-        public Builder setDataSetPlaceholder(String dataSetPlaceholder) {
+        public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }

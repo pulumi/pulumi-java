@@ -73,22 +73,22 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayArgs extends
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay) {
+        public Builder fixedDelay(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs> fixedDelay) {
             this.fixedDelay = fixedDelay;
             return this;
         }
 
-        public Builder setFixedDelay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
+        public Builder fixedDelay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs fixedDelay) {
             this.fixedDelay = Input.ofNullable(fixedDelay);
             return this;
         }
 
-        public Builder setPercentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Input<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = Input.ofNullable(percentage);
             return this;
         }

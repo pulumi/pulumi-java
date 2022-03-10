@@ -65,12 +65,12 @@ public final class GetGroupFilter {
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder setAttributePath(String attributePath) {
+        public Builder attributePath(String attributePath) {
             this.attributePath = Objects.requireNonNull(attributePath);
             return this;
         }
 
-        public Builder setAttributeValue(String attributeValue) {
+        public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }

@@ -132,32 +132,32 @@ public final class GroupConnectivityInformationResponse {
     	      this.redirectMapId = defaults.redirectMapId;
         }
 
-        public Builder setCustomerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
+        public Builder customerVisibleFqdns(@Nullable List<String> customerVisibleFqdns) {
             this.customerVisibleFqdns = customerVisibleFqdns;
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setInternalFqdn(String internalFqdn) {
+        public Builder internalFqdn(String internalFqdn) {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
         }
 
-        public Builder setMemberName(String memberName) {
+        public Builder memberName(String memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
+        public Builder privateLinkServiceArmRegion(@Nullable String privateLinkServiceArmRegion) {
             this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
             return this;
         }
 
-        public Builder setRedirectMapId(@Nullable String redirectMapId) {
+        public Builder redirectMapId(@Nullable String redirectMapId) {
             this.redirectMapId = redirectMapId;
             return this;
         }

@@ -57,12 +57,12 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder setResourceLink(@Nullable Input<String> resourceLink) {
+        public Builder resourceLink(@Nullable Input<String> resourceLink) {
             this.resourceLink = resourceLink;
             return this;
         }
 
-        public Builder setResourceLink(@Nullable String resourceLink) {
+        public Builder resourceLink(@Nullable String resourceLink) {
             this.resourceLink = Input.ofNullable(resourceLink);
             return this;
         }

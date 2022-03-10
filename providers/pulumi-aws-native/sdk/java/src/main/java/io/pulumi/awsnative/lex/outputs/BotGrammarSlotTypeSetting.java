@@ -42,7 +42,7 @@ public final class BotGrammarSlotTypeSetting {
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(@Nullable BotGrammarSlotTypeSource source) {
+        public Builder source(@Nullable BotGrammarSlotTypeSource source) {
             this.source = source;
             return this;
         }

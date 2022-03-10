@@ -99,22 +99,22 @@ public final class ConfigMapKeySelectorResponse {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLocalObjectReference(LocalObjectReferenceResponse localObjectReference) {
+        public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

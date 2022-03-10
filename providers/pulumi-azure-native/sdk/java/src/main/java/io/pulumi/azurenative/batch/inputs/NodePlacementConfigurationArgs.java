@@ -57,12 +57,12 @@ public final class NodePlacementConfigurationArgs extends io.pulumi.resources.Re
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(@Nullable Input<NodePlacementPolicyType> policy) {
+        public Builder policy(@Nullable Input<NodePlacementPolicyType> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable NodePlacementPolicyType policy) {
+        public Builder policy(@Nullable NodePlacementPolicyType policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

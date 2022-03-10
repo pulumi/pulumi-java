@@ -107,22 +107,22 @@ public final class LogMetricTriggerResponse extends io.pulumi.resources.InvokeAr
     	      this.thresholdOperator = defaults.thresholdOperator;
         }
 
-        public Builder setMetricColumn(@Nullable String metricColumn) {
+        public Builder metricColumn(@Nullable String metricColumn) {
             this.metricColumn = metricColumn;
             return this;
         }
 
-        public Builder setMetricTriggerType(@Nullable String metricTriggerType) {
+        public Builder metricTriggerType(@Nullable String metricTriggerType) {
             this.metricTriggerType = metricTriggerType;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThresholdOperator(@Nullable String thresholdOperator) {
+        public Builder thresholdOperator(@Nullable String thresholdOperator) {
             this.thresholdOperator = thresholdOperator;
             return this;
         }

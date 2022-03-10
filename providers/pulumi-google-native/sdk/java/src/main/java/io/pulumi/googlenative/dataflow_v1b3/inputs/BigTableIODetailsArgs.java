@@ -90,32 +90,32 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTableId(@Nullable Input<String> tableId) {
+        public Builder tableId(@Nullable Input<String> tableId) {
             this.tableId = tableId;
             return this;
         }
 
-        public Builder setTableId(@Nullable String tableId) {
+        public Builder tableId(@Nullable String tableId) {
             this.tableId = Input.ofNullable(tableId);
             return this;
         }

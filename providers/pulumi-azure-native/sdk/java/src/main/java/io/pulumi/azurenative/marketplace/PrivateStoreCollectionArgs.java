@@ -152,72 +152,72 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     	      this.subscriptionsList = defaults.subscriptionsList;
         }
 
-        public Builder setAllSubscriptions(@Nullable Input<Boolean> allSubscriptions) {
+        public Builder allSubscriptions(@Nullable Input<Boolean> allSubscriptions) {
             this.allSubscriptions = allSubscriptions;
             return this;
         }
 
-        public Builder setAllSubscriptions(@Nullable Boolean allSubscriptions) {
+        public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
             this.allSubscriptions = Input.ofNullable(allSubscriptions);
             return this;
         }
 
-        public Builder setClaim(@Nullable Input<String> claim) {
+        public Builder claim(@Nullable Input<String> claim) {
             this.claim = claim;
             return this;
         }
 
-        public Builder setClaim(@Nullable String claim) {
+        public Builder claim(@Nullable String claim) {
             this.claim = Input.ofNullable(claim);
             return this;
         }
 
-        public Builder setCollectionId(@Nullable Input<String> collectionId) {
+        public Builder collectionId(@Nullable Input<String> collectionId) {
             this.collectionId = collectionId;
             return this;
         }
 
-        public Builder setCollectionId(@Nullable String collectionId) {
+        public Builder collectionId(@Nullable String collectionId) {
             this.collectionId = Input.ofNullable(collectionId);
             return this;
         }
 
-        public Builder setCollectionName(@Nullable Input<String> collectionName) {
+        public Builder collectionName(@Nullable Input<String> collectionName) {
             this.collectionName = collectionName;
             return this;
         }
 
-        public Builder setCollectionName(@Nullable String collectionName) {
+        public Builder collectionName(@Nullable String collectionName) {
             this.collectionName = Input.ofNullable(collectionName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setPrivateStoreId(Input<String> privateStoreId) {
+        public Builder privateStoreId(Input<String> privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
 
-        public Builder setPrivateStoreId(String privateStoreId) {
+        public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Input.of(Objects.requireNonNull(privateStoreId));
             return this;
         }
 
-        public Builder setSubscriptionsList(@Nullable Input<List<String>> subscriptionsList) {
+        public Builder subscriptionsList(@Nullable Input<List<String>> subscriptionsList) {
             this.subscriptionsList = subscriptionsList;
             return this;
         }
 
-        public Builder setSubscriptionsList(@Nullable List<String> subscriptionsList) {
+        public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
             this.subscriptionsList = Input.ofNullable(subscriptionsList);
             return this;
         }

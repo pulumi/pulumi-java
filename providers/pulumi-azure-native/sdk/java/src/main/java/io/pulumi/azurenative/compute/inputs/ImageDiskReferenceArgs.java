@@ -75,22 +75,22 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     	      this.lun = defaults.lun;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLun(@Nullable Input<Integer> lun) {
+        public Builder lun(@Nullable Input<Integer> lun) {
             this.lun = lun;
             return this;
         }
 
-        public Builder setLun(@Nullable Integer lun) {
+        public Builder lun(@Nullable Integer lun) {
             this.lun = Input.ofNullable(lun);
             return this;
         }

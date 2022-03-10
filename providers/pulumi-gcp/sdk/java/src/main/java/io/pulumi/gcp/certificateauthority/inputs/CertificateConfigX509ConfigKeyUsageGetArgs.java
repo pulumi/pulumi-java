@@ -92,32 +92,32 @@ public final class CertificateConfigX509ConfigKeyUsageGetArgs extends io.pulumi.
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsage(Input<CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
+        public Builder baseKeyUsage(Input<CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage) {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
 
-        public Builder setBaseKeyUsage(CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
+        public Builder baseKeyUsage(CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs baseKeyUsage) {
             this.baseKeyUsage = Input.of(Objects.requireNonNull(baseKeyUsage));
             return this;
         }
 
-        public Builder setExtendedKeyUsage(Input<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(Input<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
+        public Builder extendedKeyUsage(CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs extendedKeyUsage) {
             this.extendedKeyUsage = Input.of(Objects.requireNonNull(extendedKeyUsage));
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable Input<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Input<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }

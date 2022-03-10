@@ -75,17 +75,17 @@ public final class GetProjectResult {
     	      this.projects = defaults.projects;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProjects(List<GetProjectProject> projects) {
+        public Builder projects(List<GetProjectProject> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }

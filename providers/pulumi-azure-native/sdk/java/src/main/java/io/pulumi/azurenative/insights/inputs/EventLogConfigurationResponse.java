@@ -62,12 +62,12 @@ public final class EventLogConfigurationResponse extends io.pulumi.resources.Inv
     	      this.logName = defaults.logName;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setLogName(String logName) {
+        public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }

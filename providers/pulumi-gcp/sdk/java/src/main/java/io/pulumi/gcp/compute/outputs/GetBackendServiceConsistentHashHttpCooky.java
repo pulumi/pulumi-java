@@ -67,17 +67,17 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     	      this.ttls = defaults.ttls;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTtls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
+        public Builder ttls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
             this.ttls = Objects.requireNonNull(ttls);
             return this;
         }

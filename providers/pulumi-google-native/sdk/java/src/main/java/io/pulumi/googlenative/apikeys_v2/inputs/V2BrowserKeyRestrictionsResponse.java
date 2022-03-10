@@ -56,7 +56,7 @@ public final class V2BrowserKeyRestrictionsResponse extends io.pulumi.resources.
     	      this.allowedReferrers = defaults.allowedReferrers;
         }
 
-        public Builder setAllowedReferrers(List<String> allowedReferrers) {
+        public Builder allowedReferrers(List<String> allowedReferrers) {
             this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
             return this;
         }

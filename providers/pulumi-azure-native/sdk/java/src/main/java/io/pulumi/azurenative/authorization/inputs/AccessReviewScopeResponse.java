@@ -139,32 +139,32 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setAssignmentState(String assignmentState) {
+        public Builder assignmentState(String assignmentState) {
             this.assignmentState = Objects.requireNonNull(assignmentState);
             return this;
         }
 
-        public Builder setExpandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
+        public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable String inactiveDuration) {
+        public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }

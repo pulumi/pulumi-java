@@ -218,112 +218,112 @@ public final class ExpressRouteConnectionArgs extends io.pulumi.resources.Resour
     	      this.routingWeight = defaults.routingWeight;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Input<Boolean> enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = Input.ofNullable(enableInternetSecurity);
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(Input<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(Input<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(ExpressRouteCircuitPeeringIdArgs expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdArgs expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Input.of(Objects.requireNonNull(expressRouteCircuitPeering));
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Input<Boolean> expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Input<Boolean> expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = Input.ofNullable(expressRouteGatewayBypass);
             return this;
         }
 
-        public Builder setExpressRouteGatewayName(Input<String> expressRouteGatewayName) {
+        public Builder expressRouteGatewayName(Input<String> expressRouteGatewayName) {
             this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
             return this;
         }
 
-        public Builder setExpressRouteGatewayName(String expressRouteGatewayName) {
+        public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             this.expressRouteGatewayName = Input.of(Objects.requireNonNull(expressRouteGatewayName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
+        public Builder routingConfiguration(@Nullable Input<RoutingConfigurationArgs> routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
             this.routingConfiguration = Input.ofNullable(routingConfiguration);
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Input<Integer> routingWeight) {
+        public Builder routingWeight(@Nullable Input<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Input.ofNullable(routingWeight);
             return this;
         }

@@ -57,12 +57,12 @@ public final class MarkdownPartMetadataContentArgs extends io.pulumi.resources.R
     	      this.settings = defaults.settings;
         }
 
-        public Builder setSettings(@Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings) {
+        public Builder settings(@Nullable Input<MarkdownPartMetadataSettingsSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable MarkdownPartMetadataSettingsSettingsArgs settings) {
+        public Builder settings(@Nullable MarkdownPartMetadataSettingsSettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

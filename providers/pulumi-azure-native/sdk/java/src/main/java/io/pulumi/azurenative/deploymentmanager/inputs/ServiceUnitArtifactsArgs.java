@@ -106,42 +106,42 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
     	      this.templateUri = defaults.templateUri;
         }
 
-        public Builder setParametersArtifactSourceRelativePath(@Nullable Input<String> parametersArtifactSourceRelativePath) {
+        public Builder parametersArtifactSourceRelativePath(@Nullable Input<String> parametersArtifactSourceRelativePath) {
             this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
 
-        public Builder setParametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
+        public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
             this.parametersArtifactSourceRelativePath = Input.ofNullable(parametersArtifactSourceRelativePath);
             return this;
         }
 
-        public Builder setParametersUri(@Nullable Input<String> parametersUri) {
+        public Builder parametersUri(@Nullable Input<String> parametersUri) {
             this.parametersUri = parametersUri;
             return this;
         }
 
-        public Builder setParametersUri(@Nullable String parametersUri) {
+        public Builder parametersUri(@Nullable String parametersUri) {
             this.parametersUri = Input.ofNullable(parametersUri);
             return this;
         }
 
-        public Builder setTemplateArtifactSourceRelativePath(@Nullable Input<String> templateArtifactSourceRelativePath) {
+        public Builder templateArtifactSourceRelativePath(@Nullable Input<String> templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
 
-        public Builder setTemplateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
+        public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
             this.templateArtifactSourceRelativePath = Input.ofNullable(templateArtifactSourceRelativePath);
             return this;
         }
 
-        public Builder setTemplateUri(@Nullable Input<String> templateUri) {
+        public Builder templateUri(@Nullable Input<String> templateUri) {
             this.templateUri = templateUri;
             return this;
         }
 
-        public Builder setTemplateUri(@Nullable String templateUri) {
+        public Builder templateUri(@Nullable String templateUri) {
             this.templateUri = Input.ofNullable(templateUri);
             return this;
         }

@@ -50,7 +50,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpiration {
     	      this.days = defaults.days;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }

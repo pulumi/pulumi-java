@@ -66,12 +66,12 @@ public final class CloudRunConfigResponse {
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setLoadBalancerType(String loadBalancerType) {
+        public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }

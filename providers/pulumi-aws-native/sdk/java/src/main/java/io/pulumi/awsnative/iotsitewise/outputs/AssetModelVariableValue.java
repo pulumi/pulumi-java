@@ -51,12 +51,12 @@ public final class AssetModelVariableValue {
     	      this.propertyLogicalId = defaults.propertyLogicalId;
         }
 
-        public Builder setHierarchyLogicalId(@Nullable String hierarchyLogicalId) {
+        public Builder hierarchyLogicalId(@Nullable String hierarchyLogicalId) {
             this.hierarchyLogicalId = hierarchyLogicalId;
             return this;
         }
 
-        public Builder setPropertyLogicalId(String propertyLogicalId) {
+        public Builder propertyLogicalId(String propertyLogicalId) {
             this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
             return this;
         }

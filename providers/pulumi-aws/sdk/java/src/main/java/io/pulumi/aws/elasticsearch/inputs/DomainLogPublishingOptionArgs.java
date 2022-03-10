@@ -87,32 +87,32 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
     	      this.logType = defaults.logType;
         }
 
-        public Builder setCloudwatchLogGroupArn(Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(Input<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder setCloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Input.of(Objects.requireNonNull(cloudwatchLogGroupArn));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogType(Input<String> logType) {
+        public Builder logType(Input<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }

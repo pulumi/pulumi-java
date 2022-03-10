@@ -73,22 +73,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule) {
+        public Builder exclusionRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule) {
             this.exclusionRule = exclusionRule;
             return this;
         }
 
-        public Builder setExclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs exclusionRule) {
+        public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs exclusionRule) {
             this.exclusionRule = Input.ofNullable(exclusionRule);
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule) {
+        public Builder hotwordRule(@Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs hotwordRule) {
+        public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs hotwordRule) {
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }

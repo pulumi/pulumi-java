@@ -207,102 +207,102 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     	      this.sources = defaults.sources;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Input<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,Kind> kind) {
+        public Builder kind(Either<String,Kind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ParameterDeclarationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ParameterDeclarationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ParameterDeclarationArgs> parameters) {
+        public Builder parameters(@Nullable List<ParameterDeclarationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPipelineTopologyName(@Nullable Input<String> pipelineTopologyName) {
+        public Builder pipelineTopologyName(@Nullable Input<String> pipelineTopologyName) {
             this.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
 
-        public Builder setPipelineTopologyName(@Nullable String pipelineTopologyName) {
+        public Builder pipelineTopologyName(@Nullable String pipelineTopologyName) {
             this.pipelineTopologyName = Input.ofNullable(pipelineTopologyName);
             return this;
         }
 
-        public Builder setProcessors(@Nullable Input<List<EncoderProcessorArgs>> processors) {
+        public Builder processors(@Nullable Input<List<EncoderProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<EncoderProcessorArgs> processors) {
+        public Builder processors(@Nullable List<EncoderProcessorArgs> processors) {
             this.processors = Input.ofNullable(processors);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSinks(Input<List<VideoSinkArgs>> sinks) {
+        public Builder sinks(Input<List<VideoSinkArgs>> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
-        public Builder setSinks(List<VideoSinkArgs> sinks) {
+        public Builder sinks(List<VideoSinkArgs> sinks) {
             this.sinks = Input.of(Objects.requireNonNull(sinks));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setSources(Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
+        public Builder sources(Input<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setSources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
+        public Builder sources(List<Either<RtspSourceArgs,VideoSourceArgs>> sources) {
             this.sources = Input.of(Objects.requireNonNull(sources));
             return this;
         }

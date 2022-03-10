@@ -108,42 +108,42 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
     	      this.unitOverride = defaults.unitOverride;
         }
 
-        public Builder setTimeSeriesFilter(@Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter) {
+        public Builder timeSeriesFilter(@Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter) {
             this.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
 
-        public Builder setTimeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
+        public Builder timeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
             this.timeSeriesFilter = Input.ofNullable(timeSeriesFilter);
             return this;
         }
 
-        public Builder setTimeSeriesFilterRatio(@Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
+        public Builder timeSeriesFilterRatio(@Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
 
-        public Builder setTimeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
+        public Builder timeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = Input.ofNullable(timeSeriesFilterRatio);
             return this;
         }
 
-        public Builder setTimeSeriesQueryLanguage(@Nullable Input<String> timeSeriesQueryLanguage) {
+        public Builder timeSeriesQueryLanguage(@Nullable Input<String> timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
 
-        public Builder setTimeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
+        public Builder timeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = Input.ofNullable(timeSeriesQueryLanguage);
             return this;
         }
 
-        public Builder setUnitOverride(@Nullable Input<String> unitOverride) {
+        public Builder unitOverride(@Nullable Input<String> unitOverride) {
             this.unitOverride = unitOverride;
             return this;
         }
 
-        public Builder setUnitOverride(@Nullable String unitOverride) {
+        public Builder unitOverride(@Nullable String unitOverride) {
             this.unitOverride = Input.ofNullable(unitOverride);
             return this;
         }

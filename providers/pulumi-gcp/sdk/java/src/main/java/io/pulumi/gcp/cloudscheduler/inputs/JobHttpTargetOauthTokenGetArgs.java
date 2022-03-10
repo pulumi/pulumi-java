@@ -72,22 +72,22 @@ public final class JobHttpTargetOauthTokenGetArgs extends io.pulumi.resources.Re
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setServiceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }

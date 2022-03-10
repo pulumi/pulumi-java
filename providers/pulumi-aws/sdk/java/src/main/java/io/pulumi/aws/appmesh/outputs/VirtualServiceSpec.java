@@ -50,7 +50,7 @@ public final class VirtualServiceSpec {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setProvider(@Nullable VirtualServiceSpecProvider provider) {
+        public Builder provider(@Nullable VirtualServiceSpecProvider provider) {
             this.provider = provider;
             return this;
         }

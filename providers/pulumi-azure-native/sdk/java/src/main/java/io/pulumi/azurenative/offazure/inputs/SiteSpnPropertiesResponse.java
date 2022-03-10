@@ -138,32 +138,32 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAadAuthority(@Nullable String aadAuthority) {
+        public Builder aadAuthority(@Nullable String aadAuthority) {
             this.aadAuthority = aadAuthority;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setRawCertData(@Nullable String rawCertData) {
+        public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

@@ -117,42 +117,42 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setEnrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
+        public Builder enrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
 
-        public Builder setEnrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
+        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             this.enrolledServices = Input.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable List<String> notificationEmails) {
+        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Input.ofNullable(notificationEmails);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }

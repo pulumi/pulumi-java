@@ -59,17 +59,17 @@ public final class RuleGroupIPSetForwardedIPConfiguration {
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setPosition(RuleGroupIPSetForwardedIPConfigurationPosition position) {
+        public Builder position(RuleGroupIPSetForwardedIPConfigurationPosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

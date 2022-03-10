@@ -93,42 +93,42 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
     	      this.writeOperationType = defaults.writeOperationType;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
             this.errorHandlingConfig = Input.ofNullable(errorHandlingConfig);
             return this;
         }
 
-        public Builder setIdFieldNames(@Nullable Input<List<String>> idFieldNames) {
+        public Builder idFieldNames(@Nullable Input<List<String>> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
 
-        public Builder setIdFieldNames(@Nullable List<String> idFieldNames) {
+        public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = Input.ofNullable(idFieldNames);
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
 
-        public Builder setWriteOperationType(@Nullable Input<FlowWriteOperationType> writeOperationType) {
+        public Builder writeOperationType(@Nullable Input<FlowWriteOperationType> writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
         }
 
-        public Builder setWriteOperationType(@Nullable FlowWriteOperationType writeOperationType) {
+        public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = Input.ofNullable(writeOperationType);
             return this;
         }

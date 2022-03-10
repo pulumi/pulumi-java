@@ -184,92 +184,92 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Input<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
-        public Builder setEventBusName(@Nullable String eventBusName) {
+        public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Input.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Input<String> eventPattern) {
+        public Builder eventPattern(@Nullable Input<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable String eventPattern) {
+        public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Input.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable Input<String> scheduleExpression) {
+        public Builder scheduleExpression(@Nullable Input<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Input.ofNullable(scheduleExpression);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

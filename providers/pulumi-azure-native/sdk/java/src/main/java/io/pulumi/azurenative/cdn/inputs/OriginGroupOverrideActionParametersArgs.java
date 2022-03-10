@@ -70,22 +70,22 @@ public final class OriginGroupOverrideActionParametersArgs extends io.pulumi.res
     	      this.originGroup = defaults.originGroup;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOriginGroup(Input<ResourceReferenceArgs> originGroup) {
+        public Builder originGroup(Input<ResourceReferenceArgs> originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
 
-        public Builder setOriginGroup(ResourceReferenceArgs originGroup) {
+        public Builder originGroup(ResourceReferenceArgs originGroup) {
             this.originGroup = Input.of(Objects.requireNonNull(originGroup));
             return this;
         }

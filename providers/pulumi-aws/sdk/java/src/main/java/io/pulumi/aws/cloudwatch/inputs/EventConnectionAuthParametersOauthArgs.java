@@ -104,42 +104,42 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
     	      this.oauthHttpParameters = defaults.oauthHttpParameters;
         }
 
-        public Builder setAuthorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder setClientParameters(@Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters) {
+        public Builder clientParameters(@Nullable Input<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
 
-        public Builder setClientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersArgs clientParameters) {
+        public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersArgs clientParameters) {
             this.clientParameters = Input.ofNullable(clientParameters);
             return this;
         }
 
-        public Builder setHttpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Input<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setOauthHttpParameters(Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
+        public Builder oauthHttpParameters(Input<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
         }
 
-        public Builder setOauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersArgs oauthHttpParameters) {
+        public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParametersArgs oauthHttpParameters) {
             this.oauthHttpParameters = Input.of(Objects.requireNonNull(oauthHttpParameters));
             return this;
         }

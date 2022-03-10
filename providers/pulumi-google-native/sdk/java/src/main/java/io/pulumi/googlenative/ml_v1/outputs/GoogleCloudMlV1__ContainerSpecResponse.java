@@ -116,27 +116,27 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnv(List<GoogleCloudMlV1__EnvVarResponse> env) {
+        public Builder env(List<GoogleCloudMlV1__EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setPorts(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
+        public Builder ports(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

@@ -116,62 +116,62 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatastoreName(@Nullable Input<String> datastoreName) {
+        public Builder datastoreName(@Nullable Input<String> datastoreName) {
             this.datastoreName = datastoreName;
             return this;
         }
 
-        public Builder setDatastoreName(@Nullable String datastoreName) {
+        public Builder datastoreName(@Nullable String datastoreName) {
             this.datastoreName = Input.ofNullable(datastoreName);
             return this;
         }
 
-        public Builder setDatastorePartitions(@Nullable Input<DatastorePartitionsArgs> datastorePartitions) {
+        public Builder datastorePartitions(@Nullable Input<DatastorePartitionsArgs> datastorePartitions) {
             this.datastorePartitions = datastorePartitions;
             return this;
         }
 
-        public Builder setDatastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
+        public Builder datastorePartitions(@Nullable DatastorePartitionsArgs datastorePartitions) {
             this.datastorePartitions = Input.ofNullable(datastorePartitions);
             return this;
         }
 
-        public Builder setDatastoreStorage(@Nullable Input<DatastoreStorageArgs> datastoreStorage) {
+        public Builder datastoreStorage(@Nullable Input<DatastoreStorageArgs> datastoreStorage) {
             this.datastoreStorage = datastoreStorage;
             return this;
         }
 
-        public Builder setDatastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
+        public Builder datastoreStorage(@Nullable DatastoreStorageArgs datastoreStorage) {
             this.datastoreStorage = Input.ofNullable(datastoreStorage);
             return this;
         }
 
-        public Builder setFileFormatConfiguration(@Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
+        public Builder fileFormatConfiguration(@Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration) {
             this.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
 
-        public Builder setFileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
+        public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfigurationArgs fileFormatConfiguration) {
             this.fileFormatConfiguration = Input.ofNullable(fileFormatConfiguration);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
+        public Builder retentionPeriod(@Nullable DatastoreRetentionPeriodArgs retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatastoreTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatastoreTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatastoreTagArgs> tags) {
+        public Builder tags(@Nullable List<DatastoreTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -70,22 +70,22 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
     	      this.intervalSec = defaults.intervalSec;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setIntervalSec(@Nullable Input<Integer> intervalSec) {
+        public Builder intervalSec(@Nullable Input<Integer> intervalSec) {
             this.intervalSec = intervalSec;
             return this;
         }
 
-        public Builder setIntervalSec(@Nullable Integer intervalSec) {
+        public Builder intervalSec(@Nullable Integer intervalSec) {
             this.intervalSec = Input.ofNullable(intervalSec);
             return this;
         }

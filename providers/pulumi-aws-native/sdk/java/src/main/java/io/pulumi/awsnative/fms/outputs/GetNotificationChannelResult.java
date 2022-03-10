@@ -51,12 +51,12 @@ public final class GetNotificationChannelResult {
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setSnsRoleName(@Nullable String snsRoleName) {
+        public Builder snsRoleName(@Nullable String snsRoleName) {
             this.snsRoleName = snsRoleName;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }

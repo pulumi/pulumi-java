@@ -102,22 +102,22 @@ public final class NetworkPolicySpec {
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder setEgress(@Nullable List<NetworkPolicyEgressRule> egress) {
+        public Builder egress(@Nullable List<NetworkPolicyEgressRule> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<NetworkPolicyIngressRule> ingress) {
+        public Builder ingress(@Nullable List<NetworkPolicyIngressRule> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setPodSelector(LabelSelector podSelector) {
+        public Builder podSelector(LabelSelector podSelector) {
             this.podSelector = Objects.requireNonNull(podSelector);
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable List<String> policyTypes) {
+        public Builder policyTypes(@Nullable List<String> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }

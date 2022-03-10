@@ -88,32 +88,32 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setPreferences(@Nullable Input<GroupInstanceRefreshPreferencesArgs> preferences) {
+        public Builder preferences(@Nullable Input<GroupInstanceRefreshPreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setPreferences(@Nullable GroupInstanceRefreshPreferencesArgs preferences) {
+        public Builder preferences(@Nullable GroupInstanceRefreshPreferencesArgs preferences) {
             this.preferences = Input.ofNullable(preferences);
             return this;
         }
 
-        public Builder setStrategy(Input<String> strategy) {
+        public Builder strategy(Input<String> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Input.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<List<String>> triggers) {
+        public Builder triggers(@Nullable Input<List<String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<String> triggers) {
+        public Builder triggers(@Nullable List<String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

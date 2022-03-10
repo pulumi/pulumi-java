@@ -87,17 +87,17 @@ public final class ListEndpointCredentialsArgs extends io.pulumi.resources.Invok
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setExpiresin(@Nullable Integer expiresin) {
+        public Builder expiresin(@Nullable Integer expiresin) {
             this.expiresin = expiresin;
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

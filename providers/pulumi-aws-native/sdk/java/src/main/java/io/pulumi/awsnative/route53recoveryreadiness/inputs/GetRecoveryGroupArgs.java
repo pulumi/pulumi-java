@@ -51,7 +51,7 @@ public final class GetRecoveryGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.recoveryGroupName = defaults.recoveryGroupName;
         }
 
-        public Builder setRecoveryGroupName(String recoveryGroupName) {
+        public Builder recoveryGroupName(String recoveryGroupName) {
             this.recoveryGroupName = Objects.requireNonNull(recoveryGroupName);
             return this;
         }

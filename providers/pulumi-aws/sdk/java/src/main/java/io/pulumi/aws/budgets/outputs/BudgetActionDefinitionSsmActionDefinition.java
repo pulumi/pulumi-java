@@ -82,17 +82,17 @@ public final class BudgetActionDefinitionSsmActionDefinition {
     	      this.region = defaults.region;
         }
 
-        public Builder setActionSubType(String actionSubType) {
+        public Builder actionSubType(String actionSubType) {
             this.actionSubType = Objects.requireNonNull(actionSubType);
             return this;
         }
 
-        public Builder setInstanceIds(List<String> instanceIds) {
+        public Builder instanceIds(List<String> instanceIds) {
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

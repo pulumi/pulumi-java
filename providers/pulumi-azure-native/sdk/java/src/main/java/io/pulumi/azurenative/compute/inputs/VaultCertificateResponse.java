@@ -74,12 +74,12 @@ public final class VaultCertificateResponse extends io.pulumi.resources.InvokeAr
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder setCertificateStore(@Nullable String certificateStore) {
+        public Builder certificateStore(@Nullable String certificateStore) {
             this.certificateStore = certificateStore;
             return this;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }

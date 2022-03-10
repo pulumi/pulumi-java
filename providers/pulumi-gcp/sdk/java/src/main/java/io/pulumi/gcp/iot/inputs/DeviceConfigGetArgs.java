@@ -86,42 +86,42 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder setBinaryData(@Nullable Input<String> binaryData) {
+        public Builder binaryData(@Nullable Input<String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
-        public Builder setBinaryData(@Nullable String binaryData) {
+        public Builder binaryData(@Nullable String binaryData) {
             this.binaryData = Input.ofNullable(binaryData);
             return this;
         }
 
-        public Builder setCloudUpdateTime(@Nullable Input<String> cloudUpdateTime) {
+        public Builder cloudUpdateTime(@Nullable Input<String> cloudUpdateTime) {
             this.cloudUpdateTime = cloudUpdateTime;
             return this;
         }
 
-        public Builder setCloudUpdateTime(@Nullable String cloudUpdateTime) {
+        public Builder cloudUpdateTime(@Nullable String cloudUpdateTime) {
             this.cloudUpdateTime = Input.ofNullable(cloudUpdateTime);
             return this;
         }
 
-        public Builder setDeviceAckTime(@Nullable Input<String> deviceAckTime) {
+        public Builder deviceAckTime(@Nullable Input<String> deviceAckTime) {
             this.deviceAckTime = deviceAckTime;
             return this;
         }
 
-        public Builder setDeviceAckTime(@Nullable String deviceAckTime) {
+        public Builder deviceAckTime(@Nullable String deviceAckTime) {
             this.deviceAckTime = Input.ofNullable(deviceAckTime);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

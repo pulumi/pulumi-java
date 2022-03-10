@@ -138,62 +138,62 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder setColocationStatus(@Nullable Input<InstanceViewStatusArgs> colocationStatus) {
+        public Builder colocationStatus(@Nullable Input<InstanceViewStatusArgs> colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
 
-        public Builder setColocationStatus(@Nullable InstanceViewStatusArgs colocationStatus) {
+        public Builder colocationStatus(@Nullable InstanceViewStatusArgs colocationStatus) {
             this.colocationStatus = Input.ofNullable(colocationStatus);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProximityPlacementGroupName(@Nullable Input<String> proximityPlacementGroupName) {
+        public Builder proximityPlacementGroupName(@Nullable Input<String> proximityPlacementGroupName) {
             this.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
 
-        public Builder setProximityPlacementGroupName(@Nullable String proximityPlacementGroupName) {
+        public Builder proximityPlacementGroupName(@Nullable String proximityPlacementGroupName) {
             this.proximityPlacementGroupName = Input.ofNullable(proximityPlacementGroupName);
             return this;
         }
 
-        public Builder setProximityPlacementGroupType(@Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
+        public Builder proximityPlacementGroupType(@Nullable Input<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
             this.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
 
-        public Builder setProximityPlacementGroupType(@Nullable Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
+        public Builder proximityPlacementGroupType(@Nullable Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
             this.proximityPlacementGroupType = Input.ofNullable(proximityPlacementGroupType);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

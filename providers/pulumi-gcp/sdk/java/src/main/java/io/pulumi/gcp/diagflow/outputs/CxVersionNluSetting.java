@@ -60,17 +60,17 @@ public final class CxVersionNluSetting {
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setClassificationThreshold(@Nullable Double classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable String modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
-        public Builder setModelType(@Nullable String modelType) {
+        public Builder modelType(@Nullable String modelType) {
             this.modelType = modelType;
             return this;
         }
