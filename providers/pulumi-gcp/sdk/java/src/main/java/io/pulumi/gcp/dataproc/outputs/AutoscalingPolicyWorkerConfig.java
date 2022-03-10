@@ -40,11 +40,11 @@ public final class AutoscalingPolicyWorkerConfig {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","weight"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyWorkerConfig(
-        Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;

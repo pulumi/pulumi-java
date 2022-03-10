@@ -29,11 +29,11 @@ public final class DatabaseInstanceRestoreBackupContext {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"backupRunId","instanceId","project"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceRestoreBackupContext(
-        Integer backupRunId,
-        @Nullable String instanceId,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("backupRunId") Integer backupRunId,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.backupRunId = backupRunId;
         this.instanceId = instanceId;
         this.project = project;

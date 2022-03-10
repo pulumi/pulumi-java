@@ -15,8 +15,8 @@ public final class TransferJobTransferSpecHttpDataSource {
      */
     private final String listUrl;
 
-    @OutputCustomType.Constructor({"listUrl"})
-    private TransferJobTransferSpecHttpDataSource(String listUrl) {
+    @OutputCustomType.Constructor
+    private TransferJobTransferSpecHttpDataSource(@OutputCustomType.Parameter("listUrl") String listUrl) {
         this.listUrl = listUrl;
     }
 

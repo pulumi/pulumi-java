@@ -28,11 +28,11 @@ public final class ClusterNodePoolNodeConfigGuestAccelerator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","gpuPartitionSize","type"})
+    @OutputCustomType.Constructor
     private ClusterNodePoolNodeConfigGuestAccelerator(
-        Integer count,
-        @Nullable String gpuPartitionSize,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("gpuPartitionSize") @Nullable String gpuPartitionSize,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.gpuPartitionSize = gpuPartitionSize;
         this.type = type;

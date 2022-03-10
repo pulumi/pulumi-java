@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate;
 
-    @OutputCustomType.Constructor({"enforce","validate"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExec(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
-        OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
+        @OutputCustomType.Parameter("enforce") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
+        @OutputCustomType.Parameter("validate") OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
         this.enforce = enforce;
         this.validate = validate;
     }

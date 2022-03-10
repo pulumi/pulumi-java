@@ -22,10 +22,10 @@ public final class InstanceAcceleratorConfig {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"coreCount","type"})
+    @OutputCustomType.Constructor
     private InstanceAcceleratorConfig(
-        Integer coreCount,
-        String type) {
+        @OutputCustomType.Parameter("coreCount") Integer coreCount,
+        @OutputCustomType.Parameter("type") String type) {
         this.coreCount = coreCount;
         this.type = type;
     }

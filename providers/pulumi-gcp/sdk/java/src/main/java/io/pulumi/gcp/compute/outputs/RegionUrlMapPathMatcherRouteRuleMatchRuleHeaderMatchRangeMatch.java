@@ -20,10 +20,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
      */
     private final Integer rangeStart;
 
-    @OutputCustomType.Constructor({"rangeEnd","rangeStart"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(
-        Integer rangeEnd,
-        Integer rangeStart) {
+        @OutputCustomType.Parameter("rangeEnd") Integer rangeEnd,
+        @OutputCustomType.Parameter("rangeStart") Integer rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }

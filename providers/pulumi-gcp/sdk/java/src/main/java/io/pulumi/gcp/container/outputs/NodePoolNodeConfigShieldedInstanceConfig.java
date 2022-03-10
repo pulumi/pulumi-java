@@ -14,10 +14,10 @@ public final class NodePoolNodeConfigShieldedInstanceConfig {
     private final @Nullable Boolean enableIntegrityMonitoring;
     private final @Nullable Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
+    @OutputCustomType.Constructor
     private NodePoolNodeConfigShieldedInstanceConfig(
-        @Nullable Boolean enableIntegrityMonitoring,
-        @Nullable Boolean enableSecureBoot) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }

@@ -16,12 +16,12 @@ public final class DomainMappingStatusCondition {
     private final @Nullable String status;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"message","reason","status","type"})
+    @OutputCustomType.Constructor
     private DomainMappingStatusCondition(
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.message = message;
         this.reason = reason;
         this.status = status;

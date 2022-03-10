@@ -24,10 +24,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
      */
     private final @Nullable String monitoringInterval;
 
-    @OutputCustomType.Constructor({"disabled","monitoringInterval"})
+    @OutputCustomType.Constructor
     private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis(
-        @Nullable Boolean disabled,
-        @Nullable String monitoringInterval) {
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("monitoringInterval") @Nullable String monitoringInterval) {
         this.disabled = disabled;
         this.monitoringInterval = monitoringInterval;
     }

@@ -25,10 +25,10 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy(
-        @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }

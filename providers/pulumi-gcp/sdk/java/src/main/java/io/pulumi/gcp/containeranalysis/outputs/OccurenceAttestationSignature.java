@@ -37,10 +37,10 @@ public final class OccurenceAttestationSignature {
      */
     private final @Nullable String signature;
 
-    @OutputCustomType.Constructor({"publicKeyId","signature"})
+    @OutputCustomType.Constructor
     private OccurenceAttestationSignature(
-        String publicKeyId,
-        @Nullable String signature) {
+        @OutputCustomType.Parameter("publicKeyId") String publicKeyId,
+        @OutputCustomType.Parameter("signature") @Nullable String signature) {
         this.publicKeyId = publicKeyId;
         this.signature = signature;
     }

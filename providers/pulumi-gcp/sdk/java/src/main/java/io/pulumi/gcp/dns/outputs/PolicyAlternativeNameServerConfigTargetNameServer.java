@@ -25,10 +25,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
      */
     private final String ipv4Address;
 
-    @OutputCustomType.Constructor({"forwardingPath","ipv4Address"})
+    @OutputCustomType.Constructor
     private PolicyAlternativeNameServerConfigTargetNameServer(
-        @Nullable String forwardingPath,
-        String ipv4Address) {
+        @OutputCustomType.Parameter("forwardingPath") @Nullable String forwardingPath,
+        @OutputCustomType.Parameter("ipv4Address") String ipv4Address) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
     }

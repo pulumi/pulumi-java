@@ -25,12 +25,12 @@ public final class GetRegionsResult {
     private final String project;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"id","names","project","status"})
+    @OutputCustomType.Constructor
     private GetRegionsResult(
-        String id,
-        List<String> names,
-        String project,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.id = id;
         this.names = names;
         this.project = project;

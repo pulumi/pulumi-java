@@ -15,8 +15,8 @@ public final class EngineModelDefaultVersion {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private EngineModelDefaultVersion(String name) {
+    @OutputCustomType.Constructor
+    private EngineModelDefaultVersion(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

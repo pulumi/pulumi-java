@@ -17,8 +17,8 @@ public final class AzureNodePoolConfigRootVolume {
      */
     private final @Nullable Integer sizeGib;
 
-    @OutputCustomType.Constructor({"sizeGib"})
-    private AzureNodePoolConfigRootVolume(@Nullable Integer sizeGib) {
+    @OutputCustomType.Constructor
+    private AzureNodePoolConfigRootVolume(@OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib) {
         this.sizeGib = sizeGib;
     }
 

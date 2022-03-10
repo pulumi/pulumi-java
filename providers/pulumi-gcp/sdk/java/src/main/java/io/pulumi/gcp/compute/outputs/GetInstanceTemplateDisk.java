@@ -102,22 +102,22 @@ public final class GetInstanceTemplateDisk {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKeys","diskName","diskSizeGb","diskType","$interface","labels","mode","resourcePolicies","source","sourceImage","type"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateDisk(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys,
-        String diskName,
-        Integer diskSizeGb,
-        String diskType,
-        String $interface,
-        Map<String,String> labels,
-        String mode,
-        List<String> resourcePolicies,
-        String source,
-        String sourceImage,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeys") List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

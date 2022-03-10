@@ -31,17 +31,17 @@ public final class GetServiceResult {
     private final List<GetServiceTemplate> templates;
     private final List<GetServiceTraffic> traffics;
 
-    @OutputCustomType.Constructor({"autogenerateRevisionName","id","location","metadatas","name","project","statuses","templates","traffics"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        Boolean autogenerateRevisionName,
-        String id,
-        String location,
-        List<GetServiceMetadata> metadatas,
-        String name,
-        @Nullable String project,
-        List<GetServiceStatus> statuses,
-        List<GetServiceTemplate> templates,
-        List<GetServiceTraffic> traffics) {
+        @OutputCustomType.Parameter("autogenerateRevisionName") Boolean autogenerateRevisionName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metadatas") List<GetServiceMetadata> metadatas,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("statuses") List<GetServiceStatus> statuses,
+        @OutputCustomType.Parameter("templates") List<GetServiceTemplate> templates,
+        @OutputCustomType.Parameter("traffics") List<GetServiceTraffic> traffics) {
         this.autogenerateRevisionName = autogenerateRevisionName;
         this.id = id;
         this.location = location;

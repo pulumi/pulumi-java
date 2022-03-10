@@ -56,14 +56,14 @@ public final class TableExternalDataConfigurationCsvOptions {
      */
     private final @Nullable Integer skipLeadingRows;
 
-    @OutputCustomType.Constructor({"allowJaggedRows","allowQuotedNewlines","encoding","fieldDelimiter","quote","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private TableExternalDataConfigurationCsvOptions(
-        @Nullable Boolean allowJaggedRows,
-        @Nullable Boolean allowQuotedNewlines,
-        @Nullable String encoding,
-        @Nullable String fieldDelimiter,
-        String quote,
-        @Nullable Integer skipLeadingRows) {
+        @OutputCustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
+        @OutputCustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("quote") String quote,
+        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;

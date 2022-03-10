@@ -16,8 +16,8 @@ public final class FlexibleAppVersionDeploymentContainer {
      */
     private final String image;
 
-    @OutputCustomType.Constructor({"image"})
-    private FlexibleAppVersionDeploymentContainer(String image) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionDeploymentContainer(@OutputCustomType.Parameter("image") String image) {
         this.image = image;
     }
 

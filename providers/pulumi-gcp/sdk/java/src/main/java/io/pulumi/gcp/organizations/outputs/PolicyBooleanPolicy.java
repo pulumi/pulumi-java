@@ -15,8 +15,8 @@ public final class PolicyBooleanPolicy {
      */
     private final Boolean enforced;
 
-    @OutputCustomType.Constructor({"enforced"})
-    private PolicyBooleanPolicy(Boolean enforced) {
+    @OutputCustomType.Constructor
+    private PolicyBooleanPolicy(@OutputCustomType.Parameter("enforced") Boolean enforced) {
         this.enforced = enforced;
     }
 

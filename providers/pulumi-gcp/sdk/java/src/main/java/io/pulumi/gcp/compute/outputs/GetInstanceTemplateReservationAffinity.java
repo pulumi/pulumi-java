@@ -18,10 +18,10 @@ public final class GetInstanceTemplateReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservations","type"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateReservationAffinity(
-        List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations,
-        String type) {
+        @OutputCustomType.Parameter("specificReservations") List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservations = specificReservations;
         this.type = type;
     }

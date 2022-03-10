@@ -14,11 +14,11 @@ public final class GetResourcePolicyGroupPlacementPolicy {
     private final String collocation;
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor({"availabilityDomainCount","collocation","vmCount"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyGroupPlacementPolicy(
-        Integer availabilityDomainCount,
-        String collocation,
-        Integer vmCount) {
+        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @OutputCustomType.Parameter("collocation") String collocation,
+        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.vmCount = vmCount;

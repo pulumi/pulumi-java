@@ -27,14 +27,14 @@ public final class GetAccountAccessTokenResult {
     private final List<String> scopes;
     private final String targetServiceAccount;
 
-    @OutputCustomType.Constructor({"accessToken","delegates","id","lifetime","scopes","targetServiceAccount"})
+    @OutputCustomType.Constructor
     private GetAccountAccessTokenResult(
-        String accessToken,
-        @Nullable List<String> delegates,
-        String id,
-        @Nullable String lifetime,
-        List<String> scopes,
-        String targetServiceAccount) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("delegates") @Nullable List<String> delegates,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("targetServiceAccount") String targetServiceAccount) {
         this.accessToken = accessToken;
         this.delegates = delegates;
         this.id = id;

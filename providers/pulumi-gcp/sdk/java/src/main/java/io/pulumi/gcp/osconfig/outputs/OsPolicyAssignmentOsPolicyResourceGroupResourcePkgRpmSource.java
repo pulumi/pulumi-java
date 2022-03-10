@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSource(
-        @Nullable Boolean allowInsecure,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs gcs,
-        @Nullable String localPath,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGcs gcs,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

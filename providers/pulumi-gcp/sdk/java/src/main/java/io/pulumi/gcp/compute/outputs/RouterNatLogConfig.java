@@ -22,10 +22,10 @@ public final class RouterNatLogConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"enable","filter"})
+    @OutputCustomType.Constructor
     private RouterNatLogConfig(
-        Boolean enable,
-        String filter) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("filter") String filter) {
         this.enable = enable;
         this.filter = filter;
     }

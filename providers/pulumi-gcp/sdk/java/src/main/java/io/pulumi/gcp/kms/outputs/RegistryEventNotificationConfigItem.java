@@ -14,10 +14,10 @@ public final class RegistryEventNotificationConfigItem {
     private final String pubsubTopicName;
     private final @Nullable String subfolderMatches;
 
-    @OutputCustomType.Constructor({"pubsubTopicName","subfolderMatches"})
+    @OutputCustomType.Constructor
     private RegistryEventNotificationConfigItem(
-        String pubsubTopicName,
-        @Nullable String subfolderMatches) {
+        @OutputCustomType.Parameter("pubsubTopicName") String pubsubTopicName,
+        @OutputCustomType.Parameter("subfolderMatches") @Nullable String subfolderMatches) {
         this.pubsubTopicName = pubsubTopicName;
         this.subfolderMatches = subfolderMatches;
     }

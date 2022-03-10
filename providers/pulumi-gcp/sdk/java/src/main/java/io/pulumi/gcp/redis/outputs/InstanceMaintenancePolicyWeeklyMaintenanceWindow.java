@@ -44,11 +44,11 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      */
     private final InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private InstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        String day,
-        @Nullable String duration,
-        InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("startTime") InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

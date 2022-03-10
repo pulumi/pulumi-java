@@ -24,10 +24,10 @@ public final class RegionInstanceGroupManagerStatusStateful {
      */
     private final @Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs;
 
-    @OutputCustomType.Constructor({"hasStatefulConfig","perInstanceConfigs"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerStatusStateful(
-        @Nullable Boolean hasStatefulConfig,
-        @Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
+        @OutputCustomType.Parameter("hasStatefulConfig") @Nullable Boolean hasStatefulConfig,
+        @OutputCustomType.Parameter("perInstanceConfigs") @Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
         this.hasStatefulConfig = hasStatefulConfig;
         this.perInstanceConfigs = perInstanceConfigs;
     }

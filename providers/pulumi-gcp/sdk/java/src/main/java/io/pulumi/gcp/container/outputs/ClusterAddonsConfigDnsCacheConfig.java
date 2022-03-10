@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigDnsCacheConfig {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterAddonsConfigDnsCacheConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterAddonsConfigDnsCacheConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

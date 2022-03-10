@@ -27,11 +27,11 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enableHierarchicalResourceQuota","enablePodTreeLabels","enabled"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementHierarchyController(
-        @Nullable Boolean enableHierarchicalResourceQuota,
-        @Nullable Boolean enablePodTreeLabels,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("enableHierarchicalResourceQuota") @Nullable Boolean enableHierarchicalResourceQuota,
+        @OutputCustomType.Parameter("enablePodTreeLabels") @Nullable Boolean enablePodTreeLabels,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
         this.enablePodTreeLabels = enablePodTreeLabels;
         this.enabled = enabled;

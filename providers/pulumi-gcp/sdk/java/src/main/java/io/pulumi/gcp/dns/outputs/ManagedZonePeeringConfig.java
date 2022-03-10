@@ -16,8 +16,8 @@ public final class ManagedZonePeeringConfig {
      */
     private final ManagedZonePeeringConfigTargetNetwork targetNetwork;
 
-    @OutputCustomType.Constructor({"targetNetwork"})
-    private ManagedZonePeeringConfig(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
+    @OutputCustomType.Constructor
+    private ManagedZonePeeringConfig(@OutputCustomType.Parameter("targetNetwork") ManagedZonePeeringConfigTargetNetwork targetNetwork) {
         this.targetNetwork = targetNetwork;
     }
 

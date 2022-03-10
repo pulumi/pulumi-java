@@ -16,11 +16,11 @@ public final class GetClusterMaintenancePolicy {
     private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
     private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
 
-    @OutputCustomType.Constructor({"dailyMaintenanceWindows","maintenanceExclusions","recurringWindows"})
+    @OutputCustomType.Constructor
     private GetClusterMaintenancePolicy(
-        List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
-        List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
+        @OutputCustomType.Parameter("dailyMaintenanceWindows") List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
+        @OutputCustomType.Parameter("maintenanceExclusions") List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
+        @OutputCustomType.Parameter("recurringWindows") List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
         this.dailyMaintenanceWindows = dailyMaintenanceWindows;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindows = recurringWindows;

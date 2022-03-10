@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule;
 
-    @OutputCustomType.Constructor({"exclusionRule","hotwordRule"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRule(
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
+        @OutputCustomType.Parameter("exclusionRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
+        @OutputCustomType.Parameter("hotwordRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }

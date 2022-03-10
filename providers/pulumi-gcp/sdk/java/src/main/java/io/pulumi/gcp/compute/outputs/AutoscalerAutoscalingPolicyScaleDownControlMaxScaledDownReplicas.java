@@ -24,10 +24,10 @@ public final class AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownRepli
      */
     private final @Nullable Integer percent;
 
-    @OutputCustomType.Constructor({"fixed","percent"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas(
-        @Nullable Integer fixed,
-        @Nullable Integer percent) {
+        @OutputCustomType.Parameter("fixed") @Nullable Integer fixed,
+        @OutputCustomType.Parameter("percent") @Nullable Integer percent) {
         this.fixed = fixed;
         this.percent = percent;
     }

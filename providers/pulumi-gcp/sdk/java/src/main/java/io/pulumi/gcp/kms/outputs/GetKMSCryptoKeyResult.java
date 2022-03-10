@@ -38,18 +38,18 @@ public final class GetKMSCryptoKeyResult {
     private final Boolean skipInitialVersionCreation;
     private final List<GetKMSCryptoKeyVersionTemplate> versionTemplates;
 
-    @OutputCustomType.Constructor({"destroyScheduledDuration","id","importOnly","keyRing","labels","name","purpose","rotationPeriod","skipInitialVersionCreation","versionTemplates"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyResult(
-        String destroyScheduledDuration,
-        String id,
-        Boolean importOnly,
-        String keyRing,
-        Map<String,String> labels,
-        String name,
-        String purpose,
-        String rotationPeriod,
-        Boolean skipInitialVersionCreation,
-        List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
+        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
+        @OutputCustomType.Parameter("keyRing") String keyRing,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @OutputCustomType.Parameter("skipInitialVersionCreation") Boolean skipInitialVersionCreation,
+        @OutputCustomType.Parameter("versionTemplates") List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
         this.destroyScheduledDuration = destroyScheduledDuration;
         this.id = id;
         this.importOnly = importOnly;

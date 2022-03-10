@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class NodePoolNodeConfigEphemeralStorageConfig {
     private final Integer localSsdCount;
 
-    @OutputCustomType.Constructor({"localSsdCount"})
-    private NodePoolNodeConfigEphemeralStorageConfig(Integer localSsdCount) {
+    @OutputCustomType.Constructor
+    private NodePoolNodeConfigEphemeralStorageConfig(@OutputCustomType.Parameter("localSsdCount") Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
     }
 

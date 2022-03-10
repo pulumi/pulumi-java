@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPrestoJob {
      */
     private final @Nullable WorkflowTemplateJobPrestoJobQueryList queryList;
 
-    @OutputCustomType.Constructor({"clientTags","continueOnFailure","loggingConfig","outputFormat","properties","queryFileUri","queryList"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobPrestoJob(
-        @Nullable List<String> clientTags,
-        @Nullable Boolean continueOnFailure,
-        @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
-        @Nullable String outputFormat,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
+        @OutputCustomType.Parameter("clientTags") @Nullable List<String> clientTags,
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;

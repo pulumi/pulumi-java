@@ -35,11 +35,11 @@ public final class ImageRawDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"containerType","sha1","source"})
+    @OutputCustomType.Constructor
     private ImageRawDisk(
-        @Nullable String containerType,
-        @Nullable String sha1,
-        String source) {
+        @OutputCustomType.Parameter("containerType") @Nullable String containerType,
+        @OutputCustomType.Parameter("sha1") @Nullable String sha1,
+        @OutputCustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.sha1 = sha1;
         this.source = source;

@@ -16,8 +16,8 @@ public final class ClusterNodePoolNodeConfigGcfsConfig {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterNodePoolNodeConfigGcfsConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterNodePoolNodeConfigGcfsConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

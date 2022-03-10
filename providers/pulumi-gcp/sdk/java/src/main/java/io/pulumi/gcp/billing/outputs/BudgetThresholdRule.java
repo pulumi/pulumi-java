@@ -27,10 +27,10 @@ public final class BudgetThresholdRule {
      */
     private final Double thresholdPercent;
 
-    @OutputCustomType.Constructor({"spendBasis","thresholdPercent"})
+    @OutputCustomType.Constructor
     private BudgetThresholdRule(
-        @Nullable String spendBasis,
-        Double thresholdPercent) {
+        @OutputCustomType.Parameter("spendBasis") @Nullable String spendBasis,
+        @OutputCustomType.Parameter("thresholdPercent") Double thresholdPercent) {
         this.spendBasis = spendBasis;
         this.thresholdPercent = thresholdPercent;
     }

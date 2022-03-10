@@ -26,10 +26,10 @@ public final class ServicePerimetersServicePerimeterStatusVpcAccessibleServices 
      */
     private final @Nullable Boolean enableRestriction;
 
-    @OutputCustomType.Constructor({"allowedServices","enableRestriction"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterStatusVpcAccessibleServices(
-        @Nullable List<String> allowedServices,
-        @Nullable Boolean enableRestriction) {
+        @OutputCustomType.Parameter("allowedServices") @Nullable List<String> allowedServices,
+        @OutputCustomType.Parameter("enableRestriction") @Nullable Boolean enableRestriction) {
         this.allowedServices = allowedServices;
         this.enableRestriction = enableRestriction;
     }

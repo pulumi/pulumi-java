@@ -16,8 +16,8 @@ public final class PreventionInspectTemplateInspectConfigInfoType {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PreventionInspectTemplateInspectConfigInfoType(String name) {
+    @OutputCustomType.Constructor
+    private PreventionInspectTemplateInspectConfigInfoType(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -17,8 +17,8 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private OsPolicyAssignmentInstanceFilterExclusionLabel(@Nullable Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private OsPolicyAssignmentInstanceFilterExclusionLabel(@OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.labels = labels;
     }
 

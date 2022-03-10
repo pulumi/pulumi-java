@@ -14,10 +14,10 @@ public final class GetBucketLifecycleRule {
     private final List<GetBucketLifecycleRuleAction> actions;
     private final List<GetBucketLifecycleRuleCondition> conditions;
 
-    @OutputCustomType.Constructor({"actions","conditions"})
+    @OutputCustomType.Constructor
     private GetBucketLifecycleRule(
-        List<GetBucketLifecycleRuleAction> actions,
-        List<GetBucketLifecycleRuleCondition> conditions) {
+        @OutputCustomType.Parameter("actions") List<GetBucketLifecycleRuleAction> actions,
+        @OutputCustomType.Parameter("conditions") List<GetBucketLifecycleRuleCondition> conditions) {
         this.actions = actions;
         this.conditions = conditions;
     }

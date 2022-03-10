@@ -22,11 +22,11 @@ public final class GetLocationsResult {
     private final List<String> locations;
     private final String project;
 
-    @OutputCustomType.Constructor({"id","locations","project"})
+    @OutputCustomType.Constructor
     private GetLocationsResult(
-        String id,
-        List<String> locations,
-        String project) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("project") String project) {
         this.id = id;
         this.locations = locations;
         this.project = project;

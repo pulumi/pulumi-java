@@ -39,12 +39,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex;
 
-    @OutputCustomType.Constructor({"dictionary","excludeInfoTypes","matchingType","regex"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
-        String matchingType,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
+        @OutputCustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
+        @OutputCustomType.Parameter("excludeInfoTypes") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
+        @OutputCustomType.Parameter("matchingType") String matchingType,
+        @OutputCustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;

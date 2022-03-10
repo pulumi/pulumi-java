@@ -38,12 +38,12 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      */
     private final @Nullable List<String> responseHeadersToRemoves;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdds","requestHeadersToRemoves","responseHeadersToAdds","responseHeadersToRemoves"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction(
-        @Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
-        @Nullable List<String> requestHeadersToRemoves,
-        @Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
-        @Nullable List<String> responseHeadersToRemoves) {
+        @OutputCustomType.Parameter("requestHeadersToAdds") @Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
+        @OutputCustomType.Parameter("requestHeadersToRemoves") @Nullable List<String> requestHeadersToRemoves,
+        @OutputCustomType.Parameter("responseHeadersToAdds") @Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
+        @OutputCustomType.Parameter("responseHeadersToRemoves") @Nullable List<String> responseHeadersToRemoves) {
         this.requestHeadersToAdds = requestHeadersToAdds;
         this.requestHeadersToRemoves = requestHeadersToRemoves;
         this.responseHeadersToAdds = responseHeadersToAdds;

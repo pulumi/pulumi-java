@@ -64,18 +64,18 @@ public final class GetKeysKeySigningKey {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor({"algorithm","creationTime","description","digests","dsRecord","id","isActive","keyLength","keyTag","publicKey"})
+    @OutputCustomType.Constructor
     private GetKeysKeySigningKey(
-        String algorithm,
-        String creationTime,
-        String description,
-        List<GetKeysKeySigningKeyDigest> digests,
-        String dsRecord,
-        String id,
-        Boolean isActive,
-        Integer keyLength,
-        Integer keyTag,
-        String publicKey) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("digests") List<GetKeysKeySigningKeyDigest> digests,
+        @OutputCustomType.Parameter("dsRecord") String dsRecord,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isActive") Boolean isActive,
+        @OutputCustomType.Parameter("keyLength") Integer keyLength,
+        @OutputCustomType.Parameter("keyTag") Integer keyTag,
+        @OutputCustomType.Parameter("publicKey") String publicKey) {
         this.algorithm = algorithm;
         this.creationTime = creationTime;
         this.description = description;

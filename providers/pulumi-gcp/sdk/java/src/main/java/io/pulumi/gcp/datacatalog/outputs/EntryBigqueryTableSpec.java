@@ -18,11 +18,11 @@ public final class EntryBigqueryTableSpec {
     private final @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs;
     private final @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs;
 
-    @OutputCustomType.Constructor({"tableSourceType","tableSpecs","viewSpecs"})
+    @OutputCustomType.Constructor
     private EntryBigqueryTableSpec(
-        @Nullable String tableSourceType,
-        @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs,
-        @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
+        @OutputCustomType.Parameter("tableSourceType") @Nullable String tableSourceType,
+        @OutputCustomType.Parameter("tableSpecs") @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs,
+        @OutputCustomType.Parameter("viewSpecs") @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
         this.tableSourceType = tableSourceType;
         this.tableSpecs = tableSpecs;
         this.viewSpecs = viewSpecs;

@@ -39,13 +39,13 @@ public final class EnterpriseKeyWebSettings {
      */
     private final String integrationType;
 
-    @OutputCustomType.Constructor({"allowAllDomains","allowAmpTraffic","allowedDomains","challengeSecurityPreference","integrationType"})
+    @OutputCustomType.Constructor
     private EnterpriseKeyWebSettings(
-        @Nullable Boolean allowAllDomains,
-        @Nullable Boolean allowAmpTraffic,
-        @Nullable List<String> allowedDomains,
-        @Nullable String challengeSecurityPreference,
-        String integrationType) {
+        @OutputCustomType.Parameter("allowAllDomains") @Nullable Boolean allowAllDomains,
+        @OutputCustomType.Parameter("allowAmpTraffic") @Nullable Boolean allowAmpTraffic,
+        @OutputCustomType.Parameter("allowedDomains") @Nullable List<String> allowedDomains,
+        @OutputCustomType.Parameter("challengeSecurityPreference") @Nullable String challengeSecurityPreference,
+        @OutputCustomType.Parameter("integrationType") String integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;

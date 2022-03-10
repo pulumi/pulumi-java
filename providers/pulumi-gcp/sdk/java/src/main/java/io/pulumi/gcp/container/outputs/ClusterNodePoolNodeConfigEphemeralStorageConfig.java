@@ -15,8 +15,8 @@ public final class ClusterNodePoolNodeConfigEphemeralStorageConfig {
      */
     private final Integer localSsdCount;
 
-    @OutputCustomType.Constructor({"localSsdCount"})
-    private ClusterNodePoolNodeConfigEphemeralStorageConfig(Integer localSsdCount) {
+    @OutputCustomType.Constructor
+    private ClusterNodePoolNodeConfigEphemeralStorageConfig(@OutputCustomType.Parameter("localSsdCount") Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
     }
 

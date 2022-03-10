@@ -23,10 +23,10 @@ public final class InstanceNetworkConfig {
      */
     private final String network;
 
-    @OutputCustomType.Constructor({"ipAllocation","network"})
+    @OutputCustomType.Constructor
     private InstanceNetworkConfig(
-        String ipAllocation,
-        String network) {
+        @OutputCustomType.Parameter("ipAllocation") String ipAllocation,
+        @OutputCustomType.Parameter("network") String network) {
         this.ipAllocation = ipAllocation;
         this.network = network;
     }

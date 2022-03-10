@@ -13,11 +13,11 @@ public final class GetBackendServiceIap {
     private final String oauth2ClientSecret;
     private final String oauth2ClientSecretSha256;
 
-    @OutputCustomType.Constructor({"oauth2ClientId","oauth2ClientSecret","oauth2ClientSecretSha256"})
+    @OutputCustomType.Constructor
     private GetBackendServiceIap(
-        String oauth2ClientId,
-        String oauth2ClientSecret,
-        String oauth2ClientSecretSha256) {
+        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @OutputCustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
+        @OutputCustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientSecret = oauth2ClientSecret;
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;

@@ -70,18 +70,18 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"databaseEncryption","mainVolume","proxyConfig","replicaPlacements","rootVolume","sshConfig","subnetId","tags","version","vmSize"})
+    @OutputCustomType.Constructor
     private AzureClusterControlPlane(
-        @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
-        @Nullable AzureClusterControlPlaneMainVolume mainVolume,
-        @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
-        @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
-        @Nullable AzureClusterControlPlaneRootVolume rootVolume,
-        AzureClusterControlPlaneSshConfig sshConfig,
-        String subnetId,
-        @Nullable Map<String,String> tags,
-        String version,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("databaseEncryption") @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @OutputCustomType.Parameter("mainVolume") @Nullable AzureClusterControlPlaneMainVolume mainVolume,
+        @OutputCustomType.Parameter("proxyConfig") @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
+        @OutputCustomType.Parameter("replicaPlacements") @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
+        @OutputCustomType.Parameter("rootVolume") @Nullable AzureClusterControlPlaneRootVolume rootVolume,
+        @OutputCustomType.Parameter("sshConfig") AzureClusterControlPlaneSshConfig sshConfig,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.databaseEncryption = databaseEncryption;
         this.mainVolume = mainVolume;
         this.proxyConfig = proxyConfig;

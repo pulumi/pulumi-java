@@ -23,12 +23,12 @@ public final class GetTensorflowVersionsResult {
     private final List<String> versions;
     private final String zone;
 
-    @OutputCustomType.Constructor({"id","project","versions","zone"})
+    @OutputCustomType.Constructor
     private GetTensorflowVersionsResult(
-        String id,
-        String project,
-        List<String> versions,
-        String zone) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("versions") List<String> versions,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.id = id;
         this.project = project;
         this.versions = versions;

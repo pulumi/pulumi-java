@@ -27,11 +27,11 @@ public final class GuestPoliciesAssignmentOsType {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor({"osArchitecture","osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private GuestPoliciesAssignmentOsType(
-        @Nullable String osArchitecture,
-        @Nullable String osShortName,
-        @Nullable String osVersion) {
+        @OutputCustomType.Parameter("osArchitecture") @Nullable String osArchitecture,
+        @OutputCustomType.Parameter("osShortName") @Nullable String osShortName,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osArchitecture = osArchitecture;
         this.osShortName = osShortName;
         this.osVersion = osVersion;

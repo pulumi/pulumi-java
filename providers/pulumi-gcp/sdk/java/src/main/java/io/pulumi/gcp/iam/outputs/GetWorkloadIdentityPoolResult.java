@@ -25,16 +25,16 @@ public final class GetWorkloadIdentityPoolResult {
     private final String state;
     private final String workloadIdentityPoolId;
 
-    @OutputCustomType.Constructor({"description","disabled","displayName","id","name","project","state","workloadIdentityPoolId"})
+    @OutputCustomType.Constructor
     private GetWorkloadIdentityPoolResult(
-        String description,
-        Boolean disabled,
-        String displayName,
-        String id,
-        String name,
-        @Nullable String project,
-        String state,
-        String workloadIdentityPoolId) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;

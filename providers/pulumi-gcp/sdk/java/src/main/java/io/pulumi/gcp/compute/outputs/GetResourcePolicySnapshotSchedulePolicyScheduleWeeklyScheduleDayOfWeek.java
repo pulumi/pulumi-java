@@ -12,10 +12,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     private final String day;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"day","startTime"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(
-        String day,
-        String startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.startTime = startTime;
     }

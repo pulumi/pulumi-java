@@ -26,10 +26,10 @@ public final class AutoscalingPolicyBasicAlgorithm {
      */
     private final AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","yarnConfig"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyBasicAlgorithm(
-        @Nullable String cooldownPeriod,
-        AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
+        @OutputCustomType.Parameter("cooldownPeriod") @Nullable String cooldownPeriod,
+        @OutputCustomType.Parameter("yarnConfig") AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.yarnConfig = yarnConfig;
     }

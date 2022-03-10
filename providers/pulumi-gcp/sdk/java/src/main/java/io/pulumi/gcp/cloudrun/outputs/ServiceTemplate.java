@@ -26,10 +26,10 @@ public final class ServiceTemplate {
      */
     private final @Nullable ServiceTemplateSpec spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private ServiceTemplate(
-        @Nullable ServiceTemplateMetadata metadata,
-        @Nullable ServiceTemplateSpec spec) {
+        @OutputCustomType.Parameter("metadata") @Nullable ServiceTemplateMetadata metadata,
+        @OutputCustomType.Parameter("spec") @Nullable ServiceTemplateSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

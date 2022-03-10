@@ -52,18 +52,18 @@ public final class GetEngineVersionsResult {
     private final List<String> validNodeVersions;
     private final @Nullable String versionPrefix;
 
-    @OutputCustomType.Constructor({"defaultClusterVersion","id","latestMasterVersion","latestNodeVersion","location","project","releaseChannelDefaultVersion","validMasterVersions","validNodeVersions","versionPrefix"})
+    @OutputCustomType.Constructor
     private GetEngineVersionsResult(
-        String defaultClusterVersion,
-        String id,
-        String latestMasterVersion,
-        String latestNodeVersion,
-        @Nullable String location,
-        @Nullable String project,
-        Map<String,String> releaseChannelDefaultVersion,
-        List<String> validMasterVersions,
-        List<String> validNodeVersions,
-        @Nullable String versionPrefix) {
+        @OutputCustomType.Parameter("defaultClusterVersion") String defaultClusterVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestMasterVersion") String latestMasterVersion,
+        @OutputCustomType.Parameter("latestNodeVersion") String latestNodeVersion,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("releaseChannelDefaultVersion") Map<String,String> releaseChannelDefaultVersion,
+        @OutputCustomType.Parameter("validMasterVersions") List<String> validMasterVersions,
+        @OutputCustomType.Parameter("validNodeVersions") List<String> validNodeVersions,
+        @OutputCustomType.Parameter("versionPrefix") @Nullable String versionPrefix) {
         this.defaultClusterVersion = defaultClusterVersion;
         this.id = id;
         this.latestMasterVersion = latestMasterVersion;

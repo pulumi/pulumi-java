@@ -26,11 +26,11 @@ public final class GetLBIPRangesResult {
      */
     private final List<String> networks;
 
-    @OutputCustomType.Constructor({"httpSslTcpInternals","id","networks"})
+    @OutputCustomType.Constructor
     private GetLBIPRangesResult(
-        List<String> httpSslTcpInternals,
-        String id,
-        List<String> networks) {
+        @OutputCustomType.Parameter("httpSslTcpInternals") List<String> httpSslTcpInternals,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networks") List<String> networks) {
         this.httpSslTcpInternals = httpSslTcpInternals;
         this.id = id;
         this.networks = networks;

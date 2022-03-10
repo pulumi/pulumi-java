@@ -28,11 +28,11 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
      */
     private final @Nullable List<String> flags;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","artifactId","flags"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeUpdateStepMsiInstallation(
-        @Nullable List<Integer> allowedExitCodes,
-        String artifactId,
-        @Nullable List<String> flags) {
+        @OutputCustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("flags") @Nullable List<String> flags) {
         this.allowedExitCodes = allowedExitCodes;
         this.artifactId = artifactId;
         this.flags = flags;

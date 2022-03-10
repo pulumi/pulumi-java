@@ -19,11 +19,11 @@ public final class DomainMappingStatusResourceRecord {
     private final @Nullable String rrdata;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"name","rrdata","type"})
+    @OutputCustomType.Constructor
     private DomainMappingStatusResourceRecord(
-        @Nullable String name,
-        @Nullable String rrdata,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("rrdata") @Nullable String rrdata,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;

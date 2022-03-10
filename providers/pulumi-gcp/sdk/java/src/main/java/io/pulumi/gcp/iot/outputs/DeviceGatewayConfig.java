@@ -37,12 +37,12 @@ public final class DeviceGatewayConfig {
      */
     private final @Nullable String lastAccessedGatewayTime;
 
-    @OutputCustomType.Constructor({"gatewayAuthMethod","gatewayType","lastAccessedGatewayId","lastAccessedGatewayTime"})
+    @OutputCustomType.Constructor
     private DeviceGatewayConfig(
-        @Nullable String gatewayAuthMethod,
-        @Nullable String gatewayType,
-        @Nullable String lastAccessedGatewayId,
-        @Nullable String lastAccessedGatewayTime) {
+        @OutputCustomType.Parameter("gatewayAuthMethod") @Nullable String gatewayAuthMethod,
+        @OutputCustomType.Parameter("gatewayType") @Nullable String gatewayType,
+        @OutputCustomType.Parameter("lastAccessedGatewayId") @Nullable String lastAccessedGatewayId,
+        @OutputCustomType.Parameter("lastAccessedGatewayTime") @Nullable String lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;

@@ -33,11 +33,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      */
     private final PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath;
 
-    @OutputCustomType.Constructor({"bigQueryField","cloudStorageFileSet","outputPath"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionary(
-        @Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField bigQueryField,
-        @Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet,
-        PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
+        @OutputCustomType.Parameter("bigQueryField") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField bigQueryField,
+        @OutputCustomType.Parameter("cloudStorageFileSet") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet,
+        @OutputCustomType.Parameter("outputPath") PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
         this.outputPath = outputPath;

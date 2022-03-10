@@ -26,10 +26,10 @@ public final class RegionBackendServiceLogConfig {
      */
     private final @Nullable Double sampleRate;
 
-    @OutputCustomType.Constructor({"enable","sampleRate"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceLogConfig(
-        @Nullable Boolean enable,
-        @Nullable Double sampleRate) {
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

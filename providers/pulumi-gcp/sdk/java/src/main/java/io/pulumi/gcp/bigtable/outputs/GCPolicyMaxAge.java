@@ -27,10 +27,10 @@ public final class GCPolicyMaxAge {
      */
     private final @Nullable String duration;
 
-    @OutputCustomType.Constructor({"days","duration"})
+    @OutputCustomType.Constructor
     private GCPolicyMaxAge(
-        @Nullable Integer days,
-        @Nullable String duration) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("duration") @Nullable String duration) {
         this.days = days;
         this.duration = duration;
     }

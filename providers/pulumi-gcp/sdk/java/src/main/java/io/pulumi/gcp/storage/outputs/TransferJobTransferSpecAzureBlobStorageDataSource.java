@@ -33,12 +33,12 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecAzureBlobStorageDataSource(
-        TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
-        String container,
-        @Nullable String path,
-        String storageAccount) {
+        @OutputCustomType.Parameter("azureCredentials") TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;

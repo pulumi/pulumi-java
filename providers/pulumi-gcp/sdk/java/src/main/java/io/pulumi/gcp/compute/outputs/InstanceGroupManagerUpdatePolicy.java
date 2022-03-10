@@ -54,16 +54,16 @@ public final class InstanceGroupManagerUpdatePolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"maxSurgeFixed","maxSurgePercent","maxUnavailableFixed","maxUnavailablePercent","minReadySec","minimalAction","replacementMethod","type"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerUpdatePolicy(
-        @Nullable Integer maxSurgeFixed,
-        @Nullable Integer maxSurgePercent,
-        @Nullable Integer maxUnavailableFixed,
-        @Nullable Integer maxUnavailablePercent,
-        @Nullable Integer minReadySec,
-        String minimalAction,
-        @Nullable String replacementMethod,
-        String type) {
+        @OutputCustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
+        @OutputCustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
+        @OutputCustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
+        @OutputCustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
+        @OutputCustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
+        @OutputCustomType.Parameter("minimalAction") String minimalAction,
+        @OutputCustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
+        @OutputCustomType.Parameter("type") String type) {
         this.maxSurgeFixed = maxSurgeFixed;
         this.maxSurgePercent = maxSurgePercent;
         this.maxUnavailableFixed = maxUnavailableFixed;

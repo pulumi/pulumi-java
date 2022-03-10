@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MembershipEndpointGkeCluster {
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"resourceLink"})
-    private MembershipEndpointGkeCluster(String resourceLink) {
+    @OutputCustomType.Constructor
+    private MembershipEndpointGkeCluster(@OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.resourceLink = resourceLink;
     }
 

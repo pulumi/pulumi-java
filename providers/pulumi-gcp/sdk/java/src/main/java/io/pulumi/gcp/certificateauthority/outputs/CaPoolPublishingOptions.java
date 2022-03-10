@@ -25,10 +25,10 @@ public final class CaPoolPublishingOptions {
      */
     private final Boolean publishCrl;
 
-    @OutputCustomType.Constructor({"publishCaCert","publishCrl"})
+    @OutputCustomType.Constructor
     private CaPoolPublishingOptions(
-        Boolean publishCaCert,
-        Boolean publishCrl) {
+        @OutputCustomType.Parameter("publishCaCert") Boolean publishCaCert,
+        @OutputCustomType.Parameter("publishCrl") Boolean publishCrl) {
         this.publishCaCert = publishCaCert;
         this.publishCrl = publishCrl;
     }

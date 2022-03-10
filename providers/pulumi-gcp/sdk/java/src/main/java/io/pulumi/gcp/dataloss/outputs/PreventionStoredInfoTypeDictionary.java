@@ -25,10 +25,10 @@ public final class PreventionStoredInfoTypeDictionary {
      */
     private final @Nullable PreventionStoredInfoTypeDictionaryWordList wordList;
 
-    @OutputCustomType.Constructor({"cloudStoragePath","wordList"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeDictionary(
-        @Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath,
-        @Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
+        @OutputCustomType.Parameter("cloudStoragePath") @Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath,
+        @OutputCustomType.Parameter("wordList") @Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }

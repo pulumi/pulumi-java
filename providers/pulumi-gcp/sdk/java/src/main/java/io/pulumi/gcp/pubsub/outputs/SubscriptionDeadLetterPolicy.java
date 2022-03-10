@@ -38,10 +38,10 @@ public final class SubscriptionDeadLetterPolicy {
      */
     private final @Nullable Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor({"deadLetterTopic","maxDeliveryAttempts"})
+    @OutputCustomType.Constructor
     private SubscriptionDeadLetterPolicy(
-        @Nullable String deadLetterTopic,
-        @Nullable Integer maxDeliveryAttempts) {
+        @OutputCustomType.Parameter("deadLetterTopic") @Nullable String deadLetterTopic,
+        @OutputCustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }

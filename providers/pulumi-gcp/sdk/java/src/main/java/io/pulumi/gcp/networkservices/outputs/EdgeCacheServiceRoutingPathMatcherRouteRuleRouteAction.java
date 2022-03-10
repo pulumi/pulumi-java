@@ -32,11 +32,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite;
 
-    @OutputCustomType.Constructor({"cdnPolicy","corsPolicy","urlRewrite"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction(
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy cdnPolicy,
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
+        @OutputCustomType.Parameter("cdnPolicy") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy cdnPolicy,
+        @OutputCustomType.Parameter("corsPolicy") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
+        @OutputCustomType.Parameter("urlRewrite") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
         this.cdnPolicy = cdnPolicy;
         this.corsPolicy = corsPolicy;
         this.urlRewrite = urlRewrite;

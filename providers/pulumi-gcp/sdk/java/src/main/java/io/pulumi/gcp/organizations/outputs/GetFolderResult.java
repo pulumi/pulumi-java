@@ -51,18 +51,18 @@ public final class GetFolderResult {
      */
     private final String parent;
 
-    @OutputCustomType.Constructor({"createTime","displayName","folder","folderId","id","lifecycleState","lookupOrganization","name","organization","parent"})
+    @OutputCustomType.Constructor
     private GetFolderResult(
-        String createTime,
-        String displayName,
-        String folder,
-        String folderId,
-        String id,
-        String lifecycleState,
-        @Nullable Boolean lookupOrganization,
-        String name,
-        String organization,
-        String parent) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("folder") String folder,
+        @OutputCustomType.Parameter("folderId") String folderId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("lookupOrganization") @Nullable Boolean lookupOrganization,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("parent") String parent) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.folder = folder;

@@ -36,12 +36,12 @@ public final class InboundSamlConfigIdpConfig {
      */
     private final String ssoUrl;
 
-    @OutputCustomType.Constructor({"idpCertificates","idpEntityId","signRequest","ssoUrl"})
+    @OutputCustomType.Constructor
     private InboundSamlConfigIdpConfig(
-        List<InboundSamlConfigIdpConfigIdpCertificate> idpCertificates,
-        String idpEntityId,
-        @Nullable Boolean signRequest,
-        String ssoUrl) {
+        @OutputCustomType.Parameter("idpCertificates") List<InboundSamlConfigIdpConfigIdpCertificate> idpCertificates,
+        @OutputCustomType.Parameter("idpEntityId") String idpEntityId,
+        @OutputCustomType.Parameter("signRequest") @Nullable Boolean signRequest,
+        @OutputCustomType.Parameter("ssoUrl") String ssoUrl) {
         this.idpCertificates = idpCertificates;
         this.idpEntityId = idpEntityId;
         this.signRequest = signRequest;

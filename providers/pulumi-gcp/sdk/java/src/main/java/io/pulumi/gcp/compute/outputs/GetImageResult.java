@@ -111,28 +111,28 @@ public final class GetImageResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"archiveSizeBytes","creationTimestamp","description","diskSizeGb","family","filter","id","imageEncryptionKeySha256","imageId","labelFingerprint","labels","licenses","name","project","selfLink","sourceDisk","sourceDiskEncryptionKeySha256","sourceDiskId","sourceImageId","status"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        Integer archiveSizeBytes,
-        String creationTimestamp,
-        String description,
-        Integer diskSizeGb,
-        String family,
-        @Nullable String filter,
-        String id,
-        String imageEncryptionKeySha256,
-        String imageId,
-        String labelFingerprint,
-        Map<String,String> labels,
-        List<String> licenses,
-        String name,
-        String project,
-        String selfLink,
-        String sourceDisk,
-        String sourceDiskEncryptionKeySha256,
-        String sourceDiskId,
-        String sourceImageId,
-        String status) {
+        @OutputCustomType.Parameter("archiveSizeBytes") Integer archiveSizeBytes,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageEncryptionKeySha256") String imageEncryptionKeySha256,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKeySha256") String sourceDiskEncryptionKeySha256,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
+        @OutputCustomType.Parameter("status") String status) {
         this.archiveSizeBytes = archiveSizeBytes;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

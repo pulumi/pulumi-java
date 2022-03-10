@@ -50,12 +50,12 @@ public final class RouterBgp {
      */
     private final Integer asn;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn"})
+    @OutputCustomType.Constructor
     private RouterBgp(
-        @Nullable String advertiseMode,
-        @Nullable List<String> advertisedGroups,
-        @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
-        Integer asn) {
+        @OutputCustomType.Parameter("advertiseMode") @Nullable String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") @Nullable List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @OutputCustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

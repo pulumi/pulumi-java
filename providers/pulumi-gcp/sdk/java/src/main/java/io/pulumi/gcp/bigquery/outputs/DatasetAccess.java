@@ -54,14 +54,14 @@ public final class DatasetAccess {
      */
     private final @Nullable DatasetAccessView view;
 
-    @OutputCustomType.Constructor({"domain","groupByEmail","role","specialGroup","userByEmail","view"})
+    @OutputCustomType.Constructor
     private DatasetAccess(
-        @Nullable String domain,
-        @Nullable String groupByEmail,
-        @Nullable String role,
-        @Nullable String specialGroup,
-        @Nullable String userByEmail,
-        @Nullable DatasetAccessView view) {
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("groupByEmail") @Nullable String groupByEmail,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("specialGroup") @Nullable String specialGroup,
+        @OutputCustomType.Parameter("userByEmail") @Nullable String userByEmail,
+        @OutputCustomType.Parameter("view") @Nullable DatasetAccessView view) {
         this.domain = domain;
         this.groupByEmail = groupByEmail;
         this.role = role;

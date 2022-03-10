@@ -31,10 +31,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      */
     private final PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table;
 
-    @OutputCustomType.Constructor({"outputSchema","table"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig(
-        @Nullable String outputSchema,
-        PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
+        @OutputCustomType.Parameter("outputSchema") @Nullable String outputSchema,
+        @OutputCustomType.Parameter("table") PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
         this.outputSchema = outputSchema;
         this.table = table;
     }

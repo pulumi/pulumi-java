@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodePoolNodeConfigEphemeralStorageConfig {
     private final Integer localSsdCount;
 
-    @OutputCustomType.Constructor({"localSsdCount"})
-    private GetClusterNodePoolNodeConfigEphemeralStorageConfig(Integer localSsdCount) {
+    @OutputCustomType.Constructor
+    private GetClusterNodePoolNodeConfigEphemeralStorageConfig(@OutputCustomType.Parameter("localSsdCount") Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
     }
 

@@ -24,10 +24,10 @@ public final class ClusterAddonsConfigIstioConfig {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"auth","disabled"})
+    @OutputCustomType.Constructor
     private ClusterAddonsConfigIstioConfig(
-        @Nullable String auth,
-        Boolean disabled) {
+        @OutputCustomType.Parameter("auth") @Nullable String auth,
+        @OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }

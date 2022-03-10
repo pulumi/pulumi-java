@@ -14,10 +14,10 @@ public final class GetServiceTemplate {
     private final List<GetServiceTemplateMetadata> metadatas;
     private final List<GetServiceTemplateSpec> specs;
 
-    @OutputCustomType.Constructor({"metadatas","specs"})
+    @OutputCustomType.Constructor
     private GetServiceTemplate(
-        List<GetServiceTemplateMetadata> metadatas,
-        List<GetServiceTemplateSpec> specs) {
+        @OutputCustomType.Parameter("metadatas") List<GetServiceTemplateMetadata> metadatas,
+        @OutputCustomType.Parameter("specs") List<GetServiceTemplateSpec> specs) {
         this.metadatas = metadatas;
         this.specs = specs;
     }

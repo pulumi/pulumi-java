@@ -31,11 +31,11 @@ public final class InstanceFileShares {
      */
     private final @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions;
 
-    @OutputCustomType.Constructor({"capacityGb","name","nfsExportOptions"})
+    @OutputCustomType.Constructor
     private InstanceFileShares(
-        Integer capacityGb,
-        String name,
-        @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
+        @OutputCustomType.Parameter("capacityGb") Integer capacityGb,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nfsExportOptions") @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
         this.capacityGb = capacityGb;
         this.name = name;
         this.nfsExportOptions = nfsExportOptions;

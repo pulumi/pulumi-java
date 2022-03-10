@@ -39,13 +39,13 @@ public final class PolicySpecRule {
      */
     private final @Nullable PolicySpecRuleValues values;
 
-    @OutputCustomType.Constructor({"allowAll","condition","denyAll","enforce","values"})
+    @OutputCustomType.Constructor
     private PolicySpecRule(
-        @Nullable String allowAll,
-        @Nullable PolicySpecRuleCondition condition,
-        @Nullable String denyAll,
-        @Nullable String enforce,
-        @Nullable PolicySpecRuleValues values) {
+        @OutputCustomType.Parameter("allowAll") @Nullable String allowAll,
+        @OutputCustomType.Parameter("condition") @Nullable PolicySpecRuleCondition condition,
+        @OutputCustomType.Parameter("denyAll") @Nullable String denyAll,
+        @OutputCustomType.Parameter("enforce") @Nullable String enforce,
+        @OutputCustomType.Parameter("values") @Nullable PolicySpecRuleValues values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;

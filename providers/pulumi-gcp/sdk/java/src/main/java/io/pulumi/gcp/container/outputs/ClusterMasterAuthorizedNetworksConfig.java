@@ -18,8 +18,8 @@ public final class ClusterMasterAuthorizedNetworksConfig {
      */
     private final @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
-    @OutputCustomType.Constructor({"cidrBlocks"})
-    private ClusterMasterAuthorizedNetworksConfig(@Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+    @OutputCustomType.Constructor
+    private ClusterMasterAuthorizedNetworksConfig(@OutputCustomType.Parameter("cidrBlocks") @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
     }
 

@@ -30,11 +30,11 @@ public final class MetricMetricDescriptorLabel {
      */
     private final @Nullable String valueType;
 
-    @OutputCustomType.Constructor({"description","key","valueType"})
+    @OutputCustomType.Constructor
     private MetricMetricDescriptorLabel(
-        @Nullable String description,
-        String key,
-        @Nullable String valueType) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("valueType") @Nullable String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;

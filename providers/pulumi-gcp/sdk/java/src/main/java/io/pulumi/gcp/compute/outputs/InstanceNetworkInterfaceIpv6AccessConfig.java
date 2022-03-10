@@ -26,12 +26,12 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
      */
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"externalIpv6","externalIpv6PrefixLength","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private InstanceNetworkInterfaceIpv6AccessConfig(
-        @Nullable String externalIpv6,
-        @Nullable String externalIpv6PrefixLength,
-        String networkTier,
-        @Nullable String publicPtrDomainName) {
+        @OutputCustomType.Parameter("externalIpv6") @Nullable String externalIpv6,
+        @OutputCustomType.Parameter("externalIpv6PrefixLength") @Nullable String externalIpv6PrefixLength,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.networkTier = networkTier;

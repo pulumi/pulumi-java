@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetOrganizationPolicyBooleanPolicy {
     private final Boolean enforced;
 
-    @OutputCustomType.Constructor({"enforced"})
-    private GetOrganizationPolicyBooleanPolicy(Boolean enforced) {
+    @OutputCustomType.Constructor
+    private GetOrganizationPolicyBooleanPolicy(@OutputCustomType.Parameter("enforced") Boolean enforced) {
         this.enforced = enforced;
     }
 

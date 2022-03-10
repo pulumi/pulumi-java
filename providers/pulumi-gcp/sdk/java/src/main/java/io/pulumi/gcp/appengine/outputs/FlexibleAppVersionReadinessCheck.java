@@ -50,15 +50,15 @@ public final class FlexibleAppVersionReadinessCheck {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"appStartTimeout","checkInterval","failureThreshold","host","path","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionReadinessCheck(
-        @Nullable String appStartTimeout,
-        @Nullable String checkInterval,
-        @Nullable Double failureThreshold,
-        @Nullable String host,
-        String path,
-        @Nullable Double successThreshold,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("appStartTimeout") @Nullable String appStartTimeout,
+        @OutputCustomType.Parameter("checkInterval") @Nullable String checkInterval,
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Double failureThreshold,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Double successThreshold,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.appStartTimeout = appStartTimeout;
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;

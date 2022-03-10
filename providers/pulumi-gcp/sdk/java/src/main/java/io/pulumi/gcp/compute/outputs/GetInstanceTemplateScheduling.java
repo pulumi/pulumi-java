@@ -44,13 +44,13 @@ public final class GetInstanceTemplateScheduling {
      */
     private final Boolean preemptible;
 
-    @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateScheduling(
-        Boolean automaticRestart,
-        Integer minNodeCpus,
-        List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible) {
+        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;

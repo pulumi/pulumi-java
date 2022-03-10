@@ -30,10 +30,10 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperation {
      */
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor({"methodSelectors","serviceName"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusEgressPolicyEgressToOperation(
-        @Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelector> methodSelectors,
-        @Nullable String serviceName) {
+        @OutputCustomType.Parameter("methodSelectors") @Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelector> methodSelectors,
+        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.methodSelectors = methodSelectors;
         this.serviceName = serviceName;
     }

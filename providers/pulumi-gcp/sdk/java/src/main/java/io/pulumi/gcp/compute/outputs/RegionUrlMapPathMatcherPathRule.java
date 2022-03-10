@@ -47,12 +47,12 @@ public final class RegionUrlMapPathMatcherPathRule {
      */
     private final @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"paths","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherPathRule(
-        List<String> paths,
-        @Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction,
-        @Nullable String service,
-        @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;

@@ -28,11 +28,11 @@ public final class CertificateTemplateIdentityConstraints {
      */
     private final @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression;
 
-    @OutputCustomType.Constructor({"allowSubjectAltNamesPassthrough","allowSubjectPassthrough","celExpression"})
+    @OutputCustomType.Constructor
     private CertificateTemplateIdentityConstraints(
-        Boolean allowSubjectAltNamesPassthrough,
-        Boolean allowSubjectPassthrough,
-        @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
+        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @OutputCustomType.Parameter("celExpression") @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;

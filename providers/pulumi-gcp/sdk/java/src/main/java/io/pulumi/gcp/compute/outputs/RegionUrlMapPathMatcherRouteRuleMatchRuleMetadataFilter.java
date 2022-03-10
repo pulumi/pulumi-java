@@ -31,10 +31,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      */
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor({"filterLabels","filterMatchCriteria"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter(
-        List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
+        @OutputCustomType.Parameter("filterLabels") List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels,
+        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

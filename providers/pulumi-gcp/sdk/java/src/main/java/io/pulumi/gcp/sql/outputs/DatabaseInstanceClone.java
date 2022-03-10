@@ -22,10 +22,10 @@ public final class DatabaseInstanceClone {
      */
     private final String sourceInstanceName;
 
-    @OutputCustomType.Constructor({"pointInTime","sourceInstanceName"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceClone(
-        @Nullable String pointInTime,
-        String sourceInstanceName) {
+        @OutputCustomType.Parameter("pointInTime") @Nullable String pointInTime,
+        @OutputCustomType.Parameter("sourceInstanceName") String sourceInstanceName) {
         this.pointInTime = pointInTime;
         this.sourceInstanceName = sourceInstanceName;
     }

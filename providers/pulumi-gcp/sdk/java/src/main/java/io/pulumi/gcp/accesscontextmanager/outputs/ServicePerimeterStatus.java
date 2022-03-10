@@ -72,14 +72,14 @@ public final class ServicePerimeterStatus {
      */
     private final @Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices;
 
-    @OutputCustomType.Constructor({"accessLevels","egressPolicies","ingressPolicies","resources","restrictedServices","vpcAccessibleServices"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatus(
-        @Nullable List<String> accessLevels,
-        @Nullable List<ServicePerimeterStatusEgressPolicy> egressPolicies,
-        @Nullable List<ServicePerimeterStatusIngressPolicy> ingressPolicies,
-        @Nullable List<String> resources,
-        @Nullable List<String> restrictedServices,
-        @Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
+        @OutputCustomType.Parameter("accessLevels") @Nullable List<String> accessLevels,
+        @OutputCustomType.Parameter("egressPolicies") @Nullable List<ServicePerimeterStatusEgressPolicy> egressPolicies,
+        @OutputCustomType.Parameter("ingressPolicies") @Nullable List<ServicePerimeterStatusIngressPolicy> ingressPolicies,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("restrictedServices") @Nullable List<String> restrictedServices,
+        @OutputCustomType.Parameter("vpcAccessibleServices") @Nullable ServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;

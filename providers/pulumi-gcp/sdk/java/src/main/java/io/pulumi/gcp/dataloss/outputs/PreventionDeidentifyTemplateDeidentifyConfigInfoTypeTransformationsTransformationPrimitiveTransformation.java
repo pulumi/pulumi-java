@@ -47,13 +47,13 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Boolean replaceWithInfoTypeConfig;
 
-    @OutputCustomType.Constructor({"characterMaskConfig","cryptoDeterministicConfig","cryptoReplaceFfxFpeConfig","replaceConfig","replaceWithInfoTypeConfig"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation(
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig characterMaskConfig,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig cryptoDeterministicConfig,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig replaceConfig,
-        @Nullable Boolean replaceWithInfoTypeConfig) {
+        @OutputCustomType.Parameter("characterMaskConfig") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig characterMaskConfig,
+        @OutputCustomType.Parameter("cryptoDeterministicConfig") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig cryptoDeterministicConfig,
+        @OutputCustomType.Parameter("cryptoReplaceFfxFpeConfig") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig cryptoReplaceFfxFpeConfig,
+        @OutputCustomType.Parameter("replaceConfig") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig replaceConfig,
+        @OutputCustomType.Parameter("replaceWithInfoTypeConfig") @Nullable Boolean replaceWithInfoTypeConfig) {
         this.characterMaskConfig = characterMaskConfig;
         this.cryptoDeterministicConfig = cryptoDeterministicConfig;
         this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;

@@ -22,10 +22,10 @@ public final class CxIntentTrainingPhrasePart {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"parameterId","text"})
+    @OutputCustomType.Constructor
     private CxIntentTrainingPhrasePart(
-        @Nullable String parameterId,
-        String text) {
+        @OutputCustomType.Parameter("parameterId") @Nullable String parameterId,
+        @OutputCustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }

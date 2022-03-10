@@ -23,10 +23,10 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor({"cidrBlock","displayName"})
+    @OutputCustomType.Constructor
     private ClusterMasterAuthorizedNetworksConfigCidrBlock(
-        String cidrBlock,
-        @Nullable String displayName) {
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RegionInstanceGroupManagerStatusVersionTarget {
     private final @Nullable Boolean isReached;
 
-    @OutputCustomType.Constructor({"isReached"})
-    private RegionInstanceGroupManagerStatusVersionTarget(@Nullable Boolean isReached) {
+    @OutputCustomType.Constructor
+    private RegionInstanceGroupManagerStatusVersionTarget(@OutputCustomType.Parameter("isReached") @Nullable Boolean isReached) {
         this.isReached = isReached;
     }
 

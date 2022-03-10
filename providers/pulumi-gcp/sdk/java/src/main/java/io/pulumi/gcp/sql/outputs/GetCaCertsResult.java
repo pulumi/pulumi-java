@@ -29,13 +29,13 @@ public final class GetCaCertsResult {
     private final String instance;
     private final String project;
 
-    @OutputCustomType.Constructor({"activeVersion","certs","id","instance","project"})
+    @OutputCustomType.Constructor
     private GetCaCertsResult(
-        String activeVersion,
-        List<GetCaCertsCert> certs,
-        String id,
-        String instance,
-        String project) {
+        @OutputCustomType.Parameter("activeVersion") String activeVersion,
+        @OutputCustomType.Parameter("certs") List<GetCaCertsCert> certs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("project") String project) {
         this.activeVersion = activeVersion;
         this.certs = certs;
         this.id = id;

@@ -53,15 +53,15 @@ public final class TransferJobTransferSpec {
      */
     private final @Nullable TransferJobTransferSpecTransferOptions transferOptions;
 
-    @OutputCustomType.Constructor({"awsS3DataSource","azureBlobStorageDataSource","gcsDataSink","gcsDataSource","httpDataSource","objectConditions","transferOptions"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpec(
-        @Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource,
-        @Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource,
-        @Nullable TransferJobTransferSpecGcsDataSink gcsDataSink,
-        @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource,
-        @Nullable TransferJobTransferSpecHttpDataSource httpDataSource,
-        @Nullable TransferJobTransferSpecObjectConditions objectConditions,
-        @Nullable TransferJobTransferSpecTransferOptions transferOptions) {
+        @OutputCustomType.Parameter("awsS3DataSource") @Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource,
+        @OutputCustomType.Parameter("azureBlobStorageDataSource") @Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource,
+        @OutputCustomType.Parameter("gcsDataSink") @Nullable TransferJobTransferSpecGcsDataSink gcsDataSink,
+        @OutputCustomType.Parameter("gcsDataSource") @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource,
+        @OutputCustomType.Parameter("httpDataSource") @Nullable TransferJobTransferSpecHttpDataSource httpDataSource,
+        @OutputCustomType.Parameter("objectConditions") @Nullable TransferJobTransferSpecObjectConditions objectConditions,
+        @OutputCustomType.Parameter("transferOptions") @Nullable TransferJobTransferSpecTransferOptions transferOptions) {
         this.awsS3DataSource = awsS3DataSource;
         this.azureBlobStorageDataSource = azureBlobStorageDataSource;
         this.gcsDataSink = gcsDataSink;

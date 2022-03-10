@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetResourcePolicyInstanceSchedulePolicyVmStopSchedule {
     private final String schedule;
 
-    @OutputCustomType.Constructor({"schedule"})
-    private GetResourcePolicyInstanceSchedulePolicyVmStopSchedule(String schedule) {
+    @OutputCustomType.Constructor
+    private GetResourcePolicyInstanceSchedulePolicyVmStopSchedule(@OutputCustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 

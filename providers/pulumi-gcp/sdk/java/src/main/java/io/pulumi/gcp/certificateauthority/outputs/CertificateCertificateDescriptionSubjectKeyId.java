@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class CertificateCertificateDescriptionSubjectKeyId {
     private final @Nullable String keyId;
 
-    @OutputCustomType.Constructor({"keyId"})
-    private CertificateCertificateDescriptionSubjectKeyId(@Nullable String keyId) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionSubjectKeyId(@OutputCustomType.Parameter("keyId") @Nullable String keyId) {
         this.keyId = keyId;
     }
 

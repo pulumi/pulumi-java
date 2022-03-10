@@ -30,10 +30,10 @@ public final class SloRequestBasedSliDistributionCut {
      */
     private final SloRequestBasedSliDistributionCutRange range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSliDistributionCut(
-        String distributionFilter,
-        SloRequestBasedSliDistributionCutRange range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") SloRequestBasedSliDistributionCutRange range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }

@@ -30,11 +30,11 @@ public final class ReservationSpecificReservation {
      */
     private final ReservationSpecificReservationInstanceProperties instanceProperties;
 
-    @OutputCustomType.Constructor({"count","inUseCount","instanceProperties"})
+    @OutputCustomType.Constructor
     private ReservationSpecificReservation(
-        Integer count,
-        @Nullable Integer inUseCount,
-        ReservationSpecificReservationInstanceProperties instanceProperties) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("inUseCount") @Nullable Integer inUseCount,
+        @OutputCustomType.Parameter("instanceProperties") ReservationSpecificReservationInstanceProperties instanceProperties) {
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;

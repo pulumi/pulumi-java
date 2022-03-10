@@ -15,8 +15,8 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey {
      */
     private final String kmsKeySelfLink;
 
-    @OutputCustomType.Constructor({"kmsKeySelfLink"})
-    private GetInstanceTemplateDiskDiskEncryptionKey(String kmsKeySelfLink) {
+    @OutputCustomType.Constructor
+    private GetInstanceTemplateDiskDiskEncryptionKey(@OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink) {
         this.kmsKeySelfLink = kmsKeySelfLink;
     }
 

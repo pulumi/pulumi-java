@@ -16,12 +16,12 @@ public final class GetInstanceMaintenancePolicy {
     private final String updateTime;
     private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
-    @OutputCustomType.Constructor({"createTime","description","updateTime","weeklyMaintenanceWindows"})
+    @OutputCustomType.Constructor
     private GetInstanceMaintenancePolicy(
-        String createTime,
-        String description,
-        String updateTime,
-        List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("weeklyMaintenanceWindows") List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;

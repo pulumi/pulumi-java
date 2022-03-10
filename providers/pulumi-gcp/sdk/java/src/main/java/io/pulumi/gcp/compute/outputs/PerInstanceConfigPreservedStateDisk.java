@@ -41,12 +41,12 @@ public final class PerInstanceConfigPreservedStateDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"deleteRule","deviceName","mode","source"})
+    @OutputCustomType.Constructor
     private PerInstanceConfigPreservedStateDisk(
-        @Nullable String deleteRule,
-        String deviceName,
-        @Nullable String mode,
-        String source) {
+        @OutputCustomType.Parameter("deleteRule") @Nullable String deleteRule,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") String source) {
         this.deleteRule = deleteRule;
         this.deviceName = deviceName;
         this.mode = mode;

@@ -14,11 +14,11 @@ public final class GetHcVpnGatewayVpnInterface {
     private final String interconnectAttachment;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"id","interconnectAttachment","ipAddress"})
+    @OutputCustomType.Constructor
     private GetHcVpnGatewayVpnInterface(
-        Integer id,
-        String interconnectAttachment,
-        String ipAddress) {
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;

@@ -15,8 +15,8 @@ public final class DeploymentTargetConfig {
      */
     private final String content;
 
-    @OutputCustomType.Constructor({"content"})
-    private DeploymentTargetConfig(String content) {
+    @OutputCustomType.Constructor
+    private DeploymentTargetConfig(@OutputCustomType.Parameter("content") String content) {
         this.content = content;
     }
 

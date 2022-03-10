@@ -51,13 +51,13 @@ public final class GuestPoliciesAssignment {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"groupLabels","instanceNamePrefixes","instances","osTypes","zones"})
+    @OutputCustomType.Constructor
     private GuestPoliciesAssignment(
-        @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
-        @Nullable List<String> instanceNamePrefixes,
-        @Nullable List<String> instances,
-        @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("groupLabels") @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
+        @OutputCustomType.Parameter("osTypes") @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
         this.instances = instances;

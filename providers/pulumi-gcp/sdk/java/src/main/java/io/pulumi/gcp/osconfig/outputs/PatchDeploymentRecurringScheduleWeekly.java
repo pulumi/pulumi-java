@@ -16,8 +16,8 @@ public final class PatchDeploymentRecurringScheduleWeekly {
      */
     private final String dayOfWeek;
 
-    @OutputCustomType.Constructor({"dayOfWeek"})
-    private PatchDeploymentRecurringScheduleWeekly(String dayOfWeek) {
+    @OutputCustomType.Constructor
+    private PatchDeploymentRecurringScheduleWeekly(@OutputCustomType.Parameter("dayOfWeek") String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
 

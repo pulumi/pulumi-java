@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRe
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"sha256Checksum","uri"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote(
-        @Nullable String sha256Checksum,
-        String uri) {
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.sha256Checksum = sha256Checksum;
         this.uri = uri;
     }

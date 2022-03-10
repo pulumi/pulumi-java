@@ -17,8 +17,8 @@ public final class WorkflowTemplateJobPrestoJobLoggingConfig {
      */
     private final @Nullable Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private WorkflowTemplateJobPrestoJobLoggingConfig(@Nullable Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplateJobPrestoJobLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") @Nullable Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

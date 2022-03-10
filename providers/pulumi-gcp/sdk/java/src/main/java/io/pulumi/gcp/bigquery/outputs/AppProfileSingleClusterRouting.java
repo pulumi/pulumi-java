@@ -24,10 +24,10 @@ public final class AppProfileSingleClusterRouting {
      */
     private final String clusterId;
 
-    @OutputCustomType.Constructor({"allowTransactionalWrites","clusterId"})
+    @OutputCustomType.Constructor
     private AppProfileSingleClusterRouting(
-        @Nullable Boolean allowTransactionalWrites,
-        String clusterId) {
+        @OutputCustomType.Parameter("allowTransactionalWrites") @Nullable Boolean allowTransactionalWrites,
+        @OutputCustomType.Parameter("clusterId") String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = clusterId;
     }

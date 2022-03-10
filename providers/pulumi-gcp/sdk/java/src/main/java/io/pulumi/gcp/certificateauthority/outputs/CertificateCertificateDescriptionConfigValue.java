@@ -18,8 +18,8 @@ public final class CertificateCertificateDescriptionConfigValue {
      */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages;
 
-    @OutputCustomType.Constructor({"keyUsages"})
-    private CertificateCertificateDescriptionConfigValue(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionConfigValue(@OutputCustomType.Parameter("keyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages) {
         this.keyUsages = keyUsages;
     }
 

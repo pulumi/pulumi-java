@@ -33,12 +33,12 @@ public final class AwsNodePoolConfigRootVolume {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"iops","kmsKeyArn","sizeGib","volumeType"})
+    @OutputCustomType.Constructor
     private AwsNodePoolConfigRootVolume(
-        @Nullable Integer iops,
-        @Nullable String kmsKeyArn,
-        @Nullable Integer sizeGib,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.iops = iops;
         this.kmsKeyArn = kmsKeyArn;
         this.sizeGib = sizeGib;

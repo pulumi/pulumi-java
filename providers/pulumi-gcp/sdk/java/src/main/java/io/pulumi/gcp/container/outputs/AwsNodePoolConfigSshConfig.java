@@ -15,8 +15,8 @@ public final class AwsNodePoolConfigSshConfig {
      */
     private final String ec2KeyPair;
 
-    @OutputCustomType.Constructor({"ec2KeyPair"})
-    private AwsNodePoolConfigSshConfig(String ec2KeyPair) {
+    @OutputCustomType.Constructor
+    private AwsNodePoolConfigSshConfig(@OutputCustomType.Parameter("ec2KeyPair") String ec2KeyPair) {
         this.ec2KeyPair = ec2KeyPair;
     }
 

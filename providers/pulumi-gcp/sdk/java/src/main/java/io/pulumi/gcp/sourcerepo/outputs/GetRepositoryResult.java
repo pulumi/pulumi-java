@@ -25,14 +25,14 @@ public final class GetRepositoryResult {
     private final Integer size;
     private final String url;
 
-    @OutputCustomType.Constructor({"id","name","project","pubsubConfigs","size","url"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String id,
-        String name,
-        @Nullable String project,
-        List<GetRepositoryPubsubConfig> pubsubConfigs,
-        Integer size,
-        String url) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("pubsubConfigs") List<GetRepositoryPubsubConfig> pubsubConfigs,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("url") String url) {
         this.id = id;
         this.name = name;
         this.project = project;

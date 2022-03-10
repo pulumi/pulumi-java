@@ -39,11 +39,11 @@ public final class RegionBackendServiceConsistentHash {
      */
     private final @Nullable Integer minimumRingSize;
 
-    @OutputCustomType.Constructor({"httpCookie","httpHeaderName","minimumRingSize"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceConsistentHash(
-        @Nullable RegionBackendServiceConsistentHashHttpCookie httpCookie,
-        @Nullable String httpHeaderName,
-        @Nullable Integer minimumRingSize) {
+        @OutputCustomType.Parameter("httpCookie") @Nullable RegionBackendServiceConsistentHashHttpCookie httpCookie,
+        @OutputCustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
+        @OutputCustomType.Parameter("minimumRingSize") @Nullable Integer minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

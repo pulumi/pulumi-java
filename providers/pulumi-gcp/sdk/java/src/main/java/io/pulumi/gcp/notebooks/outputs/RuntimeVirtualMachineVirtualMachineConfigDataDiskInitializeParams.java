@@ -50,13 +50,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"description","diskName","diskSizeGb","diskType","labels"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams(
-        @Nullable String description,
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGb,
-        @Nullable String diskType,
-        @Nullable Map<String,String> labels) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

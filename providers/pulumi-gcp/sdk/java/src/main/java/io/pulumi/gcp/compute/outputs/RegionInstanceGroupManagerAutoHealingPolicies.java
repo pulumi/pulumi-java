@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
      */
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor({"healthCheck","initialDelaySec"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerAutoHealingPolicies(
-        String healthCheck,
-        Integer initialDelaySec) {
+        @OutputCustomType.Parameter("healthCheck") String healthCheck,
+        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
     }

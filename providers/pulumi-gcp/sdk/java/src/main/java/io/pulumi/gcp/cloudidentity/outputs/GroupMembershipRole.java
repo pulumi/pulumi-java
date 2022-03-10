@@ -16,8 +16,8 @@ public final class GroupMembershipRole {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GroupMembershipRole(String name) {
+    @OutputCustomType.Constructor
+    private GroupMembershipRole(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

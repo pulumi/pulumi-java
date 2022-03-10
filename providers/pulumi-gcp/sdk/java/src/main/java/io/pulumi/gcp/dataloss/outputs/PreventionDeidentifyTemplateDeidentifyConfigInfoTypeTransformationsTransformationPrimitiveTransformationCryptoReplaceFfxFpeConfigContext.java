@@ -17,8 +17,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

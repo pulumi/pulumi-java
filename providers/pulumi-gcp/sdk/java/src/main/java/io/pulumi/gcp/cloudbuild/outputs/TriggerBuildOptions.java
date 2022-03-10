@@ -101,20 +101,20 @@ public final class TriggerBuildOptions {
      */
     private final @Nullable String workerPool;
 
-    @OutputCustomType.Constructor({"diskSizeGb","dynamicSubstitutions","envs","logStreamingOption","logging","machineType","requestedVerifyOption","secretEnvs","sourceProvenanceHashes","substitutionOption","volumes","workerPool"})
+    @OutputCustomType.Constructor
     private TriggerBuildOptions(
-        @Nullable Integer diskSizeGb,
-        @Nullable Boolean dynamicSubstitutions,
-        @Nullable List<String> envs,
-        @Nullable String logStreamingOption,
-        @Nullable String logging,
-        @Nullable String machineType,
-        @Nullable String requestedVerifyOption,
-        @Nullable List<String> secretEnvs,
-        @Nullable List<String> sourceProvenanceHashes,
-        @Nullable String substitutionOption,
-        @Nullable List<TriggerBuildOptionsVolume> volumes,
-        @Nullable String workerPool) {
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("dynamicSubstitutions") @Nullable Boolean dynamicSubstitutions,
+        @OutputCustomType.Parameter("envs") @Nullable List<String> envs,
+        @OutputCustomType.Parameter("logStreamingOption") @Nullable String logStreamingOption,
+        @OutputCustomType.Parameter("logging") @Nullable String logging,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("requestedVerifyOption") @Nullable String requestedVerifyOption,
+        @OutputCustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
+        @OutputCustomType.Parameter("sourceProvenanceHashes") @Nullable List<String> sourceProvenanceHashes,
+        @OutputCustomType.Parameter("substitutionOption") @Nullable String substitutionOption,
+        @OutputCustomType.Parameter("volumes") @Nullable List<TriggerBuildOptionsVolume> volumes,
+        @OutputCustomType.Parameter("workerPool") @Nullable String workerPool) {
         this.diskSizeGb = diskSizeGb;
         this.dynamicSubstitutions = dynamicSubstitutions;
         this.envs = envs;

@@ -16,8 +16,8 @@ public final class SecretTopic {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SecretTopic(String name) {
+    @OutputCustomType.Constructor
+    private SecretTopic(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

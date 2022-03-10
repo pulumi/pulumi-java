@@ -15,8 +15,8 @@ public final class FunctionEventTriggerFailurePolicy {
      */
     private final Boolean retry;
 
-    @OutputCustomType.Constructor({"retry"})
-    private FunctionEventTriggerFailurePolicy(Boolean retry) {
+    @OutputCustomType.Constructor
+    private FunctionEventTriggerFailurePolicy(@OutputCustomType.Parameter("retry") Boolean retry) {
         this.retry = retry;
     }
 

@@ -16,8 +16,8 @@ public final class ClusterNodeConfigSandboxConfig {
      */
     private final String sandboxType;
 
-    @OutputCustomType.Constructor({"sandboxType"})
-    private ClusterNodeConfigSandboxConfig(String sandboxType) {
+    @OutputCustomType.Constructor
+    private ClusterNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 

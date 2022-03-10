@@ -48,13 +48,13 @@ public final class ConnectivityTestDestination {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"instance","ipAddress","network","port","projectId"})
+    @OutputCustomType.Constructor
     private ConnectivityTestDestination(
-        @Nullable String instance,
-        @Nullable String ipAddress,
-        @Nullable String network,
-        @Nullable Integer port,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.instance = instance;
         this.ipAddress = ipAddress;
         this.network = network;

@@ -34,23 +34,23 @@ public final class GetGlobalForwardingRuleResult {
     private final String selfLink;
     private final String target;
 
-    @OutputCustomType.Constructor({"description","id","ipAddress","ipProtocol","ipVersion","labelFingerprint","labels","loadBalancingScheme","metadataFilters","name","network","portRange","project","selfLink","target"})
+    @OutputCustomType.Constructor
     private GetGlobalForwardingRuleResult(
-        String description,
-        String id,
-        String ipAddress,
-        String ipProtocol,
-        String ipVersion,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String loadBalancingScheme,
-        List<GetGlobalForwardingRuleMetadataFilter> metadataFilters,
-        String name,
-        String network,
-        String portRange,
-        @Nullable String project,
-        String selfLink,
-        String target) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("ipVersion") String ipVersion,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @OutputCustomType.Parameter("metadataFilters") List<GetGlobalForwardingRuleMetadataFilter> metadataFilters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("portRange") String portRange,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("target") String target) {
         this.description = description;
         this.id = id;
         this.ipAddress = ipAddress;

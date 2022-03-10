@@ -34,11 +34,11 @@ public final class MetricBucketOptions {
      */
     private final @Nullable MetricBucketOptionsLinearBuckets linearBuckets;
 
-    @OutputCustomType.Constructor({"explicitBuckets","exponentialBuckets","linearBuckets"})
+    @OutputCustomType.Constructor
     private MetricBucketOptions(
-        @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
-        @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
-        @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
+        @OutputCustomType.Parameter("explicitBuckets") @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
+        @OutputCustomType.Parameter("exponentialBuckets") @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
+        @OutputCustomType.Parameter("linearBuckets") @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
         this.explicitBuckets = explicitBuckets;
         this.exponentialBuckets = exponentialBuckets;
         this.linearBuckets = linearBuckets;

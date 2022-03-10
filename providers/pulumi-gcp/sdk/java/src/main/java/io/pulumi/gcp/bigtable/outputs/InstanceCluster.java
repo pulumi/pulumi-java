@@ -43,13 +43,13 @@ public final class InstanceCluster {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"clusterId","kmsKeyName","numNodes","storageType","zone"})
+    @OutputCustomType.Constructor
     private InstanceCluster(
-        String clusterId,
-        @Nullable String kmsKeyName,
-        @Nullable Integer numNodes,
-        @Nullable String storageType,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @OutputCustomType.Parameter("numNodes") @Nullable Integer numNodes,
+        @OutputCustomType.Parameter("storageType") @Nullable String storageType,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.clusterId = clusterId;
         this.kmsKeyName = kmsKeyName;
         this.numNodes = numNodes;

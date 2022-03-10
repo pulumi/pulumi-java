@@ -17,8 +17,8 @@ public final class PreventionStoredInfoTypeDictionaryWordList {
      */
     private final List<String> words;
 
-    @OutputCustomType.Constructor({"words"})
-    private PreventionStoredInfoTypeDictionaryWordList(List<String> words) {
+    @OutputCustomType.Constructor
+    private PreventionStoredInfoTypeDictionaryWordList(@OutputCustomType.Parameter("words") List<String> words) {
         this.words = words;
     }
 

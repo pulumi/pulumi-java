@@ -23,19 +23,19 @@ public final class GetDatabaseInstanceReplicaConfiguration {
     private final String username;
     private final Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","failoverTarget","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceReplicaConfiguration(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        Integer connectRetryInterval,
-        String dumpFilePath,
-        Boolean failoverTarget,
-        Integer masterHeartbeatPeriod,
-        String password,
-        String sslCipher,
-        String username,
-        Boolean verifyServerCertificate) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
+        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @OutputCustomType.Parameter("failoverTarget") Boolean failoverTarget,
+        @OutputCustomType.Parameter("masterHeartbeatPeriod") Integer masterHeartbeatPeriod,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("sslCipher") String sslCipher,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

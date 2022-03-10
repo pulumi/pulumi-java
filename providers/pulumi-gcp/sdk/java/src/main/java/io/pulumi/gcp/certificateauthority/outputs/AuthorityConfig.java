@@ -23,10 +23,10 @@ public final class AuthorityConfig {
      */
     private final AuthorityConfigX509Config x509Config;
 
-    @OutputCustomType.Constructor({"subjectConfig","x509Config"})
+    @OutputCustomType.Constructor
     private AuthorityConfig(
-        AuthorityConfigSubjectConfig subjectConfig,
-        AuthorityConfigX509Config x509Config) {
+        @OutputCustomType.Parameter("subjectConfig") AuthorityConfigSubjectConfig subjectConfig,
+        @OutputCustomType.Parameter("x509Config") AuthorityConfigX509Config x509Config) {
         this.subjectConfig = subjectConfig;
         this.x509Config = x509Config;
     }

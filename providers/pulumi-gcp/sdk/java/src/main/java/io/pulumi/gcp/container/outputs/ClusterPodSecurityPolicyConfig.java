@@ -16,8 +16,8 @@ public final class ClusterPodSecurityPolicyConfig {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterPodSecurityPolicyConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterPodSecurityPolicyConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

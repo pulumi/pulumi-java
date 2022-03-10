@@ -14,10 +14,10 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
     private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"cidrBlocks","enabled"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigMasterAuthorizedNetworksConfig(
-        List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("cidrBlocks") List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }

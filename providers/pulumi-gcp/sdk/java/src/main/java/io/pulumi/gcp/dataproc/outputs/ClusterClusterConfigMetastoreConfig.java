@@ -15,8 +15,8 @@ public final class ClusterClusterConfigMetastoreConfig {
      */
     private final String dataprocMetastoreService;
 
-    @OutputCustomType.Constructor({"dataprocMetastoreService"})
-    private ClusterClusterConfigMetastoreConfig(String dataprocMetastoreService) {
+    @OutputCustomType.Constructor
+    private ClusterClusterConfigMetastoreConfig(@OutputCustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
     }
 

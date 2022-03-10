@@ -55,15 +55,15 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      */
     private final String maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOrigins","disabled","exposeHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> allowHeaders,
-        @Nullable List<String> allowMethods,
-        @Nullable List<String> allowOrigins,
-        @Nullable Boolean disabled,
-        @Nullable List<String> exposeHeaders,
-        String maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowHeaders") @Nullable List<String> allowHeaders,
+        @OutputCustomType.Parameter("allowMethods") @Nullable List<String> allowMethods,
+        @OutputCustomType.Parameter("allowOrigins") @Nullable List<String> allowOrigins,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAge") String maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

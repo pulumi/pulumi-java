@@ -13,10 +13,10 @@ public final class GetClusterNetworkPolicy {
     private final Boolean enabled;
     private final String provider;
 
-    @OutputCustomType.Constructor({"enabled","provider"})
+    @OutputCustomType.Constructor
     private GetClusterNetworkPolicy(
-        Boolean enabled,
-        String provider) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("provider") String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }

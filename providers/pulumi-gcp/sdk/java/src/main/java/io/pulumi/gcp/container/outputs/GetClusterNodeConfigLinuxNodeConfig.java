@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterNodeConfigLinuxNodeConfig {
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private GetClusterNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private GetClusterNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 

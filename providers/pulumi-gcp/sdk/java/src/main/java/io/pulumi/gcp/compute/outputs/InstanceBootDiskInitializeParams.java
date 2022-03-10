@@ -44,12 +44,12 @@ public final class InstanceBootDiskInitializeParams {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"image","labels","size","type"})
+    @OutputCustomType.Constructor
     private InstanceBootDiskInitializeParams(
-        @Nullable String image,
-        @Nullable Map<String,Object> labels,
-        @Nullable Integer size,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,Object> labels,
+        @OutputCustomType.Parameter("size") @Nullable Integer size,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.image = image;
         this.labels = labels;
         this.size = size;

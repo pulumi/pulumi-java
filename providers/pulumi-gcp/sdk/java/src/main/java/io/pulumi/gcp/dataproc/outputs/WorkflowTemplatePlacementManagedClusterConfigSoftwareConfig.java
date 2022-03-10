@@ -25,11 +25,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"imageVersion","optionalComponents","properties"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig(
-        @Nullable String imageVersion,
-        @Nullable List<String> optionalComponents,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @OutputCustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;

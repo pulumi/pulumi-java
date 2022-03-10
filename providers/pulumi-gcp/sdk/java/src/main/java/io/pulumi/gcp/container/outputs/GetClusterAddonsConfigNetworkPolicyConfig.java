@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigNetworkPolicyConfig {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private GetClusterAddonsConfigNetworkPolicyConfig(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigNetworkPolicyConfig(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

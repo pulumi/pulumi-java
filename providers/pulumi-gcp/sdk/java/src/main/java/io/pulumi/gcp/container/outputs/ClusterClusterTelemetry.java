@@ -15,8 +15,8 @@ public final class ClusterClusterTelemetry {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ClusterClusterTelemetry(String type) {
+    @OutputCustomType.Constructor
+    private ClusterClusterTelemetry(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

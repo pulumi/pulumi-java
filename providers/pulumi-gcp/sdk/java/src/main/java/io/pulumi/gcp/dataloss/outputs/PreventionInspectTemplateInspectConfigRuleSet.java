@@ -24,10 +24,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      */
     private final List<PreventionInspectTemplateInspectConfigRuleSetRule> rules;
 
-    @OutputCustomType.Constructor({"infoTypes","rules"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSet(
-        List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes,
-        List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
+        @OutputCustomType.Parameter("infoTypes") List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes,
+        @OutputCustomType.Parameter("rules") List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
         this.infoTypes = infoTypes;
         this.rules = rules;
     }

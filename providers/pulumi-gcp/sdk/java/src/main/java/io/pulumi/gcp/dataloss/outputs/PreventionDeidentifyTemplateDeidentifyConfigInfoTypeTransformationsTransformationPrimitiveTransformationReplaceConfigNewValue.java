@@ -61,16 +61,16 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String timestampValue;
 
-    @OutputCustomType.Constructor({"booleanValue","dateValue","dayOfWeekValue","floatValue","integerValue","stringValue","timeValue","timestampValue"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue(
-        @Nullable Boolean booleanValue,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue,
-        @Nullable String dayOfWeekValue,
-        @Nullable Double floatValue,
-        @Nullable Integer integerValue,
-        @Nullable String stringValue,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue,
-        @Nullable String timestampValue) {
+        @OutputCustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
+        @OutputCustomType.Parameter("dateValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue,
+        @OutputCustomType.Parameter("dayOfWeekValue") @Nullable String dayOfWeekValue,
+        @OutputCustomType.Parameter("floatValue") @Nullable Double floatValue,
+        @OutputCustomType.Parameter("integerValue") @Nullable Integer integerValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("timeValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue,
+        @OutputCustomType.Parameter("timestampValue") @Nullable String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.dayOfWeekValue = dayOfWeekValue;

@@ -35,12 +35,12 @@ public final class CxIntentParameter {
      */
     private final @Nullable Boolean redact;
 
-    @OutputCustomType.Constructor({"entityType","id","isList","redact"})
+    @OutputCustomType.Constructor
     private CxIntentParameter(
-        String entityType,
-        String id,
-        @Nullable Boolean isList,
-        @Nullable Boolean redact) {
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
+        @OutputCustomType.Parameter("redact") @Nullable Boolean redact) {
         this.entityType = entityType;
         this.id = id;
         this.isList = isList;

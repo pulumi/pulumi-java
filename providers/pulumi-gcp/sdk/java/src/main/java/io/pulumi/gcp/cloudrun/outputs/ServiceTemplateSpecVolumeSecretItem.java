@@ -35,11 +35,11 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"key","mode","path"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecVolumeSecretItem(
-        String key,
-        @Nullable Integer mode,
-        String path) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;

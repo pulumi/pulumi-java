@@ -40,12 +40,12 @@ public final class FlexibleAppVersionEndpointsApiService {
      */
     private final @Nullable String rolloutStrategy;
 
-    @OutputCustomType.Constructor({"configId","disableTraceSampling","name","rolloutStrategy"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionEndpointsApiService(
-        @Nullable String configId,
-        @Nullable Boolean disableTraceSampling,
-        String name,
-        @Nullable String rolloutStrategy) {
+        @OutputCustomType.Parameter("configId") @Nullable String configId,
+        @OutputCustomType.Parameter("disableTraceSampling") @Nullable Boolean disableTraceSampling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rolloutStrategy") @Nullable String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;

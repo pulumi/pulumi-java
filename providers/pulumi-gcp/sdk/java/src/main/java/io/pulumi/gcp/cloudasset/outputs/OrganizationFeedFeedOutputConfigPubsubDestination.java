@@ -15,8 +15,8 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestination {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private OrganizationFeedFeedOutputConfigPubsubDestination(String topic) {
+    @OutputCustomType.Constructor
+    private OrganizationFeedFeedOutputConfigPubsubDestination(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 

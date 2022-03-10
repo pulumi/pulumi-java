@@ -25,10 +25,10 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"filePath","sizeBytes"})
+    @OutputCustomType.Constructor
     private EntryGcsFilesetSpecSampleGcsFileSpec(
-        @Nullable String filePath,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.filePath = filePath;
         this.sizeBytes = sizeBytes;
     }

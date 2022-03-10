@@ -27,10 +27,10 @@ public final class ServicePerimeterSpecIngressPolicy {
      */
     private final @Nullable ServicePerimeterSpecIngressPolicyIngressTo ingressTo;
 
-    @OutputCustomType.Constructor({"ingressFrom","ingressTo"})
+    @OutputCustomType.Constructor
     private ServicePerimeterSpecIngressPolicy(
-        @Nullable ServicePerimeterSpecIngressPolicyIngressFrom ingressFrom,
-        @Nullable ServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
+        @OutputCustomType.Parameter("ingressFrom") @Nullable ServicePerimeterSpecIngressPolicyIngressFrom ingressFrom,
+        @OutputCustomType.Parameter("ingressTo") @Nullable ServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
         this.ingressFrom = ingressFrom;
         this.ingressTo = ingressTo;
     }

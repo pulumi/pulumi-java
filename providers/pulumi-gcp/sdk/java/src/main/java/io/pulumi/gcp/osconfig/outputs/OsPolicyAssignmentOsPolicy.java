@@ -40,13 +40,13 @@ public final class OsPolicyAssignmentOsPolicy {
      */
     private final List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups;
 
-    @OutputCustomType.Constructor({"allowNoResourceGroupMatch","description","id","mode","resourceGroups"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicy(
-        @Nullable Boolean allowNoResourceGroupMatch,
-        @Nullable String description,
-        String id,
-        String mode,
-        List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
+        @OutputCustomType.Parameter("allowNoResourceGroupMatch") @Nullable Boolean allowNoResourceGroupMatch,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("resourceGroups") List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.id = id;

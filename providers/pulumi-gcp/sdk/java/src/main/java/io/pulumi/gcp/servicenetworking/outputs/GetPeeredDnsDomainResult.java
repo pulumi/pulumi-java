@@ -21,15 +21,15 @@ public final class GetPeeredDnsDomainResult {
     private final String project;
     private final String service;
 
-    @OutputCustomType.Constructor({"dnsSuffix","id","name","network","parent","project","service"})
+    @OutputCustomType.Constructor
     private GetPeeredDnsDomainResult(
-        String dnsSuffix,
-        String id,
-        String name,
-        String network,
-        String parent,
-        String project,
-        String service) {
+        @OutputCustomType.Parameter("dnsSuffix") String dnsSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("service") String service) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.name = name;

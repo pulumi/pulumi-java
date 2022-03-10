@@ -52,13 +52,13 @@ public final class CaPoolIssuancePolicy {
      */
     private final @Nullable String maximumLifetime;
 
-    @OutputCustomType.Constructor({"allowedIssuanceModes","allowedKeyTypes","baselineValues","identityConstraints","maximumLifetime"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicy(
-        @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
-        @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
-        @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
-        @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
-        @Nullable String maximumLifetime) {
+        @OutputCustomType.Parameter("allowedIssuanceModes") @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedKeyTypes") @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
+        @OutputCustomType.Parameter("baselineValues") @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
+        @OutputCustomType.Parameter("identityConstraints") @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
+        @OutputCustomType.Parameter("maximumLifetime") @Nullable String maximumLifetime) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;

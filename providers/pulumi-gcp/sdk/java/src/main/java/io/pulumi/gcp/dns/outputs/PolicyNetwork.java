@@ -17,8 +17,8 @@ public final class PolicyNetwork {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"networkUrl"})
-    private PolicyNetwork(String networkUrl) {
+    @OutputCustomType.Constructor
+    private PolicyNetwork(@OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.networkUrl = networkUrl;
     }
 

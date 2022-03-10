@@ -61,15 +61,15 @@ public final class TriggerTriggerTemplate {
      */
     private final @Nullable String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","dir","invertRegex","projectId","repoName","tagName"})
+    @OutputCustomType.Constructor
     private TriggerTriggerTemplate(
-        @Nullable String branchName,
-        @Nullable String commitSha,
-        @Nullable String dir,
-        @Nullable Boolean invertRegex,
-        @Nullable String projectId,
-        @Nullable String repoName,
-        @Nullable String tagName) {
+        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
+        @OutputCustomType.Parameter("commitSha") @Nullable String commitSha,
+        @OutputCustomType.Parameter("dir") @Nullable String dir,
+        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("repoName") @Nullable String repoName,
+        @OutputCustomType.Parameter("tagName") @Nullable String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;

@@ -30,10 +30,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      */
     private final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(
-        String distributionFilter,
-        SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }

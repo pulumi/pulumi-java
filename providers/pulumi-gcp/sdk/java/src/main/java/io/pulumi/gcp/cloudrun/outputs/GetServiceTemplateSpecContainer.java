@@ -25,17 +25,17 @@ public final class GetServiceTemplateSpecContainer {
     private final List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts;
     private final String workingDir;
 
-    @OutputCustomType.Constructor({"args","commands","envFroms","envs","image","ports","resources","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainer(
-        List<String> args,
-        List<String> commands,
-        List<GetServiceTemplateSpecContainerEnvFrom> envFroms,
-        List<GetServiceTemplateSpecContainerEnv> envs,
-        String image,
-        List<GetServiceTemplateSpecContainerPort> ports,
-        List<GetServiceTemplateSpecContainerResource> resources,
-        List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts,
-        String workingDir) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("commands") List<String> commands,
+        @OutputCustomType.Parameter("envFroms") List<GetServiceTemplateSpecContainerEnvFrom> envFroms,
+        @OutputCustomType.Parameter("envs") List<GetServiceTemplateSpecContainerEnv> envs,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("ports") List<GetServiceTemplateSpecContainerPort> ports,
+        @OutputCustomType.Parameter("resources") List<GetServiceTemplateSpecContainerResource> resources,
+        @OutputCustomType.Parameter("volumeMounts") List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") String workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;

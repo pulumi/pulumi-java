@@ -38,11 +38,11 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendService {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"backendService","headerAction","weight"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionWeightedBackendService(
-        String backendService,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
-        Integer weight) {
+        @OutputCustomType.Parameter("backendService") String backendService,
+        @OutputCustomType.Parameter("headerAction") @Nullable URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;

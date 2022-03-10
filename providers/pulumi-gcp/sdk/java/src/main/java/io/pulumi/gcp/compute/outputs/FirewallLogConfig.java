@@ -16,8 +16,8 @@ public final class FirewallLogConfig {
      */
     private final String metadata;
 
-    @OutputCustomType.Constructor({"metadata"})
-    private FirewallLogConfig(String metadata) {
+    @OutputCustomType.Constructor
+    private FirewallLogConfig(@OutputCustomType.Parameter("metadata") String metadata) {
         this.metadata = metadata;
     }
 

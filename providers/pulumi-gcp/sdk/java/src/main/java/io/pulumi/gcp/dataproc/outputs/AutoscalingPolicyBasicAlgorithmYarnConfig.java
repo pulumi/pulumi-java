@@ -59,13 +59,13 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final @Nullable Double scaleUpMinWorkerFraction;
 
-    @OutputCustomType.Constructor({"gracefulDecommissionTimeout","scaleDownFactor","scaleDownMinWorkerFraction","scaleUpFactor","scaleUpMinWorkerFraction"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyBasicAlgorithmYarnConfig(
-        String gracefulDecommissionTimeout,
-        Double scaleDownFactor,
-        @Nullable Double scaleDownMinWorkerFraction,
-        Double scaleUpFactor,
-        @Nullable Double scaleUpMinWorkerFraction) {
+        @OutputCustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
+        @OutputCustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
+        @OutputCustomType.Parameter("scaleDownMinWorkerFraction") @Nullable Double scaleDownMinWorkerFraction,
+        @OutputCustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
+        @OutputCustomType.Parameter("scaleUpMinWorkerFraction") @Nullable Double scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;

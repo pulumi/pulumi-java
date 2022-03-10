@@ -90,18 +90,18 @@ public final class ClusterAddonsConfig {
      */
     private final @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig;
 
-    @OutputCustomType.Constructor({"cloudrunConfig","configConnectorConfig","dnsCacheConfig","gcePersistentDiskCsiDriverConfig","gcpFilestoreCsiDriverConfig","horizontalPodAutoscaling","httpLoadBalancing","istioConfig","kalmConfig","networkPolicyConfig"})
+    @OutputCustomType.Constructor
     private ClusterAddonsConfig(
-        @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
-        @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
-        @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
-        @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
-        @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
-        @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
-        @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
-        @Nullable ClusterAddonsConfigIstioConfig istioConfig,
-        @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
-        @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
+        @OutputCustomType.Parameter("cloudrunConfig") @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
+        @OutputCustomType.Parameter("configConnectorConfig") @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
+        @OutputCustomType.Parameter("dnsCacheConfig") @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
+        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
+        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
+        @OutputCustomType.Parameter("horizontalPodAutoscaling") @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
+        @OutputCustomType.Parameter("httpLoadBalancing") @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
+        @OutputCustomType.Parameter("istioConfig") @Nullable ClusterAddonsConfigIstioConfig istioConfig,
+        @OutputCustomType.Parameter("kalmConfig") @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
+        @OutputCustomType.Parameter("networkPolicyConfig") @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
         this.cloudrunConfig = cloudrunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;

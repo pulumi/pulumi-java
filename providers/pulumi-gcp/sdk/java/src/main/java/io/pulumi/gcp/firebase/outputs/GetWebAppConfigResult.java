@@ -26,18 +26,18 @@ public final class GetWebAppConfigResult {
     private final String storageBucket;
     private final String webAppId;
 
-    @OutputCustomType.Constructor({"apiKey","authDomain","databaseUrl","id","locationId","measurementId","messagingSenderId","project","storageBucket","webAppId"})
+    @OutputCustomType.Constructor
     private GetWebAppConfigResult(
-        String apiKey,
-        String authDomain,
-        String databaseUrl,
-        String id,
-        String locationId,
-        String measurementId,
-        String messagingSenderId,
-        @Nullable String project,
-        String storageBucket,
-        String webAppId) {
+        @OutputCustomType.Parameter("apiKey") String apiKey,
+        @OutputCustomType.Parameter("authDomain") String authDomain,
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationId") String locationId,
+        @OutputCustomType.Parameter("measurementId") String measurementId,
+        @OutputCustomType.Parameter("messagingSenderId") String messagingSenderId,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("storageBucket") String storageBucket,
+        @OutputCustomType.Parameter("webAppId") String webAppId) {
         this.apiKey = apiKey;
         this.authDomain = authDomain;
         this.databaseUrl = databaseUrl;

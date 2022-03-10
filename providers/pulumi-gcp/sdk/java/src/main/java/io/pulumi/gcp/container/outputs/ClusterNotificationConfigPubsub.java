@@ -24,10 +24,10 @@ public final class ClusterNotificationConfigPubsub {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor({"enabled","topic"})
+    @OutputCustomType.Constructor
     private ClusterNotificationConfigPubsub(
-        Boolean enabled,
-        @Nullable String topic) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("topic") @Nullable String topic) {
         this.enabled = enabled;
         this.topic = topic;
     }

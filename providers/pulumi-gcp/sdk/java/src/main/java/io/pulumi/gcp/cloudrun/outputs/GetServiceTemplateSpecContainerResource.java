@@ -13,10 +13,10 @@ public final class GetServiceTemplateSpecContainerResource {
     private final Map<String,String> limits;
     private final Map<String,String> requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerResource(
-        Map<String,String> limits,
-        Map<String,String> requests) {
+        @OutputCustomType.Parameter("limits") Map<String,String> limits,
+        @OutputCustomType.Parameter("requests") Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

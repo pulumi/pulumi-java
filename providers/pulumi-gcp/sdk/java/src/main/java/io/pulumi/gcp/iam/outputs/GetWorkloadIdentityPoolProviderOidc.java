@@ -13,10 +13,10 @@ public final class GetWorkloadIdentityPoolProviderOidc {
     private final List<String> allowedAudiences;
     private final String issuerUri;
 
-    @OutputCustomType.Constructor({"allowedAudiences","issuerUri"})
+    @OutputCustomType.Constructor
     private GetWorkloadIdentityPoolProviderOidc(
-        List<String> allowedAudiences,
-        String issuerUri) {
+        @OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences,
+        @OutputCustomType.Parameter("issuerUri") String issuerUri) {
         this.allowedAudiences = allowedAudiences;
         this.issuerUri = issuerUri;
     }

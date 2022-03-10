@@ -73,15 +73,15 @@ public final class ServiceMetadata {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"annotations","generation","labels","namespace","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private ServiceMetadata(
-        @Nullable Map<String,String> annotations,
-        @Nullable Integer generation,
-        @Nullable Map<String,String> labels,
-        @Nullable String namespace,
-        @Nullable String resourceVersion,
-        @Nullable String selfLink,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
+        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;

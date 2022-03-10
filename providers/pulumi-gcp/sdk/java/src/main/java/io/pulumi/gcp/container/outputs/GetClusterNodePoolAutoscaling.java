@@ -12,10 +12,10 @@ public final class GetClusterNodePoolAutoscaling {
     private final Integer maxNodeCount;
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private GetClusterNodePoolAutoscaling(
-        Integer maxNodeCount,
-        Integer minNodeCount) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }

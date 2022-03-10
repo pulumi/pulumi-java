@@ -81,13 +81,13 @@ public final class AutoscalerAutoscalingPolicyMetric {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"filter","name","singleInstanceAssignment","target","type"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicyMetric(
-        @Nullable String filter,
-        String name,
-        @Nullable Double singleInstanceAssignment,
-        @Nullable Double target,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("singleInstanceAssignment") @Nullable Double singleInstanceAssignment,
+        @OutputCustomType.Parameter("target") @Nullable Double target,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.filter = filter;
         this.name = name;
         this.singleInstanceAssignment = singleInstanceAssignment;

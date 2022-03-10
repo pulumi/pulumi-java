@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacementClusterSelector {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"clusterLabels","zone"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementClusterSelector(
-        Map<String,String> clusterLabels,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.clusterLabels = clusterLabels;
         this.zone = zone;
     }

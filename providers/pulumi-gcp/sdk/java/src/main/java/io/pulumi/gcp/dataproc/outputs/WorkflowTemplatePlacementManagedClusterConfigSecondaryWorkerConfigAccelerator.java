@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      */
     private final @Nullable String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator(
-        @Nullable Integer acceleratorCount,
-        @Nullable String acceleratorType) {
+        @OutputCustomType.Parameter("acceleratorCount") @Nullable Integer acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") @Nullable String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

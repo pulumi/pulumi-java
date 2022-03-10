@@ -59,17 +59,17 @@ public final class RegionInstanceGroupManagerUpdatePolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"instanceRedistributionType","maxSurgeFixed","maxSurgePercent","maxUnavailableFixed","maxUnavailablePercent","minReadySec","minimalAction","replacementMethod","type"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerUpdatePolicy(
-        @Nullable String instanceRedistributionType,
-        @Nullable Integer maxSurgeFixed,
-        @Nullable Integer maxSurgePercent,
-        @Nullable Integer maxUnavailableFixed,
-        @Nullable Integer maxUnavailablePercent,
-        @Nullable Integer minReadySec,
-        String minimalAction,
-        @Nullable String replacementMethod,
-        String type) {
+        @OutputCustomType.Parameter("instanceRedistributionType") @Nullable String instanceRedistributionType,
+        @OutputCustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
+        @OutputCustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
+        @OutputCustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
+        @OutputCustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
+        @OutputCustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
+        @OutputCustomType.Parameter("minimalAction") String minimalAction,
+        @OutputCustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
+        @OutputCustomType.Parameter("type") String type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurgeFixed = maxSurgeFixed;
         this.maxSurgePercent = maxSurgePercent;

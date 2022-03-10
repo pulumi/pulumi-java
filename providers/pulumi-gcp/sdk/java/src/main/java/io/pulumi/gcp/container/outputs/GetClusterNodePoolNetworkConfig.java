@@ -14,11 +14,11 @@ public final class GetClusterNodePoolNetworkConfig {
     private final String podIpv4CidrBlock;
     private final String podRange;
 
-    @OutputCustomType.Constructor({"createPodRange","podIpv4CidrBlock","podRange"})
+    @OutputCustomType.Constructor
     private GetClusterNodePoolNetworkConfig(
-        Boolean createPodRange,
-        String podIpv4CidrBlock,
-        String podRange) {
+        @OutputCustomType.Parameter("createPodRange") Boolean createPodRange,
+        @OutputCustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
+        @OutputCustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

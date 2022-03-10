@@ -50,12 +50,12 @@ public final class RegionHealthCheckGrpcHealthCheck {
      */
     private final @Nullable String portSpecification;
 
-    @OutputCustomType.Constructor({"grpcServiceName","port","portName","portSpecification"})
+    @OutputCustomType.Constructor
     private RegionHealthCheckGrpcHealthCheck(
-        @Nullable String grpcServiceName,
-        @Nullable Integer port,
-        @Nullable String portName,
-        @Nullable String portSpecification) {
+        @OutputCustomType.Parameter("grpcServiceName") @Nullable String grpcServiceName,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("portName") @Nullable String portName,
+        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;

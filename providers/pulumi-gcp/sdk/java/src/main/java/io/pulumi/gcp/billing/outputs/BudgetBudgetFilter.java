@@ -67,14 +67,14 @@ public final class BudgetBudgetFilter {
      */
     private final @Nullable List<String> subaccounts;
 
-    @OutputCustomType.Constructor({"creditTypes","creditTypesTreatment","labels","projects","services","subaccounts"})
+    @OutputCustomType.Constructor
     private BudgetBudgetFilter(
-        @Nullable List<String> creditTypes,
-        @Nullable String creditTypesTreatment,
-        @Nullable Map<String,String> labels,
-        @Nullable List<String> projects,
-        @Nullable List<String> services,
-        @Nullable List<String> subaccounts) {
+        @OutputCustomType.Parameter("creditTypes") @Nullable List<String> creditTypes,
+        @OutputCustomType.Parameter("creditTypesTreatment") @Nullable String creditTypesTreatment,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("projects") @Nullable List<String> projects,
+        @OutputCustomType.Parameter("services") @Nullable List<String> services,
+        @OutputCustomType.Parameter("subaccounts") @Nullable List<String> subaccounts) {
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;
         this.labels = labels;

@@ -15,11 +15,11 @@ public final class AwsClusterWorkloadIdentityConfig {
     private final @Nullable String issuerUri;
     private final @Nullable String workloadPool;
 
-    @OutputCustomType.Constructor({"identityProvider","issuerUri","workloadPool"})
+    @OutputCustomType.Constructor
     private AwsClusterWorkloadIdentityConfig(
-        @Nullable String identityProvider,
-        @Nullable String issuerUri,
-        @Nullable String workloadPool) {
+        @OutputCustomType.Parameter("identityProvider") @Nullable String identityProvider,
+        @OutputCustomType.Parameter("issuerUri") @Nullable String issuerUri,
+        @OutputCustomType.Parameter("workloadPool") @Nullable String workloadPool) {
         this.identityProvider = identityProvider;
         this.issuerUri = issuerUri;
         this.workloadPool = workloadPool;

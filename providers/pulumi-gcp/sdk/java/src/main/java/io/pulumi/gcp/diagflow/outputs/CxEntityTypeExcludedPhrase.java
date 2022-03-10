@@ -17,8 +17,8 @@ public final class CxEntityTypeExcludedPhrase {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private CxEntityTypeExcludedPhrase(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private CxEntityTypeExcludedPhrase(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

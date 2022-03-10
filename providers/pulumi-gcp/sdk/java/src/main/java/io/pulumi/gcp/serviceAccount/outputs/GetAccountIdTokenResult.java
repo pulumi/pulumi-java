@@ -28,14 +28,14 @@ public final class GetAccountIdTokenResult {
     private final String targetAudience;
     private final @Nullable String targetServiceAccount;
 
-    @OutputCustomType.Constructor({"delegates","id","idToken","includeEmail","targetAudience","targetServiceAccount"})
+    @OutputCustomType.Constructor
     private GetAccountIdTokenResult(
-        @Nullable List<String> delegates,
-        String id,
-        String idToken,
-        @Nullable Boolean includeEmail,
-        String targetAudience,
-        @Nullable String targetServiceAccount) {
+        @OutputCustomType.Parameter("delegates") @Nullable List<String> delegates,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idToken") String idToken,
+        @OutputCustomType.Parameter("includeEmail") @Nullable Boolean includeEmail,
+        @OutputCustomType.Parameter("targetAudience") String targetAudience,
+        @OutputCustomType.Parameter("targetServiceAccount") @Nullable String targetServiceAccount) {
         this.delegates = delegates;
         this.id = id;
         this.idToken = idToken;

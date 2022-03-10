@@ -25,10 +25,10 @@ public final class AutoscalerAutoscalingPolicyScaleInControl {
      */
     private final @Nullable Integer timeWindowSec;
 
-    @OutputCustomType.Constructor({"maxScaledInReplicas","timeWindowSec"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicyScaleInControl(
-        @Nullable AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas,
-        @Nullable Integer timeWindowSec) {
+        @OutputCustomType.Parameter("maxScaledInReplicas") @Nullable AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas,
+        @OutputCustomType.Parameter("timeWindowSec") @Nullable Integer timeWindowSec) {
         this.maxScaledInReplicas = maxScaledInReplicas;
         this.timeWindowSec = timeWindowSec;
     }

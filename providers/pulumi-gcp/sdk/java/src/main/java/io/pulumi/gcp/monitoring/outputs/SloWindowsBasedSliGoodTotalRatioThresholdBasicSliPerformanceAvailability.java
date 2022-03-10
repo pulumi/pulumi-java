@@ -17,8 +17,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

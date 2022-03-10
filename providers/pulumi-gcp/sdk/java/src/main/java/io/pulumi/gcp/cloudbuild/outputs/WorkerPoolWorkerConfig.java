@@ -29,11 +29,11 @@ public final class WorkerPoolWorkerConfig {
      */
     private final @Nullable Boolean noExternalIp;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","noExternalIp"})
+    @OutputCustomType.Constructor
     private WorkerPoolWorkerConfig(
-        @Nullable Integer diskSizeGb,
-        @Nullable String machineType,
-        @Nullable Boolean noExternalIp) {
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("noExternalIp") @Nullable Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;

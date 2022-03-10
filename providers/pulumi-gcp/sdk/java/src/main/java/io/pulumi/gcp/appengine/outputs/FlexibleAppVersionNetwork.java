@@ -43,13 +43,13 @@ public final class FlexibleAppVersionNetwork {
      */
     private final @Nullable String subnetwork;
 
-    @OutputCustomType.Constructor({"forwardedPorts","instanceTag","name","sessionAffinity","subnetwork"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionNetwork(
-        @Nullable List<String> forwardedPorts,
-        @Nullable String instanceTag,
-        String name,
-        @Nullable Boolean sessionAffinity,
-        @Nullable String subnetwork) {
+        @OutputCustomType.Parameter("forwardedPorts") @Nullable List<String> forwardedPorts,
+        @OutputCustomType.Parameter("instanceTag") @Nullable String instanceTag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sessionAffinity") @Nullable Boolean sessionAffinity,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;

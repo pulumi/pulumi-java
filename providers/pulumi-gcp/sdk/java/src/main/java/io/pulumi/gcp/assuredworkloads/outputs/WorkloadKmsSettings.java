@@ -20,10 +20,10 @@ public final class WorkloadKmsSettings {
      */
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private WorkloadKmsSettings(
-        String nextRotationTime,
-        String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

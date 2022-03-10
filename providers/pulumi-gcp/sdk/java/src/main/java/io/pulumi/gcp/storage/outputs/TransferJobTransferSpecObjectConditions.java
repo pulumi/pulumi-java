@@ -33,12 +33,12 @@ public final class TransferJobTransferSpecObjectConditions {
      */
     private final @Nullable String minTimeElapsedSinceLastModification;
 
-    @OutputCustomType.Constructor({"excludePrefixes","includePrefixes","maxTimeElapsedSinceLastModification","minTimeElapsedSinceLastModification"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecObjectConditions(
-        @Nullable List<String> excludePrefixes,
-        @Nullable List<String> includePrefixes,
-        @Nullable String maxTimeElapsedSinceLastModification,
-        @Nullable String minTimeElapsedSinceLastModification) {
+        @OutputCustomType.Parameter("excludePrefixes") @Nullable List<String> excludePrefixes,
+        @OutputCustomType.Parameter("includePrefixes") @Nullable List<String> includePrefixes,
+        @OutputCustomType.Parameter("maxTimeElapsedSinceLastModification") @Nullable String maxTimeElapsedSinceLastModification,
+        @OutputCustomType.Parameter("minTimeElapsedSinceLastModification") @Nullable String minTimeElapsedSinceLastModification) {
         this.excludePrefixes = excludePrefixes;
         this.includePrefixes = includePrefixes;
         this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;

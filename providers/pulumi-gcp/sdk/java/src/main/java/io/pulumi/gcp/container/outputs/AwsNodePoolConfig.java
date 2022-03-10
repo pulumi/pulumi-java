@@ -63,17 +63,17 @@ public final class AwsNodePoolConfig {
      */
     private final @Nullable List<AwsNodePoolConfigTaint> taints;
 
-    @OutputCustomType.Constructor({"configEncryption","iamInstanceProfile","instanceType","labels","rootVolume","securityGroupIds","sshConfig","tags","taints"})
+    @OutputCustomType.Constructor
     private AwsNodePoolConfig(
-        AwsNodePoolConfigConfigEncryption configEncryption,
-        String iamInstanceProfile,
-        @Nullable String instanceType,
-        @Nullable Map<String,String> labels,
-        @Nullable AwsNodePoolConfigRootVolume rootVolume,
-        @Nullable List<String> securityGroupIds,
-        @Nullable AwsNodePoolConfigSshConfig sshConfig,
-        @Nullable Map<String,String> tags,
-        @Nullable List<AwsNodePoolConfigTaint> taints) {
+        @OutputCustomType.Parameter("configEncryption") AwsNodePoolConfigConfigEncryption configEncryption,
+        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("rootVolume") @Nullable AwsNodePoolConfigRootVolume rootVolume,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("sshConfig") @Nullable AwsNodePoolConfigSshConfig sshConfig,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("taints") @Nullable List<AwsNodePoolConfigTaint> taints) {
         this.configEncryption = configEncryption;
         this.iamInstanceProfile = iamInstanceProfile;
         this.instanceType = instanceType;

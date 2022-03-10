@@ -16,11 +16,11 @@ public final class GetEnvironmentConfigWorkloadsConfig {
     private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
     private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
-    @OutputCustomType.Constructor({"schedulers","webServers","workers"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfig(
-        List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
-        List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
-        List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
+        @OutputCustomType.Parameter("schedulers") List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
+        @OutputCustomType.Parameter("webServers") List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
+        @OutputCustomType.Parameter("workers") List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
         this.schedulers = schedulers;
         this.webServers = webServers;
         this.workers = workers;

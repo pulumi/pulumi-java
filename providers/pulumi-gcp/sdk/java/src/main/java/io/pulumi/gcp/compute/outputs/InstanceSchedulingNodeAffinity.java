@@ -27,11 +27,11 @@ public final class InstanceSchedulingNodeAffinity {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","operator","values"})
+    @OutputCustomType.Constructor
     private InstanceSchedulingNodeAffinity(
-        String key,
-        String operator,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;

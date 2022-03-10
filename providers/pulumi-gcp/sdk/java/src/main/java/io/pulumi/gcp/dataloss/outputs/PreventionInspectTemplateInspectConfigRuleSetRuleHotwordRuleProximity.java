@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      */
     private final @Nullable Integer windowBefore;
 
-    @OutputCustomType.Constructor({"windowAfter","windowBefore"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity(
-        @Nullable Integer windowAfter,
-        @Nullable Integer windowBefore) {
+        @OutputCustomType.Parameter("windowAfter") @Nullable Integer windowAfter,
+        @OutputCustomType.Parameter("windowBefore") @Nullable Integer windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }

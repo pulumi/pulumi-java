@@ -18,13 +18,13 @@ public final class InstanceMemcacheNode {
     private final @Nullable String state;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"host","nodeId","port","state","zone"})
+    @OutputCustomType.Constructor
     private InstanceMemcacheNode(
-        @Nullable String host,
-        @Nullable String nodeId,
-        @Nullable Integer port,
-        @Nullable String state,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("nodeId") @Nullable String nodeId,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.port = port;

@@ -28,10 +28,10 @@ public final class ServicePerimeterStatusEgressPolicyEgressFrom {
      */
     private final @Nullable String identityType;
 
-    @OutputCustomType.Constructor({"identities","identityType"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusEgressPolicyEgressFrom(
-        @Nullable List<String> identities,
-        @Nullable String identityType) {
+        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
+        @OutputCustomType.Parameter("identityType") @Nullable String identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }

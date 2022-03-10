@@ -14,11 +14,11 @@ public final class GetClusterNodePoolNodeConfigKubeletConfig {
     private final String cpuCfsQuotaPeriod;
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor({"cpuCfsQuota","cpuCfsQuotaPeriod","cpuManagerPolicy"})
+    @OutputCustomType.Constructor
     private GetClusterNodePoolNodeConfigKubeletConfig(
-        Boolean cpuCfsQuota,
-        String cpuCfsQuotaPeriod,
-        String cpuManagerPolicy) {
+        @OutputCustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
+        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
+        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

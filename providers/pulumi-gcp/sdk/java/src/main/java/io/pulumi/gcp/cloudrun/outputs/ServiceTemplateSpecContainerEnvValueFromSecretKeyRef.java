@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"key","name"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
-        String key,
-        String name) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

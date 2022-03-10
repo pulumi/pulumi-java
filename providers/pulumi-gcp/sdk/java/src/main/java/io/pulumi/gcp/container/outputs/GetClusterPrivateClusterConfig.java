@@ -20,15 +20,15 @@ public final class GetClusterPrivateClusterConfig {
     private final String privateEndpoint;
     private final String publicEndpoint;
 
-    @OutputCustomType.Constructor({"enablePrivateEndpoint","enablePrivateNodes","masterGlobalAccessConfigs","masterIpv4CidrBlock","peeringName","privateEndpoint","publicEndpoint"})
+    @OutputCustomType.Constructor
     private GetClusterPrivateClusterConfig(
-        Boolean enablePrivateEndpoint,
-        Boolean enablePrivateNodes,
-        List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs,
-        String masterIpv4CidrBlock,
-        String peeringName,
-        String privateEndpoint,
-        String publicEndpoint) {
+        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("enablePrivateNodes") Boolean enablePrivateNodes,
+        @OutputCustomType.Parameter("masterGlobalAccessConfigs") List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("peeringName") String peeringName,
+        @OutputCustomType.Parameter("privateEndpoint") String privateEndpoint,
+        @OutputCustomType.Parameter("publicEndpoint") String publicEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.enablePrivateNodes = enablePrivateNodes;
         this.masterGlobalAccessConfigs = masterGlobalAccessConfigs;

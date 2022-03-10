@@ -27,19 +27,19 @@ public final class EnvironmentConfigNodeConfig {
     private final @Nullable List<String> tags;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"diskSizeGb","enableIpMasqAgent","ipAllocationPolicy","machineType","maxPodsPerNode","network","oauthScopes","serviceAccount","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigNodeConfig(
-        @Nullable Integer diskSizeGb,
-        @Nullable Boolean enableIpMasqAgent,
-        @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
-        @Nullable String machineType,
-        @Nullable Integer maxPodsPerNode,
-        @Nullable String network,
-        @Nullable List<String> oauthScopes,
-        @Nullable String serviceAccount,
-        @Nullable String subnetwork,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("enableIpMasqAgent") @Nullable Boolean enableIpMasqAgent,
+        @OutputCustomType.Parameter("ipAllocationPolicy") @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;

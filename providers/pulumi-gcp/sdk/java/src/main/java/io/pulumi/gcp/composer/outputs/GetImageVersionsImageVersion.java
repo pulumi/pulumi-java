@@ -21,10 +21,10 @@ public final class GetImageVersionsImageVersion {
      */
     private final List<String> supportedPythonVersions;
 
-    @OutputCustomType.Constructor({"imageVersionId","supportedPythonVersions"})
+    @OutputCustomType.Constructor
     private GetImageVersionsImageVersion(
-        String imageVersionId,
-        List<String> supportedPythonVersions) {
+        @OutputCustomType.Parameter("imageVersionId") String imageVersionId,
+        @OutputCustomType.Parameter("supportedPythonVersions") List<String> supportedPythonVersions) {
         this.imageVersionId = imageVersionId;
         this.supportedPythonVersions = supportedPythonVersions;
     }

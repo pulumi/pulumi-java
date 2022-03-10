@@ -32,12 +32,12 @@ public final class CertificateConfigSubjectConfigSubjectAltName {
      */
     private final @Nullable List<String> uris;
 
-    @OutputCustomType.Constructor({"dnsNames","emailAddresses","ipAddresses","uris"})
+    @OutputCustomType.Constructor
     private CertificateConfigSubjectConfigSubjectAltName(
-        @Nullable List<String> dnsNames,
-        @Nullable List<String> emailAddresses,
-        @Nullable List<String> ipAddresses,
-        @Nullable List<String> uris) {
+        @OutputCustomType.Parameter("dnsNames") @Nullable List<String> dnsNames,
+        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("uris") @Nullable List<String> uris) {
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;
         this.ipAddresses = ipAddresses;

@@ -19,15 +19,15 @@ public final class GetServiceMetadata {
     private final String selfLink;
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","generation","labels","namespace","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private GetServiceMetadata(
-        Map<String,String> annotations,
-        Integer generation,
-        Map<String,String> labels,
-        String namespace,
-        String resourceVersion,
-        String selfLink,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("generation") Integer generation,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;

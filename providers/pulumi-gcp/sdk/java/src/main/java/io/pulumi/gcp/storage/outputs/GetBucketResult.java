@@ -44,28 +44,28 @@ public final class GetBucketResult {
     private final List<GetBucketVersioning> versionings;
     private final List<GetBucketWebsite> websites;
 
-    @OutputCustomType.Constructor({"cors","defaultEventBasedHold","encryptions","forceDestroy","id","labels","lifecycleRules","location","loggings","name","project","publicAccessPrevention","requesterPays","retentionPolicies","selfLink","storageClass","uniformBucketLevelAccess","url","versionings","websites"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        List<GetBucketCor> cors,
-        Boolean defaultEventBasedHold,
-        List<GetBucketEncryption> encryptions,
-        Boolean forceDestroy,
-        String id,
-        Map<String,String> labels,
-        List<GetBucketLifecycleRule> lifecycleRules,
-        String location,
-        List<GetBucketLogging> loggings,
-        String name,
-        String project,
-        String publicAccessPrevention,
-        Boolean requesterPays,
-        List<GetBucketRetentionPolicy> retentionPolicies,
-        String selfLink,
-        String storageClass,
-        Boolean uniformBucketLevelAccess,
-        String url,
-        List<GetBucketVersioning> versionings,
-        List<GetBucketWebsite> websites) {
+        @OutputCustomType.Parameter("cors") List<GetBucketCor> cors,
+        @OutputCustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
+        @OutputCustomType.Parameter("encryptions") List<GetBucketEncryption> encryptions,
+        @OutputCustomType.Parameter("forceDestroy") Boolean forceDestroy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifecycleRules") List<GetBucketLifecycleRule> lifecycleRules,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("loggings") List<GetBucketLogging> loggings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
+        @OutputCustomType.Parameter("requesterPays") Boolean requesterPays,
+        @OutputCustomType.Parameter("retentionPolicies") List<GetBucketRetentionPolicy> retentionPolicies,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("uniformBucketLevelAccess") Boolean uniformBucketLevelAccess,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("versionings") List<GetBucketVersioning> versionings,
+        @OutputCustomType.Parameter("websites") List<GetBucketWebsite> websites) {
         this.cors = cors;
         this.defaultEventBasedHold = defaultEventBasedHold;
         this.encryptions = encryptions;

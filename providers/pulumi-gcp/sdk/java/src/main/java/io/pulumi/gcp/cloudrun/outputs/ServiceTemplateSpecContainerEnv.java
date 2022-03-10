@@ -36,11 +36,11 @@ public final class ServiceTemplateSpecContainerEnv {
      */
     private final @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom;
 
-    @OutputCustomType.Constructor({"name","value","valueFrom"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerEnv(
-        @Nullable String name,
-        @Nullable String value,
-        @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("valueFrom") @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

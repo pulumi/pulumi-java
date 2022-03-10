@@ -13,10 +13,10 @@ public final class GetBackendServiceSecuritySetting {
     private final String clientTlsPolicy;
     private final List<String> subjectAltNames;
 
-    @OutputCustomType.Constructor({"clientTlsPolicy","subjectAltNames"})
+    @OutputCustomType.Constructor
     private GetBackendServiceSecuritySetting(
-        String clientTlsPolicy,
-        List<String> subjectAltNames) {
+        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }

@@ -12,10 +12,10 @@ public final class GetBackendServiceConsistentHashHttpCookyTtl {
     private final Integer nanos;
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private GetBackendServiceConsistentHashHttpCookyTtl(
-        Integer nanos,
-        Integer seconds) {
+        @OutputCustomType.Parameter("nanos") Integer nanos,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

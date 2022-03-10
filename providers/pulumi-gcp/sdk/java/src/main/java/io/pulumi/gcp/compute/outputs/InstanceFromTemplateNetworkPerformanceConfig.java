@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class InstanceFromTemplateNetworkPerformanceConfig {
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor({"totalEgressBandwidthTier"})
-    private InstanceFromTemplateNetworkPerformanceConfig(String totalEgressBandwidthTier) {
+    @OutputCustomType.Constructor
+    private InstanceFromTemplateNetworkPerformanceConfig(@OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 

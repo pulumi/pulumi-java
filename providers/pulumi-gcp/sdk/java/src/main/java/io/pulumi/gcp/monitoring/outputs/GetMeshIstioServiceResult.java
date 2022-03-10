@@ -27,17 +27,17 @@ public final class GetMeshIstioServiceResult {
     private final String serviceNamespace;
     private final List<GetMeshIstioServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"displayName","id","meshUid","name","project","serviceId","serviceName","serviceNamespace","telemetries"})
+    @OutputCustomType.Constructor
     private GetMeshIstioServiceResult(
-        String displayName,
-        String id,
-        String meshUid,
-        String name,
-        @Nullable String project,
-        String serviceId,
-        String serviceName,
-        String serviceNamespace,
-        List<GetMeshIstioServiceTelemetry> telemetries) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("meshUid") String meshUid,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @OutputCustomType.Parameter("telemetries") List<GetMeshIstioServiceTelemetry> telemetries) {
         this.displayName = displayName;
         this.id = id;
         this.meshUid = meshUid;

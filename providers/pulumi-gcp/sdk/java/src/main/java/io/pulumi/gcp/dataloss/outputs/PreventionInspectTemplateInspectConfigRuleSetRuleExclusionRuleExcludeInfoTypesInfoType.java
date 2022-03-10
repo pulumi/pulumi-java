@@ -16,8 +16,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType(String name) {
+    @OutputCustomType.Constructor
+    private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -49,32 +49,32 @@ public final class NodePoolNodeConfig {
     private final @Nullable List<NodePoolNodeConfigTaint> taints;
     private final @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig;
 
-    @OutputCustomType.Constructor({"bootDiskKmsKey","diskSizeGb","diskType","ephemeralStorageConfig","gcfsConfig","guestAccelerators","imageType","kubeletConfig","labels","linuxNodeConfig","localSsdCount","machineType","metadata","minCpuPlatform","nodeGroup","oauthScopes","preemptible","sandboxConfig","serviceAccount","shieldedInstanceConfig","spot","tags","taints","workloadMetadataConfig"})
+    @OutputCustomType.Constructor
     private NodePoolNodeConfig(
-        @Nullable String bootDiskKmsKey,
-        @Nullable Integer diskSizeGb,
-        @Nullable String diskType,
-        @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
-        @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig,
-        @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators,
-        @Nullable String imageType,
-        @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig,
-        @Nullable Map<String,String> labels,
-        @Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig,
-        @Nullable Integer localSsdCount,
-        @Nullable String machineType,
-        @Nullable Map<String,String> metadata,
-        @Nullable String minCpuPlatform,
-        @Nullable String nodeGroup,
-        @Nullable List<String> oauthScopes,
-        @Nullable Boolean preemptible,
-        @Nullable NodePoolNodeConfigSandboxConfig sandboxConfig,
-        @Nullable String serviceAccount,
-        @Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @Nullable Boolean spot,
-        @Nullable List<String> tags,
-        @Nullable List<NodePoolNodeConfigTaint> taints,
-        @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        @OutputCustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("ephemeralStorageConfig") @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
+        @OutputCustomType.Parameter("gcfsConfig") @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig,
+        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators,
+        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
+        @OutputCustomType.Parameter("kubeletConfig") @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("linuxNodeConfig") @Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig,
+        @OutputCustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @OutputCustomType.Parameter("sandboxConfig") @Nullable NodePoolNodeConfigSandboxConfig sandboxConfig,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @OutputCustomType.Parameter("spot") @Nullable Boolean spot,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("taints") @Nullable List<NodePoolNodeConfigTaint> taints,
+        @OutputCustomType.Parameter("workloadMetadataConfig") @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

@@ -46,14 +46,14 @@ public final class WorkflowTemplateJobHiveJob {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobHiveJob(
-        @Nullable Boolean continueOnFailure,
-        @Nullable List<String> jarFileUris,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobHiveJobQueryList queryList,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobHiveJobQueryList queryList,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;

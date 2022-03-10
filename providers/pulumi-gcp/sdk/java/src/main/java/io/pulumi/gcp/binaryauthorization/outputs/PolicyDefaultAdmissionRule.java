@@ -36,11 +36,11 @@ public final class PolicyDefaultAdmissionRule {
      */
     private final @Nullable List<String> requireAttestationsBies;
 
-    @OutputCustomType.Constructor({"enforcementMode","evaluationMode","requireAttestationsBies"})
+    @OutputCustomType.Constructor
     private PolicyDefaultAdmissionRule(
-        String enforcementMode,
-        String evaluationMode,
-        @Nullable List<String> requireAttestationsBies) {
+        @OutputCustomType.Parameter("enforcementMode") String enforcementMode,
+        @OutputCustomType.Parameter("evaluationMode") String evaluationMode,
+        @OutputCustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
         this.enforcementMode = enforcementMode;
         this.evaluationMode = evaluationMode;
         this.requireAttestationsBies = requireAttestationsBies;

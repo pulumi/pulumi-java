@@ -27,11 +27,11 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
      */
     private final @Nullable Boolean enableVtpm;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigGceClusterConfigShieldedInstanceConfig(
-        @Nullable Boolean enableIntegrityMonitoring,
-        @Nullable Boolean enableSecureBoot,
-        @Nullable Boolean enableVtpm) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot,
+        @OutputCustomType.Parameter("enableVtpm") @Nullable Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

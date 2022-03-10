@@ -14,10 +14,10 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindow {
     private final @Nullable String duration;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","startTime"})
+    @OutputCustomType.Constructor
     private ClusterMaintenancePolicyDailyMaintenanceWindow(
-        @Nullable String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }

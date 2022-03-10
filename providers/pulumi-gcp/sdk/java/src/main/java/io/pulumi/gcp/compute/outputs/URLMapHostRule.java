@@ -31,11 +31,11 @@ public final class URLMapHostRule {
      */
     private final String pathMatcher;
 
-    @OutputCustomType.Constructor({"description","hosts","pathMatcher"})
+    @OutputCustomType.Constructor
     private URLMapHostRule(
-        @Nullable String description,
-        List<String> hosts,
-        String pathMatcher) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("pathMatcher") String pathMatcher) {
         this.description = description;
         this.hosts = hosts;
         this.pathMatcher = pathMatcher;

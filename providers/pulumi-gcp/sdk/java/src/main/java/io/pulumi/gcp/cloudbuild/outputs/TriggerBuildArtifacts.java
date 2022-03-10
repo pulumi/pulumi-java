@@ -32,10 +32,10 @@ public final class TriggerBuildArtifacts {
      */
     private final @Nullable TriggerBuildArtifactsObjects objects;
 
-    @OutputCustomType.Constructor({"images","objects"})
+    @OutputCustomType.Constructor
     private TriggerBuildArtifacts(
-        @Nullable List<String> images,
-        @Nullable TriggerBuildArtifactsObjects objects) {
+        @OutputCustomType.Parameter("images") @Nullable List<String> images,
+        @OutputCustomType.Parameter("objects") @Nullable TriggerBuildArtifactsObjects objects) {
         this.images = images;
         this.objects = objects;
     }

@@ -26,17 +26,17 @@ public final class GetGroupsGroup {
     private final String parent;
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","groupKeys","initialGroupConfig","labels","name","parent","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupsGroup(
-        String createTime,
-        String description,
-        String displayName,
-        List<GetGroupsGroupGroupKey> groupKeys,
-        String initialGroupConfig,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("groupKeys") List<GetGroupsGroupGroupKey> groupKeys,
+        @OutputCustomType.Parameter("initialGroupConfig") String initialGroupConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

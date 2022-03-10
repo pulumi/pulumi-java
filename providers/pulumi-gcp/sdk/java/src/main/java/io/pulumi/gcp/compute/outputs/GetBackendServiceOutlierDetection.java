@@ -24,19 +24,19 @@ public final class GetBackendServiceOutlierDetection {
     private final Integer successRateRequestVolume;
     private final Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor({"baseEjectionTimes","consecutiveErrors","consecutiveGatewayFailure","enforcingConsecutiveErrors","enforcingConsecutiveGatewayFailure","enforcingSuccessRate","intervals","maxEjectionPercent","successRateMinimumHosts","successRateRequestVolume","successRateStdevFactor"})
+    @OutputCustomType.Constructor
     private GetBackendServiceOutlierDetection(
-        List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
-        Integer consecutiveErrors,
-        Integer consecutiveGatewayFailure,
-        Integer enforcingConsecutiveErrors,
-        Integer enforcingConsecutiveGatewayFailure,
-        Integer enforcingSuccessRate,
-        List<GetBackendServiceOutlierDetectionInterval> intervals,
-        Integer maxEjectionPercent,
-        Integer successRateMinimumHosts,
-        Integer successRateRequestVolume,
-        Integer successRateStdevFactor) {
+        @OutputCustomType.Parameter("baseEjectionTimes") List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
+        @OutputCustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
+        @OutputCustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
+        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
+        @OutputCustomType.Parameter("intervals") List<GetBackendServiceOutlierDetectionInterval> intervals,
+        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
+        @OutputCustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
+        @OutputCustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
         this.baseEjectionTimes = baseEjectionTimes;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

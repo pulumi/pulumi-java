@@ -19,10 +19,10 @@ public final class IntentFollowupIntentInfo {
      */
     private final @Nullable String parentFollowupIntentName;
 
-    @OutputCustomType.Constructor({"followupIntentName","parentFollowupIntentName"})
+    @OutputCustomType.Constructor
     private IntentFollowupIntentInfo(
-        @Nullable String followupIntentName,
-        @Nullable String parentFollowupIntentName) {
+        @OutputCustomType.Parameter("followupIntentName") @Nullable String followupIntentName,
+        @OutputCustomType.Parameter("parentFollowupIntentName") @Nullable String parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }

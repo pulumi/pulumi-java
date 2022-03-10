@@ -38,23 +38,23 @@ public final class EnvironmentConfig {
     private final @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl;
     private final @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig;
 
-    @OutputCustomType.Constructor({"airflowUri","dagGcsPrefix","databaseConfig","encryptionConfig","environmentSize","gkeCluster","maintenanceWindow","masterAuthorizedNetworksConfig","nodeConfig","nodeCount","privateEnvironmentConfig","softwareConfig","webServerConfig","webServerNetworkAccessControl","workloadsConfig"})
+    @OutputCustomType.Constructor
     private EnvironmentConfig(
-        @Nullable String airflowUri,
-        @Nullable String dagGcsPrefix,
-        @Nullable EnvironmentConfigDatabaseConfig databaseConfig,
-        @Nullable EnvironmentConfigEncryptionConfig encryptionConfig,
-        @Nullable String environmentSize,
-        @Nullable String gkeCluster,
-        @Nullable EnvironmentConfigMaintenanceWindow maintenanceWindow,
-        @Nullable EnvironmentConfigMasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig,
-        @Nullable EnvironmentConfigNodeConfig nodeConfig,
-        @Nullable Integer nodeCount,
-        @Nullable EnvironmentConfigPrivateEnvironmentConfig privateEnvironmentConfig,
-        @Nullable EnvironmentConfigSoftwareConfig softwareConfig,
-        @Nullable EnvironmentConfigWebServerConfig webServerConfig,
-        @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl,
-        @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig) {
+        @OutputCustomType.Parameter("airflowUri") @Nullable String airflowUri,
+        @OutputCustomType.Parameter("dagGcsPrefix") @Nullable String dagGcsPrefix,
+        @OutputCustomType.Parameter("databaseConfig") @Nullable EnvironmentConfigDatabaseConfig databaseConfig,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable EnvironmentConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("environmentSize") @Nullable String environmentSize,
+        @OutputCustomType.Parameter("gkeCluster") @Nullable String gkeCluster,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable EnvironmentConfigMaintenanceWindow maintenanceWindow,
+        @OutputCustomType.Parameter("masterAuthorizedNetworksConfig") @Nullable EnvironmentConfigMasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig,
+        @OutputCustomType.Parameter("nodeConfig") @Nullable EnvironmentConfigNodeConfig nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @OutputCustomType.Parameter("privateEnvironmentConfig") @Nullable EnvironmentConfigPrivateEnvironmentConfig privateEnvironmentConfig,
+        @OutputCustomType.Parameter("softwareConfig") @Nullable EnvironmentConfigSoftwareConfig softwareConfig,
+        @OutputCustomType.Parameter("webServerConfig") @Nullable EnvironmentConfigWebServerConfig webServerConfig,
+        @OutputCustomType.Parameter("webServerNetworkAccessControl") @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl,
+        @OutputCustomType.Parameter("workloadsConfig") @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfig = databaseConfig;

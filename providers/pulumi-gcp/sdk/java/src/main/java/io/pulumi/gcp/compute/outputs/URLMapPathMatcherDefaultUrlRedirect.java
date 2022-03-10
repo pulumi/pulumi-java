@@ -65,14 +65,14 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      */
     private final Boolean stripQuery;
 
-    @OutputCustomType.Constructor({"hostRedirect","httpsRedirect","pathRedirect","prefixRedirect","redirectResponseCode","stripQuery"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultUrlRedirect(
-        @Nullable String hostRedirect,
-        @Nullable Boolean httpsRedirect,
-        @Nullable String pathRedirect,
-        @Nullable String prefixRedirect,
-        @Nullable String redirectResponseCode,
-        Boolean stripQuery) {
+        @OutputCustomType.Parameter("hostRedirect") @Nullable String hostRedirect,
+        @OutputCustomType.Parameter("httpsRedirect") @Nullable Boolean httpsRedirect,
+        @OutputCustomType.Parameter("pathRedirect") @Nullable String pathRedirect,
+        @OutputCustomType.Parameter("prefixRedirect") @Nullable String prefixRedirect,
+        @OutputCustomType.Parameter("redirectResponseCode") @Nullable String redirectResponseCode,
+        @OutputCustomType.Parameter("stripQuery") Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;

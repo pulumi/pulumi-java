@@ -22,10 +22,10 @@ public final class ClusterDatabaseEncryption {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"keyName","state"})
+    @OutputCustomType.Constructor
     private ClusterDatabaseEncryption(
-        @Nullable String keyName,
-        String state) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("state") String state) {
         this.keyName = keyName;
         this.state = state;
     }

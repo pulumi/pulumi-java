@@ -67,16 +67,16 @@ public final class TriggerBuildSourceRepoSource {
      */
     private final @Nullable String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","dir","invertRegex","projectId","repoName","substitutions","tagName"})
+    @OutputCustomType.Constructor
     private TriggerBuildSourceRepoSource(
-        @Nullable String branchName,
-        @Nullable String commitSha,
-        @Nullable String dir,
-        @Nullable Boolean invertRegex,
-        @Nullable String projectId,
-        String repoName,
-        @Nullable Map<String,String> substitutions,
-        @Nullable String tagName) {
+        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
+        @OutputCustomType.Parameter("commitSha") @Nullable String commitSha,
+        @OutputCustomType.Parameter("dir") @Nullable String dir,
+        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("repoName") String repoName,
+        @OutputCustomType.Parameter("substitutions") @Nullable Map<String,String> substitutions,
+        @OutputCustomType.Parameter("tagName") @Nullable String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;

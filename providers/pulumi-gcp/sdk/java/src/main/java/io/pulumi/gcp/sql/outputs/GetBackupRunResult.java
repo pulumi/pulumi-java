@@ -38,15 +38,15 @@ public final class GetBackupRunResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"backupId","id","instance","location","mostRecent","startTime","status"})
+    @OutputCustomType.Constructor
     private GetBackupRunResult(
-        Integer backupId,
-        String id,
-        String instance,
-        String location,
-        @Nullable Boolean mostRecent,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("backupId") Integer backupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.backupId = backupId;
         this.id = id;
         this.instance = instance;

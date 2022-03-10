@@ -48,12 +48,12 @@ public final class RouterPeerBfd {
      */
     private final String sessionInitializationMode;
 
-    @OutputCustomType.Constructor({"minReceiveInterval","minTransmitInterval","multiplier","sessionInitializationMode"})
+    @OutputCustomType.Constructor
     private RouterPeerBfd(
-        @Nullable Integer minReceiveInterval,
-        @Nullable Integer minTransmitInterval,
-        @Nullable Integer multiplier,
-        String sessionInitializationMode) {
+        @OutputCustomType.Parameter("minReceiveInterval") @Nullable Integer minReceiveInterval,
+        @OutputCustomType.Parameter("minTransmitInterval") @Nullable Integer minTransmitInterval,
+        @OutputCustomType.Parameter("multiplier") @Nullable Integer multiplier,
+        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;

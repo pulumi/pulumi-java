@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source;
 
-    @OutputCustomType.Constructor({"properties","source"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi(
-        @Nullable List<String> properties,
-        OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
+        @OutputCustomType.Parameter("properties") @Nullable List<String> properties,
+        @OutputCustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
         this.properties = properties;
         this.source = source;
     }

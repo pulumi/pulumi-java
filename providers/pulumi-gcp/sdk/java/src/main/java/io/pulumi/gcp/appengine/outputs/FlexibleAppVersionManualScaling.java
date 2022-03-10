@@ -17,8 +17,8 @@ public final class FlexibleAppVersionManualScaling {
      */
     private final Integer instances;
 
-    @OutputCustomType.Constructor({"instances"})
-    private FlexibleAppVersionManualScaling(Integer instances) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionManualScaling(@OutputCustomType.Parameter("instances") Integer instances) {
         this.instances = instances;
     }
 

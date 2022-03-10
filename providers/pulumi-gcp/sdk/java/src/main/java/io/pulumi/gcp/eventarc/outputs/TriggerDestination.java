@@ -23,10 +23,10 @@ public final class TriggerDestination {
      */
     private final @Nullable TriggerDestinationCloudRunService cloudRunService;
 
-    @OutputCustomType.Constructor({"cloudFunction","cloudRunService"})
+    @OutputCustomType.Constructor
     private TriggerDestination(
-        @Nullable String cloudFunction,
-        @Nullable TriggerDestinationCloudRunService cloudRunService) {
+        @OutputCustomType.Parameter("cloudFunction") @Nullable String cloudFunction,
+        @OutputCustomType.Parameter("cloudRunService") @Nullable TriggerDestinationCloudRunService cloudRunService) {
         this.cloudFunction = cloudFunction;
         this.cloudRunService = cloudRunService;
     }

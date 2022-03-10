@@ -76,15 +76,15 @@ public final class URLMapPathMatcherPathRuleRouteAction {
      */
     private final @Nullable List<URLMapPathMatcherPathRuleRouteActionWeightedBackendService> weightedBackendServices;
 
-    @OutputCustomType.Constructor({"corsPolicy","faultInjectionPolicy","requestMirrorPolicy","retryPolicy","timeout","urlRewrite","weightedBackendServices"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteAction(
-        @Nullable URLMapPathMatcherPathRuleRouteActionCorsPolicy corsPolicy,
-        @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
-        @Nullable URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
-        @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicy retryPolicy,
-        @Nullable URLMapPathMatcherPathRuleRouteActionTimeout timeout,
-        @Nullable URLMapPathMatcherPathRuleRouteActionUrlRewrite urlRewrite,
-        @Nullable List<URLMapPathMatcherPathRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        @OutputCustomType.Parameter("corsPolicy") @Nullable URLMapPathMatcherPathRuleRouteActionCorsPolicy corsPolicy,
+        @OutputCustomType.Parameter("faultInjectionPolicy") @Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
+        @OutputCustomType.Parameter("requestMirrorPolicy") @Nullable URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable URLMapPathMatcherPathRuleRouteActionTimeout timeout,
+        @OutputCustomType.Parameter("urlRewrite") @Nullable URLMapPathMatcherPathRuleRouteActionUrlRewrite urlRewrite,
+        @OutputCustomType.Parameter("weightedBackendServices") @Nullable List<URLMapPathMatcherPathRuleRouteActionWeightedBackendService> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.requestMirrorPolicy = requestMirrorPolicy;

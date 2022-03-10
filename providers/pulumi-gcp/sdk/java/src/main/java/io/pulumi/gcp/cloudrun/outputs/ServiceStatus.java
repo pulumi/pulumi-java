@@ -20,13 +20,13 @@ public final class ServiceStatus {
     private final @Nullable Integer observedGeneration;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"conditions","latestCreatedRevisionName","latestReadyRevisionName","observedGeneration","url"})
+    @OutputCustomType.Constructor
     private ServiceStatus(
-        @Nullable List<ServiceStatusCondition> conditions,
-        @Nullable String latestCreatedRevisionName,
-        @Nullable String latestReadyRevisionName,
-        @Nullable Integer observedGeneration,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<ServiceStatusCondition> conditions,
+        @OutputCustomType.Parameter("latestCreatedRevisionName") @Nullable String latestCreatedRevisionName,
+        @OutputCustomType.Parameter("latestReadyRevisionName") @Nullable String latestReadyRevisionName,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;

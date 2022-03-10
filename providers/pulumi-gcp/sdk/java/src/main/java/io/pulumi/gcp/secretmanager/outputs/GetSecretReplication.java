@@ -14,10 +14,10 @@ public final class GetSecretReplication {
     private final Boolean automatic;
     private final List<GetSecretReplicationUserManaged> userManageds;
 
-    @OutputCustomType.Constructor({"automatic","userManageds"})
+    @OutputCustomType.Constructor
     private GetSecretReplication(
-        Boolean automatic,
-        List<GetSecretReplicationUserManaged> userManageds) {
+        @OutputCustomType.Parameter("automatic") Boolean automatic,
+        @OutputCustomType.Parameter("userManageds") List<GetSecretReplicationUserManaged> userManageds) {
         this.automatic = automatic;
         this.userManageds = userManageds;
     }

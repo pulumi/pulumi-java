@@ -95,17 +95,17 @@ public final class ServicePerimetersServicePerimeter {
      */
     private final @Nullable Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor({"createTime","description","name","perimeterType","spec","status","title","updateTime","useExplicitDryRunSpec"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeter(
-        @Nullable String createTime,
-        @Nullable String description,
-        String name,
-        @Nullable String perimeterType,
-        @Nullable ServicePerimetersServicePerimeterSpec spec,
-        @Nullable ServicePerimetersServicePerimeterStatus status,
-        String title,
-        @Nullable String updateTime,
-        @Nullable Boolean useExplicitDryRunSpec) {
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") @Nullable String perimeterType,
+        @OutputCustomType.Parameter("spec") @Nullable ServicePerimetersServicePerimeterSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable ServicePerimetersServicePerimeterStatus status,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime,
+        @OutputCustomType.Parameter("useExplicitDryRunSpec") @Nullable Boolean useExplicitDryRunSpec) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

@@ -18,8 +18,8 @@ public final class AiDatasetEncryptionSpec {
      */
     private final @Nullable String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private AiDatasetEncryptionSpec(@Nullable String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private AiDatasetEncryptionSpec(@OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

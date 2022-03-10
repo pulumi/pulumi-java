@@ -16,8 +16,8 @@ public final class DicomStoreStreamConfig {
      */
     private final DicomStoreStreamConfigBigqueryDestination bigqueryDestination;
 
-    @OutputCustomType.Constructor({"bigqueryDestination"})
-    private DicomStoreStreamConfig(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
+    @OutputCustomType.Constructor
+    private DicomStoreStreamConfig(@OutputCustomType.Parameter("bigqueryDestination") DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
     }
 

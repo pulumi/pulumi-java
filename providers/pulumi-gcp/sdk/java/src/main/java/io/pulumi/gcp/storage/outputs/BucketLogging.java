@@ -23,10 +23,10 @@ public final class BucketLogging {
      */
     private final @Nullable String logObjectPrefix;
 
-    @OutputCustomType.Constructor({"logBucket","logObjectPrefix"})
+    @OutputCustomType.Constructor
     private BucketLogging(
-        String logBucket,
-        @Nullable String logObjectPrefix) {
+        @OutputCustomType.Parameter("logBucket") String logBucket,
+        @OutputCustomType.Parameter("logObjectPrefix") @Nullable String logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }

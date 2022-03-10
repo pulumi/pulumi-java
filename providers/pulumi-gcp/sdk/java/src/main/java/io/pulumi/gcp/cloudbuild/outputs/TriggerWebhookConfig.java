@@ -25,10 +25,10 @@ public final class TriggerWebhookConfig {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"secret","state"})
+    @OutputCustomType.Constructor
     private TriggerWebhookConfig(
-        String secret,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.secret = secret;
         this.state = state;
     }

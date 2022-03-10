@@ -19,8 +19,8 @@ public final class ServiceNetworkSettingsNetworkSettings {
      */
     private final @Nullable String ingressTrafficAllowed;
 
-    @OutputCustomType.Constructor({"ingressTrafficAllowed"})
-    private ServiceNetworkSettingsNetworkSettings(@Nullable String ingressTrafficAllowed) {
+    @OutputCustomType.Constructor
+    private ServiceNetworkSettingsNetworkSettings(@OutputCustomType.Parameter("ingressTrafficAllowed") @Nullable String ingressTrafficAllowed) {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
     }
 

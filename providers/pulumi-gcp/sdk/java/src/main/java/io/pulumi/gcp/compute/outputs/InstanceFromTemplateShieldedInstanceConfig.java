@@ -15,11 +15,11 @@ public final class InstanceFromTemplateShieldedInstanceConfig {
     private final @Nullable Boolean enableSecureBoot;
     private final @Nullable Boolean enableVtpm;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateShieldedInstanceConfig(
-        @Nullable Boolean enableIntegrityMonitoring,
-        @Nullable Boolean enableSecureBoot,
-        @Nullable Boolean enableVtpm) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot,
+        @OutputCustomType.Parameter("enableVtpm") @Nullable Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

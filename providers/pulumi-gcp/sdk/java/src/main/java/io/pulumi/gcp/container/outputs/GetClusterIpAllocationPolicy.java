@@ -14,12 +14,12 @@ public final class GetClusterIpAllocationPolicy {
     private final String servicesIpv4CidrBlock;
     private final String servicesSecondaryRangeName;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName"})
+    @OutputCustomType.Constructor
     private GetClusterIpAllocationPolicy(
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

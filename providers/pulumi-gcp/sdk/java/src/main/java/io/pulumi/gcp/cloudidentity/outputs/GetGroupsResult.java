@@ -23,11 +23,11 @@ public final class GetGroupsResult {
     private final String id;
     private final String parent;
 
-    @OutputCustomType.Constructor({"groups","id","parent"})
+    @OutputCustomType.Constructor
     private GetGroupsResult(
-        List<GetGroupsGroup> groups,
-        String id,
-        String parent) {
+        @OutputCustomType.Parameter("groups") List<GetGroupsGroup> groups,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parent") String parent) {
         this.groups = groups;
         this.id = id;
         this.parent = parent;

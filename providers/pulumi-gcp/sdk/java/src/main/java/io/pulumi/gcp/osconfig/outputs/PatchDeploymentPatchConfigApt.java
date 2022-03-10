@@ -31,11 +31,11 @@ public final class PatchDeploymentPatchConfigApt {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"excludes","exclusivePackages","type"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigApt(
-        @Nullable List<String> excludes,
-        @Nullable List<String> exclusivePackages,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePackages") @Nullable List<String> exclusivePackages,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.type = type;

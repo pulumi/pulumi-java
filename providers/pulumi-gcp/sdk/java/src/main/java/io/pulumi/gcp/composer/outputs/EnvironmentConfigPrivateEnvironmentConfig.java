@@ -20,15 +20,15 @@ public final class EnvironmentConfigPrivateEnvironmentConfig {
     private final @Nullable String masterIpv4CidrBlock;
     private final @Nullable String webServerIpv4CidrBlock;
 
-    @OutputCustomType.Constructor({"cloudComposerConnectionSubnetwork","cloudComposerNetworkIpv4CidrBlock","cloudSqlIpv4CidrBlock","enablePrivateEndpoint","enablePrivatelyUsedPublicIps","masterIpv4CidrBlock","webServerIpv4CidrBlock"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigPrivateEnvironmentConfig(
-        @Nullable String cloudComposerConnectionSubnetwork,
-        @Nullable String cloudComposerNetworkIpv4CidrBlock,
-        @Nullable String cloudSqlIpv4CidrBlock,
-        @Nullable Boolean enablePrivateEndpoint,
-        @Nullable Boolean enablePrivatelyUsedPublicIps,
-        @Nullable String masterIpv4CidrBlock,
-        @Nullable String webServerIpv4CidrBlock) {
+        @OutputCustomType.Parameter("cloudComposerConnectionSubnetwork") @Nullable String cloudComposerConnectionSubnetwork,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") @Nullable String cloudComposerNetworkIpv4CidrBlock,
+        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") @Nullable String cloudSqlIpv4CidrBlock,
+        @OutputCustomType.Parameter("enablePrivateEndpoint") @Nullable Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("enablePrivatelyUsedPublicIps") @Nullable Boolean enablePrivatelyUsedPublicIps,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") @Nullable String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("webServerIpv4CidrBlock") @Nullable String webServerIpv4CidrBlock) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;

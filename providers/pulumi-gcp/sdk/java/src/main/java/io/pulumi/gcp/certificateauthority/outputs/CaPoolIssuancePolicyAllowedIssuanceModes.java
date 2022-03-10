@@ -20,10 +20,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
      */
     private final Boolean allowCsrBasedIssuance;
 
-    @OutputCustomType.Constructor({"allowConfigBasedIssuance","allowCsrBasedIssuance"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyAllowedIssuanceModes(
-        Boolean allowConfigBasedIssuance,
-        Boolean allowCsrBasedIssuance) {
+        @OutputCustomType.Parameter("allowConfigBasedIssuance") Boolean allowConfigBasedIssuance,
+        @OutputCustomType.Parameter("allowCsrBasedIssuance") Boolean allowCsrBasedIssuance) {
         this.allowConfigBasedIssuance = allowConfigBasedIssuance;
         this.allowCsrBasedIssuance = allowCsrBasedIssuance;
     }

@@ -37,11 +37,11 @@ public final class RegionNetworkEndpointGroupCloudRun {
      */
     private final @Nullable String urlMask;
 
-    @OutputCustomType.Constructor({"service","tag","urlMask"})
+    @OutputCustomType.Constructor
     private RegionNetworkEndpointGroupCloudRun(
-        @Nullable String service,
-        @Nullable String tag,
-        @Nullable String urlMask) {
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("urlMask") @Nullable String urlMask) {
         this.service = service;
         this.tag = tag;
         this.urlMask = urlMask;

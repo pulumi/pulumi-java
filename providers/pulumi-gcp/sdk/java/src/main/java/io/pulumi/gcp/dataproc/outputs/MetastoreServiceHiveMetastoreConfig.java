@@ -31,11 +31,11 @@ public final class MetastoreServiceHiveMetastoreConfig {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"configOverrides","kerberosConfig","version"})
+    @OutputCustomType.Constructor
     private MetastoreServiceHiveMetastoreConfig(
-        @Nullable Map<String,String> configOverrides,
-        @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
-        String version) {
+        @OutputCustomType.Parameter("configOverrides") @Nullable Map<String,String> configOverrides,
+        @OutputCustomType.Parameter("kerberosConfig") @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
+        @OutputCustomType.Parameter("version") String version) {
         this.configOverrides = configOverrides;
         this.kerberosConfig = kerberosConfig;
         this.version = version;

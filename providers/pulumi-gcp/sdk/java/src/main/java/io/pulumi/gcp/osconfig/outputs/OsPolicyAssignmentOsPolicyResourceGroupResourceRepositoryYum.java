@@ -33,12 +33,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"baseUrl","displayName","gpgKeys","id"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum(
-        String baseUrl,
-        @Nullable String displayName,
-        @Nullable List<String> gpgKeys,
-        String id) {
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("gpgKeys") @Nullable List<String> gpgKeys,
+        @OutputCustomType.Parameter("id") String id) {
         this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;

@@ -40,12 +40,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Boolean reverseOrder;
 
-    @OutputCustomType.Constructor({"charactersToIgnores","maskingCharacter","numberToMask","reverseOrder"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig(
-        @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
-        @Nullable String maskingCharacter,
-        @Nullable Integer numberToMask,
-        @Nullable Boolean reverseOrder) {
+        @OutputCustomType.Parameter("charactersToIgnores") @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
+        @OutputCustomType.Parameter("maskingCharacter") @Nullable String maskingCharacter,
+        @OutputCustomType.Parameter("numberToMask") @Nullable Integer numberToMask,
+        @OutputCustomType.Parameter("reverseOrder") @Nullable Boolean reverseOrder) {
         this.charactersToIgnores = charactersToIgnores;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;

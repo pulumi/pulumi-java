@@ -72,19 +72,19 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"internalIpOnly","metadata","network","nodeGroupAffinity","privateIpv6GoogleAccess","reservationAffinity","serviceAccount","serviceAccountScopes","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(
-        @Nullable Boolean internalIpOnly,
-        @Nullable Map<String,String> metadata,
-        @Nullable String network,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
-        @Nullable String privateIpv6GoogleAccess,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
-        @Nullable String serviceAccount,
-        @Nullable List<String> serviceAccountScopes,
-        @Nullable String subnetwork,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("nodeGroupAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") @Nullable String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("reservationAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;

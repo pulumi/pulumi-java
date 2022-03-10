@@ -121,23 +121,23 @@ public final class ClusterClusterConfig {
      */
     private final @Nullable ClusterClusterConfigWorkerConfig workerConfig;
 
-    @OutputCustomType.Constructor({"autoscalingConfig","bucket","encryptionConfig","endpointConfig","gceClusterConfig","initializationActions","lifecycleConfig","masterConfig","metastoreConfig","preemptibleWorkerConfig","securityConfig","softwareConfig","stagingBucket","tempBucket","workerConfig"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfig(
-        @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
-        @Nullable String bucket,
-        @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
-        @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
-        @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
-        @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
-        @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
-        @Nullable ClusterClusterConfigMasterConfig masterConfig,
-        @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
-        @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
-        @Nullable ClusterClusterConfigSecurityConfig securityConfig,
-        @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
-        @Nullable String stagingBucket,
-        @Nullable String tempBucket,
-        @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
+        @OutputCustomType.Parameter("autoscalingConfig") @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("endpointConfig") @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
+        @OutputCustomType.Parameter("gceClusterConfig") @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
+        @OutputCustomType.Parameter("initializationActions") @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
+        @OutputCustomType.Parameter("lifecycleConfig") @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
+        @OutputCustomType.Parameter("masterConfig") @Nullable ClusterClusterConfigMasterConfig masterConfig,
+        @OutputCustomType.Parameter("metastoreConfig") @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
+        @OutputCustomType.Parameter("preemptibleWorkerConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
+        @OutputCustomType.Parameter("securityConfig") @Nullable ClusterClusterConfigSecurityConfig securityConfig,
+        @OutputCustomType.Parameter("softwareConfig") @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
+        @OutputCustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
+        @OutputCustomType.Parameter("tempBucket") @Nullable String tempBucket,
+        @OutputCustomType.Parameter("workerConfig") @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.bucket = bucket;
         this.encryptionConfig = encryptionConfig;

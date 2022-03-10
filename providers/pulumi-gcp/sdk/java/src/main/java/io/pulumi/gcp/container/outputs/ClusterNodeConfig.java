@@ -185,32 +185,32 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig;
 
-    @OutputCustomType.Constructor({"bootDiskKmsKey","diskSizeGb","diskType","ephemeralStorageConfig","gcfsConfig","guestAccelerators","imageType","kubeletConfig","labels","linuxNodeConfig","localSsdCount","machineType","metadata","minCpuPlatform","nodeGroup","oauthScopes","preemptible","sandboxConfig","serviceAccount","shieldedInstanceConfig","spot","tags","taints","workloadMetadataConfig"})
+    @OutputCustomType.Constructor
     private ClusterNodeConfig(
-        @Nullable String bootDiskKmsKey,
-        @Nullable Integer diskSizeGb,
-        @Nullable String diskType,
-        @Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
-        @Nullable ClusterNodeConfigGcfsConfig gcfsConfig,
-        @Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators,
-        @Nullable String imageType,
-        @Nullable ClusterNodeConfigKubeletConfig kubeletConfig,
-        @Nullable Map<String,String> labels,
-        @Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig,
-        @Nullable Integer localSsdCount,
-        @Nullable String machineType,
-        @Nullable Map<String,String> metadata,
-        @Nullable String minCpuPlatform,
-        @Nullable String nodeGroup,
-        @Nullable List<String> oauthScopes,
-        @Nullable Boolean preemptible,
-        @Nullable ClusterNodeConfigSandboxConfig sandboxConfig,
-        @Nullable String serviceAccount,
-        @Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @Nullable Boolean spot,
-        @Nullable List<String> tags,
-        @Nullable List<ClusterNodeConfigTaint> taints,
-        @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        @OutputCustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("ephemeralStorageConfig") @Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
+        @OutputCustomType.Parameter("gcfsConfig") @Nullable ClusterNodeConfigGcfsConfig gcfsConfig,
+        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators,
+        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
+        @OutputCustomType.Parameter("kubeletConfig") @Nullable ClusterNodeConfigKubeletConfig kubeletConfig,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("linuxNodeConfig") @Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig,
+        @OutputCustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @OutputCustomType.Parameter("sandboxConfig") @Nullable ClusterNodeConfigSandboxConfig sandboxConfig,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @OutputCustomType.Parameter("spot") @Nullable Boolean spot,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("taints") @Nullable List<ClusterNodeConfigTaint> taints,
+        @OutputCustomType.Parameter("workloadMetadataConfig") @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

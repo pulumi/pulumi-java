@@ -12,10 +12,10 @@ public final class GetClusterNodePoolUpgradeSetting {
     private final Integer maxSurge;
     private final Integer maxUnavailable;
 
-    @OutputCustomType.Constructor({"maxSurge","maxUnavailable"})
+    @OutputCustomType.Constructor
     private GetClusterNodePoolUpgradeSetting(
-        Integer maxSurge,
-        Integer maxUnavailable) {
+        @OutputCustomType.Parameter("maxSurge") Integer maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

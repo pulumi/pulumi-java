@@ -23,10 +23,10 @@ public final class EnterpriseKeyTestingOptions {
      */
     private final @Nullable Double testingScore;
 
-    @OutputCustomType.Constructor({"testingChallenge","testingScore"})
+    @OutputCustomType.Constructor
     private EnterpriseKeyTestingOptions(
-        @Nullable String testingChallenge,
-        @Nullable Double testingScore) {
+        @OutputCustomType.Parameter("testingChallenge") @Nullable String testingChallenge,
+        @OutputCustomType.Parameter("testingScore") @Nullable Double testingScore) {
         this.testingChallenge = testingChallenge;
         this.testingScore = testingScore;
     }

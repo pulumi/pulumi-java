@@ -31,11 +31,11 @@ public final class TableMaterializedView {
      */
     private final @Nullable Integer refreshIntervalMs;
 
-    @OutputCustomType.Constructor({"enableRefresh","query","refreshIntervalMs"})
+    @OutputCustomType.Constructor
     private TableMaterializedView(
-        @Nullable Boolean enableRefresh,
-        String query,
-        @Nullable Integer refreshIntervalMs) {
+        @OutputCustomType.Parameter("enableRefresh") @Nullable Boolean enableRefresh,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("refreshIntervalMs") @Nullable Integer refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;

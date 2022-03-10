@@ -97,20 +97,20 @@ public final class TriggerBuild {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"artifacts","availableSecrets","images","logsBucket","options","queueTtl","secrets","source","steps","substitutions","tags","timeout"})
+    @OutputCustomType.Constructor
     private TriggerBuild(
-        @Nullable TriggerBuildArtifacts artifacts,
-        @Nullable TriggerBuildAvailableSecrets availableSecrets,
-        @Nullable List<String> images,
-        @Nullable String logsBucket,
-        @Nullable TriggerBuildOptions options,
-        @Nullable String queueTtl,
-        @Nullable List<TriggerBuildSecret> secrets,
-        @Nullable TriggerBuildSource source,
-        List<TriggerBuildStep> steps,
-        @Nullable Map<String,String> substitutions,
-        @Nullable List<String> tags,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("artifacts") @Nullable TriggerBuildArtifacts artifacts,
+        @OutputCustomType.Parameter("availableSecrets") @Nullable TriggerBuildAvailableSecrets availableSecrets,
+        @OutputCustomType.Parameter("images") @Nullable List<String> images,
+        @OutputCustomType.Parameter("logsBucket") @Nullable String logsBucket,
+        @OutputCustomType.Parameter("options") @Nullable TriggerBuildOptions options,
+        @OutputCustomType.Parameter("queueTtl") @Nullable String queueTtl,
+        @OutputCustomType.Parameter("secrets") @Nullable List<TriggerBuildSecret> secrets,
+        @OutputCustomType.Parameter("source") @Nullable TriggerBuildSource source,
+        @OutputCustomType.Parameter("steps") List<TriggerBuildStep> steps,
+        @OutputCustomType.Parameter("substitutions") @Nullable Map<String,String> substitutions,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;
         this.images = images;

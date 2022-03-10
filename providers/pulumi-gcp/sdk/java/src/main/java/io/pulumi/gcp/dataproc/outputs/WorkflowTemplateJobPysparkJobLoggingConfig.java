@@ -17,8 +17,8 @@ public final class WorkflowTemplateJobPysparkJobLoggingConfig {
      */
     private final @Nullable Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private WorkflowTemplateJobPysparkJobLoggingConfig(@Nullable Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplateJobPysparkJobLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") @Nullable Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

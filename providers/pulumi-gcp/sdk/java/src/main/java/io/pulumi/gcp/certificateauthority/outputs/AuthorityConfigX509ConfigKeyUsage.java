@@ -32,11 +32,11 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      */
     private final @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
+    @OutputCustomType.Constructor
     private AuthorityConfigX509ConfigKeyUsage(
-        AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
-        AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @OutputCustomType.Parameter("baseKeyUsage") AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
+        @OutputCustomType.Parameter("extendedKeyUsage") AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

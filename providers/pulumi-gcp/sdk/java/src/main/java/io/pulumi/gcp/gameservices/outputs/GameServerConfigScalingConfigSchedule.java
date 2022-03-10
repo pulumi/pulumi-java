@@ -38,12 +38,12 @@ public final class GameServerConfigScalingConfigSchedule {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"cronJobDuration","cronSpec","endTime","startTime"})
+    @OutputCustomType.Constructor
     private GameServerConfigScalingConfigSchedule(
-        @Nullable String cronJobDuration,
-        @Nullable String cronSpec,
-        @Nullable String endTime,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("cronJobDuration") @Nullable String cronJobDuration,
+        @OutputCustomType.Parameter("cronSpec") @Nullable String cronSpec,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.cronJobDuration = cronJobDuration;
         this.cronSpec = cronSpec;
         this.endTime = endTime;

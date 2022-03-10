@@ -17,11 +17,11 @@ public final class EnvironmentConfigWorkloadsConfig {
     private final @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer;
     private final @Nullable EnvironmentConfigWorkloadsConfigWorker worker;
 
-    @OutputCustomType.Constructor({"scheduler","webServer","worker"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWorkloadsConfig(
-        @Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler,
-        @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer,
-        @Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
+        @OutputCustomType.Parameter("scheduler") @Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler,
+        @OutputCustomType.Parameter("webServer") @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer,
+        @OutputCustomType.Parameter("worker") @Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;

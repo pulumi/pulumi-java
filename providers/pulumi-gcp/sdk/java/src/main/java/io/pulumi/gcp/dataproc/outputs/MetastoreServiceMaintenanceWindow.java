@@ -22,10 +22,10 @@ public final class MetastoreServiceMaintenanceWindow {
      */
     private final Integer hourOfDay;
 
-    @OutputCustomType.Constructor({"dayOfWeek","hourOfDay"})
+    @OutputCustomType.Constructor
     private MetastoreServiceMaintenanceWindow(
-        String dayOfWeek,
-        Integer hourOfDay) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("hourOfDay") Integer hourOfDay) {
         this.dayOfWeek = dayOfWeek;
         this.hourOfDay = hourOfDay;
     }

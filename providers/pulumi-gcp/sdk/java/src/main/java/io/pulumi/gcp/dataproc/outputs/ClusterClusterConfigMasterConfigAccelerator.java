@@ -21,10 +21,10 @@ public final class ClusterClusterConfigMasterConfigAccelerator {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigMasterConfigAccelerator(
-        Integer acceleratorCount,
-        String acceleratorType) {
+        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

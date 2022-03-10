@@ -12,10 +12,10 @@ public final class GetKMSCryptoKeyVersionTemplate {
     private final String algorithm;
     private final String protectionLevel;
 
-    @OutputCustomType.Constructor({"algorithm","protectionLevel"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyVersionTemplate(
-        String algorithm,
-        String protectionLevel) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

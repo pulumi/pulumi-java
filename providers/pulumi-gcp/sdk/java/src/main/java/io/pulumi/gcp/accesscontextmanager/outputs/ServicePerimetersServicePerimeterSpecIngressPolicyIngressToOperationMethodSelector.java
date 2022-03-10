@@ -25,10 +25,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOp
      */
     private final @Nullable String permission;
 
-    @OutputCustomType.Constructor({"method","permission"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector(
-        @Nullable String method,
-        @Nullable String permission) {
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("permission") @Nullable String permission) {
         this.method = method;
         this.permission = permission;
     }

@@ -31,10 +31,10 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      */
     private final @Nullable List<String> ports;
 
-    @OutputCustomType.Constructor({"ipProtocol","ports"})
+    @OutputCustomType.Constructor
     private OrganizationSecurityPolicyRuleMatchConfigLayer4Config(
-        String ipProtocol,
-        @Nullable List<String> ports) {
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("ports") @Nullable List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }

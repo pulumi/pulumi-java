@@ -24,10 +24,10 @@ public final class SecretReplicationUserManagedReplica {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption","location"})
+    @OutputCustomType.Constructor
     private SecretReplicationUserManagedReplica(
-        @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
-        String location) {
+        @OutputCustomType.Parameter("customerManagedEncryption") @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
+        @OutputCustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }

@@ -15,8 +15,8 @@ public final class WorkerPoolNetworkConfig {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor({"peeredNetwork"})
-    private WorkerPoolNetworkConfig(String peeredNetwork) {
+    @OutputCustomType.Constructor
+    private WorkerPoolNetworkConfig(@OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.peeredNetwork = peeredNetwork;
     }
 

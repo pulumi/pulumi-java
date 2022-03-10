@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterMasterAuthorizedNetworksConfig {
     private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
-    @OutputCustomType.Constructor({"cidrBlocks"})
-    private GetClusterMasterAuthorizedNetworksConfig(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+    @OutputCustomType.Constructor
+    private GetClusterMasterAuthorizedNetworksConfig(@OutputCustomType.Parameter("cidrBlocks") List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
     }
 

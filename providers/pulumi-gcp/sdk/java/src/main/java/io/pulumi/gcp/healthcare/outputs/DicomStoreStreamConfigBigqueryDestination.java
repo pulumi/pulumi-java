@@ -15,8 +15,8 @@ public final class DicomStoreStreamConfigBigqueryDestination {
      */
     private final String tableUri;
 
-    @OutputCustomType.Constructor({"tableUri"})
-    private DicomStoreStreamConfigBigqueryDestination(String tableUri) {
+    @OutputCustomType.Constructor
+    private DicomStoreStreamConfigBigqueryDestination(@OutputCustomType.Parameter("tableUri") String tableUri) {
         this.tableUri = tableUri;
     }
 

@@ -41,12 +41,12 @@ public final class ReservationSpecificReservationInstanceProperties {
      */
     private final @Nullable String minCpuPlatform;
 
-    @OutputCustomType.Constructor({"guestAccelerators","localSsds","machineType","minCpuPlatform"})
+    @OutputCustomType.Constructor
     private ReservationSpecificReservationInstanceProperties(
-        @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators,
-        @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds,
-        String machineType,
-        @Nullable String minCpuPlatform) {
+        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators,
+        @OutputCustomType.Parameter("localSsds") @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.machineType = machineType;

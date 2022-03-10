@@ -17,8 +17,8 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
      */
     private final @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor({"text"})
-    private CxFlowEventHandlerTriggerFulfillmentMessage(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
+    @OutputCustomType.Constructor
+    private CxFlowEventHandlerTriggerFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
         this.text = text;
     }
 

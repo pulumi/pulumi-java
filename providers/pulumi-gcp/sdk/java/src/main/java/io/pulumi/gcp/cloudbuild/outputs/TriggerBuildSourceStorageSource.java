@@ -29,11 +29,11 @@ public final class TriggerBuildSourceStorageSource {
      */
     private final String object;
 
-    @OutputCustomType.Constructor({"bucket","generation","object"})
+    @OutputCustomType.Constructor
     private TriggerBuildSourceStorageSource(
-        String bucket,
-        @Nullable String generation,
-        String object) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("generation") @Nullable String generation,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

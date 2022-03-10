@@ -21,11 +21,11 @@ public final class GetTransferProjectServieAccountResult {
     private final String id;
     private final String project;
 
-    @OutputCustomType.Constructor({"email","id","project"})
+    @OutputCustomType.Constructor
     private GetTransferProjectServieAccountResult(
-        String email,
-        String id,
-        String project) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project) {
         this.email = email;
         this.id = id;
         this.project = project;

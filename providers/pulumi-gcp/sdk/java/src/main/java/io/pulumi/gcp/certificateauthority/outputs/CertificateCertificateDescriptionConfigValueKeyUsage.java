@@ -32,11 +32,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor({"baseKeyUsages","extendedKeyUsages","unknownExtendedKeyUsages"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionConfigValueKeyUsage(
-        @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages,
-        @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages,
-        @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @OutputCustomType.Parameter("baseKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages,
+        @OutputCustomType.Parameter("extendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages,
+        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsages = baseKeyUsages;
         this.extendedKeyUsages = extendedKeyUsages;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

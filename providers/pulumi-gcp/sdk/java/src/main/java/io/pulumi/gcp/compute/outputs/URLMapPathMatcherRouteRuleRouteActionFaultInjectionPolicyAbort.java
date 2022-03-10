@@ -25,10 +25,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
      */
     private final @Nullable Double percentage;
 
-    @OutputCustomType.Constructor({"httpStatus","percentage"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort(
-        @Nullable Integer httpStatus,
-        @Nullable Double percentage) {
+        @OutputCustomType.Parameter("httpStatus") @Nullable Integer httpStatus,
+        @OutputCustomType.Parameter("percentage") @Nullable Double percentage) {
         this.httpStatus = httpStatus;
         this.percentage = percentage;
     }

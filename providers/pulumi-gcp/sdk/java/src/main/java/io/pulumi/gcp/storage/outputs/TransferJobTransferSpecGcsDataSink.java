@@ -22,10 +22,10 @@ public final class TransferJobTransferSpecGcsDataSink {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"bucketName","path"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecGcsDataSink(
-        String bucketName,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.bucketName = bucketName;
         this.path = path;
     }

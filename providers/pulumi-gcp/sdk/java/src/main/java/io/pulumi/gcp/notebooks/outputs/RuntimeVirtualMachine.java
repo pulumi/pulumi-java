@@ -31,11 +31,11 @@ public final class RuntimeVirtualMachine {
      */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","virtualMachineConfig"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachine(
-        @Nullable String instanceId,
-        @Nullable String instanceName,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
+        @OutputCustomType.Parameter("virtualMachineConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;

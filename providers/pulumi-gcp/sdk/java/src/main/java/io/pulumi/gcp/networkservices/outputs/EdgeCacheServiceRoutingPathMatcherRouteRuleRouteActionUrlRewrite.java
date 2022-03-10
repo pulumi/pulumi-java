@@ -37,11 +37,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      */
     private final @Nullable String pathTemplateRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite","pathTemplateRewrite"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(
-        @Nullable String hostRewrite,
-        @Nullable String pathPrefixRewrite,
-        @Nullable String pathTemplateRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite,
+        @OutputCustomType.Parameter("pathTemplateRewrite") @Nullable String pathTemplateRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
         this.pathTemplateRewrite = pathTemplateRewrite;

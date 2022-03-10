@@ -25,10 +25,10 @@ public final class SecurityScanConfigSchedule {
      */
     private final @Nullable String scheduleTime;
 
-    @OutputCustomType.Constructor({"intervalDurationDays","scheduleTime"})
+    @OutputCustomType.Constructor
     private SecurityScanConfigSchedule(
-        Integer intervalDurationDays,
-        @Nullable String scheduleTime) {
+        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @OutputCustomType.Parameter("scheduleTime") @Nullable String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }

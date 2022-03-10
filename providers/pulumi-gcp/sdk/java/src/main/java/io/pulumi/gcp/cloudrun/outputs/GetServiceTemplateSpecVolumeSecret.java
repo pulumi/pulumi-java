@@ -16,11 +16,11 @@ public final class GetServiceTemplateSpecVolumeSecret {
     private final List<GetServiceTemplateSpecVolumeSecretItem> items;
     private final String secretName;
 
-    @OutputCustomType.Constructor({"defaultMode","items","secretName"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecVolumeSecret(
-        Integer defaultMode,
-        List<GetServiceTemplateSpecVolumeSecretItem> items,
-        String secretName) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<GetServiceTemplateSpecVolumeSecretItem> items,
+        @OutputCustomType.Parameter("secretName") String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secretName = secretName;

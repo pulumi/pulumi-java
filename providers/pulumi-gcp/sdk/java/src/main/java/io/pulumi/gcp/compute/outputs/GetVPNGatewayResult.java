@@ -37,15 +37,15 @@ public final class GetVPNGatewayResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"description","id","name","network","project","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetVPNGatewayResult(
-        String description,
-        String id,
-        String name,
-        String network,
-        String project,
-        String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.description = description;
         this.id = id;
         this.name = name;

@@ -25,11 +25,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable(
-        String datasetId,
-        String projectId,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;

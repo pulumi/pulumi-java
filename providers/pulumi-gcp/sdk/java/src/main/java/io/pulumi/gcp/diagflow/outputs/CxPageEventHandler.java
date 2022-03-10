@@ -42,13 +42,13 @@ public final class CxPageEventHandler {
      */
     private final @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment;
 
-    @OutputCustomType.Constructor({"event","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private CxPageEventHandler(
-        @Nullable String event,
-        @Nullable String name,
-        @Nullable String targetFlow,
-        @Nullable String targetPage,
-        @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment) {
+        @OutputCustomType.Parameter("event") @Nullable String event,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetFlow") @Nullable String targetFlow,
+        @OutputCustomType.Parameter("targetPage") @Nullable String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;

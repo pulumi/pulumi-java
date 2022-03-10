@@ -12,10 +12,10 @@ public final class GetBucketObjectContentCustomerEncryption {
     private final String encryptionAlgorithm;
     private final String encryptionKey;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionKey"})
+    @OutputCustomType.Constructor
     private GetBucketObjectContentCustomerEncryption(
-        String encryptionAlgorithm,
-        String encryptionKey) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionKey") String encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionKey = encryptionKey;
     }

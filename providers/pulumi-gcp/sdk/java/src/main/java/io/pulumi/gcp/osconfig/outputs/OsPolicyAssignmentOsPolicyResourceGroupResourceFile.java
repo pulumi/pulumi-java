@@ -39,13 +39,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"content","file","path","permissions","state"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFile(
-        @Nullable String content,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file,
-        String path,
-        @Nullable String permissions,
-        String state) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
+        @OutputCustomType.Parameter("state") String state) {
         this.content = content;
         this.file = file;
         this.path = path;

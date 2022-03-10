@@ -19,11 +19,11 @@ public final class DeviceLastErrorStatus {
     private final @Nullable String message;
     private final @Nullable Integer number;
 
-    @OutputCustomType.Constructor({"details","message","number"})
+    @OutputCustomType.Constructor
     private DeviceLastErrorStatus(
-        @Nullable List<Map<String,Object>> details,
-        @Nullable String message,
-        @Nullable Integer number) {
+        @OutputCustomType.Parameter("details") @Nullable List<Map<String,Object>> details,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("number") @Nullable Integer number) {
         this.details = details;
         this.message = message;
         this.number = number;

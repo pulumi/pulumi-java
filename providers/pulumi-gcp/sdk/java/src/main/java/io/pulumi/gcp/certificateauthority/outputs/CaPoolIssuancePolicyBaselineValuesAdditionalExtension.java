@@ -29,11 +29,11 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"critical","objectId","value"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtension(
-        Boolean critical,
-        CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
-        String value) {
+        @OutputCustomType.Parameter("critical") Boolean critical,
+        @OutputCustomType.Parameter("objectId") CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
+        @OutputCustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

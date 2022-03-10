@@ -36,11 +36,11 @@ public final class NodeGroupAutoscalingPolicy {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"maxNodes","minNodes","mode"})
+    @OutputCustomType.Constructor
     private NodeGroupAutoscalingPolicy(
-        @Nullable Integer maxNodes,
-        @Nullable Integer minNodes,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("maxNodes") @Nullable Integer maxNodes,
+        @OutputCustomType.Parameter("minNodes") @Nullable Integer minNodes,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;

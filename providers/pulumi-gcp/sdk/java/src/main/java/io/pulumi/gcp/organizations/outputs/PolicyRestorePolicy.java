@@ -15,8 +15,8 @@ public final class PolicyRestorePolicy {
      */
     private final Boolean $default;
 
-    @OutputCustomType.Constructor({"$default"})
-    private PolicyRestorePolicy(Boolean $default) {
+    @OutputCustomType.Constructor
+    private PolicyRestorePolicy(@OutputCustomType.Parameter("default") Boolean $default) {
         this.$default = $default;
     }
 

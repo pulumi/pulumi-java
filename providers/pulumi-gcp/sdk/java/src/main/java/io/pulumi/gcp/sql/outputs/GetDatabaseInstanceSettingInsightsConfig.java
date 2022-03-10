@@ -15,12 +15,12 @@ public final class GetDatabaseInstanceSettingInsightsConfig {
     private final Boolean recordApplicationTags;
     private final Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor({"queryInsightsEnabled","queryStringLength","recordApplicationTags","recordClientAddress"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingInsightsConfig(
-        Boolean queryInsightsEnabled,
-        Integer queryStringLength,
-        Boolean recordApplicationTags,
-        Boolean recordClientAddress) {
+        @OutputCustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
+        @OutputCustomType.Parameter("queryStringLength") Integer queryStringLength,
+        @OutputCustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
+        @OutputCustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryStringLength = queryStringLength;
         this.recordApplicationTags = recordApplicationTags;

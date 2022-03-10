@@ -41,13 +41,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository;
 
-    @OutputCustomType.Constructor({"exec","file","id","pkg","repository"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResource(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
-        String id,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
+        @OutputCustomType.Parameter("exec") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
+        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("pkg") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
+        @OutputCustomType.Parameter("repository") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
         this.exec = exec;
         this.file = file;
         this.id = id;

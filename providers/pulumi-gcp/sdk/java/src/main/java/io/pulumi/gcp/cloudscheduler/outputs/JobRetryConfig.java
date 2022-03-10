@@ -47,13 +47,13 @@ public final class JobRetryConfig {
      */
     private final @Nullable Integer retryCount;
 
-    @OutputCustomType.Constructor({"maxBackoffDuration","maxDoublings","maxRetryDuration","minBackoffDuration","retryCount"})
+    @OutputCustomType.Constructor
     private JobRetryConfig(
-        @Nullable String maxBackoffDuration,
-        @Nullable Integer maxDoublings,
-        @Nullable String maxRetryDuration,
-        @Nullable String minBackoffDuration,
-        @Nullable Integer retryCount) {
+        @OutputCustomType.Parameter("maxBackoffDuration") @Nullable String maxBackoffDuration,
+        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoffDuration") @Nullable String minBackoffDuration,
+        @OutputCustomType.Parameter("retryCount") @Nullable Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;

@@ -12,10 +12,10 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
     private final String cidrBlock;
     private final String displayName;
 
-    @OutputCustomType.Constructor({"cidrBlock","displayName"})
+    @OutputCustomType.Constructor
     private GetClusterMasterAuthorizedNetworksConfigCidrBlock(
-        String cidrBlock,
-        String displayName) {
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("displayName") String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }

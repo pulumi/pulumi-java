@@ -43,15 +43,15 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor({"description","dnsName","id","name","nameServers","project","visibility"})
+    @OutputCustomType.Constructor
     private GetManagedZoneResult(
-        String description,
-        String dnsName,
-        String id,
-        String name,
-        List<String> nameServers,
-        @Nullable String project,
-        String visibility) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("visibility") String visibility) {
         this.description = description;
         this.dnsName = dnsName;
         this.id = id;

@@ -25,10 +25,10 @@ public final class RegionPerInstanceConfigPreservedState {
      */
     private final @Nullable Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"disks","metadata"})
+    @OutputCustomType.Constructor
     private RegionPerInstanceConfigPreservedState(
-        @Nullable List<RegionPerInstanceConfigPreservedStateDisk> disks,
-        @Nullable Map<String,String> metadata) {
+        @OutputCustomType.Parameter("disks") @Nullable List<RegionPerInstanceConfigPreservedStateDisk> disks,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata) {
         this.disks = disks;
         this.metadata = metadata;
     }

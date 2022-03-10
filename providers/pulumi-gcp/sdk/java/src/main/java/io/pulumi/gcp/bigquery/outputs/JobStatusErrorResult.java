@@ -19,11 +19,11 @@ public final class JobStatusErrorResult {
     private final @Nullable String message;
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"location","message","reason"})
+    @OutputCustomType.Constructor
     private JobStatusErrorResult(
-        @Nullable String location,
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.location = location;
         this.message = message;
         this.reason = reason;

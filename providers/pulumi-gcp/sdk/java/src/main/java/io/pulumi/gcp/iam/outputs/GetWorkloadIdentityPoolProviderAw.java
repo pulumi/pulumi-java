@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetWorkloadIdentityPoolProviderAw {
     private final String accountId;
 
-    @OutputCustomType.Constructor({"accountId"})
-    private GetWorkloadIdentityPoolProviderAw(String accountId) {
+    @OutputCustomType.Constructor
+    private GetWorkloadIdentityPoolProviderAw(@OutputCustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

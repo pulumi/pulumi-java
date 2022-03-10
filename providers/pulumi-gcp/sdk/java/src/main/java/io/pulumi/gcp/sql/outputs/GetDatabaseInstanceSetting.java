@@ -37,25 +37,25 @@ public final class GetDatabaseInstanceSetting {
     private final Map<String,String> userLabels;
     private final Integer version;
 
-    @OutputCustomType.Constructor({"activationPolicy","availabilityType","backupConfigurations","collation","databaseFlags","diskAutoresize","diskAutoresizeLimit","diskSize","diskType","insightsConfigs","ipConfigurations","locationPreferences","maintenanceWindows","pricingPlan","tier","userLabels","version"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSetting(
-        String activationPolicy,
-        String availabilityType,
-        List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations,
-        String collation,
-        List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags,
-        Boolean diskAutoresize,
-        Integer diskAutoresizeLimit,
-        Integer diskSize,
-        String diskType,
-        List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs,
-        List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations,
-        List<GetDatabaseInstanceSettingLocationPreference> locationPreferences,
-        List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows,
-        String pricingPlan,
-        String tier,
-        Map<String,String> userLabels,
-        Integer version) {
+        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
+        @OutputCustomType.Parameter("availabilityType") String availabilityType,
+        @OutputCustomType.Parameter("backupConfigurations") List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("databaseFlags") List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags,
+        @OutputCustomType.Parameter("diskAutoresize") Boolean diskAutoresize,
+        @OutputCustomType.Parameter("diskAutoresizeLimit") Integer diskAutoresizeLimit,
+        @OutputCustomType.Parameter("diskSize") Integer diskSize,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("insightsConfigs") List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs,
+        @OutputCustomType.Parameter("ipConfigurations") List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations,
+        @OutputCustomType.Parameter("locationPreferences") List<GetDatabaseInstanceSettingLocationPreference> locationPreferences,
+        @OutputCustomType.Parameter("maintenanceWindows") List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows,
+        @OutputCustomType.Parameter("pricingPlan") String pricingPlan,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.activationPolicy = activationPolicy;
         this.availabilityType = availabilityType;
         this.backupConfigurations = backupConfigurations;

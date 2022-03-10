@@ -22,16 +22,16 @@ public final class InstanceFromMachineImageBootDisk {
     private final @Nullable String mode;
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor({"autoDelete","deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","initializeParams","kmsKeySelfLink","mode","source"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageBootDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable String deviceName,
-        @Nullable String diskEncryptionKeyRaw,
-        @Nullable String diskEncryptionKeySha256,
-        @Nullable InstanceFromMachineImageBootDiskInitializeParams initializeParams,
-        @Nullable String kmsKeySelfLink,
-        @Nullable String mode,
-        @Nullable String source) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
+        @OutputCustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
+        @OutputCustomType.Parameter("initializeParams") @Nullable InstanceFromMachineImageBootDiskInitializeParams initializeParams,
+        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") @Nullable String source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;

@@ -32,10 +32,10 @@ public final class GroupMembershipMemberKey {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"id","namespace"})
+    @OutputCustomType.Constructor
     private GroupMembershipMemberKey(
-        String id,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.id = id;
         this.namespace = namespace;
     }

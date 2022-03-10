@@ -35,11 +35,11 @@ public final class ServicePerimeterStatusIngressPolicyIngressFrom {
      */
     private final @Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSource> sources;
 
-    @OutputCustomType.Constructor({"identities","identityType","sources"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusIngressPolicyIngressFrom(
-        @Nullable List<String> identities,
-        @Nullable String identityType,
-        @Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSource> sources) {
+        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
+        @OutputCustomType.Parameter("identityType") @Nullable String identityType,
+        @OutputCustomType.Parameter("sources") @Nullable List<ServicePerimeterStatusIngressPolicyIngressFromSource> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;

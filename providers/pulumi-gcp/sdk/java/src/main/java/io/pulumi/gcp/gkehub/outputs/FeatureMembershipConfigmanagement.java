@@ -41,13 +41,13 @@ public final class FeatureMembershipConfigmanagement {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"binauthz","configSync","hierarchyController","policyController","version"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagement(
-        @Nullable FeatureMembershipConfigmanagementBinauthz binauthz,
-        @Nullable FeatureMembershipConfigmanagementConfigSync configSync,
-        @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController,
-        @Nullable FeatureMembershipConfigmanagementPolicyController policyController,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("binauthz") @Nullable FeatureMembershipConfigmanagementBinauthz binauthz,
+        @OutputCustomType.Parameter("configSync") @Nullable FeatureMembershipConfigmanagementConfigSync configSync,
+        @OutputCustomType.Parameter("hierarchyController") @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController,
+        @OutputCustomType.Parameter("policyController") @Nullable FeatureMembershipConfigmanagementPolicyController policyController,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.binauthz = binauthz;
         this.configSync = configSync;
         this.hierarchyController = hierarchyController;

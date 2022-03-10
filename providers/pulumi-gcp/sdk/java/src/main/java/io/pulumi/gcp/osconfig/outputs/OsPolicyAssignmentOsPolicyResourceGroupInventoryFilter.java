@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor({"osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(
-        String osShortName,
-        @Nullable String osVersion) {
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }

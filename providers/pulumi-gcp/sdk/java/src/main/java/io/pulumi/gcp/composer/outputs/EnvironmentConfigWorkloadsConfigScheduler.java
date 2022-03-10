@@ -17,12 +17,12 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
     private final @Nullable Double memoryGb;
     private final @Nullable Double storageGb;
 
-    @OutputCustomType.Constructor({"count","cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWorkloadsConfigScheduler(
-        @Nullable Integer count,
-        @Nullable Double cpu,
-        @Nullable Double memoryGb,
-        @Nullable Double storageGb) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") @Nullable Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;

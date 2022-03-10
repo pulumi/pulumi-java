@@ -21,10 +21,10 @@ public final class GetInstanceGuestAccelerator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","type"})
+    @OutputCustomType.Constructor
     private GetInstanceGuestAccelerator(
-        Integer count,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }

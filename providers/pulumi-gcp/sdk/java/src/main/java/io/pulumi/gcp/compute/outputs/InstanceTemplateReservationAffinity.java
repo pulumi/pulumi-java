@@ -24,10 +24,10 @@ public final class InstanceTemplateReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservation","type"})
+    @OutputCustomType.Constructor
     private InstanceTemplateReservationAffinity(
-        @Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation,
-        String type) {
+        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }

@@ -31,13 +31,13 @@ public final class GetTestablePermissionsResult {
     private final List<GetTestablePermissionsPermission> permissions;
     private final @Nullable List<String> stages;
 
-    @OutputCustomType.Constructor({"customSupportLevel","fullResourceName","id","permissions","stages"})
+    @OutputCustomType.Constructor
     private GetTestablePermissionsResult(
-        @Nullable String customSupportLevel,
-        String fullResourceName,
-        String id,
-        List<GetTestablePermissionsPermission> permissions,
-        @Nullable List<String> stages) {
+        @OutputCustomType.Parameter("customSupportLevel") @Nullable String customSupportLevel,
+        @OutputCustomType.Parameter("fullResourceName") String fullResourceName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("permissions") List<GetTestablePermissionsPermission> permissions,
+        @OutputCustomType.Parameter("stages") @Nullable List<String> stages) {
         this.customSupportLevel = customSupportLevel;
         this.fullResourceName = fullResourceName;
         this.id = id;

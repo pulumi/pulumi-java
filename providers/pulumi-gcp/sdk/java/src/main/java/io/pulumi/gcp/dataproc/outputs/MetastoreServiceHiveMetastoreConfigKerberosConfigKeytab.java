@@ -16,8 +16,8 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
      */
     private final String cloudSecret;
 
-    @OutputCustomType.Constructor({"cloudSecret"})
-    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab(String cloudSecret) {
+    @OutputCustomType.Constructor
+    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab(@OutputCustomType.Parameter("cloudSecret") String cloudSecret) {
         this.cloudSecret = cloudSecret;
     }
 

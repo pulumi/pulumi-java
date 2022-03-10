@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodeConfigGcfsConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterNodeConfigGcfsConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterNodeConfigGcfsConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

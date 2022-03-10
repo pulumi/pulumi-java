@@ -25,10 +25,10 @@ public final class AuthorityConfigSubjectConfig {
      */
     private final @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName;
 
-    @OutputCustomType.Constructor({"subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private AuthorityConfigSubjectConfig(
-        AuthorityConfigSubjectConfigSubject subject,
-        @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
+        @OutputCustomType.Parameter("subject") AuthorityConfigSubjectConfigSubject subject,
+        @OutputCustomType.Parameter("subjectAltName") @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }

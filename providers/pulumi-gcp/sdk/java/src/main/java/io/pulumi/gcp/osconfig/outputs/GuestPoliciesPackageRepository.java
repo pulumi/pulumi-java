@@ -39,12 +39,12 @@ public final class GuestPoliciesPackageRepository {
      */
     private final @Nullable GuestPoliciesPackageRepositoryZypper zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepository(
-        @Nullable GuestPoliciesPackageRepositoryApt apt,
-        @Nullable GuestPoliciesPackageRepositoryGoo goo,
-        @Nullable GuestPoliciesPackageRepositoryYum yum,
-        @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
+        @OutputCustomType.Parameter("apt") @Nullable GuestPoliciesPackageRepositoryApt apt,
+        @OutputCustomType.Parameter("goo") @Nullable GuestPoliciesPackageRepositoryGoo goo,
+        @OutputCustomType.Parameter("yum") @Nullable GuestPoliciesPackageRepositoryYum yum,
+        @OutputCustomType.Parameter("zypper") @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

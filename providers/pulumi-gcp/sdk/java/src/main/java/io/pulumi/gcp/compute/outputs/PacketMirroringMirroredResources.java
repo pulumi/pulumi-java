@@ -31,11 +31,11 @@ public final class PacketMirroringMirroredResources {
      */
     private final @Nullable List<String> tags;
 
-    @OutputCustomType.Constructor({"instances","subnetworks","tags"})
+    @OutputCustomType.Constructor
     private PacketMirroringMirroredResources(
-        @Nullable List<PacketMirroringMirroredResourcesInstance> instances,
-        @Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks,
-        @Nullable List<String> tags) {
+        @OutputCustomType.Parameter("instances") @Nullable List<PacketMirroringMirroredResourcesInstance> instances,
+        @OutputCustomType.Parameter("subnetworks") @Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;

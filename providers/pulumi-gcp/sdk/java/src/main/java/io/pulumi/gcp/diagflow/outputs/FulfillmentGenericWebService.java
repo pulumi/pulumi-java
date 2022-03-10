@@ -33,12 +33,12 @@ public final class FulfillmentGenericWebService {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","requestHeaders","uri","username"})
+    @OutputCustomType.Constructor
     private FulfillmentGenericWebService(
-        @Nullable String password,
-        @Nullable Map<String,String> requestHeaders,
-        String uri,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("requestHeaders") @Nullable Map<String,String> requestHeaders,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.requestHeaders = requestHeaders;
         this.uri = uri;

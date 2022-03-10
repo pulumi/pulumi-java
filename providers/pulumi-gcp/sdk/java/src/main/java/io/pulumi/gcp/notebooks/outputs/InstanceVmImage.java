@@ -28,11 +28,11 @@ public final class InstanceVmImage {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"imageFamily","imageName","project"})
+    @OutputCustomType.Constructor
     private InstanceVmImage(
-        @Nullable String imageFamily,
-        @Nullable String imageName,
-        String project) {
+        @OutputCustomType.Parameter("imageFamily") @Nullable String imageFamily,
+        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
+        @OutputCustomType.Parameter("project") String project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
         this.project = project;

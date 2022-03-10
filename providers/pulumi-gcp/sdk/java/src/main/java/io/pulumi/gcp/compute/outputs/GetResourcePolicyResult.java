@@ -37,17 +37,17 @@ public final class GetResourcePolicyResult {
     private final String selfLink;
     private final List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies;
 
-    @OutputCustomType.Constructor({"description","groupPlacementPolicies","id","instanceSchedulePolicies","name","project","region","selfLink","snapshotSchedulePolicies"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyResult(
-        String description,
-        List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
-        String id,
-        List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
-        String name,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("groupPlacementPolicies") List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceSchedulePolicies") List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("snapshotSchedulePolicies") List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
         this.description = description;
         this.groupPlacementPolicies = groupPlacementPolicies;
         this.id = id;

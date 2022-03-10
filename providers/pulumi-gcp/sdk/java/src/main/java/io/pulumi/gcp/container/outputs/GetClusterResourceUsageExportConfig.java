@@ -15,11 +15,11 @@ public final class GetClusterResourceUsageExportConfig {
     private final Boolean enableNetworkEgressMetering;
     private final Boolean enableResourceConsumptionMetering;
 
-    @OutputCustomType.Constructor({"bigqueryDestinations","enableNetworkEgressMetering","enableResourceConsumptionMetering"})
+    @OutputCustomType.Constructor
     private GetClusterResourceUsageExportConfig(
-        List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
-        Boolean enableNetworkEgressMetering,
-        Boolean enableResourceConsumptionMetering) {
+        @OutputCustomType.Parameter("bigqueryDestinations") List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
+        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering,
+        @OutputCustomType.Parameter("enableResourceConsumptionMetering") Boolean enableResourceConsumptionMetering) {
         this.bigqueryDestinations = bigqueryDestinations;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;

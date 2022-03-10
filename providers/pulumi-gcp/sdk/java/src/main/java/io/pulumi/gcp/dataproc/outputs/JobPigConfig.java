@@ -49,15 +49,15 @@ public final class JobPigConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","loggingConfig","properties","queryFileUri","queryLists","scriptVariables"})
+    @OutputCustomType.Constructor
     private JobPigConfig(
-        @Nullable Boolean continueOnFailure,
-        @Nullable List<String> jarFileUris,
-        @Nullable JobPigConfigLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable List<String> queryLists,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable JobPigConfigLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;

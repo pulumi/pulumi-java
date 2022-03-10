@@ -15,8 +15,8 @@ public final class StandardAppVersionEntrypoint {
      */
     private final String shell;
 
-    @OutputCustomType.Constructor({"shell"})
-    private StandardAppVersionEntrypoint(String shell) {
+    @OutputCustomType.Constructor
+    private StandardAppVersionEntrypoint(@OutputCustomType.Parameter("shell") String shell) {
         this.shell = shell;
     }
 

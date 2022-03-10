@@ -14,10 +14,10 @@ public final class DefaultObjectAccessControlProjectTeam {
     private final @Nullable String projectNumber;
     private final @Nullable String team;
 
-    @OutputCustomType.Constructor({"projectNumber","team"})
+    @OutputCustomType.Constructor
     private DefaultObjectAccessControlProjectTeam(
-        @Nullable String projectNumber,
-        @Nullable String team) {
+        @OutputCustomType.Parameter("projectNumber") @Nullable String projectNumber,
+        @OutputCustomType.Parameter("team") @Nullable String team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }

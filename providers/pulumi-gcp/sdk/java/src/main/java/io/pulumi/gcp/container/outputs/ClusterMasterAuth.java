@@ -21,12 +21,12 @@ public final class ClusterMasterAuth {
     private final @Nullable String clientKey;
     private final @Nullable String clusterCaCertificate;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfig","clientKey","clusterCaCertificate"})
+    @OutputCustomType.Constructor
     private ClusterMasterAuth(
-        @Nullable String clientCertificate,
-        ClusterMasterAuthClientCertificateConfig clientCertificateConfig,
-        @Nullable String clientKey,
-        @Nullable String clusterCaCertificate) {
+        @OutputCustomType.Parameter("clientCertificate") @Nullable String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfig") ClusterMasterAuthClientCertificateConfig clientCertificateConfig,
+        @OutputCustomType.Parameter("clientKey") @Nullable String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") @Nullable String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;

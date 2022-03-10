@@ -42,13 +42,13 @@ public final class DatabaseInstanceSettingsIpConfiguration {
      */
     private final @Nullable Boolean requireSsl;
 
-    @OutputCustomType.Constructor({"allocatedIpRange","authorizedNetworks","ipv4Enabled","privateNetwork","requireSsl"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsIpConfiguration(
-        @Nullable String allocatedIpRange,
-        @Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks,
-        @Nullable Boolean ipv4Enabled,
-        @Nullable String privateNetwork,
-        @Nullable Boolean requireSsl) {
+        @OutputCustomType.Parameter("allocatedIpRange") @Nullable String allocatedIpRange,
+        @OutputCustomType.Parameter("authorizedNetworks") @Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks,
+        @OutputCustomType.Parameter("ipv4Enabled") @Nullable Boolean ipv4Enabled,
+        @OutputCustomType.Parameter("privateNetwork") @Nullable String privateNetwork,
+        @OutputCustomType.Parameter("requireSsl") @Nullable Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;

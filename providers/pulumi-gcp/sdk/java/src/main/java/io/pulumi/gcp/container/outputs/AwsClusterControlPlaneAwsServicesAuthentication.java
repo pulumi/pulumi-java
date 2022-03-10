@@ -22,10 +22,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
      */
     private final @Nullable String roleSessionName;
 
-    @OutputCustomType.Constructor({"roleArn","roleSessionName"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlaneAwsServicesAuthentication(
-        String roleArn,
-        @Nullable String roleSessionName) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("roleSessionName") @Nullable String roleSessionName) {
         this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
     }

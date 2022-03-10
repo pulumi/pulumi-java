@@ -20,12 +20,12 @@ public final class GetRegistryRepositoryResult {
     private final @Nullable String region;
     private final String repositoryUrl;
 
-    @OutputCustomType.Constructor({"id","project","region","repositoryUrl"})
+    @OutputCustomType.Constructor
     private GetRegistryRepositoryResult(
-        String id,
-        String project,
-        @Nullable String region,
-        String repositoryUrl) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl) {
         this.id = id;
         this.project = project;
         this.region = region;

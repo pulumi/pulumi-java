@@ -16,12 +16,12 @@ public final class GetClusterMasterAuth {
     private final String clientKey;
     private final String clusterCaCertificate;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfigs","clientKey","clusterCaCertificate"})
+    @OutputCustomType.Constructor
     private GetClusterMasterAuth(
-        String clientCertificate,
-        List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
-        String clientKey,
-        String clusterCaCertificate) {
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfigs") List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfigs = clientCertificateConfigs;
         this.clientKey = clientKey;

@@ -71,14 +71,14 @@ public final class AccessLevelsAccessLevelBasicCondition {
      */
     private final @Nullable List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor({"devicePolicy","ipSubnetworks","members","negate","regions","requiredAccessLevels"})
+    @OutputCustomType.Constructor
     private AccessLevelsAccessLevelBasicCondition(
-        @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
-        @Nullable List<String> ipSubnetworks,
-        @Nullable List<String> members,
-        @Nullable Boolean negate,
-        @Nullable List<String> regions,
-        @Nullable List<String> requiredAccessLevels) {
+        @OutputCustomType.Parameter("devicePolicy") @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
+        @OutputCustomType.Parameter("ipSubnetworks") @Nullable List<String> ipSubnetworks,
+        @OutputCustomType.Parameter("members") @Nullable List<String> members,
+        @OutputCustomType.Parameter("negate") @Nullable Boolean negate,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("requiredAccessLevels") @Nullable List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;

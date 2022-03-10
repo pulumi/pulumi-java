@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector {
     private final List<String> realms;
 
-    @OutputCustomType.Constructor({"realms"})
-    private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(List<String> realms) {
+    @OutputCustomType.Constructor
+    private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(@OutputCustomType.Parameter("realms") List<String> realms) {
         this.realms = realms;
     }
 

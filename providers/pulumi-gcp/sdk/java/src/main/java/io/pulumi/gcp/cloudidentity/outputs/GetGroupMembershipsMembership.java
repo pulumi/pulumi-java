@@ -34,16 +34,16 @@ public final class GetGroupMembershipsMembership {
     private final String type;
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","group","memberKeys","name","preferredMemberKeys","roles","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupMembershipsMembership(
-        String createTime,
-        String group,
-        List<GetGroupMembershipsMembershipMemberKey> memberKeys,
-        String name,
-        List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys,
-        List<GetGroupMembershipsMembershipRole> roles,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("memberKeys") List<GetGroupMembershipsMembershipMemberKey> memberKeys,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preferredMemberKeys") List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys,
+        @OutputCustomType.Parameter("roles") List<GetGroupMembershipsMembershipRole> roles,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.group = group;
         this.memberKeys = memberKeys;

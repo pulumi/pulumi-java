@@ -30,10 +30,10 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      */
     private final @Nullable String schemaType;
 
-    @OutputCustomType.Constructor({"recursiveStructureDepth","schemaType"})
+    @OutputCustomType.Constructor
     private FhirStoreStreamConfigBigqueryDestinationSchemaConfig(
-        Integer recursiveStructureDepth,
-        @Nullable String schemaType) {
+        @OutputCustomType.Parameter("recursiveStructureDepth") Integer recursiveStructureDepth,
+        @OutputCustomType.Parameter("schemaType") @Nullable String schemaType) {
         this.recursiveStructureDepth = recursiveStructureDepth;
         this.schemaType = schemaType;
     }

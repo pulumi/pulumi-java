@@ -15,12 +15,12 @@ public final class GetHealthCheckGrpcHealthCheck {
     private final String portName;
     private final String portSpecification;
 
-    @OutputCustomType.Constructor({"grpcServiceName","port","portName","portSpecification"})
+    @OutputCustomType.Constructor
     private GetHealthCheckGrpcHealthCheck(
-        String grpcServiceName,
-        Integer port,
-        String portName,
-        String portSpecification) {
+        @OutputCustomType.Parameter("grpcServiceName") String grpcServiceName,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("portSpecification") String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;

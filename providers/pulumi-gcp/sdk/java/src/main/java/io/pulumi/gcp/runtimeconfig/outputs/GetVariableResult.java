@@ -23,15 +23,15 @@ public final class GetVariableResult {
     private final String updateTime;
     private final String value;
 
-    @OutputCustomType.Constructor({"id","name","parent","project","text","updateTime","value"})
+    @OutputCustomType.Constructor
     private GetVariableResult(
-        String id,
-        String name,
-        String parent,
-        @Nullable String project,
-        String text,
-        String updateTime,
-        String value) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("value") String value) {
         this.id = id;
         this.name = name;
         this.parent = parent;

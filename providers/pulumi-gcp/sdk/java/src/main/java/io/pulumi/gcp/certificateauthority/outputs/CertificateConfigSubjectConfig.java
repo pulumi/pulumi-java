@@ -25,10 +25,10 @@ public final class CertificateConfigSubjectConfig {
      */
     private final @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName;
 
-    @OutputCustomType.Constructor({"subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private CertificateConfigSubjectConfig(
-        CertificateConfigSubjectConfigSubject subject,
-        @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
+        @OutputCustomType.Parameter("subject") CertificateConfigSubjectConfigSubject subject,
+        @OutputCustomType.Parameter("subjectAltName") @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }
