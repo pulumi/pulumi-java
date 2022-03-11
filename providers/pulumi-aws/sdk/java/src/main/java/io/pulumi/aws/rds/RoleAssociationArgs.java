@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dbInstanceIdentifier", required=true)
-      private final Input<String> dbInstanceIdentifier;
+      private final Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
+    public Output<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
@@ -29,9 +29,9 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="featureName", required=true)
-      private final Input<String> featureName;
+      private final Output<String> featureName;
 
-    public Input<String> getFeatureName() {
+    public Output<String> getFeatureName() {
         return this.featureName;
     }
 
@@ -40,25 +40,25 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public RoleAssociationArgs(
-        Input<String> dbInstanceIdentifier,
-        Input<String> featureName,
-        Input<String> roleArn) {
+        Output<String> dbInstanceIdentifier,
+        Output<String> featureName,
+        Output<String> roleArn) {
         this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
         this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private RoleAssociationArgs() {
-        this.dbInstanceIdentifier = Input.empty();
-        this.featureName = Input.empty();
-        this.roleArn = Input.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.featureName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> dbInstanceIdentifier;
-        private Input<String> featureName;
-        private Input<String> roleArn;
+        private Output<String> dbInstanceIdentifier;
+        private Output<String> featureName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder dbInstanceIdentifier(Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
 
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.of(Objects.requireNonNull(dbInstanceIdentifier));
+            this.dbInstanceIdentifier = Output.of(Objects.requireNonNull(dbInstanceIdentifier));
             return this;
         }
 
-        public Builder featureName(Input<String> featureName) {
+        public Builder featureName(Output<String> featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
         public Builder featureName(String featureName) {
-            this.featureName = Input.of(Objects.requireNonNull(featureName));
+            this.featureName = Output.of(Objects.requireNonNull(featureName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public RoleAssociationArgs build() {

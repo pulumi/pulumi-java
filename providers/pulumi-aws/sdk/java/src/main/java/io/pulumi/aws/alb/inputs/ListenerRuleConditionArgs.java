@@ -9,7 +9,7 @@ import io.pulumi.aws.alb.inputs.ListenerRuleConditionHttpRequestMethodArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionPathPatternArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionQueryStringArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionSourceIpArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostHeader")
-      private final @Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader;
+      private final @Nullable Output<ListenerRuleConditionHostHeaderArgs> hostHeader;
 
-    public Input<ListenerRuleConditionHostHeaderArgs> getHostHeader() {
-        return this.hostHeader == null ? Input.empty() : this.hostHeader;
+    public Output<ListenerRuleConditionHostHeaderArgs> getHostHeader() {
+        return this.hostHeader == null ? Output.empty() : this.hostHeader;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpHeader")
-      private final @Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader;
+      private final @Nullable Output<ListenerRuleConditionHttpHeaderArgs> httpHeader;
 
-    public Input<ListenerRuleConditionHttpHeaderArgs> getHttpHeader() {
-        return this.httpHeader == null ? Input.empty() : this.httpHeader;
+    public Output<ListenerRuleConditionHttpHeaderArgs> getHttpHeader() {
+        return this.httpHeader == null ? Output.empty() : this.httpHeader;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpRequestMethod")
-      private final @Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
+      private final @Nullable Output<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
 
-    public Input<ListenerRuleConditionHttpRequestMethodArgs> getHttpRequestMethod() {
-        return this.httpRequestMethod == null ? Input.empty() : this.httpRequestMethod;
+    public Output<ListenerRuleConditionHttpRequestMethodArgs> getHttpRequestMethod() {
+        return this.httpRequestMethod == null ? Output.empty() : this.httpRequestMethod;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pathPattern")
-      private final @Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern;
+      private final @Nullable Output<ListenerRuleConditionPathPatternArgs> pathPattern;
 
-    public Input<ListenerRuleConditionPathPatternArgs> getPathPattern() {
-        return this.pathPattern == null ? Input.empty() : this.pathPattern;
+    public Output<ListenerRuleConditionPathPatternArgs> getPathPattern() {
+        return this.pathPattern == null ? Output.empty() : this.pathPattern;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryStrings")
-      private final @Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
+      private final @Nullable Output<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
 
-    public Input<List<ListenerRuleConditionQueryStringArgs>> getQueryStrings() {
-        return this.queryStrings == null ? Input.empty() : this.queryStrings;
+    public Output<List<ListenerRuleConditionQueryStringArgs>> getQueryStrings() {
+        return this.queryStrings == null ? Output.empty() : this.queryStrings;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceIp")
-      private final @Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp;
+      private final @Nullable Output<ListenerRuleConditionSourceIpArgs> sourceIp;
 
-    public Input<ListenerRuleConditionSourceIpArgs> getSourceIp() {
-        return this.sourceIp == null ? Input.empty() : this.sourceIp;
+    public Output<ListenerRuleConditionSourceIpArgs> getSourceIp() {
+        return this.sourceIp == null ? Output.empty() : this.sourceIp;
     }
 
     public ListenerRuleConditionArgs(
-        @Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader,
-        @Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader,
-        @Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod,
-        @Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern,
-        @Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings,
-        @Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp) {
+        @Nullable Output<ListenerRuleConditionHostHeaderArgs> hostHeader,
+        @Nullable Output<ListenerRuleConditionHttpHeaderArgs> httpHeader,
+        @Nullable Output<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod,
+        @Nullable Output<ListenerRuleConditionPathPatternArgs> pathPattern,
+        @Nullable Output<List<ListenerRuleConditionQueryStringArgs>> queryStrings,
+        @Nullable Output<ListenerRuleConditionSourceIpArgs> sourceIp) {
         this.hostHeader = hostHeader;
         this.httpHeader = httpHeader;
         this.httpRequestMethod = httpRequestMethod;
@@ -102,12 +102,12 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
     }
 
     private ListenerRuleConditionArgs() {
-        this.hostHeader = Input.empty();
-        this.httpHeader = Input.empty();
-        this.httpRequestMethod = Input.empty();
-        this.pathPattern = Input.empty();
-        this.queryStrings = Input.empty();
-        this.sourceIp = Input.empty();
+        this.hostHeader = Output.empty();
+        this.httpHeader = Output.empty();
+        this.httpRequestMethod = Output.empty();
+        this.pathPattern = Output.empty();
+        this.queryStrings = Output.empty();
+        this.sourceIp = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader;
-        private @Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader;
-        private @Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
-        private @Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern;
-        private @Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
-        private @Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp;
+        private @Nullable Output<ListenerRuleConditionHostHeaderArgs> hostHeader;
+        private @Nullable Output<ListenerRuleConditionHttpHeaderArgs> httpHeader;
+        private @Nullable Output<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
+        private @Nullable Output<ListenerRuleConditionPathPatternArgs> pathPattern;
+        private @Nullable Output<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
+        private @Nullable Output<ListenerRuleConditionSourceIpArgs> sourceIp;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
     	      this.sourceIp = defaults.sourceIp;
         }
 
-        public Builder hostHeader(@Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader) {
+        public Builder hostHeader(@Nullable Output<ListenerRuleConditionHostHeaderArgs> hostHeader) {
             this.hostHeader = hostHeader;
             return this;
         }
 
         public Builder hostHeader(@Nullable ListenerRuleConditionHostHeaderArgs hostHeader) {
-            this.hostHeader = Input.ofNullable(hostHeader);
+            this.hostHeader = Output.ofNullable(hostHeader);
             return this;
         }
 
-        public Builder httpHeader(@Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader) {
+        public Builder httpHeader(@Nullable Output<ListenerRuleConditionHttpHeaderArgs> httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
 
         public Builder httpHeader(@Nullable ListenerRuleConditionHttpHeaderArgs httpHeader) {
-            this.httpHeader = Input.ofNullable(httpHeader);
+            this.httpHeader = Output.ofNullable(httpHeader);
             return this;
         }
 
-        public Builder httpRequestMethod(@Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod) {
+        public Builder httpRequestMethod(@Nullable Output<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod) {
             this.httpRequestMethod = httpRequestMethod;
             return this;
         }
 
         public Builder httpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethodArgs httpRequestMethod) {
-            this.httpRequestMethod = Input.ofNullable(httpRequestMethod);
+            this.httpRequestMethod = Output.ofNullable(httpRequestMethod);
             return this;
         }
 
-        public Builder pathPattern(@Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern) {
+        public Builder pathPattern(@Nullable Output<ListenerRuleConditionPathPatternArgs> pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
 
         public Builder pathPattern(@Nullable ListenerRuleConditionPathPatternArgs pathPattern) {
-            this.pathPattern = Input.ofNullable(pathPattern);
+            this.pathPattern = Output.ofNullable(pathPattern);
             return this;
         }
 
-        public Builder queryStrings(@Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings) {
+        public Builder queryStrings(@Nullable Output<List<ListenerRuleConditionQueryStringArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
         public Builder queryStrings(@Nullable List<ListenerRuleConditionQueryStringArgs> queryStrings) {
-            this.queryStrings = Input.ofNullable(queryStrings);
+            this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
 
-        public Builder sourceIp(@Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp) {
+        public Builder sourceIp(@Nullable Output<ListenerRuleConditionSourceIpArgs> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
 
         public Builder sourceIp(@Nullable ListenerRuleConditionSourceIpArgs sourceIp) {
-            this.sourceIp = Input.ofNullable(sourceIp);
+            this.sourceIp = Output.ofNullable(sourceIp);
             return this;
         }
         public ListenerRuleConditionArgs build() {

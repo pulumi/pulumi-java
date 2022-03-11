@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.SizeConstraintSetSizeConstraintFieldToMatchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-      private final Input<String> comparisonOperator;
+      private final Output<String> comparisonOperator;
 
-    public Input<String> getComparisonOperator() {
+    public Output<String> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -33,9 +33,9 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-      private final Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
+      private final Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
 
-    public Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -45,9 +45,9 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="size", required=true)
-      private final Input<Integer> size;
+      private final Output<Integer> size;
 
-    public Input<Integer> getSize() {
+    public Output<Integer> getSize() {
         return this.size;
     }
 
@@ -61,17 +61,17 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="textTransformation", required=true)
-      private final Input<String> textTransformation;
+      private final Output<String> textTransformation;
 
-    public Input<String> getTextTransformation() {
+    public Output<String> getTextTransformation() {
         return this.textTransformation;
     }
 
     public SizeConstraintSetSizeConstraintGetArgs(
-        Input<String> comparisonOperator,
-        Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch,
-        Input<Integer> size,
-        Input<String> textTransformation) {
+        Output<String> comparisonOperator,
+        Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch,
+        Output<Integer> size,
+        Output<String> textTransformation) {
         this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
         this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
         this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
@@ -79,10 +79,10 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     }
 
     private SizeConstraintSetSizeConstraintGetArgs() {
-        this.comparisonOperator = Input.empty();
-        this.fieldToMatch = Input.empty();
-        this.size = Input.empty();
-        this.textTransformation = Input.empty();
+        this.comparisonOperator = Output.empty();
+        this.fieldToMatch = Output.empty();
+        this.size = Output.empty();
+        this.textTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> comparisonOperator;
-        private Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
-        private Input<Integer> size;
-        private Input<String> textTransformation;
+        private Output<String> comparisonOperator;
+        private Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
+        private Output<Integer> size;
+        private Output<String> textTransformation;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder comparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Output<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
+            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder fieldToMatch(Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
         public Builder fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
+            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder size(Input<Integer> size) {
+        public Builder size(Output<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
         public Builder size(Integer size) {
-            this.size = Input.of(Objects.requireNonNull(size));
+            this.size = Output.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder textTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Output<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
+            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
             return this;
         }
         public SizeConstraintSetSizeConstraintGetArgs build() {

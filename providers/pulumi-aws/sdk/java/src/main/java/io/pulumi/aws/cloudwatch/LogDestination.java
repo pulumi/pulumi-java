@@ -6,7 +6,6 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogDestinationArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogDestinationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -124,14 +123,14 @@ public class LogDestination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LogDestination(String name, LogDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/logDestination:LogDestination", name, args == null ? LogDestinationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudwatch/logDestination:LogDestination", name, args == null ? LogDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LogDestination(String name, Input<String> id, @Nullable LogDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LogDestination(String name, Output<String> id, @Nullable LogDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudwatch/logDestination:LogDestination", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -147,7 +146,7 @@ public class LogDestination extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LogDestination get(String name, Input<String> id, @Nullable LogDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LogDestination get(String name, Output<String> id, @Nullable LogDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LogDestination(name, id, state, options);
     }
 }

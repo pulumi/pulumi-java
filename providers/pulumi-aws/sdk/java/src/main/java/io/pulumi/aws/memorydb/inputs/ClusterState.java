@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterClusterEndpointGetArgs;
 import io.pulumi.aws.memorydb.inputs.ClusterShardGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aclName")
-      private final @Nullable Input<String> aclName;
+      private final @Nullable Output<String> aclName;
 
-    public Input<String> getAclName() {
-        return this.aclName == null ? Input.empty() : this.aclName;
+    public Output<String> getAclName() {
+        return this.aclName == null ? Output.empty() : this.aclName;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -48,24 +48,24 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     @InputImport(name="clusterEndpoints")
-      private final @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+      private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
-    public Input<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
-        return this.clusterEndpoints == null ? Input.empty() : this.clusterEndpoints;
+    public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
+        return this.clusterEndpoints == null ? Output.empty() : this.clusterEndpoints;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enginePatchVersion")
-      private final @Nullable Input<String> enginePatchVersion;
+      private final @Nullable Output<String> enginePatchVersion;
 
-    public Input<String> getEnginePatchVersion() {
-        return this.enginePatchVersion == null ? Input.empty() : this.enginePatchVersion;
+    public Output<String> getEnginePatchVersion() {
+        return this.enginePatchVersion == null ? Output.empty() : this.enginePatchVersion;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="finalSnapshotName")
-      private final @Nullable Input<String> finalSnapshotName;
+      private final @Nullable Output<String> finalSnapshotName;
 
-    public Input<String> getFinalSnapshotName() {
-        return this.finalSnapshotName == null ? Input.empty() : this.finalSnapshotName;
+    public Output<String> getFinalSnapshotName() {
+        return this.finalSnapshotName == null ? Output.empty() : this.finalSnapshotName;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Output<String> maintenanceWindow;
 
-    public Input<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<String> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numReplicasPerShard")
-      private final @Nullable Input<Integer> numReplicasPerShard;
+      private final @Nullable Output<Integer> numReplicasPerShard;
 
-    public Input<Integer> getNumReplicasPerShard() {
-        return this.numReplicasPerShard == null ? Input.empty() : this.numReplicasPerShard;
+    public Output<Integer> getNumReplicasPerShard() {
+        return this.numReplicasPerShard == null ? Output.empty() : this.numReplicasPerShard;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numShards")
-      private final @Nullable Input<Integer> numShards;
+      private final @Nullable Output<Integer> numShards;
 
-    public Input<Integer> getNumShards() {
-        return this.numShards == null ? Input.empty() : this.numShards;
+    public Output<Integer> getNumShards() {
+        return this.numShards == null ? Output.empty() : this.numShards;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterGroupName")
-      private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Output<String> parameterGroupName;
 
-    public Input<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
+    public Output<String> getParameterGroupName() {
+        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shards")
-      private final @Nullable Input<List<ClusterShardGetArgs>> shards;
+      private final @Nullable Output<List<ClusterShardGetArgs>> shards;
 
-    public Input<List<ClusterShardGetArgs>> getShards() {
-        return this.shards == null ? Input.empty() : this.shards;
+    public Output<List<ClusterShardGetArgs>> getShards() {
+        return this.shards == null ? Output.empty() : this.shards;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotArns")
-      private final @Nullable Input<String> snapshotArns;
+      private final @Nullable Output<String> snapshotArns;
 
-    public Input<String> getSnapshotArns() {
-        return this.snapshotArns == null ? Input.empty() : this.snapshotArns;
+    public Output<String> getSnapshotArns() {
+        return this.snapshotArns == null ? Output.empty() : this.snapshotArns;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotName")
-      private final @Nullable Input<String> snapshotName;
+      private final @Nullable Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
-        return this.snapshotName == null ? Input.empty() : this.snapshotName;
+    public Output<String> getSnapshotName() {
+        return this.snapshotName == null ? Output.empty() : this.snapshotName;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotRetentionLimit")
-      private final @Nullable Input<Integer> snapshotRetentionLimit;
+      private final @Nullable Output<Integer> snapshotRetentionLimit;
 
-    public Input<Integer> getSnapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Input.empty() : this.snapshotRetentionLimit;
+    public Output<Integer> getSnapshotRetentionLimit() {
+        return this.snapshotRetentionLimit == null ? Output.empty() : this.snapshotRetentionLimit;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotWindow")
-      private final @Nullable Input<String> snapshotWindow;
+      private final @Nullable Output<String> snapshotWindow;
 
-    public Input<String> getSnapshotWindow() {
-        return this.snapshotWindow == null ? Input.empty() : this.snapshotWindow;
+    public Output<String> getSnapshotWindow() {
+        return this.snapshotWindow == null ? Output.empty() : this.snapshotWindow;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
     /**
@@ -283,10 +283,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetGroupName")
-      private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Output<String> subnetGroupName;
 
-    public Input<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
+    public Output<String> getSubnetGroupName() {
+        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
     /**
@@ -294,10 +294,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -305,10 +305,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -316,41 +316,41 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsEnabled")
-      private final @Nullable Input<Boolean> tlsEnabled;
+      private final @Nullable Output<Boolean> tlsEnabled;
 
-    public Input<Boolean> getTlsEnabled() {
-        return this.tlsEnabled == null ? Input.empty() : this.tlsEnabled;
+    public Output<Boolean> getTlsEnabled() {
+        return this.tlsEnabled == null ? Output.empty() : this.tlsEnabled;
     }
 
     public ClusterState(
-        @Nullable Input<String> aclName,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints,
-        @Nullable Input<String> description,
-        @Nullable Input<String> enginePatchVersion,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> finalSnapshotName,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> maintenanceWindow,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<Integer> numReplicasPerShard,
-        @Nullable Input<Integer> numShards,
-        @Nullable Input<String> parameterGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<ClusterShardGetArgs>> shards,
-        @Nullable Input<String> snapshotArns,
-        @Nullable Input<String> snapshotName,
-        @Nullable Input<Integer> snapshotRetentionLimit,
-        @Nullable Input<String> snapshotWindow,
-        @Nullable Input<String> snsTopicArn,
-        @Nullable Input<String> subnetGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Boolean> tlsEnabled) {
+        @Nullable Output<String> aclName,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints,
+        @Nullable Output<String> description,
+        @Nullable Output<String> enginePatchVersion,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> finalSnapshotName,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> maintenanceWindow,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<Integer> numReplicasPerShard,
+        @Nullable Output<Integer> numShards,
+        @Nullable Output<String> parameterGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<ClusterShardGetArgs>> shards,
+        @Nullable Output<String> snapshotArns,
+        @Nullable Output<String> snapshotName,
+        @Nullable Output<Integer> snapshotRetentionLimit,
+        @Nullable Output<String> snapshotWindow,
+        @Nullable Output<String> snsTopicArn,
+        @Nullable Output<String> subnetGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Boolean> tlsEnabled) {
         this.aclName = aclName;
         this.arn = arn;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
@@ -382,34 +382,34 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.aclName = Input.empty();
-        this.arn = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.clusterEndpoints = Input.empty();
-        this.description = Input.empty();
-        this.enginePatchVersion = Input.empty();
-        this.engineVersion = Input.empty();
-        this.finalSnapshotName = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.nodeType = Input.empty();
-        this.numReplicasPerShard = Input.empty();
-        this.numShards = Input.empty();
-        this.parameterGroupName = Input.empty();
-        this.port = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.shards = Input.empty();
-        this.snapshotArns = Input.empty();
-        this.snapshotName = Input.empty();
-        this.snapshotRetentionLimit = Input.empty();
-        this.snapshotWindow = Input.empty();
-        this.snsTopicArn = Input.empty();
-        this.subnetGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.tlsEnabled = Input.empty();
+        this.aclName = Output.empty();
+        this.arn = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.clusterEndpoints = Output.empty();
+        this.description = Output.empty();
+        this.enginePatchVersion = Output.empty();
+        this.engineVersion = Output.empty();
+        this.finalSnapshotName = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.nodeType = Output.empty();
+        this.numReplicasPerShard = Output.empty();
+        this.numShards = Output.empty();
+        this.parameterGroupName = Output.empty();
+        this.port = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.shards = Output.empty();
+        this.snapshotArns = Output.empty();
+        this.snapshotName = Output.empty();
+        this.snapshotRetentionLimit = Output.empty();
+        this.snapshotWindow = Output.empty();
+        this.snsTopicArn = Output.empty();
+        this.subnetGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.tlsEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -421,34 +421,34 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aclName;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> enginePatchVersion;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> finalSnapshotName;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> maintenanceWindow;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<Integer> numReplicasPerShard;
-        private @Nullable Input<Integer> numShards;
-        private @Nullable Input<String> parameterGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<ClusterShardGetArgs>> shards;
-        private @Nullable Input<String> snapshotArns;
-        private @Nullable Input<String> snapshotName;
-        private @Nullable Input<Integer> snapshotRetentionLimit;
-        private @Nullable Input<String> snapshotWindow;
-        private @Nullable Input<String> snsTopicArn;
-        private @Nullable Input<String> subnetGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Boolean> tlsEnabled;
+        private @Nullable Output<String> aclName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> enginePatchVersion;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> finalSnapshotName;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> maintenanceWindow;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<Integer> numReplicasPerShard;
+        private @Nullable Output<Integer> numShards;
+        private @Nullable Output<String> parameterGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<ClusterShardGetArgs>> shards;
+        private @Nullable Output<String> snapshotArns;
+        private @Nullable Output<String> snapshotName;
+        private @Nullable Output<Integer> snapshotRetentionLimit;
+        private @Nullable Output<String> snapshotWindow;
+        private @Nullable Output<String> snsTopicArn;
+        private @Nullable Output<String> subnetGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> tlsEnabled;
 
         public Builder() {
     	      // Empty
@@ -486,283 +486,283 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.tlsEnabled = defaults.tlsEnabled;
         }
 
-        public Builder aclName(@Nullable Input<String> aclName) {
+        public Builder aclName(@Nullable Output<String> aclName) {
             this.aclName = aclName;
             return this;
         }
 
         public Builder aclName(@Nullable String aclName) {
-            this.aclName = Input.ofNullable(aclName);
+            this.aclName = Output.ofNullable(aclName);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder clusterEndpoints(@Nullable Input<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
+        public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
             this.clusterEndpoints = clusterEndpoints;
             return this;
         }
 
         public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
-            this.clusterEndpoints = Input.ofNullable(clusterEndpoints);
+            this.clusterEndpoints = Output.ofNullable(clusterEndpoints);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enginePatchVersion(@Nullable Input<String> enginePatchVersion) {
+        public Builder enginePatchVersion(@Nullable Output<String> enginePatchVersion) {
             this.enginePatchVersion = enginePatchVersion;
             return this;
         }
 
         public Builder enginePatchVersion(@Nullable String enginePatchVersion) {
-            this.enginePatchVersion = Input.ofNullable(enginePatchVersion);
+            this.enginePatchVersion = Output.ofNullable(enginePatchVersion);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder finalSnapshotName(@Nullable Input<String> finalSnapshotName) {
+        public Builder finalSnapshotName(@Nullable Output<String> finalSnapshotName) {
             this.finalSnapshotName = finalSnapshotName;
             return this;
         }
 
         public Builder finalSnapshotName(@Nullable String finalSnapshotName) {
-            this.finalSnapshotName = Input.ofNullable(finalSnapshotName);
+            this.finalSnapshotName = Output.ofNullable(finalSnapshotName);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder numReplicasPerShard(@Nullable Input<Integer> numReplicasPerShard) {
+        public Builder numReplicasPerShard(@Nullable Output<Integer> numReplicasPerShard) {
             this.numReplicasPerShard = numReplicasPerShard;
             return this;
         }
 
         public Builder numReplicasPerShard(@Nullable Integer numReplicasPerShard) {
-            this.numReplicasPerShard = Input.ofNullable(numReplicasPerShard);
+            this.numReplicasPerShard = Output.ofNullable(numReplicasPerShard);
             return this;
         }
 
-        public Builder numShards(@Nullable Input<Integer> numShards) {
+        public Builder numShards(@Nullable Output<Integer> numShards) {
             this.numShards = numShards;
             return this;
         }
 
         public Builder numShards(@Nullable Integer numShards) {
-            this.numShards = Input.ofNullable(numShards);
+            this.numShards = Output.ofNullable(numShards);
             return this;
         }
 
-        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Input.ofNullable(parameterGroupName);
+            this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder shards(@Nullable Input<List<ClusterShardGetArgs>> shards) {
+        public Builder shards(@Nullable Output<List<ClusterShardGetArgs>> shards) {
             this.shards = shards;
             return this;
         }
 
         public Builder shards(@Nullable List<ClusterShardGetArgs> shards) {
-            this.shards = Input.ofNullable(shards);
+            this.shards = Output.ofNullable(shards);
             return this;
         }
 
-        public Builder snapshotArns(@Nullable Input<String> snapshotArns) {
+        public Builder snapshotArns(@Nullable Output<String> snapshotArns) {
             this.snapshotArns = snapshotArns;
             return this;
         }
 
         public Builder snapshotArns(@Nullable String snapshotArns) {
-            this.snapshotArns = Input.ofNullable(snapshotArns);
+            this.snapshotArns = Output.ofNullable(snapshotArns);
             return this;
         }
 
-        public Builder snapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Output<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Input.ofNullable(snapshotName);
+            this.snapshotName = Output.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder snapshotRetentionLimit(@Nullable Input<Integer> snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
             this.snapshotRetentionLimit = snapshotRetentionLimit;
             return this;
         }
 
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Input.ofNullable(snapshotRetentionLimit);
+            this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder snapshotWindow(@Nullable Input<String> snapshotWindow) {
+        public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
             this.snapshotWindow = snapshotWindow;
             return this;
         }
 
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Input.ofNullable(snapshotWindow);
+            this.snapshotWindow = Output.ofNullable(snapshotWindow);
             return this;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Input.ofNullable(subnetGroupName);
+            this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder tlsEnabled(@Nullable Input<Boolean> tlsEnabled) {
+        public Builder tlsEnabled(@Nullable Output<Boolean> tlsEnabled) {
             this.tlsEnabled = tlsEnabled;
             return this;
         }
 
         public Builder tlsEnabled(@Nullable Boolean tlsEnabled) {
-            this.tlsEnabled = Input.ofNullable(tlsEnabled);
+            this.tlsEnabled = Output.ofNullable(tlsEnabled);
             return this;
         }
         public ClusterState build() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.JobCommandArgs;
 import io.pulumi.aws.glue.inputs.JobExecutionPropertyArgs;
 import io.pulumi.aws.glue.inputs.JobNotificationPropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command", required=true)
-      private final Input<JobCommandArgs> command;
+      private final Output<JobCommandArgs> command;
 
-    public Input<JobCommandArgs> getCommand() {
+    public Output<JobCommandArgs> getCommand() {
         return this.command;
     }
 
@@ -37,10 +37,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connections")
-      private final @Nullable Input<List<String>> connections;
+      private final @Nullable Output<List<String>> connections;
 
-    public Input<List<String>> getConnections() {
-        return this.connections == null ? Input.empty() : this.connections;
+    public Output<List<String>> getConnections() {
+        return this.connections == null ? Output.empty() : this.connections;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultArguments")
-      private final @Nullable Input<Map<String,String>> defaultArguments;
+      private final @Nullable Output<Map<String,String>> defaultArguments;
 
-    public Input<Map<String,String>> getDefaultArguments() {
-        return this.defaultArguments == null ? Input.empty() : this.defaultArguments;
+    public Output<Map<String,String>> getDefaultArguments() {
+        return this.defaultArguments == null ? Output.empty() : this.defaultArguments;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionProperty")
-      private final @Nullable Input<JobExecutionPropertyArgs> executionProperty;
+      private final @Nullable Output<JobExecutionPropertyArgs> executionProperty;
 
-    public Input<JobExecutionPropertyArgs> getExecutionProperty() {
-        return this.executionProperty == null ? Input.empty() : this.executionProperty;
+    public Output<JobExecutionPropertyArgs> getExecutionProperty() {
+        return this.executionProperty == null ? Output.empty() : this.executionProperty;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-      private final @Nullable Input<String> glueVersion;
+      private final @Nullable Output<String> glueVersion;
 
-    public Input<String> getGlueVersion() {
-        return this.glueVersion == null ? Input.empty() : this.glueVersion;
+    public Output<String> getGlueVersion() {
+        return this.glueVersion == null ? Output.empty() : this.glueVersion;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-      private final @Nullable Input<Double> maxCapacity;
+      private final @Nullable Output<Double> maxCapacity;
 
-    public Input<Double> getMaxCapacity() {
-        return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
+    public Output<Double> getMaxCapacity() {
+        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries")
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonOverridableArguments")
-      private final @Nullable Input<Map<String,String>> nonOverridableArguments;
+      private final @Nullable Output<Map<String,String>> nonOverridableArguments;
 
-    public Input<Map<String,String>> getNonOverridableArguments() {
-        return this.nonOverridableArguments == null ? Input.empty() : this.nonOverridableArguments;
+    public Output<Map<String,String>> getNonOverridableArguments() {
+        return this.nonOverridableArguments == null ? Output.empty() : this.nonOverridableArguments;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationProperty")
-      private final @Nullable Input<JobNotificationPropertyArgs> notificationProperty;
+      private final @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
 
-    public Input<JobNotificationPropertyArgs> getNotificationProperty() {
-        return this.notificationProperty == null ? Input.empty() : this.notificationProperty;
+    public Output<JobNotificationPropertyArgs> getNotificationProperty() {
+        return this.notificationProperty == null ? Output.empty() : this.notificationProperty;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-      private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Input<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
+    public Output<Integer> getNumberOfWorkers() {
+        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -158,9 +158,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -169,10 +169,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-      private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Output<String> securityConfiguration;
 
-    public Input<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
+    public Output<String> getSecurityConfiguration() {
+        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -202,30 +202,30 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-      private final @Nullable Input<String> workerType;
+      private final @Nullable Output<String> workerType;
 
-    public Input<String> getWorkerType() {
-        return this.workerType == null ? Input.empty() : this.workerType;
+    public Output<String> getWorkerType() {
+        return this.workerType == null ? Output.empty() : this.workerType;
     }
 
     public JobArgs(
-        Input<JobCommandArgs> command,
-        @Nullable Input<List<String>> connections,
-        @Nullable Input<Map<String,String>> defaultArguments,
-        @Nullable Input<String> description,
-        @Nullable Input<JobExecutionPropertyArgs> executionProperty,
-        @Nullable Input<String> glueVersion,
-        @Nullable Input<Double> maxCapacity,
-        @Nullable Input<Integer> maxRetries,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> nonOverridableArguments,
-        @Nullable Input<JobNotificationPropertyArgs> notificationProperty,
-        @Nullable Input<Integer> numberOfWorkers,
-        Input<String> roleArn,
-        @Nullable Input<String> securityConfiguration,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> timeout,
-        @Nullable Input<String> workerType) {
+        Output<JobCommandArgs> command,
+        @Nullable Output<List<String>> connections,
+        @Nullable Output<Map<String,String>> defaultArguments,
+        @Nullable Output<String> description,
+        @Nullable Output<JobExecutionPropertyArgs> executionProperty,
+        @Nullable Output<String> glueVersion,
+        @Nullable Output<Double> maxCapacity,
+        @Nullable Output<Integer> maxRetries,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> nonOverridableArguments,
+        @Nullable Output<JobNotificationPropertyArgs> notificationProperty,
+        @Nullable Output<Integer> numberOfWorkers,
+        Output<String> roleArn,
+        @Nullable Output<String> securityConfiguration,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> timeout,
+        @Nullable Output<String> workerType) {
         this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
         this.connections = connections;
         this.defaultArguments = defaultArguments;
@@ -246,23 +246,23 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.command = Input.empty();
-        this.connections = Input.empty();
-        this.defaultArguments = Input.empty();
-        this.description = Input.empty();
-        this.executionProperty = Input.empty();
-        this.glueVersion = Input.empty();
-        this.maxCapacity = Input.empty();
-        this.maxRetries = Input.empty();
-        this.name = Input.empty();
-        this.nonOverridableArguments = Input.empty();
-        this.notificationProperty = Input.empty();
-        this.numberOfWorkers = Input.empty();
-        this.roleArn = Input.empty();
-        this.securityConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
-        this.workerType = Input.empty();
+        this.command = Output.empty();
+        this.connections = Output.empty();
+        this.defaultArguments = Output.empty();
+        this.description = Output.empty();
+        this.executionProperty = Output.empty();
+        this.glueVersion = Output.empty();
+        this.maxCapacity = Output.empty();
+        this.maxRetries = Output.empty();
+        this.name = Output.empty();
+        this.nonOverridableArguments = Output.empty();
+        this.notificationProperty = Output.empty();
+        this.numberOfWorkers = Output.empty();
+        this.roleArn = Output.empty();
+        this.securityConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
+        this.workerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -274,23 +274,23 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<JobCommandArgs> command;
-        private @Nullable Input<List<String>> connections;
-        private @Nullable Input<Map<String,String>> defaultArguments;
-        private @Nullable Input<String> description;
-        private @Nullable Input<JobExecutionPropertyArgs> executionProperty;
-        private @Nullable Input<String> glueVersion;
-        private @Nullable Input<Double> maxCapacity;
-        private @Nullable Input<Integer> maxRetries;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> nonOverridableArguments;
-        private @Nullable Input<JobNotificationPropertyArgs> notificationProperty;
-        private @Nullable Input<Integer> numberOfWorkers;
-        private Input<String> roleArn;
-        private @Nullable Input<String> securityConfiguration;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> timeout;
-        private @Nullable Input<String> workerType;
+        private Output<JobCommandArgs> command;
+        private @Nullable Output<List<String>> connections;
+        private @Nullable Output<Map<String,String>> defaultArguments;
+        private @Nullable Output<String> description;
+        private @Nullable Output<JobExecutionPropertyArgs> executionProperty;
+        private @Nullable Output<String> glueVersion;
+        private @Nullable Output<Double> maxCapacity;
+        private @Nullable Output<Integer> maxRetries;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> nonOverridableArguments;
+        private @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
+        private @Nullable Output<Integer> numberOfWorkers;
+        private Output<String> roleArn;
+        private @Nullable Output<String> securityConfiguration;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> timeout;
+        private @Nullable Output<String> workerType;
 
         public Builder() {
     	      // Empty
@@ -317,173 +317,173 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder command(Input<JobCommandArgs> command) {
+        public Builder command(Output<JobCommandArgs> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
         public Builder command(JobCommandArgs command) {
-            this.command = Input.of(Objects.requireNonNull(command));
+            this.command = Output.of(Objects.requireNonNull(command));
             return this;
         }
 
-        public Builder connections(@Nullable Input<List<String>> connections) {
+        public Builder connections(@Nullable Output<List<String>> connections) {
             this.connections = connections;
             return this;
         }
 
         public Builder connections(@Nullable List<String> connections) {
-            this.connections = Input.ofNullable(connections);
+            this.connections = Output.ofNullable(connections);
             return this;
         }
 
-        public Builder defaultArguments(@Nullable Input<Map<String,String>> defaultArguments) {
+        public Builder defaultArguments(@Nullable Output<Map<String,String>> defaultArguments) {
             this.defaultArguments = defaultArguments;
             return this;
         }
 
         public Builder defaultArguments(@Nullable Map<String,String> defaultArguments) {
-            this.defaultArguments = Input.ofNullable(defaultArguments);
+            this.defaultArguments = Output.ofNullable(defaultArguments);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder executionProperty(@Nullable Input<JobExecutionPropertyArgs> executionProperty) {
+        public Builder executionProperty(@Nullable Output<JobExecutionPropertyArgs> executionProperty) {
             this.executionProperty = executionProperty;
             return this;
         }
 
         public Builder executionProperty(@Nullable JobExecutionPropertyArgs executionProperty) {
-            this.executionProperty = Input.ofNullable(executionProperty);
+            this.executionProperty = Output.ofNullable(executionProperty);
             return this;
         }
 
-        public Builder glueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Input.ofNullable(glueVersion);
+            this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
         public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Input.ofNullable(maxCapacity);
+            this.maxCapacity = Output.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nonOverridableArguments(@Nullable Input<Map<String,String>> nonOverridableArguments) {
+        public Builder nonOverridableArguments(@Nullable Output<Map<String,String>> nonOverridableArguments) {
             this.nonOverridableArguments = nonOverridableArguments;
             return this;
         }
 
         public Builder nonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
-            this.nonOverridableArguments = Input.ofNullable(nonOverridableArguments);
+            this.nonOverridableArguments = Output.ofNullable(nonOverridableArguments);
             return this;
         }
 
-        public Builder notificationProperty(@Nullable Input<JobNotificationPropertyArgs> notificationProperty) {
+        public Builder notificationProperty(@Nullable Output<JobNotificationPropertyArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
 
         public Builder notificationProperty(@Nullable JobNotificationPropertyArgs notificationProperty) {
-            this.notificationProperty = Input.ofNullable(notificationProperty);
+            this.notificationProperty = Output.ofNullable(notificationProperty);
             return this;
         }
 
-        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Input.ofNullable(securityConfiguration);
+            this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder workerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Input.ofNullable(workerType);
+            this.workerType = Output.ofNullable(workerType);
             return this;
         }
         public JobArgs build() {

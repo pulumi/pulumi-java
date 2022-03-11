@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @InputImport(name="documentVersion")
-      private final @Nullable Input<String> documentVersion;
+      private final @Nullable Output<String> documentVersion;
 
-    public Input<String> getDocumentVersion() {
-        return this.documentVersion == null ? Input.empty() : this.documentVersion;
+    public Output<String> getDocumentVersion() {
+        return this.documentVersion == null ? Output.empty() : this.documentVersion;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
+      private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
-    public Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(
-        @Nullable Input<String> documentVersion,
-        @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
+        @Nullable Output<String> documentVersion,
+        @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
         this.documentVersion = documentVersion;
         this.parameters = parameters;
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs() {
-        this.documentVersion = Input.empty();
-        this.parameters = Input.empty();
+        this.documentVersion = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     }
 
     public static final class Builder {
-        private @Nullable Input<String> documentVersion;
-        private @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
+        private @Nullable Output<String> documentVersion;
+        private @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder documentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Input.ofNullable(documentVersion);
+            this.documentVersion = Output.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs build() {

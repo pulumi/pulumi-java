@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,10 +16,10 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
     public static final DomainVpcOptionsArgs Empty = new DomainVpcOptionsArgs();
 
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -38,24 +38,24 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public DomainVpcOptionsArgs(
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<String> vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -63,10 +63,10 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DomainVpcOptionsArgs() {
-        this.availabilityZones = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
-        this.vpcId = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,10 +78,10 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -95,43 +95,43 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public DomainVpcOptionsArgs build() {

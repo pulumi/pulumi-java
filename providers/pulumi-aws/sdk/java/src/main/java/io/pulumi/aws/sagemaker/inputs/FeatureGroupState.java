@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupFeatureDefinitionGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTimeFeatureName")
-      private final @Nullable Input<String> eventTimeFeatureName;
+      private final @Nullable Output<String> eventTimeFeatureName;
 
-    public Input<String> getEventTimeFeatureName() {
-        return this.eventTimeFeatureName == null ? Input.empty() : this.eventTimeFeatureName;
+    public Output<String> getEventTimeFeatureName() {
+        return this.eventTimeFeatureName == null ? Output.empty() : this.eventTimeFeatureName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureDefinitions")
-      private final @Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
+      private final @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
 
-    public Input<List<FeatureGroupFeatureDefinitionGetArgs>> getFeatureDefinitions() {
-        return this.featureDefinitions == null ? Input.empty() : this.featureDefinitions;
+    public Output<List<FeatureGroupFeatureDefinitionGetArgs>> getFeatureDefinitions() {
+        return this.featureDefinitions == null ? Output.empty() : this.featureDefinitions;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureGroupName")
-      private final @Nullable Input<String> featureGroupName;
+      private final @Nullable Output<String> featureGroupName;
 
-    public Input<String> getFeatureGroupName() {
-        return this.featureGroupName == null ? Input.empty() : this.featureGroupName;
+    public Output<String> getFeatureGroupName() {
+        return this.featureGroupName == null ? Output.empty() : this.featureGroupName;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineStoreConfig")
-      private final @Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
+      private final @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
 
-    public Input<FeatureGroupOfflineStoreConfigGetArgs> getOfflineStoreConfig() {
-        return this.offlineStoreConfig == null ? Input.empty() : this.offlineStoreConfig;
+    public Output<FeatureGroupOfflineStoreConfigGetArgs> getOfflineStoreConfig() {
+        return this.offlineStoreConfig == null ? Output.empty() : this.offlineStoreConfig;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlineStoreConfig")
-      private final @Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
+      private final @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
 
-    public Input<FeatureGroupOnlineStoreConfigGetArgs> getOnlineStoreConfig() {
-        return this.onlineStoreConfig == null ? Input.empty() : this.onlineStoreConfig;
+    public Output<FeatureGroupOnlineStoreConfigGetArgs> getOnlineStoreConfig() {
+        return this.onlineStoreConfig == null ? Output.empty() : this.onlineStoreConfig;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordIdentifierFeatureName")
-      private final @Nullable Input<String> recordIdentifierFeatureName;
+      private final @Nullable Output<String> recordIdentifierFeatureName;
 
-    public Input<String> getRecordIdentifierFeatureName() {
-        return this.recordIdentifierFeatureName == null ? Input.empty() : this.recordIdentifierFeatureName;
+    public Output<String> getRecordIdentifierFeatureName() {
+        return this.recordIdentifierFeatureName == null ? Output.empty() : this.recordIdentifierFeatureName;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public FeatureGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> eventTimeFeatureName,
-        @Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions,
-        @Nullable Input<String> featureGroupName,
-        @Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig,
-        @Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig,
-        @Nullable Input<String> recordIdentifierFeatureName,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> eventTimeFeatureName,
+        @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions,
+        @Nullable Output<String> featureGroupName,
+        @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig,
+        @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig,
+        @Nullable Output<String> recordIdentifierFeatureName,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.description = description;
         this.eventTimeFeatureName = eventTimeFeatureName;
@@ -166,17 +166,17 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureGroupState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.eventTimeFeatureName = Input.empty();
-        this.featureDefinitions = Input.empty();
-        this.featureGroupName = Input.empty();
-        this.offlineStoreConfig = Input.empty();
-        this.onlineStoreConfig = Input.empty();
-        this.recordIdentifierFeatureName = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.eventTimeFeatureName = Output.empty();
+        this.featureDefinitions = Output.empty();
+        this.featureGroupName = Output.empty();
+        this.offlineStoreConfig = Output.empty();
+        this.onlineStoreConfig = Output.empty();
+        this.recordIdentifierFeatureName = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> eventTimeFeatureName;
-        private @Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
-        private @Nullable Input<String> featureGroupName;
-        private @Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
-        private @Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
-        private @Nullable Input<String> recordIdentifierFeatureName;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> eventTimeFeatureName;
+        private @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
+        private @Nullable Output<String> featureGroupName;
+        private @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
+        private @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
+        private @Nullable Output<String> recordIdentifierFeatureName;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder eventTimeFeatureName(@Nullable Input<String> eventTimeFeatureName) {
+        public Builder eventTimeFeatureName(@Nullable Output<String> eventTimeFeatureName) {
             this.eventTimeFeatureName = eventTimeFeatureName;
             return this;
         }
 
         public Builder eventTimeFeatureName(@Nullable String eventTimeFeatureName) {
-            this.eventTimeFeatureName = Input.ofNullable(eventTimeFeatureName);
+            this.eventTimeFeatureName = Output.ofNullable(eventTimeFeatureName);
             return this;
         }
 
-        public Builder featureDefinitions(@Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
+        public Builder featureDefinitions(@Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
             this.featureDefinitions = featureDefinitions;
             return this;
         }
 
         public Builder featureDefinitions(@Nullable List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
-            this.featureDefinitions = Input.ofNullable(featureDefinitions);
+            this.featureDefinitions = Output.ofNullable(featureDefinitions);
             return this;
         }
 
-        public Builder featureGroupName(@Nullable Input<String> featureGroupName) {
+        public Builder featureGroupName(@Nullable Output<String> featureGroupName) {
             this.featureGroupName = featureGroupName;
             return this;
         }
 
         public Builder featureGroupName(@Nullable String featureGroupName) {
-            this.featureGroupName = Input.ofNullable(featureGroupName);
+            this.featureGroupName = Output.ofNullable(featureGroupName);
             return this;
         }
 
-        public Builder offlineStoreConfig(@Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
             this.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
 
         public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
-            this.offlineStoreConfig = Input.ofNullable(offlineStoreConfig);
+            this.offlineStoreConfig = Output.ofNullable(offlineStoreConfig);
             return this;
         }
 
-        public Builder onlineStoreConfig(@Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
             this.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
 
         public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
-            this.onlineStoreConfig = Input.ofNullable(onlineStoreConfig);
+            this.onlineStoreConfig = Output.ofNullable(onlineStoreConfig);
             return this;
         }
 
-        public Builder recordIdentifierFeatureName(@Nullable Input<String> recordIdentifierFeatureName) {
+        public Builder recordIdentifierFeatureName(@Nullable Output<String> recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = recordIdentifierFeatureName;
             return this;
         }
 
         public Builder recordIdentifierFeatureName(@Nullable String recordIdentifierFeatureName) {
-            this.recordIdentifierFeatureName = Input.ofNullable(recordIdentifierFeatureName);
+            this.recordIdentifierFeatureName = Output.ofNullable(recordIdentifierFeatureName);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public FeatureGroupState build() {

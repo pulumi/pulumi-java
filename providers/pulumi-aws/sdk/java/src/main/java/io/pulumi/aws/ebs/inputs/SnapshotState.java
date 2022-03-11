@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataEncryptionKeyId")
-      private final @Nullable Input<String> dataEncryptionKeyId;
+      private final @Nullable Output<String> dataEncryptionKeyId;
 
-    public Input<String> getDataEncryptionKeyId() {
-        return this.dataEncryptionKeyId == null ? Input.empty() : this.dataEncryptionKeyId;
+    public Output<String> getDataEncryptionKeyId() {
+        return this.dataEncryptionKeyId == null ? Output.empty() : this.dataEncryptionKeyId;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-      private final @Nullable Input<String> outpostArn;
+      private final @Nullable Output<String> outpostArn;
 
-    public Input<String> getOutpostArn() {
-        return this.outpostArn == null ? Input.empty() : this.outpostArn;
+    public Output<String> getOutpostArn() {
+        return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerAlias")
-      private final @Nullable Input<String> ownerAlias;
+      private final @Nullable Output<String> ownerAlias;
 
-    public Input<String> getOwnerAlias() {
-        return this.ownerAlias == null ? Input.empty() : this.ownerAlias;
+    public Output<String> getOwnerAlias() {
+        return this.ownerAlias == null ? Output.empty() : this.ownerAlias;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permanentRestore")
-      private final @Nullable Input<Boolean> permanentRestore;
+      private final @Nullable Output<Boolean> permanentRestore;
 
-    public Input<Boolean> getPermanentRestore() {
-        return this.permanentRestore == null ? Input.empty() : this.permanentRestore;
+    public Output<Boolean> getPermanentRestore() {
+        return this.permanentRestore == null ? Output.empty() : this.permanentRestore;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageTier")
-      private final @Nullable Input<String> storageTier;
+      private final @Nullable Output<String> storageTier;
 
-    public Input<String> getStorageTier() {
-        return this.storageTier == null ? Input.empty() : this.storageTier;
+    public Output<String> getStorageTier() {
+        return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryRestoreDays")
-      private final @Nullable Input<Integer> temporaryRestoreDays;
+      private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Input<Integer> getTemporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Input.empty() : this.temporaryRestoreDays;
+    public Output<Integer> getTemporaryRestoreDays() {
+        return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeId")
-      private final @Nullable Input<String> volumeId;
+      private final @Nullable Output<String> volumeId;
 
-    public Input<String> getVolumeId() {
-        return this.volumeId == null ? Input.empty() : this.volumeId;
+    public Output<String> getVolumeId() {
+        return this.volumeId == null ? Output.empty() : this.volumeId;
     }
 
     /**
@@ -176,28 +176,28 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     public SnapshotState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> dataEncryptionKeyId,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> outpostArn,
-        @Nullable Input<String> ownerAlias,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Boolean> permanentRestore,
-        @Nullable Input<String> storageTier,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> temporaryRestoreDays,
-        @Nullable Input<String> volumeId,
-        @Nullable Input<Integer> volumeSize) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> dataEncryptionKeyId,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> outpostArn,
+        @Nullable Output<String> ownerAlias,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Boolean> permanentRestore,
+        @Nullable Output<String> storageTier,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> temporaryRestoreDays,
+        @Nullable Output<String> volumeId,
+        @Nullable Output<Integer> volumeSize) {
         this.arn = arn;
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         this.description = description;
@@ -216,21 +216,21 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotState() {
-        this.arn = Input.empty();
-        this.dataEncryptionKeyId = Input.empty();
-        this.description = Input.empty();
-        this.encrypted = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.outpostArn = Input.empty();
-        this.ownerAlias = Input.empty();
-        this.ownerId = Input.empty();
-        this.permanentRestore = Input.empty();
-        this.storageTier = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.temporaryRestoreDays = Input.empty();
-        this.volumeId = Input.empty();
-        this.volumeSize = Input.empty();
+        this.arn = Output.empty();
+        this.dataEncryptionKeyId = Output.empty();
+        this.description = Output.empty();
+        this.encrypted = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.outpostArn = Output.empty();
+        this.ownerAlias = Output.empty();
+        this.ownerId = Output.empty();
+        this.permanentRestore = Output.empty();
+        this.storageTier = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.temporaryRestoreDays = Output.empty();
+        this.volumeId = Output.empty();
+        this.volumeSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -242,21 +242,21 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> dataEncryptionKeyId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> outpostArn;
-        private @Nullable Input<String> ownerAlias;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Boolean> permanentRestore;
-        private @Nullable Input<String> storageTier;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> temporaryRestoreDays;
-        private @Nullable Input<String> volumeId;
-        private @Nullable Input<Integer> volumeSize;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> dataEncryptionKeyId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> outpostArn;
+        private @Nullable Output<String> ownerAlias;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Boolean> permanentRestore;
+        private @Nullable Output<String> storageTier;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> temporaryRestoreDays;
+        private @Nullable Output<String> volumeId;
+        private @Nullable Output<Integer> volumeSize;
 
         public Builder() {
     	      // Empty
@@ -281,153 +281,153 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeSize = defaults.volumeSize;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder dataEncryptionKeyId(@Nullable Input<String> dataEncryptionKeyId) {
+        public Builder dataEncryptionKeyId(@Nullable Output<String> dataEncryptionKeyId) {
             this.dataEncryptionKeyId = dataEncryptionKeyId;
             return this;
         }
 
         public Builder dataEncryptionKeyId(@Nullable String dataEncryptionKeyId) {
-            this.dataEncryptionKeyId = Input.ofNullable(dataEncryptionKeyId);
+            this.dataEncryptionKeyId = Output.ofNullable(dataEncryptionKeyId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder outpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Input.ofNullable(outpostArn);
+            this.outpostArn = Output.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder ownerAlias(@Nullable Input<String> ownerAlias) {
+        public Builder ownerAlias(@Nullable Output<String> ownerAlias) {
             this.ownerAlias = ownerAlias;
             return this;
         }
 
         public Builder ownerAlias(@Nullable String ownerAlias) {
-            this.ownerAlias = Input.ofNullable(ownerAlias);
+            this.ownerAlias = Output.ofNullable(ownerAlias);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Input.ofNullable(permanentRestore);
+            this.permanentRestore = Output.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder storageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Output<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
         public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Input.ofNullable(storageTier);
+            this.storageTier = Output.ofNullable(storageTier);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
+            this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
             return this;
         }
 
-        public Builder volumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Output<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Input.ofNullable(volumeId);
+            this.volumeId = Output.ofNullable(volumeId);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
         public SnapshotState build() {

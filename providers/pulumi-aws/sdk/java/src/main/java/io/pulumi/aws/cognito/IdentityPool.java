@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.IdentityPoolArgs;
 import io.pulumi.aws.cognito.inputs.IdentityPoolState;
 import io.pulumi.aws.cognito.outputs.IdentityPoolCognitoIdentityProvider;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -228,14 +227,14 @@ public class IdentityPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityPool(String name, IdentityPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/identityPool:IdentityPool", name, args == null ? IdentityPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cognito/identityPool:IdentityPool", name, args == null ? IdentityPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IdentityPool(String name, Input<String> id, @Nullable IdentityPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IdentityPool(String name, Output<String> id, @Nullable IdentityPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cognito/identityPool:IdentityPool", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -251,7 +250,7 @@ public class IdentityPool extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityPool get(String name, Input<String> id, @Nullable IdentityPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityPool get(String name, Output<String> id, @Nullable IdentityPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IdentityPool(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="base")
-      private final @Nullable Input<Integer> base;
+      private final @Nullable Output<Integer> base;
 
-    public Input<Integer> getBase() {
-        return this.base == null ? Input.empty() : this.base;
+    public Output<Integer> getBase() {
+        return this.base == null ? Output.empty() : this.base;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="capacityProvider", required=true)
-      private final Input<String> capacityProvider;
+      private final Output<String> capacityProvider;
 
-    public Input<String> getCapacityProvider() {
+    public Output<String> getCapacityProvider() {
         return this.capacityProvider;
     }
 
@@ -42,25 +42,25 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public TaskSetCapacityProviderStrategyGetArgs(
-        @Nullable Input<Integer> base,
-        Input<String> capacityProvider,
-        Input<Integer> weight) {
+        @Nullable Output<Integer> base,
+        Output<String> capacityProvider,
+        Output<Integer> weight) {
         this.base = base;
         this.capacityProvider = Objects.requireNonNull(capacityProvider, "expected parameter 'capacityProvider' to be non-null");
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private TaskSetCapacityProviderStrategyGetArgs() {
-        this.base = Input.empty();
-        this.capacityProvider = Input.empty();
-        this.weight = Input.empty();
+        this.base = Output.empty();
+        this.capacityProvider = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> base;
-        private Input<String> capacityProvider;
-        private Input<Integer> weight;
+        private @Nullable Output<Integer> base;
+        private Output<String> capacityProvider;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
     	      this.weight = defaults.weight;
         }
 
-        public Builder base(@Nullable Input<Integer> base) {
+        public Builder base(@Nullable Output<Integer> base) {
             this.base = base;
             return this;
         }
 
         public Builder base(@Nullable Integer base) {
-            this.base = Input.ofNullable(base);
+            this.base = Output.ofNullable(base);
             return this;
         }
 
-        public Builder capacityProvider(Input<String> capacityProvider) {
+        public Builder capacityProvider(Output<String> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
         public Builder capacityProvider(String capacityProvider) {
-            this.capacityProvider = Input.of(Objects.requireNonNull(capacityProvider));
+            this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public TaskSetCapacityProviderStrategyGetArgs build() {

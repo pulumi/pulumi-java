@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="asyncInferenceConfig")
-      private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
+      private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
 
-    public Input<EndpointConfigurationAsyncInferenceConfigArgs> getAsyncInferenceConfig() {
-        return this.asyncInferenceConfig == null ? Input.empty() : this.asyncInferenceConfig;
+    public Output<EndpointConfigurationAsyncInferenceConfigArgs> getAsyncInferenceConfig() {
+        return this.asyncInferenceConfig == null ? Output.empty() : this.asyncInferenceConfig;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataCaptureConfig")
-      private final @Nullable Input<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
+      private final @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
 
-    public Input<EndpointConfigurationDataCaptureConfigArgs> getDataCaptureConfig() {
-        return this.dataCaptureConfig == null ? Input.empty() : this.dataCaptureConfig;
+    public Output<EndpointConfigurationDataCaptureConfigArgs> getDataCaptureConfig() {
+        return this.dataCaptureConfig == null ? Output.empty() : this.dataCaptureConfig;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="productionVariants", required=true)
-      private final Input<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
+      private final Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
 
-    public Input<List<EndpointConfigurationProductionVariantArgs>> getProductionVariants() {
+    public Output<List<EndpointConfigurationProductionVariantArgs>> getProductionVariants() {
         return this.productionVariants;
     }
 
@@ -79,19 +79,19 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EndpointConfigurationArgs(
-        @Nullable Input<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig,
-        @Nullable Input<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> name,
-        Input<List<EndpointConfigurationProductionVariantArgs>> productionVariants,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig,
+        @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> name,
+        Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants,
+        @Nullable Output<Map<String,String>> tags) {
         this.asyncInferenceConfig = asyncInferenceConfig;
         this.dataCaptureConfig = dataCaptureConfig;
         this.kmsKeyArn = kmsKeyArn;
@@ -101,12 +101,12 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private EndpointConfigurationArgs() {
-        this.asyncInferenceConfig = Input.empty();
-        this.dataCaptureConfig = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.name = Input.empty();
-        this.productionVariants = Input.empty();
-        this.tags = Input.empty();
+        this.asyncInferenceConfig = Output.empty();
+        this.dataCaptureConfig = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.name = Output.empty();
+        this.productionVariants = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
-        private @Nullable Input<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> name;
-        private Input<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig;
+        private @Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> name;
+        private Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class EndpointConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder asyncInferenceConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig) {
+        public Builder asyncInferenceConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigArgs> asyncInferenceConfig) {
             this.asyncInferenceConfig = asyncInferenceConfig;
             return this;
         }
 
         public Builder asyncInferenceConfig(@Nullable EndpointConfigurationAsyncInferenceConfigArgs asyncInferenceConfig) {
-            this.asyncInferenceConfig = Input.ofNullable(asyncInferenceConfig);
+            this.asyncInferenceConfig = Output.ofNullable(asyncInferenceConfig);
             return this;
         }
 
-        public Builder dataCaptureConfig(@Nullable Input<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
+        public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigArgs> dataCaptureConfig) {
             this.dataCaptureConfig = dataCaptureConfig;
             return this;
         }
 
         public Builder dataCaptureConfig(@Nullable EndpointConfigurationDataCaptureConfigArgs dataCaptureConfig) {
-            this.dataCaptureConfig = Input.ofNullable(dataCaptureConfig);
+            this.dataCaptureConfig = Output.ofNullable(dataCaptureConfig);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder productionVariants(Input<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
+        public Builder productionVariants(Output<List<EndpointConfigurationProductionVariantArgs>> productionVariants) {
             this.productionVariants = Objects.requireNonNull(productionVariants);
             return this;
         }
 
         public Builder productionVariants(List<EndpointConfigurationProductionVariantArgs> productionVariants) {
-            this.productionVariants = Input.of(Objects.requireNonNull(productionVariants));
+            this.productionVariants = Output.of(Objects.requireNonNull(productionVariants));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EndpointConfigurationArgs build() {

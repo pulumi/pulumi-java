@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TopicRuleDynamodbv2PutItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
-    public TopicRuleDynamodbv2PutItemArgs(Input<String> tableName) {
+    public TopicRuleDynamodbv2PutItemArgs(Output<String> tableName) {
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
     }
 
     private TopicRuleDynamodbv2PutItemArgs() {
-        this.tableName = Input.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TopicRuleDynamodbv2PutItemArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> tableName;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TopicRuleDynamodbv2PutItemArgs extends io.pulumi.resources.Re
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public TopicRuleDynamodbv2PutItemArgs build() {

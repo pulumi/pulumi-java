@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
      * 
      */
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
@@ -30,22 +30,22 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
      * 
      */
     @InputImport(name="referrerPolicy", required=true)
-      private final Input<String> referrerPolicy;
+      private final Output<String> referrerPolicy;
 
-    public Input<String> getReferrerPolicy() {
+    public Output<String> getReferrerPolicy() {
         return this.referrerPolicy;
     }
 
     public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs(
-        Input<Boolean> override,
-        Input<String> referrerPolicy) {
+        Output<Boolean> override,
+        Output<String> referrerPolicy) {
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
         this.referrerPolicy = Objects.requireNonNull(referrerPolicy, "expected parameter 'referrerPolicy' to be non-null");
     }
 
     private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs() {
-        this.override = Input.empty();
-        this.referrerPolicy = Input.empty();
+        this.override = Output.empty();
+        this.referrerPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
     }
 
     public static final class Builder {
-        private Input<Boolean> override;
-        private Input<String> referrerPolicy;
+        private Output<Boolean> override;
+        private Output<String> referrerPolicy;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
     	      this.referrerPolicy = defaults.referrerPolicy;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder referrerPolicy(Input<String> referrerPolicy) {
+        public Builder referrerPolicy(Output<String> referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }
 
         public Builder referrerPolicy(String referrerPolicy) {
-            this.referrerPolicy = Input.of(Objects.requireNonNull(referrerPolicy));
+            this.referrerPolicy = Output.of(Objects.requireNonNull(referrerPolicy));
             return this;
         }
         public ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs build() {

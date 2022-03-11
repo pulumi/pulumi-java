@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automatic")
-      private final @Nullable Input<Boolean> automatic;
+      private final @Nullable Output<Boolean> automatic;
 
-    public Input<Boolean> getAutomatic() {
-        return this.automatic == null ? Input.empty() : this.automatic;
+    public Output<Boolean> getAutomatic() {
+        return this.automatic == null ? Output.empty() : this.automatic;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="configRuleName", required=true)
-      private final Input<String> configRuleName;
+      private final Output<String> configRuleName;
 
-    public Input<String> getConfigRuleName() {
+    public Output<String> getConfigRuleName() {
         return this.configRuleName;
     }
 
@@ -46,10 +46,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="executionControls")
-      private final @Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls;
+      private final @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
 
-    public Input<RemediationConfigurationExecutionControlsArgs> getExecutionControls() {
-        return this.executionControls == null ? Input.empty() : this.executionControls;
+    public Output<RemediationConfigurationExecutionControlsArgs> getExecutionControls() {
+        return this.executionControls == null ? Output.empty() : this.executionControls;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maximumAutomaticAttempts")
-      private final @Nullable Input<Integer> maximumAutomaticAttempts;
+      private final @Nullable Output<Integer> maximumAutomaticAttempts;
 
-    public Input<Integer> getMaximumAutomaticAttempts() {
-        return this.maximumAutomaticAttempts == null ? Input.empty() : this.maximumAutomaticAttempts;
+    public Output<Integer> getMaximumAutomaticAttempts() {
+        return this.maximumAutomaticAttempts == null ? Output.empty() : this.maximumAutomaticAttempts;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<RemediationConfigurationParameterArgs>> parameters;
+      private final @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
 
-    public Input<List<RemediationConfigurationParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<RemediationConfigurationParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retryAttemptSeconds")
-      private final @Nullable Input<Integer> retryAttemptSeconds;
+      private final @Nullable Output<Integer> retryAttemptSeconds;
 
-    public Input<Integer> getRetryAttemptSeconds() {
-        return this.retryAttemptSeconds == null ? Input.empty() : this.retryAttemptSeconds;
+    public Output<Integer> getRetryAttemptSeconds() {
+        return this.retryAttemptSeconds == null ? Output.empty() : this.retryAttemptSeconds;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetId", required=true)
-      private final Input<String> targetId;
+      private final Output<String> targetId;
 
-    public Input<String> getTargetId() {
+    public Output<String> getTargetId() {
         return this.targetId;
     }
 
@@ -112,9 +112,9 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetType", required=true)
-      private final Input<String> targetType;
+      private final Output<String> targetType;
 
-    public Input<String> getTargetType() {
+    public Output<String> getTargetType() {
         return this.targetType;
     }
 
@@ -123,23 +123,23 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetVersion")
-      private final @Nullable Input<String> targetVersion;
+      private final @Nullable Output<String> targetVersion;
 
-    public Input<String> getTargetVersion() {
-        return this.targetVersion == null ? Input.empty() : this.targetVersion;
+    public Output<String> getTargetVersion() {
+        return this.targetVersion == null ? Output.empty() : this.targetVersion;
     }
 
     public RemediationConfigurationArgs(
-        @Nullable Input<Boolean> automatic,
-        Input<String> configRuleName,
-        @Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls,
-        @Nullable Input<Integer> maximumAutomaticAttempts,
-        @Nullable Input<List<RemediationConfigurationParameterArgs>> parameters,
-        @Nullable Input<String> resourceType,
-        @Nullable Input<Integer> retryAttemptSeconds,
-        Input<String> targetId,
-        Input<String> targetType,
-        @Nullable Input<String> targetVersion) {
+        @Nullable Output<Boolean> automatic,
+        Output<String> configRuleName,
+        @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls,
+        @Nullable Output<Integer> maximumAutomaticAttempts,
+        @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters,
+        @Nullable Output<String> resourceType,
+        @Nullable Output<Integer> retryAttemptSeconds,
+        Output<String> targetId,
+        Output<String> targetType,
+        @Nullable Output<String> targetVersion) {
         this.automatic = automatic;
         this.configRuleName = Objects.requireNonNull(configRuleName, "expected parameter 'configRuleName' to be non-null");
         this.executionControls = executionControls;
@@ -153,16 +153,16 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private RemediationConfigurationArgs() {
-        this.automatic = Input.empty();
-        this.configRuleName = Input.empty();
-        this.executionControls = Input.empty();
-        this.maximumAutomaticAttempts = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceType = Input.empty();
-        this.retryAttemptSeconds = Input.empty();
-        this.targetId = Input.empty();
-        this.targetType = Input.empty();
-        this.targetVersion = Input.empty();
+        this.automatic = Output.empty();
+        this.configRuleName = Output.empty();
+        this.executionControls = Output.empty();
+        this.maximumAutomaticAttempts = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceType = Output.empty();
+        this.retryAttemptSeconds = Output.empty();
+        this.targetId = Output.empty();
+        this.targetType = Output.empty();
+        this.targetVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> automatic;
-        private Input<String> configRuleName;
-        private @Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls;
-        private @Nullable Input<Integer> maximumAutomaticAttempts;
-        private @Nullable Input<List<RemediationConfigurationParameterArgs>> parameters;
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<Integer> retryAttemptSeconds;
-        private Input<String> targetId;
-        private Input<String> targetType;
-        private @Nullable Input<String> targetVersion;
+        private @Nullable Output<Boolean> automatic;
+        private Output<String> configRuleName;
+        private @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
+        private @Nullable Output<Integer> maximumAutomaticAttempts;
+        private @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<Integer> retryAttemptSeconds;
+        private Output<String> targetId;
+        private Output<String> targetType;
+        private @Nullable Output<String> targetVersion;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
     	      this.targetVersion = defaults.targetVersion;
         }
 
-        public Builder automatic(@Nullable Input<Boolean> automatic) {
+        public Builder automatic(@Nullable Output<Boolean> automatic) {
             this.automatic = automatic;
             return this;
         }
 
         public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Input.ofNullable(automatic);
+            this.automatic = Output.ofNullable(automatic);
             return this;
         }
 
-        public Builder configRuleName(Input<String> configRuleName) {
+        public Builder configRuleName(Output<String> configRuleName) {
             this.configRuleName = Objects.requireNonNull(configRuleName);
             return this;
         }
 
         public Builder configRuleName(String configRuleName) {
-            this.configRuleName = Input.of(Objects.requireNonNull(configRuleName));
+            this.configRuleName = Output.of(Objects.requireNonNull(configRuleName));
             return this;
         }
 
-        public Builder executionControls(@Nullable Input<RemediationConfigurationExecutionControlsArgs> executionControls) {
+        public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls) {
             this.executionControls = executionControls;
             return this;
         }
 
         public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsArgs executionControls) {
-            this.executionControls = Input.ofNullable(executionControls);
+            this.executionControls = Output.ofNullable(executionControls);
             return this;
         }
 
-        public Builder maximumAutomaticAttempts(@Nullable Input<Integer> maximumAutomaticAttempts) {
+        public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
             this.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
 
         public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
-            this.maximumAutomaticAttempts = Input.ofNullable(maximumAutomaticAttempts);
+            this.maximumAutomaticAttempts = Output.ofNullable(maximumAutomaticAttempts);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<RemediationConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<RemediationConfigurationParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder retryAttemptSeconds(@Nullable Input<Integer> retryAttemptSeconds) {
+        public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
             this.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
 
         public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
-            this.retryAttemptSeconds = Input.ofNullable(retryAttemptSeconds);
+            this.retryAttemptSeconds = Output.ofNullable(retryAttemptSeconds);
             return this;
         }
 
-        public Builder targetId(Input<String> targetId) {
+        public Builder targetId(Output<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Input.of(Objects.requireNonNull(targetId));
+            this.targetId = Output.of(Objects.requireNonNull(targetId));
             return this;
         }
 
-        public Builder targetType(Input<String> targetType) {
+        public Builder targetType(Output<String> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
         public Builder targetType(String targetType) {
-            this.targetType = Input.of(Objects.requireNonNull(targetType));
+            this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
         }
 
-        public Builder targetVersion(@Nullable Input<String> targetVersion) {
+        public Builder targetVersion(@Nullable Output<String> targetVersion) {
             this.targetVersion = targetVersion;
             return this;
         }
 
         public Builder targetVersion(@Nullable String targetVersion) {
-            this.targetVersion = Input.ofNullable(targetVersion);
+            this.targetVersion = Output.ofNullable(targetVersion);
             return this;
         }
         public RemediationConfigurationArgs build() {

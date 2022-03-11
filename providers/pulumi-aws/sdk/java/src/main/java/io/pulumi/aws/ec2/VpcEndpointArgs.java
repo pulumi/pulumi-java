@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAccept")
-      private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Output<Boolean> autoAccept;
 
-    public Input<Boolean> getAutoAccept() {
-        return this.autoAccept == null ? Input.empty() : this.autoAccept;
+    public Output<Boolean> getAutoAccept() {
+        return this.autoAccept == null ? Output.empty() : this.autoAccept;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDnsEnabled")
-      private final @Nullable Input<Boolean> privateDnsEnabled;
+      private final @Nullable Output<Boolean> privateDnsEnabled;
 
-    public Input<Boolean> getPrivateDnsEnabled() {
-        return this.privateDnsEnabled == null ? Input.empty() : this.privateDnsEnabled;
+    public Output<Boolean> getPrivateDnsEnabled() {
+        return this.privateDnsEnabled == null ? Output.empty() : this.privateDnsEnabled;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableIds")
-      private final @Nullable Input<List<String>> routeTableIds;
+      private final @Nullable Output<List<String>> routeTableIds;
 
-    public Input<List<String>> getRouteTableIds() {
-        return this.routeTableIds == null ? Input.empty() : this.routeTableIds;
+    public Output<List<String>> getRouteTableIds() {
+        return this.routeTableIds == null ? Output.empty() : this.routeTableIds;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -89,10 +89,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointType")
-      private final @Nullable Input<String> vpcEndpointType;
+      private final @Nullable Output<String> vpcEndpointType;
 
-    public Input<String> getVpcEndpointType() {
-        return this.vpcEndpointType == null ? Input.empty() : this.vpcEndpointType;
+    public Output<String> getVpcEndpointType() {
+        return this.vpcEndpointType == null ? Output.empty() : this.vpcEndpointType;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public VpcEndpointArgs(
-        @Nullable Input<Boolean> autoAccept,
-        @Nullable Input<String> policy,
-        @Nullable Input<Boolean> privateDnsEnabled,
-        @Nullable Input<List<String>> routeTableIds,
-        @Nullable Input<List<String>> securityGroupIds,
-        Input<String> serviceName,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vpcEndpointType,
-        Input<String> vpcId) {
+        @Nullable Output<Boolean> autoAccept,
+        @Nullable Output<String> policy,
+        @Nullable Output<Boolean> privateDnsEnabled,
+        @Nullable Output<List<String>> routeTableIds,
+        @Nullable Output<List<String>> securityGroupIds,
+        Output<String> serviceName,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vpcEndpointType,
+        Output<String> vpcId) {
         this.autoAccept = autoAccept;
         this.policy = policy;
         this.privateDnsEnabled = privateDnsEnabled;
@@ -152,16 +152,16 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcEndpointArgs() {
-        this.autoAccept = Input.empty();
-        this.policy = Input.empty();
-        this.privateDnsEnabled = Input.empty();
-        this.routeTableIds = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.serviceName = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.vpcEndpointType = Input.empty();
-        this.vpcId = Input.empty();
+        this.autoAccept = Output.empty();
+        this.policy = Output.empty();
+        this.privateDnsEnabled = Output.empty();
+        this.routeTableIds = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.serviceName = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.vpcEndpointType = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoAccept;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<Boolean> privateDnsEnabled;
-        private @Nullable Input<List<String>> routeTableIds;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private Input<String> serviceName;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vpcEndpointType;
-        private Input<String> vpcId;
+        private @Nullable Output<Boolean> autoAccept;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<Boolean> privateDnsEnabled;
+        private @Nullable Output<List<String>> routeTableIds;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private Output<String> serviceName;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vpcEndpointType;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder autoAccept(@Nullable Input<Boolean> autoAccept) {
+        public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
         public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Input.ofNullable(autoAccept);
+            this.autoAccept = Output.ofNullable(autoAccept);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder privateDnsEnabled(@Nullable Input<Boolean> privateDnsEnabled) {
+        public Builder privateDnsEnabled(@Nullable Output<Boolean> privateDnsEnabled) {
             this.privateDnsEnabled = privateDnsEnabled;
             return this;
         }
 
         public Builder privateDnsEnabled(@Nullable Boolean privateDnsEnabled) {
-            this.privateDnsEnabled = Input.ofNullable(privateDnsEnabled);
+            this.privateDnsEnabled = Output.ofNullable(privateDnsEnabled);
             return this;
         }
 
-        public Builder routeTableIds(@Nullable Input<List<String>> routeTableIds) {
+        public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
 
         public Builder routeTableIds(@Nullable List<String> routeTableIds) {
-            this.routeTableIds = Input.ofNullable(routeTableIds);
+            this.routeTableIds = Output.ofNullable(routeTableIds);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcEndpointType(@Nullable Input<String> vpcEndpointType) {
+        public Builder vpcEndpointType(@Nullable Output<String> vpcEndpointType) {
             this.vpcEndpointType = vpcEndpointType;
             return this;
         }
 
         public Builder vpcEndpointType(@Nullable String vpcEndpointType) {
-            this.vpcEndpointType = Input.ofNullable(vpcEndpointType);
+            this.vpcEndpointType = Output.ofNullable(vpcEndpointType);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public VpcEndpointArgs build() {

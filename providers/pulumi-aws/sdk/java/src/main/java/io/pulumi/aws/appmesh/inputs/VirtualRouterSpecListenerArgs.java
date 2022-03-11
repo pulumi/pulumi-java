@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerPortMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="portMapping", required=true)
-      private final Input<VirtualRouterSpecListenerPortMappingArgs> portMapping;
+      private final Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
-    public Input<VirtualRouterSpecListenerPortMappingArgs> getPortMapping() {
+    public Output<VirtualRouterSpecListenerPortMappingArgs> getPortMapping() {
         return this.portMapping;
     }
 
-    public VirtualRouterSpecListenerArgs(Input<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
+    public VirtualRouterSpecListenerArgs(Output<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
         this.portMapping = Objects.requireNonNull(portMapping, "expected parameter 'portMapping' to be non-null");
     }
 
     private VirtualRouterSpecListenerArgs() {
-        this.portMapping = Input.empty();
+        this.portMapping = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<VirtualRouterSpecListenerPortMappingArgs> portMapping;
+        private Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
     	      this.portMapping = defaults.portMapping;
         }
 
-        public Builder portMapping(Input<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
+        public Builder portMapping(Output<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
         public Builder portMapping(VirtualRouterSpecListenerPortMappingArgs portMapping) {
-            this.portMapping = Input.of(Objects.requireNonNull(portMapping));
+            this.portMapping = Output.of(Objects.requireNonNull(portMapping));
             return this;
         }
         public VirtualRouterSpecListenerArgs build() {

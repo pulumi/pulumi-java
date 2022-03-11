@@ -9,7 +9,6 @@ import io.pulumi.aws.alb.inputs.LoadBalancerState;
 import io.pulumi.aws.alb.outputs.LoadBalancerAccessLogs;
 import io.pulumi.aws.alb.outputs.LoadBalancerSubnetMapping;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -419,18 +418,18 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancer(String name, @Nullable LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:alb/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:alb/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LoadBalancer(String name, Input<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LoadBalancer(String name, Output<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:alb/loadBalancer:LoadBalancer", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("aws:applicationloadbalancing/loadBalancer:LoadBalancer").build())
+                Output.of(Alias.builder().setType("aws:applicationloadbalancing/loadBalancer:LoadBalancer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -445,7 +444,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoadBalancer get(String name, Input<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LoadBalancer get(String name, Output<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoadBalancer(name, id, state, options);
     }
 }

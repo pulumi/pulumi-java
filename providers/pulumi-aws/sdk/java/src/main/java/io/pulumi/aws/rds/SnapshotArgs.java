@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier", required=true)
-      private final Input<String> dbInstanceIdentifier;
+      private final Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
+    public Output<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
@@ -31,9 +31,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotIdentifier", required=true)
-      private final Input<String> dbSnapshotIdentifier;
+      private final Output<String> dbSnapshotIdentifier;
 
-    public Input<String> getDbSnapshotIdentifier() {
+    public Output<String> getDbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier;
     }
 
@@ -42,25 +42,25 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SnapshotArgs(
-        Input<String> dbInstanceIdentifier,
-        Input<String> dbSnapshotIdentifier,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> dbInstanceIdentifier,
+        Output<String> dbSnapshotIdentifier,
+        @Nullable Output<Map<String,String>> tags) {
         this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier, "expected parameter 'dbInstanceIdentifier' to be non-null");
         this.dbSnapshotIdentifier = Objects.requireNonNull(dbSnapshotIdentifier, "expected parameter 'dbSnapshotIdentifier' to be non-null");
         this.tags = tags;
     }
 
     private SnapshotArgs() {
-        this.dbInstanceIdentifier = Input.empty();
-        this.dbSnapshotIdentifier = Input.empty();
-        this.tags = Input.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.dbSnapshotIdentifier = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dbInstanceIdentifier;
-        private Input<String> dbSnapshotIdentifier;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> dbInstanceIdentifier;
+        private Output<String> dbSnapshotIdentifier;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder dbInstanceIdentifier(Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
 
         public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.of(Objects.requireNonNull(dbInstanceIdentifier));
+            this.dbInstanceIdentifier = Output.of(Objects.requireNonNull(dbInstanceIdentifier));
             return this;
         }
 
-        public Builder dbSnapshotIdentifier(Input<String> dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(Output<String> dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = Objects.requireNonNull(dbSnapshotIdentifier);
             return this;
         }
 
         public Builder dbSnapshotIdentifier(String dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = Input.of(Objects.requireNonNull(dbSnapshotIdentifier));
+            this.dbSnapshotIdentifier = Output.of(Objects.requireNonNull(dbSnapshotIdentifier));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SnapshotArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3outposts;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-      private final Input<String> outpostId;
+      private final Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
+    public Output<String> getOutpostId() {
         return this.outpostId;
     }
 
@@ -29,9 +29,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-      private final Input<String> securityGroupId;
+      private final Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
+    public Output<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -40,25 +40,25 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
     public EndpointArgs(
-        Input<String> outpostId,
-        Input<String> securityGroupId,
-        Input<String> subnetId) {
+        Output<String> outpostId,
+        Output<String> securityGroupId,
+        Output<String> subnetId) {
         this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
         this.securityGroupId = Objects.requireNonNull(securityGroupId, "expected parameter 'securityGroupId' to be non-null");
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private EndpointArgs() {
-        this.outpostId = Input.empty();
-        this.securityGroupId = Input.empty();
-        this.subnetId = Input.empty();
+        this.outpostId = Output.empty();
+        this.securityGroupId = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> outpostId;
-        private Input<String> securityGroupId;
-        private Input<String> subnetId;
+        private Output<String> outpostId;
+        private Output<String> securityGroupId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder outpostId(Input<String> outpostId) {
+        public Builder outpostId(Output<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
         public Builder outpostId(String outpostId) {
-            this.outpostId = Input.of(Objects.requireNonNull(outpostId));
+            this.outpostId = Output.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder securityGroupId(Input<String> securityGroupId) {
+        public Builder securityGroupId(Output<String> securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
         public Builder securityGroupId(String securityGroupId) {
-            this.securityGroupId = Input.of(Objects.requireNonNull(securityGroupId));
+            this.securityGroupId = Output.of(Objects.requireNonNull(securityGroupId));
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public EndpointArgs build() {

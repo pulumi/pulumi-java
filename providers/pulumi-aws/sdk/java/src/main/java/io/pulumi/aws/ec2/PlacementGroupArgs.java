@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.enums.PlacementStrategy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionCount")
-      private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Output<Integer> partitionCount;
 
-    public Input<Integer> getPartitionCount() {
-        return this.partitionCount == null ? Input.empty() : this.partitionCount;
+    public Output<Integer> getPartitionCount() {
+        return this.partitionCount == null ? Output.empty() : this.partitionCount;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strategy", required=true)
-      private final Input<Either<String,PlacementStrategy>> strategy;
+      private final Output<Either<String,PlacementStrategy>> strategy;
 
-    public Input<Either<String,PlacementStrategy>> getStrategy() {
+    public Output<Either<String,PlacementStrategy>> getStrategy() {
         return this.strategy;
     }
 
@@ -58,17 +58,17 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PlacementGroupArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> partitionCount,
-        Input<Either<String,PlacementStrategy>> strategy,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> partitionCount,
+        Output<Either<String,PlacementStrategy>> strategy,
+        @Nullable Output<Map<String,String>> tags) {
         this.name = name;
         this.partitionCount = partitionCount;
         this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
@@ -76,10 +76,10 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlacementGroupArgs() {
-        this.name = Input.empty();
-        this.partitionCount = Input.empty();
-        this.strategy = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.partitionCount = Output.empty();
+        this.strategy = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> partitionCount;
-        private Input<Either<String,PlacementStrategy>> strategy;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> partitionCount;
+        private Output<Either<String,PlacementStrategy>> strategy;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder partitionCount(@Nullable Input<Integer> partitionCount) {
+        public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Input.ofNullable(partitionCount);
+            this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
 
-        public Builder strategy(Input<Either<String,PlacementStrategy>> strategy) {
+        public Builder strategy(Output<Either<String,PlacementStrategy>> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
         public Builder strategy(Either<String,PlacementStrategy> strategy) {
-            this.strategy = Input.of(Objects.requireNonNull(strategy));
+            this.strategy = Output.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PlacementGroupArgs build() {

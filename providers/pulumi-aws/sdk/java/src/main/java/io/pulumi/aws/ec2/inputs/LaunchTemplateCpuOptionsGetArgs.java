@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="coreCount")
-      private final @Nullable Input<Integer> coreCount;
+      private final @Nullable Output<Integer> coreCount;
 
-    public Input<Integer> getCoreCount() {
-        return this.coreCount == null ? Input.empty() : this.coreCount;
+    public Output<Integer> getCoreCount() {
+        return this.coreCount == null ? Output.empty() : this.coreCount;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="threadsPerCore")
-      private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Output<Integer> threadsPerCore;
 
-    public Input<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
+    public Output<Integer> getThreadsPerCore() {
+        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
     }
 
     public LaunchTemplateCpuOptionsGetArgs(
-        @Nullable Input<Integer> coreCount,
-        @Nullable Input<Integer> threadsPerCore) {
+        @Nullable Output<Integer> coreCount,
+        @Nullable Output<Integer> threadsPerCore) {
         this.coreCount = coreCount;
         this.threadsPerCore = threadsPerCore;
     }
 
     private LaunchTemplateCpuOptionsGetArgs() {
-        this.coreCount = Input.empty();
-        this.threadsPerCore = Input.empty();
+        this.coreCount = Output.empty();
+        this.threadsPerCore = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> coreCount;
-        private @Nullable Input<Integer> threadsPerCore;
+        private @Nullable Output<Integer> coreCount;
+        private @Nullable Output<Integer> threadsPerCore;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder coreCount(@Nullable Input<Integer> coreCount) {
+        public Builder coreCount(@Nullable Output<Integer> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Input.ofNullable(coreCount);
+            this.coreCount = Output.ofNullable(coreCount);
             return this;
         }
 
-        public Builder threadsPerCore(@Nullable Input<Integer> threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
 
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Input.ofNullable(threadsPerCore);
+            this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
         }
         public LaunchTemplateCpuOptionsGetArgs build() {

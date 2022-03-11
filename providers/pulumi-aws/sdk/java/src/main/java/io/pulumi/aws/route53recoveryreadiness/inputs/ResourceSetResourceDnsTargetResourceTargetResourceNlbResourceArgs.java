@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
-    public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(@Nullable Input<String> arn) {
+    public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs(@Nullable Output<String> arn) {
         this.arn = arn;
     }
 
     private ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs() {
-        this.arn = Input.empty();
+        this.arn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
+        private @Nullable Output<String> arn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     	      this.arn = defaults.arn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
         public ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceArgs build() {

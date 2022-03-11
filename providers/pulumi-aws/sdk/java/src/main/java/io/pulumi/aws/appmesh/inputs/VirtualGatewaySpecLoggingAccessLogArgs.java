@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogFileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualGatewaySpecLoggingAccessLogFileArgs> file;
+      private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file;
 
-    public Input<VirtualGatewaySpecLoggingAccessLogFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualGatewaySpecLoggingAccessLogFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
-    public VirtualGatewaySpecLoggingAccessLogArgs(@Nullable Input<VirtualGatewaySpecLoggingAccessLogFileArgs> file) {
+    public VirtualGatewaySpecLoggingAccessLogArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file) {
         this.file = file;
     }
 
     private VirtualGatewaySpecLoggingAccessLogArgs() {
-        this.file = Input.empty();
+        this.file = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecLoggingAccessLogFileArgs> file;
+        private @Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecLoggingAccessLogArgs extends io.pulumi.reso
     	      this.file = defaults.file;
         }
 
-        public Builder file(@Nullable Input<VirtualGatewaySpecLoggingAccessLogFileArgs> file) {
+        public Builder file(@Nullable Output<VirtualGatewaySpecLoggingAccessLogFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
         public VirtualGatewaySpecLoggingAccessLogArgs build() {

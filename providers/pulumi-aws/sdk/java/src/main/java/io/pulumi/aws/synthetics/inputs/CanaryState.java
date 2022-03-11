@@ -8,7 +8,7 @@ import io.pulumi.aws.synthetics.inputs.CanaryRunConfigGetArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryScheduleGetArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryTimelineGetArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryVpcConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactConfig")
-      private final @Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig;
+      private final @Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig;
 
-    public Input<CanaryArtifactConfigGetArgs> getArtifactConfig() {
-        return this.artifactConfig == null ? Input.empty() : this.artifactConfig;
+    public Output<CanaryArtifactConfigGetArgs> getArtifactConfig() {
+        return this.artifactConfig == null ? Output.empty() : this.artifactConfig;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactS3Location")
-      private final @Nullable Input<String> artifactS3Location;
+      private final @Nullable Output<String> artifactS3Location;
 
-    public Input<String> getArtifactS3Location() {
-        return this.artifactS3Location == null ? Input.empty() : this.artifactS3Location;
+    public Output<String> getArtifactS3Location() {
+        return this.artifactS3Location == null ? Output.empty() : this.artifactS3Location;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineArn")
-      private final @Nullable Input<String> engineArn;
+      private final @Nullable Output<String> engineArn;
 
-    public Input<String> getEngineArn() {
-        return this.engineArn == null ? Input.empty() : this.engineArn;
+    public Output<String> getEngineArn() {
+        return this.engineArn == null ? Output.empty() : this.engineArn;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureRetentionPeriod")
-      private final @Nullable Input<Integer> failureRetentionPeriod;
+      private final @Nullable Output<Integer> failureRetentionPeriod;
 
-    public Input<Integer> getFailureRetentionPeriod() {
-        return this.failureRetentionPeriod == null ? Input.empty() : this.failureRetentionPeriod;
+    public Output<Integer> getFailureRetentionPeriod() {
+        return this.failureRetentionPeriod == null ? Output.empty() : this.failureRetentionPeriod;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handler")
-      private final @Nullable Input<String> handler;
+      private final @Nullable Output<String> handler;
 
-    public Input<String> getHandler() {
-        return this.handler == null ? Input.empty() : this.handler;
+    public Output<String> getHandler() {
+        return this.handler == null ? Output.empty() : this.handler;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runConfig")
-      private final @Nullable Input<CanaryRunConfigGetArgs> runConfig;
+      private final @Nullable Output<CanaryRunConfigGetArgs> runConfig;
 
-    public Input<CanaryRunConfigGetArgs> getRunConfig() {
-        return this.runConfig == null ? Input.empty() : this.runConfig;
+    public Output<CanaryRunConfigGetArgs> getRunConfig() {
+        return this.runConfig == null ? Output.empty() : this.runConfig;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<String> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-      private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
-        return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
+    public Output<String> getS3Bucket() {
+        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-      private final @Nullable Input<String> s3Key;
+      private final @Nullable Output<String> s3Key;
 
-    public Input<String> getS3Key() {
-        return this.s3Key == null ? Input.empty() : this.s3Key;
+    public Output<String> getS3Key() {
+        return this.s3Key == null ? Output.empty() : this.s3Key;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Version")
-      private final @Nullable Input<String> s3Version;
+      private final @Nullable Output<String> s3Version;
 
-    public Input<String> getS3Version() {
-        return this.s3Version == null ? Input.empty() : this.s3Version;
+    public Output<String> getS3Version() {
+        return this.s3Version == null ? Output.empty() : this.s3Version;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<CanaryScheduleGetArgs> schedule;
+      private final @Nullable Output<CanaryScheduleGetArgs> schedule;
 
-    public Input<CanaryScheduleGetArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<CanaryScheduleGetArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceLocationArn")
-      private final @Nullable Input<String> sourceLocationArn;
+      private final @Nullable Output<String> sourceLocationArn;
 
-    public Input<String> getSourceLocationArn() {
-        return this.sourceLocationArn == null ? Input.empty() : this.sourceLocationArn;
+    public Output<String> getSourceLocationArn() {
+        return this.sourceLocationArn == null ? Output.empty() : this.sourceLocationArn;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startCanary")
-      private final @Nullable Input<Boolean> startCanary;
+      private final @Nullable Output<Boolean> startCanary;
 
-    public Input<Boolean> getStartCanary() {
-        return this.startCanary == null ? Input.empty() : this.startCanary;
+    public Output<Boolean> getStartCanary() {
+        return this.startCanary == null ? Output.empty() : this.startCanary;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successRetentionPeriod")
-      private final @Nullable Input<Integer> successRetentionPeriod;
+      private final @Nullable Output<Integer> successRetentionPeriod;
 
-    public Input<Integer> getSuccessRetentionPeriod() {
-        return this.successRetentionPeriod == null ? Input.empty() : this.successRetentionPeriod;
+    public Output<Integer> getSuccessRetentionPeriod() {
+        return this.successRetentionPeriod == null ? Output.empty() : this.successRetentionPeriod;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -248,10 +248,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timelines")
-      private final @Nullable Input<List<CanaryTimelineGetArgs>> timelines;
+      private final @Nullable Output<List<CanaryTimelineGetArgs>> timelines;
 
-    public Input<List<CanaryTimelineGetArgs>> getTimelines() {
-        return this.timelines == null ? Input.empty() : this.timelines;
+    public Output<List<CanaryTimelineGetArgs>> getTimelines() {
+        return this.timelines == null ? Output.empty() : this.timelines;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<CanaryVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Output<CanaryVpcConfigGetArgs> vpcConfig;
 
-    public Input<CanaryVpcConfigGetArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<CanaryVpcConfigGetArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     /**
@@ -270,36 +270,36 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zipFile")
-      private final @Nullable Input<String> zipFile;
+      private final @Nullable Output<String> zipFile;
 
-    public Input<String> getZipFile() {
-        return this.zipFile == null ? Input.empty() : this.zipFile;
+    public Output<String> getZipFile() {
+        return this.zipFile == null ? Output.empty() : this.zipFile;
     }
 
     public CanaryState(
-        @Nullable Input<String> arn,
-        @Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig,
-        @Nullable Input<String> artifactS3Location,
-        @Nullable Input<String> engineArn,
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<Integer> failureRetentionPeriod,
-        @Nullable Input<String> handler,
-        @Nullable Input<String> name,
-        @Nullable Input<CanaryRunConfigGetArgs> runConfig,
-        @Nullable Input<String> runtimeVersion,
-        @Nullable Input<String> s3Bucket,
-        @Nullable Input<String> s3Key,
-        @Nullable Input<String> s3Version,
-        @Nullable Input<CanaryScheduleGetArgs> schedule,
-        @Nullable Input<String> sourceLocationArn,
-        @Nullable Input<Boolean> startCanary,
-        @Nullable Input<String> status,
-        @Nullable Input<Integer> successRetentionPeriod,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<CanaryTimelineGetArgs>> timelines,
-        @Nullable Input<CanaryVpcConfigGetArgs> vpcConfig,
-        @Nullable Input<String> zipFile) {
+        @Nullable Output<String> arn,
+        @Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig,
+        @Nullable Output<String> artifactS3Location,
+        @Nullable Output<String> engineArn,
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<Integer> failureRetentionPeriod,
+        @Nullable Output<String> handler,
+        @Nullable Output<String> name,
+        @Nullable Output<CanaryRunConfigGetArgs> runConfig,
+        @Nullable Output<String> runtimeVersion,
+        @Nullable Output<String> s3Bucket,
+        @Nullable Output<String> s3Key,
+        @Nullable Output<String> s3Version,
+        @Nullable Output<CanaryScheduleGetArgs> schedule,
+        @Nullable Output<String> sourceLocationArn,
+        @Nullable Output<Boolean> startCanary,
+        @Nullable Output<String> status,
+        @Nullable Output<Integer> successRetentionPeriod,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<CanaryTimelineGetArgs>> timelines,
+        @Nullable Output<CanaryVpcConfigGetArgs> vpcConfig,
+        @Nullable Output<String> zipFile) {
         this.arn = arn;
         this.artifactConfig = artifactConfig;
         this.artifactS3Location = artifactS3Location;
@@ -326,29 +326,29 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CanaryState() {
-        this.arn = Input.empty();
-        this.artifactConfig = Input.empty();
-        this.artifactS3Location = Input.empty();
-        this.engineArn = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.failureRetentionPeriod = Input.empty();
-        this.handler = Input.empty();
-        this.name = Input.empty();
-        this.runConfig = Input.empty();
-        this.runtimeVersion = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Key = Input.empty();
-        this.s3Version = Input.empty();
-        this.schedule = Input.empty();
-        this.sourceLocationArn = Input.empty();
-        this.startCanary = Input.empty();
-        this.status = Input.empty();
-        this.successRetentionPeriod = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.timelines = Input.empty();
-        this.vpcConfig = Input.empty();
-        this.zipFile = Input.empty();
+        this.arn = Output.empty();
+        this.artifactConfig = Output.empty();
+        this.artifactS3Location = Output.empty();
+        this.engineArn = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.failureRetentionPeriod = Output.empty();
+        this.handler = Output.empty();
+        this.name = Output.empty();
+        this.runConfig = Output.empty();
+        this.runtimeVersion = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Key = Output.empty();
+        this.s3Version = Output.empty();
+        this.schedule = Output.empty();
+        this.sourceLocationArn = Output.empty();
+        this.startCanary = Output.empty();
+        this.status = Output.empty();
+        this.successRetentionPeriod = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.timelines = Output.empty();
+        this.vpcConfig = Output.empty();
+        this.zipFile = Output.empty();
     }
 
     public static Builder builder() {
@@ -360,29 +360,29 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig;
-        private @Nullable Input<String> artifactS3Location;
-        private @Nullable Input<String> engineArn;
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<Integer> failureRetentionPeriod;
-        private @Nullable Input<String> handler;
-        private @Nullable Input<String> name;
-        private @Nullable Input<CanaryRunConfigGetArgs> runConfig;
-        private @Nullable Input<String> runtimeVersion;
-        private @Nullable Input<String> s3Bucket;
-        private @Nullable Input<String> s3Key;
-        private @Nullable Input<String> s3Version;
-        private @Nullable Input<CanaryScheduleGetArgs> schedule;
-        private @Nullable Input<String> sourceLocationArn;
-        private @Nullable Input<Boolean> startCanary;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Integer> successRetentionPeriod;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<CanaryTimelineGetArgs>> timelines;
-        private @Nullable Input<CanaryVpcConfigGetArgs> vpcConfig;
-        private @Nullable Input<String> zipFile;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig;
+        private @Nullable Output<String> artifactS3Location;
+        private @Nullable Output<String> engineArn;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<Integer> failureRetentionPeriod;
+        private @Nullable Output<String> handler;
+        private @Nullable Output<String> name;
+        private @Nullable Output<CanaryRunConfigGetArgs> runConfig;
+        private @Nullable Output<String> runtimeVersion;
+        private @Nullable Output<String> s3Bucket;
+        private @Nullable Output<String> s3Key;
+        private @Nullable Output<String> s3Version;
+        private @Nullable Output<CanaryScheduleGetArgs> schedule;
+        private @Nullable Output<String> sourceLocationArn;
+        private @Nullable Output<Boolean> startCanary;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Integer> successRetentionPeriod;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<CanaryTimelineGetArgs>> timelines;
+        private @Nullable Output<CanaryVpcConfigGetArgs> vpcConfig;
+        private @Nullable Output<String> zipFile;
 
         public Builder() {
     	      // Empty
@@ -415,233 +415,233 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     	      this.zipFile = defaults.zipFile;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder artifactConfig(@Nullable Input<CanaryArtifactConfigGetArgs> artifactConfig) {
+        public Builder artifactConfig(@Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig) {
             this.artifactConfig = artifactConfig;
             return this;
         }
 
         public Builder artifactConfig(@Nullable CanaryArtifactConfigGetArgs artifactConfig) {
-            this.artifactConfig = Input.ofNullable(artifactConfig);
+            this.artifactConfig = Output.ofNullable(artifactConfig);
             return this;
         }
 
-        public Builder artifactS3Location(@Nullable Input<String> artifactS3Location) {
+        public Builder artifactS3Location(@Nullable Output<String> artifactS3Location) {
             this.artifactS3Location = artifactS3Location;
             return this;
         }
 
         public Builder artifactS3Location(@Nullable String artifactS3Location) {
-            this.artifactS3Location = Input.ofNullable(artifactS3Location);
+            this.artifactS3Location = Output.ofNullable(artifactS3Location);
             return this;
         }
 
-        public Builder engineArn(@Nullable Input<String> engineArn) {
+        public Builder engineArn(@Nullable Output<String> engineArn) {
             this.engineArn = engineArn;
             return this;
         }
 
         public Builder engineArn(@Nullable String engineArn) {
-            this.engineArn = Input.ofNullable(engineArn);
+            this.engineArn = Output.ofNullable(engineArn);
             return this;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder failureRetentionPeriod(@Nullable Input<Integer> failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Output<Integer> failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
 
         public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
-            this.failureRetentionPeriod = Input.ofNullable(failureRetentionPeriod);
+            this.failureRetentionPeriod = Output.ofNullable(failureRetentionPeriod);
             return this;
         }
 
-        public Builder handler(@Nullable Input<String> handler) {
+        public Builder handler(@Nullable Output<String> handler) {
             this.handler = handler;
             return this;
         }
 
         public Builder handler(@Nullable String handler) {
-            this.handler = Input.ofNullable(handler);
+            this.handler = Output.ofNullable(handler);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder runConfig(@Nullable Input<CanaryRunConfigGetArgs> runConfig) {
+        public Builder runConfig(@Nullable Output<CanaryRunConfigGetArgs> runConfig) {
             this.runConfig = runConfig;
             return this;
         }
 
         public Builder runConfig(@Nullable CanaryRunConfigGetArgs runConfig) {
-            this.runConfig = Input.ofNullable(runConfig);
+            this.runConfig = Output.ofNullable(runConfig);
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Input.ofNullable(s3Bucket);
+            this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder s3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
         public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Input.ofNullable(s3Key);
+            this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
 
-        public Builder s3Version(@Nullable Input<String> s3Version) {
+        public Builder s3Version(@Nullable Output<String> s3Version) {
             this.s3Version = s3Version;
             return this;
         }
 
         public Builder s3Version(@Nullable String s3Version) {
-            this.s3Version = Input.ofNullable(s3Version);
+            this.s3Version = Output.ofNullable(s3Version);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<CanaryScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Output<CanaryScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable CanaryScheduleGetArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder sourceLocationArn(@Nullable Input<String> sourceLocationArn) {
+        public Builder sourceLocationArn(@Nullable Output<String> sourceLocationArn) {
             this.sourceLocationArn = sourceLocationArn;
             return this;
         }
 
         public Builder sourceLocationArn(@Nullable String sourceLocationArn) {
-            this.sourceLocationArn = Input.ofNullable(sourceLocationArn);
+            this.sourceLocationArn = Output.ofNullable(sourceLocationArn);
             return this;
         }
 
-        public Builder startCanary(@Nullable Input<Boolean> startCanary) {
+        public Builder startCanary(@Nullable Output<Boolean> startCanary) {
             this.startCanary = startCanary;
             return this;
         }
 
         public Builder startCanary(@Nullable Boolean startCanary) {
-            this.startCanary = Input.ofNullable(startCanary);
+            this.startCanary = Output.ofNullable(startCanary);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder successRetentionPeriod(@Nullable Input<Integer> successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Output<Integer> successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
 
         public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
-            this.successRetentionPeriod = Input.ofNullable(successRetentionPeriod);
+            this.successRetentionPeriod = Output.ofNullable(successRetentionPeriod);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder timelines(@Nullable Input<List<CanaryTimelineGetArgs>> timelines) {
+        public Builder timelines(@Nullable Output<List<CanaryTimelineGetArgs>> timelines) {
             this.timelines = timelines;
             return this;
         }
 
         public Builder timelines(@Nullable List<CanaryTimelineGetArgs> timelines) {
-            this.timelines = Input.ofNullable(timelines);
+            this.timelines = Output.ofNullable(timelines);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<CanaryVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<CanaryVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable CanaryVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
 
-        public Builder zipFile(@Nullable Input<String> zipFile) {
+        public Builder zipFile(@Nullable Output<String> zipFile) {
             this.zipFile = zipFile;
             return this;
         }
 
         public Builder zipFile(@Nullable String zipFile) {
-            this.zipFile = Input.ofNullable(zipFile);
+            this.zipFile = Output.ofNullable(zipFile);
             return this;
         }
         public CanaryState build() {

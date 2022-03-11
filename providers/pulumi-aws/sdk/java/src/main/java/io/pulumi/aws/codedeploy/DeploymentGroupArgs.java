@@ -13,7 +13,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupEcsServiceArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilterArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alarmConfiguration")
-      private final @Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
+      private final @Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
 
-    public Input<DeploymentGroupAlarmConfigurationArgs> getAlarmConfiguration() {
-        return this.alarmConfiguration == null ? Input.empty() : this.alarmConfiguration;
+    public Output<DeploymentGroupAlarmConfigurationArgs> getAlarmConfiguration() {
+        return this.alarmConfiguration == null ? Output.empty() : this.alarmConfiguration;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appName", required=true)
-      private final Input<String> appName;
+      private final Output<String> appName;
 
-    public Input<String> getAppName() {
+    public Output<String> getAppName() {
         return this.appName;
     }
 
@@ -53,10 +53,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoRollbackConfiguration")
-      private final @Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
+      private final @Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
-    public Input<DeploymentGroupAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
-        return this.autoRollbackConfiguration == null ? Input.empty() : this.autoRollbackConfiguration;
+    public Output<DeploymentGroupAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
+        return this.autoRollbackConfiguration == null ? Output.empty() : this.autoRollbackConfiguration;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoscalingGroups")
-      private final @Nullable Input<List<String>> autoscalingGroups;
+      private final @Nullable Output<List<String>> autoscalingGroups;
 
-    public Input<List<String>> getAutoscalingGroups() {
-        return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
+    public Output<List<String>> getAutoscalingGroups() {
+        return this.autoscalingGroups == null ? Output.empty() : this.autoscalingGroups;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="blueGreenDeploymentConfig")
-      private final @Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
+      private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
 
-    public Input<DeploymentGroupBlueGreenDeploymentConfigArgs> getBlueGreenDeploymentConfig() {
-        return this.blueGreenDeploymentConfig == null ? Input.empty() : this.blueGreenDeploymentConfig;
+    public Output<DeploymentGroupBlueGreenDeploymentConfigArgs> getBlueGreenDeploymentConfig() {
+        return this.blueGreenDeploymentConfig == null ? Output.empty() : this.blueGreenDeploymentConfig;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentConfigName")
-      private final @Nullable Input<String> deploymentConfigName;
+      private final @Nullable Output<String> deploymentConfigName;
 
-    public Input<String> getDeploymentConfigName() {
-        return this.deploymentConfigName == null ? Input.empty() : this.deploymentConfigName;
+    public Output<String> getDeploymentConfigName() {
+        return this.deploymentConfigName == null ? Output.empty() : this.deploymentConfigName;
     }
 
     /**
@@ -97,9 +97,9 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentGroupName", required=true)
-      private final Input<String> deploymentGroupName;
+      private final Output<String> deploymentGroupName;
 
-    public Input<String> getDeploymentGroupName() {
+    public Output<String> getDeploymentGroupName() {
         return this.deploymentGroupName;
     }
 
@@ -108,10 +108,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentStyle")
-      private final @Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
+      private final @Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
 
-    public Input<DeploymentGroupDeploymentStyleArgs> getDeploymentStyle() {
-        return this.deploymentStyle == null ? Input.empty() : this.deploymentStyle;
+    public Output<DeploymentGroupDeploymentStyleArgs> getDeploymentStyle() {
+        return this.deploymentStyle == null ? Output.empty() : this.deploymentStyle;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ec2TagFilters")
-      private final @Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
+      private final @Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
 
-    public Input<List<DeploymentGroupEc2TagFilterArgs>> getEc2TagFilters() {
-        return this.ec2TagFilters == null ? Input.empty() : this.ec2TagFilters;
+    public Output<List<DeploymentGroupEc2TagFilterArgs>> getEc2TagFilters() {
+        return this.ec2TagFilters == null ? Output.empty() : this.ec2TagFilters;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ec2TagSets")
-      private final @Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
+      private final @Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
 
-    public Input<List<DeploymentGroupEc2TagSetArgs>> getEc2TagSets() {
-        return this.ec2TagSets == null ? Input.empty() : this.ec2TagSets;
+    public Output<List<DeploymentGroupEc2TagSetArgs>> getEc2TagSets() {
+        return this.ec2TagSets == null ? Output.empty() : this.ec2TagSets;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ecsService")
-      private final @Nullable Input<DeploymentGroupEcsServiceArgs> ecsService;
+      private final @Nullable Output<DeploymentGroupEcsServiceArgs> ecsService;
 
-    public Input<DeploymentGroupEcsServiceArgs> getEcsService() {
-        return this.ecsService == null ? Input.empty() : this.ecsService;
+    public Output<DeploymentGroupEcsServiceArgs> getEcsService() {
+        return this.ecsService == null ? Output.empty() : this.ecsService;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerInfo")
-      private final @Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
+      private final @Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
 
-    public Input<DeploymentGroupLoadBalancerInfoArgs> getLoadBalancerInfo() {
-        return this.loadBalancerInfo == null ? Input.empty() : this.loadBalancerInfo;
+    public Output<DeploymentGroupLoadBalancerInfoArgs> getLoadBalancerInfo() {
+        return this.loadBalancerInfo == null ? Output.empty() : this.loadBalancerInfo;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onPremisesInstanceTagFilters")
-      private final @Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
+      private final @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
 
-    public Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> getOnPremisesInstanceTagFilters() {
-        return this.onPremisesInstanceTagFilters == null ? Input.empty() : this.onPremisesInstanceTagFilters;
+    public Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> getOnPremisesInstanceTagFilters() {
+        return this.onPremisesInstanceTagFilters == null ? Output.empty() : this.onPremisesInstanceTagFilters;
     }
 
     /**
@@ -174,9 +174,9 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceRoleArn", required=true)
-      private final Input<String> serviceRoleArn;
+      private final Output<String> serviceRoleArn;
 
-    public Input<String> getServiceRoleArn() {
+    public Output<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
 
@@ -185,10 +185,10 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -196,29 +196,29 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="triggerConfigurations")
-      private final @Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
+      private final @Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
 
-    public Input<List<DeploymentGroupTriggerConfigurationArgs>> getTriggerConfigurations() {
-        return this.triggerConfigurations == null ? Input.empty() : this.triggerConfigurations;
+    public Output<List<DeploymentGroupTriggerConfigurationArgs>> getTriggerConfigurations() {
+        return this.triggerConfigurations == null ? Output.empty() : this.triggerConfigurations;
     }
 
     public DeploymentGroupArgs(
-        @Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration,
-        Input<String> appName,
-        @Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration,
-        @Nullable Input<List<String>> autoscalingGroups,
-        @Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig,
-        @Nullable Input<String> deploymentConfigName,
-        Input<String> deploymentGroupName,
-        @Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle,
-        @Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters,
-        @Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets,
-        @Nullable Input<DeploymentGroupEcsServiceArgs> ecsService,
-        @Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo,
-        @Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters,
-        Input<String> serviceRoleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations) {
+        @Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration,
+        Output<String> appName,
+        @Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration,
+        @Nullable Output<List<String>> autoscalingGroups,
+        @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig,
+        @Nullable Output<String> deploymentConfigName,
+        Output<String> deploymentGroupName,
+        @Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle,
+        @Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters,
+        @Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets,
+        @Nullable Output<DeploymentGroupEcsServiceArgs> ecsService,
+        @Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo,
+        @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters,
+        Output<String> serviceRoleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations) {
         this.alarmConfiguration = alarmConfiguration;
         this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
         this.autoRollbackConfiguration = autoRollbackConfiguration;
@@ -238,22 +238,22 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DeploymentGroupArgs() {
-        this.alarmConfiguration = Input.empty();
-        this.appName = Input.empty();
-        this.autoRollbackConfiguration = Input.empty();
-        this.autoscalingGroups = Input.empty();
-        this.blueGreenDeploymentConfig = Input.empty();
-        this.deploymentConfigName = Input.empty();
-        this.deploymentGroupName = Input.empty();
-        this.deploymentStyle = Input.empty();
-        this.ec2TagFilters = Input.empty();
-        this.ec2TagSets = Input.empty();
-        this.ecsService = Input.empty();
-        this.loadBalancerInfo = Input.empty();
-        this.onPremisesInstanceTagFilters = Input.empty();
-        this.serviceRoleArn = Input.empty();
-        this.tags = Input.empty();
-        this.triggerConfigurations = Input.empty();
+        this.alarmConfiguration = Output.empty();
+        this.appName = Output.empty();
+        this.autoRollbackConfiguration = Output.empty();
+        this.autoscalingGroups = Output.empty();
+        this.blueGreenDeploymentConfig = Output.empty();
+        this.deploymentConfigName = Output.empty();
+        this.deploymentGroupName = Output.empty();
+        this.deploymentStyle = Output.empty();
+        this.ec2TagFilters = Output.empty();
+        this.ec2TagSets = Output.empty();
+        this.ecsService = Output.empty();
+        this.loadBalancerInfo = Output.empty();
+        this.onPremisesInstanceTagFilters = Output.empty();
+        this.serviceRoleArn = Output.empty();
+        this.tags = Output.empty();
+        this.triggerConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -265,22 +265,22 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
-        private Input<String> appName;
-        private @Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
-        private @Nullable Input<List<String>> autoscalingGroups;
-        private @Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
-        private @Nullable Input<String> deploymentConfigName;
-        private Input<String> deploymentGroupName;
-        private @Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
-        private @Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
-        private @Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
-        private @Nullable Input<DeploymentGroupEcsServiceArgs> ecsService;
-        private @Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
-        private @Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
-        private Input<String> serviceRoleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
+        private @Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
+        private Output<String> appName;
+        private @Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
+        private @Nullable Output<List<String>> autoscalingGroups;
+        private @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
+        private @Nullable Output<String> deploymentConfigName;
+        private Output<String> deploymentGroupName;
+        private @Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
+        private @Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
+        private @Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
+        private @Nullable Output<DeploymentGroupEcsServiceArgs> ecsService;
+        private @Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
+        private @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
+        private Output<String> serviceRoleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
 
         public Builder() {
     	      // Empty
@@ -306,163 +306,163 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.triggerConfigurations = defaults.triggerConfigurations;
         }
 
-        public Builder alarmConfiguration(@Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration) {
+        public Builder alarmConfiguration(@Nullable Output<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration) {
             this.alarmConfiguration = alarmConfiguration;
             return this;
         }
 
         public Builder alarmConfiguration(@Nullable DeploymentGroupAlarmConfigurationArgs alarmConfiguration) {
-            this.alarmConfiguration = Input.ofNullable(alarmConfiguration);
+            this.alarmConfiguration = Output.ofNullable(alarmConfiguration);
             return this;
         }
 
-        public Builder appName(Input<String> appName) {
+        public Builder appName(Output<String> appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
         public Builder appName(String appName) {
-            this.appName = Input.of(Objects.requireNonNull(appName));
+            this.appName = Output.of(Objects.requireNonNull(appName));
             return this;
         }
 
-        public Builder autoRollbackConfiguration(@Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable Output<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration) {
             this.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
 
         public Builder autoRollbackConfiguration(@Nullable DeploymentGroupAutoRollbackConfigurationArgs autoRollbackConfiguration) {
-            this.autoRollbackConfiguration = Input.ofNullable(autoRollbackConfiguration);
+            this.autoRollbackConfiguration = Output.ofNullable(autoRollbackConfiguration);
             return this;
         }
 
-        public Builder autoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable Output<List<String>> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
         public Builder autoscalingGroups(@Nullable List<String> autoscalingGroups) {
-            this.autoscalingGroups = Input.ofNullable(autoscalingGroups);
+            this.autoscalingGroups = Output.ofNullable(autoscalingGroups);
             return this;
         }
 
-        public Builder blueGreenDeploymentConfig(@Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig) {
+        public Builder blueGreenDeploymentConfig(@Nullable Output<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig) {
             this.blueGreenDeploymentConfig = blueGreenDeploymentConfig;
             return this;
         }
 
         public Builder blueGreenDeploymentConfig(@Nullable DeploymentGroupBlueGreenDeploymentConfigArgs blueGreenDeploymentConfig) {
-            this.blueGreenDeploymentConfig = Input.ofNullable(blueGreenDeploymentConfig);
+            this.blueGreenDeploymentConfig = Output.ofNullable(blueGreenDeploymentConfig);
             return this;
         }
 
-        public Builder deploymentConfigName(@Nullable Input<String> deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
             this.deploymentConfigName = deploymentConfigName;
             return this;
         }
 
         public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
-            this.deploymentConfigName = Input.ofNullable(deploymentConfigName);
+            this.deploymentConfigName = Output.ofNullable(deploymentConfigName);
             return this;
         }
 
-        public Builder deploymentGroupName(Input<String> deploymentGroupName) {
+        public Builder deploymentGroupName(Output<String> deploymentGroupName) {
             this.deploymentGroupName = Objects.requireNonNull(deploymentGroupName);
             return this;
         }
 
         public Builder deploymentGroupName(String deploymentGroupName) {
-            this.deploymentGroupName = Input.of(Objects.requireNonNull(deploymentGroupName));
+            this.deploymentGroupName = Output.of(Objects.requireNonNull(deploymentGroupName));
             return this;
         }
 
-        public Builder deploymentStyle(@Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle) {
+        public Builder deploymentStyle(@Nullable Output<DeploymentGroupDeploymentStyleArgs> deploymentStyle) {
             this.deploymentStyle = deploymentStyle;
             return this;
         }
 
         public Builder deploymentStyle(@Nullable DeploymentGroupDeploymentStyleArgs deploymentStyle) {
-            this.deploymentStyle = Input.ofNullable(deploymentStyle);
+            this.deploymentStyle = Output.ofNullable(deploymentStyle);
             return this;
         }
 
-        public Builder ec2TagFilters(@Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters) {
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }
 
         public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagFilterArgs> ec2TagFilters) {
-            this.ec2TagFilters = Input.ofNullable(ec2TagFilters);
+            this.ec2TagFilters = Output.ofNullable(ec2TagFilters);
             return this;
         }
 
-        public Builder ec2TagSets(@Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets) {
+        public Builder ec2TagSets(@Nullable Output<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets) {
             this.ec2TagSets = ec2TagSets;
             return this;
         }
 
         public Builder ec2TagSets(@Nullable List<DeploymentGroupEc2TagSetArgs> ec2TagSets) {
-            this.ec2TagSets = Input.ofNullable(ec2TagSets);
+            this.ec2TagSets = Output.ofNullable(ec2TagSets);
             return this;
         }
 
-        public Builder ecsService(@Nullable Input<DeploymentGroupEcsServiceArgs> ecsService) {
+        public Builder ecsService(@Nullable Output<DeploymentGroupEcsServiceArgs> ecsService) {
             this.ecsService = ecsService;
             return this;
         }
 
         public Builder ecsService(@Nullable DeploymentGroupEcsServiceArgs ecsService) {
-            this.ecsService = Input.ofNullable(ecsService);
+            this.ecsService = Output.ofNullable(ecsService);
             return this;
         }
 
-        public Builder loadBalancerInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo) {
+        public Builder loadBalancerInfo(@Nullable Output<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo) {
             this.loadBalancerInfo = loadBalancerInfo;
             return this;
         }
 
         public Builder loadBalancerInfo(@Nullable DeploymentGroupLoadBalancerInfoArgs loadBalancerInfo) {
-            this.loadBalancerInfo = Input.ofNullable(loadBalancerInfo);
+            this.loadBalancerInfo = Output.ofNullable(loadBalancerInfo);
             return this;
         }
 
-        public Builder onPremisesInstanceTagFilters(@Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters) {
+        public Builder onPremisesInstanceTagFilters(@Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters) {
             this.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
             return this;
         }
 
         public Builder onPremisesInstanceTagFilters(@Nullable List<DeploymentGroupOnPremisesInstanceTagFilterArgs> onPremisesInstanceTagFilters) {
-            this.onPremisesInstanceTagFilters = Input.ofNullable(onPremisesInstanceTagFilters);
+            this.onPremisesInstanceTagFilters = Output.ofNullable(onPremisesInstanceTagFilters);
             return this;
         }
 
-        public Builder serviceRoleArn(Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(Output<String> serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
         public Builder serviceRoleArn(String serviceRoleArn) {
-            this.serviceRoleArn = Input.of(Objects.requireNonNull(serviceRoleArn));
+            this.serviceRoleArn = Output.of(Objects.requireNonNull(serviceRoleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder triggerConfigurations(@Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations) {
+        public Builder triggerConfigurations(@Nullable Output<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations) {
             this.triggerConfigurations = triggerConfigurations;
             return this;
         }
 
         public Builder triggerConfigurations(@Nullable List<DeploymentGroupTriggerConfigurationArgs> triggerConfigurations) {
-            this.triggerConfigurations = Input.ofNullable(triggerConfigurations);
+            this.triggerConfigurations = Output.ofNullable(triggerConfigurations);
             return this;
         }
         public DeploymentGroupArgs build() {

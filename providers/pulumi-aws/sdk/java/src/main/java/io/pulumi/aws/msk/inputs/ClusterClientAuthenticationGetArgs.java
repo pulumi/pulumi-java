@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sasl")
-      private final @Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl;
+      private final @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl;
 
-    public Input<ClusterClientAuthenticationSaslGetArgs> getSasl() {
-        return this.sasl == null ? Input.empty() : this.sasl;
+    public Output<ClusterClientAuthenticationSaslGetArgs> getSasl() {
+        return this.sasl == null ? Output.empty() : this.sasl;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls;
+      private final @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls;
 
-    public Input<ClusterClientAuthenticationTlsGetArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<ClusterClientAuthenticationTlsGetArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
     public ClusterClientAuthenticationGetArgs(
-        @Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl,
-        @Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls) {
+        @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl,
+        @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls) {
         this.sasl = sasl;
         this.tls = tls;
     }
 
     private ClusterClientAuthenticationGetArgs() {
-        this.sasl = Input.empty();
-        this.tls = Input.empty();
+        this.sasl = Output.empty();
+        this.tls = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl;
-        private @Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls;
+        private @Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl;
+        private @Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
     	      this.tls = defaults.tls;
         }
 
-        public Builder sasl(@Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl) {
+        public Builder sasl(@Nullable Output<ClusterClientAuthenticationSaslGetArgs> sasl) {
             this.sasl = sasl;
             return this;
         }
 
         public Builder sasl(@Nullable ClusterClientAuthenticationSaslGetArgs sasl) {
-            this.sasl = Input.ofNullable(sasl);
+            this.sasl = Output.ofNullable(sasl);
             return this;
         }
 
-        public Builder tls(@Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls) {
+        public Builder tls(@Nullable Output<ClusterClientAuthenticationTlsGetArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable ClusterClientAuthenticationTlsGetArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
         public ClusterClientAuthenticationGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeFilters")
-      private final @Nullable Input<List<MetricStreamExcludeFilterArgs>> excludeFilters;
+      private final @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters;
 
-    public Input<List<MetricStreamExcludeFilterArgs>> getExcludeFilters() {
-        return this.excludeFilters == null ? Input.empty() : this.excludeFilters;
+    public Output<List<MetricStreamExcludeFilterArgs>> getExcludeFilters() {
+        return this.excludeFilters == null ? Output.empty() : this.excludeFilters;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseArn", required=true)
-      private final Input<String> firehoseArn;
+      private final Output<String> firehoseArn;
 
-    public Input<String> getFirehoseArn() {
+    public Output<String> getFirehoseArn() {
         return this.firehoseArn;
     }
 
@@ -45,17 +45,17 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeFilters")
-      private final @Nullable Input<List<MetricStreamIncludeFilterArgs>> includeFilters;
+      private final @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters;
 
-    public Input<List<MetricStreamIncludeFilterArgs>> getIncludeFilters() {
-        return this.includeFilters == null ? Input.empty() : this.includeFilters;
+    public Output<List<MetricStreamIncludeFilterArgs>> getIncludeFilters() {
+        return this.includeFilters == null ? Output.empty() : this.includeFilters;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -74,9 +74,9 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat", required=true)
-      private final Input<String> outputFormat;
+      private final Output<String> outputFormat;
 
-    public Input<String> getOutputFormat() {
+    public Output<String> getOutputFormat() {
         return this.outputFormat;
     }
 
@@ -85,9 +85,9 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -96,21 +96,21 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MetricStreamArgs(
-        @Nullable Input<List<MetricStreamExcludeFilterArgs>> excludeFilters,
-        Input<String> firehoseArn,
-        @Nullable Input<List<MetricStreamIncludeFilterArgs>> includeFilters,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        Input<String> outputFormat,
-        Input<String> roleArn,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters,
+        Output<String> firehoseArn,
+        @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        Output<String> outputFormat,
+        Output<String> roleArn,
+        @Nullable Output<Map<String,String>> tags) {
         this.excludeFilters = excludeFilters;
         this.firehoseArn = Objects.requireNonNull(firehoseArn, "expected parameter 'firehoseArn' to be non-null");
         this.includeFilters = includeFilters;
@@ -122,14 +122,14 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricStreamArgs() {
-        this.excludeFilters = Input.empty();
-        this.firehoseArn = Input.empty();
-        this.includeFilters = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.outputFormat = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.excludeFilters = Output.empty();
+        this.firehoseArn = Output.empty();
+        this.includeFilters = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.outputFormat = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MetricStreamExcludeFilterArgs>> excludeFilters;
-        private Input<String> firehoseArn;
-        private @Nullable Input<List<MetricStreamIncludeFilterArgs>> includeFilters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private Input<String> outputFormat;
-        private Input<String> roleArn;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters;
+        private Output<String> firehoseArn;
+        private @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private Output<String> outputFormat;
+        private Output<String> roleArn;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder excludeFilters(@Nullable Input<List<MetricStreamExcludeFilterArgs>> excludeFilters) {
+        public Builder excludeFilters(@Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
         public Builder excludeFilters(@Nullable List<MetricStreamExcludeFilterArgs> excludeFilters) {
-            this.excludeFilters = Input.ofNullable(excludeFilters);
+            this.excludeFilters = Output.ofNullable(excludeFilters);
             return this;
         }
 
-        public Builder firehoseArn(Input<String> firehoseArn) {
+        public Builder firehoseArn(Output<String> firehoseArn) {
             this.firehoseArn = Objects.requireNonNull(firehoseArn);
             return this;
         }
 
         public Builder firehoseArn(String firehoseArn) {
-            this.firehoseArn = Input.of(Objects.requireNonNull(firehoseArn));
+            this.firehoseArn = Output.of(Objects.requireNonNull(firehoseArn));
             return this;
         }
 
-        public Builder includeFilters(@Nullable Input<List<MetricStreamIncludeFilterArgs>> includeFilters) {
+        public Builder includeFilters(@Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
         public Builder includeFilters(@Nullable List<MetricStreamIncludeFilterArgs> includeFilters) {
-            this.includeFilters = Input.ofNullable(includeFilters);
+            this.includeFilters = Output.ofNullable(includeFilters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder outputFormat(Input<String> outputFormat) {
+        public Builder outputFormat(Output<String> outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
 
         public Builder outputFormat(String outputFormat) {
-            this.outputFormat = Input.of(Objects.requireNonNull(outputFormat));
+            this.outputFormat = Output.of(Objects.requireNonNull(outputFormat));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MetricStreamArgs build() {

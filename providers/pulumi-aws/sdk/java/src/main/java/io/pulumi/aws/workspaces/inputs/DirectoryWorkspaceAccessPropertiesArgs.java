@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeAndroid")
-      private final @Nullable Input<String> deviceTypeAndroid;
+      private final @Nullable Output<String> deviceTypeAndroid;
 
-    public Input<String> getDeviceTypeAndroid() {
-        return this.deviceTypeAndroid == null ? Input.empty() : this.deviceTypeAndroid;
+    public Output<String> getDeviceTypeAndroid() {
+        return this.deviceTypeAndroid == null ? Output.empty() : this.deviceTypeAndroid;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeChromeos")
-      private final @Nullable Input<String> deviceTypeChromeos;
+      private final @Nullable Output<String> deviceTypeChromeos;
 
-    public Input<String> getDeviceTypeChromeos() {
-        return this.deviceTypeChromeos == null ? Input.empty() : this.deviceTypeChromeos;
+    public Output<String> getDeviceTypeChromeos() {
+        return this.deviceTypeChromeos == null ? Output.empty() : this.deviceTypeChromeos;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeIos")
-      private final @Nullable Input<String> deviceTypeIos;
+      private final @Nullable Output<String> deviceTypeIos;
 
-    public Input<String> getDeviceTypeIos() {
-        return this.deviceTypeIos == null ? Input.empty() : this.deviceTypeIos;
+    public Output<String> getDeviceTypeIos() {
+        return this.deviceTypeIos == null ? Output.empty() : this.deviceTypeIos;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeLinux")
-      private final @Nullable Input<String> deviceTypeLinux;
+      private final @Nullable Output<String> deviceTypeLinux;
 
-    public Input<String> getDeviceTypeLinux() {
-        return this.deviceTypeLinux == null ? Input.empty() : this.deviceTypeLinux;
+    public Output<String> getDeviceTypeLinux() {
+        return this.deviceTypeLinux == null ? Output.empty() : this.deviceTypeLinux;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeOsx")
-      private final @Nullable Input<String> deviceTypeOsx;
+      private final @Nullable Output<String> deviceTypeOsx;
 
-    public Input<String> getDeviceTypeOsx() {
-        return this.deviceTypeOsx == null ? Input.empty() : this.deviceTypeOsx;
+    public Output<String> getDeviceTypeOsx() {
+        return this.deviceTypeOsx == null ? Output.empty() : this.deviceTypeOsx;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeWeb")
-      private final @Nullable Input<String> deviceTypeWeb;
+      private final @Nullable Output<String> deviceTypeWeb;
 
-    public Input<String> getDeviceTypeWeb() {
-        return this.deviceTypeWeb == null ? Input.empty() : this.deviceTypeWeb;
+    public Output<String> getDeviceTypeWeb() {
+        return this.deviceTypeWeb == null ? Output.empty() : this.deviceTypeWeb;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeWindows")
-      private final @Nullable Input<String> deviceTypeWindows;
+      private final @Nullable Output<String> deviceTypeWindows;
 
-    public Input<String> getDeviceTypeWindows() {
-        return this.deviceTypeWindows == null ? Input.empty() : this.deviceTypeWindows;
+    public Output<String> getDeviceTypeWindows() {
+        return this.deviceTypeWindows == null ? Output.empty() : this.deviceTypeWindows;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="deviceTypeZeroclient")
-      private final @Nullable Input<String> deviceTypeZeroclient;
+      private final @Nullable Output<String> deviceTypeZeroclient;
 
-    public Input<String> getDeviceTypeZeroclient() {
-        return this.deviceTypeZeroclient == null ? Input.empty() : this.deviceTypeZeroclient;
+    public Output<String> getDeviceTypeZeroclient() {
+        return this.deviceTypeZeroclient == null ? Output.empty() : this.deviceTypeZeroclient;
     }
 
     public DirectoryWorkspaceAccessPropertiesArgs(
-        @Nullable Input<String> deviceTypeAndroid,
-        @Nullable Input<String> deviceTypeChromeos,
-        @Nullable Input<String> deviceTypeIos,
-        @Nullable Input<String> deviceTypeLinux,
-        @Nullable Input<String> deviceTypeOsx,
-        @Nullable Input<String> deviceTypeWeb,
-        @Nullable Input<String> deviceTypeWindows,
-        @Nullable Input<String> deviceTypeZeroclient) {
+        @Nullable Output<String> deviceTypeAndroid,
+        @Nullable Output<String> deviceTypeChromeos,
+        @Nullable Output<String> deviceTypeIos,
+        @Nullable Output<String> deviceTypeLinux,
+        @Nullable Output<String> deviceTypeOsx,
+        @Nullable Output<String> deviceTypeWeb,
+        @Nullable Output<String> deviceTypeWindows,
+        @Nullable Output<String> deviceTypeZeroclient) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         this.deviceTypeChromeos = deviceTypeChromeos;
         this.deviceTypeIos = deviceTypeIos;
@@ -122,14 +122,14 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
     }
 
     private DirectoryWorkspaceAccessPropertiesArgs() {
-        this.deviceTypeAndroid = Input.empty();
-        this.deviceTypeChromeos = Input.empty();
-        this.deviceTypeIos = Input.empty();
-        this.deviceTypeLinux = Input.empty();
-        this.deviceTypeOsx = Input.empty();
-        this.deviceTypeWeb = Input.empty();
-        this.deviceTypeWindows = Input.empty();
-        this.deviceTypeZeroclient = Input.empty();
+        this.deviceTypeAndroid = Output.empty();
+        this.deviceTypeChromeos = Output.empty();
+        this.deviceTypeIos = Output.empty();
+        this.deviceTypeLinux = Output.empty();
+        this.deviceTypeOsx = Output.empty();
+        this.deviceTypeWeb = Output.empty();
+        this.deviceTypeWindows = Output.empty();
+        this.deviceTypeZeroclient = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deviceTypeAndroid;
-        private @Nullable Input<String> deviceTypeChromeos;
-        private @Nullable Input<String> deviceTypeIos;
-        private @Nullable Input<String> deviceTypeLinux;
-        private @Nullable Input<String> deviceTypeOsx;
-        private @Nullable Input<String> deviceTypeWeb;
-        private @Nullable Input<String> deviceTypeWindows;
-        private @Nullable Input<String> deviceTypeZeroclient;
+        private @Nullable Output<String> deviceTypeAndroid;
+        private @Nullable Output<String> deviceTypeChromeos;
+        private @Nullable Output<String> deviceTypeIos;
+        private @Nullable Output<String> deviceTypeLinux;
+        private @Nullable Output<String> deviceTypeOsx;
+        private @Nullable Output<String> deviceTypeWeb;
+        private @Nullable Output<String> deviceTypeWindows;
+        private @Nullable Output<String> deviceTypeZeroclient;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class DirectoryWorkspaceAccessPropertiesArgs extends io.pulumi.reso
     	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
         }
 
-        public Builder deviceTypeAndroid(@Nullable Input<String> deviceTypeAndroid) {
+        public Builder deviceTypeAndroid(@Nullable Output<String> deviceTypeAndroid) {
             this.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
 
         public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
-            this.deviceTypeAndroid = Input.ofNullable(deviceTypeAndroid);
+            this.deviceTypeAndroid = Output.ofNullable(deviceTypeAndroid);
             return this;
         }
 
-        public Builder deviceTypeChromeos(@Nullable Input<String> deviceTypeChromeos) {
+        public Builder deviceTypeChromeos(@Nullable Output<String> deviceTypeChromeos) {
             this.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
 
         public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
-            this.deviceTypeChromeos = Input.ofNullable(deviceTypeChromeos);
+            this.deviceTypeChromeos = Output.ofNullable(deviceTypeChromeos);
             return this;
         }
 
-        public Builder deviceTypeIos(@Nullable Input<String> deviceTypeIos) {
+        public Builder deviceTypeIos(@Nullable Output<String> deviceTypeIos) {
             this.deviceTypeIos = deviceTypeIos;
             return this;
         }
 
         public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
-            this.deviceTypeIos = Input.ofNullable(deviceTypeIos);
+            this.deviceTypeIos = Output.ofNullable(deviceTypeIos);
             return this;
         }
 
-        public Builder deviceTypeLinux(@Nullable Input<String> deviceTypeLinux) {
+        public Builder deviceTypeLinux(@Nullable Output<String> deviceTypeLinux) {
             this.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
 
         public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
-            this.deviceTypeLinux = Input.ofNullable(deviceTypeLinux);
+            this.deviceTypeLinux = Output.ofNullable(deviceTypeLinux);
             return this;
         }
 
-        public Builder deviceTypeOsx(@Nullable Input<String> deviceTypeOsx) {
+        public Builder deviceTypeOsx(@Nullable Output<String> deviceTypeOsx) {
             this.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
 
         public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
-            this.deviceTypeOsx = Input.ofNullable(deviceTypeOsx);
+            this.deviceTypeOsx = Output.ofNullable(deviceTypeOsx);
             return this;
         }
 
-        public Builder deviceTypeWeb(@Nullable Input<String> deviceTypeWeb) {
+        public Builder deviceTypeWeb(@Nullable Output<String> deviceTypeWeb) {
             this.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
 
         public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
-            this.deviceTypeWeb = Input.ofNullable(deviceTypeWeb);
+            this.deviceTypeWeb = Output.ofNullable(deviceTypeWeb);
             return this;
         }
 
-        public Builder deviceTypeWindows(@Nullable Input<String> deviceTypeWindows) {
+        public Builder deviceTypeWindows(@Nullable Output<String> deviceTypeWindows) {
             this.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
 
         public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
-            this.deviceTypeWindows = Input.ofNullable(deviceTypeWindows);
+            this.deviceTypeWindows = Output.ofNullable(deviceTypeWindows);
             return this;
         }
 
-        public Builder deviceTypeZeroclient(@Nullable Input<String> deviceTypeZeroclient) {
+        public Builder deviceTypeZeroclient(@Nullable Output<String> deviceTypeZeroclient) {
             this.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
         }
 
         public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
-            this.deviceTypeZeroclient = Input.ofNullable(deviceTypeZeroclient);
+            this.deviceTypeZeroclient = Output.ofNullable(deviceTypeZeroclient);
             return this;
         }
         public DirectoryWorkspaceAccessPropertiesArgs build() {

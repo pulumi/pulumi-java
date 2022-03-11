@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -31,10 +31,10 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dbUser")
-      private final @Nullable Input<String> dbUser;
+      private final @Nullable Output<String> dbUser;
 
-    public Input<String> getDbUser() {
-        return this.dbUser == null ? Input.empty() : this.dbUser;
+    public Output<String> getDbUser() {
+        return this.dbUser == null ? Output.empty() : this.dbUser;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretsManagerArn")
-      private final @Nullable Input<String> secretsManagerArn;
+      private final @Nullable Output<String> secretsManagerArn;
 
-    public Input<String> getSecretsManagerArn() {
-        return this.secretsManagerArn == null ? Input.empty() : this.secretsManagerArn;
+    public Output<String> getSecretsManagerArn() {
+        return this.secretsManagerArn == null ? Output.empty() : this.secretsManagerArn;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sql")
-      private final @Nullable Input<String> sql;
+      private final @Nullable Output<String> sql;
 
-    public Input<String> getSql() {
-        return this.sql == null ? Input.empty() : this.sql;
+    public Output<String> getSql() {
+        return this.sql == null ? Output.empty() : this.sql;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statementName")
-      private final @Nullable Input<String> statementName;
+      private final @Nullable Output<String> statementName;
 
-    public Input<String> getStatementName() {
-        return this.statementName == null ? Input.empty() : this.statementName;
+    public Output<String> getStatementName() {
+        return this.statementName == null ? Output.empty() : this.statementName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="withEvent")
-      private final @Nullable Input<Boolean> withEvent;
+      private final @Nullable Output<Boolean> withEvent;
 
-    public Input<Boolean> getWithEvent() {
-        return this.withEvent == null ? Input.empty() : this.withEvent;
+    public Output<Boolean> getWithEvent() {
+        return this.withEvent == null ? Output.empty() : this.withEvent;
     }
 
     public EventTargetRedshiftTargetGetArgs(
-        Input<String> database,
-        @Nullable Input<String> dbUser,
-        @Nullable Input<String> secretsManagerArn,
-        @Nullable Input<String> sql,
-        @Nullable Input<String> statementName,
-        @Nullable Input<Boolean> withEvent) {
+        Output<String> database,
+        @Nullable Output<String> dbUser,
+        @Nullable Output<String> secretsManagerArn,
+        @Nullable Output<String> sql,
+        @Nullable Output<String> statementName,
+        @Nullable Output<Boolean> withEvent) {
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.dbUser = dbUser;
         this.secretsManagerArn = secretsManagerArn;
@@ -97,12 +97,12 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
     }
 
     private EventTargetRedshiftTargetGetArgs() {
-        this.database = Input.empty();
-        this.dbUser = Input.empty();
-        this.secretsManagerArn = Input.empty();
-        this.sql = Input.empty();
-        this.statementName = Input.empty();
-        this.withEvent = Input.empty();
+        this.database = Output.empty();
+        this.dbUser = Output.empty();
+        this.secretsManagerArn = Output.empty();
+        this.sql = Output.empty();
+        this.statementName = Output.empty();
+        this.withEvent = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> database;
-        private @Nullable Input<String> dbUser;
-        private @Nullable Input<String> secretsManagerArn;
-        private @Nullable Input<String> sql;
-        private @Nullable Input<String> statementName;
-        private @Nullable Input<Boolean> withEvent;
+        private Output<String> database;
+        private @Nullable Output<String> dbUser;
+        private @Nullable Output<String> secretsManagerArn;
+        private @Nullable Output<String> sql;
+        private @Nullable Output<String> statementName;
+        private @Nullable Output<Boolean> withEvent;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
     	      this.withEvent = defaults.withEvent;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder dbUser(@Nullable Input<String> dbUser) {
+        public Builder dbUser(@Nullable Output<String> dbUser) {
             this.dbUser = dbUser;
             return this;
         }
 
         public Builder dbUser(@Nullable String dbUser) {
-            this.dbUser = Input.ofNullable(dbUser);
+            this.dbUser = Output.ofNullable(dbUser);
             return this;
         }
 
-        public Builder secretsManagerArn(@Nullable Input<String> secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Input.ofNullable(secretsManagerArn);
+            this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
             return this;
         }
 
-        public Builder sql(@Nullable Input<String> sql) {
+        public Builder sql(@Nullable Output<String> sql) {
             this.sql = sql;
             return this;
         }
 
         public Builder sql(@Nullable String sql) {
-            this.sql = Input.ofNullable(sql);
+            this.sql = Output.ofNullable(sql);
             return this;
         }
 
-        public Builder statementName(@Nullable Input<String> statementName) {
+        public Builder statementName(@Nullable Output<String> statementName) {
             this.statementName = statementName;
             return this;
         }
 
         public Builder statementName(@Nullable String statementName) {
-            this.statementName = Input.ofNullable(statementName);
+            this.statementName = Output.ofNullable(statementName);
             return this;
         }
 
-        public Builder withEvent(@Nullable Input<Boolean> withEvent) {
+        public Builder withEvent(@Nullable Output<Boolean> withEvent) {
             this.withEvent = withEvent;
             return this;
         }
 
         public Builder withEvent(@Nullable Boolean withEvent) {
-            this.withEvent = Input.ofNullable(withEvent);
+            this.withEvent = Output.ofNullable(withEvent);
             return this;
         }
         public EventTargetRedshiftTargetGetArgs build() {

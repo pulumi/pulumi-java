@@ -6,7 +6,6 @@ package io.pulumi.aws.ssoadmin;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssoadmin.AccountAssignmentArgs;
 import io.pulumi.aws.ssoadmin.inputs.AccountAssignmentState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -150,14 +149,14 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountAssignment(String name, AccountAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssoadmin/accountAssignment:AccountAssignment", name, args == null ? AccountAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ssoadmin/accountAssignment:AccountAssignment", name, args == null ? AccountAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccountAssignment(String name, Input<String> id, @Nullable AccountAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccountAssignment(String name, Output<String> id, @Nullable AccountAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ssoadmin/accountAssignment:AccountAssignment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -173,7 +172,7 @@ public class AccountAssignment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccountAssignment get(String name, Input<String> id, @Nullable AccountAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccountAssignment get(String name, Output<String> id, @Nullable AccountAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccountAssignment(name, id, state, options);
     }
 }

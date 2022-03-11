@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<String> identity;
+      private final Output<String> identity;
 
-    public Input<String> getIdentity() {
+    public Output<String> getIdentity() {
         return this.identity;
     }
 
@@ -31,10 +31,10 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeOriginalHeaders")
-      private final @Nullable Input<Boolean> includeOriginalHeaders;
+      private final @Nullable Output<Boolean> includeOriginalHeaders;
 
-    public Input<Boolean> getIncludeOriginalHeaders() {
-        return this.includeOriginalHeaders == null ? Input.empty() : this.includeOriginalHeaders;
+    public Output<Boolean> getIncludeOriginalHeaders() {
+        return this.includeOriginalHeaders == null ? Output.empty() : this.includeOriginalHeaders;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="notificationType", required=true)
-      private final Input<String> notificationType;
+      private final Output<String> notificationType;
 
-    public Input<String> getNotificationType() {
+    public Output<String> getNotificationType() {
         return this.notificationType;
     }
 
@@ -53,17 +53,17 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="topicArn")
-      private final @Nullable Input<String> topicArn;
+      private final @Nullable Output<String> topicArn;
 
-    public Input<String> getTopicArn() {
-        return this.topicArn == null ? Input.empty() : this.topicArn;
+    public Output<String> getTopicArn() {
+        return this.topicArn == null ? Output.empty() : this.topicArn;
     }
 
     public IdentityNotificationTopicArgs(
-        Input<String> identity,
-        @Nullable Input<Boolean> includeOriginalHeaders,
-        Input<String> notificationType,
-        @Nullable Input<String> topicArn) {
+        Output<String> identity,
+        @Nullable Output<Boolean> includeOriginalHeaders,
+        Output<String> notificationType,
+        @Nullable Output<String> topicArn) {
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
         this.includeOriginalHeaders = includeOriginalHeaders;
         this.notificationType = Objects.requireNonNull(notificationType, "expected parameter 'notificationType' to be non-null");
@@ -71,10 +71,10 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     }
 
     private IdentityNotificationTopicArgs() {
-        this.identity = Input.empty();
-        this.includeOriginalHeaders = Input.empty();
-        this.notificationType = Input.empty();
-        this.topicArn = Input.empty();
+        this.identity = Output.empty();
+        this.includeOriginalHeaders = Output.empty();
+        this.notificationType = Output.empty();
+        this.topicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> identity;
-        private @Nullable Input<Boolean> includeOriginalHeaders;
-        private Input<String> notificationType;
-        private @Nullable Input<String> topicArn;
+        private Output<String> identity;
+        private @Nullable Output<Boolean> includeOriginalHeaders;
+        private Output<String> notificationType;
+        private @Nullable Output<String> topicArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder identity(Input<String> identity) {
+        public Builder identity(Output<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(String identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder includeOriginalHeaders(@Nullable Input<Boolean> includeOriginalHeaders) {
+        public Builder includeOriginalHeaders(@Nullable Output<Boolean> includeOriginalHeaders) {
             this.includeOriginalHeaders = includeOriginalHeaders;
             return this;
         }
 
         public Builder includeOriginalHeaders(@Nullable Boolean includeOriginalHeaders) {
-            this.includeOriginalHeaders = Input.ofNullable(includeOriginalHeaders);
+            this.includeOriginalHeaders = Output.ofNullable(includeOriginalHeaders);
             return this;
         }
 
-        public Builder notificationType(Input<String> notificationType) {
+        public Builder notificationType(Output<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
 
         public Builder notificationType(String notificationType) {
-            this.notificationType = Input.of(Objects.requireNonNull(notificationType));
+            this.notificationType = Output.of(Objects.requireNonNull(notificationType));
             return this;
         }
 
-        public Builder topicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Output<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Input.ofNullable(topicArn);
+            this.topicArn = Output.ofNullable(topicArn);
             return this;
         }
         public IdentityNotificationTopicArgs build() {

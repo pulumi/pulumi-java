@@ -6,7 +6,6 @@ package io.pulumi.aws.securityhub;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.FindingAggregatorArgs;
 import io.pulumi.aws.securityhub.inputs.FindingAggregatorState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -97,14 +96,14 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FindingAggregator(String name, FindingAggregatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/findingAggregator:FindingAggregator", name, args == null ? FindingAggregatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:securityhub/findingAggregator:FindingAggregator", name, args == null ? FindingAggregatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FindingAggregator(String name, Input<String> id, @Nullable FindingAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FindingAggregator(String name, Output<String> id, @Nullable FindingAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:securityhub/findingAggregator:FindingAggregator", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -120,7 +119,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FindingAggregator get(String name, Input<String> id, @Nullable FindingAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FindingAggregator get(String name, Output<String> id, @Nullable FindingAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FindingAggregator(name, id, state, options);
     }
 }

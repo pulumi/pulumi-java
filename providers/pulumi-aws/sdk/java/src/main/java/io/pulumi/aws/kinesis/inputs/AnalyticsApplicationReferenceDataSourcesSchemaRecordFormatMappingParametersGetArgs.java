@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * 
      */
     @InputImport(name="csv")
-      private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv;
+      private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> getCsv() {
-        return this.csv == null ? Input.empty() : this.csv;
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> getCsv() {
+        return this.csv == null ? Output.empty() : this.csv;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * 
      */
     @InputImport(name="json")
-      private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json;
+      private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
-    public Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> getJson() {
-        return this.json == null ? Input.empty() : this.json;
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> getJson() {
+        return this.json == null ? Output.empty() : this.json;
     }
 
     public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs(
-        @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv,
-        @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json) {
+        @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv,
+        @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json) {
         this.csv = csv;
         this.json = json;
     }
 
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs() {
-        this.csv = Input.empty();
-        this.json = Input.empty();
+        this.csv = Output.empty();
+        this.json = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     }
 
     public static final class Builder {
-        private @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv;
-        private @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json;
+        private @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv;
+        private @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     	      this.json = defaults.json;
         }
 
-        public Builder csv(@Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv) {
+        public Builder csv(@Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv) {
             this.csv = csv;
             return this;
         }
 
         public Builder csv(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs csv) {
-            this.csv = Input.ofNullable(csv);
+            this.csv = Output.ofNullable(csv);
             return this;
         }
 
-        public Builder json(@Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json) {
+        public Builder json(@Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json) {
             this.json = json;
             return this;
         }
 
         public Builder json(@Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs json) {
-            this.json = Input.ofNullable(json);
+            this.json = Output.ofNullable(json);
             return this;
         }
         public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs build() {

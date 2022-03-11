@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashKey")
-      private final @Nullable Input<String> hashKey;
+      private final @Nullable Output<String> hashKey;
 
-    public Input<String> getHashKey() {
-        return this.hashKey == null ? Input.empty() : this.hashKey;
+    public Output<String> getHashKey() {
+        return this.hashKey == null ? Output.empty() : this.hashKey;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="item")
-      private final @Nullable Input<String> item;
+      private final @Nullable Output<String> item;
 
-    public Input<String> getItem() {
-        return this.item == null ? Input.empty() : this.item;
+    public Output<String> getItem() {
+        return this.item == null ? Output.empty() : this.item;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangeKey")
-      private final @Nullable Input<String> rangeKey;
+      private final @Nullable Output<String> rangeKey;
 
-    public Input<String> getRangeKey() {
-        return this.rangeKey == null ? Input.empty() : this.rangeKey;
+    public Output<String> getRangeKey() {
+        return this.rangeKey == null ? Output.empty() : this.rangeKey;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public TableItemState(
-        @Nullable Input<String> hashKey,
-        @Nullable Input<String> item,
-        @Nullable Input<String> rangeKey,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<String> hashKey,
+        @Nullable Output<String> item,
+        @Nullable Output<String> rangeKey,
+        @Nullable Output<String> tableName) {
         this.hashKey = hashKey;
         this.item = item;
         this.rangeKey = rangeKey;
@@ -71,10 +71,10 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableItemState() {
-        this.hashKey = Input.empty();
-        this.item = Input.empty();
-        this.rangeKey = Input.empty();
-        this.tableName = Input.empty();
+        this.hashKey = Output.empty();
+        this.item = Output.empty();
+        this.rangeKey = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hashKey;
-        private @Nullable Input<String> item;
-        private @Nullable Input<String> rangeKey;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<String> hashKey;
+        private @Nullable Output<String> item;
+        private @Nullable Output<String> rangeKey;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder hashKey(@Nullable Input<String> hashKey) {
+        public Builder hashKey(@Nullable Output<String> hashKey) {
             this.hashKey = hashKey;
             return this;
         }
 
         public Builder hashKey(@Nullable String hashKey) {
-            this.hashKey = Input.ofNullable(hashKey);
+            this.hashKey = Output.ofNullable(hashKey);
             return this;
         }
 
-        public Builder item(@Nullable Input<String> item) {
+        public Builder item(@Nullable Output<String> item) {
             this.item = item;
             return this;
         }
 
         public Builder item(@Nullable String item) {
-            this.item = Input.ofNullable(item);
+            this.item = Output.ofNullable(item);
             return this;
         }
 
-        public Builder rangeKey(@Nullable Input<String> rangeKey) {
+        public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
 
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Input.ofNullable(rangeKey);
+            this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public TableItemState build() {

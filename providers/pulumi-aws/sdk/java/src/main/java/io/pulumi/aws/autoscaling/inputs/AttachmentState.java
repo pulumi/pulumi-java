@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="albTargetGroupArn")
-      private final @Nullable Input<String> albTargetGroupArn;
+      private final @Nullable Output<String> albTargetGroupArn;
 
-    public Input<String> getAlbTargetGroupArn() {
-        return this.albTargetGroupArn == null ? Input.empty() : this.albTargetGroupArn;
+    public Output<String> getAlbTargetGroupArn() {
+        return this.albTargetGroupArn == null ? Output.empty() : this.albTargetGroupArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName")
-      private final @Nullable Input<String> autoscalingGroupName;
+      private final @Nullable Output<String> autoscalingGroupName;
 
-    public Input<String> getAutoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Input.empty() : this.autoscalingGroupName;
+    public Output<String> getAutoscalingGroupName() {
+        return this.autoscalingGroupName == null ? Output.empty() : this.autoscalingGroupName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb")
-      private final @Nullable Input<String> elb;
+      private final @Nullable Output<String> elb;
 
-    public Input<String> getElb() {
-        return this.elb == null ? Input.empty() : this.elb;
+    public Output<String> getElb() {
+        return this.elb == null ? Output.empty() : this.elb;
     }
 
     public AttachmentState(
-        @Nullable Input<String> albTargetGroupArn,
-        @Nullable Input<String> autoscalingGroupName,
-        @Nullable Input<String> elb) {
+        @Nullable Output<String> albTargetGroupArn,
+        @Nullable Output<String> autoscalingGroupName,
+        @Nullable Output<String> elb) {
         this.albTargetGroupArn = albTargetGroupArn;
         this.autoscalingGroupName = autoscalingGroupName;
         this.elb = elb;
     }
 
     private AttachmentState() {
-        this.albTargetGroupArn = Input.empty();
-        this.autoscalingGroupName = Input.empty();
-        this.elb = Input.empty();
+        this.albTargetGroupArn = Output.empty();
+        this.autoscalingGroupName = Output.empty();
+        this.elb = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> albTargetGroupArn;
-        private @Nullable Input<String> autoscalingGroupName;
-        private @Nullable Input<String> elb;
+        private @Nullable Output<String> albTargetGroupArn;
+        private @Nullable Output<String> autoscalingGroupName;
+        private @Nullable Output<String> elb;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     	      this.elb = defaults.elb;
         }
 
-        public Builder albTargetGroupArn(@Nullable Input<String> albTargetGroupArn) {
+        public Builder albTargetGroupArn(@Nullable Output<String> albTargetGroupArn) {
             this.albTargetGroupArn = albTargetGroupArn;
             return this;
         }
 
         public Builder albTargetGroupArn(@Nullable String albTargetGroupArn) {
-            this.albTargetGroupArn = Input.ofNullable(albTargetGroupArn);
+            this.albTargetGroupArn = Output.ofNullable(albTargetGroupArn);
             return this;
         }
 
-        public Builder autoscalingGroupName(@Nullable Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
 
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Input.ofNullable(autoscalingGroupName);
+            this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
             return this;
         }
 
-        public Builder elb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Output<String> elb) {
             this.elb = elb;
             return this;
         }
 
         public Builder elb(@Nullable String elb) {
-            this.elb = Input.ofNullable(elb);
+            this.elb = Output.ofNullable(elb);
             return this;
         }
         public AttachmentState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.xray.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedRate")
-      private final @Nullable Input<Double> fixedRate;
+      private final @Nullable Output<Double> fixedRate;
 
-    public Input<Double> getFixedRate() {
-        return this.fixedRate == null ? Input.empty() : this.fixedRate;
+    public Output<Double> getFixedRate() {
+        return this.fixedRate == null ? Output.empty() : this.fixedRate;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<String> httpMethod;
+      private final @Nullable Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<String> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservoirSize")
-      private final @Nullable Input<Integer> reservoirSize;
+      private final @Nullable Output<Integer> reservoirSize;
 
-    public Input<Integer> getReservoirSize() {
-        return this.reservoirSize == null ? Input.empty() : this.reservoirSize;
+    public Output<Integer> getReservoirSize() {
+        return this.reservoirSize == null ? Output.empty() : this.reservoirSize;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceType")
-      private final @Nullable Input<String> serviceType;
+      private final @Nullable Output<String> serviceType;
 
-    public Input<String> getServiceType() {
-        return this.serviceType == null ? Input.empty() : this.serviceType;
+    public Output<String> getServiceType() {
+        return this.serviceType == null ? Output.empty() : this.serviceType;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlPath")
-      private final @Nullable Input<String> urlPath;
+      private final @Nullable Output<String> urlPath;
 
-    public Input<String> getUrlPath() {
-        return this.urlPath == null ? Input.empty() : this.urlPath;
+    public Output<String> getUrlPath() {
+        return this.urlPath == null ? Output.empty() : this.urlPath;
     }
 
     /**
@@ -176,28 +176,28 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public SamplingRuleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Map<String,String>> attributes,
-        @Nullable Input<Double> fixedRate,
-        @Nullable Input<String> host,
-        @Nullable Input<String> httpMethod,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<Integer> reservoirSize,
-        @Nullable Input<String> resourceArn,
-        @Nullable Input<String> ruleName,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<String> serviceType,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> urlPath,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Map<String,String>> attributes,
+        @Nullable Output<Double> fixedRate,
+        @Nullable Output<String> host,
+        @Nullable Output<String> httpMethod,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<Integer> reservoirSize,
+        @Nullable Output<String> resourceArn,
+        @Nullable Output<String> ruleName,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<String> serviceType,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> urlPath,
+        @Nullable Output<Integer> version) {
         this.arn = arn;
         this.attributes = attributes;
         this.fixedRate = fixedRate;
@@ -216,21 +216,21 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SamplingRuleState() {
-        this.arn = Input.empty();
-        this.attributes = Input.empty();
-        this.fixedRate = Input.empty();
-        this.host = Input.empty();
-        this.httpMethod = Input.empty();
-        this.priority = Input.empty();
-        this.reservoirSize = Input.empty();
-        this.resourceArn = Input.empty();
-        this.ruleName = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceType = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.urlPath = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.attributes = Output.empty();
+        this.fixedRate = Output.empty();
+        this.host = Output.empty();
+        this.httpMethod = Output.empty();
+        this.priority = Output.empty();
+        this.reservoirSize = Output.empty();
+        this.resourceArn = Output.empty();
+        this.ruleName = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceType = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.urlPath = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -242,21 +242,21 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Map<String,String>> attributes;
-        private @Nullable Input<Double> fixedRate;
-        private @Nullable Input<String> host;
-        private @Nullable Input<String> httpMethod;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<Integer> reservoirSize;
-        private @Nullable Input<String> resourceArn;
-        private @Nullable Input<String> ruleName;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<String> serviceType;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> urlPath;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Map<String,String>> attributes;
+        private @Nullable Output<Double> fixedRate;
+        private @Nullable Output<String> host;
+        private @Nullable Output<String> httpMethod;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<Integer> reservoirSize;
+        private @Nullable Output<String> resourceArn;
+        private @Nullable Output<String> ruleName;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<String> serviceType;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> urlPath;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -281,153 +281,153 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder fixedRate(@Nullable Input<Double> fixedRate) {
+        public Builder fixedRate(@Nullable Output<Double> fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
 
         public Builder fixedRate(@Nullable Double fixedRate) {
-            this.fixedRate = Input.ofNullable(fixedRate);
+            this.fixedRate = Output.ofNullable(fixedRate);
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder httpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder reservoirSize(@Nullable Input<Integer> reservoirSize) {
+        public Builder reservoirSize(@Nullable Output<Integer> reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
 
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
-            this.reservoirSize = Input.ofNullable(reservoirSize);
+            this.reservoirSize = Output.ofNullable(reservoirSize);
             return this;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceType(@Nullable Input<String> serviceType) {
+        public Builder serviceType(@Nullable Output<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = Input.ofNullable(serviceType);
+            this.serviceType = Output.ofNullable(serviceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder urlPath(@Nullable Input<String> urlPath) {
+        public Builder urlPath(@Nullable Output<String> urlPath) {
             this.urlPath = urlPath;
             return this;
         }
 
         public Builder urlPath(@Nullable String urlPath) {
-            this.urlPath = Input.ofNullable(urlPath);
+            this.urlPath = Output.ofNullable(urlPath);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public SamplingRuleState build() {

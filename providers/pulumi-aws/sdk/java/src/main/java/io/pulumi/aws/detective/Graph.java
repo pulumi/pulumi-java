@@ -6,7 +6,6 @@ package io.pulumi.aws.detective;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.detective.GraphArgs;
 import io.pulumi.aws.detective.inputs.GraphState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -117,14 +116,14 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Graph(String name, @Nullable GraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:detective/graph:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:detective/graph:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Graph(String name, Input<String> id, @Nullable GraphState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Graph(String name, Output<String> id, @Nullable GraphState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:detective/graph:Graph", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -140,7 +139,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Graph get(String name, Input<String> id, @Nullable GraphState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Graph get(String name, Output<String> id, @Nullable GraphState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Graph(name, id, state, options);
     }
 }

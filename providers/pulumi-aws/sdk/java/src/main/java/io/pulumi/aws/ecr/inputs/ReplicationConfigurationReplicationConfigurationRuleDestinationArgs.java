@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -29,22 +29,22 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      * 
      */
     @InputImport(name="registryId", required=true)
-      private final Input<String> registryId;
+      private final Output<String> registryId;
 
-    public Input<String> getRegistryId() {
+    public Output<String> getRegistryId() {
         return this.registryId;
     }
 
     public ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(
-        Input<String> region,
-        Input<String> registryId) {
+        Output<String> region,
+        Output<String> registryId) {
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
         this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
     }
 
     private ReplicationConfigurationReplicationConfigurationRuleDestinationArgs() {
-        this.region = Input.empty();
-        this.registryId = Input.empty();
+        this.region = Output.empty();
+        this.registryId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     }
 
     public static final class Builder {
-        private Input<String> region;
-        private Input<String> registryId;
+        private Output<String> region;
+        private Output<String> registryId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder registryId(Input<String> registryId) {
+        public Builder registryId(Output<String> registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
         public Builder registryId(String registryId) {
-            this.registryId = Input.of(Objects.requireNonNull(registryId));
+            this.registryId = Output.of(Objects.requireNonNull(registryId));
             return this;
         }
         public ReplicationConfigurationReplicationConfigurationRuleDestinationArgs build() {

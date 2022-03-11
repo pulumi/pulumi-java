@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="appIdClientRegex")
-      private final @Nullable Input<String> appIdClientRegex;
+      private final @Nullable Output<String> appIdClientRegex;
 
-    public Input<String> getAppIdClientRegex() {
-        return this.appIdClientRegex == null ? Input.empty() : this.appIdClientRegex;
+    public Output<String> getAppIdClientRegex() {
+        return this.appIdClientRegex == null ? Output.empty() : this.appIdClientRegex;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="awsRegion")
-      private final @Nullable Input<String> awsRegion;
+      private final @Nullable Output<String> awsRegion;
 
-    public Input<String> getAwsRegion() {
-        return this.awsRegion == null ? Input.empty() : this.awsRegion;
+    public Output<String> getAwsRegion() {
+        return this.awsRegion == null ? Output.empty() : this.awsRegion;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="userPoolId", required=true)
-      private final Input<String> userPoolId;
+      private final Output<String> userPoolId;
 
-    public Input<String> getUserPoolId() {
+    public Output<String> getUserPoolId() {
         return this.userPoolId;
     }
 
     public GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs(
-        @Nullable Input<String> appIdClientRegex,
-        @Nullable Input<String> awsRegion,
-        Input<String> userPoolId) {
+        @Nullable Output<String> appIdClientRegex,
+        @Nullable Output<String> awsRegion,
+        Output<String> userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
         this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
     }
 
     private GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs() {
-        this.appIdClientRegex = Input.empty();
-        this.awsRegion = Input.empty();
-        this.userPoolId = Input.empty();
+        this.appIdClientRegex = Output.empty();
+        this.awsRegion = Output.empty();
+        this.userPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appIdClientRegex;
-        private @Nullable Input<String> awsRegion;
-        private Input<String> userPoolId;
+        private @Nullable Output<String> appIdClientRegex;
+        private @Nullable Output<String> awsRegion;
+        private Output<String> userPoolId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder appIdClientRegex(@Nullable Input<String> appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable Output<String> appIdClientRegex) {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
         public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
-            this.appIdClientRegex = Input.ofNullable(appIdClientRegex);
+            this.appIdClientRegex = Output.ofNullable(appIdClientRegex);
             return this;
         }
 
-        public Builder awsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Input.ofNullable(awsRegion);
+            this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder userPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Output<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
+            this.userPoolId = Output.of(Objects.requireNonNull(userPoolId));
             return this;
         }
         public GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs build() {

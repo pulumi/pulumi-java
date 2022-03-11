@@ -6,7 +6,7 @@ package io.pulumi.aws.amplify.inputs;
 import io.pulumi.aws.amplify.inputs.AppAutoBranchCreationConfigGetArgs;
 import io.pulumi.aws.amplify.inputs.AppCustomRuleGetArgs;
 import io.pulumi.aws.amplify.inputs.AppProductionBranchGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-      private final @Nullable Input<String> accessToken;
+      private final @Nullable Output<String> accessToken;
 
-    public Input<String> getAccessToken() {
-        return this.accessToken == null ? Input.empty() : this.accessToken;
+    public Output<String> getAccessToken() {
+        return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBranchCreationConfig")
-      private final @Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
+      private final @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
 
-    public Input<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
-        return this.autoBranchCreationConfig == null ? Input.empty() : this.autoBranchCreationConfig;
+    public Output<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
+        return this.autoBranchCreationConfig == null ? Output.empty() : this.autoBranchCreationConfig;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBranchCreationPatterns")
-      private final @Nullable Input<List<String>> autoBranchCreationPatterns;
+      private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
-    public Input<List<String>> getAutoBranchCreationPatterns() {
-        return this.autoBranchCreationPatterns == null ? Input.empty() : this.autoBranchCreationPatterns;
+    public Output<List<String>> getAutoBranchCreationPatterns() {
+        return this.autoBranchCreationPatterns == null ? Output.empty() : this.autoBranchCreationPatterns;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuthCredentials")
-      private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Output<String> basicAuthCredentials;
 
-    public Input<String> getBasicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
+    public Output<String> getBasicAuthCredentials() {
+        return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildSpec")
-      private final @Nullable Input<String> buildSpec;
+      private final @Nullable Output<String> buildSpec;
 
-    public Input<String> getBuildSpec() {
-        return this.buildSpec == null ? Input.empty() : this.buildSpec;
+    public Output<String> getBuildSpec() {
+        return this.buildSpec == null ? Output.empty() : this.buildSpec;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRules")
-      private final @Nullable Input<List<AppCustomRuleGetArgs>> customRules;
+      private final @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
 
-    public Input<List<AppCustomRuleGetArgs>> getCustomRules() {
-        return this.customRules == null ? Input.empty() : this.customRules;
+    public Output<List<AppCustomRuleGetArgs>> getCustomRules() {
+        return this.customRules == null ? Output.empty() : this.customRules;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDomain")
-      private final @Nullable Input<String> defaultDomain;
+      private final @Nullable Output<String> defaultDomain;
 
-    public Input<String> getDefaultDomain() {
-        return this.defaultDomain == null ? Input.empty() : this.defaultDomain;
+    public Output<String> getDefaultDomain() {
+        return this.defaultDomain == null ? Output.empty() : this.defaultDomain;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoBranchCreation")
-      private final @Nullable Input<Boolean> enableAutoBranchCreation;
+      private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
-    public Input<Boolean> getEnableAutoBranchCreation() {
-        return this.enableAutoBranchCreation == null ? Input.empty() : this.enableAutoBranchCreation;
+    public Output<Boolean> getEnableAutoBranchCreation() {
+        return this.enableAutoBranchCreation == null ? Output.empty() : this.enableAutoBranchCreation;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBasicAuth")
-      private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Input<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
+    public Output<Boolean> getEnableBasicAuth() {
+        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBranchAutoBuild")
-      private final @Nullable Input<Boolean> enableBranchAutoBuild;
+      private final @Nullable Output<Boolean> enableBranchAutoBuild;
 
-    public Input<Boolean> getEnableBranchAutoBuild() {
-        return this.enableBranchAutoBuild == null ? Input.empty() : this.enableBranchAutoBuild;
+    public Output<Boolean> getEnableBranchAutoBuild() {
+        return this.enableBranchAutoBuild == null ? Output.empty() : this.enableBranchAutoBuild;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBranchAutoDeletion")
-      private final @Nullable Input<Boolean> enableBranchAutoDeletion;
+      private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
-    public Input<Boolean> getEnableBranchAutoDeletion() {
-        return this.enableBranchAutoDeletion == null ? Input.empty() : this.enableBranchAutoDeletion;
+    public Output<Boolean> getEnableBranchAutoDeletion() {
+        return this.enableBranchAutoDeletion == null ? Output.empty() : this.enableBranchAutoDeletion;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-      private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Input<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
+    public Output<Map<String,String>> getEnvironmentVariables() {
+        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamServiceRoleArn")
-      private final @Nullable Input<String> iamServiceRoleArn;
+      private final @Nullable Output<String> iamServiceRoleArn;
 
-    public Input<String> getIamServiceRoleArn() {
-        return this.iamServiceRoleArn == null ? Input.empty() : this.iamServiceRoleArn;
+    public Output<String> getIamServiceRoleArn() {
+        return this.iamServiceRoleArn == null ? Output.empty() : this.iamServiceRoleArn;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-      private final @Nullable Input<String> oauthToken;
+      private final @Nullable Output<String> oauthToken;
 
-    public Input<String> getOauthToken() {
-        return this.oauthToken == null ? Input.empty() : this.oauthToken;
+    public Output<String> getOauthToken() {
+        return this.oauthToken == null ? Output.empty() : this.oauthToken;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-      private final @Nullable Input<String> platform;
+      private final @Nullable Output<String> platform;
 
-    public Input<String> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<String> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productionBranches")
-      private final @Nullable Input<List<AppProductionBranchGetArgs>> productionBranches;
+      private final @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
 
-    public Input<List<AppProductionBranchGetArgs>> getProductionBranches() {
-        return this.productionBranches == null ? Input.empty() : this.productionBranches;
+    public Output<List<AppProductionBranchGetArgs>> getProductionBranches() {
+        return this.productionBranches == null ? Output.empty() : this.productionBranches;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -256,35 +256,35 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public AppState(
-        @Nullable Input<String> accessToken,
-        @Nullable Input<String> arn,
-        @Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig,
-        @Nullable Input<List<String>> autoBranchCreationPatterns,
-        @Nullable Input<String> basicAuthCredentials,
-        @Nullable Input<String> buildSpec,
-        @Nullable Input<List<AppCustomRuleGetArgs>> customRules,
-        @Nullable Input<String> defaultDomain,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableAutoBranchCreation,
-        @Nullable Input<Boolean> enableBasicAuth,
-        @Nullable Input<Boolean> enableBranchAutoBuild,
-        @Nullable Input<Boolean> enableBranchAutoDeletion,
-        @Nullable Input<Map<String,String>> environmentVariables,
-        @Nullable Input<String> iamServiceRoleArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> oauthToken,
-        @Nullable Input<String> platform,
-        @Nullable Input<List<AppProductionBranchGetArgs>> productionBranches,
-        @Nullable Input<String> repository,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> accessToken,
+        @Nullable Output<String> arn,
+        @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig,
+        @Nullable Output<List<String>> autoBranchCreationPatterns,
+        @Nullable Output<String> basicAuthCredentials,
+        @Nullable Output<String> buildSpec,
+        @Nullable Output<List<AppCustomRuleGetArgs>> customRules,
+        @Nullable Output<String> defaultDomain,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableAutoBranchCreation,
+        @Nullable Output<Boolean> enableBasicAuth,
+        @Nullable Output<Boolean> enableBranchAutoBuild,
+        @Nullable Output<Boolean> enableBranchAutoDeletion,
+        @Nullable Output<Map<String,String>> environmentVariables,
+        @Nullable Output<String> iamServiceRoleArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> oauthToken,
+        @Nullable Output<String> platform,
+        @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches,
+        @Nullable Output<String> repository,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.accessToken = accessToken;
         this.arn = arn;
         this.autoBranchCreationConfig = autoBranchCreationConfig;
@@ -310,28 +310,28 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppState() {
-        this.accessToken = Input.empty();
-        this.arn = Input.empty();
-        this.autoBranchCreationConfig = Input.empty();
-        this.autoBranchCreationPatterns = Input.empty();
-        this.basicAuthCredentials = Input.empty();
-        this.buildSpec = Input.empty();
-        this.customRules = Input.empty();
-        this.defaultDomain = Input.empty();
-        this.description = Input.empty();
-        this.enableAutoBranchCreation = Input.empty();
-        this.enableBasicAuth = Input.empty();
-        this.enableBranchAutoBuild = Input.empty();
-        this.enableBranchAutoDeletion = Input.empty();
-        this.environmentVariables = Input.empty();
-        this.iamServiceRoleArn = Input.empty();
-        this.name = Input.empty();
-        this.oauthToken = Input.empty();
-        this.platform = Input.empty();
-        this.productionBranches = Input.empty();
-        this.repository = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.accessToken = Output.empty();
+        this.arn = Output.empty();
+        this.autoBranchCreationConfig = Output.empty();
+        this.autoBranchCreationPatterns = Output.empty();
+        this.basicAuthCredentials = Output.empty();
+        this.buildSpec = Output.empty();
+        this.customRules = Output.empty();
+        this.defaultDomain = Output.empty();
+        this.description = Output.empty();
+        this.enableAutoBranchCreation = Output.empty();
+        this.enableBasicAuth = Output.empty();
+        this.enableBranchAutoBuild = Output.empty();
+        this.enableBranchAutoDeletion = Output.empty();
+        this.environmentVariables = Output.empty();
+        this.iamServiceRoleArn = Output.empty();
+        this.name = Output.empty();
+        this.oauthToken = Output.empty();
+        this.platform = Output.empty();
+        this.productionBranches = Output.empty();
+        this.repository = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -343,28 +343,28 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessToken;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
-        private @Nullable Input<List<String>> autoBranchCreationPatterns;
-        private @Nullable Input<String> basicAuthCredentials;
-        private @Nullable Input<String> buildSpec;
-        private @Nullable Input<List<AppCustomRuleGetArgs>> customRules;
-        private @Nullable Input<String> defaultDomain;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableAutoBranchCreation;
-        private @Nullable Input<Boolean> enableBasicAuth;
-        private @Nullable Input<Boolean> enableBranchAutoBuild;
-        private @Nullable Input<Boolean> enableBranchAutoDeletion;
-        private @Nullable Input<Map<String,String>> environmentVariables;
-        private @Nullable Input<String> iamServiceRoleArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> oauthToken;
-        private @Nullable Input<String> platform;
-        private @Nullable Input<List<AppProductionBranchGetArgs>> productionBranches;
-        private @Nullable Input<String> repository;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> accessToken;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
+        private @Nullable Output<List<String>> autoBranchCreationPatterns;
+        private @Nullable Output<String> basicAuthCredentials;
+        private @Nullable Output<String> buildSpec;
+        private @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
+        private @Nullable Output<String> defaultDomain;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableAutoBranchCreation;
+        private @Nullable Output<Boolean> enableBasicAuth;
+        private @Nullable Output<Boolean> enableBranchAutoBuild;
+        private @Nullable Output<Boolean> enableBranchAutoDeletion;
+        private @Nullable Output<Map<String,String>> environmentVariables;
+        private @Nullable Output<String> iamServiceRoleArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> oauthToken;
+        private @Nullable Output<String> platform;
+        private @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
+        private @Nullable Output<String> repository;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -396,223 +396,223 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder accessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Output<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Input.ofNullable(accessToken);
+            this.accessToken = Output.ofNullable(accessToken);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoBranchCreationConfig(@Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig) {
+        public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig) {
             this.autoBranchCreationConfig = autoBranchCreationConfig;
             return this;
         }
 
         public Builder autoBranchCreationConfig(@Nullable AppAutoBranchCreationConfigGetArgs autoBranchCreationConfig) {
-            this.autoBranchCreationConfig = Input.ofNullable(autoBranchCreationConfig);
+            this.autoBranchCreationConfig = Output.ofNullable(autoBranchCreationConfig);
             return this;
         }
 
-        public Builder autoBranchCreationPatterns(@Nullable Input<List<String>> autoBranchCreationPatterns) {
+        public Builder autoBranchCreationPatterns(@Nullable Output<List<String>> autoBranchCreationPatterns) {
             this.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
 
         public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
-            this.autoBranchCreationPatterns = Input.ofNullable(autoBranchCreationPatterns);
+            this.autoBranchCreationPatterns = Output.ofNullable(autoBranchCreationPatterns);
             return this;
         }
 
-        public Builder basicAuthCredentials(@Nullable Input<String> basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable Output<String> basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Input.ofNullable(basicAuthCredentials);
+            this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
             return this;
         }
 
-        public Builder buildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Output<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
         public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Input.ofNullable(buildSpec);
+            this.buildSpec = Output.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder customRules(@Nullable Input<List<AppCustomRuleGetArgs>> customRules) {
+        public Builder customRules(@Nullable Output<List<AppCustomRuleGetArgs>> customRules) {
             this.customRules = customRules;
             return this;
         }
 
         public Builder customRules(@Nullable List<AppCustomRuleGetArgs> customRules) {
-            this.customRules = Input.ofNullable(customRules);
+            this.customRules = Output.ofNullable(customRules);
             return this;
         }
 
-        public Builder defaultDomain(@Nullable Input<String> defaultDomain) {
+        public Builder defaultDomain(@Nullable Output<String> defaultDomain) {
             this.defaultDomain = defaultDomain;
             return this;
         }
 
         public Builder defaultDomain(@Nullable String defaultDomain) {
-            this.defaultDomain = Input.ofNullable(defaultDomain);
+            this.defaultDomain = Output.ofNullable(defaultDomain);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableAutoBranchCreation(@Nullable Input<Boolean> enableAutoBranchCreation) {
+        public Builder enableAutoBranchCreation(@Nullable Output<Boolean> enableAutoBranchCreation) {
             this.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
 
         public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
-            this.enableAutoBranchCreation = Input.ofNullable(enableAutoBranchCreation);
+            this.enableAutoBranchCreation = Output.ofNullable(enableAutoBranchCreation);
             return this;
         }
 
-        public Builder enableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Input.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
 
-        public Builder enableBranchAutoBuild(@Nullable Input<Boolean> enableBranchAutoBuild) {
+        public Builder enableBranchAutoBuild(@Nullable Output<Boolean> enableBranchAutoBuild) {
             this.enableBranchAutoBuild = enableBranchAutoBuild;
             return this;
         }
 
         public Builder enableBranchAutoBuild(@Nullable Boolean enableBranchAutoBuild) {
-            this.enableBranchAutoBuild = Input.ofNullable(enableBranchAutoBuild);
+            this.enableBranchAutoBuild = Output.ofNullable(enableBranchAutoBuild);
             return this;
         }
 
-        public Builder enableBranchAutoDeletion(@Nullable Input<Boolean> enableBranchAutoDeletion) {
+        public Builder enableBranchAutoDeletion(@Nullable Output<Boolean> enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
 
         public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
-            this.enableBranchAutoDeletion = Input.ofNullable(enableBranchAutoDeletion);
+            this.enableBranchAutoDeletion = Output.ofNullable(enableBranchAutoDeletion);
             return this;
         }
 
-        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Input.ofNullable(environmentVariables);
+            this.environmentVariables = Output.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder iamServiceRoleArn(@Nullable Input<String> iamServiceRoleArn) {
+        public Builder iamServiceRoleArn(@Nullable Output<String> iamServiceRoleArn) {
             this.iamServiceRoleArn = iamServiceRoleArn;
             return this;
         }
 
         public Builder iamServiceRoleArn(@Nullable String iamServiceRoleArn) {
-            this.iamServiceRoleArn = Input.ofNullable(iamServiceRoleArn);
+            this.iamServiceRoleArn = Output.ofNullable(iamServiceRoleArn);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder oauthToken(@Nullable Input<String> oauthToken) {
+        public Builder oauthToken(@Nullable Output<String> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
         public Builder oauthToken(@Nullable String oauthToken) {
-            this.oauthToken = Input.ofNullable(oauthToken);
+            this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
 
-        public Builder platform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Output<String> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable String platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder productionBranches(@Nullable Input<List<AppProductionBranchGetArgs>> productionBranches) {
+        public Builder productionBranches(@Nullable Output<List<AppProductionBranchGetArgs>> productionBranches) {
             this.productionBranches = productionBranches;
             return this;
         }
 
         public Builder productionBranches(@Nullable List<AppProductionBranchGetArgs> productionBranches) {
-            this.productionBranches = Input.ofNullable(productionBranches);
+            this.productionBranches = Output.ofNullable(productionBranches);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public AppState build() {

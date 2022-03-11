@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs
      * 
      */
     @InputImport(name="statements", required=true)
-      private final Input<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements;
+      private final Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements;
 
-    public Input<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> getStatements() {
+    public Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> getStatements() {
         return this.statements;
     }
 
-    public RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs(Input<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements) {
+    public RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs(Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements) {
         this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
     }
 
     private RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs() {
-        this.statements = Input.empty();
+        this.statements = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs
     }
 
     public static final class Builder {
-        private Input<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements;
+        private Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs
     	      this.statements = defaults.statements;
         }
 
-        public Builder statements(Input<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements) {
+        public Builder statements(Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
         public Builder statements(List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementGetArgs> statements) {
-            this.statements = Input.of(Objects.requireNonNull(statements));
+            this.statements = Output.of(Objects.requireNonNull(statements));
             return this;
         }
         public RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs build() {

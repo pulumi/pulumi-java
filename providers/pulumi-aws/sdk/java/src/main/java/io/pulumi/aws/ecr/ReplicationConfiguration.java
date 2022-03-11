@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.ReplicationConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationState;
 import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationConfiguration(String name, @Nullable ReplicationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/replicationConfiguration:ReplicationConfiguration", name, args == null ? ReplicationConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecr/replicationConfiguration:ReplicationConfiguration", name, args == null ? ReplicationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReplicationConfiguration(String name, Input<String> id, @Nullable ReplicationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReplicationConfiguration(String name, Output<String> id, @Nullable ReplicationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecr/replicationConfiguration:ReplicationConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -123,7 +122,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReplicationConfiguration get(String name, Input<String> id, @Nullable ReplicationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReplicationConfiguration get(String name, Output<String> id, @Nullable ReplicationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationConfiguration(name, id, state, options);
     }
 }

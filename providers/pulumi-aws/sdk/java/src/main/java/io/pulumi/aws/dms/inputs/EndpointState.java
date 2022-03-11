@@ -8,7 +8,7 @@ import io.pulumi.aws.dms.inputs.EndpointKafkaSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointKinesisSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointMongodbSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointS3SettingsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticsearchSettings")
-      private final @Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
+      private final @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
 
-    public Input<EndpointElasticsearchSettingsGetArgs> getElasticsearchSettings() {
-        return this.elasticsearchSettings == null ? Input.empty() : this.elasticsearchSettings;
+    public Output<EndpointElasticsearchSettingsGetArgs> getElasticsearchSettings() {
+        return this.elasticsearchSettings == null ? Output.empty() : this.elasticsearchSettings;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointArn")
-      private final @Nullable Input<String> endpointArn;
+      private final @Nullable Output<String> endpointArn;
 
-    public Input<String> getEndpointArn() {
-        return this.endpointArn == null ? Input.empty() : this.endpointArn;
+    public Output<String> getEndpointArn() {
+        return this.endpointArn == null ? Output.empty() : this.endpointArn;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointId")
-      private final @Nullable Input<String> endpointId;
+      private final @Nullable Output<String> endpointId;
 
-    public Input<String> getEndpointId() {
-        return this.endpointId == null ? Input.empty() : this.endpointId;
+    public Output<String> getEndpointId() {
+        return this.endpointId == null ? Output.empty() : this.endpointId;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType")
-      private final @Nullable Input<String> endpointType;
+      private final @Nullable Output<String> endpointType;
 
-    public Input<String> getEndpointType() {
-        return this.endpointType == null ? Input.empty() : this.endpointType;
+    public Output<String> getEndpointType() {
+        return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineName")
-      private final @Nullable Input<String> engineName;
+      private final @Nullable Output<String> engineName;
 
-    public Input<String> getEngineName() {
-        return this.engineName == null ? Input.empty() : this.engineName;
+    public Output<String> getEngineName() {
+        return this.engineName == null ? Output.empty() : this.engineName;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraConnectionAttributes")
-      private final @Nullable Input<String> extraConnectionAttributes;
+      private final @Nullable Output<String> extraConnectionAttributes;
 
-    public Input<String> getExtraConnectionAttributes() {
-        return this.extraConnectionAttributes == null ? Input.empty() : this.extraConnectionAttributes;
+    public Output<String> getExtraConnectionAttributes() {
+        return this.extraConnectionAttributes == null ? Output.empty() : this.extraConnectionAttributes;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaSettings")
-      private final @Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings;
+      private final @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings;
 
-    public Input<EndpointKafkaSettingsGetArgs> getKafkaSettings() {
-        return this.kafkaSettings == null ? Input.empty() : this.kafkaSettings;
+    public Output<EndpointKafkaSettingsGetArgs> getKafkaSettings() {
+        return this.kafkaSettings == null ? Output.empty() : this.kafkaSettings;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kinesisSettings")
-      private final @Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings;
+      private final @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings;
 
-    public Input<EndpointKinesisSettingsGetArgs> getKinesisSettings() {
-        return this.kinesisSettings == null ? Input.empty() : this.kinesisSettings;
+    public Output<EndpointKinesisSettingsGetArgs> getKinesisSettings() {
+        return this.kinesisSettings == null ? Output.empty() : this.kinesisSettings;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mongodbSettings")
-      private final @Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings;
+      private final @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings;
 
-    public Input<EndpointMongodbSettingsGetArgs> getMongodbSettings() {
-        return this.mongodbSettings == null ? Input.empty() : this.mongodbSettings;
+    public Output<EndpointMongodbSettingsGetArgs> getMongodbSettings() {
+        return this.mongodbSettings == null ? Output.empty() : this.mongodbSettings;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Settings")
-      private final @Nullable Input<EndpointS3SettingsGetArgs> s3Settings;
+      private final @Nullable Output<EndpointS3SettingsGetArgs> s3Settings;
 
-    public Input<EndpointS3SettingsGetArgs> getS3Settings() {
-        return this.s3Settings == null ? Input.empty() : this.s3Settings;
+    public Output<EndpointS3SettingsGetArgs> getS3Settings() {
+        return this.s3Settings == null ? Output.empty() : this.s3Settings;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretsManagerAccessRoleArn")
-      private final @Nullable Input<String> secretsManagerAccessRoleArn;
+      private final @Nullable Output<String> secretsManagerAccessRoleArn;
 
-    public Input<String> getSecretsManagerAccessRoleArn() {
-        return this.secretsManagerAccessRoleArn == null ? Input.empty() : this.secretsManagerAccessRoleArn;
+    public Output<String> getSecretsManagerAccessRoleArn() {
+        return this.secretsManagerAccessRoleArn == null ? Output.empty() : this.secretsManagerAccessRoleArn;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretsManagerArn")
-      private final @Nullable Input<String> secretsManagerArn;
+      private final @Nullable Output<String> secretsManagerArn;
 
-    public Input<String> getSecretsManagerArn() {
-        return this.secretsManagerArn == null ? Input.empty() : this.secretsManagerArn;
+    public Output<String> getSecretsManagerArn() {
+        return this.secretsManagerArn == null ? Output.empty() : this.secretsManagerArn;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-      private final @Nullable Input<String> serverName;
+      private final @Nullable Output<String> serverName;
 
-    public Input<String> getServerName() {
-        return this.serverName == null ? Input.empty() : this.serverName;
+    public Output<String> getServerName() {
+        return this.serverName == null ? Output.empty() : this.serverName;
     }
 
     /**
@@ -224,10 +224,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccessRole")
-      private final @Nullable Input<String> serviceAccessRole;
+      private final @Nullable Output<String> serviceAccessRole;
 
-    public Input<String> getServiceAccessRole() {
-        return this.serviceAccessRole == null ? Input.empty() : this.serviceAccessRole;
+    public Output<String> getServiceAccessRole() {
+        return this.serviceAccessRole == null ? Output.empty() : this.serviceAccessRole;
     }
 
     /**
@@ -235,10 +235,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslMode")
-      private final @Nullable Input<String> sslMode;
+      private final @Nullable Output<String> sslMode;
 
-    public Input<String> getSslMode() {
-        return this.sslMode == null ? Input.empty() : this.sslMode;
+    public Output<String> getSslMode() {
+        return this.sslMode == null ? Output.empty() : this.sslMode;
     }
 
     /**
@@ -246,10 +246,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -257,10 +257,10 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -268,36 +268,36 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public EndpointState(
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings,
-        @Nullable Input<String> endpointArn,
-        @Nullable Input<String> endpointId,
-        @Nullable Input<String> endpointType,
-        @Nullable Input<String> engineName,
-        @Nullable Input<String> extraConnectionAttributes,
-        @Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings,
-        @Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings,
-        @Nullable Input<String> password,
-        @Nullable Input<Integer> port,
-        @Nullable Input<EndpointS3SettingsGetArgs> s3Settings,
-        @Nullable Input<String> secretsManagerAccessRoleArn,
-        @Nullable Input<String> secretsManagerArn,
-        @Nullable Input<String> serverName,
-        @Nullable Input<String> serviceAccessRole,
-        @Nullable Input<String> sslMode,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings,
+        @Nullable Output<String> endpointArn,
+        @Nullable Output<String> endpointId,
+        @Nullable Output<String> endpointType,
+        @Nullable Output<String> engineName,
+        @Nullable Output<String> extraConnectionAttributes,
+        @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings,
+        @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings,
+        @Nullable Output<String> password,
+        @Nullable Output<Integer> port,
+        @Nullable Output<EndpointS3SettingsGetArgs> s3Settings,
+        @Nullable Output<String> secretsManagerAccessRoleArn,
+        @Nullable Output<String> secretsManagerArn,
+        @Nullable Output<String> serverName,
+        @Nullable Output<String> serviceAccessRole,
+        @Nullable Output<String> sslMode,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> username) {
         this.certificateArn = certificateArn;
         this.databaseName = databaseName;
         this.elasticsearchSettings = elasticsearchSettings;
@@ -324,29 +324,29 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointState() {
-        this.certificateArn = Input.empty();
-        this.databaseName = Input.empty();
-        this.elasticsearchSettings = Input.empty();
-        this.endpointArn = Input.empty();
-        this.endpointId = Input.empty();
-        this.endpointType = Input.empty();
-        this.engineName = Input.empty();
-        this.extraConnectionAttributes = Input.empty();
-        this.kafkaSettings = Input.empty();
-        this.kinesisSettings = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.mongodbSettings = Input.empty();
-        this.password = Input.empty();
-        this.port = Input.empty();
-        this.s3Settings = Input.empty();
-        this.secretsManagerAccessRoleArn = Input.empty();
-        this.secretsManagerArn = Input.empty();
-        this.serverName = Input.empty();
-        this.serviceAccessRole = Input.empty();
-        this.sslMode = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.username = Input.empty();
+        this.certificateArn = Output.empty();
+        this.databaseName = Output.empty();
+        this.elasticsearchSettings = Output.empty();
+        this.endpointArn = Output.empty();
+        this.endpointId = Output.empty();
+        this.endpointType = Output.empty();
+        this.engineName = Output.empty();
+        this.extraConnectionAttributes = Output.empty();
+        this.kafkaSettings = Output.empty();
+        this.kinesisSettings = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.mongodbSettings = Output.empty();
+        this.password = Output.empty();
+        this.port = Output.empty();
+        this.s3Settings = Output.empty();
+        this.secretsManagerAccessRoleArn = Output.empty();
+        this.secretsManagerArn = Output.empty();
+        this.serverName = Output.empty();
+        this.serviceAccessRole = Output.empty();
+        this.sslMode = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -358,29 +358,29 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
-        private @Nullable Input<String> endpointArn;
-        private @Nullable Input<String> endpointId;
-        private @Nullable Input<String> endpointType;
-        private @Nullable Input<String> engineName;
-        private @Nullable Input<String> extraConnectionAttributes;
-        private @Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings;
-        private @Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings;
-        private @Nullable Input<String> password;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<EndpointS3SettingsGetArgs> s3Settings;
-        private @Nullable Input<String> secretsManagerAccessRoleArn;
-        private @Nullable Input<String> secretsManagerArn;
-        private @Nullable Input<String> serverName;
-        private @Nullable Input<String> serviceAccessRole;
-        private @Nullable Input<String> sslMode;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
+        private @Nullable Output<String> endpointArn;
+        private @Nullable Output<String> endpointId;
+        private @Nullable Output<String> endpointType;
+        private @Nullable Output<String> engineName;
+        private @Nullable Output<String> extraConnectionAttributes;
+        private @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings;
+        private @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings;
+        private @Nullable Output<String> password;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<EndpointS3SettingsGetArgs> s3Settings;
+        private @Nullable Output<String> secretsManagerAccessRoleArn;
+        private @Nullable Output<String> secretsManagerArn;
+        private @Nullable Output<String> serverName;
+        private @Nullable Output<String> serviceAccessRole;
+        private @Nullable Output<String> sslMode;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -413,233 +413,233 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder elasticsearchSettings(@Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings) {
+        public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings) {
             this.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
 
         public Builder elasticsearchSettings(@Nullable EndpointElasticsearchSettingsGetArgs elasticsearchSettings) {
-            this.elasticsearchSettings = Input.ofNullable(elasticsearchSettings);
+            this.elasticsearchSettings = Output.ofNullable(elasticsearchSettings);
             return this;
         }
 
-        public Builder endpointArn(@Nullable Input<String> endpointArn) {
+        public Builder endpointArn(@Nullable Output<String> endpointArn) {
             this.endpointArn = endpointArn;
             return this;
         }
 
         public Builder endpointArn(@Nullable String endpointArn) {
-            this.endpointArn = Input.ofNullable(endpointArn);
+            this.endpointArn = Output.ofNullable(endpointArn);
             return this;
         }
 
-        public Builder endpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Output<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
         public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Input.ofNullable(endpointId);
+            this.endpointId = Output.ofNullable(endpointId);
             return this;
         }
 
-        public Builder endpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Output<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Input.ofNullable(endpointType);
+            this.endpointType = Output.ofNullable(endpointType);
             return this;
         }
 
-        public Builder engineName(@Nullable Input<String> engineName) {
+        public Builder engineName(@Nullable Output<String> engineName) {
             this.engineName = engineName;
             return this;
         }
 
         public Builder engineName(@Nullable String engineName) {
-            this.engineName = Input.ofNullable(engineName);
+            this.engineName = Output.ofNullable(engineName);
             return this;
         }
 
-        public Builder extraConnectionAttributes(@Nullable Input<String> extraConnectionAttributes) {
+        public Builder extraConnectionAttributes(@Nullable Output<String> extraConnectionAttributes) {
             this.extraConnectionAttributes = extraConnectionAttributes;
             return this;
         }
 
         public Builder extraConnectionAttributes(@Nullable String extraConnectionAttributes) {
-            this.extraConnectionAttributes = Input.ofNullable(extraConnectionAttributes);
+            this.extraConnectionAttributes = Output.ofNullable(extraConnectionAttributes);
             return this;
         }
 
-        public Builder kafkaSettings(@Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings) {
+        public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings) {
             this.kafkaSettings = kafkaSettings;
             return this;
         }
 
         public Builder kafkaSettings(@Nullable EndpointKafkaSettingsGetArgs kafkaSettings) {
-            this.kafkaSettings = Input.ofNullable(kafkaSettings);
+            this.kafkaSettings = Output.ofNullable(kafkaSettings);
             return this;
         }
 
-        public Builder kinesisSettings(@Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings) {
+        public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings) {
             this.kinesisSettings = kinesisSettings;
             return this;
         }
 
         public Builder kinesisSettings(@Nullable EndpointKinesisSettingsGetArgs kinesisSettings) {
-            this.kinesisSettings = Input.ofNullable(kinesisSettings);
+            this.kinesisSettings = Output.ofNullable(kinesisSettings);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder mongodbSettings(@Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings) {
+        public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings) {
             this.mongodbSettings = mongodbSettings;
             return this;
         }
 
         public Builder mongodbSettings(@Nullable EndpointMongodbSettingsGetArgs mongodbSettings) {
-            this.mongodbSettings = Input.ofNullable(mongodbSettings);
+            this.mongodbSettings = Output.ofNullable(mongodbSettings);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder s3Settings(@Nullable Input<EndpointS3SettingsGetArgs> s3Settings) {
+        public Builder s3Settings(@Nullable Output<EndpointS3SettingsGetArgs> s3Settings) {
             this.s3Settings = s3Settings;
             return this;
         }
 
         public Builder s3Settings(@Nullable EndpointS3SettingsGetArgs s3Settings) {
-            this.s3Settings = Input.ofNullable(s3Settings);
+            this.s3Settings = Output.ofNullable(s3Settings);
             return this;
         }
 
-        public Builder secretsManagerAccessRoleArn(@Nullable Input<String> secretsManagerAccessRoleArn) {
+        public Builder secretsManagerAccessRoleArn(@Nullable Output<String> secretsManagerAccessRoleArn) {
             this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
             return this;
         }
 
         public Builder secretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
-            this.secretsManagerAccessRoleArn = Input.ofNullable(secretsManagerAccessRoleArn);
+            this.secretsManagerAccessRoleArn = Output.ofNullable(secretsManagerAccessRoleArn);
             return this;
         }
 
-        public Builder secretsManagerArn(@Nullable Input<String> secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Input.ofNullable(secretsManagerArn);
+            this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
             return this;
         }
 
-        public Builder serverName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Output<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Input.ofNullable(serverName);
+            this.serverName = Output.ofNullable(serverName);
             return this;
         }
 
-        public Builder serviceAccessRole(@Nullable Input<String> serviceAccessRole) {
+        public Builder serviceAccessRole(@Nullable Output<String> serviceAccessRole) {
             this.serviceAccessRole = serviceAccessRole;
             return this;
         }
 
         public Builder serviceAccessRole(@Nullable String serviceAccessRole) {
-            this.serviceAccessRole = Input.ofNullable(serviceAccessRole);
+            this.serviceAccessRole = Output.ofNullable(serviceAccessRole);
             return this;
         }
 
-        public Builder sslMode(@Nullable Input<String> sslMode) {
+        public Builder sslMode(@Nullable Output<String> sslMode) {
             this.sslMode = sslMode;
             return this;
         }
 
         public Builder sslMode(@Nullable String sslMode) {
-            this.sslMode = Input.ofNullable(sslMode);
+            this.sslMode = Output.ofNullable(sslMode);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public EndpointState build() {

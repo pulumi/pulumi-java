@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectAttributeGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
     public static final PipelineDefinitionParameterObjectGetArgs Empty = new PipelineDefinitionParameterObjectGetArgs();
 
     @InputImport(name="attributes")
-      private final @Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
+      private final @Nullable Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
 
-    public Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -28,22 +28,22 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     public PipelineDefinitionParameterObjectGetArgs(
-        @Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes,
-        Input<String> id) {
+        @Nullable Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes,
+        Output<String> id) {
         this.attributes = attributes;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
     }
 
     private PipelineDefinitionParameterObjectGetArgs() {
-        this.attributes = Input.empty();
-        this.id = Input.empty();
+        this.attributes = Output.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
-        private Input<String> id;
+        private @Nullable Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
+        private Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class PipelineDefinitionParameterObjectGetArgs extends io.pulumi.re
     	      this.id = defaults.id;
         }
 
-        public Builder attributes(@Nullable Input<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes) {
+        public Builder attributes(@Nullable Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable List<PipelineDefinitionParameterObjectAttributeGetArgs> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
         public PipelineDefinitionParameterObjectGetArgs build() {

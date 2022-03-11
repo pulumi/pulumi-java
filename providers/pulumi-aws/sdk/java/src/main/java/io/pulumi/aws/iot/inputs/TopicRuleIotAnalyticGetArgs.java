@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TopicRuleIotAnalyticGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="channelName", required=true)
-      private final Input<String> channelName;
+      private final Output<String> channelName;
 
-    public Input<String> getChannelName() {
+    public Output<String> getChannelName() {
         return this.channelName;
     }
 
@@ -29,22 +29,22 @@ public final class TopicRuleIotAnalyticGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public TopicRuleIotAnalyticGetArgs(
-        Input<String> channelName,
-        Input<String> roleArn) {
+        Output<String> channelName,
+        Output<String> roleArn) {
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private TopicRuleIotAnalyticGetArgs() {
-        this.channelName = Input.empty();
-        this.roleArn = Input.empty();
+        this.channelName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TopicRuleIotAnalyticGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> channelName;
-        private Input<String> roleArn;
+        private Output<String> channelName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TopicRuleIotAnalyticGetArgs extends io.pulumi.resources.Resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder channelName(Input<String> channelName) {
+        public Builder channelName(Output<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Input.of(Objects.requireNonNull(channelName));
+            this.channelName = Output.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public TopicRuleIotAnalyticGetArgs build() {

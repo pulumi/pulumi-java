@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kinesis.StreamArgs;
 import io.pulumi.aws.kinesis.inputs.StreamState;
 import io.pulumi.aws.kinesis.outputs.StreamStreamModeDetails;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -234,14 +233,14 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stream(String name, @Nullable StreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/stream:Stream", name, args == null ? StreamArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:kinesis/stream:Stream", name, args == null ? StreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Stream(String name, Input<String> id, @Nullable StreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Stream(String name, Output<String> id, @Nullable StreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:kinesis/stream:Stream", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -257,7 +256,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Stream get(String name, Input<String> id, @Nullable StreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Stream get(String name, Output<String> id, @Nullable StreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Stream(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RouteSpecGrpcRouteActionWeightedTargetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="virtualNode", required=true)
-      private final Input<String> virtualNode;
+      private final Output<String> virtualNode;
 
-    public Input<String> getVirtualNode() {
+    public Output<String> getVirtualNode() {
         return this.virtualNode;
     }
 
@@ -30,22 +30,22 @@ public final class RouteSpecGrpcRouteActionWeightedTargetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public RouteSpecGrpcRouteActionWeightedTargetArgs(
-        Input<String> virtualNode,
-        Input<Integer> weight) {
+        Output<String> virtualNode,
+        Output<Integer> weight) {
         this.virtualNode = Objects.requireNonNull(virtualNode, "expected parameter 'virtualNode' to be non-null");
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private RouteSpecGrpcRouteActionWeightedTargetArgs() {
-        this.virtualNode = Input.empty();
-        this.weight = Input.empty();
+        this.virtualNode = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class RouteSpecGrpcRouteActionWeightedTargetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<String> virtualNode;
-        private Input<Integer> weight;
+        private Output<String> virtualNode;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class RouteSpecGrpcRouteActionWeightedTargetArgs extends io.pulumi.
     	      this.weight = defaults.weight;
         }
 
-        public Builder virtualNode(Input<String> virtualNode) {
+        public Builder virtualNode(Output<String> virtualNode) {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
 
         public Builder virtualNode(String virtualNode) {
-            this.virtualNode = Input.of(Objects.requireNonNull(virtualNode));
+            this.virtualNode = Output.of(Objects.requireNonNull(virtualNode));
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public RouteSpecGrpcRouteActionWeightedTargetArgs build() {

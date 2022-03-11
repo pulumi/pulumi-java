@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.fsx.OntapVolumeArgs;
 import io.pulumi.aws.fsx.inputs.OntapVolumeState;
 import io.pulumi.aws.fsx.outputs.OntapVolumeTieringPolicy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -275,14 +274,14 @@ public class OntapVolume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OntapVolume(String name, OntapVolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/ontapVolume:OntapVolume", name, args == null ? OntapVolumeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/ontapVolume:OntapVolume", name, args == null ? OntapVolumeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OntapVolume(String name, Input<String> id, @Nullable OntapVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OntapVolume(String name, Output<String> id, @Nullable OntapVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/ontapVolume:OntapVolume", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -298,7 +297,7 @@ public class OntapVolume extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OntapVolume get(String name, Input<String> id, @Nullable OntapVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OntapVolume get(String name, Output<String> id, @Nullable OntapVolumeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OntapVolume(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
      * 
      */
     @InputImport(name="capacityRebalance")
-      private final @Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+      private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
+    public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
+        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
     }
 
-    public SpotFleetRequestSpotMaintenanceStrategiesGetArgs(@Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
+    public SpotFleetRequestSpotMaintenanceStrategiesGetArgs(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 
     private SpotFleetRequestSpotMaintenanceStrategiesGetArgs() {
-        this.capacityRebalance = Input.empty();
+        this.capacityRebalance = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
+        private @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder capacityRebalance(@Nullable Input<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
         public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
-            this.capacityRebalance = Input.ofNullable(capacityRebalance);
+            this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
         }
         public SpotFleetRequestSpotMaintenanceStrategiesGetArgs build() {

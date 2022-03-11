@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="defaultValue", required=true)
-      private final Input<String> defaultValue;
+      private final Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
+    public Output<String> getDefaultValue() {
         return this.defaultValue;
     }
 
@@ -29,9 +29,9 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="dimensionName", required=true)
-      private final Input<String> dimensionName;
+      private final Output<String> dimensionName;
 
-    public Input<String> getDimensionName() {
+    public Output<String> getDimensionName() {
         return this.dimensionName;
     }
 
@@ -40,25 +40,25 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="valueSource", required=true)
-      private final Input<String> valueSource;
+      private final Output<String> valueSource;
 
-    public Input<String> getValueSource() {
+    public Output<String> getValueSource() {
         return this.valueSource;
     }
 
     public EventDestinationCloudwatchDestinationGetArgs(
-        Input<String> defaultValue,
-        Input<String> dimensionName,
-        Input<String> valueSource) {
+        Output<String> defaultValue,
+        Output<String> dimensionName,
+        Output<String> valueSource) {
         this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
         this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
         this.valueSource = Objects.requireNonNull(valueSource, "expected parameter 'valueSource' to be non-null");
     }
 
     private EventDestinationCloudwatchDestinationGetArgs() {
-        this.defaultValue = Input.empty();
-        this.dimensionName = Input.empty();
-        this.valueSource = Input.empty();
+        this.defaultValue = Output.empty();
+        this.dimensionName = Output.empty();
+        this.valueSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> defaultValue;
-        private Input<String> dimensionName;
-        private Input<String> valueSource;
+        private Output<String> defaultValue;
+        private Output<String> dimensionName;
+        private Output<String> valueSource;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     	      this.valueSource = defaults.valueSource;
         }
 
-        public Builder defaultValue(Input<String> defaultValue) {
+        public Builder defaultValue(Output<String> defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Input.of(Objects.requireNonNull(defaultValue));
+            this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
             return this;
         }
 
-        public Builder dimensionName(Input<String> dimensionName) {
+        public Builder dimensionName(Output<String> dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Input.of(Objects.requireNonNull(dimensionName));
+            this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
             return this;
         }
 
-        public Builder valueSource(Input<String> valueSource) {
+        public Builder valueSource(Output<String> valueSource) {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }
 
         public Builder valueSource(String valueSource) {
-            this.valueSource = Input.of(Objects.requireNonNull(valueSource));
+            this.valueSource = Output.of(Objects.requireNonNull(valueSource));
             return this;
         }
         public EventDestinationCloudwatchDestinationGetArgs build() {

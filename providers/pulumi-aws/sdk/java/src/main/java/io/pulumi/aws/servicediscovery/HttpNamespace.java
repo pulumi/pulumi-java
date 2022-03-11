@@ -6,7 +6,6 @@ package io.pulumi.aws.servicediscovery;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicediscovery.HttpNamespaceArgs;
 import io.pulumi.aws.servicediscovery.inputs.HttpNamespaceState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -137,14 +136,14 @@ public class HttpNamespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HttpNamespace(String name, @Nullable HttpNamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicediscovery/httpNamespace:HttpNamespace", name, args == null ? HttpNamespaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicediscovery/httpNamespace:HttpNamespace", name, args == null ? HttpNamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HttpNamespace(String name, Input<String> id, @Nullable HttpNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HttpNamespace(String name, Output<String> id, @Nullable HttpNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicediscovery/httpNamespace:HttpNamespace", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -160,7 +159,7 @@ public class HttpNamespace extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HttpNamespace get(String name, Input<String> id, @Nullable HttpNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HttpNamespace get(String name, Output<String> id, @Nullable HttpNamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HttpNamespace(name, id, state, options);
     }
 }

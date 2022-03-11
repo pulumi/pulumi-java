@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="egress")
-      private final @Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress;
+      private final @Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress;
 
-    public Input<List<DefaultSecurityGroupEgressGetArgs>> getEgress() {
-        return this.egress == null ? Input.empty() : this.egress;
+    public Output<List<DefaultSecurityGroupEgressGetArgs>> getEgress() {
+        return this.egress == null ? Output.empty() : this.egress;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ingress")
-      private final @Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress;
+      private final @Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress;
 
-    public Input<List<DefaultSecurityGroupIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Input.empty() : this.ingress;
+    public Output<List<DefaultSecurityGroupIngressGetArgs>> getIngress() {
+        return this.ingress == null ? Output.empty() : this.ingress;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,17 +79,17 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     @InputImport(name="revokeRulesOnDelete")
-      private final @Nullable Input<Boolean> revokeRulesOnDelete;
+      private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Input<Boolean> getRevokeRulesOnDelete() {
-        return this.revokeRulesOnDelete == null ? Input.empty() : this.revokeRulesOnDelete;
+    public Output<Boolean> getRevokeRulesOnDelete() {
+        return this.revokeRulesOnDelete == null ? Output.empty() : this.revokeRulesOnDelete;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public DefaultSecurityGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress,
-        @Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<Boolean> revokeRulesOnDelete,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress,
+        @Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<Boolean> revokeRulesOnDelete,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.arn = arn;
         this.description = description;
         this.egress = egress;
@@ -149,16 +149,16 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
     }
 
     private DefaultSecurityGroupState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.egress = Input.empty();
-        this.ingress = Input.empty();
-        this.name = Input.empty();
-        this.ownerId = Input.empty();
-        this.revokeRulesOnDelete = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.egress = Output.empty();
+        this.ingress = Output.empty();
+        this.name = Output.empty();
+        this.ownerId = Output.empty();
+        this.revokeRulesOnDelete = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress;
-        private @Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<Boolean> revokeRulesOnDelete;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress;
+        private @Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<Boolean> revokeRulesOnDelete;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder egress(@Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress) {
+        public Builder egress(@Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
         public Builder egress(@Nullable List<DefaultSecurityGroupEgressGetArgs> egress) {
-            this.egress = Input.ofNullable(egress);
+            this.egress = Output.ofNullable(egress);
             return this;
         }
 
-        public Builder ingress(@Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
         public Builder ingress(@Nullable List<DefaultSecurityGroupIngressGetArgs> ingress) {
-            this.ingress = Input.ofNullable(ingress);
+            this.ingress = Output.ofNullable(ingress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder revokeRulesOnDelete(@Nullable Input<Boolean> revokeRulesOnDelete) {
+        public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
             this.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
 
         public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = Input.ofNullable(revokeRulesOnDelete);
+            this.revokeRulesOnDelete = Output.ofNullable(revokeRulesOnDelete);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public DefaultSecurityGroupState build() {

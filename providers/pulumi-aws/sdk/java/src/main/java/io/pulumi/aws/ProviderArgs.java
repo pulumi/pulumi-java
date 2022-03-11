@@ -8,7 +8,7 @@ import io.pulumi.aws.inputs.ProviderAssumeRoleArgs;
 import io.pulumi.aws.inputs.ProviderDefaultTagsArgs;
 import io.pulumi.aws.inputs.ProviderEndpointArgs;
 import io.pulumi.aws.inputs.ProviderIgnoreTagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,24 +27,24 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey")
-      private final @Nullable Input<String> accessKey;
+      private final @Nullable Output<String> accessKey;
 
-    public Input<String> getAccessKey() {
-        return this.accessKey == null ? Input.empty() : this.accessKey;
+    public Output<String> getAccessKey() {
+        return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
     @InputImport(name="allowedAccountIds", json=true)
-      private final @Nullable Input<List<String>> allowedAccountIds;
+      private final @Nullable Output<List<String>> allowedAccountIds;
 
-    public Input<List<String>> getAllowedAccountIds() {
-        return this.allowedAccountIds == null ? Input.empty() : this.allowedAccountIds;
+    public Output<List<String>> getAllowedAccountIds() {
+        return this.allowedAccountIds == null ? Output.empty() : this.allowedAccountIds;
     }
 
     @InputImport(name="assumeRole", json=true)
-      private final @Nullable Input<ProviderAssumeRoleArgs> assumeRole;
+      private final @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
 
-    public Input<ProviderAssumeRoleArgs> getAssumeRole() {
-        return this.assumeRole == null ? Input.empty() : this.assumeRole;
+    public Output<ProviderAssumeRoleArgs> getAssumeRole() {
+        return this.assumeRole == null ? Output.empty() : this.assumeRole;
     }
 
     /**
@@ -52,24 +52,24 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTags", json=true)
-      private final @Nullable Input<ProviderDefaultTagsArgs> defaultTags;
+      private final @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
 
-    public Input<ProviderDefaultTagsArgs> getDefaultTags() {
-        return this.defaultTags == null ? Input.empty() : this.defaultTags;
+    public Output<ProviderDefaultTagsArgs> getDefaultTags() {
+        return this.defaultTags == null ? Output.empty() : this.defaultTags;
     }
 
     @InputImport(name="endpoints", json=true)
-      private final @Nullable Input<List<ProviderEndpointArgs>> endpoints;
+      private final @Nullable Output<List<ProviderEndpointArgs>> endpoints;
 
-    public Input<List<ProviderEndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<ProviderEndpointArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     @InputImport(name="forbiddenAccountIds", json=true)
-      private final @Nullable Input<List<String>> forbiddenAccountIds;
+      private final @Nullable Output<List<String>> forbiddenAccountIds;
 
-    public Input<List<String>> getForbiddenAccountIds() {
-        return this.forbiddenAccountIds == null ? Input.empty() : this.forbiddenAccountIds;
+    public Output<List<String>> getForbiddenAccountIds() {
+        return this.forbiddenAccountIds == null ? Output.empty() : this.forbiddenAccountIds;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpProxy")
-      private final @Nullable Input<String> httpProxy;
+      private final @Nullable Output<String> httpProxy;
 
-    public Input<String> getHttpProxy() {
-        return this.httpProxy == null ? Input.empty() : this.httpProxy;
+    public Output<String> getHttpProxy() {
+        return this.httpProxy == null ? Output.empty() : this.httpProxy;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreTags", json=true)
-      private final @Nullable Input<ProviderIgnoreTagsArgs> ignoreTags;
+      private final @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
 
-    public Input<ProviderIgnoreTagsArgs> getIgnoreTags() {
-        return this.ignoreTags == null ? Input.empty() : this.ignoreTags;
+    public Output<ProviderIgnoreTagsArgs> getIgnoreTags() {
+        return this.ignoreTags == null ? Output.empty() : this.ignoreTags;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecure", json=true)
-      private final @Nullable Input<Boolean> insecure;
+      private final @Nullable Output<Boolean> insecure;
 
-    public Input<Boolean> getInsecure() {
-        return this.insecure == null ? Input.empty() : this.insecure;
+    public Output<Boolean> getInsecure() {
+        return this.insecure == null ? Output.empty() : this.insecure;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries", json=true)
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-      private final @Nullable Input<String> profile;
+      private final @Nullable Output<String> profile;
 
-    public Input<String> getProfile() {
-        return this.profile == null ? Input.empty() : this.profile;
+    public Output<String> getProfile() {
+        return this.profile == null ? Output.empty() : this.profile;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ForcePathStyle", json=true)
-      private final @Nullable Input<Boolean> s3ForcePathStyle;
+      private final @Nullable Output<Boolean> s3ForcePathStyle;
 
-    public Input<Boolean> getS3ForcePathStyle() {
-        return this.s3ForcePathStyle == null ? Input.empty() : this.s3ForcePathStyle;
+    public Output<Boolean> getS3ForcePathStyle() {
+        return this.s3ForcePathStyle == null ? Output.empty() : this.s3ForcePathStyle;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretKey")
-      private final @Nullable Input<String> secretKey;
+      private final @Nullable Output<String> secretKey;
 
-    public Input<String> getSecretKey() {
-        return this.secretKey == null ? Input.empty() : this.secretKey;
+    public Output<String> getSecretKey() {
+        return this.secretKey == null ? Output.empty() : this.secretKey;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedCredentialsFile")
-      private final @Nullable Input<String> sharedCredentialsFile;
+      private final @Nullable Output<String> sharedCredentialsFile;
 
-    public Input<String> getSharedCredentialsFile() {
-        return this.sharedCredentialsFile == null ? Input.empty() : this.sharedCredentialsFile;
+    public Output<String> getSharedCredentialsFile() {
+        return this.sharedCredentialsFile == null ? Output.empty() : this.sharedCredentialsFile;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipCredentialsValidation", json=true)
-      private final @Nullable Input<Boolean> skipCredentialsValidation;
+      private final @Nullable Output<Boolean> skipCredentialsValidation;
 
-    public Input<Boolean> getSkipCredentialsValidation() {
-        return this.skipCredentialsValidation == null ? Input.empty() : this.skipCredentialsValidation;
+    public Output<Boolean> getSkipCredentialsValidation() {
+        return this.skipCredentialsValidation == null ? Output.empty() : this.skipCredentialsValidation;
     }
 
     /**
@@ -191,17 +191,17 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipGetEc2Platforms", json=true)
-      private final @Nullable Input<Boolean> skipGetEc2Platforms;
+      private final @Nullable Output<Boolean> skipGetEc2Platforms;
 
-    public Input<Boolean> getSkipGetEc2Platforms() {
-        return this.skipGetEc2Platforms == null ? Input.empty() : this.skipGetEc2Platforms;
+    public Output<Boolean> getSkipGetEc2Platforms() {
+        return this.skipGetEc2Platforms == null ? Output.empty() : this.skipGetEc2Platforms;
     }
 
     @InputImport(name="skipMetadataApiCheck", json=true)
-      private final @Nullable Input<Boolean> skipMetadataApiCheck;
+      private final @Nullable Output<Boolean> skipMetadataApiCheck;
 
-    public Input<Boolean> getSkipMetadataApiCheck() {
-        return this.skipMetadataApiCheck == null ? Input.empty() : this.skipMetadataApiCheck;
+    public Output<Boolean> getSkipMetadataApiCheck() {
+        return this.skipMetadataApiCheck == null ? Output.empty() : this.skipMetadataApiCheck;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipRegionValidation", json=true)
-      private final @Nullable Input<Boolean> skipRegionValidation;
+      private final @Nullable Output<Boolean> skipRegionValidation;
 
-    public Input<Boolean> getSkipRegionValidation() {
-        return this.skipRegionValidation == null ? Input.empty() : this.skipRegionValidation;
+    public Output<Boolean> getSkipRegionValidation() {
+        return this.skipRegionValidation == null ? Output.empty() : this.skipRegionValidation;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipRequestingAccountId", json=true)
-      private final @Nullable Input<Boolean> skipRequestingAccountId;
+      private final @Nullable Output<Boolean> skipRequestingAccountId;
 
-    public Input<Boolean> getSkipRequestingAccountId() {
-        return this.skipRequestingAccountId == null ? Input.empty() : this.skipRequestingAccountId;
+    public Output<Boolean> getSkipRequestingAccountId() {
+        return this.skipRequestingAccountId == null ? Output.empty() : this.skipRequestingAccountId;
     }
 
     /**
@@ -232,34 +232,34 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token")
-      private final @Nullable Input<String> token;
+      private final @Nullable Output<String> token;
 
-    public Input<String> getToken() {
-        return this.token == null ? Input.empty() : this.token;
+    public Output<String> getToken() {
+        return this.token == null ? Output.empty() : this.token;
     }
 
     public ProviderArgs(
-        @Nullable Input<String> accessKey,
-        @Nullable Input<List<String>> allowedAccountIds,
-        @Nullable Input<ProviderAssumeRoleArgs> assumeRole,
-        @Nullable Input<ProviderDefaultTagsArgs> defaultTags,
-        @Nullable Input<List<ProviderEndpointArgs>> endpoints,
-        @Nullable Input<List<String>> forbiddenAccountIds,
-        @Nullable Input<String> httpProxy,
-        @Nullable Input<ProviderIgnoreTagsArgs> ignoreTags,
-        @Nullable Input<Boolean> insecure,
-        @Nullable Input<Integer> maxRetries,
-        @Nullable Input<String> profile,
-        @Nullable Input<String> region,
-        @Nullable Input<Boolean> s3ForcePathStyle,
-        @Nullable Input<String> secretKey,
-        @Nullable Input<String> sharedCredentialsFile,
-        @Nullable Input<Boolean> skipCredentialsValidation,
-        @Nullable Input<Boolean> skipGetEc2Platforms,
-        @Nullable Input<Boolean> skipMetadataApiCheck,
-        @Nullable Input<Boolean> skipRegionValidation,
-        @Nullable Input<Boolean> skipRequestingAccountId,
-        @Nullable Input<String> token) {
+        @Nullable Output<String> accessKey,
+        @Nullable Output<List<String>> allowedAccountIds,
+        @Nullable Output<ProviderAssumeRoleArgs> assumeRole,
+        @Nullable Output<ProviderDefaultTagsArgs> defaultTags,
+        @Nullable Output<List<ProviderEndpointArgs>> endpoints,
+        @Nullable Output<List<String>> forbiddenAccountIds,
+        @Nullable Output<String> httpProxy,
+        @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags,
+        @Nullable Output<Boolean> insecure,
+        @Nullable Output<Integer> maxRetries,
+        @Nullable Output<String> profile,
+        @Nullable Output<String> region,
+        @Nullable Output<Boolean> s3ForcePathStyle,
+        @Nullable Output<String> secretKey,
+        @Nullable Output<String> sharedCredentialsFile,
+        @Nullable Output<Boolean> skipCredentialsValidation,
+        @Nullable Output<Boolean> skipGetEc2Platforms,
+        @Nullable Output<Boolean> skipMetadataApiCheck,
+        @Nullable Output<Boolean> skipRegionValidation,
+        @Nullable Output<Boolean> skipRequestingAccountId,
+        @Nullable Output<String> token) {
         this.accessKey = accessKey;
         this.allowedAccountIds = allowedAccountIds;
         this.assumeRole = assumeRole;
@@ -270,41 +270,41 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
         this.ignoreTags = ignoreTags;
         this.insecure = insecure;
         this.maxRetries = maxRetries;
-        this.profile = profile == null ? Input.ofNullable(Utilities.getEnv("AWS_PROFILE").orElse(null)) : profile;
-        this.region = region == null ? Input.ofNullable(Utilities.getEnv("AWS_REGION", "AWS_DEFAULT_REGION").orElse(null)) : region;
+        this.profile = profile == null ? Output.ofNullable(Utilities.getEnv("AWS_PROFILE").orElse(null)) : profile;
+        this.region = region == null ? Output.ofNullable(Utilities.getEnv("AWS_REGION", "AWS_DEFAULT_REGION").orElse(null)) : region;
         this.s3ForcePathStyle = s3ForcePathStyle;
         this.secretKey = secretKey;
         this.sharedCredentialsFile = sharedCredentialsFile;
-        this.skipCredentialsValidation = skipCredentialsValidation == null ? Input.ofNullable(true) : skipCredentialsValidation;
-        this.skipGetEc2Platforms = skipGetEc2Platforms == null ? Input.ofNullable(true) : skipGetEc2Platforms;
-        this.skipMetadataApiCheck = skipMetadataApiCheck == null ? Input.ofNullable(true) : skipMetadataApiCheck;
-        this.skipRegionValidation = skipRegionValidation == null ? Input.ofNullable(true) : skipRegionValidation;
+        this.skipCredentialsValidation = skipCredentialsValidation == null ? Output.ofNullable(true) : skipCredentialsValidation;
+        this.skipGetEc2Platforms = skipGetEc2Platforms == null ? Output.ofNullable(true) : skipGetEc2Platforms;
+        this.skipMetadataApiCheck = skipMetadataApiCheck == null ? Output.ofNullable(true) : skipMetadataApiCheck;
+        this.skipRegionValidation = skipRegionValidation == null ? Output.ofNullable(true) : skipRegionValidation;
         this.skipRequestingAccountId = skipRequestingAccountId;
         this.token = token;
     }
 
     private ProviderArgs() {
-        this.accessKey = Input.empty();
-        this.allowedAccountIds = Input.empty();
-        this.assumeRole = Input.empty();
-        this.defaultTags = Input.empty();
-        this.endpoints = Input.empty();
-        this.forbiddenAccountIds = Input.empty();
-        this.httpProxy = Input.empty();
-        this.ignoreTags = Input.empty();
-        this.insecure = Input.empty();
-        this.maxRetries = Input.empty();
-        this.profile = Input.empty();
-        this.region = Input.empty();
-        this.s3ForcePathStyle = Input.empty();
-        this.secretKey = Input.empty();
-        this.sharedCredentialsFile = Input.empty();
-        this.skipCredentialsValidation = Input.empty();
-        this.skipGetEc2Platforms = Input.empty();
-        this.skipMetadataApiCheck = Input.empty();
-        this.skipRegionValidation = Input.empty();
-        this.skipRequestingAccountId = Input.empty();
-        this.token = Input.empty();
+        this.accessKey = Output.empty();
+        this.allowedAccountIds = Output.empty();
+        this.assumeRole = Output.empty();
+        this.defaultTags = Output.empty();
+        this.endpoints = Output.empty();
+        this.forbiddenAccountIds = Output.empty();
+        this.httpProxy = Output.empty();
+        this.ignoreTags = Output.empty();
+        this.insecure = Output.empty();
+        this.maxRetries = Output.empty();
+        this.profile = Output.empty();
+        this.region = Output.empty();
+        this.s3ForcePathStyle = Output.empty();
+        this.secretKey = Output.empty();
+        this.sharedCredentialsFile = Output.empty();
+        this.skipCredentialsValidation = Output.empty();
+        this.skipGetEc2Platforms = Output.empty();
+        this.skipMetadataApiCheck = Output.empty();
+        this.skipRegionValidation = Output.empty();
+        this.skipRequestingAccountId = Output.empty();
+        this.token = Output.empty();
     }
 
     public static Builder builder() {
@@ -316,27 +316,27 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accessKey;
-        private @Nullable Input<List<String>> allowedAccountIds;
-        private @Nullable Input<ProviderAssumeRoleArgs> assumeRole;
-        private @Nullable Input<ProviderDefaultTagsArgs> defaultTags;
-        private @Nullable Input<List<ProviderEndpointArgs>> endpoints;
-        private @Nullable Input<List<String>> forbiddenAccountIds;
-        private @Nullable Input<String> httpProxy;
-        private @Nullable Input<ProviderIgnoreTagsArgs> ignoreTags;
-        private @Nullable Input<Boolean> insecure;
-        private @Nullable Input<Integer> maxRetries;
-        private @Nullable Input<String> profile;
-        private @Nullable Input<String> region;
-        private @Nullable Input<Boolean> s3ForcePathStyle;
-        private @Nullable Input<String> secretKey;
-        private @Nullable Input<String> sharedCredentialsFile;
-        private @Nullable Input<Boolean> skipCredentialsValidation;
-        private @Nullable Input<Boolean> skipGetEc2Platforms;
-        private @Nullable Input<Boolean> skipMetadataApiCheck;
-        private @Nullable Input<Boolean> skipRegionValidation;
-        private @Nullable Input<Boolean> skipRequestingAccountId;
-        private @Nullable Input<String> token;
+        private @Nullable Output<String> accessKey;
+        private @Nullable Output<List<String>> allowedAccountIds;
+        private @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
+        private @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
+        private @Nullable Output<List<ProviderEndpointArgs>> endpoints;
+        private @Nullable Output<List<String>> forbiddenAccountIds;
+        private @Nullable Output<String> httpProxy;
+        private @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
+        private @Nullable Output<Boolean> insecure;
+        private @Nullable Output<Integer> maxRetries;
+        private @Nullable Output<String> profile;
+        private @Nullable Output<String> region;
+        private @Nullable Output<Boolean> s3ForcePathStyle;
+        private @Nullable Output<String> secretKey;
+        private @Nullable Output<String> sharedCredentialsFile;
+        private @Nullable Output<Boolean> skipCredentialsValidation;
+        private @Nullable Output<Boolean> skipGetEc2Platforms;
+        private @Nullable Output<Boolean> skipMetadataApiCheck;
+        private @Nullable Output<Boolean> skipRegionValidation;
+        private @Nullable Output<Boolean> skipRequestingAccountId;
+        private @Nullable Output<String> token;
 
         public Builder() {
     	      // Empty
@@ -367,213 +367,213 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder accessKey(@Nullable Input<String> accessKey) {
+        public Builder accessKey(@Nullable Output<String> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Input.ofNullable(accessKey);
+            this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
 
-        public Builder allowedAccountIds(@Nullable Input<List<String>> allowedAccountIds) {
+        public Builder allowedAccountIds(@Nullable Output<List<String>> allowedAccountIds) {
             this.allowedAccountIds = allowedAccountIds;
             return this;
         }
 
         public Builder allowedAccountIds(@Nullable List<String> allowedAccountIds) {
-            this.allowedAccountIds = Input.ofNullable(allowedAccountIds);
+            this.allowedAccountIds = Output.ofNullable(allowedAccountIds);
             return this;
         }
 
-        public Builder assumeRole(@Nullable Input<ProviderAssumeRoleArgs> assumeRole) {
+        public Builder assumeRole(@Nullable Output<ProviderAssumeRoleArgs> assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
 
         public Builder assumeRole(@Nullable ProviderAssumeRoleArgs assumeRole) {
-            this.assumeRole = Input.ofNullable(assumeRole);
+            this.assumeRole = Output.ofNullable(assumeRole);
             return this;
         }
 
-        public Builder defaultTags(@Nullable Input<ProviderDefaultTagsArgs> defaultTags) {
+        public Builder defaultTags(@Nullable Output<ProviderDefaultTagsArgs> defaultTags) {
             this.defaultTags = defaultTags;
             return this;
         }
 
         public Builder defaultTags(@Nullable ProviderDefaultTagsArgs defaultTags) {
-            this.defaultTags = Input.ofNullable(defaultTags);
+            this.defaultTags = Output.ofNullable(defaultTags);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<ProviderEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<ProviderEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<ProviderEndpointArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder forbiddenAccountIds(@Nullable Input<List<String>> forbiddenAccountIds) {
+        public Builder forbiddenAccountIds(@Nullable Output<List<String>> forbiddenAccountIds) {
             this.forbiddenAccountIds = forbiddenAccountIds;
             return this;
         }
 
         public Builder forbiddenAccountIds(@Nullable List<String> forbiddenAccountIds) {
-            this.forbiddenAccountIds = Input.ofNullable(forbiddenAccountIds);
+            this.forbiddenAccountIds = Output.ofNullable(forbiddenAccountIds);
             return this;
         }
 
-        public Builder httpProxy(@Nullable Input<String> httpProxy) {
+        public Builder httpProxy(@Nullable Output<String> httpProxy) {
             this.httpProxy = httpProxy;
             return this;
         }
 
         public Builder httpProxy(@Nullable String httpProxy) {
-            this.httpProxy = Input.ofNullable(httpProxy);
+            this.httpProxy = Output.ofNullable(httpProxy);
             return this;
         }
 
-        public Builder ignoreTags(@Nullable Input<ProviderIgnoreTagsArgs> ignoreTags) {
+        public Builder ignoreTags(@Nullable Output<ProviderIgnoreTagsArgs> ignoreTags) {
             this.ignoreTags = ignoreTags;
             return this;
         }
 
         public Builder ignoreTags(@Nullable ProviderIgnoreTagsArgs ignoreTags) {
-            this.ignoreTags = Input.ofNullable(ignoreTags);
+            this.ignoreTags = Output.ofNullable(ignoreTags);
             return this;
         }
 
-        public Builder insecure(@Nullable Input<Boolean> insecure) {
+        public Builder insecure(@Nullable Output<Boolean> insecure) {
             this.insecure = insecure;
             return this;
         }
 
         public Builder insecure(@Nullable Boolean insecure) {
-            this.insecure = Input.ofNullable(insecure);
+            this.insecure = Output.ofNullable(insecure);
             return this;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder profile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Output<String> profile) {
             this.profile = profile;
             return this;
         }
 
         public Builder profile(@Nullable String profile) {
-            this.profile = Input.ofNullable(profile);
+            this.profile = Output.ofNullable(profile);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder s3ForcePathStyle(@Nullable Input<Boolean> s3ForcePathStyle) {
+        public Builder s3ForcePathStyle(@Nullable Output<Boolean> s3ForcePathStyle) {
             this.s3ForcePathStyle = s3ForcePathStyle;
             return this;
         }
 
         public Builder s3ForcePathStyle(@Nullable Boolean s3ForcePathStyle) {
-            this.s3ForcePathStyle = Input.ofNullable(s3ForcePathStyle);
+            this.s3ForcePathStyle = Output.ofNullable(s3ForcePathStyle);
             return this;
         }
 
-        public Builder secretKey(@Nullable Input<String> secretKey) {
+        public Builder secretKey(@Nullable Output<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
 
         public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Input.ofNullable(secretKey);
+            this.secretKey = Output.ofNullable(secretKey);
             return this;
         }
 
-        public Builder sharedCredentialsFile(@Nullable Input<String> sharedCredentialsFile) {
+        public Builder sharedCredentialsFile(@Nullable Output<String> sharedCredentialsFile) {
             this.sharedCredentialsFile = sharedCredentialsFile;
             return this;
         }
 
         public Builder sharedCredentialsFile(@Nullable String sharedCredentialsFile) {
-            this.sharedCredentialsFile = Input.ofNullable(sharedCredentialsFile);
+            this.sharedCredentialsFile = Output.ofNullable(sharedCredentialsFile);
             return this;
         }
 
-        public Builder skipCredentialsValidation(@Nullable Input<Boolean> skipCredentialsValidation) {
+        public Builder skipCredentialsValidation(@Nullable Output<Boolean> skipCredentialsValidation) {
             this.skipCredentialsValidation = skipCredentialsValidation;
             return this;
         }
 
         public Builder skipCredentialsValidation(@Nullable Boolean skipCredentialsValidation) {
-            this.skipCredentialsValidation = Input.ofNullable(skipCredentialsValidation);
+            this.skipCredentialsValidation = Output.ofNullable(skipCredentialsValidation);
             return this;
         }
 
-        public Builder skipGetEc2Platforms(@Nullable Input<Boolean> skipGetEc2Platforms) {
+        public Builder skipGetEc2Platforms(@Nullable Output<Boolean> skipGetEc2Platforms) {
             this.skipGetEc2Platforms = skipGetEc2Platforms;
             return this;
         }
 
         public Builder skipGetEc2Platforms(@Nullable Boolean skipGetEc2Platforms) {
-            this.skipGetEc2Platforms = Input.ofNullable(skipGetEc2Platforms);
+            this.skipGetEc2Platforms = Output.ofNullable(skipGetEc2Platforms);
             return this;
         }
 
-        public Builder skipMetadataApiCheck(@Nullable Input<Boolean> skipMetadataApiCheck) {
+        public Builder skipMetadataApiCheck(@Nullable Output<Boolean> skipMetadataApiCheck) {
             this.skipMetadataApiCheck = skipMetadataApiCheck;
             return this;
         }
 
         public Builder skipMetadataApiCheck(@Nullable Boolean skipMetadataApiCheck) {
-            this.skipMetadataApiCheck = Input.ofNullable(skipMetadataApiCheck);
+            this.skipMetadataApiCheck = Output.ofNullable(skipMetadataApiCheck);
             return this;
         }
 
-        public Builder skipRegionValidation(@Nullable Input<Boolean> skipRegionValidation) {
+        public Builder skipRegionValidation(@Nullable Output<Boolean> skipRegionValidation) {
             this.skipRegionValidation = skipRegionValidation;
             return this;
         }
 
         public Builder skipRegionValidation(@Nullable Boolean skipRegionValidation) {
-            this.skipRegionValidation = Input.ofNullable(skipRegionValidation);
+            this.skipRegionValidation = Output.ofNullable(skipRegionValidation);
             return this;
         }
 
-        public Builder skipRequestingAccountId(@Nullable Input<Boolean> skipRequestingAccountId) {
+        public Builder skipRequestingAccountId(@Nullable Output<Boolean> skipRequestingAccountId) {
             this.skipRequestingAccountId = skipRequestingAccountId;
             return this;
         }
 
         public Builder skipRequestingAccountId(@Nullable Boolean skipRequestingAccountId) {
-            this.skipRequestingAccountId = Input.ofNullable(skipRequestingAccountId);
+            this.skipRequestingAccountId = Output.ofNullable(skipRequestingAccountId);
             return this;
         }
 
-        public Builder token(@Nullable Input<String> token) {
+        public Builder token(@Nullable Output<String> token) {
             this.token = token;
             return this;
         }
 
         public Builder token(@Nullable String token) {
-            this.token = Input.ofNullable(token);
+            this.token = Output.ofNullable(token);
             return this;
         }
         public ProviderArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.ecs.inputs.TaskSetLoadBalancerGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetNetworkConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetScaleGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviderStrategies")
-      private final @Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+      private final @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
-    public Input<List<TaskSetCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
-        return this.capacityProviderStrategies == null ? Input.empty() : this.capacityProviderStrategies;
+    public Output<List<TaskSetCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
+        return this.capacityProviderStrategies == null ? Output.empty() : this.capacityProviderStrategies;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<String> cluster;
+      private final @Nullable Output<String> cluster;
 
-    public Input<String> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<String> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId")
-      private final @Nullable Input<String> externalId;
+      private final @Nullable Output<String> externalId;
 
-    public Input<String> getExternalId() {
-        return this.externalId == null ? Input.empty() : this.externalId;
+    public Output<String> getExternalId() {
+        return this.externalId == null ? Output.empty() : this.externalId;
     }
 
     @InputImport(name="forceDelete")
-      private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Output<Boolean> forceDelete;
 
-    public Input<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Input.empty() : this.forceDelete;
+    public Output<Boolean> getForceDelete() {
+        return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchType")
-      private final @Nullable Input<String> launchType;
+      private final @Nullable Output<String> launchType;
 
-    public Input<String> getLaunchType() {
-        return this.launchType == null ? Input.empty() : this.launchType;
+    public Output<String> getLaunchType() {
+        return this.launchType == null ? Output.empty() : this.launchType;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-      private final @Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
+      private final @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
 
-    public Input<List<TaskSetLoadBalancerGetArgs>> getLoadBalancers() {
-        return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
+    public Output<List<TaskSetLoadBalancerGetArgs>> getLoadBalancers() {
+        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
+      private final @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Input<TaskSetNetworkConfigurationGetArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<TaskSetNetworkConfigurationGetArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-      private final @Nullable Input<String> platformVersion;
+      private final @Nullable Output<String> platformVersion;
 
-    public Input<String> getPlatformVersion() {
-        return this.platformVersion == null ? Input.empty() : this.platformVersion;
+    public Output<String> getPlatformVersion() {
+        return this.platformVersion == null ? Output.empty() : this.platformVersion;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<TaskSetScaleGetArgs> scale;
+      private final @Nullable Output<TaskSetScaleGetArgs> scale;
 
-    public Input<TaskSetScaleGetArgs> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<TaskSetScaleGetArgs> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRegistries")
-      private final @Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries;
+      private final @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
 
-    public Input<TaskSetServiceRegistriesGetArgs> getServiceRegistries() {
-        return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
+    public Output<TaskSetServiceRegistriesGetArgs> getServiceRegistries() {
+        return this.serviceRegistries == null ? Output.empty() : this.serviceRegistries;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stabilityStatus")
-      private final @Nullable Input<String> stabilityStatus;
+      private final @Nullable Output<String> stabilityStatus;
 
-    public Input<String> getStabilityStatus() {
-        return this.stabilityStatus == null ? Input.empty() : this.stabilityStatus;
+    public Output<String> getStabilityStatus() {
+        return this.stabilityStatus == null ? Output.empty() : this.stabilityStatus;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinition")
-      private final @Nullable Input<String> taskDefinition;
+      private final @Nullable Output<String> taskDefinition;
 
-    public Input<String> getTaskDefinition() {
-        return this.taskDefinition == null ? Input.empty() : this.taskDefinition;
+    public Output<String> getTaskDefinition() {
+        return this.taskDefinition == null ? Output.empty() : this.taskDefinition;
     }
 
     /**
@@ -210,17 +210,17 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSetId")
-      private final @Nullable Input<String> taskSetId;
+      private final @Nullable Output<String> taskSetId;
 
-    public Input<String> getTaskSetId() {
-        return this.taskSetId == null ? Input.empty() : this.taskSetId;
+    public Output<String> getTaskSetId() {
+        return this.taskSetId == null ? Output.empty() : this.taskSetId;
     }
 
     @InputImport(name="waitUntilStable")
-      private final @Nullable Input<Boolean> waitUntilStable;
+      private final @Nullable Output<Boolean> waitUntilStable;
 
-    public Input<Boolean> getWaitUntilStable() {
-        return this.waitUntilStable == null ? Input.empty() : this.waitUntilStable;
+    public Output<Boolean> getWaitUntilStable() {
+        return this.waitUntilStable == null ? Output.empty() : this.waitUntilStable;
     }
 
     /**
@@ -228,33 +228,33 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitUntilStableTimeout")
-      private final @Nullable Input<String> waitUntilStableTimeout;
+      private final @Nullable Output<String> waitUntilStableTimeout;
 
-    public Input<String> getWaitUntilStableTimeout() {
-        return this.waitUntilStableTimeout == null ? Input.empty() : this.waitUntilStableTimeout;
+    public Output<String> getWaitUntilStableTimeout() {
+        return this.waitUntilStableTimeout == null ? Output.empty() : this.waitUntilStableTimeout;
     }
 
     public TaskSetState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies,
-        @Nullable Input<String> cluster,
-        @Nullable Input<String> externalId,
-        @Nullable Input<Boolean> forceDelete,
-        @Nullable Input<String> launchType,
-        @Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers,
-        @Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration,
-        @Nullable Input<String> platformVersion,
-        @Nullable Input<TaskSetScaleGetArgs> scale,
-        @Nullable Input<String> service,
-        @Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries,
-        @Nullable Input<String> stabilityStatus,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> taskDefinition,
-        @Nullable Input<String> taskSetId,
-        @Nullable Input<Boolean> waitUntilStable,
-        @Nullable Input<String> waitUntilStableTimeout) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies,
+        @Nullable Output<String> cluster,
+        @Nullable Output<String> externalId,
+        @Nullable Output<Boolean> forceDelete,
+        @Nullable Output<String> launchType,
+        @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers,
+        @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration,
+        @Nullable Output<String> platformVersion,
+        @Nullable Output<TaskSetScaleGetArgs> scale,
+        @Nullable Output<String> service,
+        @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries,
+        @Nullable Output<String> stabilityStatus,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> taskDefinition,
+        @Nullable Output<String> taskSetId,
+        @Nullable Output<Boolean> waitUntilStable,
+        @Nullable Output<String> waitUntilStableTimeout) {
         this.arn = arn;
         this.capacityProviderStrategies = capacityProviderStrategies;
         this.cluster = cluster;
@@ -278,26 +278,26 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskSetState() {
-        this.arn = Input.empty();
-        this.capacityProviderStrategies = Input.empty();
-        this.cluster = Input.empty();
-        this.externalId = Input.empty();
-        this.forceDelete = Input.empty();
-        this.launchType = Input.empty();
-        this.loadBalancers = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.platformVersion = Input.empty();
-        this.scale = Input.empty();
-        this.service = Input.empty();
-        this.serviceRegistries = Input.empty();
-        this.stabilityStatus = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.taskDefinition = Input.empty();
-        this.taskSetId = Input.empty();
-        this.waitUntilStable = Input.empty();
-        this.waitUntilStableTimeout = Input.empty();
+        this.arn = Output.empty();
+        this.capacityProviderStrategies = Output.empty();
+        this.cluster = Output.empty();
+        this.externalId = Output.empty();
+        this.forceDelete = Output.empty();
+        this.launchType = Output.empty();
+        this.loadBalancers = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.platformVersion = Output.empty();
+        this.scale = Output.empty();
+        this.service = Output.empty();
+        this.serviceRegistries = Output.empty();
+        this.stabilityStatus = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.taskDefinition = Output.empty();
+        this.taskSetId = Output.empty();
+        this.waitUntilStable = Output.empty();
+        this.waitUntilStableTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -309,26 +309,26 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
-        private @Nullable Input<String> cluster;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<Boolean> forceDelete;
-        private @Nullable Input<String> launchType;
-        private @Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
-        private @Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
-        private @Nullable Input<String> platformVersion;
-        private @Nullable Input<TaskSetScaleGetArgs> scale;
-        private @Nullable Input<String> service;
-        private @Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries;
-        private @Nullable Input<String> stabilityStatus;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> taskDefinition;
-        private @Nullable Input<String> taskSetId;
-        private @Nullable Input<Boolean> waitUntilStable;
-        private @Nullable Input<String> waitUntilStableTimeout;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+        private @Nullable Output<String> cluster;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<Boolean> forceDelete;
+        private @Nullable Output<String> launchType;
+        private @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
+        private @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
+        private @Nullable Output<String> platformVersion;
+        private @Nullable Output<TaskSetScaleGetArgs> scale;
+        private @Nullable Output<String> service;
+        private @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
+        private @Nullable Output<String> stabilityStatus;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> taskDefinition;
+        private @Nullable Output<String> taskSetId;
+        private @Nullable Output<Boolean> waitUntilStable;
+        private @Nullable Output<String> waitUntilStableTimeout;
 
         public Builder() {
     	      // Empty
@@ -358,203 +358,203 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
     	      this.waitUntilStableTimeout = defaults.waitUntilStableTimeout;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder capacityProviderStrategies(@Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             this.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
         public Builder capacityProviderStrategies(@Nullable List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
-            this.capacityProviderStrategies = Input.ofNullable(capacityProviderStrategies);
+            this.capacityProviderStrategies = Output.ofNullable(capacityProviderStrategies);
             return this;
         }
 
-        public Builder cluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Input.ofNullable(externalId);
+            this.externalId = Output.ofNullable(externalId);
             return this;
         }
 
-        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Input.ofNullable(forceDelete);
+            this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder launchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Output<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
         public Builder launchType(@Nullable String launchType) {
-            this.launchType = Input.ofNullable(launchType);
+            this.launchType = Output.ofNullable(launchType);
             return this;
         }
 
-        public Builder loadBalancers(@Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerGetArgs> loadBalancers) {
-            this.loadBalancers = Input.ofNullable(loadBalancers);
+            this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationGetArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder platformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Input.ofNullable(platformVersion);
+            this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder scale(@Nullable Input<TaskSetScaleGetArgs> scale) {
+        public Builder scale(@Nullable Output<TaskSetScaleGetArgs> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable TaskSetScaleGetArgs scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder serviceRegistries(@Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
 
         public Builder serviceRegistries(@Nullable TaskSetServiceRegistriesGetArgs serviceRegistries) {
-            this.serviceRegistries = Input.ofNullable(serviceRegistries);
+            this.serviceRegistries = Output.ofNullable(serviceRegistries);
             return this;
         }
 
-        public Builder stabilityStatus(@Nullable Input<String> stabilityStatus) {
+        public Builder stabilityStatus(@Nullable Output<String> stabilityStatus) {
             this.stabilityStatus = stabilityStatus;
             return this;
         }
 
         public Builder stabilityStatus(@Nullable String stabilityStatus) {
-            this.stabilityStatus = Input.ofNullable(stabilityStatus);
+            this.stabilityStatus = Output.ofNullable(stabilityStatus);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder taskDefinition(@Nullable Input<String> taskDefinition) {
+        public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
 
         public Builder taskDefinition(@Nullable String taskDefinition) {
-            this.taskDefinition = Input.ofNullable(taskDefinition);
+            this.taskDefinition = Output.ofNullable(taskDefinition);
             return this;
         }
 
-        public Builder taskSetId(@Nullable Input<String> taskSetId) {
+        public Builder taskSetId(@Nullable Output<String> taskSetId) {
             this.taskSetId = taskSetId;
             return this;
         }
 
         public Builder taskSetId(@Nullable String taskSetId) {
-            this.taskSetId = Input.ofNullable(taskSetId);
+            this.taskSetId = Output.ofNullable(taskSetId);
             return this;
         }
 
-        public Builder waitUntilStable(@Nullable Input<Boolean> waitUntilStable) {
+        public Builder waitUntilStable(@Nullable Output<Boolean> waitUntilStable) {
             this.waitUntilStable = waitUntilStable;
             return this;
         }
 
         public Builder waitUntilStable(@Nullable Boolean waitUntilStable) {
-            this.waitUntilStable = Input.ofNullable(waitUntilStable);
+            this.waitUntilStable = Output.ofNullable(waitUntilStable);
             return this;
         }
 
-        public Builder waitUntilStableTimeout(@Nullable Input<String> waitUntilStableTimeout) {
+        public Builder waitUntilStableTimeout(@Nullable Output<String> waitUntilStableTimeout) {
             this.waitUntilStableTimeout = waitUntilStableTimeout;
             return this;
         }
 
         public Builder waitUntilStableTimeout(@Nullable String waitUntilStableTimeout) {
-            this.waitUntilStableTimeout = Input.ofNullable(waitUntilStableTimeout);
+            this.waitUntilStableTimeout = Output.ofNullable(waitUntilStableTimeout);
             return this;
         }
         public TaskSetState build() {

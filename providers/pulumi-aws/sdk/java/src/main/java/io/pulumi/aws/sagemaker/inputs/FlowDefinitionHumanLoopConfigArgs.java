@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="humanTaskUiArn", required=true)
-      private final Input<String> humanTaskUiArn;
+      private final Output<String> humanTaskUiArn;
 
-    public Input<String> getHumanTaskUiArn() {
+    public Output<String> getHumanTaskUiArn() {
         return this.humanTaskUiArn;
     }
 
@@ -33,10 +33,10 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicWorkforceTaskPrice")
-      private final @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
+      private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
 
-    public Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> getPublicWorkforceTaskPrice() {
-        return this.publicWorkforceTaskPrice == null ? Input.empty() : this.publicWorkforceTaskPrice;
+    public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> getPublicWorkforceTaskPrice() {
+        return this.publicWorkforceTaskPrice == null ? Output.empty() : this.publicWorkforceTaskPrice;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskAvailabilityLifetimeInSeconds")
-      private final @Nullable Input<Integer> taskAvailabilityLifetimeInSeconds;
+      private final @Nullable Output<Integer> taskAvailabilityLifetimeInSeconds;
 
-    public Input<Integer> getTaskAvailabilityLifetimeInSeconds() {
-        return this.taskAvailabilityLifetimeInSeconds == null ? Input.empty() : this.taskAvailabilityLifetimeInSeconds;
+    public Output<Integer> getTaskAvailabilityLifetimeInSeconds() {
+        return this.taskAvailabilityLifetimeInSeconds == null ? Output.empty() : this.taskAvailabilityLifetimeInSeconds;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskCount", required=true)
-      private final Input<Integer> taskCount;
+      private final Output<Integer> taskCount;
 
-    public Input<Integer> getTaskCount() {
+    public Output<Integer> getTaskCount() {
         return this.taskCount;
     }
 
@@ -66,9 +66,9 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskDescription", required=true)
-      private final Input<String> taskDescription;
+      private final Output<String> taskDescription;
 
-    public Input<String> getTaskDescription() {
+    public Output<String> getTaskDescription() {
         return this.taskDescription;
     }
 
@@ -77,10 +77,10 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskKeywords")
-      private final @Nullable Input<List<String>> taskKeywords;
+      private final @Nullable Output<List<String>> taskKeywords;
 
-    public Input<List<String>> getTaskKeywords() {
-        return this.taskKeywords == null ? Input.empty() : this.taskKeywords;
+    public Output<List<String>> getTaskKeywords() {
+        return this.taskKeywords == null ? Output.empty() : this.taskKeywords;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskTimeLimitInSeconds")
-      private final @Nullable Input<Integer> taskTimeLimitInSeconds;
+      private final @Nullable Output<Integer> taskTimeLimitInSeconds;
 
-    public Input<Integer> getTaskTimeLimitInSeconds() {
-        return this.taskTimeLimitInSeconds == null ? Input.empty() : this.taskTimeLimitInSeconds;
+    public Output<Integer> getTaskTimeLimitInSeconds() {
+        return this.taskTimeLimitInSeconds == null ? Output.empty() : this.taskTimeLimitInSeconds;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskTitle", required=true)
-      private final Input<String> taskTitle;
+      private final Output<String> taskTitle;
 
-    public Input<String> getTaskTitle() {
+    public Output<String> getTaskTitle() {
         return this.taskTitle;
     }
 
@@ -110,22 +110,22 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workteamArn", required=true)
-      private final Input<String> workteamArn;
+      private final Output<String> workteamArn;
 
-    public Input<String> getWorkteamArn() {
+    public Output<String> getWorkteamArn() {
         return this.workteamArn;
     }
 
     public FlowDefinitionHumanLoopConfigArgs(
-        Input<String> humanTaskUiArn,
-        @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice,
-        @Nullable Input<Integer> taskAvailabilityLifetimeInSeconds,
-        Input<Integer> taskCount,
-        Input<String> taskDescription,
-        @Nullable Input<List<String>> taskKeywords,
-        @Nullable Input<Integer> taskTimeLimitInSeconds,
-        Input<String> taskTitle,
-        Input<String> workteamArn) {
+        Output<String> humanTaskUiArn,
+        @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice,
+        @Nullable Output<Integer> taskAvailabilityLifetimeInSeconds,
+        Output<Integer> taskCount,
+        Output<String> taskDescription,
+        @Nullable Output<List<String>> taskKeywords,
+        @Nullable Output<Integer> taskTimeLimitInSeconds,
+        Output<String> taskTitle,
+        Output<String> workteamArn) {
         this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn, "expected parameter 'humanTaskUiArn' to be non-null");
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
@@ -138,15 +138,15 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
     }
 
     private FlowDefinitionHumanLoopConfigArgs() {
-        this.humanTaskUiArn = Input.empty();
-        this.publicWorkforceTaskPrice = Input.empty();
-        this.taskAvailabilityLifetimeInSeconds = Input.empty();
-        this.taskCount = Input.empty();
-        this.taskDescription = Input.empty();
-        this.taskKeywords = Input.empty();
-        this.taskTimeLimitInSeconds = Input.empty();
-        this.taskTitle = Input.empty();
-        this.workteamArn = Input.empty();
+        this.humanTaskUiArn = Output.empty();
+        this.publicWorkforceTaskPrice = Output.empty();
+        this.taskAvailabilityLifetimeInSeconds = Output.empty();
+        this.taskCount = Output.empty();
+        this.taskDescription = Output.empty();
+        this.taskKeywords = Output.empty();
+        this.taskTimeLimitInSeconds = Output.empty();
+        this.taskTitle = Output.empty();
+        this.workteamArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> humanTaskUiArn;
-        private @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
-        private @Nullable Input<Integer> taskAvailabilityLifetimeInSeconds;
-        private Input<Integer> taskCount;
-        private Input<String> taskDescription;
-        private @Nullable Input<List<String>> taskKeywords;
-        private @Nullable Input<Integer> taskTimeLimitInSeconds;
-        private Input<String> taskTitle;
-        private Input<String> workteamArn;
+        private Output<String> humanTaskUiArn;
+        private @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
+        private @Nullable Output<Integer> taskAvailabilityLifetimeInSeconds;
+        private Output<Integer> taskCount;
+        private Output<String> taskDescription;
+        private @Nullable Output<List<String>> taskKeywords;
+        private @Nullable Output<Integer> taskTimeLimitInSeconds;
+        private Output<String> taskTitle;
+        private Output<String> workteamArn;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
     	      this.workteamArn = defaults.workteamArn;
         }
 
-        public Builder humanTaskUiArn(Input<String> humanTaskUiArn) {
+        public Builder humanTaskUiArn(Output<String> humanTaskUiArn) {
             this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
             return this;
         }
 
         public Builder humanTaskUiArn(String humanTaskUiArn) {
-            this.humanTaskUiArn = Input.of(Objects.requireNonNull(humanTaskUiArn));
+            this.humanTaskUiArn = Output.of(Objects.requireNonNull(humanTaskUiArn));
             return this;
         }
 
-        public Builder publicWorkforceTaskPrice(@Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice) {
+        public Builder publicWorkforceTaskPrice(@Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
             return this;
         }
 
         public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs publicWorkforceTaskPrice) {
-            this.publicWorkforceTaskPrice = Input.ofNullable(publicWorkforceTaskPrice);
+            this.publicWorkforceTaskPrice = Output.ofNullable(publicWorkforceTaskPrice);
             return this;
         }
 
-        public Builder taskAvailabilityLifetimeInSeconds(@Nullable Input<Integer> taskAvailabilityLifetimeInSeconds) {
+        public Builder taskAvailabilityLifetimeInSeconds(@Nullable Output<Integer> taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
             return this;
         }
 
         public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
-            this.taskAvailabilityLifetimeInSeconds = Input.ofNullable(taskAvailabilityLifetimeInSeconds);
+            this.taskAvailabilityLifetimeInSeconds = Output.ofNullable(taskAvailabilityLifetimeInSeconds);
             return this;
         }
 
-        public Builder taskCount(Input<Integer> taskCount) {
+        public Builder taskCount(Output<Integer> taskCount) {
             this.taskCount = Objects.requireNonNull(taskCount);
             return this;
         }
 
         public Builder taskCount(Integer taskCount) {
-            this.taskCount = Input.of(Objects.requireNonNull(taskCount));
+            this.taskCount = Output.of(Objects.requireNonNull(taskCount));
             return this;
         }
 
-        public Builder taskDescription(Input<String> taskDescription) {
+        public Builder taskDescription(Output<String> taskDescription) {
             this.taskDescription = Objects.requireNonNull(taskDescription);
             return this;
         }
 
         public Builder taskDescription(String taskDescription) {
-            this.taskDescription = Input.of(Objects.requireNonNull(taskDescription));
+            this.taskDescription = Output.of(Objects.requireNonNull(taskDescription));
             return this;
         }
 
-        public Builder taskKeywords(@Nullable Input<List<String>> taskKeywords) {
+        public Builder taskKeywords(@Nullable Output<List<String>> taskKeywords) {
             this.taskKeywords = taskKeywords;
             return this;
         }
 
         public Builder taskKeywords(@Nullable List<String> taskKeywords) {
-            this.taskKeywords = Input.ofNullable(taskKeywords);
+            this.taskKeywords = Output.ofNullable(taskKeywords);
             return this;
         }
 
-        public Builder taskTimeLimitInSeconds(@Nullable Input<Integer> taskTimeLimitInSeconds) {
+        public Builder taskTimeLimitInSeconds(@Nullable Output<Integer> taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
             return this;
         }
 
         public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
-            this.taskTimeLimitInSeconds = Input.ofNullable(taskTimeLimitInSeconds);
+            this.taskTimeLimitInSeconds = Output.ofNullable(taskTimeLimitInSeconds);
             return this;
         }
 
-        public Builder taskTitle(Input<String> taskTitle) {
+        public Builder taskTitle(Output<String> taskTitle) {
             this.taskTitle = Objects.requireNonNull(taskTitle);
             return this;
         }
 
         public Builder taskTitle(String taskTitle) {
-            this.taskTitle = Input.of(Objects.requireNonNull(taskTitle));
+            this.taskTitle = Output.of(Objects.requireNonNull(taskTitle));
             return this;
         }
 
-        public Builder workteamArn(Input<String> workteamArn) {
+        public Builder workteamArn(Output<String> workteamArn) {
             this.workteamArn = Objects.requireNonNull(workteamArn);
             return this;
         }
 
         public Builder workteamArn(String workteamArn) {
-            this.workteamArn = Input.of(Objects.requireNonNull(workteamArn));
+            this.workteamArn = Output.of(Objects.requireNonNull(workteamArn));
             return this;
         }
         public FlowDefinitionHumanLoopConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appautoscaling;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity", required=true)
-      private final Input<Integer> maxCapacity;
+      private final Output<Integer> maxCapacity;
 
-    public Input<Integer> getMaxCapacity() {
+    public Output<Integer> getMaxCapacity() {
         return this.maxCapacity;
     }
 
@@ -31,9 +31,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity", required=true)
-      private final Input<Integer> minCapacity;
+      private final Output<Integer> minCapacity;
 
-    public Input<Integer> getMinCapacity() {
+    public Output<Integer> getMinCapacity() {
         return this.minCapacity;
     }
 
@@ -42,9 +42,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -53,10 +53,10 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-      private final Input<String> scalableDimension;
+      private final Output<String> scalableDimension;
 
-    public Input<String> getScalableDimension() {
+    public Output<String> getScalableDimension() {
         return this.scalableDimension;
     }
 
@@ -75,19 +75,19 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-      private final Input<String> serviceNamespace;
+      private final Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
+    public Output<String> getServiceNamespace() {
         return this.serviceNamespace;
     }
 
     public TargetArgs(
-        Input<Integer> maxCapacity,
-        Input<Integer> minCapacity,
-        Input<String> resourceId,
-        @Nullable Input<String> roleArn,
-        Input<String> scalableDimension,
-        Input<String> serviceNamespace) {
+        Output<Integer> maxCapacity,
+        Output<Integer> minCapacity,
+        Output<String> resourceId,
+        @Nullable Output<String> roleArn,
+        Output<String> scalableDimension,
+        Output<String> serviceNamespace) {
         this.maxCapacity = Objects.requireNonNull(maxCapacity, "expected parameter 'maxCapacity' to be non-null");
         this.minCapacity = Objects.requireNonNull(minCapacity, "expected parameter 'minCapacity' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
@@ -97,12 +97,12 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetArgs() {
-        this.maxCapacity = Input.empty();
-        this.minCapacity = Input.empty();
-        this.resourceId = Input.empty();
-        this.roleArn = Input.empty();
-        this.scalableDimension = Input.empty();
-        this.serviceNamespace = Input.empty();
+        this.maxCapacity = Output.empty();
+        this.minCapacity = Output.empty();
+        this.resourceId = Output.empty();
+        this.roleArn = Output.empty();
+        this.scalableDimension = Output.empty();
+        this.serviceNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> maxCapacity;
-        private Input<Integer> minCapacity;
-        private Input<String> resourceId;
-        private @Nullable Input<String> roleArn;
-        private Input<String> scalableDimension;
-        private Input<String> serviceNamespace;
+        private Output<Integer> maxCapacity;
+        private Output<Integer> minCapacity;
+        private Output<String> resourceId;
+        private @Nullable Output<String> roleArn;
+        private Output<String> scalableDimension;
+        private Output<String> serviceNamespace;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder maxCapacity(Input<Integer> maxCapacity) {
+        public Builder maxCapacity(Output<Integer> maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
         public Builder maxCapacity(Integer maxCapacity) {
-            this.maxCapacity = Input.of(Objects.requireNonNull(maxCapacity));
+            this.maxCapacity = Output.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
 
-        public Builder minCapacity(Input<Integer> minCapacity) {
+        public Builder minCapacity(Output<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
         public Builder minCapacity(Integer minCapacity) {
-            this.minCapacity = Input.of(Objects.requireNonNull(minCapacity));
+            this.minCapacity = Output.of(Objects.requireNonNull(minCapacity));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder scalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
+            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder serviceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
+            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
         public TargetArgs build() {

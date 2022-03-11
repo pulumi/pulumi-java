@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudtrail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="endsWiths")
-      private final @Nullable Input<List<String>> endsWiths;
+      private final @Nullable Output<List<String>> endsWiths;
 
-    public Input<List<String>> getEndsWiths() {
-        return this.endsWiths == null ? Input.empty() : this.endsWiths;
+    public Output<List<String>> getEndsWiths() {
+        return this.endsWiths == null ? Output.empty() : this.endsWiths;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="equals")
-      private final @Nullable Input<List<String>> equals;
+      private final @Nullable Output<List<String>> equals;
 
-    public Input<List<String>> getEquals() {
-        return this.equals == null ? Input.empty() : this.equals;
+    public Output<List<String>> getEquals() {
+        return this.equals == null ? Output.empty() : this.equals;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="field", required=true)
-      private final Input<String> field;
+      private final Output<String> field;
 
-    public Input<String> getField() {
+    public Output<String> getField() {
         return this.field;
     }
 
@@ -53,10 +53,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notEndsWiths")
-      private final @Nullable Input<List<String>> notEndsWiths;
+      private final @Nullable Output<List<String>> notEndsWiths;
 
-    public Input<List<String>> getNotEndsWiths() {
-        return this.notEndsWiths == null ? Input.empty() : this.notEndsWiths;
+    public Output<List<String>> getNotEndsWiths() {
+        return this.notEndsWiths == null ? Output.empty() : this.notEndsWiths;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notEquals")
-      private final @Nullable Input<List<String>> notEquals;
+      private final @Nullable Output<List<String>> notEquals;
 
-    public Input<List<String>> getNotEquals() {
-        return this.notEquals == null ? Input.empty() : this.notEquals;
+    public Output<List<String>> getNotEquals() {
+        return this.notEquals == null ? Output.empty() : this.notEquals;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notStartsWiths")
-      private final @Nullable Input<List<String>> notStartsWiths;
+      private final @Nullable Output<List<String>> notStartsWiths;
 
-    public Input<List<String>> getNotStartsWiths() {
-        return this.notStartsWiths == null ? Input.empty() : this.notStartsWiths;
+    public Output<List<String>> getNotStartsWiths() {
+        return this.notStartsWiths == null ? Output.empty() : this.notStartsWiths;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="startsWiths")
-      private final @Nullable Input<List<String>> startsWiths;
+      private final @Nullable Output<List<String>> startsWiths;
 
-    public Input<List<String>> getStartsWiths() {
-        return this.startsWiths == null ? Input.empty() : this.startsWiths;
+    public Output<List<String>> getStartsWiths() {
+        return this.startsWiths == null ? Output.empty() : this.startsWiths;
     }
 
     public TrailAdvancedEventSelectorFieldSelectorArgs(
-        @Nullable Input<List<String>> endsWiths,
-        @Nullable Input<List<String>> equals,
-        Input<String> field,
-        @Nullable Input<List<String>> notEndsWiths,
-        @Nullable Input<List<String>> notEquals,
-        @Nullable Input<List<String>> notStartsWiths,
-        @Nullable Input<List<String>> startsWiths) {
+        @Nullable Output<List<String>> endsWiths,
+        @Nullable Output<List<String>> equals,
+        Output<String> field,
+        @Nullable Output<List<String>> notEndsWiths,
+        @Nullable Output<List<String>> notEquals,
+        @Nullable Output<List<String>> notStartsWiths,
+        @Nullable Output<List<String>> startsWiths) {
         this.endsWiths = endsWiths;
         this.equals = equals;
         this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
@@ -110,13 +110,13 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     }
 
     private TrailAdvancedEventSelectorFieldSelectorArgs() {
-        this.endsWiths = Input.empty();
-        this.equals = Input.empty();
-        this.field = Input.empty();
-        this.notEndsWiths = Input.empty();
-        this.notEquals = Input.empty();
-        this.notStartsWiths = Input.empty();
-        this.startsWiths = Input.empty();
+        this.endsWiths = Output.empty();
+        this.equals = Output.empty();
+        this.field = Output.empty();
+        this.notEndsWiths = Output.empty();
+        this.notEquals = Output.empty();
+        this.notStartsWiths = Output.empty();
+        this.startsWiths = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> endsWiths;
-        private @Nullable Input<List<String>> equals;
-        private Input<String> field;
-        private @Nullable Input<List<String>> notEndsWiths;
-        private @Nullable Input<List<String>> notEquals;
-        private @Nullable Input<List<String>> notStartsWiths;
-        private @Nullable Input<List<String>> startsWiths;
+        private @Nullable Output<List<String>> endsWiths;
+        private @Nullable Output<List<String>> equals;
+        private Output<String> field;
+        private @Nullable Output<List<String>> notEndsWiths;
+        private @Nullable Output<List<String>> notEquals;
+        private @Nullable Output<List<String>> notStartsWiths;
+        private @Nullable Output<List<String>> startsWiths;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     	      this.startsWiths = defaults.startsWiths;
         }
 
-        public Builder endsWiths(@Nullable Input<List<String>> endsWiths) {
+        public Builder endsWiths(@Nullable Output<List<String>> endsWiths) {
             this.endsWiths = endsWiths;
             return this;
         }
 
         public Builder endsWiths(@Nullable List<String> endsWiths) {
-            this.endsWiths = Input.ofNullable(endsWiths);
+            this.endsWiths = Output.ofNullable(endsWiths);
             return this;
         }
 
-        public Builder equals(@Nullable Input<List<String>> equals) {
+        public Builder equals(@Nullable Output<List<String>> equals) {
             this.equals = equals;
             return this;
         }
 
         public Builder equals(@Nullable List<String> equals) {
-            this.equals = Input.ofNullable(equals);
+            this.equals = Output.ofNullable(equals);
             return this;
         }
 
-        public Builder field(Input<String> field) {
+        public Builder field(Output<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
         public Builder field(String field) {
-            this.field = Input.of(Objects.requireNonNull(field));
+            this.field = Output.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder notEndsWiths(@Nullable Input<List<String>> notEndsWiths) {
+        public Builder notEndsWiths(@Nullable Output<List<String>> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
 
         public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
-            this.notEndsWiths = Input.ofNullable(notEndsWiths);
+            this.notEndsWiths = Output.ofNullable(notEndsWiths);
             return this;
         }
 
-        public Builder notEquals(@Nullable Input<List<String>> notEquals) {
+        public Builder notEquals(@Nullable Output<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
         public Builder notEquals(@Nullable List<String> notEquals) {
-            this.notEquals = Input.ofNullable(notEquals);
+            this.notEquals = Output.ofNullable(notEquals);
             return this;
         }
 
-        public Builder notStartsWiths(@Nullable Input<List<String>> notStartsWiths) {
+        public Builder notStartsWiths(@Nullable Output<List<String>> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
 
         public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
-            this.notStartsWiths = Input.ofNullable(notStartsWiths);
+            this.notStartsWiths = Output.ofNullable(notStartsWiths);
             return this;
         }
 
-        public Builder startsWiths(@Nullable Input<List<String>> startsWiths) {
+        public Builder startsWiths(@Nullable Output<List<String>> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }
 
         public Builder startsWiths(@Nullable List<String> startsWiths) {
-            this.startsWiths = Input.ofNullable(startsWiths);
+            this.startsWiths = Output.ofNullable(startsWiths);
             return this;
         }
         public TrailAdvancedEventSelectorFieldSelectorArgs build() {

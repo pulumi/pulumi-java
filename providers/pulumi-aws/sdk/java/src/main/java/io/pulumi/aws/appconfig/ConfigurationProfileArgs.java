@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig;
 
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -33,10 +33,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="locationUri", required=true)
-      private final Input<String> locationUri;
+      private final Output<String> locationUri;
 
-    public Input<String> getLocationUri() {
+    public Output<String> getLocationUri() {
         return this.locationUri;
     }
 
@@ -55,10 +55,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="retrievalRoleArn")
-      private final @Nullable Input<String> retrievalRoleArn;
+      private final @Nullable Output<String> retrievalRoleArn;
 
-    public Input<String> getRetrievalRoleArn() {
-        return this.retrievalRoleArn == null ? Input.empty() : this.retrievalRoleArn;
+    public Output<String> getRetrievalRoleArn() {
+        return this.retrievalRoleArn == null ? Output.empty() : this.retrievalRoleArn;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validators")
-      private final @Nullable Input<List<ConfigurationProfileValidatorArgs>> validators;
+      private final @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
-    public Input<List<ConfigurationProfileValidatorArgs>> getValidators() {
-        return this.validators == null ? Input.empty() : this.validators;
+    public Output<List<ConfigurationProfileValidatorArgs>> getValidators() {
+        return this.validators == null ? Output.empty() : this.validators;
     }
 
     public ConfigurationProfileArgs(
-        Input<String> applicationId,
-        @Nullable Input<String> description,
-        Input<String> locationUri,
-        @Nullable Input<String> name,
-        @Nullable Input<String> retrievalRoleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<ConfigurationProfileValidatorArgs>> validators) {
+        Output<String> applicationId,
+        @Nullable Output<String> description,
+        Output<String> locationUri,
+        @Nullable Output<String> name,
+        @Nullable Output<String> retrievalRoleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.description = description;
         this.locationUri = Objects.requireNonNull(locationUri, "expected parameter 'locationUri' to be non-null");
@@ -112,13 +112,13 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigurationProfileArgs() {
-        this.applicationId = Input.empty();
-        this.description = Input.empty();
-        this.locationUri = Input.empty();
-        this.name = Input.empty();
-        this.retrievalRoleArn = Input.empty();
-        this.tags = Input.empty();
-        this.validators = Input.empty();
+        this.applicationId = Output.empty();
+        this.description = Output.empty();
+        this.locationUri = Output.empty();
+        this.name = Output.empty();
+        this.retrievalRoleArn = Output.empty();
+        this.tags = Output.empty();
+        this.validators = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private @Nullable Input<String> description;
-        private Input<String> locationUri;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> retrievalRoleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<ConfigurationProfileValidatorArgs>> validators;
+        private Output<String> applicationId;
+        private @Nullable Output<String> description;
+        private Output<String> locationUri;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> retrievalRoleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<ConfigurationProfileValidatorArgs>> validators;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     	      this.validators = defaults.validators;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder locationUri(Input<String> locationUri) {
+        public Builder locationUri(Output<String> locationUri) {
             this.locationUri = Objects.requireNonNull(locationUri);
             return this;
         }
 
         public Builder locationUri(String locationUri) {
-            this.locationUri = Input.of(Objects.requireNonNull(locationUri));
+            this.locationUri = Output.of(Objects.requireNonNull(locationUri));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retrievalRoleArn(@Nullable Input<String> retrievalRoleArn) {
+        public Builder retrievalRoleArn(@Nullable Output<String> retrievalRoleArn) {
             this.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
 
         public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
-            this.retrievalRoleArn = Input.ofNullable(retrievalRoleArn);
+            this.retrievalRoleArn = Output.ofNullable(retrievalRoleArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder validators(@Nullable Input<List<ConfigurationProfileValidatorArgs>> validators) {
+        public Builder validators(@Nullable Output<List<ConfigurationProfileValidatorArgs>> validators) {
             this.validators = validators;
             return this;
         }
 
         public Builder validators(@Nullable List<ConfigurationProfileValidatorArgs> validators) {
-            this.validators = Input.ofNullable(validators);
+            this.validators = Output.ofNullable(validators);
             return this;
         }
         public ConfigurationProfileArgs build() {

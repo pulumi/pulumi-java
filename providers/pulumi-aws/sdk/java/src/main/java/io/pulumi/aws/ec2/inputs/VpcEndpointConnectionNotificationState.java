@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectionEvents")
-      private final @Nullable Input<List<String>> connectionEvents;
+      private final @Nullable Output<List<String>> connectionEvents;
 
-    public Input<List<String>> getConnectionEvents() {
-        return this.connectionEvents == null ? Input.empty() : this.connectionEvents;
+    public Output<List<String>> getConnectionEvents() {
+        return this.connectionEvents == null ? Output.empty() : this.connectionEvents;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectionNotificationArn")
-      private final @Nullable Input<String> connectionNotificationArn;
+      private final @Nullable Output<String> connectionNotificationArn;
 
-    public Input<String> getConnectionNotificationArn() {
-        return this.connectionNotificationArn == null ? Input.empty() : this.connectionNotificationArn;
+    public Output<String> getConnectionNotificationArn() {
+        return this.connectionNotificationArn == null ? Output.empty() : this.connectionNotificationArn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="notificationType")
-      private final @Nullable Input<String> notificationType;
+      private final @Nullable Output<String> notificationType;
 
-    public Input<String> getNotificationType() {
-        return this.notificationType == null ? Input.empty() : this.notificationType;
+    public Output<String> getNotificationType() {
+        return this.notificationType == null ? Output.empty() : this.notificationType;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-      private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;
+    public Output<String> getVpcEndpointServiceId() {
+        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
     }
 
     public VpcEndpointConnectionNotificationState(
-        @Nullable Input<List<String>> connectionEvents,
-        @Nullable Input<String> connectionNotificationArn,
-        @Nullable Input<String> notificationType,
-        @Nullable Input<String> state,
-        @Nullable Input<String> vpcEndpointId,
-        @Nullable Input<String> vpcEndpointServiceId) {
+        @Nullable Output<List<String>> connectionEvents,
+        @Nullable Output<String> connectionNotificationArn,
+        @Nullable Output<String> notificationType,
+        @Nullable Output<String> state,
+        @Nullable Output<String> vpcEndpointId,
+        @Nullable Output<String> vpcEndpointServiceId) {
         this.connectionEvents = connectionEvents;
         this.connectionNotificationArn = connectionNotificationArn;
         this.notificationType = notificationType;
@@ -97,12 +97,12 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     }
 
     private VpcEndpointConnectionNotificationState() {
-        this.connectionEvents = Input.empty();
-        this.connectionNotificationArn = Input.empty();
-        this.notificationType = Input.empty();
-        this.state = Input.empty();
-        this.vpcEndpointId = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
+        this.connectionEvents = Output.empty();
+        this.connectionNotificationArn = Output.empty();
+        this.notificationType = Output.empty();
+        this.state = Output.empty();
+        this.vpcEndpointId = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> connectionEvents;
-        private @Nullable Input<String> connectionNotificationArn;
-        private @Nullable Input<String> notificationType;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> vpcEndpointId;
-        private @Nullable Input<String> vpcEndpointServiceId;
+        private @Nullable Output<List<String>> connectionEvents;
+        private @Nullable Output<String> connectionNotificationArn;
+        private @Nullable Output<String> notificationType;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> vpcEndpointId;
+        private @Nullable Output<String> vpcEndpointServiceId;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder connectionEvents(@Nullable Input<List<String>> connectionEvents) {
+        public Builder connectionEvents(@Nullable Output<List<String>> connectionEvents) {
             this.connectionEvents = connectionEvents;
             return this;
         }
 
         public Builder connectionEvents(@Nullable List<String> connectionEvents) {
-            this.connectionEvents = Input.ofNullable(connectionEvents);
+            this.connectionEvents = Output.ofNullable(connectionEvents);
             return this;
         }
 
-        public Builder connectionNotificationArn(@Nullable Input<String> connectionNotificationArn) {
+        public Builder connectionNotificationArn(@Nullable Output<String> connectionNotificationArn) {
             this.connectionNotificationArn = connectionNotificationArn;
             return this;
         }
 
         public Builder connectionNotificationArn(@Nullable String connectionNotificationArn) {
-            this.connectionNotificationArn = Input.ofNullable(connectionNotificationArn);
+            this.connectionNotificationArn = Output.ofNullable(connectionNotificationArn);
             return this;
         }
 
-        public Builder notificationType(@Nullable Input<String> notificationType) {
+        public Builder notificationType(@Nullable Output<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
 
         public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Input.ofNullable(notificationType);
+            this.notificationType = Output.ofNullable(notificationType);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
         }
         public VpcEndpointConnectionNotificationState build() {

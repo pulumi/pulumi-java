@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     public VpcEndpointSubnetAssociationState(
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> vpcEndpointId) {
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> vpcEndpointId) {
         this.subnetId = subnetId;
         this.vpcEndpointId = vpcEndpointId;
     }
 
     private VpcEndpointSubnetAssociationState() {
-        this.subnetId = Input.empty();
-        this.vpcEndpointId = Input.empty();
+        this.subnetId = Output.empty();
+        this.vpcEndpointId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> vpcEndpointId;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> vpcEndpointId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
         public VpcEndpointSubnetAssociationState build() {

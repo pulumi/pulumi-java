@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventCategories", required=true)
-      private final Input<List<String>> eventCategories;
+      private final Output<List<String>> eventCategories;
 
-    public Input<List<String>> getEventCategories() {
+    public Output<List<String>> getEventCategories() {
         return this.eventCategories;
     }
 
@@ -44,10 +44,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsTopicArn", required=true)
-      private final Input<String> snsTopicArn;
+      private final Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
+    public Output<String> getSnsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -66,10 +66,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceIds")
-      private final @Nullable Input<List<String>> sourceIds;
+      private final @Nullable Output<List<String>> sourceIds;
 
-    public Input<List<String>> getSourceIds() {
-        return this.sourceIds == null ? Input.empty() : this.sourceIds;
+    public Output<List<String>> getSourceIds() {
+        return this.sourceIds == null ? Output.empty() : this.sourceIds;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<String> sourceType;
+      private final @Nullable Output<String> sourceType;
 
-    public Input<String> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<String> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EventSubscriptionArgs(
-        @Nullable Input<Boolean> enabled,
-        Input<List<String>> eventCategories,
-        @Nullable Input<String> name,
-        Input<String> snsTopicArn,
-        @Nullable Input<List<String>> sourceIds,
-        @Nullable Input<String> sourceType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> enabled,
+        Output<List<String>> eventCategories,
+        @Nullable Output<String> name,
+        Output<String> snsTopicArn,
+        @Nullable Output<List<String>> sourceIds,
+        @Nullable Output<String> sourceType,
+        @Nullable Output<Map<String,String>> tags) {
         this.enabled = enabled;
         this.eventCategories = Objects.requireNonNull(eventCategories, "expected parameter 'eventCategories' to be non-null");
         this.name = name;
@@ -112,13 +112,13 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EventSubscriptionArgs() {
-        this.enabled = Input.empty();
-        this.eventCategories = Input.empty();
-        this.name = Input.empty();
-        this.snsTopicArn = Input.empty();
-        this.sourceIds = Input.empty();
-        this.sourceType = Input.empty();
-        this.tags = Input.empty();
+        this.enabled = Output.empty();
+        this.eventCategories = Output.empty();
+        this.name = Output.empty();
+        this.snsTopicArn = Output.empty();
+        this.sourceIds = Output.empty();
+        this.sourceType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private Input<List<String>> eventCategories;
-        private @Nullable Input<String> name;
-        private Input<String> snsTopicArn;
-        private @Nullable Input<List<String>> sourceIds;
-        private @Nullable Input<String> sourceType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> enabled;
+        private Output<List<String>> eventCategories;
+        private @Nullable Output<String> name;
+        private Output<String> snsTopicArn;
+        private @Nullable Output<List<String>> sourceIds;
+        private @Nullable Output<String> sourceType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder eventCategories(Input<List<String>> eventCategories) {
+        public Builder eventCategories(Output<List<String>> eventCategories) {
             this.eventCategories = Objects.requireNonNull(eventCategories);
             return this;
         }
 
         public Builder eventCategories(List<String> eventCategories) {
-            this.eventCategories = Input.of(Objects.requireNonNull(eventCategories));
+            this.eventCategories = Output.of(Objects.requireNonNull(eventCategories));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder snsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Output<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
         public Builder snsTopicArn(String snsTopicArn) {
-            this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
+            this.snsTopicArn = Output.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }
 
-        public Builder sourceIds(@Nullable Input<List<String>> sourceIds) {
+        public Builder sourceIds(@Nullable Output<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
         public Builder sourceIds(@Nullable List<String> sourceIds) {
-            this.sourceIds = Input.ofNullable(sourceIds);
+            this.sourceIds = Output.ofNullable(sourceIds);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Output<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EventSubscriptionArgs build() {

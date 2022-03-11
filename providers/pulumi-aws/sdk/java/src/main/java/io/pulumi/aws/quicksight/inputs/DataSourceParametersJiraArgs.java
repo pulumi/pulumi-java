@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="siteBaseUrl", required=true)
-      private final Input<String> siteBaseUrl;
+      private final Output<String> siteBaseUrl;
 
-    public Input<String> getSiteBaseUrl() {
+    public Output<String> getSiteBaseUrl() {
         return this.siteBaseUrl;
     }
 
-    public DataSourceParametersJiraArgs(Input<String> siteBaseUrl) {
+    public DataSourceParametersJiraArgs(Output<String> siteBaseUrl) {
         this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl, "expected parameter 'siteBaseUrl' to be non-null");
     }
 
     private DataSourceParametersJiraArgs() {
-        this.siteBaseUrl = Input.empty();
+        this.siteBaseUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> siteBaseUrl;
+        private Output<String> siteBaseUrl;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class DataSourceParametersJiraArgs extends io.pulumi.resources.Reso
     	      this.siteBaseUrl = defaults.siteBaseUrl;
         }
 
-        public Builder siteBaseUrl(Input<String> siteBaseUrl) {
+        public Builder siteBaseUrl(Output<String> siteBaseUrl) {
             this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
             return this;
         }
 
         public Builder siteBaseUrl(String siteBaseUrl) {
-            this.siteBaseUrl = Input.of(Objects.requireNonNull(siteBaseUrl));
+            this.siteBaseUrl = Output.of(Objects.requireNonNull(siteBaseUrl));
             return this;
         }
         public DataSourceParametersJiraArgs build() {

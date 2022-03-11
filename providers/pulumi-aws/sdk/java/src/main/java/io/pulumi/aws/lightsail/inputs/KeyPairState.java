@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedFingerprint")
-      private final @Nullable Input<String> encryptedFingerprint;
+      private final @Nullable Output<String> encryptedFingerprint;
 
-    public Input<String> getEncryptedFingerprint() {
-        return this.encryptedFingerprint == null ? Input.empty() : this.encryptedFingerprint;
+    public Output<String> getEncryptedFingerprint() {
+        return this.encryptedFingerprint == null ? Output.empty() : this.encryptedFingerprint;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedPrivateKey")
-      private final @Nullable Input<String> encryptedPrivateKey;
+      private final @Nullable Output<String> encryptedPrivateKey;
 
-    public Input<String> getEncryptedPrivateKey() {
-        return this.encryptedPrivateKey == null ? Input.empty() : this.encryptedPrivateKey;
+    public Output<String> getEncryptedPrivateKey() {
+        return this.encryptedPrivateKey == null ? Output.empty() : this.encryptedPrivateKey;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-      private final @Nullable Input<String> pgpKey;
+      private final @Nullable Output<String> pgpKey;
 
-    public Input<String> getPgpKey() {
-        return this.pgpKey == null ? Input.empty() : this.pgpKey;
+    public Output<String> getPgpKey() {
+        return this.pgpKey == null ? Output.empty() : this.pgpKey;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     public KeyPairState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> encryptedFingerprint,
-        @Nullable Input<String> encryptedPrivateKey,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> pgpKey,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> publicKey) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> encryptedFingerprint,
+        @Nullable Output<String> encryptedPrivateKey,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> pgpKey,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> publicKey) {
         this.arn = arn;
         this.encryptedFingerprint = encryptedFingerprint;
         this.encryptedPrivateKey = encryptedPrivateKey;
@@ -138,15 +138,15 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairState() {
-        this.arn = Input.empty();
-        this.encryptedFingerprint = Input.empty();
-        this.encryptedPrivateKey = Input.empty();
-        this.fingerprint = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.pgpKey = Input.empty();
-        this.privateKey = Input.empty();
-        this.publicKey = Input.empty();
+        this.arn = Output.empty();
+        this.encryptedFingerprint = Output.empty();
+        this.encryptedPrivateKey = Output.empty();
+        this.fingerprint = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.pgpKey = Output.empty();
+        this.privateKey = Output.empty();
+        this.publicKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> encryptedFingerprint;
-        private @Nullable Input<String> encryptedPrivateKey;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> pgpKey;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> publicKey;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> encryptedFingerprint;
+        private @Nullable Output<String> encryptedPrivateKey;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> pgpKey;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> publicKey;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder encryptedFingerprint(@Nullable Input<String> encryptedFingerprint) {
+        public Builder encryptedFingerprint(@Nullable Output<String> encryptedFingerprint) {
             this.encryptedFingerprint = encryptedFingerprint;
             return this;
         }
 
         public Builder encryptedFingerprint(@Nullable String encryptedFingerprint) {
-            this.encryptedFingerprint = Input.ofNullable(encryptedFingerprint);
+            this.encryptedFingerprint = Output.ofNullable(encryptedFingerprint);
             return this;
         }
 
-        public Builder encryptedPrivateKey(@Nullable Input<String> encryptedPrivateKey) {
+        public Builder encryptedPrivateKey(@Nullable Output<String> encryptedPrivateKey) {
             this.encryptedPrivateKey = encryptedPrivateKey;
             return this;
         }
 
         public Builder encryptedPrivateKey(@Nullable String encryptedPrivateKey) {
-            this.encryptedPrivateKey = Input.ofNullable(encryptedPrivateKey);
+            this.encryptedPrivateKey = Output.ofNullable(encryptedPrivateKey);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder pgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Input.ofNullable(pgpKey);
+            this.pgpKey = Output.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
         public KeyPairState build() {

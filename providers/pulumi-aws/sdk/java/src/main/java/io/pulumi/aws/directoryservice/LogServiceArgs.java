@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId", required=true)
-      private final Input<String> directoryId;
+      private final Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
+    public Output<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -29,22 +29,22 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName", required=true)
-      private final Input<String> logGroupName;
+      private final Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
+    public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
     public LogServiceArgs(
-        Input<String> directoryId,
-        Input<String> logGroupName) {
+        Output<String> directoryId,
+        Output<String> logGroupName) {
         this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
         this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
     }
 
     private LogServiceArgs() {
-        this.directoryId = Input.empty();
-        this.logGroupName = Input.empty();
+        this.directoryId = Output.empty();
+        this.logGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> directoryId;
-        private Input<String> logGroupName;
+        private Output<String> directoryId;
+        private Output<String> logGroupName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder directoryId(Input<String> directoryId) {
+        public Builder directoryId(Output<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
         public Builder directoryId(String directoryId) {
-            this.directoryId = Input.of(Objects.requireNonNull(directoryId));
+            this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
 
-        public Builder logGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
+            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
         public LogServiceArgs build() {

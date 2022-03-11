@@ -6,7 +6,6 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.PullThroughCacheRuleArgs;
 import io.pulumi.aws.ecr.inputs.PullThroughCacheRuleState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,14 +112,14 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PullThroughCacheRule(String name, PullThroughCacheRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PullThroughCacheRule(String name, Input<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PullThroughCacheRule(String name, Output<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -136,7 +135,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PullThroughCacheRule get(String name, Input<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PullThroughCacheRule get(String name, Output<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PullThroughCacheRule(name, id, state, options);
     }
 }

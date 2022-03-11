@@ -5,7 +5,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesGetArgs;
 import io.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="magneticStoreWriteProperties")
-      private final @Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
+      private final @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
 
-    public Input<TableMagneticStoreWritePropertiesGetArgs> getMagneticStoreWriteProperties() {
-        return this.magneticStoreWriteProperties == null ? Input.empty() : this.magneticStoreWriteProperties;
+    public Output<TableMagneticStoreWritePropertiesGetArgs> getMagneticStoreWriteProperties() {
+        return this.magneticStoreWriteProperties == null ? Output.empty() : this.magneticStoreWriteProperties;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionProperties")
-      private final @Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties;
+      private final @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties;
 
-    public Input<TableRetentionPropertiesGetArgs> getRetentionProperties() {
-        return this.retentionProperties == null ? Input.empty() : this.retentionProperties;
+    public Output<TableRetentionPropertiesGetArgs> getRetentionProperties() {
+        return this.retentionProperties == null ? Output.empty() : this.retentionProperties;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public TableState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties,
-        @Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties,
-        @Nullable Input<String> tableName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties,
+        @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties,
+        @Nullable Output<String> tableName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.databaseName = databaseName;
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
@@ -112,13 +112,13 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableState() {
-        this.arn = Input.empty();
-        this.databaseName = Input.empty();
-        this.magneticStoreWriteProperties = Input.empty();
-        this.retentionProperties = Input.empty();
-        this.tableName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.databaseName = Output.empty();
+        this.magneticStoreWriteProperties = Output.empty();
+        this.retentionProperties = Output.empty();
+        this.tableName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
-        private @Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties;
-        private @Nullable Input<String> tableName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
+        private @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties;
+        private @Nullable Output<String> tableName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder magneticStoreWriteProperties(@Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(@Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
 
         public Builder magneticStoreWriteProperties(@Nullable TableMagneticStoreWritePropertiesGetArgs magneticStoreWriteProperties) {
-            this.magneticStoreWriteProperties = Input.ofNullable(magneticStoreWriteProperties);
+            this.magneticStoreWriteProperties = Output.ofNullable(magneticStoreWriteProperties);
             return this;
         }
 
-        public Builder retentionProperties(@Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties) {
+        public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties) {
             this.retentionProperties = retentionProperties;
             return this;
         }
 
         public Builder retentionProperties(@Nullable TableRetentionPropertiesGetArgs retentionProperties) {
-            this.retentionProperties = Input.ofNullable(retentionProperties);
+            this.retentionProperties = Output.ofNullable(retentionProperties);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public TableState build() {

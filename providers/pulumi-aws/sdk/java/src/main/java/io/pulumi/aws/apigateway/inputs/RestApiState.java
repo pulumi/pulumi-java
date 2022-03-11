@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeySource")
-      private final @Nullable Input<String> apiKeySource;
+      private final @Nullable Output<String> apiKeySource;
 
-    public Input<String> getApiKeySource() {
-        return this.apiKeySource == null ? Input.empty() : this.apiKeySource;
+    public Output<String> getApiKeySource() {
+        return this.apiKeySource == null ? Output.empty() : this.apiKeySource;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryMediaTypes")
-      private final @Nullable Input<List<String>> binaryMediaTypes;
+      private final @Nullable Output<List<String>> binaryMediaTypes;
 
-    public Input<List<String>> getBinaryMediaTypes() {
-        return this.binaryMediaTypes == null ? Input.empty() : this.binaryMediaTypes;
+    public Output<List<String>> getBinaryMediaTypes() {
+        return this.binaryMediaTypes == null ? Output.empty() : this.binaryMediaTypes;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableExecuteApiEndpoint")
-      private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
+      private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Input<Boolean> getDisableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint == null ? Input.empty() : this.disableExecuteApiEndpoint;
+    public Output<Boolean> getDisableExecuteApiEndpoint() {
+        return this.disableExecuteApiEndpoint == null ? Output.empty() : this.disableExecuteApiEndpoint;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfiguration")
-      private final @Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
+      private final @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
 
-    public Input<RestApiEndpointConfigurationGetArgs> getEndpointConfiguration() {
-        return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
+    public Output<RestApiEndpointConfigurationGetArgs> getEndpointConfiguration() {
+        return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionArn")
-      private final @Nullable Input<String> executionArn;
+      private final @Nullable Output<String> executionArn;
 
-    public Input<String> getExecutionArn() {
-        return this.executionArn == null ? Input.empty() : this.executionArn;
+    public Output<String> getExecutionArn() {
+        return this.executionArn == null ? Output.empty() : this.executionArn;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumCompressionSize")
-      private final @Nullable Input<Integer> minimumCompressionSize;
+      private final @Nullable Output<Integer> minimumCompressionSize;
 
-    public Input<Integer> getMinimumCompressionSize() {
-        return this.minimumCompressionSize == null ? Input.empty() : this.minimumCompressionSize;
+    public Output<Integer> getMinimumCompressionSize() {
+        return this.minimumCompressionSize == null ? Output.empty() : this.minimumCompressionSize;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootResourceId")
-      private final @Nullable Input<String> rootResourceId;
+      private final @Nullable Output<String> rootResourceId;
 
-    public Input<String> getRootResourceId() {
-        return this.rootResourceId == null ? Input.empty() : this.rootResourceId;
+    public Output<String> getRootResourceId() {
+        return this.rootResourceId == null ? Output.empty() : this.rootResourceId;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -191,29 +191,29 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public RestApiState(
-        @Nullable Input<String> apiKeySource,
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> binaryMediaTypes,
-        @Nullable Input<String> body,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disableExecuteApiEndpoint,
-        @Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration,
-        @Nullable Input<String> executionArn,
-        @Nullable Input<Integer> minimumCompressionSize,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<String> policy,
-        @Nullable Input<String> rootResourceId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> apiKeySource,
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> binaryMediaTypes,
+        @Nullable Output<String> body,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disableExecuteApiEndpoint,
+        @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration,
+        @Nullable Output<String> executionArn,
+        @Nullable Output<Integer> minimumCompressionSize,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<String> policy,
+        @Nullable Output<String> rootResourceId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.apiKeySource = apiKeySource;
         this.arn = arn;
         this.binaryMediaTypes = binaryMediaTypes;
@@ -233,22 +233,22 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestApiState() {
-        this.apiKeySource = Input.empty();
-        this.arn = Input.empty();
-        this.binaryMediaTypes = Input.empty();
-        this.body = Input.empty();
-        this.createdDate = Input.empty();
-        this.description = Input.empty();
-        this.disableExecuteApiEndpoint = Input.empty();
-        this.endpointConfiguration = Input.empty();
-        this.executionArn = Input.empty();
-        this.minimumCompressionSize = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.policy = Input.empty();
-        this.rootResourceId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.apiKeySource = Output.empty();
+        this.arn = Output.empty();
+        this.binaryMediaTypes = Output.empty();
+        this.body = Output.empty();
+        this.createdDate = Output.empty();
+        this.description = Output.empty();
+        this.disableExecuteApiEndpoint = Output.empty();
+        this.endpointConfiguration = Output.empty();
+        this.executionArn = Output.empty();
+        this.minimumCompressionSize = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.policy = Output.empty();
+        this.rootResourceId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -260,22 +260,22 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiKeySource;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> binaryMediaTypes;
-        private @Nullable Input<String> body;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disableExecuteApiEndpoint;
-        private @Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
-        private @Nullable Input<String> executionArn;
-        private @Nullable Input<Integer> minimumCompressionSize;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> rootResourceId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> apiKeySource;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> binaryMediaTypes;
+        private @Nullable Output<String> body;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disableExecuteApiEndpoint;
+        private @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
+        private @Nullable Output<String> executionArn;
+        private @Nullable Output<Integer> minimumCompressionSize;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> rootResourceId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -301,163 +301,163 @@ public final class RestApiState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder apiKeySource(@Nullable Input<String> apiKeySource) {
+        public Builder apiKeySource(@Nullable Output<String> apiKeySource) {
             this.apiKeySource = apiKeySource;
             return this;
         }
 
         public Builder apiKeySource(@Nullable String apiKeySource) {
-            this.apiKeySource = Input.ofNullable(apiKeySource);
+            this.apiKeySource = Output.ofNullable(apiKeySource);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder binaryMediaTypes(@Nullable Input<List<String>> binaryMediaTypes) {
+        public Builder binaryMediaTypes(@Nullable Output<List<String>> binaryMediaTypes) {
             this.binaryMediaTypes = binaryMediaTypes;
             return this;
         }
 
         public Builder binaryMediaTypes(@Nullable List<String> binaryMediaTypes) {
-            this.binaryMediaTypes = Input.ofNullable(binaryMediaTypes);
+            this.binaryMediaTypes = Output.ofNullable(binaryMediaTypes);
             return this;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disableExecuteApiEndpoint(@Nullable Input<Boolean> disableExecuteApiEndpoint) {
+        public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
 
         public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = Input.ofNullable(disableExecuteApiEndpoint);
+            this.disableExecuteApiEndpoint = Output.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
 
-        public Builder endpointConfiguration(@Nullable Input<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
         public Builder endpointConfiguration(@Nullable RestApiEndpointConfigurationGetArgs endpointConfiguration) {
-            this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
+            this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder executionArn(@Nullable Input<String> executionArn) {
+        public Builder executionArn(@Nullable Output<String> executionArn) {
             this.executionArn = executionArn;
             return this;
         }
 
         public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Input.ofNullable(executionArn);
+            this.executionArn = Output.ofNullable(executionArn);
             return this;
         }
 
-        public Builder minimumCompressionSize(@Nullable Input<Integer> minimumCompressionSize) {
+        public Builder minimumCompressionSize(@Nullable Output<Integer> minimumCompressionSize) {
             this.minimumCompressionSize = minimumCompressionSize;
             return this;
         }
 
         public Builder minimumCompressionSize(@Nullable Integer minimumCompressionSize) {
-            this.minimumCompressionSize = Input.ofNullable(minimumCompressionSize);
+            this.minimumCompressionSize = Output.ofNullable(minimumCompressionSize);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder rootResourceId(@Nullable Input<String> rootResourceId) {
+        public Builder rootResourceId(@Nullable Output<String> rootResourceId) {
             this.rootResourceId = rootResourceId;
             return this;
         }
 
         public Builder rootResourceId(@Nullable String rootResourceId) {
-            this.rootResourceId = Input.ofNullable(rootResourceId);
+            this.rootResourceId = Output.ofNullable(rootResourceId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public RestApiState build() {

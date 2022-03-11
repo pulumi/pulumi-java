@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
      * 
      */
     @InputImport(name="realtimeMetricsSubscriptionConfig", required=true)
-      private final Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
+      private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
-    public Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> getRealtimeMetricsSubscriptionConfig() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> getRealtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }
 
-    public MonitoringSubscriptionMonitoringSubscriptionGetArgs(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
+    public MonitoringSubscriptionMonitoringSubscriptionGetArgs(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
         this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig, "expected parameter 'realtimeMetricsSubscriptionConfig' to be non-null");
     }
 
     private MonitoringSubscriptionMonitoringSubscriptionGetArgs() {
-        this.realtimeMetricsSubscriptionConfig = Input.empty();
+        this.realtimeMetricsSubscriptionConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
+        private Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
     	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
         }
 
-        public Builder realtimeMetricsSubscriptionConfig(Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
             return this;
         }
 
         public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs realtimeMetricsSubscriptionConfig) {
-            this.realtimeMetricsSubscriptionConfig = Input.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
+            this.realtimeMetricsSubscriptionConfig = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionConfig));
             return this;
         }
         public MonitoringSubscriptionMonitoringSubscriptionGetArgs build() {

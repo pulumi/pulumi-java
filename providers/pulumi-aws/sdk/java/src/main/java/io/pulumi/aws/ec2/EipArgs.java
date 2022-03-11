@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWithPrivateIp")
-      private final @Nullable Input<String> associateWithPrivateIp;
+      private final @Nullable Output<String> associateWithPrivateIp;
 
-    public Input<String> getAssociateWithPrivateIp() {
-        return this.associateWithPrivateIp == null ? Input.empty() : this.associateWithPrivateIp;
+    public Output<String> getAssociateWithPrivateIp() {
+        return this.associateWithPrivateIp == null ? Output.empty() : this.associateWithPrivateIp;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-      private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Input<String> getCustomerOwnedIpv4Pool() {
-        return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
+    public Output<String> getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkBorderGroup")
-      private final @Nullable Input<String> networkBorderGroup;
+      private final @Nullable Output<String> networkBorderGroup;
 
-    public Input<String> getNetworkBorderGroup() {
-        return this.networkBorderGroup == null ? Input.empty() : this.networkBorderGroup;
+    public Output<String> getNetworkBorderGroup() {
+        return this.networkBorderGroup == null ? Output.empty() : this.networkBorderGroup;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterface")
-      private final @Nullable Input<String> networkInterface;
+      private final @Nullable Output<String> networkInterface;
 
-    public Input<String> getNetworkInterface() {
-        return this.networkInterface == null ? Input.empty() : this.networkInterface;
+    public Output<String> getNetworkInterface() {
+        return this.networkInterface == null ? Output.empty() : this.networkInterface;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpv4Pool")
-      private final @Nullable Input<String> publicIpv4Pool;
+      private final @Nullable Output<String> publicIpv4Pool;
 
-    public Input<String> getPublicIpv4Pool() {
-        return this.publicIpv4Pool == null ? Input.empty() : this.publicIpv4Pool;
+    public Output<String> getPublicIpv4Pool() {
+        return this.publicIpv4Pool == null ? Output.empty() : this.publicIpv4Pool;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpc")
-      private final @Nullable Input<Boolean> vpc;
+      private final @Nullable Output<Boolean> vpc;
 
-    public Input<Boolean> getVpc() {
-        return this.vpc == null ? Input.empty() : this.vpc;
+    public Output<Boolean> getVpc() {
+        return this.vpc == null ? Output.empty() : this.vpc;
     }
 
     public EipArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<String> associateWithPrivateIp,
-        @Nullable Input<String> customerOwnedIpv4Pool,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> networkBorderGroup,
-        @Nullable Input<String> networkInterface,
-        @Nullable Input<String> publicIpv4Pool,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> vpc) {
+        @Nullable Output<String> address,
+        @Nullable Output<String> associateWithPrivateIp,
+        @Nullable Output<String> customerOwnedIpv4Pool,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> networkBorderGroup,
+        @Nullable Output<String> networkInterface,
+        @Nullable Output<String> publicIpv4Pool,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> vpc) {
         this.address = address;
         this.associateWithPrivateIp = associateWithPrivateIp;
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
@@ -137,15 +137,15 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EipArgs() {
-        this.address = Input.empty();
-        this.associateWithPrivateIp = Input.empty();
-        this.customerOwnedIpv4Pool = Input.empty();
-        this.instance = Input.empty();
-        this.networkBorderGroup = Input.empty();
-        this.networkInterface = Input.empty();
-        this.publicIpv4Pool = Input.empty();
-        this.tags = Input.empty();
-        this.vpc = Input.empty();
+        this.address = Output.empty();
+        this.associateWithPrivateIp = Output.empty();
+        this.customerOwnedIpv4Pool = Output.empty();
+        this.instance = Output.empty();
+        this.networkBorderGroup = Output.empty();
+        this.networkInterface = Output.empty();
+        this.publicIpv4Pool = Output.empty();
+        this.tags = Output.empty();
+        this.vpc = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<String> associateWithPrivateIp;
-        private @Nullable Input<String> customerOwnedIpv4Pool;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> networkBorderGroup;
-        private @Nullable Input<String> networkInterface;
-        private @Nullable Input<String> publicIpv4Pool;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> vpc;
+        private @Nullable Output<String> address;
+        private @Nullable Output<String> associateWithPrivateIp;
+        private @Nullable Output<String> customerOwnedIpv4Pool;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> networkBorderGroup;
+        private @Nullable Output<String> networkInterface;
+        private @Nullable Output<String> publicIpv4Pool;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> vpc;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder associateWithPrivateIp(@Nullable Input<String> associateWithPrivateIp) {
+        public Builder associateWithPrivateIp(@Nullable Output<String> associateWithPrivateIp) {
             this.associateWithPrivateIp = associateWithPrivateIp;
             return this;
         }
 
         public Builder associateWithPrivateIp(@Nullable String associateWithPrivateIp) {
-            this.associateWithPrivateIp = Input.ofNullable(associateWithPrivateIp);
+            this.associateWithPrivateIp = Output.ofNullable(associateWithPrivateIp);
             return this;
         }
 
-        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
         public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
-            this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
+            this.customerOwnedIpv4Pool = Output.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder networkBorderGroup(@Nullable Input<String> networkBorderGroup) {
+        public Builder networkBorderGroup(@Nullable Output<String> networkBorderGroup) {
             this.networkBorderGroup = networkBorderGroup;
             return this;
         }
 
         public Builder networkBorderGroup(@Nullable String networkBorderGroup) {
-            this.networkBorderGroup = Input.ofNullable(networkBorderGroup);
+            this.networkBorderGroup = Output.ofNullable(networkBorderGroup);
             return this;
         }
 
-        public Builder networkInterface(@Nullable Input<String> networkInterface) {
+        public Builder networkInterface(@Nullable Output<String> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
         public Builder networkInterface(@Nullable String networkInterface) {
-            this.networkInterface = Input.ofNullable(networkInterface);
+            this.networkInterface = Output.ofNullable(networkInterface);
             return this;
         }
 
-        public Builder publicIpv4Pool(@Nullable Input<String> publicIpv4Pool) {
+        public Builder publicIpv4Pool(@Nullable Output<String> publicIpv4Pool) {
             this.publicIpv4Pool = publicIpv4Pool;
             return this;
         }
 
         public Builder publicIpv4Pool(@Nullable String publicIpv4Pool) {
-            this.publicIpv4Pool = Input.ofNullable(publicIpv4Pool);
+            this.publicIpv4Pool = Output.ofNullable(publicIpv4Pool);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpc(@Nullable Input<Boolean> vpc) {
+        public Builder vpc(@Nullable Output<Boolean> vpc) {
             this.vpc = vpc;
             return this;
         }
 
         public Builder vpc(@Nullable Boolean vpc) {
-            this.vpc = Input.ofNullable(vpc);
+            this.vpc = Output.ofNullable(vpc);
             return this;
         }
         public EipArgs build() {

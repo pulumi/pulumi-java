@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidth", required=true)
-      private final Input<String> bandwidth;
+      private final Output<String> bandwidth;
 
-    public Input<String> getBandwidth() {
+    public Output<String> getBandwidth() {
         return this.bandwidth;
     }
 
@@ -31,9 +31,9 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionId", required=true)
-      private final Input<String> connectionId;
+      private final Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
+    public Output<String> getConnectionId() {
         return this.connectionId;
     }
 
@@ -42,10 +42,10 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ownerAccountId", required=true)
-      private final Input<String> ownerAccountId;
+      private final Output<String> ownerAccountId;
 
-    public Input<String> getOwnerAccountId() {
+    public Output<String> getOwnerAccountId() {
         return this.ownerAccountId;
     }
 
@@ -64,18 +64,18 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vlan", required=true)
-      private final Input<Integer> vlan;
+      private final Output<Integer> vlan;
 
-    public Input<Integer> getVlan() {
+    public Output<Integer> getVlan() {
         return this.vlan;
     }
 
     public HostedConnectionArgs(
-        Input<String> bandwidth,
-        Input<String> connectionId,
-        @Nullable Input<String> name,
-        Input<String> ownerAccountId,
-        Input<Integer> vlan) {
+        Output<String> bandwidth,
+        Output<String> connectionId,
+        @Nullable Output<String> name,
+        Output<String> ownerAccountId,
+        Output<Integer> vlan) {
         this.bandwidth = Objects.requireNonNull(bandwidth, "expected parameter 'bandwidth' to be non-null");
         this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
         this.name = name;
@@ -84,11 +84,11 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HostedConnectionArgs() {
-        this.bandwidth = Input.empty();
-        this.connectionId = Input.empty();
-        this.name = Input.empty();
-        this.ownerAccountId = Input.empty();
-        this.vlan = Input.empty();
+        this.bandwidth = Output.empty();
+        this.connectionId = Output.empty();
+        this.name = Output.empty();
+        this.ownerAccountId = Output.empty();
+        this.vlan = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> bandwidth;
-        private Input<String> connectionId;
-        private @Nullable Input<String> name;
-        private Input<String> ownerAccountId;
-        private Input<Integer> vlan;
+        private Output<String> bandwidth;
+        private Output<String> connectionId;
+        private @Nullable Output<String> name;
+        private Output<String> ownerAccountId;
+        private Output<Integer> vlan;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder bandwidth(Input<String> bandwidth) {
+        public Builder bandwidth(Output<String> bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
 
         public Builder bandwidth(String bandwidth) {
-            this.bandwidth = Input.of(Objects.requireNonNull(bandwidth));
+            this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
             return this;
         }
 
-        public Builder connectionId(Input<String> connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Input.of(Objects.requireNonNull(connectionId));
+            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerAccountId(Input<String> ownerAccountId) {
+        public Builder ownerAccountId(Output<String> ownerAccountId) {
             this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
             return this;
         }
 
         public Builder ownerAccountId(String ownerAccountId) {
-            this.ownerAccountId = Input.of(Objects.requireNonNull(ownerAccountId));
+            this.ownerAccountId = Output.of(Objects.requireNonNull(ownerAccountId));
             return this;
         }
 
-        public Builder vlan(Input<Integer> vlan) {
+        public Builder vlan(Output<Integer> vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
 
         public Builder vlan(Integer vlan) {
-            this.vlan = Input.of(Objects.requireNonNull(vlan));
+            this.vlan = Output.of(Objects.requireNonNull(vlan));
             return this;
         }
         public HostedConnectionArgs build() {

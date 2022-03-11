@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class PolicyIncludeMapGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accounts")
-      private final @Nullable Input<List<String>> accounts;
+      private final @Nullable Output<List<String>> accounts;
 
-    public Input<List<String>> getAccounts() {
-        return this.accounts == null ? Input.empty() : this.accounts;
+    public Output<List<String>> getAccounts() {
+        return this.accounts == null ? Output.empty() : this.accounts;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class PolicyIncludeMapGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="orgunits")
-      private final @Nullable Input<List<String>> orgunits;
+      private final @Nullable Output<List<String>> orgunits;
 
-    public Input<List<String>> getOrgunits() {
-        return this.orgunits == null ? Input.empty() : this.orgunits;
+    public Output<List<String>> getOrgunits() {
+        return this.orgunits == null ? Output.empty() : this.orgunits;
     }
 
     public PolicyIncludeMapGetArgs(
-        @Nullable Input<List<String>> accounts,
-        @Nullable Input<List<String>> orgunits) {
+        @Nullable Output<List<String>> accounts,
+        @Nullable Output<List<String>> orgunits) {
         this.accounts = accounts;
         this.orgunits = orgunits;
     }
 
     private PolicyIncludeMapGetArgs() {
-        this.accounts = Input.empty();
-        this.orgunits = Input.empty();
+        this.accounts = Output.empty();
+        this.orgunits = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PolicyIncludeMapGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accounts;
-        private @Nullable Input<List<String>> orgunits;
+        private @Nullable Output<List<String>> accounts;
+        private @Nullable Output<List<String>> orgunits;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PolicyIncludeMapGetArgs extends io.pulumi.resources.ResourceA
     	      this.orgunits = defaults.orgunits;
         }
 
-        public Builder accounts(@Nullable Input<List<String>> accounts) {
+        public Builder accounts(@Nullable Output<List<String>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Input.ofNullable(accounts);
+            this.accounts = Output.ofNullable(accounts);
             return this;
         }
 
-        public Builder orgunits(@Nullable Input<List<String>> orgunits) {
+        public Builder orgunits(@Nullable Output<List<String>> orgunits) {
             this.orgunits = orgunits;
             return this;
         }
 
         public Builder orgunits(@Nullable List<String> orgunits) {
-            this.orgunits = Input.ofNullable(orgunits);
+            this.orgunits = Output.ofNullable(orgunits);
             return this;
         }
         public PolicyIncludeMapGetArgs build() {

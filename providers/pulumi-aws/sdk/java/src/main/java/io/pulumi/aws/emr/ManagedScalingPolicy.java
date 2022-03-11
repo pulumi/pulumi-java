@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.emr.ManagedScalingPolicyArgs;
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyState;
 import io.pulumi.aws.emr.outputs.ManagedScalingPolicyComputeLimit;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedScalingPolicy(String name, ManagedScalingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:emr/managedScalingPolicy:ManagedScalingPolicy", name, args == null ? ManagedScalingPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:emr/managedScalingPolicy:ManagedScalingPolicy", name, args == null ? ManagedScalingPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedScalingPolicy(String name, Input<String> id, @Nullable ManagedScalingPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedScalingPolicy(String name, Output<String> id, @Nullable ManagedScalingPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:emr/managedScalingPolicy:ManagedScalingPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedScalingPolicy get(String name, Input<String> id, @Nullable ManagedScalingPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedScalingPolicy get(String name, Output<String> id, @Nullable ManagedScalingPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedScalingPolicy(name, id, state, options);
     }
 }

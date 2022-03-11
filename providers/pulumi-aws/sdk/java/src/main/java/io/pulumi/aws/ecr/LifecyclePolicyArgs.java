@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -29,22 +29,22 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="repository", required=true)
-      private final Input<String> repository;
+      private final Output<String> repository;
 
-    public Input<String> getRepository() {
+    public Output<String> getRepository() {
         return this.repository;
     }
 
     public LifecyclePolicyArgs(
-        Input<String> policy,
-        Input<String> repository) {
+        Output<String> policy,
+        Output<String> repository) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
         this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
     }
 
     private LifecyclePolicyArgs() {
-        this.policy = Input.empty();
-        this.repository = Input.empty();
+        this.policy = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> policy;
-        private Input<String> repository;
+        private Output<String> policy;
+        private Output<String> repository;
 
         public Builder() {
     	      // Empty
@@ -69,18 +69,18 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.repository = defaults.repository;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder repository(Input<String> repository) {
+        public Builder repository(Output<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(String repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
         public LifecyclePolicyArgs build() {

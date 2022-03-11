@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validationRecordFqdns")
-      private final @Nullable Input<List<String>> validationRecordFqdns;
+      private final @Nullable Output<List<String>> validationRecordFqdns;
 
-    public Input<List<String>> getValidationRecordFqdns() {
-        return this.validationRecordFqdns == null ? Input.empty() : this.validationRecordFqdns;
+    public Output<List<String>> getValidationRecordFqdns() {
+        return this.validationRecordFqdns == null ? Output.empty() : this.validationRecordFqdns;
     }
 
     public CertificateValidationState(
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<List<String>> validationRecordFqdns) {
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<List<String>> validationRecordFqdns) {
         this.certificateArn = certificateArn;
         this.validationRecordFqdns = validationRecordFqdns;
     }
 
     private CertificateValidationState() {
-        this.certificateArn = Input.empty();
-        this.validationRecordFqdns = Input.empty();
+        this.certificateArn = Output.empty();
+        this.validationRecordFqdns = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<List<String>> validationRecordFqdns;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<List<String>> validationRecordFqdns;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
     	      this.validationRecordFqdns = defaults.validationRecordFqdns;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder validationRecordFqdns(@Nullable Input<List<String>> validationRecordFqdns) {
+        public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
             this.validationRecordFqdns = validationRecordFqdns;
             return this;
         }
 
         public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
-            this.validationRecordFqdns = Input.ofNullable(validationRecordFqdns);
+            this.validationRecordFqdns = Output.ofNullable(validationRecordFqdns);
             return this;
         }
         public CertificateValidationState build() {

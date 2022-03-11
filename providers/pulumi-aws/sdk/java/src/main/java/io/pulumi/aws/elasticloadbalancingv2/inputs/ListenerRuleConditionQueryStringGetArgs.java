@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ListenerRuleConditionQueryStringGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ListenerRuleConditionQueryStringGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ListenerRuleConditionQueryStringGetArgs(
-        @Nullable Input<String> key,
-        Input<String> value) {
+        @Nullable Output<String> key,
+        Output<String> value) {
         this.key = key;
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ListenerRuleConditionQueryStringGetArgs() {
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ListenerRuleConditionQueryStringGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> key;
-        private Input<String> value;
+        private @Nullable Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ListenerRuleConditionQueryStringGetArgs extends io.pulumi.res
     	      this.value = defaults.value;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ListenerRuleConditionQueryStringGetArgs build() {

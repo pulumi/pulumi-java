@@ -6,7 +6,6 @@ package io.pulumi.aws.mediastore;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.mediastore.ContainerArgs;
 import io.pulumi.aws.mediastore.inputs.ContainerState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -139,14 +138,14 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Container(String name, @Nullable ContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mediastore/container:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:mediastore/container:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Container(String name, Input<String> id, @Nullable ContainerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Container(String name, Output<String> id, @Nullable ContainerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:mediastore/container:Container", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -162,7 +161,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Container get(String name, Input<String> id, @Nullable ContainerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Container get(String name, Output<String> id, @Nullable ContainerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Container(name, id, state, options);
     }
 }

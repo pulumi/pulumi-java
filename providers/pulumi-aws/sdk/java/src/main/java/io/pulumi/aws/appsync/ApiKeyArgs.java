@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -30,10 +30,10 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-      private final @Nullable Input<String> expires;
+      private final @Nullable Output<String> expires;
 
-    public Input<String> getExpires() {
-        return this.expires == null ? Input.empty() : this.expires;
+    public Output<String> getExpires() {
+        return this.expires == null ? Output.empty() : this.expires;
     }
 
     public ApiKeyArgs(
-        Input<String> apiId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> expires) {
+        Output<String> apiId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> expires) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.description = description == null ? Input.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
         this.expires = expires;
     }
 
     private ApiKeyArgs() {
-        this.apiId = Input.empty();
-        this.description = Input.empty();
-        this.expires = Input.empty();
+        this.apiId = Output.empty();
+        this.description = Output.empty();
+        this.expires = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> expires;
+        private Output<String> apiId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> expires;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expires = defaults.expires;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder expires(@Nullable Input<String> expires) {
+        public Builder expires(@Nullable Output<String> expires) {
             this.expires = expires;
             return this;
         }
 
         public Builder expires(@Nullable String expires) {
-            this.expires = Input.ofNullable(expires);
+            this.expires = Output.ofNullable(expires);
             return this;
         }
         public ApiKeyArgs build() {

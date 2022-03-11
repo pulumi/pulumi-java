@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-      private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
+    public Output<String> getDbInstanceIdentifier() {
+        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="featureName")
-      private final @Nullable Input<String> featureName;
+      private final @Nullable Output<String> featureName;
 
-    public Input<String> getFeatureName() {
-        return this.featureName == null ? Input.empty() : this.featureName;
+    public Output<String> getFeatureName() {
+        return this.featureName == null ? Output.empty() : this.featureName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public RoleAssociationState(
-        @Nullable Input<String> dbInstanceIdentifier,
-        @Nullable Input<String> featureName,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> dbInstanceIdentifier,
+        @Nullable Output<String> featureName,
+        @Nullable Output<String> roleArn) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         this.featureName = featureName;
         this.roleArn = roleArn;
     }
 
     private RoleAssociationState() {
-        this.dbInstanceIdentifier = Input.empty();
-        this.featureName = Input.empty();
-        this.roleArn = Input.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.featureName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dbInstanceIdentifier;
-        private @Nullable Input<String> featureName;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> dbInstanceIdentifier;
+        private @Nullable Output<String> featureName;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder featureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Output<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Input.ofNullable(featureName);
+            this.featureName = Output.ofNullable(featureName);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public RoleAssociationState build() {

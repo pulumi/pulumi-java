@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentConclusionStatementMessageGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class IntentConclusionStatementGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messages", required=true)
-      private final Input<List<IntentConclusionStatementMessageGetArgs>> messages;
+      private final Output<List<IntentConclusionStatementMessageGetArgs>> messages;
 
-    public Input<List<IntentConclusionStatementMessageGetArgs>> getMessages() {
+    public Output<List<IntentConclusionStatementMessageGetArgs>> getMessages() {
         return this.messages;
     }
 
@@ -36,22 +36,22 @@ public final class IntentConclusionStatementGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="responseCard")
-      private final @Nullable Input<String> responseCard;
+      private final @Nullable Output<String> responseCard;
 
-    public Input<String> getResponseCard() {
-        return this.responseCard == null ? Input.empty() : this.responseCard;
+    public Output<String> getResponseCard() {
+        return this.responseCard == null ? Output.empty() : this.responseCard;
     }
 
     public IntentConclusionStatementGetArgs(
-        Input<List<IntentConclusionStatementMessageGetArgs>> messages,
-        @Nullable Input<String> responseCard) {
+        Output<List<IntentConclusionStatementMessageGetArgs>> messages,
+        @Nullable Output<String> responseCard) {
         this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
         this.responseCard = responseCard;
     }
 
     private IntentConclusionStatementGetArgs() {
-        this.messages = Input.empty();
-        this.responseCard = Input.empty();
+        this.messages = Output.empty();
+        this.responseCard = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IntentConclusionStatementGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<List<IntentConclusionStatementMessageGetArgs>> messages;
-        private @Nullable Input<String> responseCard;
+        private Output<List<IntentConclusionStatementMessageGetArgs>> messages;
+        private @Nullable Output<String> responseCard;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IntentConclusionStatementGetArgs extends io.pulumi.resources.
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder messages(Input<List<IntentConclusionStatementMessageGetArgs>> messages) {
+        public Builder messages(Output<List<IntentConclusionStatementMessageGetArgs>> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
         public Builder messages(List<IntentConclusionStatementMessageGetArgs> messages) {
-            this.messages = Input.of(Objects.requireNonNull(messages));
+            this.messages = Output.of(Objects.requireNonNull(messages));
             return this;
         }
 
-        public Builder responseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Output<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Input.ofNullable(responseCard);
+            this.responseCard = Output.ofNullable(responseCard);
             return this;
         }
         public IntentConclusionStatementGetArgs build() {

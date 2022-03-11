@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sqs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueUrl")
-      private final @Nullable Input<String> queueUrl;
+      private final @Nullable Output<String> queueUrl;
 
-    public Input<String> getQueueUrl() {
-        return this.queueUrl == null ? Input.empty() : this.queueUrl;
+    public Output<String> getQueueUrl() {
+        return this.queueUrl == null ? Output.empty() : this.queueUrl;
     }
 
     public QueuePolicyState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> queueUrl) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> queueUrl) {
         this.policy = policy;
         this.queueUrl = queueUrl;
     }
 
     private QueuePolicyState() {
-        this.policy = Input.empty();
-        this.queueUrl = Input.empty();
+        this.policy = Output.empty();
+        this.queueUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> queueUrl;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> queueUrl;
 
         public Builder() {
     	      // Empty
@@ -70,18 +70,18 @@ public final class QueuePolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.queueUrl = defaults.queueUrl;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder queueUrl(@Nullable Input<String> queueUrl) {
+        public Builder queueUrl(@Nullable Output<String> queueUrl) {
             this.queueUrl = queueUrl;
             return this;
         }
 
         public Builder queueUrl(@Nullable String queueUrl) {
-            this.queueUrl = Input.ofNullable(queueUrl);
+            this.queueUrl = Output.ofNullable(queueUrl);
             return this;
         }
         public QueuePolicyState build() {

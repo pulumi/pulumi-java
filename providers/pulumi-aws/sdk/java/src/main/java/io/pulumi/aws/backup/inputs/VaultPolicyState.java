@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupVaultArn")
-      private final @Nullable Input<String> backupVaultArn;
+      private final @Nullable Output<String> backupVaultArn;
 
-    public Input<String> getBackupVaultArn() {
-        return this.backupVaultArn == null ? Input.empty() : this.backupVaultArn;
+    public Output<String> getBackupVaultArn() {
+        return this.backupVaultArn == null ? Output.empty() : this.backupVaultArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupVaultName")
-      private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Output<String> backupVaultName;
 
-    public Input<String> getBackupVaultName() {
-        return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
+    public Output<String> getBackupVaultName() {
+        return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public VaultPolicyState(
-        @Nullable Input<String> backupVaultArn,
-        @Nullable Input<String> backupVaultName,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> backupVaultArn,
+        @Nullable Output<String> backupVaultName,
+        @Nullable Output<String> policy) {
         this.backupVaultArn = backupVaultArn;
         this.backupVaultName = backupVaultName;
         this.policy = policy;
     }
 
     private VaultPolicyState() {
-        this.backupVaultArn = Input.empty();
-        this.backupVaultName = Input.empty();
-        this.policy = Input.empty();
+        this.backupVaultArn = Output.empty();
+        this.backupVaultName = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupVaultArn;
-        private @Nullable Input<String> backupVaultName;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> backupVaultArn;
+        private @Nullable Output<String> backupVaultName;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder backupVaultArn(@Nullable Input<String> backupVaultArn) {
+        public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
 
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Input.ofNullable(backupVaultArn);
+            this.backupVaultArn = Output.ofNullable(backupVaultArn);
             return this;
         }
 
-        public Builder backupVaultName(@Nullable Input<String> backupVaultName) {
+        public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
 
         public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Input.ofNullable(backupVaultName);
+            this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public VaultPolicyState build() {

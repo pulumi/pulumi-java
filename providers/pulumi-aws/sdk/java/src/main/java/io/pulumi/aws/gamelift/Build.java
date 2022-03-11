@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.gamelift.BuildArgs;
 import io.pulumi.aws.gamelift.inputs.BuildState;
 import io.pulumi.aws.gamelift.outputs.BuildStorageLocation;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -164,14 +163,14 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Build(String name, BuildArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:gamelift/build:Build", name, args == null ? BuildArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:gamelift/build:Build", name, args == null ? BuildArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Build(String name, Input<String> id, @Nullable BuildState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Build(String name, Output<String> id, @Nullable BuildState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:gamelift/build:Build", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -187,7 +186,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Build get(String name, Input<String> id, @Nullable BuildState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Build get(String name, Output<String> id, @Nullable BuildState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Build(name, id, state, options);
     }
 }

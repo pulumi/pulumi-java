@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -33,10 +33,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId", required=true)
-      private final Input<String> detectorId;
+      private final Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
+    public Output<String> getDetectorId() {
         return this.detectorId;
     }
 
@@ -55,9 +55,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingCriteria", required=true)
-      private final Input<FilterFindingCriteriaArgs> findingCriteria;
+      private final Output<FilterFindingCriteriaArgs> findingCriteria;
 
-    public Input<FilterFindingCriteriaArgs> getFindingCriteria() {
+    public Output<FilterFindingCriteriaArgs> getFindingCriteria() {
         return this.findingCriteria;
     }
 
@@ -66,10 +66,10 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rank", required=true)
-      private final Input<Integer> rank;
+      private final Output<Integer> rank;
 
-    public Input<Integer> getRank() {
+    public Output<Integer> getRank() {
         return this.rank;
     }
 
@@ -88,20 +88,20 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public FilterArgs(
-        Input<String> action,
-        @Nullable Input<String> description,
-        Input<String> detectorId,
-        Input<FilterFindingCriteriaArgs> findingCriteria,
-        @Nullable Input<String> name,
-        Input<Integer> rank,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> action,
+        @Nullable Output<String> description,
+        Output<String> detectorId,
+        Output<FilterFindingCriteriaArgs> findingCriteria,
+        @Nullable Output<String> name,
+        Output<Integer> rank,
+        @Nullable Output<Map<String,String>> tags) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.description = description;
         this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
@@ -112,13 +112,13 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.action = Input.empty();
-        this.description = Input.empty();
-        this.detectorId = Input.empty();
-        this.findingCriteria = Input.empty();
-        this.name = Input.empty();
-        this.rank = Input.empty();
-        this.tags = Input.empty();
+        this.action = Output.empty();
+        this.description = Output.empty();
+        this.detectorId = Output.empty();
+        this.findingCriteria = Output.empty();
+        this.name = Output.empty();
+        this.rank = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private @Nullable Input<String> description;
-        private Input<String> detectorId;
-        private Input<FilterFindingCriteriaArgs> findingCriteria;
-        private @Nullable Input<String> name;
-        private Input<Integer> rank;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> action;
+        private @Nullable Output<String> description;
+        private Output<String> detectorId;
+        private Output<FilterFindingCriteriaArgs> findingCriteria;
+        private @Nullable Output<String> name;
+        private Output<Integer> rank;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder detectorId(Input<String> detectorId) {
+        public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
         public Builder detectorId(String detectorId) {
-            this.detectorId = Input.of(Objects.requireNonNull(detectorId));
+            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder findingCriteria(Input<FilterFindingCriteriaArgs> findingCriteria) {
+        public Builder findingCriteria(Output<FilterFindingCriteriaArgs> findingCriteria) {
             this.findingCriteria = Objects.requireNonNull(findingCriteria);
             return this;
         }
 
         public Builder findingCriteria(FilterFindingCriteriaArgs findingCriteria) {
-            this.findingCriteria = Input.of(Objects.requireNonNull(findingCriteria));
+            this.findingCriteria = Output.of(Objects.requireNonNull(findingCriteria));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rank(Input<Integer> rank) {
+        public Builder rank(Output<Integer> rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
 
         public Builder rank(Integer rank) {
-            this.rank = Input.of(Objects.requireNonNull(rank));
+            this.rank = Output.of(Objects.requireNonNull(rank));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public FilterArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupStatefulRuleOptionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleVariables")
-      private final @Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
+      private final @Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
 
-    public Input<RuleGroupRuleGroupRuleVariablesGetArgs> getRuleVariables() {
-        return this.ruleVariables == null ? Input.empty() : this.ruleVariables;
+    public Output<RuleGroupRuleGroupRuleVariablesGetArgs> getRuleVariables() {
+        return this.ruleVariables == null ? Output.empty() : this.ruleVariables;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rulesSource", required=true)
-      private final Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
+      private final Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
 
-    public Input<RuleGroupRuleGroupRulesSourceGetArgs> getRulesSource() {
+    public Output<RuleGroupRuleGroupRulesSourceGetArgs> getRulesSource() {
         return this.rulesSource;
     }
 
@@ -43,25 +43,25 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="statefulRuleOptions")
-      private final @Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
+      private final @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
 
-    public Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> getStatefulRuleOptions() {
-        return this.statefulRuleOptions == null ? Input.empty() : this.statefulRuleOptions;
+    public Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> getStatefulRuleOptions() {
+        return this.statefulRuleOptions == null ? Output.empty() : this.statefulRuleOptions;
     }
 
     public RuleGroupRuleGroupGetArgs(
-        @Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables,
-        Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource,
-        @Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
+        @Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables,
+        Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource,
+        @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
         this.ruleVariables = ruleVariables;
         this.rulesSource = Objects.requireNonNull(rulesSource, "expected parameter 'rulesSource' to be non-null");
         this.statefulRuleOptions = statefulRuleOptions;
     }
 
     private RuleGroupRuleGroupGetArgs() {
-        this.ruleVariables = Input.empty();
-        this.rulesSource = Input.empty();
-        this.statefulRuleOptions = Input.empty();
+        this.ruleVariables = Output.empty();
+        this.rulesSource = Output.empty();
+        this.statefulRuleOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
-        private Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
-        private @Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
+        private @Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables;
+        private Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource;
+        private @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RuleGroupRuleGroupGetArgs extends io.pulumi.resources.Resourc
     	      this.statefulRuleOptions = defaults.statefulRuleOptions;
         }
 
-        public Builder ruleVariables(@Nullable Input<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables) {
+        public Builder ruleVariables(@Nullable Output<RuleGroupRuleGroupRuleVariablesGetArgs> ruleVariables) {
             this.ruleVariables = ruleVariables;
             return this;
         }
 
         public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesGetArgs ruleVariables) {
-            this.ruleVariables = Input.ofNullable(ruleVariables);
+            this.ruleVariables = Output.ofNullable(ruleVariables);
             return this;
         }
 
-        public Builder rulesSource(Input<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
+        public Builder rulesSource(Output<RuleGroupRuleGroupRulesSourceGetArgs> rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
 
         public Builder rulesSource(RuleGroupRuleGroupRulesSourceGetArgs rulesSource) {
-            this.rulesSource = Input.of(Objects.requireNonNull(rulesSource));
+            this.rulesSource = Output.of(Objects.requireNonNull(rulesSource));
             return this;
         }
 
-        public Builder statefulRuleOptions(@Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsGetArgs> statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
 
         public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsGetArgs statefulRuleOptions) {
-            this.statefulRuleOptions = Input.ofNullable(statefulRuleOptions);
+            this.statefulRuleOptions = Output.ofNullable(statefulRuleOptions);
             return this;
         }
         public RuleGroupRuleGroupGetArgs build() {

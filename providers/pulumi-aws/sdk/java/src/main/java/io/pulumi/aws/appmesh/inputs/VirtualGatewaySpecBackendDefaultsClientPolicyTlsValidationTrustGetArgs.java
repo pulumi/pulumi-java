@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * 
      */
     @InputImport(name="acm")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
-        return this.acm == null ? Input.empty() : this.acm;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
+        return this.acm == null ? Output.empty() : this.acm;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * 
      */
     @InputImport(name="sds")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {
-        return this.sds == null ? Input.empty() : this.sds;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {
+        return this.sds == null ? Output.empty() : this.sds;
     }
 
     public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm,
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file,
-        @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm,
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file,
+        @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs() {
-        this.acm = Input.empty();
-        this.file = Input.empty();
-        this.sds = Input.empty();
+        this.acm = Output.empty();
+        this.file = Output.empty();
+        this.sds = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     	      this.sds = defaults.sds;
         }
 
-        public Builder acm(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
+        public Builder acm(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
             this.acm = acm;
             return this;
         }
 
         public Builder acm(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
-            this.acm = Input.ofNullable(acm);
+            this.acm = Output.ofNullable(acm);
             return this;
         }
 
-        public Builder file(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
+        public Builder file(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder sds(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
+        public Builder sds(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
 
         public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
-            this.sds = Input.ofNullable(sds);
+            this.sds = Output.ofNullable(sds);
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs build() {

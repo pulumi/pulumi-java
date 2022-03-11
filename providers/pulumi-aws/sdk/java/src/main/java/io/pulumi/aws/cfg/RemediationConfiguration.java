@@ -8,7 +8,6 @@ import io.pulumi.aws.cfg.RemediationConfigurationArgs;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationState;
 import io.pulumi.aws.cfg.outputs.RemediationConfigurationExecutionControls;
 import io.pulumi.aws.cfg.outputs.RemediationConfigurationParameter;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -229,14 +228,14 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public RemediationConfiguration(String name, RemediationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/remediationConfiguration:RemediationConfiguration", name, args == null ? RemediationConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cfg/remediationConfiguration:RemediationConfiguration", name, args == null ? RemediationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RemediationConfiguration(String name, Input<String> id, @Nullable RemediationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RemediationConfiguration(String name, Output<String> id, @Nullable RemediationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cfg/remediationConfiguration:RemediationConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -252,7 +251,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RemediationConfiguration get(String name, Input<String> id, @Nullable RemediationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RemediationConfiguration get(String name, Output<String> id, @Nullable RemediationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RemediationConfiguration(name, id, state, options);
     }
 }

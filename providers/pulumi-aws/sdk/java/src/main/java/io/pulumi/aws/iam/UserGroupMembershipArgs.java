@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groups", required=true)
-      private final Input<List<String>> groups;
+      private final Output<List<String>> groups;
 
-    public Input<List<String>> getGroups() {
+    public Output<List<String>> getGroups() {
         return this.groups;
     }
 
@@ -30,22 +30,22 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="user", required=true)
-      private final Input<String> user;
+      private final Output<String> user;
 
-    public Input<String> getUser() {
+    public Output<String> getUser() {
         return this.user;
     }
 
     public UserGroupMembershipArgs(
-        Input<List<String>> groups,
-        Input<String> user) {
+        Output<List<String>> groups,
+        Output<String> user) {
         this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
         this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
     }
 
     private UserGroupMembershipArgs() {
-        this.groups = Input.empty();
-        this.user = Input.empty();
+        this.groups = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<String>> groups;
-        private Input<String> user;
+        private Output<List<String>> groups;
+        private Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     	      this.user = defaults.user;
         }
 
-        public Builder groups(Input<List<String>> groups) {
+        public Builder groups(Output<List<String>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
         public Builder groups(List<String> groups) {
-            this.groups = Input.of(Objects.requireNonNull(groups));
+            this.groups = Output.of(Objects.requireNonNull(groups));
             return this;
         }
 
-        public Builder user(Input<String> user) {
+        public Builder user(Output<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
         public Builder user(String user) {
-            this.user = Input.of(Objects.requireNonNull(user));
+            this.user = Output.of(Objects.requireNonNull(user));
             return this;
         }
         public UserGroupMembershipArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="qos")
-      private final @Nullable Input<Integer> qos;
+      private final @Nullable Output<Integer> qos;
 
-    public Input<Integer> getQos() {
-        return this.qos == null ? Input.empty() : this.qos;
+    public Output<Integer> getQos() {
+        return this.qos == null ? Output.empty() : this.qos;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -42,25 +42,25 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public TopicRuleErrorActionRepublishArgs(
-        @Nullable Input<Integer> qos,
-        Input<String> roleArn,
-        Input<String> topic) {
+        @Nullable Output<Integer> qos,
+        Output<String> roleArn,
+        Output<String> topic) {
         this.qos = qos;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
     }
 
     private TopicRuleErrorActionRepublishArgs() {
-        this.qos = Input.empty();
-        this.roleArn = Input.empty();
-        this.topic = Input.empty();
+        this.qos = Output.empty();
+        this.roleArn = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> qos;
-        private Input<String> roleArn;
-        private Input<String> topic;
+        private @Nullable Output<Integer> qos;
+        private Output<String> roleArn;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
     	      this.topic = defaults.topic;
         }
 
-        public Builder qos(@Nullable Input<Integer> qos) {
+        public Builder qos(@Nullable Output<Integer> qos) {
             this.qos = qos;
             return this;
         }
 
         public Builder qos(@Nullable Integer qos) {
-            this.qos = Input.ofNullable(qos);
+            this.qos = Output.ofNullable(qos);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public TopicRuleErrorActionRepublishArgs build() {

@@ -15,7 +15,6 @@ import io.pulumi.aws.s3.outputs.BucketReplicationConfiguration;
 import io.pulumi.aws.s3.outputs.BucketServerSideEncryptionConfiguration;
 import io.pulumi.aws.s3.outputs.BucketVersioning;
 import io.pulumi.aws.s3.outputs.BucketWebsite;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -440,14 +439,14 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Bucket(String name, @Nullable BucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:s3/bucket:Bucket", name, args == null ? BucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Bucket(String name, Input<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Bucket(String name, Output<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:s3/bucket:Bucket", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -463,7 +462,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Bucket get(String name, Input<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Bucket get(String name, Output<String> id, @Nullable BucketState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Bucket(name, id, state, options);
     }
 }

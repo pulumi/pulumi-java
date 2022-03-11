@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs ex
      * 
      */
     @InputImport(name="defaultGid")
-      private final @Nullable Input<Integer> defaultGid;
+      private final @Nullable Output<Integer> defaultGid;
 
-    public Input<Integer> getDefaultGid() {
-        return this.defaultGid == null ? Input.empty() : this.defaultGid;
+    public Output<Integer> getDefaultGid() {
+        return this.defaultGid == null ? Output.empty() : this.defaultGid;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs ex
      * 
      */
     @InputImport(name="defaultUid")
-      private final @Nullable Input<Integer> defaultUid;
+      private final @Nullable Output<Integer> defaultUid;
 
-    public Input<Integer> getDefaultUid() {
-        return this.defaultUid == null ? Input.empty() : this.defaultUid;
+    public Output<Integer> getDefaultUid() {
+        return this.defaultUid == null ? Output.empty() : this.defaultUid;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs ex
      * 
      */
     @InputImport(name="mountPath")
-      private final @Nullable Input<String> mountPath;
+      private final @Nullable Output<String> mountPath;
 
-    public Input<String> getMountPath() {
-        return this.mountPath == null ? Input.empty() : this.mountPath;
+    public Output<String> getMountPath() {
+        return this.mountPath == null ? Output.empty() : this.mountPath;
     }
 
     public AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs(
-        @Nullable Input<Integer> defaultGid,
-        @Nullable Input<Integer> defaultUid,
-        @Nullable Input<String> mountPath) {
+        @Nullable Output<Integer> defaultGid,
+        @Nullable Output<Integer> defaultUid,
+        @Nullable Output<String> mountPath) {
         this.defaultGid = defaultGid;
         this.defaultUid = defaultUid;
         this.mountPath = mountPath;
     }
 
     private AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs() {
-        this.defaultGid = Input.empty();
-        this.defaultUid = Input.empty();
-        this.mountPath = Input.empty();
+        this.defaultGid = Output.empty();
+        this.defaultUid = Output.empty();
+        this.mountPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultGid;
-        private @Nullable Input<Integer> defaultUid;
-        private @Nullable Input<String> mountPath;
+        private @Nullable Output<Integer> defaultGid;
+        private @Nullable Output<Integer> defaultUid;
+        private @Nullable Output<String> mountPath;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs ex
     	      this.mountPath = defaults.mountPath;
         }
 
-        public Builder defaultGid(@Nullable Input<Integer> defaultGid) {
+        public Builder defaultGid(@Nullable Output<Integer> defaultGid) {
             this.defaultGid = defaultGid;
             return this;
         }
 
         public Builder defaultGid(@Nullable Integer defaultGid) {
-            this.defaultGid = Input.ofNullable(defaultGid);
+            this.defaultGid = Output.ofNullable(defaultGid);
             return this;
         }
 
-        public Builder defaultUid(@Nullable Input<Integer> defaultUid) {
+        public Builder defaultUid(@Nullable Output<Integer> defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
 
         public Builder defaultUid(@Nullable Integer defaultUid) {
-            this.defaultUid = Input.ofNullable(defaultUid);
+            this.defaultUid = Output.ofNullable(defaultUid);
             return this;
         }
 
-        public Builder mountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Output<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Input.ofNullable(mountPath);
+            this.mountPath = Output.ofNullable(mountPath);
             return this;
         }
         public AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs build() {

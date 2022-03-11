@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="sizeInGib", required=true)
-      private final Input<Integer> sizeInGib;
+      private final Output<Integer> sizeInGib;
 
-    public Input<Integer> getSizeInGib() {
+    public Output<Integer> getSizeInGib() {
         return this.sizeInGib;
     }
 
-    public TaskDefinitionEphemeralStorageGetArgs(Input<Integer> sizeInGib) {
+    public TaskDefinitionEphemeralStorageGetArgs(Output<Integer> sizeInGib) {
         this.sizeInGib = Objects.requireNonNull(sizeInGib, "expected parameter 'sizeInGib' to be non-null");
     }
 
     private TaskDefinitionEphemeralStorageGetArgs() {
-        this.sizeInGib = Input.empty();
+        this.sizeInGib = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<Integer> sizeInGib;
+        private Output<Integer> sizeInGib;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends io.pulumi.resou
     	      this.sizeInGib = defaults.sizeInGib;
         }
 
-        public Builder sizeInGib(Input<Integer> sizeInGib) {
+        public Builder sizeInGib(Output<Integer> sizeInGib) {
             this.sizeInGib = Objects.requireNonNull(sizeInGib);
             return this;
         }
 
         public Builder sizeInGib(Integer sizeInGib) {
-            this.sizeInGib = Input.of(Objects.requireNonNull(sizeInGib));
+            this.sizeInGib = Output.of(Objects.requireNonNull(sizeInGib));
             return this;
         }
         public TaskDefinitionEphemeralStorageGetArgs build() {

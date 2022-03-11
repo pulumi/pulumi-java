@@ -8,7 +8,6 @@ import io.pulumi.aws.servicecatalog.ProvisionedProductArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductState;
 import io.pulumi.aws.servicecatalog.outputs.ProvisionedProductProvisioningParameter;
 import io.pulumi.aws.servicecatalog.outputs.ProvisionedProductStackSetProvisioningPreferences;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -431,14 +430,14 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProvisionedProduct(String name, @Nullable ProvisionedProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/provisionedProduct:ProvisionedProduct", name, args == null ? ProvisionedProductArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/provisionedProduct:ProvisionedProduct", name, args == null ? ProvisionedProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProvisionedProduct(String name, Input<String> id, @Nullable ProvisionedProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProvisionedProduct(String name, Output<String> id, @Nullable ProvisionedProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/provisionedProduct:ProvisionedProduct", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -454,7 +453,7 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProvisionedProduct get(String name, Input<String> id, @Nullable ProvisionedProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProvisionedProduct get(String name, Output<String> id, @Nullable ProvisionedProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProvisionedProduct(name, id, state, options);
     }
 }

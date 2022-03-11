@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="directoryName", required=true)
-      private final Input<String> directoryName;
+      private final Output<String> directoryName;
 
-    public Input<String> getDirectoryName() {
+    public Output<String> getDirectoryName() {
         return this.directoryName;
     }
 
@@ -31,9 +31,9 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedNames", required=true)
-      private final Input<List<String>> organizationalUnitDistinguishedNames;
+      private final Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Input<List<String>> getOrganizationalUnitDistinguishedNames() {
+    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
     }
 
@@ -42,25 +42,25 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccountCredentials", required=true)
-      private final Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
+      private final Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
-    public Input<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {
+    public Output<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {
         return this.serviceAccountCredentials;
     }
 
     public DirectoryConfigArgs(
-        Input<String> directoryName,
-        Input<List<String>> organizationalUnitDistinguishedNames,
-        Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
+        Output<String> directoryName,
+        Output<List<String>> organizationalUnitDistinguishedNames,
+        Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
         this.directoryName = Objects.requireNonNull(directoryName, "expected parameter 'directoryName' to be non-null");
         this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames, "expected parameter 'organizationalUnitDistinguishedNames' to be non-null");
         this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials, "expected parameter 'serviceAccountCredentials' to be non-null");
     }
 
     private DirectoryConfigArgs() {
-        this.directoryName = Input.empty();
-        this.organizationalUnitDistinguishedNames = Input.empty();
-        this.serviceAccountCredentials = Input.empty();
+        this.directoryName = Output.empty();
+        this.organizationalUnitDistinguishedNames = Output.empty();
+        this.serviceAccountCredentials = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> directoryName;
-        private Input<List<String>> organizationalUnitDistinguishedNames;
-        private Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
+        private Output<String> directoryName;
+        private Output<List<String>> organizationalUnitDistinguishedNames;
+        private Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceAccountCredentials = defaults.serviceAccountCredentials;
         }
 
-        public Builder directoryName(Input<String> directoryName) {
+        public Builder directoryName(Output<String> directoryName) {
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
 
         public Builder directoryName(String directoryName) {
-            this.directoryName = Input.of(Objects.requireNonNull(directoryName));
+            this.directoryName = Output.of(Objects.requireNonNull(directoryName));
             return this;
         }
 
-        public Builder organizationalUnitDistinguishedNames(Input<List<String>> organizationalUnitDistinguishedNames) {
+        public Builder organizationalUnitDistinguishedNames(Output<List<String>> organizationalUnitDistinguishedNames) {
             this.organizationalUnitDistinguishedNames = Objects.requireNonNull(organizationalUnitDistinguishedNames);
             return this;
         }
 
         public Builder organizationalUnitDistinguishedNames(List<String> organizationalUnitDistinguishedNames) {
-            this.organizationalUnitDistinguishedNames = Input.of(Objects.requireNonNull(organizationalUnitDistinguishedNames));
+            this.organizationalUnitDistinguishedNames = Output.of(Objects.requireNonNull(organizationalUnitDistinguishedNames));
             return this;
         }
 
-        public Builder serviceAccountCredentials(Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
+        public Builder serviceAccountCredentials(Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials) {
             this.serviceAccountCredentials = Objects.requireNonNull(serviceAccountCredentials);
             return this;
         }
 
         public Builder serviceAccountCredentials(DirectoryConfigServiceAccountCredentialsArgs serviceAccountCredentials) {
-            this.serviceAccountCredentials = Input.of(Objects.requireNonNull(serviceAccountCredentials));
+            this.serviceAccountCredentials = Output.of(Objects.requireNonNull(serviceAccountCredentials));
             return this;
         }
         public DirectoryConfigArgs build() {

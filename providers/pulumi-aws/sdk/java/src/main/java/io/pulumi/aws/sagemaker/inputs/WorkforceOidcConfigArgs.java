@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-      private final Input<String> authorizationEndpoint;
+      private final Output<String> authorizationEndpoint;
 
-    public Input<String> getAuthorizationEndpoint() {
+    public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -29,9 +29,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -40,9 +40,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
@@ -51,9 +51,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="issuer", required=true)
-      private final Input<String> issuer;
+      private final Output<String> issuer;
 
-    public Input<String> getIssuer() {
+    public Output<String> getIssuer() {
         return this.issuer;
     }
 
@@ -62,9 +62,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="jwksUri", required=true)
-      private final Input<String> jwksUri;
+      private final Output<String> jwksUri;
 
-    public Input<String> getJwksUri() {
+    public Output<String> getJwksUri() {
         return this.jwksUri;
     }
 
@@ -73,9 +73,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logoutEndpoint", required=true)
-      private final Input<String> logoutEndpoint;
+      private final Output<String> logoutEndpoint;
 
-    public Input<String> getLogoutEndpoint() {
+    public Output<String> getLogoutEndpoint() {
         return this.logoutEndpoint;
     }
 
@@ -84,9 +84,9 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tokenEndpoint", required=true)
-      private final Input<String> tokenEndpoint;
+      private final Output<String> tokenEndpoint;
 
-    public Input<String> getTokenEndpoint() {
+    public Output<String> getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
@@ -95,21 +95,21 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userInfoEndpoint", required=true)
-      private final Input<String> userInfoEndpoint;
+      private final Output<String> userInfoEndpoint;
 
-    public Input<String> getUserInfoEndpoint() {
+    public Output<String> getUserInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
     public WorkforceOidcConfigArgs(
-        Input<String> authorizationEndpoint,
-        Input<String> clientId,
-        Input<String> clientSecret,
-        Input<String> issuer,
-        Input<String> jwksUri,
-        Input<String> logoutEndpoint,
-        Input<String> tokenEndpoint,
-        Input<String> userInfoEndpoint) {
+        Output<String> authorizationEndpoint,
+        Output<String> clientId,
+        Output<String> clientSecret,
+        Output<String> issuer,
+        Output<String> jwksUri,
+        Output<String> logoutEndpoint,
+        Output<String> tokenEndpoint,
+        Output<String> userInfoEndpoint) {
         this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
         this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
@@ -121,14 +121,14 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkforceOidcConfigArgs() {
-        this.authorizationEndpoint = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.issuer = Input.empty();
-        this.jwksUri = Input.empty();
-        this.logoutEndpoint = Input.empty();
-        this.tokenEndpoint = Input.empty();
-        this.userInfoEndpoint = Input.empty();
+        this.authorizationEndpoint = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.issuer = Output.empty();
+        this.jwksUri = Output.empty();
+        this.logoutEndpoint = Output.empty();
+        this.tokenEndpoint = Output.empty();
+        this.userInfoEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> authorizationEndpoint;
-        private Input<String> clientId;
-        private Input<String> clientSecret;
-        private Input<String> issuer;
-        private Input<String> jwksUri;
-        private Input<String> logoutEndpoint;
-        private Input<String> tokenEndpoint;
-        private Input<String> userInfoEndpoint;
+        private Output<String> authorizationEndpoint;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
+        private Output<String> issuer;
+        private Output<String> jwksUri;
+        private Output<String> logoutEndpoint;
+        private Output<String> tokenEndpoint;
+        private Output<String> userInfoEndpoint;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
+            this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder issuer(Input<String> issuer) {
+        public Builder issuer(Output<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Input.of(Objects.requireNonNull(issuer));
+            this.issuer = Output.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder jwksUri(Input<String> jwksUri) {
+        public Builder jwksUri(Output<String> jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
 
         public Builder jwksUri(String jwksUri) {
-            this.jwksUri = Input.of(Objects.requireNonNull(jwksUri));
+            this.jwksUri = Output.of(Objects.requireNonNull(jwksUri));
             return this;
         }
 
-        public Builder logoutEndpoint(Input<String> logoutEndpoint) {
+        public Builder logoutEndpoint(Output<String> logoutEndpoint) {
             this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
             return this;
         }
 
         public Builder logoutEndpoint(String logoutEndpoint) {
-            this.logoutEndpoint = Input.of(Objects.requireNonNull(logoutEndpoint));
+            this.logoutEndpoint = Output.of(Objects.requireNonNull(logoutEndpoint));
             return this;
         }
 
-        public Builder tokenEndpoint(Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(Output<String> tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
         public Builder tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Input.of(Objects.requireNonNull(tokenEndpoint));
+            this.tokenEndpoint = Output.of(Objects.requireNonNull(tokenEndpoint));
             return this;
         }
 
-        public Builder userInfoEndpoint(Input<String> userInfoEndpoint) {
+        public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
 
         public Builder userInfoEndpoint(String userInfoEndpoint) {
-            this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
+            this.userInfoEndpoint = Output.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }
         public WorkforceOidcConfigArgs build() {

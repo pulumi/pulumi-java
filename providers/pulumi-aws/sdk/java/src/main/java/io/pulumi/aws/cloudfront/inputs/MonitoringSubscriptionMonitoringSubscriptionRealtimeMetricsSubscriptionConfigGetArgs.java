@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
      * 
      */
     @InputImport(name="realtimeMetricsSubscriptionStatus", required=true)
-      private final Input<String> realtimeMetricsSubscriptionStatus;
+      private final Output<String> realtimeMetricsSubscriptionStatus;
 
-    public Input<String> getRealtimeMetricsSubscriptionStatus() {
+    public Output<String> getRealtimeMetricsSubscriptionStatus() {
         return this.realtimeMetricsSubscriptionStatus;
     }
 
-    public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs(Input<String> realtimeMetricsSubscriptionStatus) {
+    public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs(Output<String> realtimeMetricsSubscriptionStatus) {
         this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus, "expected parameter 'realtimeMetricsSubscriptionStatus' to be non-null");
     }
 
     private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs() {
-        this.realtimeMetricsSubscriptionStatus = Input.empty();
+        this.realtimeMetricsSubscriptionStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     }
 
     public static final class Builder {
-        private Input<String> realtimeMetricsSubscriptionStatus;
+        private Output<String> realtimeMetricsSubscriptionStatus;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     	      this.realtimeMetricsSubscriptionStatus = defaults.realtimeMetricsSubscriptionStatus;
         }
 
-        public Builder realtimeMetricsSubscriptionStatus(Input<String> realtimeMetricsSubscriptionStatus) {
+        public Builder realtimeMetricsSubscriptionStatus(Output<String> realtimeMetricsSubscriptionStatus) {
             this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus);
             return this;
         }
 
         public Builder realtimeMetricsSubscriptionStatus(String realtimeMetricsSubscriptionStatus) {
-            this.realtimeMetricsSubscriptionStatus = Input.of(Objects.requireNonNull(realtimeMetricsSubscriptionStatus));
+            this.realtimeMetricsSubscriptionStatus = Output.of(Objects.requireNonNull(realtimeMetricsSubscriptionStatus));
             return this;
         }
         public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs build() {

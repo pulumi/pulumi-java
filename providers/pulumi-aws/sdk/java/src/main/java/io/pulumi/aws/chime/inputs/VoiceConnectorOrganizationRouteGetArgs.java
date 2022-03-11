@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.chime.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -31,10 +31,10 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -53,9 +53,9 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="protocol", required=true)
-      private final Input<String> protocol;
+      private final Output<String> protocol;
 
-    public Input<String> getProtocol() {
+    public Output<String> getProtocol() {
         return this.protocol;
     }
 
@@ -64,18 +64,18 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
     public VoiceConnectorOrganizationRouteGetArgs(
-        Input<String> host,
-        @Nullable Input<Integer> port,
-        Input<Integer> priority,
-        Input<String> protocol,
-        Input<Integer> weight) {
+        Output<String> host,
+        @Nullable Output<Integer> port,
+        Output<Integer> priority,
+        Output<String> protocol,
+        Output<Integer> weight) {
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = port;
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
@@ -84,11 +84,11 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     }
 
     private VoiceConnectorOrganizationRouteGetArgs() {
-        this.host = Input.empty();
-        this.port = Input.empty();
-        this.priority = Input.empty();
-        this.protocol = Input.empty();
-        this.weight = Input.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
+        this.priority = Output.empty();
+        this.protocol = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> host;
-        private @Nullable Input<Integer> port;
-        private Input<Integer> priority;
-        private Input<String> protocol;
-        private Input<Integer> weight;
+        private Output<String> host;
+        private @Nullable Output<Integer> port;
+        private Output<Integer> priority;
+        private Output<String> protocol;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     	      this.weight = defaults.weight;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder protocol(Input<String> protocol) {
+        public Builder protocol(Output<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
         public Builder protocol(String protocol) {
-            this.protocol = Input.of(Objects.requireNonNull(protocol));
+            this.protocol = Output.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public VoiceConnectorOrganizationRouteGetArgs build() {

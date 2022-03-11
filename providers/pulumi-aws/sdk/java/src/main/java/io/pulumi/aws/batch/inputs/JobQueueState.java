@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeEnvironments")
-      private final @Nullable Input<List<String>> computeEnvironments;
+      private final @Nullable Output<List<String>> computeEnvironments;
 
-    public Input<List<String>> getComputeEnvironments() {
-        return this.computeEnvironments == null ? Input.empty() : this.computeEnvironments;
+    public Output<List<String>> getComputeEnvironments() {
+        return this.computeEnvironments == null ? Output.empty() : this.computeEnvironments;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingPolicyArn")
-      private final @Nullable Input<String> schedulingPolicyArn;
+      private final @Nullable Output<String> schedulingPolicyArn;
 
-    public Input<String> getSchedulingPolicyArn() {
-        return this.schedulingPolicyArn == null ? Input.empty() : this.schedulingPolicyArn;
+    public Output<String> getSchedulingPolicyArn() {
+        return this.schedulingPolicyArn == null ? Output.empty() : this.schedulingPolicyArn;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public JobQueueState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> computeEnvironments,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> schedulingPolicyArn,
-        @Nullable Input<String> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> computeEnvironments,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> schedulingPolicyArn,
+        @Nullable Output<String> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.computeEnvironments = computeEnvironments;
         this.name = name;
@@ -128,14 +128,14 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobQueueState() {
-        this.arn = Input.empty();
-        this.computeEnvironments = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.schedulingPolicyArn = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.computeEnvironments = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.schedulingPolicyArn = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> computeEnvironments;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> schedulingPolicyArn;
-        private @Nullable Input<String> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> computeEnvironments;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> schedulingPolicyArn;
+        private @Nullable Output<String> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder computeEnvironments(@Nullable Input<List<String>> computeEnvironments) {
+        public Builder computeEnvironments(@Nullable Output<List<String>> computeEnvironments) {
             this.computeEnvironments = computeEnvironments;
             return this;
         }
 
         public Builder computeEnvironments(@Nullable List<String> computeEnvironments) {
-            this.computeEnvironments = Input.ofNullable(computeEnvironments);
+            this.computeEnvironments = Output.ofNullable(computeEnvironments);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder schedulingPolicyArn(@Nullable Input<String> schedulingPolicyArn) {
+        public Builder schedulingPolicyArn(@Nullable Output<String> schedulingPolicyArn) {
             this.schedulingPolicyArn = schedulingPolicyArn;
             return this;
         }
 
         public Builder schedulingPolicyArn(@Nullable String schedulingPolicyArn) {
-            this.schedulingPolicyArn = Input.ofNullable(schedulingPolicyArn);
+            this.schedulingPolicyArn = Output.ofNullable(schedulingPolicyArn);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public JobQueueState build() {

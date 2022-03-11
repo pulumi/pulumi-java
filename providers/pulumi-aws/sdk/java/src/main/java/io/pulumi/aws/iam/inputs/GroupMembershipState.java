@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="group")
-      private final @Nullable Input<String> group;
+      private final @Nullable Output<String> group;
 
-    public Input<String> getGroup() {
-        return this.group == null ? Input.empty() : this.group;
+    public Output<String> getGroup() {
+        return this.group == null ? Output.empty() : this.group;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="users")
-      private final @Nullable Input<List<String>> users;
+      private final @Nullable Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
-        return this.users == null ? Input.empty() : this.users;
+    public Output<List<String>> getUsers() {
+        return this.users == null ? Output.empty() : this.users;
     }
 
     public GroupMembershipState(
-        @Nullable Input<String> group,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> users) {
+        @Nullable Output<String> group,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> users) {
         this.group = group;
         this.name = name;
         this.users = users;
     }
 
     private GroupMembershipState() {
-        this.group = Input.empty();
-        this.name = Input.empty();
-        this.users = Input.empty();
+        this.group = Output.empty();
+        this.name = Output.empty();
+        this.users = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> group;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> users;
+        private @Nullable Output<String> group;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> users;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     	      this.users = defaults.users;
         }
 
-        public Builder group(@Nullable Input<String> group) {
+        public Builder group(@Nullable Output<String> group) {
             this.group = group;
             return this;
         }
 
         public Builder group(@Nullable String group) {
-            this.group = Input.ofNullable(group);
+            this.group = Output.ofNullable(group);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder users(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Output<List<String>> users) {
             this.users = users;
             return this;
         }
 
         public Builder users(@Nullable List<String> users) {
-            this.users = Input.ofNullable(users);
+            this.users = Output.ofNullable(users);
             return this;
         }
         public GroupMembershipState build() {

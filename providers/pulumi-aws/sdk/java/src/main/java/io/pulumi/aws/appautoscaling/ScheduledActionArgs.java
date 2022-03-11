@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -53,9 +53,9 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-      private final Input<String> scalableDimension;
+      private final Output<String> scalableDimension;
 
-    public Input<String> getScalableDimension() {
+    public Output<String> getScalableDimension() {
         return this.scalableDimension;
     }
 
@@ -64,9 +64,9 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scalableTargetAction", required=true)
-      private final Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
+      private final Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
 
-    public Input<ScheduledActionScalableTargetActionArgs> getScalableTargetAction() {
+    public Output<ScheduledActionScalableTargetActionArgs> getScalableTargetAction() {
         return this.scalableTargetAction;
     }
 
@@ -75,9 +75,9 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -86,9 +86,9 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-      private final Input<String> serviceNamespace;
+      private final Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
+    public Output<String> getServiceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -97,10 +97,10 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -108,22 +108,22 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timezone")
-      private final @Nullable Input<String> timezone;
+      private final @Nullable Output<String> timezone;
 
-    public Input<String> getTimezone() {
-        return this.timezone == null ? Input.empty() : this.timezone;
+    public Output<String> getTimezone() {
+        return this.timezone == null ? Output.empty() : this.timezone;
     }
 
     public ScheduledActionArgs(
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> name,
-        Input<String> resourceId,
-        Input<String> scalableDimension,
-        Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction,
-        Input<String> schedule,
-        Input<String> serviceNamespace,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> timezone) {
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> name,
+        Output<String> resourceId,
+        Output<String> scalableDimension,
+        Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction,
+        Output<String> schedule,
+        Output<String> serviceNamespace,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> timezone) {
         this.endTime = endTime;
         this.name = name;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
@@ -136,15 +136,15 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScheduledActionArgs() {
-        this.endTime = Input.empty();
-        this.name = Input.empty();
-        this.resourceId = Input.empty();
-        this.scalableDimension = Input.empty();
-        this.scalableTargetAction = Input.empty();
-        this.schedule = Input.empty();
-        this.serviceNamespace = Input.empty();
-        this.startTime = Input.empty();
-        this.timezone = Input.empty();
+        this.endTime = Output.empty();
+        this.name = Output.empty();
+        this.resourceId = Output.empty();
+        this.scalableDimension = Output.empty();
+        this.scalableTargetAction = Output.empty();
+        this.schedule = Output.empty();
+        this.serviceNamespace = Output.empty();
+        this.startTime = Output.empty();
+        this.timezone = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> name;
-        private Input<String> resourceId;
-        private Input<String> scalableDimension;
-        private Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
-        private Input<String> schedule;
-        private Input<String> serviceNamespace;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> timezone;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> name;
+        private Output<String> resourceId;
+        private Output<String> scalableDimension;
+        private Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
+        private Output<String> schedule;
+        private Output<String> serviceNamespace;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> timezone;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder scalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
+            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder scalableTargetAction(Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
+        public Builder scalableTargetAction(Output<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
             this.scalableTargetAction = Objects.requireNonNull(scalableTargetAction);
             return this;
         }
 
         public Builder scalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
-            this.scalableTargetAction = Input.of(Objects.requireNonNull(scalableTargetAction));
+            this.scalableTargetAction = Output.of(Objects.requireNonNull(scalableTargetAction));
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder serviceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
+            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder timezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Output<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
         public Builder timezone(@Nullable String timezone) {
-            this.timezone = Input.ofNullable(timezone);
+            this.timezone = Output.ofNullable(timezone);
             return this;
         }
         public ScheduledActionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudhsmv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterId")
-      private final @Nullable Input<String> clusterId;
+      private final @Nullable Output<String> clusterId;
 
-    public Input<String> getClusterId() {
-        return this.clusterId == null ? Input.empty() : this.clusterId;
+    public Output<String> getClusterId() {
+        return this.clusterId == null ? Output.empty() : this.clusterId;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmEniId")
-      private final @Nullable Input<String> hsmEniId;
+      private final @Nullable Output<String> hsmEniId;
 
-    public Input<String> getHsmEniId() {
-        return this.hsmEniId == null ? Input.empty() : this.hsmEniId;
+    public Output<String> getHsmEniId() {
+        return this.hsmEniId == null ? Output.empty() : this.hsmEniId;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmId")
-      private final @Nullable Input<String> hsmId;
+      private final @Nullable Output<String> hsmId;
 
-    public Input<String> getHsmId() {
-        return this.hsmId == null ? Input.empty() : this.hsmId;
+    public Output<String> getHsmId() {
+        return this.hsmId == null ? Output.empty() : this.hsmId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmState")
-      private final @Nullable Input<String> hsmState;
+      private final @Nullable Output<String> hsmState;
 
-    public Input<String> getHsmState() {
-        return this.hsmState == null ? Input.empty() : this.hsmState;
+    public Output<String> getHsmState() {
+        return this.hsmState == null ? Output.empty() : this.hsmState;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -85,20 +85,20 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public HsmState(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> clusterId,
-        @Nullable Input<String> hsmEniId,
-        @Nullable Input<String> hsmId,
-        @Nullable Input<String> hsmState,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> clusterId,
+        @Nullable Output<String> hsmEniId,
+        @Nullable Output<String> hsmId,
+        @Nullable Output<String> hsmState,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> subnetId) {
         this.availabilityZone = availabilityZone;
         this.clusterId = clusterId;
         this.hsmEniId = hsmEniId;
@@ -109,13 +109,13 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HsmState() {
-        this.availabilityZone = Input.empty();
-        this.clusterId = Input.empty();
-        this.hsmEniId = Input.empty();
-        this.hsmId = Input.empty();
-        this.hsmState = Input.empty();
-        this.ipAddress = Input.empty();
-        this.subnetId = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.clusterId = Output.empty();
+        this.hsmEniId = Output.empty();
+        this.hsmId = Output.empty();
+        this.hsmState = Output.empty();
+        this.ipAddress = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> clusterId;
-        private @Nullable Input<String> hsmEniId;
-        private @Nullable Input<String> hsmId;
-        private @Nullable Input<String> hsmState;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> clusterId;
+        private @Nullable Output<String> hsmEniId;
+        private @Nullable Output<String> hsmId;
+        private @Nullable Output<String> hsmState;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder clusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Input.ofNullable(clusterId);
+            this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
 
-        public Builder hsmEniId(@Nullable Input<String> hsmEniId) {
+        public Builder hsmEniId(@Nullable Output<String> hsmEniId) {
             this.hsmEniId = hsmEniId;
             return this;
         }
 
         public Builder hsmEniId(@Nullable String hsmEniId) {
-            this.hsmEniId = Input.ofNullable(hsmEniId);
+            this.hsmEniId = Output.ofNullable(hsmEniId);
             return this;
         }
 
-        public Builder hsmId(@Nullable Input<String> hsmId) {
+        public Builder hsmId(@Nullable Output<String> hsmId) {
             this.hsmId = hsmId;
             return this;
         }
 
         public Builder hsmId(@Nullable String hsmId) {
-            this.hsmId = Input.ofNullable(hsmId);
+            this.hsmId = Output.ofNullable(hsmId);
             return this;
         }
 
-        public Builder hsmState(@Nullable Input<String> hsmState) {
+        public Builder hsmState(@Nullable Output<String> hsmState) {
             this.hsmState = hsmState;
             return this;
         }
 
         public Builder hsmState(@Nullable String hsmState) {
-            this.hsmState = Input.ofNullable(hsmState);
+            this.hsmState = Output.ofNullable(hsmState);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public HsmState build() {

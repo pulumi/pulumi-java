@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.AvailabilityZoneGroupArgs;
 import io.pulumi.aws.ec2.inputs.AvailabilityZoneGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class AvailabilityZoneGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AvailabilityZoneGroup(String name, AvailabilityZoneGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/availabilityZoneGroup:AvailabilityZoneGroup", name, args == null ? AvailabilityZoneGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/availabilityZoneGroup:AvailabilityZoneGroup", name, args == null ? AvailabilityZoneGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AvailabilityZoneGroup(String name, Input<String> id, @Nullable AvailabilityZoneGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AvailabilityZoneGroup(String name, Output<String> id, @Nullable AvailabilityZoneGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/availabilityZoneGroup:AvailabilityZoneGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class AvailabilityZoneGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AvailabilityZoneGroup get(String name, Input<String> id, @Nullable AvailabilityZoneGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AvailabilityZoneGroup get(String name, Output<String> id, @Nullable AvailabilityZoneGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AvailabilityZoneGroup(name, id, state, options);
     }
 }

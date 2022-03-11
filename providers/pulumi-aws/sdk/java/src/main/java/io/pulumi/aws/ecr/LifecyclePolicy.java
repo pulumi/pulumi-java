@@ -6,7 +6,6 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.LifecyclePolicyArgs;
 import io.pulumi.aws.ecr.inputs.LifecyclePolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -114,14 +113,14 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LifecyclePolicy(String name, LifecyclePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/lifecyclePolicy:LifecyclePolicy", name, args == null ? LifecyclePolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecr/lifecyclePolicy:LifecyclePolicy", name, args == null ? LifecyclePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LifecyclePolicy(String name, Input<String> id, @Nullable LifecyclePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LifecyclePolicy(String name, Output<String> id, @Nullable LifecyclePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecr/lifecyclePolicy:LifecyclePolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -137,7 +136,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LifecyclePolicy get(String name, Input<String> id, @Nullable LifecyclePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LifecyclePolicy get(String name, Output<String> id, @Nullable LifecyclePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LifecyclePolicy(name, id, state, options);
     }
 }

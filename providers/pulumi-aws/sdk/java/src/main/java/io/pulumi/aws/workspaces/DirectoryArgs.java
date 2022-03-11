@@ -6,7 +6,7 @@ package io.pulumi.aws.workspaces;
 import io.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId", required=true)
-      private final Input<String> directoryId;
+      private final Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
+    public Output<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -35,10 +35,10 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipGroupIds")
-      private final @Nullable Input<List<String>> ipGroupIds;
+      private final @Nullable Output<List<String>> ipGroupIds;
 
-    public Input<List<String>> getIpGroupIds() {
-        return this.ipGroupIds == null ? Input.empty() : this.ipGroupIds;
+    public Output<List<String>> getIpGroupIds() {
+        return this.ipGroupIds == null ? Output.empty() : this.ipGroupIds;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePermissions")
-      private final @Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions;
+      private final @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions;
 
-    public Input<DirectorySelfServicePermissionsArgs> getSelfServicePermissions() {
-        return this.selfServicePermissions == null ? Input.empty() : this.selfServicePermissions;
+    public Output<DirectorySelfServicePermissionsArgs> getSelfServicePermissions() {
+        return this.selfServicePermissions == null ? Output.empty() : this.selfServicePermissions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-      private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Input.empty() : this.subnetIds;
+    public Output<List<String>> getSubnetIds() {
+        return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceAccessProperties")
-      private final @Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
+      private final @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
 
-    public Input<DirectoryWorkspaceAccessPropertiesArgs> getWorkspaceAccessProperties() {
-        return this.workspaceAccessProperties == null ? Input.empty() : this.workspaceAccessProperties;
+    public Output<DirectoryWorkspaceAccessPropertiesArgs> getWorkspaceAccessProperties() {
+        return this.workspaceAccessProperties == null ? Output.empty() : this.workspaceAccessProperties;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceCreationProperties")
-      private final @Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
+      private final @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
-    public Input<DirectoryWorkspaceCreationPropertiesArgs> getWorkspaceCreationProperties() {
-        return this.workspaceCreationProperties == null ? Input.empty() : this.workspaceCreationProperties;
+    public Output<DirectoryWorkspaceCreationPropertiesArgs> getWorkspaceCreationProperties() {
+        return this.workspaceCreationProperties == null ? Output.empty() : this.workspaceCreationProperties;
     }
 
     public DirectoryArgs(
-        Input<String> directoryId,
-        @Nullable Input<List<String>> ipGroupIds,
-        @Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions,
-        @Nullable Input<List<String>> subnetIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties,
-        @Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
+        Output<String> directoryId,
+        @Nullable Output<List<String>> ipGroupIds,
+        @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions,
+        @Nullable Output<List<String>> subnetIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties,
+        @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
         this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
         this.ipGroupIds = ipGroupIds;
         this.selfServicePermissions = selfServicePermissions;
@@ -114,13 +114,13 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryArgs() {
-        this.directoryId = Input.empty();
-        this.ipGroupIds = Input.empty();
-        this.selfServicePermissions = Input.empty();
-        this.subnetIds = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceAccessProperties = Input.empty();
-        this.workspaceCreationProperties = Input.empty();
+        this.directoryId = Output.empty();
+        this.ipGroupIds = Output.empty();
+        this.selfServicePermissions = Output.empty();
+        this.subnetIds = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceAccessProperties = Output.empty();
+        this.workspaceCreationProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> directoryId;
-        private @Nullable Input<List<String>> ipGroupIds;
-        private @Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions;
-        private @Nullable Input<List<String>> subnetIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
-        private @Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
+        private Output<String> directoryId;
+        private @Nullable Output<List<String>> ipGroupIds;
+        private @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions;
+        private @Nullable Output<List<String>> subnetIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
+        private @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceCreationProperties = defaults.workspaceCreationProperties;
         }
 
-        public Builder directoryId(Input<String> directoryId) {
+        public Builder directoryId(Output<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
         public Builder directoryId(String directoryId) {
-            this.directoryId = Input.of(Objects.requireNonNull(directoryId));
+            this.directoryId = Output.of(Objects.requireNonNull(directoryId));
             return this;
         }
 
-        public Builder ipGroupIds(@Nullable Input<List<String>> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable Output<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
 
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
-            this.ipGroupIds = Input.ofNullable(ipGroupIds);
+            this.ipGroupIds = Output.ofNullable(ipGroupIds);
             return this;
         }
 
-        public Builder selfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
 
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsArgs selfServicePermissions) {
-            this.selfServicePermissions = Input.ofNullable(selfServicePermissions);
+            this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
             return this;
         }
 
-        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Input.ofNullable(subnetIds);
+            this.subnetIds = Output.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
 
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
-            this.workspaceAccessProperties = Input.ofNullable(workspaceAccessProperties);
+            this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
             return this;
         }
 
-        public Builder workspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
 
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
-            this.workspaceCreationProperties = Input.ofNullable(workspaceCreationProperties);
+            this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
             return this;
         }
         public DirectoryArgs build() {

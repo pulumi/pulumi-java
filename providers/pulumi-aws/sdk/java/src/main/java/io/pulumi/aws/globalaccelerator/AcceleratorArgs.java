@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator;
 
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<AcceleratorAttributesArgs> attributes;
+      private final @Nullable Output<AcceleratorAttributesArgs> attributes;
 
-    public Input<AcceleratorAttributesArgs> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<AcceleratorAttributesArgs> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-      private final @Nullable Input<String> ipAddressType;
+      private final @Nullable Output<String> ipAddressType;
 
-    public Input<String> getIpAddressType() {
-        return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
+    public Output<String> getIpAddressType() {
+        return this.ipAddressType == null ? Output.empty() : this.ipAddressType;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AcceleratorArgs(
-        @Nullable Input<AcceleratorAttributesArgs> attributes,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> ipAddressType,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AcceleratorAttributesArgs> attributes,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> ipAddressType,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.attributes = attributes;
         this.enabled = enabled;
         this.ipAddressType = ipAddressType;
@@ -86,11 +86,11 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AcceleratorArgs() {
-        this.attributes = Input.empty();
-        this.enabled = Input.empty();
-        this.ipAddressType = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.attributes = Output.empty();
+        this.enabled = Output.empty();
+        this.ipAddressType = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AcceleratorAttributesArgs> attributes;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> ipAddressType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AcceleratorAttributesArgs> attributes;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> ipAddressType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder attributes(@Nullable Input<AcceleratorAttributesArgs> attributes) {
+        public Builder attributes(@Nullable Output<AcceleratorAttributesArgs> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable AcceleratorAttributesArgs attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder ipAddressType(@Nullable Input<String> ipAddressType) {
+        public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = Input.ofNullable(ipAddressType);
+            this.ipAddressType = Output.ofNullable(ipAddressType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AcceleratorArgs build() {

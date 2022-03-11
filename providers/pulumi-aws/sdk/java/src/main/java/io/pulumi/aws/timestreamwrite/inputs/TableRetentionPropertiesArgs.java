@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.timestreamwrite.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="magneticStoreRetentionPeriodInDays", required=true)
-      private final Input<Integer> magneticStoreRetentionPeriodInDays;
+      private final Output<Integer> magneticStoreRetentionPeriodInDays;
 
-    public Input<Integer> getMagneticStoreRetentionPeriodInDays() {
+    public Output<Integer> getMagneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
     }
 
@@ -29,22 +29,22 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="memoryStoreRetentionPeriodInHours", required=true)
-      private final Input<Integer> memoryStoreRetentionPeriodInHours;
+      private final Output<Integer> memoryStoreRetentionPeriodInHours;
 
-    public Input<Integer> getMemoryStoreRetentionPeriodInHours() {
+    public Output<Integer> getMemoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;
     }
 
     public TableRetentionPropertiesArgs(
-        Input<Integer> magneticStoreRetentionPeriodInDays,
-        Input<Integer> memoryStoreRetentionPeriodInHours) {
+        Output<Integer> magneticStoreRetentionPeriodInDays,
+        Output<Integer> memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays, "expected parameter 'magneticStoreRetentionPeriodInDays' to be non-null");
         this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours, "expected parameter 'memoryStoreRetentionPeriodInHours' to be non-null");
     }
 
     private TableRetentionPropertiesArgs() {
-        this.magneticStoreRetentionPeriodInDays = Input.empty();
-        this.memoryStoreRetentionPeriodInHours = Input.empty();
+        this.magneticStoreRetentionPeriodInDays = Output.empty();
+        this.memoryStoreRetentionPeriodInHours = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<Integer> magneticStoreRetentionPeriodInDays;
-        private Input<Integer> memoryStoreRetentionPeriodInHours;
+        private Output<Integer> magneticStoreRetentionPeriodInDays;
+        private Output<Integer> memoryStoreRetentionPeriodInHours;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
     	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
         }
 
-        public Builder magneticStoreRetentionPeriodInDays(Input<Integer> magneticStoreRetentionPeriodInDays) {
+        public Builder magneticStoreRetentionPeriodInDays(Output<Integer> magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
             return this;
         }
 
         public Builder magneticStoreRetentionPeriodInDays(Integer magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = Input.of(Objects.requireNonNull(magneticStoreRetentionPeriodInDays));
+            this.magneticStoreRetentionPeriodInDays = Output.of(Objects.requireNonNull(magneticStoreRetentionPeriodInDays));
             return this;
         }
 
-        public Builder memoryStoreRetentionPeriodInHours(Input<Integer> memoryStoreRetentionPeriodInHours) {
+        public Builder memoryStoreRetentionPeriodInHours(Output<Integer> memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
             return this;
         }
 
         public Builder memoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = Input.of(Objects.requireNonNull(memoryStoreRetentionPeriodInHours));
+            this.memoryStoreRetentionPeriodInHours = Output.of(Objects.requireNonNull(memoryStoreRetentionPeriodInHours));
             return this;
         }
         public TableRetentionPropertiesArgs build() {

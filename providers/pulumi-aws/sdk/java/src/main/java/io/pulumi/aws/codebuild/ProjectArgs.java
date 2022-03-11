@@ -14,7 +14,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceVersionArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,9 +34,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts", required=true)
-      private final Input<ProjectArtifactsArgs> artifacts;
+      private final Output<ProjectArtifactsArgs> artifacts;
 
-    public Input<ProjectArtifactsArgs> getArtifacts() {
+    public Output<ProjectArtifactsArgs> getArtifacts() {
         return this.artifacts;
     }
 
@@ -45,10 +45,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="badgeEnabled")
-      private final @Nullable Input<Boolean> badgeEnabled;
+      private final @Nullable Output<Boolean> badgeEnabled;
 
-    public Input<Boolean> getBadgeEnabled() {
-        return this.badgeEnabled == null ? Input.empty() : this.badgeEnabled;
+    public Output<Boolean> getBadgeEnabled() {
+        return this.badgeEnabled == null ? Output.empty() : this.badgeEnabled;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildBatchConfig")
-      private final @Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig;
+      private final @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
 
-    public Input<ProjectBuildBatchConfigArgs> getBuildBatchConfig() {
-        return this.buildBatchConfig == null ? Input.empty() : this.buildBatchConfig;
+    public Output<ProjectBuildBatchConfigArgs> getBuildBatchConfig() {
+        return this.buildBatchConfig == null ? Output.empty() : this.buildBatchConfig;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildTimeout")
-      private final @Nullable Input<Integer> buildTimeout;
+      private final @Nullable Output<Integer> buildTimeout;
 
-    public Input<Integer> getBuildTimeout() {
-        return this.buildTimeout == null ? Input.empty() : this.buildTimeout;
+    public Output<Integer> getBuildTimeout() {
+        return this.buildTimeout == null ? Output.empty() : this.buildTimeout;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cache")
-      private final @Nullable Input<ProjectCacheArgs> cache;
+      private final @Nullable Output<ProjectCacheArgs> cache;
 
-    public Input<ProjectCacheArgs> getCache() {
-        return this.cache == null ? Input.empty() : this.cache;
+    public Output<ProjectCacheArgs> getCache() {
+        return this.cache == null ? Output.empty() : this.cache;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrentBuildLimit")
-      private final @Nullable Input<Integer> concurrentBuildLimit;
+      private final @Nullable Output<Integer> concurrentBuildLimit;
 
-    public Input<Integer> getConcurrentBuildLimit() {
-        return this.concurrentBuildLimit == null ? Input.empty() : this.concurrentBuildLimit;
+    public Output<Integer> getConcurrentBuildLimit() {
+        return this.concurrentBuildLimit == null ? Output.empty() : this.concurrentBuildLimit;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-      private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Output<String> encryptionKey;
 
-    public Input<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
+    public Output<String> getEncryptionKey() {
+        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-      private final Input<ProjectEnvironmentArgs> environment;
+      private final Output<ProjectEnvironmentArgs> environment;
 
-    public Input<ProjectEnvironmentArgs> getEnvironment() {
+    public Output<ProjectEnvironmentArgs> getEnvironment() {
         return this.environment;
     }
 
@@ -133,10 +133,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemLocations")
-      private final @Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
+      private final @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
 
-    public Input<List<ProjectFileSystemLocationArgs>> getFileSystemLocations() {
-        return this.fileSystemLocations == null ? Input.empty() : this.fileSystemLocations;
+    public Output<List<ProjectFileSystemLocationArgs>> getFileSystemLocations() {
+        return this.fileSystemLocations == null ? Output.empty() : this.fileSystemLocations;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsConfig")
-      private final @Nullable Input<ProjectLogsConfigArgs> logsConfig;
+      private final @Nullable Output<ProjectLogsConfigArgs> logsConfig;
 
-    public Input<ProjectLogsConfigArgs> getLogsConfig() {
-        return this.logsConfig == null ? Input.empty() : this.logsConfig;
+    public Output<ProjectLogsConfigArgs> getLogsConfig() {
+        return this.logsConfig == null ? Output.empty() : this.logsConfig;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectVisibility")
-      private final @Nullable Input<String> projectVisibility;
+      private final @Nullable Output<String> projectVisibility;
 
-    public Input<String> getProjectVisibility() {
-        return this.projectVisibility == null ? Input.empty() : this.projectVisibility;
+    public Output<String> getProjectVisibility() {
+        return this.projectVisibility == null ? Output.empty() : this.projectVisibility;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queuedTimeout")
-      private final @Nullable Input<Integer> queuedTimeout;
+      private final @Nullable Output<Integer> queuedTimeout;
 
-    public Input<Integer> getQueuedTimeout() {
-        return this.queuedTimeout == null ? Input.empty() : this.queuedTimeout;
+    public Output<Integer> getQueuedTimeout() {
+        return this.queuedTimeout == null ? Output.empty() : this.queuedTimeout;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceAccessRole")
-      private final @Nullable Input<String> resourceAccessRole;
+      private final @Nullable Output<String> resourceAccessRole;
 
-    public Input<String> getResourceAccessRole() {
-        return this.resourceAccessRole == null ? Input.empty() : this.resourceAccessRole;
+    public Output<String> getResourceAccessRole() {
+        return this.resourceAccessRole == null ? Output.empty() : this.resourceAccessRole;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryArtifacts")
-      private final @Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
+      private final @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
 
-    public Input<List<ProjectSecondaryArtifactArgs>> getSecondaryArtifacts() {
-        return this.secondaryArtifacts == null ? Input.empty() : this.secondaryArtifacts;
+    public Output<List<ProjectSecondaryArtifactArgs>> getSecondaryArtifacts() {
+        return this.secondaryArtifacts == null ? Output.empty() : this.secondaryArtifacts;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondarySourceVersions")
-      private final @Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
+      private final @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
 
-    public Input<List<ProjectSecondarySourceVersionArgs>> getSecondarySourceVersions() {
-        return this.secondarySourceVersions == null ? Input.empty() : this.secondarySourceVersions;
+    public Output<List<ProjectSecondarySourceVersionArgs>> getSecondarySourceVersions() {
+        return this.secondarySourceVersions == null ? Output.empty() : this.secondarySourceVersions;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondarySources")
-      private final @Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources;
+      private final @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
 
-    public Input<List<ProjectSecondarySourceArgs>> getSecondarySources() {
-        return this.secondarySources == null ? Input.empty() : this.secondarySources;
+    public Output<List<ProjectSecondarySourceArgs>> getSecondarySources() {
+        return this.secondarySources == null ? Output.empty() : this.secondarySources;
     }
 
     /**
@@ -232,9 +232,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole", required=true)
-      private final Input<String> serviceRole;
+      private final Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
+    public Output<String> getServiceRole() {
         return this.serviceRole;
     }
 
@@ -243,9 +243,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<ProjectSourceArgs> source;
+      private final Output<ProjectSourceArgs> source;
 
-    public Input<ProjectSourceArgs> getSource() {
+    public Output<ProjectSourceArgs> getSource() {
         return this.source;
     }
 
@@ -254,10 +254,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVersion")
-      private final @Nullable Input<String> sourceVersion;
+      private final @Nullable Output<String> sourceVersion;
 
-    public Input<String> getSourceVersion() {
-        return this.sourceVersion == null ? Input.empty() : this.sourceVersion;
+    public Output<String> getSourceVersion() {
+        return this.sourceVersion == null ? Output.empty() : this.sourceVersion;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -276,36 +276,36 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<ProjectVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
-    public Input<ProjectVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<ProjectVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public ProjectArgs(
-        Input<ProjectArtifactsArgs> artifacts,
-        @Nullable Input<Boolean> badgeEnabled,
-        @Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig,
-        @Nullable Input<Integer> buildTimeout,
-        @Nullable Input<ProjectCacheArgs> cache,
-        @Nullable Input<Integer> concurrentBuildLimit,
-        @Nullable Input<String> description,
-        @Nullable Input<String> encryptionKey,
-        Input<ProjectEnvironmentArgs> environment,
-        @Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations,
-        @Nullable Input<ProjectLogsConfigArgs> logsConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> projectVisibility,
-        @Nullable Input<Integer> queuedTimeout,
-        @Nullable Input<String> resourceAccessRole,
-        @Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts,
-        @Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions,
-        @Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources,
-        Input<String> serviceRole,
-        Input<ProjectSourceArgs> source,
-        @Nullable Input<String> sourceVersion,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ProjectVpcConfigArgs> vpcConfig) {
+        Output<ProjectArtifactsArgs> artifacts,
+        @Nullable Output<Boolean> badgeEnabled,
+        @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig,
+        @Nullable Output<Integer> buildTimeout,
+        @Nullable Output<ProjectCacheArgs> cache,
+        @Nullable Output<Integer> concurrentBuildLimit,
+        @Nullable Output<String> description,
+        @Nullable Output<String> encryptionKey,
+        Output<ProjectEnvironmentArgs> environment,
+        @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations,
+        @Nullable Output<ProjectLogsConfigArgs> logsConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> projectVisibility,
+        @Nullable Output<Integer> queuedTimeout,
+        @Nullable Output<String> resourceAccessRole,
+        @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts,
+        @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions,
+        @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources,
+        Output<String> serviceRole,
+        Output<ProjectSourceArgs> source,
+        @Nullable Output<String> sourceVersion,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
         this.artifacts = Objects.requireNonNull(artifacts, "expected parameter 'artifacts' to be non-null");
         this.badgeEnabled = badgeEnabled;
         this.buildBatchConfig = buildBatchConfig;
@@ -332,29 +332,29 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.artifacts = Input.empty();
-        this.badgeEnabled = Input.empty();
-        this.buildBatchConfig = Input.empty();
-        this.buildTimeout = Input.empty();
-        this.cache = Input.empty();
-        this.concurrentBuildLimit = Input.empty();
-        this.description = Input.empty();
-        this.encryptionKey = Input.empty();
-        this.environment = Input.empty();
-        this.fileSystemLocations = Input.empty();
-        this.logsConfig = Input.empty();
-        this.name = Input.empty();
-        this.projectVisibility = Input.empty();
-        this.queuedTimeout = Input.empty();
-        this.resourceAccessRole = Input.empty();
-        this.secondaryArtifacts = Input.empty();
-        this.secondarySourceVersions = Input.empty();
-        this.secondarySources = Input.empty();
-        this.serviceRole = Input.empty();
-        this.source = Input.empty();
-        this.sourceVersion = Input.empty();
-        this.tags = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.artifacts = Output.empty();
+        this.badgeEnabled = Output.empty();
+        this.buildBatchConfig = Output.empty();
+        this.buildTimeout = Output.empty();
+        this.cache = Output.empty();
+        this.concurrentBuildLimit = Output.empty();
+        this.description = Output.empty();
+        this.encryptionKey = Output.empty();
+        this.environment = Output.empty();
+        this.fileSystemLocations = Output.empty();
+        this.logsConfig = Output.empty();
+        this.name = Output.empty();
+        this.projectVisibility = Output.empty();
+        this.queuedTimeout = Output.empty();
+        this.resourceAccessRole = Output.empty();
+        this.secondaryArtifacts = Output.empty();
+        this.secondarySourceVersions = Output.empty();
+        this.secondarySources = Output.empty();
+        this.serviceRole = Output.empty();
+        this.source = Output.empty();
+        this.sourceVersion = Output.empty();
+        this.tags = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -366,29 +366,29 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ProjectArtifactsArgs> artifacts;
-        private @Nullable Input<Boolean> badgeEnabled;
-        private @Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig;
-        private @Nullable Input<Integer> buildTimeout;
-        private @Nullable Input<ProjectCacheArgs> cache;
-        private @Nullable Input<Integer> concurrentBuildLimit;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> encryptionKey;
-        private Input<ProjectEnvironmentArgs> environment;
-        private @Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
-        private @Nullable Input<ProjectLogsConfigArgs> logsConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> projectVisibility;
-        private @Nullable Input<Integer> queuedTimeout;
-        private @Nullable Input<String> resourceAccessRole;
-        private @Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
-        private @Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
-        private @Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources;
-        private Input<String> serviceRole;
-        private Input<ProjectSourceArgs> source;
-        private @Nullable Input<String> sourceVersion;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ProjectVpcConfigArgs> vpcConfig;
+        private Output<ProjectArtifactsArgs> artifacts;
+        private @Nullable Output<Boolean> badgeEnabled;
+        private @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
+        private @Nullable Output<Integer> buildTimeout;
+        private @Nullable Output<ProjectCacheArgs> cache;
+        private @Nullable Output<Integer> concurrentBuildLimit;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> encryptionKey;
+        private Output<ProjectEnvironmentArgs> environment;
+        private @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
+        private @Nullable Output<ProjectLogsConfigArgs> logsConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> projectVisibility;
+        private @Nullable Output<Integer> queuedTimeout;
+        private @Nullable Output<String> resourceAccessRole;
+        private @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
+        private @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
+        private @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
+        private Output<String> serviceRole;
+        private Output<ProjectSourceArgs> source;
+        private @Nullable Output<String> sourceVersion;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -421,233 +421,233 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder artifacts(Input<ProjectArtifactsArgs> artifacts) {
+        public Builder artifacts(Output<ProjectArtifactsArgs> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
         public Builder artifacts(ProjectArtifactsArgs artifacts) {
-            this.artifacts = Input.of(Objects.requireNonNull(artifacts));
+            this.artifacts = Output.of(Objects.requireNonNull(artifacts));
             return this;
         }
 
-        public Builder badgeEnabled(@Nullable Input<Boolean> badgeEnabled) {
+        public Builder badgeEnabled(@Nullable Output<Boolean> badgeEnabled) {
             this.badgeEnabled = badgeEnabled;
             return this;
         }
 
         public Builder badgeEnabled(@Nullable Boolean badgeEnabled) {
-            this.badgeEnabled = Input.ofNullable(badgeEnabled);
+            this.badgeEnabled = Output.ofNullable(badgeEnabled);
             return this;
         }
 
-        public Builder buildBatchConfig(@Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig) {
+        public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig) {
             this.buildBatchConfig = buildBatchConfig;
             return this;
         }
 
         public Builder buildBatchConfig(@Nullable ProjectBuildBatchConfigArgs buildBatchConfig) {
-            this.buildBatchConfig = Input.ofNullable(buildBatchConfig);
+            this.buildBatchConfig = Output.ofNullable(buildBatchConfig);
             return this;
         }
 
-        public Builder buildTimeout(@Nullable Input<Integer> buildTimeout) {
+        public Builder buildTimeout(@Nullable Output<Integer> buildTimeout) {
             this.buildTimeout = buildTimeout;
             return this;
         }
 
         public Builder buildTimeout(@Nullable Integer buildTimeout) {
-            this.buildTimeout = Input.ofNullable(buildTimeout);
+            this.buildTimeout = Output.ofNullable(buildTimeout);
             return this;
         }
 
-        public Builder cache(@Nullable Input<ProjectCacheArgs> cache) {
+        public Builder cache(@Nullable Output<ProjectCacheArgs> cache) {
             this.cache = cache;
             return this;
         }
 
         public Builder cache(@Nullable ProjectCacheArgs cache) {
-            this.cache = Input.ofNullable(cache);
+            this.cache = Output.ofNullable(cache);
             return this;
         }
 
-        public Builder concurrentBuildLimit(@Nullable Input<Integer> concurrentBuildLimit) {
+        public Builder concurrentBuildLimit(@Nullable Output<Integer> concurrentBuildLimit) {
             this.concurrentBuildLimit = concurrentBuildLimit;
             return this;
         }
 
         public Builder concurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
-            this.concurrentBuildLimit = Input.ofNullable(concurrentBuildLimit);
+            this.concurrentBuildLimit = Output.ofNullable(concurrentBuildLimit);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Input.ofNullable(encryptionKey);
+            this.encryptionKey = Output.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder environment(Input<ProjectEnvironmentArgs> environment) {
+        public Builder environment(Output<ProjectEnvironmentArgs> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
         public Builder environment(ProjectEnvironmentArgs environment) {
-            this.environment = Input.of(Objects.requireNonNull(environment));
+            this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
 
-        public Builder fileSystemLocations(@Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
+        public Builder fileSystemLocations(@Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
             this.fileSystemLocations = fileSystemLocations;
             return this;
         }
 
         public Builder fileSystemLocations(@Nullable List<ProjectFileSystemLocationArgs> fileSystemLocations) {
-            this.fileSystemLocations = Input.ofNullable(fileSystemLocations);
+            this.fileSystemLocations = Output.ofNullable(fileSystemLocations);
             return this;
         }
 
-        public Builder logsConfig(@Nullable Input<ProjectLogsConfigArgs> logsConfig) {
+        public Builder logsConfig(@Nullable Output<ProjectLogsConfigArgs> logsConfig) {
             this.logsConfig = logsConfig;
             return this;
         }
 
         public Builder logsConfig(@Nullable ProjectLogsConfigArgs logsConfig) {
-            this.logsConfig = Input.ofNullable(logsConfig);
+            this.logsConfig = Output.ofNullable(logsConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectVisibility(@Nullable Input<String> projectVisibility) {
+        public Builder projectVisibility(@Nullable Output<String> projectVisibility) {
             this.projectVisibility = projectVisibility;
             return this;
         }
 
         public Builder projectVisibility(@Nullable String projectVisibility) {
-            this.projectVisibility = Input.ofNullable(projectVisibility);
+            this.projectVisibility = Output.ofNullable(projectVisibility);
             return this;
         }
 
-        public Builder queuedTimeout(@Nullable Input<Integer> queuedTimeout) {
+        public Builder queuedTimeout(@Nullable Output<Integer> queuedTimeout) {
             this.queuedTimeout = queuedTimeout;
             return this;
         }
 
         public Builder queuedTimeout(@Nullable Integer queuedTimeout) {
-            this.queuedTimeout = Input.ofNullable(queuedTimeout);
+            this.queuedTimeout = Output.ofNullable(queuedTimeout);
             return this;
         }
 
-        public Builder resourceAccessRole(@Nullable Input<String> resourceAccessRole) {
+        public Builder resourceAccessRole(@Nullable Output<String> resourceAccessRole) {
             this.resourceAccessRole = resourceAccessRole;
             return this;
         }
 
         public Builder resourceAccessRole(@Nullable String resourceAccessRole) {
-            this.resourceAccessRole = Input.ofNullable(resourceAccessRole);
+            this.resourceAccessRole = Output.ofNullable(resourceAccessRole);
             return this;
         }
 
-        public Builder secondaryArtifacts(@Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
+        public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
             this.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
 
         public Builder secondaryArtifacts(@Nullable List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
-            this.secondaryArtifacts = Input.ofNullable(secondaryArtifacts);
+            this.secondaryArtifacts = Output.ofNullable(secondaryArtifacts);
             return this;
         }
 
-        public Builder secondarySourceVersions(@Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
+        public Builder secondarySourceVersions(@Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
             this.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
 
         public Builder secondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
-            this.secondarySourceVersions = Input.ofNullable(secondarySourceVersions);
+            this.secondarySourceVersions = Output.ofNullable(secondarySourceVersions);
             return this;
         }
 
-        public Builder secondarySources(@Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources) {
+        public Builder secondarySources(@Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources) {
             this.secondarySources = secondarySources;
             return this;
         }
 
         public Builder secondarySources(@Nullable List<ProjectSecondarySourceArgs> secondarySources) {
-            this.secondarySources = Input.ofNullable(secondarySources);
+            this.secondarySources = Output.ofNullable(secondarySources);
             return this;
         }
 
-        public Builder serviceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Output<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
+            this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder source(Input<ProjectSourceArgs> source) {
+        public Builder source(Output<ProjectSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(ProjectSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourceVersion(@Nullable Input<String> sourceVersion) {
+        public Builder sourceVersion(@Nullable Output<String> sourceVersion) {
             this.sourceVersion = sourceVersion;
             return this;
         }
 
         public Builder sourceVersion(@Nullable String sourceVersion) {
-            this.sourceVersion = Input.ofNullable(sourceVersion);
+            this.sourceVersion = Output.ofNullable(sourceVersion);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<ProjectVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable ProjectVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public ProjectArgs build() {

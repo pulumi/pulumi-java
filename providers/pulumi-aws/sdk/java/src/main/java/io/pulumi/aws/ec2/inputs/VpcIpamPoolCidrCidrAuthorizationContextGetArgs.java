@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
      * 
      */
     @InputImport(name="signature")
-      private final @Nullable Input<String> signature;
+      private final @Nullable Output<String> signature;
 
-    public Input<String> getSignature() {
-        return this.signature == null ? Input.empty() : this.signature;
+    public Output<String> getSignature() {
+        return this.signature == null ? Output.empty() : this.signature;
     }
 
     public VpcIpamPoolCidrCidrAuthorizationContextGetArgs(
-        @Nullable Input<String> message,
-        @Nullable Input<String> signature) {
+        @Nullable Output<String> message,
+        @Nullable Output<String> signature) {
         this.message = message;
         this.signature = signature;
     }
 
     private VpcIpamPoolCidrCidrAuthorizationContextGetArgs() {
-        this.message = Input.empty();
-        this.signature = Input.empty();
+        this.message = Output.empty();
+        this.signature = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> signature;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> signature;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     	      this.signature = defaults.signature;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder signature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Output<String> signature) {
             this.signature = signature;
             return this;
         }
 
         public Builder signature(@Nullable String signature) {
-            this.signature = Input.ofNullable(signature);
+            this.signature = Output.ofNullable(signature);
             return this;
         }
         public VpcIpamPoolCidrCidrAuthorizationContextGetArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.IdentityProviderArgs;
 import io.pulumi.aws.cognito.inputs.IdentityProviderState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,14 +153,14 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityProvider(String name, IdentityProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/identityProvider:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cognito/identityProvider:IdentityProvider", name, args == null ? IdentityProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IdentityProvider(String name, Input<String> id, @Nullable IdentityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IdentityProvider(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cognito/identityProvider:IdentityProvider", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -177,7 +176,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IdentityProvider get(String name, Input<String> id, @Nullable IdentityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IdentityProvider get(String name, Output<String> id, @Nullable IdentityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IdentityProvider(name, id, state, options);
     }
 }

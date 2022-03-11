@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.synthetics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="created")
-      private final @Nullable Input<String> created;
+      private final @Nullable Output<String> created;
 
-    public Input<String> getCreated() {
-        return this.created == null ? Input.empty() : this.created;
+    public Output<String> getCreated() {
+        return this.created == null ? Output.empty() : this.created;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastModified")
-      private final @Nullable Input<String> lastModified;
+      private final @Nullable Output<String> lastModified;
 
-    public Input<String> getLastModified() {
-        return this.lastModified == null ? Input.empty() : this.lastModified;
+    public Output<String> getLastModified() {
+        return this.lastModified == null ? Output.empty() : this.lastModified;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastStarted")
-      private final @Nullable Input<String> lastStarted;
+      private final @Nullable Output<String> lastStarted;
 
-    public Input<String> getLastStarted() {
-        return this.lastStarted == null ? Input.empty() : this.lastStarted;
+    public Output<String> getLastStarted() {
+        return this.lastStarted == null ? Output.empty() : this.lastStarted;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastStopped")
-      private final @Nullable Input<String> lastStopped;
+      private final @Nullable Output<String> lastStopped;
 
-    public Input<String> getLastStopped() {
-        return this.lastStopped == null ? Input.empty() : this.lastStopped;
+    public Output<String> getLastStopped() {
+        return this.lastStopped == null ? Output.empty() : this.lastStopped;
     }
 
     public CanaryTimelineGetArgs(
-        @Nullable Input<String> created,
-        @Nullable Input<String> lastModified,
-        @Nullable Input<String> lastStarted,
-        @Nullable Input<String> lastStopped) {
+        @Nullable Output<String> created,
+        @Nullable Output<String> lastModified,
+        @Nullable Output<String> lastStarted,
+        @Nullable Output<String> lastStopped) {
         this.created = created;
         this.lastModified = lastModified;
         this.lastStarted = lastStarted;
@@ -70,10 +70,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CanaryTimelineGetArgs() {
-        this.created = Input.empty();
-        this.lastModified = Input.empty();
-        this.lastStarted = Input.empty();
-        this.lastStopped = Input.empty();
+        this.created = Output.empty();
+        this.lastModified = Output.empty();
+        this.lastStarted = Output.empty();
+        this.lastStopped = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> created;
-        private @Nullable Input<String> lastModified;
-        private @Nullable Input<String> lastStarted;
-        private @Nullable Input<String> lastStopped;
+        private @Nullable Output<String> created;
+        private @Nullable Output<String> lastModified;
+        private @Nullable Output<String> lastStarted;
+        private @Nullable Output<String> lastStopped;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
     	      this.lastStopped = defaults.lastStopped;
         }
 
-        public Builder created(@Nullable Input<String> created) {
+        public Builder created(@Nullable Output<String> created) {
             this.created = created;
             return this;
         }
 
         public Builder created(@Nullable String created) {
-            this.created = Input.ofNullable(created);
+            this.created = Output.ofNullable(created);
             return this;
         }
 
-        public Builder lastModified(@Nullable Input<String> lastModified) {
+        public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Input.ofNullable(lastModified);
+            this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
 
-        public Builder lastStarted(@Nullable Input<String> lastStarted) {
+        public Builder lastStarted(@Nullable Output<String> lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
 
         public Builder lastStarted(@Nullable String lastStarted) {
-            this.lastStarted = Input.ofNullable(lastStarted);
+            this.lastStarted = Output.ofNullable(lastStarted);
             return this;
         }
 
-        public Builder lastStopped(@Nullable Input<String> lastStopped) {
+        public Builder lastStopped(@Nullable Output<String> lastStopped) {
             this.lastStopped = lastStopped;
             return this;
         }
 
         public Builder lastStopped(@Nullable String lastStopped) {
-            this.lastStopped = Input.ofNullable(lastStopped);
+            this.lastStopped = Output.ofNullable(lastStopped);
             return this;
         }
         public CanaryTimelineGetArgs build() {

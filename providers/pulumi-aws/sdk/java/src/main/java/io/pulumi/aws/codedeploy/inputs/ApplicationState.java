@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePlatform")
-      private final @Nullable Input<String> computePlatform;
+      private final @Nullable Output<String> computePlatform;
 
-    public Input<String> getComputePlatform() {
-        return this.computePlatform == null ? Input.empty() : this.computePlatform;
+    public Output<String> getComputePlatform() {
+        return this.computePlatform == null ? Output.empty() : this.computePlatform;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="githubAccountName")
-      private final @Nullable Input<String> githubAccountName;
+      private final @Nullable Output<String> githubAccountName;
 
-    public Input<String> getGithubAccountName() {
-        return this.githubAccountName == null ? Input.empty() : this.githubAccountName;
+    public Output<String> getGithubAccountName() {
+        return this.githubAccountName == null ? Output.empty() : this.githubAccountName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedToGithub")
-      private final @Nullable Input<Boolean> linkedToGithub;
+      private final @Nullable Output<Boolean> linkedToGithub;
 
-    public Input<Boolean> getLinkedToGithub() {
-        return this.linkedToGithub == null ? Input.empty() : this.linkedToGithub;
+    public Output<Boolean> getLinkedToGithub() {
+        return this.linkedToGithub == null ? Output.empty() : this.linkedToGithub;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -98,21 +98,21 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ApplicationState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> computePlatform,
-        @Nullable Input<String> githubAccountName,
-        @Nullable Input<Boolean> linkedToGithub,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> computePlatform,
+        @Nullable Output<String> githubAccountName,
+        @Nullable Output<Boolean> linkedToGithub,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.applicationId = applicationId;
         this.arn = arn;
         this.computePlatform = computePlatform;
@@ -124,14 +124,14 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationState() {
-        this.applicationId = Input.empty();
-        this.arn = Input.empty();
-        this.computePlatform = Input.empty();
-        this.githubAccountName = Input.empty();
-        this.linkedToGithub = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.applicationId = Output.empty();
+        this.arn = Output.empty();
+        this.computePlatform = Output.empty();
+        this.githubAccountName = Output.empty();
+        this.linkedToGithub = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,14 +143,14 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> computePlatform;
-        private @Nullable Input<String> githubAccountName;
-        private @Nullable Input<Boolean> linkedToGithub;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> computePlatform;
+        private @Nullable Output<String> githubAccountName;
+        private @Nullable Output<Boolean> linkedToGithub;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -168,83 +168,83 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder computePlatform(@Nullable Input<String> computePlatform) {
+        public Builder computePlatform(@Nullable Output<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
         public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Input.ofNullable(computePlatform);
+            this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder githubAccountName(@Nullable Input<String> githubAccountName) {
+        public Builder githubAccountName(@Nullable Output<String> githubAccountName) {
             this.githubAccountName = githubAccountName;
             return this;
         }
 
         public Builder githubAccountName(@Nullable String githubAccountName) {
-            this.githubAccountName = Input.ofNullable(githubAccountName);
+            this.githubAccountName = Output.ofNullable(githubAccountName);
             return this;
         }
 
-        public Builder linkedToGithub(@Nullable Input<Boolean> linkedToGithub) {
+        public Builder linkedToGithub(@Nullable Output<Boolean> linkedToGithub) {
             this.linkedToGithub = linkedToGithub;
             return this;
         }
 
         public Builder linkedToGithub(@Nullable Boolean linkedToGithub) {
-            this.linkedToGithub = Input.ofNullable(linkedToGithub);
+            this.linkedToGithub = Output.ofNullable(linkedToGithub);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ApplicationState build() {

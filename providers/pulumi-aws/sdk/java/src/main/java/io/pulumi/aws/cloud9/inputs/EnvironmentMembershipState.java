@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloud9.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="environmentId")
-      private final @Nullable Input<String> environmentId;
+      private final @Nullable Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
-        return this.environmentId == null ? Input.empty() : this.environmentId;
+    public Output<String> getEnvironmentId() {
+        return this.environmentId == null ? Output.empty() : this.environmentId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<String> permissions;
+      private final @Nullable Output<String> permissions;
 
-    public Input<String> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<String> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userArn")
-      private final @Nullable Input<String> userArn;
+      private final @Nullable Output<String> userArn;
 
-    public Input<String> getUserArn() {
-        return this.userArn == null ? Input.empty() : this.userArn;
+    public Output<String> getUserArn() {
+        return this.userArn == null ? Output.empty() : this.userArn;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userId")
-      private final @Nullable Input<String> userId;
+      private final @Nullable Output<String> userId;
 
-    public Input<String> getUserId() {
-        return this.userId == null ? Input.empty() : this.userId;
+    public Output<String> getUserId() {
+        return this.userId == null ? Output.empty() : this.userId;
     }
 
     public EnvironmentMembershipState(
-        @Nullable Input<String> environmentId,
-        @Nullable Input<String> permissions,
-        @Nullable Input<String> userArn,
-        @Nullable Input<String> userId) {
+        @Nullable Output<String> environmentId,
+        @Nullable Output<String> permissions,
+        @Nullable Output<String> userArn,
+        @Nullable Output<String> userId) {
         this.environmentId = environmentId;
         this.permissions = permissions;
         this.userArn = userArn;
@@ -70,10 +70,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
     }
 
     private EnvironmentMembershipState() {
-        this.environmentId = Input.empty();
-        this.permissions = Input.empty();
-        this.userArn = Input.empty();
-        this.userId = Input.empty();
+        this.environmentId = Output.empty();
+        this.permissions = Output.empty();
+        this.userArn = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> environmentId;
-        private @Nullable Input<String> permissions;
-        private @Nullable Input<String> userArn;
-        private @Nullable Input<String> userId;
+        private @Nullable Output<String> environmentId;
+        private @Nullable Output<String> permissions;
+        private @Nullable Output<String> userArn;
+        private @Nullable Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
     	      this.userId = defaults.userId;
         }
 
-        public Builder environmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Output<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Input.ofNullable(environmentId);
+            this.environmentId = Output.ofNullable(environmentId);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder userArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Output<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Input.ofNullable(userArn);
+            this.userArn = Output.ofNullable(userArn);
             return this;
         }
 
-        public Builder userId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             this.userId = userId;
             return this;
         }
 
         public Builder userId(@Nullable String userId) {
-            this.userId = Input.ofNullable(userId);
+            this.userId = Output.ofNullable(userId);
             return this;
         }
         public EnvironmentMembershipState build() {

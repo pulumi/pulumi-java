@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardArn")
-      private final @Nullable Input<String> dashboardArn;
+      private final @Nullable Output<String> dashboardArn;
 
-    public Input<String> getDashboardArn() {
-        return this.dashboardArn == null ? Input.empty() : this.dashboardArn;
+    public Output<String> getDashboardArn() {
+        return this.dashboardArn == null ? Output.empty() : this.dashboardArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardBody")
-      private final @Nullable Input<String> dashboardBody;
+      private final @Nullable Output<String> dashboardBody;
 
-    public Input<String> getDashboardBody() {
-        return this.dashboardBody == null ? Input.empty() : this.dashboardBody;
+    public Output<String> getDashboardBody() {
+        return this.dashboardBody == null ? Output.empty() : this.dashboardBody;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-      private final @Nullable Input<String> dashboardName;
+      private final @Nullable Output<String> dashboardName;
 
-    public Input<String> getDashboardName() {
-        return this.dashboardName == null ? Input.empty() : this.dashboardName;
+    public Output<String> getDashboardName() {
+        return this.dashboardName == null ? Output.empty() : this.dashboardName;
     }
 
     public DashboardState(
-        @Nullable Input<String> dashboardArn,
-        @Nullable Input<String> dashboardBody,
-        @Nullable Input<String> dashboardName) {
+        @Nullable Output<String> dashboardArn,
+        @Nullable Output<String> dashboardBody,
+        @Nullable Output<String> dashboardName) {
         this.dashboardArn = dashboardArn;
         this.dashboardBody = dashboardBody;
         this.dashboardName = dashboardName;
     }
 
     private DashboardState() {
-        this.dashboardArn = Input.empty();
-        this.dashboardBody = Input.empty();
-        this.dashboardName = Input.empty();
+        this.dashboardArn = Output.empty();
+        this.dashboardBody = Output.empty();
+        this.dashboardName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dashboardArn;
-        private @Nullable Input<String> dashboardBody;
-        private @Nullable Input<String> dashboardName;
+        private @Nullable Output<String> dashboardArn;
+        private @Nullable Output<String> dashboardBody;
+        private @Nullable Output<String> dashboardName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     	      this.dashboardName = defaults.dashboardName;
         }
 
-        public Builder dashboardArn(@Nullable Input<String> dashboardArn) {
+        public Builder dashboardArn(@Nullable Output<String> dashboardArn) {
             this.dashboardArn = dashboardArn;
             return this;
         }
 
         public Builder dashboardArn(@Nullable String dashboardArn) {
-            this.dashboardArn = Input.ofNullable(dashboardArn);
+            this.dashboardArn = Output.ofNullable(dashboardArn);
             return this;
         }
 
-        public Builder dashboardBody(@Nullable Input<String> dashboardBody) {
+        public Builder dashboardBody(@Nullable Output<String> dashboardBody) {
             this.dashboardBody = dashboardBody;
             return this;
         }
 
         public Builder dashboardBody(@Nullable String dashboardBody) {
-            this.dashboardBody = Input.ofNullable(dashboardBody);
+            this.dashboardBody = Output.ofNullable(dashboardBody);
             return this;
         }
 
-        public Builder dashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Output<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Input.ofNullable(dashboardName);
+            this.dashboardName = Output.ofNullable(dashboardName);
             return this;
         }
         public DashboardState build() {

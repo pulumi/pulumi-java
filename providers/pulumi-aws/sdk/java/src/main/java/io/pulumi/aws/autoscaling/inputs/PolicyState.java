@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adjustmentType")
-      private final @Nullable Input<String> adjustmentType;
+      private final @Nullable Output<String> adjustmentType;
 
-    public Input<String> getAdjustmentType() {
-        return this.adjustmentType == null ? Input.empty() : this.adjustmentType;
+    public Output<String> getAdjustmentType() {
+        return this.adjustmentType == null ? Output.empty() : this.adjustmentType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName")
-      private final @Nullable Input<String> autoscalingGroupName;
+      private final @Nullable Output<String> autoscalingGroupName;
 
-    public Input<String> getAutoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Input.empty() : this.autoscalingGroupName;
+    public Output<String> getAutoscalingGroupName() {
+        return this.autoscalingGroupName == null ? Output.empty() : this.autoscalingGroupName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cooldown")
-      private final @Nullable Input<Integer> cooldown;
+      private final @Nullable Output<Integer> cooldown;
 
-    public Input<Integer> getCooldown() {
-        return this.cooldown == null ? Input.empty() : this.cooldown;
+    public Output<Integer> getCooldown() {
+        return this.cooldown == null ? Output.empty() : this.cooldown;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="estimatedInstanceWarmup")
-      private final @Nullable Input<Integer> estimatedInstanceWarmup;
+      private final @Nullable Output<Integer> estimatedInstanceWarmup;
 
-    public Input<Integer> getEstimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
+    public Output<Integer> getEstimatedInstanceWarmup() {
+        return this.estimatedInstanceWarmup == null ? Output.empty() : this.estimatedInstanceWarmup;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricAggregationType")
-      private final @Nullable Input<String> metricAggregationType;
+      private final @Nullable Output<String> metricAggregationType;
 
-    public Input<String> getMetricAggregationType() {
-        return this.metricAggregationType == null ? Input.empty() : this.metricAggregationType;
+    public Output<String> getMetricAggregationType() {
+        return this.metricAggregationType == null ? Output.empty() : this.metricAggregationType;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAdjustmentMagnitude")
-      private final @Nullable Input<Integer> minAdjustmentMagnitude;
+      private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
-    public Input<Integer> getMinAdjustmentMagnitude() {
-        return this.minAdjustmentMagnitude == null ? Input.empty() : this.minAdjustmentMagnitude;
+    public Output<Integer> getMinAdjustmentMagnitude() {
+        return this.minAdjustmentMagnitude == null ? Output.empty() : this.minAdjustmentMagnitude;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType")
-      private final @Nullable Input<String> policyType;
+      private final @Nullable Output<String> policyType;
 
-    public Input<String> getPolicyType() {
-        return this.policyType == null ? Input.empty() : this.policyType;
+    public Output<String> getPolicyType() {
+        return this.policyType == null ? Output.empty() : this.policyType;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictiveScalingConfiguration")
-      private final @Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
+      private final @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
 
-    public Input<PolicyPredictiveScalingConfigurationGetArgs> getPredictiveScalingConfiguration() {
-        return this.predictiveScalingConfiguration == null ? Input.empty() : this.predictiveScalingConfiguration;
+    public Output<PolicyPredictiveScalingConfigurationGetArgs> getPredictiveScalingConfiguration() {
+        return this.predictiveScalingConfiguration == null ? Output.empty() : this.predictiveScalingConfiguration;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingAdjustment")
-      private final @Nullable Input<Integer> scalingAdjustment;
+      private final @Nullable Output<Integer> scalingAdjustment;
 
-    public Input<Integer> getScalingAdjustment() {
-        return this.scalingAdjustment == null ? Input.empty() : this.scalingAdjustment;
+    public Output<Integer> getScalingAdjustment() {
+        return this.scalingAdjustment == null ? Output.empty() : this.scalingAdjustment;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepAdjustments")
-      private final @Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
+      private final @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
 
-    public Input<List<PolicyStepAdjustmentGetArgs>> getStepAdjustments() {
-        return this.stepAdjustments == null ? Input.empty() : this.stepAdjustments;
+    public Output<List<PolicyStepAdjustmentGetArgs>> getStepAdjustments() {
+        return this.stepAdjustments == null ? Output.empty() : this.stepAdjustments;
     }
 
     /**
@@ -159,26 +159,26 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTrackingConfiguration")
-      private final @Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
+      private final @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
 
-    public Input<PolicyTargetTrackingConfigurationGetArgs> getTargetTrackingConfiguration() {
-        return this.targetTrackingConfiguration == null ? Input.empty() : this.targetTrackingConfiguration;
+    public Output<PolicyTargetTrackingConfigurationGetArgs> getTargetTrackingConfiguration() {
+        return this.targetTrackingConfiguration == null ? Output.empty() : this.targetTrackingConfiguration;
     }
 
     public PolicyState(
-        @Nullable Input<String> adjustmentType,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> autoscalingGroupName,
-        @Nullable Input<Integer> cooldown,
-        @Nullable Input<Integer> estimatedInstanceWarmup,
-        @Nullable Input<String> metricAggregationType,
-        @Nullable Input<Integer> minAdjustmentMagnitude,
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyType,
-        @Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration,
-        @Nullable Input<Integer> scalingAdjustment,
-        @Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments,
-        @Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
+        @Nullable Output<String> adjustmentType,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> autoscalingGroupName,
+        @Nullable Output<Integer> cooldown,
+        @Nullable Output<Integer> estimatedInstanceWarmup,
+        @Nullable Output<String> metricAggregationType,
+        @Nullable Output<Integer> minAdjustmentMagnitude,
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyType,
+        @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration,
+        @Nullable Output<Integer> scalingAdjustment,
+        @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments,
+        @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
         this.adjustmentType = adjustmentType;
         this.arn = arn;
         this.autoscalingGroupName = autoscalingGroupName;
@@ -195,19 +195,19 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyState() {
-        this.adjustmentType = Input.empty();
-        this.arn = Input.empty();
-        this.autoscalingGroupName = Input.empty();
-        this.cooldown = Input.empty();
-        this.estimatedInstanceWarmup = Input.empty();
-        this.metricAggregationType = Input.empty();
-        this.minAdjustmentMagnitude = Input.empty();
-        this.name = Input.empty();
-        this.policyType = Input.empty();
-        this.predictiveScalingConfiguration = Input.empty();
-        this.scalingAdjustment = Input.empty();
-        this.stepAdjustments = Input.empty();
-        this.targetTrackingConfiguration = Input.empty();
+        this.adjustmentType = Output.empty();
+        this.arn = Output.empty();
+        this.autoscalingGroupName = Output.empty();
+        this.cooldown = Output.empty();
+        this.estimatedInstanceWarmup = Output.empty();
+        this.metricAggregationType = Output.empty();
+        this.minAdjustmentMagnitude = Output.empty();
+        this.name = Output.empty();
+        this.policyType = Output.empty();
+        this.predictiveScalingConfiguration = Output.empty();
+        this.scalingAdjustment = Output.empty();
+        this.stepAdjustments = Output.empty();
+        this.targetTrackingConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -219,19 +219,19 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adjustmentType;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> autoscalingGroupName;
-        private @Nullable Input<Integer> cooldown;
-        private @Nullable Input<Integer> estimatedInstanceWarmup;
-        private @Nullable Input<String> metricAggregationType;
-        private @Nullable Input<Integer> minAdjustmentMagnitude;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyType;
-        private @Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
-        private @Nullable Input<Integer> scalingAdjustment;
-        private @Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
-        private @Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
+        private @Nullable Output<String> adjustmentType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> autoscalingGroupName;
+        private @Nullable Output<Integer> cooldown;
+        private @Nullable Output<Integer> estimatedInstanceWarmup;
+        private @Nullable Output<String> metricAggregationType;
+        private @Nullable Output<Integer> minAdjustmentMagnitude;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyType;
+        private @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
+        private @Nullable Output<Integer> scalingAdjustment;
+        private @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
+        private @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
 
         public Builder() {
     	      // Empty
@@ -254,133 +254,133 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.targetTrackingConfiguration = defaults.targetTrackingConfiguration;
         }
 
-        public Builder adjustmentType(@Nullable Input<String> adjustmentType) {
+        public Builder adjustmentType(@Nullable Output<String> adjustmentType) {
             this.adjustmentType = adjustmentType;
             return this;
         }
 
         public Builder adjustmentType(@Nullable String adjustmentType) {
-            this.adjustmentType = Input.ofNullable(adjustmentType);
+            this.adjustmentType = Output.ofNullable(adjustmentType);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoscalingGroupName(@Nullable Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
 
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Input.ofNullable(autoscalingGroupName);
+            this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
             return this;
         }
 
-        public Builder cooldown(@Nullable Input<Integer> cooldown) {
+        public Builder cooldown(@Nullable Output<Integer> cooldown) {
             this.cooldown = cooldown;
             return this;
         }
 
         public Builder cooldown(@Nullable Integer cooldown) {
-            this.cooldown = Input.ofNullable(cooldown);
+            this.cooldown = Output.ofNullable(cooldown);
             return this;
         }
 
-        public Builder estimatedInstanceWarmup(@Nullable Input<Integer> estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Output<Integer> estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
         public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = Input.ofNullable(estimatedInstanceWarmup);
+            this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
             return this;
         }
 
-        public Builder metricAggregationType(@Nullable Input<String> metricAggregationType) {
+        public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
 
         public Builder metricAggregationType(@Nullable String metricAggregationType) {
-            this.metricAggregationType = Input.ofNullable(metricAggregationType);
+            this.metricAggregationType = Output.ofNullable(metricAggregationType);
             return this;
         }
 
-        public Builder minAdjustmentMagnitude(@Nullable Input<Integer> minAdjustmentMagnitude) {
+        public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
 
         public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
-            this.minAdjustmentMagnitude = Input.ofNullable(minAdjustmentMagnitude);
+            this.minAdjustmentMagnitude = Output.ofNullable(minAdjustmentMagnitude);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyType(@Nullable Input<String> policyType) {
+        public Builder policyType(@Nullable Output<String> policyType) {
             this.policyType = policyType;
             return this;
         }
 
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = Input.ofNullable(policyType);
+            this.policyType = Output.ofNullable(policyType);
             return this;
         }
 
-        public Builder predictiveScalingConfiguration(@Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
+        public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
             this.predictiveScalingConfiguration = predictiveScalingConfiguration;
             return this;
         }
 
         public Builder predictiveScalingConfiguration(@Nullable PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
-            this.predictiveScalingConfiguration = Input.ofNullable(predictiveScalingConfiguration);
+            this.predictiveScalingConfiguration = Output.ofNullable(predictiveScalingConfiguration);
             return this;
         }
 
-        public Builder scalingAdjustment(@Nullable Input<Integer> scalingAdjustment) {
+        public Builder scalingAdjustment(@Nullable Output<Integer> scalingAdjustment) {
             this.scalingAdjustment = scalingAdjustment;
             return this;
         }
 
         public Builder scalingAdjustment(@Nullable Integer scalingAdjustment) {
-            this.scalingAdjustment = Input.ofNullable(scalingAdjustment);
+            this.scalingAdjustment = Output.ofNullable(scalingAdjustment);
             return this;
         }
 
-        public Builder stepAdjustments(@Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
+        public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }
 
         public Builder stepAdjustments(@Nullable List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
-            this.stepAdjustments = Input.ofNullable(stepAdjustments);
+            this.stepAdjustments = Output.ofNullable(stepAdjustments);
             return this;
         }
 
-        public Builder targetTrackingConfiguration(@Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(@Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
             this.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
         }
 
         public Builder targetTrackingConfiguration(@Nullable PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
-            this.targetTrackingConfiguration = Input.ofNullable(targetTrackingConfiguration);
+            this.targetTrackingConfiguration = Output.ofNullable(targetTrackingConfiguration);
             return this;
         }
         public PolicyState build() {

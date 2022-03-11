@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<VirtualServiceSpecProviderArgs> provider;
+      private final @Nullable Output<VirtualServiceSpecProviderArgs> provider;
 
-    public Input<VirtualServiceSpecProviderArgs> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<VirtualServiceSpecProviderArgs> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
-    public VirtualServiceSpecArgs(@Nullable Input<VirtualServiceSpecProviderArgs> provider) {
+    public VirtualServiceSpecArgs(@Nullable Output<VirtualServiceSpecProviderArgs> provider) {
         this.provider = provider;
     }
 
     private VirtualServiceSpecArgs() {
-        this.provider = Input.empty();
+        this.provider = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualServiceSpecProviderArgs> provider;
+        private @Nullable Output<VirtualServiceSpecProviderArgs> provider;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
     	      this.provider = defaults.provider;
         }
 
-        public Builder provider(@Nullable Input<VirtualServiceSpecProviderArgs> provider) {
+        public Builder provider(@Nullable Output<VirtualServiceSpecProviderArgs> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable VirtualServiceSpecProviderArgs provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
         public VirtualServiceSpecArgs build() {

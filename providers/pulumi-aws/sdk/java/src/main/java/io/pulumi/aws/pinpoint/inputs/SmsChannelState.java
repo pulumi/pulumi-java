@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotionalMessagesPerSecond")
-      private final @Nullable Input<Integer> promotionalMessagesPerSecond;
+      private final @Nullable Output<Integer> promotionalMessagesPerSecond;
 
-    public Input<Integer> getPromotionalMessagesPerSecond() {
-        return this.promotionalMessagesPerSecond == null ? Input.empty() : this.promotionalMessagesPerSecond;
+    public Output<Integer> getPromotionalMessagesPerSecond() {
+        return this.promotionalMessagesPerSecond == null ? Output.empty() : this.promotionalMessagesPerSecond;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="senderId")
-      private final @Nullable Input<String> senderId;
+      private final @Nullable Output<String> senderId;
 
-    public Input<String> getSenderId() {
-        return this.senderId == null ? Input.empty() : this.senderId;
+    public Output<String> getSenderId() {
+        return this.senderId == null ? Output.empty() : this.senderId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortCode")
-      private final @Nullable Input<String> shortCode;
+      private final @Nullable Output<String> shortCode;
 
-    public Input<String> getShortCode() {
-        return this.shortCode == null ? Input.empty() : this.shortCode;
+    public Output<String> getShortCode() {
+        return this.shortCode == null ? Output.empty() : this.shortCode;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transactionalMessagesPerSecond")
-      private final @Nullable Input<Integer> transactionalMessagesPerSecond;
+      private final @Nullable Output<Integer> transactionalMessagesPerSecond;
 
-    public Input<Integer> getTransactionalMessagesPerSecond() {
-        return this.transactionalMessagesPerSecond == null ? Input.empty() : this.transactionalMessagesPerSecond;
+    public Output<Integer> getTransactionalMessagesPerSecond() {
+        return this.transactionalMessagesPerSecond == null ? Output.empty() : this.transactionalMessagesPerSecond;
     }
 
     public SmsChannelState(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> promotionalMessagesPerSecond,
-        @Nullable Input<String> senderId,
-        @Nullable Input<String> shortCode,
-        @Nullable Input<Integer> transactionalMessagesPerSecond) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> promotionalMessagesPerSecond,
+        @Nullable Output<String> senderId,
+        @Nullable Output<String> shortCode,
+        @Nullable Output<Integer> transactionalMessagesPerSecond) {
         this.applicationId = applicationId;
         this.enabled = enabled;
         this.promotionalMessagesPerSecond = promotionalMessagesPerSecond;
@@ -98,12 +98,12 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsChannelState() {
-        this.applicationId = Input.empty();
-        this.enabled = Input.empty();
-        this.promotionalMessagesPerSecond = Input.empty();
-        this.senderId = Input.empty();
-        this.shortCode = Input.empty();
-        this.transactionalMessagesPerSecond = Input.empty();
+        this.applicationId = Output.empty();
+        this.enabled = Output.empty();
+        this.promotionalMessagesPerSecond = Output.empty();
+        this.senderId = Output.empty();
+        this.shortCode = Output.empty();
+        this.transactionalMessagesPerSecond = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> promotionalMessagesPerSecond;
-        private @Nullable Input<String> senderId;
-        private @Nullable Input<String> shortCode;
-        private @Nullable Input<Integer> transactionalMessagesPerSecond;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> promotionalMessagesPerSecond;
+        private @Nullable Output<String> senderId;
+        private @Nullable Output<String> shortCode;
+        private @Nullable Output<Integer> transactionalMessagesPerSecond;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     	      this.transactionalMessagesPerSecond = defaults.transactionalMessagesPerSecond;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder promotionalMessagesPerSecond(@Nullable Input<Integer> promotionalMessagesPerSecond) {
+        public Builder promotionalMessagesPerSecond(@Nullable Output<Integer> promotionalMessagesPerSecond) {
             this.promotionalMessagesPerSecond = promotionalMessagesPerSecond;
             return this;
         }
 
         public Builder promotionalMessagesPerSecond(@Nullable Integer promotionalMessagesPerSecond) {
-            this.promotionalMessagesPerSecond = Input.ofNullable(promotionalMessagesPerSecond);
+            this.promotionalMessagesPerSecond = Output.ofNullable(promotionalMessagesPerSecond);
             return this;
         }
 
-        public Builder senderId(@Nullable Input<String> senderId) {
+        public Builder senderId(@Nullable Output<String> senderId) {
             this.senderId = senderId;
             return this;
         }
 
         public Builder senderId(@Nullable String senderId) {
-            this.senderId = Input.ofNullable(senderId);
+            this.senderId = Output.ofNullable(senderId);
             return this;
         }
 
-        public Builder shortCode(@Nullable Input<String> shortCode) {
+        public Builder shortCode(@Nullable Output<String> shortCode) {
             this.shortCode = shortCode;
             return this;
         }
 
         public Builder shortCode(@Nullable String shortCode) {
-            this.shortCode = Input.ofNullable(shortCode);
+            this.shortCode = Output.ofNullable(shortCode);
             return this;
         }
 
-        public Builder transactionalMessagesPerSecond(@Nullable Input<Integer> transactionalMessagesPerSecond) {
+        public Builder transactionalMessagesPerSecond(@Nullable Output<Integer> transactionalMessagesPerSecond) {
             this.transactionalMessagesPerSecond = transactionalMessagesPerSecond;
             return this;
         }
 
         public Builder transactionalMessagesPerSecond(@Nullable Integer transactionalMessagesPerSecond) {
-            this.transactionalMessagesPerSecond = Input.ofNullable(transactionalMessagesPerSecond);
+            this.transactionalMessagesPerSecond = Output.ofNullable(transactionalMessagesPerSecond);
             return this;
         }
         public SmsChannelState build() {

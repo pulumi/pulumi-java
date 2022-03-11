@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instancePort", required=true)
-      private final Input<Integer> instancePort;
+      private final Output<Integer> instancePort;
 
-    public Input<Integer> getInstancePort() {
+    public Output<Integer> getInstancePort() {
         return this.instancePort;
     }
 
@@ -32,9 +32,9 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceProtocol", required=true)
-      private final Input<String> instanceProtocol;
+      private final Output<String> instanceProtocol;
 
-    public Input<String> getInstanceProtocol() {
+    public Output<String> getInstanceProtocol() {
         return this.instanceProtocol;
     }
 
@@ -43,9 +43,9 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="lbPort", required=true)
-      private final Input<Integer> lbPort;
+      private final Output<Integer> lbPort;
 
-    public Input<Integer> getLbPort() {
+    public Output<Integer> getLbPort() {
         return this.lbPort;
     }
 
@@ -55,9 +55,9 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="lbProtocol", required=true)
-      private final Input<String> lbProtocol;
+      private final Output<String> lbProtocol;
 
-    public Input<String> getLbProtocol() {
+    public Output<String> getLbProtocol() {
         return this.lbProtocol;
     }
 
@@ -67,18 +67,18 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sslCertificateId")
-      private final @Nullable Input<String> sslCertificateId;
+      private final @Nullable Output<String> sslCertificateId;
 
-    public Input<String> getSslCertificateId() {
-        return this.sslCertificateId == null ? Input.empty() : this.sslCertificateId;
+    public Output<String> getSslCertificateId() {
+        return this.sslCertificateId == null ? Output.empty() : this.sslCertificateId;
     }
 
     public LoadBalancerListenerGetArgs(
-        Input<Integer> instancePort,
-        Input<String> instanceProtocol,
-        Input<Integer> lbPort,
-        Input<String> lbProtocol,
-        @Nullable Input<String> sslCertificateId) {
+        Output<Integer> instancePort,
+        Output<String> instanceProtocol,
+        Output<Integer> lbPort,
+        Output<String> lbProtocol,
+        @Nullable Output<String> sslCertificateId) {
         this.instancePort = Objects.requireNonNull(instancePort, "expected parameter 'instancePort' to be non-null");
         this.instanceProtocol = Objects.requireNonNull(instanceProtocol, "expected parameter 'instanceProtocol' to be non-null");
         this.lbPort = Objects.requireNonNull(lbPort, "expected parameter 'lbPort' to be non-null");
@@ -87,11 +87,11 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     }
 
     private LoadBalancerListenerGetArgs() {
-        this.instancePort = Input.empty();
-        this.instanceProtocol = Input.empty();
-        this.lbPort = Input.empty();
-        this.lbProtocol = Input.empty();
-        this.sslCertificateId = Input.empty();
+        this.instancePort = Output.empty();
+        this.instanceProtocol = Output.empty();
+        this.lbPort = Output.empty();
+        this.lbProtocol = Output.empty();
+        this.sslCertificateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<Integer> instancePort;
-        private Input<String> instanceProtocol;
-        private Input<Integer> lbPort;
-        private Input<String> lbProtocol;
-        private @Nullable Input<String> sslCertificateId;
+        private Output<Integer> instancePort;
+        private Output<String> instanceProtocol;
+        private Output<Integer> lbPort;
+        private Output<String> lbProtocol;
+        private @Nullable Output<String> sslCertificateId;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     	      this.sslCertificateId = defaults.sslCertificateId;
         }
 
-        public Builder instancePort(Input<Integer> instancePort) {
+        public Builder instancePort(Output<Integer> instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
 
         public Builder instancePort(Integer instancePort) {
-            this.instancePort = Input.of(Objects.requireNonNull(instancePort));
+            this.instancePort = Output.of(Objects.requireNonNull(instancePort));
             return this;
         }
 
-        public Builder instanceProtocol(Input<String> instanceProtocol) {
+        public Builder instanceProtocol(Output<String> instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
 
         public Builder instanceProtocol(String instanceProtocol) {
-            this.instanceProtocol = Input.of(Objects.requireNonNull(instanceProtocol));
+            this.instanceProtocol = Output.of(Objects.requireNonNull(instanceProtocol));
             return this;
         }
 
-        public Builder lbPort(Input<Integer> lbPort) {
+        public Builder lbPort(Output<Integer> lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
 
         public Builder lbPort(Integer lbPort) {
-            this.lbPort = Input.of(Objects.requireNonNull(lbPort));
+            this.lbPort = Output.of(Objects.requireNonNull(lbPort));
             return this;
         }
 
-        public Builder lbProtocol(Input<String> lbProtocol) {
+        public Builder lbProtocol(Output<String> lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
 
         public Builder lbProtocol(String lbProtocol) {
-            this.lbProtocol = Input.of(Objects.requireNonNull(lbProtocol));
+            this.lbProtocol = Output.of(Objects.requireNonNull(lbProtocol));
             return this;
         }
 
-        public Builder sslCertificateId(@Nullable Input<String> sslCertificateId) {
+        public Builder sslCertificateId(@Nullable Output<String> sslCertificateId) {
             this.sslCertificateId = sslCertificateId;
             return this;
         }
 
         public Builder sslCertificateId(@Nullable String sslCertificateId) {
-            this.sslCertificateId = Input.ofNullable(sslCertificateId);
+            this.sslCertificateId = Output.ofNullable(sslCertificateId);
             return this;
         }
         public LoadBalancerListenerGetArgs build() {

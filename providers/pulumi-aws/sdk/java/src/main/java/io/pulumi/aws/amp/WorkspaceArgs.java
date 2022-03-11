@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
-    public WorkspaceArgs(@Nullable Input<String> alias) {
+    public WorkspaceArgs(@Nullable Output<String> alias) {
         this.alias = alias;
     }
 
     private WorkspaceArgs() {
-        this.alias = Input.empty();
+        this.alias = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
+        private @Nullable Output<String> alias;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.alias = defaults.alias;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
         public WorkspaceArgs build() {

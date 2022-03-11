@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionEvents", required=true)
-      private final Input<List<String>> connectionEvents;
+      private final Output<List<String>> connectionEvents;
 
-    public Input<List<String>> getConnectionEvents() {
+    public Output<List<String>> getConnectionEvents() {
         return this.connectionEvents;
     }
 
@@ -31,9 +31,9 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionNotificationArn", required=true)
-      private final Input<String> connectionNotificationArn;
+      private final Output<String> connectionNotificationArn;
 
-    public Input<String> getConnectionNotificationArn() {
+    public Output<String> getConnectionNotificationArn() {
         return this.connectionNotificationArn;
     }
 
@@ -42,10 +42,10 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vpcEndpointId")
-      private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Output<String> vpcEndpointId;
 
-    public Input<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
+    public Output<String> getVpcEndpointId() {
+        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-      private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Input<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;
+    public Output<String> getVpcEndpointServiceId() {
+        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
     }
 
     public VpcEndpointConnectionNotificationArgs(
-        Input<List<String>> connectionEvents,
-        Input<String> connectionNotificationArn,
-        @Nullable Input<String> vpcEndpointId,
-        @Nullable Input<String> vpcEndpointServiceId) {
+        Output<List<String>> connectionEvents,
+        Output<String> connectionNotificationArn,
+        @Nullable Output<String> vpcEndpointId,
+        @Nullable Output<String> vpcEndpointServiceId) {
         this.connectionEvents = Objects.requireNonNull(connectionEvents, "expected parameter 'connectionEvents' to be non-null");
         this.connectionNotificationArn = Objects.requireNonNull(connectionNotificationArn, "expected parameter 'connectionNotificationArn' to be non-null");
         this.vpcEndpointId = vpcEndpointId;
@@ -71,10 +71,10 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
     }
 
     private VpcEndpointConnectionNotificationArgs() {
-        this.connectionEvents = Input.empty();
-        this.connectionNotificationArn = Input.empty();
-        this.vpcEndpointId = Input.empty();
-        this.vpcEndpointServiceId = Input.empty();
+        this.connectionEvents = Output.empty();
+        this.connectionNotificationArn = Output.empty();
+        this.vpcEndpointId = Output.empty();
+        this.vpcEndpointServiceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<List<String>> connectionEvents;
-        private Input<String> connectionNotificationArn;
-        private @Nullable Input<String> vpcEndpointId;
-        private @Nullable Input<String> vpcEndpointServiceId;
+        private Output<List<String>> connectionEvents;
+        private Output<String> connectionNotificationArn;
+        private @Nullable Output<String> vpcEndpointId;
+        private @Nullable Output<String> vpcEndpointServiceId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder connectionEvents(Input<List<String>> connectionEvents) {
+        public Builder connectionEvents(Output<List<String>> connectionEvents) {
             this.connectionEvents = Objects.requireNonNull(connectionEvents);
             return this;
         }
 
         public Builder connectionEvents(List<String> connectionEvents) {
-            this.connectionEvents = Input.of(Objects.requireNonNull(connectionEvents));
+            this.connectionEvents = Output.of(Objects.requireNonNull(connectionEvents));
             return this;
         }
 
-        public Builder connectionNotificationArn(Input<String> connectionNotificationArn) {
+        public Builder connectionNotificationArn(Output<String> connectionNotificationArn) {
             this.connectionNotificationArn = Objects.requireNonNull(connectionNotificationArn);
             return this;
         }
 
         public Builder connectionNotificationArn(String connectionNotificationArn) {
-            this.connectionNotificationArn = Input.of(Objects.requireNonNull(connectionNotificationArn));
+            this.connectionNotificationArn = Output.of(Objects.requireNonNull(connectionNotificationArn));
             return this;
         }
 
-        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
             return this;
         }
         public VpcEndpointConnectionNotificationArgs build() {

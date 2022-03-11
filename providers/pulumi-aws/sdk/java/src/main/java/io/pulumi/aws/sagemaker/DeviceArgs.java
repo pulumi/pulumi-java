@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="device", required=true)
-      private final Input<DeviceDeviceArgs> device;
+      private final Output<DeviceDeviceArgs> device;
 
-    public Input<DeviceDeviceArgs> getDevice() {
+    public Output<DeviceDeviceArgs> getDevice() {
         return this.device;
     }
 
@@ -30,22 +30,22 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-      private final Input<String> deviceFleetName;
+      private final Output<String> deviceFleetName;
 
-    public Input<String> getDeviceFleetName() {
+    public Output<String> getDeviceFleetName() {
         return this.deviceFleetName;
     }
 
     public DeviceArgs(
-        Input<DeviceDeviceArgs> device,
-        Input<String> deviceFleetName) {
+        Output<DeviceDeviceArgs> device,
+        Output<String> deviceFleetName) {
         this.device = Objects.requireNonNull(device, "expected parameter 'device' to be non-null");
         this.deviceFleetName = Objects.requireNonNull(deviceFleetName, "expected parameter 'deviceFleetName' to be non-null");
     }
 
     private DeviceArgs() {
-        this.device = Input.empty();
-        this.deviceFleetName = Input.empty();
+        this.device = Output.empty();
+        this.deviceFleetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DeviceDeviceArgs> device;
-        private Input<String> deviceFleetName;
+        private Output<DeviceDeviceArgs> device;
+        private Output<String> deviceFleetName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deviceFleetName = defaults.deviceFleetName;
         }
 
-        public Builder device(Input<DeviceDeviceArgs> device) {
+        public Builder device(Output<DeviceDeviceArgs> device) {
             this.device = Objects.requireNonNull(device);
             return this;
         }
 
         public Builder device(DeviceDeviceArgs device) {
-            this.device = Input.of(Objects.requireNonNull(device));
+            this.device = Output.of(Objects.requireNonNull(device));
             return this;
         }
 
-        public Builder deviceFleetName(Input<String> deviceFleetName) {
+        public Builder deviceFleetName(Output<String> deviceFleetName) {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
 
         public Builder deviceFleetName(String deviceFleetName) {
-            this.deviceFleetName = Input.of(Objects.requireNonNull(deviceFleetName));
+            this.deviceFleetName = Output.of(Objects.requireNonNull(deviceFleetName));
             return this;
         }
         public DeviceArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
      * 
      */
     @InputImport(name="customActions")
-      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
+      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> getCustomActions() {
-        return this.customActions == null ? Input.empty() : this.customActions;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> getCustomActions() {
+        return this.customActions == null ? Output.empty() : this.customActions;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
      * 
      */
     @InputImport(name="statelessRules", required=true)
-      private final Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
+      private final Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> getStatelessRules() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> getStatelessRules() {
         return this.statelessRules;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs(
-        @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions,
-        Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules) {
+        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions,
+        Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules) {
         this.customActions = customActions;
         this.statelessRules = Objects.requireNonNull(statelessRules, "expected parameter 'statelessRules' to be non-null");
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs() {
-        this.customActions = Input.empty();
-        this.statelessRules = Input.empty();
+        this.customActions = Output.empty();
+        this.statelessRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
-        private Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
+        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
+        private Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
     	      this.statelessRules = defaults.statelessRules;
         }
 
-        public Builder customActions(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions) {
+        public Builder customActions(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions) {
             this.customActions = customActions;
             return this;
         }
 
         public Builder customActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs> customActions) {
-            this.customActions = Input.ofNullable(customActions);
+            this.customActions = Output.ofNullable(customActions);
             return this;
         }
 
-        public Builder statelessRules(Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules) {
+        public Builder statelessRules(Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
 
         public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs> statelessRules) {
-            this.statelessRules = Input.of(Objects.requireNonNull(statelessRules));
+            this.statelessRules = Output.of(Objects.requireNonNull(statelessRules));
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs build() {

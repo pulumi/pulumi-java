@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyGroupId")
-      private final @Nullable Input<String> keyGroupId;
+      private final @Nullable Output<String> keyGroupId;
 
-    public Input<String> getKeyGroupId() {
-        return this.keyGroupId == null ? Input.empty() : this.keyGroupId;
+    public Output<String> getKeyGroupId() {
+        return this.keyGroupId == null ? Output.empty() : this.keyGroupId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyPairIds")
-      private final @Nullable Input<List<String>> keyPairIds;
+      private final @Nullable Output<List<String>> keyPairIds;
 
-    public Input<List<String>> getKeyPairIds() {
-        return this.keyPairIds == null ? Input.empty() : this.keyPairIds;
+    public Output<List<String>> getKeyPairIds() {
+        return this.keyPairIds == null ? Output.empty() : this.keyPairIds;
     }
 
     public DistributionTrustedKeyGroupItemGetArgs(
-        @Nullable Input<String> keyGroupId,
-        @Nullable Input<List<String>> keyPairIds) {
+        @Nullable Output<String> keyGroupId,
+        @Nullable Output<List<String>> keyPairIds) {
         this.keyGroupId = keyGroupId;
         this.keyPairIds = keyPairIds;
     }
 
     private DistributionTrustedKeyGroupItemGetArgs() {
-        this.keyGroupId = Input.empty();
-        this.keyPairIds = Input.empty();
+        this.keyGroupId = Output.empty();
+        this.keyPairIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyGroupId;
-        private @Nullable Input<List<String>> keyPairIds;
+        private @Nullable Output<String> keyGroupId;
+        private @Nullable Output<List<String>> keyPairIds;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DistributionTrustedKeyGroupItemGetArgs extends io.pulumi.reso
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder keyGroupId(@Nullable Input<String> keyGroupId) {
+        public Builder keyGroupId(@Nullable Output<String> keyGroupId) {
             this.keyGroupId = keyGroupId;
             return this;
         }
 
         public Builder keyGroupId(@Nullable String keyGroupId) {
-            this.keyGroupId = Input.ofNullable(keyGroupId);
+            this.keyGroupId = Output.ofNullable(keyGroupId);
             return this;
         }
 
-        public Builder keyPairIds(@Nullable Input<List<String>> keyPairIds) {
+        public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
 
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
-            this.keyPairIds = Input.ofNullable(keyPairIds);
+            this.keyPairIds = Output.ofNullable(keyPairIds);
             return this;
         }
         public DistributionTrustedKeyGroupItemGetArgs build() {

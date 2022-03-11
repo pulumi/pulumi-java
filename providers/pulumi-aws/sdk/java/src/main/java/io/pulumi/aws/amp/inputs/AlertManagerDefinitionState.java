@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="definition")
-      private final @Nullable Input<String> definition;
+      private final @Nullable Output<String> definition;
 
-    public Input<String> getDefinition() {
-        return this.definition == null ? Input.empty() : this.definition;
+    public Output<String> getDefinition() {
+        return this.definition == null ? Output.empty() : this.definition;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceId")
-      private final @Nullable Input<String> workspaceId;
+      private final @Nullable Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
-        return this.workspaceId == null ? Input.empty() : this.workspaceId;
+    public Output<String> getWorkspaceId() {
+        return this.workspaceId == null ? Output.empty() : this.workspaceId;
     }
 
     public AlertManagerDefinitionState(
-        @Nullable Input<String> definition,
-        @Nullable Input<String> workspaceId) {
+        @Nullable Output<String> definition,
+        @Nullable Output<String> workspaceId) {
         this.definition = definition;
         this.workspaceId = workspaceId;
     }
 
     private AlertManagerDefinitionState() {
-        this.definition = Input.empty();
-        this.workspaceId = Input.empty();
+        this.definition = Output.empty();
+        this.workspaceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> definition;
-        private @Nullable Input<String> workspaceId;
+        private @Nullable Output<String> definition;
+        private @Nullable Output<String> workspaceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder definition(@Nullable Input<String> definition) {
+        public Builder definition(@Nullable Output<String> definition) {
             this.definition = definition;
             return this;
         }
 
         public Builder definition(@Nullable String definition) {
-            this.definition = Input.ofNullable(definition);
+            this.definition = Output.ofNullable(definition);
             return this;
         }
 
-        public Builder workspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Output<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Input.ofNullable(workspaceId);
+            this.workspaceId = Output.ofNullable(workspaceId);
             return this;
         }
         public AlertManagerDefinitionState build() {

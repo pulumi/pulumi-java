@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datapipeline.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -29,22 +29,22 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="stringValue", required=true)
-      private final Input<String> stringValue;
+      private final Output<String> stringValue;
 
-    public Input<String> getStringValue() {
+    public Output<String> getStringValue() {
         return this.stringValue;
     }
 
     public PipelineDefinitionParameterValueGetArgs(
-        Input<String> id,
-        Input<String> stringValue) {
+        Output<String> id,
+        Output<String> stringValue) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
     }
 
     private PipelineDefinitionParameterValueGetArgs() {
-        this.id = Input.empty();
-        this.stringValue = Input.empty();
+        this.id = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<String> stringValue;
+        private Output<String> id;
+        private Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder stringValue(Input<String> stringValue) {
+        public Builder stringValue(Output<String> stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
 
         public Builder stringValue(String stringValue) {
-            this.stringValue = Input.of(Objects.requireNonNull(stringValue));
+            this.stringValue = Output.of(Objects.requireNonNull(stringValue));
             return this;
         }
         public PipelineDefinitionParameterValueGetArgs build() {

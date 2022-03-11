@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -30,22 +30,22 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public DataSourceParametersSparkGetArgs(
-        Input<String> host,
-        Input<Integer> port) {
+        Output<String> host,
+        Output<Integer> port) {
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private DataSourceParametersSparkGetArgs() {
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> host;
-        private Input<Integer> port;
+        private Output<String> host;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
     	      this.port = defaults.port;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public DataSourceParametersSparkGetArgs build() {

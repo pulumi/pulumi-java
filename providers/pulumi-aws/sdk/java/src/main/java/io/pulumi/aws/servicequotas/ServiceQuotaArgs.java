@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicequotas;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaCode", required=true)
-      private final Input<String> quotaCode;
+      private final Output<String> quotaCode;
 
-    public Input<String> getQuotaCode() {
+    public Output<String> getQuotaCode() {
         return this.quotaCode;
     }
 
@@ -30,9 +30,9 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCode", required=true)
-      private final Input<String> serviceCode;
+      private final Output<String> serviceCode;
 
-    public Input<String> getServiceCode() {
+    public Output<String> getServiceCode() {
         return this.serviceCode;
     }
 
@@ -41,25 +41,25 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<Double> value;
+      private final Output<Double> value;
 
-    public Input<Double> getValue() {
+    public Output<Double> getValue() {
         return this.value;
     }
 
     public ServiceQuotaArgs(
-        Input<String> quotaCode,
-        Input<String> serviceCode,
-        Input<Double> value) {
+        Output<String> quotaCode,
+        Output<String> serviceCode,
+        Output<Double> value) {
         this.quotaCode = Objects.requireNonNull(quotaCode, "expected parameter 'quotaCode' to be non-null");
         this.serviceCode = Objects.requireNonNull(serviceCode, "expected parameter 'serviceCode' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ServiceQuotaArgs() {
-        this.quotaCode = Input.empty();
-        this.serviceCode = Input.empty();
-        this.value = Input.empty();
+        this.quotaCode = Output.empty();
+        this.serviceCode = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> quotaCode;
-        private Input<String> serviceCode;
-        private Input<Double> value;
+        private Output<String> quotaCode;
+        private Output<String> serviceCode;
+        private Output<Double> value;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder quotaCode(Input<String> quotaCode) {
+        public Builder quotaCode(Output<String> quotaCode) {
             this.quotaCode = Objects.requireNonNull(quotaCode);
             return this;
         }
 
         public Builder quotaCode(String quotaCode) {
-            this.quotaCode = Input.of(Objects.requireNonNull(quotaCode));
+            this.quotaCode = Output.of(Objects.requireNonNull(quotaCode));
             return this;
         }
 
-        public Builder serviceCode(Input<String> serviceCode) {
+        public Builder serviceCode(Output<String> serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
 
         public Builder serviceCode(String serviceCode) {
-            this.serviceCode = Input.of(Objects.requireNonNull(serviceCode));
+            this.serviceCode = Output.of(Objects.requireNonNull(serviceCode));
             return this;
         }
 
-        public Builder value(Input<Double> value) {
+        public Builder value(Output<Double> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(Double value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ServiceQuotaArgs build() {

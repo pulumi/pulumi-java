@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class ListenerRuleConditionHttpRequestMethodArgs extends io.pulumi.
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
-    public ListenerRuleConditionHttpRequestMethodArgs(Input<List<String>> values) {
+    public ListenerRuleConditionHttpRequestMethodArgs(Output<List<String>> values) {
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private ListenerRuleConditionHttpRequestMethodArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ListenerRuleConditionHttpRequestMethodArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<List<String>> values;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ListenerRuleConditionHttpRequestMethodArgs extends io.pulumi.
     	      this.values = defaults.values;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public ListenerRuleConditionHttpRequestMethodArgs build() {

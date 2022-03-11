@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageGroupId")
-      private final @Nullable Input<String> messageGroupId;
+      private final @Nullable Output<String> messageGroupId;
 
-    public Input<String> getMessageGroupId() {
-        return this.messageGroupId == null ? Input.empty() : this.messageGroupId;
+    public Output<String> getMessageGroupId() {
+        return this.messageGroupId == null ? Output.empty() : this.messageGroupId;
     }
 
-    public EventTargetSqsTargetGetArgs(@Nullable Input<String> messageGroupId) {
+    public EventTargetSqsTargetGetArgs(@Nullable Output<String> messageGroupId) {
         this.messageGroupId = messageGroupId;
     }
 
     private EventTargetSqsTargetGetArgs() {
-        this.messageGroupId = Input.empty();
+        this.messageGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> messageGroupId;
+        private @Nullable Output<String> messageGroupId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
     	      this.messageGroupId = defaults.messageGroupId;
         }
 
-        public Builder messageGroupId(@Nullable Input<String> messageGroupId) {
+        public Builder messageGroupId(@Nullable Output<String> messageGroupId) {
             this.messageGroupId = messageGroupId;
             return this;
         }
 
         public Builder messageGroupId(@Nullable String messageGroupId) {
-            this.messageGroupId = Input.ofNullable(messageGroupId);
+            this.messageGroupId = Output.ofNullable(messageGroupId);
             return this;
         }
         public EventTargetSqsTargetGetArgs build() {

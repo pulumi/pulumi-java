@@ -6,7 +6,7 @@ package io.pulumi.aws.appstream;
 import io.pulumi.aws.appstream.inputs.FleetComputeCapacityArgs;
 import io.pulumi.aws.appstream.inputs.FleetDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.FleetVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,9 +25,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeCapacity", required=true)
-      private final Input<FleetComputeCapacityArgs> computeCapacity;
+      private final Output<FleetComputeCapacityArgs> computeCapacity;
 
-    public Input<FleetComputeCapacityArgs> getComputeCapacity() {
+    public Output<FleetComputeCapacityArgs> getComputeCapacity() {
         return this.computeCapacity;
     }
 
@@ -36,10 +36,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disconnectTimeoutInSeconds")
-      private final @Nullable Input<Integer> disconnectTimeoutInSeconds;
+      private final @Nullable Output<Integer> disconnectTimeoutInSeconds;
 
-    public Input<Integer> getDisconnectTimeoutInSeconds() {
-        return this.disconnectTimeoutInSeconds == null ? Input.empty() : this.disconnectTimeoutInSeconds;
+    public Output<Integer> getDisconnectTimeoutInSeconds() {
+        return this.disconnectTimeoutInSeconds == null ? Output.empty() : this.disconnectTimeoutInSeconds;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainJoinInfo")
-      private final @Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo;
+      private final @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
 
-    public Input<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
-        return this.domainJoinInfo == null ? Input.empty() : this.domainJoinInfo;
+    public Output<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
+        return this.domainJoinInfo == null ? Output.empty() : this.domainJoinInfo;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDefaultInternetAccess")
-      private final @Nullable Input<Boolean> enableDefaultInternetAccess;
+      private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Input<Boolean> getEnableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Input.empty() : this.enableDefaultInternetAccess;
+    public Output<Boolean> getEnableDefaultInternetAccess() {
+        return this.enableDefaultInternetAccess == null ? Output.empty() : this.enableDefaultInternetAccess;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetType")
-      private final @Nullable Input<String> fleetType;
+      private final @Nullable Output<String> fleetType;
 
-    public Input<String> getFleetType() {
-        return this.fleetType == null ? Input.empty() : this.fleetType;
+    public Output<String> getFleetType() {
+        return this.fleetType == null ? Output.empty() : this.fleetType;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-      private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
+    public Output<String> getIamRoleArn() {
+        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleDisconnectTimeoutInSeconds")
-      private final @Nullable Input<Integer> idleDisconnectTimeoutInSeconds;
+      private final @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
 
-    public Input<Integer> getIdleDisconnectTimeoutInSeconds() {
-        return this.idleDisconnectTimeoutInSeconds == null ? Input.empty() : this.idleDisconnectTimeoutInSeconds;
+    public Output<Integer> getIdleDisconnectTimeoutInSeconds() {
+        return this.idleDisconnectTimeoutInSeconds == null ? Output.empty() : this.idleDisconnectTimeoutInSeconds;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageArn")
-      private final @Nullable Input<String> imageArn;
+      private final @Nullable Output<String> imageArn;
 
-    public Input<String> getImageArn() {
-        return this.imageArn == null ? Input.empty() : this.imageArn;
+    public Output<String> getImageArn() {
+        return this.imageArn == null ? Output.empty() : this.imageArn;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -146,9 +146,9 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -157,10 +157,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxUserDurationInSeconds")
-      private final @Nullable Input<Integer> maxUserDurationInSeconds;
+      private final @Nullable Output<Integer> maxUserDurationInSeconds;
 
-    public Input<Integer> getMaxUserDurationInSeconds() {
-        return this.maxUserDurationInSeconds == null ? Input.empty() : this.maxUserDurationInSeconds;
+    public Output<Integer> getMaxUserDurationInSeconds() {
+        return this.maxUserDurationInSeconds == null ? Output.empty() : this.maxUserDurationInSeconds;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamView")
-      private final @Nullable Input<String> streamView;
+      private final @Nullable Output<String> streamView;
 
-    public Input<String> getStreamView() {
-        return this.streamView == null ? Input.empty() : this.streamView;
+    public Output<String> getStreamView() {
+        return this.streamView == null ? Output.empty() : this.streamView;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -201,30 +201,30 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<FleetVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
-    public Input<FleetVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<FleetVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public FleetArgs(
-        Input<FleetComputeCapacityArgs> computeCapacity,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> disconnectTimeoutInSeconds,
-        @Nullable Input<String> displayName,
-        @Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo,
-        @Nullable Input<Boolean> enableDefaultInternetAccess,
-        @Nullable Input<String> fleetType,
-        @Nullable Input<String> iamRoleArn,
-        @Nullable Input<Integer> idleDisconnectTimeoutInSeconds,
-        @Nullable Input<String> imageArn,
-        @Nullable Input<String> imageName,
-        Input<String> instanceType,
-        @Nullable Input<Integer> maxUserDurationInSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<String> streamView,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<FleetVpcConfigArgs> vpcConfig) {
+        Output<FleetComputeCapacityArgs> computeCapacity,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> disconnectTimeoutInSeconds,
+        @Nullable Output<String> displayName,
+        @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo,
+        @Nullable Output<Boolean> enableDefaultInternetAccess,
+        @Nullable Output<String> fleetType,
+        @Nullable Output<String> iamRoleArn,
+        @Nullable Output<Integer> idleDisconnectTimeoutInSeconds,
+        @Nullable Output<String> imageArn,
+        @Nullable Output<String> imageName,
+        Output<String> instanceType,
+        @Nullable Output<Integer> maxUserDurationInSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<String> streamView,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<FleetVpcConfigArgs> vpcConfig) {
         this.computeCapacity = Objects.requireNonNull(computeCapacity, "expected parameter 'computeCapacity' to be non-null");
         this.description = description;
         this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
@@ -245,23 +245,23 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.computeCapacity = Input.empty();
-        this.description = Input.empty();
-        this.disconnectTimeoutInSeconds = Input.empty();
-        this.displayName = Input.empty();
-        this.domainJoinInfo = Input.empty();
-        this.enableDefaultInternetAccess = Input.empty();
-        this.fleetType = Input.empty();
-        this.iamRoleArn = Input.empty();
-        this.idleDisconnectTimeoutInSeconds = Input.empty();
-        this.imageArn = Input.empty();
-        this.imageName = Input.empty();
-        this.instanceType = Input.empty();
-        this.maxUserDurationInSeconds = Input.empty();
-        this.name = Input.empty();
-        this.streamView = Input.empty();
-        this.tags = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.computeCapacity = Output.empty();
+        this.description = Output.empty();
+        this.disconnectTimeoutInSeconds = Output.empty();
+        this.displayName = Output.empty();
+        this.domainJoinInfo = Output.empty();
+        this.enableDefaultInternetAccess = Output.empty();
+        this.fleetType = Output.empty();
+        this.iamRoleArn = Output.empty();
+        this.idleDisconnectTimeoutInSeconds = Output.empty();
+        this.imageArn = Output.empty();
+        this.imageName = Output.empty();
+        this.instanceType = Output.empty();
+        this.maxUserDurationInSeconds = Output.empty();
+        this.name = Output.empty();
+        this.streamView = Output.empty();
+        this.tags = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -273,23 +273,23 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<FleetComputeCapacityArgs> computeCapacity;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> disconnectTimeoutInSeconds;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo;
-        private @Nullable Input<Boolean> enableDefaultInternetAccess;
-        private @Nullable Input<String> fleetType;
-        private @Nullable Input<String> iamRoleArn;
-        private @Nullable Input<Integer> idleDisconnectTimeoutInSeconds;
-        private @Nullable Input<String> imageArn;
-        private @Nullable Input<String> imageName;
-        private Input<String> instanceType;
-        private @Nullable Input<Integer> maxUserDurationInSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> streamView;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<FleetVpcConfigArgs> vpcConfig;
+        private Output<FleetComputeCapacityArgs> computeCapacity;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> disconnectTimeoutInSeconds;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
+        private @Nullable Output<Boolean> enableDefaultInternetAccess;
+        private @Nullable Output<String> fleetType;
+        private @Nullable Output<String> iamRoleArn;
+        private @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
+        private @Nullable Output<String> imageArn;
+        private @Nullable Output<String> imageName;
+        private Output<String> instanceType;
+        private @Nullable Output<Integer> maxUserDurationInSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> streamView;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -316,173 +316,173 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder computeCapacity(Input<FleetComputeCapacityArgs> computeCapacity) {
+        public Builder computeCapacity(Output<FleetComputeCapacityArgs> computeCapacity) {
             this.computeCapacity = Objects.requireNonNull(computeCapacity);
             return this;
         }
 
         public Builder computeCapacity(FleetComputeCapacityArgs computeCapacity) {
-            this.computeCapacity = Input.of(Objects.requireNonNull(computeCapacity));
+            this.computeCapacity = Output.of(Objects.requireNonNull(computeCapacity));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disconnectTimeoutInSeconds(@Nullable Input<Integer> disconnectTimeoutInSeconds) {
+        public Builder disconnectTimeoutInSeconds(@Nullable Output<Integer> disconnectTimeoutInSeconds) {
             this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
             return this;
         }
 
         public Builder disconnectTimeoutInSeconds(@Nullable Integer disconnectTimeoutInSeconds) {
-            this.disconnectTimeoutInSeconds = Input.ofNullable(disconnectTimeoutInSeconds);
+            this.disconnectTimeoutInSeconds = Output.ofNullable(disconnectTimeoutInSeconds);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder domainJoinInfo(@Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo) {
+        public Builder domainJoinInfo(@Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo) {
             this.domainJoinInfo = domainJoinInfo;
             return this;
         }
 
         public Builder domainJoinInfo(@Nullable FleetDomainJoinInfoArgs domainJoinInfo) {
-            this.domainJoinInfo = Input.ofNullable(domainJoinInfo);
+            this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
             return this;
         }
 
-        public Builder enableDefaultInternetAccess(@Nullable Input<Boolean> enableDefaultInternetAccess) {
+        public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
             this.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
 
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Input.ofNullable(enableDefaultInternetAccess);
+            this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
             return this;
         }
 
-        public Builder fleetType(@Nullable Input<String> fleetType) {
+        public Builder fleetType(@Nullable Output<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
 
         public Builder fleetType(@Nullable String fleetType) {
-            this.fleetType = Input.ofNullable(fleetType);
+            this.fleetType = Output.ofNullable(fleetType);
             return this;
         }
 
-        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Input.ofNullable(iamRoleArn);
+            this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder idleDisconnectTimeoutInSeconds(@Nullable Input<Integer> idleDisconnectTimeoutInSeconds) {
+        public Builder idleDisconnectTimeoutInSeconds(@Nullable Output<Integer> idleDisconnectTimeoutInSeconds) {
             this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
             return this;
         }
 
         public Builder idleDisconnectTimeoutInSeconds(@Nullable Integer idleDisconnectTimeoutInSeconds) {
-            this.idleDisconnectTimeoutInSeconds = Input.ofNullable(idleDisconnectTimeoutInSeconds);
+            this.idleDisconnectTimeoutInSeconds = Output.ofNullable(idleDisconnectTimeoutInSeconds);
             return this;
         }
 
-        public Builder imageArn(@Nullable Input<String> imageArn) {
+        public Builder imageArn(@Nullable Output<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Input.ofNullable(imageArn);
+            this.imageArn = Output.ofNullable(imageArn);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder maxUserDurationInSeconds(@Nullable Input<Integer> maxUserDurationInSeconds) {
+        public Builder maxUserDurationInSeconds(@Nullable Output<Integer> maxUserDurationInSeconds) {
             this.maxUserDurationInSeconds = maxUserDurationInSeconds;
             return this;
         }
 
         public Builder maxUserDurationInSeconds(@Nullable Integer maxUserDurationInSeconds) {
-            this.maxUserDurationInSeconds = Input.ofNullable(maxUserDurationInSeconds);
+            this.maxUserDurationInSeconds = Output.ofNullable(maxUserDurationInSeconds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder streamView(@Nullable Input<String> streamView) {
+        public Builder streamView(@Nullable Output<String> streamView) {
             this.streamView = streamView;
             return this;
         }
 
         public Builder streamView(@Nullable String streamView) {
-            this.streamView = Input.ofNullable(streamView);
+            this.streamView = Output.ofNullable(streamView);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<FleetVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<FleetVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable FleetVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public FleetArgs build() {

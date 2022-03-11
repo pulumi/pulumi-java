@@ -8,7 +8,6 @@ import io.pulumi.aws.fsx.WindowsFileSystemArgs;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemState;
 import io.pulumi.aws.fsx.outputs.WindowsFileSystemAuditLogConfiguration;
 import io.pulumi.aws.fsx.outputs.WindowsFileSystemSelfManagedActiveDirectory;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -468,14 +467,14 @@ public class WindowsFileSystem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WindowsFileSystem(String name, WindowsFileSystemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/windowsFileSystem:WindowsFileSystem", name, args == null ? WindowsFileSystemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/windowsFileSystem:WindowsFileSystem", name, args == null ? WindowsFileSystemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WindowsFileSystem(String name, Input<String> id, @Nullable WindowsFileSystemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WindowsFileSystem(String name, Output<String> id, @Nullable WindowsFileSystemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/windowsFileSystem:WindowsFileSystem", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -491,7 +490,7 @@ public class WindowsFileSystem extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WindowsFileSystem get(String name, Input<String> id, @Nullable WindowsFileSystemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WindowsFileSystem get(String name, Output<String> id, @Nullable WindowsFileSystemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WindowsFileSystem(name, id, state, options);
     }
 }

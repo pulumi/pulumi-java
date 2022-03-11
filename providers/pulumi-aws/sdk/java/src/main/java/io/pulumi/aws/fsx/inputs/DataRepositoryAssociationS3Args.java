@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoExportPolicyArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoImportPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoExportPolicy")
-      private final @Nullable Input<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
+      private final @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
 
-    public Input<DataRepositoryAssociationS3AutoExportPolicyArgs> getAutoExportPolicy() {
-        return this.autoExportPolicy == null ? Input.empty() : this.autoExportPolicy;
+    public Output<DataRepositoryAssociationS3AutoExportPolicyArgs> getAutoExportPolicy() {
+        return this.autoExportPolicy == null ? Output.empty() : this.autoExportPolicy;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoImportPolicy")
-      private final @Nullable Input<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
+      private final @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
 
-    public Input<DataRepositoryAssociationS3AutoImportPolicyArgs> getAutoImportPolicy() {
-        return this.autoImportPolicy == null ? Input.empty() : this.autoImportPolicy;
+    public Output<DataRepositoryAssociationS3AutoImportPolicyArgs> getAutoImportPolicy() {
+        return this.autoImportPolicy == null ? Output.empty() : this.autoImportPolicy;
     }
 
     public DataRepositoryAssociationS3Args(
-        @Nullable Input<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy,
-        @Nullable Input<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
+        @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy,
+        @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         this.autoImportPolicy = autoImportPolicy;
     }
 
     private DataRepositoryAssociationS3Args() {
-        this.autoExportPolicy = Input.empty();
-        this.autoImportPolicy = Input.empty();
+        this.autoExportPolicy = Output.empty();
+        this.autoImportPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
-        private @Nullable Input<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
+        private @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
+        private @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     	      this.autoImportPolicy = defaults.autoImportPolicy;
         }
 
-        public Builder autoExportPolicy(@Nullable Input<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy) {
+        public Builder autoExportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy) {
             this.autoExportPolicy = autoExportPolicy;
             return this;
         }
 
         public Builder autoExportPolicy(@Nullable DataRepositoryAssociationS3AutoExportPolicyArgs autoExportPolicy) {
-            this.autoExportPolicy = Input.ofNullable(autoExportPolicy);
+            this.autoExportPolicy = Output.ofNullable(autoExportPolicy);
             return this;
         }
 
-        public Builder autoImportPolicy(@Nullable Input<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
+        public Builder autoImportPolicy(@Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy) {
             this.autoImportPolicy = autoImportPolicy;
             return this;
         }
 
         public Builder autoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicyArgs autoImportPolicy) {
-            this.autoImportPolicy = Input.ofNullable(autoImportPolicy);
+            this.autoImportPolicy = Output.ofNullable(autoImportPolicy);
             return this;
         }
         public DataRepositoryAssociationS3Args build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetArn", required=true)
-      private final Input<String> targetArn;
+      private final Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
+    public Output<String> getTargetArn() {
         return this.targetArn;
     }
 
-    public FunctionDeadLetterConfigArgs(Input<String> targetArn) {
+    public FunctionDeadLetterConfigArgs(Output<String> targetArn) {
         this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
     }
 
     private FunctionDeadLetterConfigArgs() {
-        this.targetArn = Input.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> targetArn;
+        private Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder targetArn(Input<String> targetArn) {
+        public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
         public Builder targetArn(String targetArn) {
-            this.targetArn = Input.of(Objects.requireNonNull(targetArn));
+            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
         }
         public FunctionDeadLetterConfigArgs build() {

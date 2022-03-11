@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerFunctionArn", required=true)
-      private final Input<String> authorizerFunctionArn;
+      private final Output<String> authorizerFunctionArn;
 
-    public Input<String> getAuthorizerFunctionArn() {
+    public Output<String> getAuthorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
 
@@ -32,10 +32,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingDisabled")
-      private final @Nullable Input<Boolean> signingDisabled;
+      private final @Nullable Output<Boolean> signingDisabled;
 
-    public Input<Boolean> getSigningDisabled() {
-        return this.signingDisabled == null ? Input.empty() : this.signingDisabled;
+    public Output<Boolean> getSigningDisabled() {
+        return this.signingDisabled == null ? Output.empty() : this.signingDisabled;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenKeyName")
-      private final @Nullable Input<String> tokenKeyName;
+      private final @Nullable Output<String> tokenKeyName;
 
-    public Input<String> getTokenKeyName() {
-        return this.tokenKeyName == null ? Input.empty() : this.tokenKeyName;
+    public Output<String> getTokenKeyName() {
+        return this.tokenKeyName == null ? Output.empty() : this.tokenKeyName;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenSigningPublicKeys")
-      private final @Nullable Input<Map<String,String>> tokenSigningPublicKeys;
+      private final @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
-    public Input<Map<String,String>> getTokenSigningPublicKeys() {
-        return this.tokenSigningPublicKeys == null ? Input.empty() : this.tokenSigningPublicKeys;
+    public Output<Map<String,String>> getTokenSigningPublicKeys() {
+        return this.tokenSigningPublicKeys == null ? Output.empty() : this.tokenSigningPublicKeys;
     }
 
     public AuthorizerArgs(
-        Input<String> authorizerFunctionArn,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> signingDisabled,
-        @Nullable Input<String> status,
-        @Nullable Input<String> tokenKeyName,
-        @Nullable Input<Map<String,String>> tokenSigningPublicKeys) {
+        Output<String> authorizerFunctionArn,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> signingDisabled,
+        @Nullable Output<String> status,
+        @Nullable Output<String> tokenKeyName,
+        @Nullable Output<Map<String,String>> tokenSigningPublicKeys) {
         this.authorizerFunctionArn = Objects.requireNonNull(authorizerFunctionArn, "expected parameter 'authorizerFunctionArn' to be non-null");
         this.name = name;
         this.signingDisabled = signingDisabled;
@@ -98,12 +98,12 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizerArgs() {
-        this.authorizerFunctionArn = Input.empty();
-        this.name = Input.empty();
-        this.signingDisabled = Input.empty();
-        this.status = Input.empty();
-        this.tokenKeyName = Input.empty();
-        this.tokenSigningPublicKeys = Input.empty();
+        this.authorizerFunctionArn = Output.empty();
+        this.name = Output.empty();
+        this.signingDisabled = Output.empty();
+        this.status = Output.empty();
+        this.tokenKeyName = Output.empty();
+        this.tokenSigningPublicKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> authorizerFunctionArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> signingDisabled;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> tokenKeyName;
-        private @Nullable Input<Map<String,String>> tokenSigningPublicKeys;
+        private Output<String> authorizerFunctionArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> signingDisabled;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> tokenKeyName;
+        private @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenSigningPublicKeys = defaults.tokenSigningPublicKeys;
         }
 
-        public Builder authorizerFunctionArn(Input<String> authorizerFunctionArn) {
+        public Builder authorizerFunctionArn(Output<String> authorizerFunctionArn) {
             this.authorizerFunctionArn = Objects.requireNonNull(authorizerFunctionArn);
             return this;
         }
 
         public Builder authorizerFunctionArn(String authorizerFunctionArn) {
-            this.authorizerFunctionArn = Input.of(Objects.requireNonNull(authorizerFunctionArn));
+            this.authorizerFunctionArn = Output.of(Objects.requireNonNull(authorizerFunctionArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder signingDisabled(@Nullable Input<Boolean> signingDisabled) {
+        public Builder signingDisabled(@Nullable Output<Boolean> signingDisabled) {
             this.signingDisabled = signingDisabled;
             return this;
         }
 
         public Builder signingDisabled(@Nullable Boolean signingDisabled) {
-            this.signingDisabled = Input.ofNullable(signingDisabled);
+            this.signingDisabled = Output.ofNullable(signingDisabled);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tokenKeyName(@Nullable Input<String> tokenKeyName) {
+        public Builder tokenKeyName(@Nullable Output<String> tokenKeyName) {
             this.tokenKeyName = tokenKeyName;
             return this;
         }
 
         public Builder tokenKeyName(@Nullable String tokenKeyName) {
-            this.tokenKeyName = Input.ofNullable(tokenKeyName);
+            this.tokenKeyName = Output.ofNullable(tokenKeyName);
             return this;
         }
 
-        public Builder tokenSigningPublicKeys(@Nullable Input<Map<String,String>> tokenSigningPublicKeys) {
+        public Builder tokenSigningPublicKeys(@Nullable Output<Map<String,String>> tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }
 
         public Builder tokenSigningPublicKeys(@Nullable Map<String,String> tokenSigningPublicKeys) {
-            this.tokenSigningPublicKeys = Input.ofNullable(tokenSigningPublicKeys);
+            this.tokenSigningPublicKeys = Output.ofNullable(tokenSigningPublicKeys);
             return this;
         }
         public AuthorizerArgs build() {

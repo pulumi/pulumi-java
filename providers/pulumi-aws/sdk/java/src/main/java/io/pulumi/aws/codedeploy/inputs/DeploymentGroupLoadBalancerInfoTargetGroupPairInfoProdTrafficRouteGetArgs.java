@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
      * 
      */
     @InputImport(name="listenerArns", required=true)
-      private final Input<List<String>> listenerArns;
+      private final Output<List<String>> listenerArns;
 
-    public Input<List<String>> getListenerArns() {
+    public Output<List<String>> getListenerArns() {
         return this.listenerArns;
     }
 
-    public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs(Input<List<String>> listenerArns) {
+    public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs(Output<List<String>> listenerArns) {
         this.listenerArns = Objects.requireNonNull(listenerArns, "expected parameter 'listenerArns' to be non-null");
     }
 
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs() {
-        this.listenerArns = Input.empty();
+        this.listenerArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     }
 
     public static final class Builder {
-        private Input<List<String>> listenerArns;
+        private Output<List<String>> listenerArns;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     	      this.listenerArns = defaults.listenerArns;
         }
 
-        public Builder listenerArns(Input<List<String>> listenerArns) {
+        public Builder listenerArns(Output<List<String>> listenerArns) {
             this.listenerArns = Objects.requireNonNull(listenerArns);
             return this;
         }
 
         public Builder listenerArns(List<String> listenerArns) {
-            this.listenerArns = Input.of(Objects.requireNonNull(listenerArns));
+            this.listenerArns = Output.of(Objects.requireNonNull(listenerArns));
             return this;
         }
         public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<String> authenticationType;
+      private final @Nullable Output<String> authenticationType;
 
-    public Input<String> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<String> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstName")
-      private final @Nullable Input<String> firstName;
+      private final @Nullable Output<String> firstName;
 
-    public Input<String> getFirstName() {
-        return this.firstName == null ? Input.empty() : this.firstName;
+    public Output<String> getFirstName() {
+        return this.firstName == null ? Output.empty() : this.firstName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastName")
-      private final @Nullable Input<String> lastName;
+      private final @Nullable Output<String> lastName;
 
-    public Input<String> getLastName() {
-        return this.lastName == null ? Input.empty() : this.lastName;
+    public Output<String> getLastName() {
+        return this.lastName == null ? Output.empty() : this.lastName;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendEmailNotification")
-      private final @Nullable Input<Boolean> sendEmailNotification;
+      private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Input<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Input.empty() : this.sendEmailNotification;
+    public Output<Boolean> getSendEmailNotification() {
+        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public UserState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> authenticationType,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> firstName,
-        @Nullable Input<String> lastName,
-        @Nullable Input<Boolean> sendEmailNotification,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> authenticationType,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> firstName,
+        @Nullable Output<String> lastName,
+        @Nullable Output<Boolean> sendEmailNotification,
+        @Nullable Output<String> userName) {
         this.arn = arn;
         this.authenticationType = authenticationType;
         this.createdTime = createdTime;
@@ -123,14 +123,14 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.arn = Input.empty();
-        this.authenticationType = Input.empty();
-        this.createdTime = Input.empty();
-        this.enabled = Input.empty();
-        this.firstName = Input.empty();
-        this.lastName = Input.empty();
-        this.sendEmailNotification = Input.empty();
-        this.userName = Input.empty();
+        this.arn = Output.empty();
+        this.authenticationType = Output.empty();
+        this.createdTime = Output.empty();
+        this.enabled = Output.empty();
+        this.firstName = Output.empty();
+        this.lastName = Output.empty();
+        this.sendEmailNotification = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> authenticationType;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> firstName;
-        private @Nullable Input<String> lastName;
-        private @Nullable Input<Boolean> sendEmailNotification;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> authenticationType;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> firstName;
+        private @Nullable Output<String> lastName;
+        private @Nullable Output<Boolean> sendEmailNotification;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder authenticationType(@Nullable Input<String> authenticationType) {
+        public Builder authenticationType(@Nullable Output<String> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder firstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Output<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Input.ofNullable(firstName);
+            this.firstName = Output.ofNullable(firstName);
             return this;
         }
 
-        public Builder lastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Output<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Input.ofNullable(lastName);
+            this.lastName = Output.ofNullable(lastName);
             return this;
         }
 
-        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public UserState build() {

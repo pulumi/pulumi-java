@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupFailoverCriteriaGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupMemberGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="failoverCriteria", required=true)
-      private final Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria;
+      private final Output<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria;
 
-    public Input<DistributionOriginGroupFailoverCriteriaGetArgs> getFailoverCriteria() {
+    public Output<DistributionOriginGroupFailoverCriteriaGetArgs> getFailoverCriteria() {
         return this.failoverCriteria;
     }
 
@@ -32,9 +32,9 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="members", required=true)
-      private final Input<List<DistributionOriginGroupMemberGetArgs>> members;
+      private final Output<List<DistributionOriginGroupMemberGetArgs>> members;
 
-    public Input<List<DistributionOriginGroupMemberGetArgs>> getMembers() {
+    public Output<List<DistributionOriginGroupMemberGetArgs>> getMembers() {
         return this.members;
     }
 
@@ -43,25 +43,25 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="originId", required=true)
-      private final Input<String> originId;
+      private final Output<String> originId;
 
-    public Input<String> getOriginId() {
+    public Output<String> getOriginId() {
         return this.originId;
     }
 
     public DistributionOriginGroupGetArgs(
-        Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria,
-        Input<List<DistributionOriginGroupMemberGetArgs>> members,
-        Input<String> originId) {
+        Output<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria,
+        Output<List<DistributionOriginGroupMemberGetArgs>> members,
+        Output<String> originId) {
         this.failoverCriteria = Objects.requireNonNull(failoverCriteria, "expected parameter 'failoverCriteria' to be non-null");
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.originId = Objects.requireNonNull(originId, "expected parameter 'originId' to be non-null");
     }
 
     private DistributionOriginGroupGetArgs() {
-        this.failoverCriteria = Input.empty();
-        this.members = Input.empty();
-        this.originId = Input.empty();
+        this.failoverCriteria = Output.empty();
+        this.members = Output.empty();
+        this.originId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria;
-        private Input<List<DistributionOriginGroupMemberGetArgs>> members;
-        private Input<String> originId;
+        private Output<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria;
+        private Output<List<DistributionOriginGroupMemberGetArgs>> members;
+        private Output<String> originId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
     	      this.originId = defaults.originId;
         }
 
-        public Builder failoverCriteria(Input<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria) {
+        public Builder failoverCriteria(Output<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
         public Builder failoverCriteria(DistributionOriginGroupFailoverCriteriaGetArgs failoverCriteria) {
-            this.failoverCriteria = Input.of(Objects.requireNonNull(failoverCriteria));
+            this.failoverCriteria = Output.of(Objects.requireNonNull(failoverCriteria));
             return this;
         }
 
-        public Builder members(Input<List<DistributionOriginGroupMemberGetArgs>> members) {
+        public Builder members(Output<List<DistributionOriginGroupMemberGetArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<DistributionOriginGroupMemberGetArgs> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder originId(Input<String> originId) {
+        public Builder originId(Output<String> originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
 
         public Builder originId(String originId) {
-            this.originId = Input.of(Objects.requireNonNull(originId));
+            this.originId = Output.of(Objects.requireNonNull(originId));
             return this;
         }
         public DistributionOriginGroupGetArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsGetArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryUpstreamGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorAccount")
-      private final @Nullable Input<String> administratorAccount;
+      private final @Nullable Output<String> administratorAccount;
 
-    public Input<String> getAdministratorAccount() {
-        return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
+    public Output<String> getAdministratorAccount() {
+        return this.administratorAccount == null ? Output.empty() : this.administratorAccount;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainOwner")
-      private final @Nullable Input<String> domainOwner;
+      private final @Nullable Output<String> domainOwner;
 
-    public Input<String> getDomainOwner() {
-        return this.domainOwner == null ? Input.empty() : this.domainOwner;
+    public Output<String> getDomainOwner() {
+        return this.domainOwner == null ? Output.empty() : this.domainOwner;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalConnections")
-      private final @Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections;
+      private final @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
 
-    public Input<RepositoryExternalConnectionsGetArgs> getExternalConnections() {
-        return this.externalConnections == null ? Input.empty() : this.externalConnections;
+    public Output<RepositoryExternalConnectionsGetArgs> getExternalConnections() {
+        return this.externalConnections == null ? Output.empty() : this.externalConnections;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<String> repository;
+      private final @Nullable Output<String> repository;
 
-    public Input<String> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<String> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -122,23 +122,23 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upstreams")
-      private final @Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams;
+      private final @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
 
-    public Input<List<RepositoryUpstreamGetArgs>> getUpstreams() {
-        return this.upstreams == null ? Input.empty() : this.upstreams;
+    public Output<List<RepositoryUpstreamGetArgs>> getUpstreams() {
+        return this.upstreams == null ? Output.empty() : this.upstreams;
     }
 
     public RepositoryState(
-        @Nullable Input<String> administratorAccount,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> domainOwner,
-        @Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections,
-        @Nullable Input<String> repository,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams) {
+        @Nullable Output<String> administratorAccount,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> domainOwner,
+        @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections,
+        @Nullable Output<String> repository,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams) {
         this.administratorAccount = administratorAccount;
         this.arn = arn;
         this.description = description;
@@ -152,16 +152,16 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryState() {
-        this.administratorAccount = Input.empty();
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.domain = Input.empty();
-        this.domainOwner = Input.empty();
-        this.externalConnections = Input.empty();
-        this.repository = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.upstreams = Input.empty();
+        this.administratorAccount = Output.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.domain = Output.empty();
+        this.domainOwner = Output.empty();
+        this.externalConnections = Output.empty();
+        this.repository = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.upstreams = Output.empty();
     }
 
     public static Builder builder() {
@@ -173,16 +173,16 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administratorAccount;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> domainOwner;
-        private @Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections;
-        private @Nullable Input<String> repository;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams;
+        private @Nullable Output<String> administratorAccount;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> domainOwner;
+        private @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
+        private @Nullable Output<String> repository;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
 
         public Builder() {
     	      // Empty
@@ -202,103 +202,103 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder administratorAccount(@Nullable Input<String> administratorAccount) {
+        public Builder administratorAccount(@Nullable Output<String> administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
         public Builder administratorAccount(@Nullable String administratorAccount) {
-            this.administratorAccount = Input.ofNullable(administratorAccount);
+            this.administratorAccount = Output.ofNullable(administratorAccount);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder domainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Input.ofNullable(domainOwner);
+            this.domainOwner = Output.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder externalConnections(@Nullable Input<RepositoryExternalConnectionsGetArgs> externalConnections) {
+        public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
         public Builder externalConnections(@Nullable RepositoryExternalConnectionsGetArgs externalConnections) {
-            this.externalConnections = Input.ofNullable(externalConnections);
+            this.externalConnections = Output.ofNullable(externalConnections);
             return this;
         }
 
-        public Builder repository(@Nullable Input<String> repository) {
+        public Builder repository(@Nullable Output<String> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder upstreams(@Nullable Input<List<RepositoryUpstreamGetArgs>> upstreams) {
+        public Builder upstreams(@Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
 
         public Builder upstreams(@Nullable List<RepositoryUpstreamGetArgs> upstreams) {
-            this.upstreams = Input.ofNullable(upstreams);
+            this.upstreams = Output.ofNullable(upstreams);
             return this;
         }
         public RepositoryState build() {

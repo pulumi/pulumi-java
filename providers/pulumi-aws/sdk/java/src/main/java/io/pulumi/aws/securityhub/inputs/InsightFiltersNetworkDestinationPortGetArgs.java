@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InsightFiltersNetworkDestinationPortGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="eq")
-      private final @Nullable Input<String> eq;
+      private final @Nullable Output<String> eq;
 
-    public Input<String> getEq() {
-        return this.eq == null ? Input.empty() : this.eq;
+    public Output<String> getEq() {
+        return this.eq == null ? Output.empty() : this.eq;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class InsightFiltersNetworkDestinationPortGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="gte")
-      private final @Nullable Input<String> gte;
+      private final @Nullable Output<String> gte;
 
-    public Input<String> getGte() {
-        return this.gte == null ? Input.empty() : this.gte;
+    public Output<String> getGte() {
+        return this.gte == null ? Output.empty() : this.gte;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class InsightFiltersNetworkDestinationPortGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="lte")
-      private final @Nullable Input<String> lte;
+      private final @Nullable Output<String> lte;
 
-    public Input<String> getLte() {
-        return this.lte == null ? Input.empty() : this.lte;
+    public Output<String> getLte() {
+        return this.lte == null ? Output.empty() : this.lte;
     }
 
     public InsightFiltersNetworkDestinationPortGetArgs(
-        @Nullable Input<String> eq,
-        @Nullable Input<String> gte,
-        @Nullable Input<String> lte) {
+        @Nullable Output<String> eq,
+        @Nullable Output<String> gte,
+        @Nullable Output<String> lte) {
         this.eq = eq;
         this.gte = gte;
         this.lte = lte;
     }
 
     private InsightFiltersNetworkDestinationPortGetArgs() {
-        this.eq = Input.empty();
-        this.gte = Input.empty();
-        this.lte = Input.empty();
+        this.eq = Output.empty();
+        this.gte = Output.empty();
+        this.lte = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class InsightFiltersNetworkDestinationPortGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eq;
-        private @Nullable Input<String> gte;
-        private @Nullable Input<String> lte;
+        private @Nullable Output<String> eq;
+        private @Nullable Output<String> gte;
+        private @Nullable Output<String> lte;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class InsightFiltersNetworkDestinationPortGetArgs extends io.pulumi
     	      this.lte = defaults.lte;
         }
 
-        public Builder eq(@Nullable Input<String> eq) {
+        public Builder eq(@Nullable Output<String> eq) {
             this.eq = eq;
             return this;
         }
 
         public Builder eq(@Nullable String eq) {
-            this.eq = Input.ofNullable(eq);
+            this.eq = Output.ofNullable(eq);
             return this;
         }
 
-        public Builder gte(@Nullable Input<String> gte) {
+        public Builder gte(@Nullable Output<String> gte) {
             this.gte = gte;
             return this;
         }
 
         public Builder gte(@Nullable String gte) {
-            this.gte = Input.ofNullable(gte);
+            this.gte = Output.ofNullable(gte);
             return this;
         }
 
-        public Builder lte(@Nullable Input<String> lte) {
+        public Builder lte(@Nullable Output<String> lte) {
             this.lte = lte;
             return this;
         }
 
         public Builder lte(@Nullable String lte) {
-            this.lte = Input.ofNullable(lte);
+            this.lte = Output.ofNullable(lte);
             return this;
         }
         public InsightFiltersNetworkDestinationPortGetArgs build() {

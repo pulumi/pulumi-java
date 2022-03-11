@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     public static final InstanceEphemeralBlockDeviceArgs Empty = new InstanceEphemeralBlockDeviceArgs();
 
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="virtualName", required=true)
-      private final Input<String> virtualName;
+      private final Output<String> virtualName;
 
-    public Input<String> getVirtualName() {
+    public Output<String> getVirtualName() {
         return this.virtualName;
     }
 
     public InstanceEphemeralBlockDeviceArgs(
-        Input<String> deviceName,
-        Input<String> virtualName) {
+        Output<String> deviceName,
+        Output<String> virtualName) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
     }
 
     private InstanceEphemeralBlockDeviceArgs() {
-        this.deviceName = Input.empty();
-        this.virtualName = Input.empty();
+        this.deviceName = Output.empty();
+        this.virtualName = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private Input<String> virtualName;
+        private Output<String> deviceName;
+        private Output<String> virtualName;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder virtualName(Input<String> virtualName) {
+        public Builder virtualName(Output<String> virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }
 
         public Builder virtualName(String virtualName) {
-            this.virtualName = Input.of(Objects.requireNonNull(virtualName));
+            this.virtualName = Output.of(Objects.requireNonNull(virtualName));
             return this;
         }
         public InstanceEphemeralBlockDeviceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elastictranscoder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accesses")
-      private final @Nullable Input<List<String>> accesses;
+      private final @Nullable Output<List<String>> accesses;
 
-    public Input<List<String>> getAccesses() {
-        return this.accesses == null ? Input.empty() : this.accesses;
+    public Output<List<String>> getAccesses() {
+        return this.accesses == null ? Output.empty() : this.accesses;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="grantee")
-      private final @Nullable Input<String> grantee;
+      private final @Nullable Output<String> grantee;
 
-    public Input<String> getGrantee() {
-        return this.grantee == null ? Input.empty() : this.grantee;
+    public Output<String> getGrantee() {
+        return this.grantee == null ? Output.empty() : this.grantee;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="granteeType")
-      private final @Nullable Input<String> granteeType;
+      private final @Nullable Output<String> granteeType;
 
-    public Input<String> getGranteeType() {
-        return this.granteeType == null ? Input.empty() : this.granteeType;
+    public Output<String> getGranteeType() {
+        return this.granteeType == null ? Output.empty() : this.granteeType;
     }
 
     public PipelineContentConfigPermissionGetArgs(
-        @Nullable Input<List<String>> accesses,
-        @Nullable Input<String> grantee,
-        @Nullable Input<String> granteeType) {
+        @Nullable Output<List<String>> accesses,
+        @Nullable Output<String> grantee,
+        @Nullable Output<String> granteeType) {
         this.accesses = accesses;
         this.grantee = grantee;
         this.granteeType = granteeType;
     }
 
     private PipelineContentConfigPermissionGetArgs() {
-        this.accesses = Input.empty();
-        this.grantee = Input.empty();
-        this.granteeType = Input.empty();
+        this.accesses = Output.empty();
+        this.grantee = Output.empty();
+        this.granteeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> accesses;
-        private @Nullable Input<String> grantee;
-        private @Nullable Input<String> granteeType;
+        private @Nullable Output<List<String>> accesses;
+        private @Nullable Output<String> grantee;
+        private @Nullable Output<String> granteeType;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
     	      this.granteeType = defaults.granteeType;
         }
 
-        public Builder accesses(@Nullable Input<List<String>> accesses) {
+        public Builder accesses(@Nullable Output<List<String>> accesses) {
             this.accesses = accesses;
             return this;
         }
 
         public Builder accesses(@Nullable List<String> accesses) {
-            this.accesses = Input.ofNullable(accesses);
+            this.accesses = Output.ofNullable(accesses);
             return this;
         }
 
-        public Builder grantee(@Nullable Input<String> grantee) {
+        public Builder grantee(@Nullable Output<String> grantee) {
             this.grantee = grantee;
             return this;
         }
 
         public Builder grantee(@Nullable String grantee) {
-            this.grantee = Input.ofNullable(grantee);
+            this.grantee = Output.ofNullable(grantee);
             return this;
         }
 
-        public Builder granteeType(@Nullable Input<String> granteeType) {
+        public Builder granteeType(@Nullable Output<String> granteeType) {
             this.granteeType = granteeType;
             return this;
         }
 
         public Builder granteeType(@Nullable String granteeType) {
-            this.granteeType = Input.ofNullable(granteeType);
+            this.granteeType = Output.ofNullable(granteeType);
             return this;
         }
         public PipelineContentConfigPermissionGetArgs build() {

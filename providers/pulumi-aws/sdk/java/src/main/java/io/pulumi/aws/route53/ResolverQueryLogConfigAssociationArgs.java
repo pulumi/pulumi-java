@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resolverQueryLogConfigId", required=true)
-      private final Input<String> resolverQueryLogConfigId;
+      private final Output<String> resolverQueryLogConfigId;
 
-    public Input<String> getResolverQueryLogConfigId() {
+    public Output<String> getResolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
 
@@ -29,22 +29,22 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public ResolverQueryLogConfigAssociationArgs(
-        Input<String> resolverQueryLogConfigId,
-        Input<String> resourceId) {
+        Output<String> resolverQueryLogConfigId,
+        Output<String> resourceId) {
         this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId, "expected parameter 'resolverQueryLogConfigId' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private ResolverQueryLogConfigAssociationArgs() {
-        this.resolverQueryLogConfigId = Input.empty();
-        this.resourceId = Input.empty();
+        this.resolverQueryLogConfigId = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> resolverQueryLogConfigId;
-        private Input<String> resourceId;
+        private Output<String> resolverQueryLogConfigId;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder resolverQueryLogConfigId(Input<String> resolverQueryLogConfigId) {
+        public Builder resolverQueryLogConfigId(Output<String> resolverQueryLogConfigId) {
             this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId);
             return this;
         }
 
         public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
-            this.resolverQueryLogConfigId = Input.of(Objects.requireNonNull(resolverQueryLogConfigId));
+            this.resolverQueryLogConfigId = Output.of(Objects.requireNonNull(resolverQueryLogConfigId));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public ResolverQueryLogConfigAssociationArgs build() {

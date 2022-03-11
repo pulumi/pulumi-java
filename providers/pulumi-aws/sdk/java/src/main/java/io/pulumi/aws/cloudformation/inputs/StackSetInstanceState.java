@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentTargets")
-      private final @Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
+      private final @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
 
-    public Input<StackSetInstanceDeploymentTargetsGetArgs> getDeploymentTargets() {
-        return this.deploymentTargets == null ? Input.empty() : this.deploymentTargets;
+    public Output<StackSetInstanceDeploymentTargetsGetArgs> getDeploymentTargets() {
+        return this.deploymentTargets == null ? Output.empty() : this.deploymentTargets;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="organizationalUnitId")
-      private final @Nullable Input<String> organizationalUnitId;
+      private final @Nullable Output<String> organizationalUnitId;
 
-    public Input<String> getOrganizationalUnitId() {
-        return this.organizationalUnitId == null ? Input.empty() : this.organizationalUnitId;
+    public Output<String> getOrganizationalUnitId() {
+        return this.organizationalUnitId == null ? Output.empty() : this.organizationalUnitId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterOverrides")
-      private final @Nullable Input<Map<String,String>> parameterOverrides;
+      private final @Nullable Output<Map<String,String>> parameterOverrides;
 
-    public Input<Map<String,String>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Input.empty() : this.parameterOverrides;
+    public Output<Map<String,String>> getParameterOverrides() {
+        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="retainStack")
-      private final @Nullable Input<Boolean> retainStack;
+      private final @Nullable Output<Boolean> retainStack;
 
-    public Input<Boolean> getRetainStack() {
-        return this.retainStack == null ? Input.empty() : this.retainStack;
+    public Output<Boolean> getRetainStack() {
+        return this.retainStack == null ? Output.empty() : this.retainStack;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stackId")
-      private final @Nullable Input<String> stackId;
+      private final @Nullable Output<String> stackId;
 
-    public Input<String> getStackId() {
-        return this.stackId == null ? Input.empty() : this.stackId;
+    public Output<String> getStackId() {
+        return this.stackId == null ? Output.empty() : this.stackId;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stackSetName")
-      private final @Nullable Input<String> stackSetName;
+      private final @Nullable Output<String> stackSetName;
 
-    public Input<String> getStackSetName() {
-        return this.stackSetName == null ? Input.empty() : this.stackSetName;
+    public Output<String> getStackSetName() {
+        return this.stackSetName == null ? Output.empty() : this.stackSetName;
     }
 
     public StackSetInstanceState(
-        @Nullable Input<String> accountId,
-        @Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets,
-        @Nullable Input<String> organizationalUnitId,
-        @Nullable Input<Map<String,String>> parameterOverrides,
-        @Nullable Input<String> region,
-        @Nullable Input<Boolean> retainStack,
-        @Nullable Input<String> stackId,
-        @Nullable Input<String> stackSetName) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets,
+        @Nullable Output<String> organizationalUnitId,
+        @Nullable Output<Map<String,String>> parameterOverrides,
+        @Nullable Output<String> region,
+        @Nullable Output<Boolean> retainStack,
+        @Nullable Output<String> stackId,
+        @Nullable Output<String> stackSetName) {
         this.accountId = accountId;
         this.deploymentTargets = deploymentTargets;
         this.organizationalUnitId = organizationalUnitId;
@@ -125,14 +125,14 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     private StackSetInstanceState() {
-        this.accountId = Input.empty();
-        this.deploymentTargets = Input.empty();
-        this.organizationalUnitId = Input.empty();
-        this.parameterOverrides = Input.empty();
-        this.region = Input.empty();
-        this.retainStack = Input.empty();
-        this.stackId = Input.empty();
-        this.stackSetName = Input.empty();
+        this.accountId = Output.empty();
+        this.deploymentTargets = Output.empty();
+        this.organizationalUnitId = Output.empty();
+        this.parameterOverrides = Output.empty();
+        this.region = Output.empty();
+        this.retainStack = Output.empty();
+        this.stackId = Output.empty();
+        this.stackSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
-        private @Nullable Input<String> organizationalUnitId;
-        private @Nullable Input<Map<String,String>> parameterOverrides;
-        private @Nullable Input<String> region;
-        private @Nullable Input<Boolean> retainStack;
-        private @Nullable Input<String> stackId;
-        private @Nullable Input<String> stackSetName;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
+        private @Nullable Output<String> organizationalUnitId;
+        private @Nullable Output<Map<String,String>> parameterOverrides;
+        private @Nullable Output<String> region;
+        private @Nullable Output<Boolean> retainStack;
+        private @Nullable Output<String> stackId;
+        private @Nullable Output<String> stackSetName;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
     	      this.stackSetName = defaults.stackSetName;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder deploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
+        public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
 
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
-            this.deploymentTargets = Input.ofNullable(deploymentTargets);
+            this.deploymentTargets = Output.ofNullable(deploymentTargets);
             return this;
         }
 
-        public Builder organizationalUnitId(@Nullable Input<String> organizationalUnitId) {
+        public Builder organizationalUnitId(@Nullable Output<String> organizationalUnitId) {
             this.organizationalUnitId = organizationalUnitId;
             return this;
         }
 
         public Builder organizationalUnitId(@Nullable String organizationalUnitId) {
-            this.organizationalUnitId = Input.ofNullable(organizationalUnitId);
+            this.organizationalUnitId = Output.ofNullable(organizationalUnitId);
             return this;
         }
 
-        public Builder parameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
-            this.parameterOverrides = Input.ofNullable(parameterOverrides);
+            this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder retainStack(@Nullable Input<Boolean> retainStack) {
+        public Builder retainStack(@Nullable Output<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
 
         public Builder retainStack(@Nullable Boolean retainStack) {
-            this.retainStack = Input.ofNullable(retainStack);
+            this.retainStack = Output.ofNullable(retainStack);
             return this;
         }
 
-        public Builder stackId(@Nullable Input<String> stackId) {
+        public Builder stackId(@Nullable Output<String> stackId) {
             this.stackId = stackId;
             return this;
         }
 
         public Builder stackId(@Nullable String stackId) {
-            this.stackId = Input.ofNullable(stackId);
+            this.stackId = Output.ofNullable(stackId);
             return this;
         }
 
-        public Builder stackSetName(@Nullable Input<String> stackSetName) {
+        public Builder stackSetName(@Nullable Output<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
 
         public Builder stackSetName(@Nullable String stackSetName) {
-            this.stackSetName = Input.ofNullable(stackSetName);
+            this.stackSetName = Output.ofNullable(stackSetName);
             return this;
         }
         public StackSetInstanceState build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallRuleGroupAssociationArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -182,14 +181,14 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallRuleGroupAssociation(String name, ResolverFirewallRuleGroupAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation", name, args == null ? ResolverFirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation", name, args == null ? ResolverFirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverFirewallRuleGroupAssociation(String name, Input<String> id, @Nullable ResolverFirewallRuleGroupAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverFirewallRuleGroupAssociation(String name, Output<String> id, @Nullable ResolverFirewallRuleGroupAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -205,7 +204,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverFirewallRuleGroupAssociation get(String name, Input<String> id, @Nullable ResolverFirewallRuleGroupAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverFirewallRuleGroupAssociation get(String name, Output<String> id, @Nullable ResolverFirewallRuleGroupAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverFirewallRuleGroupAssociation(name, id, state, options);
     }
 }

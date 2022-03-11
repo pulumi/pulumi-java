@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,9 +21,9 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -32,10 +32,10 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     public LoadBalancerAccessLogsGetArgs(
-        Input<String> bucket,
-        @Nullable Input<String> bucketPrefix,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> interval) {
+        Output<String> bucket,
+        @Nullable Output<String> bucketPrefix,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> interval) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;
@@ -72,10 +72,10 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
     }
 
     private LoadBalancerAccessLogsGetArgs() {
-        this.bucket = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.enabled = Input.empty();
-        this.interval = Input.empty();
+        this.bucket = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.enabled = Output.empty();
+        this.interval = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> bucketPrefix;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> interval;
+        private Output<String> bucket;
+        private @Nullable Output<String> bucketPrefix;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> interval;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class LoadBalancerAccessLogsGetArgs extends io.pulumi.resources.Res
     	      this.interval = defaults.interval;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
         public LoadBalancerAccessLogsGetArgs build() {

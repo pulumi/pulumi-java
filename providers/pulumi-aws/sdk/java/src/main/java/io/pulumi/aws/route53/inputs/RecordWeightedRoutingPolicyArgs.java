@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="weight", required=true)
-      private final Input<Integer> weight;
+      private final Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
+    public Output<Integer> getWeight() {
         return this.weight;
     }
 
-    public RecordWeightedRoutingPolicyArgs(Input<Integer> weight) {
+    public RecordWeightedRoutingPolicyArgs(Output<Integer> weight) {
         this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
     }
 
     private RecordWeightedRoutingPolicyArgs() {
-        this.weight = Input.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Integer> weight;
+        private Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
     	      this.weight = defaults.weight;
         }
 
-        public Builder weight(Input<Integer> weight) {
+        public Builder weight(Output<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
         public Builder weight(Integer weight) {
-            this.weight = Input.of(Objects.requireNonNull(weight));
+            this.weight = Output.of(Objects.requireNonNull(weight));
             return this;
         }
         public RecordWeightedRoutingPolicyArgs build() {

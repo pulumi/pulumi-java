@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowCustomRequestHandlingGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class WebAclDefaultActionAllowGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customRequestHandling")
-      private final @Nullable Input<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+      private final @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Input<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Input.empty() : this.customRequestHandling;
+    public Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> getCustomRequestHandling() {
+        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
     }
 
-    public WebAclDefaultActionAllowGetArgs(@Nullable Input<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
+    public WebAclDefaultActionAllowGetArgs(@Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
     private WebAclDefaultActionAllowGetArgs() {
-        this.customRequestHandling = Input.empty();
+        this.customRequestHandling = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclDefaultActionAllowGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
+        private @Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclDefaultActionAllowGetArgs extends io.pulumi.resources.R
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder customRequestHandling(@Nullable Input<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Output<WebAclDefaultActionAllowCustomRequestHandlingGetArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
         public Builder customRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandlingGetArgs customRequestHandling) {
-            this.customRequestHandling = Input.ofNullable(customRequestHandling);
+            this.customRequestHandling = Output.ofNullable(customRequestHandling);
             return this;
         }
         public WebAclDefaultActionAllowGetArgs build() {

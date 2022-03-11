@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<Map<String,String>> context;
+      private final @Nullable Output<Map<String,String>> context;
 
-    public Input<Map<String,String>> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<Map<String,String>> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
@@ -42,25 +42,25 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plaintext", required=true)
-      private final Input<String> plaintext;
+      private final Output<String> plaintext;
 
-    public Input<String> getPlaintext() {
+    public Output<String> getPlaintext() {
         return this.plaintext;
     }
 
     public CiphertextArgs(
-        @Nullable Input<Map<String,String>> context,
-        Input<String> keyId,
-        Input<String> plaintext) {
+        @Nullable Output<Map<String,String>> context,
+        Output<String> keyId,
+        Output<String> plaintext) {
         this.context = context;
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
         this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
     }
 
     private CiphertextArgs() {
-        this.context = Input.empty();
-        this.keyId = Input.empty();
-        this.plaintext = Input.empty();
+        this.context = Output.empty();
+        this.keyId = Output.empty();
+        this.plaintext = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> context;
-        private Input<String> keyId;
-        private Input<String> plaintext;
+        private @Nullable Output<Map<String,String>> context;
+        private Output<String> keyId;
+        private Output<String> plaintext;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder context(@Nullable Input<Map<String,String>> context) {
+        public Builder context(@Nullable Output<Map<String,String>> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder plaintext(Input<String> plaintext) {
+        public Builder plaintext(Output<String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
 
         public Builder plaintext(String plaintext) {
-            this.plaintext = Input.of(Objects.requireNonNull(plaintext));
+            this.plaintext = Output.of(Objects.requireNonNull(plaintext));
             return this;
         }
         public CiphertextArgs build() {

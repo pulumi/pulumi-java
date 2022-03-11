@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3;
 
 import io.pulumi.aws.s3.inputs.BucketMetricFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,10 +31,10 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketMetricFilterArgs> filter;
+      private final @Nullable Output<BucketMetricFilterArgs> filter;
 
-    public Input<BucketMetricFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketMetricFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BucketMetricArgs(
-        Input<String> bucket,
-        @Nullable Input<BucketMetricFilterArgs> filter,
-        @Nullable Input<String> name) {
+        Output<String> bucket,
+        @Nullable Output<BucketMetricFilterArgs> filter,
+        @Nullable Output<String> name) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.filter = filter;
         this.name = name;
     }
 
     private BucketMetricArgs() {
-        this.bucket = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
+        this.bucket = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<BucketMetricFilterArgs> filter;
-        private @Nullable Input<String> name;
+        private Output<String> bucket;
+        private @Nullable Output<BucketMetricFilterArgs> filter;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketMetricFilterArgs> filter) {
+        public Builder filter(@Nullable Output<BucketMetricFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketMetricFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BucketMetricArgs build() {

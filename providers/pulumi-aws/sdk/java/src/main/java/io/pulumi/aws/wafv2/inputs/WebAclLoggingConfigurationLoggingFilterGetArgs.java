@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
      * 
      */
     @InputImport(name="defaultBehavior", required=true)
-      private final Input<String> defaultBehavior;
+      private final Output<String> defaultBehavior;
 
-    public Input<String> getDefaultBehavior() {
+    public Output<String> getDefaultBehavior() {
         return this.defaultBehavior;
     }
 
@@ -31,22 +31,22 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
      * 
      */
     @InputImport(name="filters", required=true)
-      private final Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
+      private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
 
-    public Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> getFilters() {
+    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> getFilters() {
         return this.filters;
     }
 
     public WebAclLoggingConfigurationLoggingFilterGetArgs(
-        Input<String> defaultBehavior,
-        Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
+        Output<String> defaultBehavior,
+        Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
         this.defaultBehavior = Objects.requireNonNull(defaultBehavior, "expected parameter 'defaultBehavior' to be non-null");
         this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
     }
 
     private WebAclLoggingConfigurationLoggingFilterGetArgs() {
-        this.defaultBehavior = Input.empty();
-        this.filters = Input.empty();
+        this.defaultBehavior = Output.empty();
+        this.filters = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> defaultBehavior;
-        private Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
+        private Output<String> defaultBehavior;
+        private Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
     	      this.filters = defaults.filters;
         }
 
-        public Builder defaultBehavior(Input<String> defaultBehavior) {
+        public Builder defaultBehavior(Output<String> defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
         public Builder defaultBehavior(String defaultBehavior) {
-            this.defaultBehavior = Input.of(Objects.requireNonNull(defaultBehavior));
+            this.defaultBehavior = Output.of(Objects.requireNonNull(defaultBehavior));
             return this;
         }
 
-        public Builder filters(Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
+        public Builder filters(Output<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
         public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs> filters) {
-            this.filters = Input.of(Objects.requireNonNull(filters));
+            this.filters = Output.of(Objects.requireNonNull(filters));
             return this;
         }
         public WebAclLoggingConfigurationLoggingFilterGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationId")
-      private final @Nullable Input<String> allocationId;
+      private final @Nullable Output<String> allocationId;
 
-    public Input<String> getAllocationId() {
-        return this.allocationId == null ? Input.empty() : this.allocationId;
+    public Output<String> getAllocationId() {
+        return this.allocationId == null ? Output.empty() : this.allocationId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowReassociation")
-      private final @Nullable Input<Boolean> allowReassociation;
+      private final @Nullable Output<Boolean> allowReassociation;
 
-    public Input<Boolean> getAllowReassociation() {
-        return this.allowReassociation == null ? Input.empty() : this.allowReassociation;
+    public Output<Boolean> getAllowReassociation() {
+        return this.allowReassociation == null ? Output.empty() : this.allowReassociation;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
     /**
@@ -84,19 +84,19 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIp")
-      private final @Nullable Input<String> publicIp;
+      private final @Nullable Output<String> publicIp;
 
-    public Input<String> getPublicIp() {
-        return this.publicIp == null ? Input.empty() : this.publicIp;
+    public Output<String> getPublicIp() {
+        return this.publicIp == null ? Output.empty() : this.publicIp;
     }
 
     public EipAssociationArgs(
-        @Nullable Input<String> allocationId,
-        @Nullable Input<Boolean> allowReassociation,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<String> privateIpAddress,
-        @Nullable Input<String> publicIp) {
+        @Nullable Output<String> allocationId,
+        @Nullable Output<Boolean> allowReassociation,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<String> privateIpAddress,
+        @Nullable Output<String> publicIp) {
         this.allocationId = allocationId;
         this.allowReassociation = allowReassociation;
         this.instanceId = instanceId;
@@ -106,12 +106,12 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EipAssociationArgs() {
-        this.allocationId = Input.empty();
-        this.allowReassociation = Input.empty();
-        this.instanceId = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.privateIpAddress = Input.empty();
-        this.publicIp = Input.empty();
+        this.allocationId = Output.empty();
+        this.allowReassociation = Output.empty();
+        this.instanceId = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.privateIpAddress = Output.empty();
+        this.publicIp = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,12 +123,12 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> allocationId;
-        private @Nullable Input<Boolean> allowReassociation;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<String> privateIpAddress;
-        private @Nullable Input<String> publicIp;
+        private @Nullable Output<String> allocationId;
+        private @Nullable Output<Boolean> allowReassociation;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<String> privateIpAddress;
+        private @Nullable Output<String> publicIp;
 
         public Builder() {
     	      // Empty
@@ -144,63 +144,63 @@ public final class EipAssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicIp = defaults.publicIp;
         }
 
-        public Builder allocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Output<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
         public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Input.ofNullable(allocationId);
+            this.allocationId = Output.ofNullable(allocationId);
             return this;
         }
 
-        public Builder allowReassociation(@Nullable Input<Boolean> allowReassociation) {
+        public Builder allowReassociation(@Nullable Output<Boolean> allowReassociation) {
             this.allowReassociation = allowReassociation;
             return this;
         }
 
         public Builder allowReassociation(@Nullable Boolean allowReassociation) {
-            this.allowReassociation = Input.ofNullable(allowReassociation);
+            this.allowReassociation = Output.ofNullable(allowReassociation);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder publicIp(@Nullable Input<String> publicIp) {
+        public Builder publicIp(@Nullable Output<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
         public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = Input.ofNullable(publicIp);
+            this.publicIp = Output.ofNullable(publicIp);
             return this;
         }
         public EipAssociationArgs build() {

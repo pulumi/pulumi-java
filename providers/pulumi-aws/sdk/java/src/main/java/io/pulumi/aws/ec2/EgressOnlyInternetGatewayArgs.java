@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public EgressOnlyInternetGatewayArgs(
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vpcId) {
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vpcId) {
         this.tags = tags;
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private EgressOnlyInternetGatewayArgs() {
-        this.tags = Input.empty();
-        this.vpcId = Input.empty();
+        this.tags = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vpcId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public EgressOnlyInternetGatewayArgs build() {

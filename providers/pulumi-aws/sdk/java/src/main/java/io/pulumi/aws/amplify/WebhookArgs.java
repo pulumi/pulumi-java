@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -30,9 +30,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName", required=true)
-      private final Input<String> branchName;
+      private final Output<String> branchName;
 
-    public Input<String> getBranchName() {
+    public Output<String> getBranchName() {
         return this.branchName;
     }
 
@@ -41,25 +41,25 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     public WebhookArgs(
-        Input<String> appId,
-        Input<String> branchName,
-        @Nullable Input<String> description) {
+        Output<String> appId,
+        Output<String> branchName,
+        @Nullable Output<String> description) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
         this.description = description;
     }
 
     private WebhookArgs() {
-        this.appId = Input.empty();
-        this.branchName = Input.empty();
-        this.description = Input.empty();
+        this.appId = Output.empty();
+        this.branchName = Output.empty();
+        this.description = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private Input<String> branchName;
-        private @Nullable Input<String> description;
+        private Output<String> appId;
+        private Output<String> branchName;
+        private @Nullable Output<String> description;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder branchName(Input<String> branchName) {
+        public Builder branchName(Output<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Input.of(Objects.requireNonNull(branchName));
+            this.branchName = Output.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
         public WebhookArgs build() {

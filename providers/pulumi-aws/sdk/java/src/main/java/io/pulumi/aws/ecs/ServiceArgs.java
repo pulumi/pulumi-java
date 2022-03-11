@@ -11,7 +11,7 @@ import io.pulumi.aws.ecs.inputs.ServiceNetworkConfigurationArgs;
 import io.pulumi.aws.ecs.inputs.ServiceOrderedPlacementStrategyArgs;
 import io.pulumi.aws.ecs.inputs.ServicePlacementConstraintArgs;
 import io.pulumi.aws.ecs.inputs.ServiceServiceRegistriesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -31,10 +31,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviderStrategies")
-      private final @Nullable Input<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies;
+      private final @Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies;
 
-    public Input<List<ServiceCapacityProviderStrategyArgs>> getCapacityProviderStrategies() {
-        return this.capacityProviderStrategies == null ? Input.empty() : this.capacityProviderStrategies;
+    public Output<List<ServiceCapacityProviderStrategyArgs>> getCapacityProviderStrategies() {
+        return this.capacityProviderStrategies == null ? Output.empty() : this.capacityProviderStrategies;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-      private final @Nullable Input<String> cluster;
+      private final @Nullable Output<String> cluster;
 
-    public Input<String> getCluster() {
-        return this.cluster == null ? Input.empty() : this.cluster;
+    public Output<String> getCluster() {
+        return this.cluster == null ? Output.empty() : this.cluster;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentCircuitBreaker")
-      private final @Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
+      private final @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
 
-    public Input<ServiceDeploymentCircuitBreakerArgs> getDeploymentCircuitBreaker() {
-        return this.deploymentCircuitBreaker == null ? Input.empty() : this.deploymentCircuitBreaker;
+    public Output<ServiceDeploymentCircuitBreakerArgs> getDeploymentCircuitBreaker() {
+        return this.deploymentCircuitBreaker == null ? Output.empty() : this.deploymentCircuitBreaker;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentController")
-      private final @Nullable Input<ServiceDeploymentControllerArgs> deploymentController;
+      private final @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
 
-    public Input<ServiceDeploymentControllerArgs> getDeploymentController() {
-        return this.deploymentController == null ? Input.empty() : this.deploymentController;
+    public Output<ServiceDeploymentControllerArgs> getDeploymentController() {
+        return this.deploymentController == null ? Output.empty() : this.deploymentController;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMaximumPercent")
-      private final @Nullable Input<Integer> deploymentMaximumPercent;
+      private final @Nullable Output<Integer> deploymentMaximumPercent;
 
-    public Input<Integer> getDeploymentMaximumPercent() {
-        return this.deploymentMaximumPercent == null ? Input.empty() : this.deploymentMaximumPercent;
+    public Output<Integer> getDeploymentMaximumPercent() {
+        return this.deploymentMaximumPercent == null ? Output.empty() : this.deploymentMaximumPercent;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMinimumHealthyPercent")
-      private final @Nullable Input<Integer> deploymentMinimumHealthyPercent;
+      private final @Nullable Output<Integer> deploymentMinimumHealthyPercent;
 
-    public Input<Integer> getDeploymentMinimumHealthyPercent() {
-        return this.deploymentMinimumHealthyPercent == null ? Input.empty() : this.deploymentMinimumHealthyPercent;
+    public Output<Integer> getDeploymentMinimumHealthyPercent() {
+        return this.deploymentMinimumHealthyPercent == null ? Output.empty() : this.deploymentMinimumHealthyPercent;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredCount")
-      private final @Nullable Input<Integer> desiredCount;
+      private final @Nullable Output<Integer> desiredCount;
 
-    public Input<Integer> getDesiredCount() {
-        return this.desiredCount == null ? Input.empty() : this.desiredCount;
+    public Output<Integer> getDesiredCount() {
+        return this.desiredCount == null ? Output.empty() : this.desiredCount;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableEcsManagedTags")
-      private final @Nullable Input<Boolean> enableEcsManagedTags;
+      private final @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Input<Boolean> getEnableEcsManagedTags() {
-        return this.enableEcsManagedTags == null ? Input.empty() : this.enableEcsManagedTags;
+    public Output<Boolean> getEnableEcsManagedTags() {
+        return this.enableEcsManagedTags == null ? Output.empty() : this.enableEcsManagedTags;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableExecuteCommand")
-      private final @Nullable Input<Boolean> enableExecuteCommand;
+      private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Input<Boolean> getEnableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Input.empty() : this.enableExecuteCommand;
+    public Output<Boolean> getEnableExecuteCommand() {
+        return this.enableExecuteCommand == null ? Output.empty() : this.enableExecuteCommand;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceNewDeployment")
-      private final @Nullable Input<Boolean> forceNewDeployment;
+      private final @Nullable Output<Boolean> forceNewDeployment;
 
-    public Input<Boolean> getForceNewDeployment() {
-        return this.forceNewDeployment == null ? Input.empty() : this.forceNewDeployment;
+    public Output<Boolean> getForceNewDeployment() {
+        return this.forceNewDeployment == null ? Output.empty() : this.forceNewDeployment;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckGracePeriodSeconds")
-      private final @Nullable Input<Integer> healthCheckGracePeriodSeconds;
+      private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Input<Integer> getHealthCheckGracePeriodSeconds() {
-        return this.healthCheckGracePeriodSeconds == null ? Input.empty() : this.healthCheckGracePeriodSeconds;
+    public Output<Integer> getHealthCheckGracePeriodSeconds() {
+        return this.healthCheckGracePeriodSeconds == null ? Output.empty() : this.healthCheckGracePeriodSeconds;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRole")
-      private final @Nullable Input<String> iamRole;
+      private final @Nullable Output<String> iamRole;
 
-    public Input<String> getIamRole() {
-        return this.iamRole == null ? Input.empty() : this.iamRole;
+    public Output<String> getIamRole() {
+        return this.iamRole == null ? Output.empty() : this.iamRole;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchType")
-      private final @Nullable Input<String> launchType;
+      private final @Nullable Output<String> launchType;
 
-    public Input<String> getLaunchType() {
-        return this.launchType == null ? Input.empty() : this.launchType;
+    public Output<String> getLaunchType() {
+        return this.launchType == null ? Output.empty() : this.launchType;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-      private final @Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers;
+      private final @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
 
-    public Input<List<ServiceLoadBalancerArgs>> getLoadBalancers() {
-        return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
+    public Output<List<ServiceLoadBalancerArgs>> getLoadBalancers() {
+        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-      private final @Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
 
-    public Input<ServiceNetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
+    public Output<ServiceNetworkConfigurationArgs> getNetworkConfiguration() {
+        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderedPlacementStrategies")
-      private final @Nullable Input<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies;
+      private final @Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies;
 
-    public Input<List<ServiceOrderedPlacementStrategyArgs>> getOrderedPlacementStrategies() {
-        return this.orderedPlacementStrategies == null ? Input.empty() : this.orderedPlacementStrategies;
+    public Output<List<ServiceOrderedPlacementStrategyArgs>> getOrderedPlacementStrategies() {
+        return this.orderedPlacementStrategies == null ? Output.empty() : this.orderedPlacementStrategies;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementConstraints")
-      private final @Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints;
+      private final @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
 
-    public Input<List<ServicePlacementConstraintArgs>> getPlacementConstraints() {
-        return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
+    public Output<List<ServicePlacementConstraintArgs>> getPlacementConstraints() {
+        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
     }
 
     /**
@@ -229,10 +229,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-      private final @Nullable Input<String> platformVersion;
+      private final @Nullable Output<String> platformVersion;
 
-    public Input<String> getPlatformVersion() {
-        return this.platformVersion == null ? Input.empty() : this.platformVersion;
+    public Output<String> getPlatformVersion() {
+        return this.platformVersion == null ? Output.empty() : this.platformVersion;
     }
 
     /**
@@ -240,10 +240,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propagateTags")
-      private final @Nullable Input<String> propagateTags;
+      private final @Nullable Output<String> propagateTags;
 
-    public Input<String> getPropagateTags() {
-        return this.propagateTags == null ? Input.empty() : this.propagateTags;
+    public Output<String> getPropagateTags() {
+        return this.propagateTags == null ? Output.empty() : this.propagateTags;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingStrategy")
-      private final @Nullable Input<String> schedulingStrategy;
+      private final @Nullable Output<String> schedulingStrategy;
 
-    public Input<String> getSchedulingStrategy() {
-        return this.schedulingStrategy == null ? Input.empty() : this.schedulingStrategy;
+    public Output<String> getSchedulingStrategy() {
+        return this.schedulingStrategy == null ? Output.empty() : this.schedulingStrategy;
     }
 
     /**
@@ -262,10 +262,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRegistries")
-      private final @Nullable Input<ServiceServiceRegistriesArgs> serviceRegistries;
+      private final @Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries;
 
-    public Input<ServiceServiceRegistriesArgs> getServiceRegistries() {
-        return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
+    public Output<ServiceServiceRegistriesArgs> getServiceRegistries() {
+        return this.serviceRegistries == null ? Output.empty() : this.serviceRegistries;
     }
 
     /**
@@ -273,10 +273,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -284,10 +284,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinition")
-      private final @Nullable Input<String> taskDefinition;
+      private final @Nullable Output<String> taskDefinition;
 
-    public Input<String> getTaskDefinition() {
-        return this.taskDefinition == null ? Input.empty() : this.taskDefinition;
+    public Output<String> getTaskDefinition() {
+        return this.taskDefinition == null ? Output.empty() : this.taskDefinition;
     }
 
     /**
@@ -295,38 +295,38 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForSteadyState")
-      private final @Nullable Input<Boolean> waitForSteadyState;
+      private final @Nullable Output<Boolean> waitForSteadyState;
 
-    public Input<Boolean> getWaitForSteadyState() {
-        return this.waitForSteadyState == null ? Input.empty() : this.waitForSteadyState;
+    public Output<Boolean> getWaitForSteadyState() {
+        return this.waitForSteadyState == null ? Output.empty() : this.waitForSteadyState;
     }
 
     public ServiceArgs(
-        @Nullable Input<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies,
-        @Nullable Input<String> cluster,
-        @Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker,
-        @Nullable Input<ServiceDeploymentControllerArgs> deploymentController,
-        @Nullable Input<Integer> deploymentMaximumPercent,
-        @Nullable Input<Integer> deploymentMinimumHealthyPercent,
-        @Nullable Input<Integer> desiredCount,
-        @Nullable Input<Boolean> enableEcsManagedTags,
-        @Nullable Input<Boolean> enableExecuteCommand,
-        @Nullable Input<Boolean> forceNewDeployment,
-        @Nullable Input<Integer> healthCheckGracePeriodSeconds,
-        @Nullable Input<String> iamRole,
-        @Nullable Input<String> launchType,
-        @Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers,
-        @Nullable Input<String> name,
-        @Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration,
-        @Nullable Input<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies,
-        @Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints,
-        @Nullable Input<String> platformVersion,
-        @Nullable Input<String> propagateTags,
-        @Nullable Input<String> schedulingStrategy,
-        @Nullable Input<ServiceServiceRegistriesArgs> serviceRegistries,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> taskDefinition,
-        @Nullable Input<Boolean> waitForSteadyState) {
+        @Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies,
+        @Nullable Output<String> cluster,
+        @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker,
+        @Nullable Output<ServiceDeploymentControllerArgs> deploymentController,
+        @Nullable Output<Integer> deploymentMaximumPercent,
+        @Nullable Output<Integer> deploymentMinimumHealthyPercent,
+        @Nullable Output<Integer> desiredCount,
+        @Nullable Output<Boolean> enableEcsManagedTags,
+        @Nullable Output<Boolean> enableExecuteCommand,
+        @Nullable Output<Boolean> forceNewDeployment,
+        @Nullable Output<Integer> healthCheckGracePeriodSeconds,
+        @Nullable Output<String> iamRole,
+        @Nullable Output<String> launchType,
+        @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers,
+        @Nullable Output<String> name,
+        @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration,
+        @Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies,
+        @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints,
+        @Nullable Output<String> platformVersion,
+        @Nullable Output<String> propagateTags,
+        @Nullable Output<String> schedulingStrategy,
+        @Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> taskDefinition,
+        @Nullable Output<Boolean> waitForSteadyState) {
         this.capacityProviderStrategies = capacityProviderStrategies;
         this.cluster = cluster;
         this.deploymentCircuitBreaker = deploymentCircuitBreaker;
@@ -355,31 +355,31 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.capacityProviderStrategies = Input.empty();
-        this.cluster = Input.empty();
-        this.deploymentCircuitBreaker = Input.empty();
-        this.deploymentController = Input.empty();
-        this.deploymentMaximumPercent = Input.empty();
-        this.deploymentMinimumHealthyPercent = Input.empty();
-        this.desiredCount = Input.empty();
-        this.enableEcsManagedTags = Input.empty();
-        this.enableExecuteCommand = Input.empty();
-        this.forceNewDeployment = Input.empty();
-        this.healthCheckGracePeriodSeconds = Input.empty();
-        this.iamRole = Input.empty();
-        this.launchType = Input.empty();
-        this.loadBalancers = Input.empty();
-        this.name = Input.empty();
-        this.networkConfiguration = Input.empty();
-        this.orderedPlacementStrategies = Input.empty();
-        this.placementConstraints = Input.empty();
-        this.platformVersion = Input.empty();
-        this.propagateTags = Input.empty();
-        this.schedulingStrategy = Input.empty();
-        this.serviceRegistries = Input.empty();
-        this.tags = Input.empty();
-        this.taskDefinition = Input.empty();
-        this.waitForSteadyState = Input.empty();
+        this.capacityProviderStrategies = Output.empty();
+        this.cluster = Output.empty();
+        this.deploymentCircuitBreaker = Output.empty();
+        this.deploymentController = Output.empty();
+        this.deploymentMaximumPercent = Output.empty();
+        this.deploymentMinimumHealthyPercent = Output.empty();
+        this.desiredCount = Output.empty();
+        this.enableEcsManagedTags = Output.empty();
+        this.enableExecuteCommand = Output.empty();
+        this.forceNewDeployment = Output.empty();
+        this.healthCheckGracePeriodSeconds = Output.empty();
+        this.iamRole = Output.empty();
+        this.launchType = Output.empty();
+        this.loadBalancers = Output.empty();
+        this.name = Output.empty();
+        this.networkConfiguration = Output.empty();
+        this.orderedPlacementStrategies = Output.empty();
+        this.placementConstraints = Output.empty();
+        this.platformVersion = Output.empty();
+        this.propagateTags = Output.empty();
+        this.schedulingStrategy = Output.empty();
+        this.serviceRegistries = Output.empty();
+        this.tags = Output.empty();
+        this.taskDefinition = Output.empty();
+        this.waitForSteadyState = Output.empty();
     }
 
     public static Builder builder() {
@@ -391,31 +391,31 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies;
-        private @Nullable Input<String> cluster;
-        private @Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
-        private @Nullable Input<ServiceDeploymentControllerArgs> deploymentController;
-        private @Nullable Input<Integer> deploymentMaximumPercent;
-        private @Nullable Input<Integer> deploymentMinimumHealthyPercent;
-        private @Nullable Input<Integer> desiredCount;
-        private @Nullable Input<Boolean> enableEcsManagedTags;
-        private @Nullable Input<Boolean> enableExecuteCommand;
-        private @Nullable Input<Boolean> forceNewDeployment;
-        private @Nullable Input<Integer> healthCheckGracePeriodSeconds;
-        private @Nullable Input<String> iamRole;
-        private @Nullable Input<String> launchType;
-        private @Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Input<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies;
-        private @Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints;
-        private @Nullable Input<String> platformVersion;
-        private @Nullable Input<String> propagateTags;
-        private @Nullable Input<String> schedulingStrategy;
-        private @Nullable Input<ServiceServiceRegistriesArgs> serviceRegistries;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> taskDefinition;
-        private @Nullable Input<Boolean> waitForSteadyState;
+        private @Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies;
+        private @Nullable Output<String> cluster;
+        private @Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker;
+        private @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
+        private @Nullable Output<Integer> deploymentMaximumPercent;
+        private @Nullable Output<Integer> deploymentMinimumHealthyPercent;
+        private @Nullable Output<Integer> desiredCount;
+        private @Nullable Output<Boolean> enableEcsManagedTags;
+        private @Nullable Output<Boolean> enableExecuteCommand;
+        private @Nullable Output<Boolean> forceNewDeployment;
+        private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
+        private @Nullable Output<String> iamRole;
+        private @Nullable Output<String> launchType;
+        private @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
+        private @Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies;
+        private @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
+        private @Nullable Output<String> platformVersion;
+        private @Nullable Output<String> propagateTags;
+        private @Nullable Output<String> schedulingStrategy;
+        private @Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> taskDefinition;
+        private @Nullable Output<Boolean> waitForSteadyState;
 
         public Builder() {
     	      // Empty
@@ -450,253 +450,253 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitForSteadyState = defaults.waitForSteadyState;
         }
 
-        public Builder capacityProviderStrategies(@Nullable Input<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Output<List<ServiceCapacityProviderStrategyArgs>> capacityProviderStrategies) {
             this.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
         public Builder capacityProviderStrategies(@Nullable List<ServiceCapacityProviderStrategyArgs> capacityProviderStrategies) {
-            this.capacityProviderStrategies = Input.ofNullable(capacityProviderStrategies);
+            this.capacityProviderStrategies = Output.ofNullable(capacityProviderStrategies);
             return this;
         }
 
-        public Builder cluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Output<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Input.ofNullable(cluster);
+            this.cluster = Output.ofNullable(cluster);
             return this;
         }
 
-        public Builder deploymentCircuitBreaker(@Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable Output<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
 
         public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
-            this.deploymentCircuitBreaker = Input.ofNullable(deploymentCircuitBreaker);
+            this.deploymentCircuitBreaker = Output.ofNullable(deploymentCircuitBreaker);
             return this;
         }
 
-        public Builder deploymentController(@Nullable Input<ServiceDeploymentControllerArgs> deploymentController) {
+        public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerArgs> deploymentController) {
             this.deploymentController = deploymentController;
             return this;
         }
 
         public Builder deploymentController(@Nullable ServiceDeploymentControllerArgs deploymentController) {
-            this.deploymentController = Input.ofNullable(deploymentController);
+            this.deploymentController = Output.ofNullable(deploymentController);
             return this;
         }
 
-        public Builder deploymentMaximumPercent(@Nullable Input<Integer> deploymentMaximumPercent) {
+        public Builder deploymentMaximumPercent(@Nullable Output<Integer> deploymentMaximumPercent) {
             this.deploymentMaximumPercent = deploymentMaximumPercent;
             return this;
         }
 
         public Builder deploymentMaximumPercent(@Nullable Integer deploymentMaximumPercent) {
-            this.deploymentMaximumPercent = Input.ofNullable(deploymentMaximumPercent);
+            this.deploymentMaximumPercent = Output.ofNullable(deploymentMaximumPercent);
             return this;
         }
 
-        public Builder deploymentMinimumHealthyPercent(@Nullable Input<Integer> deploymentMinimumHealthyPercent) {
+        public Builder deploymentMinimumHealthyPercent(@Nullable Output<Integer> deploymentMinimumHealthyPercent) {
             this.deploymentMinimumHealthyPercent = deploymentMinimumHealthyPercent;
             return this;
         }
 
         public Builder deploymentMinimumHealthyPercent(@Nullable Integer deploymentMinimumHealthyPercent) {
-            this.deploymentMinimumHealthyPercent = Input.ofNullable(deploymentMinimumHealthyPercent);
+            this.deploymentMinimumHealthyPercent = Output.ofNullable(deploymentMinimumHealthyPercent);
             return this;
         }
 
-        public Builder desiredCount(@Nullable Input<Integer> desiredCount) {
+        public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
 
         public Builder desiredCount(@Nullable Integer desiredCount) {
-            this.desiredCount = Input.ofNullable(desiredCount);
+            this.desiredCount = Output.ofNullable(desiredCount);
             return this;
         }
 
-        public Builder enableEcsManagedTags(@Nullable Input<Boolean> enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Output<Boolean> enableEcsManagedTags) {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
         public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
-            this.enableEcsManagedTags = Input.ofNullable(enableEcsManagedTags);
+            this.enableEcsManagedTags = Output.ofNullable(enableEcsManagedTags);
             return this;
         }
 
-        public Builder enableExecuteCommand(@Nullable Input<Boolean> enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Input.ofNullable(enableExecuteCommand);
+            this.enableExecuteCommand = Output.ofNullable(enableExecuteCommand);
             return this;
         }
 
-        public Builder forceNewDeployment(@Nullable Input<Boolean> forceNewDeployment) {
+        public Builder forceNewDeployment(@Nullable Output<Boolean> forceNewDeployment) {
             this.forceNewDeployment = forceNewDeployment;
             return this;
         }
 
         public Builder forceNewDeployment(@Nullable Boolean forceNewDeployment) {
-            this.forceNewDeployment = Input.ofNullable(forceNewDeployment);
+            this.forceNewDeployment = Output.ofNullable(forceNewDeployment);
             return this;
         }
 
-        public Builder healthCheckGracePeriodSeconds(@Nullable Input<Integer> healthCheckGracePeriodSeconds) {
+        public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
 
         public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = Input.ofNullable(healthCheckGracePeriodSeconds);
+            this.healthCheckGracePeriodSeconds = Output.ofNullable(healthCheckGracePeriodSeconds);
             return this;
         }
 
-        public Builder iamRole(@Nullable Input<String> iamRole) {
+        public Builder iamRole(@Nullable Output<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
         public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Input.ofNullable(iamRole);
+            this.iamRole = Output.ofNullable(iamRole);
             return this;
         }
 
-        public Builder launchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Output<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
         public Builder launchType(@Nullable String launchType) {
-            this.launchType = Input.ofNullable(launchType);
+            this.launchType = Output.ofNullable(launchType);
             return this;
         }
 
-        public Builder loadBalancers(@Nullable Input<List<ServiceLoadBalancerArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
         public Builder loadBalancers(@Nullable List<ServiceLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Input.ofNullable(loadBalancers);
+            this.loadBalancers = Output.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkConfiguration(@Nullable Input<ServiceNetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
         public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Input.ofNullable(networkConfiguration);
+            this.networkConfiguration = Output.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder orderedPlacementStrategies(@Nullable Input<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies) {
+        public Builder orderedPlacementStrategies(@Nullable Output<List<ServiceOrderedPlacementStrategyArgs>> orderedPlacementStrategies) {
             this.orderedPlacementStrategies = orderedPlacementStrategies;
             return this;
         }
 
         public Builder orderedPlacementStrategies(@Nullable List<ServiceOrderedPlacementStrategyArgs> orderedPlacementStrategies) {
-            this.orderedPlacementStrategies = Input.ofNullable(orderedPlacementStrategies);
+            this.orderedPlacementStrategies = Output.ofNullable(orderedPlacementStrategies);
             return this;
         }
 
-        public Builder placementConstraints(@Nullable Input<List<ServicePlacementConstraintArgs>> placementConstraints) {
+        public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
         public Builder placementConstraints(@Nullable List<ServicePlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Input.ofNullable(placementConstraints);
+            this.placementConstraints = Output.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder platformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Input.ofNullable(platformVersion);
+            this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder propagateTags(@Nullable Input<String> propagateTags) {
+        public Builder propagateTags(@Nullable Output<String> propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
         public Builder propagateTags(@Nullable String propagateTags) {
-            this.propagateTags = Input.ofNullable(propagateTags);
+            this.propagateTags = Output.ofNullable(propagateTags);
             return this;
         }
 
-        public Builder schedulingStrategy(@Nullable Input<String> schedulingStrategy) {
+        public Builder schedulingStrategy(@Nullable Output<String> schedulingStrategy) {
             this.schedulingStrategy = schedulingStrategy;
             return this;
         }
 
         public Builder schedulingStrategy(@Nullable String schedulingStrategy) {
-            this.schedulingStrategy = Input.ofNullable(schedulingStrategy);
+            this.schedulingStrategy = Output.ofNullable(schedulingStrategy);
             return this;
         }
 
-        public Builder serviceRegistries(@Nullable Input<ServiceServiceRegistriesArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Output<ServiceServiceRegistriesArgs> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
 
         public Builder serviceRegistries(@Nullable ServiceServiceRegistriesArgs serviceRegistries) {
-            this.serviceRegistries = Input.ofNullable(serviceRegistries);
+            this.serviceRegistries = Output.ofNullable(serviceRegistries);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder taskDefinition(@Nullable Input<String> taskDefinition) {
+        public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
 
         public Builder taskDefinition(@Nullable String taskDefinition) {
-            this.taskDefinition = Input.ofNullable(taskDefinition);
+            this.taskDefinition = Output.ofNullable(taskDefinition);
             return this;
         }
 
-        public Builder waitForSteadyState(@Nullable Input<Boolean> waitForSteadyState) {
+        public Builder waitForSteadyState(@Nullable Output<Boolean> waitForSteadyState) {
             this.waitForSteadyState = waitForSteadyState;
             return this;
         }
 
         public Builder waitForSteadyState(@Nullable Boolean waitForSteadyState) {
-            this.waitForSteadyState = Input.ofNullable(waitForSteadyState);
+            this.waitForSteadyState = Output.ofNullable(waitForSteadyState);
             return this;
         }
         public ServiceArgs build() {

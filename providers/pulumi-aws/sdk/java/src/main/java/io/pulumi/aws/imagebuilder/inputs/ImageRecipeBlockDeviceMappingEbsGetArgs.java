@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deleteOnTermination")
-      private final @Nullable Input<String> deleteOnTermination;
+      private final @Nullable Output<String> deleteOnTermination;
 
-    public Input<String> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
+    public Output<String> getDeleteOnTermination() {
+        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<String> encrypted;
+      private final @Nullable Output<String> encrypted;
 
-    public Input<String> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<String> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="snapshotId")
-      private final @Nullable Input<String> snapshotId;
+      private final @Nullable Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
-        return this.snapshotId == null ? Input.empty() : this.snapshotId;
+    public Output<String> getSnapshotId() {
+        return this.snapshotId == null ? Output.empty() : this.snapshotId;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public ImageRecipeBlockDeviceMappingEbsGetArgs(
-        @Nullable Input<String> deleteOnTermination,
-        @Nullable Input<String> encrypted,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> snapshotId,
-        @Nullable Input<Integer> volumeSize,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<String> deleteOnTermination,
+        @Nullable Output<String> encrypted,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> snapshotId,
+        @Nullable Output<Integer> volumeSize,
+        @Nullable Output<String> volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;
@@ -110,13 +110,13 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     }
 
     private ImageRecipeBlockDeviceMappingEbsGetArgs() {
-        this.deleteOnTermination = Input.empty();
-        this.encrypted = Input.empty();
-        this.iops = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.snapshotId = Input.empty();
-        this.volumeSize = Input.empty();
-        this.volumeType = Input.empty();
+        this.deleteOnTermination = Output.empty();
+        this.encrypted = Output.empty();
+        this.iops = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.snapshotId = Output.empty();
+        this.volumeSize = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deleteOnTermination;
-        private @Nullable Input<String> encrypted;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> snapshotId;
-        private @Nullable Input<Integer> volumeSize;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<String> deleteOnTermination;
+        private @Nullable Output<String> encrypted;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> snapshotId;
+        private @Nullable Output<Integer> volumeSize;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder deleteOnTermination(@Nullable Input<String> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
         public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<String> encrypted) {
+        public Builder encrypted(@Nullable Output<String> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable String encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder snapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Output<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Input.ofNullable(snapshotId);
+            this.snapshotId = Output.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public ImageRecipeBlockDeviceMappingEbsGetArgs build() {

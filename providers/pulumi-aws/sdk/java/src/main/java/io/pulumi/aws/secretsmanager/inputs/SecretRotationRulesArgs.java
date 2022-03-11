@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class SecretRotationRulesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automaticallyAfterDays", required=true)
-      private final Input<Integer> automaticallyAfterDays;
+      private final Output<Integer> automaticallyAfterDays;
 
-    public Input<Integer> getAutomaticallyAfterDays() {
+    public Output<Integer> getAutomaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 
-    public SecretRotationRulesArgs(Input<Integer> automaticallyAfterDays) {
+    public SecretRotationRulesArgs(Output<Integer> automaticallyAfterDays) {
         this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays, "expected parameter 'automaticallyAfterDays' to be non-null");
     }
 
     private SecretRotationRulesArgs() {
-        this.automaticallyAfterDays = Input.empty();
+        this.automaticallyAfterDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class SecretRotationRulesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Integer> automaticallyAfterDays;
+        private Output<Integer> automaticallyAfterDays;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class SecretRotationRulesArgs extends io.pulumi.resources.ResourceA
     	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
         }
 
-        public Builder automaticallyAfterDays(Input<Integer> automaticallyAfterDays) {
+        public Builder automaticallyAfterDays(Output<Integer> automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
         }
 
         public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
-            this.automaticallyAfterDays = Input.of(Objects.requireNonNull(automaticallyAfterDays));
+            this.automaticallyAfterDays = Output.of(Objects.requireNonNull(automaticallyAfterDays));
             return this;
         }
         public SecretRotationRulesArgs build() {

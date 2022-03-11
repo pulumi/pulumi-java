@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class EventBusPolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="eventBusName")
-      private final @Nullable Input<String> eventBusName;
+      private final @Nullable Output<String> eventBusName;
 
-    public Input<String> getEventBusName() {
-        return this.eventBusName == null ? Input.empty() : this.eventBusName;
+    public Output<String> getEventBusName() {
+        return this.eventBusName == null ? Output.empty() : this.eventBusName;
     }
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     public EventBusPolicyState(
-        @Nullable Input<String> eventBusName,
-        @Nullable Input<String> policy) {
+        @Nullable Output<String> eventBusName,
+        @Nullable Output<String> policy) {
         this.eventBusName = eventBusName;
         this.policy = policy;
     }
 
     private EventBusPolicyState() {
-        this.eventBusName = Input.empty();
-        this.policy = Input.empty();
+        this.eventBusName = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class EventBusPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> eventBusName;
-        private @Nullable Input<String> policy;
+        private @Nullable Output<String> eventBusName;
+        private @Nullable Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class EventBusPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policy = defaults.policy;
         }
 
-        public Builder eventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Output<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Input.ofNullable(eventBusName);
+            this.eventBusName = Output.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
         public EventBusPolicyState build() {

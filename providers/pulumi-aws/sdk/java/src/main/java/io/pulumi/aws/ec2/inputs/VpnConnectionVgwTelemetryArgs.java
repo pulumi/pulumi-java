@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="acceptedRouteCount")
-      private final @Nullable Input<Integer> acceptedRouteCount;
+      private final @Nullable Output<Integer> acceptedRouteCount;
 
-    public Input<Integer> getAcceptedRouteCount() {
-        return this.acceptedRouteCount == null ? Input.empty() : this.acceptedRouteCount;
+    public Output<Integer> getAcceptedRouteCount() {
+        return this.acceptedRouteCount == null ? Output.empty() : this.acceptedRouteCount;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="lastStatusChange")
-      private final @Nullable Input<String> lastStatusChange;
+      private final @Nullable Output<String> lastStatusChange;
 
-    public Input<String> getLastStatusChange() {
-        return this.lastStatusChange == null ? Input.empty() : this.lastStatusChange;
+    public Output<String> getLastStatusChange() {
+        return this.lastStatusChange == null ? Output.empty() : this.lastStatusChange;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="outsideIpAddress")
-      private final @Nullable Input<String> outsideIpAddress;
+      private final @Nullable Output<String> outsideIpAddress;
 
-    public Input<String> getOutsideIpAddress() {
-        return this.outsideIpAddress == null ? Input.empty() : this.outsideIpAddress;
+    public Output<String> getOutsideIpAddress() {
+        return this.outsideIpAddress == null ? Output.empty() : this.outsideIpAddress;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statusMessage")
-      private final @Nullable Input<String> statusMessage;
+      private final @Nullable Output<String> statusMessage;
 
-    public Input<String> getStatusMessage() {
-        return this.statusMessage == null ? Input.empty() : this.statusMessage;
+    public Output<String> getStatusMessage() {
+        return this.statusMessage == null ? Output.empty() : this.statusMessage;
     }
 
     public VpnConnectionVgwTelemetryArgs(
-        @Nullable Input<Integer> acceptedRouteCount,
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> lastStatusChange,
-        @Nullable Input<String> outsideIpAddress,
-        @Nullable Input<String> status,
-        @Nullable Input<String> statusMessage) {
+        @Nullable Output<Integer> acceptedRouteCount,
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> lastStatusChange,
+        @Nullable Output<String> outsideIpAddress,
+        @Nullable Output<String> status,
+        @Nullable Output<String> statusMessage) {
         this.acceptedRouteCount = acceptedRouteCount;
         this.certificateArn = certificateArn;
         this.lastStatusChange = lastStatusChange;
@@ -97,12 +97,12 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
     }
 
     private VpnConnectionVgwTelemetryArgs() {
-        this.acceptedRouteCount = Input.empty();
-        this.certificateArn = Input.empty();
-        this.lastStatusChange = Input.empty();
-        this.outsideIpAddress = Input.empty();
-        this.status = Input.empty();
-        this.statusMessage = Input.empty();
+        this.acceptedRouteCount = Output.empty();
+        this.certificateArn = Output.empty();
+        this.lastStatusChange = Output.empty();
+        this.outsideIpAddress = Output.empty();
+        this.status = Output.empty();
+        this.statusMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> acceptedRouteCount;
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> lastStatusChange;
-        private @Nullable Input<String> outsideIpAddress;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> statusMessage;
+        private @Nullable Output<Integer> acceptedRouteCount;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> lastStatusChange;
+        private @Nullable Output<String> outsideIpAddress;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> statusMessage;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder acceptedRouteCount(@Nullable Input<Integer> acceptedRouteCount) {
+        public Builder acceptedRouteCount(@Nullable Output<Integer> acceptedRouteCount) {
             this.acceptedRouteCount = acceptedRouteCount;
             return this;
         }
 
         public Builder acceptedRouteCount(@Nullable Integer acceptedRouteCount) {
-            this.acceptedRouteCount = Input.ofNullable(acceptedRouteCount);
+            this.acceptedRouteCount = Output.ofNullable(acceptedRouteCount);
             return this;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder lastStatusChange(@Nullable Input<String> lastStatusChange) {
+        public Builder lastStatusChange(@Nullable Output<String> lastStatusChange) {
             this.lastStatusChange = lastStatusChange;
             return this;
         }
 
         public Builder lastStatusChange(@Nullable String lastStatusChange) {
-            this.lastStatusChange = Input.ofNullable(lastStatusChange);
+            this.lastStatusChange = Output.ofNullable(lastStatusChange);
             return this;
         }
 
-        public Builder outsideIpAddress(@Nullable Input<String> outsideIpAddress) {
+        public Builder outsideIpAddress(@Nullable Output<String> outsideIpAddress) {
             this.outsideIpAddress = outsideIpAddress;
             return this;
         }
 
         public Builder outsideIpAddress(@Nullable String outsideIpAddress) {
-            this.outsideIpAddress = Input.ofNullable(outsideIpAddress);
+            this.outsideIpAddress = Output.ofNullable(outsideIpAddress);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder statusMessage(@Nullable Input<String> statusMessage) {
+        public Builder statusMessage(@Nullable Output<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
         public Builder statusMessage(@Nullable String statusMessage) {
-            this.statusMessage = Input.ofNullable(statusMessage);
+            this.statusMessage = Output.ofNullable(statusMessage);
             return this;
         }
         public VpnConnectionVgwTelemetryArgs build() {

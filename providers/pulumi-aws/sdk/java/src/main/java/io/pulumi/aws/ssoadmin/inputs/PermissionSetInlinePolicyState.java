@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="inlinePolicy")
-      private final @Nullable Input<String> inlinePolicy;
+      private final @Nullable Output<String> inlinePolicy;
 
-    public Input<String> getInlinePolicy() {
-        return this.inlinePolicy == null ? Input.empty() : this.inlinePolicy;
+    public Output<String> getInlinePolicy() {
+        return this.inlinePolicy == null ? Output.empty() : this.inlinePolicy;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceArn")
-      private final @Nullable Input<String> instanceArn;
+      private final @Nullable Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
-        return this.instanceArn == null ? Input.empty() : this.instanceArn;
+    public Output<String> getInstanceArn() {
+        return this.instanceArn == null ? Output.empty() : this.instanceArn;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="permissionSetArn")
-      private final @Nullable Input<String> permissionSetArn;
+      private final @Nullable Output<String> permissionSetArn;
 
-    public Input<String> getPermissionSetArn() {
-        return this.permissionSetArn == null ? Input.empty() : this.permissionSetArn;
+    public Output<String> getPermissionSetArn() {
+        return this.permissionSetArn == null ? Output.empty() : this.permissionSetArn;
     }
 
     public PermissionSetInlinePolicyState(
-        @Nullable Input<String> inlinePolicy,
-        @Nullable Input<String> instanceArn,
-        @Nullable Input<String> permissionSetArn) {
+        @Nullable Output<String> inlinePolicy,
+        @Nullable Output<String> instanceArn,
+        @Nullable Output<String> permissionSetArn) {
         this.inlinePolicy = inlinePolicy;
         this.instanceArn = instanceArn;
         this.permissionSetArn = permissionSetArn;
     }
 
     private PermissionSetInlinePolicyState() {
-        this.inlinePolicy = Input.empty();
-        this.instanceArn = Input.empty();
-        this.permissionSetArn = Input.empty();
+        this.inlinePolicy = Output.empty();
+        this.instanceArn = Output.empty();
+        this.permissionSetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> inlinePolicy;
-        private @Nullable Input<String> instanceArn;
-        private @Nullable Input<String> permissionSetArn;
+        private @Nullable Output<String> inlinePolicy;
+        private @Nullable Output<String> instanceArn;
+        private @Nullable Output<String> permissionSetArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder inlinePolicy(@Nullable Input<String> inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Output<String> inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
 
         public Builder inlinePolicy(@Nullable String inlinePolicy) {
-            this.inlinePolicy = Input.ofNullable(inlinePolicy);
+            this.inlinePolicy = Output.ofNullable(inlinePolicy);
             return this;
         }
 
-        public Builder instanceArn(@Nullable Input<String> instanceArn) {
+        public Builder instanceArn(@Nullable Output<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
         public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Input.ofNullable(instanceArn);
+            this.instanceArn = Output.ofNullable(instanceArn);
             return this;
         }
 
-        public Builder permissionSetArn(@Nullable Input<String> permissionSetArn) {
+        public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Input.ofNullable(permissionSetArn);
+            this.permissionSetArn = Output.ofNullable(permissionSetArn);
             return this;
         }
         public PermissionSetInlinePolicyState build() {

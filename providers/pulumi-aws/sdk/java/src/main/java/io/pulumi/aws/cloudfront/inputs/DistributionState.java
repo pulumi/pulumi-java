@@ -13,7 +13,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionRestrictionsGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,10 +34,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliases")
-      private final @Nullable Input<List<String>> aliases;
+      private final @Nullable Output<List<String>> aliases;
 
-    public Input<List<String>> getAliases() {
-        return this.aliases == null ? Input.empty() : this.aliases;
+    public Output<List<String>> getAliases() {
+        return this.aliases == null ? Output.empty() : this.aliases;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callerReference")
-      private final @Nullable Input<String> callerReference;
+      private final @Nullable Output<String> callerReference;
 
-    public Input<String> getCallerReference() {
-        return this.callerReference == null ? Input.empty() : this.callerReference;
+    public Output<String> getCallerReference() {
+        return this.callerReference == null ? Output.empty() : this.callerReference;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customErrorResponses")
-      private final @Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
+      private final @Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
 
-    public Input<List<DistributionCustomErrorResponseGetArgs>> getCustomErrorResponses() {
-        return this.customErrorResponses == null ? Input.empty() : this.customErrorResponses;
+    public Output<List<DistributionCustomErrorResponseGetArgs>> getCustomErrorResponses() {
+        return this.customErrorResponses == null ? Output.empty() : this.customErrorResponses;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCacheBehavior")
-      private final @Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
+      private final @Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
 
-    public Input<DistributionDefaultCacheBehaviorGetArgs> getDefaultCacheBehavior() {
-        return this.defaultCacheBehavior == null ? Input.empty() : this.defaultCacheBehavior;
+    public Output<DistributionDefaultCacheBehaviorGetArgs> getDefaultCacheBehavior() {
+        return this.defaultCacheBehavior == null ? Output.empty() : this.defaultCacheBehavior;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRootObject")
-      private final @Nullable Input<String> defaultRootObject;
+      private final @Nullable Output<String> defaultRootObject;
 
-    public Input<String> getDefaultRootObject() {
-        return this.defaultRootObject == null ? Input.empty() : this.defaultRootObject;
+    public Output<String> getDefaultRootObject() {
+        return this.defaultRootObject == null ? Output.empty() : this.defaultRootObject;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId")
-      private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Output<String> hostedZoneId;
 
-    public Input<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
+    public Output<String> getHostedZoneId() {
+        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpVersion")
-      private final @Nullable Input<String> httpVersion;
+      private final @Nullable Output<String> httpVersion;
 
-    public Input<String> getHttpVersion() {
-        return this.httpVersion == null ? Input.empty() : this.httpVersion;
+    public Output<String> getHttpVersion() {
+        return this.httpVersion == null ? Output.empty() : this.httpVersion;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inProgressValidationBatches")
-      private final @Nullable Input<Integer> inProgressValidationBatches;
+      private final @Nullable Output<Integer> inProgressValidationBatches;
 
-    public Input<Integer> getInProgressValidationBatches() {
-        return this.inProgressValidationBatches == null ? Input.empty() : this.inProgressValidationBatches;
+    public Output<Integer> getInProgressValidationBatches() {
+        return this.inProgressValidationBatches == null ? Output.empty() : this.inProgressValidationBatches;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isIpv6Enabled")
-      private final @Nullable Input<Boolean> isIpv6Enabled;
+      private final @Nullable Output<Boolean> isIpv6Enabled;
 
-    public Input<Boolean> getIsIpv6Enabled() {
-        return this.isIpv6Enabled == null ? Input.empty() : this.isIpv6Enabled;
+    public Output<Boolean> getIsIpv6Enabled() {
+        return this.isIpv6Enabled == null ? Output.empty() : this.isIpv6Enabled;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedTime")
-      private final @Nullable Input<String> lastModifiedTime;
+      private final @Nullable Output<String> lastModifiedTime;
 
-    public Input<String> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
+    public Output<String> getLastModifiedTime() {
+        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig;
 
-    public Input<DistributionLoggingConfigGetArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<DistributionLoggingConfigGetArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -225,10 +225,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderedCacheBehaviors")
-      private final @Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
+      private final @Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
 
-    public Input<List<DistributionOrderedCacheBehaviorGetArgs>> getOrderedCacheBehaviors() {
-        return this.orderedCacheBehaviors == null ? Input.empty() : this.orderedCacheBehaviors;
+    public Output<List<DistributionOrderedCacheBehaviorGetArgs>> getOrderedCacheBehaviors() {
+        return this.orderedCacheBehaviors == null ? Output.empty() : this.orderedCacheBehaviors;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroups")
-      private final @Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups;
+      private final @Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups;
 
-    public Input<List<DistributionOriginGroupGetArgs>> getOriginGroups() {
-        return this.originGroups == null ? Input.empty() : this.originGroups;
+    public Output<List<DistributionOriginGroupGetArgs>> getOriginGroups() {
+        return this.originGroups == null ? Output.empty() : this.originGroups;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origins")
-      private final @Nullable Input<List<DistributionOriginGetArgs>> origins;
+      private final @Nullable Output<List<DistributionOriginGetArgs>> origins;
 
-    public Input<List<DistributionOriginGetArgs>> getOrigins() {
-        return this.origins == null ? Input.empty() : this.origins;
+    public Output<List<DistributionOriginGetArgs>> getOrigins() {
+        return this.origins == null ? Output.empty() : this.origins;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priceClass")
-      private final @Nullable Input<String> priceClass;
+      private final @Nullable Output<String> priceClass;
 
-    public Input<String> getPriceClass() {
-        return this.priceClass == null ? Input.empty() : this.priceClass;
+    public Output<String> getPriceClass() {
+        return this.priceClass == null ? Output.empty() : this.priceClass;
     }
 
     /**
@@ -273,10 +273,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions")
-      private final @Nullable Input<DistributionRestrictionsGetArgs> restrictions;
+      private final @Nullable Output<DistributionRestrictionsGetArgs> restrictions;
 
-    public Input<DistributionRestrictionsGetArgs> getRestrictions() {
-        return this.restrictions == null ? Input.empty() : this.restrictions;
+    public Output<DistributionRestrictionsGetArgs> getRestrictions() {
+        return this.restrictions == null ? Output.empty() : this.restrictions;
     }
 
     /**
@@ -286,10 +286,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retainOnDelete")
-      private final @Nullable Input<Boolean> retainOnDelete;
+      private final @Nullable Output<Boolean> retainOnDelete;
 
-    public Input<Boolean> getRetainOnDelete() {
-        return this.retainOnDelete == null ? Input.empty() : this.retainOnDelete;
+    public Output<Boolean> getRetainOnDelete() {
+        return this.retainOnDelete == null ? Output.empty() : this.retainOnDelete;
     }
 
     /**
@@ -299,10 +299,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -321,10 +321,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedKeyGroups")
-      private final @Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
+      private final @Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
 
-    public Input<List<DistributionTrustedKeyGroupGetArgs>> getTrustedKeyGroups() {
-        return this.trustedKeyGroups == null ? Input.empty() : this.trustedKeyGroups;
+    public Output<List<DistributionTrustedKeyGroupGetArgs>> getTrustedKeyGroups() {
+        return this.trustedKeyGroups == null ? Output.empty() : this.trustedKeyGroups;
     }
 
     /**
@@ -345,10 +345,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedSigners")
-      private final @Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners;
+      private final @Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners;
 
-    public Input<List<DistributionTrustedSignerGetArgs>> getTrustedSigners() {
-        return this.trustedSigners == null ? Input.empty() : this.trustedSigners;
+    public Output<List<DistributionTrustedSignerGetArgs>> getTrustedSigners() {
+        return this.trustedSigners == null ? Output.empty() : this.trustedSigners;
     }
 
     /**
@@ -358,10 +358,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewerCertificate")
-      private final @Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate;
+      private final @Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate;
 
-    public Input<DistributionViewerCertificateGetArgs> getViewerCertificate() {
-        return this.viewerCertificate == null ? Input.empty() : this.viewerCertificate;
+    public Output<DistributionViewerCertificateGetArgs> getViewerCertificate() {
+        return this.viewerCertificate == null ? Output.empty() : this.viewerCertificate;
     }
 
     /**
@@ -371,10 +371,10 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForDeployment")
-      private final @Nullable Input<Boolean> waitForDeployment;
+      private final @Nullable Output<Boolean> waitForDeployment;
 
-    public Input<Boolean> getWaitForDeployment() {
-        return this.waitForDeployment == null ? Input.empty() : this.waitForDeployment;
+    public Output<Boolean> getWaitForDeployment() {
+        return this.waitForDeployment == null ? Output.empty() : this.waitForDeployment;
     }
 
     /**
@@ -388,43 +388,43 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webAclId")
-      private final @Nullable Input<String> webAclId;
+      private final @Nullable Output<String> webAclId;
 
-    public Input<String> getWebAclId() {
-        return this.webAclId == null ? Input.empty() : this.webAclId;
+    public Output<String> getWebAclId() {
+        return this.webAclId == null ? Output.empty() : this.webAclId;
     }
 
     public DistributionState(
-        @Nullable Input<List<String>> aliases,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> callerReference,
-        @Nullable Input<String> comment,
-        @Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses,
-        @Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior,
-        @Nullable Input<String> defaultRootObject,
-        @Nullable Input<String> domainName,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> hostedZoneId,
-        @Nullable Input<String> httpVersion,
-        @Nullable Input<Integer> inProgressValidationBatches,
-        @Nullable Input<Boolean> isIpv6Enabled,
-        @Nullable Input<String> lastModifiedTime,
-        @Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig,
-        @Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors,
-        @Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups,
-        @Nullable Input<List<DistributionOriginGetArgs>> origins,
-        @Nullable Input<String> priceClass,
-        @Nullable Input<DistributionRestrictionsGetArgs> restrictions,
-        @Nullable Input<Boolean> retainOnDelete,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups,
-        @Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners,
-        @Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate,
-        @Nullable Input<Boolean> waitForDeployment,
-        @Nullable Input<String> webAclId) {
+        @Nullable Output<List<String>> aliases,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> callerReference,
+        @Nullable Output<String> comment,
+        @Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses,
+        @Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior,
+        @Nullable Output<String> defaultRootObject,
+        @Nullable Output<String> domainName,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> hostedZoneId,
+        @Nullable Output<String> httpVersion,
+        @Nullable Output<Integer> inProgressValidationBatches,
+        @Nullable Output<Boolean> isIpv6Enabled,
+        @Nullable Output<String> lastModifiedTime,
+        @Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig,
+        @Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors,
+        @Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups,
+        @Nullable Output<List<DistributionOriginGetArgs>> origins,
+        @Nullable Output<String> priceClass,
+        @Nullable Output<DistributionRestrictionsGetArgs> restrictions,
+        @Nullable Output<Boolean> retainOnDelete,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups,
+        @Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners,
+        @Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate,
+        @Nullable Output<Boolean> waitForDeployment,
+        @Nullable Output<String> webAclId) {
         this.aliases = aliases;
         this.arn = arn;
         this.callerReference = callerReference;
@@ -458,36 +458,36 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DistributionState() {
-        this.aliases = Input.empty();
-        this.arn = Input.empty();
-        this.callerReference = Input.empty();
-        this.comment = Input.empty();
-        this.customErrorResponses = Input.empty();
-        this.defaultCacheBehavior = Input.empty();
-        this.defaultRootObject = Input.empty();
-        this.domainName = Input.empty();
-        this.enabled = Input.empty();
-        this.etag = Input.empty();
-        this.hostedZoneId = Input.empty();
-        this.httpVersion = Input.empty();
-        this.inProgressValidationBatches = Input.empty();
-        this.isIpv6Enabled = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.orderedCacheBehaviors = Input.empty();
-        this.originGroups = Input.empty();
-        this.origins = Input.empty();
-        this.priceClass = Input.empty();
-        this.restrictions = Input.empty();
-        this.retainOnDelete = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.trustedKeyGroups = Input.empty();
-        this.trustedSigners = Input.empty();
-        this.viewerCertificate = Input.empty();
-        this.waitForDeployment = Input.empty();
-        this.webAclId = Input.empty();
+        this.aliases = Output.empty();
+        this.arn = Output.empty();
+        this.callerReference = Output.empty();
+        this.comment = Output.empty();
+        this.customErrorResponses = Output.empty();
+        this.defaultCacheBehavior = Output.empty();
+        this.defaultRootObject = Output.empty();
+        this.domainName = Output.empty();
+        this.enabled = Output.empty();
+        this.etag = Output.empty();
+        this.hostedZoneId = Output.empty();
+        this.httpVersion = Output.empty();
+        this.inProgressValidationBatches = Output.empty();
+        this.isIpv6Enabled = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.orderedCacheBehaviors = Output.empty();
+        this.originGroups = Output.empty();
+        this.origins = Output.empty();
+        this.priceClass = Output.empty();
+        this.restrictions = Output.empty();
+        this.retainOnDelete = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.trustedKeyGroups = Output.empty();
+        this.trustedSigners = Output.empty();
+        this.viewerCertificate = Output.empty();
+        this.waitForDeployment = Output.empty();
+        this.webAclId = Output.empty();
     }
 
     public static Builder builder() {
@@ -499,36 +499,36 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> aliases;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> callerReference;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
-        private @Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
-        private @Nullable Input<String> defaultRootObject;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> hostedZoneId;
-        private @Nullable Input<String> httpVersion;
-        private @Nullable Input<Integer> inProgressValidationBatches;
-        private @Nullable Input<Boolean> isIpv6Enabled;
-        private @Nullable Input<String> lastModifiedTime;
-        private @Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
-        private @Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups;
-        private @Nullable Input<List<DistributionOriginGetArgs>> origins;
-        private @Nullable Input<String> priceClass;
-        private @Nullable Input<DistributionRestrictionsGetArgs> restrictions;
-        private @Nullable Input<Boolean> retainOnDelete;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
-        private @Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners;
-        private @Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate;
-        private @Nullable Input<Boolean> waitForDeployment;
-        private @Nullable Input<String> webAclId;
+        private @Nullable Output<List<String>> aliases;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> callerReference;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
+        private @Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
+        private @Nullable Output<String> defaultRootObject;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> hostedZoneId;
+        private @Nullable Output<String> httpVersion;
+        private @Nullable Output<Integer> inProgressValidationBatches;
+        private @Nullable Output<Boolean> isIpv6Enabled;
+        private @Nullable Output<String> lastModifiedTime;
+        private @Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig;
+        private @Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
+        private @Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups;
+        private @Nullable Output<List<DistributionOriginGetArgs>> origins;
+        private @Nullable Output<String> priceClass;
+        private @Nullable Output<DistributionRestrictionsGetArgs> restrictions;
+        private @Nullable Output<Boolean> retainOnDelete;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
+        private @Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners;
+        private @Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate;
+        private @Nullable Output<Boolean> waitForDeployment;
+        private @Nullable Output<String> webAclId;
 
         public Builder() {
     	      // Empty
@@ -568,303 +568,303 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
     	      this.webAclId = defaults.webAclId;
         }
 
-        public Builder aliases(@Nullable Input<List<String>> aliases) {
+        public Builder aliases(@Nullable Output<List<String>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Input.ofNullable(aliases);
+            this.aliases = Output.ofNullable(aliases);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder callerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Output<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
         public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Input.ofNullable(callerReference);
+            this.callerReference = Output.ofNullable(callerReference);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder customErrorResponses(@Nullable Input<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses) {
+        public Builder customErrorResponses(@Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
 
         public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponseGetArgs> customErrorResponses) {
-            this.customErrorResponses = Input.ofNullable(customErrorResponses);
+            this.customErrorResponses = Output.ofNullable(customErrorResponses);
             return this;
         }
 
-        public Builder defaultCacheBehavior(@Nullable Input<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(@Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior) {
             this.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
 
         public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehaviorGetArgs defaultCacheBehavior) {
-            this.defaultCacheBehavior = Input.ofNullable(defaultCacheBehavior);
+            this.defaultCacheBehavior = Output.ofNullable(defaultCacheBehavior);
             return this;
         }
 
-        public Builder defaultRootObject(@Nullable Input<String> defaultRootObject) {
+        public Builder defaultRootObject(@Nullable Output<String> defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
 
         public Builder defaultRootObject(@Nullable String defaultRootObject) {
-            this.defaultRootObject = Input.ofNullable(defaultRootObject);
+            this.defaultRootObject = Output.ofNullable(defaultRootObject);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Input.ofNullable(hostedZoneId);
+            this.hostedZoneId = Output.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder httpVersion(@Nullable Input<String> httpVersion) {
+        public Builder httpVersion(@Nullable Output<String> httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
 
         public Builder httpVersion(@Nullable String httpVersion) {
-            this.httpVersion = Input.ofNullable(httpVersion);
+            this.httpVersion = Output.ofNullable(httpVersion);
             return this;
         }
 
-        public Builder inProgressValidationBatches(@Nullable Input<Integer> inProgressValidationBatches) {
+        public Builder inProgressValidationBatches(@Nullable Output<Integer> inProgressValidationBatches) {
             this.inProgressValidationBatches = inProgressValidationBatches;
             return this;
         }
 
         public Builder inProgressValidationBatches(@Nullable Integer inProgressValidationBatches) {
-            this.inProgressValidationBatches = Input.ofNullable(inProgressValidationBatches);
+            this.inProgressValidationBatches = Output.ofNullable(inProgressValidationBatches);
             return this;
         }
 
-        public Builder isIpv6Enabled(@Nullable Input<Boolean> isIpv6Enabled) {
+        public Builder isIpv6Enabled(@Nullable Output<Boolean> isIpv6Enabled) {
             this.isIpv6Enabled = isIpv6Enabled;
             return this;
         }
 
         public Builder isIpv6Enabled(@Nullable Boolean isIpv6Enabled) {
-            this.isIpv6Enabled = Input.ofNullable(isIpv6Enabled);
+            this.isIpv6Enabled = Output.ofNullable(isIpv6Enabled);
             return this;
         }
 
-        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<DistributionLoggingConfigGetArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable DistributionLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder orderedCacheBehaviors(@Nullable Input<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors) {
+        public Builder orderedCacheBehaviors(@Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors) {
             this.orderedCacheBehaviors = orderedCacheBehaviors;
             return this;
         }
 
         public Builder orderedCacheBehaviors(@Nullable List<DistributionOrderedCacheBehaviorGetArgs> orderedCacheBehaviors) {
-            this.orderedCacheBehaviors = Input.ofNullable(orderedCacheBehaviors);
+            this.orderedCacheBehaviors = Output.ofNullable(orderedCacheBehaviors);
             return this;
         }
 
-        public Builder originGroups(@Nullable Input<List<DistributionOriginGroupGetArgs>> originGroups) {
+        public Builder originGroups(@Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
         public Builder originGroups(@Nullable List<DistributionOriginGroupGetArgs> originGroups) {
-            this.originGroups = Input.ofNullable(originGroups);
+            this.originGroups = Output.ofNullable(originGroups);
             return this;
         }
 
-        public Builder origins(@Nullable Input<List<DistributionOriginGetArgs>> origins) {
+        public Builder origins(@Nullable Output<List<DistributionOriginGetArgs>> origins) {
             this.origins = origins;
             return this;
         }
 
         public Builder origins(@Nullable List<DistributionOriginGetArgs> origins) {
-            this.origins = Input.ofNullable(origins);
+            this.origins = Output.ofNullable(origins);
             return this;
         }
 
-        public Builder priceClass(@Nullable Input<String> priceClass) {
+        public Builder priceClass(@Nullable Output<String> priceClass) {
             this.priceClass = priceClass;
             return this;
         }
 
         public Builder priceClass(@Nullable String priceClass) {
-            this.priceClass = Input.ofNullable(priceClass);
+            this.priceClass = Output.ofNullable(priceClass);
             return this;
         }
 
-        public Builder restrictions(@Nullable Input<DistributionRestrictionsGetArgs> restrictions) {
+        public Builder restrictions(@Nullable Output<DistributionRestrictionsGetArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
         public Builder restrictions(@Nullable DistributionRestrictionsGetArgs restrictions) {
-            this.restrictions = Input.ofNullable(restrictions);
+            this.restrictions = Output.ofNullable(restrictions);
             return this;
         }
 
-        public Builder retainOnDelete(@Nullable Input<Boolean> retainOnDelete) {
+        public Builder retainOnDelete(@Nullable Output<Boolean> retainOnDelete) {
             this.retainOnDelete = retainOnDelete;
             return this;
         }
 
         public Builder retainOnDelete(@Nullable Boolean retainOnDelete) {
-            this.retainOnDelete = Input.ofNullable(retainOnDelete);
+            this.retainOnDelete = Output.ofNullable(retainOnDelete);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder trustedKeyGroups(@Nullable Input<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
 
         public Builder trustedKeyGroups(@Nullable List<DistributionTrustedKeyGroupGetArgs> trustedKeyGroups) {
-            this.trustedKeyGroups = Input.ofNullable(trustedKeyGroups);
+            this.trustedKeyGroups = Output.ofNullable(trustedKeyGroups);
             return this;
         }
 
-        public Builder trustedSigners(@Nullable Input<List<DistributionTrustedSignerGetArgs>> trustedSigners) {
+        public Builder trustedSigners(@Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
 
         public Builder trustedSigners(@Nullable List<DistributionTrustedSignerGetArgs> trustedSigners) {
-            this.trustedSigners = Input.ofNullable(trustedSigners);
+            this.trustedSigners = Output.ofNullable(trustedSigners);
             return this;
         }
 
-        public Builder viewerCertificate(@Nullable Input<DistributionViewerCertificateGetArgs> viewerCertificate) {
+        public Builder viewerCertificate(@Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate) {
             this.viewerCertificate = viewerCertificate;
             return this;
         }
 
         public Builder viewerCertificate(@Nullable DistributionViewerCertificateGetArgs viewerCertificate) {
-            this.viewerCertificate = Input.ofNullable(viewerCertificate);
+            this.viewerCertificate = Output.ofNullable(viewerCertificate);
             return this;
         }
 
-        public Builder waitForDeployment(@Nullable Input<Boolean> waitForDeployment) {
+        public Builder waitForDeployment(@Nullable Output<Boolean> waitForDeployment) {
             this.waitForDeployment = waitForDeployment;
             return this;
         }
 
         public Builder waitForDeployment(@Nullable Boolean waitForDeployment) {
-            this.waitForDeployment = Input.ofNullable(waitForDeployment);
+            this.waitForDeployment = Output.ofNullable(waitForDeployment);
             return this;
         }
 
-        public Builder webAclId(@Nullable Input<String> webAclId) {
+        public Builder webAclId(@Nullable Output<String> webAclId) {
             this.webAclId = webAclId;
             return this;
         }
 
         public Builder webAclId(@Nullable String webAclId) {
-            this.webAclId = Input.ofNullable(webAclId);
+            this.webAclId = Output.ofNullable(webAclId);
             return this;
         }
         public DistributionState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeyRequired")
-      private final @Nullable Input<Boolean> apiKeyRequired;
+      private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Input<Boolean> getApiKeyRequired() {
-        return this.apiKeyRequired == null ? Input.empty() : this.apiKeyRequired;
+    public Output<Boolean> getApiKeyRequired() {
+        return this.apiKeyRequired == null ? Output.empty() : this.apiKeyRequired;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationScopes")
-      private final @Nullable Input<List<String>> authorizationScopes;
+      private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Input<List<String>> getAuthorizationScopes() {
-        return this.authorizationScopes == null ? Input.empty() : this.authorizationScopes;
+    public Output<List<String>> getAuthorizationScopes() {
+        return this.authorizationScopes == null ? Output.empty() : this.authorizationScopes;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType")
-      private final @Nullable Input<String> authorizationType;
+      private final @Nullable Output<String> authorizationType;
 
-    public Input<String> getAuthorizationType() {
-        return this.authorizationType == null ? Input.empty() : this.authorizationType;
+    public Output<String> getAuthorizationType() {
+        return this.authorizationType == null ? Output.empty() : this.authorizationType;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerId")
-      private final @Nullable Input<String> authorizerId;
+      private final @Nullable Output<String> authorizerId;
 
-    public Input<String> getAuthorizerId() {
-        return this.authorizerId == null ? Input.empty() : this.authorizerId;
+    public Output<String> getAuthorizerId() {
+        return this.authorizerId == null ? Output.empty() : this.authorizerId;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelSelectionExpression")
-      private final @Nullable Input<String> modelSelectionExpression;
+      private final @Nullable Output<String> modelSelectionExpression;
 
-    public Input<String> getModelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Input.empty() : this.modelSelectionExpression;
+    public Output<String> getModelSelectionExpression() {
+        return this.modelSelectionExpression == null ? Output.empty() : this.modelSelectionExpression;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationName")
-      private final @Nullable Input<String> operationName;
+      private final @Nullable Output<String> operationName;
 
-    public Input<String> getOperationName() {
-        return this.operationName == null ? Input.empty() : this.operationName;
+    public Output<String> getOperationName() {
+        return this.operationName == null ? Output.empty() : this.operationName;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestModels")
-      private final @Nullable Input<Map<String,String>> requestModels;
+      private final @Nullable Output<Map<String,String>> requestModels;
 
-    public Input<Map<String,String>> getRequestModels() {
-        return this.requestModels == null ? Input.empty() : this.requestModels;
+    public Output<Map<String,String>> getRequestModels() {
+        return this.requestModels == null ? Output.empty() : this.requestModels;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-      private final @Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters;
+      private final @Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters;
 
-    public Input<List<RouteRequestParameterGetArgs>> getRequestParameters() {
-        return this.requestParameters == null ? Input.empty() : this.requestParameters;
+    public Output<List<RouteRequestParameterGetArgs>> getRequestParameters() {
+        return this.requestParameters == null ? Output.empty() : this.requestParameters;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeKey")
-      private final @Nullable Input<String> routeKey;
+      private final @Nullable Output<String> routeKey;
 
-    public Input<String> getRouteKey() {
-        return this.routeKey == null ? Input.empty() : this.routeKey;
+    public Output<String> getRouteKey() {
+        return this.routeKey == null ? Output.empty() : this.routeKey;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeResponseSelectionExpression")
-      private final @Nullable Input<String> routeResponseSelectionExpression;
+      private final @Nullable Output<String> routeResponseSelectionExpression;
 
-    public Input<String> getRouteResponseSelectionExpression() {
-        return this.routeResponseSelectionExpression == null ? Input.empty() : this.routeResponseSelectionExpression;
+    public Output<String> getRouteResponseSelectionExpression() {
+        return this.routeResponseSelectionExpression == null ? Output.empty() : this.routeResponseSelectionExpression;
     }
 
     /**
@@ -147,25 +147,25 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public RouteState(
-        @Nullable Input<String> apiId,
-        @Nullable Input<Boolean> apiKeyRequired,
-        @Nullable Input<List<String>> authorizationScopes,
-        @Nullable Input<String> authorizationType,
-        @Nullable Input<String> authorizerId,
-        @Nullable Input<String> modelSelectionExpression,
-        @Nullable Input<String> operationName,
-        @Nullable Input<Map<String,String>> requestModels,
-        @Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters,
-        @Nullable Input<String> routeKey,
-        @Nullable Input<String> routeResponseSelectionExpression,
-        @Nullable Input<String> target) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<Boolean> apiKeyRequired,
+        @Nullable Output<List<String>> authorizationScopes,
+        @Nullable Output<String> authorizationType,
+        @Nullable Output<String> authorizerId,
+        @Nullable Output<String> modelSelectionExpression,
+        @Nullable Output<String> operationName,
+        @Nullable Output<Map<String,String>> requestModels,
+        @Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters,
+        @Nullable Output<String> routeKey,
+        @Nullable Output<String> routeResponseSelectionExpression,
+        @Nullable Output<String> target) {
         this.apiId = apiId;
         this.apiKeyRequired = apiKeyRequired;
         this.authorizationScopes = authorizationScopes;
@@ -181,18 +181,18 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.apiId = Input.empty();
-        this.apiKeyRequired = Input.empty();
-        this.authorizationScopes = Input.empty();
-        this.authorizationType = Input.empty();
-        this.authorizerId = Input.empty();
-        this.modelSelectionExpression = Input.empty();
-        this.operationName = Input.empty();
-        this.requestModels = Input.empty();
-        this.requestParameters = Input.empty();
-        this.routeKey = Input.empty();
-        this.routeResponseSelectionExpression = Input.empty();
-        this.target = Input.empty();
+        this.apiId = Output.empty();
+        this.apiKeyRequired = Output.empty();
+        this.authorizationScopes = Output.empty();
+        this.authorizationType = Output.empty();
+        this.authorizerId = Output.empty();
+        this.modelSelectionExpression = Output.empty();
+        this.operationName = Output.empty();
+        this.requestModels = Output.empty();
+        this.requestParameters = Output.empty();
+        this.routeKey = Output.empty();
+        this.routeResponseSelectionExpression = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<Boolean> apiKeyRequired;
-        private @Nullable Input<List<String>> authorizationScopes;
-        private @Nullable Input<String> authorizationType;
-        private @Nullable Input<String> authorizerId;
-        private @Nullable Input<String> modelSelectionExpression;
-        private @Nullable Input<String> operationName;
-        private @Nullable Input<Map<String,String>> requestModels;
-        private @Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters;
-        private @Nullable Input<String> routeKey;
-        private @Nullable Input<String> routeResponseSelectionExpression;
-        private @Nullable Input<String> target;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<Boolean> apiKeyRequired;
+        private @Nullable Output<List<String>> authorizationScopes;
+        private @Nullable Output<String> authorizationType;
+        private @Nullable Output<String> authorizerId;
+        private @Nullable Output<String> modelSelectionExpression;
+        private @Nullable Output<String> operationName;
+        private @Nullable Output<Map<String,String>> requestModels;
+        private @Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters;
+        private @Nullable Output<String> routeKey;
+        private @Nullable Output<String> routeResponseSelectionExpression;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder apiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Output<Boolean> apiKeyRequired) {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
         public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
-            this.apiKeyRequired = Input.ofNullable(apiKeyRequired);
+            this.apiKeyRequired = Output.ofNullable(apiKeyRequired);
             return this;
         }
 
-        public Builder authorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable Output<List<String>> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
 
         public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
-            this.authorizationScopes = Input.ofNullable(authorizationScopes);
+            this.authorizationScopes = Output.ofNullable(authorizationScopes);
             return this;
         }
 
-        public Builder authorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Output<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
         public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Input.ofNullable(authorizationType);
+            this.authorizationType = Output.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder authorizerId(@Nullable Input<String> authorizerId) {
+        public Builder authorizerId(@Nullable Output<String> authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
         public Builder authorizerId(@Nullable String authorizerId) {
-            this.authorizerId = Input.ofNullable(authorizerId);
+            this.authorizerId = Output.ofNullable(authorizerId);
             return this;
         }
 
-        public Builder modelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
 
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Input.ofNullable(modelSelectionExpression);
+            this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
             return this;
         }
 
-        public Builder operationName(@Nullable Input<String> operationName) {
+        public Builder operationName(@Nullable Output<String> operationName) {
             this.operationName = operationName;
             return this;
         }
 
         public Builder operationName(@Nullable String operationName) {
-            this.operationName = Input.ofNullable(operationName);
+            this.operationName = Output.ofNullable(operationName);
             return this;
         }
 
-        public Builder requestModels(@Nullable Input<Map<String,String>> requestModels) {
+        public Builder requestModels(@Nullable Output<Map<String,String>> requestModels) {
             this.requestModels = requestModels;
             return this;
         }
 
         public Builder requestModels(@Nullable Map<String,String> requestModels) {
-            this.requestModels = Input.ofNullable(requestModels);
+            this.requestModels = Output.ofNullable(requestModels);
             return this;
         }
 
-        public Builder requestParameters(@Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters) {
+        public Builder requestParameters(@Nullable Output<List<RouteRequestParameterGetArgs>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
         public Builder requestParameters(@Nullable List<RouteRequestParameterGetArgs> requestParameters) {
-            this.requestParameters = Input.ofNullable(requestParameters);
+            this.requestParameters = Output.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder routeKey(@Nullable Input<String> routeKey) {
+        public Builder routeKey(@Nullable Output<String> routeKey) {
             this.routeKey = routeKey;
             return this;
         }
 
         public Builder routeKey(@Nullable String routeKey) {
-            this.routeKey = Input.ofNullable(routeKey);
+            this.routeKey = Output.ofNullable(routeKey);
             return this;
         }
 
-        public Builder routeResponseSelectionExpression(@Nullable Input<String> routeResponseSelectionExpression) {
+        public Builder routeResponseSelectionExpression(@Nullable Output<String> routeResponseSelectionExpression) {
             this.routeResponseSelectionExpression = routeResponseSelectionExpression;
             return this;
         }
 
         public Builder routeResponseSelectionExpression(@Nullable String routeResponseSelectionExpression) {
-            this.routeResponseSelectionExpression = Input.ofNullable(routeResponseSelectionExpression);
+            this.routeResponseSelectionExpression = Output.ofNullable(routeResponseSelectionExpression);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public RouteState build() {

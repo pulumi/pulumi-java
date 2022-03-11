@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudtrail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="insightType", required=true)
-      private final Input<String> insightType;
+      private final Output<String> insightType;
 
-    public Input<String> getInsightType() {
+    public Output<String> getInsightType() {
         return this.insightType;
     }
 
-    public TrailInsightSelectorGetArgs(Input<String> insightType) {
+    public TrailInsightSelectorGetArgs(Output<String> insightType) {
         this.insightType = Objects.requireNonNull(insightType, "expected parameter 'insightType' to be non-null");
     }
 
     private TrailInsightSelectorGetArgs() {
-        this.insightType = Input.empty();
+        this.insightType = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> insightType;
+        private Output<String> insightType;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
     	      this.insightType = defaults.insightType;
         }
 
-        public Builder insightType(Input<String> insightType) {
+        public Builder insightType(Output<String> insightType) {
             this.insightType = Objects.requireNonNull(insightType);
             return this;
         }
 
         public Builder insightType(String insightType) {
-            this.insightType = Input.of(Objects.requireNonNull(insightType));
+            this.insightType = Output.of(Objects.requireNonNull(insightType));
             return this;
         }
         public TrailInsightSelectorGetArgs build() {

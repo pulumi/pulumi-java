@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafregional.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs(
-        @Nullable Input<String> data,
-        Input<String> type) {
+        @Nullable Output<String> data,
+        Output<String> type) {
         this.data = data;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs() {
-        this.data = Input.empty();
-        this.type = Input.empty();
+        this.data = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> data;
-        private Input<String> type;
+        private @Nullable Output<String> data;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs
     	      this.type = defaults.type;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs build() {

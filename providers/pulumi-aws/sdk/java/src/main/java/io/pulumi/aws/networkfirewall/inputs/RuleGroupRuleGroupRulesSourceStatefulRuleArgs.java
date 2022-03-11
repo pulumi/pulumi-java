@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
@@ -32,9 +32,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="header", required=true)
-      private final Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
+      private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
 
-    public Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> getHeader() {
+    public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> getHeader() {
         return this.header;
     }
 
@@ -43,25 +43,25 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * 
      */
     @InputImport(name="ruleOptions", required=true)
-      private final Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
+      private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
-    public Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> getRuleOptions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> getRuleOptions() {
         return this.ruleOptions;
     }
 
     public RuleGroupRuleGroupRulesSourceStatefulRuleArgs(
-        Input<String> action,
-        Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header,
-        Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
+        Output<String> action,
+        Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header,
+        Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
         this.ruleOptions = Objects.requireNonNull(ruleOptions, "expected parameter 'ruleOptions' to be non-null");
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleArgs() {
-        this.action = Input.empty();
-        this.header = Input.empty();
-        this.ruleOptions = Input.empty();
+        this.action = Output.empty();
+        this.header = Output.empty();
+        this.ruleOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
-        private Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
+        private Output<String> action;
+        private Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
+        private Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder header(Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header) {
+        public Builder header(Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
         public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs header) {
-            this.header = Input.of(Objects.requireNonNull(header));
+            this.header = Output.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder ruleOptions(Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
+        public Builder ruleOptions(Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }
 
         public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs> ruleOptions) {
-            this.ruleOptions = Input.of(Objects.requireNonNull(ruleOptions));
+            this.ruleOptions = Output.of(Objects.requireNonNull(ruleOptions));
             return this;
         }
         public RuleGroupRuleGroupRulesSourceStatefulRuleArgs build() {

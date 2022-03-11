@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class WorkforceSourceIpConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cidrs", required=true)
-      private final Input<List<String>> cidrs;
+      private final Output<List<String>> cidrs;
 
-    public Input<List<String>> getCidrs() {
+    public Output<List<String>> getCidrs() {
         return this.cidrs;
     }
 
-    public WorkforceSourceIpConfigArgs(Input<List<String>> cidrs) {
+    public WorkforceSourceIpConfigArgs(Output<List<String>> cidrs) {
         this.cidrs = Objects.requireNonNull(cidrs, "expected parameter 'cidrs' to be non-null");
     }
 
     private WorkforceSourceIpConfigArgs() {
-        this.cidrs = Input.empty();
+        this.cidrs = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkforceSourceIpConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> cidrs;
+        private Output<List<String>> cidrs;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkforceSourceIpConfigArgs extends io.pulumi.resources.Resou
     	      this.cidrs = defaults.cidrs;
         }
 
-        public Builder cidrs(Input<List<String>> cidrs) {
+        public Builder cidrs(Output<List<String>> cidrs) {
             this.cidrs = Objects.requireNonNull(cidrs);
             return this;
         }
 
         public Builder cidrs(List<String> cidrs) {
-            this.cidrs = Input.of(Objects.requireNonNull(cidrs));
+            this.cidrs = Output.of(Objects.requireNonNull(cidrs));
             return this;
         }
         public WorkforceSourceIpConfigArgs build() {

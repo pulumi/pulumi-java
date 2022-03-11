@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public RecorderStatusState(
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<String> name) {
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<String> name) {
         this.isEnabled = isEnabled;
         this.name = name;
     }
 
     private RecorderStatusState() {
-        this.isEnabled = Input.empty();
-        this.name = Input.empty();
+        this.isEnabled = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public RecorderStatusState build() {

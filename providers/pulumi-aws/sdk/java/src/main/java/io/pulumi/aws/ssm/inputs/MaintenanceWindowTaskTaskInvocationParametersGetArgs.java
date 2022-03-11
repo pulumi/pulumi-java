@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAut
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,10 +22,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * 
      */
     @InputImport(name="automationParameters")
-      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
+      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
 
-    public Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> getAutomationParameters() {
-        return this.automationParameters == null ? Input.empty() : this.automationParameters;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> getAutomationParameters() {
+        return this.automationParameters == null ? Output.empty() : this.automationParameters;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * 
      */
     @InputImport(name="lambdaParameters")
-      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
+      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
 
-    public Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> getLambdaParameters() {
-        return this.lambdaParameters == null ? Input.empty() : this.lambdaParameters;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> getLambdaParameters() {
+        return this.lambdaParameters == null ? Output.empty() : this.lambdaParameters;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * 
      */
     @InputImport(name="runCommandParameters")
-      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
+      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
 
-    public Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> getRunCommandParameters() {
-        return this.runCommandParameters == null ? Input.empty() : this.runCommandParameters;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> getRunCommandParameters() {
+        return this.runCommandParameters == null ? Output.empty() : this.runCommandParameters;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * 
      */
     @InputImport(name="stepFunctionsParameters")
-      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
+      private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
 
-    public Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> getStepFunctionsParameters() {
-        return this.stepFunctionsParameters == null ? Input.empty() : this.stepFunctionsParameters;
+    public Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> getStepFunctionsParameters() {
+        return this.stepFunctionsParameters == null ? Output.empty() : this.stepFunctionsParameters;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersGetArgs(
-        @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters,
-        @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters,
-        @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters,
-        @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
+        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters,
+        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters,
+        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters,
+        @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
         this.automationParameters = automationParameters;
         this.lambdaParameters = lambdaParameters;
         this.runCommandParameters = runCommandParameters;
@@ -73,10 +73,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersGetArgs() {
-        this.automationParameters = Input.empty();
-        this.lambdaParameters = Input.empty();
-        this.runCommandParameters = Input.empty();
-        this.stepFunctionsParameters = Input.empty();
+        this.automationParameters = Output.empty();
+        this.lambdaParameters = Output.empty();
+        this.runCommandParameters = Output.empty();
+        this.stepFunctionsParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
-        private @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
-        private @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
-        private @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
+        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
+        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
+        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
+        private @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
     	      this.stepFunctionsParameters = defaults.stepFunctionsParameters;
         }
 
-        public Builder automationParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters) {
+        public Builder automationParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters) {
             this.automationParameters = automationParameters;
             return this;
         }
 
         public Builder automationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs automationParameters) {
-            this.automationParameters = Input.ofNullable(automationParameters);
+            this.automationParameters = Output.ofNullable(automationParameters);
             return this;
         }
 
-        public Builder lambdaParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters) {
+        public Builder lambdaParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters) {
             this.lambdaParameters = lambdaParameters;
             return this;
         }
 
         public Builder lambdaParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs lambdaParameters) {
-            this.lambdaParameters = Input.ofNullable(lambdaParameters);
+            this.lambdaParameters = Output.ofNullable(lambdaParameters);
             return this;
         }
 
-        public Builder runCommandParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters) {
+        public Builder runCommandParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters) {
             this.runCommandParameters = runCommandParameters;
             return this;
         }
 
         public Builder runCommandParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs runCommandParameters) {
-            this.runCommandParameters = Input.ofNullable(runCommandParameters);
+            this.runCommandParameters = Output.ofNullable(runCommandParameters);
             return this;
         }
 
-        public Builder stepFunctionsParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
+        public Builder stepFunctionsParameters(@Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters) {
             this.stepFunctionsParameters = stepFunctionsParameters;
             return this;
         }
 
         public Builder stepFunctionsParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs stepFunctionsParameters) {
-            this.stepFunctionsParameters = Input.ofNullable(stepFunctionsParameters);
+            this.stepFunctionsParameters = Output.ofNullable(stepFunctionsParameters);
             return this;
         }
         public MaintenanceWindowTaskTaskInvocationParametersGetArgs build() {

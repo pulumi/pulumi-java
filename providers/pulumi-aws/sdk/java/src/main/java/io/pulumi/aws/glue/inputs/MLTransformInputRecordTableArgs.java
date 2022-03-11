@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -52,17 +52,17 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public MLTransformInputRecordTableArgs(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<String> connectionName,
-        Input<String> databaseName,
-        Input<String> tableName) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<String> connectionName,
+        Output<String> databaseName,
+        Output<String> tableName) {
         this.catalogId = catalogId;
         this.connectionName = connectionName;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
@@ -70,10 +70,10 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
     }
 
     private MLTransformInputRecordTableArgs() {
-        this.catalogId = Input.empty();
-        this.connectionName = Input.empty();
-        this.databaseName = Input.empty();
-        this.tableName = Input.empty();
+        this.catalogId = Output.empty();
+        this.connectionName = Output.empty();
+        this.databaseName = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<String> connectionName;
-        private Input<String> databaseName;
-        private Input<String> tableName;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<String> connectionName;
+        private Output<String> databaseName;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class MLTransformInputRecordTableArgs extends io.pulumi.resources.R
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public MLTransformInputRecordTableArgs build() {

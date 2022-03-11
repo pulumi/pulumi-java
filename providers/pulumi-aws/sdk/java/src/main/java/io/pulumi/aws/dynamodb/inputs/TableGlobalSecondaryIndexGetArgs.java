@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hashKey", required=true)
-      private final Input<String> hashKey;
+      private final Output<String> hashKey;
 
-    public Input<String> getHashKey() {
+    public Output<String> getHashKey() {
         return this.hashKey;
     }
 
@@ -33,9 +33,9 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,10 +46,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nonKeyAttributes")
-      private final @Nullable Input<List<String>> nonKeyAttributes;
+      private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Input<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Input.empty() : this.nonKeyAttributes;
+    public Output<List<String>> getNonKeyAttributes() {
+        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="projectionType", required=true)
-      private final Input<String> projectionType;
+      private final Output<String> projectionType;
 
-    public Input<String> getProjectionType() {
+    public Output<String> getProjectionType() {
         return this.projectionType;
     }
 
@@ -72,10 +72,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rangeKey")
-      private final @Nullable Input<String> rangeKey;
+      private final @Nullable Output<String> rangeKey;
 
-    public Input<String> getRangeKey() {
-        return this.rangeKey == null ? Input.empty() : this.rangeKey;
+    public Output<String> getRangeKey() {
+        return this.rangeKey == null ? Output.empty() : this.rangeKey;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readCapacity")
-      private final @Nullable Input<Integer> readCapacity;
+      private final @Nullable Output<Integer> readCapacity;
 
-    public Input<Integer> getReadCapacity() {
-        return this.readCapacity == null ? Input.empty() : this.readCapacity;
+    public Output<Integer> getReadCapacity() {
+        return this.readCapacity == null ? Output.empty() : this.readCapacity;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeCapacity")
-      private final @Nullable Input<Integer> writeCapacity;
+      private final @Nullable Output<Integer> writeCapacity;
 
-    public Input<Integer> getWriteCapacity() {
-        return this.writeCapacity == null ? Input.empty() : this.writeCapacity;
+    public Output<Integer> getWriteCapacity() {
+        return this.writeCapacity == null ? Output.empty() : this.writeCapacity;
     }
 
     public TableGlobalSecondaryIndexGetArgs(
-        Input<String> hashKey,
-        Input<String> name,
-        @Nullable Input<List<String>> nonKeyAttributes,
-        Input<String> projectionType,
-        @Nullable Input<String> rangeKey,
-        @Nullable Input<Integer> readCapacity,
-        @Nullable Input<Integer> writeCapacity) {
+        Output<String> hashKey,
+        Output<String> name,
+        @Nullable Output<List<String>> nonKeyAttributes,
+        Output<String> projectionType,
+        @Nullable Output<String> rangeKey,
+        @Nullable Output<Integer> readCapacity,
+        @Nullable Output<Integer> writeCapacity) {
         this.hashKey = Objects.requireNonNull(hashKey, "expected parameter 'hashKey' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.nonKeyAttributes = nonKeyAttributes;
@@ -118,13 +118,13 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
     }
 
     private TableGlobalSecondaryIndexGetArgs() {
-        this.hashKey = Input.empty();
-        this.name = Input.empty();
-        this.nonKeyAttributes = Input.empty();
-        this.projectionType = Input.empty();
-        this.rangeKey = Input.empty();
-        this.readCapacity = Input.empty();
-        this.writeCapacity = Input.empty();
+        this.hashKey = Output.empty();
+        this.name = Output.empty();
+        this.nonKeyAttributes = Output.empty();
+        this.projectionType = Output.empty();
+        this.rangeKey = Output.empty();
+        this.readCapacity = Output.empty();
+        this.writeCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> hashKey;
-        private Input<String> name;
-        private @Nullable Input<List<String>> nonKeyAttributes;
-        private Input<String> projectionType;
-        private @Nullable Input<String> rangeKey;
-        private @Nullable Input<Integer> readCapacity;
-        private @Nullable Input<Integer> writeCapacity;
+        private Output<String> hashKey;
+        private Output<String> name;
+        private @Nullable Output<List<String>> nonKeyAttributes;
+        private Output<String> projectionType;
+        private @Nullable Output<String> rangeKey;
+        private @Nullable Output<Integer> readCapacity;
+        private @Nullable Output<Integer> writeCapacity;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class TableGlobalSecondaryIndexGetArgs extends io.pulumi.resources.
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder hashKey(Input<String> hashKey) {
+        public Builder hashKey(Output<String> hashKey) {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
 
         public Builder hashKey(String hashKey) {
-            this.hashKey = Input.of(Objects.requireNonNull(hashKey));
+            this.hashKey = Output.of(Objects.requireNonNull(hashKey));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nonKeyAttributes(@Nullable Input<List<String>> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Input.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
             return this;
         }
 
-        public Builder projectionType(Input<String> projectionType) {
+        public Builder projectionType(Output<String> projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
         public Builder projectionType(String projectionType) {
-            this.projectionType = Input.of(Objects.requireNonNull(projectionType));
+            this.projectionType = Output.of(Objects.requireNonNull(projectionType));
             return this;
         }
 
-        public Builder rangeKey(@Nullable Input<String> rangeKey) {
+        public Builder rangeKey(@Nullable Output<String> rangeKey) {
             this.rangeKey = rangeKey;
             return this;
         }
 
         public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Input.ofNullable(rangeKey);
+            this.rangeKey = Output.ofNullable(rangeKey);
             return this;
         }
 
-        public Builder readCapacity(@Nullable Input<Integer> readCapacity) {
+        public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             this.readCapacity = readCapacity;
             return this;
         }
 
         public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Input.ofNullable(readCapacity);
+            this.readCapacity = Output.ofNullable(readCapacity);
             return this;
         }
 
-        public Builder writeCapacity(@Nullable Input<Integer> writeCapacity) {
+        public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             this.writeCapacity = writeCapacity;
             return this;
         }
 
         public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Input.ofNullable(writeCapacity);
+            this.writeCapacity = Output.ofNullable(writeCapacity);
             return this;
         }
         public TableGlobalSecondaryIndexGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="metricDimensions")
-      private final @Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
+      private final @Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
 
-    public Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> getMetricDimensions() {
-        return this.metricDimensions == null ? Input.empty() : this.metricDimensions;
+    public Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> getMetricDimensions() {
+        return this.metricDimensions == null ? Output.empty() : this.metricDimensions;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="metricName", required=true)
-      private final Input<String> metricName;
+      private final Output<String> metricName;
 
-    public Input<String> getMetricName() {
+    public Output<String> getMetricName() {
         return this.metricName;
     }
 
@@ -43,9 +43,9 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
@@ -54,9 +54,9 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="statistic", required=true)
-      private final Input<String> statistic;
+      private final Output<String> statistic;
 
-    public Input<String> getStatistic() {
+    public Output<String> getStatistic() {
         return this.statistic;
     }
 
@@ -65,18 +65,18 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     public PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs(
-        @Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions,
-        Input<String> metricName,
-        Input<String> namespace,
-        Input<String> statistic,
-        @Nullable Input<String> unit) {
+        @Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions,
+        Output<String> metricName,
+        Output<String> namespace,
+        Output<String> statistic,
+        @Nullable Output<String> unit) {
         this.metricDimensions = metricDimensions;
         this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
@@ -85,11 +85,11 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     }
 
     private PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs() {
-        this.metricDimensions = Input.empty();
-        this.metricName = Input.empty();
-        this.namespace = Input.empty();
-        this.statistic = Input.empty();
-        this.unit = Input.empty();
+        this.metricDimensions = Output.empty();
+        this.metricName = Output.empty();
+        this.namespace = Output.empty();
+        this.statistic = Output.empty();
+        this.unit = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
-        private Input<String> metricName;
-        private Input<String> namespace;
-        private Input<String> statistic;
-        private @Nullable Input<String> unit;
+        private @Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
+        private Output<String> metricName;
+        private Output<String> namespace;
+        private Output<String> statistic;
+        private @Nullable Output<String> unit;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     	      this.unit = defaults.unit;
         }
 
-        public Builder metricDimensions(@Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions) {
+        public Builder metricDimensions(@Nullable Output<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions) {
             this.metricDimensions = metricDimensions;
             return this;
         }
 
         public Builder metricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs> metricDimensions) {
-            this.metricDimensions = Input.ofNullable(metricDimensions);
+            this.metricDimensions = Output.ofNullable(metricDimensions);
             return this;
         }
 
-        public Builder metricName(Input<String> metricName) {
+        public Builder metricName(Output<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Input.of(Objects.requireNonNull(metricName));
+            this.metricName = Output.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder statistic(Input<String> statistic) {
+        public Builder statistic(Output<String> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
         public Builder statistic(String statistic) {
-            this.statistic = Input.of(Objects.requireNonNull(statistic));
+            this.statistic = Output.of(Objects.requireNonNull(statistic));
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
         public PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs build() {

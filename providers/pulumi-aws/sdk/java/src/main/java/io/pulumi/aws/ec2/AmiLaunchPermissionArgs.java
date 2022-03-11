@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -29,22 +29,22 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageId", required=true)
-      private final Input<String> imageId;
+      private final Output<String> imageId;
 
-    public Input<String> getImageId() {
+    public Output<String> getImageId() {
         return this.imageId;
     }
 
     public AmiLaunchPermissionArgs(
-        Input<String> accountId,
-        Input<String> imageId) {
+        Output<String> accountId,
+        Output<String> imageId) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.imageId = Objects.requireNonNull(imageId, "expected parameter 'imageId' to be non-null");
     }
 
     private AmiLaunchPermissionArgs() {
-        this.accountId = Input.empty();
-        this.imageId = Input.empty();
+        this.accountId = Output.empty();
+        this.imageId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> imageId;
+        private Output<String> accountId;
+        private Output<String> imageId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
     	      this.imageId = defaults.imageId;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder imageId(Input<String> imageId) {
+        public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Input.of(Objects.requireNonNull(imageId));
+            this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
         public AmiLaunchPermissionArgs build() {

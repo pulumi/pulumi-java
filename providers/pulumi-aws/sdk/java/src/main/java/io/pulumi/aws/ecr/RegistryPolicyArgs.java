@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final RegistryPolicyArgs Empty = new RegistryPolicyArgs();
 
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
-    public RegistryPolicyArgs(Input<String> policy) {
+    public RegistryPolicyArgs(Output<String> policy) {
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private RegistryPolicyArgs() {
-        this.policy = Input.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> policy;
+        private Output<String> policy;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public RegistryPolicyArgs build() {

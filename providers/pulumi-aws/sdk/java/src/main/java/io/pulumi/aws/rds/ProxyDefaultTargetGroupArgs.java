@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionPoolConfig")
-      private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
+      private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
-    public Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
-        return this.connectionPoolConfig == null ? Input.empty() : this.connectionPoolConfig;
+    public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
+        return this.connectionPoolConfig == null ? Output.empty() : this.connectionPoolConfig;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dbProxyName", required=true)
-      private final Input<String> dbProxyName;
+      private final Output<String> dbProxyName;
 
-    public Input<String> getDbProxyName() {
+    public Output<String> getDbProxyName() {
         return this.dbProxyName;
     }
 
     public ProxyDefaultTargetGroupArgs(
-        @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig,
-        Input<String> dbProxyName) {
+        @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig,
+        Output<String> dbProxyName) {
         this.connectionPoolConfig = connectionPoolConfig;
         this.dbProxyName = Objects.requireNonNull(dbProxyName, "expected parameter 'dbProxyName' to be non-null");
     }
 
     private ProxyDefaultTargetGroupArgs() {
-        this.connectionPoolConfig = Input.empty();
-        this.dbProxyName = Input.empty();
+        this.connectionPoolConfig = Output.empty();
+        this.dbProxyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
-        private Input<String> dbProxyName;
+        private @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
+        private Output<String> dbProxyName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
     	      this.dbProxyName = defaults.dbProxyName;
         }
 
-        public Builder connectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
             this.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
 
         public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
-            this.connectionPoolConfig = Input.ofNullable(connectionPoolConfig);
+            this.connectionPoolConfig = Output.ofNullable(connectionPoolConfig);
             return this;
         }
 
-        public Builder dbProxyName(Input<String> dbProxyName) {
+        public Builder dbProxyName(Output<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
 
         public Builder dbProxyName(String dbProxyName) {
-            this.dbProxyName = Input.of(Objects.requireNonNull(dbProxyName));
+            this.dbProxyName = Output.of(Objects.requireNonNull(dbProxyName));
             return this;
         }
         public ProxyDefaultTargetGroupArgs build() {

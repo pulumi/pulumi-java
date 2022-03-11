@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.ConstraintArgs;
 import io.pulumi.aws.servicecatalog.inputs.ConstraintState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -174,14 +173,14 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Constraint(String name, ConstraintArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/constraint:Constraint", name, args == null ? ConstraintArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/constraint:Constraint", name, args == null ? ConstraintArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Constraint(String name, Input<String> id, @Nullable ConstraintState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Constraint(String name, Output<String> id, @Nullable ConstraintState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/constraint:Constraint", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -197,7 +196,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Constraint get(String name, Input<String> id, @Nullable ConstraintState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Constraint get(String name, Output<String> id, @Nullable ConstraintState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Constraint(name, id, state, options);
     }
 }

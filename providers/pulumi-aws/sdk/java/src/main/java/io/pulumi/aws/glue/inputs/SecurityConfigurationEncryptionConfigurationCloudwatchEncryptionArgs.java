@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * 
      */
     @InputImport(name="cloudwatchEncryptionMode")
-      private final @Nullable Input<String> cloudwatchEncryptionMode;
+      private final @Nullable Output<String> cloudwatchEncryptionMode;
 
-    public Input<String> getCloudwatchEncryptionMode() {
-        return this.cloudwatchEncryptionMode == null ? Input.empty() : this.cloudwatchEncryptionMode;
+    public Output<String> getCloudwatchEncryptionMode() {
+        return this.cloudwatchEncryptionMode == null ? Output.empty() : this.cloudwatchEncryptionMode;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     public SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs(
-        @Nullable Input<String> cloudwatchEncryptionMode,
-        @Nullable Input<String> kmsKeyArn) {
+        @Nullable Output<String> cloudwatchEncryptionMode,
+        @Nullable Output<String> kmsKeyArn) {
         this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }
 
     private SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs() {
-        this.cloudwatchEncryptionMode = Input.empty();
-        this.kmsKeyArn = Input.empty();
+        this.cloudwatchEncryptionMode = Output.empty();
+        this.kmsKeyArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudwatchEncryptionMode;
-        private @Nullable Input<String> kmsKeyArn;
+        private @Nullable Output<String> cloudwatchEncryptionMode;
+        private @Nullable Output<String> kmsKeyArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder cloudwatchEncryptionMode(@Nullable Input<String> cloudwatchEncryptionMode) {
+        public Builder cloudwatchEncryptionMode(@Nullable Output<String> cloudwatchEncryptionMode) {
             this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
             return this;
         }
 
         public Builder cloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
-            this.cloudwatchEncryptionMode = Input.ofNullable(cloudwatchEncryptionMode);
+            this.cloudwatchEncryptionMode = Output.ofNullable(cloudwatchEncryptionMode);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
         public SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs build() {

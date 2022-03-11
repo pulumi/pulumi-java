@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mwaa.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
     public static final EnvironmentLastUpdatedErrorGetArgs Empty = new EnvironmentLastUpdatedErrorGetArgs();
 
     @InputImport(name="errorCode")
-      private final @Nullable Input<String> errorCode;
+      private final @Nullable Output<String> errorCode;
 
-    public Input<String> getErrorCode() {
-        return this.errorCode == null ? Input.empty() : this.errorCode;
+    public Output<String> getErrorCode() {
+        return this.errorCode == null ? Output.empty() : this.errorCode;
     }
 
     @InputImport(name="errorMessage")
-      private final @Nullable Input<String> errorMessage;
+      private final @Nullable Output<String> errorMessage;
 
-    public Input<String> getErrorMessage() {
-        return this.errorMessage == null ? Input.empty() : this.errorMessage;
+    public Output<String> getErrorMessage() {
+        return this.errorMessage == null ? Output.empty() : this.errorMessage;
     }
 
     public EnvironmentLastUpdatedErrorGetArgs(
-        @Nullable Input<String> errorCode,
-        @Nullable Input<String> errorMessage) {
+        @Nullable Output<String> errorCode,
+        @Nullable Output<String> errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }
 
     private EnvironmentLastUpdatedErrorGetArgs() {
-        this.errorCode = Input.empty();
-        this.errorMessage = Input.empty();
+        this.errorCode = Output.empty();
+        this.errorMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> errorCode;
-        private @Nullable Input<String> errorMessage;
+        private @Nullable Output<String> errorCode;
+        private @Nullable Output<String> errorMessage;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
     	      this.errorMessage = defaults.errorMessage;
         }
 
-        public Builder errorCode(@Nullable Input<String> errorCode) {
+        public Builder errorCode(@Nullable Output<String> errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
         public Builder errorCode(@Nullable String errorCode) {
-            this.errorCode = Input.ofNullable(errorCode);
+            this.errorCode = Output.ofNullable(errorCode);
             return this;
         }
 
-        public Builder errorMessage(@Nullable Input<String> errorMessage) {
+        public Builder errorMessage(@Nullable Output<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = Input.ofNullable(errorMessage);
+            this.errorMessage = Output.ofNullable(errorMessage);
             return this;
         }
         public EnvironmentLastUpdatedErrorGetArgs build() {

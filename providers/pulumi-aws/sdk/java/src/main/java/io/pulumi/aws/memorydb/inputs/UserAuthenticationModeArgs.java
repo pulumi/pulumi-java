@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.memorydb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="passwordCount")
-      private final @Nullable Input<Integer> passwordCount;
+      private final @Nullable Output<Integer> passwordCount;
 
-    public Input<Integer> getPasswordCount() {
-        return this.passwordCount == null ? Input.empty() : this.passwordCount;
+    public Output<Integer> getPasswordCount() {
+        return this.passwordCount == null ? Output.empty() : this.passwordCount;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="passwords", required=true)
-      private final Input<List<String>> passwords;
+      private final Output<List<String>> passwords;
 
-    public Input<List<String>> getPasswords() {
+    public Output<List<String>> getPasswords() {
         return this.passwords;
     }
 
@@ -43,25 +43,25 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public UserAuthenticationModeArgs(
-        @Nullable Input<Integer> passwordCount,
-        Input<List<String>> passwords,
-        Input<String> type) {
+        @Nullable Output<Integer> passwordCount,
+        Output<List<String>> passwords,
+        Output<String> type) {
         this.passwordCount = passwordCount;
         this.passwords = Objects.requireNonNull(passwords, "expected parameter 'passwords' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private UserAuthenticationModeArgs() {
-        this.passwordCount = Input.empty();
-        this.passwords = Input.empty();
-        this.type = Input.empty();
+        this.passwordCount = Output.empty();
+        this.passwords = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> passwordCount;
-        private Input<List<String>> passwords;
-        private Input<String> type;
+        private @Nullable Output<Integer> passwordCount;
+        private Output<List<String>> passwords;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder passwordCount(@Nullable Input<Integer> passwordCount) {
+        public Builder passwordCount(@Nullable Output<Integer> passwordCount) {
             this.passwordCount = passwordCount;
             return this;
         }
 
         public Builder passwordCount(@Nullable Integer passwordCount) {
-            this.passwordCount = Input.ofNullable(passwordCount);
+            this.passwordCount = Output.ofNullable(passwordCount);
             return this;
         }
 
-        public Builder passwords(Input<List<String>> passwords) {
+        public Builder passwords(Output<List<String>> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
 
         public Builder passwords(List<String> passwords) {
-            this.passwords = Input.of(Objects.requireNonNull(passwords));
+            this.passwords = Output.of(Objects.requireNonNull(passwords));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public UserAuthenticationModeArgs build() {

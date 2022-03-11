@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
      * 
      */
     @InputImport(name="daysAfterInitiation", required=true)
-      private final Input<Integer> daysAfterInitiation;
+      private final Output<Integer> daysAfterInitiation;
 
-    public Input<Integer> getDaysAfterInitiation() {
+    public Output<Integer> getDaysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
-    public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(Input<Integer> daysAfterInitiation) {
+    public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs(Output<Integer> daysAfterInitiation) {
         this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
     }
 
     private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs() {
-        this.daysAfterInitiation = Input.empty();
+        this.daysAfterInitiation = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     }
 
     public static final class Builder {
-        private Input<Integer> daysAfterInitiation;
+        private Output<Integer> daysAfterInitiation;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     	      this.daysAfterInitiation = defaults.daysAfterInitiation;
         }
 
-        public Builder daysAfterInitiation(Input<Integer> daysAfterInitiation) {
+        public Builder daysAfterInitiation(Output<Integer> daysAfterInitiation) {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
         }
 
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
-            this.daysAfterInitiation = Input.of(Objects.requireNonNull(daysAfterInitiation));
+            this.daysAfterInitiation = Output.of(Objects.requireNonNull(daysAfterInitiation));
             return this;
         }
         public BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs build() {

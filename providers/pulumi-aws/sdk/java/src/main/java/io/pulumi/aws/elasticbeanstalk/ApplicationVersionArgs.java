@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="application", required=true)
-      private final Input<String> application;
+      private final Output<String> application;
 
-    public Input<String> getApplication() {
+    public Output<String> getApplication() {
         return this.application;
     }
 
@@ -32,9 +32,9 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -43,10 +43,10 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="forceDelete")
-      private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Output<Boolean> forceDelete;
 
-    public Input<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Input.empty() : this.forceDelete;
+    public Output<Boolean> getForceDelete() {
+        return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -76,10 +76,10 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationVersionArgs(
-        Input<String> application,
-        Input<String> bucket,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> forceDelete,
-        Input<String> key,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> application,
+        Output<String> bucket,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> forceDelete,
+        Output<String> key,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.description = description;
@@ -111,13 +111,13 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApplicationVersionArgs() {
-        this.application = Input.empty();
-        this.bucket = Input.empty();
-        this.description = Input.empty();
-        this.forceDelete = Input.empty();
-        this.key = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.application = Output.empty();
+        this.bucket = Output.empty();
+        this.description = Output.empty();
+        this.forceDelete = Output.empty();
+        this.key = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> application;
-        private Input<String> bucket;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> forceDelete;
-        private Input<String> key;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> application;
+        private Output<String> bucket;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> forceDelete;
+        private Output<String> key;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,63 +152,63 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder application(Input<String> application) {
+        public Builder application(Output<String> application) {
             this.application = Objects.requireNonNull(application);
             return this;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Input.ofNullable(forceDelete);
+            this.forceDelete = Output.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationVersionArgs build() {

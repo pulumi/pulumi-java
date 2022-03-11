@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inspector;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -19,18 +19,18 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags", required=true)
-      private final Input<Map<String,String>> tags;
+      private final Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
+    public Output<Map<String,String>> getTags() {
         return this.tags;
     }
 
-    public ResourceGroupArgs(Input<Map<String,String>> tags) {
+    public ResourceGroupArgs(Output<Map<String,String>> tags) {
         this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
     }
 
     private ResourceGroupArgs() {
-        this.tags = Input.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> tags;
+        private Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder tags(Input<Map<String,String>> tags) {
+        public Builder tags(Output<Map<String,String>> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
         public Builder tags(Map<String,String> tags) {
-            this.tags = Input.of(Objects.requireNonNull(tags));
+            this.tags = Output.of(Objects.requireNonNull(tags));
             return this;
         }
         public ResourceGroupArgs build() {

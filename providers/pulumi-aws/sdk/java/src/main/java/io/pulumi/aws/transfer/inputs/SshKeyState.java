@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId")
-      private final @Nullable Input<String> serverId;
+      private final @Nullable Output<String> serverId;
 
-    public Input<String> getServerId() {
-        return this.serverId == null ? Input.empty() : this.serverId;
+    public Output<String> getServerId() {
+        return this.serverId == null ? Output.empty() : this.serverId;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public SshKeyState(
-        @Nullable Input<String> body,
-        @Nullable Input<String> serverId,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> body,
+        @Nullable Output<String> serverId,
+        @Nullable Output<String> userName) {
         this.body = body;
         this.serverId = serverId;
         this.userName = userName;
     }
 
     private SshKeyState() {
-        this.body = Input.empty();
-        this.serverId = Input.empty();
-        this.userName = Input.empty();
+        this.body = Output.empty();
+        this.serverId = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private @Nullable Input<String> serverId;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> body;
+        private @Nullable Output<String> serverId;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder serverId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Output<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
         public Builder serverId(@Nullable String serverId) {
-            this.serverId = Input.ofNullable(serverId);
+            this.serverId = Output.ofNullable(serverId);
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public SshKeyState build() {

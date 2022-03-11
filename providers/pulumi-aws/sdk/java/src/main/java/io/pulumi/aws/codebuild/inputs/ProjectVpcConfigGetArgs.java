@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,9 +19,9 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -30,9 +30,9 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnets", required=true)
-      private final Input<List<String>> subnets;
+      private final Output<List<String>> subnets;
 
-    public Input<List<String>> getSubnets() {
+    public Output<List<String>> getSubnets() {
         return this.subnets;
     }
 
@@ -41,25 +41,25 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
     public ProjectVpcConfigGetArgs(
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnets,
-        Input<String> vpcId) {
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnets,
+        Output<String> vpcId) {
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private ProjectVpcConfigGetArgs() {
-        this.securityGroupIds = Input.empty();
-        this.subnets = Input.empty();
-        this.vpcId = Input.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnets = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnets;
-        private Input<String> vpcId;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnets;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnets(Input<List<String>> subnets) {
+        public Builder subnets(Output<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
         public Builder subnets(List<String> subnets) {
-            this.subnets = Input.of(Objects.requireNonNull(subnets));
+            this.subnets = Output.of(Objects.requireNonNull(subnets));
             return this;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public ProjectVpcConfigGetArgs build() {

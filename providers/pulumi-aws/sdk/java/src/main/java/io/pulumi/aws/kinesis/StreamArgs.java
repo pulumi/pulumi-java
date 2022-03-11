@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis;
 
 import io.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionType")
-      private final @Nullable Input<String> encryptionType;
+      private final @Nullable Output<String> encryptionType;
 
-    public Input<String> getEncryptionType() {
-        return this.encryptionType == null ? Input.empty() : this.encryptionType;
+    public Output<String> getEncryptionType() {
+        return this.encryptionType == null ? Output.empty() : this.encryptionType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enforceConsumerDeletion")
-      private final @Nullable Input<Boolean> enforceConsumerDeletion;
+      private final @Nullable Output<Boolean> enforceConsumerDeletion;
 
-    public Input<Boolean> getEnforceConsumerDeletion() {
-        return this.enforceConsumerDeletion == null ? Input.empty() : this.enforceConsumerDeletion;
+    public Output<Boolean> getEnforceConsumerDeletion() {
+        return this.enforceConsumerDeletion == null ? Output.empty() : this.enforceConsumerDeletion;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<Integer> retentionPeriod;
+      private final @Nullable Output<Integer> retentionPeriod;
 
-    public Input<Integer> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<Integer> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-      private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Output<Integer> shardCount;
 
-    public Input<Integer> getShardCount() {
-        return this.shardCount == null ? Input.empty() : this.shardCount;
+    public Output<Integer> getShardCount() {
+        return this.shardCount == null ? Output.empty() : this.shardCount;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardLevelMetrics")
-      private final @Nullable Input<List<String>> shardLevelMetrics;
+      private final @Nullable Output<List<String>> shardLevelMetrics;
 
-    public Input<List<String>> getShardLevelMetrics() {
-        return this.shardLevelMetrics == null ? Input.empty() : this.shardLevelMetrics;
+    public Output<List<String>> getShardLevelMetrics() {
+        return this.shardLevelMetrics == null ? Output.empty() : this.shardLevelMetrics;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamModeDetails")
-      private final @Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails;
+      private final @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
 
-    public Input<StreamStreamModeDetailsArgs> getStreamModeDetails() {
-        return this.streamModeDetails == null ? Input.empty() : this.streamModeDetails;
+    public Output<StreamStreamModeDetailsArgs> getStreamModeDetails() {
+        return this.streamModeDetails == null ? Output.empty() : this.streamModeDetails;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StreamArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> encryptionType,
-        @Nullable Input<Boolean> enforceConsumerDeletion,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> retentionPeriod,
-        @Nullable Input<Integer> shardCount,
-        @Nullable Input<List<String>> shardLevelMetrics,
-        @Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> encryptionType,
+        @Nullable Output<Boolean> enforceConsumerDeletion,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> retentionPeriod,
+        @Nullable Output<Integer> shardCount,
+        @Nullable Output<List<String>> shardLevelMetrics,
+        @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails,
+        @Nullable Output<Map<String,String>> tags) {
         this.arn = arn;
         this.encryptionType = encryptionType;
         this.enforceConsumerDeletion = enforceConsumerDeletion;
@@ -154,16 +154,16 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.arn = Input.empty();
-        this.encryptionType = Input.empty();
-        this.enforceConsumerDeletion = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.name = Input.empty();
-        this.retentionPeriod = Input.empty();
-        this.shardCount = Input.empty();
-        this.shardLevelMetrics = Input.empty();
-        this.streamModeDetails = Input.empty();
-        this.tags = Input.empty();
+        this.arn = Output.empty();
+        this.encryptionType = Output.empty();
+        this.enforceConsumerDeletion = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.name = Output.empty();
+        this.retentionPeriod = Output.empty();
+        this.shardCount = Output.empty();
+        this.shardLevelMetrics = Output.empty();
+        this.streamModeDetails = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> encryptionType;
-        private @Nullable Input<Boolean> enforceConsumerDeletion;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> retentionPeriod;
-        private @Nullable Input<Integer> shardCount;
-        private @Nullable Input<List<String>> shardLevelMetrics;
-        private @Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> encryptionType;
+        private @Nullable Output<Boolean> enforceConsumerDeletion;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> retentionPeriod;
+        private @Nullable Output<Integer> shardCount;
+        private @Nullable Output<List<String>> shardLevelMetrics;
+        private @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder encryptionType(@Nullable Input<String> encryptionType) {
+        public Builder encryptionType(@Nullable Output<String> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
         public Builder encryptionType(@Nullable String encryptionType) {
-            this.encryptionType = Input.ofNullable(encryptionType);
+            this.encryptionType = Output.ofNullable(encryptionType);
             return this;
         }
 
-        public Builder enforceConsumerDeletion(@Nullable Input<Boolean> enforceConsumerDeletion) {
+        public Builder enforceConsumerDeletion(@Nullable Output<Boolean> enforceConsumerDeletion) {
             this.enforceConsumerDeletion = enforceConsumerDeletion;
             return this;
         }
 
         public Builder enforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
-            this.enforceConsumerDeletion = Input.ofNullable(enforceConsumerDeletion);
+            this.enforceConsumerDeletion = Output.ofNullable(enforceConsumerDeletion);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder shardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Input.ofNullable(shardCount);
+            this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
 
-        public Builder shardLevelMetrics(@Nullable Input<List<String>> shardLevelMetrics) {
+        public Builder shardLevelMetrics(@Nullable Output<List<String>> shardLevelMetrics) {
             this.shardLevelMetrics = shardLevelMetrics;
             return this;
         }
 
         public Builder shardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
-            this.shardLevelMetrics = Input.ofNullable(shardLevelMetrics);
+            this.shardLevelMetrics = Output.ofNullable(shardLevelMetrics);
             return this;
         }
 
-        public Builder streamModeDetails(@Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails) {
+        public Builder streamModeDetails(@Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
 
         public Builder streamModeDetails(@Nullable StreamStreamModeDetailsArgs streamModeDetails) {
-            this.streamModeDetails = Input.ofNullable(streamModeDetails);
+            this.streamModeDetails = Output.ofNullable(streamModeDetails);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StreamArgs build() {

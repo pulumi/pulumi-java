@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
+      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
+      private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
 
-    public Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="referenceDataSource")
-      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
+      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
 
-    public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> getReferenceDataSource() {
-        return this.referenceDataSource == null ? Input.empty() : this.referenceDataSource;
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> getReferenceDataSource() {
+        return this.referenceDataSource == null ? Output.empty() : this.referenceDataSource;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(
-        @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input,
-        @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs,
-        @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
+        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input,
+        @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs,
+        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
         this.input = input;
         this.outputs = outputs;
         this.referenceDataSource = referenceDataSource;
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs() {
-        this.input = Input.empty();
-        this.outputs = Input.empty();
-        this.referenceDataSource = Input.empty();
+        this.input = Output.empty();
+        this.outputs = Output.empty();
+        this.referenceDataSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
-        private @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
-        private @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
+        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
+        private @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
+        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.referenceDataSource = defaults.referenceDataSource;
         }
 
-        public Builder input(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input) {
+        public Builder input(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder referenceDataSource(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
+        public Builder referenceDataSource(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
         }
 
         public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs referenceDataSource) {
-            this.referenceDataSource = Input.ofNullable(referenceDataSource);
+            this.referenceDataSource = Output.ofNullable(referenceDataSource);
             return this;
         }
         public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs build() {

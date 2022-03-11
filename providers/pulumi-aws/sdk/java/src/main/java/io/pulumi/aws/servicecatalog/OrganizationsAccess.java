@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.OrganizationsAccessArgs;
 import io.pulumi.aws.servicecatalog.inputs.OrganizationsAccessState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -76,14 +75,14 @@ public class OrganizationsAccess extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationsAccess(String name, OrganizationsAccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/organizationsAccess:OrganizationsAccess", name, args == null ? OrganizationsAccessArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/organizationsAccess:OrganizationsAccess", name, args == null ? OrganizationsAccessArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OrganizationsAccess(String name, Input<String> id, @Nullable OrganizationsAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OrganizationsAccess(String name, Output<String> id, @Nullable OrganizationsAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/organizationsAccess:OrganizationsAccess", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -99,7 +98,7 @@ public class OrganizationsAccess extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OrganizationsAccess get(String name, Input<String> id, @Nullable OrganizationsAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OrganizationsAccess get(String name, Output<String> id, @Nullable OrganizationsAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrganizationsAccess(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="credential", required=true)
-      private final Input<String> credential;
+      private final Output<String> credential;
 
-    public Input<String> getCredential() {
+    public Output<String> getCredential() {
         return this.credential;
     }
 
@@ -29,22 +29,22 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="credentialProvider", required=true)
-      private final Input<String> credentialProvider;
+      private final Output<String> credentialProvider;
 
-    public Input<String> getCredentialProvider() {
+    public Output<String> getCredentialProvider() {
         return this.credentialProvider;
     }
 
     public ProjectEnvironmentRegistryCredentialGetArgs(
-        Input<String> credential,
-        Input<String> credentialProvider) {
+        Output<String> credential,
+        Output<String> credentialProvider) {
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.credentialProvider = Objects.requireNonNull(credentialProvider, "expected parameter 'credentialProvider' to be non-null");
     }
 
     private ProjectEnvironmentRegistryCredentialGetArgs() {
-        this.credential = Input.empty();
-        this.credentialProvider = Input.empty();
+        this.credential = Output.empty();
+        this.credentialProvider = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> credential;
-        private Input<String> credentialProvider;
+        private Output<String> credential;
+        private Output<String> credentialProvider;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
     	      this.credentialProvider = defaults.credentialProvider;
         }
 
-        public Builder credential(Input<String> credential) {
+        public Builder credential(Output<String> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
         public Builder credential(String credential) {
-            this.credential = Input.of(Objects.requireNonNull(credential));
+            this.credential = Output.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder credentialProvider(Input<String> credentialProvider) {
+        public Builder credentialProvider(Output<String> credentialProvider) {
             this.credentialProvider = Objects.requireNonNull(credentialProvider);
             return this;
         }
 
         public Builder credentialProvider(String credentialProvider) {
-            this.credentialProvider = Input.of(Objects.requireNonNull(credentialProvider));
+            this.credentialProvider = Output.of(Objects.requireNonNull(credentialProvider));
             return this;
         }
         public ProjectEnvironmentRegistryCredentialGetArgs build() {

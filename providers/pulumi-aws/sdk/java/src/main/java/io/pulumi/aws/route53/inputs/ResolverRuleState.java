@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ResolverRuleTargetIpGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-      private final @Nullable Input<String> ownerId;
+      private final @Nullable Output<String> ownerId;
 
-    public Input<String> getOwnerId() {
-        return this.ownerId == null ? Input.empty() : this.ownerId;
+    public Output<String> getOwnerId() {
+        return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolverEndpointId")
-      private final @Nullable Input<String> resolverEndpointId;
+      private final @Nullable Output<String> resolverEndpointId;
 
-    public Input<String> getResolverEndpointId() {
-        return this.resolverEndpointId == null ? Input.empty() : this.resolverEndpointId;
+    public Output<String> getResolverEndpointId() {
+        return this.resolverEndpointId == null ? Output.empty() : this.resolverEndpointId;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleType")
-      private final @Nullable Input<String> ruleType;
+      private final @Nullable Output<String> ruleType;
 
-    public Input<String> getRuleType() {
-        return this.ruleType == null ? Input.empty() : this.ruleType;
+    public Output<String> getRuleType() {
+        return this.ruleType == null ? Output.empty() : this.ruleType;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareStatus")
-      private final @Nullable Input<String> shareStatus;
+      private final @Nullable Output<String> shareStatus;
 
-    public Input<String> getShareStatus() {
-        return this.shareStatus == null ? Input.empty() : this.shareStatus;
+    public Output<String> getShareStatus() {
+        return this.shareStatus == null ? Output.empty() : this.shareStatus;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetIps")
-      private final @Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps;
+      private final @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
 
-    public Input<List<ResolverRuleTargetIpGetArgs>> getTargetIps() {
-        return this.targetIps == null ? Input.empty() : this.targetIps;
+    public Output<List<ResolverRuleTargetIpGetArgs>> getTargetIps() {
+        return this.targetIps == null ? Output.empty() : this.targetIps;
     }
 
     public ResolverRuleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerId,
-        @Nullable Input<String> resolverEndpointId,
-        @Nullable Input<String> ruleType,
-        @Nullable Input<String> shareStatus,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerId,
+        @Nullable Output<String> resolverEndpointId,
+        @Nullable Output<String> ruleType,
+        @Nullable Output<String> shareStatus,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
         this.arn = arn;
         this.domainName = domainName;
         this.name = name;
@@ -154,16 +154,16 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResolverRuleState() {
-        this.arn = Input.empty();
-        this.domainName = Input.empty();
-        this.name = Input.empty();
-        this.ownerId = Input.empty();
-        this.resolverEndpointId = Input.empty();
-        this.ruleType = Input.empty();
-        this.shareStatus = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.targetIps = Input.empty();
+        this.arn = Output.empty();
+        this.domainName = Output.empty();
+        this.name = Output.empty();
+        this.ownerId = Output.empty();
+        this.resolverEndpointId = Output.empty();
+        this.ruleType = Output.empty();
+        this.shareStatus = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.targetIps = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerId;
-        private @Nullable Input<String> resolverEndpointId;
-        private @Nullable Input<String> ruleType;
-        private @Nullable Input<String> shareStatus;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerId;
+        private @Nullable Output<String> resolverEndpointId;
+        private @Nullable Output<String> ruleType;
+        private @Nullable Output<String> shareStatus;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.targetIps = defaults.targetIps;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Input.ofNullable(ownerId);
+            this.ownerId = Output.ofNullable(ownerId);
             return this;
         }
 
-        public Builder resolverEndpointId(@Nullable Input<String> resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = Input.ofNullable(resolverEndpointId);
+            this.resolverEndpointId = Output.ofNullable(resolverEndpointId);
             return this;
         }
 
-        public Builder ruleType(@Nullable Input<String> ruleType) {
+        public Builder ruleType(@Nullable Output<String> ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
         public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = Input.ofNullable(ruleType);
+            this.ruleType = Output.ofNullable(ruleType);
             return this;
         }
 
-        public Builder shareStatus(@Nullable Input<String> shareStatus) {
+        public Builder shareStatus(@Nullable Output<String> shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
 
         public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = Input.ofNullable(shareStatus);
+            this.shareStatus = Output.ofNullable(shareStatus);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder targetIps(@Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps) {
+        public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
 
         public Builder targetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
-            this.targetIps = Input.ofNullable(targetIps);
+            this.targetIps = Output.ofNullable(targetIps);
             return this;
         }
         public ResolverRuleState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="searchableAttributes")
-      private final @Nullable Input<List<String>> searchableAttributes;
+      private final @Nullable Output<List<String>> searchableAttributes;
 
-    public Input<List<String>> getSearchableAttributes() {
-        return this.searchableAttributes == null ? Input.empty() : this.searchableAttributes;
+    public Output<List<String>> getSearchableAttributes() {
+        return this.searchableAttributes == null ? Output.empty() : this.searchableAttributes;
     }
 
     public ThingTypePropertiesArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> searchableAttributes) {
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> searchableAttributes) {
         this.description = description;
         this.searchableAttributes = searchableAttributes;
     }
 
     private ThingTypePropertiesArgs() {
-        this.description = Input.empty();
-        this.searchableAttributes = Input.empty();
+        this.description = Output.empty();
+        this.searchableAttributes = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> searchableAttributes;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> searchableAttributes;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.searchableAttributes = defaults.searchableAttributes;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder searchableAttributes(@Nullable Input<List<String>> searchableAttributes) {
+        public Builder searchableAttributes(@Nullable Output<List<String>> searchableAttributes) {
             this.searchableAttributes = searchableAttributes;
             return this;
         }
 
         public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
-            this.searchableAttributes = Input.ofNullable(searchableAttributes);
+            this.searchableAttributes = Output.ofNullable(searchableAttributes);
             return this;
         }
         public ThingTypePropertiesArgs build() {

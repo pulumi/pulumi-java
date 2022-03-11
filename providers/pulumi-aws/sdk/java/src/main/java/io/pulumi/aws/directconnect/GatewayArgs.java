@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amazonSideAsn", required=true)
-      private final Input<String> amazonSideAsn;
+      private final Output<String> amazonSideAsn;
 
-    public Input<String> getAmazonSideAsn() {
+    public Output<String> getAmazonSideAsn() {
         return this.amazonSideAsn;
     }
 
@@ -30,22 +30,22 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public GatewayArgs(
-        Input<String> amazonSideAsn,
-        @Nullable Input<String> name) {
+        Output<String> amazonSideAsn,
+        @Nullable Output<String> name) {
         this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn, "expected parameter 'amazonSideAsn' to be non-null");
         this.name = name;
     }
 
     private GatewayArgs() {
-        this.amazonSideAsn = Input.empty();
-        this.name = Input.empty();
+        this.amazonSideAsn = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> amazonSideAsn;
-        private @Nullable Input<String> name;
+        private Output<String> amazonSideAsn;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder amazonSideAsn(Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(Output<String> amazonSideAsn) {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
 
         public Builder amazonSideAsn(String amazonSideAsn) {
-            this.amazonSideAsn = Input.of(Objects.requireNonNull(amazonSideAsn));
+            this.amazonSideAsn = Output.of(Objects.requireNonNull(amazonSideAsn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public GatewayArgs build() {

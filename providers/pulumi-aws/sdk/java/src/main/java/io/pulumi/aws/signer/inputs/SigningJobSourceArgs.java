@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobSourceS3Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class SigningJobSourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3", required=true)
-      private final Input<SigningJobSourceS3Args> s3;
+      private final Output<SigningJobSourceS3Args> s3;
 
-    public Input<SigningJobSourceS3Args> getS3() {
+    public Output<SigningJobSourceS3Args> getS3() {
         return this.s3;
     }
 
-    public SigningJobSourceArgs(Input<SigningJobSourceS3Args> s3) {
+    public SigningJobSourceArgs(Output<SigningJobSourceS3Args> s3) {
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
     }
 
     private SigningJobSourceArgs() {
-        this.s3 = Input.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class SigningJobSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<SigningJobSourceS3Args> s3;
+        private Output<SigningJobSourceS3Args> s3;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class SigningJobSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.s3 = defaults.s3;
         }
 
-        public Builder s3(Input<SigningJobSourceS3Args> s3) {
+        public Builder s3(Output<SigningJobSourceS3Args> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(SigningJobSourceS3Args s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
         public SigningJobSourceArgs build() {

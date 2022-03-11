@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -29,9 +29,9 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managedPolicyArn", required=true)
-      private final Input<String> managedPolicyArn;
+      private final Output<String> managedPolicyArn;
 
-    public Input<String> getManagedPolicyArn() {
+    public Output<String> getManagedPolicyArn() {
         return this.managedPolicyArn;
     }
 
@@ -40,25 +40,25 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-      private final Input<String> permissionSetArn;
+      private final Output<String> permissionSetArn;
 
-    public Input<String> getPermissionSetArn() {
+    public Output<String> getPermissionSetArn() {
         return this.permissionSetArn;
     }
 
     public ManagedPolicyAttachmentArgs(
-        Input<String> instanceArn,
-        Input<String> managedPolicyArn,
-        Input<String> permissionSetArn) {
+        Output<String> instanceArn,
+        Output<String> managedPolicyArn,
+        Output<String> permissionSetArn) {
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.managedPolicyArn = Objects.requireNonNull(managedPolicyArn, "expected parameter 'managedPolicyArn' to be non-null");
         this.permissionSetArn = Objects.requireNonNull(permissionSetArn, "expected parameter 'permissionSetArn' to be non-null");
     }
 
     private ManagedPolicyAttachmentArgs() {
-        this.instanceArn = Input.empty();
-        this.managedPolicyArn = Input.empty();
-        this.permissionSetArn = Input.empty();
+        this.instanceArn = Output.empty();
+        this.managedPolicyArn = Output.empty();
+        this.permissionSetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> instanceArn;
-        private Input<String> managedPolicyArn;
-        private Input<String> permissionSetArn;
+        private Output<String> instanceArn;
+        private Output<String> managedPolicyArn;
+        private Output<String> permissionSetArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder managedPolicyArn(Input<String> managedPolicyArn) {
+        public Builder managedPolicyArn(Output<String> managedPolicyArn) {
             this.managedPolicyArn = Objects.requireNonNull(managedPolicyArn);
             return this;
         }
 
         public Builder managedPolicyArn(String managedPolicyArn) {
-            this.managedPolicyArn = Input.of(Objects.requireNonNull(managedPolicyArn));
+            this.managedPolicyArn = Output.of(Objects.requireNonNull(managedPolicyArn));
             return this;
         }
 
-        public Builder permissionSetArn(Input<String> permissionSetArn) {
+        public Builder permissionSetArn(Output<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
 
         public Builder permissionSetArn(String permissionSetArn) {
-            this.permissionSetArn = Input.of(Objects.requireNonNull(permissionSetArn));
+            this.permissionSetArn = Output.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }
         public ManagedPolicyAttachmentArgs build() {

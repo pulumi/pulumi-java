@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fleetName")
-      private final @Nullable Input<String> fleetName;
+      private final @Nullable Output<String> fleetName;
 
-    public Input<String> getFleetName() {
-        return this.fleetName == null ? Input.empty() : this.fleetName;
+    public Output<String> getFleetName() {
+        return this.fleetName == null ? Output.empty() : this.fleetName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stackName")
-      private final @Nullable Input<String> stackName;
+      private final @Nullable Output<String> stackName;
 
-    public Input<String> getStackName() {
-        return this.stackName == null ? Input.empty() : this.stackName;
+    public Output<String> getStackName() {
+        return this.stackName == null ? Output.empty() : this.stackName;
     }
 
     public FleetStackAssociationState(
-        @Nullable Input<String> fleetName,
-        @Nullable Input<String> stackName) {
+        @Nullable Output<String> fleetName,
+        @Nullable Output<String> stackName) {
         this.fleetName = fleetName;
         this.stackName = stackName;
     }
 
     private FleetStackAssociationState() {
-        this.fleetName = Input.empty();
-        this.stackName = Input.empty();
+        this.fleetName = Output.empty();
+        this.stackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fleetName;
-        private @Nullable Input<String> stackName;
+        private @Nullable Output<String> fleetName;
+        private @Nullable Output<String> stackName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder fleetName(@Nullable Input<String> fleetName) {
+        public Builder fleetName(@Nullable Output<String> fleetName) {
             this.fleetName = fleetName;
             return this;
         }
 
         public Builder fleetName(@Nullable String fleetName) {
-            this.fleetName = Input.ofNullable(fleetName);
+            this.fleetName = Output.ofNullable(fleetName);
             return this;
         }
 
-        public Builder stackName(@Nullable Input<String> stackName) {
+        public Builder stackName(@Nullable Output<String> stackName) {
             this.stackName = stackName;
             return this;
         }
 
         public Builder stackName(@Nullable String stackName) {
-            this.stackName = Input.ofNullable(stackName);
+            this.stackName = Output.ofNullable(stackName);
             return this;
         }
         public FleetStackAssociationState build() {

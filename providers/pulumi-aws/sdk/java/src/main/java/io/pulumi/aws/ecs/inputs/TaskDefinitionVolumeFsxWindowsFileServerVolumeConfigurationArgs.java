@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @InputImport(name="authorizationConfig", required=true)
-      private final Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
+      private final Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
 
-    public Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> getAuthorizationConfig() {
+    public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> getAuthorizationConfig() {
         return this.authorizationConfig;
     }
 
@@ -30,9 +30,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-      private final Input<String> fileSystemId;
+      private final Output<String> fileSystemId;
 
-    public Input<String> getFileSystemId() {
+    public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
@@ -41,25 +41,25 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @InputImport(name="rootDirectory", required=true)
-      private final Input<String> rootDirectory;
+      private final Output<String> rootDirectory;
 
-    public Input<String> getRootDirectory() {
+    public Output<String> getRootDirectory() {
         return this.rootDirectory;
     }
 
     public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(
-        Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig,
-        Input<String> fileSystemId,
-        Input<String> rootDirectory) {
+        Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig,
+        Output<String> fileSystemId,
+        Output<String> rootDirectory) {
         this.authorizationConfig = Objects.requireNonNull(authorizationConfig, "expected parameter 'authorizationConfig' to be non-null");
         this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
         this.rootDirectory = Objects.requireNonNull(rootDirectory, "expected parameter 'rootDirectory' to be non-null");
     }
 
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs() {
-        this.authorizationConfig = Input.empty();
-        this.fileSystemId = Input.empty();
-        this.rootDirectory = Input.empty();
+        this.authorizationConfig = Output.empty();
+        this.fileSystemId = Output.empty();
+        this.rootDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
     }
 
     public static final class Builder {
-        private Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
-        private Input<String> fileSystemId;
-        private Input<String> rootDirectory;
+        private Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
+        private Output<String> fileSystemId;
+        private Output<String> rootDirectory;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder authorizationConfig(Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig) {
+        public Builder authorizationConfig(Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig) {
             this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
             return this;
         }
 
         public Builder authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs authorizationConfig) {
-            this.authorizationConfig = Input.of(Objects.requireNonNull(authorizationConfig));
+            this.authorizationConfig = Output.of(Objects.requireNonNull(authorizationConfig));
             return this;
         }
 
-        public Builder fileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Output<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
+            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder rootDirectory(Input<String> rootDirectory) {
+        public Builder rootDirectory(Output<String> rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }
 
         public Builder rootDirectory(String rootDirectory) {
-            this.rootDirectory = Input.of(Objects.requireNonNull(rootDirectory));
+            this.rootDirectory = Output.of(Objects.requireNonNull(rootDirectory));
             return this;
         }
         public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs build() {

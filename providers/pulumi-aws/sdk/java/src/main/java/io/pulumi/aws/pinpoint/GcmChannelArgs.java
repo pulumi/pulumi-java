@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKey", required=true)
-      private final Input<String> apiKey;
+      private final Output<String> apiKey;
 
-    public Input<String> getApiKey() {
+    public Output<String> getApiKey() {
         return this.apiKey;
     }
 
@@ -31,9 +31,9 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -42,25 +42,25 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     public GcmChannelArgs(
-        Input<String> apiKey,
-        Input<String> applicationId,
-        @Nullable Input<Boolean> enabled) {
+        Output<String> apiKey,
+        Output<String> applicationId,
+        @Nullable Output<Boolean> enabled) {
         this.apiKey = Objects.requireNonNull(apiKey, "expected parameter 'apiKey' to be non-null");
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.enabled = enabled;
     }
 
     private GcmChannelArgs() {
-        this.apiKey = Input.empty();
-        this.applicationId = Input.empty();
-        this.enabled = Input.empty();
+        this.apiKey = Output.empty();
+        this.applicationId = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiKey;
-        private Input<String> applicationId;
-        private @Nullable Input<Boolean> enabled;
+        private Output<String> apiKey;
+        private Output<String> applicationId;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class GcmChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder apiKey(Input<String> apiKey) {
+        public Builder apiKey(Output<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
         public Builder apiKey(String apiKey) {
-            this.apiKey = Input.of(Objects.requireNonNull(apiKey));
+            this.apiKey = Output.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public GcmChannelArgs build() {

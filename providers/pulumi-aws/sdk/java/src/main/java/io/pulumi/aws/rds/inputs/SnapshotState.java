@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatedStorage")
-      private final @Nullable Input<Integer> allocatedStorage;
+      private final @Nullable Output<Integer> allocatedStorage;
 
-    public Input<Integer> getAllocatedStorage() {
-        return this.allocatedStorage == null ? Input.empty() : this.allocatedStorage;
+    public Output<Integer> getAllocatedStorage() {
+        return this.allocatedStorage == null ? Output.empty() : this.allocatedStorage;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-      private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
+    public Output<String> getDbInstanceIdentifier() {
+        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotArn")
-      private final @Nullable Input<String> dbSnapshotArn;
+      private final @Nullable Output<String> dbSnapshotArn;
 
-    public Input<String> getDbSnapshotArn() {
-        return this.dbSnapshotArn == null ? Input.empty() : this.dbSnapshotArn;
+    public Output<String> getDbSnapshotArn() {
+        return this.dbSnapshotArn == null ? Output.empty() : this.dbSnapshotArn;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotIdentifier")
-      private final @Nullable Input<String> dbSnapshotIdentifier;
+      private final @Nullable Output<String> dbSnapshotIdentifier;
 
-    public Input<String> getDbSnapshotIdentifier() {
-        return this.dbSnapshotIdentifier == null ? Input.empty() : this.dbSnapshotIdentifier;
+    public Output<String> getDbSnapshotIdentifier() {
+        return this.dbSnapshotIdentifier == null ? Output.empty() : this.dbSnapshotIdentifier;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-      private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Output<Boolean> encrypted;
 
-    public Input<Boolean> getEncrypted() {
-        return this.encrypted == null ? Input.empty() : this.encrypted;
+    public Output<Boolean> getEncrypted() {
+        return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iops")
-      private final @Nullable Input<Integer> iops;
+      private final @Nullable Output<Integer> iops;
 
-    public Input<Integer> getIops() {
-        return this.iops == null ? Input.empty() : this.iops;
+    public Output<Integer> getIops() {
+        return this.iops == null ? Output.empty() : this.iops;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseModel")
-      private final @Nullable Input<String> licenseModel;
+      private final @Nullable Output<String> licenseModel;
 
-    public Input<String> getLicenseModel() {
-        return this.licenseModel == null ? Input.empty() : this.licenseModel;
+    public Output<String> getLicenseModel() {
+        return this.licenseModel == null ? Output.empty() : this.licenseModel;
     }
 
     /**
@@ -143,24 +143,24 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionGroupName")
-      private final @Nullable Input<String> optionGroupName;
+      private final @Nullable Output<String> optionGroupName;
 
-    public Input<String> getOptionGroupName() {
-        return this.optionGroupName == null ? Input.empty() : this.optionGroupName;
+    public Output<String> getOptionGroupName() {
+        return this.optionGroupName == null ? Output.empty() : this.optionGroupName;
     }
 
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="snapshotType")
-      private final @Nullable Input<String> snapshotType;
+      private final @Nullable Output<String> snapshotType;
 
-    public Input<String> getSnapshotType() {
-        return this.snapshotType == null ? Input.empty() : this.snapshotType;
+    public Output<String> getSnapshotType() {
+        return this.snapshotType == null ? Output.empty() : this.snapshotType;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDbSnapshotIdentifier")
-      private final @Nullable Input<String> sourceDbSnapshotIdentifier;
+      private final @Nullable Output<String> sourceDbSnapshotIdentifier;
 
-    public Input<String> getSourceDbSnapshotIdentifier() {
-        return this.sourceDbSnapshotIdentifier == null ? Input.empty() : this.sourceDbSnapshotIdentifier;
+    public Output<String> getSourceDbSnapshotIdentifier() {
+        return this.sourceDbSnapshotIdentifier == null ? Output.empty() : this.sourceDbSnapshotIdentifier;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegion")
-      private final @Nullable Input<String> sourceRegion;
+      private final @Nullable Output<String> sourceRegion;
 
-    public Input<String> getSourceRegion() {
-        return this.sourceRegion == null ? Input.empty() : this.sourceRegion;
+    public Output<String> getSourceRegion() {
+        return this.sourceRegion == null ? Output.empty() : this.sourceRegion;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType")
-      private final @Nullable Input<String> storageType;
+      private final @Nullable Output<String> storageType;
 
-    public Input<String> getStorageType() {
-        return this.storageType == null ? Input.empty() : this.storageType;
+    public Output<String> getStorageType() {
+        return this.storageType == null ? Output.empty() : this.storageType;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -234,34 +234,34 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public SnapshotState(
-        @Nullable Input<Integer> allocatedStorage,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> dbInstanceIdentifier,
-        @Nullable Input<String> dbSnapshotArn,
-        @Nullable Input<String> dbSnapshotIdentifier,
-        @Nullable Input<Boolean> encrypted,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<Integer> iops,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> licenseModel,
-        @Nullable Input<String> optionGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> snapshotType,
-        @Nullable Input<String> sourceDbSnapshotIdentifier,
-        @Nullable Input<String> sourceRegion,
-        @Nullable Input<String> status,
-        @Nullable Input<String> storageType,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<Integer> allocatedStorage,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> dbInstanceIdentifier,
+        @Nullable Output<String> dbSnapshotArn,
+        @Nullable Output<String> dbSnapshotIdentifier,
+        @Nullable Output<Boolean> encrypted,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<Integer> iops,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> licenseModel,
+        @Nullable Output<String> optionGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> snapshotType,
+        @Nullable Output<String> sourceDbSnapshotIdentifier,
+        @Nullable Output<String> sourceRegion,
+        @Nullable Output<String> status,
+        @Nullable Output<String> storageType,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId) {
         this.allocatedStorage = allocatedStorage;
         this.availabilityZone = availabilityZone;
         this.dbInstanceIdentifier = dbInstanceIdentifier;
@@ -286,27 +286,27 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotState() {
-        this.allocatedStorage = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.dbInstanceIdentifier = Input.empty();
-        this.dbSnapshotArn = Input.empty();
-        this.dbSnapshotIdentifier = Input.empty();
-        this.encrypted = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.iops = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.licenseModel = Input.empty();
-        this.optionGroupName = Input.empty();
-        this.port = Input.empty();
-        this.snapshotType = Input.empty();
-        this.sourceDbSnapshotIdentifier = Input.empty();
-        this.sourceRegion = Input.empty();
-        this.status = Input.empty();
-        this.storageType = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
+        this.allocatedStorage = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.dbSnapshotArn = Output.empty();
+        this.dbSnapshotIdentifier = Output.empty();
+        this.encrypted = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.iops = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.licenseModel = Output.empty();
+        this.optionGroupName = Output.empty();
+        this.port = Output.empty();
+        this.snapshotType = Output.empty();
+        this.sourceDbSnapshotIdentifier = Output.empty();
+        this.sourceRegion = Output.empty();
+        this.status = Output.empty();
+        this.storageType = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -318,27 +318,27 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> allocatedStorage;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> dbInstanceIdentifier;
-        private @Nullable Input<String> dbSnapshotArn;
-        private @Nullable Input<String> dbSnapshotIdentifier;
-        private @Nullable Input<Boolean> encrypted;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<Integer> iops;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> licenseModel;
-        private @Nullable Input<String> optionGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> snapshotType;
-        private @Nullable Input<String> sourceDbSnapshotIdentifier;
-        private @Nullable Input<String> sourceRegion;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> storageType;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<Integer> allocatedStorage;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> dbInstanceIdentifier;
+        private @Nullable Output<String> dbSnapshotArn;
+        private @Nullable Output<String> dbSnapshotIdentifier;
+        private @Nullable Output<Boolean> encrypted;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<Integer> iops;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> licenseModel;
+        private @Nullable Output<String> optionGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> snapshotType;
+        private @Nullable Output<String> sourceDbSnapshotIdentifier;
+        private @Nullable Output<String> sourceRegion;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> storageType;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -369,213 +369,213 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder allocatedStorage(@Nullable Input<Integer> allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Output<Integer> allocatedStorage) {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
 
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Input.ofNullable(allocatedStorage);
+            this.allocatedStorage = Output.ofNullable(allocatedStorage);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder dbSnapshotArn(@Nullable Input<String> dbSnapshotArn) {
+        public Builder dbSnapshotArn(@Nullable Output<String> dbSnapshotArn) {
             this.dbSnapshotArn = dbSnapshotArn;
             return this;
         }
 
         public Builder dbSnapshotArn(@Nullable String dbSnapshotArn) {
-            this.dbSnapshotArn = Input.ofNullable(dbSnapshotArn);
+            this.dbSnapshotArn = Output.ofNullable(dbSnapshotArn);
             return this;
         }
 
-        public Builder dbSnapshotIdentifier(@Nullable Input<String> dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(@Nullable Output<String> dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
 
         public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = Input.ofNullable(dbSnapshotIdentifier);
+            this.dbSnapshotIdentifier = Output.ofNullable(dbSnapshotIdentifier);
             return this;
         }
 
-        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Output<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Input.ofNullable(encrypted);
+            this.encrypted = Output.ofNullable(encrypted);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder iops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Output<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Input.ofNullable(iops);
+            this.iops = Output.ofNullable(iops);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder licenseModel(@Nullable Input<String> licenseModel) {
+        public Builder licenseModel(@Nullable Output<String> licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
 
         public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = Input.ofNullable(licenseModel);
+            this.licenseModel = Output.ofNullable(licenseModel);
             return this;
         }
 
-        public Builder optionGroupName(@Nullable Input<String> optionGroupName) {
+        public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
             this.optionGroupName = optionGroupName;
             return this;
         }
 
         public Builder optionGroupName(@Nullable String optionGroupName) {
-            this.optionGroupName = Input.ofNullable(optionGroupName);
+            this.optionGroupName = Output.ofNullable(optionGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder snapshotType(@Nullable Input<String> snapshotType) {
+        public Builder snapshotType(@Nullable Output<String> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
         public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = Input.ofNullable(snapshotType);
+            this.snapshotType = Output.ofNullable(snapshotType);
             return this;
         }
 
-        public Builder sourceDbSnapshotIdentifier(@Nullable Input<String> sourceDbSnapshotIdentifier) {
+        public Builder sourceDbSnapshotIdentifier(@Nullable Output<String> sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
             return this;
         }
 
         public Builder sourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
-            this.sourceDbSnapshotIdentifier = Input.ofNullable(sourceDbSnapshotIdentifier);
+            this.sourceDbSnapshotIdentifier = Output.ofNullable(sourceDbSnapshotIdentifier);
             return this;
         }
 
-        public Builder sourceRegion(@Nullable Input<String> sourceRegion) {
+        public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
             this.sourceRegion = sourceRegion;
             return this;
         }
 
         public Builder sourceRegion(@Nullable String sourceRegion) {
-            this.sourceRegion = Input.ofNullable(sourceRegion);
+            this.sourceRegion = Output.ofNullable(sourceRegion);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder storageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Output<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Input.ofNullable(storageType);
+            this.storageType = Output.ofNullable(storageType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public SnapshotState build() {

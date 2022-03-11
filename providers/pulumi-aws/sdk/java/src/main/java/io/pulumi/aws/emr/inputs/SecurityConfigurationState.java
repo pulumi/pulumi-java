@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<String> configuration;
+      private final @Nullable Output<String> configuration;
 
-    public Input<String> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<String> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     public SecurityConfigurationState(
-        @Nullable Input<String> configuration,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix) {
+        @Nullable Output<String> configuration,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix) {
         this.configuration = configuration;
         this.creationDate = creationDate;
         this.name = name;
@@ -71,10 +71,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     }
 
     private SecurityConfigurationState() {
-        this.configuration = Input.empty();
-        this.creationDate = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
+        this.configuration = Output.empty();
+        this.creationDate = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configuration;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
+        private @Nullable Output<String> configuration;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder configuration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
         public SecurityConfigurationState build() {

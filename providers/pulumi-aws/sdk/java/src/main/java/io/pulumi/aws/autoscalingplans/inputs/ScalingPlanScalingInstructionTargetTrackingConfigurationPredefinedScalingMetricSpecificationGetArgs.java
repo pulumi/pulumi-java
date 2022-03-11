@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscalingplans.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @InputImport(name="predefinedScalingMetricType", required=true)
-      private final Input<String> predefinedScalingMetricType;
+      private final Output<String> predefinedScalingMetricType;
 
-    public Input<String> getPredefinedScalingMetricType() {
+    public Output<String> getPredefinedScalingMetricType() {
         return this.predefinedScalingMetricType;
     }
 
@@ -30,22 +30,22 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @InputImport(name="resourceLabel")
-      private final @Nullable Input<String> resourceLabel;
+      private final @Nullable Output<String> resourceLabel;
 
-    public Input<String> getResourceLabel() {
-        return this.resourceLabel == null ? Input.empty() : this.resourceLabel;
+    public Output<String> getResourceLabel() {
+        return this.resourceLabel == null ? Output.empty() : this.resourceLabel;
     }
 
     public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(
-        Input<String> predefinedScalingMetricType,
-        @Nullable Input<String> resourceLabel) {
+        Output<String> predefinedScalingMetricType,
+        @Nullable Output<String> resourceLabel) {
         this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType, "expected parameter 'predefinedScalingMetricType' to be non-null");
         this.resourceLabel = resourceLabel;
     }
 
     private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs() {
-        this.predefinedScalingMetricType = Input.empty();
-        this.resourceLabel = Input.empty();
+        this.predefinedScalingMetricType = Output.empty();
+        this.resourceLabel = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     }
 
     public static final class Builder {
-        private Input<String> predefinedScalingMetricType;
-        private @Nullable Input<String> resourceLabel;
+        private Output<String> predefinedScalingMetricType;
+        private @Nullable Output<String> resourceLabel;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder predefinedScalingMetricType(Input<String> predefinedScalingMetricType) {
+        public Builder predefinedScalingMetricType(Output<String> predefinedScalingMetricType) {
             this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
             return this;
         }
 
         public Builder predefinedScalingMetricType(String predefinedScalingMetricType) {
-            this.predefinedScalingMetricType = Input.of(Objects.requireNonNull(predefinedScalingMetricType));
+            this.predefinedScalingMetricType = Output.of(Objects.requireNonNull(predefinedScalingMetricType));
             return this;
         }
 
-        public Builder resourceLabel(@Nullable Input<String> resourceLabel) {
+        public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }
 
         public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Input.ofNullable(resourceLabel);
+            this.resourceLabel = Output.ofNullable(resourceLabel);
             return this;
         }
         public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs build() {

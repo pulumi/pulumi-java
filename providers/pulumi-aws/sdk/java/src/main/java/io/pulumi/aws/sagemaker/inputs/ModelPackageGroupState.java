@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modelPackageGroupDescription")
-      private final @Nullable Input<String> modelPackageGroupDescription;
+      private final @Nullable Output<String> modelPackageGroupDescription;
 
-    public Input<String> getModelPackageGroupDescription() {
-        return this.modelPackageGroupDescription == null ? Input.empty() : this.modelPackageGroupDescription;
+    public Output<String> getModelPackageGroupDescription() {
+        return this.modelPackageGroupDescription == null ? Output.empty() : this.modelPackageGroupDescription;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modelPackageGroupName")
-      private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Output<String> modelPackageGroupName;
 
-    public Input<String> getModelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
+    public Output<String> getModelPackageGroupName() {
+        return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ModelPackageGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> modelPackageGroupDescription,
-        @Nullable Input<String> modelPackageGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> modelPackageGroupDescription,
+        @Nullable Output<String> modelPackageGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         this.modelPackageGroupName = modelPackageGroupName;
@@ -84,11 +84,11 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
     }
 
     private ModelPackageGroupState() {
-        this.arn = Input.empty();
-        this.modelPackageGroupDescription = Input.empty();
-        this.modelPackageGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.modelPackageGroupDescription = Output.empty();
+        this.modelPackageGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> modelPackageGroupDescription;
-        private @Nullable Input<String> modelPackageGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> modelPackageGroupDescription;
+        private @Nullable Output<String> modelPackageGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder modelPackageGroupDescription(@Nullable Input<String> modelPackageGroupDescription) {
+        public Builder modelPackageGroupDescription(@Nullable Output<String> modelPackageGroupDescription) {
             this.modelPackageGroupDescription = modelPackageGroupDescription;
             return this;
         }
 
         public Builder modelPackageGroupDescription(@Nullable String modelPackageGroupDescription) {
-            this.modelPackageGroupDescription = Input.ofNullable(modelPackageGroupDescription);
+            this.modelPackageGroupDescription = Output.ofNullable(modelPackageGroupDescription);
             return this;
         }
 
-        public Builder modelPackageGroupName(@Nullable Input<String> modelPackageGroupName) {
+        public Builder modelPackageGroupName(@Nullable Output<String> modelPackageGroupName) {
             this.modelPackageGroupName = modelPackageGroupName;
             return this;
         }
 
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Input.ofNullable(modelPackageGroupName);
+            this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ModelPackageGroupState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
      * 
      */
     @InputImport(name="clientBroker")
-      private final @Nullable Input<String> clientBroker;
+      private final @Nullable Output<String> clientBroker;
 
-    public Input<String> getClientBroker() {
-        return this.clientBroker == null ? Input.empty() : this.clientBroker;
+    public Output<String> getClientBroker() {
+        return this.clientBroker == null ? Output.empty() : this.clientBroker;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
      * 
      */
     @InputImport(name="inCluster")
-      private final @Nullable Input<Boolean> inCluster;
+      private final @Nullable Output<Boolean> inCluster;
 
-    public Input<Boolean> getInCluster() {
-        return this.inCluster == null ? Input.empty() : this.inCluster;
+    public Output<Boolean> getInCluster() {
+        return this.inCluster == null ? Output.empty() : this.inCluster;
     }
 
     public ClusterEncryptionInfoEncryptionInTransitArgs(
-        @Nullable Input<String> clientBroker,
-        @Nullable Input<Boolean> inCluster) {
+        @Nullable Output<String> clientBroker,
+        @Nullable Output<Boolean> inCluster) {
         this.clientBroker = clientBroker;
         this.inCluster = inCluster;
     }
 
     private ClusterEncryptionInfoEncryptionInTransitArgs() {
-        this.clientBroker = Input.empty();
-        this.inCluster = Input.empty();
+        this.clientBroker = Output.empty();
+        this.inCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientBroker;
-        private @Nullable Input<Boolean> inCluster;
+        private @Nullable Output<String> clientBroker;
+        private @Nullable Output<Boolean> inCluster;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
     	      this.inCluster = defaults.inCluster;
         }
 
-        public Builder clientBroker(@Nullable Input<String> clientBroker) {
+        public Builder clientBroker(@Nullable Output<String> clientBroker) {
             this.clientBroker = clientBroker;
             return this;
         }
 
         public Builder clientBroker(@Nullable String clientBroker) {
-            this.clientBroker = Input.ofNullable(clientBroker);
+            this.clientBroker = Output.ofNullable(clientBroker);
             return this;
         }
 
-        public Builder inCluster(@Nullable Input<Boolean> inCluster) {
+        public Builder inCluster(@Nullable Output<Boolean> inCluster) {
             this.inCluster = inCluster;
             return this;
         }
 
         public Builder inCluster(@Nullable Boolean inCluster) {
-            this.inCluster = Input.ofNullable(inCluster);
+            this.inCluster = Output.ofNullable(inCluster);
             return this;
         }
         public ClusterEncryptionInfoEncryptionInTransitArgs build() {

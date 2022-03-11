@@ -4,7 +4,7 @@
 package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceTypes", required=true)
-      private final Input<List<String>> resourceTypes;
+      private final Output<List<String>> resourceTypes;
 
-    public Input<List<String>> getResourceTypes() {
+    public Output<List<String>> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -32,9 +32,9 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schedules", required=true)
-      private final Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
+      private final Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
 
-    public Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> getSchedules() {
+    public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> getSchedules() {
         return this.schedules;
     }
 
@@ -43,25 +43,25 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetTags", required=true)
-      private final Input<Map<String,String>> targetTags;
+      private final Output<Map<String,String>> targetTags;
 
-    public Input<Map<String,String>> getTargetTags() {
+    public Output<Map<String,String>> getTargetTags() {
         return this.targetTags;
     }
 
     public LifecyclePolicyPolicyDetailsGetArgs(
-        Input<List<String>> resourceTypes,
-        Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules,
-        Input<Map<String,String>> targetTags) {
+        Output<List<String>> resourceTypes,
+        Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules,
+        Output<Map<String,String>> targetTags) {
         this.resourceTypes = Objects.requireNonNull(resourceTypes, "expected parameter 'resourceTypes' to be non-null");
         this.schedules = Objects.requireNonNull(schedules, "expected parameter 'schedules' to be non-null");
         this.targetTags = Objects.requireNonNull(targetTags, "expected parameter 'targetTags' to be non-null");
     }
 
     private LifecyclePolicyPolicyDetailsGetArgs() {
-        this.resourceTypes = Input.empty();
-        this.schedules = Input.empty();
-        this.targetTags = Input.empty();
+        this.resourceTypes = Output.empty();
+        this.schedules = Output.empty();
+        this.targetTags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<List<String>> resourceTypes;
-        private Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
-        private Input<Map<String,String>> targetTags;
+        private Output<List<String>> resourceTypes;
+        private Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
+        private Output<Map<String,String>> targetTags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     	      this.targetTags = defaults.targetTags;
         }
 
-        public Builder resourceTypes(Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(Output<List<String>> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
 
         public Builder resourceTypes(List<String> resourceTypes) {
-            this.resourceTypes = Input.of(Objects.requireNonNull(resourceTypes));
+            this.resourceTypes = Output.of(Objects.requireNonNull(resourceTypes));
             return this;
         }
 
-        public Builder schedules(Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
+        public Builder schedules(Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
         public Builder schedules(List<LifecyclePolicyPolicyDetailsScheduleGetArgs> schedules) {
-            this.schedules = Input.of(Objects.requireNonNull(schedules));
+            this.schedules = Output.of(Objects.requireNonNull(schedules));
             return this;
         }
 
-        public Builder targetTags(Input<Map<String,String>> targetTags) {
+        public Builder targetTags(Output<Map<String,String>> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
 
         public Builder targetTags(Map<String,String> targetTags) {
-            this.targetTags = Input.of(Objects.requireNonNull(targetTags));
+            this.targetTags = Output.of(Objects.requireNonNull(targetTags));
             return this;
         }
         public LifecyclePolicyPolicyDetailsGetArgs build() {

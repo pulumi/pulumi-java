@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify;
 
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -33,9 +33,9 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -44,9 +44,9 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subDomains", required=true)
-      private final Input<List<DomainAssociationSubDomainArgs>> subDomains;
+      private final Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
-    public Input<List<DomainAssociationSubDomainArgs>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomainArgs>> getSubDomains() {
         return this.subDomains;
     }
 
@@ -55,17 +55,17 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="waitForVerification")
-      private final @Nullable Input<Boolean> waitForVerification;
+      private final @Nullable Output<Boolean> waitForVerification;
 
-    public Input<Boolean> getWaitForVerification() {
-        return this.waitForVerification == null ? Input.empty() : this.waitForVerification;
+    public Output<Boolean> getWaitForVerification() {
+        return this.waitForVerification == null ? Output.empty() : this.waitForVerification;
     }
 
     public DomainAssociationArgs(
-        Input<String> appId,
-        Input<String> domainName,
-        Input<List<DomainAssociationSubDomainArgs>> subDomains,
-        @Nullable Input<Boolean> waitForVerification) {
+        Output<String> appId,
+        Output<String> domainName,
+        Output<List<DomainAssociationSubDomainArgs>> subDomains,
+        @Nullable Output<Boolean> waitForVerification) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
         this.subDomains = Objects.requireNonNull(subDomains, "expected parameter 'subDomains' to be non-null");
@@ -73,10 +73,10 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DomainAssociationArgs() {
-        this.appId = Input.empty();
-        this.domainName = Input.empty();
-        this.subDomains = Input.empty();
-        this.waitForVerification = Input.empty();
+        this.appId = Output.empty();
+        this.domainName = Output.empty();
+        this.subDomains = Output.empty();
+        this.waitForVerification = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private Input<String> domainName;
-        private Input<List<DomainAssociationSubDomainArgs>> subDomains;
-        private @Nullable Input<Boolean> waitForVerification;
+        private Output<String> appId;
+        private Output<String> domainName;
+        private Output<List<DomainAssociationSubDomainArgs>> subDomains;
+        private @Nullable Output<Boolean> waitForVerification;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     	      this.waitForVerification = defaults.waitForVerification;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder subDomains(Input<List<DomainAssociationSubDomainArgs>> subDomains) {
+        public Builder subDomains(Output<List<DomainAssociationSubDomainArgs>> subDomains) {
             this.subDomains = Objects.requireNonNull(subDomains);
             return this;
         }
 
         public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
-            this.subDomains = Input.of(Objects.requireNonNull(subDomains));
+            this.subDomains = Output.of(Objects.requireNonNull(subDomains));
             return this;
         }
 
-        public Builder waitForVerification(@Nullable Input<Boolean> waitForVerification) {
+        public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
             this.waitForVerification = waitForVerification;
             return this;
         }
 
         public Builder waitForVerification(@Nullable Boolean waitForVerification) {
-            this.waitForVerification = Input.ofNullable(waitForVerification);
+            this.waitForVerification = Output.ofNullable(waitForVerification);
             return this;
         }
         public DomainAssociationArgs build() {

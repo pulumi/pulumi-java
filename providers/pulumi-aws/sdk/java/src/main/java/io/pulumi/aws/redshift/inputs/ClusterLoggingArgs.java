@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-      private final @Nullable Input<String> bucketName;
+      private final @Nullable Output<String> bucketName;
 
-    public Input<String> getBucketName() {
-        return this.bucketName == null ? Input.empty() : this.bucketName;
+    public Output<String> getBucketName() {
+        return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable", required=true)
-      private final Input<Boolean> enable;
+      private final Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
+    public Output<Boolean> getEnable() {
         return this.enable;
     }
 
@@ -43,25 +43,25 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3KeyPrefix")
-      private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Output<String> s3KeyPrefix;
 
-    public Input<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
+    public Output<String> getS3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
     }
 
     public ClusterLoggingArgs(
-        @Nullable Input<String> bucketName,
-        Input<Boolean> enable,
-        @Nullable Input<String> s3KeyPrefix) {
+        @Nullable Output<String> bucketName,
+        Output<Boolean> enable,
+        @Nullable Output<String> s3KeyPrefix) {
         this.bucketName = bucketName;
         this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
         this.s3KeyPrefix = s3KeyPrefix;
     }
 
     private ClusterLoggingArgs() {
-        this.bucketName = Input.empty();
-        this.enable = Input.empty();
-        this.s3KeyPrefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.enable = Output.empty();
+        this.s3KeyPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketName;
-        private Input<Boolean> enable;
-        private @Nullable Input<String> s3KeyPrefix;
+        private @Nullable Output<String> bucketName;
+        private Output<Boolean> enable;
+        private @Nullable Output<String> s3KeyPrefix;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder bucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Output<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Input.ofNullable(bucketName);
+            this.bucketName = Output.ofNullable(bucketName);
             return this;
         }
 
-        public Builder enable(Input<Boolean> enable) {
+        public Builder enable(Output<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Input.of(Objects.requireNonNull(enable));
+            this.enable = Output.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder s3KeyPrefix(@Nullable Input<String> s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
 
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Input.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
             return this;
         }
         public ClusterLoggingArgs build() {

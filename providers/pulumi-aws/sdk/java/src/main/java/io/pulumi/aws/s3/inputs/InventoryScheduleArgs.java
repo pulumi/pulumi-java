@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="frequency", required=true)
-      private final Input<String> frequency;
+      private final Output<String> frequency;
 
-    public Input<String> getFrequency() {
+    public Output<String> getFrequency() {
         return this.frequency;
     }
 
-    public InventoryScheduleArgs(Input<String> frequency) {
+    public InventoryScheduleArgs(Output<String> frequency) {
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
     }
 
     private InventoryScheduleArgs() {
-        this.frequency = Input.empty();
+        this.frequency = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> frequency;
+        private Output<String> frequency;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.frequency = defaults.frequency;
         }
 
-        public Builder frequency(Input<String> frequency) {
+        public Builder frequency(Output<String> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
         public Builder frequency(String frequency) {
-            this.frequency = Input.of(Objects.requireNonNull(frequency));
+            this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
         public InventoryScheduleArgs build() {

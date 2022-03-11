@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding", required=true)
-      private final Input<String> encoding;
+      private final Output<String> encoding;
 
-    public Input<String> getEncoding() {
+    public Output<String> getEncoding() {
         return this.encoding;
     }
 
@@ -30,9 +30,9 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey", required=true)
-      private final Input<String> publicKey;
+      private final Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
+    public Output<String> getPublicKey() {
         return this.publicKey;
     }
 
@@ -41,10 +41,10 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public SshKeyArgs(
-        Input<String> encoding,
-        Input<String> publicKey,
-        @Nullable Input<String> status,
-        Input<String> username) {
+        Output<String> encoding,
+        Output<String> publicKey,
+        @Nullable Output<String> status,
+        Output<String> username) {
         this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
         this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
         this.status = status;
@@ -70,10 +70,10 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshKeyArgs() {
-        this.encoding = Input.empty();
-        this.publicKey = Input.empty();
-        this.status = Input.empty();
-        this.username = Input.empty();
+        this.encoding = Output.empty();
+        this.publicKey = Output.empty();
+        this.status = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> encoding;
-        private Input<String> publicKey;
-        private @Nullable Input<String> status;
-        private Input<String> username;
+        private Output<String> encoding;
+        private Output<String> publicKey;
+        private @Nullable Output<String> status;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder encoding(Input<String> encoding) {
+        public Builder encoding(Output<String> encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
         public Builder encoding(String encoding) {
-            this.encoding = Input.of(Objects.requireNonNull(encoding));
+            this.encoding = Output.of(Objects.requireNonNull(encoding));
             return this;
         }
 
-        public Builder publicKey(Input<String> publicKey) {
+        public Builder publicKey(Output<String> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
         public Builder publicKey(String publicKey) {
-            this.publicKey = Input.of(Objects.requireNonNull(publicKey));
+            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public SshKeyArgs build() {

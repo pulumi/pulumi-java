@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="optInStatus")
-      private final @Nullable Input<String> optInStatus;
+      private final @Nullable Output<String> optInStatus;
 
-    public Input<String> getOptInStatus() {
-        return this.optInStatus == null ? Input.empty() : this.optInStatus;
+    public Output<String> getOptInStatus() {
+        return this.optInStatus == null ? Output.empty() : this.optInStatus;
     }
 
     public AvailabilityZoneGroupState(
-        @Nullable Input<String> groupName,
-        @Nullable Input<String> optInStatus) {
+        @Nullable Output<String> groupName,
+        @Nullable Output<String> optInStatus) {
         this.groupName = groupName;
         this.optInStatus = optInStatus;
     }
 
     private AvailabilityZoneGroupState() {
-        this.groupName = Input.empty();
-        this.optInStatus = Input.empty();
+        this.groupName = Output.empty();
+        this.optInStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<String> optInStatus;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<String> optInStatus;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
     	      this.optInStatus = defaults.optInStatus;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder optInStatus(@Nullable Input<String> optInStatus) {
+        public Builder optInStatus(@Nullable Output<String> optInStatus) {
             this.optInStatus = optInStatus;
             return this;
         }
 
         public Builder optInStatus(@Nullable String optInStatus) {
-            this.optInStatus = Input.ofNullable(optInStatus);
+            this.optInStatus = Output.ofNullable(optInStatus);
             return this;
         }
         public AvailabilityZoneGroupState build() {

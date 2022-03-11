@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     public DomainNameApiAssociationState(
-        @Nullable Input<String> apiId,
-        @Nullable Input<String> domainName) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<String> domainName) {
         this.apiId = apiId;
         this.domainName = domainName;
     }
 
     private DomainNameApiAssociationState() {
-        this.apiId = Input.empty();
-        this.domainName = Input.empty();
+        this.apiId = Output.empty();
+        this.domainName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<String> domainName;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<String> domainName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
         public DomainNameApiAssociationState build() {

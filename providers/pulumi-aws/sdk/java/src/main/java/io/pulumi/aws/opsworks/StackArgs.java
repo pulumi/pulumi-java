@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks;
 
 import io.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-      private final @Nullable Input<String> agentVersion;
+      private final @Nullable Output<String> agentVersion;
 
-    public Input<String> getAgentVersion() {
-        return this.agentVersion == null ? Input.empty() : this.agentVersion;
+    public Output<String> getAgentVersion() {
+        return this.agentVersion == null ? Output.empty() : this.agentVersion;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="berkshelfVersion")
-      private final @Nullable Input<String> berkshelfVersion;
+      private final @Nullable Output<String> berkshelfVersion;
 
-    public Input<String> getBerkshelfVersion() {
-        return this.berkshelfVersion == null ? Input.empty() : this.berkshelfVersion;
+    public Output<String> getBerkshelfVersion() {
+        return this.berkshelfVersion == null ? Output.empty() : this.berkshelfVersion;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="color")
-      private final @Nullable Input<String> color;
+      private final @Nullable Output<String> color;
 
-    public Input<String> getColor() {
-        return this.color == null ? Input.empty() : this.color;
+    public Output<String> getColor() {
+        return this.color == null ? Output.empty() : this.color;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationManagerName")
-      private final @Nullable Input<String> configurationManagerName;
+      private final @Nullable Output<String> configurationManagerName;
 
-    public Input<String> getConfigurationManagerName() {
-        return this.configurationManagerName == null ? Input.empty() : this.configurationManagerName;
+    public Output<String> getConfigurationManagerName() {
+        return this.configurationManagerName == null ? Output.empty() : this.configurationManagerName;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationManagerVersion")
-      private final @Nullable Input<String> configurationManagerVersion;
+      private final @Nullable Output<String> configurationManagerVersion;
 
-    public Input<String> getConfigurationManagerVersion() {
-        return this.configurationManagerVersion == null ? Input.empty() : this.configurationManagerVersion;
+    public Output<String> getConfigurationManagerVersion() {
+        return this.configurationManagerVersion == null ? Output.empty() : this.configurationManagerVersion;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customCookbooksSources")
-      private final @Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
+      private final @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
 
-    public Input<List<StackCustomCookbooksSourceArgs>> getCustomCookbooksSources() {
-        return this.customCookbooksSources == null ? Input.empty() : this.customCookbooksSources;
+    public Output<List<StackCustomCookbooksSourceArgs>> getCustomCookbooksSources() {
+        return this.customCookbooksSources == null ? Output.empty() : this.customCookbooksSources;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customJson")
-      private final @Nullable Input<String> customJson;
+      private final @Nullable Output<String> customJson;
 
-    public Input<String> getCustomJson() {
-        return this.customJson == null ? Input.empty() : this.customJson;
+    public Output<String> getCustomJson() {
+        return this.customJson == null ? Output.empty() : this.customJson;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAvailabilityZone")
-      private final @Nullable Input<String> defaultAvailabilityZone;
+      private final @Nullable Output<String> defaultAvailabilityZone;
 
-    public Input<String> getDefaultAvailabilityZone() {
-        return this.defaultAvailabilityZone == null ? Input.empty() : this.defaultAvailabilityZone;
+    public Output<String> getDefaultAvailabilityZone() {
+        return this.defaultAvailabilityZone == null ? Output.empty() : this.defaultAvailabilityZone;
     }
 
     /**
@@ -114,9 +114,9 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultInstanceProfileArn", required=true)
-      private final Input<String> defaultInstanceProfileArn;
+      private final Output<String> defaultInstanceProfileArn;
 
-    public Input<String> getDefaultInstanceProfileArn() {
+    public Output<String> getDefaultInstanceProfileArn() {
         return this.defaultInstanceProfileArn;
     }
 
@@ -125,10 +125,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultOs")
-      private final @Nullable Input<String> defaultOs;
+      private final @Nullable Output<String> defaultOs;
 
-    public Input<String> getDefaultOs() {
-        return this.defaultOs == null ? Input.empty() : this.defaultOs;
+    public Output<String> getDefaultOs() {
+        return this.defaultOs == null ? Output.empty() : this.defaultOs;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRootDeviceType")
-      private final @Nullable Input<String> defaultRootDeviceType;
+      private final @Nullable Output<String> defaultRootDeviceType;
 
-    public Input<String> getDefaultRootDeviceType() {
-        return this.defaultRootDeviceType == null ? Input.empty() : this.defaultRootDeviceType;
+    public Output<String> getDefaultRootDeviceType() {
+        return this.defaultRootDeviceType == null ? Output.empty() : this.defaultRootDeviceType;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSshKeyName")
-      private final @Nullable Input<String> defaultSshKeyName;
+      private final @Nullable Output<String> defaultSshKeyName;
 
-    public Input<String> getDefaultSshKeyName() {
-        return this.defaultSshKeyName == null ? Input.empty() : this.defaultSshKeyName;
+    public Output<String> getDefaultSshKeyName() {
+        return this.defaultSshKeyName == null ? Output.empty() : this.defaultSshKeyName;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSubnetId")
-      private final @Nullable Input<String> defaultSubnetId;
+      private final @Nullable Output<String> defaultSubnetId;
 
-    public Input<String> getDefaultSubnetId() {
-        return this.defaultSubnetId == null ? Input.empty() : this.defaultSubnetId;
+    public Output<String> getDefaultSubnetId() {
+        return this.defaultSubnetId == null ? Output.empty() : this.defaultSubnetId;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnameTheme")
-      private final @Nullable Input<String> hostnameTheme;
+      private final @Nullable Output<String> hostnameTheme;
 
-    public Input<String> getHostnameTheme() {
-        return this.hostnameTheme == null ? Input.empty() : this.hostnameTheme;
+    public Output<String> getHostnameTheme() {
+        return this.hostnameTheme == null ? Output.empty() : this.hostnameTheme;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manageBerkshelf")
-      private final @Nullable Input<Boolean> manageBerkshelf;
+      private final @Nullable Output<Boolean> manageBerkshelf;
 
-    public Input<Boolean> getManageBerkshelf() {
-        return this.manageBerkshelf == null ? Input.empty() : this.manageBerkshelf;
+    public Output<Boolean> getManageBerkshelf() {
+        return this.manageBerkshelf == null ? Output.empty() : this.manageBerkshelf;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -204,9 +204,9 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -215,9 +215,9 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRoleArn", required=true)
-      private final Input<String> serviceRoleArn;
+      private final Output<String> serviceRoleArn;
 
-    public Input<String> getServiceRoleArn() {
+    public Output<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
 
@@ -226,10 +226,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useCustomCookbooks")
-      private final @Nullable Input<Boolean> useCustomCookbooks;
+      private final @Nullable Output<Boolean> useCustomCookbooks;
 
-    public Input<Boolean> getUseCustomCookbooks() {
-        return this.useCustomCookbooks == null ? Input.empty() : this.useCustomCookbooks;
+    public Output<Boolean> getUseCustomCookbooks() {
+        return this.useCustomCookbooks == null ? Output.empty() : this.useCustomCookbooks;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useOpsworksSecurityGroups")
-      private final @Nullable Input<Boolean> useOpsworksSecurityGroups;
+      private final @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
-    public Input<Boolean> getUseOpsworksSecurityGroups() {
-        return this.useOpsworksSecurityGroups == null ? Input.empty() : this.useOpsworksSecurityGroups;
+    public Output<Boolean> getUseOpsworksSecurityGroups() {
+        return this.useOpsworksSecurityGroups == null ? Output.empty() : this.useOpsworksSecurityGroups;
     }
 
     /**
@@ -261,35 +261,35 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     public StackArgs(
-        @Nullable Input<String> agentVersion,
-        @Nullable Input<String> berkshelfVersion,
-        @Nullable Input<String> color,
-        @Nullable Input<String> configurationManagerName,
-        @Nullable Input<String> configurationManagerVersion,
-        @Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources,
-        @Nullable Input<String> customJson,
-        @Nullable Input<String> defaultAvailabilityZone,
-        Input<String> defaultInstanceProfileArn,
-        @Nullable Input<String> defaultOs,
-        @Nullable Input<String> defaultRootDeviceType,
-        @Nullable Input<String> defaultSshKeyName,
-        @Nullable Input<String> defaultSubnetId,
-        @Nullable Input<String> hostnameTheme,
-        @Nullable Input<Boolean> manageBerkshelf,
-        @Nullable Input<String> name,
-        Input<String> region,
-        Input<String> serviceRoleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Boolean> useCustomCookbooks,
-        @Nullable Input<Boolean> useOpsworksSecurityGroups,
-        @Nullable Input<String> vpcId) {
+        @Nullable Output<String> agentVersion,
+        @Nullable Output<String> berkshelfVersion,
+        @Nullable Output<String> color,
+        @Nullable Output<String> configurationManagerName,
+        @Nullable Output<String> configurationManagerVersion,
+        @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources,
+        @Nullable Output<String> customJson,
+        @Nullable Output<String> defaultAvailabilityZone,
+        Output<String> defaultInstanceProfileArn,
+        @Nullable Output<String> defaultOs,
+        @Nullable Output<String> defaultRootDeviceType,
+        @Nullable Output<String> defaultSshKeyName,
+        @Nullable Output<String> defaultSubnetId,
+        @Nullable Output<String> hostnameTheme,
+        @Nullable Output<Boolean> manageBerkshelf,
+        @Nullable Output<String> name,
+        Output<String> region,
+        Output<String> serviceRoleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Boolean> useCustomCookbooks,
+        @Nullable Output<Boolean> useOpsworksSecurityGroups,
+        @Nullable Output<String> vpcId) {
         this.agentVersion = agentVersion;
         this.berkshelfVersion = berkshelfVersion;
         this.color = color;
@@ -315,28 +315,28 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackArgs() {
-        this.agentVersion = Input.empty();
-        this.berkshelfVersion = Input.empty();
-        this.color = Input.empty();
-        this.configurationManagerName = Input.empty();
-        this.configurationManagerVersion = Input.empty();
-        this.customCookbooksSources = Input.empty();
-        this.customJson = Input.empty();
-        this.defaultAvailabilityZone = Input.empty();
-        this.defaultInstanceProfileArn = Input.empty();
-        this.defaultOs = Input.empty();
-        this.defaultRootDeviceType = Input.empty();
-        this.defaultSshKeyName = Input.empty();
-        this.defaultSubnetId = Input.empty();
-        this.hostnameTheme = Input.empty();
-        this.manageBerkshelf = Input.empty();
-        this.name = Input.empty();
-        this.region = Input.empty();
-        this.serviceRoleArn = Input.empty();
-        this.tags = Input.empty();
-        this.useCustomCookbooks = Input.empty();
-        this.useOpsworksSecurityGroups = Input.empty();
-        this.vpcId = Input.empty();
+        this.agentVersion = Output.empty();
+        this.berkshelfVersion = Output.empty();
+        this.color = Output.empty();
+        this.configurationManagerName = Output.empty();
+        this.configurationManagerVersion = Output.empty();
+        this.customCookbooksSources = Output.empty();
+        this.customJson = Output.empty();
+        this.defaultAvailabilityZone = Output.empty();
+        this.defaultInstanceProfileArn = Output.empty();
+        this.defaultOs = Output.empty();
+        this.defaultRootDeviceType = Output.empty();
+        this.defaultSshKeyName = Output.empty();
+        this.defaultSubnetId = Output.empty();
+        this.hostnameTheme = Output.empty();
+        this.manageBerkshelf = Output.empty();
+        this.name = Output.empty();
+        this.region = Output.empty();
+        this.serviceRoleArn = Output.empty();
+        this.tags = Output.empty();
+        this.useCustomCookbooks = Output.empty();
+        this.useOpsworksSecurityGroups = Output.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -348,28 +348,28 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agentVersion;
-        private @Nullable Input<String> berkshelfVersion;
-        private @Nullable Input<String> color;
-        private @Nullable Input<String> configurationManagerName;
-        private @Nullable Input<String> configurationManagerVersion;
-        private @Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
-        private @Nullable Input<String> customJson;
-        private @Nullable Input<String> defaultAvailabilityZone;
-        private Input<String> defaultInstanceProfileArn;
-        private @Nullable Input<String> defaultOs;
-        private @Nullable Input<String> defaultRootDeviceType;
-        private @Nullable Input<String> defaultSshKeyName;
-        private @Nullable Input<String> defaultSubnetId;
-        private @Nullable Input<String> hostnameTheme;
-        private @Nullable Input<Boolean> manageBerkshelf;
-        private @Nullable Input<String> name;
-        private Input<String> region;
-        private Input<String> serviceRoleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Boolean> useCustomCookbooks;
-        private @Nullable Input<Boolean> useOpsworksSecurityGroups;
-        private @Nullable Input<String> vpcId;
+        private @Nullable Output<String> agentVersion;
+        private @Nullable Output<String> berkshelfVersion;
+        private @Nullable Output<String> color;
+        private @Nullable Output<String> configurationManagerName;
+        private @Nullable Output<String> configurationManagerVersion;
+        private @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
+        private @Nullable Output<String> customJson;
+        private @Nullable Output<String> defaultAvailabilityZone;
+        private Output<String> defaultInstanceProfileArn;
+        private @Nullable Output<String> defaultOs;
+        private @Nullable Output<String> defaultRootDeviceType;
+        private @Nullable Output<String> defaultSshKeyName;
+        private @Nullable Output<String> defaultSubnetId;
+        private @Nullable Output<String> hostnameTheme;
+        private @Nullable Output<Boolean> manageBerkshelf;
+        private @Nullable Output<String> name;
+        private Output<String> region;
+        private Output<String> serviceRoleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Boolean> useCustomCookbooks;
+        private @Nullable Output<Boolean> useOpsworksSecurityGroups;
+        private @Nullable Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -401,223 +401,223 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder agentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Output<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Input.ofNullable(agentVersion);
+            this.agentVersion = Output.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder berkshelfVersion(@Nullable Input<String> berkshelfVersion) {
+        public Builder berkshelfVersion(@Nullable Output<String> berkshelfVersion) {
             this.berkshelfVersion = berkshelfVersion;
             return this;
         }
 
         public Builder berkshelfVersion(@Nullable String berkshelfVersion) {
-            this.berkshelfVersion = Input.ofNullable(berkshelfVersion);
+            this.berkshelfVersion = Output.ofNullable(berkshelfVersion);
             return this;
         }
 
-        public Builder color(@Nullable Input<String> color) {
+        public Builder color(@Nullable Output<String> color) {
             this.color = color;
             return this;
         }
 
         public Builder color(@Nullable String color) {
-            this.color = Input.ofNullable(color);
+            this.color = Output.ofNullable(color);
             return this;
         }
 
-        public Builder configurationManagerName(@Nullable Input<String> configurationManagerName) {
+        public Builder configurationManagerName(@Nullable Output<String> configurationManagerName) {
             this.configurationManagerName = configurationManagerName;
             return this;
         }
 
         public Builder configurationManagerName(@Nullable String configurationManagerName) {
-            this.configurationManagerName = Input.ofNullable(configurationManagerName);
+            this.configurationManagerName = Output.ofNullable(configurationManagerName);
             return this;
         }
 
-        public Builder configurationManagerVersion(@Nullable Input<String> configurationManagerVersion) {
+        public Builder configurationManagerVersion(@Nullable Output<String> configurationManagerVersion) {
             this.configurationManagerVersion = configurationManagerVersion;
             return this;
         }
 
         public Builder configurationManagerVersion(@Nullable String configurationManagerVersion) {
-            this.configurationManagerVersion = Input.ofNullable(configurationManagerVersion);
+            this.configurationManagerVersion = Output.ofNullable(configurationManagerVersion);
             return this;
         }
 
-        public Builder customCookbooksSources(@Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
+        public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
             this.customCookbooksSources = customCookbooksSources;
             return this;
         }
 
         public Builder customCookbooksSources(@Nullable List<StackCustomCookbooksSourceArgs> customCookbooksSources) {
-            this.customCookbooksSources = Input.ofNullable(customCookbooksSources);
+            this.customCookbooksSources = Output.ofNullable(customCookbooksSources);
             return this;
         }
 
-        public Builder customJson(@Nullable Input<String> customJson) {
+        public Builder customJson(@Nullable Output<String> customJson) {
             this.customJson = customJson;
             return this;
         }
 
         public Builder customJson(@Nullable String customJson) {
-            this.customJson = Input.ofNullable(customJson);
+            this.customJson = Output.ofNullable(customJson);
             return this;
         }
 
-        public Builder defaultAvailabilityZone(@Nullable Input<String> defaultAvailabilityZone) {
+        public Builder defaultAvailabilityZone(@Nullable Output<String> defaultAvailabilityZone) {
             this.defaultAvailabilityZone = defaultAvailabilityZone;
             return this;
         }
 
         public Builder defaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
-            this.defaultAvailabilityZone = Input.ofNullable(defaultAvailabilityZone);
+            this.defaultAvailabilityZone = Output.ofNullable(defaultAvailabilityZone);
             return this;
         }
 
-        public Builder defaultInstanceProfileArn(Input<String> defaultInstanceProfileArn) {
+        public Builder defaultInstanceProfileArn(Output<String> defaultInstanceProfileArn) {
             this.defaultInstanceProfileArn = Objects.requireNonNull(defaultInstanceProfileArn);
             return this;
         }
 
         public Builder defaultInstanceProfileArn(String defaultInstanceProfileArn) {
-            this.defaultInstanceProfileArn = Input.of(Objects.requireNonNull(defaultInstanceProfileArn));
+            this.defaultInstanceProfileArn = Output.of(Objects.requireNonNull(defaultInstanceProfileArn));
             return this;
         }
 
-        public Builder defaultOs(@Nullable Input<String> defaultOs) {
+        public Builder defaultOs(@Nullable Output<String> defaultOs) {
             this.defaultOs = defaultOs;
             return this;
         }
 
         public Builder defaultOs(@Nullable String defaultOs) {
-            this.defaultOs = Input.ofNullable(defaultOs);
+            this.defaultOs = Output.ofNullable(defaultOs);
             return this;
         }
 
-        public Builder defaultRootDeviceType(@Nullable Input<String> defaultRootDeviceType) {
+        public Builder defaultRootDeviceType(@Nullable Output<String> defaultRootDeviceType) {
             this.defaultRootDeviceType = defaultRootDeviceType;
             return this;
         }
 
         public Builder defaultRootDeviceType(@Nullable String defaultRootDeviceType) {
-            this.defaultRootDeviceType = Input.ofNullable(defaultRootDeviceType);
+            this.defaultRootDeviceType = Output.ofNullable(defaultRootDeviceType);
             return this;
         }
 
-        public Builder defaultSshKeyName(@Nullable Input<String> defaultSshKeyName) {
+        public Builder defaultSshKeyName(@Nullable Output<String> defaultSshKeyName) {
             this.defaultSshKeyName = defaultSshKeyName;
             return this;
         }
 
         public Builder defaultSshKeyName(@Nullable String defaultSshKeyName) {
-            this.defaultSshKeyName = Input.ofNullable(defaultSshKeyName);
+            this.defaultSshKeyName = Output.ofNullable(defaultSshKeyName);
             return this;
         }
 
-        public Builder defaultSubnetId(@Nullable Input<String> defaultSubnetId) {
+        public Builder defaultSubnetId(@Nullable Output<String> defaultSubnetId) {
             this.defaultSubnetId = defaultSubnetId;
             return this;
         }
 
         public Builder defaultSubnetId(@Nullable String defaultSubnetId) {
-            this.defaultSubnetId = Input.ofNullable(defaultSubnetId);
+            this.defaultSubnetId = Output.ofNullable(defaultSubnetId);
             return this;
         }
 
-        public Builder hostnameTheme(@Nullable Input<String> hostnameTheme) {
+        public Builder hostnameTheme(@Nullable Output<String> hostnameTheme) {
             this.hostnameTheme = hostnameTheme;
             return this;
         }
 
         public Builder hostnameTheme(@Nullable String hostnameTheme) {
-            this.hostnameTheme = Input.ofNullable(hostnameTheme);
+            this.hostnameTheme = Output.ofNullable(hostnameTheme);
             return this;
         }
 
-        public Builder manageBerkshelf(@Nullable Input<Boolean> manageBerkshelf) {
+        public Builder manageBerkshelf(@Nullable Output<Boolean> manageBerkshelf) {
             this.manageBerkshelf = manageBerkshelf;
             return this;
         }
 
         public Builder manageBerkshelf(@Nullable Boolean manageBerkshelf) {
-            this.manageBerkshelf = Input.ofNullable(manageBerkshelf);
+            this.manageBerkshelf = Output.ofNullable(manageBerkshelf);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder serviceRoleArn(Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(Output<String> serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
         public Builder serviceRoleArn(String serviceRoleArn) {
-            this.serviceRoleArn = Input.of(Objects.requireNonNull(serviceRoleArn));
+            this.serviceRoleArn = Output.of(Objects.requireNonNull(serviceRoleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder useCustomCookbooks(@Nullable Input<Boolean> useCustomCookbooks) {
+        public Builder useCustomCookbooks(@Nullable Output<Boolean> useCustomCookbooks) {
             this.useCustomCookbooks = useCustomCookbooks;
             return this;
         }
 
         public Builder useCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
-            this.useCustomCookbooks = Input.ofNullable(useCustomCookbooks);
+            this.useCustomCookbooks = Output.ofNullable(useCustomCookbooks);
             return this;
         }
 
-        public Builder useOpsworksSecurityGroups(@Nullable Input<Boolean> useOpsworksSecurityGroups) {
+        public Builder useOpsworksSecurityGroups(@Nullable Output<Boolean> useOpsworksSecurityGroups) {
             this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
             return this;
         }
 
         public Builder useOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
-            this.useOpsworksSecurityGroups = Input.ofNullable(useOpsworksSecurityGroups);
+            this.useOpsworksSecurityGroups = Output.ofNullable(useOpsworksSecurityGroups);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
         public StackArgs build() {

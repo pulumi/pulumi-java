@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules;
+      private final @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
-    public Input<List<RegistryScanningConfigurationRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<RegistryScanningConfigurationRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scanType", required=true)
-      private final Input<String> scanType;
+      private final Output<String> scanType;
 
-    public Input<String> getScanType() {
+    public Output<String> getScanType() {
         return this.scanType;
     }
 
     public RegistryScanningConfigurationArgs(
-        @Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules,
-        Input<String> scanType) {
+        @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules,
+        Output<String> scanType) {
         this.rules = rules;
         this.scanType = Objects.requireNonNull(scanType, "expected parameter 'scanType' to be non-null");
     }
 
     private RegistryScanningConfigurationArgs() {
-        this.rules = Input.empty();
-        this.scanType = Input.empty();
+        this.rules = Output.empty();
+        this.scanType = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules;
-        private Input<String> scanType;
+        private @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
+        private Output<String> scanType;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
     	      this.scanType = defaults.scanType;
         }
 
-        public Builder rules(@Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder scanType(Input<String> scanType) {
+        public Builder scanType(Output<String> scanType) {
             this.scanType = Objects.requireNonNull(scanType);
             return this;
         }
 
         public Builder scanType(String scanType) {
-            this.scanType = Input.of(Objects.requireNonNull(scanType));
+            this.scanType = Output.of(Objects.requireNonNull(scanType));
             return this;
         }
         public RegistryScanningConfigurationArgs build() {

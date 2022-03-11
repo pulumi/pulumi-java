@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockDeviceMappings")
-      private final @Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Input<List<ImageRecipeBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
+    public Output<List<ImageRecipeBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components", required=true)
-      private final Input<List<ImageRecipeComponentArgs>> components;
+      private final Output<List<ImageRecipeComponentArgs>> components;
 
-    public Input<List<ImageRecipeComponentArgs>> getComponents() {
+    public Output<List<ImageRecipeComponentArgs>> getComponents() {
         return this.components;
     }
 
@@ -45,10 +45,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentImage", required=true)
-      private final Input<String> parentImage;
+      private final Output<String> parentImage;
 
-    public Input<String> getParentImage() {
+    public Output<String> getParentImage() {
         return this.parentImage;
     }
 
@@ -78,10 +78,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDataBase64")
-      private final @Nullable Input<String> userDataBase64;
+      private final @Nullable Output<String> userDataBase64;
 
-    public Input<String> getUserDataBase64() {
-        return this.userDataBase64 == null ? Input.empty() : this.userDataBase64;
+    public Output<String> getUserDataBase64() {
+        return this.userDataBase64 == null ? Output.empty() : this.userDataBase64;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
@@ -111,22 +111,22 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDirectory")
-      private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Output<String> workingDirectory;
 
-    public Input<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
+    public Output<String> getWorkingDirectory() {
+        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
     }
 
     public ImageRecipeArgs(
-        @Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings,
-        Input<List<ImageRecipeComponentArgs>> components,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> parentImage,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> userDataBase64,
-        Input<String> version,
-        @Nullable Input<String> workingDirectory) {
+        @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings,
+        Output<List<ImageRecipeComponentArgs>> components,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> parentImage,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> userDataBase64,
+        Output<String> version,
+        @Nullable Output<String> workingDirectory) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.components = Objects.requireNonNull(components, "expected parameter 'components' to be non-null");
         this.description = description;
@@ -139,15 +139,15 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRecipeArgs() {
-        this.blockDeviceMappings = Input.empty();
-        this.components = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.parentImage = Input.empty();
-        this.tags = Input.empty();
-        this.userDataBase64 = Input.empty();
-        this.version = Input.empty();
-        this.workingDirectory = Input.empty();
+        this.blockDeviceMappings = Output.empty();
+        this.components = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.parentImage = Output.empty();
+        this.tags = Output.empty();
+        this.userDataBase64 = Output.empty();
+        this.version = Output.empty();
+        this.workingDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
-        private Input<List<ImageRecipeComponentArgs>> components;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> parentImage;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> userDataBase64;
-        private Input<String> version;
-        private @Nullable Input<String> workingDirectory;
+        private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
+        private Output<List<ImageRecipeComponentArgs>> components;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> parentImage;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> userDataBase64;
+        private Output<String> version;
+        private @Nullable Output<String> workingDirectory;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder blockDeviceMappings(@Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
         public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder components(Input<List<ImageRecipeComponentArgs>> components) {
+        public Builder components(Output<List<ImageRecipeComponentArgs>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
         public Builder components(List<ImageRecipeComponentArgs> components) {
-            this.components = Input.of(Objects.requireNonNull(components));
+            this.components = Output.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentImage(Input<String> parentImage) {
+        public Builder parentImage(Output<String> parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
 
         public Builder parentImage(String parentImage) {
-            this.parentImage = Input.of(Objects.requireNonNull(parentImage));
+            this.parentImage = Output.of(Objects.requireNonNull(parentImage));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userDataBase64(@Nullable Input<String> userDataBase64) {
+        public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
 
         public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Input.ofNullable(userDataBase64);
+            this.userDataBase64 = Output.ofNullable(userDataBase64);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Input.ofNullable(workingDirectory);
+            this.workingDirectory = Output.ofNullable(workingDirectory);
             return this;
         }
         public ImageRecipeArgs build() {

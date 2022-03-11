@@ -6,7 +6,6 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.BudgetResourceAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.BudgetResourceAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class BudgetResourceAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public BudgetResourceAssociation(String name, BudgetResourceAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation", name, args == null ? BudgetResourceAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation", name, args == null ? BudgetResourceAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BudgetResourceAssociation(String name, Input<String> id, @Nullable BudgetResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BudgetResourceAssociation(String name, Output<String> id, @Nullable BudgetResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:servicecatalog/budgetResourceAssociation:BudgetResourceAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class BudgetResourceAssociation extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BudgetResourceAssociation get(String name, Input<String> id, @Nullable BudgetResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BudgetResourceAssociation get(String name, Output<String> id, @Nullable BudgetResourceAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BudgetResourceAssociation(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall;
 
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="firewallArn", required=true)
-      private final Input<String> firewallArn;
+      private final Output<String> firewallArn;
 
-    public Input<String> getFirewallArn() {
+    public Output<String> getFirewallArn() {
         return this.firewallArn;
     }
 
@@ -30,22 +30,22 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="loggingConfiguration", required=true)
-      private final Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
+      private final Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
-    public Input<LoggingConfigurationLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<LoggingConfigurationLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration;
     }
 
     public LoggingConfigurationArgs(
-        Input<String> firewallArn,
-        Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
+        Output<String> firewallArn,
+        Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
         this.firewallArn = Objects.requireNonNull(firewallArn, "expected parameter 'firewallArn' to be non-null");
         this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration, "expected parameter 'loggingConfiguration' to be non-null");
     }
 
     private LoggingConfigurationArgs() {
-        this.firewallArn = Input.empty();
-        this.loggingConfiguration = Input.empty();
+        this.firewallArn = Output.empty();
+        this.loggingConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> firewallArn;
-        private Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
+        private Output<String> firewallArn;
+        private Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder firewallArn(Input<String> firewallArn) {
+        public Builder firewallArn(Output<String> firewallArn) {
             this.firewallArn = Objects.requireNonNull(firewallArn);
             return this;
         }
 
         public Builder firewallArn(String firewallArn) {
-            this.firewallArn = Input.of(Objects.requireNonNull(firewallArn));
+            this.firewallArn = Output.of(Objects.requireNonNull(firewallArn));
             return this;
         }
 
-        public Builder loggingConfiguration(Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration);
             return this;
         }
 
         public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Input.of(Objects.requireNonNull(loggingConfiguration));
+            this.loggingConfiguration = Output.of(Objects.requireNonNull(loggingConfiguration));
             return this;
         }
         public LoggingConfigurationArgs build() {

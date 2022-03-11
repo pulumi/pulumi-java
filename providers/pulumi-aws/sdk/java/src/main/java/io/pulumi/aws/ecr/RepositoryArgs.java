@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfigurations")
-      private final @Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
+      private final @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
-    public Input<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
-        return this.encryptionConfigurations == null ? Input.empty() : this.encryptionConfigurations;
+    public Output<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
+        return this.encryptionConfigurations == null ? Output.empty() : this.encryptionConfigurations;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageScanningConfiguration")
-      private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+      private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
-    public Input<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Input.empty() : this.imageScanningConfiguration;
+    public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
+        return this.imageScanningConfiguration == null ? Output.empty() : this.imageScanningConfiguration;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTagMutability")
-      private final @Nullable Input<String> imageTagMutability;
+      private final @Nullable Output<String> imageTagMutability;
 
-    public Input<String> getImageTagMutability() {
-        return this.imageTagMutability == null ? Input.empty() : this.imageTagMutability;
+    public Output<String> getImageTagMutability() {
+        return this.imageTagMutability == null ? Output.empty() : this.imageTagMutability;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RepositoryArgs(
-        @Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations,
-        @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration,
-        @Nullable Input<String> imageTagMutability,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations,
+        @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration,
+        @Nullable Output<String> imageTagMutability,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.encryptionConfigurations = encryptionConfigurations;
         this.imageScanningConfiguration = imageScanningConfiguration;
         this.imageTagMutability = imageTagMutability;
@@ -87,11 +87,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.encryptionConfigurations = Input.empty();
-        this.imageScanningConfiguration = Input.empty();
-        this.imageTagMutability = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.encryptionConfigurations = Output.empty();
+        this.imageScanningConfiguration = Output.empty();
+        this.imageTagMutability = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
-        private @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
-        private @Nullable Input<String> imageTagMutability;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
+        private @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+        private @Nullable Output<String> imageTagMutability;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder encryptionConfigurations(@Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations) {
             this.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
 
         public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
-            this.encryptionConfigurations = Input.ofNullable(encryptionConfigurations);
+            this.encryptionConfigurations = Output.ofNullable(encryptionConfigurations);
             return this;
         }
 
-        public Builder imageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Input.ofNullable(imageScanningConfiguration);
+            this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
             return this;
         }
 
-        public Builder imageTagMutability(@Nullable Input<String> imageTagMutability) {
+        public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
         public Builder imageTagMutability(@Nullable String imageTagMutability) {
-            this.imageTagMutability = Input.ofNullable(imageTagMutability);
+            this.imageTagMutability = Output.ofNullable(imageTagMutability);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RepositoryArgs build() {

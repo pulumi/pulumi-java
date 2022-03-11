@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoResolveBestVoicesEnabled")
-      private final @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
+      private final @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
-    public Input<Boolean> getAutoResolveBestVoicesEnabled() {
-        return this.autoResolveBestVoicesEnabled == null ? Input.empty() : this.autoResolveBestVoicesEnabled;
+    public Output<Boolean> getAutoResolveBestVoicesEnabled() {
+        return this.autoResolveBestVoicesEnabled == null ? Output.empty() : this.autoResolveBestVoicesEnabled;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactFlowLogsEnabled")
-      private final @Nullable Input<Boolean> contactFlowLogsEnabled;
+      private final @Nullable Output<Boolean> contactFlowLogsEnabled;
 
-    public Input<Boolean> getContactFlowLogsEnabled() {
-        return this.contactFlowLogsEnabled == null ? Input.empty() : this.contactFlowLogsEnabled;
+    public Output<Boolean> getContactFlowLogsEnabled() {
+        return this.contactFlowLogsEnabled == null ? Output.empty() : this.contactFlowLogsEnabled;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactLensEnabled")
-      private final @Nullable Input<Boolean> contactLensEnabled;
+      private final @Nullable Output<Boolean> contactLensEnabled;
 
-    public Input<Boolean> getContactLensEnabled() {
-        return this.contactLensEnabled == null ? Input.empty() : this.contactLensEnabled;
+    public Output<Boolean> getContactLensEnabled() {
+        return this.contactLensEnabled == null ? Output.empty() : this.contactLensEnabled;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-      private final @Nullable Input<String> directoryId;
+      private final @Nullable Output<String> directoryId;
 
-    public Input<String> getDirectoryId() {
-        return this.directoryId == null ? Input.empty() : this.directoryId;
+    public Output<String> getDirectoryId() {
+        return this.directoryId == null ? Output.empty() : this.directoryId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="earlyMediaEnabled")
-      private final @Nullable Input<Boolean> earlyMediaEnabled;
+      private final @Nullable Output<Boolean> earlyMediaEnabled;
 
-    public Input<Boolean> getEarlyMediaEnabled() {
-        return this.earlyMediaEnabled == null ? Input.empty() : this.earlyMediaEnabled;
+    public Output<Boolean> getEarlyMediaEnabled() {
+        return this.earlyMediaEnabled == null ? Output.empty() : this.earlyMediaEnabled;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityManagementType")
-      private final @Nullable Input<String> identityManagementType;
+      private final @Nullable Output<String> identityManagementType;
 
-    public Input<String> getIdentityManagementType() {
-        return this.identityManagementType == null ? Input.empty() : this.identityManagementType;
+    public Output<String> getIdentityManagementType() {
+        return this.identityManagementType == null ? Output.empty() : this.identityManagementType;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inboundCallsEnabled")
-      private final @Nullable Input<Boolean> inboundCallsEnabled;
+      private final @Nullable Output<Boolean> inboundCallsEnabled;
 
-    public Input<Boolean> getInboundCallsEnabled() {
-        return this.inboundCallsEnabled == null ? Input.empty() : this.inboundCallsEnabled;
+    public Output<Boolean> getInboundCallsEnabled() {
+        return this.inboundCallsEnabled == null ? Output.empty() : this.inboundCallsEnabled;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceAlias")
-      private final @Nullable Input<String> instanceAlias;
+      private final @Nullable Output<String> instanceAlias;
 
-    public Input<String> getInstanceAlias() {
-        return this.instanceAlias == null ? Input.empty() : this.instanceAlias;
+    public Output<String> getInstanceAlias() {
+        return this.instanceAlias == null ? Output.empty() : this.instanceAlias;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outboundCallsEnabled")
-      private final @Nullable Input<Boolean> outboundCallsEnabled;
+      private final @Nullable Output<Boolean> outboundCallsEnabled;
 
-    public Input<Boolean> getOutboundCallsEnabled() {
-        return this.outboundCallsEnabled == null ? Input.empty() : this.outboundCallsEnabled;
+    public Output<Boolean> getOutboundCallsEnabled() {
+        return this.outboundCallsEnabled == null ? Output.empty() : this.outboundCallsEnabled;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole")
-      private final @Nullable Input<String> serviceRole;
+      private final @Nullable Output<String> serviceRole;
 
-    public Input<String> getServiceRole() {
-        return this.serviceRole == null ? Input.empty() : this.serviceRole;
+    public Output<String> getServiceRole() {
+        return this.serviceRole == null ? Output.empty() : this.serviceRole;
     }
 
     /**
@@ -153,26 +153,26 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public InstanceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> autoResolveBestVoicesEnabled,
-        @Nullable Input<Boolean> contactFlowLogsEnabled,
-        @Nullable Input<Boolean> contactLensEnabled,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> directoryId,
-        @Nullable Input<Boolean> earlyMediaEnabled,
-        @Nullable Input<String> identityManagementType,
-        @Nullable Input<Boolean> inboundCallsEnabled,
-        @Nullable Input<String> instanceAlias,
-        @Nullable Input<Boolean> outboundCallsEnabled,
-        @Nullable Input<String> serviceRole,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> autoResolveBestVoicesEnabled,
+        @Nullable Output<Boolean> contactFlowLogsEnabled,
+        @Nullable Output<Boolean> contactLensEnabled,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> directoryId,
+        @Nullable Output<Boolean> earlyMediaEnabled,
+        @Nullable Output<String> identityManagementType,
+        @Nullable Output<Boolean> inboundCallsEnabled,
+        @Nullable Output<String> instanceAlias,
+        @Nullable Output<Boolean> outboundCallsEnabled,
+        @Nullable Output<String> serviceRole,
+        @Nullable Output<String> status) {
         this.arn = arn;
         this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
         this.contactFlowLogsEnabled = contactFlowLogsEnabled;
@@ -189,19 +189,19 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.arn = Input.empty();
-        this.autoResolveBestVoicesEnabled = Input.empty();
-        this.contactFlowLogsEnabled = Input.empty();
-        this.contactLensEnabled = Input.empty();
-        this.createdTime = Input.empty();
-        this.directoryId = Input.empty();
-        this.earlyMediaEnabled = Input.empty();
-        this.identityManagementType = Input.empty();
-        this.inboundCallsEnabled = Input.empty();
-        this.instanceAlias = Input.empty();
-        this.outboundCallsEnabled = Input.empty();
-        this.serviceRole = Input.empty();
-        this.status = Input.empty();
+        this.arn = Output.empty();
+        this.autoResolveBestVoicesEnabled = Output.empty();
+        this.contactFlowLogsEnabled = Output.empty();
+        this.contactLensEnabled = Output.empty();
+        this.createdTime = Output.empty();
+        this.directoryId = Output.empty();
+        this.earlyMediaEnabled = Output.empty();
+        this.identityManagementType = Output.empty();
+        this.inboundCallsEnabled = Output.empty();
+        this.instanceAlias = Output.empty();
+        this.outboundCallsEnabled = Output.empty();
+        this.serviceRole = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,19 +213,19 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
-        private @Nullable Input<Boolean> contactFlowLogsEnabled;
-        private @Nullable Input<Boolean> contactLensEnabled;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> directoryId;
-        private @Nullable Input<Boolean> earlyMediaEnabled;
-        private @Nullable Input<String> identityManagementType;
-        private @Nullable Input<Boolean> inboundCallsEnabled;
-        private @Nullable Input<String> instanceAlias;
-        private @Nullable Input<Boolean> outboundCallsEnabled;
-        private @Nullable Input<String> serviceRole;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
+        private @Nullable Output<Boolean> contactFlowLogsEnabled;
+        private @Nullable Output<Boolean> contactLensEnabled;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> directoryId;
+        private @Nullable Output<Boolean> earlyMediaEnabled;
+        private @Nullable Output<String> identityManagementType;
+        private @Nullable Output<Boolean> inboundCallsEnabled;
+        private @Nullable Output<String> instanceAlias;
+        private @Nullable Output<Boolean> outboundCallsEnabled;
+        private @Nullable Output<String> serviceRole;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -248,133 +248,133 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoResolveBestVoicesEnabled(@Nullable Input<Boolean> autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(@Nullable Output<Boolean> autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
 
         public Builder autoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
-            this.autoResolveBestVoicesEnabled = Input.ofNullable(autoResolveBestVoicesEnabled);
+            this.autoResolveBestVoicesEnabled = Output.ofNullable(autoResolveBestVoicesEnabled);
             return this;
         }
 
-        public Builder contactFlowLogsEnabled(@Nullable Input<Boolean> contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(@Nullable Output<Boolean> contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
 
         public Builder contactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
-            this.contactFlowLogsEnabled = Input.ofNullable(contactFlowLogsEnabled);
+            this.contactFlowLogsEnabled = Output.ofNullable(contactFlowLogsEnabled);
             return this;
         }
 
-        public Builder contactLensEnabled(@Nullable Input<Boolean> contactLensEnabled) {
+        public Builder contactLensEnabled(@Nullable Output<Boolean> contactLensEnabled) {
             this.contactLensEnabled = contactLensEnabled;
             return this;
         }
 
         public Builder contactLensEnabled(@Nullable Boolean contactLensEnabled) {
-            this.contactLensEnabled = Input.ofNullable(contactLensEnabled);
+            this.contactLensEnabled = Output.ofNullable(contactLensEnabled);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder directoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Input.ofNullable(directoryId);
+            this.directoryId = Output.ofNullable(directoryId);
             return this;
         }
 
-        public Builder earlyMediaEnabled(@Nullable Input<Boolean> earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(@Nullable Output<Boolean> earlyMediaEnabled) {
             this.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
 
         public Builder earlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
-            this.earlyMediaEnabled = Input.ofNullable(earlyMediaEnabled);
+            this.earlyMediaEnabled = Output.ofNullable(earlyMediaEnabled);
             return this;
         }
 
-        public Builder identityManagementType(@Nullable Input<String> identityManagementType) {
+        public Builder identityManagementType(@Nullable Output<String> identityManagementType) {
             this.identityManagementType = identityManagementType;
             return this;
         }
 
         public Builder identityManagementType(@Nullable String identityManagementType) {
-            this.identityManagementType = Input.ofNullable(identityManagementType);
+            this.identityManagementType = Output.ofNullable(identityManagementType);
             return this;
         }
 
-        public Builder inboundCallsEnabled(@Nullable Input<Boolean> inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(@Nullable Output<Boolean> inboundCallsEnabled) {
             this.inboundCallsEnabled = inboundCallsEnabled;
             return this;
         }
 
         public Builder inboundCallsEnabled(@Nullable Boolean inboundCallsEnabled) {
-            this.inboundCallsEnabled = Input.ofNullable(inboundCallsEnabled);
+            this.inboundCallsEnabled = Output.ofNullable(inboundCallsEnabled);
             return this;
         }
 
-        public Builder instanceAlias(@Nullable Input<String> instanceAlias) {
+        public Builder instanceAlias(@Nullable Output<String> instanceAlias) {
             this.instanceAlias = instanceAlias;
             return this;
         }
 
         public Builder instanceAlias(@Nullable String instanceAlias) {
-            this.instanceAlias = Input.ofNullable(instanceAlias);
+            this.instanceAlias = Output.ofNullable(instanceAlias);
             return this;
         }
 
-        public Builder outboundCallsEnabled(@Nullable Input<Boolean> outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(@Nullable Output<Boolean> outboundCallsEnabled) {
             this.outboundCallsEnabled = outboundCallsEnabled;
             return this;
         }
 
         public Builder outboundCallsEnabled(@Nullable Boolean outboundCallsEnabled) {
-            this.outboundCallsEnabled = Input.ofNullable(outboundCallsEnabled);
+            this.outboundCallsEnabled = Output.ofNullable(outboundCallsEnabled);
             return this;
         }
 
-        public Builder serviceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Output<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
         public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Input.ofNullable(serviceRole);
+            this.serviceRole = Output.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public InstanceState build() {

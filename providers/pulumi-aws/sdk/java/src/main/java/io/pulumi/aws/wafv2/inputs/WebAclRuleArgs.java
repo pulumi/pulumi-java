@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleRuleLabelArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleVisibilityConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<WebAclRuleActionArgs> action;
+      private final @Nullable Output<WebAclRuleActionArgs> action;
 
-    public Input<WebAclRuleActionArgs> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<WebAclRuleActionArgs> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -48,10 +48,10 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideAction")
-      private final @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
+      private final @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
 
-    public Input<WebAclRuleOverrideActionArgs> getOverrideAction() {
-        return this.overrideAction == null ? Input.empty() : this.overrideAction;
+    public Output<WebAclRuleOverrideActionArgs> getOverrideAction() {
+        return this.overrideAction == null ? Output.empty() : this.overrideAction;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -70,10 +70,10 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleLabels")
-      private final @Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels;
+      private final @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels;
 
-    public Input<List<WebAclRuleRuleLabelArgs>> getRuleLabels() {
-        return this.ruleLabels == null ? Input.empty() : this.ruleLabels;
+    public Output<List<WebAclRuleRuleLabelArgs>> getRuleLabels() {
+        return this.ruleLabels == null ? Output.empty() : this.ruleLabels;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statement", required=true)
-      private final Input<WebAclRuleStatementArgs> statement;
+      private final Output<WebAclRuleStatementArgs> statement;
 
-    public Input<WebAclRuleStatementArgs> getStatement() {
+    public Output<WebAclRuleStatementArgs> getStatement() {
         return this.statement;
     }
 
@@ -92,20 +92,20 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-      private final Input<WebAclRuleVisibilityConfigArgs> visibilityConfig;
+      private final Output<WebAclRuleVisibilityConfigArgs> visibilityConfig;
 
-    public Input<WebAclRuleVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<WebAclRuleVisibilityConfigArgs> getVisibilityConfig() {
         return this.visibilityConfig;
     }
 
     public WebAclRuleArgs(
-        @Nullable Input<WebAclRuleActionArgs> action,
-        Input<String> name,
-        @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction,
-        Input<Integer> priority,
-        @Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels,
-        Input<WebAclRuleStatementArgs> statement,
-        Input<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
+        @Nullable Output<WebAclRuleActionArgs> action,
+        Output<String> name,
+        @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction,
+        Output<Integer> priority,
+        @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels,
+        Output<WebAclRuleStatementArgs> statement,
+        Output<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
         this.action = action;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.overrideAction = overrideAction;
@@ -116,13 +116,13 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAclRuleArgs() {
-        this.action = Input.empty();
-        this.name = Input.empty();
-        this.overrideAction = Input.empty();
-        this.priority = Input.empty();
-        this.ruleLabels = Input.empty();
-        this.statement = Input.empty();
-        this.visibilityConfig = Input.empty();
+        this.action = Output.empty();
+        this.name = Output.empty();
+        this.overrideAction = Output.empty();
+        this.priority = Output.empty();
+        this.ruleLabels = Output.empty();
+        this.statement = Output.empty();
+        this.visibilityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleActionArgs> action;
-        private Input<String> name;
-        private @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
-        private Input<Integer> priority;
-        private @Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels;
-        private Input<WebAclRuleStatementArgs> statement;
-        private Input<WebAclRuleVisibilityConfigArgs> visibilityConfig;
+        private @Nullable Output<WebAclRuleActionArgs> action;
+        private Output<String> name;
+        private @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
+        private Output<Integer> priority;
+        private @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels;
+        private Output<WebAclRuleStatementArgs> statement;
+        private Output<WebAclRuleVisibilityConfigArgs> visibilityConfig;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder action(@Nullable Input<WebAclRuleActionArgs> action) {
+        public Builder action(@Nullable Output<WebAclRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable WebAclRuleActionArgs action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder overrideAction(@Nullable Input<WebAclRuleOverrideActionArgs> overrideAction) {
+        public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
         public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
-            this.overrideAction = Input.ofNullable(overrideAction);
+            this.overrideAction = Output.ofNullable(overrideAction);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleLabels(@Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
         public Builder ruleLabels(@Nullable List<WebAclRuleRuleLabelArgs> ruleLabels) {
-            this.ruleLabels = Input.ofNullable(ruleLabels);
+            this.ruleLabels = Output.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder statement(Input<WebAclRuleStatementArgs> statement) {
+        public Builder statement(Output<WebAclRuleStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
         public Builder statement(WebAclRuleStatementArgs statement) {
-            this.statement = Input.of(Objects.requireNonNull(statement));
+            this.statement = Output.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder visibilityConfig(Input<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Output<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
         public Builder visibilityConfig(WebAclRuleVisibilityConfigArgs visibilityConfig) {
-            this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
+            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }
         public WebAclRuleArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudsearch;
 import io.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointOptions")
-      private final @Nullable Input<DomainEndpointOptionsArgs> endpointOptions;
+      private final @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
-    public Input<DomainEndpointOptionsArgs> getEndpointOptions() {
-        return this.endpointOptions == null ? Input.empty() : this.endpointOptions;
+    public Output<DomainEndpointOptionsArgs> getEndpointOptions() {
+        return this.endpointOptions == null ? Output.empty() : this.endpointOptions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexFields")
-      private final @Nullable Input<List<DomainIndexFieldArgs>> indexFields;
+      private final @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
-    public Input<List<DomainIndexFieldArgs>> getIndexFields() {
-        return this.indexFields == null ? Input.empty() : this.indexFields;
+    public Output<List<DomainIndexFieldArgs>> getIndexFields() {
+        return this.indexFields == null ? Output.empty() : this.indexFields;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiAz")
-      private final @Nullable Input<Boolean> multiAz;
+      private final @Nullable Output<Boolean> multiAz;
 
-    public Input<Boolean> getMultiAz() {
-        return this.multiAz == null ? Input.empty() : this.multiAz;
+    public Output<Boolean> getMultiAz() {
+        return this.multiAz == null ? Output.empty() : this.multiAz;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingParameters")
-      private final @Nullable Input<DomainScalingParametersArgs> scalingParameters;
+      private final @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
-    public Input<DomainScalingParametersArgs> getScalingParameters() {
-        return this.scalingParameters == null ? Input.empty() : this.scalingParameters;
+    public Output<DomainScalingParametersArgs> getScalingParameters() {
+        return this.scalingParameters == null ? Output.empty() : this.scalingParameters;
     }
 
     public DomainArgs(
-        @Nullable Input<DomainEndpointOptionsArgs> endpointOptions,
-        @Nullable Input<List<DomainIndexFieldArgs>> indexFields,
-        @Nullable Input<Boolean> multiAz,
-        @Nullable Input<String> name,
-        @Nullable Input<DomainScalingParametersArgs> scalingParameters) {
+        @Nullable Output<DomainEndpointOptionsArgs> endpointOptions,
+        @Nullable Output<List<DomainIndexFieldArgs>> indexFields,
+        @Nullable Output<Boolean> multiAz,
+        @Nullable Output<String> name,
+        @Nullable Output<DomainScalingParametersArgs> scalingParameters) {
         this.endpointOptions = endpointOptions;
         this.indexFields = indexFields;
         this.multiAz = multiAz;
@@ -88,11 +88,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.endpointOptions = Input.empty();
-        this.indexFields = Input.empty();
-        this.multiAz = Input.empty();
-        this.name = Input.empty();
-        this.scalingParameters = Input.empty();
+        this.endpointOptions = Output.empty();
+        this.indexFields = Output.empty();
+        this.multiAz = Output.empty();
+        this.name = Output.empty();
+        this.scalingParameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DomainEndpointOptionsArgs> endpointOptions;
-        private @Nullable Input<List<DomainIndexFieldArgs>> indexFields;
-        private @Nullable Input<Boolean> multiAz;
-        private @Nullable Input<String> name;
-        private @Nullable Input<DomainScalingParametersArgs> scalingParameters;
+        private @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
+        private @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
+        private @Nullable Output<Boolean> multiAz;
+        private @Nullable Output<String> name;
+        private @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scalingParameters = defaults.scalingParameters;
         }
 
-        public Builder endpointOptions(@Nullable Input<DomainEndpointOptionsArgs> endpointOptions) {
+        public Builder endpointOptions(@Nullable Output<DomainEndpointOptionsArgs> endpointOptions) {
             this.endpointOptions = endpointOptions;
             return this;
         }
 
         public Builder endpointOptions(@Nullable DomainEndpointOptionsArgs endpointOptions) {
-            this.endpointOptions = Input.ofNullable(endpointOptions);
+            this.endpointOptions = Output.ofNullable(endpointOptions);
             return this;
         }
 
-        public Builder indexFields(@Nullable Input<List<DomainIndexFieldArgs>> indexFields) {
+        public Builder indexFields(@Nullable Output<List<DomainIndexFieldArgs>> indexFields) {
             this.indexFields = indexFields;
             return this;
         }
 
         public Builder indexFields(@Nullable List<DomainIndexFieldArgs> indexFields) {
-            this.indexFields = Input.ofNullable(indexFields);
+            this.indexFields = Output.ofNullable(indexFields);
             return this;
         }
 
-        public Builder multiAz(@Nullable Input<Boolean> multiAz) {
+        public Builder multiAz(@Nullable Output<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
 
         public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Input.ofNullable(multiAz);
+            this.multiAz = Output.ofNullable(multiAz);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder scalingParameters(@Nullable Input<DomainScalingParametersArgs> scalingParameters) {
+        public Builder scalingParameters(@Nullable Output<DomainScalingParametersArgs> scalingParameters) {
             this.scalingParameters = scalingParameters;
             return this;
         }
 
         public Builder scalingParameters(@Nullable DomainScalingParametersArgs scalingParameters) {
-            this.scalingParameters = Input.ofNullable(scalingParameters);
+            this.scalingParameters = Output.ofNullable(scalingParameters);
             return this;
         }
         public DomainArgs build() {

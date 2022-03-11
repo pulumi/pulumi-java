@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionCountGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionNoneGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class WebAclRuleOverrideActionGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<WebAclRuleOverrideActionCountGetArgs> count;
+      private final @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count;
 
-    public Input<WebAclRuleOverrideActionCountGetArgs> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<WebAclRuleOverrideActionCountGetArgs> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WebAclRuleOverrideActionGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="none")
-      private final @Nullable Input<WebAclRuleOverrideActionNoneGetArgs> none;
+      private final @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none;
 
-    public Input<WebAclRuleOverrideActionNoneGetArgs> getNone() {
-        return this.none == null ? Input.empty() : this.none;
+    public Output<WebAclRuleOverrideActionNoneGetArgs> getNone() {
+        return this.none == null ? Output.empty() : this.none;
     }
 
     public WebAclRuleOverrideActionGetArgs(
-        @Nullable Input<WebAclRuleOverrideActionCountGetArgs> count,
-        @Nullable Input<WebAclRuleOverrideActionNoneGetArgs> none) {
+        @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count,
+        @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none) {
         this.count = count;
         this.none = none;
     }
 
     private WebAclRuleOverrideActionGetArgs() {
-        this.count = Input.empty();
-        this.none = Input.empty();
+        this.count = Output.empty();
+        this.none = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WebAclRuleOverrideActionGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<WebAclRuleOverrideActionCountGetArgs> count;
-        private @Nullable Input<WebAclRuleOverrideActionNoneGetArgs> none;
+        private @Nullable Output<WebAclRuleOverrideActionCountGetArgs> count;
+        private @Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WebAclRuleOverrideActionGetArgs extends io.pulumi.resources.R
     	      this.none = defaults.none;
         }
 
-        public Builder count(@Nullable Input<WebAclRuleOverrideActionCountGetArgs> count) {
+        public Builder count(@Nullable Output<WebAclRuleOverrideActionCountGetArgs> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable WebAclRuleOverrideActionCountGetArgs count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder none(@Nullable Input<WebAclRuleOverrideActionNoneGetArgs> none) {
+        public Builder none(@Nullable Output<WebAclRuleOverrideActionNoneGetArgs> none) {
             this.none = none;
             return this;
         }
 
         public Builder none(@Nullable WebAclRuleOverrideActionNoneGetArgs none) {
-            this.none = Input.ofNullable(none);
+            this.none = Output.ofNullable(none);
             return this;
         }
         public WebAclRuleOverrideActionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultArn")
-      private final @Nullable Input<String> backupVaultArn;
+      private final @Nullable Output<String> backupVaultArn;
 
-    public Input<String> getBackupVaultArn() {
-        return this.backupVaultArn == null ? Input.empty() : this.backupVaultArn;
+    public Output<String> getBackupVaultArn() {
+        return this.backupVaultArn == null ? Output.empty() : this.backupVaultArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultEvents")
-      private final @Nullable Input<List<String>> backupVaultEvents;
+      private final @Nullable Output<List<String>> backupVaultEvents;
 
-    public Input<List<String>> getBackupVaultEvents() {
-        return this.backupVaultEvents == null ? Input.empty() : this.backupVaultEvents;
+    public Output<List<String>> getBackupVaultEvents() {
+        return this.backupVaultEvents == null ? Output.empty() : this.backupVaultEvents;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultName")
-      private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Output<String> backupVaultName;
 
-    public Input<String> getBackupVaultName() {
-        return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
+    public Output<String> getBackupVaultName() {
+        return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
     public VaultNotificationsState(
-        @Nullable Input<String> backupVaultArn,
-        @Nullable Input<List<String>> backupVaultEvents,
-        @Nullable Input<String> backupVaultName,
-        @Nullable Input<String> snsTopicArn) {
+        @Nullable Output<String> backupVaultArn,
+        @Nullable Output<List<String>> backupVaultEvents,
+        @Nullable Output<String> backupVaultName,
+        @Nullable Output<String> snsTopicArn) {
         this.backupVaultArn = backupVaultArn;
         this.backupVaultEvents = backupVaultEvents;
         this.backupVaultName = backupVaultName;
@@ -71,10 +71,10 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     }
 
     private VaultNotificationsState() {
-        this.backupVaultArn = Input.empty();
-        this.backupVaultEvents = Input.empty();
-        this.backupVaultName = Input.empty();
-        this.snsTopicArn = Input.empty();
+        this.backupVaultArn = Output.empty();
+        this.backupVaultEvents = Output.empty();
+        this.backupVaultName = Output.empty();
+        this.snsTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupVaultArn;
-        private @Nullable Input<List<String>> backupVaultEvents;
-        private @Nullable Input<String> backupVaultName;
-        private @Nullable Input<String> snsTopicArn;
+        private @Nullable Output<String> backupVaultArn;
+        private @Nullable Output<List<String>> backupVaultEvents;
+        private @Nullable Output<String> backupVaultName;
+        private @Nullable Output<String> snsTopicArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder backupVaultArn(@Nullable Input<String> backupVaultArn) {
+        public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
 
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Input.ofNullable(backupVaultArn);
+            this.backupVaultArn = Output.ofNullable(backupVaultArn);
             return this;
         }
 
-        public Builder backupVaultEvents(@Nullable Input<List<String>> backupVaultEvents) {
+        public Builder backupVaultEvents(@Nullable Output<List<String>> backupVaultEvents) {
             this.backupVaultEvents = backupVaultEvents;
             return this;
         }
 
         public Builder backupVaultEvents(@Nullable List<String> backupVaultEvents) {
-            this.backupVaultEvents = Input.ofNullable(backupVaultEvents);
+            this.backupVaultEvents = Output.ofNullable(backupVaultEvents);
             return this;
         }
 
-        public Builder backupVaultName(@Nullable Input<String> backupVaultName) {
+        public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
             this.backupVaultName = backupVaultName;
             return this;
         }
 
         public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Input.ofNullable(backupVaultName);
+            this.backupVaultName = Output.ofNullable(backupVaultName);
             return this;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
         public VaultNotificationsState build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorFieldSelectorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fieldSelectors", required=true)
-      private final Input<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
+      private final Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
 
-    public Input<List<TrailAdvancedEventSelectorFieldSelectorArgs>> getFieldSelectors() {
+    public Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> getFieldSelectors() {
         return this.fieldSelectors;
     }
 
@@ -32,22 +32,22 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public TrailAdvancedEventSelectorArgs(
-        Input<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors,
-        @Nullable Input<String> name) {
+        Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors,
+        @Nullable Output<String> name) {
         this.fieldSelectors = Objects.requireNonNull(fieldSelectors, "expected parameter 'fieldSelectors' to be non-null");
         this.name = name;
     }
 
     private TrailAdvancedEventSelectorArgs() {
-        this.fieldSelectors = Input.empty();
-        this.name = Input.empty();
+        this.fieldSelectors = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
-        private @Nullable Input<String> name;
+        private Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
     	      this.name = defaults.name;
         }
 
-        public Builder fieldSelectors(Input<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors) {
+        public Builder fieldSelectors(Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors) {
             this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
             return this;
         }
 
         public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelectorArgs> fieldSelectors) {
-            this.fieldSelectors = Input.of(Objects.requireNonNull(fieldSelectors));
+            this.fieldSelectors = Output.of(Objects.requireNonNull(fieldSelectors));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public TrailAdvancedEventSelectorArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.dlm.inputs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="copyTags")
-      private final @Nullable Input<Boolean> copyTags;
+      private final @Nullable Output<Boolean> copyTags;
 
-    public Input<Boolean> getCopyTags() {
-        return this.copyTags == null ? Input.empty() : this.copyTags;
+    public Output<Boolean> getCopyTags() {
+        return this.copyTags == null ? Output.empty() : this.copyTags;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="createRule", required=true)
-      private final Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
+      private final Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
 
-    public Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> getCreateRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> getCreateRule() {
         return this.createRule;
     }
 
@@ -47,10 +47,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="crossRegionCopyRules")
-      private final @Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
+      private final @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
 
-    public Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> getCrossRegionCopyRules() {
-        return this.crossRegionCopyRules == null ? Input.empty() : this.crossRegionCopyRules;
+    public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> getCrossRegionCopyRules() {
+        return this.crossRegionCopyRules == null ? Output.empty() : this.crossRegionCopyRules;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -69,9 +69,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="retainRule", required=true)
-      private final Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
+      private final Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
 
-    public Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> getRetainRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> getRetainRule() {
         return this.retainRule;
     }
 
@@ -80,19 +80,19 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="tagsToAdd")
-      private final @Nullable Input<Map<String,String>> tagsToAdd;
+      private final @Nullable Output<Map<String,String>> tagsToAdd;
 
-    public Input<Map<String,String>> getTagsToAdd() {
-        return this.tagsToAdd == null ? Input.empty() : this.tagsToAdd;
+    public Output<Map<String,String>> getTagsToAdd() {
+        return this.tagsToAdd == null ? Output.empty() : this.tagsToAdd;
     }
 
     public LifecyclePolicyPolicyDetailsScheduleGetArgs(
-        @Nullable Input<Boolean> copyTags,
-        Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule,
-        @Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules,
-        Input<String> name,
-        Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule,
-        @Nullable Input<Map<String,String>> tagsToAdd) {
+        @Nullable Output<Boolean> copyTags,
+        Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule,
+        @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules,
+        Output<String> name,
+        Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule,
+        @Nullable Output<Map<String,String>> tagsToAdd) {
         this.copyTags = copyTags;
         this.createRule = Objects.requireNonNull(createRule, "expected parameter 'createRule' to be non-null");
         this.crossRegionCopyRules = crossRegionCopyRules;
@@ -102,12 +102,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
     }
 
     private LifecyclePolicyPolicyDetailsScheduleGetArgs() {
-        this.copyTags = Input.empty();
-        this.createRule = Input.empty();
-        this.crossRegionCopyRules = Input.empty();
-        this.name = Input.empty();
-        this.retainRule = Input.empty();
-        this.tagsToAdd = Input.empty();
+        this.copyTags = Output.empty();
+        this.createRule = Output.empty();
+        this.crossRegionCopyRules = Output.empty();
+        this.name = Output.empty();
+        this.retainRule = Output.empty();
+        this.tagsToAdd = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> copyTags;
-        private Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
-        private @Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
-        private Input<String> name;
-        private Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
-        private @Nullable Input<Map<String,String>> tagsToAdd;
+        private @Nullable Output<Boolean> copyTags;
+        private Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule;
+        private @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules;
+        private Output<String> name;
+        private Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule;
+        private @Nullable Output<Map<String,String>> tagsToAdd;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class LifecyclePolicyPolicyDetailsScheduleGetArgs extends io.pulumi
     	      this.tagsToAdd = defaults.tagsToAdd;
         }
 
-        public Builder copyTags(@Nullable Input<Boolean> copyTags) {
+        public Builder copyTags(@Nullable Output<Boolean> copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
         public Builder copyTags(@Nullable Boolean copyTags) {
-            this.copyTags = Input.ofNullable(copyTags);
+            this.copyTags = Output.ofNullable(copyTags);
             return this;
         }
 
-        public Builder createRule(Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule) {
+        public Builder createRule(Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs> createRule) {
             this.createRule = Objects.requireNonNull(createRule);
             return this;
         }
 
         public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs createRule) {
-            this.createRule = Input.of(Objects.requireNonNull(createRule));
+            this.createRule = Output.of(Objects.requireNonNull(createRule));
             return this;
         }
 
-        public Builder crossRegionCopyRules(@Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules) {
+        public Builder crossRegionCopyRules(@Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs>> crossRegionCopyRules) {
             this.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
 
         public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleGetArgs> crossRegionCopyRules) {
-            this.crossRegionCopyRules = Input.ofNullable(crossRegionCopyRules);
+            this.crossRegionCopyRules = Output.ofNullable(crossRegionCopyRules);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder retainRule(Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule) {
+        public Builder retainRule(Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs> retainRule) {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
 
         public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs retainRule) {
-            this.retainRule = Input.of(Objects.requireNonNull(retainRule));
+            this.retainRule = Output.of(Objects.requireNonNull(retainRule));
             return this;
         }
 
-        public Builder tagsToAdd(@Nullable Input<Map<String,String>> tagsToAdd) {
+        public Builder tagsToAdd(@Nullable Output<Map<String,String>> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
         }
 
         public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
-            this.tagsToAdd = Input.ofNullable(tagsToAdd);
+            this.tagsToAdd = Output.ofNullable(tagsToAdd);
             return this;
         }
         public LifecyclePolicyPolicyDetailsScheduleGetArgs build() {

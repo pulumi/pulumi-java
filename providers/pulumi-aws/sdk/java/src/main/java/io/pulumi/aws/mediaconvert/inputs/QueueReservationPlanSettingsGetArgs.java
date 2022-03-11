@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mediaconvert.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="commitment", required=true)
-      private final Input<String> commitment;
+      private final Output<String> commitment;
 
-    public Input<String> getCommitment() {
+    public Output<String> getCommitment() {
         return this.commitment;
     }
 
@@ -30,9 +30,9 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="renewalType", required=true)
-      private final Input<String> renewalType;
+      private final Output<String> renewalType;
 
-    public Input<String> getRenewalType() {
+    public Output<String> getRenewalType() {
         return this.renewalType;
     }
 
@@ -41,25 +41,25 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="reservedSlots", required=true)
-      private final Input<Integer> reservedSlots;
+      private final Output<Integer> reservedSlots;
 
-    public Input<Integer> getReservedSlots() {
+    public Output<Integer> getReservedSlots() {
         return this.reservedSlots;
     }
 
     public QueueReservationPlanSettingsGetArgs(
-        Input<String> commitment,
-        Input<String> renewalType,
-        Input<Integer> reservedSlots) {
+        Output<String> commitment,
+        Output<String> renewalType,
+        Output<Integer> reservedSlots) {
         this.commitment = Objects.requireNonNull(commitment, "expected parameter 'commitment' to be non-null");
         this.renewalType = Objects.requireNonNull(renewalType, "expected parameter 'renewalType' to be non-null");
         this.reservedSlots = Objects.requireNonNull(reservedSlots, "expected parameter 'reservedSlots' to be non-null");
     }
 
     private QueueReservationPlanSettingsGetArgs() {
-        this.commitment = Input.empty();
-        this.renewalType = Input.empty();
-        this.reservedSlots = Input.empty();
+        this.commitment = Output.empty();
+        this.renewalType = Output.empty();
+        this.reservedSlots = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> commitment;
-        private Input<String> renewalType;
-        private Input<Integer> reservedSlots;
+        private Output<String> commitment;
+        private Output<String> renewalType;
+        private Output<Integer> reservedSlots;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     	      this.reservedSlots = defaults.reservedSlots;
         }
 
-        public Builder commitment(Input<String> commitment) {
+        public Builder commitment(Output<String> commitment) {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
 
         public Builder commitment(String commitment) {
-            this.commitment = Input.of(Objects.requireNonNull(commitment));
+            this.commitment = Output.of(Objects.requireNonNull(commitment));
             return this;
         }
 
-        public Builder renewalType(Input<String> renewalType) {
+        public Builder renewalType(Output<String> renewalType) {
             this.renewalType = Objects.requireNonNull(renewalType);
             return this;
         }
 
         public Builder renewalType(String renewalType) {
-            this.renewalType = Input.of(Objects.requireNonNull(renewalType));
+            this.renewalType = Output.of(Objects.requireNonNull(renewalType));
             return this;
         }
 
-        public Builder reservedSlots(Input<Integer> reservedSlots) {
+        public Builder reservedSlots(Output<Integer> reservedSlots) {
             this.reservedSlots = Objects.requireNonNull(reservedSlots);
             return this;
         }
 
         public Builder reservedSlots(Integer reservedSlots) {
-            this.reservedSlots = Input.of(Objects.requireNonNull(reservedSlots));
+            this.reservedSlots = Output.of(Objects.requireNonNull(reservedSlots));
             return this;
         }
         public QueueReservationPlanSettingsGetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRulePatchFilterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="approveAfterDays")
-      private final @Nullable Input<Integer> approveAfterDays;
+      private final @Nullable Output<Integer> approveAfterDays;
 
-    public Input<Integer> getApproveAfterDays() {
-        return this.approveAfterDays == null ? Input.empty() : this.approveAfterDays;
+    public Output<Integer> getApproveAfterDays() {
+        return this.approveAfterDays == null ? Output.empty() : this.approveAfterDays;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="approveUntilDate")
-      private final @Nullable Input<String> approveUntilDate;
+      private final @Nullable Output<String> approveUntilDate;
 
-    public Input<String> getApproveUntilDate() {
-        return this.approveUntilDate == null ? Input.empty() : this.approveUntilDate;
+    public Output<String> getApproveUntilDate() {
+        return this.approveUntilDate == null ? Output.empty() : this.approveUntilDate;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="complianceLevel")
-      private final @Nullable Input<String> complianceLevel;
+      private final @Nullable Output<String> complianceLevel;
 
-    public Input<String> getComplianceLevel() {
-        return this.complianceLevel == null ? Input.empty() : this.complianceLevel;
+    public Output<String> getComplianceLevel() {
+        return this.complianceLevel == null ? Output.empty() : this.complianceLevel;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableNonSecurity")
-      private final @Nullable Input<Boolean> enableNonSecurity;
+      private final @Nullable Output<Boolean> enableNonSecurity;
 
-    public Input<Boolean> getEnableNonSecurity() {
-        return this.enableNonSecurity == null ? Input.empty() : this.enableNonSecurity;
+    public Output<Boolean> getEnableNonSecurity() {
+        return this.enableNonSecurity == null ? Output.empty() : this.enableNonSecurity;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="patchFilters", required=true)
-      private final Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
+      private final Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
 
-    public Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> getPatchFilters() {
+    public Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> getPatchFilters() {
         return this.patchFilters;
     }
 
     public PatchBaselineApprovalRuleGetArgs(
-        @Nullable Input<Integer> approveAfterDays,
-        @Nullable Input<String> approveUntilDate,
-        @Nullable Input<String> complianceLevel,
-        @Nullable Input<Boolean> enableNonSecurity,
-        Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
+        @Nullable Output<Integer> approveAfterDays,
+        @Nullable Output<String> approveUntilDate,
+        @Nullable Output<String> complianceLevel,
+        @Nullable Output<Boolean> enableNonSecurity,
+        Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
         this.approveAfterDays = approveAfterDays;
         this.approveUntilDate = approveUntilDate;
         this.complianceLevel = complianceLevel;
@@ -87,11 +87,11 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
     }
 
     private PatchBaselineApprovalRuleGetArgs() {
-        this.approveAfterDays = Input.empty();
-        this.approveUntilDate = Input.empty();
-        this.complianceLevel = Input.empty();
-        this.enableNonSecurity = Input.empty();
-        this.patchFilters = Input.empty();
+        this.approveAfterDays = Output.empty();
+        this.approveUntilDate = Output.empty();
+        this.complianceLevel = Output.empty();
+        this.enableNonSecurity = Output.empty();
+        this.patchFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> approveAfterDays;
-        private @Nullable Input<String> approveUntilDate;
-        private @Nullable Input<String> complianceLevel;
-        private @Nullable Input<Boolean> enableNonSecurity;
-        private Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
+        private @Nullable Output<Integer> approveAfterDays;
+        private @Nullable Output<String> approveUntilDate;
+        private @Nullable Output<String> complianceLevel;
+        private @Nullable Output<Boolean> enableNonSecurity;
+        private Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
     	      this.patchFilters = defaults.patchFilters;
         }
 
-        public Builder approveAfterDays(@Nullable Input<Integer> approveAfterDays) {
+        public Builder approveAfterDays(@Nullable Output<Integer> approveAfterDays) {
             this.approveAfterDays = approveAfterDays;
             return this;
         }
 
         public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
-            this.approveAfterDays = Input.ofNullable(approveAfterDays);
+            this.approveAfterDays = Output.ofNullable(approveAfterDays);
             return this;
         }
 
-        public Builder approveUntilDate(@Nullable Input<String> approveUntilDate) {
+        public Builder approveUntilDate(@Nullable Output<String> approveUntilDate) {
             this.approveUntilDate = approveUntilDate;
             return this;
         }
 
         public Builder approveUntilDate(@Nullable String approveUntilDate) {
-            this.approveUntilDate = Input.ofNullable(approveUntilDate);
+            this.approveUntilDate = Output.ofNullable(approveUntilDate);
             return this;
         }
 
-        public Builder complianceLevel(@Nullable Input<String> complianceLevel) {
+        public Builder complianceLevel(@Nullable Output<String> complianceLevel) {
             this.complianceLevel = complianceLevel;
             return this;
         }
 
         public Builder complianceLevel(@Nullable String complianceLevel) {
-            this.complianceLevel = Input.ofNullable(complianceLevel);
+            this.complianceLevel = Output.ofNullable(complianceLevel);
             return this;
         }
 
-        public Builder enableNonSecurity(@Nullable Input<Boolean> enableNonSecurity) {
+        public Builder enableNonSecurity(@Nullable Output<Boolean> enableNonSecurity) {
             this.enableNonSecurity = enableNonSecurity;
             return this;
         }
 
         public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
-            this.enableNonSecurity = Input.ofNullable(enableNonSecurity);
+            this.enableNonSecurity = Output.ofNullable(enableNonSecurity);
             return this;
         }
 
-        public Builder patchFilters(Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
+        public Builder patchFilters(Output<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
             this.patchFilters = Objects.requireNonNull(patchFilters);
             return this;
         }
 
         public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilterGetArgs> patchFilters) {
-            this.patchFilters = Input.of(Objects.requireNonNull(patchFilters));
+            this.patchFilters = Output.of(Objects.requireNonNull(patchFilters));
             return this;
         }
         public PatchBaselineApprovalRuleGetArgs build() {

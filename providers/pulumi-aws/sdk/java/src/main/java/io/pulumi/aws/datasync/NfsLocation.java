@@ -8,7 +8,6 @@ import io.pulumi.aws.datasync.NfsLocationArgs;
 import io.pulumi.aws.datasync.inputs.NfsLocationState;
 import io.pulumi.aws.datasync.outputs.NfsLocationMountOptions;
 import io.pulumi.aws.datasync.outputs.NfsLocationOnPremConfig;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -177,14 +176,14 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NfsLocation(String name, NfsLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/nfsLocation:NfsLocation", name, args == null ? NfsLocationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:datasync/nfsLocation:NfsLocation", name, args == null ? NfsLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NfsLocation(String name, Input<String> id, @Nullable NfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NfsLocation(String name, Output<String> id, @Nullable NfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:datasync/nfsLocation:NfsLocation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -200,7 +199,7 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NfsLocation get(String name, Input<String> id, @Nullable NfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NfsLocation get(String name, Output<String> id, @Nullable NfsLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NfsLocation(name, id, state, options);
     }
 }

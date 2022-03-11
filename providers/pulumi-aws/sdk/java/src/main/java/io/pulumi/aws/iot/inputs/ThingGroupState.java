@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingGroupMetadataGetArgs;
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,17 +24,17 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="metadatas")
-      private final @Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas;
+      private final @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas;
 
-    public Input<List<ThingGroupMetadataGetArgs>> getMetadatas() {
-        return this.metadatas == null ? Input.empty() : this.metadatas;
+    public Output<List<ThingGroupMetadataGetArgs>> getMetadatas() {
+        return this.metadatas == null ? Output.empty() : this.metadatas;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentGroupName")
-      private final @Nullable Input<String> parentGroupName;
+      private final @Nullable Output<String> parentGroupName;
 
-    public Input<String> getParentGroupName() {
-        return this.parentGroupName == null ? Input.empty() : this.parentGroupName;
+    public Output<String> getParentGroupName() {
+        return this.parentGroupName == null ? Output.empty() : this.parentGroupName;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ThingGroupPropertiesGetArgs> properties;
+      private final @Nullable Output<ThingGroupPropertiesGetArgs> properties;
 
-    public Input<ThingGroupPropertiesGetArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ThingGroupPropertiesGetArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -75,17 +75,17 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -93,21 +93,21 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ThingGroupState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentGroupName,
-        @Nullable Input<ThingGroupPropertiesGetArgs> properties,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentGroupName,
+        @Nullable Output<ThingGroupPropertiesGetArgs> properties,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Integer> version) {
         this.arn = arn;
         this.metadatas = metadatas;
         this.name = name;
@@ -119,14 +119,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingGroupState() {
-        this.arn = Input.empty();
-        this.metadatas = Input.empty();
-        this.name = Input.empty();
-        this.parentGroupName = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
+        this.arn = Output.empty();
+        this.metadatas = Output.empty();
+        this.name = Output.empty();
+        this.parentGroupName = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,14 +138,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentGroupName;
-        private @Nullable Input<ThingGroupPropertiesGetArgs> properties;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentGroupName;
+        private @Nullable Output<ThingGroupPropertiesGetArgs> properties;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -163,83 +163,83 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder metadatas(@Nullable Input<List<ThingGroupMetadataGetArgs>> metadatas) {
+        public Builder metadatas(@Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
 
         public Builder metadatas(@Nullable List<ThingGroupMetadataGetArgs> metadatas) {
-            this.metadatas = Input.ofNullable(metadatas);
+            this.metadatas = Output.ofNullable(metadatas);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentGroupName(@Nullable Input<String> parentGroupName) {
+        public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
 
         public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Input.ofNullable(parentGroupName);
+            this.parentGroupName = Output.ofNullable(parentGroupName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ThingGroupPropertiesGetArgs> properties) {
+        public Builder properties(@Nullable Output<ThingGroupPropertiesGetArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ThingGroupPropertiesGetArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ThingGroupState build() {

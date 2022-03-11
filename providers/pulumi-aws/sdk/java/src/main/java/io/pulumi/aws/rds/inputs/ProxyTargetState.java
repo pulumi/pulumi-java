@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-      private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Output<String> dbClusterIdentifier;
 
-    public Input<String> getDbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
+    public Output<String> getDbClusterIdentifier() {
+        return this.dbClusterIdentifier == null ? Output.empty() : this.dbClusterIdentifier;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-      private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Output<String> dbInstanceIdentifier;
 
-    public Input<String> getDbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
+    public Output<String> getDbInstanceIdentifier() {
+        return this.dbInstanceIdentifier == null ? Output.empty() : this.dbInstanceIdentifier;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName")
-      private final @Nullable Input<String> dbProxyName;
+      private final @Nullable Output<String> dbProxyName;
 
-    public Input<String> getDbProxyName() {
-        return this.dbProxyName == null ? Input.empty() : this.dbProxyName;
+    public Output<String> getDbProxyName() {
+        return this.dbProxyName == null ? Output.empty() : this.dbProxyName;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdsResourceId")
-      private final @Nullable Input<String> rdsResourceId;
+      private final @Nullable Output<String> rdsResourceId;
 
-    public Input<String> getRdsResourceId() {
-        return this.rdsResourceId == null ? Input.empty() : this.rdsResourceId;
+    public Output<String> getRdsResourceId() {
+        return this.rdsResourceId == null ? Output.empty() : this.rdsResourceId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetArn")
-      private final @Nullable Input<String> targetArn;
+      private final @Nullable Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
-        return this.targetArn == null ? Input.empty() : this.targetArn;
+    public Output<String> getTargetArn() {
+        return this.targetArn == null ? Output.empty() : this.targetArn;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName")
-      private final @Nullable Input<String> targetGroupName;
+      private final @Nullable Output<String> targetGroupName;
 
-    public Input<String> getTargetGroupName() {
-        return this.targetGroupName == null ? Input.empty() : this.targetGroupName;
+    public Output<String> getTargetGroupName() {
+        return this.targetGroupName == null ? Output.empty() : this.targetGroupName;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trackedClusterId")
-      private final @Nullable Input<String> trackedClusterId;
+      private final @Nullable Output<String> trackedClusterId;
 
-    public Input<String> getTrackedClusterId() {
-        return this.trackedClusterId == null ? Input.empty() : this.trackedClusterId;
+    public Output<String> getTrackedClusterId() {
+        return this.trackedClusterId == null ? Output.empty() : this.trackedClusterId;
     }
 
     /**
@@ -119,23 +119,23 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProxyTargetState(
-        @Nullable Input<String> dbClusterIdentifier,
-        @Nullable Input<String> dbInstanceIdentifier,
-        @Nullable Input<String> dbProxyName,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> rdsResourceId,
-        @Nullable Input<String> targetArn,
-        @Nullable Input<String> targetGroupName,
-        @Nullable Input<String> trackedClusterId,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> dbClusterIdentifier,
+        @Nullable Output<String> dbInstanceIdentifier,
+        @Nullable Output<String> dbProxyName,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> rdsResourceId,
+        @Nullable Output<String> targetArn,
+        @Nullable Output<String> targetGroupName,
+        @Nullable Output<String> trackedClusterId,
+        @Nullable Output<String> type) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         this.dbProxyName = dbProxyName;
@@ -149,16 +149,16 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyTargetState() {
-        this.dbClusterIdentifier = Input.empty();
-        this.dbInstanceIdentifier = Input.empty();
-        this.dbProxyName = Input.empty();
-        this.endpoint = Input.empty();
-        this.port = Input.empty();
-        this.rdsResourceId = Input.empty();
-        this.targetArn = Input.empty();
-        this.targetGroupName = Input.empty();
-        this.trackedClusterId = Input.empty();
-        this.type = Input.empty();
+        this.dbClusterIdentifier = Output.empty();
+        this.dbInstanceIdentifier = Output.empty();
+        this.dbProxyName = Output.empty();
+        this.endpoint = Output.empty();
+        this.port = Output.empty();
+        this.rdsResourceId = Output.empty();
+        this.targetArn = Output.empty();
+        this.targetGroupName = Output.empty();
+        this.trackedClusterId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -170,16 +170,16 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dbClusterIdentifier;
-        private @Nullable Input<String> dbInstanceIdentifier;
-        private @Nullable Input<String> dbProxyName;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> rdsResourceId;
-        private @Nullable Input<String> targetArn;
-        private @Nullable Input<String> targetGroupName;
-        private @Nullable Input<String> trackedClusterId;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> dbClusterIdentifier;
+        private @Nullable Output<String> dbInstanceIdentifier;
+        private @Nullable Output<String> dbProxyName;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> rdsResourceId;
+        private @Nullable Output<String> targetArn;
+        private @Nullable Output<String> targetGroupName;
+        private @Nullable Output<String> trackedClusterId;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -199,103 +199,103 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
         public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
+            this.dbClusterIdentifier = Output.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
         public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
+            this.dbInstanceIdentifier = Output.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder dbProxyName(@Nullable Input<String> dbProxyName) {
+        public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
             this.dbProxyName = dbProxyName;
             return this;
         }
 
         public Builder dbProxyName(@Nullable String dbProxyName) {
-            this.dbProxyName = Input.ofNullable(dbProxyName);
+            this.dbProxyName = Output.ofNullable(dbProxyName);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder rdsResourceId(@Nullable Input<String> rdsResourceId) {
+        public Builder rdsResourceId(@Nullable Output<String> rdsResourceId) {
             this.rdsResourceId = rdsResourceId;
             return this;
         }
 
         public Builder rdsResourceId(@Nullable String rdsResourceId) {
-            this.rdsResourceId = Input.ofNullable(rdsResourceId);
+            this.rdsResourceId = Output.ofNullable(rdsResourceId);
             return this;
         }
 
-        public Builder targetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Output<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Input.ofNullable(targetArn);
+            this.targetArn = Output.ofNullable(targetArn);
             return this;
         }
 
-        public Builder targetGroupName(@Nullable Input<String> targetGroupName) {
+        public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
             this.targetGroupName = targetGroupName;
             return this;
         }
 
         public Builder targetGroupName(@Nullable String targetGroupName) {
-            this.targetGroupName = Input.ofNullable(targetGroupName);
+            this.targetGroupName = Output.ofNullable(targetGroupName);
             return this;
         }
 
-        public Builder trackedClusterId(@Nullable Input<String> trackedClusterId) {
+        public Builder trackedClusterId(@Nullable Output<String> trackedClusterId) {
             this.trackedClusterId = trackedClusterId;
             return this;
         }
 
         public Builder trackedClusterId(@Nullable String trackedClusterId) {
-            this.trackedClusterId = Input.ofNullable(trackedClusterId);
+            this.trackedClusterId = Output.ofNullable(trackedClusterId);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProxyTargetState build() {

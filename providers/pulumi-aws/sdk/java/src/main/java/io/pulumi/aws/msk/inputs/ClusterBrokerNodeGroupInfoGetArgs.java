@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="azDistribution")
-      private final @Nullable Input<String> azDistribution;
+      private final @Nullable Output<String> azDistribution;
 
-    public Input<String> getAzDistribution() {
-        return this.azDistribution == null ? Input.empty() : this.azDistribution;
+    public Output<String> getAzDistribution() {
+        return this.azDistribution == null ? Output.empty() : this.azDistribution;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientSubnets", required=true)
-      private final Input<List<String>> clientSubnets;
+      private final Output<List<String>> clientSubnets;
 
-    public Input<List<String>> getClientSubnets() {
+    public Output<List<String>> getClientSubnets() {
         return this.clientSubnets;
     }
 
@@ -43,9 +43,9 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ebsVolumeSize", required=true)
-      private final Input<Integer> ebsVolumeSize;
+      private final Output<Integer> ebsVolumeSize;
 
-    public Input<Integer> getEbsVolumeSize() {
+    public Output<Integer> getEbsVolumeSize() {
         return this.ebsVolumeSize;
     }
 
@@ -54,9 +54,9 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -65,18 +65,18 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="securityGroups", required=true)
-      private final Input<List<String>> securityGroups;
+      private final Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
+    public Output<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
 
     public ClusterBrokerNodeGroupInfoGetArgs(
-        @Nullable Input<String> azDistribution,
-        Input<List<String>> clientSubnets,
-        Input<Integer> ebsVolumeSize,
-        Input<String> instanceType,
-        Input<List<String>> securityGroups) {
+        @Nullable Output<String> azDistribution,
+        Output<List<String>> clientSubnets,
+        Output<Integer> ebsVolumeSize,
+        Output<String> instanceType,
+        Output<List<String>> securityGroups) {
         this.azDistribution = azDistribution;
         this.clientSubnets = Objects.requireNonNull(clientSubnets, "expected parameter 'clientSubnets' to be non-null");
         this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize, "expected parameter 'ebsVolumeSize' to be non-null");
@@ -85,11 +85,11 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
     }
 
     private ClusterBrokerNodeGroupInfoGetArgs() {
-        this.azDistribution = Input.empty();
-        this.clientSubnets = Input.empty();
-        this.ebsVolumeSize = Input.empty();
-        this.instanceType = Input.empty();
-        this.securityGroups = Input.empty();
+        this.azDistribution = Output.empty();
+        this.clientSubnets = Output.empty();
+        this.ebsVolumeSize = Output.empty();
+        this.instanceType = Output.empty();
+        this.securityGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> azDistribution;
-        private Input<List<String>> clientSubnets;
-        private Input<Integer> ebsVolumeSize;
-        private Input<String> instanceType;
-        private Input<List<String>> securityGroups;
+        private @Nullable Output<String> azDistribution;
+        private Output<List<String>> clientSubnets;
+        private Output<Integer> ebsVolumeSize;
+        private Output<String> instanceType;
+        private Output<List<String>> securityGroups;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
     	      this.securityGroups = defaults.securityGroups;
         }
 
-        public Builder azDistribution(@Nullable Input<String> azDistribution) {
+        public Builder azDistribution(@Nullable Output<String> azDistribution) {
             this.azDistribution = azDistribution;
             return this;
         }
 
         public Builder azDistribution(@Nullable String azDistribution) {
-            this.azDistribution = Input.ofNullable(azDistribution);
+            this.azDistribution = Output.ofNullable(azDistribution);
             return this;
         }
 
-        public Builder clientSubnets(Input<List<String>> clientSubnets) {
+        public Builder clientSubnets(Output<List<String>> clientSubnets) {
             this.clientSubnets = Objects.requireNonNull(clientSubnets);
             return this;
         }
 
         public Builder clientSubnets(List<String> clientSubnets) {
-            this.clientSubnets = Input.of(Objects.requireNonNull(clientSubnets));
+            this.clientSubnets = Output.of(Objects.requireNonNull(clientSubnets));
             return this;
         }
 
-        public Builder ebsVolumeSize(Input<Integer> ebsVolumeSize) {
+        public Builder ebsVolumeSize(Output<Integer> ebsVolumeSize) {
             this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
             return this;
         }
 
         public Builder ebsVolumeSize(Integer ebsVolumeSize) {
-            this.ebsVolumeSize = Input.of(Objects.requireNonNull(ebsVolumeSize));
+            this.ebsVolumeSize = Output.of(Objects.requireNonNull(ebsVolumeSize));
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder securityGroups(Input<List<String>> securityGroups) {
+        public Builder securityGroups(Output<List<String>> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
         public Builder securityGroups(List<String> securityGroups) {
-            this.securityGroups = Input.of(Objects.requireNonNull(securityGroups));
+            this.securityGroups = Output.of(Objects.requireNonNull(securityGroups));
             return this;
         }
         public ClusterBrokerNodeGroupInfoGetArgs build() {

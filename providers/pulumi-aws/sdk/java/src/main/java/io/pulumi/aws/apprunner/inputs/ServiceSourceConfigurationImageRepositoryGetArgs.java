@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * 
      */
     @InputImport(name="imageConfiguration")
-      private final @Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
+      private final @Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
 
-    public Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> getImageConfiguration() {
-        return this.imageConfiguration == null ? Input.empty() : this.imageConfiguration;
+    public Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> getImageConfiguration() {
+        return this.imageConfiguration == null ? Output.empty() : this.imageConfiguration;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * 
      */
     @InputImport(name="imageIdentifier", required=true)
-      private final Input<String> imageIdentifier;
+      private final Output<String> imageIdentifier;
 
-    public Input<String> getImageIdentifier() {
+    public Output<String> getImageIdentifier() {
         return this.imageIdentifier;
     }
 
@@ -43,25 +43,25 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * 
      */
     @InputImport(name="imageRepositoryType", required=true)
-      private final Input<String> imageRepositoryType;
+      private final Output<String> imageRepositoryType;
 
-    public Input<String> getImageRepositoryType() {
+    public Output<String> getImageRepositoryType() {
         return this.imageRepositoryType;
     }
 
     public ServiceSourceConfigurationImageRepositoryGetArgs(
-        @Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration,
-        Input<String> imageIdentifier,
-        Input<String> imageRepositoryType) {
+        @Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration,
+        Output<String> imageIdentifier,
+        Output<String> imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
         this.imageIdentifier = Objects.requireNonNull(imageIdentifier, "expected parameter 'imageIdentifier' to be non-null");
         this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType, "expected parameter 'imageRepositoryType' to be non-null");
     }
 
     private ServiceSourceConfigurationImageRepositoryGetArgs() {
-        this.imageConfiguration = Input.empty();
-        this.imageIdentifier = Input.empty();
-        this.imageRepositoryType = Input.empty();
+        this.imageConfiguration = Output.empty();
+        this.imageIdentifier = Output.empty();
+        this.imageRepositoryType = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
-        private Input<String> imageIdentifier;
-        private Input<String> imageRepositoryType;
+        private @Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
+        private Output<String> imageIdentifier;
+        private Output<String> imageRepositoryType;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder imageConfiguration(@Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration) {
+        public Builder imageConfiguration(@Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
         public Builder imageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs imageConfiguration) {
-            this.imageConfiguration = Input.ofNullable(imageConfiguration);
+            this.imageConfiguration = Output.ofNullable(imageConfiguration);
             return this;
         }
 
-        public Builder imageIdentifier(Input<String> imageIdentifier) {
+        public Builder imageIdentifier(Output<String> imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
         public Builder imageIdentifier(String imageIdentifier) {
-            this.imageIdentifier = Input.of(Objects.requireNonNull(imageIdentifier));
+            this.imageIdentifier = Output.of(Objects.requireNonNull(imageIdentifier));
             return this;
         }
 
-        public Builder imageRepositoryType(Input<String> imageRepositoryType) {
+        public Builder imageRepositoryType(Output<String> imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
 
         public Builder imageRepositoryType(String imageRepositoryType) {
-            this.imageRepositoryType = Input.of(Objects.requireNonNull(imageRepositoryType));
+            this.imageRepositoryType = Output.of(Objects.requireNonNull(imageRepositoryType));
             return this;
         }
         public ServiceSourceConfigurationImageRepositoryGetArgs build() {

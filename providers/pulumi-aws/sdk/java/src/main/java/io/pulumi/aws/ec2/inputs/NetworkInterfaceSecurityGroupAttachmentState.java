@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
      * 
      */
     @InputImport(name="securityGroupId")
-      private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Output<String> securityGroupId;
 
-    public Input<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
+    public Output<String> getSecurityGroupId() {
+        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
     }
 
     public NetworkInterfaceSecurityGroupAttachmentState(
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<String> securityGroupId) {
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<String> securityGroupId) {
         this.networkInterfaceId = networkInterfaceId;
         this.securityGroupId = securityGroupId;
     }
 
     private NetworkInterfaceSecurityGroupAttachmentState() {
-        this.networkInterfaceId = Input.empty();
-        this.securityGroupId = Input.empty();
+        this.networkInterfaceId = Output.empty();
+        this.securityGroupId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<String> securityGroupId;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<String> securityGroupId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
     	      this.securityGroupId = defaults.securityGroupId;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Input.ofNullable(securityGroupId);
+            this.securityGroupId = Output.ofNullable(securityGroupId);
             return this;
         }
         public NetworkInterfaceSecurityGroupAttachmentState build() {

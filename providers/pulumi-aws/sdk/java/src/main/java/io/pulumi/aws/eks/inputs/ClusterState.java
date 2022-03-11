@@ -8,7 +8,7 @@ import io.pulumi.aws.eks.inputs.ClusterEncryptionConfigGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterIdentityGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterVpcConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthority")
-      private final @Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority;
+      private final @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
 
-    public Input<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
+    public Output<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
+        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledClusterLogTypes")
-      private final @Nullable Input<List<String>> enabledClusterLogTypes;
+      private final @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Input<List<String>> getEnabledClusterLogTypes() {
-        return this.enabledClusterLogTypes == null ? Input.empty() : this.enabledClusterLogTypes;
+    public Output<List<String>> getEnabledClusterLogTypes() {
+        return this.enabledClusterLogTypes == null ? Output.empty() : this.enabledClusterLogTypes;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig;
+      private final @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
 
-    public Input<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-      private final @Nullable Input<List<ClusterIdentityGetArgs>> identities;
+      private final @Nullable Output<List<ClusterIdentityGetArgs>> identities;
 
-    public Input<List<ClusterIdentityGetArgs>> getIdentities() {
-        return this.identities == null ? Input.empty() : this.identities;
+    public Output<List<ClusterIdentityGetArgs>> getIdentities() {
+        return this.identities == null ? Output.empty() : this.identities;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesNetworkConfig")
-      private final @Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
+      private final @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
 
-    public Input<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig == null ? Input.empty() : this.kubernetesNetworkConfig;
+    public Output<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
+        return this.kubernetesNetworkConfig == null ? Output.empty() : this.kubernetesNetworkConfig;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-      private final @Nullable Input<String> platformVersion;
+      private final @Nullable Output<String> platformVersion;
 
-    public Input<String> getPlatformVersion() {
-        return this.platformVersion == null ? Input.empty() : this.platformVersion;
+    public Output<String> getPlatformVersion() {
+        return this.platformVersion == null ? Output.empty() : this.platformVersion;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -191,29 +191,29 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<ClusterVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
 
-    public Input<ClusterVpcConfigGetArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<ClusterVpcConfigGetArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public ClusterState(
-        @Nullable Input<String> arn,
-        @Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<List<String>> enabledClusterLogTypes,
-        @Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<List<ClusterIdentityGetArgs>> identities,
-        @Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> platformVersion,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> status,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> version,
-        @Nullable Input<ClusterVpcConfigGetArgs> vpcConfig) {
+        @Nullable Output<String> arn,
+        @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<List<String>> enabledClusterLogTypes,
+        @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<List<ClusterIdentityGetArgs>> identities,
+        @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> platformVersion,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> status,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> version,
+        @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig) {
         this.arn = arn;
         this.certificateAuthority = certificateAuthority;
         this.createdAt = createdAt;
@@ -233,22 +233,22 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.arn = Input.empty();
-        this.certificateAuthority = Input.empty();
-        this.createdAt = Input.empty();
-        this.enabledClusterLogTypes = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.endpoint = Input.empty();
-        this.identities = Input.empty();
-        this.kubernetesNetworkConfig = Input.empty();
-        this.name = Input.empty();
-        this.platformVersion = Input.empty();
-        this.roleArn = Input.empty();
-        this.status = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.version = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.arn = Output.empty();
+        this.certificateAuthority = Output.empty();
+        this.createdAt = Output.empty();
+        this.enabledClusterLogTypes = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.endpoint = Output.empty();
+        this.identities = Output.empty();
+        this.kubernetesNetworkConfig = Output.empty();
+        this.name = Output.empty();
+        this.platformVersion = Output.empty();
+        this.roleArn = Output.empty();
+        this.status = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.version = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -260,22 +260,22 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<List<String>> enabledClusterLogTypes;
-        private @Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<List<ClusterIdentityGetArgs>> identities;
-        private @Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> platformVersion;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> status;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> version;
-        private @Nullable Input<ClusterVpcConfigGetArgs> vpcConfig;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<List<String>> enabledClusterLogTypes;
+        private @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<List<ClusterIdentityGetArgs>> identities;
+        private @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> platformVersion;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> status;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> version;
+        private @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -301,163 +301,163 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificateAuthority(@Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
         public Builder certificateAuthority(@Nullable ClusterCertificateAuthorityGetArgs certificateAuthority) {
-            this.certificateAuthority = Input.ofNullable(certificateAuthority);
+            this.certificateAuthority = Output.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder enabledClusterLogTypes(@Nullable Input<List<String>> enabledClusterLogTypes) {
+        public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
 
         public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = Input.ofNullable(enabledClusterLogTypes);
+            this.enabledClusterLogTypes = Output.ofNullable(enabledClusterLogTypes);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder identities(@Nullable Input<List<ClusterIdentityGetArgs>> identities) {
+        public Builder identities(@Nullable Output<List<ClusterIdentityGetArgs>> identities) {
             this.identities = identities;
             return this;
         }
 
         public Builder identities(@Nullable List<ClusterIdentityGetArgs> identities) {
-            this.identities = Input.ofNullable(identities);
+            this.identities = Output.ofNullable(identities);
             return this;
         }
 
-        public Builder kubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
 
         public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
-            this.kubernetesNetworkConfig = Input.ofNullable(kubernetesNetworkConfig);
+            this.kubernetesNetworkConfig = Output.ofNullable(kubernetesNetworkConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder platformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Output<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
         public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Input.ofNullable(platformVersion);
+            this.platformVersion = Output.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<ClusterVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<ClusterVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable ClusterVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public ClusterState build() {

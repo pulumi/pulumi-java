@@ -6,7 +6,6 @@ package io.pulumi.aws.shield;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.shield.ProtectionGroupArgs;
 import io.pulumi.aws.shield.inputs.ProtectionGroupState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,14 +183,14 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProtectionGroup(String name, ProtectionGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:shield/protectionGroup:ProtectionGroup", name, args == null ? ProtectionGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:shield/protectionGroup:ProtectionGroup", name, args == null ? ProtectionGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProtectionGroup(String name, Input<String> id, @Nullable ProtectionGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProtectionGroup(String name, Output<String> id, @Nullable ProtectionGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:shield/protectionGroup:ProtectionGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -207,7 +206,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProtectionGroup get(String name, Input<String> id, @Nullable ProtectionGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProtectionGroup get(String name, Output<String> id, @Nullable ProtectionGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProtectionGroup(name, id, state, options);
     }
 }

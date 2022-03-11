@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lex.BotAliasArgs;
 import io.pulumi.aws.lex.inputs.BotAliasState;
 import io.pulumi.aws.lex.outputs.BotAliasConversationLogs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -196,14 +195,14 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BotAlias(String name, BotAliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/botAlias:BotAlias", name, args == null ? BotAliasArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:lex/botAlias:BotAlias", name, args == null ? BotAliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BotAlias(String name, Input<String> id, @Nullable BotAliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BotAlias(String name, Output<String> id, @Nullable BotAliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:lex/botAlias:BotAlias", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -219,7 +218,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BotAlias get(String name, Input<String> id, @Nullable BotAliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BotAlias get(String name, Output<String> id, @Nullable BotAliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BotAlias(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-      private final @Nullable Input<String> catalogId;
+      private final @Nullable Output<String> catalogId;
 
-    public Input<String> getCatalogId() {
-        return this.catalogId == null ? Input.empty() : this.catalogId;
+    public Output<String> getCatalogId() {
+        return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-      private final @Nullable Input<String> creationTime;
+      private final @Nullable Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
-        return this.creationTime == null ? Input.empty() : this.creationTime;
+    public Output<String> getCreationTime() {
+        return this.creationTime == null ? Output.empty() : this.creationTime;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAccessedTime")
-      private final @Nullable Input<String> lastAccessedTime;
+      private final @Nullable Output<String> lastAccessedTime;
 
-    public Input<String> getLastAccessedTime() {
-        return this.lastAccessedTime == null ? Input.empty() : this.lastAccessedTime;
+    public Output<String> getLastAccessedTime() {
+        return this.lastAccessedTime == null ? Output.empty() : this.lastAccessedTime;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAnalyzedTime")
-      private final @Nullable Input<String> lastAnalyzedTime;
+      private final @Nullable Output<String> lastAnalyzedTime;
 
-    public Input<String> getLastAnalyzedTime() {
-        return this.lastAnalyzedTime == null ? Input.empty() : this.lastAnalyzedTime;
+    public Output<String> getLastAnalyzedTime() {
+        return this.lastAnalyzedTime == null ? Output.empty() : this.lastAnalyzedTime;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionValues")
-      private final @Nullable Input<List<String>> partitionValues;
+      private final @Nullable Output<List<String>> partitionValues;
 
-    public Input<List<String>> getPartitionValues() {
-        return this.partitionValues == null ? Input.empty() : this.partitionValues;
+    public Output<List<String>> getPartitionValues() {
+        return this.partitionValues == null ? Output.empty() : this.partitionValues;
     }
 
     /**
@@ -99,29 +99,29 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageDescriptor")
-      private final @Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor;
+      private final @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor;
 
-    public Input<PartitionStorageDescriptorGetArgs> getStorageDescriptor() {
-        return this.storageDescriptor == null ? Input.empty() : this.storageDescriptor;
+    public Output<PartitionStorageDescriptorGetArgs> getStorageDescriptor() {
+        return this.storageDescriptor == null ? Output.empty() : this.storageDescriptor;
     }
 
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public PartitionState(
-        @Nullable Input<String> catalogId,
-        @Nullable Input<String> creationTime,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<String> lastAccessedTime,
-        @Nullable Input<String> lastAnalyzedTime,
-        @Nullable Input<Map<String,String>> parameters,
-        @Nullable Input<List<String>> partitionValues,
-        @Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<String> catalogId,
+        @Nullable Output<String> creationTime,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<String> lastAccessedTime,
+        @Nullable Output<String> lastAnalyzedTime,
+        @Nullable Output<Map<String,String>> parameters,
+        @Nullable Output<List<String>> partitionValues,
+        @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor,
+        @Nullable Output<String> tableName) {
         this.catalogId = catalogId;
         this.creationTime = creationTime;
         this.databaseName = databaseName;
@@ -134,15 +134,15 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartitionState() {
-        this.catalogId = Input.empty();
-        this.creationTime = Input.empty();
-        this.databaseName = Input.empty();
-        this.lastAccessedTime = Input.empty();
-        this.lastAnalyzedTime = Input.empty();
-        this.parameters = Input.empty();
-        this.partitionValues = Input.empty();
-        this.storageDescriptor = Input.empty();
-        this.tableName = Input.empty();
+        this.catalogId = Output.empty();
+        this.creationTime = Output.empty();
+        this.databaseName = Output.empty();
+        this.lastAccessedTime = Output.empty();
+        this.lastAnalyzedTime = Output.empty();
+        this.parameters = Output.empty();
+        this.partitionValues = Output.empty();
+        this.storageDescriptor = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -154,15 +154,15 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> catalogId;
-        private @Nullable Input<String> creationTime;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<String> lastAccessedTime;
-        private @Nullable Input<String> lastAnalyzedTime;
-        private @Nullable Input<Map<String,String>> parameters;
-        private @Nullable Input<List<String>> partitionValues;
-        private @Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<String> catalogId;
+        private @Nullable Output<String> creationTime;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<String> lastAccessedTime;
+        private @Nullable Output<String> lastAnalyzedTime;
+        private @Nullable Output<Map<String,String>> parameters;
+        private @Nullable Output<List<String>> partitionValues;
+        private @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -181,93 +181,93 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder catalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Input.ofNullable(catalogId);
+            this.catalogId = Output.ofNullable(catalogId);
             return this;
         }
 
-        public Builder creationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Output<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Input.ofNullable(creationTime);
+            this.creationTime = Output.ofNullable(creationTime);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder lastAccessedTime(@Nullable Input<String> lastAccessedTime) {
+        public Builder lastAccessedTime(@Nullable Output<String> lastAccessedTime) {
             this.lastAccessedTime = lastAccessedTime;
             return this;
         }
 
         public Builder lastAccessedTime(@Nullable String lastAccessedTime) {
-            this.lastAccessedTime = Input.ofNullable(lastAccessedTime);
+            this.lastAccessedTime = Output.ofNullable(lastAccessedTime);
             return this;
         }
 
-        public Builder lastAnalyzedTime(@Nullable Input<String> lastAnalyzedTime) {
+        public Builder lastAnalyzedTime(@Nullable Output<String> lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
             return this;
         }
 
         public Builder lastAnalyzedTime(@Nullable String lastAnalyzedTime) {
-            this.lastAnalyzedTime = Input.ofNullable(lastAnalyzedTime);
+            this.lastAnalyzedTime = Output.ofNullable(lastAnalyzedTime);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder partitionValues(@Nullable Input<List<String>> partitionValues) {
+        public Builder partitionValues(@Nullable Output<List<String>> partitionValues) {
             this.partitionValues = partitionValues;
             return this;
         }
 
         public Builder partitionValues(@Nullable List<String> partitionValues) {
-            this.partitionValues = Input.ofNullable(partitionValues);
+            this.partitionValues = Output.ofNullable(partitionValues);
             return this;
         }
 
-        public Builder storageDescriptor(@Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor) {
+        public Builder storageDescriptor(@Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor) {
             this.storageDescriptor = storageDescriptor;
             return this;
         }
 
         public Builder storageDescriptor(@Nullable PartitionStorageDescriptorGetArgs storageDescriptor) {
-            this.storageDescriptor = Input.ofNullable(storageDescriptor);
+            this.storageDescriptor = Output.ofNullable(storageDescriptor);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public PartitionState build() {

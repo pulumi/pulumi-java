@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRuleArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRules")
-      private final @Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules;
+      private final @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
 
-    public Input<List<PatchBaselineApprovalRuleArgs>> getApprovalRules() {
-        return this.approvalRules == null ? Input.empty() : this.approvalRules;
+    public Output<List<PatchBaselineApprovalRuleArgs>> getApprovalRules() {
+        return this.approvalRules == null ? Output.empty() : this.approvalRules;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatches")
-      private final @Nullable Input<List<String>> approvedPatches;
+      private final @Nullable Output<List<String>> approvedPatches;
 
-    public Input<List<String>> getApprovedPatches() {
-        return this.approvedPatches == null ? Input.empty() : this.approvedPatches;
+    public Output<List<String>> getApprovedPatches() {
+        return this.approvedPatches == null ? Output.empty() : this.approvedPatches;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatchesComplianceLevel")
-      private final @Nullable Input<String> approvedPatchesComplianceLevel;
+      private final @Nullable Output<String> approvedPatchesComplianceLevel;
 
-    public Input<String> getApprovedPatchesComplianceLevel() {
-        return this.approvedPatchesComplianceLevel == null ? Input.empty() : this.approvedPatchesComplianceLevel;
+    public Output<String> getApprovedPatchesComplianceLevel() {
+        return this.approvedPatchesComplianceLevel == null ? Output.empty() : this.approvedPatchesComplianceLevel;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatchesEnableNonSecurity")
-      private final @Nullable Input<Boolean> approvedPatchesEnableNonSecurity;
+      private final @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
 
-    public Input<Boolean> getApprovedPatchesEnableNonSecurity() {
-        return this.approvedPatchesEnableNonSecurity == null ? Input.empty() : this.approvedPatchesEnableNonSecurity;
+    public Output<Boolean> getApprovedPatchesEnableNonSecurity() {
+        return this.approvedPatchesEnableNonSecurity == null ? Output.empty() : this.approvedPatchesEnableNonSecurity;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalFilters")
-      private final @Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters;
+      private final @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
 
-    public Input<List<PatchBaselineGlobalFilterArgs>> getGlobalFilters() {
-        return this.globalFilters == null ? Input.empty() : this.globalFilters;
+    public Output<List<PatchBaselineGlobalFilterArgs>> getGlobalFilters() {
+        return this.globalFilters == null ? Output.empty() : this.globalFilters;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem")
-      private final @Nullable Input<String> operatingSystem;
+      private final @Nullable Output<String> operatingSystem;
 
-    public Input<String> getOperatingSystem() {
-        return this.operatingSystem == null ? Input.empty() : this.operatingSystem;
+    public Output<String> getOperatingSystem() {
+        return this.operatingSystem == null ? Output.empty() : this.operatingSystem;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectedPatches")
-      private final @Nullable Input<List<String>> rejectedPatches;
+      private final @Nullable Output<List<String>> rejectedPatches;
 
-    public Input<List<String>> getRejectedPatches() {
-        return this.rejectedPatches == null ? Input.empty() : this.rejectedPatches;
+    public Output<List<String>> getRejectedPatches() {
+        return this.rejectedPatches == null ? Output.empty() : this.rejectedPatches;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectedPatchesAction")
-      private final @Nullable Input<String> rejectedPatchesAction;
+      private final @Nullable Output<String> rejectedPatchesAction;
 
-    public Input<String> getRejectedPatchesAction() {
-        return this.rejectedPatchesAction == null ? Input.empty() : this.rejectedPatchesAction;
+    public Output<String> getRejectedPatchesAction() {
+        return this.rejectedPatchesAction == null ? Output.empty() : this.rejectedPatchesAction;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<PatchBaselineSourceArgs>> sources;
+      private final @Nullable Output<List<PatchBaselineSourceArgs>> sources;
 
-    public Input<List<PatchBaselineSourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<PatchBaselineSourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     /**
@@ -146,25 +146,25 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PatchBaselineArgs(
-        @Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules,
-        @Nullable Input<List<String>> approvedPatches,
-        @Nullable Input<String> approvedPatchesComplianceLevel,
-        @Nullable Input<Boolean> approvedPatchesEnableNonSecurity,
-        @Nullable Input<String> description,
-        @Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters,
-        @Nullable Input<String> name,
-        @Nullable Input<String> operatingSystem,
-        @Nullable Input<List<String>> rejectedPatches,
-        @Nullable Input<String> rejectedPatchesAction,
-        @Nullable Input<List<PatchBaselineSourceArgs>> sources,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules,
+        @Nullable Output<List<String>> approvedPatches,
+        @Nullable Output<String> approvedPatchesComplianceLevel,
+        @Nullable Output<Boolean> approvedPatchesEnableNonSecurity,
+        @Nullable Output<String> description,
+        @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters,
+        @Nullable Output<String> name,
+        @Nullable Output<String> operatingSystem,
+        @Nullable Output<List<String>> rejectedPatches,
+        @Nullable Output<String> rejectedPatchesAction,
+        @Nullable Output<List<PatchBaselineSourceArgs>> sources,
+        @Nullable Output<Map<String,String>> tags) {
         this.approvalRules = approvalRules;
         this.approvedPatches = approvedPatches;
         this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
@@ -180,18 +180,18 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchBaselineArgs() {
-        this.approvalRules = Input.empty();
-        this.approvedPatches = Input.empty();
-        this.approvedPatchesComplianceLevel = Input.empty();
-        this.approvedPatchesEnableNonSecurity = Input.empty();
-        this.description = Input.empty();
-        this.globalFilters = Input.empty();
-        this.name = Input.empty();
-        this.operatingSystem = Input.empty();
-        this.rejectedPatches = Input.empty();
-        this.rejectedPatchesAction = Input.empty();
-        this.sources = Input.empty();
-        this.tags = Input.empty();
+        this.approvalRules = Output.empty();
+        this.approvedPatches = Output.empty();
+        this.approvedPatchesComplianceLevel = Output.empty();
+        this.approvedPatchesEnableNonSecurity = Output.empty();
+        this.description = Output.empty();
+        this.globalFilters = Output.empty();
+        this.name = Output.empty();
+        this.operatingSystem = Output.empty();
+        this.rejectedPatches = Output.empty();
+        this.rejectedPatchesAction = Output.empty();
+        this.sources = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,18 +203,18 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules;
-        private @Nullable Input<List<String>> approvedPatches;
-        private @Nullable Input<String> approvedPatchesComplianceLevel;
-        private @Nullable Input<Boolean> approvedPatchesEnableNonSecurity;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> operatingSystem;
-        private @Nullable Input<List<String>> rejectedPatches;
-        private @Nullable Input<String> rejectedPatchesAction;
-        private @Nullable Input<List<PatchBaselineSourceArgs>> sources;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
+        private @Nullable Output<List<String>> approvedPatches;
+        private @Nullable Output<String> approvedPatchesComplianceLevel;
+        private @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> operatingSystem;
+        private @Nullable Output<List<String>> rejectedPatches;
+        private @Nullable Output<String> rejectedPatchesAction;
+        private @Nullable Output<List<PatchBaselineSourceArgs>> sources;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -236,123 +236,123 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder approvalRules(@Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
+        public Builder approvalRules(@Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
             this.approvalRules = approvalRules;
             return this;
         }
 
         public Builder approvalRules(@Nullable List<PatchBaselineApprovalRuleArgs> approvalRules) {
-            this.approvalRules = Input.ofNullable(approvalRules);
+            this.approvalRules = Output.ofNullable(approvalRules);
             return this;
         }
 
-        public Builder approvedPatches(@Nullable Input<List<String>> approvedPatches) {
+        public Builder approvedPatches(@Nullable Output<List<String>> approvedPatches) {
             this.approvedPatches = approvedPatches;
             return this;
         }
 
         public Builder approvedPatches(@Nullable List<String> approvedPatches) {
-            this.approvedPatches = Input.ofNullable(approvedPatches);
+            this.approvedPatches = Output.ofNullable(approvedPatches);
             return this;
         }
 
-        public Builder approvedPatchesComplianceLevel(@Nullable Input<String> approvedPatchesComplianceLevel) {
+        public Builder approvedPatchesComplianceLevel(@Nullable Output<String> approvedPatchesComplianceLevel) {
             this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
             return this;
         }
 
         public Builder approvedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
-            this.approvedPatchesComplianceLevel = Input.ofNullable(approvedPatchesComplianceLevel);
+            this.approvedPatchesComplianceLevel = Output.ofNullable(approvedPatchesComplianceLevel);
             return this;
         }
 
-        public Builder approvedPatchesEnableNonSecurity(@Nullable Input<Boolean> approvedPatchesEnableNonSecurity) {
+        public Builder approvedPatchesEnableNonSecurity(@Nullable Output<Boolean> approvedPatchesEnableNonSecurity) {
             this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
             return this;
         }
 
         public Builder approvedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
-            this.approvedPatchesEnableNonSecurity = Input.ofNullable(approvedPatchesEnableNonSecurity);
+            this.approvedPatchesEnableNonSecurity = Output.ofNullable(approvedPatchesEnableNonSecurity);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalFilters(@Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
+        public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
             this.globalFilters = globalFilters;
             return this;
         }
 
         public Builder globalFilters(@Nullable List<PatchBaselineGlobalFilterArgs> globalFilters) {
-            this.globalFilters = Input.ofNullable(globalFilters);
+            this.globalFilters = Output.ofNullable(globalFilters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operatingSystem(@Nullable Input<String> operatingSystem) {
+        public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
 
         public Builder operatingSystem(@Nullable String operatingSystem) {
-            this.operatingSystem = Input.ofNullable(operatingSystem);
+            this.operatingSystem = Output.ofNullable(operatingSystem);
             return this;
         }
 
-        public Builder rejectedPatches(@Nullable Input<List<String>> rejectedPatches) {
+        public Builder rejectedPatches(@Nullable Output<List<String>> rejectedPatches) {
             this.rejectedPatches = rejectedPatches;
             return this;
         }
 
         public Builder rejectedPatches(@Nullable List<String> rejectedPatches) {
-            this.rejectedPatches = Input.ofNullable(rejectedPatches);
+            this.rejectedPatches = Output.ofNullable(rejectedPatches);
             return this;
         }
 
-        public Builder rejectedPatchesAction(@Nullable Input<String> rejectedPatchesAction) {
+        public Builder rejectedPatchesAction(@Nullable Output<String> rejectedPatchesAction) {
             this.rejectedPatchesAction = rejectedPatchesAction;
             return this;
         }
 
         public Builder rejectedPatchesAction(@Nullable String rejectedPatchesAction) {
-            this.rejectedPatchesAction = Input.ofNullable(rejectedPatchesAction);
+            this.rejectedPatchesAction = Output.ofNullable(rejectedPatchesAction);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<PatchBaselineSourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<PatchBaselineSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<PatchBaselineSourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PatchBaselineArgs build() {

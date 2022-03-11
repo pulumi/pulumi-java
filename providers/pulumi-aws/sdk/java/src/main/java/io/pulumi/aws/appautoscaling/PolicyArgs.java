@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationArgs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType")
-      private final @Nullable Input<String> policyType;
+      private final @Nullable Output<String> policyType;
 
-    public Input<String> getPolicyType() {
-        return this.policyType == null ? Input.empty() : this.policyType;
+    public Output<String> getPolicyType() {
+        return this.policyType == null ? Output.empty() : this.policyType;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -54,9 +54,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-      private final Input<String> scalableDimension;
+      private final Output<String> scalableDimension;
 
-    public Input<String> getScalableDimension() {
+    public Output<String> getScalableDimension() {
         return this.scalableDimension;
     }
 
@@ -65,9 +65,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-      private final Input<String> serviceNamespace;
+      private final Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
+    public Output<String> getServiceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -76,10 +76,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepScalingPolicyConfiguration")
-      private final @Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
+      private final @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
-    public Input<PolicyStepScalingPolicyConfigurationArgs> getStepScalingPolicyConfiguration() {
-        return this.stepScalingPolicyConfiguration == null ? Input.empty() : this.stepScalingPolicyConfiguration;
+    public Output<PolicyStepScalingPolicyConfigurationArgs> getStepScalingPolicyConfiguration() {
+        return this.stepScalingPolicyConfiguration == null ? Output.empty() : this.stepScalingPolicyConfiguration;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTrackingScalingPolicyConfiguration")
-      private final @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+      private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
-    public Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {
-        return this.targetTrackingScalingPolicyConfiguration == null ? Input.empty() : this.targetTrackingScalingPolicyConfiguration;
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {
+        return this.targetTrackingScalingPolicyConfiguration == null ? Output.empty() : this.targetTrackingScalingPolicyConfiguration;
     }
 
     public PolicyArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> policyType,
-        Input<String> resourceId,
-        Input<String> scalableDimension,
-        Input<String> serviceNamespace,
-        @Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration,
-        @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> policyType,
+        Output<String> resourceId,
+        Output<String> scalableDimension,
+        Output<String> serviceNamespace,
+        @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration,
+        @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
         this.name = name;
         this.policyType = policyType;
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
@@ -111,13 +111,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.name = Input.empty();
-        this.policyType = Input.empty();
-        this.resourceId = Input.empty();
-        this.scalableDimension = Input.empty();
-        this.serviceNamespace = Input.empty();
-        this.stepScalingPolicyConfiguration = Input.empty();
-        this.targetTrackingScalingPolicyConfiguration = Input.empty();
+        this.name = Output.empty();
+        this.policyType = Output.empty();
+        this.resourceId = Output.empty();
+        this.scalableDimension = Output.empty();
+        this.serviceNamespace = Output.empty();
+        this.stepScalingPolicyConfiguration = Output.empty();
+        this.targetTrackingScalingPolicyConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> policyType;
-        private Input<String> resourceId;
-        private Input<String> scalableDimension;
-        private Input<String> serviceNamespace;
-        private @Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
-        private @Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> policyType;
+        private Output<String> resourceId;
+        private Output<String> scalableDimension;
+        private Output<String> serviceNamespace;
+        private @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
+        private @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetTrackingScalingPolicyConfiguration = defaults.targetTrackingScalingPolicyConfiguration;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder policyType(@Nullable Input<String> policyType) {
+        public Builder policyType(@Nullable Output<String> policyType) {
             this.policyType = policyType;
             return this;
         }
 
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = Input.ofNullable(policyType);
+            this.policyType = Output.ofNullable(policyType);
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder scalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Output<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
+            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder serviceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Output<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
+            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
 
-        public Builder stepScalingPolicyConfiguration(@Nullable Input<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
+        public Builder stepScalingPolicyConfiguration(@Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
             this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
             return this;
         }
 
         public Builder stepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
-            this.stepScalingPolicyConfiguration = Input.ofNullable(stepScalingPolicyConfiguration);
+            this.stepScalingPolicyConfiguration = Output.ofNullable(stepScalingPolicyConfiguration);
             return this;
         }
 
-        public Builder targetTrackingScalingPolicyConfiguration(@Nullable Input<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
 
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = Input.ofNullable(targetTrackingScalingPolicyConfiguration);
+            this.targetTrackingScalingPolicyConfiguration = Output.ofNullable(targetTrackingScalingPolicyConfiguration);
             return this;
         }
         public PolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AccessPointVpcConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
-    public AccessPointVpcConfigurationGetArgs(Input<String> vpcId) {
+    public AccessPointVpcConfigurationGetArgs(Output<String> vpcId) {
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
     }
 
     private AccessPointVpcConfigurationGetArgs() {
-        this.vpcId = Input.empty();
+        this.vpcId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AccessPointVpcConfigurationGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> vpcId;
+        private Output<String> vpcId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AccessPointVpcConfigurationGetArgs extends io.pulumi.resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
         public AccessPointVpcConfigurationGetArgs build() {

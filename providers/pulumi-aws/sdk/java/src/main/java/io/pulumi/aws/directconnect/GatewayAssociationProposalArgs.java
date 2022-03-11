@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedPrefixes")
-      private final @Nullable Input<List<String>> allowedPrefixes;
+      private final @Nullable Output<List<String>> allowedPrefixes;
 
-    public Input<List<String>> getAllowedPrefixes() {
-        return this.allowedPrefixes == null ? Input.empty() : this.allowedPrefixes;
+    public Output<List<String>> getAllowedPrefixes() {
+        return this.allowedPrefixes == null ? Output.empty() : this.allowedPrefixes;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="associatedGatewayId", required=true)
-      private final Input<String> associatedGatewayId;
+      private final Output<String> associatedGatewayId;
 
-    public Input<String> getAssociatedGatewayId() {
+    public Output<String> getAssociatedGatewayId() {
         return this.associatedGatewayId;
     }
 
@@ -42,9 +42,9 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dxGatewayId", required=true)
-      private final Input<String> dxGatewayId;
+      private final Output<String> dxGatewayId;
 
-    public Input<String> getDxGatewayId() {
+    public Output<String> getDxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -53,17 +53,17 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dxGatewayOwnerAccountId", required=true)
-      private final Input<String> dxGatewayOwnerAccountId;
+      private final Output<String> dxGatewayOwnerAccountId;
 
-    public Input<String> getDxGatewayOwnerAccountId() {
+    public Output<String> getDxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId;
     }
 
     public GatewayAssociationProposalArgs(
-        @Nullable Input<List<String>> allowedPrefixes,
-        Input<String> associatedGatewayId,
-        Input<String> dxGatewayId,
-        Input<String> dxGatewayOwnerAccountId) {
+        @Nullable Output<List<String>> allowedPrefixes,
+        Output<String> associatedGatewayId,
+        Output<String> dxGatewayId,
+        Output<String> dxGatewayOwnerAccountId) {
         this.allowedPrefixes = allowedPrefixes;
         this.associatedGatewayId = Objects.requireNonNull(associatedGatewayId, "expected parameter 'associatedGatewayId' to be non-null");
         this.dxGatewayId = Objects.requireNonNull(dxGatewayId, "expected parameter 'dxGatewayId' to be non-null");
@@ -71,10 +71,10 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
     }
 
     private GatewayAssociationProposalArgs() {
-        this.allowedPrefixes = Input.empty();
-        this.associatedGatewayId = Input.empty();
-        this.dxGatewayId = Input.empty();
-        this.dxGatewayOwnerAccountId = Input.empty();
+        this.allowedPrefixes = Output.empty();
+        this.associatedGatewayId = Output.empty();
+        this.dxGatewayId = Output.empty();
+        this.dxGatewayOwnerAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedPrefixes;
-        private Input<String> associatedGatewayId;
-        private Input<String> dxGatewayId;
-        private Input<String> dxGatewayOwnerAccountId;
+        private @Nullable Output<List<String>> allowedPrefixes;
+        private Output<String> associatedGatewayId;
+        private Output<String> dxGatewayId;
+        private Output<String> dxGatewayOwnerAccountId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
     	      this.dxGatewayOwnerAccountId = defaults.dxGatewayOwnerAccountId;
         }
 
-        public Builder allowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable Output<List<String>> allowedPrefixes) {
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
         public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
-            this.allowedPrefixes = Input.ofNullable(allowedPrefixes);
+            this.allowedPrefixes = Output.ofNullable(allowedPrefixes);
             return this;
         }
 
-        public Builder associatedGatewayId(Input<String> associatedGatewayId) {
+        public Builder associatedGatewayId(Output<String> associatedGatewayId) {
             this.associatedGatewayId = Objects.requireNonNull(associatedGatewayId);
             return this;
         }
 
         public Builder associatedGatewayId(String associatedGatewayId) {
-            this.associatedGatewayId = Input.of(Objects.requireNonNull(associatedGatewayId));
+            this.associatedGatewayId = Output.of(Objects.requireNonNull(associatedGatewayId));
             return this;
         }
 
-        public Builder dxGatewayId(Input<String> dxGatewayId) {
+        public Builder dxGatewayId(Output<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
 
         public Builder dxGatewayId(String dxGatewayId) {
-            this.dxGatewayId = Input.of(Objects.requireNonNull(dxGatewayId));
+            this.dxGatewayId = Output.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
 
-        public Builder dxGatewayOwnerAccountId(Input<String> dxGatewayOwnerAccountId) {
+        public Builder dxGatewayOwnerAccountId(Output<String> dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Objects.requireNonNull(dxGatewayOwnerAccountId);
             return this;
         }
 
         public Builder dxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
-            this.dxGatewayOwnerAccountId = Input.of(Objects.requireNonNull(dxGatewayOwnerAccountId));
+            this.dxGatewayOwnerAccountId = Output.of(Objects.requireNonNull(dxGatewayOwnerAccountId));
             return this;
         }
         public GatewayAssociationProposalArgs build() {

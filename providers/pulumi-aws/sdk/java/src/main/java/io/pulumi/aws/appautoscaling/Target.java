@@ -6,7 +6,6 @@ package io.pulumi.aws.appautoscaling;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appautoscaling.TargetArgs;
 import io.pulumi.aws.appautoscaling.inputs.TargetState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,14 +154,14 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Target(String name, TargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appautoscaling/target:Target", name, args == null ? TargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appautoscaling/target:Target", name, args == null ? TargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Target(String name, Input<String> id, @Nullable TargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Target(String name, Output<String> id, @Nullable TargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appautoscaling/target:Target", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -178,7 +177,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Target get(String name, Input<String> id, @Nullable TargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Target get(String name, Output<String> id, @Nullable TargetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Target(name, id, state, options);
     }
 }

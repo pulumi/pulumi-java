@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodPath", required=true)
-      private final Input<String> methodPath;
+      private final Output<String> methodPath;
 
-    public Input<String> getMethodPath() {
+    public Output<String> getMethodPath() {
         return this.methodPath;
     }
 
@@ -30,9 +30,9 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-      private final Input<String> restApi;
+      private final Output<String> restApi;
 
-    public Input<String> getRestApi() {
+    public Output<String> getRestApi() {
         return this.restApi;
     }
 
@@ -41,9 +41,9 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings", required=true)
-      private final Input<MethodSettingsSettingsArgs> settings;
+      private final Output<MethodSettingsSettingsArgs> settings;
 
-    public Input<MethodSettingsSettingsArgs> getSettings() {
+    public Output<MethodSettingsSettingsArgs> getSettings() {
         return this.settings;
     }
 
@@ -52,17 +52,17 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-      private final Input<String> stageName;
+      private final Output<String> stageName;
 
-    public Input<String> getStageName() {
+    public Output<String> getStageName() {
         return this.stageName;
     }
 
     public MethodSettingsArgs(
-        Input<String> methodPath,
-        Input<String> restApi,
-        Input<MethodSettingsSettingsArgs> settings,
-        Input<String> stageName) {
+        Output<String> methodPath,
+        Output<String> restApi,
+        Output<MethodSettingsSettingsArgs> settings,
+        Output<String> stageName) {
         this.methodPath = Objects.requireNonNull(methodPath, "expected parameter 'methodPath' to be non-null");
         this.restApi = Objects.requireNonNull(restApi, "expected parameter 'restApi' to be non-null");
         this.settings = Objects.requireNonNull(settings, "expected parameter 'settings' to be non-null");
@@ -70,10 +70,10 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodSettingsArgs() {
-        this.methodPath = Input.empty();
-        this.restApi = Input.empty();
-        this.settings = Input.empty();
-        this.stageName = Input.empty();
+        this.methodPath = Output.empty();
+        this.restApi = Output.empty();
+        this.settings = Output.empty();
+        this.stageName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> methodPath;
-        private Input<String> restApi;
-        private Input<MethodSettingsSettingsArgs> settings;
-        private Input<String> stageName;
+        private Output<String> methodPath;
+        private Output<String> restApi;
+        private Output<MethodSettingsSettingsArgs> settings;
+        private Output<String> stageName;
 
         public Builder() {
     	      // Empty
@@ -102,38 +102,38 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder methodPath(Input<String> methodPath) {
+        public Builder methodPath(Output<String> methodPath) {
             this.methodPath = Objects.requireNonNull(methodPath);
             return this;
         }
 
         public Builder methodPath(String methodPath) {
-            this.methodPath = Input.of(Objects.requireNonNull(methodPath));
+            this.methodPath = Output.of(Objects.requireNonNull(methodPath));
             return this;
         }
 
-        public Builder restApi(Input<String> restApi) {
+        public Builder restApi(Output<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder settings(Input<MethodSettingsSettingsArgs> settings) {
+        public Builder settings(Output<MethodSettingsSettingsArgs> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
 
         public Builder settings(MethodSettingsSettingsArgs settings) {
-            this.settings = Input.of(Objects.requireNonNull(settings));
+            this.settings = Output.of(Objects.requireNonNull(settings));
             return this;
         }
 
-        public Builder stageName(Input<String> stageName) {
+        public Builder stageName(Output<String> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
         public Builder stageName(String stageName) {
-            this.stageName = Input.of(Objects.requireNonNull(stageName));
+            this.stageName = Output.of(Objects.requireNonNull(stageName));
             return this;
         }
         public MethodSettingsArgs build() {

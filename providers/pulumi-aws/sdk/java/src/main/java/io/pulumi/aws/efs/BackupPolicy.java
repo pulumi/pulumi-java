@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.efs.BackupPolicyArgs;
 import io.pulumi.aws.efs.inputs.BackupPolicyState;
 import io.pulumi.aws.efs.outputs.BackupPolicyBackupPolicy;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupPolicy(String name, BackupPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:efs/backupPolicy:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:efs/backupPolicy:BackupPolicy", name, args == null ? BackupPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BackupPolicy(String name, Input<String> id, @Nullable BackupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BackupPolicy(String name, Output<String> id, @Nullable BackupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:efs/backupPolicy:BackupPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BackupPolicy get(String name, Input<String> id, @Nullable BackupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BackupPolicy get(String name, Output<String> id, @Nullable BackupPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupPolicy(name, id, state, options);
     }
 }

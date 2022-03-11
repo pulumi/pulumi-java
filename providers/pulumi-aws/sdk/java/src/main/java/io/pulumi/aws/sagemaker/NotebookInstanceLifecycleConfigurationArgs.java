@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="onCreate")
-      private final @Nullable Input<String> onCreate;
+      private final @Nullable Output<String> onCreate;
 
-    public Input<String> getOnCreate() {
-        return this.onCreate == null ? Input.empty() : this.onCreate;
+    public Output<String> getOnCreate() {
+        return this.onCreate == null ? Output.empty() : this.onCreate;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="onStart")
-      private final @Nullable Input<String> onStart;
+      private final @Nullable Output<String> onStart;
 
-    public Input<String> getOnStart() {
-        return this.onStart == null ? Input.empty() : this.onStart;
+    public Output<String> getOnStart() {
+        return this.onStart == null ? Output.empty() : this.onStart;
     }
 
     public NotebookInstanceLifecycleConfigurationArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> onCreate,
-        @Nullable Input<String> onStart) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> onCreate,
+        @Nullable Output<String> onStart) {
         this.name = name;
         this.onCreate = onCreate;
         this.onStart = onStart;
     }
 
     private NotebookInstanceLifecycleConfigurationArgs() {
-        this.name = Input.empty();
-        this.onCreate = Input.empty();
-        this.onStart = Input.empty();
+        this.name = Output.empty();
+        this.onCreate = Output.empty();
+        this.onStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> onCreate;
-        private @Nullable Input<String> onStart;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> onCreate;
+        private @Nullable Output<String> onStart;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
     	      this.onStart = defaults.onStart;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onCreate(@Nullable Input<String> onCreate) {
+        public Builder onCreate(@Nullable Output<String> onCreate) {
             this.onCreate = onCreate;
             return this;
         }
 
         public Builder onCreate(@Nullable String onCreate) {
-            this.onCreate = Input.ofNullable(onCreate);
+            this.onCreate = Output.ofNullable(onCreate);
             return this;
         }
 
-        public Builder onStart(@Nullable Input<String> onStart) {
+        public Builder onStart(@Nullable Output<String> onStart) {
             this.onStart = onStart;
             return this;
         }
 
         public Builder onStart(@Nullable String onStart) {
-            this.onStart = Input.ofNullable(onStart);
+            this.onStart = Output.ofNullable(onStart);
             return this;
         }
         public NotebookInstanceLifecycleConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeEndpointGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<ClusterShardNodeEndpointGetArgs>> endpoints;
+      private final @Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints;
 
-    public Input<List<ClusterShardNodeEndpointGetArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<ClusterShardNodeEndpointGetArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ClusterShardNodeGetArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> createTime,
-        @Nullable Input<List<ClusterShardNodeEndpointGetArgs>> endpoints,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> createTime,
+        @Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints,
+        @Nullable Output<String> name) {
         this.availabilityZone = availabilityZone;
         this.createTime = createTime;
         this.endpoints = endpoints;
@@ -69,10 +69,10 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ClusterShardNodeGetArgs() {
-        this.availabilityZone = Input.empty();
-        this.createTime = Input.empty();
-        this.endpoints = Input.empty();
-        this.name = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.createTime = Output.empty();
+        this.endpoints = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<List<ClusterShardNodeEndpointGetArgs>> endpoints;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<ClusterShardNodeEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<ClusterShardNodeEndpointGetArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ClusterShardNodeGetArgs build() {

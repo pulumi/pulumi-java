@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cachingKeys")
-      private final @Nullable Input<List<String>> cachingKeys;
+      private final @Nullable Output<List<String>> cachingKeys;
 
-    public Input<List<String>> getCachingKeys() {
-        return this.cachingKeys == null ? Input.empty() : this.cachingKeys;
+    public Output<List<String>> getCachingKeys() {
+        return this.cachingKeys == null ? Output.empty() : this.cachingKeys;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public ResolverCachingConfigGetArgs(
-        @Nullable Input<List<String>> cachingKeys,
-        @Nullable Input<Integer> ttl) {
+        @Nullable Output<List<String>> cachingKeys,
+        @Nullable Output<Integer> ttl) {
         this.cachingKeys = cachingKeys;
         this.ttl = ttl;
     }
 
     private ResolverCachingConfigGetArgs() {
-        this.cachingKeys = Input.empty();
-        this.ttl = Input.empty();
+        this.cachingKeys = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> cachingKeys;
-        private @Nullable Input<Integer> ttl;
+        private @Nullable Output<List<String>> cachingKeys;
+        private @Nullable Output<Integer> ttl;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder cachingKeys(@Nullable Input<List<String>> cachingKeys) {
+        public Builder cachingKeys(@Nullable Output<List<String>> cachingKeys) {
             this.cachingKeys = cachingKeys;
             return this;
         }
 
         public Builder cachingKeys(@Nullable List<String> cachingKeys) {
-            this.cachingKeys = Input.ofNullable(cachingKeys);
+            this.cachingKeys = Output.ofNullable(cachingKeys);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public ResolverCachingConfigGetArgs build() {

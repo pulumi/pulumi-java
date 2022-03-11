@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerUserBucketGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<String> format;
+      private final Output<String> format;
 
-    public Input<String> getFormat() {
+    public Output<String> getFormat() {
         return this.format;
     }
 
@@ -42,10 +42,10 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="userBucket")
-      private final @Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
+      private final @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
-    public Input<SnapshotImportDiskContainerUserBucketGetArgs> getUserBucket() {
-        return this.userBucket == null ? Input.empty() : this.userBucket;
+    public Output<SnapshotImportDiskContainerUserBucketGetArgs> getUserBucket() {
+        return this.userBucket == null ? Output.empty() : this.userBucket;
     }
 
     public SnapshotImportDiskContainerGetArgs(
-        @Nullable Input<String> description,
-        Input<String> format,
-        @Nullable Input<String> url,
-        @Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
+        @Nullable Output<String> description,
+        Output<String> format,
+        @Nullable Output<String> url,
+        @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
         this.description = description;
         this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
         this.url = url;
@@ -71,10 +71,10 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
     }
 
     private SnapshotImportDiskContainerGetArgs() {
-        this.description = Input.empty();
-        this.format = Input.empty();
-        this.url = Input.empty();
-        this.userBucket = Input.empty();
+        this.description = Output.empty();
+        this.format = Output.empty();
+        this.url = Output.empty();
+        this.userBucket = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> format;
-        private @Nullable Input<String> url;
-        private @Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
+        private @Nullable Output<String> description;
+        private Output<String> format;
+        private @Nullable Output<String> url;
+        private @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
     	      this.userBucket = defaults.userBucket;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder format(Input<String> format) {
+        public Builder format(Output<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(String format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder userBucket(@Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
+        public Builder userBucket(@Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
             this.userBucket = userBucket;
             return this;
         }
 
         public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucketGetArgs userBucket) {
-            this.userBucket = Input.ofNullable(userBucket);
+            this.userBucket = Output.ofNullable(userBucket);
             return this;
         }
         public SnapshotImportDiskContainerGetArgs build() {

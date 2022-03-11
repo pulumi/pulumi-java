@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="s3ContentLocation")
-      private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
+      private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
 
-    public Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> getS3ContentLocation() {
-        return this.s3ContentLocation == null ? Input.empty() : this.s3ContentLocation;
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> getS3ContentLocation() {
+        return this.s3ContentLocation == null ? Output.empty() : this.s3ContentLocation;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="textContent")
-      private final @Nullable Input<String> textContent;
+      private final @Nullable Output<String> textContent;
 
-    public Input<String> getTextContent() {
-        return this.textContent == null ? Input.empty() : this.textContent;
+    public Output<String> getTextContent() {
+        return this.textContent == null ? Output.empty() : this.textContent;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs(
-        @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation,
-        @Nullable Input<String> textContent) {
+        @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation,
+        @Nullable Output<String> textContent) {
         this.s3ContentLocation = s3ContentLocation;
         this.textContent = textContent;
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs() {
-        this.s3ContentLocation = Input.empty();
-        this.textContent = Input.empty();
+        this.s3ContentLocation = Output.empty();
+        this.textContent = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
-        private @Nullable Input<String> textContent;
+        private @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
+        private @Nullable Output<String> textContent;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.textContent = defaults.textContent;
         }
 
-        public Builder s3ContentLocation(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation) {
+        public Builder s3ContentLocation(@Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation) {
             this.s3ContentLocation = s3ContentLocation;
             return this;
         }
 
         public Builder s3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs s3ContentLocation) {
-            this.s3ContentLocation = Input.ofNullable(s3ContentLocation);
+            this.s3ContentLocation = Output.ofNullable(s3ContentLocation);
             return this;
         }
 
-        public Builder textContent(@Nullable Input<String> textContent) {
+        public Builder textContent(@Nullable Output<String> textContent) {
             this.textContent = textContent;
             return this;
         }
 
         public Builder textContent(@Nullable String textContent) {
-            this.textContent = Input.ofNullable(textContent);
+            this.textContent = Output.ofNullable(textContent);
             return this;
         }
         public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs build() {

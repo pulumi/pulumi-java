@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceArn")
-      private final @Nullable Input<String> instanceArn;
+      private final @Nullable Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
-        return this.instanceArn == null ? Input.empty() : this.instanceArn;
+    public Output<String> getInstanceArn() {
+        return this.instanceArn == null ? Output.empty() : this.instanceArn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="permissionSetArn")
-      private final @Nullable Input<String> permissionSetArn;
+      private final @Nullable Output<String> permissionSetArn;
 
-    public Input<String> getPermissionSetArn() {
-        return this.permissionSetArn == null ? Input.empty() : this.permissionSetArn;
+    public Output<String> getPermissionSetArn() {
+        return this.permissionSetArn == null ? Output.empty() : this.permissionSetArn;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="principalType")
-      private final @Nullable Input<String> principalType;
+      private final @Nullable Output<String> principalType;
 
-    public Input<String> getPrincipalType() {
-        return this.principalType == null ? Input.empty() : this.principalType;
+    public Output<String> getPrincipalType() {
+        return this.principalType == null ? Output.empty() : this.principalType;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetId")
-      private final @Nullable Input<String> targetId;
+      private final @Nullable Output<String> targetId;
 
-    public Input<String> getTargetId() {
-        return this.targetId == null ? Input.empty() : this.targetId;
+    public Output<String> getTargetId() {
+        return this.targetId == null ? Output.empty() : this.targetId;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     public AccountAssignmentState(
-        @Nullable Input<String> instanceArn,
-        @Nullable Input<String> permissionSetArn,
-        @Nullable Input<String> principalId,
-        @Nullable Input<String> principalType,
-        @Nullable Input<String> targetId,
-        @Nullable Input<String> targetType) {
+        @Nullable Output<String> instanceArn,
+        @Nullable Output<String> permissionSetArn,
+        @Nullable Output<String> principalId,
+        @Nullable Output<String> principalType,
+        @Nullable Output<String> targetId,
+        @Nullable Output<String> targetType) {
         this.instanceArn = instanceArn;
         this.permissionSetArn = permissionSetArn;
         this.principalId = principalId;
@@ -96,12 +96,12 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     }
 
     private AccountAssignmentState() {
-        this.instanceArn = Input.empty();
-        this.permissionSetArn = Input.empty();
-        this.principalId = Input.empty();
-        this.principalType = Input.empty();
-        this.targetId = Input.empty();
-        this.targetType = Input.empty();
+        this.instanceArn = Output.empty();
+        this.permissionSetArn = Output.empty();
+        this.principalId = Output.empty();
+        this.principalType = Output.empty();
+        this.targetId = Output.empty();
+        this.targetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceArn;
-        private @Nullable Input<String> permissionSetArn;
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<String> principalType;
-        private @Nullable Input<String> targetId;
-        private @Nullable Input<String> targetType;
+        private @Nullable Output<String> instanceArn;
+        private @Nullable Output<String> permissionSetArn;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<String> principalType;
+        private @Nullable Output<String> targetId;
+        private @Nullable Output<String> targetType;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder instanceArn(@Nullable Input<String> instanceArn) {
+        public Builder instanceArn(@Nullable Output<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
         public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Input.ofNullable(instanceArn);
+            this.instanceArn = Output.ofNullable(instanceArn);
             return this;
         }
 
-        public Builder permissionSetArn(@Nullable Input<String> permissionSetArn) {
+        public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Input.ofNullable(permissionSetArn);
+            this.permissionSetArn = Output.ofNullable(permissionSetArn);
             return this;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder principalType(@Nullable Input<String> principalType) {
+        public Builder principalType(@Nullable Output<String> principalType) {
             this.principalType = principalType;
             return this;
         }
 
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Input.ofNullable(principalType);
+            this.principalType = Output.ofNullable(principalType);
             return this;
         }
 
-        public Builder targetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Input.ofNullable(targetId);
+            this.targetId = Output.ofNullable(targetId);
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
         public AccountAssignmentState build() {

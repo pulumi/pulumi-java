@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controlStatus", required=true)
-      private final Input<String> controlStatus;
+      private final Output<String> controlStatus;
 
-    public Input<String> getControlStatus() {
+    public Output<String> getControlStatus() {
         return this.controlStatus;
     }
 
@@ -30,10 +30,10 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabledReason")
-      private final @Nullable Input<String> disabledReason;
+      private final @Nullable Output<String> disabledReason;
 
-    public Input<String> getDisabledReason() {
-        return this.disabledReason == null ? Input.empty() : this.disabledReason;
+    public Output<String> getDisabledReason() {
+        return this.disabledReason == null ? Output.empty() : this.disabledReason;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="standardsControlArn", required=true)
-      private final Input<String> standardsControlArn;
+      private final Output<String> standardsControlArn;
 
-    public Input<String> getStandardsControlArn() {
+    public Output<String> getStandardsControlArn() {
         return this.standardsControlArn;
     }
 
     public StandardsControlArgs(
-        Input<String> controlStatus,
-        @Nullable Input<String> disabledReason,
-        Input<String> standardsControlArn) {
+        Output<String> controlStatus,
+        @Nullable Output<String> disabledReason,
+        Output<String> standardsControlArn) {
         this.controlStatus = Objects.requireNonNull(controlStatus, "expected parameter 'controlStatus' to be non-null");
         this.disabledReason = disabledReason;
         this.standardsControlArn = Objects.requireNonNull(standardsControlArn, "expected parameter 'standardsControlArn' to be non-null");
     }
 
     private StandardsControlArgs() {
-        this.controlStatus = Input.empty();
-        this.disabledReason = Input.empty();
-        this.standardsControlArn = Input.empty();
+        this.controlStatus = Output.empty();
+        this.disabledReason = Output.empty();
+        this.standardsControlArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> controlStatus;
-        private @Nullable Input<String> disabledReason;
-        private Input<String> standardsControlArn;
+        private Output<String> controlStatus;
+        private @Nullable Output<String> disabledReason;
+        private Output<String> standardsControlArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     	      this.standardsControlArn = defaults.standardsControlArn;
         }
 
-        public Builder controlStatus(Input<String> controlStatus) {
+        public Builder controlStatus(Output<String> controlStatus) {
             this.controlStatus = Objects.requireNonNull(controlStatus);
             return this;
         }
 
         public Builder controlStatus(String controlStatus) {
-            this.controlStatus = Input.of(Objects.requireNonNull(controlStatus));
+            this.controlStatus = Output.of(Objects.requireNonNull(controlStatus));
             return this;
         }
 
-        public Builder disabledReason(@Nullable Input<String> disabledReason) {
+        public Builder disabledReason(@Nullable Output<String> disabledReason) {
             this.disabledReason = disabledReason;
             return this;
         }
 
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Input.ofNullable(disabledReason);
+            this.disabledReason = Output.ofNullable(disabledReason);
             return this;
         }
 
-        public Builder standardsControlArn(Input<String> standardsControlArn) {
+        public Builder standardsControlArn(Output<String> standardsControlArn) {
             this.standardsControlArn = Objects.requireNonNull(standardsControlArn);
             return this;
         }
 
         public Builder standardsControlArn(String standardsControlArn) {
-            this.standardsControlArn = Input.of(Objects.requireNonNull(standardsControlArn));
+            this.standardsControlArn = Output.of(Objects.requireNonNull(standardsControlArn));
             return this;
         }
         public StandardsControlArgs build() {

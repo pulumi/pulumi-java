@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codepipeline.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jsonPath", required=true)
-      private final Input<String> jsonPath;
+      private final Output<String> jsonPath;
 
-    public Input<String> getJsonPath() {
+    public Output<String> getJsonPath() {
         return this.jsonPath;
     }
 
@@ -29,22 +29,22 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="matchEquals", required=true)
-      private final Input<String> matchEquals;
+      private final Output<String> matchEquals;
 
-    public Input<String> getMatchEquals() {
+    public Output<String> getMatchEquals() {
         return this.matchEquals;
     }
 
     public WebhookFilterGetArgs(
-        Input<String> jsonPath,
-        Input<String> matchEquals) {
+        Output<String> jsonPath,
+        Output<String> matchEquals) {
         this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
         this.matchEquals = Objects.requireNonNull(matchEquals, "expected parameter 'matchEquals' to be non-null");
     }
 
     private WebhookFilterGetArgs() {
-        this.jsonPath = Input.empty();
-        this.matchEquals = Input.empty();
+        this.jsonPath = Output.empty();
+        this.matchEquals = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> jsonPath;
-        private Input<String> matchEquals;
+        private Output<String> jsonPath;
+        private Output<String> matchEquals;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.matchEquals = defaults.matchEquals;
         }
 
-        public Builder jsonPath(Input<String> jsonPath) {
+        public Builder jsonPath(Output<String> jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
 
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Input.of(Objects.requireNonNull(jsonPath));
+            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
             return this;
         }
 
-        public Builder matchEquals(Input<String> matchEquals) {
+        public Builder matchEquals(Output<String> matchEquals) {
             this.matchEquals = Objects.requireNonNull(matchEquals);
             return this;
         }
 
         public Builder matchEquals(String matchEquals) {
-            this.matchEquals = Input.of(Objects.requireNonNull(matchEquals));
+            this.matchEquals = Output.of(Objects.requireNonNull(matchEquals));
             return this;
         }
         public WebhookFilterGetArgs build() {

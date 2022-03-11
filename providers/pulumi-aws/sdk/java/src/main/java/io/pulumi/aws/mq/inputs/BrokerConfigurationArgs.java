@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Integer> revision;
+      private final @Nullable Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Integer> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     public BrokerConfigurationArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> revision) {
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> revision) {
         this.id = id;
         this.revision = revision;
     }
 
     private BrokerConfigurationArgs() {
-        this.id = Input.empty();
-        this.revision = Input.empty();
+        this.id = Output.empty();
+        this.revision = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> revision;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> revision;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.revision = defaults.revision;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder revision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
         public BrokerConfigurationArgs build() {

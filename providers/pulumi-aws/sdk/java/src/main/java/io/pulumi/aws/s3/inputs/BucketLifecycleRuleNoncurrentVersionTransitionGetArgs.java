@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
      * 
      */
     @InputImport(name="storageClass", required=true)
-      private final Input<String> storageClass;
+      private final Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
+    public Output<String> getStorageClass() {
         return this.storageClass;
     }
 
     public BucketLifecycleRuleNoncurrentVersionTransitionGetArgs(
-        @Nullable Input<Integer> days,
-        Input<String> storageClass) {
+        @Nullable Output<Integer> days,
+        Output<String> storageClass) {
         this.days = days;
         this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
     }
 
     private BucketLifecycleRuleNoncurrentVersionTransitionGetArgs() {
-        this.days = Input.empty();
-        this.storageClass = Input.empty();
+        this.days = Output.empty();
+        this.storageClass = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private Input<String> storageClass;
+        private @Nullable Output<Integer> days;
+        private Output<String> storageClass;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder storageClass(Input<String> storageClass) {
+        public Builder storageClass(Output<String> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
         public Builder storageClass(String storageClass) {
-            this.storageClass = Input.of(Objects.requireNonNull(storageClass));
+            this.storageClass = Output.of(Objects.requireNonNull(storageClass));
             return this;
         }
         public BucketLifecycleRuleNoncurrentVersionTransitionGetArgs build() {

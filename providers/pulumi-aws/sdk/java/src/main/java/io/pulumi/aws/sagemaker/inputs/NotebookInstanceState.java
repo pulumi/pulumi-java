@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalCodeRepositories")
-      private final @Nullable Input<List<String>> additionalCodeRepositories;
+      private final @Nullable Output<List<String>> additionalCodeRepositories;
 
-    public Input<List<String>> getAdditionalCodeRepositories() {
-        return this.additionalCodeRepositories == null ? Input.empty() : this.additionalCodeRepositories;
+    public Output<List<String>> getAdditionalCodeRepositories() {
+        return this.additionalCodeRepositories == null ? Output.empty() : this.additionalCodeRepositories;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultCodeRepository")
-      private final @Nullable Input<String> defaultCodeRepository;
+      private final @Nullable Output<String> defaultCodeRepository;
 
-    public Input<String> getDefaultCodeRepository() {
-        return this.defaultCodeRepository == null ? Input.empty() : this.defaultCodeRepository;
+    public Output<String> getDefaultCodeRepository() {
+        return this.defaultCodeRepository == null ? Output.empty() : this.defaultCodeRepository;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="directInternetAccess")
-      private final @Nullable Input<String> directInternetAccess;
+      private final @Nullable Output<String> directInternetAccess;
 
-    public Input<String> getDirectInternetAccess() {
-        return this.directInternetAccess == null ? Input.empty() : this.directInternetAccess;
+    public Output<String> getDirectInternetAccess() {
+        return this.directInternetAccess == null ? Output.empty() : this.directInternetAccess;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lifecycleConfigName")
-      private final @Nullable Input<String> lifecycleConfigName;
+      private final @Nullable Output<String> lifecycleConfigName;
 
-    public Input<String> getLifecycleConfigName() {
-        return this.lifecycleConfigName == null ? Input.empty() : this.lifecycleConfigName;
+    public Output<String> getLifecycleConfigName() {
+        return this.lifecycleConfigName == null ? Output.empty() : this.lifecycleConfigName;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaceId")
-      private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Output<String> networkInterfaceId;
 
-    public Input<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
+    public Output<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="platformIdentifier")
-      private final @Nullable Input<String> platformIdentifier;
+      private final @Nullable Output<String> platformIdentifier;
 
-    public Input<String> getPlatformIdentifier() {
-        return this.platformIdentifier == null ? Input.empty() : this.platformIdentifier;
+    public Output<String> getPlatformIdentifier() {
+        return this.platformIdentifier == null ? Output.empty() : this.platformIdentifier;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootAccess")
-      private final @Nullable Input<String> rootAccess;
+      private final @Nullable Output<String> rootAccess;
 
-    public Input<String> getRootAccess() {
-        return this.rootAccess == null ? Input.empty() : this.rootAccess;
+    public Output<String> getRootAccess() {
+        return this.rootAccess == null ? Output.empty() : this.rootAccess;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Output<List<String>> securityGroups;
 
-    public Input<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<String>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     /**
@@ -210,31 +210,31 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="volumeSize")
-      private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Output<Integer> volumeSize;
 
-    public Input<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Input.empty() : this.volumeSize;
+    public Output<Integer> getVolumeSize() {
+        return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
     public NotebookInstanceState(
-        @Nullable Input<List<String>> additionalCodeRepositories,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> defaultCodeRepository,
-        @Nullable Input<String> directInternetAccess,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> lifecycleConfigName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> networkInterfaceId,
-        @Nullable Input<String> platformIdentifier,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> rootAccess,
-        @Nullable Input<List<String>> securityGroups,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> url,
-        @Nullable Input<Integer> volumeSize) {
+        @Nullable Output<List<String>> additionalCodeRepositories,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> defaultCodeRepository,
+        @Nullable Output<String> directInternetAccess,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> lifecycleConfigName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> networkInterfaceId,
+        @Nullable Output<String> platformIdentifier,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> rootAccess,
+        @Nullable Output<List<String>> securityGroups,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> url,
+        @Nullable Output<Integer> volumeSize) {
         this.additionalCodeRepositories = additionalCodeRepositories;
         this.arn = arn;
         this.defaultCodeRepository = defaultCodeRepository;
@@ -256,24 +256,24 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     private NotebookInstanceState() {
-        this.additionalCodeRepositories = Input.empty();
-        this.arn = Input.empty();
-        this.defaultCodeRepository = Input.empty();
-        this.directInternetAccess = Input.empty();
-        this.instanceType = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.lifecycleConfigName = Input.empty();
-        this.name = Input.empty();
-        this.networkInterfaceId = Input.empty();
-        this.platformIdentifier = Input.empty();
-        this.roleArn = Input.empty();
-        this.rootAccess = Input.empty();
-        this.securityGroups = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.url = Input.empty();
-        this.volumeSize = Input.empty();
+        this.additionalCodeRepositories = Output.empty();
+        this.arn = Output.empty();
+        this.defaultCodeRepository = Output.empty();
+        this.directInternetAccess = Output.empty();
+        this.instanceType = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.lifecycleConfigName = Output.empty();
+        this.name = Output.empty();
+        this.networkInterfaceId = Output.empty();
+        this.platformIdentifier = Output.empty();
+        this.roleArn = Output.empty();
+        this.rootAccess = Output.empty();
+        this.securityGroups = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.url = Output.empty();
+        this.volumeSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -285,24 +285,24 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalCodeRepositories;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> defaultCodeRepository;
-        private @Nullable Input<String> directInternetAccess;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> lifecycleConfigName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> networkInterfaceId;
-        private @Nullable Input<String> platformIdentifier;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> rootAccess;
-        private @Nullable Input<List<String>> securityGroups;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> url;
-        private @Nullable Input<Integer> volumeSize;
+        private @Nullable Output<List<String>> additionalCodeRepositories;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> defaultCodeRepository;
+        private @Nullable Output<String> directInternetAccess;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> lifecycleConfigName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> networkInterfaceId;
+        private @Nullable Output<String> platformIdentifier;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> rootAccess;
+        private @Nullable Output<List<String>> securityGroups;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> url;
+        private @Nullable Output<Integer> volumeSize;
 
         public Builder() {
     	      // Empty
@@ -330,183 +330,183 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
     	      this.volumeSize = defaults.volumeSize;
         }
 
-        public Builder additionalCodeRepositories(@Nullable Input<List<String>> additionalCodeRepositories) {
+        public Builder additionalCodeRepositories(@Nullable Output<List<String>> additionalCodeRepositories) {
             this.additionalCodeRepositories = additionalCodeRepositories;
             return this;
         }
 
         public Builder additionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
-            this.additionalCodeRepositories = Input.ofNullable(additionalCodeRepositories);
+            this.additionalCodeRepositories = Output.ofNullable(additionalCodeRepositories);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder defaultCodeRepository(@Nullable Input<String> defaultCodeRepository) {
+        public Builder defaultCodeRepository(@Nullable Output<String> defaultCodeRepository) {
             this.defaultCodeRepository = defaultCodeRepository;
             return this;
         }
 
         public Builder defaultCodeRepository(@Nullable String defaultCodeRepository) {
-            this.defaultCodeRepository = Input.ofNullable(defaultCodeRepository);
+            this.defaultCodeRepository = Output.ofNullable(defaultCodeRepository);
             return this;
         }
 
-        public Builder directInternetAccess(@Nullable Input<String> directInternetAccess) {
+        public Builder directInternetAccess(@Nullable Output<String> directInternetAccess) {
             this.directInternetAccess = directInternetAccess;
             return this;
         }
 
         public Builder directInternetAccess(@Nullable String directInternetAccess) {
-            this.directInternetAccess = Input.ofNullable(directInternetAccess);
+            this.directInternetAccess = Output.ofNullable(directInternetAccess);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder lifecycleConfigName(@Nullable Input<String> lifecycleConfigName) {
+        public Builder lifecycleConfigName(@Nullable Output<String> lifecycleConfigName) {
             this.lifecycleConfigName = lifecycleConfigName;
             return this;
         }
 
         public Builder lifecycleConfigName(@Nullable String lifecycleConfigName) {
-            this.lifecycleConfigName = Input.ofNullable(lifecycleConfigName);
+            this.lifecycleConfigName = Output.ofNullable(lifecycleConfigName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder platformIdentifier(@Nullable Input<String> platformIdentifier) {
+        public Builder platformIdentifier(@Nullable Output<String> platformIdentifier) {
             this.platformIdentifier = platformIdentifier;
             return this;
         }
 
         public Builder platformIdentifier(@Nullable String platformIdentifier) {
-            this.platformIdentifier = Input.ofNullable(platformIdentifier);
+            this.platformIdentifier = Output.ofNullable(platformIdentifier);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder rootAccess(@Nullable Input<String> rootAccess) {
+        public Builder rootAccess(@Nullable Output<String> rootAccess) {
             this.rootAccess = rootAccess;
             return this;
         }
 
         public Builder rootAccess(@Nullable String rootAccess) {
-            this.rootAccess = Input.ofNullable(rootAccess);
+            this.rootAccess = Output.ofNullable(rootAccess);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
 
-        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Input.ofNullable(volumeSize);
+            this.volumeSize = Output.ofNullable(volumeSize);
             return this;
         }
         public NotebookInstanceState build() {

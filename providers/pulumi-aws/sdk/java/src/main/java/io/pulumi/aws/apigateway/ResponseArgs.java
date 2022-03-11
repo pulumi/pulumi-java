@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseParameters")
-      private final @Nullable Input<Map<String,String>> responseParameters;
+      private final @Nullable Output<Map<String,String>> responseParameters;
 
-    public Input<Map<String,String>> getResponseParameters() {
-        return this.responseParameters == null ? Input.empty() : this.responseParameters;
+    public Output<Map<String,String>> getResponseParameters() {
+        return this.responseParameters == null ? Output.empty() : this.responseParameters;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTemplates")
-      private final @Nullable Input<Map<String,String>> responseTemplates;
+      private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Input<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
+    public Output<Map<String,String>> getResponseTemplates() {
+        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseType", required=true)
-      private final Input<String> responseType;
+      private final Output<String> responseType;
 
-    public Input<String> getResponseType() {
+    public Output<String> getResponseType() {
         return this.responseType;
     }
 
@@ -53,9 +53,9 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
@@ -64,18 +64,18 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<String> statusCode;
+      private final @Nullable Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<String> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     public ResponseArgs(
-        @Nullable Input<Map<String,String>> responseParameters,
-        @Nullable Input<Map<String,String>> responseTemplates,
-        Input<String> responseType,
-        Input<String> restApiId,
-        @Nullable Input<String> statusCode) {
+        @Nullable Output<Map<String,String>> responseParameters,
+        @Nullable Output<Map<String,String>> responseTemplates,
+        Output<String> responseType,
+        Output<String> restApiId,
+        @Nullable Output<String> statusCode) {
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;
         this.responseType = Objects.requireNonNull(responseType, "expected parameter 'responseType' to be non-null");
@@ -84,11 +84,11 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponseArgs() {
-        this.responseParameters = Input.empty();
-        this.responseTemplates = Input.empty();
-        this.responseType = Input.empty();
-        this.restApiId = Input.empty();
-        this.statusCode = Input.empty();
+        this.responseParameters = Output.empty();
+        this.responseTemplates = Output.empty();
+        this.responseType = Output.empty();
+        this.restApiId = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> responseParameters;
-        private @Nullable Input<Map<String,String>> responseTemplates;
-        private Input<String> responseType;
-        private Input<String> restApiId;
-        private @Nullable Input<String> statusCode;
+        private @Nullable Output<Map<String,String>> responseParameters;
+        private @Nullable Output<Map<String,String>> responseTemplates;
+        private Output<String> responseType;
+        private Output<String> restApiId;
+        private @Nullable Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder responseParameters(@Nullable Input<Map<String,String>> responseParameters) {
+        public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Input.ofNullable(responseParameters);
+            this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Input.ofNullable(responseTemplates);
+            this.responseTemplates = Output.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder responseType(Input<String> responseType) {
+        public Builder responseType(Output<String> responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
 
         public Builder responseType(String responseType) {
-            this.responseType = Input.of(Objects.requireNonNull(responseType));
+            this.responseType = Output.of(Objects.requireNonNull(responseType));
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
         public ResponseArgs build() {

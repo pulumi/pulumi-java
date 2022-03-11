@@ -6,7 +6,6 @@ package io.pulumi.aws.ecs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecs.AccountSettingDefaultArgs;
 import io.pulumi.aws.ecs.inputs.AccountSettingDefaultState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -106,14 +105,14 @@ public class AccountSettingDefault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountSettingDefault(String name, AccountSettingDefaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecs/accountSettingDefault:AccountSettingDefault", name, args == null ? AccountSettingDefaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ecs/accountSettingDefault:AccountSettingDefault", name, args == null ? AccountSettingDefaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccountSettingDefault(String name, Input<String> id, @Nullable AccountSettingDefaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccountSettingDefault(String name, Output<String> id, @Nullable AccountSettingDefaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ecs/accountSettingDefault:AccountSettingDefault", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -129,7 +128,7 @@ public class AccountSettingDefault extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccountSettingDefault get(String name, Input<String> id, @Nullable AccountSettingDefaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccountSettingDefault get(String name, Output<String> id, @Nullable AccountSettingDefaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccountSettingDefault(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientIdLists")
-      private final @Nullable Input<List<String>> clientIdLists;
+      private final @Nullable Output<List<String>> clientIdLists;
 
-    public Input<List<String>> getClientIdLists() {
-        return this.clientIdLists == null ? Input.empty() : this.clientIdLists;
+    public Output<List<String>> getClientIdLists() {
+        return this.clientIdLists == null ? Output.empty() : this.clientIdLists;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprintLists")
-      private final @Nullable Input<List<String>> thumbprintLists;
+      private final @Nullable Output<List<String>> thumbprintLists;
 
-    public Input<List<String>> getThumbprintLists() {
-        return this.thumbprintLists == null ? Input.empty() : this.thumbprintLists;
+    public Output<List<String>> getThumbprintLists() {
+        return this.thumbprintLists == null ? Output.empty() : this.thumbprintLists;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public OpenIdConnectProviderState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> clientIdLists,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<String>> thumbprintLists,
-        @Nullable Input<String> url) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> clientIdLists,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<String>> thumbprintLists,
+        @Nullable Output<String> url) {
         this.arn = arn;
         this.clientIdLists = clientIdLists;
         this.tags = tags;
@@ -98,12 +98,12 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
     }
 
     private OpenIdConnectProviderState() {
-        this.arn = Input.empty();
-        this.clientIdLists = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.thumbprintLists = Input.empty();
-        this.url = Input.empty();
+        this.arn = Output.empty();
+        this.clientIdLists = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.thumbprintLists = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> clientIdLists;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<String>> thumbprintLists;
-        private @Nullable Input<String> url;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> clientIdLists;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<String>> thumbprintLists;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
     	      this.url = defaults.url;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clientIdLists(@Nullable Input<List<String>> clientIdLists) {
+        public Builder clientIdLists(@Nullable Output<List<String>> clientIdLists) {
             this.clientIdLists = clientIdLists;
             return this;
         }
 
         public Builder clientIdLists(@Nullable List<String> clientIdLists) {
-            this.clientIdLists = Input.ofNullable(clientIdLists);
+            this.clientIdLists = Output.ofNullable(clientIdLists);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder thumbprintLists(@Nullable Input<List<String>> thumbprintLists) {
+        public Builder thumbprintLists(@Nullable Output<List<String>> thumbprintLists) {
             this.thumbprintLists = thumbprintLists;
             return this;
         }
 
         public Builder thumbprintLists(@Nullable List<String> thumbprintLists) {
-            this.thumbprintLists = Input.ofNullable(thumbprintLists);
+            this.thumbprintLists = Output.ofNullable(thumbprintLists);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public OpenIdConnectProviderState build() {

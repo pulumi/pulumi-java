@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createdDate")
-      private final @Nullable Input<String> createdDate;
+      private final @Nullable Output<String> createdDate;
 
-    public Input<String> getCreatedDate() {
-        return this.createdDate == null ? Input.empty() : this.createdDate;
+    public Output<String> getCreatedDate() {
+        return this.createdDate == null ? Output.empty() : this.createdDate;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastUpdatedDate")
-      private final @Nullable Input<String> lastUpdatedDate;
+      private final @Nullable Output<String> lastUpdatedDate;
 
-    public Input<String> getLastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Input.empty() : this.lastUpdatedDate;
+    public Output<String> getLastUpdatedDate() {
+        return this.lastUpdatedDate == null ? Output.empty() : this.lastUpdatedDate;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="meshName")
-      private final @Nullable Input<String> meshName;
+      private final @Nullable Output<String> meshName;
 
-    public Input<String> getMeshName() {
-        return this.meshName == null ? Input.empty() : this.meshName;
+    public Output<String> getMeshName() {
+        return this.meshName == null ? Output.empty() : this.meshName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="meshOwner")
-      private final @Nullable Input<String> meshOwner;
+      private final @Nullable Output<String> meshOwner;
 
-    public Input<String> getMeshOwner() {
-        return this.meshOwner == null ? Input.empty() : this.meshOwner;
+    public Output<String> getMeshOwner() {
+        return this.meshOwner == null ? Output.empty() : this.meshOwner;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceOwner")
-      private final @Nullable Input<String> resourceOwner;
+      private final @Nullable Output<String> resourceOwner;
 
-    public Input<String> getResourceOwner() {
-        return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
+    public Output<String> getResourceOwner() {
+        return this.resourceOwner == null ? Output.empty() : this.resourceOwner;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<VirtualGatewaySpecGetArgs> spec;
+      private final @Nullable Output<VirtualGatewaySpecGetArgs> spec;
 
-    public Input<VirtualGatewaySpecGetArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<VirtualGatewaySpecGetArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,23 +120,23 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public VirtualGatewayState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdDate,
-        @Nullable Input<String> lastUpdatedDate,
-        @Nullable Input<String> meshName,
-        @Nullable Input<String> meshOwner,
-        @Nullable Input<String> name,
-        @Nullable Input<String> resourceOwner,
-        @Nullable Input<VirtualGatewaySpecGetArgs> spec,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdDate,
+        @Nullable Output<String> lastUpdatedDate,
+        @Nullable Output<String> meshName,
+        @Nullable Output<String> meshOwner,
+        @Nullable Output<String> name,
+        @Nullable Output<String> resourceOwner,
+        @Nullable Output<VirtualGatewaySpecGetArgs> spec,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.lastUpdatedDate = lastUpdatedDate;
@@ -150,16 +150,16 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
     }
 
     private VirtualGatewayState() {
-        this.arn = Input.empty();
-        this.createdDate = Input.empty();
-        this.lastUpdatedDate = Input.empty();
-        this.meshName = Input.empty();
-        this.meshOwner = Input.empty();
-        this.name = Input.empty();
-        this.resourceOwner = Input.empty();
-        this.spec = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.createdDate = Output.empty();
+        this.lastUpdatedDate = Output.empty();
+        this.meshName = Output.empty();
+        this.meshOwner = Output.empty();
+        this.name = Output.empty();
+        this.resourceOwner = Output.empty();
+        this.spec = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdDate;
-        private @Nullable Input<String> lastUpdatedDate;
-        private @Nullable Input<String> meshName;
-        private @Nullable Input<String> meshOwner;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resourceOwner;
-        private @Nullable Input<VirtualGatewaySpecGetArgs> spec;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdDate;
+        private @Nullable Output<String> lastUpdatedDate;
+        private @Nullable Output<String> meshName;
+        private @Nullable Output<String> meshOwner;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resourceOwner;
+        private @Nullable Output<VirtualGatewaySpecGetArgs> spec;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Output<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Input.ofNullable(createdDate);
+            this.createdDate = Output.ofNullable(createdDate);
             return this;
         }
 
-        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
         public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
+            this.lastUpdatedDate = Output.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder meshName(@Nullable Input<String> meshName) {
+        public Builder meshName(@Nullable Output<String> meshName) {
             this.meshName = meshName;
             return this;
         }
 
         public Builder meshName(@Nullable String meshName) {
-            this.meshName = Input.ofNullable(meshName);
+            this.meshName = Output.ofNullable(meshName);
             return this;
         }
 
-        public Builder meshOwner(@Nullable Input<String> meshOwner) {
+        public Builder meshOwner(@Nullable Output<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
 
         public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = Input.ofNullable(meshOwner);
+            this.meshOwner = Output.ofNullable(meshOwner);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceOwner(@Nullable Input<String> resourceOwner) {
+        public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
 
         public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Input.ofNullable(resourceOwner);
+            this.resourceOwner = Output.ofNullable(resourceOwner);
             return this;
         }
 
-        public Builder spec(@Nullable Input<VirtualGatewaySpecGetArgs> spec) {
+        public Builder spec(@Nullable Output<VirtualGatewaySpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable VirtualGatewaySpecGetArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public VirtualGatewayState build() {

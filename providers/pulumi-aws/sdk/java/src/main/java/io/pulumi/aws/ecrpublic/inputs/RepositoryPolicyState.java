@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecrpublic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     public static final RepositoryPolicyState Empty = new RepositoryPolicyState();
 
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -26,10 +26,10 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryId")
-      private final @Nullable Input<String> registryId;
+      private final @Nullable Output<String> registryId;
 
-    public Input<String> getRegistryId() {
-        return this.registryId == null ? Input.empty() : this.registryId;
+    public Output<String> getRegistryId() {
+        return this.registryId == null ? Output.empty() : this.registryId;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     public RepositoryPolicyState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> registryId,
-        @Nullable Input<String> repositoryName) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> registryId,
+        @Nullable Output<String> repositoryName) {
         this.policy = policy;
         this.registryId = registryId;
         this.repositoryName = repositoryName;
     }
 
     private RepositoryPolicyState() {
-        this.policy = Input.empty();
-        this.registryId = Input.empty();
-        this.repositoryName = Input.empty();
+        this.policy = Output.empty();
+        this.registryId = Output.empty();
+        this.repositoryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> registryId;
-        private @Nullable Input<String> repositoryName;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> registryId;
+        private @Nullable Output<String> repositoryName;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder registryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Input.ofNullable(registryId);
+            this.registryId = Output.ofNullable(registryId);
             return this;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
         public RepositoryPolicyState build() {

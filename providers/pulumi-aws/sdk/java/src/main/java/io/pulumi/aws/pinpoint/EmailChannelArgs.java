@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.pinpoint;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -31,10 +31,10 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationSet")
-      private final @Nullable Input<String> configurationSet;
+      private final @Nullable Output<String> configurationSet;
 
-    public Input<String> getConfigurationSet() {
-        return this.configurationSet == null ? Input.empty() : this.configurationSet;
+    public Output<String> getConfigurationSet() {
+        return this.configurationSet == null ? Output.empty() : this.configurationSet;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromAddress", required=true)
-      private final Input<String> fromAddress;
+      private final Output<String> fromAddress;
 
-    public Input<String> getFromAddress() {
+    public Output<String> getFromAddress() {
         return this.fromAddress;
     }
 
@@ -64,9 +64,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<String> identity;
+      private final Output<String> identity;
 
-    public Input<String> getIdentity() {
+    public Output<String> getIdentity() {
         return this.identity;
     }
 
@@ -75,19 +75,19 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public EmailChannelArgs(
-        Input<String> applicationId,
-        @Nullable Input<String> configurationSet,
-        @Nullable Input<Boolean> enabled,
-        Input<String> fromAddress,
-        Input<String> identity,
-        @Nullable Input<String> roleArn) {
+        Output<String> applicationId,
+        @Nullable Output<String> configurationSet,
+        @Nullable Output<Boolean> enabled,
+        Output<String> fromAddress,
+        Output<String> identity,
+        @Nullable Output<String> roleArn) {
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.configurationSet = configurationSet;
         this.enabled = enabled;
@@ -97,12 +97,12 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EmailChannelArgs() {
-        this.applicationId = Input.empty();
-        this.configurationSet = Input.empty();
-        this.enabled = Input.empty();
-        this.fromAddress = Input.empty();
-        this.identity = Input.empty();
-        this.roleArn = Input.empty();
+        this.applicationId = Output.empty();
+        this.configurationSet = Output.empty();
+        this.enabled = Output.empty();
+        this.fromAddress = Output.empty();
+        this.identity = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationId;
-        private @Nullable Input<String> configurationSet;
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> fromAddress;
-        private Input<String> identity;
-        private @Nullable Input<String> roleArn;
+        private Output<String> applicationId;
+        private @Nullable Output<String> configurationSet;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> fromAddress;
+        private Output<String> identity;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder configurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Output<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
         public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Input.ofNullable(configurationSet);
+            this.configurationSet = Output.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder fromAddress(Input<String> fromAddress) {
+        public Builder fromAddress(Output<String> fromAddress) {
             this.fromAddress = Objects.requireNonNull(fromAddress);
             return this;
         }
 
         public Builder fromAddress(String fromAddress) {
-            this.fromAddress = Input.of(Objects.requireNonNull(fromAddress));
+            this.fromAddress = Output.of(Objects.requireNonNull(fromAddress));
             return this;
         }
 
-        public Builder identity(Input<String> identity) {
+        public Builder identity(Output<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(String identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public EmailChannelArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.ManagedPrefixListArgs;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListState;
 import io.pulumi.aws.ec2.outputs.ManagedPrefixListEntry;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -186,14 +185,14 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPrefixList(String name, ManagedPrefixListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/managedPrefixList:ManagedPrefixList", name, args == null ? ManagedPrefixListArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/managedPrefixList:ManagedPrefixList", name, args == null ? ManagedPrefixListArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedPrefixList(String name, Input<String> id, @Nullable ManagedPrefixListState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedPrefixList(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/managedPrefixList:ManagedPrefixList", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -209,7 +208,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedPrefixList get(String name, Input<String> id, @Nullable ManagedPrefixListState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedPrefixList get(String name, Output<String> id, @Nullable ManagedPrefixListState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedPrefixList(name, id, state, options);
     }
 }

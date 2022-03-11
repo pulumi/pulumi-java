@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @InputImport(name="profileId", required=true)
-      private final Input<String> profileId;
+      private final Output<String> profileId;
 
-    public Input<String> getProfileId() {
+    public Output<String> getProfileId() {
         return this.profileId;
     }
 
@@ -29,22 +29,22 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @InputImport(name="queryArg", required=true)
-      private final Input<String> queryArg;
+      private final Output<String> queryArg;
 
-    public Input<String> getQueryArg() {
+    public Output<String> getQueryArg() {
         return this.queryArg;
     }
 
     public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs(
-        Input<String> profileId,
-        Input<String> queryArg) {
+        Output<String> profileId,
+        Output<String> queryArg) {
         this.profileId = Objects.requireNonNull(profileId, "expected parameter 'profileId' to be non-null");
         this.queryArg = Objects.requireNonNull(queryArg, "expected parameter 'queryArg' to be non-null");
     }
 
     private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs() {
-        this.profileId = Input.empty();
-        this.queryArg = Input.empty();
+        this.profileId = Output.empty();
+        this.queryArg = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     }
 
     public static final class Builder {
-        private Input<String> profileId;
-        private Input<String> queryArg;
+        private Output<String> profileId;
+        private Output<String> queryArg;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     	      this.queryArg = defaults.queryArg;
         }
 
-        public Builder profileId(Input<String> profileId) {
+        public Builder profileId(Output<String> profileId) {
             this.profileId = Objects.requireNonNull(profileId);
             return this;
         }
 
         public Builder profileId(String profileId) {
-            this.profileId = Input.of(Objects.requireNonNull(profileId));
+            this.profileId = Output.of(Objects.requireNonNull(profileId));
             return this;
         }
 
-        public Builder queryArg(Input<String> queryArg) {
+        public Builder queryArg(Output<String> queryArg) {
             this.queryArg = Objects.requireNonNull(queryArg);
             return this;
         }
 
         public Builder queryArg(String queryArg) {
-            this.queryArg = Input.of(Objects.requireNonNull(queryArg));
+            this.queryArg = Output.of(Objects.requireNonNull(queryArg));
             return this;
         }
         public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs build() {

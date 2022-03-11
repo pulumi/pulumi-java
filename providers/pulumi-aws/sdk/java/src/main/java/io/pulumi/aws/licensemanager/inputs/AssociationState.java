@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.licensemanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseConfigurationArn")
-      private final @Nullable Input<String> licenseConfigurationArn;
+      private final @Nullable Output<String> licenseConfigurationArn;
 
-    public Input<String> getLicenseConfigurationArn() {
-        return this.licenseConfigurationArn == null ? Input.empty() : this.licenseConfigurationArn;
+    public Output<String> getLicenseConfigurationArn() {
+        return this.licenseConfigurationArn == null ? Output.empty() : this.licenseConfigurationArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn")
-      private final @Nullable Input<String> resourceArn;
+      private final @Nullable Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
-        return this.resourceArn == null ? Input.empty() : this.resourceArn;
+    public Output<String> getResourceArn() {
+        return this.resourceArn == null ? Output.empty() : this.resourceArn;
     }
 
     public AssociationState(
-        @Nullable Input<String> licenseConfigurationArn,
-        @Nullable Input<String> resourceArn) {
+        @Nullable Output<String> licenseConfigurationArn,
+        @Nullable Output<String> resourceArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         this.resourceArn = resourceArn;
     }
 
     private AssociationState() {
-        this.licenseConfigurationArn = Input.empty();
-        this.resourceArn = Input.empty();
+        this.licenseConfigurationArn = Output.empty();
+        this.resourceArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> licenseConfigurationArn;
-        private @Nullable Input<String> resourceArn;
+        private @Nullable Output<String> licenseConfigurationArn;
+        private @Nullable Output<String> resourceArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder licenseConfigurationArn(@Nullable Input<String> licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(@Nullable Output<String> licenseConfigurationArn) {
             this.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
 
         public Builder licenseConfigurationArn(@Nullable String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Input.ofNullable(licenseConfigurationArn);
+            this.licenseConfigurationArn = Output.ofNullable(licenseConfigurationArn);
             return this;
         }
 
-        public Builder resourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Output<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Input.ofNullable(resourceArn);
+            this.resourceArn = Output.ofNullable(resourceArn);
             return this;
         }
         public AssociationState build() {

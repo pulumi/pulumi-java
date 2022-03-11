@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModified")
-      private final @Nullable Input<String> lastModified;
+      private final @Nullable Output<String> lastModified;
 
-    public Input<String> getLastModified() {
-        return this.lastModified == null ? Input.empty() : this.lastModified;
+    public Output<String> getLastModified() {
+        return this.lastModified == null ? Output.empty() : this.lastModified;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     public ResourceState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> lastModified,
-        @Nullable Input<String> roleArn) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> lastModified,
+        @Nullable Output<String> roleArn) {
         this.arn = arn;
         this.lastModified = lastModified;
         this.roleArn = roleArn;
     }
 
     private ResourceState() {
-        this.arn = Input.empty();
-        this.lastModified = Input.empty();
-        this.roleArn = Input.empty();
+        this.arn = Output.empty();
+        this.lastModified = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> lastModified;
-        private @Nullable Input<String> roleArn;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> lastModified;
+        private @Nullable Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder lastModified(@Nullable Input<String> lastModified) {
+        public Builder lastModified(@Nullable Output<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Input.ofNullable(lastModified);
+            this.lastModified = Output.ofNullable(lastModified);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
         public ResourceState build() {

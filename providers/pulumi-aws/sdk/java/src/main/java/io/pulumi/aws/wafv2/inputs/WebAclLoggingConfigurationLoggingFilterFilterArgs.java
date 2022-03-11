@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * 
      */
     @InputImport(name="behavior", required=true)
-      private final Input<String> behavior;
+      private final Output<String> behavior;
 
-    public Input<String> getBehavior() {
+    public Output<String> getBehavior() {
         return this.behavior;
     }
 
@@ -31,9 +31,9 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * 
      */
     @InputImport(name="conditions", required=true)
-      private final Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
+      private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
 
-    public Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> getConditions() {
+    public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> getConditions() {
         return this.conditions;
     }
 
@@ -42,25 +42,25 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * 
      */
     @InputImport(name="requirement", required=true)
-      private final Input<String> requirement;
+      private final Output<String> requirement;
 
-    public Input<String> getRequirement() {
+    public Output<String> getRequirement() {
         return this.requirement;
     }
 
     public WebAclLoggingConfigurationLoggingFilterFilterArgs(
-        Input<String> behavior,
-        Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions,
-        Input<String> requirement) {
+        Output<String> behavior,
+        Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions,
+        Output<String> requirement) {
         this.behavior = Objects.requireNonNull(behavior, "expected parameter 'behavior' to be non-null");
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
         this.requirement = Objects.requireNonNull(requirement, "expected parameter 'requirement' to be non-null");
     }
 
     private WebAclLoggingConfigurationLoggingFilterFilterArgs() {
-        this.behavior = Input.empty();
-        this.conditions = Input.empty();
-        this.requirement = Input.empty();
+        this.behavior = Output.empty();
+        this.conditions = Output.empty();
+        this.requirement = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     }
 
     public static final class Builder {
-        private Input<String> behavior;
-        private Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
-        private Input<String> requirement;
+        private Output<String> behavior;
+        private Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
+        private Output<String> requirement;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder behavior(Input<String> behavior) {
+        public Builder behavior(Output<String> behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
         public Builder behavior(String behavior) {
-            this.behavior = Input.of(Objects.requireNonNull(behavior));
+            this.behavior = Output.of(Objects.requireNonNull(behavior));
             return this;
         }
 
-        public Builder conditions(Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions) {
+        public Builder conditions(Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder requirement(Input<String> requirement) {
+        public Builder requirement(Output<String> requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
 
         public Builder requirement(String requirement) {
-            this.requirement = Input.of(Objects.requireNonNull(requirement));
+            this.requirement = Output.of(Objects.requireNonNull(requirement));
             return this;
         }
         public WebAclLoggingConfigurationLoggingFilterFilterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="logConfiguration")
-      private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
+      private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
-    public Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
-        return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
+    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
+        return this.logConfiguration == null ? Output.empty() : this.logConfiguration;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<String> logging;
+      private final @Nullable Output<String> logging;
 
-    public Input<String> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<String> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     public ClusterConfigurationExecuteCommandConfigurationGetArgs(
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration,
-        @Nullable Input<String> logging) {
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration,
+        @Nullable Output<String> logging) {
         this.kmsKeyId = kmsKeyId;
         this.logConfiguration = logConfiguration;
         this.logging = logging;
     }
 
     private ClusterConfigurationExecuteCommandConfigurationGetArgs() {
-        this.kmsKeyId = Input.empty();
-        this.logConfiguration = Input.empty();
-        this.logging = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.logConfiguration = Output.empty();
+        this.logging = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
-        private @Nullable Input<String> logging;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
+        private @Nullable Output<String> logging;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     	      this.logging = defaults.logging;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder logConfiguration(@Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration) {
+        public Builder logConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
         public Builder logConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs logConfiguration) {
-            this.logConfiguration = Input.ofNullable(logConfiguration);
+            this.logConfiguration = Output.ofNullable(logConfiguration);
             return this;
         }
 
-        public Builder logging(@Nullable Input<String> logging) {
+        public Builder logging(@Nullable Output<String> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable String logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
         public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {

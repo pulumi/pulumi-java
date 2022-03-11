@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public PolicyAttachmentState(
-        @Nullable Input<String> policy,
-        @Nullable Input<String> target) {
+        @Nullable Output<String> policy,
+        @Nullable Output<String> target) {
         this.policy = policy;
         this.target = target;
     }
 
     private PolicyAttachmentState() {
-        this.policy = Input.empty();
-        this.target = Input.empty();
+        this.policy = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> policy;
-        private @Nullable Input<String> target;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -70,18 +70,18 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
     	      this.target = defaults.target;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public PolicyAttachmentState build() {

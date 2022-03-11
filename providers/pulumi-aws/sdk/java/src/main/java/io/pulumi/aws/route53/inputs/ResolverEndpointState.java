@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="direction")
-      private final @Nullable Input<String> direction;
+      private final @Nullable Output<String> direction;
 
-    public Input<String> getDirection() {
-        return this.direction == null ? Input.empty() : this.direction;
+    public Output<String> getDirection() {
+        return this.direction == null ? Output.empty() : this.direction;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hostVpcId")
-      private final @Nullable Input<String> hostVpcId;
+      private final @Nullable Output<String> hostVpcId;
 
-    public Input<String> getHostVpcId() {
-        return this.hostVpcId == null ? Input.empty() : this.hostVpcId;
+    public Output<String> getHostVpcId() {
+        return this.hostVpcId == null ? Output.empty() : this.hostVpcId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
+      private final @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
 
-    public Input<List<ResolverEndpointIpAddressGetArgs>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<ResolverEndpointIpAddressGetArgs>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ResolverEndpointState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> direction,
-        @Nullable Input<String> hostVpcId,
-        @Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> direction,
+        @Nullable Output<String> hostVpcId,
+        @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.direction = direction;
         this.hostVpcId = hostVpcId;
@@ -128,14 +128,14 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     }
 
     private ResolverEndpointState() {
-        this.arn = Input.empty();
-        this.direction = Input.empty();
-        this.hostVpcId = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.name = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.direction = Output.empty();
+        this.hostVpcId = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.name = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> direction;
-        private @Nullable Input<String> hostVpcId;
-        private @Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> direction;
+        private @Nullable Output<String> hostVpcId;
+        private @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder direction(@Nullable Input<String> direction) {
+        public Builder direction(@Nullable Output<String> direction) {
             this.direction = direction;
             return this;
         }
 
         public Builder direction(@Nullable String direction) {
-            this.direction = Input.ofNullable(direction);
+            this.direction = Output.ofNullable(direction);
             return this;
         }
 
-        public Builder hostVpcId(@Nullable Input<String> hostVpcId) {
+        public Builder hostVpcId(@Nullable Output<String> hostVpcId) {
             this.hostVpcId = hostVpcId;
             return this;
         }
 
         public Builder hostVpcId(@Nullable String hostVpcId) {
-            this.hostVpcId = Input.ofNullable(hostVpcId);
+            this.hostVpcId = Output.ofNullable(hostVpcId);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<ResolverEndpointIpAddressGetArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<ResolverEndpointIpAddressGetArgs> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ResolverEndpointState build() {

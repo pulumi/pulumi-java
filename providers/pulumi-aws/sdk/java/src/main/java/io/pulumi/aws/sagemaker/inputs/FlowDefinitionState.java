@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigGet
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="flowDefinitionName")
-      private final @Nullable Input<String> flowDefinitionName;
+      private final @Nullable Output<String> flowDefinitionName;
 
-    public Input<String> getFlowDefinitionName() {
-        return this.flowDefinitionName == null ? Input.empty() : this.flowDefinitionName;
+    public Output<String> getFlowDefinitionName() {
+        return this.flowDefinitionName == null ? Output.empty() : this.flowDefinitionName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopActivationConfig")
-      private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
+      private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
 
-    public Input<FlowDefinitionHumanLoopActivationConfigGetArgs> getHumanLoopActivationConfig() {
-        return this.humanLoopActivationConfig == null ? Input.empty() : this.humanLoopActivationConfig;
+    public Output<FlowDefinitionHumanLoopActivationConfigGetArgs> getHumanLoopActivationConfig() {
+        return this.humanLoopActivationConfig == null ? Output.empty() : this.humanLoopActivationConfig;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopConfig")
-      private final @Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
+      private final @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
 
-    public Input<FlowDefinitionHumanLoopConfigGetArgs> getHumanLoopConfig() {
-        return this.humanLoopConfig == null ? Input.empty() : this.humanLoopConfig;
+    public Output<FlowDefinitionHumanLoopConfigGetArgs> getHumanLoopConfig() {
+        return this.humanLoopConfig == null ? Output.empty() : this.humanLoopConfig;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="humanLoopRequestSource")
-      private final @Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
+      private final @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
 
-    public Input<FlowDefinitionHumanLoopRequestSourceGetArgs> getHumanLoopRequestSource() {
-        return this.humanLoopRequestSource == null ? Input.empty() : this.humanLoopRequestSource;
+    public Output<FlowDefinitionHumanLoopRequestSourceGetArgs> getHumanLoopRequestSource() {
+        return this.humanLoopRequestSource == null ? Output.empty() : this.humanLoopRequestSource;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outputConfig")
-      private final @Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig;
+      private final @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
 
-    public Input<FlowDefinitionOutputConfigGetArgs> getOutputConfig() {
-        return this.outputConfig == null ? Input.empty() : this.outputConfig;
+    public Output<FlowDefinitionOutputConfigGetArgs> getOutputConfig() {
+        return this.outputConfig == null ? Output.empty() : this.outputConfig;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public FlowDefinitionState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> flowDefinitionName,
-        @Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig,
-        @Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig,
-        @Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource,
-        @Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> flowDefinitionName,
+        @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig,
+        @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig,
+        @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource,
+        @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.flowDefinitionName = flowDefinitionName;
         this.humanLoopActivationConfig = humanLoopActivationConfig;
@@ -140,15 +140,15 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FlowDefinitionState() {
-        this.arn = Input.empty();
-        this.flowDefinitionName = Input.empty();
-        this.humanLoopActivationConfig = Input.empty();
-        this.humanLoopConfig = Input.empty();
-        this.humanLoopRequestSource = Input.empty();
-        this.outputConfig = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.flowDefinitionName = Output.empty();
+        this.humanLoopActivationConfig = Output.empty();
+        this.humanLoopConfig = Output.empty();
+        this.humanLoopRequestSource = Output.empty();
+        this.outputConfig = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> flowDefinitionName;
-        private @Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
-        private @Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
-        private @Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
-        private @Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> flowDefinitionName;
+        private @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
+        private @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
+        private @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
+        private @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder flowDefinitionName(@Nullable Input<String> flowDefinitionName) {
+        public Builder flowDefinitionName(@Nullable Output<String> flowDefinitionName) {
             this.flowDefinitionName = flowDefinitionName;
             return this;
         }
 
         public Builder flowDefinitionName(@Nullable String flowDefinitionName) {
-            this.flowDefinitionName = Input.ofNullable(flowDefinitionName);
+            this.flowDefinitionName = Output.ofNullable(flowDefinitionName);
             return this;
         }
 
-        public Builder humanLoopActivationConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
             this.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
 
         public Builder humanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
-            this.humanLoopActivationConfig = Input.ofNullable(humanLoopActivationConfig);
+            this.humanLoopActivationConfig = Output.ofNullable(humanLoopActivationConfig);
             return this;
         }
 
-        public Builder humanLoopConfig(@Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
+        public Builder humanLoopConfig(@Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
             this.humanLoopConfig = humanLoopConfig;
             return this;
         }
 
         public Builder humanLoopConfig(@Nullable FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
-            this.humanLoopConfig = Input.ofNullable(humanLoopConfig);
+            this.humanLoopConfig = Output.ofNullable(humanLoopConfig);
             return this;
         }
 
-        public Builder humanLoopRequestSource(@Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
             this.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
 
         public Builder humanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
-            this.humanLoopRequestSource = Input.ofNullable(humanLoopRequestSource);
+            this.humanLoopRequestSource = Output.ofNullable(humanLoopRequestSource);
             return this;
         }
 
-        public Builder outputConfig(@Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
 
         public Builder outputConfig(@Nullable FlowDefinitionOutputConfigGetArgs outputConfig) {
-            this.outputConfig = Input.ofNullable(outputConfig);
+            this.outputConfig = Output.ofNullable(outputConfig);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public FlowDefinitionState build() {

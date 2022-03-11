@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="burstLimit")
-      private final @Nullable Input<Integer> burstLimit;
+      private final @Nullable Output<Integer> burstLimit;
 
-    public Input<Integer> getBurstLimit() {
-        return this.burstLimit == null ? Input.empty() : this.burstLimit;
+    public Output<Integer> getBurstLimit() {
+        return this.burstLimit == null ? Output.empty() : this.burstLimit;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -43,25 +43,25 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rateLimit")
-      private final @Nullable Input<Double> rateLimit;
+      private final @Nullable Output<Double> rateLimit;
 
-    public Input<Double> getRateLimit() {
-        return this.rateLimit == null ? Input.empty() : this.rateLimit;
+    public Output<Double> getRateLimit() {
+        return this.rateLimit == null ? Output.empty() : this.rateLimit;
     }
 
     public UsagePlanApiStageThrottleArgs(
-        @Nullable Input<Integer> burstLimit,
-        Input<String> path,
-        @Nullable Input<Double> rateLimit) {
+        @Nullable Output<Integer> burstLimit,
+        Output<String> path,
+        @Nullable Output<Double> rateLimit) {
         this.burstLimit = burstLimit;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.rateLimit = rateLimit;
     }
 
     private UsagePlanApiStageThrottleArgs() {
-        this.burstLimit = Input.empty();
-        this.path = Input.empty();
-        this.rateLimit = Input.empty();
+        this.burstLimit = Output.empty();
+        this.path = Output.empty();
+        this.rateLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> burstLimit;
-        private Input<String> path;
-        private @Nullable Input<Double> rateLimit;
+        private @Nullable Output<Integer> burstLimit;
+        private Output<String> path;
+        private @Nullable Output<Double> rateLimit;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
     	      this.rateLimit = defaults.rateLimit;
         }
 
-        public Builder burstLimit(@Nullable Input<Integer> burstLimit) {
+        public Builder burstLimit(@Nullable Output<Integer> burstLimit) {
             this.burstLimit = burstLimit;
             return this;
         }
 
         public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Input.ofNullable(burstLimit);
+            this.burstLimit = Output.ofNullable(burstLimit);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder rateLimit(@Nullable Input<Double> rateLimit) {
+        public Builder rateLimit(@Nullable Output<Double> rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }
 
         public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Input.ofNullable(rateLimit);
+            this.rateLimit = Output.ofNullable(rateLimit);
             return this;
         }
         public UsagePlanApiStageThrottleArgs build() {

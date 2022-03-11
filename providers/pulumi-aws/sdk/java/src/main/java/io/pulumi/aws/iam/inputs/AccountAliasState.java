@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountAlias")
-      private final @Nullable Input<String> accountAlias;
+      private final @Nullable Output<String> accountAlias;
 
-    public Input<String> getAccountAlias() {
-        return this.accountAlias == null ? Input.empty() : this.accountAlias;
+    public Output<String> getAccountAlias() {
+        return this.accountAlias == null ? Output.empty() : this.accountAlias;
     }
 
-    public AccountAliasState(@Nullable Input<String> accountAlias) {
+    public AccountAliasState(@Nullable Output<String> accountAlias) {
         this.accountAlias = accountAlias;
     }
 
     private AccountAliasState() {
-        this.accountAlias = Input.empty();
+        this.accountAlias = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountAlias;
+        private @Nullable Output<String> accountAlias;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.accountAlias = defaults.accountAlias;
         }
 
-        public Builder accountAlias(@Nullable Input<String> accountAlias) {
+        public Builder accountAlias(@Nullable Output<String> accountAlias) {
             this.accountAlias = accountAlias;
             return this;
         }
 
         public Builder accountAlias(@Nullable String accountAlias) {
-            this.accountAlias = Input.ofNullable(accountAlias);
+            this.accountAlias = Output.ofNullable(accountAlias);
             return this;
         }
         public AccountAliasState build() {

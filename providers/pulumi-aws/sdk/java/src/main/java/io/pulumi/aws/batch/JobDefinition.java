@@ -8,7 +8,6 @@ import io.pulumi.aws.batch.JobDefinitionArgs;
 import io.pulumi.aws.batch.inputs.JobDefinitionState;
 import io.pulumi.aws.batch.outputs.JobDefinitionRetryStrategy;
 import io.pulumi.aws.batch.outputs.JobDefinitionTimeout;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -246,14 +245,14 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobDefinition(String name, JobDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:batch/jobDefinition:JobDefinition", name, args == null ? JobDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:batch/jobDefinition:JobDefinition", name, args == null ? JobDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private JobDefinition(String name, Input<String> id, @Nullable JobDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private JobDefinition(String name, Output<String> id, @Nullable JobDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:batch/jobDefinition:JobDefinition", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -269,7 +268,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static JobDefinition get(String name, Input<String> id, @Nullable JobDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static JobDefinition get(String name, Output<String> id, @Nullable JobDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobDefinition(name, id, state, options);
     }
 }

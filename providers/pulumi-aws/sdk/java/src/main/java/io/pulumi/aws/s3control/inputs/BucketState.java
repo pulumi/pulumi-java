@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-      private final @Nullable Input<String> bucket;
+      private final @Nullable Output<String> bucket;
 
-    public Input<String> getBucket() {
-        return this.bucket == null ? Input.empty() : this.bucket;
+    public Output<String> getBucket() {
+        return this.bucket == null ? Output.empty() : this.bucket;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId")
-      private final @Nullable Input<String> outpostId;
+      private final @Nullable Output<String> outpostId;
 
-    public Input<String> getOutpostId() {
-        return this.outpostId == null ? Input.empty() : this.outpostId;
+    public Output<String> getOutpostId() {
+        return this.outpostId == null ? Output.empty() : this.outpostId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessBlockEnabled")
-      private final @Nullable Input<Boolean> publicAccessBlockEnabled;
+      private final @Nullable Output<Boolean> publicAccessBlockEnabled;
 
-    public Input<Boolean> getPublicAccessBlockEnabled() {
-        return this.publicAccessBlockEnabled == null ? Input.empty() : this.publicAccessBlockEnabled;
+    public Output<Boolean> getPublicAccessBlockEnabled() {
+        return this.publicAccessBlockEnabled == null ? Output.empty() : this.publicAccessBlockEnabled;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public BucketState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> bucket,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> outpostId,
-        @Nullable Input<Boolean> publicAccessBlockEnabled,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> bucket,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> outpostId,
+        @Nullable Output<Boolean> publicAccessBlockEnabled,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.bucket = bucket;
         this.creationDate = creationDate;
@@ -111,13 +111,13 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketState() {
-        this.arn = Input.empty();
-        this.bucket = Input.empty();
-        this.creationDate = Input.empty();
-        this.outpostId = Input.empty();
-        this.publicAccessBlockEnabled = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.bucket = Output.empty();
+        this.creationDate = Output.empty();
+        this.outpostId = Output.empty();
+        this.publicAccessBlockEnabled = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> bucket;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> outpostId;
-        private @Nullable Input<Boolean> publicAccessBlockEnabled;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> bucket;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> outpostId;
+        private @Nullable Output<Boolean> publicAccessBlockEnabled;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder bucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Output<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Input.ofNullable(bucket);
+            this.bucket = Output.ofNullable(bucket);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder outpostId(@Nullable Input<String> outpostId) {
+        public Builder outpostId(@Nullable Output<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
         public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Input.ofNullable(outpostId);
+            this.outpostId = Output.ofNullable(outpostId);
             return this;
         }
 
-        public Builder publicAccessBlockEnabled(@Nullable Input<Boolean> publicAccessBlockEnabled) {
+        public Builder publicAccessBlockEnabled(@Nullable Output<Boolean> publicAccessBlockEnabled) {
             this.publicAccessBlockEnabled = publicAccessBlockEnabled;
             return this;
         }
 
         public Builder publicAccessBlockEnabled(@Nullable Boolean publicAccessBlockEnabled) {
-            this.publicAccessBlockEnabled = Input.ofNullable(publicAccessBlockEnabled);
+            this.publicAccessBlockEnabled = Output.ofNullable(publicAccessBlockEnabled);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public BucketState build() {

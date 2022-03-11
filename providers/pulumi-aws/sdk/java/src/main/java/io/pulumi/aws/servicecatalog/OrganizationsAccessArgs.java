@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class OrganizationsAccessArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
-    public OrganizationsAccessArgs(Input<Boolean> enabled) {
+    public OrganizationsAccessArgs(Output<Boolean> enabled) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private OrganizationsAccessArgs() {
-        this.enabled = Input.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationsAccessArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OrganizationsAccessArgs extends io.pulumi.resources.ResourceA
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public OrganizationsAccessArgs build() {

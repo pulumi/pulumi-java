@@ -5,7 +5,7 @@ package io.pulumi.aws.dax.inputs;
 
 import io.pulumi.aws.dax.inputs.ClusterNodeGetArgs;
 import io.pulumi.aws.dax.inputs.ClusterServerSideEncryptionGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAddress")
-      private final @Nullable Input<String> clusterAddress;
+      private final @Nullable Output<String> clusterAddress;
 
-    public Input<String> getClusterAddress() {
-        return this.clusterAddress == null ? Input.empty() : this.clusterAddress;
+    public Output<String> getClusterAddress() {
+        return this.clusterAddress == null ? Output.empty() : this.clusterAddress;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterEndpointEncryptionType")
-      private final @Nullable Input<String> clusterEndpointEncryptionType;
+      private final @Nullable Output<String> clusterEndpointEncryptionType;
 
-    public Input<String> getClusterEndpointEncryptionType() {
-        return this.clusterEndpointEncryptionType == null ? Input.empty() : this.clusterEndpointEncryptionType;
+    public Output<String> getClusterEndpointEncryptionType() {
+        return this.clusterEndpointEncryptionType == null ? Output.empty() : this.clusterEndpointEncryptionType;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationEndpoint")
-      private final @Nullable Input<String> configurationEndpoint;
+      private final @Nullable Output<String> configurationEndpoint;
 
-    public Input<String> getConfigurationEndpoint() {
-        return this.configurationEndpoint == null ? Input.empty() : this.configurationEndpoint;
+    public Output<String> getConfigurationEndpoint() {
+        return this.configurationEndpoint == null ? Output.empty() : this.configurationEndpoint;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-      private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Output<String> iamRoleArn;
 
-    public Input<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
+    public Output<String> getIamRoleArn() {
+        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Output<String> maintenanceWindow;
 
-    public Input<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<String> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType")
-      private final @Nullable Input<String> nodeType;
+      private final @Nullable Output<String> nodeType;
 
-    public Input<String> getNodeType() {
-        return this.nodeType == null ? Input.empty() : this.nodeType;
+    public Output<String> getNodeType() {
+        return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodes")
-      private final @Nullable Input<List<ClusterNodeGetArgs>> nodes;
+      private final @Nullable Output<List<ClusterNodeGetArgs>> nodes;
 
-    public Input<List<ClusterNodeGetArgs>> getNodes() {
-        return this.nodes == null ? Input.empty() : this.nodes;
+    public Output<List<ClusterNodeGetArgs>> getNodes() {
+        return this.nodes == null ? Output.empty() : this.nodes;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationTopicArn")
-      private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Output<String> notificationTopicArn;
 
-    public Input<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;
+    public Output<String> getNotificationTopicArn() {
+        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterGroupName")
-      private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Output<String> parameterGroupName;
 
-    public Input<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
+    public Output<String> getParameterGroupName() {
+        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicationFactor")
-      private final @Nullable Input<Integer> replicationFactor;
+      private final @Nullable Output<Integer> replicationFactor;
 
-    public Input<Integer> getReplicationFactor() {
-        return this.replicationFactor == null ? Input.empty() : this.replicationFactor;
+    public Output<Integer> getReplicationFactor() {
+        return this.replicationFactor == null ? Output.empty() : this.replicationFactor;
     }
 
     /**
@@ -208,10 +208,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -219,10 +219,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-      private final @Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
+      private final @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
 
-    public Input<ClusterServerSideEncryptionGetArgs> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
+    public Output<ClusterServerSideEncryptionGetArgs> getServerSideEncryption() {
+        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetGroupName")
-      private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Output<String> subnetGroupName;
 
-    public Input<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
+    public Output<String> getSubnetGroupName() {
+        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -253,33 +253,33 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public ClusterState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<String> clusterAddress,
-        @Nullable Input<String> clusterEndpointEncryptionType,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> configurationEndpoint,
-        @Nullable Input<String> description,
-        @Nullable Input<String> iamRoleArn,
-        @Nullable Input<String> maintenanceWindow,
-        @Nullable Input<String> nodeType,
-        @Nullable Input<List<ClusterNodeGetArgs>> nodes,
-        @Nullable Input<String> notificationTopicArn,
-        @Nullable Input<String> parameterGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<Integer> replicationFactor,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption,
-        @Nullable Input<String> subnetGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<String> clusterAddress,
+        @Nullable Output<String> clusterEndpointEncryptionType,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> configurationEndpoint,
+        @Nullable Output<String> description,
+        @Nullable Output<String> iamRoleArn,
+        @Nullable Output<String> maintenanceWindow,
+        @Nullable Output<String> nodeType,
+        @Nullable Output<List<ClusterNodeGetArgs>> nodes,
+        @Nullable Output<String> notificationTopicArn,
+        @Nullable Output<String> parameterGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<Integer> replicationFactor,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption,
+        @Nullable Output<String> subnetGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.availabilityZones = availabilityZones;
         this.clusterAddress = clusterAddress;
@@ -303,26 +303,26 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.arn = Input.empty();
-        this.availabilityZones = Input.empty();
-        this.clusterAddress = Input.empty();
-        this.clusterEndpointEncryptionType = Input.empty();
-        this.clusterName = Input.empty();
-        this.configurationEndpoint = Input.empty();
-        this.description = Input.empty();
-        this.iamRoleArn = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.nodeType = Input.empty();
-        this.nodes = Input.empty();
-        this.notificationTopicArn = Input.empty();
-        this.parameterGroupName = Input.empty();
-        this.port = Input.empty();
-        this.replicationFactor = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.serverSideEncryption = Input.empty();
-        this.subnetGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.availabilityZones = Output.empty();
+        this.clusterAddress = Output.empty();
+        this.clusterEndpointEncryptionType = Output.empty();
+        this.clusterName = Output.empty();
+        this.configurationEndpoint = Output.empty();
+        this.description = Output.empty();
+        this.iamRoleArn = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.nodeType = Output.empty();
+        this.nodes = Output.empty();
+        this.notificationTopicArn = Output.empty();
+        this.parameterGroupName = Output.empty();
+        this.port = Output.empty();
+        this.replicationFactor = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.serverSideEncryption = Output.empty();
+        this.subnetGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -334,26 +334,26 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<String> clusterAddress;
-        private @Nullable Input<String> clusterEndpointEncryptionType;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> configurationEndpoint;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> iamRoleArn;
-        private @Nullable Input<String> maintenanceWindow;
-        private @Nullable Input<String> nodeType;
-        private @Nullable Input<List<ClusterNodeGetArgs>> nodes;
-        private @Nullable Input<String> notificationTopicArn;
-        private @Nullable Input<String> parameterGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Integer> replicationFactor;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
-        private @Nullable Input<String> subnetGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<String> clusterAddress;
+        private @Nullable Output<String> clusterEndpointEncryptionType;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> configurationEndpoint;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> iamRoleArn;
+        private @Nullable Output<String> maintenanceWindow;
+        private @Nullable Output<String> nodeType;
+        private @Nullable Output<List<ClusterNodeGetArgs>> nodes;
+        private @Nullable Output<String> notificationTopicArn;
+        private @Nullable Output<String> parameterGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Integer> replicationFactor;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
+        private @Nullable Output<String> subnetGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -383,203 +383,203 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder clusterAddress(@Nullable Input<String> clusterAddress) {
+        public Builder clusterAddress(@Nullable Output<String> clusterAddress) {
             this.clusterAddress = clusterAddress;
             return this;
         }
 
         public Builder clusterAddress(@Nullable String clusterAddress) {
-            this.clusterAddress = Input.ofNullable(clusterAddress);
+            this.clusterAddress = Output.ofNullable(clusterAddress);
             return this;
         }
 
-        public Builder clusterEndpointEncryptionType(@Nullable Input<String> clusterEndpointEncryptionType) {
+        public Builder clusterEndpointEncryptionType(@Nullable Output<String> clusterEndpointEncryptionType) {
             this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
             return this;
         }
 
         public Builder clusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
-            this.clusterEndpointEncryptionType = Input.ofNullable(clusterEndpointEncryptionType);
+            this.clusterEndpointEncryptionType = Output.ofNullable(clusterEndpointEncryptionType);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder configurationEndpoint(@Nullable Input<String> configurationEndpoint) {
+        public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
             this.configurationEndpoint = configurationEndpoint;
             return this;
         }
 
         public Builder configurationEndpoint(@Nullable String configurationEndpoint) {
-            this.configurationEndpoint = Input.ofNullable(configurationEndpoint);
+            this.configurationEndpoint = Output.ofNullable(configurationEndpoint);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Input.ofNullable(iamRoleArn);
+            this.iamRoleArn = Output.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder nodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Output<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Input.ofNullable(nodeType);
+            this.nodeType = Output.ofNullable(nodeType);
             return this;
         }
 
-        public Builder nodes(@Nullable Input<List<ClusterNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Output<List<ClusterNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
         public Builder nodes(@Nullable List<ClusterNodeGetArgs> nodes) {
-            this.nodes = Input.ofNullable(nodes);
+            this.nodes = Output.ofNullable(nodes);
             return this;
         }
 
-        public Builder notificationTopicArn(@Nullable Input<String> notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Input.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
             return this;
         }
 
-        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Input.ofNullable(parameterGroupName);
+            this.parameterGroupName = Output.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder replicationFactor(@Nullable Input<Integer> replicationFactor) {
+        public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
 
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
-            this.replicationFactor = Input.ofNullable(replicationFactor);
+            this.replicationFactor = Output.ofNullable(replicationFactor);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
         public Builder serverSideEncryption(@Nullable ClusterServerSideEncryptionGetArgs serverSideEncryption) {
-            this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Input.ofNullable(subnetGroupName);
+            this.subnetGroupName = Output.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public ClusterState build() {

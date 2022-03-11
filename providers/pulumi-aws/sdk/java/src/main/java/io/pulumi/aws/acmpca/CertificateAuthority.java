@@ -8,7 +8,6 @@ import io.pulumi.aws.acmpca.CertificateAuthorityArgs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityState;
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityCertificateAuthorityConfiguration;
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityRevocationConfiguration;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -285,14 +284,14 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:acmpca/certificateAuthority:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:acmpca/certificateAuthority:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CertificateAuthority(String name, Input<String> id, @Nullable CertificateAuthorityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CertificateAuthority(String name, Output<String> id, @Nullable CertificateAuthorityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:acmpca/certificateAuthority:CertificateAuthority", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -308,7 +307,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CertificateAuthority get(String name, Input<String> id, @Nullable CertificateAuthorityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CertificateAuthority get(String name, Output<String> id, @Nullable CertificateAuthorityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CertificateAuthority(name, id, state, options);
     }
 }

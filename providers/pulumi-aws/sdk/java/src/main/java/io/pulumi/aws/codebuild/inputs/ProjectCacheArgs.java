@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modes")
-      private final @Nullable Input<List<String>> modes;
+      private final @Nullable Output<List<String>> modes;
 
-    public Input<List<String>> getModes() {
-        return this.modes == null ? Input.empty() : this.modes;
+    public Output<List<String>> getModes() {
+        return this.modes == null ? Output.empty() : this.modes;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProjectCacheArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<List<String>> modes,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> location,
+        @Nullable Output<List<String>> modes,
+        @Nullable Output<String> type) {
         this.location = location;
         this.modes = modes;
         this.type = type;
     }
 
     private ProjectCacheArgs() {
-        this.location = Input.empty();
-        this.modes = Input.empty();
-        this.type = Input.empty();
+        this.location = Output.empty();
+        this.modes = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<String>> modes;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<String>> modes;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ProjectCacheArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder modes(@Nullable Input<List<String>> modes) {
+        public Builder modes(@Nullable Output<List<String>> modes) {
             this.modes = modes;
             return this;
         }
 
         public Builder modes(@Nullable List<String> modes) {
-            this.modes = Input.ofNullable(modes);
+            this.modes = Output.ofNullable(modes);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProjectCacheArgs build() {

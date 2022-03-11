@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationName", required=true)
-      private final Input<String> applicationName;
+      private final Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
+    public Output<String> getApplicationName() {
         return this.applicationName;
     }
 
@@ -29,22 +29,22 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="snapshotName", required=true)
-      private final Input<String> snapshotName;
+      private final Output<String> snapshotName;
 
-    public Input<String> getSnapshotName() {
+    public Output<String> getSnapshotName() {
         return this.snapshotName;
     }
 
     public ApplicationSnapshotArgs(
-        Input<String> applicationName,
-        Input<String> snapshotName) {
+        Output<String> applicationName,
+        Output<String> snapshotName) {
         this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
         this.snapshotName = Objects.requireNonNull(snapshotName, "expected parameter 'snapshotName' to be non-null");
     }
 
     private ApplicationSnapshotArgs() {
-        this.applicationName = Input.empty();
-        this.snapshotName = Input.empty();
+        this.applicationName = Output.empty();
+        this.snapshotName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> applicationName;
-        private Input<String> snapshotName;
+        private Output<String> applicationName;
+        private Output<String> snapshotName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder applicationName(Input<String> applicationName) {
+        public Builder applicationName(Output<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Input.of(Objects.requireNonNull(applicationName));
+            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder snapshotName(Input<String> snapshotName) {
+        public Builder snapshotName(Output<String> snapshotName) {
             this.snapshotName = Objects.requireNonNull(snapshotName);
             return this;
         }
 
         public Builder snapshotName(String snapshotName) {
-            this.snapshotName = Input.of(Objects.requireNonNull(snapshotName));
+            this.snapshotName = Output.of(Objects.requireNonNull(snapshotName));
             return this;
         }
         public ApplicationSnapshotArgs build() {

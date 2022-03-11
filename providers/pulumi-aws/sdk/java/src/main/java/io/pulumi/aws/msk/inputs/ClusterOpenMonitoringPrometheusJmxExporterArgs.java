@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterArgs extends io.pul
      * 
      */
     @InputImport(name="enabledInBroker", required=true)
-      private final Input<Boolean> enabledInBroker;
+      private final Output<Boolean> enabledInBroker;
 
-    public Input<Boolean> getEnabledInBroker() {
+    public Output<Boolean> getEnabledInBroker() {
         return this.enabledInBroker;
     }
 
-    public ClusterOpenMonitoringPrometheusJmxExporterArgs(Input<Boolean> enabledInBroker) {
+    public ClusterOpenMonitoringPrometheusJmxExporterArgs(Output<Boolean> enabledInBroker) {
         this.enabledInBroker = Objects.requireNonNull(enabledInBroker, "expected parameter 'enabledInBroker' to be non-null");
     }
 
     private ClusterOpenMonitoringPrometheusJmxExporterArgs() {
-        this.enabledInBroker = Input.empty();
+        this.enabledInBroker = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<Boolean> enabledInBroker;
+        private Output<Boolean> enabledInBroker;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterArgs extends io.pul
     	      this.enabledInBroker = defaults.enabledInBroker;
         }
 
-        public Builder enabledInBroker(Input<Boolean> enabledInBroker) {
+        public Builder enabledInBroker(Output<Boolean> enabledInBroker) {
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
         }
 
         public Builder enabledInBroker(Boolean enabledInBroker) {
-            this.enabledInBroker = Input.of(Objects.requireNonNull(enabledInBroker));
+            this.enabledInBroker = Output.of(Objects.requireNonNull(enabledInBroker));
             return this;
         }
         public ClusterOpenMonitoringPrometheusJmxExporterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prometheusEndpoint")
-      private final @Nullable Input<String> prometheusEndpoint;
+      private final @Nullable Output<String> prometheusEndpoint;
 
-    public Input<String> getPrometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Input.empty() : this.prometheusEndpoint;
+    public Output<String> getPrometheusEndpoint() {
+        return this.prometheusEndpoint == null ? Output.empty() : this.prometheusEndpoint;
     }
 
     public WorkspaceState(
-        @Nullable Input<String> alias,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> prometheusEndpoint) {
+        @Nullable Output<String> alias,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> prometheusEndpoint) {
         this.alias = alias;
         this.arn = arn;
         this.prometheusEndpoint = prometheusEndpoint;
     }
 
     private WorkspaceState() {
-        this.alias = Input.empty();
-        this.arn = Input.empty();
-        this.prometheusEndpoint = Input.empty();
+        this.alias = Output.empty();
+        this.arn = Output.empty();
+        this.prometheusEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> prometheusEndpoint;
+        private @Nullable Output<String> alias;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> prometheusEndpoint;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     	      this.prometheusEndpoint = defaults.prometheusEndpoint;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder prometheusEndpoint(@Nullable Input<String> prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable Output<String> prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
         public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
-            this.prometheusEndpoint = Input.ofNullable(prometheusEndpoint);
+            this.prometheusEndpoint = Output.ofNullable(prometheusEndpoint);
             return this;
         }
         public WorkspaceState build() {

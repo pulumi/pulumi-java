@@ -8,7 +8,6 @@ import io.pulumi.aws.alb.ListenerArgs;
 import io.pulumi.aws.alb.inputs.ListenerState;
 import io.pulumi.aws.alb.outputs.ListenerDefaultAction;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -215,18 +214,18 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Listener(String name, ListenerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:alb/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:alb/listener:Listener", name, args == null ? ListenerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Listener(String name, Input<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Listener(String name, Output<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:alb/listener:Listener", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("aws:applicationloadbalancing/listener:Listener").build())
+                Output.of(Alias.builder().setType("aws:applicationloadbalancing/listener:Listener").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -241,7 +240,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Listener get(String name, Input<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Listener get(String name, Output<String> id, @Nullable ListenerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Listener(name, id, state, options);
     }
 }

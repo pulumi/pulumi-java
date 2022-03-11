@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.IpSetIpSetDescriptorArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipSetDescriptors")
-      private final @Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
+      private final @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
 
-    public Input<List<IpSetIpSetDescriptorArgs>> getIpSetDescriptors() {
-        return this.ipSetDescriptors == null ? Input.empty() : this.ipSetDescriptors;
+    public Output<List<IpSetIpSetDescriptorArgs>> getIpSetDescriptors() {
+        return this.ipSetDescriptors == null ? Output.empty() : this.ipSetDescriptors;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public IpSetArgs(
-        @Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors,
-        @Nullable Input<String> name) {
+        @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors,
+        @Nullable Output<String> name) {
         this.ipSetDescriptors = ipSetDescriptors;
         this.name = name;
     }
 
     private IpSetArgs() {
-        this.ipSetDescriptors = Input.empty();
-        this.name = Input.empty();
+        this.ipSetDescriptors = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
-        private @Nullable Input<String> name;
+        private @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder ipSetDescriptors(@Nullable Input<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors) {
             this.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
 
         public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
-            this.ipSetDescriptors = Input.ofNullable(ipSetDescriptors);
+            this.ipSetDescriptors = Output.ofNullable(ipSetDescriptors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public IpSetArgs build() {

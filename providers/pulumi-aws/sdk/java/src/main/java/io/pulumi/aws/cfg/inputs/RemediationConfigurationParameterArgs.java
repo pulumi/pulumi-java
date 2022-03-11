@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,10 +30,10 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceValue")
-      private final @Nullable Input<String> resourceValue;
+      private final @Nullable Output<String> resourceValue;
 
-    public Input<String> getResourceValue() {
-        return this.resourceValue == null ? Input.empty() : this.resourceValue;
+    public Output<String> getResourceValue() {
+        return this.resourceValue == null ? Output.empty() : this.resourceValue;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="staticValue")
-      private final @Nullable Input<String> staticValue;
+      private final @Nullable Output<String> staticValue;
 
-    public Input<String> getStaticValue() {
-        return this.staticValue == null ? Input.empty() : this.staticValue;
+    public Output<String> getStaticValue() {
+        return this.staticValue == null ? Output.empty() : this.staticValue;
     }
 
     public RemediationConfigurationParameterArgs(
-        Input<String> name,
-        @Nullable Input<String> resourceValue,
-        @Nullable Input<String> staticValue) {
+        Output<String> name,
+        @Nullable Output<String> resourceValue,
+        @Nullable Output<String> staticValue) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceValue = resourceValue;
         this.staticValue = staticValue;
     }
 
     private RemediationConfigurationParameterArgs() {
-        this.name = Input.empty();
-        this.resourceValue = Input.empty();
-        this.staticValue = Input.empty();
+        this.name = Output.empty();
+        this.resourceValue = Output.empty();
+        this.staticValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> resourceValue;
-        private @Nullable Input<String> staticValue;
+        private Output<String> name;
+        private @Nullable Output<String> resourceValue;
+        private @Nullable Output<String> staticValue;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RemediationConfigurationParameterArgs extends io.pulumi.resou
     	      this.staticValue = defaults.staticValue;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceValue(@Nullable Input<String> resourceValue) {
+        public Builder resourceValue(@Nullable Output<String> resourceValue) {
             this.resourceValue = resourceValue;
             return this;
         }
 
         public Builder resourceValue(@Nullable String resourceValue) {
-            this.resourceValue = Input.ofNullable(resourceValue);
+            this.resourceValue = Output.ofNullable(resourceValue);
             return this;
         }
 
-        public Builder staticValue(@Nullable Input<String> staticValue) {
+        public Builder staticValue(@Nullable Output<String> staticValue) {
             this.staticValue = staticValue;
             return this;
         }
 
         public Builder staticValue(@Nullable String staticValue) {
-            this.staticValue = Input.ofNullable(staticValue);
+            this.staticValue = Output.ofNullable(staticValue);
             return this;
         }
         public RemediationConfigurationParameterArgs build() {

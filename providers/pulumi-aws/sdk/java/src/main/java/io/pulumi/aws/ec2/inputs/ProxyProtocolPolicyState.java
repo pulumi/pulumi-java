@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instancePorts")
-      private final @Nullable Input<List<String>> instancePorts;
+      private final @Nullable Output<List<String>> instancePorts;
 
-    public Input<List<String>> getInstancePorts() {
-        return this.instancePorts == null ? Input.empty() : this.instancePorts;
+    public Output<List<String>> getInstancePorts() {
+        return this.instancePorts == null ? Output.empty() : this.instancePorts;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="loadBalancer")
-      private final @Nullable Input<String> loadBalancer;
+      private final @Nullable Output<String> loadBalancer;
 
-    public Input<String> getLoadBalancer() {
-        return this.loadBalancer == null ? Input.empty() : this.loadBalancer;
+    public Output<String> getLoadBalancer() {
+        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
     }
 
     public ProxyProtocolPolicyState(
-        @Nullable Input<List<String>> instancePorts,
-        @Nullable Input<String> loadBalancer) {
+        @Nullable Output<List<String>> instancePorts,
+        @Nullable Output<String> loadBalancer) {
         this.instancePorts = instancePorts;
         this.loadBalancer = loadBalancer;
     }
 
     private ProxyProtocolPolicyState() {
-        this.instancePorts = Input.empty();
-        this.loadBalancer = Input.empty();
+        this.instancePorts = Output.empty();
+        this.loadBalancer = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> instancePorts;
-        private @Nullable Input<String> loadBalancer;
+        private @Nullable Output<List<String>> instancePorts;
+        private @Nullable Output<String> loadBalancer;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder instancePorts(@Nullable Input<List<String>> instancePorts) {
+        public Builder instancePorts(@Nullable Output<List<String>> instancePorts) {
             this.instancePorts = instancePorts;
             return this;
         }
 
         public Builder instancePorts(@Nullable List<String> instancePorts) {
-            this.instancePorts = Input.ofNullable(instancePorts);
+            this.instancePorts = Output.ofNullable(instancePorts);
             return this;
         }
 
-        public Builder loadBalancer(@Nullable Input<String> loadBalancer) {
+        public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
         public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Input.ofNullable(loadBalancer);
+            this.loadBalancer = Output.ofNullable(loadBalancer);
             return this;
         }
         public ProxyProtocolPolicyState build() {

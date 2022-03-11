@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-      private final Input<String> repositoryUrl;
+      private final Output<String> repositoryUrl;
 
-    public Input<String> getRepositoryUrl() {
+    public Output<String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -41,25 +41,25 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     public CodeRepositoryGitConfigGetArgs(
-        @Nullable Input<String> branch,
-        Input<String> repositoryUrl,
-        @Nullable Input<String> secretArn) {
+        @Nullable Output<String> branch,
+        Output<String> repositoryUrl,
+        @Nullable Output<String> secretArn) {
         this.branch = branch;
         this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
         this.secretArn = secretArn;
     }
 
     private CodeRepositoryGitConfigGetArgs() {
-        this.branch = Input.empty();
-        this.repositoryUrl = Input.empty();
-        this.secretArn = Input.empty();
+        this.branch = Output.empty();
+        this.repositoryUrl = Output.empty();
+        this.secretArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private Input<String> repositoryUrl;
-        private @Nullable Input<String> secretArn;
+        private @Nullable Output<String> branch;
+        private Output<String> repositoryUrl;
+        private @Nullable Output<String> secretArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder repositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
+            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
         public CodeRepositoryGitConfigGetArgs build() {

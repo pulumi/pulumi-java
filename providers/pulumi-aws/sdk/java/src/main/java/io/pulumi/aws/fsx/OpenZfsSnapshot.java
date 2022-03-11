@@ -6,7 +6,6 @@ package io.pulumi.aws.fsx;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.fsx.OpenZfsSnapshotArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsSnapshotState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -146,14 +145,14 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OpenZfsSnapshot(String name, OpenZfsSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/openZfsSnapshot:OpenZfsSnapshot", name, args == null ? OpenZfsSnapshotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:fsx/openZfsSnapshot:OpenZfsSnapshot", name, args == null ? OpenZfsSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OpenZfsSnapshot(String name, Input<String> id, @Nullable OpenZfsSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OpenZfsSnapshot(String name, Output<String> id, @Nullable OpenZfsSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:fsx/openZfsSnapshot:OpenZfsSnapshot", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -169,7 +168,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OpenZfsSnapshot get(String name, Input<String> id, @Nullable OpenZfsSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OpenZfsSnapshot get(String name, Output<String> id, @Nullable OpenZfsSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenZfsSnapshot(name, id, state, options);
     }
 }

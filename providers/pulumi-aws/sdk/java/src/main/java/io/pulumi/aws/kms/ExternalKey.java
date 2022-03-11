@@ -6,7 +6,6 @@ package io.pulumi.aws.kms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kms.ExternalKeyArgs;
 import io.pulumi.aws.kms.inputs.ExternalKeyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -267,14 +266,14 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExternalKey(String name, @Nullable ExternalKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/externalKey:ExternalKey", name, args == null ? ExternalKeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:kms/externalKey:ExternalKey", name, args == null ? ExternalKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ExternalKey(String name, Input<String> id, @Nullable ExternalKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ExternalKey(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:kms/externalKey:ExternalKey", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -290,7 +289,7 @@ public class ExternalKey extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExternalKey get(String name, Input<String> id, @Nullable ExternalKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ExternalKey get(String name, Output<String> id, @Nullable ExternalKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExternalKey(name, id, state, options);
     }
 }

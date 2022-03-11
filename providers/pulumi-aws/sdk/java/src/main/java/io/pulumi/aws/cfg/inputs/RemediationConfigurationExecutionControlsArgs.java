@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
      * 
      */
     @InputImport(name="ssmControls")
-      private final @Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
+      private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
-    public Input<RemediationConfigurationExecutionControlsSsmControlsArgs> getSsmControls() {
-        return this.ssmControls == null ? Input.empty() : this.ssmControls;
+    public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> getSsmControls() {
+        return this.ssmControls == null ? Output.empty() : this.ssmControls;
     }
 
-    public RemediationConfigurationExecutionControlsArgs(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
+    public RemediationConfigurationExecutionControlsArgs(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
         this.ssmControls = ssmControls;
     }
 
     private RemediationConfigurationExecutionControlsArgs() {
-        this.ssmControls = Input.empty();
+        this.ssmControls = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
+        private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
     	      this.ssmControls = defaults.ssmControls;
         }
 
-        public Builder ssmControls(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
+        public Builder ssmControls(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
             this.ssmControls = ssmControls;
             return this;
         }
 
         public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
-            this.ssmControls = Input.ofNullable(ssmControls);
+            this.ssmControls = Output.ofNullable(ssmControls);
             return this;
         }
         public RemediationConfigurationExecutionControlsArgs build() {

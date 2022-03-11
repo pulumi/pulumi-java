@@ -6,7 +6,6 @@ package io.pulumi.aws.route53;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.DelegationSetArgs;
 import io.pulumi.aws.route53.inputs.DelegationSetState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -115,14 +114,14 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DelegationSet(String name, @Nullable DelegationSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/delegationSet:DelegationSet", name, args == null ? DelegationSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53/delegationSet:DelegationSet", name, args == null ? DelegationSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DelegationSet(String name, Input<String> id, @Nullable DelegationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DelegationSet(String name, Output<String> id, @Nullable DelegationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53/delegationSet:DelegationSet", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -138,7 +137,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DelegationSet get(String name, Input<String> id, @Nullable DelegationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DelegationSet get(String name, Output<String> id, @Nullable DelegationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DelegationSet(name, id, state, options);
     }
 }

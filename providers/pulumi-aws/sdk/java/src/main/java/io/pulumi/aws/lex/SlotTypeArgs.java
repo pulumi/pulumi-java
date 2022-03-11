@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex;
 
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-      private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Output<Boolean> createVersion;
 
-    public Input<Boolean> getCreateVersion() {
-        return this.createVersion == null ? Input.empty() : this.createVersion;
+    public Output<Boolean> getCreateVersion() {
+        return this.createVersion == null ? Output.empty() : this.createVersion;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumerationValues", required=true)
-      private final Input<List<SlotTypeEnumerationValueArgs>> enumerationValues;
+      private final Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
-    public Input<List<SlotTypeEnumerationValueArgs>> getEnumerationValues() {
+    public Output<List<SlotTypeEnumerationValueArgs>> getEnumerationValues() {
         return this.enumerationValues;
     }
 
@@ -59,10 +59,10 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -73,18 +73,18 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueSelectionStrategy")
-      private final @Nullable Input<String> valueSelectionStrategy;
+      private final @Nullable Output<String> valueSelectionStrategy;
 
-    public Input<String> getValueSelectionStrategy() {
-        return this.valueSelectionStrategy == null ? Input.empty() : this.valueSelectionStrategy;
+    public Output<String> getValueSelectionStrategy() {
+        return this.valueSelectionStrategy == null ? Output.empty() : this.valueSelectionStrategy;
     }
 
     public SlotTypeArgs(
-        @Nullable Input<Boolean> createVersion,
-        @Nullable Input<String> description,
-        Input<List<SlotTypeEnumerationValueArgs>> enumerationValues,
-        @Nullable Input<String> name,
-        @Nullable Input<String> valueSelectionStrategy) {
+        @Nullable Output<Boolean> createVersion,
+        @Nullable Output<String> description,
+        Output<List<SlotTypeEnumerationValueArgs>> enumerationValues,
+        @Nullable Output<String> name,
+        @Nullable Output<String> valueSelectionStrategy) {
         this.createVersion = createVersion;
         this.description = description;
         this.enumerationValues = Objects.requireNonNull(enumerationValues, "expected parameter 'enumerationValues' to be non-null");
@@ -93,11 +93,11 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SlotTypeArgs() {
-        this.createVersion = Input.empty();
-        this.description = Input.empty();
-        this.enumerationValues = Input.empty();
-        this.name = Input.empty();
-        this.valueSelectionStrategy = Input.empty();
+        this.createVersion = Output.empty();
+        this.description = Output.empty();
+        this.enumerationValues = Output.empty();
+        this.name = Output.empty();
+        this.valueSelectionStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> createVersion;
-        private @Nullable Input<String> description;
-        private Input<List<SlotTypeEnumerationValueArgs>> enumerationValues;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> valueSelectionStrategy;
+        private @Nullable Output<Boolean> createVersion;
+        private @Nullable Output<String> description;
+        private Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> valueSelectionStrategy;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueSelectionStrategy = defaults.valueSelectionStrategy;
         }
 
-        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Output<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
         public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Input.ofNullable(createVersion);
+            this.createVersion = Output.ofNullable(createVersion);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enumerationValues(Input<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
+        public Builder enumerationValues(Output<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
             this.enumerationValues = Objects.requireNonNull(enumerationValues);
             return this;
         }
 
         public Builder enumerationValues(List<SlotTypeEnumerationValueArgs> enumerationValues) {
-            this.enumerationValues = Input.of(Objects.requireNonNull(enumerationValues));
+            this.enumerationValues = Output.of(Objects.requireNonNull(enumerationValues));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder valueSelectionStrategy(@Nullable Input<String> valueSelectionStrategy) {
+        public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
             this.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
 
         public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
-            this.valueSelectionStrategy = Input.ofNullable(valueSelectionStrategy);
+            this.valueSelectionStrategy = Output.ofNullable(valueSelectionStrategy);
             return this;
         }
         public SlotTypeArgs build() {

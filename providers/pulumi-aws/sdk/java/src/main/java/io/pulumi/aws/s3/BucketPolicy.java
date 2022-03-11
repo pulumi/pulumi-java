@@ -6,7 +6,6 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3.BucketPolicyArgs;
 import io.pulumi.aws.s3.inputs.BucketPolicyState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -96,14 +95,14 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketPolicy(String name, BucketPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:s3/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private BucketPolicy(String name, Input<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private BucketPolicy(String name, Output<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:s3/bucketPolicy:BucketPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -119,7 +118,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BucketPolicy get(String name, Input<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static BucketPolicy get(String name, Output<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BucketPolicy(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @InputImport(name="forwardWhenQueryArgProfileIsUnknown", required=true)
-      private final Input<Boolean> forwardWhenQueryArgProfileIsUnknown;
+      private final Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
-    public Input<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
+    public Output<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
     }
 
@@ -31,22 +31,22 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @InputImport(name="queryArgProfiles")
-      private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
+      private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
-    public Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> getQueryArgProfiles() {
-        return this.queryArgProfiles == null ? Input.empty() : this.queryArgProfiles;
+    public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> getQueryArgProfiles() {
+        return this.queryArgProfiles == null ? Output.empty() : this.queryArgProfiles;
     }
 
     public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs(
-        Input<Boolean> forwardWhenQueryArgProfileIsUnknown,
-        @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
+        Output<Boolean> forwardWhenQueryArgProfileIsUnknown,
+        @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
         this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown, "expected parameter 'forwardWhenQueryArgProfileIsUnknown' to be non-null");
         this.queryArgProfiles = queryArgProfiles;
     }
 
     private FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs() {
-        this.forwardWhenQueryArgProfileIsUnknown = Input.empty();
-        this.queryArgProfiles = Input.empty();
+        this.forwardWhenQueryArgProfileIsUnknown = Output.empty();
+        this.queryArgProfiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
     }
 
     public static final class Builder {
-        private Input<Boolean> forwardWhenQueryArgProfileIsUnknown;
-        private @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
+        private Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
+        private @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
     	      this.queryArgProfiles = defaults.queryArgProfiles;
         }
 
-        public Builder forwardWhenQueryArgProfileIsUnknown(Input<Boolean> forwardWhenQueryArgProfileIsUnknown) {
+        public Builder forwardWhenQueryArgProfileIsUnknown(Output<Boolean> forwardWhenQueryArgProfileIsUnknown) {
             this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown);
             return this;
         }
 
         public Builder forwardWhenQueryArgProfileIsUnknown(Boolean forwardWhenQueryArgProfileIsUnknown) {
-            this.forwardWhenQueryArgProfileIsUnknown = Input.of(Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown));
+            this.forwardWhenQueryArgProfileIsUnknown = Output.of(Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown));
             return this;
         }
 
-        public Builder queryArgProfiles(@Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
+        public Builder queryArgProfiles(@Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles) {
             this.queryArgProfiles = queryArgProfiles;
             return this;
         }
 
         public Builder queryArgProfiles(@Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs queryArgProfiles) {
-            this.queryArgProfiles = Input.ofNullable(queryArgProfiles);
+            this.queryArgProfiles = Output.ofNullable(queryArgProfiles);
             return this;
         }
         public FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs build() {

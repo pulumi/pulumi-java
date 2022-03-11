@@ -6,7 +6,7 @@ package io.pulumi.aws.redshift.inputs;
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionPauseClusterGetArgs;
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResizeClusterGetArgs;
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResumeClusterGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,10 +21,10 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pauseCluster")
-      private final @Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
+      private final @Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
 
-    public Input<ScheduledActionTargetActionPauseClusterGetArgs> getPauseCluster() {
-        return this.pauseCluster == null ? Input.empty() : this.pauseCluster;
+    public Output<ScheduledActionTargetActionPauseClusterGetArgs> getPauseCluster() {
+        return this.pauseCluster == null ? Output.empty() : this.pauseCluster;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resizeCluster")
-      private final @Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
+      private final @Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
 
-    public Input<ScheduledActionTargetActionResizeClusterGetArgs> getResizeCluster() {
-        return this.resizeCluster == null ? Input.empty() : this.resizeCluster;
+    public Output<ScheduledActionTargetActionResizeClusterGetArgs> getResizeCluster() {
+        return this.resizeCluster == null ? Output.empty() : this.resizeCluster;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resumeCluster")
-      private final @Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
+      private final @Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
 
-    public Input<ScheduledActionTargetActionResumeClusterGetArgs> getResumeCluster() {
-        return this.resumeCluster == null ? Input.empty() : this.resumeCluster;
+    public Output<ScheduledActionTargetActionResumeClusterGetArgs> getResumeCluster() {
+        return this.resumeCluster == null ? Output.empty() : this.resumeCluster;
     }
 
     public ScheduledActionTargetActionGetArgs(
-        @Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster,
-        @Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster,
-        @Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
+        @Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster,
+        @Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster,
+        @Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;
     }
 
     private ScheduledActionTargetActionGetArgs() {
-        this.pauseCluster = Input.empty();
-        this.resizeCluster = Input.empty();
-        this.resumeCluster = Input.empty();
+        this.pauseCluster = Output.empty();
+        this.resizeCluster = Output.empty();
+        this.resumeCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
-        private @Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
-        private @Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
+        private @Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
+        private @Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
+        private @Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder pauseCluster(@Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster) {
+        public Builder pauseCluster(@Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
         public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseClusterGetArgs pauseCluster) {
-            this.pauseCluster = Input.ofNullable(pauseCluster);
+            this.pauseCluster = Output.ofNullable(pauseCluster);
             return this;
         }
 
-        public Builder resizeCluster(@Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster) {
+        public Builder resizeCluster(@Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
         public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeClusterGetArgs resizeCluster) {
-            this.resizeCluster = Input.ofNullable(resizeCluster);
+            this.resizeCluster = Output.ofNullable(resizeCluster);
             return this;
         }
 
-        public Builder resumeCluster(@Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
+        public Builder resumeCluster(@Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }
 
         public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeClusterGetArgs resumeCluster) {
-            this.resumeCluster = Input.ofNullable(resumeCluster);
+            this.resumeCluster = Output.ofNullable(resumeCluster);
             return this;
         }
         public ScheduledActionTargetActionGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="assumeRole")
-      private final @Nullable Input<String> assumeRole;
+      private final @Nullable Output<String> assumeRole;
 
-    public Input<String> getAssumeRole() {
-        return this.assumeRole == null ? Input.empty() : this.assumeRole;
+    public Output<String> getAssumeRole() {
+        return this.assumeRole == null ? Output.empty() : this.assumeRole;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -41,10 +41,10 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<String> parameters;
+      private final @Nullable Output<String> parameters;
 
-    public Input<String> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<String> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public ServiceActionDefinitionGetArgs(
-        @Nullable Input<String> assumeRole,
-        Input<String> name,
-        @Nullable Input<String> parameters,
-        @Nullable Input<String> type,
-        Input<String> version) {
+        @Nullable Output<String> assumeRole,
+        Output<String> name,
+        @Nullable Output<String> parameters,
+        @Nullable Output<String> type,
+        Output<String> version) {
         this.assumeRole = assumeRole;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.parameters = parameters;
@@ -83,11 +83,11 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     }
 
     private ServiceActionDefinitionGetArgs() {
-        this.assumeRole = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.assumeRole = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assumeRole;
-        private Input<String> name;
-        private @Nullable Input<String> parameters;
-        private @Nullable Input<String> type;
-        private Input<String> version;
+        private @Nullable Output<String> assumeRole;
+        private Output<String> name;
+        private @Nullable Output<String> parameters;
+        private @Nullable Output<String> type;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder assumeRole(@Nullable Input<String> assumeRole) {
+        public Builder assumeRole(@Nullable Output<String> assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
 
         public Builder assumeRole(@Nullable String assumeRole) {
-            this.assumeRole = Input.ofNullable(assumeRole);
+            this.assumeRole = Output.ofNullable(assumeRole);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Output<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public ServiceActionDefinitionGetArgs build() {

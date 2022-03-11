@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="invitationArn")
-      private final @Nullable Input<String> invitationArn;
+      private final @Nullable Output<String> invitationArn;
 
-    public Input<String> getInvitationArn() {
-        return this.invitationArn == null ? Input.empty() : this.invitationArn;
+    public Output<String> getInvitationArn() {
+        return this.invitationArn == null ? Output.empty() : this.invitationArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="receiverAccountId")
-      private final @Nullable Input<String> receiverAccountId;
+      private final @Nullable Output<String> receiverAccountId;
 
-    public Input<String> getReceiverAccountId() {
-        return this.receiverAccountId == null ? Input.empty() : this.receiverAccountId;
+    public Output<String> getReceiverAccountId() {
+        return this.receiverAccountId == null ? Output.empty() : this.receiverAccountId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="senderAccountId")
-      private final @Nullable Input<String> senderAccountId;
+      private final @Nullable Output<String> senderAccountId;
 
-    public Input<String> getSenderAccountId() {
-        return this.senderAccountId == null ? Input.empty() : this.senderAccountId;
+    public Output<String> getSenderAccountId() {
+        return this.senderAccountId == null ? Output.empty() : this.senderAccountId;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareArn")
-      private final @Nullable Input<String> shareArn;
+      private final @Nullable Output<String> shareArn;
 
-    public Input<String> getShareArn() {
-        return this.shareArn == null ? Input.empty() : this.shareArn;
+    public Output<String> getShareArn() {
+        return this.shareArn == null ? Output.empty() : this.shareArn;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareId")
-      private final @Nullable Input<String> shareId;
+      private final @Nullable Output<String> shareId;
 
-    public Input<String> getShareId() {
-        return this.shareId == null ? Input.empty() : this.shareId;
+    public Output<String> getShareId() {
+        return this.shareId == null ? Output.empty() : this.shareId;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="shareName")
-      private final @Nullable Input<String> shareName;
+      private final @Nullable Output<String> shareName;
 
-    public Input<String> getShareName() {
-        return this.shareName == null ? Input.empty() : this.shareName;
+    public Output<String> getShareName() {
+        return this.shareName == null ? Output.empty() : this.shareName;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ResourceShareAccepterState(
-        @Nullable Input<String> invitationArn,
-        @Nullable Input<String> receiverAccountId,
-        @Nullable Input<List<String>> resources,
-        @Nullable Input<String> senderAccountId,
-        @Nullable Input<String> shareArn,
-        @Nullable Input<String> shareId,
-        @Nullable Input<String> shareName,
-        @Nullable Input<String> status) {
+        @Nullable Output<String> invitationArn,
+        @Nullable Output<String> receiverAccountId,
+        @Nullable Output<List<String>> resources,
+        @Nullable Output<String> senderAccountId,
+        @Nullable Output<String> shareArn,
+        @Nullable Output<String> shareId,
+        @Nullable Output<String> shareName,
+        @Nullable Output<String> status) {
         this.invitationArn = invitationArn;
         this.receiverAccountId = receiverAccountId;
         this.resources = resources;
@@ -123,14 +123,14 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     }
 
     private ResourceShareAccepterState() {
-        this.invitationArn = Input.empty();
-        this.receiverAccountId = Input.empty();
-        this.resources = Input.empty();
-        this.senderAccountId = Input.empty();
-        this.shareArn = Input.empty();
-        this.shareId = Input.empty();
-        this.shareName = Input.empty();
-        this.status = Input.empty();
+        this.invitationArn = Output.empty();
+        this.receiverAccountId = Output.empty();
+        this.resources = Output.empty();
+        this.senderAccountId = Output.empty();
+        this.shareArn = Output.empty();
+        this.shareId = Output.empty();
+        this.shareName = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> invitationArn;
-        private @Nullable Input<String> receiverAccountId;
-        private @Nullable Input<List<String>> resources;
-        private @Nullable Input<String> senderAccountId;
-        private @Nullable Input<String> shareArn;
-        private @Nullable Input<String> shareId;
-        private @Nullable Input<String> shareName;
-        private @Nullable Input<String> status;
+        private @Nullable Output<String> invitationArn;
+        private @Nullable Output<String> receiverAccountId;
+        private @Nullable Output<List<String>> resources;
+        private @Nullable Output<String> senderAccountId;
+        private @Nullable Output<String> shareArn;
+        private @Nullable Output<String> shareId;
+        private @Nullable Output<String> shareName;
+        private @Nullable Output<String> status;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     	      this.status = defaults.status;
         }
 
-        public Builder invitationArn(@Nullable Input<String> invitationArn) {
+        public Builder invitationArn(@Nullable Output<String> invitationArn) {
             this.invitationArn = invitationArn;
             return this;
         }
 
         public Builder invitationArn(@Nullable String invitationArn) {
-            this.invitationArn = Input.ofNullable(invitationArn);
+            this.invitationArn = Output.ofNullable(invitationArn);
             return this;
         }
 
-        public Builder receiverAccountId(@Nullable Input<String> receiverAccountId) {
+        public Builder receiverAccountId(@Nullable Output<String> receiverAccountId) {
             this.receiverAccountId = receiverAccountId;
             return this;
         }
 
         public Builder receiverAccountId(@Nullable String receiverAccountId) {
-            this.receiverAccountId = Input.ofNullable(receiverAccountId);
+            this.receiverAccountId = Output.ofNullable(receiverAccountId);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder senderAccountId(@Nullable Input<String> senderAccountId) {
+        public Builder senderAccountId(@Nullable Output<String> senderAccountId) {
             this.senderAccountId = senderAccountId;
             return this;
         }
 
         public Builder senderAccountId(@Nullable String senderAccountId) {
-            this.senderAccountId = Input.ofNullable(senderAccountId);
+            this.senderAccountId = Output.ofNullable(senderAccountId);
             return this;
         }
 
-        public Builder shareArn(@Nullable Input<String> shareArn) {
+        public Builder shareArn(@Nullable Output<String> shareArn) {
             this.shareArn = shareArn;
             return this;
         }
 
         public Builder shareArn(@Nullable String shareArn) {
-            this.shareArn = Input.ofNullable(shareArn);
+            this.shareArn = Output.ofNullable(shareArn);
             return this;
         }
 
-        public Builder shareId(@Nullable Input<String> shareId) {
+        public Builder shareId(@Nullable Output<String> shareId) {
             this.shareId = shareId;
             return this;
         }
 
         public Builder shareId(@Nullable String shareId) {
-            this.shareId = Input.ofNullable(shareId);
+            this.shareId = Output.ofNullable(shareId);
             return this;
         }
 
-        public Builder shareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Output<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Input.ofNullable(shareName);
+            this.shareName = Output.ofNullable(shareName);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ResourceShareAccepterState build() {

@@ -6,7 +6,6 @@ package io.pulumi.aws.route53recoveryreadiness;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoveryreadiness.ReadinessCheckArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ReadinessCheckState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -139,14 +138,14 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReadinessCheck(String name, ReadinessCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53recoveryreadiness/readinessCheck:ReadinessCheck", name, args == null ? ReadinessCheckArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:route53recoveryreadiness/readinessCheck:ReadinessCheck", name, args == null ? ReadinessCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ReadinessCheck(String name, Input<String> id, @Nullable ReadinessCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ReadinessCheck(String name, Output<String> id, @Nullable ReadinessCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:route53recoveryreadiness/readinessCheck:ReadinessCheck", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -162,7 +161,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ReadinessCheck get(String name, Input<String> id, @Nullable ReadinessCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ReadinessCheck get(String name, Output<String> id, @Nullable ReadinessCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReadinessCheck(name, id, state, options);
     }
 }

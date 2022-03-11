@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
     public static final OntapVolumeTieringPolicyArgs Empty = new OntapVolumeTieringPolicyArgs();
 
     @InputImport(name="coolingPeriod")
-      private final @Nullable Input<Integer> coolingPeriod;
+      private final @Nullable Output<Integer> coolingPeriod;
 
-    public Input<Integer> getCoolingPeriod() {
-        return this.coolingPeriod == null ? Input.empty() : this.coolingPeriod;
+    public Output<Integer> getCoolingPeriod() {
+        return this.coolingPeriod == null ? Output.empty() : this.coolingPeriod;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public OntapVolumeTieringPolicyArgs(
-        @Nullable Input<Integer> coolingPeriod,
-        @Nullable Input<String> name) {
+        @Nullable Output<Integer> coolingPeriod,
+        @Nullable Output<String> name) {
         this.coolingPeriod = coolingPeriod;
         this.name = name;
     }
 
     private OntapVolumeTieringPolicyArgs() {
-        this.coolingPeriod = Input.empty();
-        this.name = Input.empty();
+        this.coolingPeriod = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> coolingPeriod;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Integer> coolingPeriod;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder coolingPeriod(@Nullable Input<Integer> coolingPeriod) {
+        public Builder coolingPeriod(@Nullable Output<Integer> coolingPeriod) {
             this.coolingPeriod = coolingPeriod;
             return this;
         }
 
         public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
-            this.coolingPeriod = Input.ofNullable(coolingPeriod);
+            this.coolingPeriod = Output.ofNullable(coolingPeriod);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public OntapVolumeTieringPolicyArgs build() {

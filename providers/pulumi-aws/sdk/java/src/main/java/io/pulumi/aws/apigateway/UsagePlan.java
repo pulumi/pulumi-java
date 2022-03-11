@@ -9,7 +9,6 @@ import io.pulumi.aws.apigateway.inputs.UsagePlanState;
 import io.pulumi.aws.apigateway.outputs.UsagePlanApiStage;
 import io.pulumi.aws.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.aws.apigateway.outputs.UsagePlanThrottleSettings;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,14 +198,14 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlan(String name, @Nullable UsagePlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/usagePlan:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:apigateway/usagePlan:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private UsagePlan(String name, Input<String> id, @Nullable UsagePlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private UsagePlan(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:apigateway/usagePlan:UsagePlan", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -222,7 +221,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UsagePlan get(String name, Input<String> id, @Nullable UsagePlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static UsagePlan get(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UsagePlan(name, id, state, options);
     }
 }

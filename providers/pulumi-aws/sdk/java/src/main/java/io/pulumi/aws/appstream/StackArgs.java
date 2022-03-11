@@ -7,7 +7,7 @@ import io.pulumi.aws.appstream.inputs.StackAccessEndpointArgs;
 import io.pulumi.aws.appstream.inputs.StackApplicationSettingsArgs;
 import io.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
 import io.pulumi.aws.appstream.inputs.StackUserSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     public static final StackArgs Empty = new StackArgs();
 
     @InputImport(name="accessEndpoints")
-      private final @Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints;
+      private final @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
-    public Input<List<StackAccessEndpointArgs>> getAccessEndpoints() {
-        return this.accessEndpoints == null ? Input.empty() : this.accessEndpoints;
+    public Output<List<StackAccessEndpointArgs>> getAccessEndpoints() {
+        return this.accessEndpoints == null ? Output.empty() : this.accessEndpoints;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSettings")
-      private final @Nullable Input<StackApplicationSettingsArgs> applicationSettings;
+      private final @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
-    public Input<StackApplicationSettingsArgs> getApplicationSettings() {
-        return this.applicationSettings == null ? Input.empty() : this.applicationSettings;
+    public Output<StackApplicationSettingsArgs> getApplicationSettings() {
+        return this.applicationSettings == null ? Output.empty() : this.applicationSettings;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="embedHostDomains")
-      private final @Nullable Input<List<String>> embedHostDomains;
+      private final @Nullable Output<List<String>> embedHostDomains;
 
-    public Input<List<String>> getEmbedHostDomains() {
-        return this.embedHostDomains == null ? Input.empty() : this.embedHostDomains;
+    public Output<List<String>> getEmbedHostDomains() {
+        return this.embedHostDomains == null ? Output.empty() : this.embedHostDomains;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedbackUrl")
-      private final @Nullable Input<String> feedbackUrl;
+      private final @Nullable Output<String> feedbackUrl;
 
-    public Input<String> getFeedbackUrl() {
-        return this.feedbackUrl == null ? Input.empty() : this.feedbackUrl;
+    public Output<String> getFeedbackUrl() {
+        return this.feedbackUrl == null ? Output.empty() : this.feedbackUrl;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectUrl")
-      private final @Nullable Input<String> redirectUrl;
+      private final @Nullable Output<String> redirectUrl;
 
-    public Input<String> getRedirectUrl() {
-        return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
+    public Output<String> getRedirectUrl() {
+        return this.redirectUrl == null ? Output.empty() : this.redirectUrl;
     }
 
     /**
@@ -109,17 +109,17 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageConnectors")
-      private final @Nullable Input<List<StackStorageConnectorArgs>> storageConnectors;
+      private final @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
-    public Input<List<StackStorageConnectorArgs>> getStorageConnectors() {
-        return this.storageConnectors == null ? Input.empty() : this.storageConnectors;
+    public Output<List<StackStorageConnectorArgs>> getStorageConnectors() {
+        return this.storageConnectors == null ? Output.empty() : this.storageConnectors;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -127,24 +127,24 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-      private final @Nullable Input<List<StackUserSettingArgs>> userSettings;
+      private final @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
-    public Input<List<StackUserSettingArgs>> getUserSettings() {
-        return this.userSettings == null ? Input.empty() : this.userSettings;
+    public Output<List<StackUserSettingArgs>> getUserSettings() {
+        return this.userSettings == null ? Output.empty() : this.userSettings;
     }
 
     public StackArgs(
-        @Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints,
-        @Nullable Input<StackApplicationSettingsArgs> applicationSettings,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<String>> embedHostDomains,
-        @Nullable Input<String> feedbackUrl,
-        @Nullable Input<String> name,
-        @Nullable Input<String> redirectUrl,
-        @Nullable Input<List<StackStorageConnectorArgs>> storageConnectors,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<StackUserSettingArgs>> userSettings) {
+        @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints,
+        @Nullable Output<StackApplicationSettingsArgs> applicationSettings,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<String>> embedHostDomains,
+        @Nullable Output<String> feedbackUrl,
+        @Nullable Output<String> name,
+        @Nullable Output<String> redirectUrl,
+        @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<StackUserSettingArgs>> userSettings) {
         this.accessEndpoints = accessEndpoints;
         this.applicationSettings = applicationSettings;
         this.description = description;
@@ -159,17 +159,17 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackArgs() {
-        this.accessEndpoints = Input.empty();
-        this.applicationSettings = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.embedHostDomains = Input.empty();
-        this.feedbackUrl = Input.empty();
-        this.name = Input.empty();
-        this.redirectUrl = Input.empty();
-        this.storageConnectors = Input.empty();
-        this.tags = Input.empty();
-        this.userSettings = Input.empty();
+        this.accessEndpoints = Output.empty();
+        this.applicationSettings = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.embedHostDomains = Output.empty();
+        this.feedbackUrl = Output.empty();
+        this.name = Output.empty();
+        this.redirectUrl = Output.empty();
+        this.storageConnectors = Output.empty();
+        this.tags = Output.empty();
+        this.userSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,17 +181,17 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints;
-        private @Nullable Input<StackApplicationSettingsArgs> applicationSettings;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<String>> embedHostDomains;
-        private @Nullable Input<String> feedbackUrl;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> redirectUrl;
-        private @Nullable Input<List<StackStorageConnectorArgs>> storageConnectors;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<StackUserSettingArgs>> userSettings;
+        private @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
+        private @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<String>> embedHostDomains;
+        private @Nullable Output<String> feedbackUrl;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> redirectUrl;
+        private @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
         public Builder() {
     	      // Empty
@@ -212,113 +212,113 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder accessEndpoints(@Nullable Input<List<StackAccessEndpointArgs>> accessEndpoints) {
+        public Builder accessEndpoints(@Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints) {
             this.accessEndpoints = accessEndpoints;
             return this;
         }
 
         public Builder accessEndpoints(@Nullable List<StackAccessEndpointArgs> accessEndpoints) {
-            this.accessEndpoints = Input.ofNullable(accessEndpoints);
+            this.accessEndpoints = Output.ofNullable(accessEndpoints);
             return this;
         }
 
-        public Builder applicationSettings(@Nullable Input<StackApplicationSettingsArgs> applicationSettings) {
+        public Builder applicationSettings(@Nullable Output<StackApplicationSettingsArgs> applicationSettings) {
             this.applicationSettings = applicationSettings;
             return this;
         }
 
         public Builder applicationSettings(@Nullable StackApplicationSettingsArgs applicationSettings) {
-            this.applicationSettings = Input.ofNullable(applicationSettings);
+            this.applicationSettings = Output.ofNullable(applicationSettings);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder embedHostDomains(@Nullable Input<List<String>> embedHostDomains) {
+        public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
             this.embedHostDomains = embedHostDomains;
             return this;
         }
 
         public Builder embedHostDomains(@Nullable List<String> embedHostDomains) {
-            this.embedHostDomains = Input.ofNullable(embedHostDomains);
+            this.embedHostDomains = Output.ofNullable(embedHostDomains);
             return this;
         }
 
-        public Builder feedbackUrl(@Nullable Input<String> feedbackUrl) {
+        public Builder feedbackUrl(@Nullable Output<String> feedbackUrl) {
             this.feedbackUrl = feedbackUrl;
             return this;
         }
 
         public Builder feedbackUrl(@Nullable String feedbackUrl) {
-            this.feedbackUrl = Input.ofNullable(feedbackUrl);
+            this.feedbackUrl = Output.ofNullable(feedbackUrl);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder redirectUrl(@Nullable Input<String> redirectUrl) {
+        public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Input.ofNullable(redirectUrl);
+            this.redirectUrl = Output.ofNullable(redirectUrl);
             return this;
         }
 
-        public Builder storageConnectors(@Nullable Input<List<StackStorageConnectorArgs>> storageConnectors) {
+        public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorArgs>> storageConnectors) {
             this.storageConnectors = storageConnectors;
             return this;
         }
 
         public Builder storageConnectors(@Nullable List<StackStorageConnectorArgs> storageConnectors) {
-            this.storageConnectors = Input.ofNullable(storageConnectors);
+            this.storageConnectors = Output.ofNullable(storageConnectors);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userSettings(@Nullable Input<List<StackUserSettingArgs>> userSettings) {
+        public Builder userSettings(@Nullable Output<List<StackUserSettingArgs>> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
 
         public Builder userSettings(@Nullable List<StackUserSettingArgs> userSettings) {
-            this.userSettings = Input.ofNullable(userSettings);
+            this.userSettings = Output.ofNullable(userSettings);
             return this;
         }
         public StackArgs build() {

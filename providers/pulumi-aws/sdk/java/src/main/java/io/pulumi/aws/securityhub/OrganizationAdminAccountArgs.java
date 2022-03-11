@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="adminAccountId", required=true)
-      private final Input<String> adminAccountId;
+      private final Output<String> adminAccountId;
 
-    public Input<String> getAdminAccountId() {
+    public Output<String> getAdminAccountId() {
         return this.adminAccountId;
     }
 
-    public OrganizationAdminAccountArgs(Input<String> adminAccountId) {
+    public OrganizationAdminAccountArgs(Output<String> adminAccountId) {
         this.adminAccountId = Objects.requireNonNull(adminAccountId, "expected parameter 'adminAccountId' to be non-null");
     }
 
     private OrganizationAdminAccountArgs() {
-        this.adminAccountId = Input.empty();
+        this.adminAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> adminAccountId;
+        private Output<String> adminAccountId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
     	      this.adminAccountId = defaults.adminAccountId;
         }
 
-        public Builder adminAccountId(Input<String> adminAccountId) {
+        public Builder adminAccountId(Output<String> adminAccountId) {
             this.adminAccountId = Objects.requireNonNull(adminAccountId);
             return this;
         }
 
         public Builder adminAccountId(String adminAccountId) {
-            this.adminAccountId = Input.of(Objects.requireNonNull(adminAccountId));
+            this.adminAccountId = Output.of(Objects.requireNonNull(adminAccountId));
             return this;
         }
         public OrganizationAdminAccountArgs build() {

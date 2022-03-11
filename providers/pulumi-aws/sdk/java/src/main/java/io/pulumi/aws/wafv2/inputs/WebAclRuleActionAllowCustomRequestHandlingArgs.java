@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class WebAclRuleActionAllowCustomRequestHandlingArgs extends io.pul
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-      private final Input<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
+      private final Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
-    public Input<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
+    public Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
         return this.insertHeaders;
     }
 
-    public WebAclRuleActionAllowCustomRequestHandlingArgs(Input<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
+    public WebAclRuleActionAllowCustomRequestHandlingArgs(Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
         this.insertHeaders = Objects.requireNonNull(insertHeaders, "expected parameter 'insertHeaders' to be non-null");
     }
 
     private WebAclRuleActionAllowCustomRequestHandlingArgs() {
-        this.insertHeaders = Input.empty();
+        this.insertHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
+        private Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WebAclRuleActionAllowCustomRequestHandlingArgs extends io.pul
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder insertHeaders(Input<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
+        public Builder insertHeaders(Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
         public Builder insertHeaders(List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs> insertHeaders) {
-            this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
+            this.insertHeaders = Output.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
         public WebAclRuleActionAllowCustomRequestHandlingArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.aws.globalaccelerator.EndpointGroupArgs;
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupState;
 import io.pulumi.aws.globalaccelerator.outputs.EndpointGroupEndpointConfiguration;
 import io.pulumi.aws.globalaccelerator.outputs.EndpointGroupPortOverride;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -229,14 +228,14 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointGroup(String name, EndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:globalaccelerator/endpointGroup:EndpointGroup", name, args == null ? EndpointGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:globalaccelerator/endpointGroup:EndpointGroup", name, args == null ? EndpointGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EndpointGroup(String name, Input<String> id, @Nullable EndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EndpointGroup(String name, Output<String> id, @Nullable EndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:globalaccelerator/endpointGroup:EndpointGroup", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -252,7 +251,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EndpointGroup get(String name, Input<String> id, @Nullable EndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EndpointGroup get(String name, Output<String> id, @Nullable EndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EndpointGroup(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="destinationRegion", required=true)
-      private final Input<String> destinationRegion;
+      private final Output<String> destinationRegion;
 
-    public Input<String> getDestinationRegion() {
+    public Output<String> getDestinationRegion() {
         return this.destinationRegion;
     }
 
@@ -31,10 +31,10 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="grantName")
-      private final @Nullable Input<String> grantName;
+      private final @Nullable Output<String> grantName;
 
-    public Input<String> getGrantName() {
-        return this.grantName == null ? Input.empty() : this.grantName;
+    public Output<String> getGrantName() {
+        return this.grantName == null ? Output.empty() : this.grantName;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retentionPeriod")
-      private final @Nullable Input<Integer> retentionPeriod;
+      private final @Nullable Output<Integer> retentionPeriod;
 
-    public Input<Integer> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
+    public Output<Integer> getRetentionPeriod() {
+        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
     public ClusterSnapshotCopyArgs(
-        Input<String> destinationRegion,
-        @Nullable Input<String> grantName,
-        @Nullable Input<Integer> retentionPeriod) {
+        Output<String> destinationRegion,
+        @Nullable Output<String> grantName,
+        @Nullable Output<Integer> retentionPeriod) {
         this.destinationRegion = Objects.requireNonNull(destinationRegion, "expected parameter 'destinationRegion' to be non-null");
         this.grantName = grantName;
         this.retentionPeriod = retentionPeriod;
     }
 
     private ClusterSnapshotCopyArgs() {
-        this.destinationRegion = Input.empty();
-        this.grantName = Input.empty();
-        this.retentionPeriod = Input.empty();
+        this.destinationRegion = Output.empty();
+        this.grantName = Output.empty();
+        this.retentionPeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> destinationRegion;
-        private @Nullable Input<String> grantName;
-        private @Nullable Input<Integer> retentionPeriod;
+        private Output<String> destinationRegion;
+        private @Nullable Output<String> grantName;
+        private @Nullable Output<Integer> retentionPeriod;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder destinationRegion(Input<String> destinationRegion) {
+        public Builder destinationRegion(Output<String> destinationRegion) {
             this.destinationRegion = Objects.requireNonNull(destinationRegion);
             return this;
         }
 
         public Builder destinationRegion(String destinationRegion) {
-            this.destinationRegion = Input.of(Objects.requireNonNull(destinationRegion));
+            this.destinationRegion = Output.of(Objects.requireNonNull(destinationRegion));
             return this;
         }
 
-        public Builder grantName(@Nullable Input<String> grantName) {
+        public Builder grantName(@Nullable Output<String> grantName) {
             this.grantName = grantName;
             return this;
         }
 
         public Builder grantName(@Nullable String grantName) {
-            this.grantName = Input.ofNullable(grantName);
+            this.grantName = Output.ofNullable(grantName);
             return this;
         }
 
-        public Builder retentionPeriod(@Nullable Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Input.ofNullable(retentionPeriod);
+            this.retentionPeriod = Output.ofNullable(retentionPeriod);
             return this;
         }
         public ClusterSnapshotCopyArgs build() {

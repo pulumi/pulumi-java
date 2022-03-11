@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
-    public EmailIdentityArgs(Input<String> email) {
+    public EmailIdentityArgs(Output<String> email) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
     }
 
     private EmailIdentityArgs() {
-        this.email = Input.empty();
+        this.email = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> email;
+        private Output<String> email;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.email = defaults.email;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
         public EmailIdentityArgs build() {

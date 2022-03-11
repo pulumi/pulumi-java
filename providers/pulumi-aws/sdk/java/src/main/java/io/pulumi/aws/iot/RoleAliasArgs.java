@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias", required=true)
-      private final Input<String> alias;
+      private final Output<String> alias;
 
-    public Input<String> getAlias() {
+    public Output<String> getAlias() {
         return this.alias;
     }
 
@@ -31,10 +31,10 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialDuration")
-      private final @Nullable Input<Integer> credentialDuration;
+      private final @Nullable Output<Integer> credentialDuration;
 
-    public Input<Integer> getCredentialDuration() {
-        return this.credentialDuration == null ? Input.empty() : this.credentialDuration;
+    public Output<Integer> getCredentialDuration() {
+        return this.credentialDuration == null ? Output.empty() : this.credentialDuration;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public RoleAliasArgs(
-        Input<String> alias,
-        @Nullable Input<Integer> credentialDuration,
-        Input<String> roleArn) {
+        Output<String> alias,
+        @Nullable Output<Integer> credentialDuration,
+        Output<String> roleArn) {
         this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
         this.credentialDuration = credentialDuration;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private RoleAliasArgs() {
-        this.alias = Input.empty();
-        this.credentialDuration = Input.empty();
-        this.roleArn = Input.empty();
+        this.alias = Output.empty();
+        this.credentialDuration = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> alias;
-        private @Nullable Input<Integer> credentialDuration;
-        private Input<String> roleArn;
+        private Output<String> alias;
+        private @Nullable Output<Integer> credentialDuration;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder alias(Input<String> alias) {
+        public Builder alias(Output<String> alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
         public Builder alias(String alias) {
-            this.alias = Input.of(Objects.requireNonNull(alias));
+            this.alias = Output.of(Objects.requireNonNull(alias));
             return this;
         }
 
-        public Builder credentialDuration(@Nullable Input<Integer> credentialDuration) {
+        public Builder credentialDuration(@Nullable Output<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
 
         public Builder credentialDuration(@Nullable Integer credentialDuration) {
-            this.credentialDuration = Input.ofNullable(credentialDuration);
+            this.credentialDuration = Output.ofNullable(credentialDuration);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public RoleAliasArgs build() {

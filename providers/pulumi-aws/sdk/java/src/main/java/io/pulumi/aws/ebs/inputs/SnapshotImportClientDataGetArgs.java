@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="uploadEnd")
-      private final @Nullable Input<String> uploadEnd;
+      private final @Nullable Output<String> uploadEnd;
 
-    public Input<String> getUploadEnd() {
-        return this.uploadEnd == null ? Input.empty() : this.uploadEnd;
+    public Output<String> getUploadEnd() {
+        return this.uploadEnd == null ? Output.empty() : this.uploadEnd;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="uploadSize")
-      private final @Nullable Input<Double> uploadSize;
+      private final @Nullable Output<Double> uploadSize;
 
-    public Input<Double> getUploadSize() {
-        return this.uploadSize == null ? Input.empty() : this.uploadSize;
+    public Output<Double> getUploadSize() {
+        return this.uploadSize == null ? Output.empty() : this.uploadSize;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="uploadStart")
-      private final @Nullable Input<String> uploadStart;
+      private final @Nullable Output<String> uploadStart;
 
-    public Input<String> getUploadStart() {
-        return this.uploadStart == null ? Input.empty() : this.uploadStart;
+    public Output<String> getUploadStart() {
+        return this.uploadStart == null ? Output.empty() : this.uploadStart;
     }
 
     public SnapshotImportClientDataGetArgs(
-        @Nullable Input<String> comment,
-        @Nullable Input<String> uploadEnd,
-        @Nullable Input<Double> uploadSize,
-        @Nullable Input<String> uploadStart) {
+        @Nullable Output<String> comment,
+        @Nullable Output<String> uploadEnd,
+        @Nullable Output<Double> uploadSize,
+        @Nullable Output<String> uploadStart) {
         this.comment = comment;
         this.uploadEnd = uploadEnd;
         this.uploadSize = uploadSize;
@@ -71,10 +71,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
     }
 
     private SnapshotImportClientDataGetArgs() {
-        this.comment = Input.empty();
-        this.uploadEnd = Input.empty();
-        this.uploadSize = Input.empty();
-        this.uploadStart = Input.empty();
+        this.comment = Output.empty();
+        this.uploadEnd = Output.empty();
+        this.uploadSize = Output.empty();
+        this.uploadStart = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> uploadEnd;
-        private @Nullable Input<Double> uploadSize;
-        private @Nullable Input<String> uploadStart;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> uploadEnd;
+        private @Nullable Output<Double> uploadSize;
+        private @Nullable Output<String> uploadStart;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
     	      this.uploadStart = defaults.uploadStart;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder uploadEnd(@Nullable Input<String> uploadEnd) {
+        public Builder uploadEnd(@Nullable Output<String> uploadEnd) {
             this.uploadEnd = uploadEnd;
             return this;
         }
 
         public Builder uploadEnd(@Nullable String uploadEnd) {
-            this.uploadEnd = Input.ofNullable(uploadEnd);
+            this.uploadEnd = Output.ofNullable(uploadEnd);
             return this;
         }
 
-        public Builder uploadSize(@Nullable Input<Double> uploadSize) {
+        public Builder uploadSize(@Nullable Output<Double> uploadSize) {
             this.uploadSize = uploadSize;
             return this;
         }
 
         public Builder uploadSize(@Nullable Double uploadSize) {
-            this.uploadSize = Input.ofNullable(uploadSize);
+            this.uploadSize = Output.ofNullable(uploadSize);
             return this;
         }
 
-        public Builder uploadStart(@Nullable Input<String> uploadStart) {
+        public Builder uploadStart(@Nullable Output<String> uploadStart) {
             this.uploadStart = uploadStart;
             return this;
         }
 
         public Builder uploadStart(@Nullable String uploadStart) {
-            this.uploadStart = Input.ofNullable(uploadStart);
+            this.uploadStart = Output.ofNullable(uploadStart);
             return this;
         }
         public SnapshotImportClientDataGetArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.batch.ComputeEnvironmentArgs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentState;
 import io.pulumi.aws.batch.outputs.ComputeEnvironmentComputeResources;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -246,14 +245,14 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ComputeEnvironment(String name, ComputeEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:batch/computeEnvironment:ComputeEnvironment", name, args == null ? ComputeEnvironmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:batch/computeEnvironment:ComputeEnvironment", name, args == null ? ComputeEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ComputeEnvironment(String name, Input<String> id, @Nullable ComputeEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ComputeEnvironment(String name, Output<String> id, @Nullable ComputeEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:batch/computeEnvironment:ComputeEnvironment", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -269,7 +268,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ComputeEnvironment get(String name, Input<String> id, @Nullable ComputeEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ComputeEnvironment get(String name, Output<String> id, @Nullable ComputeEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ComputeEnvironment(name, id, state, options);
     }
 }

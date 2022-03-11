@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.detective.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="graphArn")
-      private final @Nullable Input<String> graphArn;
+      private final @Nullable Output<String> graphArn;
 
-    public Input<String> getGraphArn() {
-        return this.graphArn == null ? Input.empty() : this.graphArn;
+    public Output<String> getGraphArn() {
+        return this.graphArn == null ? Output.empty() : this.graphArn;
     }
 
-    public InvitationAccepterState(@Nullable Input<String> graphArn) {
+    public InvitationAccepterState(@Nullable Output<String> graphArn) {
         this.graphArn = graphArn;
     }
 
     private InvitationAccepterState() {
-        this.graphArn = Input.empty();
+        this.graphArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> graphArn;
+        private @Nullable Output<String> graphArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     	      this.graphArn = defaults.graphArn;
         }
 
-        public Builder graphArn(@Nullable Input<String> graphArn) {
+        public Builder graphArn(@Nullable Output<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
 
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Input.ofNullable(graphArn);
+            this.graphArn = Output.ofNullable(graphArn);
             return this;
         }
         public InvitationAccepterState build() {

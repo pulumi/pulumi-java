@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Output<Map<String,String>> attributes;
 
-    public Input<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,String>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -43,25 +43,25 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(
-        @Nullable Input<Map<String,String>> attributes,
-        Input<String> namespaceName,
-        Input<String> serviceName) {
+        @Nullable Output<Map<String,String>> attributes,
+        Output<String> namespaceName,
+        Output<String> serviceName) {
         this.attributes = attributes;
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
     }
 
     private VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs() {
-        this.attributes = Input.empty();
-        this.namespaceName = Input.empty();
-        this.serviceName = Input.empty();
+        this.attributes = Output.empty();
+        this.namespaceName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> attributes;
-        private Input<String> namespaceName;
-        private Input<String> serviceName;
+        private @Nullable Output<Map<String,String>> attributes;
+        private Output<String> namespaceName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs build() {

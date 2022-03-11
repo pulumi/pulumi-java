@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inspector;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupArn")
-      private final @Nullable Input<String> resourceGroupArn;
+      private final @Nullable Output<String> resourceGroupArn;
 
-    public Input<String> getResourceGroupArn() {
-        return this.resourceGroupArn == null ? Input.empty() : this.resourceGroupArn;
+    public Output<String> getResourceGroupArn() {
+        return this.resourceGroupArn == null ? Output.empty() : this.resourceGroupArn;
     }
 
     public AssessmentTargetArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> resourceGroupArn) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> resourceGroupArn) {
         this.name = name;
         this.resourceGroupArn = resourceGroupArn;
     }
 
     private AssessmentTargetArgs() {
-        this.name = Input.empty();
-        this.resourceGroupArn = Input.empty();
+        this.name = Output.empty();
+        this.resourceGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> resourceGroupArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> resourceGroupArn;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class AssessmentTargetArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupArn = defaults.resourceGroupArn;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupArn(@Nullable Input<String> resourceGroupArn) {
+        public Builder resourceGroupArn(@Nullable Output<String> resourceGroupArn) {
             this.resourceGroupArn = resourceGroupArn;
             return this;
         }
 
         public Builder resourceGroupArn(@Nullable String resourceGroupArn) {
-            this.resourceGroupArn = Input.ofNullable(resourceGroupArn);
+            this.resourceGroupArn = Output.ofNullable(resourceGroupArn);
             return this;
         }
         public AssessmentTargetArgs build() {

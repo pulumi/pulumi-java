@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-      private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Input<Integer> getDeletionWindowInDays() {
-        return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
+    public Output<Integer> getDeletionWindowInDays() {
+        return this.deletionWindowInDays == null ? Output.empty() : this.deletionWindowInDays;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationModel")
-      private final @Nullable Input<String> expirationModel;
+      private final @Nullable Output<String> expirationModel;
 
-    public Input<String> getExpirationModel() {
-        return this.expirationModel == null ? Input.empty() : this.expirationModel;
+    public Output<String> getExpirationModel() {
+        return this.expirationModel == null ? Output.empty() : this.expirationModel;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyMaterialBase64")
-      private final @Nullable Input<String> keyMaterialBase64;
+      private final @Nullable Output<String> keyMaterialBase64;
 
-    public Input<String> getKeyMaterialBase64() {
-        return this.keyMaterialBase64 == null ? Input.empty() : this.keyMaterialBase64;
+    public Output<String> getKeyMaterialBase64() {
+        return this.keyMaterialBase64 == null ? Output.empty() : this.keyMaterialBase64;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyState")
-      private final @Nullable Input<String> keyState;
+      private final @Nullable Output<String> keyState;
 
-    public Input<String> getKeyState() {
-        return this.keyState == null ? Input.empty() : this.keyState;
+    public Output<String> getKeyState() {
+        return this.keyState == null ? Output.empty() : this.keyState;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-      private final @Nullable Input<String> keyUsage;
+      private final @Nullable Output<String> keyUsage;
 
-    public Input<String> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<String> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiRegion")
-      private final @Nullable Input<Boolean> multiRegion;
+      private final @Nullable Output<Boolean> multiRegion;
 
-    public Input<Boolean> getMultiRegion() {
-        return this.multiRegion == null ? Input.empty() : this.multiRegion;
+    public Output<Boolean> getMultiRegion() {
+        return this.multiRegion == null ? Output.empty() : this.multiRegion;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-      private final @Nullable Input<String> policy;
+      private final @Nullable Output<String> policy;
 
-    public Input<String> getPolicy() {
-        return this.policy == null ? Input.empty() : this.policy;
+    public Output<String> getPolicy() {
+        return this.policy == null ? Output.empty() : this.policy;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -165,27 +165,27 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validTo")
-      private final @Nullable Input<String> validTo;
+      private final @Nullable Output<String> validTo;
 
-    public Input<String> getValidTo() {
-        return this.validTo == null ? Input.empty() : this.validTo;
+    public Output<String> getValidTo() {
+        return this.validTo == null ? Output.empty() : this.validTo;
     }
 
     public ExternalKeyState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Input<Integer> deletionWindowInDays,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> expirationModel,
-        @Nullable Input<String> keyMaterialBase64,
-        @Nullable Input<String> keyState,
-        @Nullable Input<String> keyUsage,
-        @Nullable Input<Boolean> multiRegion,
-        @Nullable Input<String> policy,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> validTo) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
+        @Nullable Output<Integer> deletionWindowInDays,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> expirationModel,
+        @Nullable Output<String> keyMaterialBase64,
+        @Nullable Output<String> keyState,
+        @Nullable Output<String> keyUsage,
+        @Nullable Output<Boolean> multiRegion,
+        @Nullable Output<String> policy,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> validTo) {
         this.arn = arn;
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         this.deletionWindowInDays = deletionWindowInDays;
@@ -203,20 +203,20 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExternalKeyState() {
-        this.arn = Input.empty();
-        this.bypassPolicyLockoutSafetyCheck = Input.empty();
-        this.deletionWindowInDays = Input.empty();
-        this.description = Input.empty();
-        this.enabled = Input.empty();
-        this.expirationModel = Input.empty();
-        this.keyMaterialBase64 = Input.empty();
-        this.keyState = Input.empty();
-        this.keyUsage = Input.empty();
-        this.multiRegion = Input.empty();
-        this.policy = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.validTo = Input.empty();
+        this.arn = Output.empty();
+        this.bypassPolicyLockoutSafetyCheck = Output.empty();
+        this.deletionWindowInDays = Output.empty();
+        this.description = Output.empty();
+        this.enabled = Output.empty();
+        this.expirationModel = Output.empty();
+        this.keyMaterialBase64 = Output.empty();
+        this.keyState = Output.empty();
+        this.keyUsage = Output.empty();
+        this.multiRegion = Output.empty();
+        this.policy = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.validTo = Output.empty();
     }
 
     public static Builder builder() {
@@ -228,20 +228,20 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Input<Integer> deletionWindowInDays;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> expirationModel;
-        private @Nullable Input<String> keyMaterialBase64;
-        private @Nullable Input<String> keyState;
-        private @Nullable Input<String> keyUsage;
-        private @Nullable Input<Boolean> multiRegion;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> validTo;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+        private @Nullable Output<Integer> deletionWindowInDays;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> expirationModel;
+        private @Nullable Output<String> keyMaterialBase64;
+        private @Nullable Output<String> keyState;
+        private @Nullable Output<String> keyUsage;
+        private @Nullable Output<Boolean> multiRegion;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> validTo;
 
         public Builder() {
     	      // Empty
@@ -265,143 +265,143 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.validTo = defaults.validTo;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder deletionWindowInDays(@Nullable Input<Integer> deletionWindowInDays) {
+        public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
 
         public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
-            this.deletionWindowInDays = Input.ofNullable(deletionWindowInDays);
+            this.deletionWindowInDays = Output.ofNullable(deletionWindowInDays);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder expirationModel(@Nullable Input<String> expirationModel) {
+        public Builder expirationModel(@Nullable Output<String> expirationModel) {
             this.expirationModel = expirationModel;
             return this;
         }
 
         public Builder expirationModel(@Nullable String expirationModel) {
-            this.expirationModel = Input.ofNullable(expirationModel);
+            this.expirationModel = Output.ofNullable(expirationModel);
             return this;
         }
 
-        public Builder keyMaterialBase64(@Nullable Input<String> keyMaterialBase64) {
+        public Builder keyMaterialBase64(@Nullable Output<String> keyMaterialBase64) {
             this.keyMaterialBase64 = keyMaterialBase64;
             return this;
         }
 
         public Builder keyMaterialBase64(@Nullable String keyMaterialBase64) {
-            this.keyMaterialBase64 = Input.ofNullable(keyMaterialBase64);
+            this.keyMaterialBase64 = Output.ofNullable(keyMaterialBase64);
             return this;
         }
 
-        public Builder keyState(@Nullable Input<String> keyState) {
+        public Builder keyState(@Nullable Output<String> keyState) {
             this.keyState = keyState;
             return this;
         }
 
         public Builder keyState(@Nullable String keyState) {
-            this.keyState = Input.ofNullable(keyState);
+            this.keyState = Output.ofNullable(keyState);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<String> keyUsage) {
+        public Builder keyUsage(@Nullable Output<String> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable String keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder multiRegion(@Nullable Input<Boolean> multiRegion) {
+        public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
 
         public Builder multiRegion(@Nullable Boolean multiRegion) {
-            this.multiRegion = Input.ofNullable(multiRegion);
+            this.multiRegion = Output.ofNullable(multiRegion);
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
         public Builder policy(@Nullable String policy) {
-            this.policy = Input.ofNullable(policy);
+            this.policy = Output.ofNullable(policy);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder validTo(@Nullable Input<String> validTo) {
+        public Builder validTo(@Nullable Output<String> validTo) {
             this.validTo = validTo;
             return this;
         }
 
         public Builder validTo(@Nullable String validTo) {
-            this.validTo = Input.ofNullable(validTo);
+            this.validTo = Output.ofNullable(validTo);
             return this;
         }
         public ExternalKeyState build() {

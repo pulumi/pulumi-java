@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="brokerLogs", required=true)
-      private final Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
+      private final Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
-    public Input<ClusterLoggingInfoBrokerLogsArgs> getBrokerLogs() {
+    public Output<ClusterLoggingInfoBrokerLogsArgs> getBrokerLogs() {
         return this.brokerLogs;
     }
 
-    public ClusterLoggingInfoArgs(Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs) {
+    public ClusterLoggingInfoArgs(Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs) {
         this.brokerLogs = Objects.requireNonNull(brokerLogs, "expected parameter 'brokerLogs' to be non-null");
     }
 
     private ClusterLoggingInfoArgs() {
-        this.brokerLogs = Input.empty();
+        this.brokerLogs = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
+        private Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterLoggingInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.brokerLogs = defaults.brokerLogs;
         }
 
-        public Builder brokerLogs(Input<ClusterLoggingInfoBrokerLogsArgs> brokerLogs) {
+        public Builder brokerLogs(Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs) {
             this.brokerLogs = Objects.requireNonNull(brokerLogs);
             return this;
         }
 
         public Builder brokerLogs(ClusterLoggingInfoBrokerLogsArgs brokerLogs) {
-            this.brokerLogs = Input.of(Objects.requireNonNull(brokerLogs));
+            this.brokerLogs = Output.of(Objects.requireNonNull(brokerLogs));
             return this;
         }
         public ClusterLoggingInfoArgs build() {

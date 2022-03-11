@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Destination")
-      private final @Nullable Input<ResourceDataSyncS3DestinationGetArgs> s3Destination;
+      private final @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination;
 
-    public Input<ResourceDataSyncS3DestinationGetArgs> getS3Destination() {
-        return this.s3Destination == null ? Input.empty() : this.s3Destination;
+    public Output<ResourceDataSyncS3DestinationGetArgs> getS3Destination() {
+        return this.s3Destination == null ? Output.empty() : this.s3Destination;
     }
 
     public ResourceDataSyncState(
-        @Nullable Input<String> name,
-        @Nullable Input<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
+        @Nullable Output<String> name,
+        @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
         this.name = name;
         this.s3Destination = s3Destination;
     }
 
     private ResourceDataSyncState() {
-        this.name = Input.empty();
-        this.s3Destination = Input.empty();
+        this.name = Output.empty();
+        this.s3Destination = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<ResourceDataSyncS3DestinationGetArgs> s3Destination;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
     	      this.s3Destination = defaults.s3Destination;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder s3Destination(@Nullable Input<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
+        public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
         public Builder s3Destination(@Nullable ResourceDataSyncS3DestinationGetArgs s3Destination) {
-            this.s3Destination = Input.ofNullable(s3Destination);
+            this.s3Destination = Output.ofNullable(s3Destination);
             return this;
         }
         public ResourceDataSyncState build() {

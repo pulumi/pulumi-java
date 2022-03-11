@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -31,22 +31,22 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<List<BucketLifecycleConfigurationRuleArgs>> rules;
+      private final Output<List<BucketLifecycleConfigurationRuleArgs>> rules;
 
-    public Input<List<BucketLifecycleConfigurationRuleArgs>> getRules() {
+    public Output<List<BucketLifecycleConfigurationRuleArgs>> getRules() {
         return this.rules;
     }
 
     public BucketLifecycleConfigurationArgs(
-        Input<String> bucket,
-        Input<List<BucketLifecycleConfigurationRuleArgs>> rules) {
+        Output<String> bucket,
+        Output<List<BucketLifecycleConfigurationRuleArgs>> rules) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
     }
 
     private BucketLifecycleConfigurationArgs() {
-        this.bucket = Input.empty();
-        this.rules = Input.empty();
+        this.bucket = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private Input<List<BucketLifecycleConfigurationRuleArgs>> rules;
+        private Output<String> bucket;
+        private Output<List<BucketLifecycleConfigurationRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder rules(Input<List<BucketLifecycleConfigurationRuleArgs>> rules) {
+        public Builder rules(Output<List<BucketLifecycleConfigurationRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<BucketLifecycleConfigurationRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
         public BucketLifecycleConfigurationArgs build() {

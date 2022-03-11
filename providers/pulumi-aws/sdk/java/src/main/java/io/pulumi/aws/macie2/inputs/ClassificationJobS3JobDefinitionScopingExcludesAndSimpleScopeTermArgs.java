@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="comparator")
-      private final @Nullable Input<String> comparator;
+      private final @Nullable Output<String> comparator;
 
-    public Input<String> getComparator() {
-        return this.comparator == null ? Input.empty() : this.comparator;
+    public Output<String> getComparator() {
+        return this.comparator == null ? Output.empty() : this.comparator;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs(
-        @Nullable Input<String> comparator,
-        @Nullable Input<String> key,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> comparator,
+        @Nullable Output<String> key,
+        @Nullable Output<List<String>> values) {
         this.comparator = comparator;
         this.key = key;
         this.values = values;
     }
 
     private ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs() {
-        this.comparator = Input.empty();
-        this.key = Input.empty();
-        this.values = Input.empty();
+        this.comparator = Output.empty();
+        this.key = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comparator;
-        private @Nullable Input<String> key;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> comparator;
+        private @Nullable Output<String> key;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
     	      this.values = defaults.values;
         }
 
-        public Builder comparator(@Nullable Input<String> comparator) {
+        public Builder comparator(@Nullable Output<String> comparator) {
             this.comparator = comparator;
             return this;
         }
 
         public Builder comparator(@Nullable String comparator) {
-            this.comparator = Input.ofNullable(comparator);
+            this.comparator = Output.ofNullable(comparator);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs build() {

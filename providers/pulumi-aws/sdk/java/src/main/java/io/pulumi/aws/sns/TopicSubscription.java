@@ -6,7 +6,6 @@ package io.pulumi.aws.sns;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.TopicSubscriptionArgs;
 import io.pulumi.aws.sns.inputs.TopicSubscriptionState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -276,14 +275,14 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicSubscription(String name, TopicSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sns/topicSubscription:TopicSubscription", name, args == null ? TopicSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:sns/topicSubscription:TopicSubscription", name, args == null ? TopicSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TopicSubscription(String name, Input<String> id, @Nullable TopicSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TopicSubscription(String name, Output<String> id, @Nullable TopicSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:sns/topicSubscription:TopicSubscription", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -299,7 +298,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TopicSubscription get(String name, Input<String> id, @Nullable TopicSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TopicSubscription get(String name, Output<String> id, @Nullable TopicSubscriptionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TopicSubscription(name, id, state, options);
     }
 }

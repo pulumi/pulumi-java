@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcId", required=true)
-      private final Input<String> vpcId;
+      private final Output<String> vpcId;
 
-    public Input<String> getVpcId() {
+    public Output<String> getVpcId() {
         return this.vpcId;
     }
 
@@ -30,10 +30,10 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcRegion")
-      private final @Nullable Input<String> vpcRegion;
+      private final @Nullable Output<String> vpcRegion;
 
-    public Input<String> getVpcRegion() {
-        return this.vpcRegion == null ? Input.empty() : this.vpcRegion;
+    public Output<String> getVpcRegion() {
+        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zoneId", required=true)
-      private final Input<String> zoneId;
+      private final Output<String> zoneId;
 
-    public Input<String> getZoneId() {
+    public Output<String> getZoneId() {
         return this.zoneId;
     }
 
     public ZoneAssociationArgs(
-        Input<String> vpcId,
-        @Nullable Input<String> vpcRegion,
-        Input<String> zoneId) {
+        Output<String> vpcId,
+        @Nullable Output<String> vpcRegion,
+        Output<String> zoneId) {
         this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
         this.vpcRegion = vpcRegion;
         this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
     }
 
     private ZoneAssociationArgs() {
-        this.vpcId = Input.empty();
-        this.vpcRegion = Input.empty();
-        this.zoneId = Input.empty();
+        this.vpcId = Output.empty();
+        this.vpcRegion = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> vpcId;
-        private @Nullable Input<String> vpcRegion;
-        private Input<String> zoneId;
+        private Output<String> vpcId;
+        private @Nullable Output<String> vpcRegion;
+        private Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder vpcId(Input<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Input.of(Objects.requireNonNull(vpcId));
+            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
             return this;
         }
 
-        public Builder vpcRegion(@Nullable Input<String> vpcRegion) {
+        public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }
 
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Input.ofNullable(vpcRegion);
+            this.vpcRegion = Output.ofNullable(vpcRegion);
             return this;
         }
 
-        public Builder zoneId(Input<String> zoneId) {
+        public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
         public Builder zoneId(String zoneId) {
-            this.zoneId = Input.of(Objects.requireNonNull(zoneId));
+            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
         }
         public ZoneAssociationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch;
 
 import io.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -17,10 +17,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final SchedulingPolicyArgs Empty = new SchedulingPolicyArgs();
 
     @InputImport(name="fairSharePolicy")
-      private final @Nullable Input<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
+      private final @Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
 
-    public Input<SchedulingPolicyFairSharePolicyArgs> getFairSharePolicy() {
-        return this.fairSharePolicy == null ? Input.empty() : this.fairSharePolicy;
+    public Output<SchedulingPolicyFairSharePolicyArgs> getFairSharePolicy() {
+        return this.fairSharePolicy == null ? Output.empty() : this.fairSharePolicy;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public SchedulingPolicyArgs(
-        @Nullable Input<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.fairSharePolicy = fairSharePolicy;
         this.name = name;
         this.tags = tags;
@@ -68,10 +68,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SchedulingPolicyArgs() {
-        this.fairSharePolicy = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.fairSharePolicy = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder fairSharePolicy(@Nullable Input<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy) {
+        public Builder fairSharePolicy(@Nullable Output<SchedulingPolicyFairSharePolicyArgs> fairSharePolicy) {
             this.fairSharePolicy = fairSharePolicy;
             return this;
         }
 
         public Builder fairSharePolicy(@Nullable SchedulingPolicyFairSharePolicyArgs fairSharePolicy) {
-            this.fairSharePolicy = Input.ofNullable(fairSharePolicy);
+            this.fairSharePolicy = Output.ofNullable(fairSharePolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public SchedulingPolicyArgs build() {

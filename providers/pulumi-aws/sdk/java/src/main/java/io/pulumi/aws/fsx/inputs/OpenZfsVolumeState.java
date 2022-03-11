@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsGetArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotGetArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyTagsToSnapshots")
-      private final @Nullable Input<Boolean> copyTagsToSnapshots;
+      private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
-    public Input<Boolean> getCopyTagsToSnapshots() {
-        return this.copyTagsToSnapshots == null ? Input.empty() : this.copyTagsToSnapshots;
+    public Output<Boolean> getCopyTagsToSnapshots() {
+        return this.copyTagsToSnapshots == null ? Output.empty() : this.copyTagsToSnapshots;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataCompressionType")
-      private final @Nullable Input<String> dataCompressionType;
+      private final @Nullable Output<String> dataCompressionType;
 
-    public Input<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Input.empty() : this.dataCompressionType;
+    public Output<String> getDataCompressionType() {
+        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfsExports")
-      private final @Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
+      private final @Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
 
-    public Input<OpenZfsVolumeNfsExportsGetArgs> getNfsExports() {
-        return this.nfsExports == null ? Input.empty() : this.nfsExports;
+    public Output<OpenZfsVolumeNfsExportsGetArgs> getNfsExports() {
+        return this.nfsExports == null ? Output.empty() : this.nfsExports;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originSnapshot")
-      private final @Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
+      private final @Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
 
-    public Input<OpenZfsVolumeOriginSnapshotGetArgs> getOriginSnapshot() {
-        return this.originSnapshot == null ? Input.empty() : this.originSnapshot;
+    public Output<OpenZfsVolumeOriginSnapshotGetArgs> getOriginSnapshot() {
+        return this.originSnapshot == null ? Output.empty() : this.originSnapshot;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentVolumeId")
-      private final @Nullable Input<String> parentVolumeId;
+      private final @Nullable Output<String> parentVolumeId;
 
-    public Input<String> getParentVolumeId() {
-        return this.parentVolumeId == null ? Input.empty() : this.parentVolumeId;
+    public Output<String> getParentVolumeId() {
+        return this.parentVolumeId == null ? Output.empty() : this.parentVolumeId;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-      private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Output<Boolean> readOnly;
 
-    public Input<Boolean> getReadOnly() {
-        return this.readOnly == null ? Input.empty() : this.readOnly;
+    public Output<Boolean> getReadOnly() {
+        return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageCapacityQuotaGib")
-      private final @Nullable Input<Integer> storageCapacityQuotaGib;
+      private final @Nullable Output<Integer> storageCapacityQuotaGib;
 
-    public Input<Integer> getStorageCapacityQuotaGib() {
-        return this.storageCapacityQuotaGib == null ? Input.empty() : this.storageCapacityQuotaGib;
+    public Output<Integer> getStorageCapacityQuotaGib() {
+        return this.storageCapacityQuotaGib == null ? Output.empty() : this.storageCapacityQuotaGib;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageCapacityReservationGib")
-      private final @Nullable Input<Integer> storageCapacityReservationGib;
+      private final @Nullable Output<Integer> storageCapacityReservationGib;
 
-    public Input<Integer> getStorageCapacityReservationGib() {
-        return this.storageCapacityReservationGib == null ? Input.empty() : this.storageCapacityReservationGib;
+    public Output<Integer> getStorageCapacityReservationGib() {
+        return this.storageCapacityReservationGib == null ? Output.empty() : this.storageCapacityReservationGib;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -158,34 +158,34 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAndGroupQuotas")
-      private final @Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
+      private final @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
 
-    public Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> getUserAndGroupQuotas() {
-        return this.userAndGroupQuotas == null ? Input.empty() : this.userAndGroupQuotas;
+    public Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> getUserAndGroupQuotas() {
+        return this.userAndGroupQuotas == null ? Output.empty() : this.userAndGroupQuotas;
     }
 
     @InputImport(name="volumeType")
-      private final @Nullable Input<String> volumeType;
+      private final @Nullable Output<String> volumeType;
 
-    public Input<String> getVolumeType() {
-        return this.volumeType == null ? Input.empty() : this.volumeType;
+    public Output<String> getVolumeType() {
+        return this.volumeType == null ? Output.empty() : this.volumeType;
     }
 
     public OpenZfsVolumeState(
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> copyTagsToSnapshots,
-        @Nullable Input<String> dataCompressionType,
-        @Nullable Input<String> name,
-        @Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports,
-        @Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot,
-        @Nullable Input<String> parentVolumeId,
-        @Nullable Input<Boolean> readOnly,
-        @Nullable Input<Integer> storageCapacityQuotaGib,
-        @Nullable Input<Integer> storageCapacityReservationGib,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas,
-        @Nullable Input<String> volumeType) {
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> copyTagsToSnapshots,
+        @Nullable Output<String> dataCompressionType,
+        @Nullable Output<String> name,
+        @Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports,
+        @Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot,
+        @Nullable Output<String> parentVolumeId,
+        @Nullable Output<Boolean> readOnly,
+        @Nullable Output<Integer> storageCapacityQuotaGib,
+        @Nullable Output<Integer> storageCapacityReservationGib,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas,
+        @Nullable Output<String> volumeType) {
         this.arn = arn;
         this.copyTagsToSnapshots = copyTagsToSnapshots;
         this.dataCompressionType = dataCompressionType;
@@ -203,20 +203,20 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OpenZfsVolumeState() {
-        this.arn = Input.empty();
-        this.copyTagsToSnapshots = Input.empty();
-        this.dataCompressionType = Input.empty();
-        this.name = Input.empty();
-        this.nfsExports = Input.empty();
-        this.originSnapshot = Input.empty();
-        this.parentVolumeId = Input.empty();
-        this.readOnly = Input.empty();
-        this.storageCapacityQuotaGib = Input.empty();
-        this.storageCapacityReservationGib = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.userAndGroupQuotas = Input.empty();
-        this.volumeType = Input.empty();
+        this.arn = Output.empty();
+        this.copyTagsToSnapshots = Output.empty();
+        this.dataCompressionType = Output.empty();
+        this.name = Output.empty();
+        this.nfsExports = Output.empty();
+        this.originSnapshot = Output.empty();
+        this.parentVolumeId = Output.empty();
+        this.readOnly = Output.empty();
+        this.storageCapacityQuotaGib = Output.empty();
+        this.storageCapacityReservationGib = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.userAndGroupQuotas = Output.empty();
+        this.volumeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -228,20 +228,20 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> copyTagsToSnapshots;
-        private @Nullable Input<String> dataCompressionType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
-        private @Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
-        private @Nullable Input<String> parentVolumeId;
-        private @Nullable Input<Boolean> readOnly;
-        private @Nullable Input<Integer> storageCapacityQuotaGib;
-        private @Nullable Input<Integer> storageCapacityReservationGib;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
-        private @Nullable Input<String> volumeType;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> copyTagsToSnapshots;
+        private @Nullable Output<String> dataCompressionType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
+        private @Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
+        private @Nullable Output<String> parentVolumeId;
+        private @Nullable Output<Boolean> readOnly;
+        private @Nullable Output<Integer> storageCapacityQuotaGib;
+        private @Nullable Output<Integer> storageCapacityReservationGib;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
+        private @Nullable Output<String> volumeType;
 
         public Builder() {
     	      // Empty
@@ -265,143 +265,143 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder copyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Output<Boolean> copyTagsToSnapshots) {
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
         public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
-            this.copyTagsToSnapshots = Input.ofNullable(copyTagsToSnapshots);
+            this.copyTagsToSnapshots = Output.ofNullable(copyTagsToSnapshots);
             return this;
         }
 
-        public Builder dataCompressionType(@Nullable Input<String> dataCompressionType) {
+        public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Input.ofNullable(dataCompressionType);
+            this.dataCompressionType = Output.ofNullable(dataCompressionType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nfsExports(@Nullable Input<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
+        public Builder nfsExports(@Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
 
         public Builder nfsExports(@Nullable OpenZfsVolumeNfsExportsGetArgs nfsExports) {
-            this.nfsExports = Input.ofNullable(nfsExports);
+            this.nfsExports = Output.ofNullable(nfsExports);
             return this;
         }
 
-        public Builder originSnapshot(@Nullable Input<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
+        public Builder originSnapshot(@Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
             this.originSnapshot = originSnapshot;
             return this;
         }
 
         public Builder originSnapshot(@Nullable OpenZfsVolumeOriginSnapshotGetArgs originSnapshot) {
-            this.originSnapshot = Input.ofNullable(originSnapshot);
+            this.originSnapshot = Output.ofNullable(originSnapshot);
             return this;
         }
 
-        public Builder parentVolumeId(@Nullable Input<String> parentVolumeId) {
+        public Builder parentVolumeId(@Nullable Output<String> parentVolumeId) {
             this.parentVolumeId = parentVolumeId;
             return this;
         }
 
         public Builder parentVolumeId(@Nullable String parentVolumeId) {
-            this.parentVolumeId = Input.ofNullable(parentVolumeId);
+            this.parentVolumeId = Output.ofNullable(parentVolumeId);
             return this;
         }
 
-        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Input.ofNullable(readOnly);
+            this.readOnly = Output.ofNullable(readOnly);
             return this;
         }
 
-        public Builder storageCapacityQuotaGib(@Nullable Input<Integer> storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(@Nullable Output<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = storageCapacityQuotaGib;
             return this;
         }
 
         public Builder storageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
-            this.storageCapacityQuotaGib = Input.ofNullable(storageCapacityQuotaGib);
+            this.storageCapacityQuotaGib = Output.ofNullable(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder storageCapacityReservationGib(@Nullable Input<Integer> storageCapacityReservationGib) {
+        public Builder storageCapacityReservationGib(@Nullable Output<Integer> storageCapacityReservationGib) {
             this.storageCapacityReservationGib = storageCapacityReservationGib;
             return this;
         }
 
         public Builder storageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
-            this.storageCapacityReservationGib = Input.ofNullable(storageCapacityReservationGib);
+            this.storageCapacityReservationGib = Output.ofNullable(storageCapacityReservationGib);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder userAndGroupQuotas(@Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
 
         public Builder userAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
-            this.userAndGroupQuotas = Input.ofNullable(userAndGroupQuotas);
+            this.userAndGroupQuotas = Output.ofNullable(userAndGroupQuotas);
             return this;
         }
 
-        public Builder volumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Output<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Input.ofNullable(volumeType);
+            this.volumeType = Output.ofNullable(volumeType);
             return this;
         }
         public OpenZfsVolumeState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafregional;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceArn", required=true)
-      private final Input<String> resourceArn;
+      private final Output<String> resourceArn;
 
-    public Input<String> getResourceArn() {
+    public Output<String> getResourceArn() {
         return this.resourceArn;
     }
 
@@ -29,22 +29,22 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webAclId", required=true)
-      private final Input<String> webAclId;
+      private final Output<String> webAclId;
 
-    public Input<String> getWebAclId() {
+    public Output<String> getWebAclId() {
         return this.webAclId;
     }
 
     public WebAclAssociationArgs(
-        Input<String> resourceArn,
-        Input<String> webAclId) {
+        Output<String> resourceArn,
+        Output<String> webAclId) {
         this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
         this.webAclId = Objects.requireNonNull(webAclId, "expected parameter 'webAclId' to be non-null");
     }
 
     private WebAclAssociationArgs() {
-        this.resourceArn = Input.empty();
-        this.webAclId = Input.empty();
+        this.resourceArn = Output.empty();
+        this.webAclId = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> resourceArn;
-        private Input<String> webAclId;
+        private Output<String> resourceArn;
+        private Output<String> webAclId;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     	      this.webAclId = defaults.webAclId;
         }
 
-        public Builder resourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
+            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder webAclId(Input<String> webAclId) {
+        public Builder webAclId(Output<String> webAclId) {
             this.webAclId = Objects.requireNonNull(webAclId);
             return this;
         }
 
         public Builder webAclId(String webAclId) {
-            this.webAclId = Input.of(Objects.requireNonNull(webAclId));
+            this.webAclId = Output.of(Objects.requireNonNull(webAclId));
             return this;
         }
         public WebAclAssociationArgs build() {

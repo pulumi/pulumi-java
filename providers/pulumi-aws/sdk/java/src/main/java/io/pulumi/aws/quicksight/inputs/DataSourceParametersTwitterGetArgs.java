@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxRows", required=true)
-      private final Input<Integer> maxRows;
+      private final Output<Integer> maxRows;
 
-    public Input<Integer> getMaxRows() {
+    public Output<Integer> getMaxRows() {
         return this.maxRows;
     }
 
@@ -30,22 +30,22 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
     public DataSourceParametersTwitterGetArgs(
-        Input<Integer> maxRows,
-        Input<String> query) {
+        Output<Integer> maxRows,
+        Output<String> query) {
         this.maxRows = Objects.requireNonNull(maxRows, "expected parameter 'maxRows' to be non-null");
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
     }
 
     private DataSourceParametersTwitterGetArgs() {
-        this.maxRows = Input.empty();
-        this.query = Input.empty();
+        this.maxRows = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Integer> maxRows;
-        private Input<String> query;
+        private Output<Integer> maxRows;
+        private Output<String> query;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataSourceParametersTwitterGetArgs extends io.pulumi.resource
     	      this.query = defaults.query;
         }
 
-        public Builder maxRows(Input<Integer> maxRows) {
+        public Builder maxRows(Output<Integer> maxRows) {
             this.maxRows = Objects.requireNonNull(maxRows);
             return this;
         }
 
         public Builder maxRows(Integer maxRows) {
-            this.maxRows = Input.of(Objects.requireNonNull(maxRows));
+            this.maxRows = Output.of(Objects.requireNonNull(maxRows));
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
         public DataSourceParametersTwitterGetArgs build() {

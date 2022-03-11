@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<String> httpMethod;
+      private final @Nullable Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<String> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="responseModels")
-      private final @Nullable Input<Map<String,String>> responseModels;
+      private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Input<Map<String,String>> getResponseModels() {
-        return this.responseModels == null ? Input.empty() : this.responseModels;
+    public Output<Map<String,String>> getResponseModels() {
+        return this.responseModels == null ? Output.empty() : this.responseModels;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="responseParameters")
-      private final @Nullable Input<Map<String,Boolean>> responseParameters;
+      private final @Nullable Output<Map<String,Boolean>> responseParameters;
 
-    public Input<Map<String,Boolean>> getResponseParameters() {
-        return this.responseParameters == null ? Input.empty() : this.responseParameters;
+    public Output<Map<String,Boolean>> getResponseParameters() {
+        return this.responseParameters == null ? Output.empty() : this.responseParameters;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restApi")
-      private final @Nullable Input<String> restApi;
+      private final @Nullable Output<String> restApi;
 
-    public Input<String> getRestApi() {
-        return this.restApi == null ? Input.empty() : this.restApi;
+    public Output<String> getRestApi() {
+        return this.restApi == null ? Output.empty() : this.restApi;
     }
 
     /**
@@ -78,19 +78,19 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="statusCode")
-      private final @Nullable Input<String> statusCode;
+      private final @Nullable Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
-        return this.statusCode == null ? Input.empty() : this.statusCode;
+    public Output<String> getStatusCode() {
+        return this.statusCode == null ? Output.empty() : this.statusCode;
     }
 
     public MethodResponseState(
-        @Nullable Input<String> httpMethod,
-        @Nullable Input<String> resourceId,
-        @Nullable Input<Map<String,String>> responseModels,
-        @Nullable Input<Map<String,Boolean>> responseParameters,
-        @Nullable Input<String> restApi,
-        @Nullable Input<String> statusCode) {
+        @Nullable Output<String> httpMethod,
+        @Nullable Output<String> resourceId,
+        @Nullable Output<Map<String,String>> responseModels,
+        @Nullable Output<Map<String,Boolean>> responseParameters,
+        @Nullable Output<String> restApi,
+        @Nullable Output<String> statusCode) {
         this.httpMethod = httpMethod;
         this.resourceId = resourceId;
         this.responseModels = responseModels;
@@ -100,12 +100,12 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     }
 
     private MethodResponseState() {
-        this.httpMethod = Input.empty();
-        this.resourceId = Input.empty();
-        this.responseModels = Input.empty();
-        this.responseParameters = Input.empty();
-        this.restApi = Input.empty();
-        this.statusCode = Input.empty();
+        this.httpMethod = Output.empty();
+        this.resourceId = Output.empty();
+        this.responseModels = Output.empty();
+        this.responseParameters = Output.empty();
+        this.restApi = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpMethod;
-        private @Nullable Input<String> resourceId;
-        private @Nullable Input<Map<String,String>> responseModels;
-        private @Nullable Input<Map<String,Boolean>> responseParameters;
-        private @Nullable Input<String> restApi;
-        private @Nullable Input<String> statusCode;
+        private @Nullable Output<String> httpMethod;
+        private @Nullable Output<String> resourceId;
+        private @Nullable Output<Map<String,String>> responseModels;
+        private @Nullable Output<Map<String,Boolean>> responseParameters;
+        private @Nullable Output<String> restApi;
+        private @Nullable Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -138,58 +138,58 @@ public final class MethodResponseState extends io.pulumi.resources.ResourceArgs 
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder httpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder responseModels(@Nullable Input<Map<String,String>> responseModels) {
+        public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Input.ofNullable(responseModels);
+            this.responseModels = Output.ofNullable(responseModels);
             return this;
         }
 
-        public Builder responseParameters(@Nullable Input<Map<String,Boolean>> responseParameters) {
+        public Builder responseParameters(@Nullable Output<Map<String,Boolean>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
         public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
-            this.responseParameters = Input.ofNullable(responseParameters);
+            this.responseParameters = Output.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder restApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Output<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder statusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Output<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Input.ofNullable(statusCode);
+            this.statusCode = Output.ofNullable(statusCode);
             return this;
         }
         public MethodResponseState build() {

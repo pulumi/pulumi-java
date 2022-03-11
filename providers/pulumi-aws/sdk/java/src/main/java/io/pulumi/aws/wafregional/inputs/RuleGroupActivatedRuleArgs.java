@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RuleGroupActivatedRuleActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<RuleGroupActivatedRuleActionArgs> action;
+      private final Output<RuleGroupActivatedRuleActionArgs> action;
 
-    public Input<RuleGroupActivatedRuleActionArgs> getAction() {
+    public Output<RuleGroupActivatedRuleActionArgs> getAction() {
         return this.action;
     }
 
@@ -32,9 +32,9 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -43,9 +43,9 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ruleId", required=true)
-      private final Input<String> ruleId;
+      private final Output<String> ruleId;
 
-    public Input<String> getRuleId() {
+    public Output<String> getRuleId() {
         return this.ruleId;
     }
 
@@ -54,17 +54,17 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RuleGroupActivatedRuleArgs(
-        Input<RuleGroupActivatedRuleActionArgs> action,
-        Input<Integer> priority,
-        Input<String> ruleId,
-        @Nullable Input<String> type) {
+        Output<RuleGroupActivatedRuleActionArgs> action,
+        Output<Integer> priority,
+        Output<String> ruleId,
+        @Nullable Output<String> type) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
         this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
@@ -72,10 +72,10 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     }
 
     private RuleGroupActivatedRuleArgs() {
-        this.action = Input.empty();
-        this.priority = Input.empty();
-        this.ruleId = Input.empty();
-        this.type = Input.empty();
+        this.action = Output.empty();
+        this.priority = Output.empty();
+        this.ruleId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<RuleGroupActivatedRuleActionArgs> action;
-        private Input<Integer> priority;
-        private Input<String> ruleId;
-        private @Nullable Input<String> type;
+        private Output<RuleGroupActivatedRuleActionArgs> action;
+        private Output<Integer> priority;
+        private Output<String> ruleId;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder action(Input<RuleGroupActivatedRuleActionArgs> action) {
+        public Builder action(Output<RuleGroupActivatedRuleActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(RuleGroupActivatedRuleActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder ruleId(Input<String> ruleId) {
+        public Builder ruleId(Output<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
         public Builder ruleId(String ruleId) {
-            this.ruleId = Input.of(Objects.requireNonNull(ruleId));
+            this.ruleId = Output.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RuleGroupActivatedRuleArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
      * 
      */
     @InputImport(name="customResponseBodyKey")
-      private final @Nullable Input<String> customResponseBodyKey;
+      private final @Nullable Output<String> customResponseBodyKey;
 
-    public Input<String> getCustomResponseBodyKey() {
-        return this.customResponseBodyKey == null ? Input.empty() : this.customResponseBodyKey;
+    public Output<String> getCustomResponseBodyKey() {
+        return this.customResponseBodyKey == null ? Output.empty() : this.customResponseBodyKey;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
      * 
      */
     @InputImport(name="responseCode", required=true)
-      private final Input<Integer> responseCode;
+      private final Output<Integer> responseCode;
 
-    public Input<Integer> getResponseCode() {
+    public Output<Integer> getResponseCode() {
         return this.responseCode;
     }
 
@@ -44,25 +44,25 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
      * 
      */
     @InputImport(name="responseHeaders")
-      private final @Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
+      private final @Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
 
-    public Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> getResponseHeaders() {
-        return this.responseHeaders == null ? Input.empty() : this.responseHeaders;
+    public Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> getResponseHeaders() {
+        return this.responseHeaders == null ? Output.empty() : this.responseHeaders;
     }
 
     public RuleGroupRuleActionBlockCustomResponseGetArgs(
-        @Nullable Input<String> customResponseBodyKey,
-        Input<Integer> responseCode,
-        @Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders) {
+        @Nullable Output<String> customResponseBodyKey,
+        Output<Integer> responseCode,
+        @Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = Objects.requireNonNull(responseCode, "expected parameter 'responseCode' to be non-null");
         this.responseHeaders = responseHeaders;
     }
 
     private RuleGroupRuleActionBlockCustomResponseGetArgs() {
-        this.customResponseBodyKey = Input.empty();
-        this.responseCode = Input.empty();
-        this.responseHeaders = Input.empty();
+        this.customResponseBodyKey = Output.empty();
+        this.responseCode = Output.empty();
+        this.responseHeaders = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customResponseBodyKey;
-        private Input<Integer> responseCode;
-        private @Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
+        private @Nullable Output<String> customResponseBodyKey;
+        private Output<Integer> responseCode;
+        private @Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class RuleGroupRuleActionBlockCustomResponseGetArgs extends io.pulu
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder customResponseBodyKey(@Nullable Input<String> customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable Output<String> customResponseBodyKey) {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
         public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
-            this.customResponseBodyKey = Input.ofNullable(customResponseBodyKey);
+            this.customResponseBodyKey = Output.ofNullable(customResponseBodyKey);
             return this;
         }
 
-        public Builder responseCode(Input<Integer> responseCode) {
+        public Builder responseCode(Output<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
 
         public Builder responseCode(Integer responseCode) {
-            this.responseCode = Input.of(Objects.requireNonNull(responseCode));
+            this.responseCode = Output.of(Objects.requireNonNull(responseCode));
             return this;
         }
 
-        public Builder responseHeaders(@Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders) {
+        public Builder responseHeaders(@Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
 
         public Builder responseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeaderGetArgs> responseHeaders) {
-            this.responseHeaders = Input.ofNullable(responseHeaders);
+            this.responseHeaders = Output.ofNullable(responseHeaders);
             return this;
         }
         public RuleGroupRuleActionBlockCustomResponseGetArgs build() {

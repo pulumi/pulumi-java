@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -29,9 +29,9 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
      * 
      */
     @InputImport(name="fileKey", required=true)
-      private final Input<String> fileKey;
+      private final Output<String> fileKey;
 
-    public Input<String> getFileKey() {
+    public Output<String> getFileKey() {
         return this.fileKey;
     }
 
@@ -40,25 +40,25 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public AnalyticsApplicationReferenceDataSourcesS3Args(
-        Input<String> bucketArn,
-        Input<String> fileKey,
-        Input<String> roleArn) {
+        Output<String> bucketArn,
+        Output<String> fileKey,
+        Output<String> roleArn) {
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.fileKey = Objects.requireNonNull(fileKey, "expected parameter 'fileKey' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private AnalyticsApplicationReferenceDataSourcesS3Args() {
-        this.bucketArn = Input.empty();
-        this.fileKey = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucketArn = Output.empty();
+        this.fileKey = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> bucketArn;
-        private Input<String> fileKey;
-        private Input<String> roleArn;
+        private Output<String> bucketArn;
+        private Output<String> fileKey;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class AnalyticsApplicationReferenceDataSourcesS3Args extends io.pul
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder fileKey(Input<String> fileKey) {
+        public Builder fileKey(Output<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
         public Builder fileKey(String fileKey) {
-            this.fileKey = Input.of(Objects.requireNonNull(fileKey));
+            this.fileKey = Output.of(Objects.requireNonNull(fileKey));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public AnalyticsApplicationReferenceDataSourcesS3Args build() {

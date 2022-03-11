@@ -6,7 +6,6 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.MainRouteTableAssociationArgs;
 import io.pulumi.aws.ec2.inputs.MainRouteTableAssociationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -98,14 +97,14 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public MainRouteTableAssociation(String name, MainRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/mainRouteTableAssociation:MainRouteTableAssociation", name, args == null ? MainRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ec2/mainRouteTableAssociation:MainRouteTableAssociation", name, args == null ? MainRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MainRouteTableAssociation(String name, Input<String> id, @Nullable MainRouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MainRouteTableAssociation(String name, Output<String> id, @Nullable MainRouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ec2/mainRouteTableAssociation:MainRouteTableAssociation", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MainRouteTableAssociation get(String name, Input<String> id, @Nullable MainRouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MainRouteTableAssociation get(String name, Output<String> id, @Nullable MainRouteTableAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MainRouteTableAssociation(name, id, state, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation;
 
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deploymentTargets")
-      private final @Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
+      private final @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
-    public Input<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
-        return this.deploymentTargets == null ? Input.empty() : this.deploymentTargets;
+    public Output<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
+        return this.deploymentTargets == null ? Output.empty() : this.deploymentTargets;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameterOverrides")
-      private final @Nullable Input<Map<String,String>> parameterOverrides;
+      private final @Nullable Output<Map<String,String>> parameterOverrides;
 
-    public Input<Map<String,String>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Input.empty() : this.parameterOverrides;
+    public Output<Map<String,String>> getParameterOverrides() {
+        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="retainStack")
-      private final @Nullable Input<Boolean> retainStack;
+      private final @Nullable Output<Boolean> retainStack;
 
-    public Input<Boolean> getRetainStack() {
-        return this.retainStack == null ? Input.empty() : this.retainStack;
+    public Output<Boolean> getRetainStack() {
+        return this.retainStack == null ? Output.empty() : this.retainStack;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stackSetName", required=true)
-      private final Input<String> stackSetName;
+      private final Output<String> stackSetName;
 
-    public Input<String> getStackSetName() {
+    public Output<String> getStackSetName() {
         return this.stackSetName;
     }
 
     public StackSetInstanceArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets,
-        @Nullable Input<Map<String,String>> parameterOverrides,
-        @Nullable Input<String> region,
-        @Nullable Input<Boolean> retainStack,
-        Input<String> stackSetName) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets,
+        @Nullable Output<Map<String,String>> parameterOverrides,
+        @Nullable Output<String> region,
+        @Nullable Output<Boolean> retainStack,
+        Output<String> stackSetName) {
         this.accountId = accountId;
         this.deploymentTargets = deploymentTargets;
         this.parameterOverrides = parameterOverrides;
@@ -99,12 +99,12 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StackSetInstanceArgs() {
-        this.accountId = Input.empty();
-        this.deploymentTargets = Input.empty();
-        this.parameterOverrides = Input.empty();
-        this.region = Input.empty();
-        this.retainStack = Input.empty();
-        this.stackSetName = Input.empty();
+        this.accountId = Output.empty();
+        this.deploymentTargets = Output.empty();
+        this.parameterOverrides = Output.empty();
+        this.region = Output.empty();
+        this.retainStack = Output.empty();
+        this.stackSetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
-        private @Nullable Input<Map<String,String>> parameterOverrides;
-        private @Nullable Input<String> region;
-        private @Nullable Input<Boolean> retainStack;
-        private Input<String> stackSetName;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
+        private @Nullable Output<Map<String,String>> parameterOverrides;
+        private @Nullable Output<String> region;
+        private @Nullable Output<Boolean> retainStack;
+        private Output<String> stackSetName;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.stackSetName = defaults.stackSetName;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder deploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
+        public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
 
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
-            this.deploymentTargets = Input.ofNullable(deploymentTargets);
+            this.deploymentTargets = Output.ofNullable(deploymentTargets);
             return this;
         }
 
-        public Builder parameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
-            this.parameterOverrides = Input.ofNullable(parameterOverrides);
+            this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder retainStack(@Nullable Input<Boolean> retainStack) {
+        public Builder retainStack(@Nullable Output<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
 
         public Builder retainStack(@Nullable Boolean retainStack) {
-            this.retainStack = Input.ofNullable(retainStack);
+            this.retainStack = Output.ofNullable(retainStack);
             return this;
         }
 
-        public Builder stackSetName(Input<String> stackSetName) {
+        public Builder stackSetName(Output<String> stackSetName) {
             this.stackSetName = Objects.requireNonNull(stackSetName);
             return this;
         }
 
         public Builder stackSetName(String stackSetName) {
-            this.stackSetName = Input.of(Objects.requireNonNull(stackSetName));
+            this.stackSetName = Output.of(Objects.requireNonNull(stackSetName));
             return this;
         }
         public StackSetInstanceArgs build() {

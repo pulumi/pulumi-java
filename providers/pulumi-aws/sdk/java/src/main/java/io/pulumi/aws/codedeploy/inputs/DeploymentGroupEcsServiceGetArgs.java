@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -29,22 +29,22 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public DeploymentGroupEcsServiceGetArgs(
-        Input<String> clusterName,
-        Input<String> serviceName) {
+        Output<String> clusterName,
+        Output<String> serviceName) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
     }
 
     private DeploymentGroupEcsServiceGetArgs() {
-        this.clusterName = Input.empty();
-        this.serviceName = Input.empty();
+        this.clusterName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<String> serviceName;
+        private Output<String> clusterName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public DeploymentGroupEcsServiceGetArgs build() {

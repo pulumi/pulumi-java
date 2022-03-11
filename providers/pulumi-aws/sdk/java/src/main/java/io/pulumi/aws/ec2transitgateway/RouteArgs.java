@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blackhole")
-      private final @Nullable Input<Boolean> blackhole;
+      private final @Nullable Output<Boolean> blackhole;
 
-    public Input<Boolean> getBlackhole() {
-        return this.blackhole == null ? Input.empty() : this.blackhole;
+    public Output<Boolean> getBlackhole() {
+        return this.blackhole == null ? Output.empty() : this.blackhole;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-      private final Input<String> destinationCidrBlock;
+      private final Output<String> destinationCidrBlock;
 
-    public Input<String> getDestinationCidrBlock() {
+    public Output<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -42,10 +42,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-      private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Input<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
+    public Output<String> getTransitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayRouteTableId", required=true)
-      private final Input<String> transitGatewayRouteTableId;
+      private final Output<String> transitGatewayRouteTableId;
 
-    public Input<String> getTransitGatewayRouteTableId() {
+    public Output<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
     public RouteArgs(
-        @Nullable Input<Boolean> blackhole,
-        Input<String> destinationCidrBlock,
-        @Nullable Input<String> transitGatewayAttachmentId,
-        Input<String> transitGatewayRouteTableId) {
+        @Nullable Output<Boolean> blackhole,
+        Output<String> destinationCidrBlock,
+        @Nullable Output<String> transitGatewayAttachmentId,
+        Output<String> transitGatewayRouteTableId) {
         this.blackhole = blackhole;
         this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
@@ -71,10 +71,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.blackhole = Input.empty();
-        this.destinationCidrBlock = Input.empty();
-        this.transitGatewayAttachmentId = Input.empty();
-        this.transitGatewayRouteTableId = Input.empty();
+        this.blackhole = Output.empty();
+        this.destinationCidrBlock = Output.empty();
+        this.transitGatewayAttachmentId = Output.empty();
+        this.transitGatewayRouteTableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> blackhole;
-        private Input<String> destinationCidrBlock;
-        private @Nullable Input<String> transitGatewayAttachmentId;
-        private Input<String> transitGatewayRouteTableId;
+        private @Nullable Output<Boolean> blackhole;
+        private Output<String> destinationCidrBlock;
+        private @Nullable Output<String> transitGatewayAttachmentId;
+        private Output<String> transitGatewayRouteTableId;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder blackhole(@Nullable Input<Boolean> blackhole) {
+        public Builder blackhole(@Nullable Output<Boolean> blackhole) {
             this.blackhole = blackhole;
             return this;
         }
 
         public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Input.ofNullable(blackhole);
+            this.blackhole = Output.ofNullable(blackhole);
             return this;
         }
 
-        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
+            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder transitGatewayRouteTableId(Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
             return this;
         }
 
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Input.of(Objects.requireNonNull(transitGatewayRouteTableId));
+            this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
             return this;
         }
         public RouteArgs build() {

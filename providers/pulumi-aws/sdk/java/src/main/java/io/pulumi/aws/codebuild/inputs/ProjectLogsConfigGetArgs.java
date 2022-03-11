@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ProjectLogsConfigCloudwatchLogsGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectLogsConfigS3LogsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,10 +20,10 @@ public final class ProjectLogsConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cloudwatchLogs")
-      private final @Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
+      private final @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
 
-    public Input<ProjectLogsConfigCloudwatchLogsGetArgs> getCloudwatchLogs() {
-        return this.cloudwatchLogs == null ? Input.empty() : this.cloudwatchLogs;
+    public Output<ProjectLogsConfigCloudwatchLogsGetArgs> getCloudwatchLogs() {
+        return this.cloudwatchLogs == null ? Output.empty() : this.cloudwatchLogs;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ProjectLogsConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="s3Logs")
-      private final @Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs;
+      private final @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
 
-    public Input<ProjectLogsConfigS3LogsGetArgs> getS3Logs() {
-        return this.s3Logs == null ? Input.empty() : this.s3Logs;
+    public Output<ProjectLogsConfigS3LogsGetArgs> getS3Logs() {
+        return this.s3Logs == null ? Output.empty() : this.s3Logs;
     }
 
     public ProjectLogsConfigGetArgs(
-        @Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs,
-        @Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
+        @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs,
+        @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.s3Logs = s3Logs;
     }
 
     private ProjectLogsConfigGetArgs() {
-        this.cloudwatchLogs = Input.empty();
-        this.s3Logs = Input.empty();
+        this.cloudwatchLogs = Output.empty();
+        this.s3Logs = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ProjectLogsConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
-        private @Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs;
+        private @Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs;
+        private @Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ProjectLogsConfigGetArgs extends io.pulumi.resources.Resource
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder cloudwatchLogs(@Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable Output<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
         public Builder cloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
-            this.cloudwatchLogs = Input.ofNullable(cloudwatchLogs);
+            this.cloudwatchLogs = Output.ofNullable(cloudwatchLogs);
             return this;
         }
 
-        public Builder s3Logs(@Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
+        public Builder s3Logs(@Nullable Output<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
 
         public Builder s3Logs(@Nullable ProjectLogsConfigS3LogsGetArgs s3Logs) {
-            this.s3Logs = Input.ofNullable(s3Logs);
+            this.s3Logs = Output.ofNullable(s3Logs);
             return this;
         }
         public ProjectLogsConfigGetArgs build() {

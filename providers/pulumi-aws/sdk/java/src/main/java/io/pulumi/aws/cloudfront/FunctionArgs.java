@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code", required=true)
-      private final Input<String> code;
+      private final Output<String> code;
 
-    public Input<String> getCode() {
+    public Output<String> getCode() {
         return this.code;
     }
 
@@ -31,10 +31,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publish")
-      private final @Nullable Input<Boolean> publish;
+      private final @Nullable Output<Boolean> publish;
 
-    public Input<Boolean> getPublish() {
-        return this.publish == null ? Input.empty() : this.publish;
+    public Output<Boolean> getPublish() {
+        return this.publish == null ? Output.empty() : this.publish;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime", required=true)
-      private final Input<String> runtime;
+      private final Output<String> runtime;
 
-    public Input<String> getRuntime() {
+    public Output<String> getRuntime() {
         return this.runtime;
     }
 
     public FunctionArgs(
-        Input<String> code,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> publish,
-        Input<String> runtime) {
+        Output<String> code,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> publish,
+        Output<String> runtime) {
         this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
         this.comment = comment;
         this.name = name;
@@ -84,11 +84,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.code = Input.empty();
-        this.comment = Input.empty();
-        this.name = Input.empty();
-        this.publish = Input.empty();
-        this.runtime = Input.empty();
+        this.code = Output.empty();
+        this.comment = Output.empty();
+        this.name = Output.empty();
+        this.publish = Output.empty();
+        this.runtime = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> code;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> publish;
-        private Input<String> runtime;
+        private Output<String> code;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> publish;
+        private Output<String> runtime;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder code(Input<String> code) {
+        public Builder code(Output<String> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
         public Builder code(String code) {
-            this.code = Input.of(Objects.requireNonNull(code));
+            this.code = Output.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publish(@Nullable Input<Boolean> publish) {
+        public Builder publish(@Nullable Output<Boolean> publish) {
             this.publish = publish;
             return this;
         }
 
         public Builder publish(@Nullable Boolean publish) {
-            this.publish = Input.ofNullable(publish);
+            this.publish = Output.ofNullable(publish);
             return this;
         }
 
-        public Builder runtime(Input<String> runtime) {
+        public Builder runtime(Output<String> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
         public Builder runtime(String runtime) {
-            this.runtime = Input.of(Objects.requireNonNull(runtime));
+            this.runtime = Output.of(Objects.requireNonNull(runtime));
             return this;
         }
         public FunctionArgs build() {

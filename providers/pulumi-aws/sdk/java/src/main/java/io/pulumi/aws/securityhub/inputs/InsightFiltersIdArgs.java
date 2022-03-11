@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.securityhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class InsightFiltersIdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="comparison", required=true)
-      private final Input<String> comparison;
+      private final Output<String> comparison;
 
-    public Input<String> getComparison() {
+    public Output<String> getComparison() {
         return this.comparison;
     }
 
@@ -29,22 +29,22 @@ public final class InsightFiltersIdArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public InsightFiltersIdArgs(
-        Input<String> comparison,
-        Input<String> value) {
+        Output<String> comparison,
+        Output<String> value) {
         this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private InsightFiltersIdArgs() {
-        this.comparison = Input.empty();
-        this.value = Input.empty();
+        this.comparison = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class InsightFiltersIdArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> comparison;
-        private Input<String> value;
+        private Output<String> comparison;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class InsightFiltersIdArgs extends io.pulumi.resources.ResourceArgs
     	      this.value = defaults.value;
         }
 
-        public Builder comparison(Input<String> comparison) {
+        public Builder comparison(Output<String> comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
         public Builder comparison(String comparison) {
-            this.comparison = Input.of(Objects.requireNonNull(comparison));
+            this.comparison = Output.of(Objects.requireNonNull(comparison));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public InsightFiltersIdArgs build() {

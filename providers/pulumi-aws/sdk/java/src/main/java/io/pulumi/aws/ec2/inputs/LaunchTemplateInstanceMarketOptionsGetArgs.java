@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="marketType")
-      private final @Nullable Input<String> marketType;
+      private final @Nullable Output<String> marketType;
 
-    public Input<String> getMarketType() {
-        return this.marketType == null ? Input.empty() : this.marketType;
+    public Output<String> getMarketType() {
+        return this.marketType == null ? Output.empty() : this.marketType;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="spotOptions")
-      private final @Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions;
+      private final @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions;
 
-    public Input<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> getSpotOptions() {
-        return this.spotOptions == null ? Input.empty() : this.spotOptions;
+    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> getSpotOptions() {
+        return this.spotOptions == null ? Output.empty() : this.spotOptions;
     }
 
     public LaunchTemplateInstanceMarketOptionsGetArgs(
-        @Nullable Input<String> marketType,
-        @Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions) {
+        @Nullable Output<String> marketType,
+        @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }
 
     private LaunchTemplateInstanceMarketOptionsGetArgs() {
-        this.marketType = Input.empty();
-        this.spotOptions = Input.empty();
+        this.marketType = Output.empty();
+        this.spotOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> marketType;
-        private @Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions;
+        private @Nullable Output<String> marketType;
+        private @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
     	      this.spotOptions = defaults.spotOptions;
         }
 
-        public Builder marketType(@Nullable Input<String> marketType) {
+        public Builder marketType(@Nullable Output<String> marketType) {
             this.marketType = marketType;
             return this;
         }
 
         public Builder marketType(@Nullable String marketType) {
-            this.marketType = Input.ofNullable(marketType);
+            this.marketType = Output.ofNullable(marketType);
             return this;
         }
 
-        public Builder spotOptions(@Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
 
         public Builder spotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs spotOptions) {
-            this.spotOptions = Input.ofNullable(spotOptions);
+            this.spotOptions = Output.ofNullable(spotOptions);
             return this;
         }
         public LaunchTemplateInstanceMarketOptionsGetArgs build() {

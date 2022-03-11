@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * 
      */
     @InputImport(name="accessTier", required=true)
-      private final Input<String> accessTier;
+      private final Output<String> accessTier;
 
-    public Input<String> getAccessTier() {
+    public Output<String> getAccessTier() {
         return this.accessTier;
     }
 
@@ -30,22 +30,22 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * 
      */
     @InputImport(name="days", required=true)
-      private final Input<Integer> days;
+      private final Output<Integer> days;
 
-    public Input<Integer> getDays() {
+    public Output<Integer> getDays() {
         return this.days;
     }
 
     public BucketIntelligentTieringConfigurationTieringGetArgs(
-        Input<String> accessTier,
-        Input<Integer> days) {
+        Output<String> accessTier,
+        Output<Integer> days) {
         this.accessTier = Objects.requireNonNull(accessTier, "expected parameter 'accessTier' to be non-null");
         this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
     }
 
     private BucketIntelligentTieringConfigurationTieringGetArgs() {
-        this.accessTier = Input.empty();
-        this.days = Input.empty();
+        this.accessTier = Output.empty();
+        this.days = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> accessTier;
-        private Input<Integer> days;
+        private Output<String> accessTier;
+        private Output<Integer> days;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
     	      this.days = defaults.days;
         }
 
-        public Builder accessTier(Input<String> accessTier) {
+        public Builder accessTier(Output<String> accessTier) {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
 
         public Builder accessTier(String accessTier) {
-            this.accessTier = Input.of(Objects.requireNonNull(accessTier));
+            this.accessTier = Output.of(Objects.requireNonNull(accessTier));
             return this;
         }
 
-        public Builder days(Input<Integer> days) {
+        public Builder days(Output<Integer> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
         public Builder days(Integer days) {
-            this.days = Input.of(Objects.requireNonNull(days));
+            this.days = Output.of(Objects.requireNonNull(days));
             return this;
         }
         public BucketIntelligentTieringConfigurationTieringGetArgs build() {

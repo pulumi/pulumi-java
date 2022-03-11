@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="approvalRuleTemplateId")
-      private final @Nullable Input<String> approvalRuleTemplateId;
+      private final @Nullable Output<String> approvalRuleTemplateId;
 
-    public Input<String> getApprovalRuleTemplateId() {
-        return this.approvalRuleTemplateId == null ? Input.empty() : this.approvalRuleTemplateId;
+    public Output<String> getApprovalRuleTemplateId() {
+        return this.approvalRuleTemplateId == null ? Output.empty() : this.approvalRuleTemplateId;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creationDate")
-      private final @Nullable Input<String> creationDate;
+      private final @Nullable Output<String> creationDate;
 
-    public Input<String> getCreationDate() {
-        return this.creationDate == null ? Input.empty() : this.creationDate;
+    public Output<String> getCreationDate() {
+        return this.creationDate == null ? Output.empty() : this.creationDate;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedDate")
-      private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Output<String> lastModifiedDate;
 
-    public Input<String> getLastModifiedDate() {
-        return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
+    public Output<String> getLastModifiedDate() {
+        return this.lastModifiedDate == null ? Output.empty() : this.lastModifiedDate;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedUser")
-      private final @Nullable Input<String> lastModifiedUser;
+      private final @Nullable Output<String> lastModifiedUser;
 
-    public Input<String> getLastModifiedUser() {
-        return this.lastModifiedUser == null ? Input.empty() : this.lastModifiedUser;
+    public Output<String> getLastModifiedUser() {
+        return this.lastModifiedUser == null ? Output.empty() : this.lastModifiedUser;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -96,21 +96,21 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleContentSha256")
-      private final @Nullable Input<String> ruleContentSha256;
+      private final @Nullable Output<String> ruleContentSha256;
 
-    public Input<String> getRuleContentSha256() {
-        return this.ruleContentSha256 == null ? Input.empty() : this.ruleContentSha256;
+    public Output<String> getRuleContentSha256() {
+        return this.ruleContentSha256 == null ? Output.empty() : this.ruleContentSha256;
     }
 
     public ApprovalRuleTemplateState(
-        @Nullable Input<String> approvalRuleTemplateId,
-        @Nullable Input<String> content,
-        @Nullable Input<String> creationDate,
-        @Nullable Input<String> description,
-        @Nullable Input<String> lastModifiedDate,
-        @Nullable Input<String> lastModifiedUser,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ruleContentSha256) {
+        @Nullable Output<String> approvalRuleTemplateId,
+        @Nullable Output<String> content,
+        @Nullable Output<String> creationDate,
+        @Nullable Output<String> description,
+        @Nullable Output<String> lastModifiedDate,
+        @Nullable Output<String> lastModifiedUser,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ruleContentSha256) {
         this.approvalRuleTemplateId = approvalRuleTemplateId;
         this.content = content;
         this.creationDate = creationDate;
@@ -122,14 +122,14 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
     }
 
     private ApprovalRuleTemplateState() {
-        this.approvalRuleTemplateId = Input.empty();
-        this.content = Input.empty();
-        this.creationDate = Input.empty();
-        this.description = Input.empty();
-        this.lastModifiedDate = Input.empty();
-        this.lastModifiedUser = Input.empty();
-        this.name = Input.empty();
-        this.ruleContentSha256 = Input.empty();
+        this.approvalRuleTemplateId = Output.empty();
+        this.content = Output.empty();
+        this.creationDate = Output.empty();
+        this.description = Output.empty();
+        this.lastModifiedDate = Output.empty();
+        this.lastModifiedUser = Output.empty();
+        this.name = Output.empty();
+        this.ruleContentSha256 = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,14 +141,14 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> approvalRuleTemplateId;
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> creationDate;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> lastModifiedDate;
-        private @Nullable Input<String> lastModifiedUser;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ruleContentSha256;
+        private @Nullable Output<String> approvalRuleTemplateId;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> creationDate;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> lastModifiedDate;
+        private @Nullable Output<String> lastModifiedUser;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ruleContentSha256;
 
         public Builder() {
     	      // Empty
@@ -166,83 +166,83 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
     	      this.ruleContentSha256 = defaults.ruleContentSha256;
         }
 
-        public Builder approvalRuleTemplateId(@Nullable Input<String> approvalRuleTemplateId) {
+        public Builder approvalRuleTemplateId(@Nullable Output<String> approvalRuleTemplateId) {
             this.approvalRuleTemplateId = approvalRuleTemplateId;
             return this;
         }
 
         public Builder approvalRuleTemplateId(@Nullable String approvalRuleTemplateId) {
-            this.approvalRuleTemplateId = Input.ofNullable(approvalRuleTemplateId);
+            this.approvalRuleTemplateId = Output.ofNullable(approvalRuleTemplateId);
             return this;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder creationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Output<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
         public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Input.ofNullable(creationDate);
+            this.creationDate = Output.ofNullable(creationDate);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
+            this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder lastModifiedUser(@Nullable Input<String> lastModifiedUser) {
+        public Builder lastModifiedUser(@Nullable Output<String> lastModifiedUser) {
             this.lastModifiedUser = lastModifiedUser;
             return this;
         }
 
         public Builder lastModifiedUser(@Nullable String lastModifiedUser) {
-            this.lastModifiedUser = Input.ofNullable(lastModifiedUser);
+            this.lastModifiedUser = Output.ofNullable(lastModifiedUser);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleContentSha256(@Nullable Input<String> ruleContentSha256) {
+        public Builder ruleContentSha256(@Nullable Output<String> ruleContentSha256) {
             this.ruleContentSha256 = ruleContentSha256;
             return this;
         }
 
         public Builder ruleContentSha256(@Nullable String ruleContentSha256) {
-            this.ruleContentSha256 = Input.ofNullable(ruleContentSha256);
+            this.ruleContentSha256 = Output.ofNullable(ruleContentSha256);
             return this;
         }
         public ApprovalRuleTemplateState build() {

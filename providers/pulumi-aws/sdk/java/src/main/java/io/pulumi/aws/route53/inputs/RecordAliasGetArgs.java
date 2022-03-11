@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluateTargetHealth", required=true)
-      private final Input<Boolean> evaluateTargetHealth;
+      private final Output<Boolean> evaluateTargetHealth;
 
-    public Input<Boolean> getEvaluateTargetHealth() {
+    public Output<Boolean> getEvaluateTargetHealth() {
         return this.evaluateTargetHealth;
     }
 
@@ -30,9 +30,9 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -41,25 +41,25 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId", required=true)
-      private final Input<String> zoneId;
+      private final Output<String> zoneId;
 
-    public Input<String> getZoneId() {
+    public Output<String> getZoneId() {
         return this.zoneId;
     }
 
     public RecordAliasGetArgs(
-        Input<Boolean> evaluateTargetHealth,
-        Input<String> name,
-        Input<String> zoneId) {
+        Output<Boolean> evaluateTargetHealth,
+        Output<String> name,
+        Output<String> zoneId) {
         this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth, "expected parameter 'evaluateTargetHealth' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
     }
 
     private RecordAliasGetArgs() {
-        this.evaluateTargetHealth = Input.empty();
-        this.name = Input.empty();
-        this.zoneId = Input.empty();
+        this.evaluateTargetHealth = Output.empty();
+        this.name = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> evaluateTargetHealth;
-        private Input<String> name;
-        private Input<String> zoneId;
+        private Output<Boolean> evaluateTargetHealth;
+        private Output<String> name;
+        private Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder evaluateTargetHealth(Input<Boolean> evaluateTargetHealth) {
+        public Builder evaluateTargetHealth(Output<Boolean> evaluateTargetHealth) {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
 
         public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
-            this.evaluateTargetHealth = Input.of(Objects.requireNonNull(evaluateTargetHealth));
+            this.evaluateTargetHealth = Output.of(Objects.requireNonNull(evaluateTargetHealth));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder zoneId(Input<String> zoneId) {
+        public Builder zoneId(Output<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
         public Builder zoneId(String zoneId) {
-            this.zoneId = Input.of(Objects.requireNonNull(zoneId));
+            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
             return this;
         }
         public RecordAliasGetArgs build() {

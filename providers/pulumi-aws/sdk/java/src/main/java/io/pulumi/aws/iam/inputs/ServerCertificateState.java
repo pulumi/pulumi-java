@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateBody")
-      private final @Nullable Input<String> certificateBody;
+      private final @Nullable Output<String> certificateBody;
 
-    public Input<String> getCertificateBody() {
-        return this.certificateBody == null ? Input.empty() : this.certificateBody;
+    public Output<String> getCertificateBody() {
+        return this.certificateBody == null ? Output.empty() : this.certificateBody;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateChain")
-      private final @Nullable Input<String> certificateChain;
+      private final @Nullable Output<String> certificateChain;
 
-    public Input<String> getCertificateChain() {
-        return this.certificateChain == null ? Input.empty() : this.certificateChain;
+    public Output<String> getCertificateChain() {
+        return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="expiration")
-      private final @Nullable Input<String> expiration;
+      private final @Nullable Output<String> expiration;
 
-    public Input<String> getExpiration() {
-        return this.expiration == null ? Input.empty() : this.expiration;
+    public Output<String> getExpiration() {
+        return this.expiration == null ? Output.empty() : this.expiration;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -138,24 +138,24 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uploadDate")
-      private final @Nullable Input<String> uploadDate;
+      private final @Nullable Output<String> uploadDate;
 
-    public Input<String> getUploadDate() {
-        return this.uploadDate == null ? Input.empty() : this.uploadDate;
+    public Output<String> getUploadDate() {
+        return this.uploadDate == null ? Output.empty() : this.uploadDate;
     }
 
     public ServerCertificateState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> certificateBody,
-        @Nullable Input<String> certificateChain,
-        @Nullable Input<String> expiration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<String> path,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> uploadDate) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> certificateBody,
+        @Nullable Output<String> certificateChain,
+        @Nullable Output<String> expiration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<String> path,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> uploadDate) {
         this.arn = arn;
         this.certificateBody = certificateBody;
         this.certificateChain = certificateChain;
@@ -170,17 +170,17 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     private ServerCertificateState() {
-        this.arn = Input.empty();
-        this.certificateBody = Input.empty();
-        this.certificateChain = Input.empty();
-        this.expiration = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.path = Input.empty();
-        this.privateKey = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.uploadDate = Input.empty();
+        this.arn = Output.empty();
+        this.certificateBody = Output.empty();
+        this.certificateChain = Output.empty();
+        this.expiration = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.path = Output.empty();
+        this.privateKey = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.uploadDate = Output.empty();
     }
 
     public static Builder builder() {
@@ -192,17 +192,17 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> certificateBody;
-        private @Nullable Input<String> certificateChain;
-        private @Nullable Input<String> expiration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> uploadDate;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> certificateBody;
+        private @Nullable Output<String> certificateChain;
+        private @Nullable Output<String> expiration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> uploadDate;
 
         public Builder() {
     	      // Empty
@@ -223,113 +223,113 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
     	      this.uploadDate = defaults.uploadDate;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder certificateBody(@Nullable Input<String> certificateBody) {
+        public Builder certificateBody(@Nullable Output<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
 
         public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Input.ofNullable(certificateBody);
+            this.certificateBody = Output.ofNullable(certificateBody);
             return this;
         }
 
-        public Builder certificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Output<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Input.ofNullable(certificateChain);
+            this.certificateChain = Output.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder expiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Input.ofNullable(expiration);
+            this.expiration = Output.ofNullable(expiration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder uploadDate(@Nullable Input<String> uploadDate) {
+        public Builder uploadDate(@Nullable Output<String> uploadDate) {
             this.uploadDate = uploadDate;
             return this;
         }
 
         public Builder uploadDate(@Nullable String uploadDate) {
-            this.uploadDate = Input.ofNullable(uploadDate);
+            this.uploadDate = Output.ofNullable(uploadDate);
             return this;
         }
         public ServerCertificateState build() {

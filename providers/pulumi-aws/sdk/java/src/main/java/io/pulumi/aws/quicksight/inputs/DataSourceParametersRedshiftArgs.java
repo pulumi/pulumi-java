@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterId")
-      private final @Nullable Input<String> clusterId;
+      private final @Nullable Output<String> clusterId;
 
-    public Input<String> getClusterId() {
-        return this.clusterId == null ? Input.empty() : this.clusterId;
+    public Output<String> getClusterId() {
+        return this.clusterId == null ? Output.empty() : this.clusterId;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<String> database;
+      private final Output<String> database;
 
-    public Input<String> getDatabase() {
+    public Output<String> getDatabase() {
         return this.database;
     }
 
@@ -42,10 +42,10 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host")
-      private final @Nullable Input<String> host;
+      private final @Nullable Output<String> host;
 
-    public Input<String> getHost() {
-        return this.host == null ? Input.empty() : this.host;
+    public Output<String> getHost() {
+        return this.host == null ? Output.empty() : this.host;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public DataSourceParametersRedshiftArgs(
-        @Nullable Input<String> clusterId,
-        Input<String> database,
-        @Nullable Input<String> host,
-        @Nullable Input<Integer> port) {
+        @Nullable Output<String> clusterId,
+        Output<String> database,
+        @Nullable Output<String> host,
+        @Nullable Output<Integer> port) {
         this.clusterId = clusterId;
         this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
         this.host = host;
@@ -71,10 +71,10 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
     }
 
     private DataSourceParametersRedshiftArgs() {
-        this.clusterId = Input.empty();
-        this.database = Input.empty();
-        this.host = Input.empty();
-        this.port = Input.empty();
+        this.clusterId = Output.empty();
+        this.database = Output.empty();
+        this.host = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterId;
-        private Input<String> database;
-        private @Nullable Input<String> host;
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<String> clusterId;
+        private Output<String> database;
+        private @Nullable Output<String> host;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
     	      this.port = defaults.port;
         }
 
-        public Builder clusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Input.ofNullable(clusterId);
+            this.clusterId = Output.ofNullable(clusterId);
             return this;
         }
 
-        public Builder database(Input<String> database) {
+        public Builder database(Output<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(String database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder host(@Nullable Input<String> host) {
+        public Builder host(@Nullable Output<String> host) {
             this.host = host;
             return this;
         }
 
         public Builder host(@Nullable String host) {
-            this.host = Input.ofNullable(host);
+            this.host = Output.ofNullable(host);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public DataSourceParametersRedshiftArgs build() {

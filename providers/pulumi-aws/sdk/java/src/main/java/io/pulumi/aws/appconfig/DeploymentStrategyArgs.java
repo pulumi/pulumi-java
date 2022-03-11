@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appconfig;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,9 +22,9 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deploymentDurationInMinutes", required=true)
-      private final Input<Integer> deploymentDurationInMinutes;
+      private final Output<Integer> deploymentDurationInMinutes;
 
-    public Input<Integer> getDeploymentDurationInMinutes() {
+    public Output<Integer> getDeploymentDurationInMinutes() {
         return this.deploymentDurationInMinutes;
     }
 
@@ -33,10 +33,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="finalBakeTimeInMinutes")
-      private final @Nullable Input<Integer> finalBakeTimeInMinutes;
+      private final @Nullable Output<Integer> finalBakeTimeInMinutes;
 
-    public Input<Integer> getFinalBakeTimeInMinutes() {
-        return this.finalBakeTimeInMinutes == null ? Input.empty() : this.finalBakeTimeInMinutes;
+    public Output<Integer> getFinalBakeTimeInMinutes() {
+        return this.finalBakeTimeInMinutes == null ? Output.empty() : this.finalBakeTimeInMinutes;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="growthFactor", required=true)
-      private final Input<Double> growthFactor;
+      private final Output<Double> growthFactor;
 
-    public Input<Double> getGrowthFactor() {
+    public Output<Double> getGrowthFactor() {
         return this.growthFactor;
     }
 
@@ -66,10 +66,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="growthType")
-      private final @Nullable Input<String> growthType;
+      private final @Nullable Output<String> growthType;
 
-    public Input<String> getGrowthType() {
-        return this.growthType == null ? Input.empty() : this.growthType;
+    public Output<String> getGrowthType() {
+        return this.growthType == null ? Output.empty() : this.growthType;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replicateTo", required=true)
-      private final Input<String> replicateTo;
+      private final Output<String> replicateTo;
 
-    public Input<String> getReplicateTo() {
+    public Output<String> getReplicateTo() {
         return this.replicateTo;
     }
 
@@ -99,21 +99,21 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DeploymentStrategyArgs(
-        Input<Integer> deploymentDurationInMinutes,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> finalBakeTimeInMinutes,
-        Input<Double> growthFactor,
-        @Nullable Input<String> growthType,
-        @Nullable Input<String> name,
-        Input<String> replicateTo,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<Integer> deploymentDurationInMinutes,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> finalBakeTimeInMinutes,
+        Output<Double> growthFactor,
+        @Nullable Output<String> growthType,
+        @Nullable Output<String> name,
+        Output<String> replicateTo,
+        @Nullable Output<Map<String,String>> tags) {
         this.deploymentDurationInMinutes = Objects.requireNonNull(deploymentDurationInMinutes, "expected parameter 'deploymentDurationInMinutes' to be non-null");
         this.description = description;
         this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
@@ -125,14 +125,14 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DeploymentStrategyArgs() {
-        this.deploymentDurationInMinutes = Input.empty();
-        this.description = Input.empty();
-        this.finalBakeTimeInMinutes = Input.empty();
-        this.growthFactor = Input.empty();
-        this.growthType = Input.empty();
-        this.name = Input.empty();
-        this.replicateTo = Input.empty();
-        this.tags = Input.empty();
+        this.deploymentDurationInMinutes = Output.empty();
+        this.description = Output.empty();
+        this.finalBakeTimeInMinutes = Output.empty();
+        this.growthFactor = Output.empty();
+        this.growthType = Output.empty();
+        this.name = Output.empty();
+        this.replicateTo = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Integer> deploymentDurationInMinutes;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> finalBakeTimeInMinutes;
-        private Input<Double> growthFactor;
-        private @Nullable Input<String> growthType;
-        private @Nullable Input<String> name;
-        private Input<String> replicateTo;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<Integer> deploymentDurationInMinutes;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> finalBakeTimeInMinutes;
+        private Output<Double> growthFactor;
+        private @Nullable Output<String> growthType;
+        private @Nullable Output<String> name;
+        private Output<String> replicateTo;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder deploymentDurationInMinutes(Input<Integer> deploymentDurationInMinutes) {
+        public Builder deploymentDurationInMinutes(Output<Integer> deploymentDurationInMinutes) {
             this.deploymentDurationInMinutes = Objects.requireNonNull(deploymentDurationInMinutes);
             return this;
         }
 
         public Builder deploymentDurationInMinutes(Integer deploymentDurationInMinutes) {
-            this.deploymentDurationInMinutes = Input.of(Objects.requireNonNull(deploymentDurationInMinutes));
+            this.deploymentDurationInMinutes = Output.of(Objects.requireNonNull(deploymentDurationInMinutes));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder finalBakeTimeInMinutes(@Nullable Input<Integer> finalBakeTimeInMinutes) {
+        public Builder finalBakeTimeInMinutes(@Nullable Output<Integer> finalBakeTimeInMinutes) {
             this.finalBakeTimeInMinutes = finalBakeTimeInMinutes;
             return this;
         }
 
         public Builder finalBakeTimeInMinutes(@Nullable Integer finalBakeTimeInMinutes) {
-            this.finalBakeTimeInMinutes = Input.ofNullable(finalBakeTimeInMinutes);
+            this.finalBakeTimeInMinutes = Output.ofNullable(finalBakeTimeInMinutes);
             return this;
         }
 
-        public Builder growthFactor(Input<Double> growthFactor) {
+        public Builder growthFactor(Output<Double> growthFactor) {
             this.growthFactor = Objects.requireNonNull(growthFactor);
             return this;
         }
 
         public Builder growthFactor(Double growthFactor) {
-            this.growthFactor = Input.of(Objects.requireNonNull(growthFactor));
+            this.growthFactor = Output.of(Objects.requireNonNull(growthFactor));
             return this;
         }
 
-        public Builder growthType(@Nullable Input<String> growthType) {
+        public Builder growthType(@Nullable Output<String> growthType) {
             this.growthType = growthType;
             return this;
         }
 
         public Builder growthType(@Nullable String growthType) {
-            this.growthType = Input.ofNullable(growthType);
+            this.growthType = Output.ofNullable(growthType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder replicateTo(Input<String> replicateTo) {
+        public Builder replicateTo(Output<String> replicateTo) {
             this.replicateTo = Objects.requireNonNull(replicateTo);
             return this;
         }
 
         public Builder replicateTo(String replicateTo) {
-            this.replicateTo = Input.of(Objects.requireNonNull(replicateTo));
+            this.replicateTo = Output.of(Objects.requireNonNull(replicateTo));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DeploymentStrategyArgs build() {

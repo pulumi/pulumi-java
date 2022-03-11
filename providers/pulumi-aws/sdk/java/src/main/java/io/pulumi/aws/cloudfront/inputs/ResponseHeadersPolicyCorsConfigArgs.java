@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessCont
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlAllowCredentials", required=true)
-      private final Input<Boolean> accessControlAllowCredentials;
+      private final Output<Boolean> accessControlAllowCredentials;
 
-    public Input<Boolean> getAccessControlAllowCredentials() {
+    public Output<Boolean> getAccessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
 
@@ -35,9 +35,9 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlAllowHeaders", required=true)
-      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
+      private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
 
-    public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> getAccessControlAllowHeaders() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> getAccessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
 
@@ -46,9 +46,9 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlAllowMethods", required=true)
-      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
+      private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
 
-    public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> getAccessControlAllowMethods() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> getAccessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
 
@@ -57,9 +57,9 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlAllowOrigins", required=true)
-      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
+      private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
 
-    public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> getAccessControlAllowOrigins() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> getAccessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
 
@@ -68,10 +68,10 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlExposeHeaders")
-      private final @Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
+      private final @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
 
-    public Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
-        return this.accessControlExposeHeaders == null ? Input.empty() : this.accessControlExposeHeaders;
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
+        return this.accessControlExposeHeaders == null ? Output.empty() : this.accessControlExposeHeaders;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessControlMaxAgeSec")
-      private final @Nullable Input<Integer> accessControlMaxAgeSec;
+      private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
-    public Input<Integer> getAccessControlMaxAgeSec() {
-        return this.accessControlMaxAgeSec == null ? Input.empty() : this.accessControlMaxAgeSec;
+    public Output<Integer> getAccessControlMaxAgeSec() {
+        return this.accessControlMaxAgeSec == null ? Output.empty() : this.accessControlMaxAgeSec;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="originOverride", required=true)
-      private final Input<Boolean> originOverride;
+      private final Output<Boolean> originOverride;
 
-    public Input<Boolean> getOriginOverride() {
+    public Output<Boolean> getOriginOverride() {
         return this.originOverride;
     }
 
     public ResponseHeadersPolicyCorsConfigArgs(
-        Input<Boolean> accessControlAllowCredentials,
-        Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders,
-        Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods,
-        Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins,
-        @Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders,
-        @Nullable Input<Integer> accessControlMaxAgeSec,
-        Input<Boolean> originOverride) {
+        Output<Boolean> accessControlAllowCredentials,
+        Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders,
+        Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods,
+        Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins,
+        @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders,
+        @Nullable Output<Integer> accessControlMaxAgeSec,
+        Output<Boolean> originOverride) {
         this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials, "expected parameter 'accessControlAllowCredentials' to be non-null");
         this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders, "expected parameter 'accessControlAllowHeaders' to be non-null");
         this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods, "expected parameter 'accessControlAllowMethods' to be non-null");
@@ -114,13 +114,13 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     }
 
     private ResponseHeadersPolicyCorsConfigArgs() {
-        this.accessControlAllowCredentials = Input.empty();
-        this.accessControlAllowHeaders = Input.empty();
-        this.accessControlAllowMethods = Input.empty();
-        this.accessControlAllowOrigins = Input.empty();
-        this.accessControlExposeHeaders = Input.empty();
-        this.accessControlMaxAgeSec = Input.empty();
-        this.originOverride = Input.empty();
+        this.accessControlAllowCredentials = Output.empty();
+        this.accessControlAllowHeaders = Output.empty();
+        this.accessControlAllowMethods = Output.empty();
+        this.accessControlAllowOrigins = Output.empty();
+        this.accessControlExposeHeaders = Output.empty();
+        this.accessControlMaxAgeSec = Output.empty();
+        this.originOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> accessControlAllowCredentials;
-        private Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
-        private Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
-        private Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
-        private @Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
-        private @Nullable Input<Integer> accessControlMaxAgeSec;
-        private Input<Boolean> originOverride;
+        private Output<Boolean> accessControlAllowCredentials;
+        private Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
+        private Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
+        private Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
+        private @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
+        private @Nullable Output<Integer> accessControlMaxAgeSec;
+        private Output<Boolean> originOverride;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     	      this.originOverride = defaults.originOverride;
         }
 
-        public Builder accessControlAllowCredentials(Input<Boolean> accessControlAllowCredentials) {
+        public Builder accessControlAllowCredentials(Output<Boolean> accessControlAllowCredentials) {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
 
         public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
-            this.accessControlAllowCredentials = Input.of(Objects.requireNonNull(accessControlAllowCredentials));
+            this.accessControlAllowCredentials = Output.of(Objects.requireNonNull(accessControlAllowCredentials));
             return this;
         }
 
-        public Builder accessControlAllowHeaders(Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders) {
+        public Builder accessControlAllowHeaders(Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
 
         public Builder accessControlAllowHeaders(ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs accessControlAllowHeaders) {
-            this.accessControlAllowHeaders = Input.of(Objects.requireNonNull(accessControlAllowHeaders));
+            this.accessControlAllowHeaders = Output.of(Objects.requireNonNull(accessControlAllowHeaders));
             return this;
         }
 
-        public Builder accessControlAllowMethods(Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods) {
+        public Builder accessControlAllowMethods(Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
 
         public Builder accessControlAllowMethods(ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs accessControlAllowMethods) {
-            this.accessControlAllowMethods = Input.of(Objects.requireNonNull(accessControlAllowMethods));
+            this.accessControlAllowMethods = Output.of(Objects.requireNonNull(accessControlAllowMethods));
             return this;
         }
 
-        public Builder accessControlAllowOrigins(Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins) {
+        public Builder accessControlAllowOrigins(Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
 
         public Builder accessControlAllowOrigins(ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs accessControlAllowOrigins) {
-            this.accessControlAllowOrigins = Input.of(Objects.requireNonNull(accessControlAllowOrigins));
+            this.accessControlAllowOrigins = Output.of(Objects.requireNonNull(accessControlAllowOrigins));
             return this;
         }
 
-        public Builder accessControlExposeHeaders(@Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders) {
+        public Builder accessControlExposeHeaders(@Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders) {
             this.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
 
         public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs accessControlExposeHeaders) {
-            this.accessControlExposeHeaders = Input.ofNullable(accessControlExposeHeaders);
+            this.accessControlExposeHeaders = Output.ofNullable(accessControlExposeHeaders);
             return this;
         }
 
-        public Builder accessControlMaxAgeSec(@Nullable Input<Integer> accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(@Nullable Output<Integer> accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
 
         public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Input.ofNullable(accessControlMaxAgeSec);
+            this.accessControlMaxAgeSec = Output.ofNullable(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder originOverride(Input<Boolean> originOverride) {
+        public Builder originOverride(Output<Boolean> originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }
 
         public Builder originOverride(Boolean originOverride) {
-            this.originOverride = Input.of(Objects.requireNonNull(originOverride));
+            this.originOverride = Output.of(Objects.requireNonNull(originOverride));
             return this;
         }
         public ResponseHeadersPolicyCorsConfigArgs build() {

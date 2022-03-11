@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="configuration", required=true)
-      private final Input<String> configuration;
+      private final Output<String> configuration;
 
-    public Input<String> getConfiguration() {
+    public Output<String> getConfiguration() {
         return this.configuration;
     }
 
@@ -30,10 +30,10 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     public SecurityConfigurationArgs(
-        Input<String> configuration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix) {
+        Output<String> configuration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix) {
         this.configuration = Objects.requireNonNull(configuration, "expected parameter 'configuration' to be non-null");
         this.name = name;
         this.namePrefix = namePrefix;
     }
 
     private SecurityConfigurationArgs() {
-        this.configuration = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
+        this.configuration = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> configuration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
+        private Output<String> configuration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder configuration(Input<String> configuration) {
+        public Builder configuration(Output<String> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
         public Builder configuration(String configuration) {
-            this.configuration = Input.of(Objects.requireNonNull(configuration));
+            this.configuration = Output.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
         public SecurityConfigurationArgs build() {

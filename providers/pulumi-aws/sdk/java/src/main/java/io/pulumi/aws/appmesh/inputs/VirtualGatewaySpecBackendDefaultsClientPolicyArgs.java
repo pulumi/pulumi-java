@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
      * 
      */
     @InputImport(name="tls")
-      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
+      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
 
-    public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> getTls() {
-        return this.tls == null ? Input.empty() : this.tls;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> getTls() {
+        return this.tls == null ? Output.empty() : this.tls;
     }
 
-    public VirtualGatewaySpecBackendDefaultsClientPolicyArgs(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
+    public VirtualGatewaySpecBackendDefaultsClientPolicyArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
         this.tls = tls;
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyArgs() {
-        this.tls = Input.empty();
+        this.tls = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
+        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
     	      this.tls = defaults.tls;
         }
 
-        public Builder tls(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
+        public Builder tls(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
         public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
-            this.tls = Input.ofNullable(tls);
+            this.tls = Output.ofNullable(tls);
             return this;
         }
         public VirtualGatewaySpecBackendDefaultsClientPolicyArgs build() {

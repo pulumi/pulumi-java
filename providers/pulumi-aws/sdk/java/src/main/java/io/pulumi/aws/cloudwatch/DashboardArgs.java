@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardBody", required=true)
-      private final Input<String> dashboardBody;
+      private final Output<String> dashboardBody;
 
-    public Input<String> getDashboardBody() {
+    public Output<String> getDashboardBody() {
         return this.dashboardBody;
     }
 
@@ -29,22 +29,22 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName", required=true)
-      private final Input<String> dashboardName;
+      private final Output<String> dashboardName;
 
-    public Input<String> getDashboardName() {
+    public Output<String> getDashboardName() {
         return this.dashboardName;
     }
 
     public DashboardArgs(
-        Input<String> dashboardBody,
-        Input<String> dashboardName) {
+        Output<String> dashboardBody,
+        Output<String> dashboardName) {
         this.dashboardBody = Objects.requireNonNull(dashboardBody, "expected parameter 'dashboardBody' to be non-null");
         this.dashboardName = Objects.requireNonNull(dashboardName, "expected parameter 'dashboardName' to be non-null");
     }
 
     private DashboardArgs() {
-        this.dashboardBody = Input.empty();
-        this.dashboardName = Input.empty();
+        this.dashboardBody = Output.empty();
+        this.dashboardName = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> dashboardBody;
-        private Input<String> dashboardName;
+        private Output<String> dashboardBody;
+        private Output<String> dashboardName;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dashboardName = defaults.dashboardName;
         }
 
-        public Builder dashboardBody(Input<String> dashboardBody) {
+        public Builder dashboardBody(Output<String> dashboardBody) {
             this.dashboardBody = Objects.requireNonNull(dashboardBody);
             return this;
         }
 
         public Builder dashboardBody(String dashboardBody) {
-            this.dashboardBody = Input.of(Objects.requireNonNull(dashboardBody));
+            this.dashboardBody = Output.of(Objects.requireNonNull(dashboardBody));
             return this;
         }
 
-        public Builder dashboardName(Input<String> dashboardName) {
+        public Builder dashboardName(Output<String> dashboardName) {
             this.dashboardName = Objects.requireNonNull(dashboardName);
             return this;
         }
 
         public Builder dashboardName(String dashboardName) {
-            this.dashboardName = Input.of(Objects.requireNonNull(dashboardName));
+            this.dashboardName = Output.of(Objects.requireNonNull(dashboardName));
             return this;
         }
         public DashboardArgs build() {

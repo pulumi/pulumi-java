@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceToken")
-      private final @Nullable Input<String> eventSourceToken;
+      private final @Nullable Output<String> eventSourceToken;
 
-    public Input<String> getEventSourceToken() {
-        return this.eventSourceToken == null ? Input.empty() : this.eventSourceToken;
+    public Output<String> getEventSourceToken() {
+        return this.eventSourceToken == null ? Output.empty() : this.eventSourceToken;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function")
-      private final @Nullable Input<String> function;
+      private final @Nullable Output<String> function;
 
-    public Input<String> getFunction() {
-        return this.function == null ? Input.empty() : this.function;
+    public Output<String> getFunction() {
+        return this.function == null ? Output.empty() : this.function;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal")
-      private final @Nullable Input<String> principal;
+      private final @Nullable Output<String> principal;
 
-    public Input<String> getPrincipal() {
-        return this.principal == null ? Input.empty() : this.principal;
+    public Output<String> getPrincipal() {
+        return this.principal == null ? Output.empty() : this.principal;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifier")
-      private final @Nullable Input<String> qualifier;
+      private final @Nullable Output<String> qualifier;
 
-    public Input<String> getQualifier() {
-        return this.qualifier == null ? Input.empty() : this.qualifier;
+    public Output<String> getQualifier() {
+        return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAccount")
-      private final @Nullable Input<String> sourceAccount;
+      private final @Nullable Output<String> sourceAccount;
 
-    public Input<String> getSourceAccount() {
-        return this.sourceAccount == null ? Input.empty() : this.sourceAccount;
+    public Output<String> getSourceAccount() {
+        return this.sourceAccount == null ? Output.empty() : this.sourceAccount;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArn")
-      private final @Nullable Input<String> sourceArn;
+      private final @Nullable Output<String> sourceArn;
 
-    public Input<String> getSourceArn() {
-        return this.sourceArn == null ? Input.empty() : this.sourceArn;
+    public Output<String> getSourceArn() {
+        return this.sourceArn == null ? Output.empty() : this.sourceArn;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statementId")
-      private final @Nullable Input<String> statementId;
+      private final @Nullable Output<String> statementId;
 
-    public Input<String> getStatementId() {
-        return this.statementId == null ? Input.empty() : this.statementId;
+    public Output<String> getStatementId() {
+        return this.statementId == null ? Output.empty() : this.statementId;
     }
 
     /**
@@ -111,22 +111,22 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statementIdPrefix")
-      private final @Nullable Input<String> statementIdPrefix;
+      private final @Nullable Output<String> statementIdPrefix;
 
-    public Input<String> getStatementIdPrefix() {
-        return this.statementIdPrefix == null ? Input.empty() : this.statementIdPrefix;
+    public Output<String> getStatementIdPrefix() {
+        return this.statementIdPrefix == null ? Output.empty() : this.statementIdPrefix;
     }
 
     public PermissionState(
-        @Nullable Input<String> action,
-        @Nullable Input<String> eventSourceToken,
-        @Nullable Input<String> function,
-        @Nullable Input<String> principal,
-        @Nullable Input<String> qualifier,
-        @Nullable Input<String> sourceAccount,
-        @Nullable Input<String> sourceArn,
-        @Nullable Input<String> statementId,
-        @Nullable Input<String> statementIdPrefix) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> eventSourceToken,
+        @Nullable Output<String> function,
+        @Nullable Output<String> principal,
+        @Nullable Output<String> qualifier,
+        @Nullable Output<String> sourceAccount,
+        @Nullable Output<String> sourceArn,
+        @Nullable Output<String> statementId,
+        @Nullable Output<String> statementIdPrefix) {
         this.action = action;
         this.eventSourceToken = eventSourceToken;
         this.function = function;
@@ -139,15 +139,15 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionState() {
-        this.action = Input.empty();
-        this.eventSourceToken = Input.empty();
-        this.function = Input.empty();
-        this.principal = Input.empty();
-        this.qualifier = Input.empty();
-        this.sourceAccount = Input.empty();
-        this.sourceArn = Input.empty();
-        this.statementId = Input.empty();
-        this.statementIdPrefix = Input.empty();
+        this.action = Output.empty();
+        this.eventSourceToken = Output.empty();
+        this.function = Output.empty();
+        this.principal = Output.empty();
+        this.qualifier = Output.empty();
+        this.sourceAccount = Output.empty();
+        this.sourceArn = Output.empty();
+        this.statementId = Output.empty();
+        this.statementIdPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> eventSourceToken;
-        private @Nullable Input<String> function;
-        private @Nullable Input<String> principal;
-        private @Nullable Input<String> qualifier;
-        private @Nullable Input<String> sourceAccount;
-        private @Nullable Input<String> sourceArn;
-        private @Nullable Input<String> statementId;
-        private @Nullable Input<String> statementIdPrefix;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> eventSourceToken;
+        private @Nullable Output<String> function;
+        private @Nullable Output<String> principal;
+        private @Nullable Output<String> qualifier;
+        private @Nullable Output<String> sourceAccount;
+        private @Nullable Output<String> sourceArn;
+        private @Nullable Output<String> statementId;
+        private @Nullable Output<String> statementIdPrefix;
 
         public Builder() {
     	      // Empty
@@ -186,88 +186,88 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     	      this.statementIdPrefix = defaults.statementIdPrefix;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder eventSourceToken(@Nullable Input<String> eventSourceToken) {
+        public Builder eventSourceToken(@Nullable Output<String> eventSourceToken) {
             this.eventSourceToken = eventSourceToken;
             return this;
         }
 
         public Builder eventSourceToken(@Nullable String eventSourceToken) {
-            this.eventSourceToken = Input.ofNullable(eventSourceToken);
+            this.eventSourceToken = Output.ofNullable(eventSourceToken);
             return this;
         }
 
-        public Builder function(@Nullable Input<String> function) {
+        public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
 
-        public Builder principal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Output<String> principal) {
             this.principal = principal;
             return this;
         }
 
         public Builder principal(@Nullable String principal) {
-            this.principal = Input.ofNullable(principal);
+            this.principal = Output.ofNullable(principal);
             return this;
         }
 
-        public Builder qualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Input.ofNullable(qualifier);
+            this.qualifier = Output.ofNullable(qualifier);
             return this;
         }
 
-        public Builder sourceAccount(@Nullable Input<String> sourceAccount) {
+        public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
             this.sourceAccount = sourceAccount;
             return this;
         }
 
         public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Input.ofNullable(sourceAccount);
+            this.sourceAccount = Output.ofNullable(sourceAccount);
             return this;
         }
 
-        public Builder sourceArn(@Nullable Input<String> sourceArn) {
+        public Builder sourceArn(@Nullable Output<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Input.ofNullable(sourceArn);
+            this.sourceArn = Output.ofNullable(sourceArn);
             return this;
         }
 
-        public Builder statementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Output<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Input.ofNullable(statementId);
+            this.statementId = Output.ofNullable(statementId);
             return this;
         }
 
-        public Builder statementIdPrefix(@Nullable Input<String> statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
 
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Input.ofNullable(statementIdPrefix);
+            this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
             return this;
         }
         public PermissionState build() {

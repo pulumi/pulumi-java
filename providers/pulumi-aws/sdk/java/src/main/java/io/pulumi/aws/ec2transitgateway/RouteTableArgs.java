@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayId", required=true)
-      private final Input<String> transitGatewayId;
+      private final Output<String> transitGatewayId;
 
-    public Input<String> getTransitGatewayId() {
+    public Output<String> getTransitGatewayId() {
         return this.transitGatewayId;
     }
 
     public RouteTableArgs(
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> transitGatewayId) {
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> transitGatewayId) {
         this.tags = tags;
         this.transitGatewayId = Objects.requireNonNull(transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
     }
 
     private RouteTableArgs() {
-        this.tags = Input.empty();
-        this.transitGatewayId = Input.empty();
+        this.tags = Output.empty();
+        this.transitGatewayId = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> transitGatewayId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> transitGatewayId;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Output<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
+            this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }
         public RouteTableArgs build() {

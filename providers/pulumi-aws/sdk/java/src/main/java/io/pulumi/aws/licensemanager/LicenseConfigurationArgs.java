@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.licensemanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCount")
-      private final @Nullable Input<Integer> licenseCount;
+      private final @Nullable Output<Integer> licenseCount;
 
-    public Input<Integer> getLicenseCount() {
-        return this.licenseCount == null ? Input.empty() : this.licenseCount;
+    public Output<Integer> getLicenseCount() {
+        return this.licenseCount == null ? Output.empty() : this.licenseCount;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCountHardLimit")
-      private final @Nullable Input<Boolean> licenseCountHardLimit;
+      private final @Nullable Output<Boolean> licenseCountHardLimit;
 
-    public Input<Boolean> getLicenseCountHardLimit() {
-        return this.licenseCountHardLimit == null ? Input.empty() : this.licenseCountHardLimit;
+    public Output<Boolean> getLicenseCountHardLimit() {
+        return this.licenseCountHardLimit == null ? Output.empty() : this.licenseCountHardLimit;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCountingType", required=true)
-      private final Input<String> licenseCountingType;
+      private final Output<String> licenseCountingType;
 
-    public Input<String> getLicenseCountingType() {
+    public Output<String> getLicenseCountingType() {
         return this.licenseCountingType;
     }
 
@@ -67,10 +67,10 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseRules")
-      private final @Nullable Input<List<String>> licenseRules;
+      private final @Nullable Output<List<String>> licenseRules;
 
-    public Input<List<String>> getLicenseRules() {
-        return this.licenseRules == null ? Input.empty() : this.licenseRules;
+    public Output<List<String>> getLicenseRules() {
+        return this.licenseRules == null ? Output.empty() : this.licenseRules;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LicenseConfigurationArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> licenseCount,
-        @Nullable Input<Boolean> licenseCountHardLimit,
-        Input<String> licenseCountingType,
-        @Nullable Input<List<String>> licenseRules,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> licenseCount,
+        @Nullable Output<Boolean> licenseCountHardLimit,
+        Output<String> licenseCountingType,
+        @Nullable Output<List<String>> licenseRules,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> tags) {
         this.description = description;
         this.licenseCount = licenseCount;
         this.licenseCountHardLimit = licenseCountHardLimit;
@@ -113,13 +113,13 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private LicenseConfigurationArgs() {
-        this.description = Input.empty();
-        this.licenseCount = Input.empty();
-        this.licenseCountHardLimit = Input.empty();
-        this.licenseCountingType = Input.empty();
-        this.licenseRules = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.licenseCount = Output.empty();
+        this.licenseCountHardLimit = Output.empty();
+        this.licenseCountingType = Output.empty();
+        this.licenseRules = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> licenseCount;
-        private @Nullable Input<Boolean> licenseCountHardLimit;
-        private Input<String> licenseCountingType;
-        private @Nullable Input<List<String>> licenseRules;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> licenseCount;
+        private @Nullable Output<Boolean> licenseCountHardLimit;
+        private Output<String> licenseCountingType;
+        private @Nullable Output<List<String>> licenseRules;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder licenseCount(@Nullable Input<Integer> licenseCount) {
+        public Builder licenseCount(@Nullable Output<Integer> licenseCount) {
             this.licenseCount = licenseCount;
             return this;
         }
 
         public Builder licenseCount(@Nullable Integer licenseCount) {
-            this.licenseCount = Input.ofNullable(licenseCount);
+            this.licenseCount = Output.ofNullable(licenseCount);
             return this;
         }
 
-        public Builder licenseCountHardLimit(@Nullable Input<Boolean> licenseCountHardLimit) {
+        public Builder licenseCountHardLimit(@Nullable Output<Boolean> licenseCountHardLimit) {
             this.licenseCountHardLimit = licenseCountHardLimit;
             return this;
         }
 
         public Builder licenseCountHardLimit(@Nullable Boolean licenseCountHardLimit) {
-            this.licenseCountHardLimit = Input.ofNullable(licenseCountHardLimit);
+            this.licenseCountHardLimit = Output.ofNullable(licenseCountHardLimit);
             return this;
         }
 
-        public Builder licenseCountingType(Input<String> licenseCountingType) {
+        public Builder licenseCountingType(Output<String> licenseCountingType) {
             this.licenseCountingType = Objects.requireNonNull(licenseCountingType);
             return this;
         }
 
         public Builder licenseCountingType(String licenseCountingType) {
-            this.licenseCountingType = Input.of(Objects.requireNonNull(licenseCountingType));
+            this.licenseCountingType = Output.of(Objects.requireNonNull(licenseCountingType));
             return this;
         }
 
-        public Builder licenseRules(@Nullable Input<List<String>> licenseRules) {
+        public Builder licenseRules(@Nullable Output<List<String>> licenseRules) {
             this.licenseRules = licenseRules;
             return this;
         }
 
         public Builder licenseRules(@Nullable List<String> licenseRules) {
-            this.licenseRules = Input.ofNullable(licenseRules);
+            this.licenseRules = Output.ofNullable(licenseRules);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LicenseConfigurationArgs build() {

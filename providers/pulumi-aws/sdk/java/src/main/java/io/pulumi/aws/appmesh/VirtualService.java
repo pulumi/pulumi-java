@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appmesh.VirtualServiceArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceState;
 import io.pulumi.aws.appmesh.outputs.VirtualServiceSpec;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -212,14 +211,14 @@ public class VirtualService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualService(String name, VirtualServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appmesh/virtualService:VirtualService", name, args == null ? VirtualServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:appmesh/virtualService:VirtualService", name, args == null ? VirtualServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualService(String name, Input<String> id, @Nullable VirtualServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualService(String name, Output<String> id, @Nullable VirtualServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:appmesh/virtualService:VirtualService", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -235,7 +234,7 @@ public class VirtualService extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualService get(String name, Input<String> id, @Nullable VirtualServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualService get(String name, Output<String> id, @Nullable VirtualServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualService(name, id, state, options);
     }
 }

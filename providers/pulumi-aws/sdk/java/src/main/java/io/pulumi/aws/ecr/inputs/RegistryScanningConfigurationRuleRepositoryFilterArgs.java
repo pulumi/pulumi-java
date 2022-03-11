@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class RegistryScanningConfigurationRuleRepositoryFilterArgs extends
     public static final RegistryScanningConfigurationRuleRepositoryFilterArgs Empty = new RegistryScanningConfigurationRuleRepositoryFilterArgs();
 
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="filterType", required=true)
-      private final Input<String> filterType;
+      private final Output<String> filterType;
 
-    public Input<String> getFilterType() {
+    public Output<String> getFilterType() {
         return this.filterType;
     }
 
     public RegistryScanningConfigurationRuleRepositoryFilterArgs(
-        Input<String> filter,
-        Input<String> filterType) {
+        Output<String> filter,
+        Output<String> filterType) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.filterType = Objects.requireNonNull(filterType, "expected parameter 'filterType' to be non-null");
     }
 
     private RegistryScanningConfigurationRuleRepositoryFilterArgs() {
-        this.filter = Input.empty();
-        this.filterType = Input.empty();
+        this.filter = Output.empty();
+        this.filterType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class RegistryScanningConfigurationRuleRepositoryFilterArgs extends
     }
 
     public static final class Builder {
-        private Input<String> filter;
-        private Input<String> filterType;
+        private Output<String> filter;
+        private Output<String> filterType;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class RegistryScanningConfigurationRuleRepositoryFilterArgs extends
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder filterType(Input<String> filterType) {
+        public Builder filterType(Output<String> filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }
 
         public Builder filterType(String filterType) {
-            this.filterType = Input.of(Objects.requireNonNull(filterType));
+            this.filterType = Output.of(Objects.requireNonNull(filterType));
             return this;
         }
         public RegistryScanningConfigurationRuleRepositoryFilterArgs build() {

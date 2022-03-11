@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class JobExecutionPropertyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxConcurrentRuns")
-      private final @Nullable Input<Integer> maxConcurrentRuns;
+      private final @Nullable Output<Integer> maxConcurrentRuns;
 
-    public Input<Integer> getMaxConcurrentRuns() {
-        return this.maxConcurrentRuns == null ? Input.empty() : this.maxConcurrentRuns;
+    public Output<Integer> getMaxConcurrentRuns() {
+        return this.maxConcurrentRuns == null ? Output.empty() : this.maxConcurrentRuns;
     }
 
-    public JobExecutionPropertyArgs(@Nullable Input<Integer> maxConcurrentRuns) {
+    public JobExecutionPropertyArgs(@Nullable Output<Integer> maxConcurrentRuns) {
         this.maxConcurrentRuns = maxConcurrentRuns;
     }
 
     private JobExecutionPropertyArgs() {
-        this.maxConcurrentRuns = Input.empty();
+        this.maxConcurrentRuns = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JobExecutionPropertyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxConcurrentRuns;
+        private @Nullable Output<Integer> maxConcurrentRuns;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JobExecutionPropertyArgs extends io.pulumi.resources.Resource
     	      this.maxConcurrentRuns = defaults.maxConcurrentRuns;
         }
 
-        public Builder maxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Output<Integer> maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }
 
         public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
-            this.maxConcurrentRuns = Input.ofNullable(maxConcurrentRuns);
+            this.maxConcurrentRuns = Output.ofNullable(maxConcurrentRuns);
             return this;
         }
         public JobExecutionPropertyArgs build() {

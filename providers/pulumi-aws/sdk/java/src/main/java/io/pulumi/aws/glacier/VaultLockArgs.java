@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glacier;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completeLock", required=true)
-      private final Input<Boolean> completeLock;
+      private final Output<Boolean> completeLock;
 
-    public Input<Boolean> getCompleteLock() {
+    public Output<Boolean> getCompleteLock() {
         return this.completeLock;
     }
 
@@ -31,10 +31,10 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreDeletionError")
-      private final @Nullable Input<Boolean> ignoreDeletionError;
+      private final @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Input<Boolean> getIgnoreDeletionError() {
-        return this.ignoreDeletionError == null ? Input.empty() : this.ignoreDeletionError;
+    public Output<Boolean> getIgnoreDeletionError() {
+        return this.ignoreDeletionError == null ? Output.empty() : this.ignoreDeletionError;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<String> policy;
+      private final Output<String> policy;
 
-    public Input<String> getPolicy() {
+    public Output<String> getPolicy() {
         return this.policy;
     }
 
@@ -53,17 +53,17 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public VaultLockArgs(
-        Input<Boolean> completeLock,
-        @Nullable Input<Boolean> ignoreDeletionError,
-        Input<String> policy,
-        Input<String> vaultName) {
+        Output<Boolean> completeLock,
+        @Nullable Output<Boolean> ignoreDeletionError,
+        Output<String> policy,
+        Output<String> vaultName) {
         this.completeLock = Objects.requireNonNull(completeLock, "expected parameter 'completeLock' to be non-null");
         this.ignoreDeletionError = ignoreDeletionError;
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
@@ -71,10 +71,10 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultLockArgs() {
-        this.completeLock = Input.empty();
-        this.ignoreDeletionError = Input.empty();
-        this.policy = Input.empty();
-        this.vaultName = Input.empty();
+        this.completeLock = Output.empty();
+        this.ignoreDeletionError = Output.empty();
+        this.policy = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> completeLock;
-        private @Nullable Input<Boolean> ignoreDeletionError;
-        private Input<String> policy;
-        private Input<String> vaultName;
+        private Output<Boolean> completeLock;
+        private @Nullable Output<Boolean> ignoreDeletionError;
+        private Output<String> policy;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class VaultLockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder completeLock(Input<Boolean> completeLock) {
+        public Builder completeLock(Output<Boolean> completeLock) {
             this.completeLock = Objects.requireNonNull(completeLock);
             return this;
         }
 
         public Builder completeLock(Boolean completeLock) {
-            this.completeLock = Input.of(Objects.requireNonNull(completeLock));
+            this.completeLock = Output.of(Objects.requireNonNull(completeLock));
             return this;
         }
 
-        public Builder ignoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
             this.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
 
         public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Input.ofNullable(ignoreDeletionError);
+            this.ignoreDeletionError = Output.ofNullable(ignoreDeletionError);
             return this;
         }
 
-        public Builder policy(Input<String> policy) {
+        public Builder policy(Output<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(String policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public VaultLockArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.devicefarm.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downlinkBandwidthBits")
-      private final @Nullable Input<Integer> downlinkBandwidthBits;
+      private final @Nullable Output<Integer> downlinkBandwidthBits;
 
-    public Input<Integer> getDownlinkBandwidthBits() {
-        return this.downlinkBandwidthBits == null ? Input.empty() : this.downlinkBandwidthBits;
+    public Output<Integer> getDownlinkBandwidthBits() {
+        return this.downlinkBandwidthBits == null ? Output.empty() : this.downlinkBandwidthBits;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downlinkDelayMs")
-      private final @Nullable Input<Integer> downlinkDelayMs;
+      private final @Nullable Output<Integer> downlinkDelayMs;
 
-    public Input<Integer> getDownlinkDelayMs() {
-        return this.downlinkDelayMs == null ? Input.empty() : this.downlinkDelayMs;
+    public Output<Integer> getDownlinkDelayMs() {
+        return this.downlinkDelayMs == null ? Output.empty() : this.downlinkDelayMs;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downlinkJitterMs")
-      private final @Nullable Input<Integer> downlinkJitterMs;
+      private final @Nullable Output<Integer> downlinkJitterMs;
 
-    public Input<Integer> getDownlinkJitterMs() {
-        return this.downlinkJitterMs == null ? Input.empty() : this.downlinkJitterMs;
+    public Output<Integer> getDownlinkJitterMs() {
+        return this.downlinkJitterMs == null ? Output.empty() : this.downlinkJitterMs;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downlinkLossPercent")
-      private final @Nullable Input<Integer> downlinkLossPercent;
+      private final @Nullable Output<Integer> downlinkLossPercent;
 
-    public Input<Integer> getDownlinkLossPercent() {
-        return this.downlinkLossPercent == null ? Input.empty() : this.downlinkLossPercent;
+    public Output<Integer> getDownlinkLossPercent() {
+        return this.downlinkLossPercent == null ? Output.empty() : this.downlinkLossPercent;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectArn")
-      private final @Nullable Input<String> projectArn;
+      private final @Nullable Output<String> projectArn;
 
-    public Input<String> getProjectArn() {
-        return this.projectArn == null ? Input.empty() : this.projectArn;
+    public Output<String> getProjectArn() {
+        return this.projectArn == null ? Output.empty() : this.projectArn;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uplinkBandwidthBits")
-      private final @Nullable Input<Integer> uplinkBandwidthBits;
+      private final @Nullable Output<Integer> uplinkBandwidthBits;
 
-    public Input<Integer> getUplinkBandwidthBits() {
-        return this.uplinkBandwidthBits == null ? Input.empty() : this.uplinkBandwidthBits;
+    public Output<Integer> getUplinkBandwidthBits() {
+        return this.uplinkBandwidthBits == null ? Output.empty() : this.uplinkBandwidthBits;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uplinkDelayMs")
-      private final @Nullable Input<Integer> uplinkDelayMs;
+      private final @Nullable Output<Integer> uplinkDelayMs;
 
-    public Input<Integer> getUplinkDelayMs() {
-        return this.uplinkDelayMs == null ? Input.empty() : this.uplinkDelayMs;
+    public Output<Integer> getUplinkDelayMs() {
+        return this.uplinkDelayMs == null ? Output.empty() : this.uplinkDelayMs;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uplinkJitterMs")
-      private final @Nullable Input<Integer> uplinkJitterMs;
+      private final @Nullable Output<Integer> uplinkJitterMs;
 
-    public Input<Integer> getUplinkJitterMs() {
-        return this.uplinkJitterMs == null ? Input.empty() : this.uplinkJitterMs;
+    public Output<Integer> getUplinkJitterMs() {
+        return this.uplinkJitterMs == null ? Output.empty() : this.uplinkJitterMs;
     }
 
     /**
@@ -175,28 +175,28 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uplinkLossPercent")
-      private final @Nullable Input<Integer> uplinkLossPercent;
+      private final @Nullable Output<Integer> uplinkLossPercent;
 
-    public Input<Integer> getUplinkLossPercent() {
-        return this.uplinkLossPercent == null ? Input.empty() : this.uplinkLossPercent;
+    public Output<Integer> getUplinkLossPercent() {
+        return this.uplinkLossPercent == null ? Output.empty() : this.uplinkLossPercent;
     }
 
     public NetworkProfileState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<Integer> downlinkBandwidthBits,
-        @Nullable Input<Integer> downlinkDelayMs,
-        @Nullable Input<Integer> downlinkJitterMs,
-        @Nullable Input<Integer> downlinkLossPercent,
-        @Nullable Input<String> name,
-        @Nullable Input<String> projectArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> type,
-        @Nullable Input<Integer> uplinkBandwidthBits,
-        @Nullable Input<Integer> uplinkDelayMs,
-        @Nullable Input<Integer> uplinkJitterMs,
-        @Nullable Input<Integer> uplinkLossPercent) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<Integer> downlinkBandwidthBits,
+        @Nullable Output<Integer> downlinkDelayMs,
+        @Nullable Output<Integer> downlinkJitterMs,
+        @Nullable Output<Integer> downlinkLossPercent,
+        @Nullable Output<String> name,
+        @Nullable Output<String> projectArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> type,
+        @Nullable Output<Integer> uplinkBandwidthBits,
+        @Nullable Output<Integer> uplinkDelayMs,
+        @Nullable Output<Integer> uplinkJitterMs,
+        @Nullable Output<Integer> uplinkLossPercent) {
         this.arn = arn;
         this.description = description;
         this.downlinkBandwidthBits = downlinkBandwidthBits;
@@ -215,21 +215,21 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkProfileState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.downlinkBandwidthBits = Input.empty();
-        this.downlinkDelayMs = Input.empty();
-        this.downlinkJitterMs = Input.empty();
-        this.downlinkLossPercent = Input.empty();
-        this.name = Input.empty();
-        this.projectArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.type = Input.empty();
-        this.uplinkBandwidthBits = Input.empty();
-        this.uplinkDelayMs = Input.empty();
-        this.uplinkJitterMs = Input.empty();
-        this.uplinkLossPercent = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.downlinkBandwidthBits = Output.empty();
+        this.downlinkDelayMs = Output.empty();
+        this.downlinkJitterMs = Output.empty();
+        this.downlinkLossPercent = Output.empty();
+        this.name = Output.empty();
+        this.projectArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.type = Output.empty();
+        this.uplinkBandwidthBits = Output.empty();
+        this.uplinkDelayMs = Output.empty();
+        this.uplinkJitterMs = Output.empty();
+        this.uplinkLossPercent = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,21 +241,21 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Integer> downlinkBandwidthBits;
-        private @Nullable Input<Integer> downlinkDelayMs;
-        private @Nullable Input<Integer> downlinkJitterMs;
-        private @Nullable Input<Integer> downlinkLossPercent;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> projectArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> type;
-        private @Nullable Input<Integer> uplinkBandwidthBits;
-        private @Nullable Input<Integer> uplinkDelayMs;
-        private @Nullable Input<Integer> uplinkJitterMs;
-        private @Nullable Input<Integer> uplinkLossPercent;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Integer> downlinkBandwidthBits;
+        private @Nullable Output<Integer> downlinkDelayMs;
+        private @Nullable Output<Integer> downlinkJitterMs;
+        private @Nullable Output<Integer> downlinkLossPercent;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> projectArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> type;
+        private @Nullable Output<Integer> uplinkBandwidthBits;
+        private @Nullable Output<Integer> uplinkDelayMs;
+        private @Nullable Output<Integer> uplinkJitterMs;
+        private @Nullable Output<Integer> uplinkLossPercent;
 
         public Builder() {
     	      // Empty
@@ -280,153 +280,153 @@ public final class NetworkProfileState extends io.pulumi.resources.ResourceArgs 
     	      this.uplinkLossPercent = defaults.uplinkLossPercent;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder downlinkBandwidthBits(@Nullable Input<Integer> downlinkBandwidthBits) {
+        public Builder downlinkBandwidthBits(@Nullable Output<Integer> downlinkBandwidthBits) {
             this.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
 
         public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
-            this.downlinkBandwidthBits = Input.ofNullable(downlinkBandwidthBits);
+            this.downlinkBandwidthBits = Output.ofNullable(downlinkBandwidthBits);
             return this;
         }
 
-        public Builder downlinkDelayMs(@Nullable Input<Integer> downlinkDelayMs) {
+        public Builder downlinkDelayMs(@Nullable Output<Integer> downlinkDelayMs) {
             this.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
 
         public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
-            this.downlinkDelayMs = Input.ofNullable(downlinkDelayMs);
+            this.downlinkDelayMs = Output.ofNullable(downlinkDelayMs);
             return this;
         }
 
-        public Builder downlinkJitterMs(@Nullable Input<Integer> downlinkJitterMs) {
+        public Builder downlinkJitterMs(@Nullable Output<Integer> downlinkJitterMs) {
             this.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
 
         public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
-            this.downlinkJitterMs = Input.ofNullable(downlinkJitterMs);
+            this.downlinkJitterMs = Output.ofNullable(downlinkJitterMs);
             return this;
         }
 
-        public Builder downlinkLossPercent(@Nullable Input<Integer> downlinkLossPercent) {
+        public Builder downlinkLossPercent(@Nullable Output<Integer> downlinkLossPercent) {
             this.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
 
         public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
-            this.downlinkLossPercent = Input.ofNullable(downlinkLossPercent);
+            this.downlinkLossPercent = Output.ofNullable(downlinkLossPercent);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder projectArn(@Nullable Input<String> projectArn) {
+        public Builder projectArn(@Nullable Output<String> projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
         public Builder projectArn(@Nullable String projectArn) {
-            this.projectArn = Input.ofNullable(projectArn);
+            this.projectArn = Output.ofNullable(projectArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder uplinkBandwidthBits(@Nullable Input<Integer> uplinkBandwidthBits) {
+        public Builder uplinkBandwidthBits(@Nullable Output<Integer> uplinkBandwidthBits) {
             this.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
 
         public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
-            this.uplinkBandwidthBits = Input.ofNullable(uplinkBandwidthBits);
+            this.uplinkBandwidthBits = Output.ofNullable(uplinkBandwidthBits);
             return this;
         }
 
-        public Builder uplinkDelayMs(@Nullable Input<Integer> uplinkDelayMs) {
+        public Builder uplinkDelayMs(@Nullable Output<Integer> uplinkDelayMs) {
             this.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
 
         public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
-            this.uplinkDelayMs = Input.ofNullable(uplinkDelayMs);
+            this.uplinkDelayMs = Output.ofNullable(uplinkDelayMs);
             return this;
         }
 
-        public Builder uplinkJitterMs(@Nullable Input<Integer> uplinkJitterMs) {
+        public Builder uplinkJitterMs(@Nullable Output<Integer> uplinkJitterMs) {
             this.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
 
         public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
-            this.uplinkJitterMs = Input.ofNullable(uplinkJitterMs);
+            this.uplinkJitterMs = Output.ofNullable(uplinkJitterMs);
             return this;
         }
 
-        public Builder uplinkLossPercent(@Nullable Input<Integer> uplinkLossPercent) {
+        public Builder uplinkLossPercent(@Nullable Output<Integer> uplinkLossPercent) {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
         }
 
         public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
-            this.uplinkLossPercent = Input.ofNullable(uplinkLossPercent);
+            this.uplinkLossPercent = Output.ofNullable(uplinkLossPercent);
             return this;
         }
         public NetworkProfileState build() {

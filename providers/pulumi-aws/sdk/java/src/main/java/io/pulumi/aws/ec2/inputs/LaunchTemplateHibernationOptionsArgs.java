@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class LaunchTemplateHibernationOptionsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configured", required=true)
-      private final Input<Boolean> configured;
+      private final Output<Boolean> configured;
 
-    public Input<Boolean> getConfigured() {
+    public Output<Boolean> getConfigured() {
         return this.configured;
     }
 
-    public LaunchTemplateHibernationOptionsArgs(Input<Boolean> configured) {
+    public LaunchTemplateHibernationOptionsArgs(Output<Boolean> configured) {
         this.configured = Objects.requireNonNull(configured, "expected parameter 'configured' to be non-null");
     }
 
     private LaunchTemplateHibernationOptionsArgs() {
-        this.configured = Input.empty();
+        this.configured = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class LaunchTemplateHibernationOptionsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<Boolean> configured;
+        private Output<Boolean> configured;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class LaunchTemplateHibernationOptionsArgs extends io.pulumi.resour
     	      this.configured = defaults.configured;
         }
 
-        public Builder configured(Input<Boolean> configured) {
+        public Builder configured(Output<Boolean> configured) {
             this.configured = Objects.requireNonNull(configured);
             return this;
         }
 
         public Builder configured(Boolean configured) {
-            this.configured = Input.of(Objects.requireNonNull(configured));
+            this.configured = Output.of(Objects.requireNonNull(configured));
             return this;
         }
         public LaunchTemplateHibernationOptionsArgs build() {

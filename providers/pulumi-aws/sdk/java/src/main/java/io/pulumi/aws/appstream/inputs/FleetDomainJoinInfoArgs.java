@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="directoryName")
-      private final @Nullable Input<String> directoryName;
+      private final @Nullable Output<String> directoryName;
 
-    public Input<String> getDirectoryName() {
-        return this.directoryName == null ? Input.empty() : this.directoryName;
+    public Output<String> getDirectoryName() {
+        return this.directoryName == null ? Output.empty() : this.directoryName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-      private final @Nullable Input<String> organizationalUnitDistinguishedName;
+      private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Input<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Input.empty() : this.organizationalUnitDistinguishedName;
+    public Output<String> getOrganizationalUnitDistinguishedName() {
+        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
     }
 
     public FleetDomainJoinInfoArgs(
-        @Nullable Input<String> directoryName,
-        @Nullable Input<String> organizationalUnitDistinguishedName) {
+        @Nullable Output<String> directoryName,
+        @Nullable Output<String> organizationalUnitDistinguishedName) {
         this.directoryName = directoryName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
     }
 
     private FleetDomainJoinInfoArgs() {
-        this.directoryName = Input.empty();
-        this.organizationalUnitDistinguishedName = Input.empty();
+        this.directoryName = Output.empty();
+        this.organizationalUnitDistinguishedName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directoryName;
-        private @Nullable Input<String> organizationalUnitDistinguishedName;
+        private @Nullable Output<String> directoryName;
+        private @Nullable Output<String> organizationalUnitDistinguishedName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder directoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Output<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
         public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Input.ofNullable(directoryName);
+            this.directoryName = Output.ofNullable(directoryName);
             return this;
         }
 
-        public Builder organizationalUnitDistinguishedName(@Nullable Input<String> organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Input.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
         public FleetDomainJoinInfoArgs build() {

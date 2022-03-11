@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-      private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Input<String> getCloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
+    public Output<String> getCloudwatchLogGroupArn() {
+        return this.cloudwatchLogGroupArn == null ? Output.empty() : this.cloudwatchLogGroupArn;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId")
-      private final @Nullable Input<String> zoneId;
+      private final @Nullable Output<String> zoneId;
 
-    public Input<String> getZoneId() {
-        return this.zoneId == null ? Input.empty() : this.zoneId;
+    public Output<String> getZoneId() {
+        return this.zoneId == null ? Output.empty() : this.zoneId;
     }
 
     public QueryLogState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> cloudwatchLogGroupArn,
-        @Nullable Input<String> zoneId) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> cloudwatchLogGroupArn,
+        @Nullable Output<String> zoneId) {
         this.arn = arn;
         this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
         this.zoneId = zoneId;
     }
 
     private QueryLogState() {
-        this.arn = Input.empty();
-        this.cloudwatchLogGroupArn = Input.empty();
-        this.zoneId = Input.empty();
+        this.arn = Output.empty();
+        this.cloudwatchLogGroupArn = Output.empty();
+        this.zoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> cloudwatchLogGroupArn;
-        private @Nullable Input<String> zoneId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> cloudwatchLogGroupArn;
+        private @Nullable Output<String> zoneId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Input.ofNullable(cloudwatchLogGroupArn);
+            this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder zoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = Input.ofNullable(zoneId);
+            this.zoneId = Output.ofNullable(zoneId);
             return this;
         }
         public QueryLogState build() {

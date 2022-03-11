@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lexRegion")
-      private final @Nullable Input<String> lexRegion;
+      private final @Nullable Output<String> lexRegion;
 
-    public Input<String> getLexRegion() {
-        return this.lexRegion == null ? Input.empty() : this.lexRegion;
+    public Output<String> getLexRegion() {
+        return this.lexRegion == null ? Output.empty() : this.lexRegion;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public BotAssociationLexBotArgs(
-        @Nullable Input<String> lexRegion,
-        Input<String> name) {
+        @Nullable Output<String> lexRegion,
+        Output<String> name) {
         this.lexRegion = lexRegion;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private BotAssociationLexBotArgs() {
-        this.lexRegion = Input.empty();
-        this.name = Input.empty();
+        this.lexRegion = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> lexRegion;
-        private Input<String> name;
+        private @Nullable Output<String> lexRegion;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder lexRegion(@Nullable Input<String> lexRegion) {
+        public Builder lexRegion(@Nullable Output<String> lexRegion) {
             this.lexRegion = lexRegion;
             return this;
         }
 
         public Builder lexRegion(@Nullable String lexRegion) {
-            this.lexRegion = Input.ofNullable(lexRegion);
+            this.lexRegion = Output.ofNullable(lexRegion);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public BotAssociationLexBotArgs build() {

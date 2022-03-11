@@ -12,7 +12,7 @@ import io.pulumi.aws.glue.inputs.CrawlerMongodbTargetGetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerRecrawlPolicyGetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerS3TargetGetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,17 +30,17 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     @InputImport(name="catalogTargets")
-      private final @Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
+      private final @Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
 
-    public Input<List<CrawlerCatalogTargetGetArgs>> getCatalogTargets() {
-        return this.catalogTargets == null ? Input.empty() : this.catalogTargets;
+    public Output<List<CrawlerCatalogTargetGetArgs>> getCatalogTargets() {
+        return this.catalogTargets == null ? Output.empty() : this.catalogTargets;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classifiers")
-      private final @Nullable Input<List<String>> classifiers;
+      private final @Nullable Output<List<String>> classifiers;
 
-    public Input<List<String>> getClassifiers() {
-        return this.classifiers == null ? Input.empty() : this.classifiers;
+    public Output<List<String>> getClassifiers() {
+        return this.classifiers == null ? Output.empty() : this.classifiers;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<String> configuration;
+      private final @Nullable Output<String> configuration;
 
-    public Input<String> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<String> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     @InputImport(name="deltaTargets")
-      private final @Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
+      private final @Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
 
-    public Input<List<CrawlerDeltaTargetGetArgs>> getDeltaTargets() {
-        return this.deltaTargets == null ? Input.empty() : this.deltaTargets;
+    public Output<List<CrawlerDeltaTargetGetArgs>> getDeltaTargets() {
+        return this.deltaTargets == null ? Output.empty() : this.deltaTargets;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamodbTargets")
-      private final @Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
+      private final @Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
 
-    public Input<List<CrawlerDynamodbTargetGetArgs>> getDynamodbTargets() {
-        return this.dynamodbTargets == null ? Input.empty() : this.dynamodbTargets;
+    public Output<List<CrawlerDynamodbTargetGetArgs>> getDynamodbTargets() {
+        return this.dynamodbTargets == null ? Output.empty() : this.dynamodbTargets;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jdbcTargets")
-      private final @Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
+      private final @Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
 
-    public Input<List<CrawlerJdbcTargetGetArgs>> getJdbcTargets() {
-        return this.jdbcTargets == null ? Input.empty() : this.jdbcTargets;
+    public Output<List<CrawlerJdbcTargetGetArgs>> getJdbcTargets() {
+        return this.jdbcTargets == null ? Output.empty() : this.jdbcTargets;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lineageConfiguration")
-      private final @Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
+      private final @Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
 
-    public Input<CrawlerLineageConfigurationGetArgs> getLineageConfiguration() {
-        return this.lineageConfiguration == null ? Input.empty() : this.lineageConfiguration;
+    public Output<CrawlerLineageConfigurationGetArgs> getLineageConfiguration() {
+        return this.lineageConfiguration == null ? Output.empty() : this.lineageConfiguration;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mongodbTargets")
-      private final @Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
+      private final @Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
 
-    public Input<List<CrawlerMongodbTargetGetArgs>> getMongodbTargets() {
-        return this.mongodbTargets == null ? Input.empty() : this.mongodbTargets;
+    public Output<List<CrawlerMongodbTargetGetArgs>> getMongodbTargets() {
+        return this.mongodbTargets == null ? Output.empty() : this.mongodbTargets;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recrawlPolicy")
-      private final @Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
+      private final @Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
 
-    public Input<CrawlerRecrawlPolicyGetArgs> getRecrawlPolicy() {
-        return this.recrawlPolicy == null ? Input.empty() : this.recrawlPolicy;
+    public Output<CrawlerRecrawlPolicyGetArgs> getRecrawlPolicy() {
+        return this.recrawlPolicy == null ? Output.empty() : this.recrawlPolicy;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Targets")
-      private final @Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets;
+      private final @Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets;
 
-    public Input<List<CrawlerS3TargetGetArgs>> getS3Targets() {
-        return this.s3Targets == null ? Input.empty() : this.s3Targets;
+    public Output<List<CrawlerS3TargetGetArgs>> getS3Targets() {
+        return this.s3Targets == null ? Output.empty() : this.s3Targets;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaChangePolicy")
-      private final @Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
+      private final @Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
 
-    public Input<CrawlerSchemaChangePolicyGetArgs> getSchemaChangePolicy() {
-        return this.schemaChangePolicy == null ? Input.empty() : this.schemaChangePolicy;
+    public Output<CrawlerSchemaChangePolicyGetArgs> getSchemaChangePolicy() {
+        return this.schemaChangePolicy == null ? Output.empty() : this.schemaChangePolicy;
     }
 
     /**
@@ -209,10 +209,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-      private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Output<String> securityConfiguration;
 
-    public Input<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
+    public Output<String> getSecurityConfiguration() {
+        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tablePrefix")
-      private final @Nullable Input<String> tablePrefix;
+      private final @Nullable Output<String> tablePrefix;
 
-    public Input<String> getTablePrefix() {
-        return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
+    public Output<String> getTablePrefix() {
+        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -242,34 +242,34 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public CrawlerState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets,
-        @Nullable Input<List<String>> classifiers,
-        @Nullable Input<String> configuration,
-        @Nullable Input<String> databaseName,
-        @Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets,
-        @Nullable Input<String> description,
-        @Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets,
-        @Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets,
-        @Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration,
-        @Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets,
-        @Nullable Input<String> name,
-        @Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy,
-        @Nullable Input<String> role,
-        @Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets,
-        @Nullable Input<String> schedule,
-        @Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy,
-        @Nullable Input<String> securityConfiguration,
-        @Nullable Input<String> tablePrefix,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets,
+        @Nullable Output<List<String>> classifiers,
+        @Nullable Output<String> configuration,
+        @Nullable Output<String> databaseName,
+        @Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets,
+        @Nullable Output<String> description,
+        @Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets,
+        @Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets,
+        @Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration,
+        @Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets,
+        @Nullable Output<String> name,
+        @Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy,
+        @Nullable Output<String> role,
+        @Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets,
+        @Nullable Output<String> schedule,
+        @Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy,
+        @Nullable Output<String> securityConfiguration,
+        @Nullable Output<String> tablePrefix,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.catalogTargets = catalogTargets;
         this.classifiers = classifiers;
@@ -294,27 +294,27 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CrawlerState() {
-        this.arn = Input.empty();
-        this.catalogTargets = Input.empty();
-        this.classifiers = Input.empty();
-        this.configuration = Input.empty();
-        this.databaseName = Input.empty();
-        this.deltaTargets = Input.empty();
-        this.description = Input.empty();
-        this.dynamodbTargets = Input.empty();
-        this.jdbcTargets = Input.empty();
-        this.lineageConfiguration = Input.empty();
-        this.mongodbTargets = Input.empty();
-        this.name = Input.empty();
-        this.recrawlPolicy = Input.empty();
-        this.role = Input.empty();
-        this.s3Targets = Input.empty();
-        this.schedule = Input.empty();
-        this.schemaChangePolicy = Input.empty();
-        this.securityConfiguration = Input.empty();
-        this.tablePrefix = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.catalogTargets = Output.empty();
+        this.classifiers = Output.empty();
+        this.configuration = Output.empty();
+        this.databaseName = Output.empty();
+        this.deltaTargets = Output.empty();
+        this.description = Output.empty();
+        this.dynamodbTargets = Output.empty();
+        this.jdbcTargets = Output.empty();
+        this.lineageConfiguration = Output.empty();
+        this.mongodbTargets = Output.empty();
+        this.name = Output.empty();
+        this.recrawlPolicy = Output.empty();
+        this.role = Output.empty();
+        this.s3Targets = Output.empty();
+        this.schedule = Output.empty();
+        this.schemaChangePolicy = Output.empty();
+        this.securityConfiguration = Output.empty();
+        this.tablePrefix = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -326,27 +326,27 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
-        private @Nullable Input<List<String>> classifiers;
-        private @Nullable Input<String> configuration;
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
-        private @Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
-        private @Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
-        private @Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
-        private @Nullable Input<String> name;
-        private @Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
-        private @Nullable Input<String> role;
-        private @Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
-        private @Nullable Input<String> securityConfiguration;
-        private @Nullable Input<String> tablePrefix;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
+        private @Nullable Output<List<String>> classifiers;
+        private @Nullable Output<String> configuration;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
+        private @Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
+        private @Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
+        private @Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
+        private @Nullable Output<String> name;
+        private @Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
+        private @Nullable Output<String> role;
+        private @Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
+        private @Nullable Output<String> securityConfiguration;
+        private @Nullable Output<String> tablePrefix;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -377,213 +377,213 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder catalogTargets(@Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets) {
+        public Builder catalogTargets(@Nullable Output<List<CrawlerCatalogTargetGetArgs>> catalogTargets) {
             this.catalogTargets = catalogTargets;
             return this;
         }
 
         public Builder catalogTargets(@Nullable List<CrawlerCatalogTargetGetArgs> catalogTargets) {
-            this.catalogTargets = Input.ofNullable(catalogTargets);
+            this.catalogTargets = Output.ofNullable(catalogTargets);
             return this;
         }
 
-        public Builder classifiers(@Nullable Input<List<String>> classifiers) {
+        public Builder classifiers(@Nullable Output<List<String>> classifiers) {
             this.classifiers = classifiers;
             return this;
         }
 
         public Builder classifiers(@Nullable List<String> classifiers) {
-            this.classifiers = Input.ofNullable(classifiers);
+            this.classifiers = Output.ofNullable(classifiers);
             return this;
         }
 
-        public Builder configuration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Output<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder deltaTargets(@Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets) {
+        public Builder deltaTargets(@Nullable Output<List<CrawlerDeltaTargetGetArgs>> deltaTargets) {
             this.deltaTargets = deltaTargets;
             return this;
         }
 
         public Builder deltaTargets(@Nullable List<CrawlerDeltaTargetGetArgs> deltaTargets) {
-            this.deltaTargets = Input.ofNullable(deltaTargets);
+            this.deltaTargets = Output.ofNullable(deltaTargets);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dynamodbTargets(@Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
+        public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
             this.dynamodbTargets = dynamodbTargets;
             return this;
         }
 
         public Builder dynamodbTargets(@Nullable List<CrawlerDynamodbTargetGetArgs> dynamodbTargets) {
-            this.dynamodbTargets = Input.ofNullable(dynamodbTargets);
+            this.dynamodbTargets = Output.ofNullable(dynamodbTargets);
             return this;
         }
 
-        public Builder jdbcTargets(@Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
+        public Builder jdbcTargets(@Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
             this.jdbcTargets = jdbcTargets;
             return this;
         }
 
         public Builder jdbcTargets(@Nullable List<CrawlerJdbcTargetGetArgs> jdbcTargets) {
-            this.jdbcTargets = Input.ofNullable(jdbcTargets);
+            this.jdbcTargets = Output.ofNullable(jdbcTargets);
             return this;
         }
 
-        public Builder lineageConfiguration(@Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
+        public Builder lineageConfiguration(@Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
             this.lineageConfiguration = lineageConfiguration;
             return this;
         }
 
         public Builder lineageConfiguration(@Nullable CrawlerLineageConfigurationGetArgs lineageConfiguration) {
-            this.lineageConfiguration = Input.ofNullable(lineageConfiguration);
+            this.lineageConfiguration = Output.ofNullable(lineageConfiguration);
             return this;
         }
 
-        public Builder mongodbTargets(@Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
+        public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
             this.mongodbTargets = mongodbTargets;
             return this;
         }
 
         public Builder mongodbTargets(@Nullable List<CrawlerMongodbTargetGetArgs> mongodbTargets) {
-            this.mongodbTargets = Input.ofNullable(mongodbTargets);
+            this.mongodbTargets = Output.ofNullable(mongodbTargets);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recrawlPolicy(@Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
+        public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
             this.recrawlPolicy = recrawlPolicy;
             return this;
         }
 
         public Builder recrawlPolicy(@Nullable CrawlerRecrawlPolicyGetArgs recrawlPolicy) {
-            this.recrawlPolicy = Input.ofNullable(recrawlPolicy);
+            this.recrawlPolicy = Output.ofNullable(recrawlPolicy);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder s3Targets(@Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets) {
+        public Builder s3Targets(@Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets) {
             this.s3Targets = s3Targets;
             return this;
         }
 
         public Builder s3Targets(@Nullable List<CrawlerS3TargetGetArgs> s3Targets) {
-            this.s3Targets = Input.ofNullable(s3Targets);
+            this.s3Targets = Output.ofNullable(s3Targets);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder schemaChangePolicy(@Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
+        public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
             this.schemaChangePolicy = schemaChangePolicy;
             return this;
         }
 
         public Builder schemaChangePolicy(@Nullable CrawlerSchemaChangePolicyGetArgs schemaChangePolicy) {
-            this.schemaChangePolicy = Input.ofNullable(schemaChangePolicy);
+            this.schemaChangePolicy = Output.ofNullable(schemaChangePolicy);
             return this;
         }
 
-        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Input.ofNullable(securityConfiguration);
+            this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Input.ofNullable(tablePrefix);
+            this.tablePrefix = Output.ofNullable(tablePrefix);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public CrawlerState build() {

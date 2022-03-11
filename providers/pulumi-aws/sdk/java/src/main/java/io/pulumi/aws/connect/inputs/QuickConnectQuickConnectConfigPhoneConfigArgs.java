@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-      private final Input<String> phoneNumber;
+      private final Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
+    public Output<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
-    public QuickConnectQuickConnectConfigPhoneConfigArgs(Input<String> phoneNumber) {
+    public QuickConnectQuickConnectConfigPhoneConfigArgs(Output<String> phoneNumber) {
         this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
     }
 
     private QuickConnectQuickConnectConfigPhoneConfigArgs() {
-        this.phoneNumber = Input.empty();
+        this.phoneNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> phoneNumber;
+        private Output<String> phoneNumber;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class QuickConnectQuickConnectConfigPhoneConfigArgs extends io.pulu
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder phoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
+            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
         public QuickConnectQuickConnectConfigPhoneConfigArgs build() {

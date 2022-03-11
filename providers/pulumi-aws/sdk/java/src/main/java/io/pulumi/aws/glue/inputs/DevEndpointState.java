@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -23,10 +23,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<Map<String,Object>> arguments;
+      private final @Nullable Output<Map<String,Object>> arguments;
 
-    public Input<Map<String,Object>> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<Map<String,Object>> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraJarsS3Path")
-      private final @Nullable Input<String> extraJarsS3Path;
+      private final @Nullable Output<String> extraJarsS3Path;
 
-    public Input<String> getExtraJarsS3Path() {
-        return this.extraJarsS3Path == null ? Input.empty() : this.extraJarsS3Path;
+    public Output<String> getExtraJarsS3Path() {
+        return this.extraJarsS3Path == null ? Output.empty() : this.extraJarsS3Path;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraPythonLibsS3Path")
-      private final @Nullable Input<String> extraPythonLibsS3Path;
+      private final @Nullable Output<String> extraPythonLibsS3Path;
 
-    public Input<String> getExtraPythonLibsS3Path() {
-        return this.extraPythonLibsS3Path == null ? Input.empty() : this.extraPythonLibsS3Path;
+    public Output<String> getExtraPythonLibsS3Path() {
+        return this.extraPythonLibsS3Path == null ? Output.empty() : this.extraPythonLibsS3Path;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureReason")
-      private final @Nullable Input<String> failureReason;
+      private final @Nullable Output<String> failureReason;
 
-    public Input<String> getFailureReason() {
-        return this.failureReason == null ? Input.empty() : this.failureReason;
+    public Output<String> getFailureReason() {
+        return this.failureReason == null ? Output.empty() : this.failureReason;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-      private final @Nullable Input<String> glueVersion;
+      private final @Nullable Output<String> glueVersion;
 
-    public Input<String> getGlueVersion() {
-        return this.glueVersion == null ? Input.empty() : this.glueVersion;
+    public Output<String> getGlueVersion() {
+        return this.glueVersion == null ? Output.empty() : this.glueVersion;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfNodes")
-      private final @Nullable Input<Integer> numberOfNodes;
+      private final @Nullable Output<Integer> numberOfNodes;
 
-    public Input<Integer> getNumberOfNodes() {
-        return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;
+    public Output<Integer> getNumberOfNodes() {
+        return this.numberOfNodes == null ? Output.empty() : this.numberOfNodes;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-      private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Input<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
+    public Output<Integer> getNumberOfWorkers() {
+        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateAddress")
-      private final @Nullable Input<String> privateAddress;
+      private final @Nullable Output<String> privateAddress;
 
-    public Input<String> getPrivateAddress() {
-        return this.privateAddress == null ? Input.empty() : this.privateAddress;
+    public Output<String> getPrivateAddress() {
+        return this.privateAddress == null ? Output.empty() : this.privateAddress;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAddress")
-      private final @Nullable Input<String> publicAddress;
+      private final @Nullable Output<String> publicAddress;
 
-    public Input<String> getPublicAddress() {
-        return this.publicAddress == null ? Input.empty() : this.publicAddress;
+    public Output<String> getPublicAddress() {
+        return this.publicAddress == null ? Output.empty() : this.publicAddress;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-      private final @Nullable Input<String> publicKey;
+      private final @Nullable Output<String> publicKey;
 
-    public Input<String> getPublicKey() {
-        return this.publicKey == null ? Input.empty() : this.publicKey;
+    public Output<String> getPublicKey() {
+        return this.publicKey == null ? Output.empty() : this.publicKey;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeys")
-      private final @Nullable Input<List<String>> publicKeys;
+      private final @Nullable Output<List<String>> publicKeys;
 
-    public Input<List<String>> getPublicKeys() {
-        return this.publicKeys == null ? Input.empty() : this.publicKeys;
+    public Output<List<String>> getPublicKeys() {
+        return this.publicKeys == null ? Output.empty() : this.publicKeys;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-      private final @Nullable Input<String> roleArn;
+      private final @Nullable Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
-        return this.roleArn == null ? Input.empty() : this.roleArn;
+    public Output<String> getRoleArn() {
+        return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-      private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Output<String> securityConfiguration;
 
-    public Input<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
+    public Output<String> getSecurityConfiguration() {
+        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-      private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
+    public Output<List<String>> getSecurityGroupIds() {
+        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -254,10 +254,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-      private final @Nullable Input<String> vpcId;
+      private final @Nullable Output<String> vpcId;
 
-    public Input<String> getVpcId() {
-        return this.vpcId == null ? Input.empty() : this.vpcId;
+    public Output<String> getVpcId() {
+        return this.vpcId == null ? Output.empty() : this.vpcId;
     }
 
     /**
@@ -265,10 +265,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-      private final @Nullable Input<String> workerType;
+      private final @Nullable Output<String> workerType;
 
-    public Input<String> getWorkerType() {
-        return this.workerType == null ? Input.empty() : this.workerType;
+    public Output<String> getWorkerType() {
+        return this.workerType == null ? Output.empty() : this.workerType;
     }
 
     /**
@@ -276,10 +276,10 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yarnEndpointAddress")
-      private final @Nullable Input<String> yarnEndpointAddress;
+      private final @Nullable Output<String> yarnEndpointAddress;
 
-    public Input<String> getYarnEndpointAddress() {
-        return this.yarnEndpointAddress == null ? Input.empty() : this.yarnEndpointAddress;
+    public Output<String> getYarnEndpointAddress() {
+        return this.yarnEndpointAddress == null ? Output.empty() : this.yarnEndpointAddress;
     }
 
     /**
@@ -287,38 +287,38 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zeppelinRemoteSparkInterpreterPort")
-      private final @Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort;
+      private final @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
-    public Input<Integer> getZeppelinRemoteSparkInterpreterPort() {
-        return this.zeppelinRemoteSparkInterpreterPort == null ? Input.empty() : this.zeppelinRemoteSparkInterpreterPort;
+    public Output<Integer> getZeppelinRemoteSparkInterpreterPort() {
+        return this.zeppelinRemoteSparkInterpreterPort == null ? Output.empty() : this.zeppelinRemoteSparkInterpreterPort;
     }
 
     public DevEndpointState(
-        @Nullable Input<Map<String,Object>> arguments,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> extraJarsS3Path,
-        @Nullable Input<String> extraPythonLibsS3Path,
-        @Nullable Input<String> failureReason,
-        @Nullable Input<String> glueVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> numberOfNodes,
-        @Nullable Input<Integer> numberOfWorkers,
-        @Nullable Input<String> privateAddress,
-        @Nullable Input<String> publicAddress,
-        @Nullable Input<String> publicKey,
-        @Nullable Input<List<String>> publicKeys,
-        @Nullable Input<String> roleArn,
-        @Nullable Input<String> securityConfiguration,
-        @Nullable Input<List<String>> securityGroupIds,
-        @Nullable Input<String> status,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<String> vpcId,
-        @Nullable Input<String> workerType,
-        @Nullable Input<String> yarnEndpointAddress,
-        @Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort) {
+        @Nullable Output<Map<String,Object>> arguments,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> extraJarsS3Path,
+        @Nullable Output<String> extraPythonLibsS3Path,
+        @Nullable Output<String> failureReason,
+        @Nullable Output<String> glueVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> numberOfNodes,
+        @Nullable Output<Integer> numberOfWorkers,
+        @Nullable Output<String> privateAddress,
+        @Nullable Output<String> publicAddress,
+        @Nullable Output<String> publicKey,
+        @Nullable Output<List<String>> publicKeys,
+        @Nullable Output<String> roleArn,
+        @Nullable Output<String> securityConfiguration,
+        @Nullable Output<List<String>> securityGroupIds,
+        @Nullable Output<String> status,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<String> vpcId,
+        @Nullable Output<String> workerType,
+        @Nullable Output<String> yarnEndpointAddress,
+        @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort) {
         this.arguments = arguments;
         this.arn = arn;
         this.availabilityZone = availabilityZone;
@@ -347,31 +347,31 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DevEndpointState() {
-        this.arguments = Input.empty();
-        this.arn = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.extraJarsS3Path = Input.empty();
-        this.extraPythonLibsS3Path = Input.empty();
-        this.failureReason = Input.empty();
-        this.glueVersion = Input.empty();
-        this.name = Input.empty();
-        this.numberOfNodes = Input.empty();
-        this.numberOfWorkers = Input.empty();
-        this.privateAddress = Input.empty();
-        this.publicAddress = Input.empty();
-        this.publicKey = Input.empty();
-        this.publicKeys = Input.empty();
-        this.roleArn = Input.empty();
-        this.securityConfiguration = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.status = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.vpcId = Input.empty();
-        this.workerType = Input.empty();
-        this.yarnEndpointAddress = Input.empty();
-        this.zeppelinRemoteSparkInterpreterPort = Input.empty();
+        this.arguments = Output.empty();
+        this.arn = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.extraJarsS3Path = Output.empty();
+        this.extraPythonLibsS3Path = Output.empty();
+        this.failureReason = Output.empty();
+        this.glueVersion = Output.empty();
+        this.name = Output.empty();
+        this.numberOfNodes = Output.empty();
+        this.numberOfWorkers = Output.empty();
+        this.privateAddress = Output.empty();
+        this.publicAddress = Output.empty();
+        this.publicKey = Output.empty();
+        this.publicKeys = Output.empty();
+        this.roleArn = Output.empty();
+        this.securityConfiguration = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.status = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.vpcId = Output.empty();
+        this.workerType = Output.empty();
+        this.yarnEndpointAddress = Output.empty();
+        this.zeppelinRemoteSparkInterpreterPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -383,31 +383,31 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> arguments;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> extraJarsS3Path;
-        private @Nullable Input<String> extraPythonLibsS3Path;
-        private @Nullable Input<String> failureReason;
-        private @Nullable Input<String> glueVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> numberOfNodes;
-        private @Nullable Input<Integer> numberOfWorkers;
-        private @Nullable Input<String> privateAddress;
-        private @Nullable Input<String> publicAddress;
-        private @Nullable Input<String> publicKey;
-        private @Nullable Input<List<String>> publicKeys;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> securityConfiguration;
-        private @Nullable Input<List<String>> securityGroupIds;
-        private @Nullable Input<String> status;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<String> vpcId;
-        private @Nullable Input<String> workerType;
-        private @Nullable Input<String> yarnEndpointAddress;
-        private @Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort;
+        private @Nullable Output<Map<String,Object>> arguments;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> extraJarsS3Path;
+        private @Nullable Output<String> extraPythonLibsS3Path;
+        private @Nullable Output<String> failureReason;
+        private @Nullable Output<String> glueVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> numberOfNodes;
+        private @Nullable Output<Integer> numberOfWorkers;
+        private @Nullable Output<String> privateAddress;
+        private @Nullable Output<String> publicAddress;
+        private @Nullable Output<String> publicKey;
+        private @Nullable Output<List<String>> publicKeys;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> securityConfiguration;
+        private @Nullable Output<List<String>> securityGroupIds;
+        private @Nullable Output<String> status;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<String> vpcId;
+        private @Nullable Output<String> workerType;
+        private @Nullable Output<String> yarnEndpointAddress;
+        private @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
         public Builder() {
     	      // Empty
@@ -442,253 +442,253 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.zeppelinRemoteSparkInterpreterPort = defaults.zeppelinRemoteSparkInterpreterPort;
         }
 
-        public Builder arguments(@Nullable Input<Map<String,Object>> arguments) {
+        public Builder arguments(@Nullable Output<Map<String,Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable Map<String,Object> arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder extraJarsS3Path(@Nullable Input<String> extraJarsS3Path) {
+        public Builder extraJarsS3Path(@Nullable Output<String> extraJarsS3Path) {
             this.extraJarsS3Path = extraJarsS3Path;
             return this;
         }
 
         public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
-            this.extraJarsS3Path = Input.ofNullable(extraJarsS3Path);
+            this.extraJarsS3Path = Output.ofNullable(extraJarsS3Path);
             return this;
         }
 
-        public Builder extraPythonLibsS3Path(@Nullable Input<String> extraPythonLibsS3Path) {
+        public Builder extraPythonLibsS3Path(@Nullable Output<String> extraPythonLibsS3Path) {
             this.extraPythonLibsS3Path = extraPythonLibsS3Path;
             return this;
         }
 
         public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = Input.ofNullable(extraPythonLibsS3Path);
+            this.extraPythonLibsS3Path = Output.ofNullable(extraPythonLibsS3Path);
             return this;
         }
 
-        public Builder failureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Output<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Input.ofNullable(failureReason);
+            this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
 
-        public Builder glueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Output<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Input.ofNullable(glueVersion);
+            this.glueVersion = Output.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Input.ofNullable(numberOfNodes);
+            this.numberOfNodes = Output.ofNullable(numberOfNodes);
             return this;
         }
 
-        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder privateAddress(@Nullable Input<String> privateAddress) {
+        public Builder privateAddress(@Nullable Output<String> privateAddress) {
             this.privateAddress = privateAddress;
             return this;
         }
 
         public Builder privateAddress(@Nullable String privateAddress) {
-            this.privateAddress = Input.ofNullable(privateAddress);
+            this.privateAddress = Output.ofNullable(privateAddress);
             return this;
         }
 
-        public Builder publicAddress(@Nullable Input<String> publicAddress) {
+        public Builder publicAddress(@Nullable Output<String> publicAddress) {
             this.publicAddress = publicAddress;
             return this;
         }
 
         public Builder publicAddress(@Nullable String publicAddress) {
-            this.publicAddress = Input.ofNullable(publicAddress);
+            this.publicAddress = Output.ofNullable(publicAddress);
             return this;
         }
 
-        public Builder publicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Output<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Input.ofNullable(publicKey);
+            this.publicKey = Output.ofNullable(publicKey);
             return this;
         }
 
-        public Builder publicKeys(@Nullable Input<List<String>> publicKeys) {
+        public Builder publicKeys(@Nullable Output<List<String>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
         public Builder publicKeys(@Nullable List<String> publicKeys) {
-            this.publicKeys = Input.ofNullable(publicKeys);
+            this.publicKeys = Output.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Input.ofNullable(roleArn);
+            this.roleArn = Output.ofNullable(roleArn);
             return this;
         }
 
-        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Input.ofNullable(securityConfiguration);
+            this.securityConfiguration = Output.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Input.ofNullable(securityGroupIds);
+            this.securityGroupIds = Output.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder vpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Input.ofNullable(vpcId);
+            this.vpcId = Output.ofNullable(vpcId);
             return this;
         }
 
-        public Builder workerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Output<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Input.ofNullable(workerType);
+            this.workerType = Output.ofNullable(workerType);
             return this;
         }
 
-        public Builder yarnEndpointAddress(@Nullable Input<String> yarnEndpointAddress) {
+        public Builder yarnEndpointAddress(@Nullable Output<String> yarnEndpointAddress) {
             this.yarnEndpointAddress = yarnEndpointAddress;
             return this;
         }
 
         public Builder yarnEndpointAddress(@Nullable String yarnEndpointAddress) {
-            this.yarnEndpointAddress = Input.ofNullable(yarnEndpointAddress);
+            this.yarnEndpointAddress = Output.ofNullable(yarnEndpointAddress);
             return this;
         }
 
-        public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort) {
+        public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort) {
             this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
             return this;
         }
 
         public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Integer zeppelinRemoteSparkInterpreterPort) {
-            this.zeppelinRemoteSparkInterpreterPort = Input.ofNullable(zeppelinRemoteSparkInterpreterPort);
+            this.zeppelinRemoteSparkInterpreterPort = Output.ofNullable(zeppelinRemoteSparkInterpreterPort);
             return this;
         }
         public DevEndpointState build() {

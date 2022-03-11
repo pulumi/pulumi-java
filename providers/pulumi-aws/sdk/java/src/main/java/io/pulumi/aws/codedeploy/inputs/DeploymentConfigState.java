@@ -5,7 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="computePlatform")
-      private final @Nullable Input<String> computePlatform;
+      private final @Nullable Output<String> computePlatform;
 
-    public Input<String> getComputePlatform() {
-        return this.computePlatform == null ? Input.empty() : this.computePlatform;
+    public Output<String> getComputePlatform() {
+        return this.computePlatform == null ? Output.empty() : this.computePlatform;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentConfigId")
-      private final @Nullable Input<String> deploymentConfigId;
+      private final @Nullable Output<String> deploymentConfigId;
 
-    public Input<String> getDeploymentConfigId() {
-        return this.deploymentConfigId == null ? Input.empty() : this.deploymentConfigId;
+    public Output<String> getDeploymentConfigId() {
+        return this.deploymentConfigId == null ? Output.empty() : this.deploymentConfigId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentConfigName")
-      private final @Nullable Input<String> deploymentConfigName;
+      private final @Nullable Output<String> deploymentConfigName;
 
-    public Input<String> getDeploymentConfigName() {
-        return this.deploymentConfigName == null ? Input.empty() : this.deploymentConfigName;
+    public Output<String> getDeploymentConfigName() {
+        return this.deploymentConfigName == null ? Output.empty() : this.deploymentConfigName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minimumHealthyHosts")
-      private final @Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
+      private final @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
-    public Input<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
-        return this.minimumHealthyHosts == null ? Input.empty() : this.minimumHealthyHosts;
+    public Output<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
+        return this.minimumHealthyHosts == null ? Output.empty() : this.minimumHealthyHosts;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trafficRoutingConfig")
-      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
+      private final @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
-    public Input<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {
-        return this.trafficRoutingConfig == null ? Input.empty() : this.trafficRoutingConfig;
+    public Output<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {
+        return this.trafficRoutingConfig == null ? Output.empty() : this.trafficRoutingConfig;
     }
 
     public DeploymentConfigState(
-        @Nullable Input<String> computePlatform,
-        @Nullable Input<String> deploymentConfigId,
-        @Nullable Input<String> deploymentConfigName,
-        @Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts,
-        @Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
+        @Nullable Output<String> computePlatform,
+        @Nullable Output<String> deploymentConfigId,
+        @Nullable Output<String> deploymentConfigName,
+        @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts,
+        @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
         this.computePlatform = computePlatform;
         this.deploymentConfigId = deploymentConfigId;
         this.deploymentConfigName = deploymentConfigName;
@@ -85,11 +85,11 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     }
 
     private DeploymentConfigState() {
-        this.computePlatform = Input.empty();
-        this.deploymentConfigId = Input.empty();
-        this.deploymentConfigName = Input.empty();
-        this.minimumHealthyHosts = Input.empty();
-        this.trafficRoutingConfig = Input.empty();
+        this.computePlatform = Output.empty();
+        this.deploymentConfigId = Output.empty();
+        this.deploymentConfigName = Output.empty();
+        this.minimumHealthyHosts = Output.empty();
+        this.trafficRoutingConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computePlatform;
-        private @Nullable Input<String> deploymentConfigId;
-        private @Nullable Input<String> deploymentConfigName;
-        private @Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
-        private @Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
+        private @Nullable Output<String> computePlatform;
+        private @Nullable Output<String> deploymentConfigId;
+        private @Nullable Output<String> deploymentConfigName;
+        private @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
+        private @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     	      this.trafficRoutingConfig = defaults.trafficRoutingConfig;
         }
 
-        public Builder computePlatform(@Nullable Input<String> computePlatform) {
+        public Builder computePlatform(@Nullable Output<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
         public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Input.ofNullable(computePlatform);
+            this.computePlatform = Output.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder deploymentConfigId(@Nullable Input<String> deploymentConfigId) {
+        public Builder deploymentConfigId(@Nullable Output<String> deploymentConfigId) {
             this.deploymentConfigId = deploymentConfigId;
             return this;
         }
 
         public Builder deploymentConfigId(@Nullable String deploymentConfigId) {
-            this.deploymentConfigId = Input.ofNullable(deploymentConfigId);
+            this.deploymentConfigId = Output.ofNullable(deploymentConfigId);
             return this;
         }
 
-        public Builder deploymentConfigName(@Nullable Input<String> deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
             this.deploymentConfigName = deploymentConfigName;
             return this;
         }
 
         public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
-            this.deploymentConfigName = Input.ofNullable(deploymentConfigName);
+            this.deploymentConfigName = Output.ofNullable(deploymentConfigName);
             return this;
         }
 
-        public Builder minimumHealthyHosts(@Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
             this.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
 
         public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
-            this.minimumHealthyHosts = Input.ofNullable(minimumHealthyHosts);
+            this.minimumHealthyHosts = Output.ofNullable(minimumHealthyHosts);
             return this;
         }
 
-        public Builder trafficRoutingConfig(@Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
             this.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
 
         public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
-            this.trafficRoutingConfig = Input.ofNullable(trafficRoutingConfig);
+            this.trafficRoutingConfig = Output.ofNullable(trafficRoutingConfig);
             return this;
         }
         public DeploymentConfigState build() {

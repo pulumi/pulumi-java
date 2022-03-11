@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.shield.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="healthCheckArn")
-      private final @Nullable Input<String> healthCheckArn;
+      private final @Nullable Output<String> healthCheckArn;
 
-    public Input<String> getHealthCheckArn() {
-        return this.healthCheckArn == null ? Input.empty() : this.healthCheckArn;
+    public Output<String> getHealthCheckArn() {
+        return this.healthCheckArn == null ? Output.empty() : this.healthCheckArn;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="shieldProtectionId")
-      private final @Nullable Input<String> shieldProtectionId;
+      private final @Nullable Output<String> shieldProtectionId;
 
-    public Input<String> getShieldProtectionId() {
-        return this.shieldProtectionId == null ? Input.empty() : this.shieldProtectionId;
+    public Output<String> getShieldProtectionId() {
+        return this.shieldProtectionId == null ? Output.empty() : this.shieldProtectionId;
     }
 
     public ProtectionHealthCheckAssociationState(
-        @Nullable Input<String> healthCheckArn,
-        @Nullable Input<String> shieldProtectionId) {
+        @Nullable Output<String> healthCheckArn,
+        @Nullable Output<String> shieldProtectionId) {
         this.healthCheckArn = healthCheckArn;
         this.shieldProtectionId = shieldProtectionId;
     }
 
     private ProtectionHealthCheckAssociationState() {
-        this.healthCheckArn = Input.empty();
-        this.shieldProtectionId = Input.empty();
+        this.healthCheckArn = Output.empty();
+        this.shieldProtectionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> healthCheckArn;
-        private @Nullable Input<String> shieldProtectionId;
+        private @Nullable Output<String> healthCheckArn;
+        private @Nullable Output<String> shieldProtectionId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
     	      this.shieldProtectionId = defaults.shieldProtectionId;
         }
 
-        public Builder healthCheckArn(@Nullable Input<String> healthCheckArn) {
+        public Builder healthCheckArn(@Nullable Output<String> healthCheckArn) {
             this.healthCheckArn = healthCheckArn;
             return this;
         }
 
         public Builder healthCheckArn(@Nullable String healthCheckArn) {
-            this.healthCheckArn = Input.ofNullable(healthCheckArn);
+            this.healthCheckArn = Output.ofNullable(healthCheckArn);
             return this;
         }
 
-        public Builder shieldProtectionId(@Nullable Input<String> shieldProtectionId) {
+        public Builder shieldProtectionId(@Nullable Output<String> shieldProtectionId) {
             this.shieldProtectionId = shieldProtectionId;
             return this;
         }
 
         public Builder shieldProtectionId(@Nullable String shieldProtectionId) {
-            this.shieldProtectionId = Input.ofNullable(shieldProtectionId);
+            this.shieldProtectionId = Output.ofNullable(shieldProtectionId);
             return this;
         }
         public ProtectionHealthCheckAssociationState build() {

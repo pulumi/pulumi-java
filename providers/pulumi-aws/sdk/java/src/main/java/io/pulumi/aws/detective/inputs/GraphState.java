@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.detective.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn")
-      private final @Nullable Input<String> graphArn;
+      private final @Nullable Output<String> graphArn;
 
-    public Input<String> getGraphArn() {
-        return this.graphArn == null ? Input.empty() : this.graphArn;
+    public Output<String> getGraphArn() {
+        return this.graphArn == null ? Output.empty() : this.graphArn;
     }
 
     /**
@@ -42,24 +42,24 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public GraphState(
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> graphArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> graphArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.createdTime = createdTime;
         this.graphArn = graphArn;
         this.tags = tags;
@@ -67,10 +67,10 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphState() {
-        this.createdTime = Input.empty();
-        this.graphArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.createdTime = Output.empty();
+        this.graphArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> graphArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> graphArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder graphArn(@Nullable Input<String> graphArn) {
+        public Builder graphArn(@Nullable Output<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
 
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Input.ofNullable(graphArn);
+            this.graphArn = Output.ofNullable(graphArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public GraphState build() {

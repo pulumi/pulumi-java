@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endpointUri", required=true)
-      private final Input<String> endpointUri;
+      private final Output<String> endpointUri;
 
-    public Input<String> getEndpointUri() {
+    public Output<String> getEndpointUri() {
         return this.endpointUri;
     }
 
@@ -31,10 +31,10 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorRetryDuration")
-      private final @Nullable Input<Integer> errorRetryDuration;
+      private final @Nullable Output<Integer> errorRetryDuration;
 
-    public Input<Integer> getErrorRetryDuration() {
-        return this.errorRetryDuration == null ? Input.empty() : this.errorRetryDuration;
+    public Output<Integer> getErrorRetryDuration() {
+        return this.errorRetryDuration == null ? Output.empty() : this.errorRetryDuration;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fullLoadErrorPercentage")
-      private final @Nullable Input<Integer> fullLoadErrorPercentage;
+      private final @Nullable Output<Integer> fullLoadErrorPercentage;
 
-    public Input<Integer> getFullLoadErrorPercentage() {
-        return this.fullLoadErrorPercentage == null ? Input.empty() : this.fullLoadErrorPercentage;
+    public Output<Integer> getFullLoadErrorPercentage() {
+        return this.fullLoadErrorPercentage == null ? Output.empty() : this.fullLoadErrorPercentage;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceAccessRoleArn", required=true)
-      private final Input<String> serviceAccessRoleArn;
+      private final Output<String> serviceAccessRoleArn;
 
-    public Input<String> getServiceAccessRoleArn() {
+    public Output<String> getServiceAccessRoleArn() {
         return this.serviceAccessRoleArn;
     }
 
     public EndpointElasticsearchSettingsGetArgs(
-        Input<String> endpointUri,
-        @Nullable Input<Integer> errorRetryDuration,
-        @Nullable Input<Integer> fullLoadErrorPercentage,
-        Input<String> serviceAccessRoleArn) {
+        Output<String> endpointUri,
+        @Nullable Output<Integer> errorRetryDuration,
+        @Nullable Output<Integer> fullLoadErrorPercentage,
+        Output<String> serviceAccessRoleArn) {
         this.endpointUri = Objects.requireNonNull(endpointUri, "expected parameter 'endpointUri' to be non-null");
         this.errorRetryDuration = errorRetryDuration;
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;
@@ -71,10 +71,10 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
     }
 
     private EndpointElasticsearchSettingsGetArgs() {
-        this.endpointUri = Input.empty();
-        this.errorRetryDuration = Input.empty();
-        this.fullLoadErrorPercentage = Input.empty();
-        this.serviceAccessRoleArn = Input.empty();
+        this.endpointUri = Output.empty();
+        this.errorRetryDuration = Output.empty();
+        this.fullLoadErrorPercentage = Output.empty();
+        this.serviceAccessRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> endpointUri;
-        private @Nullable Input<Integer> errorRetryDuration;
-        private @Nullable Input<Integer> fullLoadErrorPercentage;
-        private Input<String> serviceAccessRoleArn;
+        private Output<String> endpointUri;
+        private @Nullable Output<Integer> errorRetryDuration;
+        private @Nullable Output<Integer> fullLoadErrorPercentage;
+        private Output<String> serviceAccessRoleArn;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
     	      this.serviceAccessRoleArn = defaults.serviceAccessRoleArn;
         }
 
-        public Builder endpointUri(Input<String> endpointUri) {
+        public Builder endpointUri(Output<String> endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
         public Builder endpointUri(String endpointUri) {
-            this.endpointUri = Input.of(Objects.requireNonNull(endpointUri));
+            this.endpointUri = Output.of(Objects.requireNonNull(endpointUri));
             return this;
         }
 
-        public Builder errorRetryDuration(@Nullable Input<Integer> errorRetryDuration) {
+        public Builder errorRetryDuration(@Nullable Output<Integer> errorRetryDuration) {
             this.errorRetryDuration = errorRetryDuration;
             return this;
         }
 
         public Builder errorRetryDuration(@Nullable Integer errorRetryDuration) {
-            this.errorRetryDuration = Input.ofNullable(errorRetryDuration);
+            this.errorRetryDuration = Output.ofNullable(errorRetryDuration);
             return this;
         }
 
-        public Builder fullLoadErrorPercentage(@Nullable Input<Integer> fullLoadErrorPercentage) {
+        public Builder fullLoadErrorPercentage(@Nullable Output<Integer> fullLoadErrorPercentage) {
             this.fullLoadErrorPercentage = fullLoadErrorPercentage;
             return this;
         }
 
         public Builder fullLoadErrorPercentage(@Nullable Integer fullLoadErrorPercentage) {
-            this.fullLoadErrorPercentage = Input.ofNullable(fullLoadErrorPercentage);
+            this.fullLoadErrorPercentage = Output.ofNullable(fullLoadErrorPercentage);
             return this;
         }
 
-        public Builder serviceAccessRoleArn(Input<String> serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(Output<String> serviceAccessRoleArn) {
             this.serviceAccessRoleArn = Objects.requireNonNull(serviceAccessRoleArn);
             return this;
         }
 
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = Input.of(Objects.requireNonNull(serviceAccessRoleArn));
+            this.serviceAccessRoleArn = Output.of(Objects.requireNonNull(serviceAccessRoleArn));
             return this;
         }
         public EndpointElasticsearchSettingsGetArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.aws.ebs.SnapshotImportArgs;
 import io.pulumi.aws.ebs.inputs.SnapshotImportState;
 import io.pulumi.aws.ebs.outputs.SnapshotImportClientData;
 import io.pulumi.aws.ebs.outputs.SnapshotImportDiskContainer;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -293,14 +292,14 @@ public class SnapshotImport extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotImport(String name, SnapshotImportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ebs/snapshotImport:SnapshotImport", name, args == null ? SnapshotImportArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:ebs/snapshotImport:SnapshotImport", name, args == null ? SnapshotImportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SnapshotImport(String name, Input<String> id, @Nullable SnapshotImportState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SnapshotImport(String name, Output<String> id, @Nullable SnapshotImportState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:ebs/snapshotImport:SnapshotImport", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -316,7 +315,7 @@ public class SnapshotImport extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SnapshotImport get(String name, Input<String> id, @Nullable SnapshotImportState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SnapshotImport get(String name, Output<String> id, @Nullable SnapshotImportState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SnapshotImport(name, id, state, options);
     }
 }

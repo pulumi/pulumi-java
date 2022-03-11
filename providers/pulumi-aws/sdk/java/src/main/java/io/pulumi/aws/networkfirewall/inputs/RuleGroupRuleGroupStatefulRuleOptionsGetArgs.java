@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ruleOrder", required=true)
-      private final Input<String> ruleOrder;
+      private final Output<String> ruleOrder;
 
-    public Input<String> getRuleOrder() {
+    public Output<String> getRuleOrder() {
         return this.ruleOrder;
     }
 
-    public RuleGroupRuleGroupStatefulRuleOptionsGetArgs(Input<String> ruleOrder) {
+    public RuleGroupRuleGroupStatefulRuleOptionsGetArgs(Output<String> ruleOrder) {
         this.ruleOrder = Objects.requireNonNull(ruleOrder, "expected parameter 'ruleOrder' to be non-null");
     }
 
     private RuleGroupRuleGroupStatefulRuleOptionsGetArgs() {
-        this.ruleOrder = Input.empty();
+        this.ruleOrder = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> ruleOrder;
+        private Output<String> ruleOrder;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends io.pulum
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder ruleOrder(Input<String> ruleOrder) {
+        public Builder ruleOrder(Output<String> ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }
 
         public Builder ruleOrder(String ruleOrder) {
-            this.ruleOrder = Input.of(Objects.requireNonNull(ruleOrder));
+            this.ruleOrder = Output.of(Objects.requireNonNull(ruleOrder));
             return this;
         }
         public RuleGroupRuleGroupStatefulRuleOptionsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.neptune.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applyImmediately")
-      private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Output<Boolean> applyImmediately;
 
-    public Input<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
+    public Output<Boolean> getApplyImmediately() {
+        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Input<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
+    public Output<Boolean> getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterIdentifier")
-      private final @Nullable Input<String> clusterIdentifier;
+      private final @Nullable Output<String> clusterIdentifier;
 
-    public Input<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
+    public Output<String> getClusterIdentifier() {
+        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbiResourceId")
-      private final @Nullable Input<String> dbiResourceId;
+      private final @Nullable Output<String> dbiResourceId;
 
-    public Input<String> getDbiResourceId() {
-        return this.dbiResourceId == null ? Input.empty() : this.dbiResourceId;
+    public Output<String> getDbiResourceId() {
+        return this.dbiResourceId == null ? Output.empty() : this.dbiResourceId;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endpoint")
-      private final @Nullable Input<String> endpoint;
+      private final @Nullable Output<String> endpoint;
 
-    public Input<String> getEndpoint() {
-        return this.endpoint == null ? Input.empty() : this.endpoint;
+    public Output<String> getEndpoint() {
+        return this.endpoint == null ? Output.empty() : this.endpoint;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engine")
-      private final @Nullable Input<String> engine;
+      private final @Nullable Output<String> engine;
 
-    public Input<String> getEngine() {
-        return this.engine == null ? Input.empty() : this.engine;
+    public Output<String> getEngine() {
+        return this.engine == null ? Output.empty() : this.engine;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifierPrefix")
-      private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Output<String> identifierPrefix;
 
-    public Input<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
+    public Output<String> getIdentifierPrefix() {
+        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceClass")
-      private final @Nullable Input<String> instanceClass;
+      private final @Nullable Output<String> instanceClass;
 
-    public Input<String> getInstanceClass() {
-        return this.instanceClass == null ? Input.empty() : this.instanceClass;
+    public Output<String> getInstanceClass() {
+        return this.instanceClass == null ? Output.empty() : this.instanceClass;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="neptuneParameterGroupName")
-      private final @Nullable Input<String> neptuneParameterGroupName;
+      private final @Nullable Output<String> neptuneParameterGroupName;
 
-    public Input<String> getNeptuneParameterGroupName() {
-        return this.neptuneParameterGroupName == null ? Input.empty() : this.neptuneParameterGroupName;
+    public Output<String> getNeptuneParameterGroupName() {
+        return this.neptuneParameterGroupName == null ? Output.empty() : this.neptuneParameterGroupName;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="neptuneSubnetGroupName")
-      private final @Nullable Input<String> neptuneSubnetGroupName;
+      private final @Nullable Output<String> neptuneSubnetGroupName;
 
-    public Input<String> getNeptuneSubnetGroupName() {
-        return this.neptuneSubnetGroupName == null ? Input.empty() : this.neptuneSubnetGroupName;
+    public Output<String> getNeptuneSubnetGroupName() {
+        return this.neptuneSubnetGroupName == null ? Output.empty() : this.neptuneSubnetGroupName;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredBackupWindow")
-      private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Output<String> preferredBackupWindow;
 
-    public Input<String> getPreferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
+    public Output<String> getPreferredBackupWindow() {
+        return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-      private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Input<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
+    public Output<String> getPreferredMaintenanceWindow() {
+        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="promotionTier")
-      private final @Nullable Input<Integer> promotionTier;
+      private final @Nullable Output<Integer> promotionTier;
 
-    public Input<Integer> getPromotionTier() {
-        return this.promotionTier == null ? Input.empty() : this.promotionTier;
+    public Output<Integer> getPromotionTier() {
+        return this.promotionTier == null ? Output.empty() : this.promotionTier;
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publiclyAccessible")
-      private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Input<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
+    public Output<Boolean> getPubliclyAccessible() {
+        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageEncrypted")
-      private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Output<Boolean> storageEncrypted;
 
-    public Input<Boolean> getStorageEncrypted() {
-        return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
+    public Output<Boolean> getStorageEncrypted() {
+        return this.storageEncrypted == null ? Output.empty() : this.storageEncrypted;
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     /**
@@ -288,38 +288,38 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="writer")
-      private final @Nullable Input<Boolean> writer;
+      private final @Nullable Output<Boolean> writer;
 
-    public Input<Boolean> getWriter() {
-        return this.writer == null ? Input.empty() : this.writer;
+    public Output<Boolean> getWriter() {
+        return this.writer == null ? Output.empty() : this.writer;
     }
 
     public ClusterInstanceState(
-        @Nullable Input<String> address,
-        @Nullable Input<Boolean> applyImmediately,
-        @Nullable Input<String> arn,
-        @Nullable Input<Boolean> autoMinorVersionUpgrade,
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> clusterIdentifier,
-        @Nullable Input<String> dbiResourceId,
-        @Nullable Input<String> endpoint,
-        @Nullable Input<String> engine,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> identifierPrefix,
-        @Nullable Input<String> instanceClass,
-        @Nullable Input<String> kmsKeyArn,
-        @Nullable Input<String> neptuneParameterGroupName,
-        @Nullable Input<String> neptuneSubnetGroupName,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> preferredBackupWindow,
-        @Nullable Input<String> preferredMaintenanceWindow,
-        @Nullable Input<Integer> promotionTier,
-        @Nullable Input<Boolean> publiclyAccessible,
-        @Nullable Input<Boolean> storageEncrypted,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll,
-        @Nullable Input<Boolean> writer) {
+        @Nullable Output<String> address,
+        @Nullable Output<Boolean> applyImmediately,
+        @Nullable Output<String> arn,
+        @Nullable Output<Boolean> autoMinorVersionUpgrade,
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> clusterIdentifier,
+        @Nullable Output<String> dbiResourceId,
+        @Nullable Output<String> endpoint,
+        @Nullable Output<String> engine,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> identifierPrefix,
+        @Nullable Output<String> instanceClass,
+        @Nullable Output<String> kmsKeyArn,
+        @Nullable Output<String> neptuneParameterGroupName,
+        @Nullable Output<String> neptuneSubnetGroupName,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> preferredBackupWindow,
+        @Nullable Output<String> preferredMaintenanceWindow,
+        @Nullable Output<Integer> promotionTier,
+        @Nullable Output<Boolean> publiclyAccessible,
+        @Nullable Output<Boolean> storageEncrypted,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll,
+        @Nullable Output<Boolean> writer) {
         this.address = address;
         this.applyImmediately = applyImmediately;
         this.arn = arn;
@@ -348,31 +348,31 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterInstanceState() {
-        this.address = Input.empty();
-        this.applyImmediately = Input.empty();
-        this.arn = Input.empty();
-        this.autoMinorVersionUpgrade = Input.empty();
-        this.availabilityZone = Input.empty();
-        this.clusterIdentifier = Input.empty();
-        this.dbiResourceId = Input.empty();
-        this.endpoint = Input.empty();
-        this.engine = Input.empty();
-        this.engineVersion = Input.empty();
-        this.identifier = Input.empty();
-        this.identifierPrefix = Input.empty();
-        this.instanceClass = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.neptuneParameterGroupName = Input.empty();
-        this.neptuneSubnetGroupName = Input.empty();
-        this.port = Input.empty();
-        this.preferredBackupWindow = Input.empty();
-        this.preferredMaintenanceWindow = Input.empty();
-        this.promotionTier = Input.empty();
-        this.publiclyAccessible = Input.empty();
-        this.storageEncrypted = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
-        this.writer = Input.empty();
+        this.address = Output.empty();
+        this.applyImmediately = Output.empty();
+        this.arn = Output.empty();
+        this.autoMinorVersionUpgrade = Output.empty();
+        this.availabilityZone = Output.empty();
+        this.clusterIdentifier = Output.empty();
+        this.dbiResourceId = Output.empty();
+        this.endpoint = Output.empty();
+        this.engine = Output.empty();
+        this.engineVersion = Output.empty();
+        this.identifier = Output.empty();
+        this.identifierPrefix = Output.empty();
+        this.instanceClass = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.neptuneParameterGroupName = Output.empty();
+        this.neptuneSubnetGroupName = Output.empty();
+        this.port = Output.empty();
+        this.preferredBackupWindow = Output.empty();
+        this.preferredMaintenanceWindow = Output.empty();
+        this.promotionTier = Output.empty();
+        this.publiclyAccessible = Output.empty();
+        this.storageEncrypted = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
+        this.writer = Output.empty();
     }
 
     public static Builder builder() {
@@ -384,31 +384,31 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<Boolean> applyImmediately;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> clusterIdentifier;
-        private @Nullable Input<String> dbiResourceId;
-        private @Nullable Input<String> endpoint;
-        private @Nullable Input<String> engine;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> identifierPrefix;
-        private @Nullable Input<String> instanceClass;
-        private @Nullable Input<String> kmsKeyArn;
-        private @Nullable Input<String> neptuneParameterGroupName;
-        private @Nullable Input<String> neptuneSubnetGroupName;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> preferredBackupWindow;
-        private @Nullable Input<String> preferredMaintenanceWindow;
-        private @Nullable Input<Integer> promotionTier;
-        private @Nullable Input<Boolean> publiclyAccessible;
-        private @Nullable Input<Boolean> storageEncrypted;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
-        private @Nullable Input<Boolean> writer;
+        private @Nullable Output<String> address;
+        private @Nullable Output<Boolean> applyImmediately;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> clusterIdentifier;
+        private @Nullable Output<String> dbiResourceId;
+        private @Nullable Output<String> endpoint;
+        private @Nullable Output<String> engine;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> identifierPrefix;
+        private @Nullable Output<String> instanceClass;
+        private @Nullable Output<String> kmsKeyArn;
+        private @Nullable Output<String> neptuneParameterGroupName;
+        private @Nullable Output<String> neptuneSubnetGroupName;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> preferredBackupWindow;
+        private @Nullable Output<String> preferredMaintenanceWindow;
+        private @Nullable Output<Integer> promotionTier;
+        private @Nullable Output<Boolean> publiclyAccessible;
+        private @Nullable Output<Boolean> storageEncrypted;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
+        private @Nullable Output<Boolean> writer;
 
         public Builder() {
     	      // Empty
@@ -443,253 +443,253 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
     	      this.writer = defaults.writer;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Input.ofNullable(applyImmediately);
+            this.applyImmediately = Output.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder dbiResourceId(@Nullable Input<String> dbiResourceId) {
+        public Builder dbiResourceId(@Nullable Output<String> dbiResourceId) {
             this.dbiResourceId = dbiResourceId;
             return this;
         }
 
         public Builder dbiResourceId(@Nullable String dbiResourceId) {
-            this.dbiResourceId = Input.ofNullable(dbiResourceId);
+            this.dbiResourceId = Output.ofNullable(dbiResourceId);
             return this;
         }
 
-        public Builder endpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Input.ofNullable(endpoint);
+            this.endpoint = Output.ofNullable(endpoint);
             return this;
         }
 
-        public Builder engine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             this.engine = engine;
             return this;
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = Input.ofNullable(engine);
+            this.engine = Output.ofNullable(engine);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Input.ofNullable(identifierPrefix);
+            this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder instanceClass(@Nullable Input<String> instanceClass) {
+        public Builder instanceClass(@Nullable Output<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Input.ofNullable(instanceClass);
+            this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder neptuneParameterGroupName(@Nullable Input<String> neptuneParameterGroupName) {
+        public Builder neptuneParameterGroupName(@Nullable Output<String> neptuneParameterGroupName) {
             this.neptuneParameterGroupName = neptuneParameterGroupName;
             return this;
         }
 
         public Builder neptuneParameterGroupName(@Nullable String neptuneParameterGroupName) {
-            this.neptuneParameterGroupName = Input.ofNullable(neptuneParameterGroupName);
+            this.neptuneParameterGroupName = Output.ofNullable(neptuneParameterGroupName);
             return this;
         }
 
-        public Builder neptuneSubnetGroupName(@Nullable Input<String> neptuneSubnetGroupName) {
+        public Builder neptuneSubnetGroupName(@Nullable Output<String> neptuneSubnetGroupName) {
             this.neptuneSubnetGroupName = neptuneSubnetGroupName;
             return this;
         }
 
         public Builder neptuneSubnetGroupName(@Nullable String neptuneSubnetGroupName) {
-            this.neptuneSubnetGroupName = Input.ofNullable(neptuneSubnetGroupName);
+            this.neptuneSubnetGroupName = Output.ofNullable(neptuneSubnetGroupName);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
         public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
+            this.preferredBackupWindow = Output.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder promotionTier(@Nullable Input<Integer> promotionTier) {
+        public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
             this.promotionTier = promotionTier;
             return this;
         }
 
         public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Input.ofNullable(promotionTier);
+            this.promotionTier = Output.ofNullable(promotionTier);
             return this;
         }
 
-        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder storageEncrypted(@Nullable Input<Boolean> storageEncrypted) {
+        public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
             this.storageEncrypted = storageEncrypted;
             return this;
         }
 
         public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Input.ofNullable(storageEncrypted);
+            this.storageEncrypted = Output.ofNullable(storageEncrypted);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder writer(@Nullable Input<Boolean> writer) {
+        public Builder writer(@Nullable Output<Boolean> writer) {
             this.writer = writer;
             return this;
         }
 
         public Builder writer(@Nullable Boolean writer) {
-            this.writer = Input.ofNullable(writer);
+            this.writer = Output.ofNullable(writer);
             return this;
         }
         public ClusterInstanceState build() {

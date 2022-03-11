@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudsearch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enforceHttps")
-      private final @Nullable Input<Boolean> enforceHttps;
+      private final @Nullable Output<Boolean> enforceHttps;
 
-    public Input<Boolean> getEnforceHttps() {
-        return this.enforceHttps == null ? Input.empty() : this.enforceHttps;
+    public Output<Boolean> getEnforceHttps() {
+        return this.enforceHttps == null ? Output.empty() : this.enforceHttps;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tlsSecurityPolicy")
-      private final @Nullable Input<String> tlsSecurityPolicy;
+      private final @Nullable Output<String> tlsSecurityPolicy;
 
-    public Input<String> getTlsSecurityPolicy() {
-        return this.tlsSecurityPolicy == null ? Input.empty() : this.tlsSecurityPolicy;
+    public Output<String> getTlsSecurityPolicy() {
+        return this.tlsSecurityPolicy == null ? Output.empty() : this.tlsSecurityPolicy;
     }
 
     public DomainEndpointOptionsGetArgs(
-        @Nullable Input<Boolean> enforceHttps,
-        @Nullable Input<String> tlsSecurityPolicy) {
+        @Nullable Output<Boolean> enforceHttps,
+        @Nullable Output<String> tlsSecurityPolicy) {
         this.enforceHttps = enforceHttps;
         this.tlsSecurityPolicy = tlsSecurityPolicy;
     }
 
     private DomainEndpointOptionsGetArgs() {
-        this.enforceHttps = Input.empty();
-        this.tlsSecurityPolicy = Input.empty();
+        this.enforceHttps = Output.empty();
+        this.tlsSecurityPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enforceHttps;
-        private @Nullable Input<String> tlsSecurityPolicy;
+        private @Nullable Output<Boolean> enforceHttps;
+        private @Nullable Output<String> tlsSecurityPolicy;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
     	      this.tlsSecurityPolicy = defaults.tlsSecurityPolicy;
         }
 
-        public Builder enforceHttps(@Nullable Input<Boolean> enforceHttps) {
+        public Builder enforceHttps(@Nullable Output<Boolean> enforceHttps) {
             this.enforceHttps = enforceHttps;
             return this;
         }
 
         public Builder enforceHttps(@Nullable Boolean enforceHttps) {
-            this.enforceHttps = Input.ofNullable(enforceHttps);
+            this.enforceHttps = Output.ofNullable(enforceHttps);
             return this;
         }
 
-        public Builder tlsSecurityPolicy(@Nullable Input<String> tlsSecurityPolicy) {
+        public Builder tlsSecurityPolicy(@Nullable Output<String> tlsSecurityPolicy) {
             this.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }
 
         public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
-            this.tlsSecurityPolicy = Input.ofNullable(tlsSecurityPolicy);
+            this.tlsSecurityPolicy = Output.ofNullable(tlsSecurityPolicy);
             return this;
         }
         public DomainEndpointOptionsGetArgs build() {

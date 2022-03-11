@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.networkfirewall.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
-    public FirewallSubnetMappingArgs(Input<String> subnetId) {
+    public FirewallSubnetMappingArgs(Output<String> subnetId) {
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
     }
 
     private FirewallSubnetMappingArgs() {
-        this.subnetId = Input.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> subnetId;
+        private Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
         public FirewallSubnetMappingArgs build() {

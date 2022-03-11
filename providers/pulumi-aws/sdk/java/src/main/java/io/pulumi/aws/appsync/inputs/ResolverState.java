@@ -6,7 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.ResolverCachingConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.ResolverPipelineConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cachingConfig")
-      private final @Nullable Input<ResolverCachingConfigGetArgs> cachingConfig;
+      private final @Nullable Output<ResolverCachingConfigGetArgs> cachingConfig;
 
-    public Input<ResolverCachingConfigGetArgs> getCachingConfig() {
-        return this.cachingConfig == null ? Input.empty() : this.cachingConfig;
+    public Output<ResolverCachingConfigGetArgs> getCachingConfig() {
+        return this.cachingConfig == null ? Output.empty() : this.cachingConfig;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<String> dataSource;
+      private final @Nullable Output<String> dataSource;
 
-    public Input<String> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<String> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBatchSize")
-      private final @Nullable Input<Integer> maxBatchSize;
+      private final @Nullable Output<Integer> maxBatchSize;
 
-    public Input<Integer> getMaxBatchSize() {
-        return this.maxBatchSize == null ? Input.empty() : this.maxBatchSize;
+    public Output<Integer> getMaxBatchSize() {
+        return this.maxBatchSize == null ? Output.empty() : this.maxBatchSize;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineConfig")
-      private final @Nullable Input<ResolverPipelineConfigGetArgs> pipelineConfig;
+      private final @Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig;
 
-    public Input<ResolverPipelineConfigGetArgs> getPipelineConfig() {
-        return this.pipelineConfig == null ? Input.empty() : this.pipelineConfig;
+    public Output<ResolverPipelineConfigGetArgs> getPipelineConfig() {
+        return this.pipelineConfig == null ? Output.empty() : this.pipelineConfig;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTemplate")
-      private final @Nullable Input<String> requestTemplate;
+      private final @Nullable Output<String> requestTemplate;
 
-    public Input<String> getRequestTemplate() {
-        return this.requestTemplate == null ? Input.empty() : this.requestTemplate;
+    public Output<String> getRequestTemplate() {
+        return this.requestTemplate == null ? Output.empty() : this.requestTemplate;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTemplate")
-      private final @Nullable Input<String> responseTemplate;
+      private final @Nullable Output<String> responseTemplate;
 
-    public Input<String> getResponseTemplate() {
-        return this.responseTemplate == null ? Input.empty() : this.responseTemplate;
+    public Output<String> getResponseTemplate() {
+        return this.responseTemplate == null ? Output.empty() : this.responseTemplate;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncConfig")
-      private final @Nullable Input<ResolverSyncConfigGetArgs> syncConfig;
+      private final @Nullable Output<ResolverSyncConfigGetArgs> syncConfig;
 
-    public Input<ResolverSyncConfigGetArgs> getSyncConfig() {
-        return this.syncConfig == null ? Input.empty() : this.syncConfig;
+    public Output<ResolverSyncConfigGetArgs> getSyncConfig() {
+        return this.syncConfig == null ? Output.empty() : this.syncConfig;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ResolverState(
-        @Nullable Input<String> apiId,
-        @Nullable Input<String> arn,
-        @Nullable Input<ResolverCachingConfigGetArgs> cachingConfig,
-        @Nullable Input<String> dataSource,
-        @Nullable Input<String> field,
-        @Nullable Input<String> kind,
-        @Nullable Input<Integer> maxBatchSize,
-        @Nullable Input<ResolverPipelineConfigGetArgs> pipelineConfig,
-        @Nullable Input<String> requestTemplate,
-        @Nullable Input<String> responseTemplate,
-        @Nullable Input<ResolverSyncConfigGetArgs> syncConfig,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<String> arn,
+        @Nullable Output<ResolverCachingConfigGetArgs> cachingConfig,
+        @Nullable Output<String> dataSource,
+        @Nullable Output<String> field,
+        @Nullable Output<String> kind,
+        @Nullable Output<Integer> maxBatchSize,
+        @Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig,
+        @Nullable Output<String> requestTemplate,
+        @Nullable Output<String> responseTemplate,
+        @Nullable Output<ResolverSyncConfigGetArgs> syncConfig,
+        @Nullable Output<String> type) {
         this.apiId = apiId;
         this.arn = arn;
         this.cachingConfig = cachingConfig;
@@ -178,18 +178,18 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResolverState() {
-        this.apiId = Input.empty();
-        this.arn = Input.empty();
-        this.cachingConfig = Input.empty();
-        this.dataSource = Input.empty();
-        this.field = Input.empty();
-        this.kind = Input.empty();
-        this.maxBatchSize = Input.empty();
-        this.pipelineConfig = Input.empty();
-        this.requestTemplate = Input.empty();
-        this.responseTemplate = Input.empty();
-        this.syncConfig = Input.empty();
-        this.type = Input.empty();
+        this.apiId = Output.empty();
+        this.arn = Output.empty();
+        this.cachingConfig = Output.empty();
+        this.dataSource = Output.empty();
+        this.field = Output.empty();
+        this.kind = Output.empty();
+        this.maxBatchSize = Output.empty();
+        this.pipelineConfig = Output.empty();
+        this.requestTemplate = Output.empty();
+        this.responseTemplate = Output.empty();
+        this.syncConfig = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<ResolverCachingConfigGetArgs> cachingConfig;
-        private @Nullable Input<String> dataSource;
-        private @Nullable Input<String> field;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<Integer> maxBatchSize;
-        private @Nullable Input<ResolverPipelineConfigGetArgs> pipelineConfig;
-        private @Nullable Input<String> requestTemplate;
-        private @Nullable Input<String> responseTemplate;
-        private @Nullable Input<ResolverSyncConfigGetArgs> syncConfig;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<ResolverCachingConfigGetArgs> cachingConfig;
+        private @Nullable Output<String> dataSource;
+        private @Nullable Output<String> field;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<Integer> maxBatchSize;
+        private @Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig;
+        private @Nullable Output<String> requestTemplate;
+        private @Nullable Output<String> responseTemplate;
+        private @Nullable Output<ResolverSyncConfigGetArgs> syncConfig;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class ResolverState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder cachingConfig(@Nullable Input<ResolverCachingConfigGetArgs> cachingConfig) {
+        public Builder cachingConfig(@Nullable Output<ResolverCachingConfigGetArgs> cachingConfig) {
             this.cachingConfig = cachingConfig;
             return this;
         }
 
         public Builder cachingConfig(@Nullable ResolverCachingConfigGetArgs cachingConfig) {
-            this.cachingConfig = Input.ofNullable(cachingConfig);
+            this.cachingConfig = Output.ofNullable(cachingConfig);
             return this;
         }
 
-        public Builder dataSource(@Nullable Input<String> dataSource) {
+        public Builder dataSource(@Nullable Output<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable String dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder maxBatchSize(@Nullable Input<Integer> maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
 
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
-            this.maxBatchSize = Input.ofNullable(maxBatchSize);
+            this.maxBatchSize = Output.ofNullable(maxBatchSize);
             return this;
         }
 
-        public Builder pipelineConfig(@Nullable Input<ResolverPipelineConfigGetArgs> pipelineConfig) {
+        public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigGetArgs> pipelineConfig) {
             this.pipelineConfig = pipelineConfig;
             return this;
         }
 
         public Builder pipelineConfig(@Nullable ResolverPipelineConfigGetArgs pipelineConfig) {
-            this.pipelineConfig = Input.ofNullable(pipelineConfig);
+            this.pipelineConfig = Output.ofNullable(pipelineConfig);
             return this;
         }
 
-        public Builder requestTemplate(@Nullable Input<String> requestTemplate) {
+        public Builder requestTemplate(@Nullable Output<String> requestTemplate) {
             this.requestTemplate = requestTemplate;
             return this;
         }
 
         public Builder requestTemplate(@Nullable String requestTemplate) {
-            this.requestTemplate = Input.ofNullable(requestTemplate);
+            this.requestTemplate = Output.ofNullable(requestTemplate);
             return this;
         }
 
-        public Builder responseTemplate(@Nullable Input<String> responseTemplate) {
+        public Builder responseTemplate(@Nullable Output<String> responseTemplate) {
             this.responseTemplate = responseTemplate;
             return this;
         }
 
         public Builder responseTemplate(@Nullable String responseTemplate) {
-            this.responseTemplate = Input.ofNullable(responseTemplate);
+            this.responseTemplate = Output.ofNullable(responseTemplate);
             return this;
         }
 
-        public Builder syncConfig(@Nullable Input<ResolverSyncConfigGetArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Output<ResolverSyncConfigGetArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
 
         public Builder syncConfig(@Nullable ResolverSyncConfigGetArgs syncConfig) {
-            this.syncConfig = Input.ofNullable(syncConfig);
+            this.syncConfig = Output.ofNullable(syncConfig);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ResolverState build() {

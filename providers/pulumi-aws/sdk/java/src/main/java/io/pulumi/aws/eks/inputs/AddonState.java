@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-      private final @Nullable Input<String> addonName;
+      private final @Nullable Output<String> addonName;
 
-    public Input<String> getAddonName() {
-        return this.addonName == null ? Input.empty() : this.addonName;
+    public Output<String> getAddonName() {
+        return this.addonName == null ? Output.empty() : this.addonName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonVersion")
-      private final @Nullable Input<String> addonVersion;
+      private final @Nullable Output<String> addonVersion;
 
-    public Input<String> getAddonVersion() {
-        return this.addonVersion == null ? Input.empty() : this.addonVersion;
+    public Output<String> getAddonVersion() {
+        return this.addonVersion == null ? Output.empty() : this.addonVersion;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modifiedAt")
-      private final @Nullable Input<String> modifiedAt;
+      private final @Nullable Output<String> modifiedAt;
 
-    public Input<String> getModifiedAt() {
-        return this.modifiedAt == null ? Input.empty() : this.modifiedAt;
+    public Output<String> getModifiedAt() {
+        return this.modifiedAt == null ? Output.empty() : this.modifiedAt;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolveConflicts")
-      private final @Nullable Input<String> resolveConflicts;
+      private final @Nullable Output<String> resolveConflicts;
 
-    public Input<String> getResolveConflicts() {
-        return this.resolveConflicts == null ? Input.empty() : this.resolveConflicts;
+    public Output<String> getResolveConflicts() {
+        return this.resolveConflicts == null ? Output.empty() : this.resolveConflicts;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountRoleArn")
-      private final @Nullable Input<String> serviceAccountRoleArn;
+      private final @Nullable Output<String> serviceAccountRoleArn;
 
-    public Input<String> getServiceAccountRoleArn() {
-        return this.serviceAccountRoleArn == null ? Input.empty() : this.serviceAccountRoleArn;
+    public Output<String> getServiceAccountRoleArn() {
+        return this.serviceAccountRoleArn == null ? Output.empty() : this.serviceAccountRoleArn;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -128,23 +128,23 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public AddonState(
-        @Nullable Input<String> addonName,
-        @Nullable Input<String> addonVersion,
-        @Nullable Input<String> arn,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> modifiedAt,
-        @Nullable Input<String> resolveConflicts,
-        @Nullable Input<String> serviceAccountRoleArn,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> addonName,
+        @Nullable Output<String> addonVersion,
+        @Nullable Output<String> arn,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> modifiedAt,
+        @Nullable Output<String> resolveConflicts,
+        @Nullable Output<String> serviceAccountRoleArn,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.addonName = addonName;
         this.addonVersion = addonVersion;
         this.arn = arn;
@@ -158,16 +158,16 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddonState() {
-        this.addonName = Input.empty();
-        this.addonVersion = Input.empty();
-        this.arn = Input.empty();
-        this.clusterName = Input.empty();
-        this.createdAt = Input.empty();
-        this.modifiedAt = Input.empty();
-        this.resolveConflicts = Input.empty();
-        this.serviceAccountRoleArn = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.addonName = Output.empty();
+        this.addonVersion = Output.empty();
+        this.arn = Output.empty();
+        this.clusterName = Output.empty();
+        this.createdAt = Output.empty();
+        this.modifiedAt = Output.empty();
+        this.resolveConflicts = Output.empty();
+        this.serviceAccountRoleArn = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,16 +179,16 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addonName;
-        private @Nullable Input<String> addonVersion;
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> modifiedAt;
-        private @Nullable Input<String> resolveConflicts;
-        private @Nullable Input<String> serviceAccountRoleArn;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> addonName;
+        private @Nullable Output<String> addonVersion;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> modifiedAt;
+        private @Nullable Output<String> resolveConflicts;
+        private @Nullable Output<String> serviceAccountRoleArn;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -208,103 +208,103 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder addonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Output<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Input.ofNullable(addonName);
+            this.addonName = Output.ofNullable(addonName);
             return this;
         }
 
-        public Builder addonVersion(@Nullable Input<String> addonVersion) {
+        public Builder addonVersion(@Nullable Output<String> addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
 
         public Builder addonVersion(@Nullable String addonVersion) {
-            this.addonVersion = Input.ofNullable(addonVersion);
+            this.addonVersion = Output.ofNullable(addonVersion);
             return this;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder modifiedAt(@Nullable Input<String> modifiedAt) {
+        public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
         public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Input.ofNullable(modifiedAt);
+            this.modifiedAt = Output.ofNullable(modifiedAt);
             return this;
         }
 
-        public Builder resolveConflicts(@Nullable Input<String> resolveConflicts) {
+        public Builder resolveConflicts(@Nullable Output<String> resolveConflicts) {
             this.resolveConflicts = resolveConflicts;
             return this;
         }
 
         public Builder resolveConflicts(@Nullable String resolveConflicts) {
-            this.resolveConflicts = Input.ofNullable(resolveConflicts);
+            this.resolveConflicts = Output.ofNullable(resolveConflicts);
             return this;
         }
 
-        public Builder serviceAccountRoleArn(@Nullable Input<String> serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
         public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
-            this.serviceAccountRoleArn = Input.ofNullable(serviceAccountRoleArn);
+            this.serviceAccountRoleArn = Output.ofNullable(serviceAccountRoleArn);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public AddonState build() {

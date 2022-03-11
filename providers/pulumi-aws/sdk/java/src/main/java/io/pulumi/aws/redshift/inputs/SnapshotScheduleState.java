@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="definitions")
-      private final @Nullable Input<List<String>> definitions;
+      private final @Nullable Output<List<String>> definitions;
 
-    public Input<List<String>> getDefinitions() {
-        return this.definitions == null ? Input.empty() : this.definitions;
+    public Output<List<String>> getDefinitions() {
+        return this.definitions == null ? Output.empty() : this.definitions;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identifier")
-      private final @Nullable Input<String> identifier;
+      private final @Nullable Output<String> identifier;
 
-    public Input<String> getIdentifier() {
-        return this.identifier == null ? Input.empty() : this.identifier;
+    public Output<String> getIdentifier() {
+        return this.identifier == null ? Output.empty() : this.identifier;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identifierPrefix")
-      private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Output<String> identifierPrefix;
 
-    public Input<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
+    public Output<String> getIdentifierPrefix() {
+        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -100,21 +100,21 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-      private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Input<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Input.empty() : this.tagsAll;
+    public Output<Map<String,String>> getTagsAll() {
+        return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
     public SnapshotScheduleState(
-        @Nullable Input<String> arn,
-        @Nullable Input<List<String>> definitions,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<String> identifier,
-        @Nullable Input<String> identifierPrefix,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tagsAll) {
+        @Nullable Output<String> arn,
+        @Nullable Output<List<String>> definitions,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<String> identifier,
+        @Nullable Output<String> identifierPrefix,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.definitions = definitions;
         this.description = description;
@@ -126,14 +126,14 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
     }
 
     private SnapshotScheduleState() {
-        this.arn = Input.empty();
-        this.definitions = Input.empty();
-        this.description = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.identifier = Input.empty();
-        this.identifierPrefix = Input.empty();
-        this.tags = Input.empty();
-        this.tagsAll = Input.empty();
+        this.arn = Output.empty();
+        this.definitions = Output.empty();
+        this.description = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.identifier = Output.empty();
+        this.identifierPrefix = Output.empty();
+        this.tags = Output.empty();
+        this.tagsAll = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<List<String>> definitions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<String> identifier;
-        private @Nullable Input<String> identifierPrefix;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tagsAll;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<List<String>> definitions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<String> identifier;
+        private @Nullable Output<String> identifierPrefix;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tagsAll;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder definitions(@Nullable Input<List<String>> definitions) {
+        public Builder definitions(@Nullable Output<List<String>> definitions) {
             this.definitions = definitions;
             return this;
         }
 
         public Builder definitions(@Nullable List<String> definitions) {
-            this.definitions = Input.ofNullable(definitions);
+            this.definitions = Output.ofNullable(definitions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder identifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Input.ofNullable(identifier);
+            this.identifier = Output.ofNullable(identifier);
             return this;
         }
 
-        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Input.ofNullable(identifierPrefix);
+            this.identifierPrefix = Output.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Input.ofNullable(tagsAll);
+            this.tagsAll = Output.ofNullable(tagsAll);
             return this;
         }
         public SnapshotScheduleState build() {

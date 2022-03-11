@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr;
 
 import io.pulumi.aws.emr.inputs.InstanceGroupEbsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-      private final @Nullable Input<String> autoscalingPolicy;
+      private final @Nullable Output<String> autoscalingPolicy;
 
-    public Input<String> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
+    public Output<String> getAutoscalingPolicy() {
+        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bidPrice")
-      private final @Nullable Input<String> bidPrice;
+      private final @Nullable Output<String> bidPrice;
 
-    public Input<String> getBidPrice() {
-        return this.bidPrice == null ? Input.empty() : this.bidPrice;
+    public Output<String> getBidPrice() {
+        return this.bidPrice == null ? Output.empty() : this.bidPrice;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
@@ -56,10 +56,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationsJson")
-      private final @Nullable Input<String> configurationsJson;
+      private final @Nullable Output<String> configurationsJson;
 
-    public Input<String> getConfigurationsJson() {
-        return this.configurationsJson == null ? Input.empty() : this.configurationsJson;
+    public Output<String> getConfigurationsJson() {
+        return this.configurationsJson == null ? Output.empty() : this.configurationsJson;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsConfigs")
-      private final @Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
+      private final @Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
 
-    public Input<List<InstanceGroupEbsConfigArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Input.empty() : this.ebsConfigs;
+    public Output<List<InstanceGroupEbsConfigArgs>> getEbsConfigs() {
+        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceCount")
-      private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Output<Integer> instanceCount;
 
-    public Input<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Input.empty() : this.instanceCount;
+    public Output<Integer> getInstanceCount() {
+        return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -111,22 +111,22 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public InstanceGroupArgs(
-        @Nullable Input<String> autoscalingPolicy,
-        @Nullable Input<String> bidPrice,
-        Input<String> clusterId,
-        @Nullable Input<String> configurationsJson,
-        @Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<Integer> instanceCount,
-        Input<String> instanceType,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> autoscalingPolicy,
+        @Nullable Output<String> bidPrice,
+        Output<String> clusterId,
+        @Nullable Output<String> configurationsJson,
+        @Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<Integer> instanceCount,
+        Output<String> instanceType,
+        @Nullable Output<String> name) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.bidPrice = bidPrice;
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
@@ -139,15 +139,15 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupArgs() {
-        this.autoscalingPolicy = Input.empty();
-        this.bidPrice = Input.empty();
-        this.clusterId = Input.empty();
-        this.configurationsJson = Input.empty();
-        this.ebsConfigs = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.instanceCount = Input.empty();
-        this.instanceType = Input.empty();
-        this.name = Input.empty();
+        this.autoscalingPolicy = Output.empty();
+        this.bidPrice = Output.empty();
+        this.clusterId = Output.empty();
+        this.configurationsJson = Output.empty();
+        this.ebsConfigs = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.instanceCount = Output.empty();
+        this.instanceType = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoscalingPolicy;
-        private @Nullable Input<String> bidPrice;
-        private Input<String> clusterId;
-        private @Nullable Input<String> configurationsJson;
-        private @Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<Integer> instanceCount;
-        private Input<String> instanceType;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> autoscalingPolicy;
+        private @Nullable Output<String> bidPrice;
+        private Output<String> clusterId;
+        private @Nullable Output<String> configurationsJson;
+        private @Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<Integer> instanceCount;
+        private Output<String> instanceType;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder autoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Output<String> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder bidPrice(@Nullable Input<String> bidPrice) {
+        public Builder bidPrice(@Nullable Output<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Input.ofNullable(bidPrice);
+            this.bidPrice = Output.ofNullable(bidPrice);
             return this;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder configurationsJson(@Nullable Input<String> configurationsJson) {
+        public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
             this.configurationsJson = configurationsJson;
             return this;
         }
 
         public Builder configurationsJson(@Nullable String configurationsJson) {
-            this.configurationsJson = Input.ofNullable(configurationsJson);
+            this.configurationsJson = Output.ofNullable(configurationsJson);
             return this;
         }
 
-        public Builder ebsConfigs(@Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
         public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigArgs> ebsConfigs) {
-            this.ebsConfigs = Input.ofNullable(ebsConfigs);
+            this.ebsConfigs = Output.ofNullable(ebsConfigs);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Input.ofNullable(instanceCount);
+            this.instanceCount = Output.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public InstanceGroupArgs build() {

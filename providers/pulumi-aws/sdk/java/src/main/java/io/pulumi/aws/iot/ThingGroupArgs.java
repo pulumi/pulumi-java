@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentGroupName")
-      private final @Nullable Input<String> parentGroupName;
+      private final @Nullable Output<String> parentGroupName;
 
-    public Input<String> getParentGroupName() {
-        return this.parentGroupName == null ? Input.empty() : this.parentGroupName;
+    public Output<String> getParentGroupName() {
+        return this.parentGroupName == null ? Output.empty() : this.parentGroupName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ThingGroupPropertiesArgs> properties;
+      private final @Nullable Output<ThingGroupPropertiesArgs> properties;
 
-    public Input<ThingGroupPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ThingGroupPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ThingGroupArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentGroupName,
-        @Nullable Input<ThingGroupPropertiesArgs> properties,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentGroupName,
+        @Nullable Output<ThingGroupPropertiesArgs> properties,
+        @Nullable Output<Map<String,String>> tags) {
         this.name = name;
         this.parentGroupName = parentGroupName;
         this.properties = properties;
@@ -72,10 +72,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingGroupArgs() {
-        this.name = Input.empty();
-        this.parentGroupName = Input.empty();
-        this.properties = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.parentGroupName = Output.empty();
+        this.properties = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentGroupName;
-        private @Nullable Input<ThingGroupPropertiesArgs> properties;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentGroupName;
+        private @Nullable Output<ThingGroupPropertiesArgs> properties;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentGroupName(@Nullable Input<String> parentGroupName) {
+        public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
 
         public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Input.ofNullable(parentGroupName);
+            this.parentGroupName = Output.ofNullable(parentGroupName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ThingGroupPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ThingGroupPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ThingGroupArgs build() {

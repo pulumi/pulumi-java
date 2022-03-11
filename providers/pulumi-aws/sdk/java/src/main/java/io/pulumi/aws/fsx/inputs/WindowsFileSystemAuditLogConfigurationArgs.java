@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.fsx.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="auditLogDestination")
-      private final @Nullable Input<String> auditLogDestination;
+      private final @Nullable Output<String> auditLogDestination;
 
-    public Input<String> getAuditLogDestination() {
-        return this.auditLogDestination == null ? Input.empty() : this.auditLogDestination;
+    public Output<String> getAuditLogDestination() {
+        return this.auditLogDestination == null ? Output.empty() : this.auditLogDestination;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fileAccessAuditLogLevel")
-      private final @Nullable Input<String> fileAccessAuditLogLevel;
+      private final @Nullable Output<String> fileAccessAuditLogLevel;
 
-    public Input<String> getFileAccessAuditLogLevel() {
-        return this.fileAccessAuditLogLevel == null ? Input.empty() : this.fileAccessAuditLogLevel;
+    public Output<String> getFileAccessAuditLogLevel() {
+        return this.fileAccessAuditLogLevel == null ? Output.empty() : this.fileAccessAuditLogLevel;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fileShareAccessAuditLogLevel")
-      private final @Nullable Input<String> fileShareAccessAuditLogLevel;
+      private final @Nullable Output<String> fileShareAccessAuditLogLevel;
 
-    public Input<String> getFileShareAccessAuditLogLevel() {
-        return this.fileShareAccessAuditLogLevel == null ? Input.empty() : this.fileShareAccessAuditLogLevel;
+    public Output<String> getFileShareAccessAuditLogLevel() {
+        return this.fileShareAccessAuditLogLevel == null ? Output.empty() : this.fileShareAccessAuditLogLevel;
     }
 
     public WindowsFileSystemAuditLogConfigurationArgs(
-        @Nullable Input<String> auditLogDestination,
-        @Nullable Input<String> fileAccessAuditLogLevel,
-        @Nullable Input<String> fileShareAccessAuditLogLevel) {
+        @Nullable Output<String> auditLogDestination,
+        @Nullable Output<String> fileAccessAuditLogLevel,
+        @Nullable Output<String> fileShareAccessAuditLogLevel) {
         this.auditLogDestination = auditLogDestination;
         this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
         this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
     }
 
     private WindowsFileSystemAuditLogConfigurationArgs() {
-        this.auditLogDestination = Input.empty();
-        this.fileAccessAuditLogLevel = Input.empty();
-        this.fileShareAccessAuditLogLevel = Input.empty();
+        this.auditLogDestination = Output.empty();
+        this.fileAccessAuditLogLevel = Output.empty();
+        this.fileShareAccessAuditLogLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> auditLogDestination;
-        private @Nullable Input<String> fileAccessAuditLogLevel;
-        private @Nullable Input<String> fileShareAccessAuditLogLevel;
+        private @Nullable Output<String> auditLogDestination;
+        private @Nullable Output<String> fileAccessAuditLogLevel;
+        private @Nullable Output<String> fileShareAccessAuditLogLevel;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
     	      this.fileShareAccessAuditLogLevel = defaults.fileShareAccessAuditLogLevel;
         }
 
-        public Builder auditLogDestination(@Nullable Input<String> auditLogDestination) {
+        public Builder auditLogDestination(@Nullable Output<String> auditLogDestination) {
             this.auditLogDestination = auditLogDestination;
             return this;
         }
 
         public Builder auditLogDestination(@Nullable String auditLogDestination) {
-            this.auditLogDestination = Input.ofNullable(auditLogDestination);
+            this.auditLogDestination = Output.ofNullable(auditLogDestination);
             return this;
         }
 
-        public Builder fileAccessAuditLogLevel(@Nullable Input<String> fileAccessAuditLogLevel) {
+        public Builder fileAccessAuditLogLevel(@Nullable Output<String> fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
             return this;
         }
 
         public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
-            this.fileAccessAuditLogLevel = Input.ofNullable(fileAccessAuditLogLevel);
+            this.fileAccessAuditLogLevel = Output.ofNullable(fileAccessAuditLogLevel);
             return this;
         }
 
-        public Builder fileShareAccessAuditLogLevel(@Nullable Input<String> fileShareAccessAuditLogLevel) {
+        public Builder fileShareAccessAuditLogLevel(@Nullable Output<String> fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
             return this;
         }
 
         public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
-            this.fileShareAccessAuditLogLevel = Input.ofNullable(fileShareAccessAuditLogLevel);
+            this.fileShareAccessAuditLogLevel = Output.ofNullable(fileShareAccessAuditLogLevel);
             return this;
         }
         public WindowsFileSystemAuditLogConfigurationArgs build() {

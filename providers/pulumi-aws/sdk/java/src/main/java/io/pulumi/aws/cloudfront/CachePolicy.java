@@ -7,7 +7,6 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudfront.CachePolicyArgs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyState;
 import io.pulumi.aws.cloudfront.outputs.CachePolicyParametersInCacheKeyAndForwardedToOrigin;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -166,14 +165,14 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CachePolicy(String name, CachePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/cachePolicy:CachePolicy", name, args == null ? CachePolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:cloudfront/cachePolicy:CachePolicy", name, args == null ? CachePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CachePolicy(String name, Input<String> id, @Nullable CachePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CachePolicy(String name, Output<String> id, @Nullable CachePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:cloudfront/cachePolicy:CachePolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -189,7 +188,7 @@ public class CachePolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CachePolicy get(String name, Input<String> id, @Nullable CachePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CachePolicy get(String name, Output<String> id, @Nullable CachePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CachePolicy(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apprunner.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cpu")
-      private final @Nullable Input<String> cpu;
+      private final @Nullable Output<String> cpu;
 
-    public Input<String> getCpu() {
-        return this.cpu == null ? Input.empty() : this.cpu;
+    public Output<String> getCpu() {
+        return this.cpu == null ? Output.empty() : this.cpu;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceRoleArn")
-      private final @Nullable Input<String> instanceRoleArn;
+      private final @Nullable Output<String> instanceRoleArn;
 
-    public Input<String> getInstanceRoleArn() {
-        return this.instanceRoleArn == null ? Input.empty() : this.instanceRoleArn;
+    public Output<String> getInstanceRoleArn() {
+        return this.instanceRoleArn == null ? Output.empty() : this.instanceRoleArn;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="memory")
-      private final @Nullable Input<String> memory;
+      private final @Nullable Output<String> memory;
 
-    public Input<String> getMemory() {
-        return this.memory == null ? Input.empty() : this.memory;
+    public Output<String> getMemory() {
+        return this.memory == null ? Output.empty() : this.memory;
     }
 
     public ServiceInstanceConfigurationArgs(
-        @Nullable Input<String> cpu,
-        @Nullable Input<String> instanceRoleArn,
-        @Nullable Input<String> memory) {
+        @Nullable Output<String> cpu,
+        @Nullable Output<String> instanceRoleArn,
+        @Nullable Output<String> memory) {
         this.cpu = cpu;
         this.instanceRoleArn = instanceRoleArn;
         this.memory = memory;
     }
 
     private ServiceInstanceConfigurationArgs() {
-        this.cpu = Input.empty();
-        this.instanceRoleArn = Input.empty();
-        this.memory = Input.empty();
+        this.cpu = Output.empty();
+        this.instanceRoleArn = Output.empty();
+        this.memory = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpu;
-        private @Nullable Input<String> instanceRoleArn;
-        private @Nullable Input<String> memory;
+        private @Nullable Output<String> cpu;
+        private @Nullable Output<String> instanceRoleArn;
+        private @Nullable Output<String> memory;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ServiceInstanceConfigurationArgs extends io.pulumi.resources.
     	      this.memory = defaults.memory;
         }
 
-        public Builder cpu(@Nullable Input<String> cpu) {
+        public Builder cpu(@Nullable Output<String> cpu) {
             this.cpu = cpu;
             return this;
         }
 
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Input.ofNullable(cpu);
+            this.cpu = Output.ofNullable(cpu);
             return this;
         }
 
-        public Builder instanceRoleArn(@Nullable Input<String> instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable Output<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
         public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
-            this.instanceRoleArn = Input.ofNullable(instanceRoleArn);
+            this.instanceRoleArn = Output.ofNullable(instanceRoleArn);
             return this;
         }
 
-        public Builder memory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Output<String> memory) {
             this.memory = memory;
             return this;
         }
 
         public Builder memory(@Nullable String memory) {
-            this.memory = Input.ofNullable(memory);
+            this.memory = Output.ofNullable(memory);
             return this;
         }
         public ServiceInstanceConfigurationArgs build() {

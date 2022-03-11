@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersions")
-      private final @Nullable Input<List<String>> kafkaVersions;
+      private final @Nullable Output<List<String>> kafkaVersions;
 
-    public Input<List<String>> getKafkaVersions() {
-        return this.kafkaVersions == null ? Input.empty() : this.kafkaVersions;
+    public Output<List<String>> getKafkaVersions() {
+        return this.kafkaVersions == null ? Output.empty() : this.kafkaVersions;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-      private final @Nullable Input<Integer> latestRevision;
+      private final @Nullable Output<Integer> latestRevision;
 
-    public Input<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Input.empty() : this.latestRevision;
+    public Output<Integer> getLatestRevision() {
+        return this.latestRevision == null ? Output.empty() : this.latestRevision;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverProperties")
-      private final @Nullable Input<String> serverProperties;
+      private final @Nullable Output<String> serverProperties;
 
-    public Input<String> getServerProperties() {
-        return this.serverProperties == null ? Input.empty() : this.serverProperties;
+    public Output<String> getServerProperties() {
+        return this.serverProperties == null ? Output.empty() : this.serverProperties;
     }
 
     public ConfigurationState(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> kafkaVersions,
-        @Nullable Input<Integer> latestRevision,
-        @Nullable Input<String> name,
-        @Nullable Input<String> serverProperties) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> kafkaVersions,
+        @Nullable Output<Integer> latestRevision,
+        @Nullable Output<String> name,
+        @Nullable Output<String> serverProperties) {
         this.arn = arn;
         this.description = description;
         this.kafkaVersions = kafkaVersions;
@@ -98,12 +98,12 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationState() {
-        this.arn = Input.empty();
-        this.description = Input.empty();
-        this.kafkaVersions = Input.empty();
-        this.latestRevision = Input.empty();
-        this.name = Input.empty();
-        this.serverProperties = Input.empty();
+        this.arn = Output.empty();
+        this.description = Output.empty();
+        this.kafkaVersions = Output.empty();
+        this.latestRevision = Output.empty();
+        this.name = Output.empty();
+        this.serverProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> kafkaVersions;
-        private @Nullable Input<Integer> latestRevision;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> serverProperties;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> kafkaVersions;
+        private @Nullable Output<Integer> latestRevision;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> serverProperties;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     	      this.serverProperties = defaults.serverProperties;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kafkaVersions(@Nullable Input<List<String>> kafkaVersions) {
+        public Builder kafkaVersions(@Nullable Output<List<String>> kafkaVersions) {
             this.kafkaVersions = kafkaVersions;
             return this;
         }
 
         public Builder kafkaVersions(@Nullable List<String> kafkaVersions) {
-            this.kafkaVersions = Input.ofNullable(kafkaVersions);
+            this.kafkaVersions = Output.ofNullable(kafkaVersions);
             return this;
         }
 
-        public Builder latestRevision(@Nullable Input<Integer> latestRevision) {
+        public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Input.ofNullable(latestRevision);
+            this.latestRevision = Output.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder serverProperties(@Nullable Input<String> serverProperties) {
+        public Builder serverProperties(@Nullable Output<String> serverProperties) {
             this.serverProperties = serverProperties;
             return this;
         }
 
         public Builder serverProperties(@Nullable String serverProperties) {
-            this.serverProperties = Input.ofNullable(serverProperties);
+            this.serverProperties = Output.ofNullable(serverProperties);
             return this;
         }
         public ConfigurationState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="numNodeGroups")
-      private final @Nullable Input<Integer> numNodeGroups;
+      private final @Nullable Output<Integer> numNodeGroups;
 
-    public Input<Integer> getNumNodeGroups() {
-        return this.numNodeGroups == null ? Input.empty() : this.numNodeGroups;
+    public Output<Integer> getNumNodeGroups() {
+        return this.numNodeGroups == null ? Output.empty() : this.numNodeGroups;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="replicasPerNodeGroup", required=true)
-      private final Input<Integer> replicasPerNodeGroup;
+      private final Output<Integer> replicasPerNodeGroup;
 
-    public Input<Integer> getReplicasPerNodeGroup() {
+    public Output<Integer> getReplicasPerNodeGroup() {
         return this.replicasPerNodeGroup;
     }
 
     public ReplicationGroupClusterModeArgs(
-        @Nullable Input<Integer> numNodeGroups,
-        Input<Integer> replicasPerNodeGroup) {
+        @Nullable Output<Integer> numNodeGroups,
+        Output<Integer> replicasPerNodeGroup) {
         this.numNodeGroups = numNodeGroups;
         this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup, "expected parameter 'replicasPerNodeGroup' to be non-null");
     }
 
     private ReplicationGroupClusterModeArgs() {
-        this.numNodeGroups = Input.empty();
-        this.replicasPerNodeGroup = Input.empty();
+        this.numNodeGroups = Output.empty();
+        this.replicasPerNodeGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numNodeGroups;
-        private Input<Integer> replicasPerNodeGroup;
+        private @Nullable Output<Integer> numNodeGroups;
+        private Output<Integer> replicasPerNodeGroup;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
     	      this.replicasPerNodeGroup = defaults.replicasPerNodeGroup;
         }
 
-        public Builder numNodeGroups(@Nullable Input<Integer> numNodeGroups) {
+        public Builder numNodeGroups(@Nullable Output<Integer> numNodeGroups) {
             this.numNodeGroups = numNodeGroups;
             return this;
         }
 
         public Builder numNodeGroups(@Nullable Integer numNodeGroups) {
-            this.numNodeGroups = Input.ofNullable(numNodeGroups);
+            this.numNodeGroups = Output.ofNullable(numNodeGroups);
             return this;
         }
 
-        public Builder replicasPerNodeGroup(Input<Integer> replicasPerNodeGroup) {
+        public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
             return this;
         }
 
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
-            this.replicasPerNodeGroup = Input.of(Objects.requireNonNull(replicasPerNodeGroup));
+            this.replicasPerNodeGroup = Output.of(Objects.requireNonNull(replicasPerNodeGroup));
             return this;
         }
         public ReplicationGroupClusterModeArgs build() {

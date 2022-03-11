@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="bucketArn", required=true)
-      private final Input<String> bucketArn;
+      private final Output<String> bucketArn;
 
-    public Input<String> getBucketArn() {
+    public Output<String> getBucketArn() {
         return this.bucketArn;
     }
 
@@ -30,9 +30,9 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="fileKey", required=true)
-      private final Input<String> fileKey;
+      private final Output<String> fileKey;
 
-    public Input<String> getFileKey() {
+    public Output<String> getFileKey() {
         return this.fileKey;
     }
 
@@ -41,25 +41,25 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="objectVersion")
-      private final @Nullable Input<String> objectVersion;
+      private final @Nullable Output<String> objectVersion;
 
-    public Input<String> getObjectVersion() {
-        return this.objectVersion == null ? Input.empty() : this.objectVersion;
+    public Output<String> getObjectVersion() {
+        return this.objectVersion == null ? Output.empty() : this.objectVersion;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs(
-        Input<String> bucketArn,
-        Input<String> fileKey,
-        @Nullable Input<String> objectVersion) {
+        Output<String> bucketArn,
+        Output<String> fileKey,
+        @Nullable Output<String> objectVersion) {
         this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
         this.fileKey = Objects.requireNonNull(fileKey, "expected parameter 'fileKey' to be non-null");
         this.objectVersion = objectVersion;
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs() {
-        this.bucketArn = Input.empty();
-        this.fileKey = Input.empty();
-        this.objectVersion = Input.empty();
+        this.bucketArn = Output.empty();
+        this.fileKey = Output.empty();
+        this.objectVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     public static final class Builder {
-        private Input<String> bucketArn;
-        private Input<String> fileKey;
-        private @Nullable Input<String> objectVersion;
+        private Output<String> bucketArn;
+        private Output<String> fileKey;
+        private @Nullable Output<String> objectVersion;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.objectVersion = defaults.objectVersion;
         }
 
-        public Builder bucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Output<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
+            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder fileKey(Input<String> fileKey) {
+        public Builder fileKey(Output<String> fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
         public Builder fileKey(String fileKey) {
-            this.fileKey = Input.of(Objects.requireNonNull(fileKey));
+            this.fileKey = Output.of(Objects.requireNonNull(fileKey));
             return this;
         }
 
-        public Builder objectVersion(@Nullable Input<String> objectVersion) {
+        public Builder objectVersion(@Nullable Output<String> objectVersion) {
             this.objectVersion = objectVersion;
             return this;
         }
 
         public Builder objectVersion(@Nullable String objectVersion) {
-            this.objectVersion = Input.ofNullable(objectVersion);
+            this.objectVersion = Output.ofNullable(objectVersion);
             return this;
         }
         public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs build() {

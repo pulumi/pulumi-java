@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class DeviceFleetOutputConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class DeviceFleetOutputConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3OutputLocation", required=true)
-      private final Input<String> s3OutputLocation;
+      private final Output<String> s3OutputLocation;
 
-    public Input<String> getS3OutputLocation() {
+    public Output<String> getS3OutputLocation() {
         return this.s3OutputLocation;
     }
 
     public DeviceFleetOutputConfigArgs(
-        @Nullable Input<String> kmsKeyId,
-        Input<String> s3OutputLocation) {
+        @Nullable Output<String> kmsKeyId,
+        Output<String> s3OutputLocation) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation, "expected parameter 's3OutputLocation' to be non-null");
     }
 
     private DeviceFleetOutputConfigArgs() {
-        this.kmsKeyId = Input.empty();
-        this.s3OutputLocation = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.s3OutputLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DeviceFleetOutputConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private Input<String> s3OutputLocation;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<String> s3OutputLocation;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DeviceFleetOutputConfigArgs extends io.pulumi.resources.Resou
     	      this.s3OutputLocation = defaults.s3OutputLocation;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder s3OutputLocation(Input<String> s3OutputLocation) {
+        public Builder s3OutputLocation(Output<String> s3OutputLocation) {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
 
         public Builder s3OutputLocation(String s3OutputLocation) {
-            this.s3OutputLocation = Input.of(Objects.requireNonNull(s3OutputLocation));
+            this.s3OutputLocation = Output.of(Objects.requireNonNull(s3OutputLocation));
             return this;
         }
         public DeviceFleetOutputConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowUnassociatedTargets")
-      private final @Nullable Input<Boolean> allowUnassociatedTargets;
+      private final @Nullable Output<Boolean> allowUnassociatedTargets;
 
-    public Input<Boolean> getAllowUnassociatedTargets() {
-        return this.allowUnassociatedTargets == null ? Input.empty() : this.allowUnassociatedTargets;
+    public Output<Boolean> getAllowUnassociatedTargets() {
+        return this.allowUnassociatedTargets == null ? Output.empty() : this.allowUnassociatedTargets;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cutoff", required=true)
-      private final Input<Integer> cutoff;
+      private final Output<Integer> cutoff;
 
-    public Input<Integer> getCutoff() {
+    public Output<Integer> getCutoff() {
         return this.cutoff;
     }
 
@@ -44,10 +44,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<Integer> duration;
+      private final Output<Integer> duration;
 
-    public Input<Integer> getDuration() {
+    public Output<Integer> getDuration() {
         return this.duration;
     }
 
@@ -66,10 +66,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedule", required=true)
-      private final Input<String> schedule;
+      private final Output<String> schedule;
 
-    public Input<String> getSchedule() {
+    public Output<String> getSchedule() {
         return this.schedule;
     }
 
@@ -110,10 +110,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleOffset")
-      private final @Nullable Input<Integer> scheduleOffset;
+      private final @Nullable Output<Integer> scheduleOffset;
 
-    public Input<Integer> getScheduleOffset() {
-        return this.scheduleOffset == null ? Input.empty() : this.scheduleOffset;
+    public Output<Integer> getScheduleOffset() {
+        return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scheduleTimezone")
-      private final @Nullable Input<String> scheduleTimezone;
+      private final @Nullable Output<String> scheduleTimezone;
 
-    public Input<String> getScheduleTimezone() {
-        return this.scheduleTimezone == null ? Input.empty() : this.scheduleTimezone;
+    public Output<String> getScheduleTimezone() {
+        return this.scheduleTimezone == null ? Output.empty() : this.scheduleTimezone;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="startDate")
-      private final @Nullable Input<String> startDate;
+      private final @Nullable Output<String> startDate;
 
-    public Input<String> getStartDate() {
-        return this.startDate == null ? Input.empty() : this.startDate;
+    public Output<String> getStartDate() {
+        return this.startDate == null ? Output.empty() : this.startDate;
     }
 
     /**
@@ -143,25 +143,25 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MaintenanceWindowArgs(
-        @Nullable Input<Boolean> allowUnassociatedTargets,
-        Input<Integer> cutoff,
-        @Nullable Input<String> description,
-        Input<Integer> duration,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> name,
-        Input<String> schedule,
-        @Nullable Input<Integer> scheduleOffset,
-        @Nullable Input<String> scheduleTimezone,
-        @Nullable Input<String> startDate,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Boolean> allowUnassociatedTargets,
+        Output<Integer> cutoff,
+        @Nullable Output<String> description,
+        Output<Integer> duration,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> name,
+        Output<String> schedule,
+        @Nullable Output<Integer> scheduleOffset,
+        @Nullable Output<String> scheduleTimezone,
+        @Nullable Output<String> startDate,
+        @Nullable Output<Map<String,String>> tags) {
         this.allowUnassociatedTargets = allowUnassociatedTargets;
         this.cutoff = Objects.requireNonNull(cutoff, "expected parameter 'cutoff' to be non-null");
         this.description = description;
@@ -177,18 +177,18 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.allowUnassociatedTargets = Input.empty();
-        this.cutoff = Input.empty();
-        this.description = Input.empty();
-        this.duration = Input.empty();
-        this.enabled = Input.empty();
-        this.endDate = Input.empty();
-        this.name = Input.empty();
-        this.schedule = Input.empty();
-        this.scheduleOffset = Input.empty();
-        this.scheduleTimezone = Input.empty();
-        this.startDate = Input.empty();
-        this.tags = Input.empty();
+        this.allowUnassociatedTargets = Output.empty();
+        this.cutoff = Output.empty();
+        this.description = Output.empty();
+        this.duration = Output.empty();
+        this.enabled = Output.empty();
+        this.endDate = Output.empty();
+        this.name = Output.empty();
+        this.schedule = Output.empty();
+        this.scheduleOffset = Output.empty();
+        this.scheduleTimezone = Output.empty();
+        this.startDate = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowUnassociatedTargets;
-        private Input<Integer> cutoff;
-        private @Nullable Input<String> description;
-        private Input<Integer> duration;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> name;
-        private Input<String> schedule;
-        private @Nullable Input<Integer> scheduleOffset;
-        private @Nullable Input<String> scheduleTimezone;
-        private @Nullable Input<String> startDate;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> allowUnassociatedTargets;
+        private Output<Integer> cutoff;
+        private @Nullable Output<String> description;
+        private Output<Integer> duration;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> name;
+        private Output<String> schedule;
+        private @Nullable Output<Integer> scheduleOffset;
+        private @Nullable Output<String> scheduleTimezone;
+        private @Nullable Output<String> startDate;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -233,123 +233,123 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder allowUnassociatedTargets(@Nullable Input<Boolean> allowUnassociatedTargets) {
+        public Builder allowUnassociatedTargets(@Nullable Output<Boolean> allowUnassociatedTargets) {
             this.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
 
         public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
-            this.allowUnassociatedTargets = Input.ofNullable(allowUnassociatedTargets);
+            this.allowUnassociatedTargets = Output.ofNullable(allowUnassociatedTargets);
             return this;
         }
 
-        public Builder cutoff(Input<Integer> cutoff) {
+        public Builder cutoff(Output<Integer> cutoff) {
             this.cutoff = Objects.requireNonNull(cutoff);
             return this;
         }
 
         public Builder cutoff(Integer cutoff) {
-            this.cutoff = Input.of(Objects.requireNonNull(cutoff));
+            this.cutoff = Output.of(Objects.requireNonNull(cutoff));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder duration(Input<Integer> duration) {
+        public Builder duration(Output<Integer> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(Integer duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder schedule(Input<String> schedule) {
+        public Builder schedule(Output<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Input.of(Objects.requireNonNull(schedule));
+            this.schedule = Output.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder scheduleOffset(@Nullable Input<Integer> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Output<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
         public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
-            this.scheduleOffset = Input.ofNullable(scheduleOffset);
+            this.scheduleOffset = Output.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder scheduleTimezone(@Nullable Input<String> scheduleTimezone) {
+        public Builder scheduleTimezone(@Nullable Output<String> scheduleTimezone) {
             this.scheduleTimezone = scheduleTimezone;
             return this;
         }
 
         public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
-            this.scheduleTimezone = Input.ofNullable(scheduleTimezone);
+            this.scheduleTimezone = Output.ofNullable(scheduleTimezone);
             return this;
         }
 
-        public Builder startDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Input.ofNullable(startDate);
+            this.startDate = Output.ofNullable(startDate);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MaintenanceWindowArgs build() {

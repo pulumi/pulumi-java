@@ -6,7 +6,6 @@ package io.pulumi.aws.licensemanager;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.licensemanager.LicenseConfigurationArgs;
 import io.pulumi.aws.licensemanager.inputs.LicenseConfigurationState;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -225,14 +224,14 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LicenseConfiguration(String name, LicenseConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:licensemanager/licenseConfiguration:LicenseConfiguration", name, args == null ? LicenseConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws:licensemanager/licenseConfiguration:LicenseConfiguration", name, args == null ? LicenseConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LicenseConfiguration(String name, Input<String> id, @Nullable LicenseConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LicenseConfiguration(String name, Output<String> id, @Nullable LicenseConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws:licensemanager/licenseConfiguration:LicenseConfiguration", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -248,7 +247,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LicenseConfiguration get(String name, Input<String> id, @Nullable LicenseConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LicenseConfiguration get(String name, Output<String> id, @Nullable LicenseConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LicenseConfiguration(name, id, state, options);
     }
 }

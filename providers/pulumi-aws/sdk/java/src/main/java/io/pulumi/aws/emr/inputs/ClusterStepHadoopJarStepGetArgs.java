@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="jar", required=true)
-      private final Input<String> jar;
+      private final Output<String> jar;
 
-    public Input<String> getJar() {
+    public Output<String> getJar() {
         return this.jar;
     }
 
@@ -43,10 +43,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mainClass")
-      private final @Nullable Input<String> mainClass;
+      private final @Nullable Output<String> mainClass;
 
-    public Input<String> getMainClass() {
-        return this.mainClass == null ? Input.empty() : this.mainClass;
+    public Output<String> getMainClass() {
+        return this.mainClass == null ? Output.empty() : this.mainClass;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Output<Map<String,String>> properties;
 
-    public Input<Map<String,String>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,String>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public ClusterStepHadoopJarStepGetArgs(
-        @Nullable Input<List<String>> args,
-        Input<String> jar,
-        @Nullable Input<String> mainClass,
-        @Nullable Input<Map<String,String>> properties) {
+        @Nullable Output<List<String>> args,
+        Output<String> jar,
+        @Nullable Output<String> mainClass,
+        @Nullable Output<Map<String,String>> properties) {
         this.args = args;
         this.jar = Objects.requireNonNull(jar, "expected parameter 'jar' to be non-null");
         this.mainClass = mainClass;
@@ -72,10 +72,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterStepHadoopJarStepGetArgs() {
-        this.args = Input.empty();
-        this.jar = Input.empty();
-        this.mainClass = Input.empty();
-        this.properties = Input.empty();
+        this.args = Output.empty();
+        this.jar = Output.empty();
+        this.mainClass = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private Input<String> jar;
-        private @Nullable Input<String> mainClass;
-        private @Nullable Input<Map<String,String>> properties;
+        private @Nullable Output<List<String>> args;
+        private Output<String> jar;
+        private @Nullable Output<String> mainClass;
+        private @Nullable Output<Map<String,String>> properties;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
     	      this.properties = defaults.properties;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder jar(Input<String> jar) {
+        public Builder jar(Output<String> jar) {
             this.jar = Objects.requireNonNull(jar);
             return this;
         }
 
         public Builder jar(String jar) {
-            this.jar = Input.of(Objects.requireNonNull(jar));
+            this.jar = Output.of(Objects.requireNonNull(jar));
             return this;
         }
 
-        public Builder mainClass(@Nullable Input<String> mainClass) {
+        public Builder mainClass(@Nullable Output<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
         public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Input.ofNullable(mainClass);
+            this.mainClass = Output.ofNullable(mainClass);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public ClusterStepHadoopJarStepGetArgs build() {

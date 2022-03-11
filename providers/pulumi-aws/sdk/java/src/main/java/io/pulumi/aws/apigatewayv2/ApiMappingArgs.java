@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-      private final Input<String> apiId;
+      private final Output<String> apiId;
 
-    public Input<String> getApiId() {
+    public Output<String> getApiId() {
         return this.apiId;
     }
 
@@ -30,10 +30,10 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiMappingKey")
-      private final @Nullable Input<String> apiMappingKey;
+      private final @Nullable Output<String> apiMappingKey;
 
-    public Input<String> getApiMappingKey() {
-        return this.apiMappingKey == null ? Input.empty() : this.apiMappingKey;
+    public Output<String> getApiMappingKey() {
+        return this.apiMappingKey == null ? Output.empty() : this.apiMappingKey;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-      private final Input<String> domainName;
+      private final Output<String> domainName;
 
-    public Input<String> getDomainName() {
+    public Output<String> getDomainName() {
         return this.domainName;
     }
 
@@ -52,17 +52,17 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage", required=true)
-      private final Input<String> stage;
+      private final Output<String> stage;
 
-    public Input<String> getStage() {
+    public Output<String> getStage() {
         return this.stage;
     }
 
     public ApiMappingArgs(
-        Input<String> apiId,
-        @Nullable Input<String> apiMappingKey,
-        Input<String> domainName,
-        Input<String> stage) {
+        Output<String> apiId,
+        @Nullable Output<String> apiMappingKey,
+        Output<String> domainName,
+        Output<String> stage) {
         this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
         this.apiMappingKey = apiMappingKey;
         this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
@@ -70,10 +70,10 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiMappingArgs() {
-        this.apiId = Input.empty();
-        this.apiMappingKey = Input.empty();
-        this.domainName = Input.empty();
-        this.stage = Input.empty();
+        this.apiId = Output.empty();
+        this.apiMappingKey = Output.empty();
+        this.domainName = Output.empty();
+        this.stage = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiId;
-        private @Nullable Input<String> apiMappingKey;
-        private Input<String> domainName;
-        private Input<String> stage;
+        private Output<String> apiId;
+        private @Nullable Output<String> apiMappingKey;
+        private Output<String> domainName;
+        private Output<String> stage;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stage = defaults.stage;
         }
 
-        public Builder apiId(Input<String> apiId) {
+        public Builder apiId(Output<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Input.of(Objects.requireNonNull(apiId));
+            this.apiId = Output.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder apiMappingKey(@Nullable Input<String> apiMappingKey) {
+        public Builder apiMappingKey(@Nullable Output<String> apiMappingKey) {
             this.apiMappingKey = apiMappingKey;
             return this;
         }
 
         public Builder apiMappingKey(@Nullable String apiMappingKey) {
-            this.apiMappingKey = Input.ofNullable(apiMappingKey);
+            this.apiMappingKey = Output.ofNullable(apiMappingKey);
             return this;
         }
 
-        public Builder domainName(Input<String> domainName) {
+        public Builder domainName(Output<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Input.of(Objects.requireNonNull(domainName));
+            this.domainName = Output.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder stage(Input<String> stage) {
+        public Builder stage(Output<String> stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
         public Builder stage(String stage) {
-            this.stage = Input.of(Objects.requireNonNull(stage));
+            this.stage = Output.of(Objects.requireNonNull(stage));
             return this;
         }
         public ApiMappingArgs build() {
