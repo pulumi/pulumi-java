@@ -23,7 +23,6 @@ import java.util.stream.Stream;
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
-import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 
 public interface Output<T> extends InputOutput<T, Output<T>> {
@@ -766,87 +765,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         }
     }
 
-    // Tuple Overloads that take different numbers of inputs or outputs.
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2> Output<Tuples.Tuple2<T1, T2>> tuple(Input<T1> item1, Input<T2> item2) {
-        return tuple(item1, item2, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2));
-    }
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2, T3> Output<Tuples.Tuple3<T1, T2, T3>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3
-    ) {
-        return tuple(item1, item2, item3, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3));
-    }
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2, T3, T4> Output<Tuples.Tuple4<T1, T2, T3, T4>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4
-    ) {
-        return tuple(item1, item2, item3, item4, TupleZeroIn, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4));
-    }
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2, T3, T4, T5> Output<Tuples.Tuple5<T1, T2, T3, T4, T5>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4, Input<T5> item5
-    ) {
-        return tuple(item1, item2, item3, item4, item5, TupleZeroIn, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5));
-    }
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2, T3, T4, T5, T6> Output<Tuples.Tuple6<T1, T2, T3, T4, T5, T6>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6
-    ) {
-        return tuple(item1, item2, item3, item4, item5, item6, TupleZeroIn, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6));
-    }
-
-    /**
-     * @see Output#tuple(Input, Input, Input, Input, Input, Input, Input, Input)
-     */
-    @Deprecated
-    static <T1, T2, T3, T4, T5, T6, T7> Output<Tuples.Tuple7<T1, T2, T3, T4, T5, T6, T7>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6, Input<T7> item7
-    ) {
-        return tuple(item1, item2, item3, item4, item5, item6, item7, TupleZeroIn)
-                .applyValue(v -> Tuples.of(v.t1, v.t2, v.t3, v.t4, v.t5, v.t6, v.t7));
-    }
-
-    /**
-     * Combines all the @see {@link Input} values in the provided parameters and combines
-     * them all into a single tuple containing each of their underlying values.
-     * If any of the @see {@link Input}s are not known, the final result will be not known.  Similarly,
-     * if any of the @see {@link Input}s are secrets, then the final result will be a secret.
-     */
-    @Deprecated
-    static <T1, T2, T3, T4, T5, T6, T7, T8> Output<Tuples.Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>> tuple(
-            Input<T1> item1, Input<T2> item2, Input<T3> item3, Input<T4> item4,
-            Input<T5> item5, Input<T6> item6, Input<T7> item7, Input<T8> item8
-    ) {
-        return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
-    }
+    // Tuple Overloads that take various number of outputs.
 
     /**
      * @see Output#tuple(Output, Output, Output, Output, Output, Output, Output, Output)
