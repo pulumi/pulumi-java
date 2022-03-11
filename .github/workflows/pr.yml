@@ -96,6 +96,7 @@ jobs:
             pulumi destroy -s dev --yes;
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi preview;
             pulumi stack rm dev --yes;";
       - name: run example gcp-java-gke-hello-world
@@ -117,6 +118,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi config set minimal:name foo
+            pulumi config set minimal:secret foo
             pulumi preview;
             pulumi stack rm dev --yes;";
       - name: run example aws-native-java-s3-folder
